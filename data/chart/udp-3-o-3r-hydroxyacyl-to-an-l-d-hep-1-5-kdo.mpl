@@ -30,8 +30,8 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-5-kdo "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_221 [2.3.1.221] +o_s_hexanoylpantetheine_4_phosphoryl_serine_1 +malonyl-coa +hplus +co2 +coa +h2o
-    norsolorinic_acid_anthrone
+    <-> ec_2_3_1_39 [2.3.1.39] +malonyl-coa +coa
+    malonyl-acp
   }
 
   branch from a_kdo_lipid_iva side right {
@@ -42,8 +42,8 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-5-kdo "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_3_6_1_8 [3.6.1.8] +ctp +h2o +hplus
-    ppi
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
   }
 
   branch from a_kdo_2_lipid_iva side right {

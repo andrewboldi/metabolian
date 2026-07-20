@@ -1,0 +1,426 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-ribosylnicotinate-to-diphosphate",
+  "name": "D-ribosylnicotinate to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from D-ribosylnicotinate to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25568"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58527"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_ribosylnicotinate",
+      "name": "D-ribosylnicotinate",
+      "formula": "C11H13NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58527"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "nicotinate_d_ribonucleotide",
+      "name": "nicotinate D-ribonucleotide",
+      "short": "nicotinate…",
+      "formula": "C11H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57502"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "deamido_nad",
+      "name": "deamido-NAD",
+      "formula": "C21H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58437"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nicotinate_adenine_dinucleotide_3_phosphate",
+      "name": "nicotinate-adenine dinucleotide 3'-phosphate",
+      "short": "nicotinate-adenine…",
+      "formula": "C21H23N6O18P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:189005"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "curcumene",
+      "name": "γ-curcumene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63696"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_173",
+      "name": "nicotinate riboside kinase",
+      "ec": [
+        "2.7.1.173"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_18",
+      "name": "nicotinate-nucleotide adenylyltransferase",
+      "ec": [
+        "2.7.7.18"
+      ]
+    },
+    {
+      "id": "ec_6_3_1_5",
+      "name": "NAD(+) synthase",
+      "ec": [
+        "6.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_236",
+      "name": "NAD(+) 3'-kinase",
+      "ec": [
+        "2.7.1.236"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_94",
+      "name": "gamma-curcumene synthase",
+      "ec": [
+        "4.2.3.94"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nicotinate riboside kinase",
+      "equation": "beta-D-ribosylnicotinate + ATP = nicotinate beta-D-ribonucleotide + ADP + H(+)",
+      "ec": "2.7.1.173",
+      "substrates": [
+        {
+          "metabolite": "d_ribosylnicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_d_ribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_173"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nicotinate-nucleotide adenylyltransferase",
+      "equation": "nicotinate beta-D-ribonucleotide + ATP + H(+) = deamido-NAD(+) + diphosphate",
+      "ec": "2.7.7.18",
+      "substrates": [
+        {
+          "metabolite": "nicotinate_d_ribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22860"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAD(+) synthase",
+      "equation": "deamido-NAD(+) + NH4(+) + ATP = AMP + diphosphate + NAD(+) + H(+)",
+      "ec": "6.3.1.5",
+      "substrates": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "NAD(+) 3'-kinase",
+      "equation": "deamido-NAD(+) + ATP = nicotinate-adenine dinucleotide 3'-phosphate + ADP + H(+)",
+      "ec": "2.7.1.236",
+      "substrates": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_236"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:70195"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70195"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "gamma-curcumene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = gamma-curcumene + diphosphate",
+      "ec": "4.2.3.94",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "curcumene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32031"
+          }
+        ]
+      }
+    }
+  ]
+}

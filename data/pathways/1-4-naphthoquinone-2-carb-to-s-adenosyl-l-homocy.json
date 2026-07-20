@@ -132,42 +132,69 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "terpentedienyl_diphosphate",
+      "name": "terpentedienyl diphosphate",
+      "short": "terpentedienyl PP",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:58821"
       }
     },
     {
-      "id": "sabinene",
-      "name": "(−)-sabinene",
-      "formula": "C10H16",
+      "id": "terpentetriene",
+      "name": "terpentetriene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50028"
+        "chebi": "CHEBI:50302"
       }
     },
     {
-      "id": "2_4_6_trichlorophenolate",
-      "name": "2,4,6-trichlorophenolate",
-      "short": "2,4,6-trichlorophen…",
-      "formula": "C6H2Cl3O",
+      "id": "phylloquinone",
+      "name": "phylloquinone",
+      "formula": "C31H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18067"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140426"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "2_4_6_trichloroanisole",
-      "name": "2,4,6-trichloroanisole",
-      "short": "2,4,6-trichloroanis…",
-      "formula": "C7H5Cl3O",
+      "id": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
+      "name": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone",
+      "short": "3',4',5,6-tetrahydr…",
+      "formula": "C17H13O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77769"
+      }
+    },
+    {
+      "id": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
+      "name": "3',4',5-trihydroxy-3,6,7-trimethoxyflavone",
+      "short": "3',4',5-trihydroxy-…",
+      "formula": "C18H16O8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:19333"
+        "chebi": "CHEBI:18016"
       }
     }
   ],
@@ -194,17 +221,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_109",
-      "name": "(-)-sabinene synthase",
+      "id": "ec_4_2_3_36",
+      "name": "terpentetriene synthase",
       "ec": [
-        "4.2.3.109"
+        "4.2.3.36"
       ]
     },
     {
-      "id": "ec_2_1_1_136",
-      "name": "chlorophenol O-methyltransferase",
+      "id": "ec_2_1_1_84",
+      "name": "methylquercetagetin 6-O-methyltransferase",
       "ec": [
-        "2.1.1.136"
+        "2.1.1.84"
       ]
     }
   ],
@@ -362,18 +389,18 @@
     },
     {
       "id": "r4",
-      "name": "(-)-sabinene synthase",
-      "equation": "(2E)-geranyl diphosphate = (1S,5S)-sabinene + diphosphate",
-      "ec": "4.2.3.109",
+      "name": "terpentetriene synthase",
+      "equation": "terpentedienyl diphosphate = terpentetriene + diphosphate",
+      "ec": "4.2.3.36",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "terpentedienyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sabinene",
+          "metabolite": "terpentetriene",
           "stoichiometry": 1
         },
         {
@@ -383,32 +410,75 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_109"
+          "enzyme": "ec_4_2_3_36"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25508"
+        "rhea": "RHEA:25617"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25508"
+            "id": "RHEA:25617"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "chlorophenol O-methyltransferase",
-      "equation": "2,4,6-trichlorophenol + S-adenosyl-L-methionine = 2,4,6-trichloroanisole + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.136",
+      "name": "phylloquinone + NADH + H(+) = phylloquinol + NAD(+)",
+      "equation": "phylloquinone + NADH + H(+) = phylloquinol + NAD(+)",
       "substrates": [
         {
-          "metabolite": "2_4_6_trichlorophenolate",
+          "metabolite": "phylloquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phyllohydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "methylquercetagetin 6-O-methyltransferase",
+      "equation": "3',4',5,6-tetrahydroxy-3,7-dimethoxyflavone + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,6,7-trimethoxyflavone + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.84",
+      "substrates": [
+        {
+          "metabolite": "3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone",
           "stoichiometry": 1
         },
         {
@@ -418,7 +488,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_4_6_trichloroanisole",
+          "metabolite": "3_4_5_trihydroxy_3_6_7_trimethoxyflavone",
           "stoichiometry": 1
         },
         {
@@ -428,20 +498,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_136"
+          "enzyme": "ec_2_1_1_84"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18909"
+        "rhea": "RHEA:18717"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18909"
+            "id": "RHEA:18717"
           }
         ]
       }

@@ -18,7 +18,7 @@ pathway 5r-5-hydroxy-l-lysine-1-to-d-glucopyranose "(5R)-5-hydroxy-L-lysine(1…
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
-    6_o_methyl_n_deacetylipecoside_aglycone
+    <-> ec_3_2_1_218 [3.2.1.218] +3_dehydromaltose +h2o
+    3_dehydro_d_glucose
   }
 }

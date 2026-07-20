@@ -1,0 +1,326 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fmn-n5-peroxide-to-ammonium",
+  "name": "FMN-N5-peroxide to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from FMN-N5-peroxide(2−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62364"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:176498"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fmn_n5_peroxide",
+      "name": "FMN-N5-peroxide",
+      "formula": "C17H21N4O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:176498"
+      }
+    },
+    {
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17821"
+      }
+    },
+    {
+      "id": "fmn_n5_oxide",
+      "name": "FMN-N5-oxide",
+      "formula": "C17H18N4O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:144890"
+      }
+    },
+    {
+      "id": "z_2_methylureidoacrylate",
+      "name": "(Z)-2-methylureidoacrylate",
+      "short": "2-methylureidoacryl…",
+      "formula": "C5H7N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "z_3_amino_2_methylacrylate",
+      "name": "(Z)-3-amino-2-methylacrylate",
+      "short": "3-amino-2-methylacr…",
+      "formula": "C4H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145735"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "5_methoxytryptamine",
+      "name": "5-methoxytryptamine",
+      "formula": "C11H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:166874"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_methoxyindoleacetaldehyde",
+      "name": "5-Methoxyindoleacetaldehyde",
+      "short": "5-Methoxyindoleacet…",
+      "formula": "C11H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166541"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "FMN-N(5)-peroxide + thymine = FMN-N(5)-oxide + (Z)-2-methylureidoacrylate + 2 H(+)",
+      "equation": "FMN-N(5)-peroxide + thymine = FMN-N(5)-oxide + (Z)-2-methylureidoacrylate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "fmn_n5_peroxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thymine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmn_n5_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoacrylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(Z)-2-methylureidoacrylate + H2O = (Z)-2-methylaminoacrylate + carbamate + H(+)",
+      "equation": "(Z)-2-methylureidoacrylate + H2O = (Z)-2-methylaminoacrylate + carbamate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "z_2_methylureidoacrylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_3_amino_2_methylacrylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carbamate + 2 H(+) = NH4(+) + CO2",
+      "equation": "carbamate + 2 H(+) = NH4(+) + CO2",
+      "substrates": [
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15649"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15649"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
+      "equation": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "5_methoxytryptamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methoxyindoleacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:59600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59600"
+          }
+        ]
+      }
+    }
+  ]
+}

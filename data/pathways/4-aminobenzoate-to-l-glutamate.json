@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-aminobenzoate-to-l-glutamate",
   "name": "4-aminobenzoate to L-glutamate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 4-aminobenzoate to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -110,31 +110,21 @@
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:46398"
+        "chebi": "CHEBI:327995"
       }
     },
     {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "glutamyltyramine",
+      "name": "γ-glutamyltyramine",
+      "formula": "C13H18N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
-      }
-    },
-    {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
+        "chebi": "CHEBI:83425"
       }
     }
   ],
@@ -161,10 +151,10 @@
       ]
     },
     {
-      "id": "ec_6_3_4_2",
-      "name": "CTP synthase (glutamine hydrolyzing)",
+      "id": "ec_6_3_4_24",
+      "name": "tyramine--L-glutamate ligase",
       "ec": [
-        "6.3.4.2"
+        "6.3.4.24"
       ]
     }
   ],
@@ -318,34 +308,26 @@
     },
     {
       "id": "r4",
-      "name": "CTP synthase (glutamine hydrolyzing)",
-      "equation": "UTP + L-glutamine + ATP + H2O = CTP + L-glutamate + ADP + phosphate + 2 H(+)",
-      "ec": "6.3.4.2",
+      "name": "tyramine--L-glutamate ligase",
+      "equation": "tyramine + L-glutamate + ATP = gamma-L-glutamyltyramine + ADP + phosphate + H(+)",
+      "ec": "6.3.4.24",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamine",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
+          "metabolite": "glutamyltyramine",
           "stoichiometry": 1
         },
         {
@@ -358,25 +340,25 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_4_2"
+          "enzyme": "ec_6_3_4_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:26426"
+        "rhea": "RHEA:43544"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26426"
+            "id": "RHEA:43544"
           }
         ]
       }

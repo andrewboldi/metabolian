@@ -28,19 +28,19 @@ pathway 5-methyltetrahydropteroyl-to-n6-r-s8-succinyldih "5-methyltetrahydropter
 
   branch from methionine side right {
     methionine
-    <-> ec_4_1_99_19 [4.1.99.19] +tyrosine +sam +nadph +p_cresol +5_deoxyadenosine +nadp
-    dehydroglycine
+    <-> ec_1_1_99_38 [1.1.99.38] +2_deoxy_scyllo_inosamine +sam +5_deoxyadenosine +hplus
+    3_ammonio_2_3_dideoxy_scyllo_inosose
   }
 
-  branch from ppi side left {
+  branch from 3_l_methionyl_adenylyl_zwitterionic_group side left {
+    3_l_methionyl_adenylyl_zwitterionic_group
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetyl_l_methionyl_adenylyl
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
-    3_l_lysyl_adenylyl_1_group
-  }
-
-  branch from n6_r_dihydrolipoyl_l_lysine side right {
-    n6_r_dihydrolipoyl_l_lysine
-    <-> ec_1_11_1_28 [1.11.1.28] +peroxol +alcohol +h2o
-    n6_r_lipoyl_l_lysine
+    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
+    sabinene_hydrate
   }
 }

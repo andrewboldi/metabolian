@@ -1,0 +1,379 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-idonate-to-5-dehydro-d-gluconate",
+  "name": "L-idonate to 5-dehydro-D-gluconate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-idonate to 5-dehydro-D-gluconate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21172"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17796"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_idonate",
+      "name": "L-idonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17796"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_dehydro_d_gluconate",
+      "name": "5-dehydro-D-gluconate",
+      "short": "5-dehydro-D-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58143"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_5_didehydro_d_gluconate",
+      "name": "2,5-didehydro-D-gluconate",
+      "short": "2,5-didehydro-D-glu…",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11449"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "d_gluconate",
+      "name": "D-gluconate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18391"
+      }
+    },
+    {
+      "id": "2_dehydro_l_idonate",
+      "name": "2-dehydro-L-idonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36602"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_264",
+      "name": "L-idonate 5-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.264"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_366",
+      "name": "L-idonate 5-dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.366"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_69",
+      "name": "gluconate 5-dehydrogenase",
+      "ec": [
+        "1.1.1.69"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_346",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-L-gulonate-forming)",
+      "ec": [
+        "1.1.1.346"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-idonate 5-dehydrogenase [NAD(P)(+)]",
+      "equation": "L-idonate + NAD(+) = 5-dehydro-D-gluconate + NADH + H(+)",
+      "ec": "1.1.1.264",
+      "substrates": [
+        {
+          "metabolite": "l_idonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_264"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21172"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-dehydro-D-gluconate + NADP(+) = 2,5-didehydro-D-gluconate + NADPH + H(+)",
+      "equation": "5-dehydro-D-gluconate + NADP(+) = 2,5-didehydro-D-gluconate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27634"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27634"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,5-didehydro-D-gluconate + NADH + H(+) = 5-dehydro-D-gluconate + NAD(+)",
+      "equation": "2,5-didehydro-D-gluconate + NADH + H(+) = 5-dehydro-D-gluconate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gluconate 5-dehydrogenase",
+      "equation": "D-gluconate + NADP(+) = 5-dehydro-D-gluconate + NADPH + H(+)",
+      "ec": "1.1.1.69",
+      "substrates": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-L-gulonate-forming)",
+      "equation": "2-dehydro-L-idonate + NADP(+) = 2,5-didehydro-D-gluconate + NADPH + H(+)",
+      "ec": "1.1.1.346",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_l_idonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_346"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35111"
+          }
+        ]
+      }
+    }
+  ]
+}

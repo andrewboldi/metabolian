@@ -1,0 +1,399 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "questin-hydroquinone-to-bisdechlorogeodin",
+  "name": "questin hydroquinone to (−)-bisdechlorogeodin",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from questin hydroquinone to (−)-bisdechlorogeodin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86143"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:235408"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "questin_hydroquinone",
+      "name": "questin hydroquinone",
+      "formula": "C16H14O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235408"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "demethylsulochrin",
+      "name": "demethylsulochrin",
+      "formula": "C16H12O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77886"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "sulochrin",
+      "name": "sulochrin",
+      "formula": "C17H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77639"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "bisdechlorogeodin",
+      "name": "(−)-bisdechlorogeodin",
+      "short": "(−)-bisdechlorogeod…",
+      "formula": "C17H14O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15391"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bisdechlorogeodin",
+      "name": "(+)-bisdechlorogeodin",
+      "short": "(+)-bisdechlorogeod…",
+      "formula": "C17H14O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15390"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "2_o_methylcytidine_5_monophosphate_1",
+      "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
+      "short": "2'-O-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74495"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_96",
+      "name": "questin hydroquinone dioxygenase",
+      "ec": [
+        "1.13.11.96"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_5",
+      "name": "sulochrin oxidase [(-)-bisdechlorogeodin-forming]",
+      "ec": [
+        "1.21.3.5"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_4",
+      "name": "sulochrin oxidase [(+)-bisdechlorogeodin-forming]",
+      "ec": [
+        "1.21.3.4"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_225",
+      "name": "tRNA:m(4)X modification enzyme",
+      "ec": [
+        "2.1.1.225"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "questin hydroquinone dioxygenase",
+      "equation": "questin hydroquinone + O2 = demethylsulochrin + 2 H(+)",
+      "ec": "1.13.11.96",
+      "substrates": [
+        {
+          "metabolite": "questin_hydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "demethylsulochrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "demethylsulochrin + S-adenosyl-L-methionine = sulochrin + S-adenosyl-L-homocysteine",
+      "equation": "demethylsulochrin + S-adenosyl-L-methionine = sulochrin + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "demethylsulochrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulochrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sulochrin oxidase [(-)-bisdechlorogeodin-forming]",
+      "equation": "2 sulochrin + O2 + 2 H(+) = 2 (2R)-bisdechlorogeodin + 2 H2O",
+      "ec": "1.21.3.5",
+      "substrates": [
+        {
+          "metabolite": "sulochrin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisdechlorogeodin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sulochrin oxidase [(+)-bisdechlorogeodin-forming]",
+      "equation": "2 sulochrin + O2 + 2 H(+) = 2 (2S)-bisdechlorogeodin + 2 H2O",
+      "ec": "1.21.3.4",
+      "substrates": [
+        {
+          "metabolite": "sulochrin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisdechlorogeodin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "tRNA:m(4)X modification enzyme",
+      "equation": "cytidine(4) in tRNA(Pro) + S-adenosyl-L-methionine = 2'-O-methylcytidine(4) in tRNA(Pro) + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.225",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_225"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32767"
+          }
+        ]
+      }
+    }
+  ]
+}

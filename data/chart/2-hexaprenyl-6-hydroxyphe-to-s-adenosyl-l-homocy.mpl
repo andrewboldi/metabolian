@@ -10,7 +10,7 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
     2_hexaprenyl_6_hydroxyphenol
     <-> ec_2_1_1_222 [2.1.1.222] +sam -sah -hplus
     2_hexaprenyl_6_methoxyphenol
-    <-> ec_1_14_15_46 [1.14.15.46] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +nadph +o2 +hplus -nadp -h2o
     all_trans_6_methoxy_2_hexaprenylhydroquinone
     <-> ec_2_1_1_201 [2.1.1.201] +sam -sah -hplus
     all_trans_5_methoxy_2_methyl_3_hexaprenylhydroqu
@@ -18,13 +18,7 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_9 [1.14.15.9] +2_oxospirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    2_2_dioxospirilloxanthin
+    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sam +hplus
+    n_methylhistaminium
   }
 }

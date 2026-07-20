@@ -12,13 +12,13 @@ pathway 3-oxoisoapionate-to-3-phosphonato-d-glycerate "3-oxoisoapionate… to 3-
     pg3
     <-> ec_2_7_2_3 [2.7.2.3] +atp -adp
     bpg13
-    <-> ec_2_7_1_106 [2.7.1.106] +d_glucose_6_phosphate -pg3 -hplus
-    d_glucose_1_6_bisphosphate
+    <-> . +2_deoxy_d_ribose_1_phosphate -pg3 -hplus
+    2_deoxy_d_ribose_1_5_bisphosphate
   }
 
-  branch from pg3 side left {
-    pg3
-    <-> ec_2_7_7_106 [2.7.7.106] +gtp +hplus +ppi
-    3_r_glyceryl_diphospho_5_guanosine
+  branch from glycolate side left {
+    glycolate
+    <-> . +h2o +dgtp +hplus
+    n2_1_hydroxy_2_oxoethyl_dgtp
   }
 }

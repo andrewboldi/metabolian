@@ -1,0 +1,313 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "spheroidene-to-spheroiden-2-one",
+  "name": "spheroidene to spheroiden-2-one",
+  "category": "other",
+  "summary": "A 3-step route from spheroidene to spheroiden-2-one, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49328"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35330"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "spheroidene",
+      "name": "spheroidene",
+      "formula": "C41H60O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35330"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxyspheroidene",
+      "name": "2-hydroxyspheroidene",
+      "formula": "C41H60O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91221"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_2_dihydroxyspheroidene",
+      "name": "2,2-dihydroxyspheroidene",
+      "short": "2,2-dihydroxysphero…",
+      "formula": "C41H60O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91223"
+      }
+    },
+    {
+      "id": "spheroiden_2_one",
+      "name": "spheroiden-2-one",
+      "formula": "C41H58O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62480"
+      }
+    },
+    {
+      "id": "pheophorbide_a",
+      "name": "pheophorbide a",
+      "formula": "C35H34N4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58687"
+      }
+    },
+    {
+      "id": "epoxypheophorbide_a",
+      "name": "epoxypheophorbide a",
+      "formula": "C35H35N4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:88233"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "spheroidene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2-hydroxyspheroidene + 2 ...",
+      "equation": "spheroidene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2-hydroxyspheroidene + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "spheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyspheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49328"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxyspheroidene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2,2-dihydroxysph...",
+      "equation": "2-hydroxyspheroidene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2,2-dihydroxyspheroidene + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyspheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_dihydroxyspheroidene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,2-dihydroxyspheroidene = spheroiden-2-one + H2O",
+      "equation": "2,2-dihydroxyspheroidene = spheroiden-2-one + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_2_dihydroxyspheroidene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spheroiden_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + ...",
+      "equation": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "pheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epoxypheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48160"
+          }
+        ]
+      }
+    }
+  ]
+}

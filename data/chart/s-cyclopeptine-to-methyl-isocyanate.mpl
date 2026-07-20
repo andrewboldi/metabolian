@@ -18,7 +18,7 @@ pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyana
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
-    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
   }
 }

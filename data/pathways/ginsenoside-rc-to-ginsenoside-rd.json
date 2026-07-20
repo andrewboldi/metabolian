@@ -1,0 +1,370 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ginsenoside-rc-to-ginsenoside-rd",
+  "name": "ginsenoside Rc to ginsenoside Rd",
+  "category": "other",
+  "summary": "A 3-step route from ginsenoside Rc to ginsenoside Rd, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79315"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77154"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ginsenoside_rc",
+      "name": "ginsenoside Rc",
+      "formula": "C53H90O22",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77154"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_arabinofuranose",
+      "name": "L-arabinofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6178"
+      }
+    },
+    {
+      "id": "ginsenoside_rd",
+      "name": "ginsenoside Rd",
+      "formula": "C48H82O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67988"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_rg3",
+      "name": "(20S)-ginsenoside Rg3",
+      "short": "ginsenoside Rg3",
+      "formula": "C42H72O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67991"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_rh2",
+      "name": "(20S)-ginsenoside Rh2",
+      "short": "ginsenoside Rh2",
+      "formula": "C36H62O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77147"
+      }
+    },
+    {
+      "id": "sinigrin",
+      "name": "sinigrin",
+      "formula": "C10H16NO9S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:9162"
+      }
+    },
+    {
+      "id": "z_n_sulfonatooxy_prop_2_enimidothioate",
+      "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate",
+      "short": "N-(sulfonatooxy)pro…",
+      "formula": "C4H5NO4S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:183062"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_363",
+      "name": "ginsenoside 20-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.363"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_365",
+      "name": "protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.365"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(20S)-ginsenoside Rc + H2O = L-arabinofuranose + (20S)-ginsenoside Rd",
+      "equation": "(20S)-ginsenoside Rc + H2O = L-arabinofuranose + (20S)-ginsenoside Rd",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(20S)-ginsenoside Rd + H2O = (20S)-ginsenoside Rg3 + D-glucose",
+      "equation": "(20S)-ginsenoside Rd + H2O = (20S)-ginsenoside Rg3 + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_rg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:38343"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ginsenoside 20-O-glucosyltransferase",
+      "equation": "(20S)-ginsenoside Rg3 + UDP-alpha-D-glucose = (20S)-ginsenoside Rd + UDP + H(+)",
+      "ec": "2.4.1.363",
+      "substrates": [
+        {
+          "metabolite": "20s_ginsenoside_rg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_363"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase",
+      "equation": "(20S)-ginsenoside Rh2 + UDP-alpha-D-glucose = (20S)-ginsenoside Rg3 + UDP + H(+)",
+      "ec": "2.4.1.365",
+      "substrates": [
+        {
+          "metabolite": "20s_ginsenoside_rh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20s_ginsenoside_rg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_365"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:58000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sinigrin + H2O = (Z)-N-(sulfonatooxy)prop-2-enimidothioate + D-glucose + H(+)",
+      "equation": "sinigrin + H2O = (Z)-N-(sulfonatooxy)prop-2-enimidothioate + D-glucose + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sinigrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_n_sulfonatooxy_prop_2_enimidothioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:69248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69248"
+          }
+        ]
+      }
+    }
+  ]
+}

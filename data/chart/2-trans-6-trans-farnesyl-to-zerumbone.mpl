@@ -16,15 +16,21 @@ pathway 2-trans-6-trans-farnesyl-to-zerumbone "2-trans,6-trans-farnesyl… to ze
     zerumbone
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13s_edaxadiene
+  branch from 1e_4e_8e_humulene side left {
+    1e_4e_8e_humulene
+    <-> . +ppi
+    2_cis_6_cis_farnesyl_diphosphate
   }
 
-  branch from fmn side right {
+  branch from ppi side right {
+    ppi
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +ctp +hplus
+    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
+  }
+
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_14_67 [1.14.14.67] +11_hydroxysugiol +fmnh2 +o2 +h2o +hplus
-    11_20_dihydroxysugiol
+    <-> . +cucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_hydroxycucurbitadienol
   }
 }

@@ -110,6 +110,34 @@
       }
     },
     {
+      "id": "ecgoninium_methyl_ester",
+      "name": "ecgoninium methyl ester",
+      "short": "ecgoninium methyl…",
+      "formula": "C10H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59908"
+      }
+    },
+    {
+      "id": "cinnamoylcocaine",
+      "name": "cinnamoylcocaine",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:231952"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
       "id": "udp_d_glucose",
       "name": "UDP-α-D-glucose",
       "formula": "C15H22N2O17P2",
@@ -310,6 +338,45 @@
     },
     {
       "id": "r4",
+      "name": "ecgonine methyl ester + (E)-cinnamoyl-CoA = cinnamoylcocaine + CoA",
+      "equation": "ecgonine methyl ester + (E)-cinnamoyl-CoA = cinnamoylcocaine + CoA",
+      "substrates": [
+        {
+          "metabolite": "ecgoninium_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cinnamoylcocaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81563"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81563"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "cinnamate beta-D-glucosyltransferase",
       "equation": "(E)-cinnamate + UDP-alpha-D-glucose = 1-O-(trans-cinnamoyl)-beta-D-glucose + UDP",
       "ec": "2.4.1.177",
@@ -339,7 +406,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:13437"
       },

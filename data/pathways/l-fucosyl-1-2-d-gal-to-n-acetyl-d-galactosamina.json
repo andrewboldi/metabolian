@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-fucosyl-1-2-d-gal-to-n-acetyl-d-galactosamina",
   "name": "α-L-fucosyl-(1→2)-β-D-gal… to N-acetyl-D-galactosaminate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from α-L-fucosyl-(1→2)-β-D-galactoside to N-acetyl-D-galactosaminate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -114,41 +114,13 @@
       }
     },
     {
-      "id": "udp_d_galactose",
-      "name": "UDP-α-D-galactose",
-      "formula": "C15H22N2O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:66914"
-      }
-    },
-    {
-      "id": "d_galactosyl_1_3_l_fucosyl_1_2_d_galactoside",
-      "name": "α-D-galactosyl-(1→3)-[α-L-fucosyl-(1→2)]-β-D-galactoside",
-      "short": "α-D-galactosyl-(1→3…",
-      "formula": "C18H31O15R",
+      "id": "n_acetyl_d_galactosamino_1_5_lactone",
+      "name": "N-acetyl-D-galactosamino-1,5-lactone",
+      "short": "N-acetyl-D-galactos…",
+      "formula": "C8H13NO6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140328"
-      }
-    },
-    {
-      "id": "o_n_acetyl_d_galactosaminyl_l_serine",
-      "name": "O-(N-acetyl-α-D-galactosaminyl)-L-serine",
-      "short": "O-(N-acetyl-α-D-gal…",
-      "formula": "C11H18N2O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:53604"
-      }
-    },
-    {
-      "id": "l_serine",
-      "name": "L-serine",
-      "formula": "C3H5NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29999"
+        "chebi": "CHEBI:184299"
       }
     }
   ],
@@ -172,20 +144,6 @@
       "name": "N-acylhexosamine oxidase",
       "ec": [
         "1.1.3.29"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_37",
-      "name": "fucosylgalactoside 3-alpha-galactosyltransferase",
-      "ec": [
-        "2.4.1.37"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_217",
-      "name": "exo-acting protein-alpha-N-acetylgalactosaminidase",
-      "ec": [
-        "3.2.1.217"
       ]
     }
   ],
@@ -339,61 +297,11 @@
     },
     {
       "id": "r4",
-      "name": "fucosylgalactoside 3-alpha-galactosyltransferase",
-      "equation": "an alpha-L-fucosyl-(1->2)-beta-D-galactosyl derivative + UDP-alpha-D-galactose = an alpha-D-galactosyl-(1->3)-[alpha-L-fucosyl-(1->2)]-beta-D-galactosyl derivative + UDP + H(+)",
-      "ec": "2.4.1.37",
+      "name": "N-acetyl-D-galactosamino-1,5-lactone + H2O = N-acetyl-D-galactosaminate + H(+)",
+      "equation": "N-acetyl-D-galactosamino-1,5-lactone + H2O = N-acetyl-D-galactosaminate + H(+)",
       "substrates": [
         {
-          "metabolite": "l_fucosyl_1_2_d_galactoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_galactose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_galactosyl_1_3_l_fucosyl_1_2_d_galactoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_37"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:14349"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14349"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "exo-acting protein-alpha-N-acetylgalactosaminidase",
-      "equation": "a 3-O-[N-acetyl-alpha-D-galactosaminyl]-L-seryl-[protein] + H2O = N-acetyl-D-galactosamine + L-seryl-[protein]",
-      "ec": "3.2.1.217",
-      "substrates": [
-        {
-          "metabolite": "o_n_acetyl_d_galactosaminyl_l_serine",
+          "metabolite": "n_acetyl_d_galactosamino_1_5_lactone",
           "stoichiometry": 1
         },
         {
@@ -403,30 +311,25 @@
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_galactosamine",
+          "metabolite": "n_acetyl_d_galactosaminate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_serine",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_217"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:70555"
+        "rhea": "RHEA:69520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70555"
+            "id": "RHEA:69520"
           }
         ]
       }

@@ -22,7 +22,7 @@ pathway d-galactosyl-to-cdp "α-D-galactosyl… to CDP" {
 
   branch from cdp side left {
     cdp
-    <-> ec_2_7_1_216 [2.7.1.216] +2_trans_6_trans_farnesol +ctp +hplus
-    2e_6e_farnesyl_monophosphate
+    <-> . +nad +nadp +hplus
+    ctp
   }
 }

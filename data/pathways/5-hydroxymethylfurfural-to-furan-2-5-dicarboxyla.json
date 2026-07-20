@@ -1,0 +1,314 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla",
+  "name": "5-hydroxymethylfurfural to furan-2,5-dicarboxylate",
+  "category": "redox-detox",
+  "summary": "A 5-step route from 5-hydroxymethylfurfural to furan-2,5-dicarboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43504"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:412516"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_hydroxymethylfurfural",
+      "name": "5-hydroxymethylfurfural",
+      "short": "5-hydroxymethylfurf…",
+      "formula": "C6H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:412516"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_5_diformylfuran",
+      "name": "2,5-diformylfuran",
+      "formula": "C6H4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83385"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_dihydroxymethyl_5_formylfuran",
+      "name": "2-(dihydroxymethyl)-5-formylfuran",
+      "short": "2-(dihydroxymethyl)…",
+      "formula": "C6H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83386"
+      }
+    },
+    {
+      "id": "5_formyl_2_furoate",
+      "name": "5-formyl-2-furoate",
+      "formula": "C6H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83387"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_dihydroxymethyl_2_furoate",
+      "name": "5-(dihydroxymethyl)-2-furoate",
+      "short": "5-(dihydroxymethyl)…",
+      "formula": "C6H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83388"
+      }
+    },
+    {
+      "id": "furan_2_5_dicarboxylate",
+      "name": "furan-2,5-dicarboxylate",
+      "short": "furan-2,5-dicarboxy…",
+      "formula": "C6H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83389"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-hydroxymethylfurfural + O2 = 2,5-diformylfuran + H2O2",
+      "equation": "5-hydroxymethylfurfural + O2 = 2,5-diformylfuran + H2O2",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxymethylfurfural",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_diformylfuran",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43504"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,5-diformylfuran + H2O = 2-(dihydroxymethyl)-5-formylfuran",
+      "equation": "2,5-diformylfuran + H2O = 2-(dihydroxymethyl)-5-formylfuran",
+      "substrates": [
+        {
+          "metabolite": "2_5_diformylfuran",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dihydroxymethyl_5_formylfuran",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43508"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-(dihydroxymethyl)-5-formylfuran + O2 = 2-carboxy-5-formylfuran + H2O2 + H(+)",
+      "equation": "2-(dihydroxymethyl)-5-formylfuran + O2 = 2-carboxy-5-formylfuran + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_dihydroxymethyl_5_formylfuran",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_formyl_2_furoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-carboxy-5-formylfuran + H2O = 2-carboxy-5-(dihydroxymethyl)furan",
+      "equation": "2-carboxy-5-formylfuran + H2O = 2-carboxy-5-(dihydroxymethyl)furan",
+      "substrates": [
+        {
+          "metabolite": "5_formyl_2_furoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dihydroxymethyl_2_furoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-carboxy-5-(dihydroxymethyl)furan + O2 = 2,5-dicarboxyfuran + H2O2 + H(+)",
+      "equation": "2-carboxy-5-(dihydroxymethyl)furan + O2 = 2,5-dicarboxyfuran + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5_dihydroxymethyl_2_furoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "furan_2_5_dicarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:43520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43520"
+          }
+        ]
+      }
+    }
+  ]
+}

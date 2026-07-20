@@ -113,58 +113,53 @@
       }
     },
     {
-      "id": "n_acetyl_alaninate",
-      "name": "N-acetyl-β-alaninate",
-      "formula": "C5H8NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57857"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "β-alanine",
-      "formula": "C3H7NO2",
+      "id": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
+      "name": "2-O-acetyl-1-O-octadecyl-sn-glycero-3-phosphocholine",
+      "short": "2-O-acetyl-1-O-octa…",
+      "formula": "C28H58NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57966"
+        "chebi": "CHEBI:52450"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32551"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "1_o_octadecyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-octadecyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-octadecyl-sn-gl…",
+      "formula": "C26H56NO6P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:75216"
       }
     },
     {
-      "id": "camp",
-      "name": "3',5'-Cyclic AMP (cAMP)",
-      "short": "3',5'-Cyclic AMP…",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "s_2_3_4_5_tetrahydrodipicolinate",
+      "name": "(S)-2,3,4,5-tetrahydrodipicolinate",
+      "short": "2,3,4,5-tetrahydrod…",
+      "formula": "C7H7NO4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58165"
+        "chebi": "CHEBI:16845"
       }
     },
     {
-      "id": "3_5_cyclic_imp",
-      "name": "3',5'-cyclic IMP",
-      "formula": "C10H10N4O7P",
+      "id": "4_methylene_l_glutamine",
+      "name": "4-methylene-L-glutamine",
+      "short": "4-methylene-L-gluta…",
+      "formula": "C6H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57879"
+      }
+    },
+    {
+      "id": "4_methylene_l_glutamate",
+      "name": "4-methylene-L-glutamate",
+      "short": "4-methylene-L-gluta…",
+      "formula": "C6H8NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134197"
+        "chebi": "CHEBI:58733"
       }
     }
   ],
@@ -191,24 +186,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_21",
-      "name": "N-acetyl-beta-alanine deacetylase",
+      "id": "ec_3_5_1_67",
+      "name": "4-methyleneglutaminase",
       "ec": [
-        "3.5.1.21"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_20",
-      "name": "diaminopimelate decarboxylase",
-      "ec": [
-        "4.1.1.20"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_46",
-      "name": "cAMP deaminase",
-      "ec": [
-        "3.5.4.46"
+        "3.5.1.67"
       ]
     }
   ],
@@ -354,12 +335,11 @@
     },
     {
       "id": "r4",
-      "name": "N-acetyl-beta-alanine deacetylase",
-      "equation": "N-acetyl-beta-alanine + H2O = beta-alanine + acetate",
-      "ec": "3.5.1.21",
+      "name": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-sn-glycero-3-p...",
+      "equation": "1-O-octadecyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = 1-O-octadecyl-sn-glycero-3-phosphocholine + acetate + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetyl_alaninate",
+          "metabolite": "2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho",
           "stoichiometry": 1
         },
         {
@@ -369,101 +349,98 @@
       ],
       "products": [
         {
-          "metabolite": "alanine",
+          "metabolite": "1_o_octadecyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
           "metabolite": "acetate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_5_1_21"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:23212"
+        "rhea": "RHEA:41183"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23212"
+            "id": "RHEA:41183"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "diaminopimelate decarboxylase",
-      "equation": "meso-2,6-diaminopimelate + H(+) = L-lysine + CO2",
-      "ec": "4.1.1.20",
+      "name": "meso-2,6-diaminopimelate + NADP(+) = (S)-2,3,4,5-tetrahydrodipicolinate + NH4(+) + NADP...",
+      "equation": "meso-2,6-diaminopimelate + NADP(+) = (S)-2,3,4,5-tetrahydrodipicolinate + NH4(+) + NADPH + 2 H(+)",
       "substrates": [
         {
           "metabolite": "meso_2_6_diaminopimelic_acid_dizwitterion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "s_2_3_4_5_tetrahydrodipicolinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "nh3",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_1_1_20"
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:15101"
+        "rhea": "RHEA:32255"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:15101"
+            "id": "RHEA:32255"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "cAMP deaminase",
-      "equation": "3',5'-cyclic AMP + H2O + H(+) = 3',5'-cyclic IMP + NH4(+)",
-      "ec": "3.5.4.46",
+      "name": "4-methyleneglutaminase",
+      "equation": "4-methylene-L-glutamine + H2O = 4-methylene-L-glutamate + NH4(+)",
+      "ec": "3.5.1.67",
       "substrates": [
         {
-          "metabolite": "camp",
+          "metabolite": "4_methylene_l_glutamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_cyclic_imp",
+          "metabolite": "4_methylene_l_glutamate",
           "stoichiometry": 1
         },
         {
@@ -473,20 +450,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_46"
+          "enzyme": "ec_3_5_1_67"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:22908"
+        "rhea": "RHEA:14741"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22908"
+            "id": "RHEA:14741"
           }
         ]
       }

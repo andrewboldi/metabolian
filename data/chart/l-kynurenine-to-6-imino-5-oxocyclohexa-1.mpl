@@ -30,7 +30,7 @@ pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxoc
 
   branch from alanine side left {
     alanine
-    <-> ec_6_2_1_67 [6.2.1.67] +holo-acp +atp +amp +ppi
-    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
+    <-> ec_2_6_1_99 [2.6.1.99] +l_tryptophan +pyruvate
+    3_indol_3_yl_pyruvate
   }
 }

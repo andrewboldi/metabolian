@@ -34,7 +34,7 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_69 [2.1.1.69] +bergaptol +sam
-    5_methoxypsoralen
+    <-> ec_2_1_1_153 [2.1.1.153] +vitexin_2_o_l_rhamnoside +sam +hplus
+    7_o_methylvitexin_2_o_l_rhamnoside
   }
 }

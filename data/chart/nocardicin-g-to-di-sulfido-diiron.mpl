@@ -18,8 +18,8 @@ pathway nocardicin-g-to-di-sulfido-diiron "nocardicin G to di-μ-sulfido-diiron"
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_4_4_1_14 [4.4.1.14] +sam +hplus
-    1_aminocyclopropanecarboxylic_acid
+    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
+    discadenine
   }
 
   branch from nocardicin_a side right {
@@ -30,7 +30,7 @@ pathway nocardicin-g-to-di-sulfido-diiron "nocardicin G to di-μ-sulfido-diiron"
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_9 [1.14.15.9] +spheroidene +di_sulfido_diiron +o2 +hplus +h2o
-    spheroiden_2_one
+    <-> . +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_ol
   }
 }

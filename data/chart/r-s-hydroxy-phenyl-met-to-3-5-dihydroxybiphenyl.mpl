@@ -18,8 +18,8 @@ pathway r-s-hydroxy-phenyl-met-to-3-5-dihydroxybiphenyl "(R,S)-[hydroxy(phenyl)m
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> ec_2_3_1_334 [2.3.1.334] +ecgoninium_methyl_ester +coa
-    cocaine
+    <-> . +butan_1_ol +coa
+    butyl_benzoate
   }
 
   branch from succinyl_coa side right {

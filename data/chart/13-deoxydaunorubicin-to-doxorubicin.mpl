@@ -15,10 +15,4 @@ pathway 13-deoxydaunorubicin-to-doxorubicin "13-deoxydaunorubicin to doxorubicin
     <-> ec_1_14_13_181 [1.14.13.181] +nadph +o2 +hplus -nadp -h2o
     doxorubicin
   }
-
-  branch from daunorubicin side left {
-    daunorubicin
-    <-> ec_2_1_1_292 [2.1.1.292] +carminomycin +sam +hplus
-    sah
-  }
 }

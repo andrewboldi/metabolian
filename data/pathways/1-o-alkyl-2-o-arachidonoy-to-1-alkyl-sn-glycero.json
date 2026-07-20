@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero",
   "name": "1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos…",
-  "category": "nucleotide-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 1-O-alkyl-2-O-arachidonoyl-sn-glycero-3-phosphocholine to 1-alkyl-sn-glycero-3-phosphocholine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -107,59 +107,53 @@
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
+      "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-1-alkyl-sn-g…",
+      "formula": "C9H18NO7PR2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:36702"
       }
     },
     {
-      "id": "acetate",
-      "name": "Acetate",
-      "formula": "C2H3O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30089"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "1_alkyl_2_acetyl_sn_glycerol",
-      "name": "1-alkyl-2-acetyl-sn-glycerol",
-      "short": "1-alkyl-2-acetyl-sn…",
-      "formula": "C5H9O4R",
+      "id": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1-(Z)-alk-1-enyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(Z)-alk-1-enyl-sn…",
+      "formula": "C7H15NO6PR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16291"
+        "chebi": "CHEBI:77288"
       }
     },
     {
-      "id": "cdp_choline",
-      "name": "CDP-choline",
-      "formula": "C14H25N4O11P2",
-      "charge": -1,
+      "id": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
+      "name": "1-(Z)-alk-1-enyl-2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-(Z)-alk-1-enyl-2-…",
+      "formula": "C8H14NO7PR2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58779"
+        "chebi": "CHEBI:77290"
       }
     },
     {
-      "id": "cytidine_5_monophosphate",
-      "name": "cytidine 5'-monophosphate",
-      "short": "cytidine 5'-MP",
-      "formula": "C9H12N3O8P",
-      "charge": -2,
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60377"
+        "chebi": "CHEBI:72998"
+      }
+    },
+    {
+      "id": "1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine",
+      "name": "1-palmitoyl-2-acetyl-sn-glycero-3-phosphocholine",
+      "short": "1-palmitoyl-2-acety…",
+      "formula": "C26H52NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75219"
       }
     }
   ],
@@ -183,20 +177,6 @@
       "name": "platelet-activating factor acetyltransferase",
       "ec": [
         "2.3.1.149"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_47",
-      "name": "1-alkyl-2-acetylglycerophosphocholine esterase",
-      "ec": [
-        "3.1.1.47"
-      ]
-    },
-    {
-      "id": "ec_2_7_8_2",
-      "name": "diacylglycerol cholinephosphotransferase",
-      "ec": [
-        "2.7.8.2"
       ]
     }
   ],
@@ -338,98 +318,78 @@
     },
     {
       "id": "r4",
-      "name": "1-alkyl-2-acetylglycerophosphocholine esterase",
-      "equation": "a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphocholine + acetate + H(+)",
-      "ec": "3.1.1.47",
+      "name": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + a 1-O-(1Z-alkenyl)-sn-glycero-3-phosph...",
+      "equation": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + a 1-O-(1Z-alkenyl)-sn-glycero-3-phosphoethanolamine = a 1-O-(1Z-alkenyl)-2-acyl-sn-glycero-3-phosphoethanolamine + a 1-O-alkyl-sn-glycero-3-phosphocholine",
       "substrates": [
         {
-          "metabolite": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "metabolite": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_47"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:17777"
+        "rhea": "RHEA:44684"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17777"
+            "id": "RHEA:44684"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "diacylglycerol cholinephosphotransferase",
-      "equation": "a 1-O-alkyl-2-acetyl-sn-glycerol + CDP-choline = a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + CMP + H(+)",
-      "ec": "2.7.8.2",
+      "name": "a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + 1-hexadecanoyl-sn-glycero-3-phosphoc...",
+      "equation": "a 1-O-alkyl-2-acetyl-sn-glycero-3-phosphocholine + 1-hexadecanoyl-sn-glycero-3-phosphocholine = 1-hexadecanoyl-2-acetyl-sn-glycero-3-phosphocholine + a 1-O-alkyl-sn-glycero-3-phosphocholine",
       "substrates": [
-        {
-          "metabolite": "1_alkyl_2_acetyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cdp_choline",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "2_acetyl_1_alkyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cytidine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_7_8_2"
+          "metabolite": "1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36183"
+        "rhea": "RHEA:53636"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36183"
+            "id": "RHEA:53636"
           }
         ]
       }

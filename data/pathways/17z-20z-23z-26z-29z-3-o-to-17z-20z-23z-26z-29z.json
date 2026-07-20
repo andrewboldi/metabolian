@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "17z-20z-23z-26z-29z-3-o-to-17z-20z-23z-26z-29z",
+  "name": "(17Z,20Z,23Z,26Z,29Z)-3-o… to (17Z,20Z,23Z,26Z,29Z)-dot…",
+  "category": "other",
+  "summary": "A 3-step route from (17Z,20Z,23Z,26Z,29Z)-3-oxodotriacontapentaenoyl-CoA(4−) to (17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39519"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74254"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "17z_20z_23z_26z_29z_3_oxodotriacontapentaenoyl",
+      "name": "(17Z,20Z,23Z,26Z,29Z)-3-oxodotriacontapentaenoyl-CoA",
+      "short": "(17Z,20Z,23Z,26Z,29…",
+      "formula": "C53H82N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74254"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3r_17z_20z_23z_26z_29z_3_hydroxydotriacontapent",
+      "name": "(3R,17Z,20Z,23Z,26Z,29Z)-3-hydroxydotriacontapentaenoyl-CoA",
+      "short": "(3R,17Z,20Z,23Z,26Z…",
+      "formula": "C53H84N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76473"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2e_17z_20z_23z_26z_29z_dotriacontahexaenoyl_coa",
+      "name": "(2E,17Z,20Z,23Z,26Z,29Z)-dotriacontahexaenoyl-CoA",
+      "short": "(2E,17Z,20Z,23Z,26Z…",
+      "formula": "C53H82N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76474"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "17z_20z_23z_26z_29z_dotriacontapentaenoyl_coa",
+      "name": "(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA",
+      "short": "(17Z,20Z,23Z,26Z,29…",
+      "formula": "C53H84N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74259"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-oxo-(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(17...",
+      "equation": "3-oxo-(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "17z_20z_23z_26z_29z_3_oxodotriacontapentaenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_17z_20z_23z_26z_29z_3_hydroxydotriacontapent",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-hydroxy-(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA = (2E,17Z,20Z,23Z,26Z,29Z)...",
+      "equation": "(3R)-hydroxy-(17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA = (2E,17Z,20Z,23Z,26Z,29Z)-dotriacontahexaenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3r_17z_20z_23z_26z_29z_3_hydroxydotriacontapent",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_17z_20z_23z_26z_29z_dotriacontahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E,17Z,20Z,23Z,26Z,29Z)-dotriacontahexaenoyl-CoA + NADPH + H(+) = (17Z,20Z,23Z,26Z,29Z...",
+      "equation": "(2E,17Z,20Z,23Z,26Z,29Z)-dotriacontahexaenoyl-CoA + NADPH + H(+) = (17Z,20Z,23Z,26Z,29Z)-dotriacontapentaenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_17z_20z_23z_26z_29z_dotriacontahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17z_20z_23z_26z_29z_dotriacontapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39527"
+          }
+        ]
+      }
+    }
+  ]
+}

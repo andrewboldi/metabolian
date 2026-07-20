@@ -18,7 +18,7 @@ pathway 4-aminobenzoate-to-l-glutamate "4-aminobenzoate to L-glutamate" {
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
-    ctp
+    <-> ec_6_3_4_24 [6.3.4.24] +tyraminium +atp +adp +pi +hplus
+    glutamyltyramine
   }
 }

@@ -138,68 +138,60 @@
       }
     },
     {
-      "id": "5_hydroxyxanthotoxin",
-      "name": "5-hydroxyxanthotoxin",
-      "formula": "C12H7O5",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78326"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "isopimpinellin",
-      "name": "isopimpinellin",
-      "formula": "C13H10O5",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    },
+    {
+      "id": "isoproturon",
+      "name": "isoproturon",
+      "formula": "C12H18N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28853"
+        "chebi": "CHEBI:6049"
       }
     },
     {
-      "id": "n6_methyladenosine_5_monophosphate_1",
-      "name": "N6-methyladenosine 5'-monophosphate(1−)",
-      "short": "N6-methyladenosine…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74449"
+        "chebi": "CHEBI:33738"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74411"
-      }
-    },
-    {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "isoproturon_monodemethyl",
+      "name": "isoproturon-monodemethyl",
+      "short": "isoproturon-monodem…",
+      "formula": "C11H16N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:83468"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
       }
     }
   ],
@@ -226,17 +218,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_69",
-      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
+      "id": "ec_2_1_1_310",
+      "name": "25S rRNA (cytosine(2870)-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.69"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_53",
-      "name": "mRNA N(6)-methyladenine demethylase",
-      "ec": [
-        "1.14.11.53"
+        "2.1.1.310"
       ]
     }
   ],
@@ -398,12 +383,12 @@
     },
     {
       "id": "r4",
-      "name": "5-hydroxyfuranocoumarin 5-O-methyltransferase",
-      "equation": "5-hydroxyxanthotoxin + S-adenosyl-L-methionine = isopimpinellin + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.69",
+      "name": "25S rRNA (cytosine(2870)-C(5))-methyltransferase",
+      "equation": "cytidine(2870) in 25S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(2870) in 25S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.310",
       "substrates": [
         {
-          "metabolite": "5_hydroxyxanthotoxin",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -413,56 +398,63 @@
       ],
       "products": [
         {
-          "metabolite": "isopimpinellin",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_69"
+          "enzyme": "ec_2_1_1_310"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:24894"
+        "rhea": "RHEA:43176"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24894"
+            "id": "RHEA:43176"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "mRNA N(6)-methyladenine demethylase",
-      "equation": "an N(6)-methyladenosine in mRNA + 2-oxoglutarate + O2 = an adenosine in mRNA + formaldehyde + succinate + CO2",
-      "ec": "1.14.11.53",
+      "name": "isoproturon + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 1-methyl-3-[4-(propan-2-y...",
+      "equation": "isoproturon + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 1-methyl-3-[4-(propan-2-yl)phenyl]urea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "n6_methyladenosine_5_monophosphate_1",
+          "metabolite": "isoproturon",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "isoproturon_monodemethyl",
           "stoichiometry": 1
         },
         {
@@ -470,30 +462,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "co2",
+          "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_53"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49520"
+        "rhea": "RHEA:65772"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49520"
+            "id": "RHEA:65772"
           }
         ]
       }

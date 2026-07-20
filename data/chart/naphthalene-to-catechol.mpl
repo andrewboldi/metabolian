@@ -32,21 +32,21 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
     1_hydroxy_2_naphthoate
   }
 
-  branch from salicylate side right {
+  branch from salicylaldehyde side right {
+    salicylaldehyde
+    <-> . +salicylate +atp +nadph +hplus +amp +nadp
+    ppi
+  }
+
+  branch from salicylate side left {
     salicylate
-    <-> ec_2_1_1_274 [2.1.1.274] +sam +sah
-    methyl_salicylate
+    <-> . +udp_d_glucose +udp
+    d_glucosyl_salicylate
   }
 
-  branch from phenol side left {
+  branch from phenol side right {
     phenol
-    <-> ec_2_7_1_238 [2.7.1.238] +atp +h2o +amp +pi +hplus
-    phenyl_phosphate
-  }
-
-  branch from catechol side right {
-    catechol
-    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
-    1s_2s_cyclohexa_3_5_diene_1_2_diol
+    <-> . +nadh +o2 +hplus +nad +h2o
+    quinol
   }
 }

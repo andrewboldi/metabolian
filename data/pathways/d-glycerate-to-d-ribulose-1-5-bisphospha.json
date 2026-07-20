@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glycerate-to-d-ribulose-1-5-bisphospha",
+  "name": "D-glycerate to D-ribulose 1,5-bisphospha…",
+  "category": "other",
+  "summary": "A 3-step route from D-glycerate to D-ribulose 1,5-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27377"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16659"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glycerate",
+      "name": "D-glycerate",
+      "formula": "C3H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16659"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "pg2",
+      "name": "2-Phospho-D-glycerate",
+      "short": "2-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58289"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58272"
+      }
+    },
+    {
+      "id": "d_ribulose_1_5_bisphosphate",
+      "name": "D-ribulose 1,5-bisphosphate",
+      "short": "D-ribulose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57870"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_165",
+      "name": "glycerate 2-kinase",
+      "ec": [
+        "2.7.1.165"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_11",
+      "name": "phosphoglycerate mutase (2,3-diphosphoglycerate-dependent)",
+      "ec": [
+        "5.4.2.11"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_12",
+      "name": "phosphoglycerate mutase (2,3-diphosphoglycerate-independent)",
+      "ec": [
+        "5.4.2.12"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_39",
+      "name": "ribulose-bisphosphate carboxylase",
+      "ec": [
+        "4.1.1.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glycerate 2-kinase",
+      "equation": "(R)-glycerate + ATP = (2R)-2-phosphoglycerate + ADP + H(+)",
+      "ec": "2.7.1.165",
+      "substrates": [
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_165"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27377"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27377"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglycerate mutase (2,3-diphosphoglycerate-dependent)",
+      "equation": "(2R)-2-phosphoglycerate = (2R)-3-phosphoglycerate",
+      "ec": "5.4.2.11",
+      "substrates": [
+        {
+          "metabolite": "pg2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ribulose-bisphosphate carboxylase",
+      "equation": "2 (2R)-3-phosphoglycerate + 2 H(+) = D-ribulose 1,5-bisphosphate + CO2 + H2O",
+      "ec": "4.1.1.39",
+      "substrates": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23124"
+          }
+        ]
+      }
+    }
+  ]
+}

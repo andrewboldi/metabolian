@@ -130,40 +130,41 @@
       }
     },
     {
-      "id": "menaquinone_4",
-      "name": "menaquinone-4",
-      "formula": "C31H40O2",
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78277"
+        "chebi": "CHEBI:16469"
       }
     },
     {
-      "id": "hydroxymenaquinone_4",
-      "name": "ω-hydroxymenaquinone-4",
-      "short": "ω-hydroxymenaquinon…",
-      "formula": "C31H40O3",
+      "id": "7_hydroxyestradiol",
+      "name": "7α-hydroxyestradiol",
+      "formula": "C18H24O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78278"
+        "chebi": "CHEBI:87598"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
+      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene",
+      "short": "20-methyl-21,22-did…",
+      "formula": "C31H52",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:70864"
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:70865"
       }
     }
   ],
@@ -194,20 +195,6 @@
       "name": "protopine 6-monooxygenase",
       "ec": [
         "1.14.14.98"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_78",
-      "name": "phylloquinone omega-hydroxylase",
-      "ec": [
-        "1.14.14.78"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_59",
-      "name": "[cytochrome c]-lysine N-methyltransferase",
-      "ec": [
-        "2.1.1.59"
       ]
     }
   ],
@@ -430,12 +417,11 @@
     },
     {
       "id": "r5",
-      "name": "phylloquinone omega-hydroxylase",
-      "equation": "menaquinone-4 + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxymenaquinone-4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.78",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxy-17beta-...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "menaquinone_4",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
@@ -449,7 +435,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxymenaquinone_4",
+          "metabolite": "7_hydroxyestradiol",
           "stoichiometry": 1
         },
         {
@@ -465,34 +451,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_78"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41520"
+        "rhea": "RHEA:47288"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41520"
+            "id": "RHEA:47288"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "[cytochrome c]-lysine N-methyltransferase",
-      "equation": "L-lysyl-[cytochrome c] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[cytochrome c] + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.59",
+      "name": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-d...",
+      "equation": "20-methyl-21,22-didehydro-20,21-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "20_methyl_21_22_didehydro_20_21_dihydrobotryococ",
           "stoichiometry": 1
         },
         {
@@ -502,7 +482,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
           "stoichiometry": 1
         },
         {
@@ -514,22 +494,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_59"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:24312"
+        "rhea": "RHEA:34663"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24312"
+            "id": "RHEA:34663"
           }
         ]
       }

@@ -20,7 +20,7 @@ pathway geranyl-diphosphate-to-6-exo-hydroxycamphor "geranyl diphosphate to (+)-
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
-    all_trans_heptaprenyl_diphosphate
+    <-> ec_4_2_3_101 [4.2.3.101] +fpp
+    7_epi_sesquithujene
   }
 }

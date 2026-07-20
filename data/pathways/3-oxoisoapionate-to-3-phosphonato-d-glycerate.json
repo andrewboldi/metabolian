@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-oxoisoapionate-to-3-phosphonato-d-glycerate",
   "name": "3-oxoisoapionate… to 3-phosphonato-D-glycerate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 3-oxoisoapionate 4-phosphate(3−) to 3-phosphonato-D-glycerate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -94,51 +94,42 @@
       }
     },
     {
-      "id": "d_glucose_6_phosphate",
-      "name": "α-D-glucose 6-phosphate",
-      "short": "α-D-glucose 6-P",
-      "formula": "C6H11O9P",
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58225"
+        "chebi": "CHEBI:57259"
       }
     },
     {
-      "id": "d_glucose_1_6_bisphosphate",
-      "name": "α-D-glucose 1,6-bisphosphate",
-      "short": "α-D-glucose…",
-      "formula": "C6H10O12P2",
+      "id": "2_deoxy_d_ribose_1_5_bisphosphate",
+      "name": "2-deoxy-α-D-ribose 1,5-bisphosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H8O10P2",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58392"
+        "chebi": "CHEBI:190126"
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "n2_1_hydroxy_2_oxoethyl_dgtp",
+      "name": "N2-(1-hydroxy-2-oxoethyl)-dGTP",
+      "short": "N2-(1-hydroxy-2-oxo…",
+      "formula": "C12H14N5O15P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
+        "chebi": "CHEBI:141572"
       }
     },
     {
-      "id": "3_r_glyceryl_diphospho_5_guanosine",
-      "name": "3-[(R)-glyceryl]-diphospho-5'-guanosine",
-      "short": "3-[(R)-glyceryl]-di…",
-      "formula": "C13H16N5O14P2",
-      "charge": -3,
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:147306"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:61429"
       }
     }
   ],
@@ -155,20 +146,6 @@
       "name": "phosphoglycerate kinase",
       "ec": [
         "2.7.2.3"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_106",
-      "name": "glucose-1,6-bisphosphate synthase",
-      "ec": [
-        "2.7.1.106"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_106",
-      "name": "3-phospho-D-glycerate guanylyltransferase",
-      "ec": [
-        "2.7.7.106"
       ]
     }
   ],
@@ -269,12 +246,11 @@
     },
     {
       "id": "r3",
-      "name": "glucose-1,6-bisphosphate synthase",
-      "equation": "alpha-D-glucose 6-phosphate + (2R)-3-phospho-glyceroyl phosphate = alpha-D-glucose 1,6-bisphosphate + (2R)-3-phosphoglycerate + H(+)",
-      "ec": "2.7.1.106",
+      "name": "2-deoxy-alpha-D-ribose 1-phosphate + (2R)-3-phospho-glyceroyl phosphate = 2-deoxy-alpha...",
+      "equation": "2-deoxy-alpha-D-ribose 1-phosphate + (2R)-3-phospho-glyceroyl phosphate = 2-deoxy-alpha-D-ribose 1,5-bisphosphate + (2R)-3-phosphoglycerate + H(+)",
       "substrates": [
         {
-          "metabolite": "d_glucose_6_phosphate",
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -284,7 +260,7 @@
       ],
       "products": [
         {
-          "metabolite": "d_glucose_1_6_bisphosphate",
+          "metabolite": "2_deoxy_d_ribose_1_5_bisphosphate",
           "stoichiometry": 1
         },
         {
@@ -296,38 +272,42 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_106"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:70911"
+        "rhea": "RHEA:70903"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70911"
+            "id": "RHEA:70903"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "3-phospho-D-glycerate guanylyltransferase",
-      "equation": "(2R)-3-phosphoglycerate + GTP + H(+) = 3-[(R)-glyceryl]-diphospho-5'-guanosine + diphosphate",
-      "ec": "2.7.7.106",
+      "name": "N(2)-(1-hydroxy-2-oxoethyl)-dGTP + H2O = dGTP + glycolate + H(+)",
+      "equation": "N(2)-(1-hydroxy-2-oxoethyl)-dGTP + H2O = dGTP + glycolate + H(+)",
       "substrates": [
         {
-          "metabolite": "pg3",
+          "metabolite": "n2_1_hydroxy_2_oxoethyl_dgtp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
           "stoichiometry": 1
         },
         {
@@ -335,32 +315,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "3_r_glyceryl_diphospho_5_guanosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_106"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:63440"
+        "rhea": "RHEA:57248"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63440"
+            "id": "RHEA:57248"
           }
         ]
       }

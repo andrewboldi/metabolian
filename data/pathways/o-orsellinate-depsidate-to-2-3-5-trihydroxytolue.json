@@ -109,6 +109,33 @@
       "xrefs": {
         "chebi": "CHEBI:57540"
       }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
     }
   ],
   "enzymes": [
@@ -278,6 +305,53 @@
           {
             "db": "Rhea",
             "id": "RHEA:19601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3 malonyl-CoA + acetyl-CoA + 2 H(+) = orsellinate + 3 CO2 + 4 CoA",
+      "equation": "3 malonyl-CoA + acetyl-CoA + 2 H(+) = orsellinate + 3 CO2 + 4 CoA",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_orsellinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62972"
           }
         ]
       }

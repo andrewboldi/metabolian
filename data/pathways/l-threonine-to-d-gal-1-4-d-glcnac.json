@@ -1,0 +1,337 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-threonine-to-d-gal-1-4-d-glcnac",
+  "name": "L-threonine to β-D-Gal-(1→4)-β-D-GlcNAc-…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-threonine residue to β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-α-L-Fuc-L-Thr residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:70491"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30013"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30013"
+      }
+    },
+    {
+      "id": "gdp_l_fucose",
+      "name": "GDP-β-L-fucose",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57273"
+      }
+    },
+    {
+      "id": "l_fucosyl_l_threonyl",
+      "name": "α-L-fucosyl-L-threonyl",
+      "short": "α-L-fucosyl-L-threo…",
+      "formula": "C10H17NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189631"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosaminyl_1_3_l_fucosyl_l_threonyl",
+      "name": "N-acetyl-β-D-glucosaminyl-(1→3)-α-L-fucosyl-L-threonyl",
+      "short": "N-acetyl-β-D-glucos…",
+      "formula": "C18H30N2O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189634"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "d_gal_1_4_d_glcnac_1_3_l_fuc_l_thr",
+      "name": "β-D-Gal-(1→4)-β-D-GlcNAc-(1→3)-α-L-Fuc-L-Thr",
+      "short": "β-D-Gal-(1→4)-β-D-G…",
+      "formula": "C24H40N2O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189638"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "d_glucosyl_1_3_l_fucosyl_l_threonyl",
+      "name": "β-D-glucosyl-(1→3)-α-L-fucosyl-L-threonyl",
+      "short": "β-D-glucosyl-(1→3)-…",
+      "formula": "C16H27NO11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189636"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_221",
+      "name": "peptide-O-fucosyltransferase",
+      "ec": [
+        "2.4.1.221"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_222",
+      "name": "O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase",
+      "ec": [
+        "2.4.1.222"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "peptide-O-fucosyltransferase",
+      "equation": "L-threonyl-[protein] + GDP-beta-L-fucose = 3-O-(alpha-L-fucosyl)-L-threonyl-[protein] + GDP + H(+)",
+      "ec": "2.4.1.221",
+      "substrates": [
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_l_fucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_221"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:70491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase",
+      "equation": "3-O-(alpha-L-fucosyl)-L-threonyl-[EGF-like domain protein] + UDP-N-acetyl-alpha-D-glucosamine = 3-O-(N-acetyl-beta-D-glucosaminyl-(1->3)-alpha-L-fucosyl)-L-threonyl-[EGF-like domain protein] + UDP + H(+)",
+      "ec": "2.4.1.222",
+      "substrates": [
+        {
+          "metabolite": "l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosaminyl_1_3_l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_222"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-O-(N-acetyl-beta-D-glucosaminyl-(1->3)-alpha-L-fucosyl)-L-threonyl-[EGF-like domain p...",
+      "equation": "3-O-(N-acetyl-beta-D-glucosaminyl-(1->3)-alpha-L-fucosyl)-L-threonyl-[EGF-like domain protein] + UDP-alpha-D-galactose = 3-O-(beta-D-Gal-(1->4)-beta-D-GlcNAc-(1->3)-alpha-L-Fuc)-L-threonyl-[EGF-like domain protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosaminyl_1_3_l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gal_1_4_d_glcnac_1_3_l_fuc_l_thr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70551"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-O-(alpha-L-fucosyl)-L-threonyl-[protein] + UDP-alpha-D-glucose = 3-O-(beta-D-glucosyl...",
+      "equation": "3-O-(alpha-L-fucosyl)-L-threonyl-[protein] + UDP-alpha-D-glucose = 3-O-(beta-D-glucosyl-(1->3)-alpha-L-fucosyl)-L-threonyl-[protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosyl_1_3_l_fucosyl_l_threonyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:70547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70547"
+          }
+        ]
+      }
+    }
+  ]
+}

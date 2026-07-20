@@ -1,0 +1,356 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "carotene-to-canthaxanthin",
+  "name": "β-carotene to canthaxanthin",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from β-carotene to canthaxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55660"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17579"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carotene",
+      "name": "β-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17579"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "echinenone",
+      "name": "echinenone",
+      "formula": "C40H54O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4746"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_hydroxyechinenone",
+      "name": "4'-hydroxyechinenone",
+      "formula": "C40H54O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140610"
+      }
+    },
+    {
+      "id": "4_4_dihydroxyechinenone",
+      "name": "4',4'-dihydroxyechinenone",
+      "short": "4',4'-dihydroxyechi…",
+      "formula": "C40H54O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140676"
+      }
+    },
+    {
+      "id": "canthaxanthin",
+      "name": "canthaxanthin",
+      "formula": "C40H52O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3362"
+      }
+    },
+    {
+      "id": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
+      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one",
+      "short": "9,10-dihydroxy-7-me…",
+      "formula": "C17H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146010"
+      }
+    },
+    {
+      "id": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
+      "name": "(3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one",
+      "short": "9,10-dihydroxy-7-me…",
+      "formula": "C17H16O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146011"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_63",
+      "name": "beta-carotene 4-ketolase",
+      "ec": [
+        "1.14.99.63"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-carotene 4-ketolase",
+      "equation": "all-trans-beta-carotene + 2 AH2 + 2 O2 = echinenone + 2 A + 3 H2O",
+      "ec": "1.14.99.63",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "echinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "echinenone + AH2 + O2 = 4'-hydroxyechinenone + A + H2O",
+      "equation": "echinenone + AH2 + O2 = 4'-hydroxyechinenone + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "echinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyechinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4'-hydroxyechinenone + AH2 + O2 = 4',4'-dihydroxyechinenone + A + H2O",
+      "equation": "4'-hydroxyechinenone + AH2 + O2 = 4',4'-dihydroxyechinenone + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyechinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_dihydroxyechinenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4',4'-dihydroxyechinenone = canthaxanthin + H2O",
+      "equation": "4',4'-dihydroxyechinenone = canthaxanthin + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_4_dihydroxyechinenone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "canthaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-...",
+      "equation": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one + A",
+      "substrates": [
+        {
+          "metabolite": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62880"
+          }
+        ]
+      }
+    }
+  ]
+}

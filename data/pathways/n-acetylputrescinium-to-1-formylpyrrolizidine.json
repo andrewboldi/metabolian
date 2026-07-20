@@ -1,0 +1,408 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylputrescinium-to-1-formylpyrrolizidine",
+  "name": "N-acetylputrescinium to 1-formylpyrrolizidine",
+  "category": "redox-detox",
+  "summary": "A 5-step route from N-acetylputrescinium to 1-formylpyrrolizidine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23412"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58263"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58263"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "sym_homospermidinium",
+      "name": "sym-homospermidinium",
+      "formula": "C8H24N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57811"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_4_ammoniobutylpyrrolinium_ion",
+      "name": "N-(4-ammoniobutylpyrrolinium) ion",
+      "short": "N-(4-ammoniobutylpy…",
+      "formula": "C8H18N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:228188"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "n_4_oxobutylpyrrolinium_ion",
+      "name": "N-(4-oxobutylpyrrolinium) ion",
+      "short": "N-(4-oxobutylpyrrol…",
+      "formula": "C8H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:228189"
+      }
+    },
+    {
+      "id": "1_formylpyrrolizidine",
+      "name": "1-formylpyrrolizidine",
+      "short": "1-formylpyrrolizidi…",
+      "formula": "C8H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:228186"
+      }
+    },
+    {
+      "id": "8z_11z_14z_icosatrienamide",
+      "name": "(8Z,11Z,14Z)-icosatrienamide",
+      "short": "(8Z,11Z,14Z)-icosat…",
+      "formula": "C20H35NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146163"
+      }
+    },
+    {
+      "id": "all_cis_icosa_8_11_14_trienoate",
+      "name": "all-cis-icosa-8,11,14-trienoate",
+      "short": "all-cis-icosa-8,11,…",
+      "formula": "C20H33O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71589"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_62",
+      "name": "acetylputrescine deacetylase",
+      "ec": [
+        "3.5.1.62"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_44",
+      "name": "homospermidine synthase",
+      "ec": [
+        "2.5.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetylputrescine deacetylase",
+      "equation": "N-acetylputrescine + H2O = putrescine + acetate",
+      "ec": "3.5.1.62",
+      "substrates": [
+        {
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "homospermidine synthase",
+      "equation": "2 putrescine = sym-homospermidine + NH4(+)",
+      "ec": "2.5.1.44",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18645"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18645"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sym-homospermidine + O2 = N-(4-aminobutylpyrrolinium) ion + H2O2 + NH4(+)",
+      "equation": "sym-homospermidine + O2 = N-(4-aminobutylpyrrolinium) ion + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "sym_homospermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_4_ammoniobutylpyrrolinium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-(4-aminobutylpyrrolinium) ion + O2 + H2O = N-(4-oxobutylpyrrolinium) ion + H2O2 + NH4(+)",
+      "equation": "N-(4-aminobutylpyrrolinium) ion + O2 + H2O = N-(4-oxobutylpyrrolinium) ion + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "n_4_ammoniobutylpyrrolinium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_4_oxobutylpyrrolinium_ion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-(4-oxobutylpyrrolinium) ion = 1-formylpyrrolizidine",
+      "equation": "N-(4-oxobutylpyrrolinium) ion = 1-formylpyrrolizidine",
+      "substrates": [
+        {
+          "metabolite": "n_4_oxobutylpyrrolinium_ion",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_formylpyrrolizidine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:77931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(8Z,11Z,14Z)-eicosatrienamide + H2O = (8Z,11Z,14Z)-eicosatrienoate + NH4(+)",
+      "equation": "(8Z,11Z,14Z)-eicosatrienamide + H2O = (8Z,11Z,14Z)-eicosatrienoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "8z_11z_14z_icosatrienamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_cis_icosa_8_11_14_trienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:62996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62996"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -16,15 +16,9 @@ pathway isopentenyl-diphosphate-to-d-mannosyl-ditrans-po "isopentenyl diphosphat
     d_mannosyl_ditrans_polycis_undecaprenyl_phosphat
   }
 
-  branch from ditrans_polycis_undecaprenyl_diphosphate side left {
-    ditrans_polycis_undecaprenyl_diphosphate
-    <-> ec_2_7_4_29 [2.7.4.29] +an_kdo_2_4_kdo_2_6_lipid_a +ditrans_polycis_undecaprenyl_phosphate
-    an_d_kdo_2_4_d_kdo_2_6_lipid_a_1_diphosphate
-  }
-
-  branch from ppi side right {
+  branch from ppi side left {
     ppi
-    <-> ec_2_5_1_96 [2.5.1.96] +fpp
-    15_cis_4_4_diapophytoene
+    <-> . +15_hydroxypentadecanoate +atp +coa +amp
+    15_hydroxypentadecanoyl_coa
   }
 }

@@ -16,9 +16,15 @@ pathway 7-chloro-l-tryptophan-to-dichloroarcyriaflavin-a "7-chloro-L-tryptophan 
     dichloroarcyriaflavin_a
   }
 
-  branch from nh3 side left {
+  branch from 2_iminio_3_7_chloroindol_3_yl_propionate side left {
+    2_iminio_3_7_chloroindol_3_yl_propionate
+    <-> . +h2o2 +h2o
+    3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio
+  }
+
+  branch from nh3 side right {
     nh3
-    <-> ec_1_7_2_7 [1.7.2.7] +hydrazine +iron +h2o +fe2 +hplus
-    no
+    <-> ec_4_2_1_168 [4.2.1.168] +gdp_4_dehydro_6_deoxy_d_mannose +glutamate +akg
+    gdp_4_dehydro_3_6_dideoxy_d_mannose
   }
 }

@@ -162,51 +162,22 @@
       }
     },
     {
-      "id": "dtdp_2_deoxy_l_fucose",
-      "name": "dTDP-2-deoxy-β-L-fucose",
-      "short": "dTDP-2-deoxy-β-L-fu…",
-      "formula": "C16H24N2O14P2",
-      "charge": -2,
+      "id": "dtdp_3_azaniumyl_3_6_dideoxy_d_glucose",
+      "name": "dTDP-3-azaniumyl-3,6-dideoxy-α-D-glucose",
+      "short": "dTDP-3-azaniumyl-3,…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78302"
+        "chebi": "CHEBI:63265"
       }
     },
     {
-      "id": "aclacinomycin_t",
-      "name": "aclacinomycin T",
-      "formula": "C30H35NO10",
-      "charge": 0,
+      "id": "dtdp_d_mycaminose",
+      "name": "dTDP-α-D-mycaminose",
+      "formula": "C18H30N3O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77979"
-      }
-    },
-    {
-      "id": "aclacinomycin_s",
-      "name": "aclacinomycin S",
-      "formula": "C36H45NO13",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78303"
-      }
-    },
-    {
-      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-2'-O-methyladenosine(2−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C22H28N10O17P3",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85958"
-      }
-    },
-    {
-      "id": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-N6-methyl-2'-O-methyladenosine(2−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C23H30N10O17P3",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85959"
+        "chebi": "CHEBI:63268"
       }
     }
   ],
@@ -247,17 +218,10 @@
       ]
     },
     {
-      "id": "ec_2_4_1_327",
-      "name": "aclacinomycin-T 2-deoxy-L-fucose transferase",
+      "id": "ec_2_1_1_235",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucopyranose N,N-dimethyltransferase",
       "ec": [
-        "2.4.1.327"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_62",
-      "name": "mRNA (2'-O-methyladenosine-N(6)-)-methyltransferase",
-      "ec": [
-        "2.1.1.62"
+        "2.1.1.235"
       ]
     }
   ],
@@ -517,98 +481,49 @@
     },
     {
       "id": "r6",
-      "name": "aclacinomycin-T 2-deoxy-L-fucose transferase",
-      "equation": "dTDP-2-deoxy-beta-L-fucose + aclacinomycin T = aclacinomycin S + dTDP + H(+)",
-      "ec": "2.4.1.327",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucopyranose N,N-dimethyltransferase",
+      "equation": "dTDP-3-amino-3,6-dideoxy-alpha-D-glucose + 2 S-adenosyl-L-methionine = dTDP-alpha-D-mycaminose + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.235",
       "substrates": [
         {
-          "metabolite": "dtdp_2_deoxy_l_fucose",
+          "metabolite": "dtdp_3_azaniumyl_3_6_dideoxy_d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "aclacinomycin_t",
-          "stoichiometry": 1
+          "metabolite": "sam",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "aclacinomycin_s",
+          "metabolite": "dtdp_d_mycaminose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dtdp",
-          "stoichiometry": 1
+          "metabolite": "sah",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_327"
+          "enzyme": "ec_2_1_1_235"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:41568"
+        "rhea": "RHEA:31671"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41568"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "mRNA (2'-O-methyladenosine-N(6)-)-methyltransferase",
-      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenosine) in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(N(6),2'-O-dimethyladenosine) in mRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.62",
-      "substrates": [
-        {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyladen",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_62"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:22744"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:22744"
+            "id": "RHEA:31671"
           }
         ]
       }

@@ -24,8 +24,8 @@ pathway n2-l-glutamino-1-group-to-c-terminal-l-glutamyl "N2-L-glutamino(1−) gr
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_22 [3.5.4.22] +4_hydroxy_1_pyrroline_2_carboxylate +h2o +hplus
-    2_5_dioxopentanoate
+    <-> ec_3_5_4_23 [3.5.4.23] +blasticidin_s +h2o +hplus
+    deaminohydroxyblasticidin_s
   }
 
   branch from c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha side left {

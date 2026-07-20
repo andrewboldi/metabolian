@@ -157,48 +157,59 @@
       }
     },
     {
-      "id": "xanthotoxol",
-      "name": "xanthotoxol",
-      "formula": "C11H6O4",
-      "charge": 0,
+      "id": "quercetin_7_olate",
+      "name": "quercetin-7-olate",
+      "formula": "C15H9O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15709"
+        "chebi": "CHEBI:57694"
       }
     },
     {
-      "id": "methoxsalen",
-      "name": "methoxsalen",
-      "formula": "C12H8O4",
-      "charge": 0,
+      "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
+      "name": "3',4',5-trihydroxy-3-methoxyflavon-7-olate",
+      "short": "3',4',5-trihydroxy-…",
+      "formula": "C16H11O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:18358"
+        "chebi": "CHEBI:57928"
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
+      "id": "cob_ii_yrinate_c_monoamide",
+      "name": "cob(II)yrinate c monoamide",
+      "short": "cob(II)yrinate c…",
+      "formula": "C45H54CoN5O13",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:57288"
+        "chebi": "CHEBI:70793"
       }
     },
     {
-      "id": "nag",
-      "name": "N-Acetyl-L-glutamate",
-      "formula": "C7H9NO5",
+      "id": "chorismate",
+      "name": "chorismate",
+      "formula": "C10H8O6",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:44337"
+        "chebi": "CHEBI:29748"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
       }
     }
   ],
@@ -232,17 +243,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_70",
-      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "id": "ec_2_1_1_76",
+      "name": "quercetin 3-O-methyltransferase",
       "ec": [
-        "2.1.1.70"
+        "2.1.1.76"
       ]
     },
     {
-      "id": "ec_2_3_1_1",
-      "name": "amino-acid N-acetyltransferase",
+      "id": "ec_4_1_3_27",
+      "name": "anthranilate synthase",
       "ec": [
-        "2.3.1.1"
+        "4.1.3.27"
       ]
     }
   ],
@@ -449,12 +460,12 @@
     },
     {
       "id": "r5",
-      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
-      "equation": "xanthotoxol + S-adenosyl-L-methionine = xanthotoxin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.70",
+      "name": "quercetin 3-O-methyltransferase",
+      "equation": "quercetin + S-adenosyl-L-methionine = 3',4',5,7-tetrahydroxy-3-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.76",
       "substrates": [
         {
-          "metabolite": "xanthotoxol",
+          "metabolite": "quercetin_7_olate",
           "stoichiometry": 1
         },
         {
@@ -464,7 +475,7 @@
       ],
       "products": [
         {
-          "metabolite": "methoxsalen",
+          "metabolite": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
           "stoichiometry": 1
         },
         {
@@ -478,46 +489,109 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_70"
+          "enzyme": "ec_2_1_1_76"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17901"
+        "rhea": "RHEA:17673"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17901"
+            "id": "RHEA:17673"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "amino-acid N-acetyltransferase",
-      "equation": "L-glutamate + acetyl-CoA = N-acetyl-L-glutamate + CoA + H(+)",
-      "ec": "2.3.1.1",
+      "name": "cob(II)yrinate + L-glutamine + ATP + H2O = cob(II)yrinate c monoamide + L-glutamate + A...",
+      "equation": "cob(II)yrinate + L-glutamine + ATP + H2O = cob(II)yrinate c monoamide + L-glutamate + ADP + phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "glutamate",
+          "metabolite": "cob_ii_yrinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nag",
+          "metabolite": "cob_ii_yrinate_c_monoamide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "anthranilate synthase",
+      "equation": "chorismate + L-glutamine = anthranilate + pyruvate + L-glutamate + H(+)",
+      "ec": "4.1.3.27",
+      "substrates": [
+        {
+          "metabolite": "chorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
@@ -527,20 +601,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_1"
+          "enzyme": "ec_4_1_3_27"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:24292"
+        "rhea": "RHEA:21732"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24292"
+            "id": "RHEA:21732"
           }
         ]
       }

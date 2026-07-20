@@ -1,0 +1,326 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "indole-3-carbaldehyde-to-2-formylphenylformamide",
+  "name": "indole-3-carbaldehyde to 2-formylphenylformamide",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from indole-3-carbaldehyde to 2-formylphenylformamide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58996"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28238"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "indole_3_carbaldehyde",
+      "name": "indole-3-carbaldehyde",
+      "short": "indole-3-carbaldehy…",
+      "formula": "C9H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28238"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "indole_3_carboxylate",
+      "name": "indole-3-carboxylate",
+      "formula": "C9H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62448"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "2_formylphenylformamide",
+      "name": "2-formylphenylformamide",
+      "short": "2-formylphenylforma…",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18033"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_92",
+      "name": "indole-3-carboxylate decarboxylase",
+      "ec": [
+        "4.1.1.92"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_17",
+      "name": "indole 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.17"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_122",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "ec": [
+        "4.2.1.122"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "indole-3-carbaldehyde + O2 + H2O = indole-3-carboxylate + H2O2 + H(+)",
+      "equation": "indole-3-carbaldehyde + O2 + H2O = indole-3-carboxylate + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "indole_3_carbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indole_3_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "indole-3-carboxylate decarboxylase",
+      "equation": "indole-3-carboxylate + H(+) = indole + CO2",
+      "ec": "4.1.1.92",
+      "substrates": [
+        {
+          "metabolite": "indole_3_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31015"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "indole 2,3-dioxygenase",
+      "equation": "indole + O2 = 2-formamidobenzaldehyde",
+      "ec": "1.13.11.17",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_formylphenylformamide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tryptophan synthase (indole-salvaging)",
+      "equation": "indole + L-serine = L-tryptophan + H2O",
+      "ec": "4.2.1.122",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_122"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26434"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26434"
+          }
+        ]
+      }
+    }
+  ]
+}

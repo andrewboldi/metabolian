@@ -8,33 +8,29 @@ pathway calciol-to-di-sulfido-diiron "calciol to di-μ-sulfido-diiron" {
 
   spine at 0,0 {
     calciol
-    <-> ec_1_14_14_24 [1.14.14.24] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     calcidiol
+    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    24r_24_25_dihydroxycalciol
     <-> ec_1_14_15_18 [1.14.15.18] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    calcitriol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     calcitetrol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    1s_1_25_dihydroxy_24_oxocalciol
-    <-> ec_1_14_15_16 [1.14.15.16] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    1s_1_23_25_trihydroxy_24_oxocalciol
   }
 
   branch from calcidiol side left {
     calcidiol
-    <-> ec_1_17_99_10 [1.17.99.10] +calciol +hydrogen_acceptor +h2o
-    hydrogen_donor
+    <-> ec_1_14_15_22 [1.14.15.22] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    calcitriol
   }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_99_46 [1.14.99.46] +thymine +fmnh2 +nadh +o2 +nad +h2o +hplus
-    z_2_methylureidoacrylate
-  }
-
-  branch from di_sulfido_diiron side left {
+  branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +h2o +di_sulfido_diiron +hplus
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
+    epothilone_b
+  }
+
+  branch from 24r_24_25_dihydroxycalciol side left {
+    24r_24_25_dihydroxycalciol
+    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    25_hydroxy_24_oxocalciol
   }
 }

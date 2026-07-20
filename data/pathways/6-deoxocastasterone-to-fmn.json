@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-deoxocastasterone-to-fmn",
+  "name": "6-deoxocastasterone to FMN",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 6-deoxocastasterone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69875"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:20712"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_deoxocastasterone",
+      "name": "6-deoxocastasterone",
+      "formula": "C28H50O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20712"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "6_hydroxycastasterone",
+      "name": "6α-hydroxycastasterone",
+      "short": "6α-hydroxycastaster…",
+      "formula": "C28H50O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20760"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "castasterone",
+      "name": "castasterone",
+      "formula": "C28H48O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23051"
+      }
+    },
+    {
+      "id": "brassinolide",
+      "name": "brassinolide",
+      "formula": "C28H48O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28277"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "22r_22_hydroxycholesterol",
+      "name": "(22R)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67237"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_180",
+      "name": "brassinolide synthase",
+      "ec": [
+        "1.14.14.180"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-deoxocastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxycasta...",
+      "equation": "6-deoxocastasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxycastasterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_deoxocastasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxycastasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69875"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69875"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6alpha-hydroxycastasterone + reduced [NADPH--hemoprotein reductase] + O2 = castasterone...",
+      "equation": "6alpha-hydroxycastasterone + reduced [NADPH--hemoprotein reductase] + O2 = castasterone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_hydroxycastasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "castasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "brassinolide synthase",
+      "equation": "castasterone + reduced [NADPH--hemoprotein reductase] + O2 = brassinolide + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.180",
+      "substrates": [
+        {
+          "metabolite": "castasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "brassinolide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_180"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + ...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_22_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46140"
+          }
+        ]
+      }
+    }
+  ]
+}

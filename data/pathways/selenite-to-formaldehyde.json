@@ -1,0 +1,495 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "selenite-to-formaldehyde",
+  "name": "selenite to formaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from selenite(2−) to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34939"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18212"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "selenite",
+      "name": "selenite",
+      "formula": "O3Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:18212"
+      }
+    },
+    {
+      "id": "menaquinone_8",
+      "name": "menaquinone-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44027"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "selenate",
+      "name": "selenate",
+      "formula": "O4Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15075"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "menaquinol-8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61684"
+      }
+    },
+    {
+      "id": "trimethylamine_n_oxide",
+      "name": "trimethylamine N-oxide",
+      "short": "trimethylamine…",
+      "formula": "C3H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15724"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trimethylammonium",
+      "name": "trimethylammonium",
+      "formula": "C3H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58389"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "dimethylaminium",
+      "name": "dimethylaminium",
+      "formula": "C2H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58040"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "5_5_dehydrodivanillate",
+      "name": "5,5'-dehydrodivanillate",
+      "short": "5,5'-dehydrodivanil…",
+      "formula": "C16H12O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141401"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox",
+      "name": "5,6,6'-trihydroxy-5'-methoxy[biphenyl]-3,3'-dicarboxylate",
+      "short": "5,6,6'-trihydroxy-5…",
+      "formula": "C15H10O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141402"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_2_3",
+      "name": "trimethylamine-N-oxide reductase",
+      "ec": [
+        "1.7.2.3"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_32",
+      "name": "trimethylamine-oxide aldolase",
+      "ec": [
+        "4.1.2.32"
+      ]
+    },
+    {
+      "id": "ec_1_97_1_14",
+      "name": "selenate reductase (quinol)",
+      "ec": [
+        "1.97.1.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "selenite + menaquinone-8 + H2O = selenate + menaquinol-8",
+      "equation": "selenite + menaquinone-8 + H2O = selenate + menaquinol-8",
+      "substrates": [
+        {
+          "metabolite": "selenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34939"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "trimethylamine N-oxide + menaquinol-8 + H(+) = trimethylamine + menaquinone-8 + H2O",
+      "equation": "trimethylamine N-oxide + menaquinol-8 + H(+) = trimethylamine + menaquinone-8 + H2O",
+      "substrates": [
+        {
+          "metabolite": "trimethylamine_n_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trimethylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29279"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29279"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "trimethylamine-N-oxide reductase",
+      "equation": "trimethylamine + NAD(+) + H2O = trimethylamine N-oxide + NADH + 2 H(+)",
+      "ec": "1.7.2.3",
+      "substrates": [
+        {
+          "metabolite": "trimethylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trimethylamine_n_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "trimethylamine-oxide aldolase",
+      "equation": "trimethylamine N-oxide + H(+) = dimethylamine + formaldehyde",
+      "ec": "4.1.2.32",
+      "substrates": [
+        {
+          "metabolite": "trimethylamine_n_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20217"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20217"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "selenate reductase (quinol)",
+      "equation": "selenite + a quinone + H2O = selenate + a quinol",
+      "ec": "1.97.1.14",
+      "substrates": [
+        {
+          "metabolite": "selenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_97_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:51636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "5,5'-dehydrodivanillate + NADH + O2 + H(+) = 2,2',3-trihydroxy-3'-methoxy-5,5'-dicarbox...",
+      "equation": "5,5'-dehydrodivanillate + NADH + O2 + H(+) = 2,2',3-trihydroxy-3'-methoxy-5,5'-dicarboxybiphenyl + formaldehyde + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_5_dehydrodivanillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:57008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57008"
+          }
+        ]
+      }
+    }
+  ]
+}

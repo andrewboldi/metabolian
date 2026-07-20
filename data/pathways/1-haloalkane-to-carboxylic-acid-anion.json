@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-haloalkane-to-carboxylic-acid-anion",
   "name": "1-haloalkane to carboxylic acid anion",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from 1-haloalkane to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -101,40 +101,13 @@
       }
     },
     {
-      "id": "copper",
-      "name": "copper",
-      "formula": "Cu",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:29036"
-      }
-    },
-    {
-      "id": "copper",
-      "name": "copper",
-      "formula": "Cu",
+      "id": "primary_methyl_ammonium_ion",
+      "name": "primary methyl ammonium ion",
+      "short": "primary methyl…",
+      "formula": "CH5NR",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:49552"
-      }
-    },
-    {
-      "id": "alkanesulfonate_oxoanion",
-      "name": "alkanesulfonate oxoanion",
-      "short": "alkanesulfonate…",
-      "formula": "CH2O3SR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134249"
-      }
-    },
-    {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
+        "chebi": "CHEBI:228804"
       }
     },
     {
@@ -147,39 +120,40 @@
       }
     },
     {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:17359"
-      }
-    },
-    {
-      "id": "n6_acyl_l_lysine",
-      "name": "N6-acyl-L-lysine",
-      "formula": "C7H13N2O3R",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57691"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "5_acylphosphoadenosine",
+      "name": "5'-acylphosphoadenosine",
+      "short": "5'-acylphosphoadeno…",
+      "formula": "C11H12N5O8PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60043"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
       }
     }
   ],
@@ -220,24 +194,17 @@
       ]
     },
     {
-      "id": "ec_1_1_9_1",
-      "name": "alcohol dehydrogenase (azurin)",
+      "id": "ec_1_4_3_21",
+      "name": "primary-amine oxidase",
       "ec": [
-        "1.1.9.1"
+        "1.4.3.21"
       ]
     },
     {
-      "id": "ec_1_14_14_5",
-      "name": "alkanesulfonate monooxygenase",
+      "id": "ec_3_6_1_20",
+      "name": "5'-acylphosphoadenosine hydrolase",
       "ec": [
-        "1.14.14.5"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_17",
-      "name": "acyl-lysine deacylase",
-      "ec": [
-        "3.5.1.17"
+        "3.6.1.20"
       ]
     }
   ],
@@ -395,122 +362,65 @@
     },
     {
       "id": "r4",
-      "name": "alcohol dehydrogenase (azurin)",
-      "equation": "2 oxidized [azurin] + a primary alcohol = 2 reduced [azurin] + an aldehyde + 2 H(+)",
-      "ec": "1.1.9.1",
+      "name": "primary-amine oxidase",
+      "equation": "a primary methyl amine + O2 + H2O = an aldehyde + H2O2 + NH4(+)",
+      "ec": "1.4.3.21",
       "substrates": [
         {
-          "metabolite": "copper",
-          "stoichiometry": 2
+          "metabolite": "primary_methyl_ammonium_ion",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "primary_alcohol",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "copper",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "aldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_9_1"
+          "enzyme": "ec_1_4_3_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:51148"
+        "rhea": "RHEA:16153"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51148"
+            "id": "RHEA:16153"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "alkanesulfonate monooxygenase",
-      "equation": "an alkanesulfonate + FMNH2 + O2 = an aldehyde + FMN + sulfite + H2O + 2 H(+)",
-      "ec": "1.14.14.5",
+      "name": "5'-acylphosphoadenosine hydrolase",
+      "equation": "a 5'-acylphosphoadenosine + H2O = a carboxylate + AMP + 2 H(+)",
+      "ec": "3.6.1.20",
       "substrates": [
         {
-          "metabolite": "alkanesulfonate_oxoanion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:23064"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:23064"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "acyl-lysine deacylase",
-      "equation": "an N(6)-acyl-L-lysine + H2O = a carboxylate + L-lysine",
-      "ec": "3.5.1.17",
-      "substrates": [
-        {
-          "metabolite": "n6_acyl_l_lysine",
+          "metabolite": "5_acylphosphoadenosine",
           "stoichiometry": 1
         },
         {
@@ -524,26 +434,30 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "amp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_17"
+          "enzyme": "ec_3_6_1_20"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24548"
+        "rhea": "RHEA:16837"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24548"
+            "id": "RHEA:16837"
           }
         ]
       }

@@ -1,0 +1,426 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "precorrin-3b-to-s-adenosyl-l-homocysteine",
+  "name": "precorrin-3B to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from precorrin-3B(6−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12761"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77870"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "precorrin_3b",
+      "name": "precorrin-3B",
+      "formula": "C43H44N4O17",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:77870"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "precorrin_4",
+      "name": "precorrin-4",
+      "formula": "C44H44N4O17",
+      "charge": -8,
+      "xrefs": {
+        "chebi": "CHEBI:57769"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "precorrin_5",
+      "name": "precorrin-5",
+      "formula": "C45H47N4O17",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:77871"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "precorrin_6a",
+      "name": "precorrin-6A",
+      "formula": "C44H47N4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:77872"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15440"
+      }
+    },
+    {
+      "id": "3_methyl_1_2_didehydro_2_3_dihydrosqualene",
+      "name": "3-methyl-1,2-didehydro-2,3-dihydrosqualene",
+      "short": "3-methyl-1,2-didehy…",
+      "formula": "C31H52",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70860"
+      }
+    },
+    {
+      "id": "precorrin_6y",
+      "name": "precorrin-6Y",
+      "formula": "C44H50N4O16",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:58532"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_131",
+      "name": "precorrin-3B C(17)-methyltransferase",
+      "ec": [
+        "2.1.1.131"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_133",
+      "name": "precorrin-4 C(11)-methyltransferase",
+      "ec": [
+        "2.1.1.133"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_152",
+      "name": "precorrin-6A synthase (deacetylating)",
+      "ec": [
+        "2.1.1.152"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_54",
+      "name": "precorrin-6A reductase",
+      "ec": [
+        "1.3.1.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "precorrin-3B C(17)-methyltransferase",
+      "equation": "precorrin-3B + S-adenosyl-L-methionine = precorrin-4 + S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.131",
+      "substrates": [
+        {
+          "metabolite": "precorrin_3b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12761"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "precorrin-4 C(11)-methyltransferase",
+      "equation": "precorrin-4 + S-adenosyl-L-methionine = precorrin-5 + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.133",
+      "substrates": [
+        {
+          "metabolite": "precorrin_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_133"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "precorrin-6A synthase (deacetylating)",
+      "equation": "precorrin-5 + S-adenosyl-L-methionine + H2O = precorrin-6A + acetate + S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.152",
+      "substrates": [
+        {
+          "metabolite": "precorrin_5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_6a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_152"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18261"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "squalene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrosqualene + S-ade...",
+      "equation": "squalene + S-adenosyl-L-methionine = 3-methyl-1,2-didehydro-2,3-dihydrosqualene + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "squalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrosqualene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "precorrin-6A reductase",
+      "equation": "precorrin-6B + NADP(+) = precorrin-6A + NADPH + 2 H(+)",
+      "ec": "1.3.1.54",
+      "substrates": [
+        {
+          "metabolite": "precorrin_6y",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "precorrin_6a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:23408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23408"
+          }
+        ]
+      }
+    }
+  ]
+}

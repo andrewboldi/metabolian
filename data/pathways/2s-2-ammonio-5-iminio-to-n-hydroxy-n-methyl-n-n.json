@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2s-2-ammonio-5-iminio-to-n-hydroxy-n-methyl-n-n",
+  "name": "(2S)-2-ammonio-5-{[iminio… to Nδ-hydroxy-Nω-methyl-Nω-n…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (2S)-2-ammonio-5-{[iminio(methylamino)methyl]amino}pentanoate to Nδ-hydroxy-Nω-methyl-Nω-nitroso-L-citrulline zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69056"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:114953"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
+      "name": "(2S)-2-ammonio-5-{[iminio(methylamino)methyl]amino}pentanoate",
+      "short": "2-ammonio-5-{[imini…",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:114953"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_hydroxy_n_methyl_l_argininium",
+      "name": "Nδ-hydroxy-Nω-methyl-L-argininium",
+      "short": "Nδ-hydroxy-Nω-methy…",
+      "formula": "C7H17N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143207"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_n_dihydroxy_n_methyl_l_arginine",
+      "name": "Nδ,Nω'-dihydroxy-Nω-methyl-L-arginine",
+      "short": "Nδ,Nω'-dihydroxy-Nω…",
+      "formula": "C7H16N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143208"
+      }
+    },
+    {
+      "id": "n_hydroxy_n_methyl_n_nitroso_l_citrulline",
+      "name": "Nδ-hydroxy-Nω-methyl-Nω-nitroso-L-citrulline",
+      "short": "Nδ-hydroxy-Nω-methy…",
+      "formula": "C7H14N4O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143209"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(omega)-methyl-L-arginine + NADH + O2 + H(+) = N(delta)-hydroxy-N(omega)-methyl-L-argi...",
+      "equation": "N(omega)-methyl-L-arginine + NADH + O2 + H(+) = N(delta)-hydroxy-N(omega)-methyl-L-arginine + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxy_n_methyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(delta)-hydroxy-N(omega)-methyl-L-arginine + NADH + O2 = N(delta),N(omega')-dihydroxy-...",
+      "equation": "N(delta)-hydroxy-N(omega)-methyl-L-arginine + NADH + O2 = N(delta),N(omega')-dihydroxy-N(omega)-methyl-L-arginine + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_n_methyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dihydroxy_n_methyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(delta),N(omega')-dihydroxy-N(omega)-methyl-L-arginine + O2 = N(delta)-hydroxy-N(omega...",
+      "equation": "N(delta),N(omega')-dihydroxy-N(omega)-methyl-L-arginine + O2 = N(delta)-hydroxy-N(omega)-methyl-N(omega)-nitroso-L-citrulline + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_n_dihydroxy_n_methyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxy_n_methyl_n_nitroso_l_citrulline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69064"
+          }
+        ]
+      }
+    }
+  ]
+}

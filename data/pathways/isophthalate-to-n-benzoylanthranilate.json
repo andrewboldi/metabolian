@@ -119,22 +119,31 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:61404"
       }
     },
     {
-      "id": "z_bisabolene",
-      "name": "(Z)-γ-bisabolene",
-      "formula": "C15H24",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49238"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine_5_monophosphate",
+      "name": "2'-deoxyadenosine 5'-monophosphate",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H12N5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58245"
       }
     },
     {
@@ -180,10 +189,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_40",
-      "name": "(Z)-gamma-bisabolene synthase",
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
       "ec": [
-        "4.2.3.40"
+        "3.6.1.9"
       ]
     },
     {
@@ -340,41 +349,49 @@
     },
     {
       "id": "r4",
-      "name": "(Z)-gamma-bisabolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "ec": "4.2.3.40",
+      "name": "nucleotide diphosphatase",
+      "equation": "dATP + H2O = dAMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "z_bisabolene",
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_40"
+          "enzyme": "ec_3_6_1_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:26081"
+        "rhea": "RHEA:28334"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26081"
+            "id": "RHEA:28334"
           }
         ]
       }

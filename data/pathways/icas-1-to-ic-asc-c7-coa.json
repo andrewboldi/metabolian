@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "icas-1-to-ic-asc-c7-coa",
+  "name": "icas#1 to IC-asc-ΔC7-CoA",
+  "category": "redox-detox",
+  "summary": "A 3-step route from icas#1(1−) to IC-asc-ΔC7-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:66256"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:140800"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "icas_1",
+      "name": "icas#1",
+      "formula": "C22H28NO7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140800"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ic_asc_c7_amp",
+      "name": "IC-asc-C7-AMP",
+      "formula": "C32H40N6O13P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:166982"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "ic_asc_c7_coa",
+      "name": "IC-asc-C7-CoA",
+      "formula": "C43H59N8O22P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:166976"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "ic_asc_c7_coa",
+      "name": "IC-asc-ΔC7-CoA",
+      "formula": "C43H57N8O22P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:166977"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cubenene",
+      "name": "(+)-cubenene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61685"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_63",
+      "name": "(+)-cubenene synthase",
+      "ec": [
+        "4.2.3.63"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
+      "equation": "IC-asc-C7 + ATP + H(+) = IC-asc-C7-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "icas_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ic_asc_c7_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66256"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66256"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
+      "equation": "IC-asc-C7-AMP + CoA = IC-asc-C7-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ic_asc_c7_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ic_asc_c7_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
+      "equation": "IC-asc-C7-CoA + O2 = IC-asc-DeltaC7-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "ic_asc_c7_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ic_asc_c7_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(+)-cubenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
+      "ec": "4.2.3.63",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cubenene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:29475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29475"
+          }
+        ]
+      }
+    }
+  ]
+}

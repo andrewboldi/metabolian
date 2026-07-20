@@ -132,62 +132,42 @@
       }
     },
     {
-      "id": "l_pentahomomethionine",
-      "name": "L-pentahomomethionine",
-      "short": "L-pentahomomethioni…",
-      "formula": "C10H21NO2S",
+      "id": "menaquinone_4",
+      "name": "menaquinone-4",
+      "formula": "C31H40O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134635"
+        "chebi": "CHEBI:78277"
       }
     },
     {
-      "id": "e_8_methylsulfanyl_octanal_oxime",
-      "name": "(E)-8-(methylsulfanyl)octanal oxime",
-      "short": "8-(methylsulfanyl)o…",
-      "formula": "C9H19NOS",
+      "id": "hydroxymenaquinone_4",
+      "name": "ω-hydroxymenaquinone-4",
+      "short": "ω-hydroxymenaquinon…",
+      "formula": "C31H40O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134684"
+        "chebi": "CHEBI:78278"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "presilphiperfolan_8_ol",
+      "name": "presilphiperfolan-8β-ol",
+      "short": "presilphiperfolan-8…",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:60968"
       }
     }
   ],
@@ -221,17 +201,17 @@
       ]
     },
     {
-      "id": "ec_1_14_14_42",
-      "name": "homomethionine N-monooxygenase",
+      "id": "ec_1_14_14_78",
+      "name": "phylloquinone omega-hydroxylase",
       "ec": [
-        "1.14.14.42"
+        "1.14.14.78"
       ]
     },
     {
-      "id": "ec_2_5_1_81",
-      "name": "geranylfarnesyl diphosphate synthase",
+      "id": "ec_4_2_3_74",
+      "name": "presilphiperfolanol synthase",
       "ec": [
-        "2.5.1.81"
+        "4.2.3.74"
       ]
     }
   ],
@@ -438,83 +418,79 @@
     },
     {
       "id": "r5",
-      "name": "homomethionine N-monooxygenase",
-      "equation": "L-pentahomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-8-(methylsulfanyl)octanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.42",
+      "name": "phylloquinone omega-hydroxylase",
+      "equation": "menaquinone-4 + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxymenaquinone-4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.78",
       "substrates": [
         {
-          "metabolite": "l_pentahomomethionine",
+          "metabolite": "menaquinone_4",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_8_methylsulfanyl_octanal_oxime",
+          "metabolite": "hydroxymenaquinone_4",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_42"
+          "enzyme": "ec_1_14_14_78"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33291"
+        "rhea": "RHEA:41520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33291"
+            "id": "RHEA:41520"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "geranylfarnesyl diphosphate synthase",
-      "equation": "isopentenyl diphosphate + (2E,6E,10E)-geranylgeranyl diphosphate = (2E,6E,10E,14E)-geranylfarnesyl diphosphate + diphosphate",
-      "ec": "2.5.1.81",
+      "name": "presilphiperfolanol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = presilphiperfolan-8beta-ol + diphosphate",
+      "ec": "4.2.3.74",
       "substrates": [
         {
-          "metabolite": "ipp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "metabolite": "presilphiperfolan_8_ol",
           "stoichiometry": 1
         },
         {
@@ -524,20 +500,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_81"
+          "enzyme": "ec_4_2_3_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25694"
+        "rhea": "RHEA:27954"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25694"
+            "id": "RHEA:27954"
           }
         ]
       }

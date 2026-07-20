@@ -141,60 +141,60 @@
       }
     },
     {
-      "id": "3_methylquinoline",
-      "name": "3-methylquinoline",
-      "formula": "C10H9N",
+      "id": "rhodopin",
+      "name": "rhodopin",
+      "formula": "C40H58O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:20140"
+        "chebi": "CHEBI:35331"
       }
     },
     {
-      "id": "3_methylquinolin_2_1h_one",
-      "name": "3-methylquinolin-2(1H)-one",
-      "short": "3-methylquinolin-2(…",
-      "formula": "C10H9NO",
+      "id": "3e_3_4_didehydrorhodopin",
+      "name": "(3E)-3,4-didehydrorhodopin",
+      "short": "3,4-didehydrorhodop…",
+      "formula": "C40H56O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:20114"
+        "chebi": "CHEBI:62481"
       }
     },
     {
-      "id": "r_camphor",
-      "name": "(R)-camphor",
-      "formula": "C10H16O",
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15396"
+        "chebi": "CHEBI:51458"
       }
     },
     {
-      "id": "6_endo_hydroxycamphor",
-      "name": "(+)-6-endo-hydroxycamphor",
-      "short": "(+)-6-endo-hydroxyc…",
-      "formula": "C10H16O2",
+      "id": "albaflavenone",
+      "name": "albaflavenone",
+      "formula": "C15H22O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64787"
+        "chebi": "CHEBI:51460"
       }
     },
     {
-      "id": "taurolithocholate",
-      "name": "taurolithocholate",
-      "formula": "C26H44NO5S",
+      "id": "5_cholane_3_7_12_24_tetrol",
+      "name": "5α-cholane-3α,7α,12α,24-tetrol",
+      "short": "5α-cholane-3α,7α,12…",
+      "formula": "C24H42O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50108"
+      }
+    },
+    {
+      "id": "3_7_12_trihydroxy_5_cholan_24_yl_sulfate",
+      "name": "3α,7α,12α-trihydroxy-5α-cholan-24-yl sulfate",
+      "short": "3α,7α,12α-trihydrox…",
+      "formula": "C24H41O7S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17179"
-      }
-    },
-    {
-      "id": "taurolithocholic_acid_sulfate",
-      "name": "taurolithocholic acid sulfate",
-      "short": "taurolithocholic…",
-      "formula": "C26H43NO8S2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58301"
+        "chebi": "CHEBI:58809"
       }
     }
   ],
@@ -221,24 +221,24 @@
       ]
     },
     {
-      "id": "ec_1_3_99_17",
-      "name": "quinoline 2-oxidoreductase",
+      "id": "ec_1_3_99_27",
+      "name": "1-hydroxycarotenoid 3,4-desaturase",
       "ec": [
-        "1.3.99.17"
+        "1.3.99.27"
       ]
     },
     {
-      "id": "ec_1_14_15_10",
-      "name": "(+)-camphor 6-endo-hydroxylase",
+      "id": "ec_1_14_15_39",
+      "name": "epi-isozizaene 5-monooxygenase",
       "ec": [
-        "1.14.15.10"
+        "1.14.15.39"
       ]
     },
     {
-      "id": "ec_2_8_2_14",
-      "name": "bile-salt sulfotransferase",
+      "id": "ec_2_8_2_31",
+      "name": "petromyzonol sulfotransferase",
       "ec": [
-        "2.8.2.14"
+        "2.8.2.31"
       ]
     }
   ],
@@ -396,26 +396,22 @@
     },
     {
       "id": "r4",
-      "name": "quinoline 2-oxidoreductase",
-      "equation": "3-methylquinoline + A + H2O = 3-methylquinolin-2(1H)-one + AH2",
-      "ec": "1.3.99.17",
+      "name": "1-hydroxycarotenoid 3,4-desaturase",
+      "equation": "rhodopin + A = (3E)-3,4-didehydrorhodopin + AH2",
+      "ec": "1.3.99.27",
       "substrates": [
         {
-          "metabolite": "3_methylquinoline",
+          "metabolite": "rhodopin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_methylquinolin_2_1h_one",
+          "metabolite": "3e_3_4_didehydrorhodopin",
           "stoichiometry": 1
         },
         {
@@ -425,89 +421,89 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_99_17"
+          "enzyme": "ec_1_3_99_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25928"
+        "rhea": "RHEA:30919"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25928"
+            "id": "RHEA:30919"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(+)-camphor 6-endo-hydroxylase",
-      "equation": "2 reduced [2Fe-2S]-[putidaredoxin] + (1R,4R)-camphor + O2 + 2 H(+) = (+)-6-endo-hydroxycamphor + 2 oxidized [2Fe-2S]-[putidaredoxin] + H2O",
-      "ec": "1.14.15.10",
+      "name": "epi-isozizaene 5-monooxygenase",
+      "equation": "(+)-epi-isozizaene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = albaflavenone + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
+      "ec": "1.14.15.39",
       "substrates": [
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "r_camphor",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "6_endo_hydroxycamphor",
+          "metabolite": "albaflavenone",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_10"
+          "enzyme": "ec_1_14_15_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33047"
+        "rhea": "RHEA:32439"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33047"
+            "id": "RHEA:32439"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "bile-salt sulfotransferase",
-      "equation": "taurolithocholate + 3'-phosphoadenylyl sulfate = taurolithocholate 3-sulfate + adenosine 3',5'-bisphosphate + H(+)",
-      "ec": "2.8.2.14",
+      "name": "petromyzonol sulfotransferase",
+      "equation": "5alpha-cholane-3alpha,7alpha,12alpha,24-tetrol + 3'-phosphoadenylyl sulfate = 3alpha,7alpha,12alpha-trihydroxy-5alpha-cholan-24-yl sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.31",
       "substrates": [
         {
-          "metabolite": "taurolithocholate",
+          "metabolite": "5_cholane_3_7_12_24_tetrol",
           "stoichiometry": 1
         },
         {
@@ -517,7 +513,7 @@
       ],
       "products": [
         {
-          "metabolite": "taurolithocholic_acid_sulfate",
+          "metabolite": "3_7_12_trihydroxy_5_cholan_24_yl_sulfate",
           "stoichiometry": 1
         },
         {
@@ -531,20 +527,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_2_14"
+          "enzyme": "ec_2_8_2_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14013"
+        "rhea": "RHEA:16997"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14013"
+            "id": "RHEA:16997"
           }
         ]
       }

@@ -86,21 +86,30 @@
     },
     {
       "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9β,10α-labda-8(2…",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
       "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58622"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "stemod_13_17_ene",
-      "name": "stemod-13(17)-ene",
-      "formula": "C20H32",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50068"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phyllocladan_16_ol",
+      "name": "phyllocladan-16α-ol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53643"
       }
     }
   ],
@@ -120,10 +129,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_34",
-      "name": "stemod-13(17)-ene synthase",
+      "id": "ec_4_2_3_45",
+      "name": "phyllocladan-16alpha-ol synthase",
       "ec": [
-        "4.2.3.34"
+        "4.2.3.45"
       ]
     }
   ],
@@ -269,18 +278,22 @@
     },
     {
       "id": "r4",
-      "name": "stemod-13(17)-ene synthase",
-      "equation": "9alpha-copalyl diphosphate = stemod-13(17)-ene + diphosphate",
-      "ec": "4.2.3.34",
+      "name": "phyllocladan-16alpha-ol synthase",
+      "equation": "(+)-copalyl diphosphate + H2O = phyllocladan-16alpha-ol + diphosphate",
+      "ec": "4.2.3.45",
       "substrates": [
         {
           "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "stemod_13_17_ene",
+          "metabolite": "phyllocladan_16_ol",
           "stoichiometry": 1
         },
         {
@@ -290,20 +303,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_34"
+          "enzyme": "ec_4_2_3_45"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25556"
+        "rhea": "RHEA:26430"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25556"
+            "id": "RHEA:26430"
           }
         ]
       }

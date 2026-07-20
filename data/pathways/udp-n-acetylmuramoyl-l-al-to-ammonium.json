@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-n-acetylmuramoyl-l-al-to-ammonium",
   "name": "UDP-N-acetylmuramoyl-L-al… to ammonium",
-  "category": "nucleotide-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from UDP-N-acetylmuramoyl-L-alanyl-γ-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alaninate(4−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -103,32 +103,32 @@
       }
     },
     {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
+      "id": "plp",
+      "name": "Pyridoxal 5'-phosphate (PLP)",
+      "short": "Pyridoxal 5'-P (PLP)",
+      "formula": "C8H8NO6P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:82748"
+        "chebi": "CHEBI:597326"
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
+      "id": "pyridoxamine_5_phosphate",
+      "name": "pyridoxamine 5'-phosphate",
+      "short": "pyridoxamine 5'-P",
+      "formula": "C8H12N2O5P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15378"
+        "chebi": "CHEBI:58451"
       }
     },
     {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65315"
+        "chebi": "CHEBI:57972"
       }
     }
   ],
@@ -152,13 +152,6 @@
       "name": "glycine oxidase",
       "ec": [
         "1.4.3.19"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_35",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "ec": [
-        "3.5.4.35"
       ]
     }
   ],
@@ -308,26 +301,68 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "equation": "cytidine(8) in tRNA + H2O + H(+) = uridine(8) in tRNA + NH4(+)",
-      "ec": "3.5.4.35",
+      "name": "pyridoxal 5'-phosphate + D-alanine = pyridoxamine 5'-phosphate + pyruvate",
+      "equation": "pyridoxal 5'-phosphate + D-alanine = pyridoxamine 5'-phosphate + pyruvate",
       "substrates": [
         {
-          "metabolite": "cytidine_5_monophosphate_1",
+          "metabolite": "plp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "d_alanine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "pyridoxamine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28562"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28562"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "equation": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -335,22 +370,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_35"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50964"
+        "rhea": "RHEA:61264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50964"
+            "id": "RHEA:61264"
           }
         ]
       }

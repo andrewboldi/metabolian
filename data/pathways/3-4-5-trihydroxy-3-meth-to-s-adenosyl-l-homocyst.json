@@ -1,0 +1,360 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-4-5-trihydroxy-3-meth-to-s-adenosyl-l-homocyst",
+  "name": "3',4',5-trihydroxy-3-meth… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 3',4',5-trihydroxy-3-methoxyflavon-7-olate to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16181"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57928"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
+      "name": "3',4',5-trihydroxy-3-methoxyflavon-7-olate",
+      "short": "3',4',5-trihydroxy-…",
+      "formula": "C16H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57928"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3_4_5_trihydroxy_3_7_dimethoxyflavone",
+      "name": "3',4',5-trihydroxy-3,7-dimethoxyflavone",
+      "short": "3',4',5-trihydroxy-…",
+      "formula": "C17H13O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77710"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_dihydroxy_3_4_7_trimethoxyflavone",
+      "name": "3',5-dihydroxy-3,4',7-trimethoxyflavone",
+      "short": "3',5-dihydroxy-3,4'…",
+      "formula": "C18H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77770"
+      }
+    },
+    {
+      "id": "5_hydroxy_3_3_4_7_tetramethoxyflavone",
+      "name": "5-hydroxy-3,3',4',7-tetramethoxyflavone",
+      "short": "5-hydroxy-3,3',4',7…",
+      "formula": "C19H17O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144096"
+      }
+    },
+    {
+      "id": "rhamnetin_3_olate",
+      "name": "rhamnetin-3-olate",
+      "formula": "C16H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192706"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "malonyl_coa_methyl_ester",
+      "name": "malonyl-CoA methyl ester",
+      "short": "malonyl-CoA methyl…",
+      "formula": "C25H36N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71242"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_82",
+      "name": "3-methylquercetin 7-O-methyltransferase",
+      "ec": [
+        "2.1.1.82"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_83",
+      "name": "3,7-dimethylquercetin 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.83"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-methylquercetin 7-O-methyltransferase",
+      "equation": "3',4',5,7-tetrahydroxy-3-methoxyflavone + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.82",
+      "substrates": [
+        {
+          "metabolite": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_trihydroxy_3_7_dimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_82"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16181"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16181"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3,7-dimethylquercetin 4'-O-methyltransferase",
+      "equation": "3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adenosyl-L-methionine = 3',5-dihydroxy-3,4',7-trimethoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.83",
+      "substrates": [
+        {
+          "metabolite": "3_4_5_trihydroxy_3_7_dimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dihydroxy_3_4_7_trimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3',5-dihydroxy-3,4',7-trimethoxyflavone + S-adenosyl-L-methionine = 5-hydroxy-3,7,3',4'...",
+      "equation": "3',5-dihydroxy-3,4',7-trimethoxyflavone + S-adenosyl-L-methionine = 5-hydroxy-3,7,3',4'-tetramethoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_5_dihydroxy_3_4_7_trimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxy_3_3_4_7_tetramethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "rhamnetin + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adeno...",
+      "equation": "rhamnetin + S-adenosyl-L-methionine = 3',4',5-trihydroxy-3,7-dimethoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "rhamnetin_3_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_trihydroxy_3_7_dimethoxyflavone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74763"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "malonyl-CoA + S-adenosyl-L-methionine = malonyl-CoA methyl ester + S-adenosyl-L-homocys...",
+      "equation": "malonyl-CoA + S-adenosyl-L-methionine = malonyl-CoA methyl ester + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonyl_coa_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34899"
+          }
+        ]
+      }
+    }
+  ]
+}

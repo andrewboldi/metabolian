@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-2-4-diazaniumylbutyrate-to-succinate",
   "name": "L-2,4-diazaniumylbutyrate to succinate",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from L-2,4-diazaniumylbutyrate to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,23 +139,22 @@
       }
     },
     {
-      "id": "2_aminoethyl_phosphonic_acid",
-      "name": "(2-aminoethyl)phosphonic acid",
-      "short": "(2-aminoethyl)phosp…",
-      "formula": "C2H8NO3P",
-      "charge": 0,
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57418"
+        "chebi": "CHEBI:57394"
       }
     },
     {
-      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
-      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
-      "short": "(2-amino-1-hydroxye…",
-      "formula": "C2H8NO4P",
-      "charge": 0,
+      "id": "2_hydroxystearoyl_coa",
+      "name": "2-hydroxystearoyl-CoA",
+      "short": "2-hydroxystearoyl-C…",
+      "formula": "C39H66N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:141612"
+        "chebi": "CHEBI:74116"
       }
     }
   ],
@@ -186,13 +185,6 @@
       "name": "ectoine hydrolase",
       "ec": [
         "3.5.4.44"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_46",
-      "name": "2-aminoethylphosphonate dioxygenase",
-      "ec": [
-        "1.14.11.46"
       ]
     }
   ],
@@ -383,12 +375,11 @@
     },
     {
       "id": "r5",
-      "name": "2-aminoethylphosphonate dioxygenase",
-      "equation": "(2-aminoethyl)phosphonate + 2-oxoglutarate + O2 = (1R)-(2-amino-1-hydroxyethyl)phosphonate + succinate + CO2",
-      "ec": "1.14.11.46",
+      "name": "octadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctadecanoyl-CoA + succinate + CO2",
+      "equation": "octadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctadecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "metabolite": "stearoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -402,7 +393,7 @@
       ],
       "products": [
         {
-          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "metabolite": "2_hydroxystearoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -414,22 +405,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_46"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41440"
+        "rhea": "RHEA:54624"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41440"
+            "id": "RHEA:54624"
           }
         ]
       }

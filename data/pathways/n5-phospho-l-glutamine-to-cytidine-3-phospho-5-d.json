@@ -123,31 +123,41 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "eudesmol",
-      "name": "α-eudesmol",
-      "formula": "C15H26O",
+      "id": "brevianamide_f",
+      "name": "brevianamide F",
+      "formula": "C16H17N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10278"
+        "chebi": "CHEBI:64530"
       }
     },
     {
-      "id": "neomycin_c",
-      "name": "neomycin C",
-      "formula": "C23H52N6O13",
-      "charge": 6,
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:65077"
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "deoxybrevianamide_e",
+      "name": "deoxybrevianamide E",
+      "formula": "C21H25N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72948"
+      }
+    },
+    {
+      "id": "s_3_5_dihydroxyphenylglycine",
+      "name": "(S)-3,5-dihydroxyphenylglycine",
+      "short": "3,5-dihydroxyphenyl…",
+      "formula": "C8H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75204"
       }
     },
     {
@@ -160,12 +170,13 @@
       }
     },
     {
-      "id": "6_oxoneomycin_c",
-      "name": "6'''-oxoneomycin C",
-      "formula": "C23H48N5O14",
-      "charge": 5,
+      "id": "3_5_dihydroxyphenylglyoxylate",
+      "name": "3,5-dihydroxyphenylglyoxylate",
+      "short": "3,5-dihydroxyphenyl…",
+      "formula": "C8H5O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65068"
+        "chebi": "CHEBI:75210"
       }
     }
   ],
@@ -192,17 +203,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_85",
-      "name": "alpha-eudesmol synthase",
+      "id": "ec_2_5_1_109",
+      "name": "brevianamide F prenyltransferase (deoxybrevianamide E-forming)",
       "ec": [
-        "4.2.3.85"
+        "2.5.1.109"
       ]
     },
     {
-      "id": "ec_2_6_1_95",
-      "name": "neomycin C transaminase",
+      "id": "ec_2_6_1_103",
+      "name": "(S)-3,5-dihydroxyphenylglycine transaminase",
       "ec": [
-        "2.6.1.95"
+        "2.6.1.103"
       ]
     }
   ],
@@ -356,22 +367,22 @@
     },
     {
       "id": "r4",
-      "name": "alpha-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = alpha-eudesmol + diphosphate",
-      "ec": "4.2.3.85",
+      "name": "brevianamide F prenyltransferase (deoxybrevianamide E-forming)",
+      "equation": "brevianamide F + dimethylallyl diphosphate = deoxybrevianamide E + diphosphate",
+      "ec": "2.5.1.109",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "brevianamide_f",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "eudesmol",
+          "metabolite": "deoxybrevianamide_e",
           "stoichiometry": 1
         },
         {
@@ -381,32 +392,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_85"
+          "enzyme": "ec_2_5_1_109"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30951"
+        "rhea": "RHEA:35943"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30951"
+            "id": "RHEA:35943"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "neomycin C transaminase",
-      "equation": "neomycin C + 2-oxoglutarate = 6'''-deamino-6'''-oxoneomycin C + L-glutamate",
-      "ec": "2.6.1.95",
+      "name": "(S)-3,5-dihydroxyphenylglycine transaminase",
+      "equation": "(S)-3,5-dihydroxyphenylglycine + 2-oxoglutarate = 2-(3,5-dihydroxyphenyl)-2-oxoacetate + L-glutamate",
+      "ec": "2.6.1.103",
       "substrates": [
         {
-          "metabolite": "neomycin_c",
+          "metabolite": "s_3_5_dihydroxyphenylglycine",
           "stoichiometry": 1
         },
         {
@@ -416,7 +427,7 @@
       ],
       "products": [
         {
-          "metabolite": "6_oxoneomycin_c",
+          "metabolite": "3_5_dihydroxyphenylglyoxylate",
           "stoichiometry": 1
         },
         {
@@ -426,20 +437,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_95"
+          "enzyme": "ec_2_6_1_103"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33959"
+        "rhea": "RHEA:38347"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33959"
+            "id": "RHEA:38347"
           }
         ]
       }

@@ -1,0 +1,374 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydroxyurea-to-ammonium",
+  "name": "hydroxyurea to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from hydroxyurea to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36263"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:44423"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydroxyurea",
+      "name": "hydroxyurea",
+      "formula": "CH4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44423"
+      }
+    },
+    {
+      "id": "o_acetyl_l_serine",
+      "name": "O-acetyl-L-serine",
+      "formula": "C5H9NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58340"
+      }
+    },
+    {
+      "id": "o_ureido_l_serine",
+      "name": "O-ureido-L-serine",
+      "formula": "C4H9N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73389"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_ureido_d_serine",
+      "name": "O-ureido-D-serine",
+      "formula": "C4H9N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74158"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_cycloserine",
+      "name": "D-cycloserine",
+      "formula": "C3H7N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:75929"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio",
+      "name": "3,4-bis(7-chloroindol-3-yl)-2,5-diiminiohexanedioate",
+      "short": "3,4-bis(7-chloroind…",
+      "formula": "C22H16Cl2N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133929"
+      }
+    },
+    {
+      "id": "dichlorochromopyrrolate",
+      "name": "dichlorochromopyrrolate",
+      "short": "dichlorochromopyrro…",
+      "formula": "C22H11Cl2N3O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59198"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_99_3",
+      "name": "O-ureido-L-serine synthase",
+      "ec": [
+        "2.6.99.3"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_19",
+      "name": "O-ureido-serine racemase",
+      "ec": [
+        "5.1.1.19"
+      ]
+    },
+    {
+      "id": "ec_6_3_3_5",
+      "name": "O-ureido-D-serine cyclo-ligase",
+      "ec": [
+        "6.3.3.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "O-ureido-L-serine synthase",
+      "equation": "hydroxyurea + O-acetyl-L-serine = O-ureido-L-serine + acetate + H(+)",
+      "ec": "2.6.99.3",
+      "substrates": [
+        {
+          "metabolite": "hydroxyurea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_acetyl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_ureido_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "O-ureido-serine racemase",
+      "equation": "O-ureido-L-serine = O-ureido-D-serine",
+      "ec": "5.1.1.19",
+      "substrates": [
+        {
+          "metabolite": "o_ureido_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_ureido_d_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36707"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "O-ureido-D-serine cyclo-ligase",
+      "equation": "O-ureido-D-serine + ATP + H2O + H(+) = D-cycloserine + NH4(+) + ADP + CO2 + phosphate",
+      "ec": "6.3.3.5",
+      "substrates": [
+        {
+          "metabolite": "o_ureido_d_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_cycloserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "7-chloroindole-3-pyruvate imine dimer = dichlorochromopyrrolate + NH4(+) + H(+)",
+      "equation": "7-chloroindole-3-pyruvate imine dimer = dichlorochromopyrrolate + NH4(+) + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dichlorochromopyrrolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51032"
+          }
+        ]
+      }
+    }
+  ]
+}

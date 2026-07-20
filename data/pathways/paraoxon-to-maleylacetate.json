@@ -2,8 +2,8 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "paraoxon-to-maleylacetate",
   "name": "paraoxon to maleylacetate",
-  "category": "energy-metabolism",
-  "summary": "A 5-step route from paraoxon to maleylacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 6-step route from paraoxon to maleylacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -147,6 +147,16 @@
       }
     },
     {
+      "id": "3_hydroxy_cis_cis_muconate",
+      "name": "3-hydroxy-cis,cis-muconate",
+      "short": "3-hydroxy-cis,cis-m…",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58139"
+      }
+    },
+    {
       "id": "maleylacetate",
       "name": "maleylacetate",
       "formula": "C6H4O5",
@@ -156,30 +166,49 @@
       }
     },
     {
-      "id": "1_4_dinitrobenzene",
-      "name": "1,4-dinitrobenzene",
+      "id": "quinone",
+      "name": "Quinone (menaquinone pool)",
+      "short": "Quinone (menaquinon…",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16509"
+      }
+    },
+    {
+      "id": "1_3_dinitrobenzene",
+      "name": "1,3-dinitrobenzene",
       "formula": "C6H4N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:51398"
+        "chebi": "CHEBI:51397"
       }
     },
     {
-      "id": "nitrobenzene",
-      "name": "nitrobenzene",
-      "formula": "C6H5NO2",
-      "charge": 0,
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:27798"
+        "chebi": "CHEBI:29034"
       }
     },
     {
-      "id": "catechol",
-      "name": "catechol",
-      "formula": "C6H6O2",
-      "charge": 0,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:18135"
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
       }
     },
     {
@@ -189,15 +218,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:27810"
-      }
-    },
-    {
-      "id": "3_oxoadipate",
-      "name": "3-oxoadipate",
-      "formula": "C6H6O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:15775"
       }
     }
   ],
@@ -231,10 +251,10 @@
       ]
     },
     {
-      "id": "ec_1_13_11_37",
-      "name": "hydroxyquinol 1,2-dioxygenase",
+      "id": "ec_1_14_13_167",
+      "name": "4-nitrophenol 4-monooxygenase",
       "ec": [
-        "1.13.11.37"
+        "1.14.13.167"
       ]
     },
     {
@@ -245,17 +265,17 @@
       ]
     },
     {
+      "id": "ec_1_7_2_2",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
+      "ec": [
+        "1.7.2.2"
+      ]
+    },
+    {
       "id": "ec_1_14_13_219",
       "name": "resorcinol 4-hydroxylase (NADPH)",
       "ec": [
         "1.14.13.219"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_32",
-      "name": "maleylacetate reductase",
-      "ec": [
-        "1.3.1.32"
       ]
     }
   ],
@@ -474,9 +494,8 @@
     },
     {
       "id": "r5",
-      "name": "hydroxyquinol 1,2-dioxygenase",
-      "equation": "benzene-1,2,4-triol + O2 = maleylacetate + 2 H(+)",
-      "ec": "1.13.11.37",
+      "name": "benzene-1,2,4-triol + O2 = 3-hydroxy-cis,cis-muconate + 2 H(+)",
+      "equation": "benzene-1,2,4-triol + O2 = 3-hydroxy-cis,cis-muconate + 2 H(+)",
       "substrates": [
         {
           "metabolite": "benzene_1_2_4_triol",
@@ -489,7 +508,7 @@
       ],
       "products": [
         {
-          "metabolite": "maleylacetate",
+          "metabolite": "3_hydroxy_cis_cis_muconate",
           "stoichiometry": 1
         },
         {
@@ -497,34 +516,121 @@
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_13_11_37"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35595"
+        "rhea": "RHEA:19441"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35595"
+            "id": "RHEA:19441"
           }
         ]
       }
     },
     {
       "id": "r6",
+      "name": "3-hydroxy-cis,cis-muconate = maleylacetate",
+      "equation": "3-hydroxy-cis,cis-muconate = maleylacetate",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_cis_cis_muconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:42432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "4-nitrophenol 4-monooxygenase",
+      "equation": "4-nitrophenol + NADPH + O2 + H(+) = 1,4-benzoquinone + nitrite + NADP(+) + H2O",
+      "ec": "1.14.13.167",
+      "substrates": [
+        {
+          "metabolite": "4_nitrophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:34327"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "nitroarene dioxygenase",
-      "equation": "1,4-dinitrobenzene + NADH + O2 = 4-nitrocatechol + nitrite + NAD(+) + H(+)",
+      "equation": "1,3-dinitrobenzene + NADH + O2 = 4-nitrocatechol + nitrite + NAD(+) + H(+)",
       "ec": "1.14.12.23",
       "substrates": [
         {
-          "metabolite": "1_4_dinitrobenzene",
+          "metabolite": "1_3_dinitrobenzene",
           "stoichiometry": 1
         },
         {
@@ -560,75 +666,75 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:57784"
+        "rhea": "RHEA:57788"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57784"
+            "id": "RHEA:57788"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "nitroarene dioxygenase",
-      "equation": "nitrobenzene + NADH + O2 = catechol + nitrite + NAD(+)",
-      "ec": "1.14.12.23",
+      "id": "r9",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
+      "equation": "6 Fe(III)-[cytochrome c] + NH4(+) + 2 H2O = 6 Fe(II)-[cytochrome c] + nitrite + 8 H(+)",
+      "ec": "1.7.2.2",
       "substrates": [
         {
-          "metabolite": "nitrobenzene",
+          "metabolite": "iron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "catechol",
-          "stoichiometry": 1
+          "metabolite": "fe2",
+          "stoichiometry": 6
         },
         {
           "metabolite": "nitrite",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
+          "metabolite": "hplus",
+          "stoichiometry": 8
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_12_23"
+          "enzyme": "ec_1_7_2_2"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:46508"
+        "rhea": "RHEA:13089"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46508"
+            "id": "RHEA:13089"
           }
         ]
       }
     },
     {
-      "id": "r8",
+      "id": "r10",
       "name": "resorcinol 4-hydroxylase (NADPH)",
       "equation": "resorcinol + NADPH + O2 + H(+) = benzene-1,2,4-triol + NADP(+) + H2O",
       "ec": "1.14.13.219",
@@ -670,7 +776,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:48828"
       },
@@ -680,55 +786,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:48828"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "maleylacetate reductase",
-      "equation": "3-oxoadipate + NADP(+) = maleylacetate + NADPH + H(+)",
-      "ec": "1.3.1.32",
-      "substrates": [
-        {
-          "metabolite": "3_oxoadipate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "maleylacetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_32"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:16985"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:16985"
           }
         ]
       }

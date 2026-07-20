@@ -26,27 +26,27 @@ pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
     fumitremorgin_a
   }
 
-  branch from ppi side left {
+  branch from tryprostatin_b side left {
+    tryprostatin_b
+    <-> . +nadph +o2 +hplus +nadp +h2o
+    demethoxyfumitremorgin_c
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_4_2_3_126 [4.2.3.126] +fpp
+    muurolene
   }
 
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_14_182 [1.14.14.182] +taxusin +fmnh2 +o2 +h2o +hplus
-    7_hydroxytaxusin
+    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_deoxycorticosterone
   }
 
-  branch from sah side left {
+  branch from sah side right {
     sah
-    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sam +hplus
-    guaiacols
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_11_44 [1.14.11.44] +r_2_4_chloro_2_methylphenoxy_propanoate +akg +o2 +pyruvate +co2
-    4_chloro_2_methylphenol
+    <-> . +n_methyl_l_histidine +sam +hplus
+    n_n_dimethyl_l_histidine
   }
 }

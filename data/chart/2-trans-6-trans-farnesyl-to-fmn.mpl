@@ -4,33 +4,27 @@
 # edit the generator, not this file.
 
 pathway 2-trans-6-trans-farnesyl-to-fmn "2-trans,6-trans-farnesyl… to FMN" {
-  spacing 160
+  spacing 156
 
   spine at 0,0 {
     fpp
-    <-> ec_4_2_3_23 [4.2.3.23] -ppi
-    germacrene_a
-    <-> ec_1_14_14_95 [1.14.14.95] +fmnh2 +o2 -fmn -h2o -hplus
-    germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_150 [1.14.14.150] +fmnh2 +o2 -fmn -h2o
-    costunolide
+    <-> ec_4_2_3_21 [4.2.3.21] -ppi
+    premnaspirodiene
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    solavetivol
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    solavetivone
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_83 [4.2.3.83] +fpp
-    santalene
+    <-> . +nonadecanoate +atp +coa +amp
+    nonadecanoyl_coa
   }
 
-  branch from germacra_1_10_4_11_13_trien_12_oate side right {
-    germacra_1_10_4_11_13_trien_12_oate
-    <-> ec_1_14_14_168 [1.14.14.168] +fmnh2 +o2 +fmn +h2o +hplus
-    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
-  }
-
-  branch from fmn side left {
+  branch from fmn side right {
     fmn
-    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
-    3_5_dihydroxyflavanone
+    <-> ec_1_14_14_68 [1.14.14.68] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_diene_3_ol
   }
 }

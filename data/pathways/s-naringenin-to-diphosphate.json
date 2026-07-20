@@ -119,51 +119,40 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
       "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:162247"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
-      "id": "ditrans_polycis_dodecaprenyl_diphosphate",
-      "name": "ditrans,polycis-dodecaprenyl diphosphate",
-      "short": "ditrans,polycis-dod…",
-      "formula": "C60H97O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60386"
-      }
-    },
-    {
-      "id": "amyrin",
-      "name": "β-amyrin",
-      "formula": "C30H50O",
+      "id": "5_epi_selinene",
+      "name": "5-epi-α-selinene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10352"
+        "chebi": "CHEBI:63445"
       }
     },
     {
-      "id": "oleanolate",
-      "name": "oleanolate",
-      "formula": "C30H47O3",
+      "id": "lipoxin_a4",
+      "name": "lipoxin A4",
+      "formula": "C20H31O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:82828"
+        "chebi": "CHEBI:67026"
+      }
+    },
+    {
+      "id": "20_hydroxylipoxin_a4",
+      "name": "20-hydroxylipoxin A4",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90707"
       }
     }
   ],
@@ -190,17 +179,10 @@
       ]
     },
     {
-      "id": "ec_2_5_1_88",
-      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
+      "id": "ec_4_2_3_90",
+      "name": "5-epi-alpha-selinene synthase",
       "ec": [
-        "2.5.1.88"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_126",
-      "name": "beta-amyrin 28-monooxygenase",
-      "ec": [
-        "1.14.14.126"
+        "4.2.3.90"
       ]
     }
   ],
@@ -354,102 +336,92 @@
     },
     {
       "id": "r4",
-      "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
-      "equation": "(2Z,6E)-farnesyl diphosphate + 9 isopentenyl diphosphate = di-trans,nona-cis-dodecaprenyl diphosphate + 9 diphosphate",
-      "ec": "2.5.1.88",
+      "name": "5-epi-alpha-selinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = 5-epi-alpha-selinene + diphosphate",
+      "ec": "4.2.3.90",
       "substrates": [
         {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 9
         }
       ],
       "products": [
         {
-          "metabolite": "ditrans_polycis_dodecaprenyl_diphosphate",
+          "metabolite": "5_epi_selinene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 9
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_88"
+          "enzyme": "ec_4_2_3_90"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:27602"
+        "rhea": "RHEA:31819"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27602"
+            "id": "RHEA:31819"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "beta-amyrin 28-monooxygenase",
-      "equation": "beta-amyrin + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = oleanolate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "ec": "1.14.14.126",
+      "name": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxid...",
+      "equation": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "amyrin",
+          "metabolite": "lipoxin_a4",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "oleanolate",
+          "metabolite": "20_hydroxylipoxin_a4",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_126"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43068"
+        "rhea": "RHEA:48648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43068"
+            "id": "RHEA:48648"
           }
         ]
       }

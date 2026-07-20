@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prostaglandin-h2-to-acetaldehyde",
+  "name": "prostaglandin H2 to acetaldehyde",
+  "category": "redox-detox",
+  "summary": "A 3-step route from prostaglandin H2(1−) to acetaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48644"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57405"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57405"
+      }
+    },
+    {
+      "id": "12_s_hhtre",
+      "name": "12(S)-HHTrE",
+      "formula": "C17H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90694"
+      }
+    },
+    {
+      "id": "malonaldehyde",
+      "name": "malonaldehyde",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:566274"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_oxopropanoate",
+      "name": "3-oxopropanoate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33190"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin H2 = (12S)-hydroxy-(5Z,8E,10E)-heptadecatrienoate + malonaldehyde",
+      "equation": "prostaglandin H2 = (12S)-hydroxy-(5Z,8E,10E)-heptadecatrienoate + malonaldehyde",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_s_hhtre",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "malonaldehyde + O2 + H2O = 3-oxopropanoate + H2O2 + H(+)",
+      "equation": "malonaldehyde + O2 + H2O = 3-oxopropanoate + H2O2 + H(+)",
+      "substrates": [
+        {
+          "metabolite": "malonaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58976"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxopropanoate + H(+) = acetaldehyde + CO2",
+      "equation": "3-oxopropanoate + H(+) = acetaldehyde + CO2",
+      "substrates": [
+        {
+          "metabolite": "3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45160"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -112,41 +112,49 @@
       }
     },
     {
-      "id": "n_n_diacetylchitobiose",
-      "name": "N,N'-diacetylchitobiose",
-      "short": "N,N'-diacetylchitob…",
-      "formula": "C16H28N2O11",
-      "charge": 0,
+      "id": "2_hydroxyglutarate",
+      "name": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:28681"
+        "chebi": "CHEBI:11596"
       }
     },
     {
-      "id": "n_acetyl_d_glucosaminyl_1_4_d_glucosaminium",
-      "name": "N-acetyl-β-D-glucosaminyl-(1→4)-D-glucosaminium",
-      "short": "N-acetyl-β-D-glucos…",
-      "formula": "C14H27N2O10",
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "2_hydroxyglutaryl_coa",
+      "name": "2-hydroxyglutaryl-CoA",
+      "short": "2-hydroxyglutaryl-C…",
+      "formula": "C26H37N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:78628"
+      }
+    },
+    {
+      "id": "columbamine",
+      "name": "columbamine",
+      "formula": "C20H20NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:59910"
+        "chebi": "CHEBI:15920"
       }
     },
     {
-      "id": "trans_caffeoyl_coa",
-      "name": "trans-caffeoyl-CoA",
-      "formula": "C30H38N7O19P3S",
-      "charge": -4,
+      "id": "palmatine",
+      "name": "palmatine",
+      "formula": "C21H22NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:87136"
-      }
-    },
-    {
-      "id": "trans_feruloyl_coa",
-      "name": "trans-feruloyl-CoA",
-      "formula": "C31H40N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:87305"
+        "chebi": "CHEBI:16096"
       }
     }
   ],
@@ -173,17 +181,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_105",
-      "name": "chitin disaccharide deacetylase",
+      "id": "ec_2_1_1_118",
+      "name": "columbamine O-methyltransferase",
       "ec": [
-        "3.5.1.105"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_104",
-      "name": "caffeoyl-CoA O-methyltransferase",
-      "ec": [
-        "2.1.1.104"
+        "2.1.1.118"
       ]
     }
   ],
@@ -386,22 +387,21 @@
     },
     {
       "id": "r5",
-      "name": "chitin disaccharide deacetylase",
-      "equation": "N,N'-diacetylchitobiose + H2O = N-acetyl-beta-D-glucosaminyl-(1->4)-D-glucosamine + acetate",
-      "ec": "3.5.1.105",
+      "name": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
+      "equation": "2-hydroxyglutarate + acetyl-CoA = 2-hydroxyglutaryl-CoA + acetate",
       "substrates": [
         {
-          "metabolite": "n_n_diacetylchitobiose",
+          "metabolite": "2_hydroxyglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_glucosaminium",
+          "metabolite": "2_hydroxyglutaryl_coa",
           "stoichiometry": 1
         },
         {
@@ -409,34 +409,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_105"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27469"
+        "rhea": "RHEA:42076"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27469"
+            "id": "RHEA:42076"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "caffeoyl-CoA O-methyltransferase",
-      "equation": "(E)-caffeoyl-CoA + S-adenosyl-L-methionine = (E)-feruloyl-CoA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.104",
+      "name": "columbamine O-methyltransferase",
+      "equation": "columbamine + S-adenosyl-L-methionine = palmatine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.118",
       "substrates": [
         {
-          "metabolite": "trans_caffeoyl_coa",
+          "metabolite": "columbamine",
           "stoichiometry": 1
         },
         {
@@ -446,7 +441,7 @@
       ],
       "products": [
         {
-          "metabolite": "trans_feruloyl_coa",
+          "metabolite": "palmatine",
           "stoichiometry": 1
         },
         {
@@ -460,20 +455,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_104"
+          "enzyme": "ec_2_1_1_118"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:16925"
+        "rhea": "RHEA:15373"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16925"
+            "id": "RHEA:15373"
           }
         ]
       }

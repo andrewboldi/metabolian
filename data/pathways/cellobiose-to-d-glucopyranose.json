@@ -140,68 +140,40 @@
       }
     },
     {
-      "id": "n_phosphonato_l_histidine",
-      "name": "Nπ-phosphonato-L-histidine",
-      "short": "Nπ-phosphonato-L-hi…",
-      "formula": "C6H6N3O4P",
+      "id": "tdp_d_glucose",
+      "name": "TDP-α-D-glucose",
+      "formula": "C16H24N2O17P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:64837"
+        "chebi": "CHEBI:137931"
       }
     },
     {
-      "id": "l_histidine",
-      "name": "L-histidine",
-      "formula": "C6H7N3O",
+      "id": "tdp",
+      "name": "TDP",
+      "formula": "C10H13N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61417"
+      }
+    },
+    {
+      "id": "6_tuliposide_a",
+      "name": "6-tuliposide A",
+      "formula": "C11H18O8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29979"
+        "chebi": "CHEBI:72781"
       }
     },
     {
-      "id": "adp_d_glucoside",
-      "name": "ADP α-D-glucoside",
-      "formula": "C16H23N5O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57498"
-      }
-    },
-    {
-      "id": "diboa_d_glucoside",
-      "name": "DIBOA β-D-glucoside",
-      "formula": "C14H17NO9",
+      "id": "methylene_butyrolactone",
+      "name": "α-methylene γ-butyrolactone",
+      "short": "α-methylene…",
+      "formula": "C5H6O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63670"
-      }
-    },
-    {
-      "id": "diboa",
-      "name": "DIBOA",
-      "formula": "C8H7NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:63558"
-      }
-    },
-    {
-      "id": "d_glcp_1_3_l_rhap",
-      "name": "α-D-Glcp-(1→3)-L-Rhap",
-      "short": "α-D-Glcp-(1→3)-L-Rh…",
-      "formula": "C12H22O10",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:66909"
-      }
-    },
-    {
-      "id": "l_rhamnopyranose",
-      "name": "L-rhamnopyranose",
-      "formula": "C6H12O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:62346"
+        "chebi": "CHEBI:104120"
       }
     }
   ],
@@ -235,31 +207,10 @@
       ]
     },
     {
-      "id": "ec_2_7_1_205",
-      "name": "protein-N(pi)-phosphohistidine--D-cellobiose phosphotransferase",
+      "id": "ec_4_2_99_22",
+      "name": "tuliposide A-converting enzyme",
       "ec": [
-        "2.7.1.205"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_347",
-      "name": "alpha,alpha-trehalose-phosphate synthase (ADP-forming)",
-      "ec": [
-        "2.4.1.347"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_182",
-      "name": "4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl glucoside",
-      "ec": [
-        "3.2.1.182"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_282",
-      "name": "3-O-alpha-D-glucosyl-L-rhamnose phosphorylase",
-      "ec": [
-        "2.4.1.282"
+        "4.2.99.22"
       ]
     }
   ],
@@ -454,57 +405,11 @@
     },
     {
       "id": "r5",
-      "name": "protein-N(pi)-phosphohistidine--D-cellobiose phosphotransferase",
-      "equation": "D-cellobiose(out) + N(pros)-phospho-L-histidyl-[protein] = 6-phospho-beta-D-glucosyl-(1->4)-D-glucose(in) + L-histidyl-[protein]",
-      "ec": "2.7.1.205",
+      "name": "TDP-alpha-D-glucose + D-glucose 6-phosphate = 5-methyl-UDP + alpha,alpha-trehalose 6-ph...",
+      "equation": "TDP-alpha-D-glucose + D-glucose 6-phosphate = 5-methyl-UDP + alpha,alpha-trehalose 6-phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "cellobiose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "n_phosphonato_l_histidine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_phosphonato_d_glucosyl_1_4_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_205"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:49292"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:49292"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "alpha,alpha-trehalose-phosphate synthase (ADP-forming)",
-      "equation": "ADP-alpha-D-glucose + D-glucose 6-phosphate = alpha,alpha-trehalose 6-phosphate + ADP + H(+)",
-      "ec": "2.4.1.347",
-      "substrates": [
-        {
-          "metabolite": "adp_d_glucoside",
+          "metabolite": "tdp_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -514,11 +419,11 @@
       ],
       "products": [
         {
-          "metabolite": "trehalose_6_phosphate",
+          "metabolite": "tdp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "trehalose_6_phosphate",
           "stoichiometry": 1
         },
         {
@@ -526,44 +431,35 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_347"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53880"
+        "rhea": "RHEA:53888"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53880"
+            "id": "RHEA:53888"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl glucoside",
-      "equation": "DIBOA beta-D-glucoside + H2O = DIBOA + D-glucose",
-      "ec": "3.2.1.182",
+      "id": "r6",
+      "name": "tuliposide A-converting enzyme",
+      "equation": "6-tuliposide A = tulipalin A + D-glucose",
+      "ec": "4.2.99.22",
       "substrates": [
         {
-          "metabolite": "diboa_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "6_tuliposide_a",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "diboa",
+          "metabolite": "methylene_butyrolactone",
           "stoichiometry": 1
         },
         {
@@ -573,65 +469,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_182"
+          "enzyme": "ec_4_2_99_22"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:33979"
+        "rhea": "RHEA:36071"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33979"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "3-O-alpha-D-glucosyl-L-rhamnose phosphorylase",
-      "equation": "3-O-alpha-D-glucosyl-L-rhamnose + phosphate = beta-D-glucose 1-phosphate + L-rhamnopyranose",
-      "ec": "2.4.1.282",
-      "substrates": [
-        {
-          "metabolite": "d_glcp_1_3_l_rhap",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glucose_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_rhamnopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_282"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:34207"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:34207"
+            "id": "RHEA:36071"
           }
         ]
       }

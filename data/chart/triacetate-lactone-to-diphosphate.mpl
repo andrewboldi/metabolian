@@ -18,8 +18,8 @@ pathway triacetate-lactone-to-diphosphate "triacetate lactone to diphosphate" {
 
   branch from acetoacetyl_coa side left {
     acetoacetyl_coa
-    <-> ec_2_3_1_194 [2.3.1.194] +acetyl_coa +hplus +co2 +coa
-    malonyl-coa
+    <-> . +nad +nadh +hplus
+    3_hydroxybutanoyl_coa
   }
 
   branch from acetoacetate side right {
@@ -30,7 +30,7 @@ pathway triacetate-lactone-to-diphosphate "triacetate lactone to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_27 [6.2.1.27] +4_hydroxybenzoate +atp +coa +amp
-    4_hydroxybenzoyl_coa
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_8_14_15_diene
   }
 }

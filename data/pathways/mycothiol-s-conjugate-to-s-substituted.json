@@ -104,21 +104,22 @@
       }
     },
     {
-      "id": "acetamide",
-      "name": "acetamide",
-      "formula": "C2H5NO",
-      "charge": 0,
+      "id": "1_o_acetyl_adp_d_ribose",
+      "name": "1''-O-acetyl-ADP-α-D-ribose",
+      "short": "1''-O-acetyl-ADP-α-…",
+      "formula": "C17H23N5O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:27856"
+        "chebi": "CHEBI:142511"
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
+      "id": "adp_d_ribose",
+      "name": "ADP-D-ribose",
+      "formula": "C15H21N5O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57967"
       }
     }
   ],
@@ -149,13 +150,6 @@
       "name": "cysteine-S-conjugate N-acetyltransferase",
       "ec": [
         "2.3.1.80"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_4",
-      "name": "amidase",
-      "ec": [
-        "3.5.1.4"
       ]
     }
   ],
@@ -301,12 +295,11 @@
     },
     {
       "id": "r4",
-      "name": "amidase",
-      "equation": "acetamide + H2O = acetate + NH4(+)",
-      "ec": "3.5.1.4",
+      "name": "1''-O-acetyl-ADP-alpha-D-ribose + H2O = ADP-D-ribose + acetate + H(+)",
+      "equation": "1''-O-acetyl-ADP-alpha-D-ribose + H2O = ADP-D-ribose + acetate + H(+)",
       "substrates": [
         {
-          "metabolite": "acetamide",
+          "metabolite": "1_o_acetyl_adp_d_ribose",
           "stoichiometry": 1
         },
         {
@@ -316,30 +309,29 @@
       ],
       "products": [
         {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "hplus",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:45048"
+        "rhea": "RHEA:58112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45048"
+            "id": "RHEA:58112"
           }
         ]
       }

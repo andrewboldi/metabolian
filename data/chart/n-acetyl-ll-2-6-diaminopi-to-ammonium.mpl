@@ -18,19 +18,19 @@ pathway n-acetyl-ll-2-6-diaminopi-to-ammonium "N-acetyl-LL-2,6-diaminopi… to a
 
   branch from acetate side left {
     acetate
-    <-> ec_3_5_1_21 [3.5.1.21] +n_acetyl_alaninate +h2o
-    alanine
+    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
+    1_o_octadecyl_sn_glycero_3_phosphocholine
   }
 
   branch from meso_2_6_diaminopimelic_acid_dizwitterion side right {
     meso_2_6_diaminopimelic_acid_dizwitterion
-    <-> ec_4_1_1_20 [4.1.1.20] +hplus +co2
-    l_lysinium
+    <-> . +nadp +nh3 +nadph +hplus
+    s_2_3_4_5_tetrahydrodipicolinate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
-    3_5_cyclic_imp
+    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
+    4_methylene_l_glutamate
   }
 }

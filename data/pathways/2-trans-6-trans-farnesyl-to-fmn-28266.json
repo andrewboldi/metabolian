@@ -110,40 +110,61 @@
       }
     },
     {
-      "id": "tuberculosinyl_diphosphate",
-      "name": "tuberculosinyl diphosphate",
-      "short": "tuberculosinyl PP",
-      "formula": "C20H33O7P2",
+      "id": "all_trans_dodecaprenyl_diphosphate",
+      "name": "all-trans-dodecaprenyl diphosphate",
+      "short": "all-trans-dodecapre…",
+      "formula": "C60H97O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58822"
+        "chebi": "CHEBI:84602"
       }
     },
     {
-      "id": "tuberculosinol",
-      "name": "tuberculosinol",
-      "formula": "C20H34O",
-      "charge": 0,
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:50387"
+        "chebi": "CHEBI:11173"
       }
     },
     {
-      "id": "ferruginol",
-      "name": "ferruginol",
-      "formula": "C20H30O",
+      "id": "2_demethylmenaquinol_12",
+      "name": "2-demethylmenaquinol-12",
+      "short": "2-demethylmenaquino…",
+      "formula": "C70H104O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78274"
+        "chebi": "CHEBI:84551"
       }
     },
     {
-      "id": "sugiol",
-      "name": "sugiol",
-      "formula": "C20H28O2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138961"
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "cucurbitadienol",
+      "name": "cucurbitadienol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62456"
+      }
+    },
+    {
+      "id": "11_oxocucurbitadienol",
+      "name": "11-oxocucurbitadienol",
+      "short": "11-oxocucurbitadien…",
+      "formula": "C30H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138973"
       }
     }
   ],
@@ -170,17 +191,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_153",
-      "name": "adenosine tuberculosinyltransferase",
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
       "ec": [
-        "2.5.1.153"
+        "2.5.1.74"
       ]
     },
     {
-      "id": "ec_1_14_14_65",
-      "name": "sugiol synthase",
+      "id": "ec_1_14_14_71",
+      "name": "cucurbitadienol 11-hydroxylase",
       "ec": [
-        "1.14.14.65"
+        "1.14.14.71"
       ]
     }
   ],
@@ -322,22 +343,30 @@
     },
     {
       "id": "r4",
-      "name": "adenosine tuberculosinyltransferase",
-      "equation": "tuberculosinyl diphosphate + H2O = tuberculosinol + diphosphate",
-      "ec": "2.5.1.153",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "equation": "all-trans-dodecaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-12 + CO2 + diphosphate",
+      "ec": "2.5.1.74",
       "substrates": [
         {
-          "metabolite": "tuberculosinyl_diphosphate",
+          "metabolite": "all_trans_dodecaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "tuberculosinol",
+          "metabolite": "2_demethylmenaquinol_12",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -347,32 +376,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_153"
+          "enzyme": "ec_2_5_1_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31783"
+        "rhea": "RHEA:44816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31783"
+            "id": "RHEA:44816"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "sugiol synthase",
-      "equation": "ferruginol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = sugiol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.65",
+      "name": "cucurbitadienol 11-hydroxylase",
+      "equation": "cucurbitadienol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxocucurbitadienol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.71",
       "substrates": [
         {
-          "metabolite": "ferruginol",
+          "metabolite": "cucurbitadienol",
           "stoichiometry": 1
         },
         {
@@ -386,7 +415,7 @@
       ],
       "products": [
         {
-          "metabolite": "sugiol",
+          "metabolite": "11_oxocucurbitadienol",
           "stoichiometry": 1
         },
         {
@@ -404,20 +433,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_65"
+          "enzyme": "ec_1_14_14_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55456"
+        "rhea": "RHEA:55508"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55456"
+            "id": "RHEA:55508"
           }
         ]
       }

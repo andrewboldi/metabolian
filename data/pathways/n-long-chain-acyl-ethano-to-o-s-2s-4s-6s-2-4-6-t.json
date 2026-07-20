@@ -169,22 +169,52 @@
       }
     },
     {
-      "id": "sterol",
-      "name": "sterol",
-      "formula": "C19H31OR",
-      "charge": 0,
+      "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+      "name": "O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(long-chain…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15889"
+        "chebi": "CHEBI:133243"
       }
     },
     {
-      "id": "long_chain_3_hydroxysterol_ester",
-      "name": "long-chain 3-hydroxysterol ester",
-      "short": "long-chain…",
-      "formula": "C20H30O2R2",
+      "id": "5z_8z_11z_14z_17z_icosapentaenoylethanolamine",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-icosapentaenoylethanolamine",
+      "short": "(5Z,8Z,11Z,14Z,17Z)…",
+      "formula": "C22H35NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:232093"
+        "chebi": "CHEBI:71467"
+      }
+    },
+    {
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "trehalose",
+      "name": "α,α-trehalose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16551"
+      }
+    },
+    {
+      "id": "2_o_long_chain_fatty_acyl_trehalose",
+      "name": "2-O-(long-chain fatty acyl)-α,α-trehalose",
+      "short": "2-O-(long-chain…",
+      "formula": "C13H21O12R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142477"
       }
     },
     {
@@ -197,22 +227,22 @@
       }
     },
     {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58095"
+        "chebi": "CHEBI:35235"
       }
     },
     {
-      "id": "3_l_phenylalanyl_adenylyl_1_group",
-      "name": "3'-(L-phenylalanyl)adenylyl(1−) group",
-      "short": "3'-(L-phenylalanyl)…",
-      "formula": "C19H21N6O7P",
-      "charge": -1,
+      "id": "3_l_cysteinyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-cysteinyl)adenylyl zwitterionic group",
+      "short": "3'-(L-cysteinyl)ade…",
+      "formula": "C13H18N6O7PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78531"
+        "chebi": "CHEBI:78517"
       }
     }
   ],
@@ -239,17 +269,24 @@
       ]
     },
     {
-      "id": "ec_2_3_1_26",
-      "name": "sterol O-acyltransferase",
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
       "ec": [
-        "2.3.1.26"
+        "6.2.1.59"
       ]
     },
     {
-      "id": "ec_6_1_1_20",
-      "name": "phenylalanine--tRNA ligase",
+      "id": "ec_2_3_1_279",
+      "name": "long-chain-acyl-CoA--trehalose acyltransferase",
       "ec": [
-        "6.1.1.20"
+        "2.3.1.279"
+      ]
+    },
+    {
+      "id": "ec_6_1_1_16",
+      "name": "cysteine--tRNA ligase",
+      "ec": [
+        "6.1.1.16"
       ]
     }
   ],
@@ -423,61 +460,16 @@
     },
     {
       "id": "r4",
-      "name": "sterol O-acyltransferase",
-      "equation": "a sterol + a long-chain fatty acyl-CoA = a long-chain 3-hydroxysterol ester + CoA",
-      "ec": "2.3.1.26",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "holo-[(phenol)carboxyphthiodiolenone synthase] + a long-chain fatty acid + ATP = a long-chain fatty acyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
       "substrates": [
         {
-          "metabolite": "sterol",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "long_chain_fatty_acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "long_chain_3_hydroxysterol_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_26"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:59816"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59816"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "phenylalanine--tRNA ligase",
-      "equation": "tRNA(Phe) + L-phenylalanine + ATP = L-phenylalanyl-tRNA(Phe) + AMP + diphosphate + H(+)",
-      "ec": "6.1.1.20",
-      "substrates": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
+          "metabolite": "long_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
@@ -487,7 +479,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_l_phenylalanyl_adenylyl_1_group",
+          "metabolite": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
           "stoichiometry": 1
         },
         {
@@ -497,28 +489,161 @@
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_20"
+          "enzyme": "ec_6_2_1_59"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19413"
+        "rhea": "RHEA:64660"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19413"
+            "id": "RHEA:64660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(5Z,8Z,11Z,14Z,17Z-eicosapentaenoyl) ethanolamine + H2O = (5Z,8Z,11Z,14Z,17Z)-eicosapen...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z-eicosapentaenoyl) ethanolamine + H2O = (5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + ethanolamine",
+      "substrates": [
+        {
+          "metabolite": "5z_8z_11z_14z_17z_icosapentaenoylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanolaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:35519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "long-chain-acyl-CoA--trehalose acyltransferase",
+      "equation": "a long-chain fatty acyl-CoA + alpha,alpha-trehalose = a 2-O-(long-chain fatty acyl)-alpha,alpha-trehalose + CoA",
+      "ec": "2.3.1.279",
+      "substrates": [
+        {
+          "metabolite": "long_chain_fatty_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_long_chain_fatty_acyl_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_279"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:58044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "cysteine--tRNA ligase",
+      "equation": "tRNA(Cys) + L-cysteine + ATP = L-cysteinyl-tRNA(Cys) + AMP + diphosphate",
+      "ec": "6.1.1.16",
+      "substrates": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_cysteinyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_1_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:17773"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17773"
           }
         ]
       }

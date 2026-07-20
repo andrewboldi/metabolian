@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-s-malonylpantetheine-4-to-o-s-2e-butenoylpante",
+  "name": "O-(S-malonylpantetheine-4… to O-[S-(2E)-butenoylpanteth…",
+  "category": "other",
+  "summary": "A 3-step route from O-(S-malonylpantetheine-4'-phosphoryl)serine(2−) residue to O-[S-(2E)-butenoylpantetheine-4'-phosphoryl]serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12080"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:78449"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78449"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetoacetyl-acp",
+      "name": "Acetoacetyl-[ACP]",
+      "formula": "C18H29N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78450"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hydroxybutyryl-acp",
+      "name": "(3R)-3-Hydroxybutanoyl-[ACP]",
+      "short": "3-Hydroxybutanoyl-[…",
+      "formula": "C18H31N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78451"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "butenoyl-acp",
+      "name": "(2E)-Butenoyl-[ACP]",
+      "formula": "C18H29N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78453"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_180",
+      "name": "beta-ketoacyl-[acyl-carrier-protein] synthase III",
+      "ec": [
+        "2.3.1.180"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-ketoacyl-[acyl-carrier-protein] synthase III",
+      "equation": "malonyl-[ACP] + acetyl-CoA + H(+) = 3-oxobutanoyl-[ACP] + CO2 + CoA",
+      "ec": "2.3.1.180",
+      "substrates": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_180"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-oxobutanoyl-[ACP] + NADPH + H(+) = (3R)-hydroxybutanoyl-[ACP] + NADP(+)",
+      "equation": "3-oxobutanoyl-[ACP] + NADPH + H(+) = (3R)-hydroxybutanoyl-[ACP] + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "acetoacetyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxybutyryl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3R)-hydroxybutanoyl-[ACP] = (2E)-butenoyl-[ACP] + H2O",
+      "equation": "(3R)-hydroxybutanoyl-[ACP] = (2E)-butenoyl-[ACP] + H2O",
+      "substrates": [
+        {
+          "metabolite": "hydroxybutyryl-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butenoyl-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41808"
+          }
+        ]
+      }
+    }
+  ]
+}

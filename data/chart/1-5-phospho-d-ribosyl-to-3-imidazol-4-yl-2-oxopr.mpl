@@ -28,19 +28,19 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from ppi side right {
     ppi
-    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
-    4_hydroxybutyryl_coa
+    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
+    prenol
   }
 
-  branch from glutamate side left {
+  branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side left {
+    5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam
+    <-> . +d_erythro_1_imidazol_4_yl_glycerol_3_phosphate +aicar +h2o +hplus
+    nh3
+  }
+
+  branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_11 [2.6.1.11] +n2_acetyl_l_ornithine +akg
-    2_acetamido_5_oxopentanoate
-  }
-
-  branch from 3_imidazol_4_yl_2_oxopropyl_phosphate side right {
-    3_imidazol_4_yl_2_oxopropyl_phosphate
-    <-> ec_2_6_1_9 [2.6.1.9] +akg +glutamate
-    l_histidinol_phosphate
+    <-> ec_2_7_2_11 [2.7.2.11] +atp +adp
+    l_glutamyl_phosphate
   }
 }

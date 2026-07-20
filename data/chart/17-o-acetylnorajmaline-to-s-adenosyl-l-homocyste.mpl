@@ -24,13 +24,13 @@ pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_105 [3.5.1.105] +n_n_diacetylchitobiose +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
+    <-> . +2_hydroxyglutarate +acetyl_coa
+    2_hydroxyglutaryl_coa
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_104 [2.1.1.104] +trans_caffeoyl_coa +sam +hplus
-    trans_feruloyl_coa
+    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
+    palmatine
   }
 }

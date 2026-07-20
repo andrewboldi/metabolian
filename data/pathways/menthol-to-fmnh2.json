@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "menthol-to-fmnh2",
   "name": "(−)-menthol to FMNH2",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from (−)-menthol to FMNH2(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,23 +118,39 @@
       }
     },
     {
-      "id": "2_azaniumyl_2_deoxyisochorismate",
-      "name": "2-azaniumyl-2-deoxyisochorismate",
-      "short": "2-azaniumyl-2-deoxy…",
-      "formula": "C10H10NO5",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58792"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "3_1_carboxylatovinyloxy_anthranilate",
-      "name": "3-(1-carboxylatovinyloxy)anthranilate",
-      "short": "3-(1-carboxylatovin…",
-      "formula": "C10H7NO5",
-      "charge": -2,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58790"
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -147,40 +163,40 @@
       }
     },
     {
-      "id": "r_reticulinium",
-      "name": "(R)-reticulinium",
-      "formula": "C19H24NO4",
-      "charge": 1,
+      "id": "s_scoulerine",
+      "name": "(S)-scoulerine",
+      "formula": "C19H21NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58144"
+        "chebi": "CHEBI:17129"
       }
     },
     {
-      "id": "salutaridinium",
-      "name": "salutaridinium",
-      "formula": "C19H22NO4",
-      "charge": 1,
+      "id": "s_cheilanthifoline",
+      "name": "(S)-cheilanthifoline",
+      "formula": "C19H19NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58061"
+        "chebi": "CHEBI:16233"
       }
     },
     {
-      "id": "taurochenodeoxycholate",
-      "name": "Taurochenodeoxycholate",
-      "short": "Taurochenodeoxychol…",
-      "formula": "C26H44NO6S",
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "n_hydroxy_l_tyrosinate",
+      "name": "N-hydroxy-L-tyrosinate",
+      "short": "N-hydroxy-L-tyrosin…",
+      "formula": "C9H10NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:9407"
-      }
-    },
-    {
-      "id": "taurohyocholate",
-      "name": "taurohyocholate",
-      "formula": "C26H44NO7S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58874"
+        "chebi": "CHEBI:58547"
       }
     }
   ],
@@ -207,24 +223,17 @@
       ]
     },
     {
-      "id": "ec_1_3_8_16",
-      "name": "2-amino-4-deoxychorismate dehydrogenase",
+      "id": "ec_1_2_8_1",
+      "name": "pyruvate synthase (flavodoxin)",
       "ec": [
-        "1.3.8.16"
+        "1.2.8.1"
       ]
     },
     {
-      "id": "ec_1_14_19_67",
-      "name": "salutaridine synthase",
+      "id": "ec_1_14_19_65",
+      "name": "(S)-cheilanthifoline synthase",
       "ec": [
-        "1.14.19.67"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_57",
-      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
-      "ec": [
-        "1.14.14.57"
+        "1.14.19.65"
       ]
     }
   ],
@@ -386,45 +395,57 @@
     },
     {
       "id": "r4",
-      "name": "2-amino-4-deoxychorismate dehydrogenase",
-      "equation": "(2S)-2-amino-4-deoxychorismate + FMN = 3-(1-carboxyvinyloxy)anthranilate + FMNH2",
-      "ec": "1.3.8.16",
+      "name": "pyruvate synthase (flavodoxin)",
+      "equation": "oxidized [flavodoxin] + pyruvate + CoA + 2 H(+) = reduced [flavodoxin] + acetyl-CoA + CO2",
+      "ec": "1.2.8.1",
       "substrates": [
-        {
-          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "fmn",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_1_carboxylatovinyloxy_anthranilate",
+          "metabolite": "fmnh2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_3_8_16"
+          "enzyme": "ec_1_2_8_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25371"
+        "rhea": "RHEA:44140"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25371"
+            "id": "RHEA:44140"
           }
         ]
       }
@@ -480,12 +501,12 @@
     },
     {
       "id": "r6",
-      "name": "salutaridine synthase",
-      "equation": "(R)-reticuline + reduced [NADPH--hemoprotein reductase] + O2 = salutaridine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.19.67",
+      "name": "(S)-cheilanthifoline synthase",
+      "equation": "(S)-scoulerine + reduced [NADPH--hemoprotein reductase] + O2 = (S)-cheilanthifoline + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.65",
       "substrates": [
         {
-          "metabolite": "r_reticulinium",
+          "metabolite": "s_scoulerine",
           "stoichiometry": 1
         },
         {
@@ -499,7 +520,7 @@
       ],
       "products": [
         {
-          "metabolite": "salutaridinium",
+          "metabolite": "s_cheilanthifoline",
           "stoichiometry": 1
         },
         {
@@ -517,32 +538,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_67"
+          "enzyme": "ec_1_14_19_65"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:17713"
+        "rhea": "RHEA:20485"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17713"
+            "id": "RHEA:20485"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "taurochenodeoxycholate 6alpha-hydroxylase",
-      "equation": "taurochenodeoxycholate + reduced [NADPH--hemoprotein reductase] + O2 = taurohyocholate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.57",
+      "name": "L-tyrosine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tyrosine + oxidi...",
+      "equation": "L-tyrosine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tyrosine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "taurochenodeoxycholate",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
@@ -556,7 +576,7 @@
       ],
       "products": [
         {
-          "metabolite": "taurohyocholate",
+          "metabolite": "n_hydroxy_l_tyrosinate",
           "stoichiometry": 1
         },
         {
@@ -569,25 +589,20 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_57"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:17857"
+        "rhea": "RHEA:22464"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17857"
+            "id": "RHEA:22464"
           }
         ]
       }

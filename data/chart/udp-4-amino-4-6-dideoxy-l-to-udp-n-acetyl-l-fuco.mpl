@@ -24,7 +24,7 @@ pathway udp-4-amino-4-6-dideoxy-l-to-udp-n-acetyl-l-fuco "UDP-4-amino-4,6-dideox
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_67 [2.6.1.67] +l_2_aminohexanoic_acid +akg
-    2_oxohexanoate
+    <-> . +l_kynurenine +akg
+    4_2_aminophenyl_2_4_dioxobutanoate
   }
 }

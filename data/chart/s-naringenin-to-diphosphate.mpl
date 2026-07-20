@@ -18,13 +18,13 @@ pathway s-naringenin-to-diphosphate "(S)-naringenin to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
-    ditrans_polycis_dodecaprenyl_diphosphate
+    <-> ec_4_2_3_90 [4.2.3.90] +fpp
+    5_epi_selinene
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
-    oleanolate
+    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
+    20_hydroxylipoxin_a4
   }
 }

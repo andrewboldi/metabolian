@@ -24,14 +24,14 @@ pathway geranyl-diphosphate-to-carvone "geranyl diphosphate to (+)-carvone" {
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
-    2_trans_6_trans_farnesol
+    <-> ec_3_6_1_56 [3.6.1.56] +2_hydroxy_datp +h2o +hplus
+    2_hydroxy_damp
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_79 [1.14.14.79] +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat
+    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxyprogesterone
   }
 
   branch from carvone side right {

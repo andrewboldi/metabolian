@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-lysinium-to-s-adenosyl-l-homocysteine-67112",
+  "name": "L-lysinium to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-lysinium residue to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:67112"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29969"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
+      }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "n_acyl_4e_8e_sphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-sphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-sphi…",
+      "formula": "C19H34NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85953"
+      }
+    },
+    {
+      "id": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
+      "name": "N-acyl-(4E,8E)-9-methylsphinga-4,8-dienine",
+      "short": "N-acyl-(4E,8E)-9-me…",
+      "formula": "C20H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87033"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_317",
+      "name": "sphingolipid C(9)-methyltransferase",
+      "ec": [
+        "2.1.1.317"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-lysyl(37)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(37)-[histone H...",
+      "equation": "L-lysyl(37)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(37)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:67112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-l...",
+      "equation": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6),N(6)-dimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sphingolipid C(9)-methyltransferase",
+      "equation": "a (4E,8E)-4-sphinga-4,8-dienine ceramide + S-adenosyl-L-methionine = a 9-methyl-(4E,8E)-sphinga-4,8-dienine ceramide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.317",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_4e_8e_sphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acyl_4e_8e_9_methylsphinga_4_8_dienine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_317"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46804"
+          }
+        ]
+      }
+    }
+  ]
+}

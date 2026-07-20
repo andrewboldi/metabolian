@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-methyl-5-cholest-7-en-to-4-carboxy-5-cholest-7",
+  "name": "4α-methyl-5α-cholest-7-en… to 4α-carboxy-5α-cholest-7-e…",
+  "category": "other",
+  "summary": "A 3-step route from 4α-methyl-5α-cholest-7-en-3β-ol to 4α-carboxy-5α-cholest-7-en-3β-ol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62756"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18378"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_methyl_5_cholest_7_en_3_ol",
+      "name": "4α-methyl-5α-cholest-7-en-3β-ol",
+      "short": "4α-methyl-5α-choles…",
+      "formula": "C28H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18378"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxymethyl_5_cholest_7_en_3_ol",
+      "name": "4α-hydroxymethyl-5α-cholest-7-en-3β-ol",
+      "short": "4α-hydroxymethyl-5α…",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145941"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_formyl_5_cholest_7_en_3_ol",
+      "name": "4α-formyl-5α-cholest-7-en-3β-ol",
+      "short": "4α-formyl-5α-choles…",
+      "formula": "C28H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145942"
+      }
+    },
+    {
+      "id": "4_carboxy_5_cholest_7_en_3_ol",
+      "name": "4α-carboxy-5α-cholest-7-en-3β-ol",
+      "short": "4α-carboxy-5α-chole…",
+      "formula": "C28H45O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145943"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4alpha-methyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4...",
+      "equation": "4alpha-methyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_methyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxymethyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62756"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62756"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4alpha-hydroxymethyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H...",
+      "equation": "4alpha-hydroxymethyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-formyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxymethyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_formyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:62760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4alpha-formyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) = 4al...",
+      "equation": "4alpha-formyl-5alpha-cholest-7-en-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) = 4alpha-carboxy-5alpha-cholest-7-en-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_formyl_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_5_cholest_7_en_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62764"
+          }
+        ]
+      }
+    }
+  ]
+}

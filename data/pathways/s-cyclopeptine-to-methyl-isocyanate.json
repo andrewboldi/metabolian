@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-cyclopeptine-to-methyl-isocyanate",
   "name": "(S)-cyclopeptine to methyl isocyanate",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from (S)-cyclopeptine to methyl isocyanate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,23 +119,22 @@
       }
     },
     {
-      "id": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
-      "name": "7-[(3S)-3-amino-3-carboxypropyl]wyosine 5'-monophosphate(1−)",
-      "short": "7-[(3S)-3-amino-3-c…",
-      "formula": "C18H22N6O9P",
-      "charge": -1,
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H6N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73543"
+        "chebi": "CHEBI:50347"
       }
     },
     {
-      "id": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
-      "name": "7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine 5'-monophosphate(1−)",
-      "short": "7-(2-hydroxy-3-amin…",
-      "formula": "C18H22N6O10P",
-      "charge": -1,
+      "id": "3s_3_hydroxy_l_asparagine",
+      "name": "(3S)-3-hydroxy-L-asparagine",
+      "short": "3-hydroxy-L-asparag…",
+      "formula": "C4H6N2O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73603"
+        "chebi": "CHEBI:138107"
       }
     }
   ],
@@ -155,10 +154,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_42",
-      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
+      "id": "ec_1_14_11_n4",
+      "name": "ankyrin-repeat-histidine dioxagenase",
       "ec": [
-        "1.14.11.42"
+        "1.14.11.n4"
       ]
     }
   ],
@@ -320,12 +319,12 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(Phe) (7-(3-amino-3-carboxypropyl)wyosine(37)-C(2))-hydroxylase",
-      "equation": "7-[(3S)-3-amino-3-carboxypropyl]wyosine(37) in tRNA(Phe) + 2-oxoglutarate + O2 = 7-(2-hydroxy-3-amino-3-carboxypropyl)wyosine(37) in tRNA(Phe) + succinate + CO2",
-      "ec": "1.14.11.42",
+      "name": "ankyrin-repeat-histidine dioxagenase",
+      "equation": "L-asparaginyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-asparaginyl-[ankyrin-repeat domain protein] + succinate + CO2",
+      "ec": "1.14.11.n4",
       "substrates": [
         {
-          "metabolite": "7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp",
+          "metabolite": "l_asparagine",
           "stoichiometry": 1
         },
         {
@@ -339,7 +338,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo",
+          "metabolite": "3s_3_hydroxy_l_asparagine",
           "stoichiometry": 1
         },
         {
@@ -353,20 +352,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_42"
+          "enzyme": "ec_1_14_11_n4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37899"
+        "rhea": "RHEA:54272"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37899"
+            "id": "RHEA:54272"
           }
         ]
       }

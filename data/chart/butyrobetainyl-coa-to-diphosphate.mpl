@@ -18,9 +18,15 @@ pathway butyrobetainyl-coa-to-diphosphate "γ-butyrobetainyl-CoA to diphosphate"
     e_4_trimethylammonio_but_2_enoyl_coa
   }
 
-  branch from ppi side left {
+  branch from r_carnitinyl_coa side left {
+    r_carnitinyl_coa
+    <-> .
+    s_carnitinyl_coa
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_63 [4.2.3.63] +fpp
-    cubenene
+    <-> ec_4_2_3_115 [4.2.3.115] +gpp
+    terpinene
   }
 }

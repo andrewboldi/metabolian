@@ -18,13 +18,13 @@ pathway 2-trans-6-trans-10-trans-to-s-adenosyl-l-homocys "2-trans,6-trans,10-tra
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_102 [4.2.3.102] +fpp
-    sesquithujene
+    <-> . +14_15_eet +atp +coa +amp
+    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_270 [2.1.1.270] +6a_hydroxymaackiain +sam +hplus
-    pisatin
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

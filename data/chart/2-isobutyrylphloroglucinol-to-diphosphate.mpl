@@ -18,7 +18,7 @@ pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
-    endo_bergamotene
+    <-> ec_4_2_3_139 [4.2.3.139] +fpp
+    valerena_4_7_11_diene
   }
 }

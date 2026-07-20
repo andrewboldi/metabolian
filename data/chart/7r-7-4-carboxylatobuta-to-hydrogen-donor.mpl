@@ -16,27 +16,27 @@ pathway 7r-7-4-carboxylatobuta-to-hydrogen-donor "(7R)-7-(4-carboxylatobuta… t
     akg
   }
 
-  branch from s_2_hydroxyglutarate side left {
+  branch from glutarate side left {
+    glutarate
+    <-> . +h2o +coa +hplus
+    glutaryl_coa
+  }
+
+  branch from s_2_hydroxyglutarate side right {
     s_2_hydroxyglutarate
     <-> ec_1_1_5_13 [1.1.5.13] +1_4_benzoquinones +akg
     hydroquinones
   }
 
-  branch from succinate side right {
+  branch from succinate side left {
     succinate
-    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
-    11_o_demethyl_17_o_deacetylvindolinium
+    <-> . +pentalenolactone_d +akg +o2 +co2 +h2o
+    pentalenolactone_e
   }
 
-  branch from akg side left {
+  branch from akg side right {
     akg
-    <-> ec_1_5_1_8 [1.5.1.8] +l_saccharopinate +nadp +h2o +nadph +hplus
-    l_lysinium
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +o2 +hydrogen_acceptor +h2o
-    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
+    <-> ec_1_4_1_13 [1.4.1.13] +glutamate +nadp +nadph +hplus
+    glutamine
   }
 }

@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tricarballylate-to-d-erythro-isocitrate",
+  "name": "tricarballylate to D-erythro-isocitrate",
+  "category": "other",
+  "summary": "A 3-step route from tricarballylate to D-erythro-isocitrate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86635"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62517"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tricarballylate",
+      "name": "tricarballylate",
+      "formula": "C6H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:62517"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cis_aconitate",
+      "name": "cis-Aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16383"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "d_erythro_isocitrate",
+      "name": "D-erythro-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15563"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_2_6",
+      "name": "isocitrate epimerase",
+      "ec": [
+        "5.1.2.6"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_3",
+      "name": "aconitate hydratase",
+      "ec": [
+        "4.2.1.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "equation": "tricarballylate + FAD + H(+) = cis-aconitate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "tricarballylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86635"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86635"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-aconitate + H2O = D-threo-isocitrate",
+      "equation": "cis-aconitate + H2O = D-threo-isocitrate",
+      "substrates": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isocitrate epimerase",
+      "equation": "D-threo-isocitrate = D-erythro-isocitrate",
+      "ec": "5.1.2.6",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_erythro_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aconitate hydratase",
+      "equation": "citrate = D-threo-isocitrate",
+      "ec": "4.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10336"
+          }
+        ]
+      }
+    }
+  ]
+}

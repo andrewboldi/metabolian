@@ -1,0 +1,347 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tetrahomomethionine-to-e-7-methylsulfanyl-hep",
+  "name": "L-tetrahomomethionine to (E)-7-(methylsulfanyl)hep…",
+  "category": "other",
+  "summary": "A 3-step route from L-tetrahomomethionine zwitterion to (E)-7-(methylsulfanyl)heptanal oxime, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25723"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134634"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_tetrahomomethionine",
+      "name": "L-tetrahomomethionine",
+      "short": "L-tetrahomomethioni…",
+      "formula": "C9H19NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134634"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_hydroxy_l_tetrahomomethioninate",
+      "name": "N-hydroxy-L-tetrahomomethioninate",
+      "short": "N-hydroxy-L-tetraho…",
+      "formula": "C9H18NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134668"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_n_dihydroxy_l_tetrahomomethioninate",
+      "name": "N,N-dihydroxy-L-tetrahomomethioninate",
+      "short": "N,N-dihydroxy-L-tet…",
+      "formula": "C9H18NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134669"
+      }
+    },
+    {
+      "id": "e_7_methylsulfanyl_heptanal_oxime",
+      "name": "(E)-7-(methylsulfanyl)heptanal oxime",
+      "short": "7-(methylsulfanyl)h…",
+      "formula": "C8H17NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134683"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "α-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28425"
+      }
+    },
+    {
+      "id": "cryptoxanthin",
+      "name": "α-cryptoxanthin",
+      "formula": "C40H56O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_158",
+      "name": "carotene epsilon-hydroxylase",
+      "ec": [
+        "1.14.14.158"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-tetrahomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tetra...",
+      "equation": "L-tetrahomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-tetrahomomethionine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_tetrahomomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxy_l_tetrahomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-hydroxy-L-tetrahomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N,N-dih...",
+      "equation": "N-hydroxy-L-tetrahomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N,N-dihydroxy-L-tetrahomomethionine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_l_tetrahomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dihydroxy_l_tetrahomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N,N-dihydroxy-L-tetrahomomethionine + H(+) = (E)-7-(methylsulfanyl)heptanal oxime + CO2...",
+      "equation": "N,N-dihydroxy-L-tetrahomomethionine + H(+) = (E)-7-(methylsulfanyl)heptanal oxime + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_n_dihydroxy_l_tetrahomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_7_methylsulfanyl_heptanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "carotene epsilon-hydroxylase",
+      "equation": "alpha-carotene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-cryptoxanthin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.158",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cryptoxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30399"
+          }
+        ]
+      }
+    }
+  ]
+}

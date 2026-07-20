@@ -10,7 +10,11 @@ pathway o3-d-galactosyl-1-4-to-o3-n-acetyl-d-glucosam "O3-(β-D-galactosyl-(1→
     o3_d_galactosyl_1_4_d_xylosyl_l_serine
     <-> ec_2_4_1_134 [2.4.1.134] +udp_d_galactose -udp -hplus
     o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
+    <-> . +atp -adp -hplus
+    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_2_o_phosp
     <-> ec_2_4_1_135 [2.4.1.135] +udp_d_glucuronate -udp -hplus
+    o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
+    <-> . +h2o -pi
     o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
     <-> ec_2_4_1_223 [2.4.1.223] +udpglcnac -udp -hplus
     o3_n_acetyl_d_glucosaminyl_1_4_d_glucuronosyl_1

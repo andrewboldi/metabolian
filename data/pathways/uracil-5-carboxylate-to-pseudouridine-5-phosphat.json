@@ -1,0 +1,458 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "uracil-5-carboxylate-to-pseudouridine-5-phosphat",
+  "name": "uracil-5-carboxylate to pseudouridine 5'-phosphate",
+  "category": "other",
+  "summary": "A 4-step route from uracil-5-carboxylate to pseudouridine 5'-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17685"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58159"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "uracil_5_carboxylate",
+      "name": "uracil-5-carboxylate",
+      "formula": "C5H3N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58159"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "uracil",
+      "name": "uracil",
+      "formula": "C4H4N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17568"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78346"
+      }
+    },
+    {
+      "id": "pseudouridine_5_phosphate",
+      "name": "pseudouridine 5'-phosphate",
+      "short": "pseudouridine 5'-P",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58380"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pseudouridine",
+      "name": "pseudouridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17802"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H10N2O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133902"
+      }
+    },
+    {
+      "id": "2_deoxyribose_5_monophosphate_1",
+      "name": "2'-deoxyribose 5'-monophosphate(1−)",
+      "short": "2'-deoxyribose…",
+      "formula": "C5H8O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:139095"
+      }
+    },
+    {
+      "id": "pseudo_utp",
+      "name": "pseudo-UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:142798"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_66",
+      "name": "uracil-5-carboxylate decarboxylase",
+      "ec": [
+        "4.1.1.66"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_70",
+      "name": "pseudouridylate synthase",
+      "ec": [
+        "4.2.1.70"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_96",
+      "name": "pseudouridine 5'-phosphatase",
+      "ec": [
+        "3.1.3.96"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_83",
+      "name": "pseudouridine kinase",
+      "ec": [
+        "2.7.1.83"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "uracil-5-carboxylate decarboxylase",
+      "equation": "uracil 5-carboxylate + H(+) = uracil + CO2",
+      "ec": "4.1.1.66",
+      "substrates": [
+        {
+          "metabolite": "uracil_5_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_66"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pseudouridylate synthase",
+      "equation": "D-ribose 5-phosphate + uracil = psi-UMP + H2O",
+      "ec": "4.2.1.70",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudouridine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_70"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18337"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pseudouridine 5'-phosphatase",
+      "equation": "psi-UMP + H2O = pseudouridine + phosphate",
+      "ec": "3.1.3.96",
+      "substrates": [
+        {
+          "metabolite": "pseudouridine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudouridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pseudouridine kinase",
+      "equation": "pseudouridine + ATP = psi-UMP + ADP + H(+)",
+      "ec": "2.7.1.83",
+      "substrates": [
+        {
+          "metabolite": "pseudouridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudouridine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "a 2'-deoxyuridine in double-stranded DNA + H2O = a 2'-deoxyribose 5'-monophosphate in d...",
+      "equation": "a 2'-deoxyuridine in double-stranded DNA + H2O = a 2'-deoxyribose 5'-monophosphate in double-stranded DNA + uracil",
+      "substrates": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyribose_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "uracil",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:81455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "psi-UTP + H2O = psi-UMP + diphosphate + H(+)",
+      "equation": "psi-UTP + H2O = psi-UMP + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "pseudo_utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pseudouridine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:58740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58740"
+          }
+        ]
+      }
+    }
+  ]
+}

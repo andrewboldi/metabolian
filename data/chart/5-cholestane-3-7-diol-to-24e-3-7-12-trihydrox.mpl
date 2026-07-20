@@ -10,7 +10,11 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
     diol_cdca
     <-> ec_1_14_14_139 [1.14.14.139] +fmnh2 +o2 -fmn -h2o -hplus
     triol_ca
-    <-> ec_1_14_15_15 [1.14.15.15] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    25r_5_cholestane_3_7_12_26_tetrol
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    25r_3_7_12_trihydroxy_5_cholestan_26_al
+    <-> . +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     25r_3_7_12_trihydroxy_5_cholestan_26_oate
     <-> ec_6_2_1_7 [6.2.1.7] +atp +coa -amp -ppi
     thca_coa_25r
@@ -20,27 +24,27 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
     24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
   }
 
-  branch from fmn side left {
+  branch from triol_ca side left {
+    triol_ca
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    5_cholestane_3_7_12_25_tetrol
+  }
+
+  branch from fmn side right {
     fmn
-    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
-    2_hydroxyisoflavones
+    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
+    aldehyde
   }
 
-  branch from di_sulfido_diiron side right {
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_4 [1.14.15.4] +steroid +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxy_steroid
+    <-> ec_1_2_7_8 [1.2.7.8] +3_indol_3_yl_pyruvate +coa +di_sulfido_diiron +co2 +hplus
+    indol_3_ylacetyl_coa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_7 [4.2.3.7] +fpp
-    pentalenene
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_14_99_23 [1.14.99.23] +3_hydroxybenzoate +o2 +hydrogen_acceptor +h2o
-    2_3_dihydroxybenzoate
+  branch from 25r_3_7_12_trihydroxy_5_cholestan_26_oate side right {
+    25r_3_7_12_trihydroxy_5_cholestan_26_oate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    25r_3_7_dihydroxy_5_cholestan_26_oate
   }
 }

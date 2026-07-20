@@ -15,4 +15,10 @@ pathway d-glutamate-to-n-acetyl-l-glutamyl "D-glutamate to N-acetyl-L-γ-glutamy
     <-> ec_2_7_2_8 [2.7.2.8] +atp -adp
     n_acetyl_l_glutamyl_phosphate
   }
+
+  branch from n_acetyl_l_glutamyl_phosphate side left {
+    n_acetyl_l_glutamyl_phosphate
+    <-> ec_1_2_1_38 [1.2.1.38] +pi +nadp +nadph +hplus
+    2_acetamido_5_oxopentanoate
+  }
 }

@@ -102,67 +102,66 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "chamigrene",
-      "name": "(+)-β-chamigrene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61746"
-      }
-    },
-    {
-      "id": "ferroheme_b",
-      "name": "ferroheme b",
-      "formula": "C34H30FeN4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:60344"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "biliverdin",
-      "name": "biliverdin δ",
-      "formula": "C33H33N4O6",
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136510"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "carbon_monoxide",
-      "name": "carbon monoxide",
-      "formula": "CO",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:17245"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29033"
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "dihydroserpentine",
+      "name": "dihydroserpentine",
+      "formula": "C21H23N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142535"
+      }
+    },
+    {
+      "id": "serpentine",
+      "name": "serpentine",
+      "formula": "C21H21N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142531"
       }
     }
   ],
@@ -186,20 +185,6 @@
       "name": "cyclooctatin synthase",
       "ec": [
         "1.14.99.62"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_78",
-      "name": "beta-chamigrene synthase",
-      "ec": [
-        "4.2.3.78"
-      ]
-    },
-    {
-      "id": "ec_1_14_99_58",
-      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
-      "ec": [
-        "1.14.99.58"
       ]
     }
   ],
@@ -357,18 +342,29 @@
     },
     {
       "id": "r4",
-      "name": "beta-chamigrene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-chamigrene + diphosphate",
-      "ec": "4.2.3.78",
+      "name": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
+      "equation": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "chamigrene",
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -376,87 +372,56 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_78"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30379"
+        "rhea": "RHEA:33651"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30379"
+            "id": "RHEA:33651"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "heme oxygenase (biliverdin-IX-beta and delta-forming)",
-      "equation": "heme b + 3 AH2 + 3 O2 + 3 H(+) = biliverdin IXdelta + CO + Fe(2+) + 3 A + 3 H2O",
-      "ec": "1.14.99.58",
+      "name": "dihydroserpentine + A = serpentine + AH2",
+      "equation": "dihydroserpentine + A = serpentine + AH2",
       "substrates": [
         {
-          "metabolite": "ferroheme_b",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "biliverdin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carbon_monoxide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
+          "metabolite": "dihydroserpentine",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_14_99_58"
+          "metabolite": "serpentine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:52224"
+        "rhea": "RHEA:58216"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52224"
+            "id": "RHEA:58216"
           }
         ]
       }

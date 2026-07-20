@@ -16,15 +16,27 @@ pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)eth
     o_s_2s_4s_6s_2_4_6_trimethyl_very_long_chain_fat
   }
 
+  branch from long_chain_fatty_acid_anion side left {
+    long_chain_fatty_acid_anion
+    <-> ec_6_2_1_59 [6.2.1.59] +holo-acp +atp +amp +ppi
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+  }
+
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +5z_8z_11z_14z_17z_icosapentaenoylethanolamine +h2o
+    all_cis_5_8_11_14_17_icosapentaenoate
+  }
+
   branch from long_chain_fatty_acyl_coa side left {
     long_chain_fatty_acyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +sterol +coa
-    long_chain_3_hydroxysterol_ester
+    <-> ec_2_3_1_279 [2.3.1.279] +trehalose +coa
+    2_o_long_chain_fatty_acyl_trehalose
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_20 [6.1.1.20] +amp_3_end_1 +l_phenylalanine +atp +amp +hplus
-    3_l_phenylalanyl_adenylyl_1_group
+    <-> ec_6_1_1_16 [6.1.1.16] +amp_3_end_1 +cysteine +atp +amp
+    3_l_cysteinyl_adenylyl_zwitterionic_group
   }
 }

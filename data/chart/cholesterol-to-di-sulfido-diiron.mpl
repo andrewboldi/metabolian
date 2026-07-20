@@ -16,15 +16,9 @@ pathway cholesterol-to-di-sulfido-diiron "cholesterol to di-μ-sulfido-diiron" {
     25r_4_dafachronate
   }
 
-  branch from cholest_4_en_3_one side left {
-    cholest_4_en_3_one
-    <-> ec_1_3_1_3 [1.3.1.3] +nadp +nadph +hplus
-    5_cholestan_3_one
-  }
-
-  branch from di_sulfido_diiron side right {
+  branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_palmitoleoylglycerolipid
+    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +di_sulfido_diiron +o2 +hplus +h2o
+    4_isopropylbenzyl_alcohol
   }
 }

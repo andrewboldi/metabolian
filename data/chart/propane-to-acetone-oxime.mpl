@@ -15,4 +15,10 @@ pathway propane-to-acetone-oxime "propane to acetone oxime" {
     <-> ec_2_6_3_1 [2.6.3.1] +pyruvate_oxime -pyruvate
     acetone_oxime
   }
+
+  branch from acetone side left {
+    acetone
+    <-> ec_4_1_99_16 [4.1.99.16] +1e_4s_5e_7r_germacra_1_10_5_dien_11_ol +h2o
+    geosmin
+  }
 }

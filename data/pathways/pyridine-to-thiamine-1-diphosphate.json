@@ -171,13 +171,13 @@
       }
     },
     {
-      "id": "2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate",
-      "name": "2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate",
-      "short": "2-(2-carboxy-4-meth…",
+      "id": "r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e",
+      "name": "(R,Z)- 2-carboxylato-4-methyl-5-[(2-phosphonatooxy)ethylidene]-2,5-dihydrothiazole",
+      "short": "(R,Z)- 2-carboxylat…",
       "formula": "C7H7NO6PS",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:62890"
+        "chebi": "CHEBI:62899"
       }
     },
     {
@@ -190,22 +190,43 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
+      "name": "sn-3-O-(geranylgeranyl)glycerol 1-phosphate",
+      "short": "sn-3-O-(geranylgera…",
+      "formula": "C23H39O6P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:57677"
       }
     },
     {
-      "id": "sabinene_hydrate",
-      "name": "sabinene hydrate",
-      "formula": "C10H18O",
-      "charge": 0,
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:16377"
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate",
+      "name": "2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phosphate",
+      "short": "2,3-bis-O-(geranylg…",
+      "formula": "C43H71O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58837"
+      }
+    },
+    {
+      "id": "adenosine_thiamine_triphosphate",
+      "name": "adenosine thiamine triphosphate",
+      "short": "adenosine thiamine…",
+      "formula": "C22H28N9O13P3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71393"
       }
     }
   ],
@@ -260,10 +281,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_11",
-      "name": "sabinene-hydrate synthase",
+      "id": "ec_2_5_1_42",
+      "name": "geranylgeranylglycerol-phosphate geranylgeranyltransferase",
       "ec": [
-        "4.2.3.11"
+        "2.5.1.42"
       ]
     }
   ],
@@ -602,11 +623,11 @@
     {
       "id": "r8",
       "name": "thiamine phosphate synthase",
-      "equation": "2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate + 4-amino-2-methyl-5-(diphosphooxymethyl)pyrimidine + 2 H(+) = thiamine phosphate + CO2 + diphosphate",
+      "equation": "2-[(2R,5Z)-2-carboxy-4-methylthiazol-5(2H)-ylidene]ethyl phosphate + 4-amino-2-methyl-5-(diphosphooxymethyl)pyrimidine + 2 H(+) = thiamine phosphate + CO2 + diphosphate",
       "ec": "2.5.1.3",
       "substrates": [
         {
-          "metabolite": "2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate",
+          "metabolite": "r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e",
           "stoichiometry": 1
         },
         {
@@ -640,36 +661,36 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:47848"
+        "rhea": "RHEA:47844"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47848"
+            "id": "RHEA:47844"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "sabinene-hydrate synthase",
-      "equation": "(2E)-geranyl diphosphate + H2O = sabinene hydrate + diphosphate",
-      "ec": "4.2.3.11",
+      "name": "geranylgeranylglycerol-phosphate geranylgeranyltransferase",
+      "equation": "sn-3-O-(geranylgeranyl)glycerol 1-phosphate + (2E,6E,10E)-geranylgeranyl diphosphate = 2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phosphate + diphosphate",
+      "ec": "2.5.1.42",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "sn_3_o_geranylgeranyl_glycerol_1_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sabinene_hydrate",
+          "metabolite": "2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -679,20 +700,63 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_11"
+          "enzyme": "ec_2_5_1_42"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:19565"
+        "rhea": "RHEA:18109"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19565"
+            "id": "RHEA:18109"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "thiamine diphosphate + ADP + H(+) = adenosine thiamine triphosphate + phosphate",
+      "equation": "thiamine diphosphate + ADP + H(+) = adenosine thiamine triphosphate + phosphate",
+      "substrates": [
+        {
+          "metabolite": "thiamine_1_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adenosine_thiamine_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:35243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35243"
           }
         ]
       }

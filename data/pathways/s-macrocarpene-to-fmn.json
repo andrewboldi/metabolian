@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-macrocarpene-to-fmn",
+  "name": "(S)-β-macrocarpene to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (S)-β-macrocarpene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57548"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61344"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_macrocarpene",
+      "name": "(S)-β-macrocarpene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61344"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_macrocarpen_15_ol",
+      "name": "(S)-β-macrocarpen-15-ol",
+      "short": "β-macrocarpen-15-ol",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141850"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1",
+      "name": "(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde",
+      "short": "4-(5,5-dimethylcycl…",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141851"
+      }
+    },
+    {
+      "id": "zealexin_a1",
+      "name": "zealexin A1",
+      "formula": "C15H21O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141852"
+      }
+    },
+    {
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "5z_11z_14z_17z_8_9_epoxyicosatetraenoate",
+      "name": "(5Z,11Z,14Z,17Z)-8,9-epoxyicosatetraenoate",
+      "short": "(5Z,11Z,14Z,17Z)-8,…",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136439"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-beta-macrocarpene + reduced [NADPH--hemoprotein reductase] + O2 = [(4S)-4-(5,5-dime...",
+      "equation": "(S)-beta-macrocarpene + reduced [NADPH--hemoprotein reductase] + O2 = [(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_macrocarpene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_macrocarpen_15_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57548"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57548"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + reduced [NADPH--...",
+      "equation": "[(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol + reduced [NADPH--hemoprotein reductase] + O2 = (4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_macrocarpen_15_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde + reduced [NADPH--...",
+      "equation": "(4S)-4-(5,5-dimethylcyclohex-1-en-1-yl)cyclohex-1-ene-1-carbaldehyde + reduced [NADPH--hemoprotein reductase] + O2 = zealexin A1 + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "zealexin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 8...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 8,9-epoxy-(5Z,11Z,14Z,17Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_11z_14z_17z_8_9_epoxyicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52168"
+          }
+        ]
+      }
+    }
+  ]
+}

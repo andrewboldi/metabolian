@@ -15,4 +15,10 @@ pathway l-threonine-to-adenosylcobinamide "L-threonine to adenosylcobinamide…"
     <-> ec_6_3_1_10 [6.3.1.10] +adenosylcobyrate +atp -adp -pi -hplus
     adenosylcobinamide_phosphate
   }
+
+  branch from adenosylcobinamide_phosphate side left {
+    adenosylcobinamide_phosphate
+    <-> ec_2_7_1_156 [2.7.1.156] +atp +adp +hplus
+    adenosylcobinamide
+  }
 }

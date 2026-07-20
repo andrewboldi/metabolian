@@ -12,12 +12,8 @@ pathway monosaccharide-1-phosphate-to-diphosphate "monosaccharide 1-phosphate to
     udp_monosaccharide
     <-> ec_2_4_2_12 [2.4.2.12] +nmn +ppi -nicotinamide -hplus
     prpp
-    <-> ec_6_3_4_21 [6.3.4.21] +nicotinate +atp +h2o -adp -pi -ppi
-    nicotinate_d_ribonucleotide
-    <-> ec_2_7_7_18 [2.7.7.18] +atp +hplus -ppi
-    deamido_nad
-    <-> ec_6_3_1_5 [6.3.1.5] +nh3 +atp -amp -nad -hplus
-    ppi
+    <-> ec_2_4_2_54 [2.4.2.54] +4_hydroxybenzoate +hplus -co2 -ppi
+    4_5_o_phosphonato_d_ribofuranosyl_phenol
   }
 
   branch from ppi side left {
@@ -30,11 +26,5 @@ pathway monosaccharide-1-phosphate-to-diphosphate "monosaccharide 1-phosphate to
     nicotinamide
     <-> ec_3_2_2_5 [3.2.2.5] +nad +h2o +hplus
     adp_d_ribose
-  }
-
-  branch from deamido_nad side left {
-    deamido_nad
-    <-> ec_6_3_5_1 [6.3.5.1] +glutamine +atp +h2o +amp +ppi +nad +hplus
-    glutamate
   }
 }

@@ -121,22 +121,40 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:162247"
+        "chebi": "CHEBI:57926"
       }
     },
     {
-      "id": "2_epi_prezizaene",
-      "name": "(+)-2-epi-prezizaene",
-      "formula": "C15H24",
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "l_threonylcarbamoyladenylate",
+      "name": "L-threonylcarbamoyladenylate",
+      "short": "L-threonylcarbamoyl…",
+      "formula": "C15H19N6O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73682"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62762"
+        "chebi": "CHEBI:15377"
       }
     }
   ],
@@ -163,10 +181,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_226",
-      "name": "(+)-2-epi-prezizaene synthase",
+      "id": "ec_2_7_7_87",
+      "name": "L-threonylcarbamoyladenylate synthase",
       "ec": [
-        "4.2.3.226"
+        "2.7.7.87"
       ]
     }
   ],
@@ -328,41 +346,53 @@
     },
     {
       "id": "r4",
-      "name": "(+)-2-epi-prezizaene synthase",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (+)-2-epi-prezizaene + diphosphate",
-      "ec": "4.2.3.226",
+      "name": "L-threonylcarbamoyladenylate synthase",
+      "equation": "L-threonine + hydrogencarbonate + ATP = L-threonylcarbamoyladenylate + diphosphate + H2O",
+      "ec": "2.7.7.87",
       "substrates": [
         {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_epi_prezizaene",
+          "metabolite": "l_threonylcarbamoyladenylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_226"
+          "enzyme": "ec_2_7_7_87"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31415"
+        "rhea": "RHEA:36407"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31415"
+            "id": "RHEA:36407"
           }
         ]
       }

@@ -8,33 +8,27 @@ pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bact
 
   spine at 0,0 {
     3_1_hydroxyethyl_bacteriochlorophyllide_a
-    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron -atp -h2o -hplus
-    3_1_hydroxyethyl_chlorophyllide_a
     <-> ec_4_2_1_165 [4.2.1.165] -h2o
+    3_vinylbacteriochlorophyllide_a
+    <-> ec_1_3_7_15 [1.3.7.15] +di_sulfido_diiron +adp +pi -di_sulfido_diiron -atp -h2o -hplus
     chlorophyllide_a
     <-> ec_1_3_1_75 [1.3.1.75] +nadp -nadph -hplus
     divinyl_chlorophyllide_a
   }
 
-  branch from 3_1_hydroxyethyl_chlorophyllide_a side left {
-    3_1_hydroxyethyl_chlorophyllide_a
-    <-> ec_1_1_1_396 [1.1.1.396] +nad +nadh +hplus
-    3_acetylchlorophyllide_a
+  branch from chlorophyllide_a side left {
+    chlorophyllide_a
+    <-> ec_1_14_13_122 [1.14.13.122] +nadph +o2 +hplus +nadp +h2o
+    chlorophyllide_b
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_21 [1.14.15.21] +zeaxanthin +o2 +hplus +di_sulfido_diiron +h2o
-    all_trans_violaxanthin
+    <-> ec_1_12_1_4 [1.12.1.4] +di_sulfido_diiron +nad +nadh +hplus
+    h2
   }
 
-  branch from chlorophyllide_a side left {
-    chlorophyllide_a
-    <-> ec_3_1_1_100 [3.1.1.100] +h2o +hplus +methanol +co2
-    3_vinylbacteriochlorophyllide_d
-  }
-
-  branch from divinyl_chlorophyllide_a side right {
+  branch from divinyl_chlorophyllide_a side left {
     divinyl_chlorophyllide_a
     <-> ec_1_3_7_14 [1.3.7.14] +di_sulfido_diiron +adp +pi +di_sulfido_diiron +atp +h2o +hplus
     bacteriochlorophyllide_g

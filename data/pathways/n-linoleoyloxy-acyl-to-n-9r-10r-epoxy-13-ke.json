@@ -1,0 +1,210 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-linoleoyloxy-acyl-to-n-9r-10r-epoxy-13-ke",
+  "name": "N-[ω-(linoleoyloxy)]acyl-… to N-[ω-(9R,10R)-epoxy-13-ke…",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-[ω-(linoleoyloxy)]acyl-β-D-glucosyl-(1↔1)-sphingosine to N-[ω-(9R,10R)-epoxy-13-keto-(11E)-octadecenoyloxy]acyl-β-D-glucosyl-(1↔1)-sphingosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40495"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134621"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_linoleoyloxy_acyl_d_glucosyl_1_1_sphingosine",
+      "name": "N-[ω-(linoleoyloxy)]acyl-β-D-glucosyl-(1↔1)-sphingosine",
+      "short": "N-[ω-(linoleoyloxy)…",
+      "formula": "C43H77NO10R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134621"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+      "name": "N-[ω-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]acyl-β-D-glucosyl-(1↔1)-sphingosine",
+      "short": "N-[ω-(9R)-hydropero…",
+      "formula": "C43H77NO12R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134624"
+      }
+    },
+    {
+      "id": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_a",
+      "name": "N-[ω-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]acyl-β-D-glucosyl-(1↔1)-sphingosine",
+      "short": "N-[ω-(9R,10R)-epoxy…",
+      "formula": "C43H77NO12R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134626"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_9r_10r_epoxy_13_keto_11e_octadecenoyloxy_acyl",
+      "name": "N-[ω-(9R,10R)-epoxy-13-keto-(11E)-octadecenoyloxy]acyl-β-D-glucosyl-(1↔1)-sphingosine",
+      "short": "N-[ω-(9R,10R)-epoxy…",
+      "formula": "C43H75NO12R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232325"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-[omega-(9Z,12Z)-octadecadienoyloxy]acyl-beta-D-glucosyl-(1<->1)-octadecasphing-4E-eni...",
+      "equation": "N-[omega-(9Z,12Z)-octadecadienoyloxy]acyl-beta-D-glucosyl-(1<->1)-octadecasphing-4E-enine + O2 = N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]acyl-beta-D-glucosyl-(1<->1)-octadecasphing-4E-enine",
+      "substrates": [
+        {
+          "metabolite": "n_linoleoyloxy_acyl_d_glucosyl_1_1_sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40495"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]acyl-beta-D-glucosyl-(1<->1)-oct...",
+      "equation": "N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]acyl-beta-D-glucosyl-(1<->1)-octadecasphing-4E-enine = a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]acyl-beta-D-glucosyl-(1<->1)-sphing-4E-enine",
+      "substrates": [
+        {
+          "metabolite": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_a",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]acyl-beta-D-glucosyl-(1<-...",
+      "equation": "a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]acyl-beta-D-glucosyl-(1<->1)-sphing-4E-enine + NAD(+) = a N-[omega-(9R,10R)-epoxy-13-oxo-(11E)-octadecenoyloxy]acyl-beta-D-glucosyl-(1<->1)-sphing-4E-enine + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13_keto_11e_octadecenoyloxy_acyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82447"
+          }
+        ]
+      }
+    }
+  ]
+}

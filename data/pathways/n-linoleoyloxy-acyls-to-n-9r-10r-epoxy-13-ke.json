@@ -1,0 +1,210 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-linoleoyloxy-acyls-to-n-9r-10r-epoxy-13-ke",
+  "name": "N-[ω-(linoleoyloxy)]acyls… to N-[ω-(9R,10R)-epoxy-13-ke…",
+  "category": "other",
+  "summary": "A 3-step route from N-[ω-(linoleoyloxy)]acylsphin-4-enine to N-[ω-(9R,10R)-epoxy-13-keto-(11E)-octadecenoyloxy]sphing-4-enine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41239"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77888"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_linoleoyloxy_acylsphin_4_enine",
+      "name": "N-[ω-(linoleoyloxy)]acylsphin-4-enine",
+      "short": "N-[ω-(linoleoyloxy)…",
+      "formula": "C37H67NO5R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77888"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+      "name": "N-[ω-(9R)-hydroperoxy(10E,12Z)-octadecadienoyloxy]acylsphin-4-enine",
+      "short": "N-[ω-(9R)-hydropero…",
+      "formula": "C37H67NO7R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77889"
+      }
+    },
+    {
+      "id": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_s",
+      "name": "N-[ω-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]sphing-4-enine",
+      "short": "N-[ω-(9R,10R)-epoxy…",
+      "formula": "C37H67NO7R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77891"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_9r_10r_epoxy_13_keto_11e_octadecenoyloxy_sphin",
+      "name": "N-[ω-(9R,10R)-epoxy-13-keto-(11E)-octadecenoyloxy]sphing-4-enine",
+      "short": "N-[ω-(9R,10R)-epoxy…",
+      "formula": "C37H65NO7R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77892"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a N-[omega-(9Z,12Z)-octadecadienoyloxy]-acylsphin-4E-enine + O2 = a N-[omega-(9R)-hydro...",
+      "equation": "a N-[omega-(9Z,12Z)-octadecadienoyloxy]-acylsphin-4E-enine + O2 = a N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]-acylsphin-4E-enine",
+      "substrates": [
+        {
+          "metabolite": "n_linoleoyloxy_acylsphin_4_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]-acylsphin-4E-enine = a N-[ome...",
+      "equation": "a N-[omega-(9R)-hydroperoxy-(10E,12Z)-octadecadienoyloxy]-acylsphin-4E-enine = a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]-acylsphing-4E-enine",
+      "substrates": [
+        {
+          "metabolite": "n_9r_hydroperoxy_10e_12z_octadecadienoyloxy_acyl",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_s",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]-acylsphing-4E-enine + NA...",
+      "equation": "a N-[omega-(9R,10R)-epoxy-(13R)-hydroxy-(11E)-octadecenoyloxy]-acylsphing-4E-enine + NAD(+) = a N-[omega-(9R,10R)-epoxy-13-oxo-(11E)-octadecenoyloxy]-acylsphing-4E-enine + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13r_hydroxy_11e_octadecenoyloxy_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_9r_10r_epoxy_13_keto_11e_octadecenoyloxy_sphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82471"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82471"
+          }
+        ]
+      }
+    }
+  ]
+}

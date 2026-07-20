@@ -18,13 +18,13 @@ pathway 1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero "1-O-alkyl-2-O-arachidon
 
   branch from 1_alkyl_sn_glycero_3_phosphocholine side left {
     1_alkyl_sn_glycero_3_phosphocholine
-    <-> ec_3_1_1_47 [3.1.1.47] +2_acetyl_1_alkyl_sn_glycero_3_phosphocholine +h2o +hplus
-    acetate
+    <-> . +2_acyl_1_alkyl_sn_glycero_3_phosphocholine +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
   }
 
   branch from 2_acetyl_1_alkyl_sn_glycero_3_phosphocholine side right {
     2_acetyl_1_alkyl_sn_glycero_3_phosphocholine
-    <-> ec_2_7_8_2 [2.7.8.2] +1_alkyl_2_acetyl_sn_glycerol +cdp_choline +hplus
-    cytidine_5_monophosphate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +1_alkyl_sn_glycero_3_phosphocholine
+    1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
   }
 }

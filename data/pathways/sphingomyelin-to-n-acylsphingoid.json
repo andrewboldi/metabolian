@@ -1,0 +1,425 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sphingomyelin-to-n-acylsphingoid",
+  "name": "sphingomyelin to N-acylsphingoid",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from sphingomyelin to N-acylsphingoid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45300"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64583"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sphingomyelin",
+      "name": "sphingomyelin",
+      "formula": "C9H19N2O6PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64583"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acylsphingoid",
+      "name": "N-acylsphingoid",
+      "formula": "C4H7NO3R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83273"
+      }
+    },
+    {
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:295975"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sphingoid_base",
+      "name": "sphingoid base",
+      "formula": "C3H9NO2R",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:84410"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "fatty_acyl_coa",
+      "name": "fatty acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77636"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "d_glucosylceramide",
+      "name": "β-D-glucosylceramide",
+      "formula": "C10H17NO8R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83264"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "n_stearoyl_sphingoid_base",
+      "name": "N-stearoyl-sphingoid base",
+      "short": "N-stearoyl-sphingoi…",
+      "formula": "C21H42NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:144711"
+      }
+    },
+    {
+      "id": "fatty_acid_ester",
+      "name": "fatty acid ester",
+      "formula": "CO2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35748"
+      }
+    },
+    {
+      "id": "aliphatic_alcohol",
+      "name": "aliphatic alcohol",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2571"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_299",
+      "name": "sphingoid base N-stearoyltransferase",
+      "ec": [
+        "2.3.1.299"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "an N-(acyl)-sphingosylphosphocholine + H2O = an N-acyl-sphingoid base + phosphocholine ...",
+      "equation": "an N-(acyl)-sphingosylphosphocholine + H2O = an N-acyl-sphingoid base + phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphingomyelin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingoid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "an N-acyl-sphingoid base + H2O = a sphingoid base + a fatty acid",
+      "equation": "an N-acyl-sphingoid base + H2O = a sphingoid base + a fatty acid",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingoid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingoid_base",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78455"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78455"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a sphingoid base + a fatty acyl-CoA = an N-acyl-sphingoid base + CoA + H(+)",
+      "equation": "a sphingoid base + a fatty acyl-CoA = an N-acyl-sphingoid base + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphingoid_base",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingoid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a beta-D-glucosylceramide + H2O = an N-acyl-sphingoid base + D-glucose",
+      "equation": "a beta-D-glucosylceramide + H2O = an N-acyl-sphingoid base + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "d_glucosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingoid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphingoid base N-stearoyltransferase",
+      "equation": "a sphingoid base + octadecanoyl-CoA = an N-octadecanoyl-sphingoid base + CoA + H(+)",
+      "ec": "2.3.1.299",
+      "substrates": [
+        {
+          "metabolite": "sphingoid_base",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_stearoyl_sphingoid_base",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_299"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:61476"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61476"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "a fatty acid ester + H2O = an aliphatic alcohol + a fatty acid + H(+)",
+      "equation": "a fatty acid ester + H2O = an aliphatic alcohol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "fatty_acid_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aliphatic_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:59388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59388"
+          }
+        ]
+      }
+    }
+  ]
+}

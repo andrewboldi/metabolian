@@ -18,20 +18,20 @@ pathway geranyl-diphosphate-to-isopiperitenone "geranyl diphosphate to (−)-iso
 
   branch from 4s_limonene side left {
     4s_limonene
-    <-> ec_1_14_13_107 [1.14.13.107] +nadph +o2 +hplus +nadp +h2o
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +o2 +hplus +nad +h2o
     limonene_1_2_epoxide
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
-    3s_6e_nerolidol
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    tuberculosinol
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +fmnh2 +o2 +h2o +hplus
-    oryzalexin_d
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    15_hydroxyestradiol
   }
 
   branch from isopiperitenone side right {

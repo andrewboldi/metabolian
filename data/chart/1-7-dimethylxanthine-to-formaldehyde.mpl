@@ -20,13 +20,13 @@ pathway 1-7-dimethylxanthine-to-formaldehyde "1,7-dimethylxanthine to formaldehy
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadph +o2 +hplus +nadp +h2o
-    xanthine
+    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_146 [2.1.1.146] +trans_isoeugenol +sam +hplus
-    trans_isomethyleugenol
+    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
+    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
   }
 }

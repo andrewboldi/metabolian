@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-bromo-l-tryptophan-to-2-3-5-tribromoindole",
+  "name": "5-bromo-L-tryptophan to 2,3,5-tribromoindole",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 5-bromo-L-tryptophan zwitterion to 2,3,5-tribromoindole, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82523"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232362"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_bromo_l_tryptophan",
+      "name": "5-bromo-L-tryptophan",
+      "formula": "C11H11BrN2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232362"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_bromoindole",
+      "name": "5-bromoindole",
+      "formula": "C8H6BrN",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232364"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "bromide",
+      "name": "bromide",
+      "formula": "Br",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15858"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_5_dibromoindole",
+      "name": "3,5-dibromoindole",
+      "formula": "C8H5Br2N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232365"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "2_3_5_tribromoindole",
+      "name": "2,3,5-tribromoindole",
+      "formula": "C8H4Br3N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232363"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17640"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-bromo-L-tryptophan + H2O = 5-bromoindole + pyruvate + NH4(+)",
+      "equation": "5-bromo-L-tryptophan + H2O = 5-bromoindole + pyruvate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "5_bromo_l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_bromoindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82523"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-bromoindole + bromide + FADH2 + O2 = 3,5-dibromoindole + FAD + 2 H2O",
+      "equation": "5-bromoindole + bromide + FADH2 + O2 = 3,5-dibromoindole + FAD + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "5_bromoindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dibromoindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82527"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82527"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,5-dibromoindole + bromide + FADH2 + O2 = 2,3,5-tribromoindole + FAD + 2 H2O",
+      "equation": "3,5-dibromoindole + bromide + FADH2 + O2 = 2,3,5-tribromoindole + FAD + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "3_5_dibromoindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_5_tribromoindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82531"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82531"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-tryptophan + O2 + H2O = indole-3-pyruvate + H2O2 + NH4(+)",
+      "equation": "L-tryptophan + O2 + H2O = indole-3-pyruvate + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61244"
+          }
+        ]
+      }
+    }
+  ]
+}

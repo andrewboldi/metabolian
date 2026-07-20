@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-cinnamate-to-s-styrene-glycol",
+  "name": "trans-cinnamate to (S)-styrene glycol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from trans-cinnamate to (S)-styrene glycol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46920"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15669"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_cinnamate",
+      "name": "trans-cinnamate",
+      "formula": "C9H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15669"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "styrene",
+      "name": "styrene",
+      "formula": "C8H8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27452"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_styrene_oxide",
+      "name": "(S)-styrene oxide",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51014"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_styrene_glycol",
+      "name": "(S)-styrene glycol",
+      "formula": "C8H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231714"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_102",
+      "name": "phenacrylate decarboxylase",
+      "ec": [
+        "4.1.1.102"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_11",
+      "name": "styrene monooxygenase",
+      "ec": [
+        "1.14.14.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenacrylate decarboxylase",
+      "equation": "(E)-cinnamate + H(+) = styrene + CO2",
+      "ec": "4.1.1.102",
+      "substrates": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "styrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "styrene monooxygenase",
+      "equation": "styrene + FADH2 + O2 = (S)-styrene oxide + FAD + H2O + H(+)",
+      "ec": "1.14.14.11",
+      "substrates": [
+        {
+          "metabolite": "styrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_styrene_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-styrene oxide + H2O = (S)-styrene glycol",
+      "equation": "(S)-styrene oxide + H2O = (S)-styrene glycol",
+      "substrates": [
+        {
+          "metabolite": "s_styrene_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_styrene_glycol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80795"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,13 +18,13 @@ pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to d
 
   branch from adp_d_ribose side left {
     adp_d_ribose
-    <-> ec_3_1_3_84 [3.1.3.84] +h2o +pi
-    adp_d_ribose_1_phosphate
+    <-> . +s_adp_d_ribosyl_l_cysteine_2 +h2o
+    l_cysteine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_79 [4.2.3.79] +fpp
-    thujopsene
+    <-> ec_2_5_1_n9 [2.5.1.n9] +sn_glycerol_1_phosphate +all_trans_heptaprenyl_diphosphate
+    3_heptaprenyl_sn_glycero_1_phosphate
   }
 }

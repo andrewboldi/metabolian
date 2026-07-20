@@ -18,13 +18,13 @@ pathway 2-trans-6-trans-10-trans-to-fmn-20912 "2-trans,6-trans,10-trans-… to F
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
-    cubebol
+    <-> . +8_9_eet +atp +coa +amp
+    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_71 [1.14.14.71] +cucurbitadienol +fmnh2 +o2 +h2o +hplus
-    11_oxocucurbitadienol
+    <-> ec_1_14_19_76 [1.14.19.76] +flavanones +fmnh2 +o2 +h2o +hplus
+    flavones
   }
 }

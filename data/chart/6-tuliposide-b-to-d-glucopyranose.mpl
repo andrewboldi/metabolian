@@ -4,21 +4,21 @@
 # edit the generator, not this file.
 
 pathway 6-tuliposide-b-to-d-glucopyranose "6-tuliposide B to D-glucopyranose" {
-  spacing 204
+  spacing 184
 
   spine at 0,0 {
     6_tuliposide_b
     <-> ec_4_2_99_23 [4.2.99.23] -glucose
     tulipalin_b
-    <-> ec_2_4_1_245 [2.4.1.245] +adp_d_glucoside +glucose -adp -hplus
-    trehalose
-    <-> ec_2_4_1_64 [2.4.1.64] +pi -glucose
-    d_glucose_1_phosphate
+    <-> ec_2_7_1_1 [2.7.1.1] +glucose +atp -adp -hplus
+    g6p
+    <-> ec_3_1_3_9 [3.1.3.9] +h2o -pi
+    glucose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_191 [3.2.1.191] +ginsenoside_rb1 +h2o
-    gypenoside_lxxv
+    <-> ec_3_2_1_186 [3.2.1.186] +protodioscin +h2o
+    26_desglucoprotodioscin
   }
 }

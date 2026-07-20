@@ -24,7 +24,7 @@ pathway anilide-to-4-dimethylamino-phenylaz "anilide to 4-(dimethylamino)phenyla
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
-    aromatic_l_amino_acid
+    <-> ec_3_5_1_83 [3.5.1.83] +n_acyl_d_aspartate +h2o
+    d_aspartate
   }
 }

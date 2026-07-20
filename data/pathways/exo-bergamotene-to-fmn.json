@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "exo-bergamotene-to-fmn",
+  "name": "(+)-exo-β-bergamotene to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (+)-exo-β-bergamotene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:74695"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:193166"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "exo_bergamotene",
+      "name": "(+)-exo-β-bergamotene",
+      "short": "(+)-exo-β-bergamote…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193166"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5r_hydroxy_trans_bergamotene",
+      "name": "(5R)-hydroxy-β-trans-bergamotene",
+      "short": "hydroxy-β-trans-ber…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193167"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+      "name": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one",
+      "short": "3-[2-methyl-3-(3-me…",
+      "formula": "C15H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193168"
+      }
+    },
+    {
+      "id": "5_dehydro_6_demethoxyfumagillol",
+      "name": "5-dehydro-6-demethoxyfumagillol",
+      "short": "5-dehydro-6-demetho…",
+      "formula": "C15H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193517"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "16_r_hete",
+      "name": "16(R)-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137166"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-exo-beta-bergamotene + reduced [NADPH--hemoprotein reductase] + O2 = (5R)-hydroxy-b...",
+      "equation": "(+)-exo-beta-bergamotene + reduced [NADPH--hemoprotein reductase] + O2 = (5R)-hydroxy-beta-trans-bergamotene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "exo_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5r_hydroxy_trans_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:74695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5R)-hydroxy-beta-trans-bergamotene + O2 = (3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)ox...",
+      "equation": "(5R)-hydroxy-beta-trans-bergamotene + O2 = (3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + H2O",
+      "substrates": [
+        {
+          "metabolite": "5r_hydroxy_trans_bergamotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:74699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + ...",
+      "equation": "(3S)-3-[2-methyl-3-(3-methylbut-2-en-1-yl)oxiran-2-yl]-4-methylidenecyclohexan-1-one + reduced [NADPH--hemoprotein reductase] + O2 = 5-dehydro-6-demethoxyfumagillol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_6_demethoxyfumagillol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:74703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 16(R)...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 16(R)-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_r_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53308"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -175,42 +175,40 @@
       }
     },
     {
-      "id": "8_hydroxyfurocoumarin",
-      "name": "8-hydroxyfurocoumarin",
-      "short": "8-hydroxyfurocoumar…",
-      "formula": "C11HO4R5",
-      "charge": 0,
+      "id": "o_demethylpuromycin",
+      "name": "O-demethylpuromycin",
+      "formula": "C21H28N7O5",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:52025"
+        "chebi": "CHEBI:58037"
       }
     },
     {
-      "id": "8_methoxyfurocoumarin",
-      "name": "8-methoxyfurocoumarin",
-      "short": "8-methoxyfurocoumar…",
-      "formula": "C12H3O4R5",
-      "charge": 0,
+      "id": "puromycin",
+      "name": "puromycin",
+      "formula": "C22H30N7O5",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:52028"
+        "chebi": "CHEBI:60255"
       }
     },
     {
-      "id": "cyclo_l_leucyl_l_leucyl",
-      "name": "cyclo(L-leucyl-L-leucyl)",
-      "short": "cyclo(L-leucyl-L-le…",
-      "formula": "C12H22N2O2",
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:67269"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "pulcherriminate",
-      "name": "pulcherriminate",
-      "formula": "C12H18N2O4",
-      "charge": -2,
+      "id": "22r_22_hydroxycholesterol",
+      "name": "(22R)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77663"
+        "chebi": "CHEBI:67237"
       }
     }
   ],
@@ -237,17 +235,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_70",
-      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "id": "ec_2_1_1_38",
+      "name": "O-demethylpuromycin O-methyltransferase",
       "ec": [
-        "2.1.1.70"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_13",
-      "name": "pulcherriminic acid synthase",
-      "ec": [
-        "1.14.15.13"
+        "2.1.1.38"
       ]
     }
   ],
@@ -425,12 +416,12 @@
     },
     {
       "id": "r4",
-      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
-      "equation": "an 8-hydroxyfurocoumarin + S-adenosyl-L-methionine = an 8-methoxyfurocoumarin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.70",
+      "name": "O-demethylpuromycin O-methyltransferase",
+      "equation": "O-demethylpuromycin + S-adenosyl-L-methionine = puromycin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.38",
       "substrates": [
         {
-          "metabolite": "8_hydroxyfurocoumarin",
+          "metabolite": "o_demethylpuromycin",
           "stoichiometry": 1
         },
         {
@@ -440,7 +431,7 @@
       ],
       "products": [
         {
-          "metabolite": "8_methoxyfurocoumarin",
+          "metabolite": "puromycin",
           "stoichiometry": 1
         },
         {
@@ -454,77 +445,71 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_70"
+          "enzyme": "ec_2_1_1_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:21244"
+        "rhea": "RHEA:22280"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21244"
+            "id": "RHEA:22280"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "pulcherriminic acid synthase",
-      "equation": "cyclo(L-leucyl-L-leucyl) + 6 reduced [2Fe-2S]-[ferredoxin] + 3 O2 + 4 H(+) = pulcherriminic acid + 6 oxidized [2Fe-2S]-[ferredoxin] + 4 H2O",
-      "ec": "1.14.15.13",
+      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxid...",
+      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "cyclo_l_leucyl_l_leucyl",
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 6
-        },
-        {
           "metabolite": "o2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "pulcherriminate",
+          "metabolite": "22r_22_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 6
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_13"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35555"
+        "rhea": "RHEA:34335"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35555"
+            "id": "RHEA:34335"
           }
         ]
       }

@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-sulfo-d-fucose-to-l-3-sulfolactaldehyde",
+  "name": "6-sulfo-D-fucose to L-3-sulfolactaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 6-sulfo-D-fucose(1−) to L-3-sulfolactaldehyde(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86343"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:235529"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_sulfo_d_fucose",
+      "name": "6-sulfo-D-fucose",
+      "formula": "C6H11O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:235529"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "6_deoxy_6_sulfo_d_galactono_1_5_lactone",
+      "name": "6-deoxy-6-sulfo-D-galactono-1,5-lactone",
+      "short": "6-deoxy-6-sulfo-D-g…",
+      "formula": "C6H9O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:235530"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "6_deoxy_6_sulfo_d_galactonate",
+      "name": "6-deoxy-6-sulfo-D-galactonate",
+      "short": "6-deoxy-6-sulfo-D-g…",
+      "formula": "C6H10O9S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:235534"
+      }
+    },
+    {
+      "id": "2_dehydro_3_6_dideoxy_6_sulfo_d_galactonate",
+      "name": "2-dehydro-3,6-dideoxy-6-sulfo-D-galactonate",
+      "short": "2-dehydro-3,6-dideo…",
+      "formula": "C6H8O8S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:235535"
+      }
+    },
+    {
+      "id": "l_3_sulfolactaldehyde",
+      "name": "L-3-sulfolactaldehyde",
+      "short": "L-3-sulfolactaldehy…",
+      "formula": "C3H5O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90109"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_444",
+      "name": "sulfofucose 1-dehydrogenase",
+      "ec": [
+        "1.1.1.444"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_185",
+      "name": "6-deoxy-6-sulfo-D-galactonate dehydratase",
+      "ec": [
+        "4.2.1.185"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sulfofucose 1-dehydrogenase",
+      "equation": "6-sulfo-D-fucose + NAD(+) = 6-deoxy-6-sulfo-D-galactono-1,5-lactone + NADH + H(+)",
+      "ec": "1.1.1.444",
+      "substrates": [
+        {
+          "metabolite": "6_sulfo_d_fucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_galactono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_444"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86343"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86343"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-deoxy-6-sulfo-D-galactono-1,5-lactone + H2O = 6-deoxy-6-sulfo-D-galactonate + H(+)",
+      "equation": "6-deoxy-6-sulfo-D-galactono-1,5-lactone + H2O = 6-deoxy-6-sulfo-D-galactonate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_galactono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-deoxy-6-sulfo-D-galactonate dehydratase",
+      "equation": "6-deoxy-6-sulfo-D-galactonate = 2-dehydro-3,6-dideoxy-6-sulfo-D-galactonate + H2O",
+      "ec": "4.2.1.185",
+      "substrates": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_6_dideoxy_6_sulfo_d_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_185"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-dehydro-3,6-dideoxy-6-sulfo-D-galactonate = (2S)-3-sulfolactaldehyde + pyruvate",
+      "equation": "2-dehydro-3,6-dideoxy-6-sulfo-D-galactonate = (2S)-3-sulfolactaldehyde + pyruvate",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_6_dideoxy_6_sulfo_d_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_3_sulfolactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86355"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86355"
+          }
+        ]
+      }
+    }
+  ]
+}

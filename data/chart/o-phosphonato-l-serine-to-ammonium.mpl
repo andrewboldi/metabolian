@@ -24,13 +24,13 @@ pathway o-phosphonato-l-serine-to-ammonium "O-phosphonato-L-serine to ammonium" 
 
   branch from akg side right {
     akg
-    <-> ec_1_2_1_105 [1.2.1.105] +nad +coa +co2 +nadh
-    succinyl_coa
+    <-> ec_6_4_1_7 [6.4.1.7] +hco3 +atp +adp +pi +hplus
+    s_oxalatosuccinate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_1_1_107 [4.1.1.107] +ldopa +o2 +h2o +hplus +h2o2 +co2
-    dopal
+    <-> . +s_ethyl_l_cysteine +h2o +pyruvate
+    ethanethiol
   }
 }

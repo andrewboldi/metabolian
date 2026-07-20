@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "all-cis-5-8-11-14-17-icos-to-prostaglandin-e3",
+  "name": "all-cis-5,8,11,14,17-icos… to prostaglandin E3",
+  "category": "other",
+  "summary": "A 3-step route from all-cis-5,8,11,14,17-icosapentaenoate to prostaglandin E3(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50444"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58562"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "prostaglandin_g3",
+      "name": "prostaglandin G3",
+      "formula": "C20H29O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133133"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "prostaglandin_h3",
+      "name": "prostaglandin H3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133134"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "prostaglandin_e3",
+      "name": "prostaglandin E3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133132"
+      }
+    },
+    {
+      "id": "prostaglandin_d3",
+      "name": "prostaglandin D3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132149"
+      }
+    },
+    {
+      "id": "urobilinogen",
+      "name": "urobilinogen",
+      "formula": "C33H42N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:228218"
+      }
+    },
+    {
+      "id": "4z_15z_mesobilirubin_ix",
+      "name": "(4Z,15Z)-mesobilirubin IXα",
+      "short": "(4Z,15Z)-mesobiliru…",
+      "formula": "C33H38N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229696"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + 2 O2 = prostaglandin G3",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + 2 O2 = prostaglandin G3",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_g3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin G3 + AH2 = prostaglandin H3 + A + H2O",
+      "equation": "prostaglandin G3 + AH2 = prostaglandin H3 + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_g3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin H3 = prostaglandin E3",
+      "equation": "prostaglandin H3 = prostaglandin E3",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_e3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin H3 = prostaglandin D3",
+      "equation": "prostaglandin H3 = prostaglandin D3",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_d3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "urobilinogen + 2 A = (4Z,15Z)-mesobilirubin IXalpha + 2 AH2",
+      "equation": "urobilinogen + 2 A = (4Z,15Z)-mesobilirubin IXalpha + 2 AH2",
+      "substrates": [
+        {
+          "metabolite": "urobilinogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_15z_mesobilirubin_ix",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79063"
+          }
+        ]
+      }
+    }
+  ]
+}

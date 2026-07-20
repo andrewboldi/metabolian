@@ -1,0 +1,403 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "iodide-to-l-glutamate",
+  "name": "iodide to L-glutamate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from iodide to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27453"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16382"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_iodo_l_tyrosine",
+      "name": "3-iodo-L-tyrosine",
+      "formula": "C9H10INO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59898"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "3_5_diiodo_l_tyrosinate",
+      "name": "3,5-diiodo-L-tyrosinate",
+      "short": "3,5-diiodo-L-tyrosi…",
+      "formula": "C9H8I2NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57506"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_5_diiodo_4_oxidophenyl_pyruvate",
+      "name": "(3,5-diiodo-4-oxidophenyl)pyruvate",
+      "short": "(3,5-diiodo-4-oxido…",
+      "formula": "C9H4I2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58023"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "3_4_hydroxy_3_5_diiodophenyl_lactate",
+      "name": "3-(4-hydroxy-3,5-diiodophenyl)lactate",
+      "short": "3-(4-hydroxy-3,5-di…",
+      "formula": "C9H6I2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57647"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "aromatic_l_amino_acid",
+      "name": "aromatic L-α-amino acid",
+      "short": "aromatic L-α-amino…",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84824"
+      }
+    },
+    {
+      "id": "aromatic_2_oxo_monocarboxylic_acid_anion",
+      "name": "aromatic 2-oxo monocarboxylic acid anion",
+      "short": "aromatic 2-oxo…",
+      "formula": "C2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73309"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_24",
+      "name": "diiodotyrosine transaminase",
+      "ec": [
+        "2.6.1.24"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_57",
+      "name": "aromatic-amino-acid transaminase",
+      "ec": [
+        "2.6.1.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "iodide + L-tyrosine + NADP(+) = 3-iodo-L-tyrosine + NADPH",
+      "equation": "iodide + L-tyrosine + NADP(+) = 3-iodo-L-tyrosine + NADPH",
+      "substrates": [
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_iodo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27453"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27453"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-iodo-L-tyrosine + iodide + NADP(+) = 3,5-diiodo-L-tyrosine + NADPH + H(+)",
+      "equation": "3-iodo-L-tyrosine + iodide + NADP(+) = 3,5-diiodo-L-tyrosine + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_iodo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodo_l_tyrosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27457"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diiodotyrosine transaminase",
+      "equation": "3,5-diiodo-L-tyrosine + 2-oxoglutarate = 3-(3,5-diiodo-4-hydroxyphenyl)pyruvate + L-glutamate",
+      "ec": "2.6.1.24",
+      "substrates": [
+        {
+          "metabolite": "3_5_diiodo_l_tyrosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodo_4_oxidophenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-(3,5-diiodo-4-hydroxyphenyl)lactate + NAD(+) = 3-(3,5-diiodo-4-hydroxyphenyl)pyruvate...",
+      "equation": "3-(3,5-diiodo-4-hydroxyphenyl)lactate + NAD(+) = 3-(3,5-diiodo-4-hydroxyphenyl)pyruvate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_4_hydroxy_3_5_diiodophenyl_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodo_4_oxidophenyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "aromatic-amino-acid transaminase",
+      "equation": "an aromatic L-alpha-amino acid + 2-oxoglutarate = an aromatic oxo-acid + L-glutamate",
+      "ec": "2.6.1.57",
+      "substrates": [
+        {
+          "metabolite": "aromatic_l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aromatic_2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17533"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17533"
+          }
+        ]
+      }
+    }
+  ]
+}

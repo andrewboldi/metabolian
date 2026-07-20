@@ -174,68 +174,48 @@
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:17544"
       }
     },
     {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
+      "id": "s_oxalatosuccinate",
+      "name": "(S)-oxalatosuccinate",
+      "formula": "C6H3O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57292"
+        "chebi": "CHEBI:153066"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "s_ethyl_l_cysteine",
+      "name": "S-ethyl-L-cysteine",
+      "formula": "C5H11NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:156145"
       }
     },
     {
-      "id": "ldopa",
-      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
-      "short": "3,4-Dihydroxy-L-phe…",
-      "formula": "C9H11NO4",
+      "id": "ethanethiol",
+      "name": "ethanethiol",
+      "formula": "C2H6S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57504"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "dopal",
-      "name": "3,4-Dihydroxyphenylacetaldehyde (DOPAL)",
-      "short": "3,4-Dihydroxyphenyl…",
-      "formula": "C8H8O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:27978"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:46511"
       }
     }
   ],
@@ -269,17 +249,10 @@
       ]
     },
     {
-      "id": "ec_1_2_1_105",
-      "name": "2-oxoglutarate dehydrogenase system",
+      "id": "ec_6_4_1_7",
+      "name": "2-oxoglutarate carboxylase",
       "ec": [
-        "1.2.1.105"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_107",
-      "name": "3,4-dihydroxyphenylacetaldehyde synthase",
-      "ec": [
-        "4.1.1.107"
+        "6.4.1.7"
       ]
     }
   ],
@@ -494,73 +467,34 @@
     },
     {
       "id": "r5",
-      "name": "2-oxoglutarate dehydrogenase system",
-      "equation": "2-oxoglutarate + NAD(+) + CoA = succinyl-CoA + CO2 + NADH",
-      "ec": "1.2.1.105",
+      "name": "2-oxoglutarate carboxylase",
+      "equation": "hydrogencarbonate + 2-oxoglutarate + ATP = (S)-oxalosuccinate + ADP + phosphate + H(+)",
+      "ec": "6.4.1.7",
       "substrates": [
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "akg",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "succinyl_coa",
+          "metabolite": "s_oxalatosuccinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_2_1_105"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:27786"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:27786"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "3,4-dihydroxyphenylacetaldehyde synthase",
-      "equation": "L-dopa + O2 + H2O + H(+) = 3,4-dihydroxyphenylacetaldehyde + H2O2 + NH4(+) + CO2",
-      "ec": "4.1.1.107",
-      "substrates": [
-        {
-          "metabolite": "ldopa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "pi",
           "stoichiometry": 1
         },
         {
@@ -568,40 +502,65 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "dopal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_107"
+          "enzyme": "ec_6_4_1_7"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55524"
+        "rhea": "RHEA:20425"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55524"
+            "id": "RHEA:20425"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "S-ethyl-L-cysteine + H2O = ethanethiol + pyruvate + NH4(+)",
+      "equation": "S-ethyl-L-cysteine + H2O = ethanethiol + pyruvate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "s_ethyl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:64760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64760"
           }
         ]
       }

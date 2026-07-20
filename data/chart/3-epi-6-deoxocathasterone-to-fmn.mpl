@@ -10,7 +10,9 @@ pathway 3-epi-6-deoxocathasterone-to-fmn "3-epi-6-deoxocathasterone to FMN" {
     3_epi_6_deoxocathasterone
     <-> ec_1_14_14_147 [1.14.14.147] +fmnh2 +o2 -fmn -h2o -hplus
     6_deoxotyphasterol
-    <-> ec_1_14_14_179 [1.14.14.179] +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    6_hydroxytyphasterol
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
     typhasterol
     <-> ec_1_14_14_180 [1.14.14.180] +fmnh2 +o2 -fmn -h2o -hplus
     7_oxatyphasterol
@@ -18,7 +20,13 @@ pathway 3-epi-6-deoxocathasterone-to-fmn "3-epi-6-deoxocathasterone to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +fmnh2 +o2 +acetone +h2o +hplus
-    angelicin
+    <-> ec_1_14_14_152 [1.14.14.152] +amyrin +fmnh2 +o2 +h2o +hplus
+    11_oxo_amyrin
+  }
+
+  branch from 6_hydroxytyphasterol side right {
+    6_hydroxytyphasterol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    teasterone
   }
 }

@@ -18,19 +18,25 @@ pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid…
 
   branch from long_chain_fatty_acid_anion side left {
     long_chain_fatty_acid_anion
-    <-> ec_1_2_1_48 [1.2.1.48] +nad +h2o +nadh +hplus
-    long_chain_fatty_aldehyde
+    <-> . +h2o +coa +hplus
+    long_chain_fatty_acyl_coa
   }
 
   branch from ethanol side right {
     ethanol
-    <-> ec_1_1_99_36 [1.1.99.36] +n_n_dimethyl_4_nitrosoaniline +acetaldehyde
-    4_hydroxylamino_n_n_dimethylaniline
+    <-> ec_1_1_99_36 [1.1.99.36] +hydrogen_acceptor +hydrogen_donor
+    acetaldehyde
   }
 
-  branch from ppi side left {
+  branch from o_s_long_chain_fatty_acyl_pantetheine_4_phosphor side left {
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> ec_1_2_1_80 [1.2.1.80] +holo-acp +nadp +nadph +hplus
+    long_chain_fatty_aldehyde
+  }
+
+  branch from ppi side right {
     ppi
-    <-> ec_6_1_1_24 [6.1.1.24] +amp_3_end_1 +glutamate +atp +amp
-    3_l_glutamate_adenylyl_1_group
+    <-> ec_4_2_3_26 [4.2.3.26] +gpp +h2o
+    r_linalool
   }
 }

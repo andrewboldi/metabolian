@@ -83,6 +83,15 @@
       }
     },
     {
+      "id": "meso_butane_2_3_diol",
+      "name": "meso-butane-2,3-diol",
+      "formula": "C4H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75460"
+      }
+    },
+    {
       "id": "2s_2_hydroxy_2_methyl_3_oxobutanoate",
       "name": "(2S)-2-hydroxy-2-methyl-3-oxobutanoate",
       "short": "2-hydroxy-2-methyl-…",
@@ -99,6 +108,33 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "acetoin",
+      "name": "acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15688"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -270,6 +306,49 @@
     },
     {
       "id": "r4",
+      "name": "(R,S)-butane-2,3-diol + NAD(+) = (S)-acetoin + NADH + H(+)",
+      "equation": "(R,S)-butane-2,3-diol + NAD(+) = (S)-acetoin + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "meso_butane_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:75419"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "acetolactate decarboxylase",
       "equation": "(2S)-2-acetolactate + H(+) = (R)-acetoin + CO2",
       "ec": "4.1.1.5",
@@ -299,7 +378,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:21580"
       },
@@ -309,6 +388,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:21580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "acetoin + NADP(+) = diacetyl + NADPH + H(+)",
+      "equation": "acetoin + NADP(+) = diacetyl + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butane_2_3_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:35607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35607"
           }
         ]
       }

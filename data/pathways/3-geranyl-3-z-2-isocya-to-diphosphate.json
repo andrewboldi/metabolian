@@ -147,43 +147,42 @@
       }
     },
     {
-      "id": "2r_3s_4s_leucoanthocyanidin",
-      "name": "(2R,3S,4S)-leucoanthocyanidin",
-      "short": "(2R,3S,4S)-leucoant…",
-      "formula": "C15H5O3R9",
-      "charge": 0,
+      "id": "gibberellin_a14_aldehyde",
+      "name": "gibberellin A14 aldehyde",
+      "short": "gibberellin A14…",
+      "formula": "C20H27O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138176"
+        "chebi": "CHEBI:143960"
       }
     },
     {
-      "id": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
-      "name": "4-unsubstituted 3-hydroxyanthocyanidin betaine",
-      "short": "4-unsubstituted…",
-      "formula": "C15HO2R9",
-      "charge": 0,
+      "id": "gibberellin_a14",
+      "name": "gibberellin A14",
+      "formula": "C20H26O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138177"
+        "chebi": "CHEBI:143961"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58635"
       }
     },
     {
-      "id": "exo_bergamotene",
-      "name": "(−)-exo-α-bergamotene",
-      "short": "(−)-exo-α-bergamote…",
-      "formula": "C15H24",
+      "id": "pimara_8_14_15_diene",
+      "name": "pimara-8(14),15-diene",
+      "short": "pimara-8(14),15-die…",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62756"
+        "chebi": "CHEBI:8210"
       }
     }
   ],
@@ -210,17 +209,10 @@
       ]
     },
     {
-      "id": "ec_1_14_20_4",
-      "name": "anthocyanidin synthase",
+      "id": "ec_4_2_3_147",
+      "name": "pimaradiene synthase",
       "ec": [
-        "1.14.20.4"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_81",
-      "name": "exo-alpha-bergamotene synthase",
-      "ec": [
-        "4.2.3.81"
+        "4.2.3.147"
       ]
     }
   ],
@@ -423,12 +415,11 @@
     },
     {
       "id": "r5",
-      "name": "anthocyanidin synthase",
-      "equation": "a (2R,3S,4S)-leucoanthocyanidin + 2-oxoglutarate + O2 = a 4-H-anthocyanidin with a 3-hydroxy group + succinate + CO2 + 2 H2O",
-      "ec": "1.14.20.4",
+      "name": "gibberellin A14 aldehyde + 2-oxoglutarate + O2 = gibberellin A14 + succinate + CO2 + H(+)",
+      "equation": "gibberellin A14 aldehyde + 2-oxoglutarate + O2 = gibberellin A14 + succinate + CO2 + H(+)",
       "substrates": [
         {
-          "metabolite": "2r_3s_4s_leucoanthocyanidin",
+          "metabolite": "gibberellin_a14_aldehyde",
           "stoichiometry": 1
         },
         {
@@ -442,7 +433,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
+          "metabolite": "gibberellin_a14",
           "stoichiometry": 1
         },
         {
@@ -454,44 +445,39 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_20_4"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54432"
+        "rhea": "RHEA:60816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54432"
+            "id": "RHEA:60816"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "exo-alpha-bergamotene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
-      "ec": "4.2.3.81",
+      "name": "pimaradiene synthase",
+      "equation": "(+)-copalyl diphosphate = (-)-pimara-8(14),15-diene + diphosphate",
+      "ec": "4.2.3.147",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "exo_bergamotene",
+          "metabolite": "pimara_8_14_15_diene",
           "stoichiometry": 1
         },
         {
@@ -501,20 +487,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_81"
+          "enzyme": "ec_4_2_3_147"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31427"
+        "rhea": "RHEA:42984"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31427"
+            "id": "RHEA:42984"
           }
         ]
       }

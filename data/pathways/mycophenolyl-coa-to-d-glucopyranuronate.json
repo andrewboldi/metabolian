@@ -1,0 +1,361 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "mycophenolyl-coa-to-d-glucopyranuronate",
+  "name": "mycophenolyl-CoA to D-glucopyranuronate",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from mycophenolyl-CoA(4−) to D-glucopyranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:66704"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:167447"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mycophenolyl_coa",
+      "name": "mycophenolyl-CoA",
+      "formula": "C38H50N7O21P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:167447"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "mycophenolate",
+      "name": "mycophenolate",
+      "formula": "C17H19O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62932"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "mycophenolic_acid_o_acyl_glucuronide",
+      "name": "mycophenolic acid O-acyl-glucuronide",
+      "short": "mycophenolic acid…",
+      "formula": "C23H27O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66982"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "mycophenolate_7_o_d_glucuronide",
+      "name": "mycophenolate 7-O-β-D-glucuronide",
+      "short": "mycophenolate…",
+      "formula": "C23H26O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149486"
+      }
+    },
+    {
+      "id": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+      "name": "(4Z,15Z)-bilirubin IXα C12-β-D-glucuronoside",
+      "short": "(4Z,15Z)-bilirubin…",
+      "formula": "C39H42N4O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229705"
+      }
+    },
+    {
+      "id": "bilirubin",
+      "name": "bilirubin",
+      "formula": "C33H34N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57977"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_93",
+      "name": "mycophenolic acid acyl-glucuronide esterase",
+      "ec": [
+        "3.1.1.93"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mycophenolyl-CoA + H2O = mycophenolate + CoA + H(+)",
+      "equation": "mycophenolyl-CoA + H2O = mycophenolate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mycophenolyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolic acid O-acyl-beta-D-glucuronide +...",
+      "equation": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolic acid O-acyl-beta-D-glucuronide + UDP",
+      "substrates": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolic_acid_o_acyl_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "mycophenolic acid acyl-glucuronide esterase",
+      "equation": "mycophenolic acid O-acyl-beta-D-glucuronide + H2O = mycophenolate + D-glucuronate + H(+)",
+      "ec": "3.1.1.93",
+      "substrates": [
+        {
+          "metabolite": "mycophenolic_acid_o_acyl_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + ...",
+      "equation": "mycophenolate + UDP-alpha-D-glucuronate = mycophenolate 7-O-beta-D-glucuronide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "mycophenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mycophenolate_7_o_d_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + H2O = (4Z,15Z)-bilirubin IXalpha ...",
+      "equation": "(4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + H2O = (4Z,15Z)-bilirubin IXalpha + D-glucuronate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bilirubin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:79251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79251"
+          }
+        ]
+      }
+    }
+  ]
+}

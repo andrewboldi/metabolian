@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "13-deoxydaunorubicin-to-doxorubicin",
   "name": "13-deoxydaunorubicin to doxorubicin",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 13-deoxydaunorubicin(1+) to doxorubicin(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -99,35 +99,6 @@
       "xrefs": {
         "chebi": "CHEBI:64816"
       }
-    },
-    {
-      "id": "carminomycin",
-      "name": "carminomycin",
-      "formula": "C26H28NO10",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:75730"
-      }
-    },
-    {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
     }
   ],
   "enzymes": [
@@ -136,13 +107,6 @@
       "name": "13-deoxydaunorubicin hydroxylase",
       "ec": [
         "1.14.13.181"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_292",
-      "name": "carminomycin 4-O-methyltransferase",
-      "ec": [
-        "2.1.1.292"
       ]
     }
   ],
@@ -314,55 +278,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:15717"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "carminomycin 4-O-methyltransferase",
-      "equation": "carminomycin + S-adenosyl-L-methionine = daunorubicin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.292",
-      "substrates": [
-        {
-          "metabolite": "carminomycin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "daunorubicin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_292"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:38311"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:38311"
           }
         ]
       }

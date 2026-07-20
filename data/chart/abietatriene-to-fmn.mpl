@@ -24,8 +24,8 @@ pathway abietatriene-to-fmn "abietatriene to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_84 [1.14.14.84] +linalool +fmnh2 +o2 +h2o +hplus
-    6e_8_oxolinalool
+    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
+    1_s_5_r_5_hydroxyaverantin
   }
 
   branch from 11_hydroxyferruginol side left {

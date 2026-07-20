@@ -1,0 +1,366 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-farnesol-to-fmn",
+  "name": "(2-trans,6-trans)-farnesol to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2-trans,6-trans)-farnesol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14697"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16619"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_trans_6_trans_farnesol",
+      "name": "(2-trans,6-trans)-farnesol",
+      "short": "(2-trans,6-trans)-f…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16619"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_farnesal",
+      "name": "(2-trans,6-trans)-farnesal",
+      "short": "(2-trans,6-trans)-f…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15894"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2e_6e_farnesoate",
+      "name": "(2E,6E)-farnesoate",
+      "formula": "C15H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83276"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "juvenile_hormone_iii_carboxylate",
+      "name": "juvenile hormone III carboxylate",
+      "short": "juvenile hormone…",
+      "formula": "C15H23O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83274"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "ent_cassa_12_15_dien_2_3_diol",
+      "name": "ent-cassa-12,15-dien-2β,3β-diol",
+      "short": "ent-cassa-12,15-die…",
+      "formula": "C20H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138968"
+      }
+    },
+    {
+      "id": "ent_3_hydroxycassa_12_15_dien_2_one",
+      "name": "ent-3β-hydroxycassa-12,15-dien-2-one",
+      "short": "ent-3β-hydroxycassa…",
+      "formula": "C20H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138970"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_216",
+      "name": "farnesol dehydrogenase",
+      "ec": [
+        "1.1.1.216"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_128",
+      "name": "farnesoate epoxidase",
+      "ec": [
+        "1.14.14.128"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "farnesol dehydrogenase",
+      "equation": "(2E,6E)-farnesol + NADP(+) = (2E,6E)-farnesal + NADPH + H(+)",
+      "ec": "1.1.1.216",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_farnesol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_trans_6_trans_farnesal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_216"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14697"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14697"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E,6E)-farnesal + NADP(+) + H2O = (2E,6E)-farnesoate + NADPH + 2 H(+)",
+      "equation": "(2E,6E)-farnesal + NADP(+) + H2O = (2E,6E)-farnesoate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_farnesal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_farnesoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60736"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60736"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "farnesoate epoxidase",
+      "equation": "(2E,6E)-farnesoate + reduced [NADPH--hemoprotein reductase] + O2 = juvenile hormone III carboxylate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.128",
+      "substrates": [
+        {
+          "metabolite": "2e_6e_farnesoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "juvenile_hormone_iii_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ent-cassa-12,15-dien-2beta,3beta-ol + reduced [NADPH--hemoprotein reductase] + O2 = ent...",
+      "equation": "ent-cassa-12,15-dien-2beta,3beta-ol + reduced [NADPH--hemoprotein reductase] + O2 = ent-3beta-hydroxycassa-12,15-dien-2-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ent_cassa_12_15_dien_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_3_hydroxycassa_12_15_dien_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55500"
+          }
+        ]
+      }
+    }
+  ]
+}

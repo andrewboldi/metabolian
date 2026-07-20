@@ -1,0 +1,379 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-ribitol-5-phosphate-to-d-ribulose-1-phosphate",
+  "name": "D-ribitol 5-phosphate to D-ribulose 1-phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-ribitol 5-phosphate(2−) to D-ribulose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47648"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57695"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_ribitol_5_phosphate",
+      "name": "D-ribitol 5-phosphate",
+      "short": "D-ribitol 5-P",
+      "formula": "C5H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57695"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ribitol",
+      "name": "ribitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15963"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "d_ribulose",
+      "name": "D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17173"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "d_ribulose_1_phosphate",
+      "name": "D-ribulose 1-phosphate",
+      "short": "D-ribulose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71680"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "d_ribitol_1_phosphate",
+      "name": "D-ribitol 1-phosphate",
+      "short": "D-ribitol 1-P",
+      "formula": "C5H11O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:87817"
+      }
+    },
+    {
+      "id": "d_arabinitol",
+      "name": "D-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18333"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_56",
+      "name": "ribitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.56"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_250",
+      "name": "D-arabinitol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.250"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-ribitol 5-phosphate + H2O = ribitol + phosphate",
+      "equation": "D-ribitol 5-phosphate + H2O = ribitol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "d_ribitol_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribitol 2-dehydrogenase",
+      "equation": "ribitol + NAD(+) = D-ribulose + NADH + H(+)",
+      "ec": "1.1.1.56",
+      "substrates": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20053"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-ribulose + ATP = D-ribulose 1-phosphate + ADP + H(+)",
+      "equation": "D-ribulose + ATP = D-ribulose 1-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-ribitol 1-phosphate + H2O = ribitol + phosphate",
+      "equation": "D-ribitol 1-phosphate + H2O = ribitol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "d_ribitol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "D-arabinitol 2-dehydrogenase",
+      "equation": "D-arabinitol + NAD(+) = D-ribulose + NADH + H(+)",
+      "ec": "1.1.1.250",
+      "substrates": [
+        {
+          "metabolite": "d_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_250"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:17389"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17389"
+          }
+        ]
+      }
+    }
+  ]
+}

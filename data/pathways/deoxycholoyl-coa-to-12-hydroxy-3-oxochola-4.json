@@ -3,7 +3,7 @@
   "id": "deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4",
   "name": "deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,…",
   "category": "energy-metabolism",
-  "summary": "A 3-step route from deoxycholoyl-CoA(4−) to 12α-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from deoxycholoyl-CoA(4−) to 12α-hydroxy-3-oxochola-4,6-dien-24-oate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -82,6 +82,44 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:132978"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+      "name": "12α-hydroxy-3-oxochola-4,6-dien-24-oate",
+      "short": "12α-hydroxy-3-oxoch…",
+      "formula": "C24H33O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58804"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "7_12_dihydroxy_3_oxochol_4_en_24_oate",
+      "name": "7α,12α-dihydroxy-3-oxochol-4-en-24-oate",
+      "short": "7α,12α-dihydroxy-3-…",
+      "formula": "C24H35O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58803"
       }
     }
   ],
@@ -245,6 +283,84 @@
           {
             "db": "Rhea",
             "id": "RHEA:56656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "12alpha-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA + H2O = 12alpha-hydroxy-3-oxochola-4,6-d...",
+      "equation": "12alpha-hydroxy-3-oxochola-4,6-dien-24-oyl-CoA + H2O = 12alpha-hydroxy-3-oxochola-4,6-dien-24-oate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:74311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74311"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "7alpha,12alpha-dihydroxy-3-oxochol-4-en-24-oate = 12alpha-hydroxy-3-oxochola-4,6-dien-2...",
+      "equation": "7alpha,12alpha-dihydroxy-3-oxochol-4-en-24-oate = 12alpha-hydroxy-3-oxochola-4,6-dien-24-oate + H2O",
+      "substrates": [
+        {
+          "metabolite": "7_12_dihydroxy_3_oxochol_4_en_24_oate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxochola_4_6_dien_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65352"
           }
         ]
       }

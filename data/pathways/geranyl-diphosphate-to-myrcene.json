@@ -3,13 +3,13 @@
   "id": "geranyl-diphosphate-to-myrcene",
   "name": "geranyl diphosphate to β-myrcene",
   "category": "other",
-  "summary": "A 3-step route from geranyl diphosphate(3−) to β-myrcene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 4-step route from geranyl diphosphate(3−) to β-myrcene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
       {
         "db": "Rhea",
-        "id": "RHEA:32679"
+        "id": "RHEA:47944"
       },
       {
         "db": "ChEBI",
@@ -38,21 +38,39 @@
       }
     },
     {
+      "id": "geranyl_phosphate",
+      "name": "geranyl phosphate",
+      "formula": "C10H17O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88107"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
       "id": "geraniol",
       "name": "geraniol",
       "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:17447"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -99,42 +117,14 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "patchouli_alcohol",
-      "name": "patchouli alcohol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:7940"
-      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_1_7_11",
-      "name": "geranyl diphosphate diphosphatase",
+      "id": "ec_3_6_1_68",
+      "name": "geranyl diphosphate phosphohydrolase",
       "ec": [
-        "3.1.7.11"
+        "3.6.1.68"
       ]
     },
     {
@@ -157,24 +147,65 @@
       "ec": [
         "1.1.1.347"
       ]
-    },
-    {
-      "id": "ec_4_2_3_70",
-      "name": "patchoulol synthase",
-      "ec": [
-        "4.2.3.70"
-      ]
     }
   ],
   "reactions": [
     {
       "id": "r1",
-      "name": "geranyl diphosphate diphosphatase",
-      "equation": "(2E)-geranyl diphosphate + H2O = (2E)-geraniol + diphosphate",
-      "ec": "3.1.7.11",
+      "name": "geranyl diphosphate phosphohydrolase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (2E)-geranyl phosphate + phosphate + H(+)",
+      "ec": "3.6.1.68",
       "substrates": [
         {
           "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geranyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
+      "equation": "(2E)-geranyl phosphate + H2O = (2E)-geraniol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "geranyl_phosphate",
           "stoichiometry": 1
         },
         {
@@ -188,32 +219,27 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "pi",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_7_11"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 1,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:32679"
+        "rhea": "RHEA:68020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32679"
+            "id": "RHEA:68020"
           }
         ]
       }
     },
     {
-      "id": "r2",
+      "id": "r3",
       "name": "geraniol isomerase",
       "equation": "(2E)-geraniol = (S)-linalool",
       "ec": "5.4.4.4",
@@ -235,7 +261,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 2,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:30715"
       },
@@ -250,7 +276,7 @@
       }
     },
     {
-      "id": "r3",
+      "id": "r4",
       "name": "linalool dehydratase",
       "equation": "(S)-linalool = beta-myrcene + H2O",
       "ec": "4.2.1.127",
@@ -276,7 +302,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:30711"
       },
@@ -291,7 +317,7 @@
       }
     },
     {
-      "id": "r4",
+      "id": "r5",
       "name": "geraniol dehydrogenase (NAD(+))",
       "equation": "(2E)-geraniol + NAD(+) = (2E)-geranial + NADH + H(+)",
       "ec": "1.1.1.347",
@@ -325,7 +351,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:34347"
       },
@@ -335,51 +361,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:34347"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "patchoulol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
-      "ec": "4.2.3.70",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "patchouli_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_70"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:29503"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:29503"
           }
         ]
       }

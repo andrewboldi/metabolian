@@ -1,0 +1,368 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "benzoyl-amp-to-2-3-4-6-tetrahydroxybenz",
+  "name": "benzoyl-AMP to 2,3',4,6-tetrahydroxybenz…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from benzoyl-AMP(1−) to 2,3',4,6-tetrahydroxybenzophenone(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69807"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149705"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "benzoyl_amp",
+      "name": "benzoyl-AMP",
+      "formula": "C17H17N5O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149705"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoyl_coa",
+      "name": "3-hydroxybenzoyl-CoA",
+      "formula": "C28H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57342"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "2_3_4_6_tetrahydroxybenzophenone",
+      "name": "2,3',4,6-tetrahydroxybenzophenone",
+      "short": "2,3',4,6-tetrahydro…",
+      "formula": "C13H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77647"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16236"
+      }
+    },
+    {
+      "id": "ethyl_benzoate",
+      "name": "ethyl benzoate",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156074"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_58",
+      "name": "benzoyl-CoA 3-monooxygenase",
+      "ec": [
+        "1.14.13.58"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_151",
+      "name": "2,3',4,6-tetrahydroxybenzophenone synthase",
+      "ec": [
+        "2.3.1.151"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "benzoyl-AMP + CoA = benzoyl-CoA + AMP + H(+)",
+      "equation": "benzoyl-AMP + CoA = benzoyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "benzoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "benzoyl-CoA 3-monooxygenase",
+      "equation": "benzoyl-CoA + NADPH + O2 + H(+) = 3-hydroxybenzoyl-CoA + NADP(+) + H2O",
+      "ec": "1.14.13.58",
+      "substrates": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,3',4,6-tetrahydroxybenzophenone synthase",
+      "equation": "3-hydroxybenzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,3',4,6-tetrahydroxybenzophenone + 3 CO2 + 4 CoA",
+      "ec": "2.3.1.151",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxybenzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_4_6_tetrahydroxybenzophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19305"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19305"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "equation": "ethanol + benzoyl-CoA = ethyl benzoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64680"
+          }
+        ]
+      }
+    }
+  ]
+}

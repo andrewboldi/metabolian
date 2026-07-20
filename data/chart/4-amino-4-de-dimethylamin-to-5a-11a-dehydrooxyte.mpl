@@ -20,7 +20,7 @@ pathway 4-amino-4-de-dimethylamin-to-5a-11a-dehydrooxyte "4-amino-4-de(dimethyla
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_75 [2.1.1.75] +apigenin_7_olate +sam +hplus
-    5_hydroxy_2_4_methoxyphenyl_4_oxo_4h_chromen_7_o
+    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
+    rs_coclaurinium
   }
 }

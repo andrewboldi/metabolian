@@ -127,51 +127,40 @@
       }
     },
     {
-      "id": "3r_3_hydroxy_l_aspartate",
-      "name": "(3R)-3-hydroxy-L-aspartate",
-      "short": "3-hydroxy-L-asparta…",
-      "formula": "C4H6NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58196"
-      }
-    },
-    {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:57972"
       }
     },
     {
-      "id": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
-      "name": "N-(3-carboxylatopropionyl)-LL-2,6-diaminopimelate",
-      "short": "N-(3-carboxylatopro…",
-      "formula": "C11H16N2O7",
-      "charge": -2,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58087"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "2_hydroxy_3_oxopropanoate",
+      "name": "2-hydroxy-3-oxopropanoate",
+      "short": "2-hydroxy-3-oxoprop…",
+      "formula": "C3H3O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:57978"
       }
     },
     {
-      "id": "l_2_succinylamino_6_oxoheptanedioate",
-      "name": "L-2-succinylamino-6-oxoheptanedioate",
-      "short": "L-2-succinylamino-6…",
-      "formula": "C11H12NO8",
-      "charge": -3,
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15685"
+        "chebi": "CHEBI:29986"
       }
     }
   ],
@@ -198,17 +187,17 @@
       ]
     },
     {
-      "id": "ec_4_1_3_14",
-      "name": "L-erythro-3-hydroxyaspartate aldolase",
+      "id": "ec_4_1_1_47",
+      "name": "tartronate-semialdehyde synthase",
       "ec": [
-        "4.1.3.14"
+        "4.1.1.47"
       ]
     },
     {
-      "id": "ec_2_6_1_17",
-      "name": "succinyldiaminopimelate transaminase",
+      "id": "ec_5_1_1_3",
+      "name": "glutamate racemase",
       "ec": [
-        "2.6.1.17"
+        "5.1.1.3"
       ]
     }
   ],
@@ -370,86 +359,121 @@
     },
     {
       "id": "r4",
-      "name": "L-erythro-3-hydroxyaspartate aldolase",
-      "equation": "(3R)-3-hydroxy-L-aspartate = glyoxylate + glycine",
-      "ec": "4.1.3.14",
+      "name": "L-alanine + H(+) = ethylamine + CO2",
+      "equation": "L-alanine + H(+) = ethylamine + CO2",
       "substrates": [
         {
-          "metabolite": "3r_3_hydroxy_l_aspartate",
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "ethylaminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "co2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_3_14"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:14377"
+        "rhea": "RHEA:81707"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14377"
+            "id": "RHEA:81707"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "succinyldiaminopimelate transaminase",
-      "equation": "N-succinyl-(2S,6S)-2,6-diaminopimelate + 2-oxoglutarate = (S)-2-succinylamino-6-oxoheptanedioate + L-glutamate",
-      "ec": "2.6.1.17",
+      "name": "tartronate-semialdehyde synthase",
+      "equation": "2 glyoxylate + H(+) = 2-hydroxy-3-oxopropanoate + CO2",
+      "ec": "4.1.1.47",
       "substrates": [
         {
-          "metabolite": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
-          "stoichiometry": 1
+          "metabolite": "glyoxylate",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "akg",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_2_succinylamino_6_oxoheptanedioate",
+          "metabolite": "2_hydroxy_3_oxopropanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_17"
+          "enzyme": "ec_4_1_1_47"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:11960"
+        "rhea": "RHEA:10136"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11960"
+            "id": "RHEA:10136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glutamate racemase",
+      "equation": "L-glutamate = D-glutamate",
+      "ec": "5.1.1.3",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:12813"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12813"
           }
         ]
       }

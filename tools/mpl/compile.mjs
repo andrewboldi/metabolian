@@ -159,7 +159,13 @@ export function parse(src) {
       const t = peek();
       if (t === "->" || t === "<->") {
         next();
-        const enzyme = next();
+        // "." is the step with no assigned enzyme. The poster draws those as a
+        // plain arrow, and a null enzyme is already a supported concept here
+        // (branch-links emit one). Without a way to SAY it, an ingested reaction
+        // that carries no EC assignment had to be given an invented label —
+        // "spontaneous" — which asserts a mechanism the source never claims.
+        const enzymeTok = next();
+        const enzyme = enzymeTok === "." ? null : enzymeTok;
         const step = { kind: "reaction", enzyme, reversible: t === "<->", ec: null, in: [], out: [], flags: [] };
         if (peek() === "[") { next(); step.ec = next(); expect("]"); }
         while (peek() && /^[+\-!]/.test(peek())) {

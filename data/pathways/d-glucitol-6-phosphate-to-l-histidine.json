@@ -1,0 +1,408 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucitol-6-phosphate-to-l-histidine",
+  "name": "D-glucitol 6-phosphate to L-histidine",
+  "category": "other",
+  "summary": "A 4-step route from D-glucitol 6-phosphate(2−) to L-histidine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24580"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60084"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucitol_6_phosphate",
+      "name": "D-glucitol 6-phosphate",
+      "short": "D-glucitol 6-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60084"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucitol",
+      "name": "D-glucitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17924"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "trehalose",
+      "name": "α,α-trehalose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16551"
+      }
+    },
+    {
+      "id": "trehalose_6_phosphate",
+      "name": "α,α-trehalose 6-phosphate",
+      "short": "α,α-trehalose 6-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58429"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_adp_d_ribosyl_l_histidyl_2",
+      "name": "Nτ-(ADP-D-ribosyl)-L-histidyl(2−)",
+      "short": "Nτ-(ADP-D-ribosyl)-…",
+      "formula": "C21H26N8O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:191398"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_50",
+      "name": "sorbitol-6-phosphatase",
+      "ec": [
+        "3.1.3.50"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_198",
+      "name": "protein-N(pi)-phosphohistidine--D-sorbitol phosphotransferase",
+      "ec": [
+        "2.7.1.198"
+      ]
+    },
+    {
+      "id": "ec_2_7_3_9",
+      "name": "phosphoenolpyruvate--protein phosphotransferase",
+      "ec": [
+        "2.7.3.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_201",
+      "name": "protein-N(pi)-phosphohistidine--trehalose phosphotransferase",
+      "ec": [
+        "2.7.1.201"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sorbitol-6-phosphatase",
+      "equation": "D-sorbitol 6-phosphate + H2O = D-sorbitol + phosphate",
+      "ec": "3.1.3.50",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-N(pi)-phosphohistidine--D-sorbitol phosphotransferase",
+      "equation": "D-sorbitol(out) + N(pros)-phospho-L-histidyl-[protein] = D-sorbitol 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.198",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_198"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:42484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphoenolpyruvate--protein phosphotransferase",
+      "equation": "L-histidyl-[protein] + phosphoenolpyruvate = N(pros)-phospho-L-histidyl-[protein] + pyruvate",
+      "ec": "2.7.3.9",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23880"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-N(pi)-phosphohistidine--trehalose phosphotransferase",
+      "equation": "alpha,alpha-trehalose(out) + N(pros)-phospho-L-histidyl-[protein] = alpha,alpha-trehalose 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.201",
+      "substrates": [
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_201"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotina...",
+      "equation": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotinamide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_histidyl_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:72071"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72071"
+          }
+        ]
+      }
+    }
+  ]
+}

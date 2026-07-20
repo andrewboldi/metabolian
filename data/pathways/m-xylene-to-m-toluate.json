@@ -1,0 +1,363 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "m-xylene-to-m-toluate",
+  "name": "m-xylene to m-toluate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from m-xylene to m-toluate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51600"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28488"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "m_xylene",
+      "name": "m-xylene",
+      "formula": "C8H10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28488"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_methylbenzyl_alcohol",
+      "name": "3-methylbenzyl alcohol",
+      "short": "3-methylbenzyl…",
+      "formula": "C8H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27995"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "m_tolualdehyde",
+      "name": "m-tolualdehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28476"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "m_toluate",
+      "name": "m-toluate",
+      "formula": "C8H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28795"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_26",
+      "name": "toluene methyl-monooxygenase",
+      "ec": [
+        "1.14.15.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "toluene methyl-monooxygenase",
+      "equation": "m-xylene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-methylbenzyl alcohol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.26",
+      "substrates": [
+        {
+          "metabolite": "m_xylene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-methylbenzyl alcohol + O2 = 3-methylbenzaldehyde + H2O2",
+      "equation": "3-methylbenzyl alcohol + O2 = 3-methylbenzaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "3_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "m_tolualdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-methylbenzaldehyde + NAD(+) + H2O = 3-methylbenzoate + NADH + 2 H(+)",
+      "equation": "3-methylbenzaldehyde + NAD(+) + H2O = 3-methylbenzoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "m_tolualdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "m_toluate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] ...",
+      "equation": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] + 2-oxoglutarate + NH4(+) + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32191"
+          }
+        ]
+      }
+    }
+  ]
+}

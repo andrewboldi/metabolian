@@ -4,39 +4,39 @@
 # edit the generator, not this file.
 
 pathway l-lysinium-to-succinate "L-lysinium to succinate" {
-  spacing 280
+  spacing 228
 
   spine at 0,0 {
     l_lysinium
-    <-> ec_2_1_1_60 [2.1.1.60] +sam -sah -hplus
+    <-> ec_2_1_1_59 [2.1.1.59] +sam -sah -hplus
     n6_methyl_l_lysinium
-    <-> ec_2_1_1_362 [2.1.1.362] +sam -sah -hplus
+    <-> . +sam -sah -hplus
     n6_n6_dimethyl_l_lysine_1
-    <-> ec_1_14_11_27 [1.14.11.27] +akg +o2 -formaldehyde -succinate -co2
-    l_lysinium
+    <-> . +akg +o2 -formaldehyde -succinate -co2
+    n6_methyl_l_lysinium
   }
 
-  branch from n6_methyl_l_lysinium side left {
-    n6_methyl_l_lysinium
-    <-> ec_1_14_11_66 [1.14.11.66] +akg +o2 +formaldehyde +succinate +co2
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_313 [2.1.1.313] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
+  }
+
+  branch from n6_n6_dimethyl_l_lysine_1 side right {
+    n6_n6_dimethyl_l_lysine_1
+    <-> . +sam +sah +hplus
     n6_n6_n6_trimethyl_l_lysine
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
-    4_3_methylbut_2_enyl_l_abrine
+  branch from formaldehyde side left {
+    formaldehyde
+    <-> . +monuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_4_chlorophenyl_1_methylurea
   }
 
-  branch from n6_n6_dimethyl_l_lysine_1 side left {
-    n6_n6_dimethyl_l_lysine_1
-    <-> ec_1_14_99_66 [1.14.99.66] +hydrogen_acceptor +h2o +l_lysinium +formaldehyde
-    hydrogen_donor
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_2_3_1_48 [2.3.1.48] +acetyl_coa +coa +hplus
-    n6_acetyl_l_lysine
+  branch from succinate side right {
+    succinate
+    <-> . +prekainate +akg +o2 +co2 +h2o
+    kainate
   }
 }

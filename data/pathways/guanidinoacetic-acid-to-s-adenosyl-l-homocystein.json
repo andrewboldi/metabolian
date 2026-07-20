@@ -1,0 +1,413 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "guanidinoacetic-acid-to-s-adenosyl-l-homocystein",
+  "name": "guanidinoacetic acid to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from guanidinoacetic acid zwitterion to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10656"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57742"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "guanidinoacetic_acid",
+      "name": "guanidinoacetic acid",
+      "formula": "C3H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57742"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "creatine",
+      "name": "creatine",
+      "formula": "C4H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57947"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sarcosine",
+      "name": "Sarcosine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57433"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "betaine",
+      "name": "Glycine betaine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17750"
+      }
+    },
+    {
+      "id": "tellurite",
+      "name": "tellurite",
+      "formula": "O3Te",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30477"
+      }
+    },
+    {
+      "id": "methanetelluronate",
+      "name": "methanetelluronate",
+      "formula": "CH3O3Te",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71624"
+      }
+    },
+    {
+      "id": "taurocyamine",
+      "name": "taurocyamine",
+      "formula": "C3H9N3O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58064"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_2",
+      "name": "guanidinoacetate N-methyltransferase",
+      "ec": [
+        "2.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_3",
+      "name": "creatinase",
+      "ec": [
+        "3.5.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_157",
+      "name": "sarcosine/dimethylglycine N-methyltransferase",
+      "ec": [
+        "2.1.1.157"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_265",
+      "name": "tellurite methyltransferase",
+      "ec": [
+        "2.1.1.265"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_17",
+      "name": "guanidinopropionase",
+      "ec": [
+        "3.5.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "guanidinoacetate N-methyltransferase",
+      "equation": "guanidinoacetate + S-adenosyl-L-methionine = creatine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "guanidinoacetic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "creatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10656"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "creatinase",
+      "equation": "creatine + H2O = sarcosine + urea",
+      "ec": "3.5.3.3",
+      "substrates": [
+        {
+          "metabolite": "creatine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sarcosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sarcosine/dimethylglycine N-methyltransferase",
+      "equation": "sarcosine + 2 S-adenosyl-L-methionine = glycine betaine + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.157",
+      "substrates": [
+        {
+          "metabolite": "sarcosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_157"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32467"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32467"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tellurite methyltransferase",
+      "equation": "tellurite + S-adenosyl-L-methionine = methanetellurite + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.265",
+      "substrates": [
+        {
+          "metabolite": "tellurite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanetelluronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_265"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "guanidinopropionase",
+      "equation": "taurocyamine + H2O = urea + taurine",
+      "ec": "3.5.3.17",
+      "substrates": [
+        {
+          "metabolite": "taurocyamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:75931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75931"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ pathway 4-phosphooxymethyl-2-fu-to-diphosphate "4-(phosphooxymethyl)-2-fu… to 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_76 [4.2.3.76] +fpp
-    selinene
+    <-> ec_4_2_3_131 [4.2.3.131] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    miltiradiene
   }
 }

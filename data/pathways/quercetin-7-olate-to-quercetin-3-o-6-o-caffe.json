@@ -1,0 +1,299 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "quercetin-7-olate-to-quercetin-3-o-6-o-caffe",
+  "name": "quercetin-7-olate to quercetin 3-O-[(6-O-caffe…",
+  "category": "other",
+  "summary": "A 3-step route from quercetin-7-olate to quercetin 3-O-[(6-O-caffeoyl-β-D-glucosyl)-(1→2)-β-D-glucoside](2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61180"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57694"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "quercetin_7_olate",
+      "name": "quercetin-7-olate",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57694"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "quercetin_3_o_d_glucopyranoside",
+      "name": "quercetin 3-O-β-D-glucopyranoside",
+      "short": "quercetin…",
+      "formula": "C21H19O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144437"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "quercetin_3_o_d_glucosyl_1_2_d_glucoside",
+      "name": "quercetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside",
+      "short": "quercetin…",
+      "formula": "C27H29O17",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144438"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "quercetin_3_o_6_o_caffeoyl_d_glucosyl_1_2_d_gluc",
+      "name": "quercetin 3-O-[(6-O-caffeoyl-β-D-glucosyl)-(1→2)-β-D-glucoside]",
+      "short": "quercetin…",
+      "formula": "C36H34O20",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:144440"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "petiolaroside",
+      "name": "petiolaroside",
+      "formula": "C27H29O16",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144436"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quercetin + UDP-alpha-D-glucose = quercetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "equation": "quercetin + UDP-alpha-D-glucose = quercetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "quercetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = quercetin 3-O-beta-D-glucosyl-(1...",
+      "equation": "quercetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = quercetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_o_d_glucosyl_1_2_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quercetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside + (E)-caffeoyl-CoA = quercetin 3-...",
+      "equation": "quercetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside + (E)-caffeoyl-CoA = quercetin 3-O-[(6-O-[(E)-caffeoyl]-beta-D-glucosyl)-(1->2)-beta-D-glucoside] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_o_d_glucosyl_1_2_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quercetin_3_o_6_o_caffeoyl_d_glucosyl_1_2_d_gluc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quercetin 3-O-beta-D-glucoside + UDP-beta-L-rhamnose = quercetin 3-O-beta-D-glucoside-7...",
+      "equation": "quercetin 3-O-beta-D-glucoside + UDP-beta-L-rhamnose = quercetin 3-O-beta-D-glucoside-7-O-alpha-L-rhamnoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "quercetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "petiolaroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:61188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61188"
+          }
+        ]
+      }
+    }
+  ]
+}

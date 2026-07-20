@@ -18,19 +18,19 @@ pathway menaquinone-9-to-adenosine-3-5-bismonoph "menaquinone-9 to adenosine 3',
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +3_methylquinoline +h2o +hydrogen_donor
-    3_methylquinolin_2_1h_one
+    <-> ec_1_3_99_27 [1.3.99.27] +rhodopin +hydrogen_donor
+    3e_3_4_didehydrorhodopin
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_10 [1.14.15.10] +di_sulfido_diiron +r_camphor +o2 +hplus +h2o
-    6_endo_hydroxycamphor
+    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
+    albaflavenone
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
-    <-> ec_2_8_2_14 [2.8.2.14] +taurolithocholate +3_phosphonato_5_adenylyl_sulfate +hplus
-    taurolithocholic_acid_sulfate
+    <-> ec_2_8_2_31 [2.8.2.31] +5_cholane_3_7_12_24_tetrol +3_phosphonato_5_adenylyl_sulfate +hplus
+    3_7_12_trihydroxy_5_cholan_24_yl_sulfate
   }
 }

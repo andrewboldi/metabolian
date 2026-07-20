@@ -1,0 +1,416 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-carbamoylputrescinium-to-1-pyrrolinium",
+  "name": "N-carbamoylputrescinium to 1-pyrrolinium",
+  "category": "redox-detox",
+  "summary": "A 3-step route from N-carbamoylputrescinium(1+) to 1-pyrrolinium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22284"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58318"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_carbamoylputrescinium",
+      "name": "N-carbamoylputrescinium",
+      "short": "N-carbamoylputresci…",
+      "formula": "C5H14N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58318"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_ammoniobutanal",
+      "name": "4-ammoniobutanal",
+      "formula": "C4H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58264"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "1_pyrrolinium",
+      "name": "1-pyrrolinium",
+      "formula": "C4H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:36781"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "n_hydroxyputrescine",
+      "name": "N-hydroxyputrescine",
+      "formula": "C4H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:180909"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "hexadecanamide",
+      "name": "hexadecanamide",
+      "formula": "C16H33NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74475"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_53",
+      "name": "N-carbamoylputrescine amidase",
+      "ec": [
+        "3.5.1.53"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_10",
+      "name": "putrescine oxidase",
+      "ec": [
+        "1.4.3.10"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_252",
+      "name": "putrescine N-hydroxylase",
+      "ec": [
+        "1.14.13.252"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-carbamoylputrescine amidase",
+      "equation": "N-carbamoylputrescine + H2O + 2 H(+) = putrescine + NH4(+) + CO2",
+      "ec": "3.5.1.53",
+      "substrates": [
+        {
+          "metabolite": "n_carbamoylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "putrescine oxidase",
+      "equation": "putrescine + O2 + H2O = 4-aminobutanal + H2O2 + NH4(+)",
+      "ec": "1.4.3.10",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-aminobutanal = 1-pyrroline + H2O",
+      "equation": "4-aminobutanal = 1-pyrroline + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_pyrrolinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "putrescine N-hydroxylase",
+      "equation": "putrescine + NADPH + O2 = N-hydroxyputrescine + NADP(+) + H2O",
+      "ec": "1.14.13.252",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxyputrescine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_252"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hexadecanamide + H2O = hexadecanoate + NH4(+)",
+      "equation": "hexadecanamide + H2O = hexadecanoate + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "hexadecanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62984"
+          }
+        ]
+      }
+    }
+  ]
+}

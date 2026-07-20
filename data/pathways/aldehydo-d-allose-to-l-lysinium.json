@@ -1,0 +1,341 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-allose-to-l-lysinium",
+  "name": "aldehydo-D-allose to L-lysinium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from aldehydo-D-allose to L-lysinium residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18961"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:40822"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_allose",
+      "name": "aldehydo-D-allose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40822"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_d_psicosyl_l_lysinium",
+      "name": "N6-(D-psicosyl)-L-lysinium",
+      "short": "N6-(D-psicosyl)-L-l…",
+      "formula": "C12H23N2O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:144621"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n6_3_o_phospho_d_psicosyl_l_lysinium",
+      "name": "N6-(3-O-phospho-D-psicosyl)-L-lysinium",
+      "short": "N6-(3-O-phospho-D-p…",
+      "formula": "C12H22N2O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144622"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_deoxyglucosone",
+      "name": "3-deoxyglucosone",
+      "formula": "C6H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60777"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_172",
+      "name": "protein-ribulosamine 3-kinase",
+      "ec": [
+        "2.7.1.172"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_60",
+      "name": "calmodulin-lysine N-methyltransferase",
+      "ec": [
+        "2.1.1.60"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-allose + L-lysyl-[protein] = N(6)-(D-psicosyl)-L-lysyl-[protein] + H2O",
+      "equation": "D-allose + L-lysyl-[protein] = N(6)-(D-psicosyl)-L-lysyl-[protein] + H2O",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_allose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18961"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-ribulosamine 3-kinase",
+      "equation": "N(6)-(D-psicosyl)-L-lysyl-[protein] + ATP = N(6)-(3-O-phospho-D-psicosyl)-L-lysyl-[protein] + ADP + H(+)",
+      "ec": "2.7.1.172",
+      "substrates": [
+        {
+          "metabolite": "n6_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_3_o_phospho_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6)-(3-O-phospho-D-psicosyl)-L-lysyl-[protein] + H2O = 3-deoxyglucosone + L-lysyl-[pro...",
+      "equation": "N(6)-(3-O-phospho-D-psicosyl)-L-lysyl-[protein] + H2O = 3-deoxyglucosone + L-lysyl-[protein] + phosphate",
+      "substrates": [
+        {
+          "metabolite": "n6_3_o_phospho_d_psicosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deoxyglucosone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "calmodulin-lysine N-methyltransferase",
+      "equation": "[calmodulin]-L-lysine + S-adenosyl-L-methionine = [calmodulin]-N(6)-methyl-L-lysine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.60",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21556"
+          }
+        ]
+      }
+    }
+  ]
+}

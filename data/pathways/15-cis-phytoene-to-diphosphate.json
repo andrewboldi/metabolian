@@ -2,8 +2,8 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "15-cis-phytoene-to-diphosphate",
   "name": "15-cis-phytoene to diphosphate",
-  "category": "energy-metabolism",
-  "summary": "A 4-step route from 15-cis-phytoene to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from 15-cis-phytoene to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -83,12 +83,13 @@
       }
     },
     {
-      "id": "nonaflavuxanthin",
-      "name": "nonaflavuxanthin",
-      "formula": "C45H64O",
+      "id": "dihydroisopentenyldehydrorhodopin",
+      "name": "dihydroisopentenyldehydrorhodopin",
+      "short": "dihydroisopentenyld…",
+      "formula": "C45H66O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:139514"
+        "chebi": "CHEBI:87163"
       }
     },
     {
@@ -101,51 +102,60 @@
       }
     },
     {
-      "id": "flavuxanthin",
-      "name": "flavuxanthin",
-      "formula": "C50H72O2",
+      "id": "2r_9s_annullatin_h",
+      "name": "(2R,9S)-annullatin H",
+      "formula": "C17H26O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:139515"
+        "chebi": "CHEBI:195225"
       }
     },
     {
-      "id": "5_6_7_8_tetrahydromethanopterin",
-      "name": "5,6,7,8-tetrahydromethanopterin",
-      "short": "5,6,7,8-tetrahydrom…",
-      "formula": "C30H42N6O16P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58103"
-      }
-    },
-    {
-      "id": "7_8_dihydromethanopterin",
-      "name": "7,8-dihydromethanopterin",
-      "short": "7,8-dihydromethanop…",
-      "formula": "C30H40N6O16P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:72788"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "selinene",
-      "name": "(+)-β-selinene",
-      "formula": "C15H24",
+      "id": "2r_annullatin_f",
+      "name": "(2R)-annullatin F",
+      "formula": "C17H24O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10443"
+        "chebi": "CHEBI:195226"
+      }
+    },
+    {
+      "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate",
+      "name": "1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphate",
+      "short": "1-stearoyl-2-arachi…",
+      "formula": "C41H71O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77091"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cdp_1_stearoyl_2_arachidonoyl_sn_glycerol",
+      "name": "CDP-1-stearoyl-2-arachidonoyl-sn-glycerol",
+      "short": "CDP-1-stearoyl-2-ar…",
+      "formula": "C50H83N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85349"
       }
     }
   ],
@@ -165,31 +175,10 @@
       ]
     },
     {
-      "id": "ec_2_5_1_149",
-      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
+      "id": "ec_2_5_1_150",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
       "ec": [
-        "2.5.1.149"
-      ]
-    },
-    {
-      "id": "ec_1_5_99_15",
-      "name": "dihydromethanopterin reductase (acceptor)",
-      "ec": [
-        "1.5.99.15"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_66",
-      "name": "beta-selinene cyclase",
-      "ec": [
-        "4.2.3.66"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_198",
-      "name": "alpha-selinene synthase",
-      "ec": [
-        "4.2.3.198"
+        "2.5.1.150"
       ]
     }
   ],
@@ -286,9 +275,9 @@
     },
     {
       "id": "r3",
-      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
-      "equation": "all-trans-lycopene + dimethylallyl diphosphate + A + H2O = nonaflavuxanthin + AH2 + diphosphate",
-      "ec": "2.5.1.149",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
+      "equation": "all-trans-lycopene + dimethylallyl diphosphate + H2O = dihydroisopentenyldehydrorhodopin + diphosphate",
+      "ec": "2.5.1.150",
       "substrates": [
         {
           "metabolite": "lycopene",
@@ -299,21 +288,13 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nonaflavuxanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "dihydroisopentenyldehydrorhodopin",
           "stoichiometry": 1
         },
         {
@@ -323,140 +304,84 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_149"
+          "enzyme": "ec_2_5_1_150"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:56124"
+        "rhea": "RHEA:58188"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56124"
+            "id": "RHEA:58188"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
-      "equation": "nonaflavuxanthin + dimethylallyl diphosphate + A + H2O = flavuxanthin + AH2 + diphosphate",
-      "ec": "2.5.1.149",
+      "name": "(2R,9S)-annullatin H + A = (2R)-annullatin F + AH2",
+      "equation": "(2R,9S)-annullatin H + A = (2R)-annullatin F + AH2",
       "substrates": [
         {
-          "metabolite": "nonaflavuxanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "2r_9s_annullatin_h",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "flavuxanthin",
+          "metabolite": "2r_annullatin_f",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_149"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:56128"
+        "rhea": "RHEA:76427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56128"
+            "id": "RHEA:76427"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "dihydromethanopterin reductase (acceptor)",
-      "equation": "5,6,7,8-tetrahydromethanopterin + A = 7,8-dihydromethanopterin + AH2",
-      "ec": "1.5.99.15",
+      "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) =...",
+      "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "5_6_7_8_tetrahydromethanopterin",
+          "metabolite": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7_8_dihydromethanopterin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_5_99_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:42804"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:42804"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "beta-selinene cyclase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-selinene + diphosphate",
-      "ec": "4.2.3.66",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "selinene",
+          "metabolite": "cdp_1_stearoyl_2_arachidonoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -464,22 +389,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_66"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:29483"
+        "rhea": "RHEA:45648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29483"
+            "id": "RHEA:45648"
           }
         ]
       }

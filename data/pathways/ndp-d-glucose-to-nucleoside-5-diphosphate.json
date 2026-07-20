@@ -112,13 +112,48 @@
       }
     },
     {
-      "id": "6_o_d_glucopyranosyl_d_fructofuranose",
-      "name": "6-O-α-D-glucopyranosyl-D-fructofuranose",
-      "short": "6-O-α-D-glucopyrano…",
-      "formula": "C12H22O11",
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "loliose",
+      "name": "loliose",
+      "formula": "C18H32O16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18394"
+        "chebi": "CHEBI:50661"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
       }
     }
   ],
@@ -145,17 +180,10 @@
       ]
     },
     {
-      "id": "ec_2_7_4_4",
-      "name": "nucleoside-phosphate kinase",
+      "id": "ec_2_4_1_n2",
+      "name": "loliose synthase",
       "ec": [
-        "2.7.4.4"
-      ]
-    },
-    {
-      "id": "ec_5_4_99_11",
-      "name": "isomaltulose synthase",
-      "ec": [
-        "5.4.99.11"
+        "2.4.1.n2"
       ]
     }
   ],
@@ -301,16 +329,15 @@
     },
     {
       "id": "r4",
-      "name": "nucleoside-phosphate kinase",
-      "equation": "a ribonucleoside 5'-phosphate + ATP = a ribonucleoside 5'-diphosphate + ADP",
-      "ec": "2.7.4.4",
+      "name": "a ribonucleoside 5'-phosphate + GTP = a ribonucleoside 5'-diphosphate + GDP",
+      "equation": "a ribonucleoside 5'-phosphate + GTP = a ribonucleoside 5'-diphosphate + GDP",
       "substrates": [
         {
           "metabolite": "nucleoside_5_monophosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "gtp",
           "stoichiometry": 1
         }
       ],
@@ -320,63 +347,70 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "gdp",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_4_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:24036"
+        "rhea": "RHEA:79887"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24036"
+            "id": "RHEA:79887"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "isomaltulose synthase",
-      "equation": "sucrose = 6-O-alpha-D-glucopyranosyl-D-fructose",
-      "ec": "5.4.99.11",
+      "name": "loliose synthase",
+      "equation": "sucrose + UDP-alpha-D-galactose = loliose + UDP + H(+)",
+      "ec": "2.4.1.n2",
       "substrates": [
         {
           "metabolite": "sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "metabolite": "loliose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_4_99_11"
+          "enzyme": "ec_2_4_1_n2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24032"
+        "rhea": "RHEA:25670"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24032"
+            "id": "RHEA:25670"
           }
         ]
       }

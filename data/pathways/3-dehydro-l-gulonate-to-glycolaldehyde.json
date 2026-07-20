@@ -1,0 +1,406 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-dehydro-l-gulonate-to-glycolaldehyde",
+  "name": "3-dehydro-L-gulonate to glycolaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 6-step route from 3-dehydro-L-gulonate to glycolaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21924"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57655"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_dehydro_l_gulonate",
+      "name": "3-dehydro-L-gulonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57655"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_3_diketogulonate",
+      "name": "2,3-diketogulonate",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57441"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_carboxy_l_lyxonolactone",
+      "name": "2-carboxy-L-lyxonolactone",
+      "short": "2-carboxy-L-lyxonol…",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:189412"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_carboxy_l_lyxonate",
+      "name": "2-carboxy-L-lyxonate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149765"
+      }
+    },
+    {
+      "id": "l_lyxonate",
+      "name": "L-lyxonate",
+      "formula": "C5H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145753"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_l_arabinonate",
+      "name": "2-dehydro-3-deoxy-L-arabinonate",
+      "short": "2-dehydro-3-deoxy-L…",
+      "formula": "C5H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35173"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_130",
+      "name": "3-dehydro-L-gulonate 2-dehydrogenase",
+      "ec": [
+        "1.1.1.130"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_176",
+      "name": "L-lyxonate dehydratase",
+      "ec": [
+        "4.2.1.176"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_18",
+      "name": "2-dehydro-3-deoxy-L-pentonate aldolase",
+      "ec": [
+        "4.1.2.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-dehydro-L-gulonate 2-dehydrogenase",
+      "equation": "3-dehydro-L-gulonate + NAD(+) = 2,3-dioxo-L-gulonate + NADH + H(+)",
+      "ec": "1.1.1.130",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_l_gulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_diketogulonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_130"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,3-dioxo-L-gulonate = 2-carboxy-L-lyxonolactone",
+      "equation": "2,3-dioxo-L-gulonate = 2-carboxy-L-lyxonolactone",
+      "substrates": [
+        {
+          "metabolite": "2_3_diketogulonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_carboxy_l_lyxonolactone",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70323"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-carboxy-L-lyxonolactone + H2O = 2-carboxy-L-lyxonate + H(+)",
+      "equation": "2-carboxy-L-lyxonolactone + H2O = 2-carboxy-L-lyxonate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_carboxy_l_lyxonolactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_carboxy_l_lyxonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-carboxy-L-lyxonate + H(+) = L-lyxonate + CO2",
+      "equation": "2-carboxy-L-lyxonate + H(+) = L-lyxonate + CO2",
+      "substrates": [
+        {
+          "metabolite": "2_carboxy_l_lyxonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lyxonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-lyxonate dehydratase",
+      "equation": "L-lyxonate = 2-dehydro-3-deoxy-L-arabinonate + H2O",
+      "ec": "4.2.1.176",
+      "substrates": [
+        {
+          "metabolite": "l_lyxonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_l_arabinonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_176"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:62436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62436"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-dehydro-3-deoxy-L-pentonate aldolase",
+      "equation": "2-dehydro-3-deoxy-L-arabinonate = glycolaldehyde + pyruvate",
+      "ec": "4.1.2.18",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_l_arabinonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18545"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18545"
+          }
+        ]
+      }
+    }
+  ]
+}

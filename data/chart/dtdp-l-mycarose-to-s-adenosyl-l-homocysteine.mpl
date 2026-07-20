@@ -18,13 +18,13 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
 
   branch from dtdp side left {
     dtdp
-    <-> ec_3_6_1_39 [3.6.1.39] +h2o +pi +hplus
-    dttp
+    <-> ec_2_4_1_322 [2.4.1.322] +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
+    vancomycin
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_26 [2.1.1.26] +2_iodophenol +sam +hplus
-    1_iodo_2_methoxybenzene
+    <-> ec_2_1_1_115 [2.1.1.115] +1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium +sam +hplus
+    1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini
   }
 }

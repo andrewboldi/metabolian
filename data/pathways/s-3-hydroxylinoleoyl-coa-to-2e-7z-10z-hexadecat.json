@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-hydroxylinoleoyl-coa-to-2e-7z-10z-hexadecat",
+  "name": "(S)-3-hydroxylinoleoyl-CoA to (2E,7Z,10Z)-hexadecatrien…",
+  "category": "other",
+  "summary": "A 3-step route from (S)-3-hydroxylinoleoyl-CoA(4−) to (2E,7Z,10Z)-hexadecatrienoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84427"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:233824"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_hydroxylinoleoyl_coa",
+      "name": "(S)-3-hydroxylinoleoyl-CoA",
+      "short": "3-hydroxylinoleoyl-…",
+      "formula": "C39H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233824"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "9z_12z_3_oxolinoleoyl_coa",
+      "name": "(9Z,12Z)-3-oxolinoleoyl-CoA",
+      "short": "(9Z,12Z)-3-oxolinol…",
+      "formula": "C39H60N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74013"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "7z_10z_hexadecadienoyl_coa",
+      "name": "(7Z,10Z)-hexadecadienoyl-CoA",
+      "short": "(7Z,10Z)-hexadecadi…",
+      "formula": "C37H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233825"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "2e_7z_10z_hexadecatrienoyl_coa",
+      "name": "(2E,7Z,10Z)-hexadecatrienoyl-CoA",
+      "short": "(2E,7Z,10Z)-hexadec…",
+      "formula": "C37H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233785"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3S)-hydroxy-(9Z,12Z)-octadecadienoyl-CoA + NAD(+) = 3-oxo-(9Z,12Z)-octadecadienoyl-CoA...",
+      "equation": "(3S)-hydroxy-(9Z,12Z)-octadecadienoyl-CoA + NAD(+) = 3-oxo-(9Z,12Z)-octadecadienoyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxylinoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12z_3_oxolinoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-oxo-(9Z,12Z)-octadecadienoyl-CoA + CoA = (7Z,10Z)-hexadecadienoyl-CoA + acetyl-CoA",
+      "equation": "3-oxo-(9Z,12Z)-octadecadienoyl-CoA + CoA = (7Z,10Z)-hexadecadienoyl-CoA + acetyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "9z_12z_3_oxolinoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7z_10z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(7Z,10Z)-hexadecadienoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,7...",
+      "equation": "(7Z,10Z)-hexadecadienoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,7Z,10Z)-hexadecatrienoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "substrates": [
+        {
+          "metabolite": "7z_10z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_7z_10z_hexadecatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84463"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -157,42 +157,50 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57665"
       }
     },
     {
-      "id": "eudesmol",
-      "name": "β-eudesmol",
-      "formula": "C15H26O",
+      "id": "e_2_methylgeranyl_diphosphate",
+      "name": "(E)-2-methylgeranyl diphosphate",
+      "short": "2-methylgeranyl PP",
+      "formula": "C11H19O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61984"
+      }
+    },
+    {
+      "id": "2_methylisoborneol",
+      "name": "2-methylisoborneol",
+      "formula": "C11H20O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10417"
+        "chebi": "CHEBI:61987"
       }
     },
     {
-      "id": "4_o_methylnorbelladine",
-      "name": "4'-O-methylnorbelladine",
-      "short": "4'-O-methylnorbella…",
-      "formula": "C16H20NO3",
-      "charge": 1,
+      "id": "5z_8z_11z_icosatrienoate",
+      "name": "(5Z,8Z,11Z)-icosatrienoate",
+      "short": "(5Z,8Z,11Z)-icosatr…",
+      "formula": "C20H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133993"
+        "chebi": "CHEBI:78043"
       }
     },
     {
-      "id": "4as_10br_noroxomaritidine",
-      "name": "(4aS,10bR)-noroxomaritidine",
-      "short": "(4aS,10bR)-noroxoma…",
-      "formula": "C16H18NO3",
-      "charge": 1,
+      "id": "20_hetre",
+      "name": "20-HETrE",
+      "formula": "C20H33O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133995"
+        "chebi": "CHEBI:132026"
       }
     }
   ],
@@ -226,17 +234,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_68",
-      "name": "beta-eudesmol synthase",
+      "id": "ec_4_2_3_118",
+      "name": "2-methylisoborneol synthase",
       "ec": [
-        "4.2.3.68"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_50",
-      "name": "noroxomaritidine synthase",
-      "ec": [
-        "1.14.19.50"
+        "4.2.3.118"
       ]
     }
   ],
@@ -451,12 +452,11 @@
     },
     {
       "id": "r5",
-      "name": "beta-eudesmol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = beta-eudesmol + diphosphate",
-      "ec": "4.2.3.68",
+      "name": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
+      "equation": "neryl diphosphate + H2O = 1,8-cineole + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "neryl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -466,7 +466,47 @@
       ],
       "products": [
         {
-          "metabolite": "eudesmol",
+          "metabolite": "1_8_cineole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:56632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2-methylisoborneol synthase",
+      "equation": "(E)-2-methylgeranyl diphosphate + H2O = 2-methylisoborneol + diphosphate",
+      "ec": "4.2.3.118",
+      "substrates": [
+        {
+          "metabolite": "e_2_methylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylisoborneol",
           "stoichiometry": 1
         },
         {
@@ -476,32 +516,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_68"
+          "enzyme": "ec_4_2_3_118"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:29495"
+        "rhea": "RHEA:32571"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29495"
+            "id": "RHEA:32571"
           }
         ]
       }
     },
     {
-      "id": "r6",
-      "name": "noroxomaritidine synthase",
-      "equation": "4'-O-methylnorbelladine + reduced [NADPH--hemoprotein reductase] + O2 = (10bR,4aS)-noroxomaritidine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "ec": "1.14.19.50",
+      "id": "r7",
+      "name": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-...",
+      "equation": "(5Z,8Z,11Z)-eicosatrienoate + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "4_o_methylnorbelladine",
+          "metabolite": "5z_8z_11z_icosatrienoate",
           "stoichiometry": 1
         },
         {
@@ -515,7 +554,7 @@
       ],
       "products": [
         {
-          "metabolite": "4as_10br_noroxomaritidine",
+          "metabolite": "20_hetre",
           "stoichiometry": 1
         },
         {
@@ -524,29 +563,24 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_50"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:51260"
+        "rhea": "RHEA:50164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51260"
+            "id": "RHEA:50164"
           }
         ]
       }

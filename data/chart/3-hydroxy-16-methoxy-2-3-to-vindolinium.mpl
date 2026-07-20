@@ -18,13 +18,13 @@ pathway 3-hydroxy-16-methoxy-2-3-to-vindolinium "3-hydroxy-16-methoxy-2,3-… to
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_111 [2.1.1.111] +anthranilate +sam +hplus
-    n_methylanthranilate
+    <-> ec_2_1_1_79 [2.1.1.79] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_9_10_methyleneacyl_sn_glycero_3_phospho
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_11 [1.14.11.11] +s_atropinium +akg +o2 +co2
-    6s_6_hydroxyhyoscyaminium
+    <-> ec_4_1_3_1 [4.1.3.1] +d_threo_isocitrate
+    glyoxylate
   }
 }

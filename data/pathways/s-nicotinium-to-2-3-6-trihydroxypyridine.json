@@ -159,21 +159,22 @@
       }
     },
     {
-      "id": "selenite",
-      "name": "selenite",
-      "formula": "O3Se",
-      "charge": -2,
+      "id": "2_aminophenol",
+      "name": "2-aminophenol",
+      "formula": "C6H7NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18212"
+        "chebi": "CHEBI:18112"
       }
     },
     {
-      "id": "selenate",
-      "name": "selenate",
-      "formula": "O4Se",
-      "charge": -2,
+      "id": "2_aminophenoxazin_3_one",
+      "name": "2-aminophenoxazin-3-one",
+      "short": "2-aminophenoxazin-3…",
+      "formula": "C12H8N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15075"
+        "chebi": "CHEBI:17293"
       }
     },
     {
@@ -240,13 +241,6 @@
       "name": "2,6-dihydroxypyridine 3-monooxygenase",
       "ec": [
         "1.14.13.10"
-      ]
-    },
-    {
-      "id": "ec_1_97_1_9",
-      "name": "selenate reductase (cytochrome c)",
-      "ec": [
-        "1.97.1.9"
       ]
     },
     {
@@ -520,49 +514,47 @@
     },
     {
       "id": "r6",
-      "name": "selenate reductase (cytochrome c)",
-      "equation": "selenite + A + H2O = selenate + AH2",
-      "ec": "1.97.1.9",
+      "name": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
+      "equation": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
       "substrates": [
         {
-          "metabolite": "selenite",
-          "stoichiometry": 1
+          "metabolite": "2_aminophenol",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "selenate",
+          "metabolite": "2_aminophenoxazin_3_one",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_97_1_9"
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14029"
+        "rhea": "RHEA:14681"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14029"
+            "id": "RHEA:14681"
           }
         ]
       }

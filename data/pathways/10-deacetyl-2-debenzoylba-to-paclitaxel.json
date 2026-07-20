@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "10-deacetyl-2-debenzoylba-to-paclitaxel",
   "name": "10-deacetyl-2-debenzoylba… to paclitaxel",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 5-step route from 10-deacetyl-2-debenzoylbaccatin III to paclitaxel, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -168,22 +168,22 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "squalene",
+      "name": "Squalene",
+      "formula": "C30H50",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:15440"
       }
     },
     {
-      "id": "24s_24_hydroxycholesterol",
-      "name": "(24S)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:34310"
+        "chebi": "CHEBI:15441"
       }
     }
   ],
@@ -231,10 +231,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_25",
-      "name": "cholesterol 24-hydroxylase",
+      "id": "ec_1_14_14_17",
+      "name": "squalene monooxygenase",
       "ec": [
-        "1.14.14.25"
+        "1.14.14.17"
       ]
     }
   ],
@@ -539,12 +539,12 @@
     },
     {
       "id": "r7",
-      "name": "cholesterol 24-hydroxylase",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.25",
+      "name": "squalene monooxygenase",
+      "equation": "squalene + reduced [NADPH--hemoprotein reductase] + O2 = (S)-2,3-epoxysqualene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.17",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "squalene",
           "stoichiometry": 1
         },
         {
@@ -558,7 +558,7 @@
       ],
       "products": [
         {
-          "metabolite": "24s_24_hydroxycholesterol",
+          "metabolite": "epoxysqualene",
           "stoichiometry": 1
         },
         {
@@ -576,20 +576,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_25"
+          "enzyme": "ec_1_14_14_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:22716"
+        "rhea": "RHEA:25282"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22716"
+            "id": "RHEA:25282"
           }
         ]
       }

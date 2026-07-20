@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-5-pregnan-20-to-5-pregnane-3-20-dione",
+  "name": "3β-hydroxy-5α-pregnan-20-… to 5α-pregnane-3,20-dione",
+  "category": "other",
+  "summary": "A 3-step route from 3β-hydroxy-5α-pregnan-20-one to 5α-pregnane-3,20-dione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41988"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11909"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_5_pregnan_20_one",
+      "name": "3β-hydroxy-5α-pregnan-20-one",
+      "short": "3β-hydroxy-5α-pregn…",
+      "formula": "C21H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:11909"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "5_pregnane_3_20_dione",
+      "name": "5α-pregnane-3,20-dione",
+      "short": "5α-pregnane-3,20-di…",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28952"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "brexanolone",
+      "name": "brexanolone",
+      "formula": "C21H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50169"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "5alpha_pregnane_3alpha_20alpha_diol",
+      "name": "5alpha-Pregnane-3alpha,20alpha-diol",
+      "short": "5alpha-Pregnane-3al…",
+      "formula": "C21H36O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81470"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3beta-hydroxy-5alpha-pregnane-20-one + NAD(+) = 5alpha-pregnane-3,20-dione + NADH + H(+)",
+      "equation": "3beta-hydroxy-5alpha-pregnane-20-one + NAD(+) = 5alpha-pregnane-3,20-dione + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_5_pregnan_20_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5alpha-pregnane-3,20-dione + NADPH + H(+) = 3alpha-hydroxy-5alpha-pregnan-20-one + NADP(+)",
+      "equation": "5alpha-pregnane-3,20-dione + NADPH + H(+) = 3alpha-hydroxy-5alpha-pregnan-20-one + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "brexanolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3alpha-hydroxy-5alpha-pregnan-20-one + NAD(+) = 5alpha-pregnane-3,20-dione + NADH + H(+)",
+      "equation": "3alpha-hydroxy-5alpha-pregnan-20-one + NAD(+) = 5alpha-pregnane-3,20-dione + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "brexanolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41980"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3alpha-hydroxy-5alpha-pregnan-20-one + NADPH + H(+) = 3alpha,20alpha-dihydroxy-5alpha-p...",
+      "equation": "3alpha-hydroxy-5alpha-pregnan-20-one + NADPH + H(+) = 3alpha,20alpha-dihydroxy-5alpha-pregnane + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "brexanolone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5alpha_pregnane_3alpha_20alpha_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:84159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84159"
+          }
+        ]
+      }
+    }
+  ]
+}

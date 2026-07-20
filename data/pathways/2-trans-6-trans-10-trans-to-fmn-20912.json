@@ -112,41 +112,67 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "8_9_eet",
+      "name": "8,9-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:84025"
       }
     },
     {
-      "id": "cubebol",
-      "name": "(−)-cubebol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:63446"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "cucurbitadienol",
-      "name": "cucurbitadienol",
-      "formula": "C30H50O",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:62456"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "11_oxocucurbitadienol",
-      "name": "11-oxocucurbitadienol",
-      "short": "11-oxocucurbitadien…",
-      "formula": "C30H48O2",
+      "id": "8_9_epoxy_5z_11z_14z_icosatrienoyl_coa",
+      "name": "8,9-epoxy-(5Z,11Z,14Z)-icosatrienoyl-CoA",
+      "short": "8,9-epoxy-(5Z,11Z,1…",
+      "formula": "C41H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:136107"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "flavanones",
+      "name": "flavanones",
+      "formula": "C15H2O2R10",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138973"
+        "chebi": "CHEBI:28863"
+      }
+    },
+    {
+      "id": "flavones",
+      "name": "flavones",
+      "formula": "C15O2R10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24043"
       }
     }
   ],
@@ -173,17 +199,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_91",
-      "name": "cubebol synthase",
+      "id": "ec_1_14_19_76",
+      "name": "flavone synthase II",
       "ec": [
-        "4.2.3.91"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_71",
-      "name": "cucurbitadienol 11-hydroxylase",
-      "ec": [
-        "1.14.14.71"
+        "1.14.19.76"
       ]
     }
   ],
@@ -345,22 +364,29 @@
     },
     {
       "id": "r4",
-      "name": "cubebol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = cubebol + diphosphate",
-      "ec": "4.2.3.91",
+      "name": "8,9-epoxy-(5Z,11Z,14Z)-eicosatrienoate + ATP + CoA = 8,9-epoxy-(5Z,11Z,14Z)-eicosatrien...",
+      "equation": "8,9-epoxy-(5Z,11Z,14Z)-eicosatrienoate + ATP + CoA = 8,9-epoxy-(5Z,11Z,14Z)-eicosatrienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "8_9_eet",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cubebol",
+          "metabolite": "8_9_epoxy_5z_11z_14z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -368,79 +394,74 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_91"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31823"
+        "rhea": "RHEA:52008"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31823"
+            "id": "RHEA:52008"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "cucurbitadienol 11-hydroxylase",
-      "equation": "cucurbitadienol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxocucurbitadienol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.71",
+      "name": "flavone synthase II",
+      "equation": "a flavanone + reduced [NADPH--hemoprotein reductase] + O2 = a flavone + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.76",
       "substrates": [
         {
-          "metabolite": "cucurbitadienol",
+          "metabolite": "flavanones",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11_oxocucurbitadienol",
+          "metabolite": "flavones",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_71"
+          "enzyme": "ec_1_14_19_76"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55508"
+        "rhea": "RHEA:57680"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55508"
+            "id": "RHEA:57680"
           }
         ]
       }

@@ -111,41 +111,58 @@
       }
     },
     {
-      "id": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate",
-      "name": "(1E)-4-oxobut-1-ene-1,2,4-tricarboxylate",
-      "short": "4-oxobut-1-ene-1,2,…",
-      "formula": "C7H3O7",
-      "charge": -3,
+      "id": "3_methoxycatechol",
+      "name": "3-methoxycatechol",
+      "formula": "C7H8O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57471"
+        "chebi": "CHEBI:141700"
       }
     },
     {
-      "id": "2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate",
-      "name": "(2Z,4E)-2-hydroxy-6-oxohexa-2,4-dienoate",
-      "short": "(2Z,4E)-2-hydroxy-6…",
-      "formula": "C6H5O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:71198"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "2z_4e_2_ammoniomuconate",
+      "name": "(2Z,4E)-2-ammoniomuconate",
+      "short": "(2Z,4E)-2-ammoniomu…",
+      "formula": "C6H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77859"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
       }
     }
   ],
@@ -186,17 +203,10 @@
       ]
     },
     {
-      "id": "ec_1_13_11_57",
-      "name": "gallate dioxygenase",
+      "id": "ec_3_5_99_11",
+      "name": "2-aminomuconate deaminase (2-hydroxymuconate-forming)",
       "ec": [
-        "1.13.11.57"
-      ]
-    },
-    {
-      "id": "ec_1_2_1_85",
-      "name": "2-hydroxymuconate-6-semialdehyde dehydrogenase",
-      "ec": [
-        "1.2.1.85"
+        "3.5.99.11"
       ]
     }
   ],
@@ -420,12 +430,15 @@
     },
     {
       "id": "r6",
-      "name": "gallate dioxygenase",
-      "equation": "3,4,5-trihydroxybenzoate + O2 = (1E)-4-oxobut-1-ene-1,2,4-tricarboxylate + 2 H(+)",
-      "ec": "1.13.11.57",
+      "name": "3-methoxycatechol + reduced [NADH--hemoprotein reductase] + O2 = 1,2,3-trihydroxybenzen...",
+      "equation": "3-methoxycatechol + reduced [NADH--hemoprotein reductase] + O2 = 1,2,3-trihydroxybenzene + oxidized [NADH--hemoprotein reductase] + formaldehyde + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "gallate",
+          "metabolite": "3_methoxycatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
           "stoichiometry": 1
         },
         {
@@ -435,46 +448,49 @@
       ],
       "products": [
         {
-          "metabolite": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate",
+          "metabolite": "pyrogallol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_13_11_57"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:28927"
+        "rhea": "RHEA:57432"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28927"
+            "id": "RHEA:57432"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "2-hydroxymuconate-6-semialdehyde dehydrogenase",
-      "equation": "(2Z,4E)-2-hydroxy-6-oxohexa-2,4-dienoate + NAD(+) + H2O = (2Z,4E)-2-hydroxyhexa-2,4-dienedioate + NADH + 2 H(+)",
-      "ec": "1.2.1.85",
+      "name": "2-aminomuconate deaminase (2-hydroxymuconate-forming)",
+      "equation": "(2Z,4E)-2-aminomuconate + H2O = (2Z,4E)-2-hydroxyhexa-2,4-dienedioate + NH4(+)",
+      "ec": "3.5.99.11",
       "substrates": [
         {
-          "metabolite": "2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "2z_4e_2_ammoniomuconate",
           "stoichiometry": 1
         },
         {
@@ -488,30 +504,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nh3",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_85"
+          "enzyme": "ec_3_5_99_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:34219"
+        "rhea": "RHEA:49460"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34219"
+            "id": "RHEA:49460"
           }
         ]
       }

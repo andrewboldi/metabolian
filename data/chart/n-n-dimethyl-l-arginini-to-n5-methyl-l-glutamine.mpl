@@ -24,19 +24,19 @@ pathway n-n-dimethyl-l-arginini-to-n5-methyl-l-glutamine "Nω,Nω-dimethyl-L-arg
 
   branch from citrulline side right {
     citrulline
-    <-> ec_3_5_3_18 [3.5.3.18] +h2o +methylamine
-    2s_2_ammonio_5_iminio_methylamino_methyl_amino
+    <-> ec_3_5_3_6 [3.5.3.6] +arginine +h2o
+    nh3
   }
 
   branch from methylamine side left {
     methylamine
-    <-> ec_4_2_1_88 [4.2.1.88] +d_synephrine
-    4_hydroxyphenyl_acetaldehyde
+    <-> ec_1_4_1_17 [1.4.1.17] +nadp +h2o +pyruvate +nadph +hplus
+    n_methyl_l_alanine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_14_34 [1.14.14.34] +methanesulfonate +fmnh2 +o2 +sulfite +h2o +hplus
-    fmn
+    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadph +o2 +hplus +nadp +h2o
+    7_methylxanthine
   }
 }

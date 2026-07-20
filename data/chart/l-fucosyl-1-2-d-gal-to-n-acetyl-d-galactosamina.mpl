@@ -16,15 +16,9 @@ pathway l-fucosyl-1-2-d-gal-to-n-acetyl-d-galactosamina "α-L-fucosyl-(1→2)-β
     n_acetyl_d_galactosaminate
   }
 
-  branch from l_fucosyl_1_2_d_galactoside side left {
-    l_fucosyl_1_2_d_galactoside
-    <-> ec_2_4_1_37 [2.4.1.37] +udp_d_galactose +udp +hplus
-    d_galactosyl_1_3_l_fucosyl_1_2_d_galactoside
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
-    n_acetyl_d_galactosamine
-    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
-    l_serine
+  branch from n_acetyl_d_galactosaminate side left {
+    n_acetyl_d_galactosaminate
+    <-> . +h2o +hplus
+    n_acetyl_d_galactosamino_1_5_lactone
   }
 }

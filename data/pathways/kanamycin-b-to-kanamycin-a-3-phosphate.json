@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "kanamycin-b-to-kanamycin-a-3-phosphate",
   "name": "kanamycin B to kanamycin A 3'-phosphate",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from kanamycin B(5+) to kanamycin A 3'-phosphate(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,32 +146,33 @@
       }
     },
     {
-      "id": "l_histidine",
-      "name": "L-histidine",
-      "formula": "C6H7N3O",
-      "charge": 0,
+      "id": "3_methylundecanoyl_coa",
+      "name": "3-methylundecanoyl-CoA",
+      "short": "3-methylundecanoyl-…",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29979"
+        "chebi": "CHEBI:84183"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_histidine",
-      "name": "(3S)-3-hydroxy-L-histidine",
-      "short": "3-hydroxy-L-histidi…",
-      "formula": "C6H7N3O2",
-      "charge": 0,
+      "id": "2_hydroxy_3_methylundecanoyl_coa",
+      "name": "2-hydroxy-3-methylundecanoyl-CoA",
+      "short": "2-hydroxy-3-methylu…",
+      "formula": "C33H54N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138021"
+        "chebi": "CHEBI:138632"
       }
     },
     {
-      "id": "l_glutaminiumyl_group",
-      "name": "L-glutaminiumyl group",
-      "short": "L-glutaminiumyl…",
-      "formula": "C5H10N2O2",
-      "charge": 1,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64722"
+        "chebi": "CHEBI:74411"
       }
     },
     {
@@ -184,13 +185,13 @@
       }
     },
     {
-      "id": "l_glutamyl_zwitterionic_group",
-      "name": "L-α-glutamyl zwitterionic group",
-      "short": "L-α-glutamyl…",
-      "formula": "C5H8NO3",
-      "charge": 0,
+      "id": "inosine_5_phosphate_1",
+      "name": "inosine 5'-phosphate(1−)",
+      "short": "inosine 5'-P(1−)",
+      "formula": "C10H10N4O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64721"
+        "chebi": "CHEBI:82852"
       }
     },
     {
@@ -245,17 +246,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_n4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
+      "id": "ec_3_5_4_34",
+      "name": "tRNA(Ala)(adenine(37)) deaminase",
       "ec": [
-        "1.14.11.n4"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_122",
-      "name": "protein N-terminal glutamine amidohydrolase",
-      "ec": [
-        "3.5.1.122"
+        "3.5.4.34"
       ]
     },
     {
@@ -424,12 +418,11 @@
     },
     {
       "id": "r4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "equation": "L-histidyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-histidyl-[ankyrin-repeat domain protein] + succinate + CO2",
-      "ec": "1.14.11.n4",
+      "name": "3-methylundecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylundecanoyl-CoA + succi...",
+      "equation": "3-methylundecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylundecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "l_histidine",
+          "metabolite": "3_methylundecanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -443,7 +436,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_histidine",
+          "metabolite": "2_hydroxy_3_methylundecanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -455,44 +448,43 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_n4"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54264"
+        "rhea": "RHEA:55184"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54264"
+            "id": "RHEA:55184"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "protein N-terminal glutamine amidohydrolase",
-      "equation": "N-terminal L-glutaminyl-[protein] + H2O = N-terminal L-glutamyl-[protein] + NH4(+)",
-      "ec": "3.5.1.122",
+      "name": "tRNA(Ala)(adenine(37)) deaminase",
+      "equation": "adenosine(37) in tRNA(Ala) + H2O + H(+) = inosine(37) in tRNA(Ala) + NH4(+)",
+      "ec": "3.5.4.34",
       "substrates": [
         {
-          "metabolite": "l_glutaminiumyl_group",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_glutamyl_zwitterionic_group",
+          "metabolite": "inosine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
@@ -502,20 +494,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_122"
+          "enzyme": "ec_3_5_4_34"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50680"
+        "rhea": "RHEA:50968"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50680"
+            "id": "RHEA:50968"
           }
         ]
       }

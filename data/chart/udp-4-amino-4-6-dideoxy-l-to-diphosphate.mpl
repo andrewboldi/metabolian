@@ -20,7 +20,7 @@ pathway udp-4-amino-4-6-dideoxy-l-to-diphosphate "UDP-4-amino-4,6-dideoxy-L… t
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    humulene
+    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
+    3_l_threonyl_adenylyl_1_group
   }
 }

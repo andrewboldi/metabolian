@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "12z-15z-18z-21z-24z-27z-to-12z-15z-18z-21z-24z",
+  "name": "(12Z,15Z,18Z,21Z,24Z,27Z)… to (12Z,15Z,18Z,21Z,24Z,27Z)…",
+  "category": "other",
+  "summary": "A 3-step route from (12Z,15Z,18Z,21Z,24Z,27Z)-3-oxotriacontahexaenoyl-CoA(4−) to (12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39599"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74313"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "12z_15z_18z_21z_24z_27z_3_oxotriacontahexaenoyl",
+      "name": "(12Z,15Z,18Z,21Z,24Z,27Z)-3-oxotriacontahexaenoyl-CoA",
+      "short": "(12Z,15Z,18Z,21Z,24…",
+      "formula": "C51H76N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74313"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3r_12z_15z_18z_21z_24z_27z_3_hydroxytriacontahe",
+      "name": "(3R,12Z,15Z,18Z,21Z,24Z,27Z)-3-hydroxytriacontahexaenoyl-CoA",
+      "short": "(3R,12Z,15Z,18Z,21Z…",
+      "formula": "C51H78N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76496"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2e_12z_15z_18z_21z_24z_27z_triacontaheptaenoyl",
+      "name": "(2E,12Z,15Z,18Z,21Z,24Z,27Z)-triacontaheptaenoyl-CoA",
+      "short": "(2E,12Z,15Z,18Z,21Z…",
+      "formula": "C51H76N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76497"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "12z_15z_18z_21z_24z_27z_triacontahexaenoyl_coa",
+      "name": "(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA",
+      "short": "(12Z,15Z,18Z,21Z,24…",
+      "formula": "C51H78N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74315"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-oxo-(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(1...",
+      "equation": "3-oxo-(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA + NADPH + H(+) = (3R)-hydroxy-(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "12z_15z_18z_21z_24z_27z_3_oxotriacontahexaenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_12z_15z_18z_21z_24z_27z_3_hydroxytriacontahe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-hydroxy-(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA = (2E,12Z,15Z,18Z,21Z,24Z...",
+      "equation": "(3R)-hydroxy-(12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA = (2E,12Z,15Z,18Z,21Z,24Z,27Z)-triacontaheptaenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3r_12z_15z_18z_21z_24z_27z_3_hydroxytriacontahe",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_12z_15z_18z_21z_24z_27z_triacontaheptaenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E,12Z,15Z,18Z,21Z,24Z,27Z)-triacontaheptaenoyl-CoA + NADPH + H(+) = (12Z,15Z,18Z,21Z,...",
+      "equation": "(2E,12Z,15Z,18Z,21Z,24Z,27Z)-triacontaheptaenoyl-CoA + NADPH + H(+) = (12Z,15Z,18Z,21Z,24Z,27Z)-triacontahexaenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_12z_15z_18z_21z_24z_27z_triacontaheptaenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12z_15z_18z_21z_24z_27z_triacontahexaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39607"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -134,6 +134,25 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+      "name": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol",
+      "short": "(1E,4S,5E,7R)-germa…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46734"
+      }
+    },
+    {
+      "id": "geosmin",
+      "name": "(−)-geosmin",
+      "formula": "C12H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46702"
+      }
     }
   ],
   "enzymes": [
@@ -156,6 +175,13 @@
       "name": "oximinotransferase",
       "ec": [
         "2.6.3.1"
+      ]
+    },
+    {
+      "id": "ec_4_1_99_16",
+      "name": "geosmin synthase",
+      "ec": [
+        "4.1.99.16"
       ]
     }
   ],
@@ -307,6 +333,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:11624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "geosmin synthase",
+      "equation": "(1E,4S,5E,7R)-germacra-1(10),5-dien-11-ol + H2O = (-)-geosmin + acetone",
+      "ec": "4.1.99.16",
+      "substrates": [
+        {
+          "metabolite": "1e_4s_5e_7r_germacra_1_10_5_dien_11_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geosmin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30371"
           }
         ]
       }

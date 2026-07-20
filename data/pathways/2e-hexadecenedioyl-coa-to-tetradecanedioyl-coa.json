@@ -1,0 +1,235 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-hexadecenedioyl-coa-to-tetradecanedioyl-coa",
+  "name": "(2E)-hexadecenedioyl-CoA to tetradecanedioyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (2E)-hexadecenedioyl-CoA(5−) to tetradecanedioyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40255"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77075"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_hexadecenedioyl_coa",
+      "name": "(2E)-hexadecenedioyl-CoA",
+      "short": "hexadecenedioyl-CoA",
+      "formula": "C37H57N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77075"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3r_hydroxyhexadecanedioyl_coa",
+      "name": "(3R)-hydroxyhexadecanedioyl-CoA",
+      "short": "hydroxyhexadecanedi…",
+      "formula": "C37H59N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77079"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxohexadecanedioyl_coa",
+      "name": "3-oxohexadecanedioyl-CoA",
+      "short": "3-oxohexadecanedioy…",
+      "formula": "C37H57N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77081"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "tetradecanedioyl_coa",
+      "name": "tetradecanedioyl-CoA",
+      "formula": "C35H55N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:77084"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E)-hexadecenedioyl-CoA + H2O = (3R)-hydroxyhexadecanedioyl-CoA",
+      "equation": "(2E)-hexadecenedioyl-CoA + H2O = (3R)-hydroxyhexadecanedioyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_hexadecenedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_hydroxyhexadecanedioyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40255"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-hydroxyhexadecanedioyl-CoA + NAD(+) = 3-oxohexadecanedioyl-CoA + NADH + H(+)",
+      "equation": "(3R)-hydroxyhexadecanedioyl-CoA + NAD(+) = 3-oxohexadecanedioyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_hydroxyhexadecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxohexadecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:40263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxohexadecanedioyl-CoA + CoA = tetradecanedioyl-CoA + acetyl-CoA",
+      "equation": "3-oxohexadecanedioyl-CoA + CoA = tetradecanedioyl-CoA + acetyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "3_oxohexadecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40343"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40343"
+          }
+        ]
+      }
+    }
+  ]
+}

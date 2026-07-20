@@ -14,31 +14,29 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     3_disulfanyl_l_alanine
     <-> ec_2_8_1_4 [2.8.1.4] +uridine_5_monophosphate_1 +di_sulfido_diiron +atp +hplus -4_thiouridine_5_phosphate_1 -di_sulfido_diiron -amp -ppi
     l_cysteine
-    <-> ec_2_5_1_58 [2.5.1.58] +fpp -ppi
-    s_2e_6e_farnesyl_l_cysteine
   }
 
-  branch from s_sulfosulfanyl_l_cysteine_1 side left {
-    s_sulfosulfanyl_l_cysteine_1
-    <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
-    trioxidosulfanidosulfate
-  }
-
-  branch from 3_disulfanyl_l_alanine side right {
+  branch from 3_disulfanyl_l_alanine side left {
     3_disulfanyl_l_alanine
-    <-> ec_2_8_1_13 [2.8.1.13] +uridine_5_monophosphate_1 +hydrogen_donor +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
-    2_thiouridine_5_phosphate_1
+    <-> . +cytidine_5_monophosphate_1 +hydrogen_donor +atp +l_cysteine +hydrogen_acceptor +amp +ppi +hplus
+    2_thiocytidine_5_monophosphate_1
   }
 
-  branch from sulfate side left {
+  branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    hexanal
+    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi +sulfur_atom
+    5_methylsulfinylpentyl_nitrile
   }
 
-  branch from l_cysteine side right {
+  branch from l_cysteine side left {
     l_cysteine
     <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
     3e_phycocyanobilin
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_19_23 [1.14.19.23] +oleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    linoleoyl_containing_glycerolipid
   }
 }

@@ -99,6 +99,43 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "2_acetamido_5_oxopentanoate",
+      "name": "2-acetamido-5-oxopentanoate",
+      "short": "2-acetamido-5-oxope…",
+      "formula": "C7H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29123"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
     }
   ],
   "enzymes": [
@@ -121,6 +158,13 @@
       "name": "acetylglutamate kinase",
       "ec": [
         "2.7.2.8"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_38",
+      "name": "N-acetyl-gamma-glutamyl-phosphate reductase",
+      "ec": [
+        "1.2.1.38"
       ]
     }
   ],
@@ -252,6 +296,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:14629"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-acetyl-gamma-glutamyl-phosphate reductase",
+      "equation": "N-acetyl-L-glutamate 5-semialdehyde + phosphate + NADP(+) = N-acetyl-L-glutamyl 5-phosphate + NADPH + H(+)",
+      "ec": "1.2.1.38",
+      "substrates": [
+        {
+          "metabolite": "2_acetamido_5_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_glutamyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21588"
           }
         ]
       }

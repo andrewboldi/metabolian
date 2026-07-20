@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "galactitol-to-d-galactonate",
+  "name": "galactitol to D-galactonate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from galactitol to D-galactonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37963"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16813"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16813"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4139"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_galactono_1_4_lactone",
+      "name": "D-galactono-1,4-lactone",
+      "short": "D-galactono-1,4-lac…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15895"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_galactonate",
+      "name": "D-galactonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12931"
+      }
+    },
+    {
+      "id": "psychosine",
+      "name": "psychosine",
+      "formula": "C24H48NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57934"
+      }
+    },
+    {
+      "id": "sphingosine",
+      "name": "Sphingosine",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57756"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_48",
+      "name": "D-galactose 1-dehydrogenase",
+      "ec": [
+        "1.1.1.48"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_25",
+      "name": "1,4-lactonase",
+      "ec": [
+        "3.1.1.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose reductase",
+      "equation": "galactitol + NAD(+) = D-galactose + NADH + H(+)",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-galactose 1-dehydrogenase",
+      "equation": "D-galactose + NAD(+) = D-galactono-1,4-lactone + NADH + H(+)",
+      "ec": "1.1.1.48",
+      "substrates": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21296"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,4-lactonase",
+      "equation": "D-galactono-1,4-lactone + H2O = D-galactonate + H(+)",
+      "ec": "3.1.1.25",
+      "substrates": [
+        {
+          "metabolite": "d_galactono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44900"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
+      "equation": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
+      "substrates": [
+        {
+          "metabolite": "psychosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:43908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43908"
+          }
+        ]
+      }
+    }
+  ]
+}

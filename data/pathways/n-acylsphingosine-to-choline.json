@@ -1,0 +1,411 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acylsphingosine-to-choline",
+  "name": "N-acylsphingosine to choline",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-acylsphingosine to choline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20856"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:52639"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acylsphingosine",
+      "name": "N-acylsphingosine",
+      "formula": "C19H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52639"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sphingosine",
+      "name": "Sphingosine",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57756"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-1-alkyl-sn-g…",
+      "formula": "C9H18NO7PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36702"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "1-alkyl-sn-glycero-…",
+      "formula": "C8H19NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30909"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycerol_3_phosphate",
+      "name": "1-alkyl-sn-glycerol 3-phosphate",
+      "short": "1-alkyl-sn-glycerol…",
+      "formula": "C3H6O6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58014"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    },
+    {
+      "id": "3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl",
+      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-1,2-diacyl-sn-glycerol",
+      "short": "3-[α-D-galactosyl-(…",
+      "formula": "C17H26O15R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28396"
+      }
+    },
+    {
+      "id": "2_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc",
+      "name": "2-acyl-3-O-[α-D-galactosyl-(1→6)-β-D-galactosyl]-sn-glycerol",
+      "short": "2-acyl-3-O-[α-D-gal…",
+      "formula": "C16H27O14R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:228241"
+      }
+    },
+    {
+      "id": "dihydroceramide",
+      "name": "Dihydroceramide",
+      "formula": "C19H38NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31488"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_23",
+      "name": "ceramidase",
+      "ec": [
+        "3.5.1.23"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_17",
+      "name": "sphingolipid 4-desaturase",
+      "ec": [
+        "1.14.19.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ceramidase",
+      "equation": "an N-acylsphing-4-enine + H2O = sphing-4-enine + a fatty acid",
+      "ec": "3.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + sphing-4-enine = a 1-O-alkyl-sn-glycer...",
+      "equation": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + sphing-4-enine = a 1-O-alkyl-sn-glycero-3-phosphocholine + an N-acylsphing-4-enine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + ch...",
+      "equation": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + choline + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H2O = 2-ac...",
+      "equation": "a 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + H2O = 2-acyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_3_o_d_galactosyl_1_6_d_galactosyl_sn_glyc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78087"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphingolipid 4-desaturase",
+      "equation": "an N-acylsphinganine + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = an N-acylsphing-4-enine + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.17",
+      "substrates": [
+        {
+          "metabolite": "dihydroceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46544"
+          }
+        ]
+      }
+    }
+  ]
+}

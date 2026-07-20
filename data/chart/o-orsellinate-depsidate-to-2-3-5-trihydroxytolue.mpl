@@ -15,4 +15,10 @@ pathway o-orsellinate-depsidate-to-2-3-5-trihydroxytolue "o-orsellinate depsidat
     <-> ec_1_14_13_6 [1.14.13.6] +nadh +o2 +hplus -nad -h2o
     2_3_5_trihydroxytoluene
   }
+
+  branch from o_orsellinate side left {
+    o_orsellinate
+    <-> . +acetyl_coa +hplus +co2 +coa
+    malonyl-coa
+  }
 }

@@ -131,22 +131,22 @@
       }
     },
     {
-      "id": "pser",
-      "name": "O-Phospho-L-serine",
-      "formula": "C3H6NO6P",
-      "charge": -2,
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57524"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "3_o_phosphonato_l_seryl_adenylyl_2_group",
-      "name": "3'-(O-phosphonato-L-seryl)adenylyl(2−) group",
-      "short": "3'-(O-phosphonato-L…",
-      "formula": "C13H17N6O11P2",
-      "charge": -2,
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78551"
+        "chebi": "CHEBI:78533"
       }
     },
     {
@@ -168,40 +168,43 @@
       }
     },
     {
-      "id": "xaa_l_proline",
-      "name": "Xaa-L-proline",
-      "formula": "C7H11N2O3R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:195196"
-      }
-    },
-    {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:60039"
-      }
-    },
-    {
-      "id": "n2_acyl_l_glutaminate",
-      "name": "N2-acyl-L-glutaminate",
-      "short": "N2-acyl-L-glutamina…",
-      "formula": "C6H8N2O4R",
+      "id": "cholate",
+      "name": "Cholic acid (cholate)",
+      "short": "Cholic acid…",
+      "formula": "C24H39O5",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:87584"
+        "chebi": "CHEBI:29747"
       }
     },
     {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "n_choloyl_l_amino_acid_anion",
+      "name": "N-choloyl-L-α-amino acid anion",
+      "short": "N-choloyl-L-α-amino…",
+      "formula": "C26H41NO6R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229709"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
+      "id": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
+      "name": "2-ammonioethyl (2R)-2,3-dihydroxypropyl phosphate",
+      "short": "2-ammonioethyl…",
+      "formula": "C5H14NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143890"
       }
     }
   ],
@@ -228,24 +231,10 @@
       ]
     },
     {
-      "id": "ec_6_1_1_27",
-      "name": "O-phosphoserine--tRNA ligase",
+      "id": "ec_6_1_1_11",
+      "name": "serine--tRNA ligase",
       "ec": [
-        "6.1.1.27"
-      ]
-    },
-    {
-      "id": "ec_3_4_13_9",
-      "name": "Xaa-Pro dipeptidase",
-      "ec": [
-        "3.4.13.9"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_133",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "ec": [
-        "3.5.1.133"
+        "6.1.1.11"
       ]
     }
   ],
@@ -403,16 +392,16 @@
     },
     {
       "id": "r4",
-      "name": "O-phosphoserine--tRNA ligase",
-      "equation": "tRNA(Cys) + O-phospho-L-serine + ATP = O-phospho-L-seryl-tRNA(Cys) + AMP + diphosphate",
-      "ec": "6.1.1.27",
+      "name": "serine--tRNA ligase",
+      "equation": "tRNA(Sec) + L-serine + ATP = L-seryl-tRNA(Sec) + AMP + diphosphate + H(+)",
+      "ec": "6.1.1.11",
       "substrates": [
         {
           "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pser",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
@@ -422,7 +411,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_o_phosphonato_l_seryl_adenylyl_2_group",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
@@ -432,36 +421,49 @@
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_27"
+          "enzyme": "ec_6_1_1_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25678"
+        "rhea": "RHEA:42580"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25678"
+            "id": "RHEA:42580"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Xaa-Pro dipeptidase",
-      "equation": "Xaa-L-Pro dipeptide + H2O = an L-alpha-amino acid + L-proline",
-      "ec": "3.4.13.9",
+      "name": "an L-alpha-amino acid + cholate = an N-choloyl-L-alpha-amino acid + H2O",
+      "equation": "an L-alpha-amino acid + cholate = an N-choloyl-L-alpha-amino acid + H2O",
       "substrates": [
         {
-          "metabolite": "xaa_l_proline",
+          "metabolite": "l_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_choloyl_l_amino_acid_anion",
           "stoichiometry": 1
         },
         {
@@ -469,77 +471,60 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "l_amino_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_proline",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_4_13_9"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:76407"
+        "rhea": "RHEA:79087"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76407"
+            "id": "RHEA:79087"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "equation": "an N(2)-acyl-L-glutamine + H2O = a carboxylate + L-glutamine",
-      "ec": "3.5.1.133",
+      "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + 2 H2O = sn-glycero-3-phosphoethanolamin...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + 2 H2O = sn-glycero-3-phosphoethanolamine + 2 a carboxylate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "n2_acyl_l_glutaminate",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 2
+        },
         {
-          "enzyme": "ec_3_5_1_133"
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:59984"
+        "rhea": "RHEA:32971"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59984"
+            "id": "RHEA:32971"
           }
         ]
       }

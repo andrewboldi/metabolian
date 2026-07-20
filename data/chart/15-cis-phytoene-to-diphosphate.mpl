@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 15-cis-phytoene-to-diphosphate "15-cis-phytoene to diphosphate" {
-  spacing 264
+  spacing 280
 
   spine at 0,0 {
     15_cis_phytoene
@@ -12,21 +12,19 @@ pathway 15-cis-phytoene-to-diphosphate "15-cis-phytoene to diphosphate" {
     all_trans_carotene
     <-> ec_1_3_99_26 [1.3.99.26] +hydrogen_acceptor -hydrogen_donor
     lycopene
-    <-> ec_2_5_1_149 [2.5.1.149] +dmapp +hydrogen_acceptor +h2o -hydrogen_donor -ppi
-    nonaflavuxanthin
-    <-> ec_2_5_1_149 [2.5.1.149] +dmapp +hydrogen_acceptor +h2o -hydrogen_donor -ppi
-    flavuxanthin
+    <-> ec_2_5_1_150 [2.5.1.150] +dmapp +h2o -ppi
+    dihydroisopentenyldehydrorhodopin
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
-    7_8_dihydromethanopterin
+    <-> . +2r_9s_annullatin_h +hydrogen_acceptor
+    2r_annullatin_f
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_66 [4.2.3.66] +fpp
-    selinene
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
   }
 }

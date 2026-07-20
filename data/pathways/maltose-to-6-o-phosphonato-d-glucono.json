@@ -1,0 +1,296 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "maltose-to-6-o-phosphonato-d-glucono",
+  "name": "maltose to 6-O-phosphonato-D-glucono…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from maltose to 6-O-phosphonato-D-glucono-1,5-lactone(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49300"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17306"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "maltose",
+      "name": "maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17306"
+      }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "maltose_6_phosphate",
+      "name": "α-maltose 6'-phosphate",
+      "short": "α-maltose 6'-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57478"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "6pgl",
+      "name": "6-Phospho-D-glucono-1,5-lactone",
+      "short": "6-Phospho-D-glucono…",
+      "formula": "C6H9O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57955"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_208",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
+      "ec": [
+        "2.7.1.208"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_122",
+      "name": "maltose-6'-phosphate glucosidase",
+      "ec": [
+        "3.2.1.122"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_363",
+      "name": "glucose-6-phosphate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.363"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_388",
+      "name": "glucose-6-phosphate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.388"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein-N(pi)-phosphohistidine--maltose phosphotransferase",
+      "equation": "D-maltose(out) + N(pros)-phospho-L-histidyl-[protein] = alpha-maltose 6'-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.208",
+      "substrates": [
+        {
+          "metabolite": "maltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maltose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_208"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49300"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "maltose-6'-phosphate glucosidase",
+      "equation": "alpha-maltose 6'-phosphate + H2O = D-glucose 6-phosphate + D-glucose",
+      "ec": "3.2.1.122",
+      "substrates": [
+        {
+          "metabolite": "maltose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_122"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20421"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucose-6-phosphate dehydrogenase [NAD(P)(+)]",
+      "equation": "D-glucose 6-phosphate + NAD(+) = 6-phospho-D-glucono-1,5-lactone + NADH + H(+)",
+      "ec": "1.1.1.363",
+      "substrates": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6pgl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_363"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38215"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38215"
+          }
+        ]
+      }
+    }
+  ]
+}

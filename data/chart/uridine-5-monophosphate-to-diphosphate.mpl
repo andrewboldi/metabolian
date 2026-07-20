@@ -12,19 +12,19 @@ pathway uridine-5-monophosphate-to-diphosphate "uridine 5'-monophosphate(… to 
     5_methyluridine_5_monophosphate_1
     <-> ec_2_8_1_15 [2.8.1.15] +c_terminal_n_glycylaminoethanethioate_1 +atp +h2o -5_methyl_2_thiouridine_5_phosphate_1 -amp -ppi -hplus
     c_terminal_gly_gly_1
-    <-> ec_2_7_7_100 [2.7.7.100] +atp +hplus -ppi
+    <-> . +atp +hplus -ppi
     c_terminal_gly_gly_amp_1_group
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_87 [4.2.3.87] +fpp
-    guaiene
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
+    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 }

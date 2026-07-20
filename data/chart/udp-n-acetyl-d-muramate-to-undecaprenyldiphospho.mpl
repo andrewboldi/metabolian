@@ -8,7 +8,13 @@ pathway udp-n-acetyl-d-muramate-to-undecaprenyldiphospho "UDP-N-acetyl-α-D-mura
 
   spine at 0,0 {
     udp_n_acetyl_d_muramate
-    <-> ec_6_3_2_45 [6.3.2.45] +l_alanyl_d_glutamyl_meso_diaminopimelate +atp -adp -pi -hplus
+    <-> ec_6_3_2_8 [6.3.2.8] +alanine +atp -adp -pi -hplus
+    udp_n_acetyl_d_muramoyl_l_alaninate
+    <-> ec_6_3_2_53 [6.3.2.53] +glutamate +atp -adp -pi -hplus
+    udp_n_acetyl_d_muramoyl_l_alanyl_l_glutamate
+    <-> ec_5_1_1_23 [5.1.1.23] +atp +h2o -amp -ppi -hplus
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate
+    <-> ec_6_3_2_13 [6.3.2.13] +meso_2_6_diaminopimelic_acid_dizwitterion +atp -adp -pi -hplus
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
     <-> ec_6_3_2_10 [6.3.2.10] +d_alanyl_d_alanine +atp -adp -pi -hplus
     udp_n_acetylmuramoyl_l_alanyl_d_glutamyl_meso_2
@@ -18,9 +24,9 @@ pathway udp-n-acetyl-d-muramate-to-undecaprenyldiphospho "UDP-N-acetyl-α-D-mura
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
   }
 
-  branch from ump side left {
-    ump
-    <-> ec_1_14_11_49 [1.14.11.49] +akg +o2 +succinate +co2 +pi
-    uridine_5_aldehyde
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_97 [4.2.3.97] +fpp
+    cadinene
   }
 }

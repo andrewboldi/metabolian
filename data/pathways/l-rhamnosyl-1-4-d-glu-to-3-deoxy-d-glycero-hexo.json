@@ -68,23 +68,31 @@
       }
     },
     {
-      "id": "l_rhamnosyl_1_4_d_glucuronide",
-      "name": "α-L-rhamnosyl-(1→4)-β-D-glucuronide",
-      "short": "α-L-rhamnosyl-(1→4)…",
-      "formula": "C12H18O11R",
-      "charge": -1,
+      "id": "dioscin",
+      "name": "dioscin",
+      "formula": "C45H72O16",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:229551"
+        "chebi": "CHEBI:74023"
       }
     },
     {
-      "id": "4_deoxy_l_threo_hex_4_enopyranuronoside",
-      "name": "4-deoxy-α-L-threo-hex-4-enopyranuronoside",
-      "short": "4-deoxy-α-L-threo-h…",
-      "formula": "C6H6O6R",
-      "charge": -1,
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:229553"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "diosgenin_3_o_d_glucoside",
+      "name": "diosgenin 3-O-β-D-glucoside",
+      "short": "diosgenin…",
+      "formula": "C33H52O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74020"
       }
     },
     {
@@ -95,43 +103,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:60189"
-      }
-    },
-    {
-      "id": "2_dehydro_3_deoxy_d_gluconate",
-      "name": "2-dehydro-3-deoxy-D-gluconate",
-      "short": "2-dehydro-3-deoxy-D…",
-      "formula": "C6H9O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57990"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
       }
     }
   ],
@@ -158,17 +129,17 @@
       ]
     },
     {
+      "id": "ec_3_2_1_190",
+      "name": "dioscin glycosidase (3-O-beta-D-Glc-diosgenin-forming)",
+      "ec": [
+        "3.2.1.190"
+      ]
+    },
+    {
       "id": "ec_4_2_2_6",
       "name": "oligogalacturonide lyase",
       "ec": [
         "4.2.2.6"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_127",
-      "name": "2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase",
-      "ec": [
-        "1.1.1.127"
       ]
     }
   ],
@@ -290,41 +261,45 @@
     },
     {
       "id": "r4",
-      "name": "alpha-L-rhamnosyl-(1->4)-beta-D-glucuronate lyase",
-      "equation": "an alpha-L-rhamnosyl-(1->4)-beta-D-glucuronide = a 4-deoxy-alpha-L-threo-hex-4-enopyranuronoside + L-rhamnopyranose",
-      "ec": "4.2.2.28",
+      "name": "dioscin glycosidase (3-O-beta-D-Glc-diosgenin-forming)",
+      "equation": "dioscin + 2 H2O = diosgenin 3-O-beta-D-glucoside + 2 L-rhamnopyranose",
+      "ec": "3.2.1.190",
       "substrates": [
         {
-          "metabolite": "l_rhamnosyl_1_4_d_glucuronide",
+          "metabolite": "dioscin",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "4_deoxy_l_threo_hex_4_enopyranuronoside",
+          "metabolite": "diosgenin_3_o_d_glucoside",
           "stoichiometry": 1
         },
         {
           "metabolite": "l_rhamnopyranose",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_2_28"
+          "enzyme": "ec_3_2_1_190"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:78747"
+        "rhea": "RHEA:38939"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78747"
+            "id": "RHEA:38939"
           }
         ]
       }
@@ -362,55 +337,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:20269"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase",
-      "equation": "2-dehydro-3-deoxy-D-gluconate + NAD(+) = 3-deoxy-D-glycero-2,5-hexodiulosonate + NADH + H(+)",
-      "ec": "1.1.1.127",
-      "substrates": [
-        {
-          "metabolite": "2_dehydro_3_deoxy_d_gluconate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_deoxy_d_glycero_hexo_2_5_diulosonate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_127"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:24232"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:24232"
           }
         ]
       }

@@ -10,7 +10,9 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
     o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
     <-> ec_3_1_2_31 [3.1.2.31] +h2o -dihydromonacolin_l_carboxylate -hplus
     holo-acp
-    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 -fmn -h2o -hplus
+    <-> . +dihydromonacolin_l_carboxylate +fmnh2 +o2 -fmn -h2o -hplus
+    3_hydroxy_3_5_dihydromonacolin_l_carboxylate
+    <-> . -h2o
     monacolin_l_carboxylate
     <-> ec_1_14_14_125 [1.14.14.125] +fmnh2 +o2 -fmn -h2o -hplus
     monacolin_j_carboxylate
@@ -20,13 +22,19 @@ pathway o-s-dihydromonacolin-l-to-o-pantetheine-4-phosph "O-[S-(dihydromonacolin
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_274 [2.3.1.274] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +pi
-    acyl_monophosphate
+    <-> ec_6_2_1_39 [6.2.1.39] +glutamate +atp +adp +pi
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_80 [1.14.14.80] +palmitate +fmnh2 +o2 +h2o +hplus
-    16_hydroxyhexadecanoate
+    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxyprogesterone
+  }
+
+  branch from mevinolinate side left {
+    mevinolinate
+    <-> . +h2o +hplus
+    lovastatin
   }
 }

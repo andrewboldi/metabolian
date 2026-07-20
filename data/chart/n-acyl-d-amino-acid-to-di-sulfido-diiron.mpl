@@ -18,25 +18,25 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to d
 
   branch from d_amino_acid side left {
     d_amino_acid
-    <-> ec_1_4_5_1 [1.4.5.1] +1_4_benzoquinones +h2o +2_oxo_monocarboxylic_acid_anion +nh3
-    hydroquinones
+    <-> . +o2 +h2o2
+    a_2_iminiocarboxylate
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_7_1_5 [3.7.1.5] +h2o +pyruvate +hplus
-    3_acylpyruvate
+    <-> ec_3_6_1_7 [3.6.1.7] +h2o +pi +hplus
+    acyl_monophosphate
   }
 
-  branch from nh3 side left {
+  branch from 2_oxo_monocarboxylic_acid_anion side left {
+    2_oxo_monocarboxylic_acid_anion
+    <-> ec_1_1_1_272 [1.1.1.272] +nadp +nadph +hplus
+    2r_2_hydroxy_monocarboxylic_acid_anion
+  }
+
+  branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
-    5_amino_6_5_phospho_d_ribosylamino_uracil
-  }
-
-  branch from acyl_coa side right {
-    acyl_coa
-    <-> ec_2_3_1_25 [2.3.1.25] +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +coa
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
+    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
+    xanthosine
   }
 }

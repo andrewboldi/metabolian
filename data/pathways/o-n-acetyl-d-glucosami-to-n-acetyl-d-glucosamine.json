@@ -1,9 +1,9 @@
 {
   "$schema": "../../schema/pathway.schema.json",
   "id": "o-n-acetyl-d-glucosami-to-n-acetyl-d-glucosamine",
-  "name": "O-(N-acetyl-β-D-glucosami… to N-acetyl-D-glucosamine",
+  "name": "O-(N-acetyl-β-D-glucosami… to N-acetyl-D-glucosamine…",
   "category": "amino-acid-metabolism",
-  "summary": "A 3-step route from O-(N-acetyl-β-D-glucosaminyl)-L-serine residue to N-acetyl-D-glucosamine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 3-step route from O-(N-acetyl-β-D-glucosaminyl)-L-serine residue to N-acetyl-D-glucosamine 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -57,40 +57,31 @@
       }
     },
     {
-      "id": "2_ammonio_2_deoxy_d_glucopyranose",
-      "name": "2-ammonio-2-deoxy-D-glucopyranose",
-      "short": "2-ammonio-2-deoxy-D…",
-      "formula": "C6H14NO5",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58723"
-      }
-    },
-    {
-      "id": "acetate",
-      "name": "Acetate",
-      "formula": "C2H3O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30089"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57288"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "n_acetyl_d_glucosamine_1_phosphate",
+      "name": "N-acetyl-α-D-glucosamine 1-phosphate",
+      "short": "N-acetyl-α-D-glucos…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:57776"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -100,6 +91,16 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-D-glucosamine 6-phosphate",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57513"
       }
     },
     {
@@ -121,17 +122,17 @@
       ]
     },
     {
-      "id": "ec_3_5_1_33",
-      "name": "N-acetylglucosamine deacetylase",
+      "id": "ec_2_7_1_162",
+      "name": "N-acetylhexosamine 1-kinase",
       "ec": [
-        "3.5.1.33"
+        "2.7.1.162"
       ]
     },
     {
-      "id": "ec_2_3_1_3",
-      "name": "glucosamine N-acetyltransferase",
+      "id": "ec_5_4_2_3",
+      "name": "phosphoacetylglucosamine mutase",
       "ec": [
-        "2.3.1.3"
+        "5.4.2.3"
       ]
     },
     {
@@ -190,71 +191,26 @@
     },
     {
       "id": "r2",
-      "name": "N-acetylglucosamine deacetylase",
-      "equation": "N-acetyl-D-glucosamine + H2O = D-glucosamine + acetate",
-      "ec": "3.5.1.33",
+      "name": "N-acetylhexosamine 1-kinase",
+      "equation": "N-acetyl-D-glucosamine + ATP = N-acetyl-alpha-D-glucosamine 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.162",
       "substrates": [
         {
           "metabolite": "n_acetyl_d_glucosamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_ammonio_2_deoxy_d_glucopyranose",
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_33"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:20593"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:20593"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "glucosamine N-acetyltransferase",
-      "equation": "D-glucosamine + acetyl-CoA = N-acetyl-D-glucosamine + CoA + H(+)",
-      "ec": "2.3.1.3",
-      "substrates": [
-        {
-          "metabolite": "2_ammonio_2_deoxy_d_glucopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetyl_d_glucosamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -264,20 +220,57 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_3"
+          "enzyme": "ec_2_7_1_162"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 3,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:21332"
+        "rhea": "RHEA:53724"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21332"
+            "id": "RHEA:53724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphoacetylglucosamine mutase",
+      "equation": "N-acetyl-alpha-D-glucosamine 1-phosphate = N-acetyl-D-glucosamine 6-phosphate",
+      "ec": "5.4.2.3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23804"
           }
         ]
       }

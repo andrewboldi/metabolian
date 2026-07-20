@@ -18,7 +18,7 @@ pathway caffeine-to-formaldehyde "caffeine to formaldehyde" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_68 [1.14.11.68] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    diuron_desmethyl
   }
 }

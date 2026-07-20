@@ -105,41 +105,69 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "14_15_eet",
+      "name": "14,15-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:84024"
       }
     },
     {
-      "id": "sesquithujene",
-      "name": "sesquithujene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:63711"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "6a_hydroxymaackiain",
-      "name": "(+)-6a-hydroxymaackiain",
-      "short": "(+)-6a-hydroxymaack…",
-      "formula": "C16H12O6",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:43129"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "pisatin",
-      "name": "(+)-pisatin",
-      "formula": "C17H14O6",
-      "charge": 0,
+      "id": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
+      "name": "14,15-epoxy-(5Z,8Z,11Z)-icosatrienoyl-CoA",
+      "short": "14,15-epoxy-(5Z,8Z,…",
+      "formula": "C41H62N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:67347"
+        "chebi": "CHEBI:136117"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74445"
       }
     }
   ],
@@ -163,20 +191,6 @@
       "name": "(+)-O-methylkolavelool synthase",
       "ec": [
         "2.1.1.347"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_102",
-      "name": "sesquithujene synthase",
-      "ec": [
-        "4.2.3.102"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_270",
-      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
-      "ec": [
-        "2.1.1.270"
       ]
     }
   ],
@@ -314,18 +328,29 @@
     },
     {
       "id": "r4",
-      "name": "sesquithujene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = sesquithujene + diphosphate",
-      "ec": "4.2.3.102",
+      "name": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatri...",
+      "equation": "14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + ATP + CoA = 14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "14_15_eet",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sesquithujene",
+          "metabolite": "14_15_epoxy_5z_8z_11z_icosatrienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -333,34 +358,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_102"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31991"
+        "rhea": "RHEA:52016"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31991"
+            "id": "RHEA:52016"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(+)-6a-hydroxymaackiain 3-O-methyltransferase",
-      "equation": "(+)-6a-hydroxymaackiain + S-adenosyl-L-methionine = (+)-pisatin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.270",
+      "name": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA ...",
+      "equation": "a guanosine in 21S rRNA + S-adenosyl-L-methionine = a 2'-O-methylguanosine in 21S rRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "6a_hydroxymaackiain",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -370,7 +389,7 @@
       ],
       "products": [
         {
-          "metabolite": "pisatin",
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -382,22 +401,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_270"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35471"
+        "rhea": "RHEA:47772"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35471"
+            "id": "RHEA:47772"
           }
         ]
       }

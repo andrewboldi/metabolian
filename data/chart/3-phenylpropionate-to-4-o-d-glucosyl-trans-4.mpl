@@ -8,7 +8,7 @@ pathway 3-phenylpropionate-to-4-o-d-glucosyl-trans-4 "3-phenylpropionate to 4-O-
 
   spine at 0,0 {
     3_phenylpropionate
-    <-> ec_1_3_8_15 [1.3.8.15] +fad +hplus -fadh2
+    <-> . +nad -nadh -hplus
     trans_cinnamate
     <-> ec_1_14_14_91 [1.14.14.91] +fmnh2 +o2 -fmn -h2o -hplus
     trans_4_coumarate
@@ -22,9 +22,15 @@ pathway 3-phenylpropionate-to-4-o-d-glucosyl-trans-4 "3-phenylpropionate to 4-O-
     e_3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_acr
   }
 
-  branch from fmn side right {
+  branch from trans_4_coumarate side right {
+    trans_4_coumarate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    trans_caffeate
+  }
+
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
-    maniladiol
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_13z_19z_16_17_epoxydocosatetraenoate
   }
 }

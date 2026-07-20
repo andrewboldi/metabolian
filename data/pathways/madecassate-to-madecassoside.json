@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "madecassate-to-madecassoside",
+  "name": "madecassate to madecassoside",
+  "category": "other",
+  "summary": "A 3-step route from madecassate to madecassoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84939"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:234050"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "madecassate",
+      "name": "madecassate",
+      "formula": "C30H47O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234050"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+      "name": "2α,3β,6β,23α-tetrahydroxyurs-12-en-28-oic acid 28-O-β-D-glucoside",
+      "short": "2α,3β,6β,23α-tetrah…",
+      "formula": "C36H58O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234053"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+      "name": "2α,3β,6β,23α-tetrahydroxyurs-12-en-28-oic acid 28-O-[β-D-glucosyl-(1→6)-β-D-glucoside]",
+      "short": "2α,3β,6β,23α-tetrah…",
+      "formula": "C42H68O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234054"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "madecassoside",
+      "name": "madecassoside",
+      "formula": "C48H78O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66651"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "madecassate + UDP-alpha-D-glucose = madecassic acid 28-O-beta-D-glucoside + UDP",
+      "equation": "madecassate + UDP-alpha-D-glucose = madecassic acid 28-O-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "madecassate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84939"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "madecassic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = madecassic acid 28-O-[bet...",
+      "equation": "madecassic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = madecassic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "madecassic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = ...",
+      "equation": "madecassic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = madecassoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_6_23_tetrahydroxyurs_12_en_28_oic_acid_28_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "madecassoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84963"
+          }
+        ]
+      }
+    }
+  ]
+}

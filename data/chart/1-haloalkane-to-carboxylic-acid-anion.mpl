@@ -16,21 +16,15 @@ pathway 1-haloalkane-to-carboxylic-acid-anion "1-haloalkane to carboxylic acid a
     carboxylic_acid_anion
   }
 
-  branch from primary_alcohol side left {
-    primary_alcohol
-    <-> ec_1_1_9_1 [1.1.9.1] +copper +aldehyde +hplus
-    copper
-  }
-
-  branch from aldehyde side right {
+  branch from aldehyde side left {
     aldehyde
-    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
-    fmn
+    <-> ec_1_4_3_21 [1.4.3.21] +primary_methyl_ammonium_ion +o2 +h2o +h2o2
+    nh3
   }
 
-  branch from carboxylic_acid_anion side left {
+  branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_5_1_17 [3.5.1.17] +n6_acyl_l_lysine +h2o
-    l_lysinium
+    <-> ec_3_6_1_20 [3.6.1.20] +h2o +amp +hplus
+    5_acylphosphoadenosine
   }
 }

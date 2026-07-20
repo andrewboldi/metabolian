@@ -140,42 +140,40 @@
       }
     },
     {
-      "id": "24s_24_hydroxycholesterol",
-      "name": "(24S)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:34310"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "24s_7_24_dihydroxycholesterol",
-      "name": "(24S)-7α,24-dihydroxycholesterol",
-      "short": "7α,24-dihydroxychol…",
-      "formula": "C27H46O3",
-      "charge": 0,
+      "id": "18_r_hete",
+      "name": "18(R)-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:37640"
+        "chebi": "CHEBI:90790"
       }
     },
     {
-      "id": "4_demethylrebeccamycin",
-      "name": "4'-demethylrebeccamycin",
-      "short": "4'-demethylrebeccam…",
-      "formula": "C26H19Cl2N3O7",
+      "id": "lathosterone",
+      "name": "lathosterone",
+      "formula": "C27H44O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:595389"
+        "chebi": "CHEBI:71550"
       }
     },
     {
-      "id": "rebeccamycin",
-      "name": "rebeccamycin",
-      "formula": "C27H21Cl2N3O7",
+      "id": "4_methyllathosterone",
+      "name": "4α-methyllathosterone",
+      "short": "4α-methyllathostero…",
+      "formula": "C28H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:135511"
+        "chebi": "CHEBI:16495"
       }
     }
   ],
@@ -206,20 +204,6 @@
       "name": "tetrahydroberberine oxidase",
       "ec": [
         "1.3.3.8"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_26",
-      "name": "24-hydroxycholesterol 7alpha-hydroxylase",
-      "ec": [
-        "1.14.14.26"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_164",
-      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
-      "ec": [
-        "2.1.1.164"
       ]
     }
   ],
@@ -434,12 +418,11 @@
     },
     {
       "id": "r5",
-      "name": "24-hydroxycholesterol 7alpha-hydroxylase",
-      "equation": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-7alpha-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.26",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (18R)...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (18R)-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "24s_24_hydroxycholesterol",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -453,7 +436,7 @@
       ],
       "products": [
         {
-          "metabolite": "24s_7_24_dihydroxycholesterol",
+          "metabolite": "18_r_hete",
           "stoichiometry": 1
         },
         {
@@ -469,34 +452,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_26"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46124"
+        "rhea": "RHEA:48736"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46124"
+            "id": "RHEA:48736"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "demethylrebeccamycin-D-glucose O-methyltransferase",
-      "equation": "4'-demethylrebeccamycin + S-adenosyl-L-methionine = rebeccamycin + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.164",
+      "name": "5alpha-cholest-7-en-3-one + S-adenosyl-L-methionine = 4alpha-methyl-5alpha-cholest-7-en...",
+      "equation": "5alpha-cholest-7-en-3-one + S-adenosyl-L-methionine = 4alpha-methyl-5alpha-cholest-7-en-3-one + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "4_demethylrebeccamycin",
+          "metabolite": "lathosterone",
           "stoichiometry": 1
         },
         {
@@ -506,7 +483,7 @@
       ],
       "products": [
         {
-          "metabolite": "rebeccamycin",
+          "metabolite": "4_methyllathosterone",
           "stoichiometry": 1
         },
         {
@@ -518,22 +495,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_164"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27353"
+        "rhea": "RHEA:35483"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27353"
+            "id": "RHEA:35483"
           }
         ]
       }

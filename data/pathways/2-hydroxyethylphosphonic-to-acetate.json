@@ -1,0 +1,393 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxyethylphosphonic-to-acetate",
+  "name": "2-hydroxyethylphosphonic… to acetate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2-hydroxyethylphosphonic acid(1−) to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28078"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60991"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxyethylphosphonic_acid",
+      "name": "2-hydroxyethylphosphonic acid",
+      "short": "2-hydroxyethylphosp…",
+      "formula": "C2H6O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60991"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "phosphonoacetaldehyde",
+      "name": "phosphonoacetaldehyde",
+      "short": "phosphonoacetaldehy…",
+      "formula": "C2H4O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58383"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hydrogen_phosphonatoacetate",
+      "name": "hydrogen phosphonatoacetate",
+      "short": "hydrogen phosphonat…",
+      "formula": "C2H3O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57488"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "1r_2_amino_1_hydroxyethyl_phosphonate",
+      "name": "(1R)-(2-amino-1-hydroxyethyl)phosphonate",
+      "short": "(2-amino-1-hydroxye…",
+      "formula": "C2H8NO4P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141612"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "n_acetylcadaverine",
+      "name": "N-acetylcadaverine",
+      "formula": "C7H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:134408"
+      }
+    },
+    {
+      "id": "cadaverine",
+      "name": "cadaverine",
+      "formula": "C5H16N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58384"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_309",
+      "name": "phosphonoacetaldehyde reductase (NADH)",
+      "ec": [
+        "1.1.1.309"
+      ]
+    },
+    {
+      "id": "ec_3_11_1_2",
+      "name": "phosphonoacetate hydrolase",
+      "ec": [
+        "3.11.1.2"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_33",
+      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
+      "ec": [
+        "4.3.1.33"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphonoacetaldehyde reductase (NADH)",
+      "equation": "2-hydroxyethylphosphonate + NAD(+) = phosphonoacetaldehyde + NADH + H(+)",
+      "ec": "1.1.1.309",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyethylphosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_309"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28078"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphonoacetaldehyde + NAD(+) + H2O = phosphonoacetate + NADH + 2 H(+)",
+      "equation": "phosphonoacetaldehyde + NAD(+) + H2O = phosphonoacetate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "phosphonoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydrogen_phosphonatoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphonoacetate hydrolase",
+      "equation": "phosphonoacetate + H2O = acetate + phosphate + H(+)",
+      "ec": "3.11.1.2",
+      "substrates": [
+        {
+          "metabolite": "hydrogen_phosphonatoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_11_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16749"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16749"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(R)-1-hydroxy-2-aminoethylphosphonate ammonia-lyase",
+      "equation": "(1R)-(2-amino-1-hydroxyethyl)phosphonate = phosphonoacetaldehyde + NH4(+)",
+      "ec": "4.3.1.33",
+      "substrates": [
+        {
+          "metabolite": "1r_2_amino_1_hydroxyethyl_phosphonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:72879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-acetylcadaverine + H2O = cadaverine + acetate",
+      "equation": "N-acetylcadaverine + H2O = cadaverine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetylcadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cadaverine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:51892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51892"
+          }
+        ]
+      }
+    }
+  ]
+}

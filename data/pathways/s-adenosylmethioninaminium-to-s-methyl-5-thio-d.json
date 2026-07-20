@@ -122,6 +122,15 @@
       }
     },
     {
+      "id": "nocardicin_e",
+      "name": "nocardicin E",
+      "formula": "C19H15N3O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77885"
+      }
+    },
+    {
       "id": "sam",
       "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
       "short": "S-Adenosyl-L-methio…",
@@ -132,40 +141,22 @@
       }
     },
     {
-      "id": "l_homoserine_lactone",
-      "name": "L-homoserine lactone",
-      "formula": "C4H8NO2",
-      "charge": 1,
+      "id": "isonocardicin_a",
+      "name": "isonocardicin A",
+      "formula": "C23H22N4O9",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58633"
+        "chebi": "CHEBI:77633"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "n4_aminopropylspermidine",
+      "name": "N4-aminopropylspermidine",
+      "short": "N4-aminopropylsperm…",
+      "formula": "C10H30N4",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
-      "id": "deoxyhypusine_2",
-      "name": "deoxyhypusine(2+)",
-      "formula": "C10H23N3O",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:82657"
-      }
-    },
-    {
-      "id": "trimethylenediaminium",
-      "name": "trimethylenediaminium",
-      "short": "trimethylenediamini…",
-      "formula": "C3H12N2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:57484"
+        "chebi": "CHEBI:82770"
       }
     }
   ],
@@ -199,17 +190,10 @@
       ]
     },
     {
-      "id": "ec_4_4_1_42",
-      "name": "S-adenosyl-L-methionine lyase",
+      "id": "ec_2_5_1_38",
+      "name": "isonocardicin synthase",
       "ec": [
-        "4.4.1.42"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_46",
-      "name": "deoxyhypusine synthase",
-      "ec": [
-        "2.5.1.46"
+        "2.5.1.38"
       ]
     }
   ],
@@ -359,10 +343,14 @@
     },
     {
       "id": "r4",
-      "name": "S-adenosyl-L-methionine lyase",
-      "equation": "S-adenosyl-L-methionine = L-homoserine lactone + S-methyl-5'-thioadenosine",
-      "ec": "4.4.1.42",
+      "name": "isonocardicin synthase",
+      "equation": "nocardicin E + S-adenosyl-L-methionine = isonocardicin A + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.38",
       "substrates": [
+        {
+          "metabolite": "nocardicin_e",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "sam",
           "stoichiometry": 1
@@ -370,42 +358,45 @@
       ],
       "products": [
         {
-          "metabolite": "l_homoserine_lactone",
+          "metabolite": "isonocardicin_a",
           "stoichiometry": 1
         },
         {
           "metabolite": "5_s_methyl_5_thioadenosine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_4_1_42"
+          "enzyme": "ec_2_5_1_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:21932"
+        "rhea": "RHEA:19845"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21932"
+            "id": "RHEA:19845"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "deoxyhypusine synthase",
-      "equation": "[eIF5A protein]-L-lysine + spermidine = [eIF5A protein]-deoxyhypusine + propane-1,3-diamine",
-      "ec": "2.5.1.46",
+      "name": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-aminopropylspermidine + S-...",
+      "equation": "S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-aminopropylspermidine + S-methyl-5'-thioadenosine + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "s_adenosylmethioninaminium",
           "stoichiometry": 1
         },
         {
@@ -415,30 +406,29 @@
       ],
       "products": [
         {
-          "metabolite": "deoxyhypusine_2",
+          "metabolite": "n4_aminopropylspermidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "trimethylenediaminium",
+          "metabolite": "5_s_methyl_5_thioadenosine",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_5_1_46"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33299"
+        "rhea": "RHEA:42876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33299"
+            "id": "RHEA:42876"
           }
         ]
       }

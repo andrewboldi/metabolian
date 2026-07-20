@@ -18,8 +18,8 @@ pathway isophthalate-to-n-benzoylanthranilate "isophthalate to N-benzoylanthrani
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_40 [4.2.3.40] +fpp
-    z_bisabolene
+    <-> ec_3_6_1_9 [3.6.1.9] +datp +h2o +hplus
+    2_deoxyadenosine_5_monophosphate
   }
 
   branch from benzoyl_coa side right {

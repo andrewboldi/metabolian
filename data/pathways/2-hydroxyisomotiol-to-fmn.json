@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxyisomotiol-to-fmn",
+  "name": "2α-hydroxyisomotiol to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2α-hydroxyisomotiol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82763"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232472"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxyisomotiol",
+      "name": "2α-hydroxyisomotiol",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232472"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_19_dihydroxyisomotiol",
+      "name": "2α,19β-dihydroxyisomotiol",
+      "short": "2α,19β-dihydroxyiso…",
+      "formula": "C30H50O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232482"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxyismotiol_19_one",
+      "name": "2α-hydroxyismotiol-19-one",
+      "short": "2α-hydroxyismotiol-…",
+      "formula": "C30H48O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232483"
+      }
+    },
+    {
+      "id": "2_deacetyl_3_deglucopyranosyl_fuscoatroside",
+      "name": "2-deacetyl,3-deglucopyranosyl-fuscoatroside",
+      "short": "2-deacetyl,3-degluc…",
+      "formula": "C30H49O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232484"
+      }
+    },
+    {
+      "id": "n_12_hydroxyjasmonyl_l_amino_acid_anion",
+      "name": "N-(12-hydroxyjasmonyl)-L-α-amino acid anion",
+      "short": "N-(12-hydroxyjasmon…",
+      "formula": "C14H19NO5R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138374"
+      }
+    },
+    {
+      "id": "n_12_oxojasmonyl_l_amino_acid_anion",
+      "name": "N-(12-oxojasmonyl)-L-α-amino acid anion",
+      "short": "N-(12-oxojasmonyl)-…",
+      "formula": "C14H17NO5R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138463"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2alpha-hydroxyisomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha,19beta-d...",
+      "equation": "2alpha-hydroxyisomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha,19beta-dihydroxyisomotiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyisomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_19_dihydroxyisomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82763"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2alpha,19beta-dihydroxyisomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha...",
+      "equation": "2alpha,19beta-dihydroxyisomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha-hydroxyismotiol-19-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_19_dihydroxyisomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyismotiol_19_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2alpha-hydroxyismotiol-19-one + 2 reduced [NADPH--hemoprotein reductase] + O2 = 2-deace...",
+      "equation": "2alpha-hydroxyismotiol-19-one + 2 reduced [NADPH--hemoprotein reductase] + O2 = 2-deacetyl,3-deglucopyranosyl-fuscoatroside + 2 oxidized [NADPH--hemoprotein reductase] + H2O + 3 H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxyismotiol_19_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deacetyl_3_deglucopyranosyl_fuscoatroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 12-hydroxyjasmonyl-L-alpha-amino acid + reduced [NADPH--hemoprotein reductase] + O2 =...",
+      "equation": "a 12-hydroxyjasmonyl-L-alpha-amino acid + reduced [NADPH--hemoprotein reductase] + O2 = a 12-oxojasmonyl-L-alpha-amino acid + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_12_hydroxyjasmonyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_12_oxojasmonyl_l_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55060"
+          }
+        ]
+      }
+    }
+  ]
+}

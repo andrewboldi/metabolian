@@ -1,0 +1,286 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-isoeugenol-to-capsaicin",
+  "name": "trans-isoeugenol to capsaicin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from trans-isoeugenol to capsaicin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58068"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:50545"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_isoeugenol",
+      "name": "trans-isoeugenol",
+      "formula": "C10H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50545"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "vanillin",
+      "name": "vanillin",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18346"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "vanillylamine",
+      "name": "vanillylamine",
+      "formula": "C8H12NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:149596"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "6e_8_methylnon_6_enoyl_coa",
+      "name": "(6E)-8-methylnon-6-enoyl-CoA",
+      "short": "8-methylnon-6-enoyl…",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:149597"
+      }
+    },
+    {
+      "id": "capsaicin",
+      "name": "capsaicin",
+      "formula": "C18H27NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3374"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_88",
+      "name": "isoeugenol monooxygenase",
+      "ec": [
+        "1.13.11.88"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_119",
+      "name": "vanillin aminotransferase",
+      "ec": [
+        "2.6.1.119"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_35",
+      "name": "capsaicin synthase",
+      "ec": [
+        "2.3.2.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isoeugenol monooxygenase",
+      "equation": "(E)-isoeugenol + O2 = vanillin + acetaldehyde",
+      "ec": "1.13.11.88",
+      "substrates": [
+        {
+          "metabolite": "trans_isoeugenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "vanillin aminotransferase",
+      "equation": "vanillin + L-alanine = vanillylamine + pyruvate",
+      "ec": "2.6.1.119",
+      "substrates": [
+        {
+          "metabolite": "vanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_119"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "capsaicin synthase",
+      "equation": "vanillylamine + (6E)-8-methylnon-6-enoyl-CoA = capsaicin + CoA + H(+)",
+      "ec": "2.3.2.35",
+      "substrates": [
+        {
+          "metabolite": "vanillylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6e_8_methylnon_6_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "capsaicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63832"
+          }
+        ]
+      }
+    }
+  ]
+}

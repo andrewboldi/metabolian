@@ -1,0 +1,308 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-hydroxytriacontanoy-to-3-oxodotriacontanoyl",
+  "name": "(R)-3-hydroxytriacontanoy… to 3-oxodotriacontanoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (R)-3-hydroxytriacontanoyl-CoA(4−) to 3-oxodotriacontanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39235"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_hydroxytriacontanoyl_coa",
+      "name": "(R)-3-hydroxytriacontanoyl-CoA",
+      "short": "3-hydroxytriacontan…",
+      "formula": "C51H90N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76384"
+      }
+    },
+    {
+      "id": "trans_2_triacontenoyl_coa",
+      "name": "trans-2-triacontenoyl-CoA",
+      "short": "trans-2-triaconteno…",
+      "formula": "C51H88N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76385"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "triacontanoyl_coa",
+      "name": "triacontanoyl-CoA",
+      "formula": "C51H90N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76386"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "3_oxodotriacontanoyl_coa",
+      "name": "3-oxodotriacontanoyl-CoA",
+      "short": "3-oxodotriacontanoy…",
+      "formula": "C53H92N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:83795"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "triacontan_1_ol",
+      "name": "triacontan-1-ol",
+      "formula": "C30H62O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28409"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3R)-hydroxytriacontanoyl-CoA = (2E)-triacontenoyl-CoA + H2O",
+      "equation": "(3R)-hydroxytriacontanoyl-CoA = (2E)-triacontenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "r_3_hydroxytriacontanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_triacontenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39235"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-triacontenoyl-CoA + NADPH + H(+) = triacontanoyl-CoA + NADP(+)",
+      "equation": "(2E)-triacontenoyl-CoA + NADPH + H(+) = triacontanoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_2_triacontenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triacontanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "triacontanoyl-CoA + malonyl-CoA + H(+) = 3-oxo-dotriacontanoyl-CoA + CO2 + CoA",
+      "equation": "triacontanoyl-CoA + malonyl-CoA + H(+) = 3-oxo-dotriacontanoyl-CoA + CO2 + CoA",
+      "substrates": [
+        {
+          "metabolite": "triacontanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxodotriacontanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "triacontanoyl-CoA + 2 NADPH + 2 H(+) = triacontan-1-ol + 2 NADP(+) + CoA",
+      "equation": "triacontanoyl-CoA + 2 NADPH + 2 H(+) = triacontan-1-ol + 2 NADP(+) + CoA",
+      "substrates": [
+        {
+          "metabolite": "triacontanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triacontan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:81747"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81747"
+          }
+        ]
+      }
+    }
+  ]
+}

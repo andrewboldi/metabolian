@@ -231,16 +231,6 @@
       }
     },
     {
-      "id": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
-      "name": "O-(S-hexanoylpantetheine-4'-phosphoryl)serine(1−)",
-      "short": "O-(S-hexanoylpantet…",
-      "formula": "C20H35N3O9PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78459"
-      }
-    },
-    {
       "id": "malonyl-coa",
       "name": "Malonyl-CoA",
       "formula": "C24H33N7O19P3S",
@@ -250,22 +240,12 @@
       }
     },
     {
-      "id": "norsolorinic_acid_anthrone",
-      "name": "norsolorinic acid anthrone",
-      "short": "norsolorinic acid…",
-      "formula": "C20H19O6",
-      "charge": -1,
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:77904"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:78449"
       }
     },
     {
@@ -288,22 +268,33 @@
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
+      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
+      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→3)-N-acetyl-β-D-galactosaminyl-(1→4)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide",
+      "short": "α-N-acetylneuramino…",
+      "formula": "C41H66N3O31R2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:37563"
+        "chebi": "CHEBI:90151"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d",
+      "name": "α-Neu5Ac-(2→8)-α-Neu5Ac-(2→3)-β-D-Gal-(1→3)-β-D-GalNac-(1→4)-β-D-Gal-(1→4)-β-D-Glc-(1↔1')-ceramide",
+      "short": "α-Neu5Ac-(2→8)-α-Ne…",
+      "formula": "C52H82N4O39R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:90856"
       }
     },
     {
@@ -381,10 +372,10 @@
       ]
     },
     {
-      "id": "ec_2_3_1_221",
-      "name": "noranthrone synthase",
+      "id": "ec_2_3_1_39",
+      "name": "[acyl-carrier-protein] S-malonyltransferase",
       "ec": [
-        "2.3.1.221"
+        "2.3.1.39"
       ]
     },
     {
@@ -392,27 +383,6 @@
       "name": "3-deoxy-D-manno-octulosonic acid kinase",
       "ec": [
         "2.7.1.166"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_8",
-      "name": "ATP diphosphatase",
-      "ec": [
-        "3.6.1.8"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
-      "ec": [
-        "3.6.1.9"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_65",
-      "name": "(d)CTP diphosphatase",
-      "ec": [
-        "3.6.1.65"
       ]
     },
     {
@@ -859,61 +829,45 @@
     },
     {
       "id": "r10",
-      "name": "noranthrone synthase",
-      "equation": "hexanoyl-[ACP] + 7 malonyl-CoA + 6 H(+) = noranthrone + holo-[ACP] + 7 CO2 + 7 CoA + 2 H2O",
-      "ec": "2.3.1.221",
+      "name": "[acyl-carrier-protein] S-malonyltransferase",
+      "equation": "holo-[ACP] + malonyl-CoA = malonyl-[ACP] + CoA",
+      "ec": "2.3.1.39",
       "substrates": [
-        {
-          "metabolite": "o_s_hexanoylpantetheine_4_phosphoryl_serine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 6
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "norsolorinic_acid_anthrone",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
-          "stoichiometry": 7
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "malonyl-acp",
+          "stoichiometry": 1
         },
         {
           "metabolite": "coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_221"
+          "enzyme": "ec_2_3_1_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:35179"
+        "rhea": "RHEA:41792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35179"
+            "id": "RHEA:41792"
           }
         ]
       }
@@ -969,26 +923,25 @@
     },
     {
       "id": "r12",
-      "name": "ATP diphosphatase",
-      "equation": "CTP + H2O = CMP + diphosphate + H(+)",
-      "ec": "3.6.1.8",
+      "name": "a ganglioside GM1b + CMP-N-acetyl-beta-neuraminate = a ganglioside GD1c + CMP + H(+)",
+      "equation": "a ganglioside GM1b + CMP-N-acetyl-beta-neuraminate = a ganglioside GD1c + CMP + H(+)",
       "substrates": [
         {
-          "metabolite": "ctp",
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "cmp_n_acetyl_neuraminate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cytidine_5_monophosphate",
+          "metabolite": "neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "cytidine_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -996,22 +949,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_1_8"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:27762"
+        "rhea": "RHEA:48916"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27762"
+            "id": "RHEA:48916"
           }
         ]
       }

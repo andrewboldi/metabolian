@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-acetylarylalkylamine-to-aromatic-carboxylate",
   "name": "N-acetylarylalkylamine to aromatic carboxylate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N-acetylarylalkylamine to aromatic carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,23 +128,31 @@
       }
     },
     {
-      "id": "4_methylumbelliferyl_acetate",
-      "name": "4-methylumbelliferyl acetate",
-      "short": "4-methylumbellifery…",
-      "formula": "C12H10O4",
+      "id": "1h_pyrazole",
+      "name": "1H-pyrazole",
+      "formula": "C3H4N2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17763"
+        "chebi": "CHEBI:17241"
       }
     },
     {
-      "id": "4_methylumbelliferone",
-      "name": "4-methylumbelliferone",
-      "short": "4-methylumbellifero…",
-      "formula": "C10H8O3",
+      "id": "o_acetyl_l_serine",
+      "name": "O-acetyl-L-serine",
+      "formula": "C5H9NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17224"
+        "chebi": "CHEBI:58340"
+      }
+    },
+    {
+      "id": "3_pyrazol_1_yl_l_alanine",
+      "name": "3-(pyrazol-1-yl)-L-alanine",
+      "short": "3-(pyrazol-1-yl)-L-…",
+      "formula": "C6H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57747"
       }
     },
     {
@@ -158,57 +166,49 @@
       }
     },
     {
-      "id": "arsenite",
-      "name": "arsenite",
-      "formula": "H2AsO3",
-      "charge": -1,
+      "id": "primary_alcohol",
+      "name": "primary alcohol",
+      "formula": "CH3OR",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29242"
+        "chebi": "CHEBI:15734"
       }
     },
     {
-      "id": "arsenate",
-      "name": "arsenate",
-      "formula": "HAsO4",
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "phosphoramidate",
+      "name": "phosphoramidate",
+      "formula": "H2NO3P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:48597"
+        "chebi": "CHEBI:29920"
       }
     },
     {
-      "id": "anthranilate",
-      "name": "anthranilate",
-      "formula": "C7H6NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16567"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "d_hexose",
+      "name": "D-hexose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:4194"
       }
     },
     {
-      "id": "catechol",
-      "name": "catechol",
-      "formula": "C6H6O2",
-      "charge": 0,
+      "id": "d_hexose_1_phosphate",
+      "name": "α-D-hexose 1-phosphate",
+      "short": "α-D-hexose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:18135"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:57734"
       }
     }
   ],
@@ -235,10 +235,10 @@
       ]
     },
     {
-      "id": "ec_3_1_1_56",
-      "name": "methylumbelliferyl-acetate deacetylase",
+      "id": "ec_2_5_1_51",
+      "name": "beta-pyrazolylalanine synthase",
       "ec": [
-        "3.1.1.56"
+        "2.5.1.51"
       ]
     },
     {
@@ -249,17 +249,17 @@
       ]
     },
     {
-      "id": "ec_1_20_9_1",
-      "name": "arsenate reductase (azurin)",
+      "id": "ec_1_1_9_1",
+      "name": "alcohol dehydrogenase (azurin)",
       "ec": [
-        "1.20.9.1"
+        "1.1.9.1"
       ]
     },
     {
-      "id": "ec_1_14_12_1",
-      "name": "anthranilate 1,2-dioxygenase (deaminating, decarboxylating)",
+      "id": "ec_2_7_1_62",
+      "name": "phosphoramidate--hexose phosphotransferase",
       "ec": [
-        "1.14.12.1"
+        "2.7.1.62"
       ]
     }
   ],
@@ -421,22 +421,22 @@
     },
     {
       "id": "r4",
-      "name": "methylumbelliferyl-acetate deacetylase",
-      "equation": "4-methylumbelliferyl acetate + H2O = 4-methylumbelliferone + acetate + H(+)",
-      "ec": "3.1.1.56",
+      "name": "beta-pyrazolylalanine synthase",
+      "equation": "pyrazole + O-acetyl-L-serine = 3-(pyrazol-1-yl)-L-alanine + acetate + H(+)",
+      "ec": "2.5.1.51",
       "substrates": [
         {
-          "metabolite": "4_methylumbelliferyl_acetate",
+          "metabolite": "1h_pyrazole",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "o_acetyl_l_serine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_methylumbelliferone",
+          "metabolite": "3_pyrazol_1_yl_l_alanine",
           "stoichiometry": 1
         },
         {
@@ -450,20 +450,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_1_56"
+          "enzyme": "ec_2_5_1_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:12208"
+        "rhea": "RHEA:13117"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12208"
+            "id": "RHEA:13117"
           }
         ]
       }
@@ -519,20 +519,16 @@
     },
     {
       "id": "r6",
-      "name": "arsenate reductase (azurin)",
-      "equation": "2 oxidized [azurin] + arsenite + H2O = 2 reduced [azurin] + arsenate + 3 H(+)",
-      "ec": "1.20.9.1",
+      "name": "alcohol dehydrogenase (azurin)",
+      "equation": "2 oxidized [azurin] + a primary alcohol = 2 reduced [azurin] + an aldehyde + 2 H(+)",
+      "ec": "1.1.9.1",
       "substrates": [
         {
           "metabolite": "copper",
           "stoichiometry": 2
         },
         {
-          "metabolite": "arsenite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "primary_alcohol",
           "stoichiometry": 1
         }
       ],
@@ -542,91 +538,79 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "arsenate",
+          "metabolite": "aldehyde",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_20_9_1"
+          "enzyme": "ec_1_1_9_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:18701"
+        "rhea": "RHEA:51148"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18701"
+            "id": "RHEA:51148"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "anthranilate 1,2-dioxygenase (deaminating, decarboxylating)",
-      "equation": "anthranilate + NADH + O2 + 3 H(+) = catechol + NH4(+) + CO2 + NAD(+)",
-      "ec": "1.14.12.1",
+      "name": "phosphoramidate--hexose phosphotransferase",
+      "equation": "phosphoramidate + a D-hexose + H(+) = alpha-D-hexose 1-phosphate + NH4(+)",
+      "ec": "2.7.1.62",
       "substrates": [
         {
-          "metabolite": "anthranilate",
+          "metabolite": "phosphoramidate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "d_hexose",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "catechol",
+          "metabolite": "d_hexose_1_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_12_1"
+          "enzyme": "ec_2_7_1_62"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:11076"
+        "rhea": "RHEA:10972"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11076"
+            "id": "RHEA:10972"
           }
         ]
       }

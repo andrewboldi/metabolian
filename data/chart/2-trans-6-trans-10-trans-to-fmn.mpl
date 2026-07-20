@@ -22,21 +22,15 @@ pathway 2-trans-6-trans-10-trans-to-fmn "2-trans,6-trans,10-trans-… to FMN" {
     ent_atiserene
   }
 
-  branch from ent_cassa_12_15_diene side right {
-    ent_cassa_12_15_diene
-    <-> ec_1_14_14_69 [1.14.14.69] +fmnh2 +o2 +fmn +h2o +hplus
-    ent_3_hydroxycassa_12_15_dien_2_one
-  }
-
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_4_2_3_90 [4.2.3.90] +fpp
-    5_epi_selinene
+    <-> ec_2_5_1_139 [2.5.1.139] +umbelliferone +dmapp
+    7_demethylsuberosin
   }
 
-  branch from fmn side right {
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_14_72 [1.14.14.72] +drimenol +fmnh2 +o2 +h2o +hplus
-    drimendiol
+    <-> ec_1_14_14_151 [1.14.14.151] +4_epi_eremophilene +fmnh2 +o2 +h2o +hplus
+    4_epi_eremophilene_2_ol
   }
 }

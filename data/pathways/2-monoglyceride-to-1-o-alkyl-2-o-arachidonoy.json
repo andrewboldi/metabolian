@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-monoglyceride-to-1-o-alkyl-2-o-arachidonoy",
+  "name": "2-monoglyceride to 1-O-alkyl-2-O-arachidonoy…",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 2-monoglyceride to 1-O-alkyl-2-O-arachidonoyl-sn-glycero-3-phosphocholine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78443"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17389"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_monoglyceride",
+      "name": "2-monoglyceride",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17389"
+      }
+    },
+    {
+      "id": "phosphatidylcholine",
+      "name": "Phosphatidylcholine",
+      "formula": "C10H18NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57643"
+      }
+    },
+    {
+      "id": "1_2_diglyceride",
+      "name": "1,2-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49172"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C9H19NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57875"
+      }
+    },
+    {
+      "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-1-alkyl-sn-g…",
+      "formula": "C9H18NO7PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36702"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "1-alkyl-sn-glycero-…",
+      "formula": "C8H19NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30909"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17855"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "1_o_alkyl_2_o_arachidonoyl_sn_glycero_3_phosphoc",
+      "name": "1-O-alkyl-2-O-arachidonoyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-alkyl-2-O-arach…",
+      "formula": "C28H49NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28894"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,2-diacylglycerol + a ...",
+      "equation": "a 2-acylglycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,2-diacylglycerol + a 2-acyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "2_monoglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + a 1,2-diacylglycerol = a 1-O-alkyl-sn-...",
+      "equation": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + a 1,2-diacylglycerol = a 1-O-alkyl-sn-glycero-3-phosphocholine + a triacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77759"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-O-alkyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = a 1-al...",
+      "equation": "a 1-O-alkyl-sn-glycero-3-phosphocholine + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = a 1-alkyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphocholine + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_o_alkyl_2_o_arachidonoyl_sn_glycero_3_phosphoc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:37715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37715"
+          }
+        ]
+      }
+    }
+  ]
+}

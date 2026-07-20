@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucitol-6-phosphate-to-n6-d-fructosyl-l-lysin",
+  "name": "D-glucitol 6-phosphate to N6-(D-fructosyl)-L-lysini…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-glucitol 6-phosphate(2−) to N6-(D-fructosyl)-L-lysinium residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20037"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60084"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucitol_6_phosphate",
+      "name": "D-glucitol 6-phosphate",
+      "short": "D-glucitol 6-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60084"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "aldehydo_d_glucose_6_phosphate",
+      "name": "aldehydo-D-glucose 6-phosphate",
+      "short": "aldehydo-D-glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57584"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_6_o_phospho_d_fructosyl_l_lysinium_1",
+      "name": "N6-(6-O-phospho-D-fructosyl)-L-lysinium(1−)",
+      "short": "N6-(6-O-phospho-D-f…",
+      "formula": "C12H22N2O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144588"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n6_d_fructosyl_l_lysinium",
+      "name": "N6-(D-fructosyl)-L-lysinium",
+      "short": "N6-(D-fructosyl)-L-…",
+      "formula": "C12H23N2O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143253"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_200",
+      "name": "aldose-6-phosphate reductase (NADPH)",
+      "ec": [
+        "1.1.1.200"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose-6-phosphate reductase (NADPH)",
+      "equation": "D-sorbitol 6-phosphate + NADP(+) = aldehydo-D-glucose 6-phosphate + NADPH + H(+)",
+      "ec": "1.1.1.200",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_200"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20037"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aldehydo-D-glucose 6-phosphate + L-lysyl-[protein] = N(6)-(6-O-phospho-D-fructosyl)-L-l...",
+      "equation": "aldehydo-D-glucose 6-phosphate + L-lysyl-[protein] = N(6)-(6-O-phospho-D-fructosyl)-L-lysyl-[protein] + H2O",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_6_o_phospho_d_fructosyl_l_lysinium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15945"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6)-(6-O-phospho-D-fructosyl)-L-lysyl-[protein] + H2O = N(6)-(D-fructosyl)-L-lysyl-[pr...",
+      "equation": "N(6)-(6-O-phospho-D-fructosyl)-L-lysyl-[protein] + H2O = N(6)-(D-fructosyl)-L-lysyl-[protein] + phosphate",
+      "substrates": [
+        {
+          "metabolite": "n6_6_o_phospho_d_fructosyl_l_lysinium_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_d_fructosyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16205"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16205"
+          }
+        ]
+      }
+    }
+  ]
+}

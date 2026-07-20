@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-trans-6-trans-farnesyl-to-zerumbone",
   "name": "2-trans,6-trans-farnesyl… to zerumbone",
-  "category": "energy-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from 2-trans,6-trans-farnesyl diphosphate(3−) to zerumbone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,41 +129,62 @@
       }
     },
     {
-      "id": "tuberculosinyl_diphosphate",
-      "name": "tuberculosinyl diphosphate",
-      "short": "tuberculosinyl PP",
-      "formula": "C20H33O7P2",
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58822"
+        "chebi": "CHEBI:60374"
       }
     },
     {
-      "id": "13s_edaxadiene",
-      "name": "(13S)-edaxadiene",
-      "formula": "C20H34O",
-      "charge": 0,
+      "id": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate",
+      "short": "1-hexadecanoyl-2-(5…",
+      "formula": "C39H67O8P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:63180"
+        "chebi": "CHEBI:72864"
       }
     },
     {
-      "id": "11_hydroxysugiol",
-      "name": "11-hydroxysugiol",
-      "formula": "C20H28O3",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138962"
+        "chebi": "CHEBI:37563"
       }
     },
     {
-      "id": "11_20_dihydroxysugiol",
-      "name": "11,20-dihydroxysugiol",
-      "short": "11,20-dihydroxysugi…",
-      "formula": "C20H28O4",
+      "id": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
+      "name": "CDP-1-palmitoyl-2-arachidonoyl-sn-glycerol",
+      "short": "CDP-1-palmitoyl-2-a…",
+      "formula": "C48H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85350"
+      }
+    },
+    {
+      "id": "cucurbitadienol",
+      "name": "cucurbitadienol",
+      "formula": "C30H50O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138963"
+        "chebi": "CHEBI:62456"
+      }
+    },
+    {
+      "id": "11_hydroxycucurbitadienol",
+      "name": "11α-hydroxycucurbitadienol",
+      "short": "11α-hydroxycucurbit…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138972"
       }
     }
   ],
@@ -187,20 +208,6 @@
       "name": "zerumbone synthase",
       "ec": [
         "1.1.1.326"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_153",
-      "name": "adenosine tuberculosinyltransferase",
-      "ec": [
-        "2.5.1.153"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_67",
-      "name": "11-hydroxysugiol 20-monooxygenase",
-      "ec": [
-        "1.14.14.67"
       ]
     }
   ],
@@ -354,22 +361,17 @@
     },
     {
       "id": "r4",
-      "name": "adenosine tuberculosinyltransferase",
-      "equation": "tuberculosinyl diphosphate + H2O = (13S)-edaxadiene + diphosphate",
-      "ec": "2.5.1.153",
+      "name": "(2Z,6Z)-farnesyl diphosphate = alpha-humulene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = alpha-humulene + diphosphate",
       "substrates": [
         {
-          "metabolite": "tuberculosinyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13s_edaxadiene",
+          "metabolite": "1e_4e_8e_humulene",
           "stoichiometry": 1
         },
         {
@@ -377,34 +379,71 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_153"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:31791"
+        "rhea": "RHEA:68780"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31791"
+            "id": "RHEA:68780"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "11-hydroxysugiol 20-monooxygenase",
-      "equation": "11-hydroxysugiol + reduced [NADPH--hemoprotein reductase] + O2 = 11,20-dihydroxysugiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.67",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) =...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
         {
-          "metabolite": "11_hydroxysugiol",
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:45652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadien...",
+      "equation": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadienol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cucurbitadienol",
           "stoichiometry": 1
         },
         {
@@ -418,7 +457,7 @@
       ],
       "products": [
         {
-          "metabolite": "11_20_dihydroxysugiol",
+          "metabolite": "11_hydroxycucurbitadienol",
           "stoichiometry": 1
         },
         {
@@ -434,22 +473,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_67"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:55464"
+        "rhea": "RHEA:55512"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55464"
+            "id": "RHEA:55512"
           }
         ]
       }

@@ -1,0 +1,221 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "13z-3-oxoicosenoyl-coa-to-13z-icosenoyl-coa",
+  "name": "(13Z)-3-oxoicosenoyl-CoA to (13Z)-icosenoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (13Z)-3-oxoicosenoyl-CoA(4−) to (13Z)-icosenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39695"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76559"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "13z_3_oxoicosenoyl_coa",
+      "name": "(13Z)-3-oxoicosenoyl-CoA",
+      "short": "3-oxoicosenoyl-CoA",
+      "formula": "C41H66N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76559"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3r_13z_3_hydroxyicosenoyl_coa",
+      "name": "(3R,13Z)-3-hydroxyicosenoyl-CoA",
+      "short": "(3R,13Z)-3-hydroxyi…",
+      "formula": "C41H68N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76561"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2e_13z_icosadienoyl_coa",
+      "name": "(2E,13Z)-icosadienoyl-CoA",
+      "short": "(2E,13Z)-icosadieno…",
+      "formula": "C41H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76562"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "13z_icosenoyl_coa",
+      "name": "(13Z)-icosenoyl-CoA",
+      "formula": "C41H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76563"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-oxo-(13Z)-eicosenoyl-CoA + NADPH + H(+) = (R)-3-hydroxy-(13Z)-eicosenoyl-CoA + NADP(+)",
+      "equation": "3-oxo-(13Z)-eicosenoyl-CoA + NADPH + H(+) = (R)-3-hydroxy-(13Z)-eicosenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "13z_3_oxoicosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_13z_3_hydroxyicosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-3-hydroxy-(13Z)-eicosenoyl-CoA = (2E,13Z)-eicosadienoyl-CoA + H2O",
+      "equation": "(R)-3-hydroxy-(13Z)-eicosenoyl-CoA = (2E,13Z)-eicosadienoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3r_13z_3_hydroxyicosenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_13z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E,13Z)-eicosadienoyl-CoA + NADPH + H(+) = (13Z)-eicosenoyl-CoA + NADP(+)",
+      "equation": "(2E,13Z)-eicosadienoyl-CoA + NADPH + H(+) = (13Z)-eicosenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_13z_icosadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13z_icosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39703"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39703"
+          }
+        ]
+      }
+    }
+  ]
+}

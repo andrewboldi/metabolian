@@ -22,8 +22,8 @@ pathway 1-deoxypentalenate-to-di-sulfido-diiron "1-deoxypentalenate to di-μ-sul
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
-    3s_3_hydroxy_l_arginine
+    <-> ec_1_14_11_43 [1.14.11.43] +s_dichlorprop +akg +o2 +pyruvate +co2
+    2_4_dichlorophenol
   }
 
   branch from 1_deoxy_11_oxopentalenate side right {
@@ -34,7 +34,7 @@ pathway 1-deoxypentalenate-to-di-sulfido-diiron "1-deoxypentalenate to di-μ-sul
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_23_dihydroxy_24_25_26_27_tetranorcalciol +di_sulfido_diiron +o2 +hplus +h2o
-    1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol
+    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +h2o +di_sulfido_diiron +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 }

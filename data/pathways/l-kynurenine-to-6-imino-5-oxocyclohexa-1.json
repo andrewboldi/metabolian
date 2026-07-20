@@ -158,50 +158,31 @@
       }
     },
     {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64479"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r",
-      "name": "O-[S-(L-alanyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(L-alanyl)pant…",
-      "formula": "C17H31N4O9PS",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144958"
+        "chebi": "CHEBI:57912"
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:17640"
       }
     }
   ],
@@ -242,10 +223,10 @@
       ]
     },
     {
-      "id": "ec_6_2_1_67",
-      "name": "L-alanine--[L-alanyl-carrier protein] ligase",
+      "id": "ec_2_6_1_99",
+      "name": "L-tryptophan--pyruvate aminotransferase",
       "ec": [
-        "6.2.1.67"
+        "2.6.1.99"
       ]
     }
   ],
@@ -493,53 +474,45 @@
     },
     {
       "id": "r6",
-      "name": "L-alanine--[L-alanyl-carrier protein] ligase",
-      "equation": "holo-[peptidyl-carrier protein] + L-alanine + ATP = L-alanyl-[peptidyl-carrier protein] + AMP + diphosphate",
-      "ec": "6.2.1.67",
+      "name": "L-tryptophan--pyruvate aminotransferase",
+      "equation": "L-tryptophan + pyruvate = indole-3-pyruvate + L-alanine",
+      "ec": "2.6.1.99",
       "substrates": [
         {
-          "metabolite": "holo-acp",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r",
+          "metabolite": "3_indol_3_yl_pyruvate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
+          "metabolite": "alanine",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_67"
+          "enzyme": "ec_2_6_1_99"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:61800"
+        "rhea": "RHEA:27586"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61800"
+            "id": "RHEA:27586"
           }
         ]
       }

@@ -137,43 +137,40 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "2_hydroxy_datp",
+      "name": "2-hydroxy-dATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:77897"
       }
     },
     {
-      "id": "2_trans_6_trans_farnesol",
-      "name": "(2-trans,6-trans)-farnesol",
-      "short": "(2-trans,6-trans)-f…",
-      "formula": "C15H26O",
+      "id": "2_hydroxy_damp",
+      "name": "2-hydroxy-dAMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63212"
+      }
+    },
+    {
+      "id": "progesterone",
+      "name": "progesterone",
+      "formula": "C21H30O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16619"
+        "chebi": "CHEBI:17026"
       }
     },
     {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O2",
-      "charge": -1,
+      "id": "6_hydroxyprogesterone",
+      "name": "6β-hydroxyprogesterone",
+      "short": "6β-hydroxyprogester…",
+      "formula": "C21H30O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77016"
-      }
-    },
-    {
-      "id": "4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-22-hydroxydocosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77015"
+        "chebi": "CHEBI:62117"
       }
     },
     {
@@ -216,17 +213,10 @@
       ]
     },
     {
-      "id": "ec_3_1_7_6",
-      "name": "farnesyl diphosphatase",
+      "id": "ec_3_6_1_56",
+      "name": "2-hydroxy-dATP diphosphatase",
       "ec": [
-        "3.1.7.6"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_79",
-      "name": "docosahexaenoic acid omega-hydroxylase",
-      "ec": [
-        "1.14.14.79"
+        "3.6.1.56"
       ]
     },
     {
@@ -444,12 +434,12 @@
     },
     {
       "id": "r5",
-      "name": "farnesyl diphosphatase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2E,6E)-farnesol + diphosphate",
-      "ec": "3.1.7.6",
+      "name": "2-hydroxy-dATP diphosphatase",
+      "equation": "2-oxo-dATP + H2O = 2-oxo-dAMP + diphosphate + H(+)",
+      "ec": "3.6.1.56",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_hydroxy_datp",
           "stoichiometry": 1
         },
         {
@@ -459,42 +449,45 @@
       ],
       "products": [
         {
-          "metabolite": "2_trans_6_trans_farnesol",
+          "metabolite": "2_hydroxy_damp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_7_6"
+          "enzyme": "ec_3_6_1_56"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27526"
+        "rhea": "RHEA:31583"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27526"
+            "id": "RHEA:31583"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "docosahexaenoic acid omega-hydroxylase",
-      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 22-hydroxy-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.79",
+      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone ...",
+      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "metabolite": "progesterone",
           "stoichiometry": 1
         },
         {
@@ -508,7 +501,7 @@
       ],
       "products": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat",
+          "metabolite": "6_hydroxyprogesterone",
           "stoichiometry": 1
         },
         {
@@ -524,22 +517,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_79"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40155"
+        "rhea": "RHEA:47252"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40155"
+            "id": "RHEA:47252"
           }
         ]
       }

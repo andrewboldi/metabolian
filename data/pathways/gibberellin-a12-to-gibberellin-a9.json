@@ -1,0 +1,345 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gibberellin-a12-to-gibberellin-a9",
+  "name": "gibberellin A12 to gibberellin A9",
+  "category": "other",
+  "summary": "A 3-step route from gibberellin A12(2−) to gibberellin A9(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61556"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58627"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gibberellin_a12",
+      "name": "gibberellin A12",
+      "formula": "C20H26O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58627"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gibberellin_a15_2_diacid_form",
+      "name": "gibberellin A15(2−) (diacid form)",
+      "short": "gibberellin…",
+      "formula": "C20H26O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:143956"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gibberellin_a24",
+      "name": "gibberellin A24",
+      "formula": "C20H24O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:143957"
+      }
+    },
+    {
+      "id": "gibberellin_a9",
+      "name": "gibberellin A9",
+      "formula": "C19H23O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73255"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H71MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58416"
+      }
+    },
+    {
+      "id": "71_hydroxychlorophyll_a",
+      "name": "71-hydroxychlorophyll a",
+      "short": "71-hydroxychlorophy…",
+      "formula": "C55H71MgN4O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_7_2",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "ec": [
+        "1.17.7.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "gibberellin A12 + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = gibberellin A15 + 2 o...",
+      "equation": "gibberellin A12 + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = gibberellin A15 + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a12",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a15_2_diacid_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gibberellin A15 + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = gibberellin A24 + 2 o...",
+      "equation": "gibberellin A15 + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = gibberellin A24 + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a15_2_diacid_form",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a24",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "gibberellin A24 + O2 + H(+) = gibberellin A9 + CO2 + H2O",
+      "equation": "gibberellin A24 + O2 + H(+) = gibberellin A9 + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a24",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "equation": "chlorophyll a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 7(1)-hydroxychlorophyll a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.2",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "71_hydroxychlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53544"
+          }
+        ]
+      }
+    }
+  ]
+}

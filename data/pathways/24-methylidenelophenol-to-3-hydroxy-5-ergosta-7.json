@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "24-methylidenelophenol-to-3-hydroxy-5-ergosta-7",
+  "name": "24-methylidenelophenol to 3β-hydroxy-5α-ergosta-7,2…",
+  "category": "other",
+  "summary": "A 3-step route from 24-methylidenelophenol to 3β-hydroxy-5α-ergosta-7,24(28)-diene-4α-carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58872"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29107"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "24_methylidenelophenol",
+      "name": "24-methylidenelophenol",
+      "short": "24-methylidenelophe…",
+      "formula": "C29H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29107"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxymethyl_5_ergosta_7_24_28_dien_3_ol",
+      "name": "4α-hydroxymethyl-5α-ergosta-7,24(28)-dien-3β-ol",
+      "short": "4α-hydroxymethyl-5α…",
+      "formula": "C29H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142848"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_formyl_ergosta_7_24_28_dien_3_ol",
+      "name": "4α-formyl-ergosta-7,24(28)-dien-3β-ol",
+      "short": "4α-formyl-ergosta-7…",
+      "formula": "C29H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142849"
+      }
+    },
+    {
+      "id": "3_hydroxy_5_ergosta_7_24_28_diene_4_carboxylate",
+      "name": "3β-hydroxy-5α-ergosta-7,24(28)-diene-4α-carboxylate",
+      "short": "3β-hydroxy-5α-ergos…",
+      "formula": "C29H45O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142850"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "24-methylidenelophenol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethyl-...",
+      "equation": "24-methylidenelophenol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "24_methylidenelophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxymethyl_5_ergosta_7_24_28_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4alpha-hydroxymethyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 ...",
+      "equation": "4alpha-hydroxymethyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-formyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxymethyl_5_ergosta_7_24_28_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_formyl_ergosta_7_24_28_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58876"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4alpha-formyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) ...",
+      "equation": "4alpha-formyl-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) = 4alpha-carboxy-ergosta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_formyl_ergosta_7_24_28_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_5_ergosta_7_24_28_diene_4_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58880"
+          }
+        ]
+      }
+    }
+  ]
+}

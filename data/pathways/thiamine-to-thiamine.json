@@ -1,0 +1,339 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "thiamine-to-thiamine",
+  "name": "thiamine to thiamine",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 3-step route from thiamine(1+) to thiamine(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11576"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18385"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "thiamine",
+      "name": "thiamine",
+      "formula": "C12H17N4OS",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:18385"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "thiamine_1_diphosphate",
+      "name": "thiamine(1+) diphosphate",
+      "short": "thiamine(1+) PP",
+      "formula": "C12H16N4O7P2S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58937"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "thiamine_1_monophosphate",
+      "name": "thiamine(1+) monophosphate",
+      "short": "thiamine(1+) MP",
+      "formula": "C12H16N4O4PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:37575"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "thiaminium_carboxylate_betaine",
+      "name": "thiaminium carboxylate betaine",
+      "short": "thiaminium…",
+      "formula": "C12H14N4O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58438"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_6_2",
+      "name": "thiamine diphosphokinase",
+      "ec": [
+        "2.7.6.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_100",
+      "name": "thiamine phosphate phosphatase",
+      "ec": [
+        "3.1.3.100"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_23",
+      "name": "thiamine oxidase",
+      "ec": [
+        "1.1.3.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thiamine diphosphokinase",
+      "equation": "thiamine + ATP = thiamine diphosphate + AMP + H(+)",
+      "ec": "2.7.6.2",
+      "substrates": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiamine_1_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_6_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thiamine diphosphate + H2O = thiamine phosphate + phosphate + H(+)",
+      "equation": "thiamine diphosphate + H2O = thiamine phosphate + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "thiamine_1_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiamine_1_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27998"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27998"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "thiamine phosphate phosphatase",
+      "equation": "thiamine phosphate + H2O = thiamine + phosphate",
+      "ec": "3.1.3.100",
+      "substrates": [
+        {
+          "metabolite": "thiamine_1_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_100"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "thiamine oxidase",
+      "equation": "thiamine + 2 O2 + H2O = thiamine acetate + 2 H2O2 + H(+)",
+      "ec": "1.1.3.23",
+      "substrates": [
+        {
+          "metabolite": "thiamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thiaminium_carboxylate_betaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:21280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21280"
+          }
+        ]
+      }
+    }
+  ]
+}

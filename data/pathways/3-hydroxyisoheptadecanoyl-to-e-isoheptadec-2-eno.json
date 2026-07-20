@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxyisoheptadecanoyl-to-e-isoheptadec-2-eno",
+  "name": "3-hydroxyisoheptadecanoyl… to (E)-isoheptadec-2-enoyl-C…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from 3-hydroxyisoheptadecanoyl-CoA(4−) to (E)-isoheptadec-2-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35359"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71446"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxyisoheptadecanoyl_coa",
+      "name": "3-hydroxyisoheptadecanoyl-CoA",
+      "short": "3-hydroxyisoheptade…",
+      "formula": "C38H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71446"
+      }
+    },
+    {
+      "id": "e_isoheptadec_2_enoyl_coa",
+      "name": "(E)-isoheptadec-2-enoyl-CoA",
+      "short": "isoheptadec-2-enoyl…",
+      "formula": "C38H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71462"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "isoheptadecanoyl_coa",
+      "name": "isoheptadecanoyl-CoA",
+      "formula": "C38H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71461"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hydroxyisoheptadecanoyl-CoA = (2E)-15-methylhexadecenoyl-CoA + H2O",
+      "equation": "3-hydroxyisoheptadecanoyl-CoA = (2E)-15-methylhexadecenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyisoheptadecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_isoheptadec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-15-methylhexadecenoyl-CoA + NADPH + H(+) = isoheptadecanoyl-coA + NADP(+)",
+      "equation": "(2E)-15-methylhexadecenoyl-CoA + NADPH + H(+) = isoheptadecanoyl-coA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "e_isoheptadec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoheptadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isoheptadecanoyl-coA + O2 = (2E)-15-methylhexadecenoyl-CoA + H2O2",
+      "equation": "isoheptadecanoyl-coA + O2 = (2E)-15-methylhexadecenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "isoheptadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_isoheptadec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86619"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -20,7 +20,7 @@ pathway n-5-phosphonato-d-ribo-to-diphosphate "N-(5-phosphonato-β-D-ribo… to 
     c_terminal_gly_gly_1
     <-> ec_2_7_7_73 [2.7.7.73] +atp +hplus -ppi
     c_terminal_gly_gly_amp_1_group
-    <-> ec_2_8_1_11 [2.8.1.11] +3_disulfanyl_l_alanine +hydrogen_donor -l_cysteine -hydrogen_acceptor -amp -hplus
+    <-> . +3_disulfanyl_l_alanine +hydrogen_donor -l_cysteine -hydrogen_acceptor -amp -hplus
     c_terminal_n_glycylaminoethanethioate_1
     <-> ec_2_8_1_12 [2.8.1.12] +precursor_z +h2o -c_terminal_gly_gly_1 -hplus
     molybdopterin
@@ -34,21 +34,21 @@ pathway n-5-phosphonato-d-ribo-to-diphosphate "N-(5-phosphonato-β-D-ribo… to 
     2_methyl_l_tryptophan
   }
 
-  branch from r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e side right {
+  branch from 1_deoxy_d_xylulose_5_phosphate side right {
+    1_deoxy_d_xylulose_5_phosphate
+    <-> . +1_methylthio_d_xylulose_5_phosphate +hydrogen_donor +hydrogen_acceptor
+    methanethiol
+  }
+
+  branch from r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e side left {
     r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e
     <-> ec_5_3_99_10 [5.3.99.10]
     2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
   }
 
-  branch from ppi side left {
+  branch from ppi side right {
     ppi
-    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
-    prenol
-  }
-
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> ec_2_1_1_63 [2.1.1.63] +6_o_methyl_dgmp_1 +2_deoxyguanosine_5_monophosphate_1
-    s_methyl_l_cysteine
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
   }
 }

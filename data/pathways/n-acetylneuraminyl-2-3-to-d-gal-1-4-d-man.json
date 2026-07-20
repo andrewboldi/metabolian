@@ -1,0 +1,199 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylneuraminyl-2-3-to-d-gal-1-4-d-man",
+  "name": "α-N-acetylneuraminyl-(2→3… to β-D-Gal-(1→4)-D-Man",
+  "category": "other",
+  "summary": "A 3-step route from α-N-acetylneuraminyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(1−) to β-D-Gal-(1→4)-D-Man, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:65540"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:79210"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco",
+      "name": "α-N-acetylneuraminyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "α-N-acetylneuraminy…",
+      "formula": "C27H43N2O21R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:79210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
+      "name": "α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-D-glucose",
+      "short": "α-N-acetylneuramino…",
+      "formula": "C23H38NO19",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:156068"
+      }
+    },
+    {
+      "id": "n_acylsphingoid",
+      "name": "N-acylsphingoid",
+      "formula": "C4H7NO3R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83273"
+      }
+    },
+    {
+      "id": "lactose",
+      "name": "lactose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17716"
+      }
+    },
+    {
+      "id": "n_acetylneuraminate",
+      "name": "N-acetylneuraminate",
+      "formula": "C11H18NO9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35418"
+      }
+    },
+    {
+      "id": "d_gal_1_4_d_man",
+      "name": "β-D-Gal-(1→4)-D-Man",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59563"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a ganglioside GM3 + H2O = N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-D...",
+      "equation": "a ganglioside GM3 + H2O = N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-D-glucose + an N-acyl-sphingoid base",
+      "substrates": [
+        {
+          "metabolite": "n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingoid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:65540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-D-glucose + H2O = lactose +...",
+      "equation": "N-acetyl-alpha-neuraminosyl-(2->3)-beta-D-galactosyl-(1->4)-D-glucose + H2O = lactose + N-acetylneuraminate",
+      "substrates": [
+        {
+          "metabolite": "n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetylneuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lactose = epilactose",
+      "equation": "lactose = epilactose",
+      "substrates": [
+        {
+          "metabolite": "lactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gal_1_4_d_man",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84431"
+          }
+        ]
+      }
+    }
+  ]
+}

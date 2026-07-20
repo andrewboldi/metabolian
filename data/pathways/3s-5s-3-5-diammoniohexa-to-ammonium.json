@@ -121,32 +121,23 @@
       }
     },
     {
-      "id": "z_2_methylureidoacrylate",
-      "name": "(Z)-2-methylureidoacrylate",
-      "short": "2-methylureidoacryl…",
-      "formula": "C5H7N2O3",
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:143783"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "z_3_amino_2_methylacrylate",
-      "name": "(Z)-3-amino-2-methylacrylate",
-      "short": "3-amino-2-methylacr…",
-      "formula": "C4H6NO2",
+      "id": "inosine_5_phosphate_1",
+      "name": "inosine 5'-phosphate(1−)",
+      "short": "inosine 5'-P(1−)",
+      "formula": "C10H10N4O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:145735"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:82852"
       }
     },
     {
@@ -174,6 +165,33 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "3_aminobutanoic_acid",
+      "name": "3-aminobutanoic acid",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:150018"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
       }
     },
     {
@@ -209,10 +227,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_110",
-      "name": "ureidoacrylate amidohydrolase",
+      "id": "ec_3_5_4_33",
+      "name": "tRNA(adenine(34)) deaminase",
       "ec": [
-        "3.5.1.110"
+        "3.5.4.33"
       ]
     },
     {
@@ -376,12 +394,12 @@
     },
     {
       "id": "r4",
-      "name": "ureidoacrylate amidohydrolase",
-      "equation": "(Z)-2-methylureidoacrylate + H2O + H(+) = (Z)-2-methylaminoacrylate + NH4(+) + CO2",
-      "ec": "3.5.1.110",
+      "name": "tRNA(adenine(34)) deaminase",
+      "equation": "adenosine(34) in tRNA + H2O + H(+) = inosine(34) in tRNA + NH4(+)",
+      "ec": "3.5.4.33",
       "substrates": [
         {
-          "metabolite": "z_2_methylureidoacrylate",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -395,34 +413,30 @@
       ],
       "products": [
         {
-          "metabolite": "z_3_amino_2_methylacrylate",
+          "metabolite": "inosine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_110"
+          "enzyme": "ec_3_5_4_33"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42620"
+        "rhea": "RHEA:43168"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42620"
+            "id": "RHEA:43168"
           }
         ]
       }
@@ -474,6 +488,45 @@
     },
     {
       "id": "r6",
+      "name": "3-aminobutanoate + pyruvate = acetoacetate + L-alanine",
+      "equation": "3-aminobutanoate + pyruvate = acetoacetate + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "3_aminobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:64308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
       "name": "4-hydroxybutanoyl-CoA dehydratase",
       "equation": "4-hydroxybutanoyl-CoA = (2E)-butenoyl-CoA + H2O",
       "ec": "4.2.1.120",
@@ -499,7 +552,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:26530"
       },

@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-ergostan-3-yl-l-aspa-to-d-glucopyranose",
+  "name": "1-(ergostan-3β-yl)-L-aspa… to D-glucopyranose",
+  "category": "other",
+  "summary": "A 3-step route from 1-(ergostan-3β-yl)-L-aspartate to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76559"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195261"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_ergostan_3_yl_l_aspartate",
+      "name": "1-(ergostan-3β-yl)-L-aspartate",
+      "short": "1-(ergostan-3β-yl)-…",
+      "formula": "C32H49NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195261"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ergosterol",
+      "name": "ergosterol",
+      "formula": "C28H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16933"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "ergosteryl_3_d_glucoside",
+      "name": "ergosteryl 3-β-D-glucoside",
+      "short": "ergosteryl…",
+      "formula": "C34H54O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52973"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "d_aspartate",
+      "name": "D-aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29990"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_121",
+      "name": "ergosteryl-3beta-O-L-aspartate hydrolase",
+      "ec": [
+        "3.1.1.121"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_13",
+      "name": "aspartate racemase",
+      "ec": [
+        "5.1.1.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ergosteryl-3beta-O-L-aspartate hydrolase",
+      "equation": "1-(ergostan-3beta-yl)-L-aspartate + H2O = ergosterol + L-aspartate + H(+)",
+      "ec": "3.1.1.121",
+      "substrates": [
+        {
+          "metabolite": "1_ergostan_3_yl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_121"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76559"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ergosterol + UDP-alpha-D-glucose = ergosteryl 3-beta-D-glucoside + UDP + H(+)",
+      "equation": "ergosterol + UDP-alpha-D-glucose = ergosteryl 3-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosteryl_3_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ergosteryl 3-beta-D-glucoside + H2O = ergosterol + D-glucose",
+      "equation": "ergosteryl 3-beta-D-glucoside + H2O = ergosterol + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "ergosteryl_3_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aspartate racemase",
+      "equation": "L-aspartate = D-aspartate",
+      "ec": "5.1.1.13",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:14973"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14973"
+          }
+        ]
+      }
+    }
+  ]
+}

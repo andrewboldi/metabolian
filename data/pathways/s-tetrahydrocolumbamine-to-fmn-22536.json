@@ -122,41 +122,41 @@
       }
     },
     {
-      "id": "iodide",
-      "name": "iodide",
-      "formula": "I",
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16382"
+        "chebi": "CHEBI:16567"
       }
     },
     {
-      "id": "iodomethane",
-      "name": "iodomethane",
-      "formula": "CH3I",
+      "id": "methyl_anthranilate",
+      "name": "methyl anthranilate",
+      "formula": "C8H9NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:39282"
+        "chebi": "CHEBI:73244"
       }
     },
     {
-      "id": "2_methylpropanaminium",
-      "name": "2-methylpropanaminium",
-      "short": "2-methylpropanamini…",
-      "formula": "C4H12N",
-      "charge": 1,
+      "id": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-2,6-…",
+      "formula": "C16H22N2O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57601"
+        "chebi": "CHEBI:84537"
       }
     },
     {
-      "id": "n_hydroxy_2_methylpropanamine",
-      "name": "N-hydroxy-2-methylpropanamine",
-      "short": "N-hydroxy-2-methylp…",
-      "formula": "C4H11NO",
-      "charge": 0,
+      "id": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
+      "name": "dTDP-4-dehydro-2,3,6-trideoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-2,3,…",
+      "formula": "C16H22N2O13P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:131928"
+        "chebi": "CHEBI:90944"
       }
     }
   ],
@@ -183,17 +183,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_165",
-      "name": "methyl halide transferase",
+      "id": "ec_2_1_1_277",
+      "name": "anthranilate O-methyltransferase",
       "ec": [
-        "2.1.1.165"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_30",
-      "name": "isobutylamine N-monooxygenase",
-      "ec": [
-        "1.14.14.30"
+        "2.1.1.277"
       ]
     }
   ],
@@ -351,12 +344,12 @@
     },
     {
       "id": "r4",
-      "name": "methyl halide transferase",
-      "equation": "iodide + S-adenosyl-L-methionine = iodomethane + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.165",
+      "name": "anthranilate O-methyltransferase",
+      "equation": "anthranilate + S-adenosyl-L-methionine = O-methyl anthranilate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.277",
       "substrates": [
         {
-          "metabolite": "iodide",
+          "metabolite": "anthranilate",
           "stoichiometry": 1
         },
         {
@@ -366,7 +359,7 @@
       ],
       "products": [
         {
-          "metabolite": "iodomethane",
+          "metabolite": "methyl_anthranilate",
           "stoichiometry": 1
         },
         {
@@ -376,46 +369,41 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_165"
+          "enzyme": "ec_2_1_1_277"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:27357"
+        "rhea": "RHEA:36103"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27357"
+            "id": "RHEA:36103"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "isobutylamine N-monooxygenase",
-      "equation": "2-methylpropan-1-amine + FMNH2 + O2 = N-(2-methylpropyl)hydroxylamine + FMN + H2O + 2 H(+)",
-      "ec": "1.14.14.30",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose + reduced [flavodoxin] = dTDP-4-dehydro-2,3,...",
+      "equation": "dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose + reduced [flavodoxin] = dTDP-4-dehydro-2,3,6-trideoxy-alpha-D-hexopyranose + oxidized [flavodoxin] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "2_methylpropanaminium",
+          "metabolite": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_hydroxy_2_methylpropanamine",
+          "metabolite": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -428,25 +416,20 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_30"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49804"
+        "rhea": "RHEA:49224"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49804"
+            "id": "RHEA:49224"
           }
         ]
       }

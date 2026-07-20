@@ -26,8 +26,8 @@ pathway r-amygdalin-to-d-glucopyranose "(R)-amygdalin to D-glucopyranose" {
 
   branch from glucose side right {
     glucose
-    <-> ec_2_3_1_143 [2.3.1.143] +1_2_3_6_tetrakis_o_galloyl_d_glucose +1_o_galloyl_d_glucose +hplus
-    1_2_3_4_6_pentakis_o_galloyl_d_glucose
+    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
+    1_2_di_o_sinapoyl_d_glucose
   }
 
   branch from mandelonitrile side left {
@@ -36,9 +36,9 @@ pathway r-amygdalin-to-d-glucopyranose "(R)-amygdalin to D-glucopyranose" {
     vicianose
   }
 
-  branch from d_galactose side right {
-    d_galactose
-    <-> ec_5_1_3_3 [5.1.3.3]
-    d_galactose
+  branch from lactose side right {
+    lactose
+    <-> ec_3_2_1_227 [3.2.1.227] +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc +h2o
+    n_acetyllactosamine
   }
 }

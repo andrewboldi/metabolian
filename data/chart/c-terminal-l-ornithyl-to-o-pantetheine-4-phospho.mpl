@@ -18,13 +18,13 @@ pathway c-terminal-l-ornithyl-to-o-pantetheine-4-phospho "C-terminal-γ-(L-ornit
 
   branch from ornithine side left {
     ornithine
-    <-> ec_2_1_4_3 [2.1.4.3] +l_canavanine +arginine +hplus
-    l_canaline
+    <-> ec_3_5_3_25 [3.5.3.25] +n5_hydroxyamino_imino_methyl_l_ornithinium +h2o
+    hydroxyurea
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_3_1_2_14 [3.1.2.14] +o_s_tetradecanoylpantetheine_4_phosphoryl_serine +h2o +hplus
-    tetradecanoate
+    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
+    acetyl-acp
   }
 }

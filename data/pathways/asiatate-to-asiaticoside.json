@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "asiatate-to-asiaticoside",
+  "name": "asiatate to asiaticoside",
+  "category": "other",
+  "summary": "A 3-step route from asiatate to asiaticoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84935"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:234025"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "asiatate",
+      "name": "asiatate",
+      "formula": "C30H47O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234025"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+      "name": "2α,3β,23α-trihydroxyurs-12-en-28-oic acid 28-O-β-D-glucopyranoside",
+      "short": "2α,3β,23α-trihydrox…",
+      "formula": "C36H58O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67952"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+      "name": "2α,3β,23α-trihydroxyurs-12-en-28-oic acid 28-O-[β-D-glucosyl-(1→6)-β-D-glucoside]",
+      "short": "2α,3β,23α-trihydrox…",
+      "formula": "C42H68O15",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234052"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "asiaticoside",
+      "name": "asiaticoside",
+      "formula": "C48H78O19",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79928"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "asiatate + UDP-alpha-D-glucose = asiatic acid 28-O-beta-D-glucoside + UDP",
+      "equation": "asiatate + UDP-alpha-D-glucose = asiatic acid 28-O-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "asiatate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84935"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "asiatic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = asiatic acid 28-O-[beta-D-gl...",
+      "equation": "asiatic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = asiatic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84947"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "asiatic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = asi...",
+      "equation": "asiatic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = asiaticoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_23_trihydroxyurs_12_en_28_oic_acid_28_o_d_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "asiaticoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84959"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84959"
+          }
+        ]
+      }
+    }
+  ]
+}

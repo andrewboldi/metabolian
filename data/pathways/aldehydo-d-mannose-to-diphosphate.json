@@ -106,23 +106,22 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5β,9α,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58553"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "ent_pimara_8_14_15_diene",
-      "name": "ent-pimara-8(14),15-diene",
-      "short": "ent-pimara-8(14),15…",
-      "formula": "C20H32",
+      "id": "epi_cedrol",
+      "name": "epi-cedrol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50063"
+        "chebi": "CHEBI:52226"
       }
     }
   ],
@@ -149,10 +148,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_30",
-      "name": "ent-pimara-8(14),15-diene synthase",
+      "id": "ec_4_2_3_39",
+      "name": "epi-cedrol synthase",
       "ec": [
-        "4.2.3.30"
+        "4.2.3.39"
       ]
     }
   ],
@@ -298,18 +297,22 @@
     },
     {
       "id": "r4",
-      "name": "ent-pimara-8(14),15-diene synthase",
-      "equation": "ent-copalyl diphosphate = ent-pimara-8(14),15-diene + diphosphate",
-      "ec": "4.2.3.30",
+      "name": "epi-cedrol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = epi-cedrol + diphosphate",
+      "ec": "4.2.3.39",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ent_pimara_8_14_15_diene",
+          "metabolite": "epi_cedrol",
           "stoichiometry": 1
         },
         {
@@ -319,20 +322,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_30"
+          "enzyme": "ec_4_2_3_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25540"
+        "rhea": "RHEA:26115"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25540"
+            "id": "RHEA:26115"
           }
         ]
       }

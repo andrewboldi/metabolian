@@ -1,0 +1,403 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tryptophan-to-skatole",
+  "name": "L-tryptophan to skatole",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-tryptophan zwitterion to skatole, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16165"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57912"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "indole_3_acetamide",
+      "name": "indole-3-acetamide",
+      "formula": "C10H10N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "indole_3_acetate",
+      "name": "indole-3-acetate",
+      "formula": "C10H8NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30854"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "skatole",
+      "name": "skatole",
+      "formula": "C9H9N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9171"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "2_oxindole_3_acetate",
+      "name": "2-oxindole-3-acetate",
+      "formula": "C10H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188445"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85452"
+      }
+    },
+    {
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H10N2O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133902"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_12_3",
+      "name": "tryptophan 2-monooxygenase",
+      "ec": [
+        "1.13.12.3"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_4",
+      "name": "amidase",
+      "ec": [
+        "3.5.1.4"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_115",
+      "name": "indoleacetate decarboxylase",
+      "ec": [
+        "4.1.1.115"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tryptophan 2-monooxygenase",
+      "equation": "L-tryptophan + O2 = indole-3-acetamide + CO2 + H2O",
+      "ec": "1.13.12.3",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indole_3_acetamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16165"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16165"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "amidase",
+      "equation": "indole-3-acetamide + H2O = (indol-3-yl)acetate + NH4(+)",
+      "ec": "3.5.1.4",
+      "substrates": [
+        {
+          "metabolite": "indole_3_acetamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "indoleacetate decarboxylase",
+      "equation": "(indol-3-yl)acetate + H(+) = skatole + CO2",
+      "ec": "4.1.1.115",
+      "substrates": [
+        {
+          "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "skatole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(indol-3-yl)acetate + 2-oxoglutarate + O2 = 2-oxindole-3-acetate + succinate + CO2",
+      "equation": "(indol-3-yl)acetate + 2-oxoglutarate + O2 = 2-oxindole-3-acetate + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxindole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "a 2'-deoxycytidine in double-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in double-st...",
+      "equation": "a 2'-deoxycytidine in double-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in double-stranded DNA + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:66604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66604"
+          }
+        ]
+      }
+    }
+  ]
+}

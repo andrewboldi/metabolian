@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3s-3-hydroxyicosanoyl-c-to-n-eicosanoylsphingan",
+  "name": "(3S)-3-hydroxyicosanoyl-C… to N-eicosanoylsphinganine",
+  "category": "other",
+  "summary": "A 3-step route from (3S)-3-hydroxyicosanoyl-CoA(4−) to N-eicosanoylsphinganine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78591"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87562"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3s_3_hydroxyicosanoyl_coa",
+      "name": "(3S)-3-hydroxyicosanoyl-CoA",
+      "short": "3-hydroxyicosanoyl-…",
+      "formula": "C41H70N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87562"
+      }
+    },
+    {
+      "id": "trans_2_icosenoyl_coa",
+      "name": "trans-2-icosenoyl-CoA",
+      "short": "trans-2-icosenoyl-C…",
+      "formula": "C41H68N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74691"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "icosanoyl_coa",
+      "name": "icosanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57380"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "sphinganine",
+      "name": "Sphinganine",
+      "formula": "C18H40NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57817"
+      }
+    },
+    {
+      "id": "n_eicosanoylsphinganine",
+      "name": "N-eicosanoylsphinganine",
+      "short": "N-eicosanoylsphinga…",
+      "formula": "C38H77NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67027"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_oleoylglycerol",
+      "name": "2-oleoylglycerol",
+      "formula": "C21H40O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73990"
+      }
+    },
+    {
+      "id": "1_icosanoyl_2_oleoyl_sn_glycerol",
+      "name": "1-icosanoyl-2-oleoyl-sn-glycerol",
+      "short": "1-icosanoyl-2-oleoy…",
+      "formula": "C41H78O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75470"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3S)-hydroxyeicosanoyl-CoA = (2E)-eicosenoyl-CoA + H2O",
+      "equation": "(3S)-hydroxyeicosanoyl-CoA = (2E)-eicosenoyl-CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "3s_3_hydroxyicosanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_icosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-eicosenoyl-CoA + NADH + H(+) = eicosanoyl-CoA + NAD(+)",
+      "equation": "(2E)-eicosenoyl-CoA + NADH + H(+) = eicosanoyl-CoA + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_2_icosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "eicosanoyl-CoA + sphinganine = N-eicosanoylsphinganine + CoA + H(+)",
+      "equation": "eicosanoyl-CoA + sphinganine = N-eicosanoylsphinganine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphinganine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_eicosanoylsphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z)-octadecenoyl-sn-gly...",
+      "equation": "eicosanoyl-CoA + 2-(9Z-octadecenoyl)-glycerol = 1-eicosanoyl-2-(9Z)-octadecenoyl-sn-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "icosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oleoylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_icosanoyl_2_oleoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38079"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38079"
+          }
+        ]
+      }
+    }
+  ]
+}

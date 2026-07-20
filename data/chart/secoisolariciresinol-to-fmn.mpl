@@ -4,23 +4,49 @@
 # edit the generator, not this file.
 
 pathway secoisolariciresinol-to-fmn "(−)-secoisolariciresinol to FMN" {
-  spacing 200
+  spacing 264
 
   spine at 0,0 {
     secoisolariciresinol
-    <-> ec_1_23_1_2 [1.23.1.2] +nadp -nadph -hplus
-    lariciresinol
-    <-> ec_1_23_1_1 [1.23.1.1] +nadp -nadph -hplus
-    pinoresinol
-    <-> ec_1_14_19_74 [1.14.19.74] +fmnh2 +o2 -fmn -h2o -hplus
-    4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr
-    <-> ec_1_14_19_74 [1.14.19.74] +fmnh2 +o2 -fmn -h2o -hplus
-    sesamin
+    <-> ec_1_1_1_331 [1.1.1.331] +nad -nadh -hplus
+    matairesinol
+    <-> ec_1_14_19_72 [1.14.19.72] +fmnh2 +o2 -fmn -h2o -hplus
+    pluviatolide
+    <-> ec_2_1_1_323 [2.1.1.323] +sam -sah -hplus
+    bursehernin
+    <-> ec_1_14_14_131 [1.14.14.131] +fmnh2 +o2 -fmn -h2o -hplus
+    5_desmethylyatein
+    <-> ec_2_1_1_330 [2.1.1.330] +sam -sah -hplus
+    dihydroanhydropodorhizol
+    <-> ec_1_14_20_8 [1.14.20.8] +akg +o2 -succinate -co2 -h2o
+    deoxypodophyllotoxin
+    <-> . +fmnh2 +o2 -formaldehyde -fmn -h2o -hplus
+    4_demethyldeoxypodophyllotoxin
+    <-> ec_1_14_14_132 [1.14.14.132] +fmnh2 +o2 -fmn -h2o -hplus
+    4_demethylepipodophyllotoxin
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
-    indolin_2_one
+    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
+    e_4_hydroxyphenyl_acetaldehyde_oxime
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
+    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
+    3s_3_hydroxy_l_arginine
+  }
+
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 }

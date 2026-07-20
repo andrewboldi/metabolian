@@ -150,57 +150,23 @@
       }
     },
     {
-      "id": "udp_d_glucose",
-      "name": "UDP-α-D-glucose",
-      "formula": "C15H22N2O17P2",
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58885"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "l_tartrate",
-      "name": "L-tartrate",
-      "formula": "C4H4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30924"
-      }
-    },
-    {
-      "id": "oleuropein",
-      "name": "oleuropein",
-      "formula": "C25H32O13",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:7747"
-      }
-    },
-    {
-      "id": "oleuropein_aglycone",
-      "name": "oleuropein aglycone",
-      "formula": "C19H22O8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:139162"
-      }
-    },
-    {
-      "id": "meso_tartrate",
-      "name": "meso-tartrate",
-      "formula": "C4H4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30928"
+        "chebi": "CHEBI:58601"
       }
     },
     {
@@ -213,12 +179,40 @@
       }
     },
     {
+      "id": "2_hydroxy_3_oxopropanoate",
+      "name": "2-hydroxy-3-oxopropanoate",
+      "short": "2-hydroxy-3-oxoprop…",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57978"
+      }
+    },
+    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "ginsenoside_rd",
+      "name": "ginsenoside Rd",
+      "formula": "C48H82O18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67988"
+      }
+    },
+    {
+      "id": "ginsenoside_c_k",
+      "name": "ginsenoside C-K",
+      "formula": "C36H62O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77146"
       }
     }
   ],
@@ -252,24 +246,31 @@
       ]
     },
     {
-      "id": "ec_4_1_1_73",
-      "name": "tartrate decarboxylase",
+      "id": "ec_3_6_1_15",
+      "name": "nucleoside-triphosphate phosphatase",
       "ec": [
-        "4.1.1.73"
+        "3.6.1.15"
       ]
     },
     {
-      "id": "ec_3_2_1_206",
-      "name": "oleuropein beta-glucosidase",
+      "id": "ec_2_4_1_352",
+      "name": "glucosylglycerate phosphorylase",
       "ec": [
-        "3.2.1.206"
+        "2.4.1.352"
       ]
     },
     {
-      "id": "ec_1_1_1_93",
-      "name": "tartrate dehydrogenase",
+      "id": "ec_1_1_1_60",
+      "name": "2-hydroxy-3-oxopropionate reductase",
       "ec": [
-        "1.1.1.93"
+        "1.1.1.60"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_191",
+      "name": "ginsenosidase type III",
+      "ec": [
+        "3.2.1.191"
       ]
     }
   ],
@@ -468,106 +469,12 @@
     },
     {
       "id": "r5",
-      "name": "glucosyl-3-phosphoglycerate synthase",
-      "equation": "(2R)-3-phosphoglycerate + UDP-alpha-D-glucose = (2R)-2-O-(alpha-D-glucopyranosyl)-3-phospho-glycerate + UDP + H(+)",
-      "ec": "2.4.1.266",
+      "name": "nucleoside-triphosphate phosphatase",
+      "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-diphosphate + phosphate + H(+)",
+      "ec": "3.6.1.15",
       "substrates": [
         {
-          "metabolite": "pg3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp_d_glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_266"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:31319"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31319"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "tartrate decarboxylase",
-      "equation": "(2R,3R)-tartrate + H(+) = (R)-glycerate + CO2",
-      "ec": "4.1.1.73",
-      "substrates": [
-        {
-          "metabolite": "l_tartrate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glycerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_73"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:13317"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:13317"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "oleuropein beta-glucosidase",
-      "equation": "oleuropein + H2O = oleuropein aglycone + D-glucose",
-      "ec": "3.2.1.206",
-      "substrates": [
-        {
-          "metabolite": "oleuropein",
+          "metabolite": "nucleoside_5_triphoshate",
           "stoichiometry": 1
         },
         {
@@ -577,42 +484,91 @@
       ],
       "products": [
         {
-          "metabolite": "oleuropein_aglycone",
+          "metabolite": "nucleoside_5_diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_206"
+          "enzyme": "ec_3_6_1_15"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55740"
+        "rhea": "RHEA:23680"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55740"
+            "id": "RHEA:23680"
           }
         ]
       }
     },
     {
-      "id": "r8",
-      "name": "tartrate dehydrogenase",
-      "equation": "(2R,3S)-tartrate + NAD(+) = 2-hydroxy-3-oxosuccinate + NADH + H(+)",
-      "ec": "1.1.1.93",
+      "id": "r6",
+      "name": "glucosylglycerate phosphorylase",
+      "equation": "(2R)-2-O-(alpha-D-glucopyranosyl)-glycerate + phosphate = (R)-glycerate + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.352",
       "substrates": [
         {
-          "metabolite": "meso_tartrate",
+          "metabolite": "2_o_d_glucopyranosyl_d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_352"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:55268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "2-hydroxy-3-oxopropionate reductase",
+      "equation": "(R)-glycerate + NAD(+) = 2-hydroxy-3-oxopropanoate + NADH + H(+)",
+      "ec": "1.1.1.60",
+      "substrates": [
+        {
+          "metabolite": "d_glycerate",
           "stoichiometry": 1
         },
         {
@@ -622,7 +578,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxy_3_oxosuccinate",
+          "metabolite": "2_hydroxy_3_oxopropanoate",
           "stoichiometry": 1
         },
         {
@@ -636,20 +592,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_93"
+          "enzyme": "ec_1_1_1_60"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:16457"
+        "rhea": "RHEA:18845"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16457"
+            "id": "RHEA:18845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "ginsenosidase type III",
+      "equation": "(20S)-ginsenoside Rd + 2 H2O = (20S)-ginsenoside C-K + 2 D-glucose",
+      "ec": "3.2.1.191",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_k",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:40743"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40743"
           }
         ]
       }

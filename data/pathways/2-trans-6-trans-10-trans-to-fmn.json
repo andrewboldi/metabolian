@@ -122,50 +122,51 @@
       }
     },
     {
-      "id": "ent_3_hydroxycassa_12_15_dien_2_one",
-      "name": "ent-3β-hydroxycassa-12,15-dien-2-one",
-      "short": "ent-3β-hydroxycassa…",
-      "formula": "C20H30O2",
+      "id": "umbelliferone",
+      "name": "umbelliferone",
+      "formula": "C9H6O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138970"
+        "chebi": "CHEBI:27510"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "5_epi_selinene",
-      "name": "5-epi-α-selinene",
+      "id": "7_demethylsuberosin",
+      "name": "7-demethylsuberosin",
+      "formula": "C14H14O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:69042"
+      }
+    },
+    {
+      "id": "4_epi_eremophilene",
+      "name": "(−)-4-epi-eremophilene",
+      "short": "(−)-4-epi-eremophil…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63445"
+        "chebi": "CHEBI:142083"
       }
     },
     {
-      "id": "drimenol",
-      "name": "drimenol",
-      "formula": "C15H26O",
+      "id": "4_epi_eremophilene_2_ol",
+      "name": "4-epi-eremophilene-2β-ol",
+      "short": "4-epi-eremophilene-…",
+      "formula": "C15H24O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61148"
-      }
-    },
-    {
-      "id": "drimendiol",
-      "name": "drimendiol",
-      "formula": "C15H26O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138971"
+        "chebi": "CHEBI:142084"
       }
     }
   ],
@@ -199,24 +200,17 @@
       ]
     },
     {
-      "id": "ec_1_14_14_69",
-      "name": "ent-cassadiene hydroxylase",
+      "id": "ec_2_5_1_139",
+      "name": "umbelliferone 6-dimethylallyltransferase",
       "ec": [
-        "1.14.14.69"
+        "2.5.1.139"
       ]
     },
     {
-      "id": "ec_4_2_3_90",
-      "name": "5-epi-alpha-selinene synthase",
+      "id": "ec_1_14_14_151",
+      "name": "premnaspirodiene oxygenase",
       "ec": [
-        "4.2.3.90"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_72",
-      "name": "drimenol monooxygenase",
-      "ec": [
-        "1.14.14.72"
+        "1.14.14.151"
       ]
     }
   ],
@@ -399,75 +393,22 @@
     },
     {
       "id": "r5",
-      "name": "ent-cassadiene hydroxylase",
-      "equation": "ent-cassa-12,15-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = ent-3beta-hydroxycassa-12,15-dien-2-one + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 3 H(+)",
-      "ec": "1.14.14.69",
+      "name": "umbelliferone 6-dimethylallyltransferase",
+      "equation": "umbelliferone + dimethylallyl diphosphate = demethylsuberosin + diphosphate",
+      "ec": "2.5.1.139",
       "substrates": [
         {
-          "metabolite": "ent_cassa_12_15_diene",
+          "metabolite": "umbelliferone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ent_3_hydroxycassa_12_15_dien_2_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_69"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:55480"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55480"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "5-epi-alpha-selinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = 5-epi-alpha-selinene + diphosphate",
-      "ec": "4.2.3.90",
-      "substrates": [
-        {
-          "metabolite": "fpp",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_epi_selinene",
+          "metabolite": "7_demethylsuberosin",
           "stoichiometry": 1
         },
         {
@@ -477,32 +418,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_90"
+          "enzyme": "ec_2_5_1_139"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31819"
+        "rhea": "RHEA:51868"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31819"
+            "id": "RHEA:51868"
           }
         ]
       }
     },
     {
-      "id": "r7",
-      "name": "drimenol monooxygenase",
-      "equation": "(5S,9S,10S)-drim-7-en-11-ol + reduced [NADPH--hemoprotein reductase] + O2 = (5S,10S)-(9R)-7-drimene-11,12-diol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.72",
+      "id": "r6",
+      "name": "premnaspirodiene oxygenase",
+      "equation": "4-epi-eremophilene + reduced [NADPH--hemoprotein reductase] + O2 = 4-epi-eremophilene-2beta-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.151",
       "substrates": [
         {
-          "metabolite": "drimenol",
+          "metabolite": "4_epi_eremophilene",
           "stoichiometry": 1
         },
         {
@@ -516,7 +457,7 @@
       ],
       "products": [
         {
-          "metabolite": "drimendiol",
+          "metabolite": "4_epi_eremophilene_2_ol",
           "stoichiometry": 1
         },
         {
@@ -534,20 +475,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_72"
+          "enzyme": "ec_1_14_14_151"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:55504"
+        "rhea": "RHEA:57676"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55504"
+            "id": "RHEA:57676"
           }
         ]
       }

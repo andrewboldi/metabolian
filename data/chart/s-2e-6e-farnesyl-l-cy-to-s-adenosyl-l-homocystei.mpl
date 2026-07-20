@@ -24,25 +24,25 @@ pathway s-2e-6e-farnesyl-l-cy-to-s-adenosyl-l-homocystei "S-[(2E,6E)-farnesyl]-L
 
   branch from 2_trans_6_trans_farnesal side left {
     2_trans_6_trans_farnesal
-    <-> ec_1_1_1_216 [1.1.1.216] +nadp +nadph +hplus
+    <-> ec_1_1_1_354 [1.1.1.354] +nad +nadh +hplus
     2_trans_6_trans_farnesol
   }
 
   branch from cysteine side right {
     cysteine
-    <-> ec_1_8_1_6 [1.8.1.6] +nad +nadh +hplus
-    l_cystine
+    <-> . +l_cysteine +alanine
+    3_disulfanyl_l_alanine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_64 [2.1.1.64] +3_demethylubiquinol_9 +sam +hplus
-    ubiquinol_9
+    <-> ec_2_1_1_146 [2.1.1.146] +trans_isoeugenol +sam +hplus
+    trans_isomethyleugenol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
-    capsidiol
+    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
+    indolin_2_one
   }
 }

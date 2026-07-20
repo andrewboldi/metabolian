@@ -595,7 +595,11 @@ for (const f of mplFiles) {
     // number printed under the label refers to.
     r.proteinName = e?.name || null;
     r.rxnName = dataRxn?.name || null;
-    r.enzymeName = dataRxn?.name ? trimParenthetical(dataRxn.name, 12, false) : (e?.name || r.enzyme);
+    // A step with no enzyme gets NO label. Falling through to the reaction name
+    // here would print the equation beside an arrow whose cells already state it,
+    // and would quietly re-introduce a label where the data says there is none.
+    r.enzymeName = !r.enzyme ? null
+      : dataRxn?.name ? trimParenthetical(dataRxn.name, 12, false) : (e?.name || r.enzyme);
     r.gene = e?.gene || null;
     r.uniprot = e?.xrefs?.uniprot || e?.xrefs?.alphafold || null;
     r.pdb = e?.xrefs?.pdb?.[0] || null;

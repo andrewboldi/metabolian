@@ -129,58 +129,69 @@
       }
     },
     {
-      "id": "3_methyl_7h_xanthine",
-      "name": "3-methyl-7H-xanthine",
-      "formula": "C6H6N4O2",
+      "id": "n6_methyladenosine_5_monophosphate_1",
+      "name": "N6-methyladenosine 5'-monophosphate(1−)",
+      "short": "N6-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74449"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62208"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
+      "id": "malonyl-acp",
+      "name": "Malonyl-[ACP]",
+      "formula": "C17H26N3O11PS",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:78449"
       }
     },
     {
-      "id": "xanthine",
-      "name": "Xanthine",
-      "formula": "C5H4N4O2",
-      "charge": 0,
+      "id": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
+      "name": "O-[S-(methoxycarbonylacetyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(methoxycarbon…",
+      "formula": "C18H29N3O11PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17712"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "trans_isoeugenol",
-      "name": "trans-isoeugenol",
-      "formula": "C10H12O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50545"
-      }
-    },
-    {
-      "id": "trans_isomethyleugenol",
-      "name": "trans-isomethyleugenol",
-      "short": "trans-isomethyleuge…",
-      "formula": "C11H14O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:6877"
+        "chebi": "CHEBI:78845"
       }
     }
   ],
@@ -207,24 +218,17 @@
       ]
     },
     {
-      "id": "ec_1_14_13_179",
-      "name": "methylxanthine N(3)-demethylase",
+      "id": "ec_1_14_11_53",
+      "name": "mRNA N(6)-methyladenine demethylase",
       "ec": [
-        "1.14.13.179"
+        "1.14.11.53"
       ]
     },
     {
-      "id": "ec_2_1_1_146",
-      "name": "(iso)eugenol O-methyltransferase",
+      "id": "ec_2_1_1_197",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
       "ec": [
-        "2.1.1.146"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_279",
-      "name": "trans-anol O-methyltransferase",
-      "ec": [
-        "2.1.1.279"
+        "2.1.1.197"
       ]
     }
   ],
@@ -451,30 +455,26 @@
     },
     {
       "id": "r5",
-      "name": "methylxanthine N(3)-demethylase",
-      "equation": "3-methylxanthine + NADPH + O2 + H(+) = xanthine + formaldehyde + NADP(+) + H2O",
-      "ec": "1.14.13.179",
+      "name": "mRNA N(6)-methyladenine demethylase",
+      "equation": "an N(6)-methyladenosine in mRNA + 2-oxoglutarate + O2 = an adenosine in mRNA + formaldehyde + succinate + CO2",
+      "ec": "1.14.11.53",
       "substrates": [
         {
-          "metabolite": "3_methyl_7h_xanthine",
+          "metabolite": "n6_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "akg",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "xanthine",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -482,42 +482,42 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "succinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_179"
+          "enzyme": "ec_1_14_11_53"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36291"
+        "rhea": "RHEA:49520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36291"
+            "id": "RHEA:49520"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(iso)eugenol O-methyltransferase",
-      "equation": "(E)-isoeugenol + S-adenosyl-L-methionine = (E)-isomethyleugenol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.146",
+      "name": "malonyl-[acyl-carrier protein] O-methyltransferase",
+      "equation": "malonyl-[ACP] + S-adenosyl-L-methionine = malonyl-[ACP] methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.197",
       "substrates": [
         {
-          "metabolite": "trans_isoeugenol",
+          "metabolite": "malonyl-acp",
           "stoichiometry": 1
         },
         {
@@ -527,34 +527,30 @@
       ],
       "products": [
         {
-          "metabolite": "trans_isomethyleugenol",
+          "metabolite": "o_s_methoxycarbonylacetyl_pantetheine_4_phosphor",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_146"
+          "enzyme": "ec_2_1_1_197"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:17081"
+        "rhea": "RHEA:17105"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17081"
+            "id": "RHEA:17105"
           }
         ]
       }

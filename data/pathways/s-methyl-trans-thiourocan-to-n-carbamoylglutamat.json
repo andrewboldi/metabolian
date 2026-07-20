@@ -1,0 +1,204 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-methyl-trans-thiourocan-to-n-carbamoylglutamat",
+  "name": "S-methyl-trans-thiourocan… to N-carbamoylglutamate",
+  "category": "other",
+  "summary": "A 3-step route from S-methyl-trans-thiourocanate(1−) to N-carbamoylglutamate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79039"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229683"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_methyl_trans_thiourocanate",
+      "name": "S-methyl-trans-thiourocanate",
+      "short": "S-methyl-trans-thio…",
+      "formula": "C7H7N2O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229683"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_methyl_thiohydantoin_5_propanoate",
+      "name": "S-methyl-thiohydantoin-5-propanoate",
+      "short": "S-methyl-thiohydant…",
+      "formula": "C7H9N2O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229685"
+      }
+    },
+    {
+      "id": "hydantoin_5_propionate",
+      "name": "hydantoin-5-propionate",
+      "short": "hydantoin-5-propion…",
+      "formula": "C6H7N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133476"
+      }
+    },
+    {
+      "id": "methanethiol",
+      "name": "methanethiol",
+      "formula": "CH4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16007"
+      }
+    },
+    {
+      "id": "n_carbamoylglutamate",
+      "name": "N-carbamoylglutamate",
+      "formula": "C6H8N2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:233559"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "S-methyl-(E)-thiourocanate + H2O = S-methyl-thiohydantoin-5-propanoate",
+      "equation": "S-methyl-(E)-thiourocanate + H2O = S-methyl-thiohydantoin-5-propanoate",
+      "substrates": [
+        {
+          "metabolite": "s_methyl_trans_thiourocanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_methyl_thiohydantoin_5_propanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79039"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79039"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "S-methyl-thiohydantoin-5-propanoate + H2O = hydantoin-5-propanoate + methanethiol",
+      "equation": "S-methyl-thiohydantoin-5-propanoate + H2O = hydantoin-5-propanoate + methanethiol",
+      "substrates": [
+        {
+          "metabolite": "s_methyl_thiohydantoin_5_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydantoin_5_propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanethiol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hydantoin-5-propanoate + H2O = N-carbamoylglutamate + H(+)",
+      "equation": "hydantoin-5-propanoate + H2O = N-carbamoylglutamate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "hydantoin_5_propionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_carbamoylglutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84043"
+          }
+        ]
+      }
+    }
+  ]
+}

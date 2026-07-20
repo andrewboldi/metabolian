@@ -28,19 +28,19 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_72 [2.6.1.72] +d_4_hydroxyphenylglycine +akg
-    4_hydroxyphenylglyoxylate
+    <-> ec_2_6_1_22 [2.6.1.22] +s_3_aminoisobutyric_acid +akg
+    2_methyl_3_oxopropanoate
   }
 
-  branch from glycine side left {
+  branch from s_substituted_l_cysteine side left {
+    s_substituted_l_cysteine
+    <-> . +thiol
+    2_ammonioprop_2_enoate
+  }
+
+  branch from glycine side right {
     glycine
-    <-> ec_4_1_2_42 [4.1.2.42] +d_threonine
-    acetaldehyde
-  }
-
-  branch from thiol side right {
-    thiol
-    <-> ec_2_1_1_9 [2.1.1.9] +sam +sah +hplus
-    methyl_sulfide
+    <-> ec_6_3_2_3 [6.3.2.3] +atp +gsh +adp +pi +hplus
+    glu_cys
   }
 }

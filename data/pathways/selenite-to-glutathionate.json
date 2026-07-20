@@ -1,0 +1,391 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "selenite-to-glutathionate",
+  "name": "selenite to glutathionate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from selenite(2−) to glutathionate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34903"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18212"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "selenite",
+      "name": "selenite",
+      "formula": "O3Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:18212"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "selenodiglutathione",
+      "name": "selenodiglutathione",
+      "formula": "C20H30N6O12S2Se",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71259"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58297"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "glutathioselenol",
+      "name": "glutathioselenol",
+      "formula": "C10H16N3O6SSe",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71265"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "selanide",
+      "name": "selanide",
+      "formula": "HSe",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29317"
+      }
+    },
+    {
+      "id": "13_s_hpode",
+      "name": "13(S)-HPODE",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57466"
+      }
+    },
+    {
+      "id": "13_s_hode",
+      "name": "13(S)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90850"
+      }
+    },
+    {
+      "id": "s_acylglutathionate",
+      "name": "S-acylglutathionate",
+      "formula": "C11H15N3O7SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60058"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_2_7",
+      "name": "glutathione thiolesterase",
+      "ec": [
+        "3.1.2.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "selenite + 4 glutathione + 2 H(+) = selenodiglutathione + glutathione disulfide + 3 H2O",
+      "equation": "selenite + 4 glutathione + 2 H(+) = selenodiglutathione + glutathione disulfide + 3 H2O",
+      "substrates": [
+        {
+          "metabolite": "selenite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selenodiglutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34903"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "selenodiglutathione + NADPH + H(+) = glutathioselenol + glutathione + NADP(+)",
+      "equation": "selenodiglutathione + NADPH + H(+) = glutathioselenol + glutathione + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "selenodiglutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutathioselenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glutathioselenol + NADPH = hydrogenselenide + glutathione + NADP(+)",
+      "equation": "glutathioselenol + NADPH = hydrogenselenide + glutathione + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "glutathioselenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selanide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-oc...",
+      "equation": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-octadecadienoate + glutathione disulfide + H2O",
+      "substrates": [
+        {
+          "metabolite": "13_s_hpode",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_s_hode",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glutathione thiolesterase",
+      "equation": "an S-acylglutathione + H2O = a carboxylate + glutathione + H(+)",
+      "ec": "3.1.2.7",
+      "substrates": [
+        {
+          "metabolite": "s_acylglutathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22708"
+          }
+        ]
+      }
+    }
+  ]
+}

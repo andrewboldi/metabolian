@@ -55,6 +55,34 @@
       }
     },
     {
+      "id": "l_ribulose_5_phosphate",
+      "name": "L-ribulose 5-phosphate",
+      "short": "L-ribulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58226"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
       "id": "xylitol",
       "name": "xylitol",
       "formula": "C5H12O5",
@@ -235,6 +263,45 @@
     },
     {
       "id": "r4",
+      "name": "L-ribulose 5-phosphate + H2O = L-ribulose + phosphate",
+      "equation": "L-ribulose 5-phosphate + H2O = L-ribulose + phosphate",
+      "substrates": [
+        {
+          "metabolite": "l_ribulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:79819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "L-xylulose reductase",
       "equation": "xylitol + NADP(+) = L-xylulose + NADPH + H(+)",
       "ec": "1.1.1.10",
@@ -268,7 +335,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:17025"
       },

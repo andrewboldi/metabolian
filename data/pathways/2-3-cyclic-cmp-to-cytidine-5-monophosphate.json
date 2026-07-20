@@ -1,0 +1,336 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-cyclic-cmp-to-cytidine-5-monophosphate",
+  "name": "2',3'-cyclic CMP to cytidine 5'-monophosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from 2',3'-cyclic CMP(1−) to cytidine 5'-monophosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41956"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60877"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_cyclic_cmp",
+      "name": "2',3'-cyclic CMP",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60877"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cytidine_2_phosphate",
+      "name": "cytidine 2'-phosphate",
+      "short": "cytidine 2'-P",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77766"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cytidine",
+      "name": "cytidine",
+      "formula": "C9H13N3O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17562"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "n_acyl_d_galactosylsphingosine",
+      "name": "N-acyl-β-D-galactosylsphingosine",
+      "short": "N-acyl-β-D-galactos…",
+      "formula": "C25H46NO8R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18390"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "n_acetyl_neuraminosyl_2_3_d_galactosylceramide",
+      "name": "N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosylceramide",
+      "short": "N-acetyl-α-neuramin…",
+      "formula": "C36H62N2O16R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78482"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_37",
+      "name": "2',3'-cyclic-nucleotide 3'-phosphodiesterase",
+      "ec": [
+        "3.1.4.37"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_213",
+      "name": "cytidine kinase",
+      "ec": [
+        "2.7.1.213"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2',3'-cyclic-nucleotide 3'-phosphodiesterase",
+      "equation": "2',3'-cyclophospho-CMP + H2O = cytidine 2'-phosphate + H(+)",
+      "ec": "3.1.4.37",
+      "substrates": [
+        {
+          "metabolite": "2_3_cyclic_cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine_2_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cytidine 2'-phosphate + H2O = cytidine + phosphate",
+      "equation": "cytidine 2'-phosphate + H2O = cytidine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "cytidine_2_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37351"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37351"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "uridine/cytidine kinase",
+      "equation": "cytidine + GTP = GDP + CMP + H(+)",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "cytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28162"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28162"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a beta-D-galactosyl-(1<->1')-N-acylsphing-4-enine + CMP-N-acetyl-beta-neuraminate = a g...",
+      "equation": "a beta-D-galactosyl-(1<->1')-N-acylsphing-4-enine + CMP-N-acetyl-beta-neuraminate = a ganglioside GM4 (d18:1(4E)) + CMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_d_galactosylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_neuraminosyl_2_3_d_galactosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47600"
+          }
+        ]
+      }
+    }
+  ]
+}

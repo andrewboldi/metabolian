@@ -18,7 +18,7 @@ pathway d-glucopyranose-to-6-o-sinapoyl-d-glucono-1 "D-glucopyranose… to 6-O-s
 
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_8 [2.4.1.8] +maltose +pi
-    d_glucose_1_phosphate
+    <-> . +cellobiose +h2o
+    d_glucose
   }
 }

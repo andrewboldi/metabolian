@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-hydroxymethylglutar-to-dimethylmaleate",
+  "name": "(S)-2-hydroxymethylglutar… to dimethylmaleate",
+  "category": "other",
+  "summary": "A 3-step route from (S)-2-hydroxymethylglutarate to dimethylmaleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27582"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:180543"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_2_hydroxymethylglutarate",
+      "name": "(S)-2-hydroxymethylglutarate",
+      "short": "2-hydroxymethylglut…",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:180543"
+      }
+    },
+    {
+      "id": "2_methylideneglutarate",
+      "name": "2-methylideneglutarate",
+      "short": "2-methylideneglutar…",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58056"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_methylene_3_methylsuccinate",
+      "name": "2-methylene-3-methylsuccinate",
+      "short": "2-methylene-3-methy…",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57637"
+      }
+    },
+    {
+      "id": "dimethylmaleate",
+      "name": "dimethylmaleate",
+      "formula": "C6H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17081"
+      }
+    },
+    {
+      "id": "2r_3s_2_3_dimethylmalate",
+      "name": "(2R,3S)-2,3-dimethylmalate",
+      "short": "(2R,3S)-2,3-dimethy…",
+      "formula": "C6H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57422"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_4",
+      "name": "2-methyleneglutarate mutase",
+      "ec": [
+        "5.4.99.4"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_6",
+      "name": "methylitaconate Delta-isomerase",
+      "ec": [
+        "5.3.3.6"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_85",
+      "name": "dimethylmaleate hydratase",
+      "ec": [
+        "4.2.1.85"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2-hydroxymethylglutarate = 2-methyleneglutarate + H2O",
+      "equation": "(S)-2-hydroxymethylglutarate = 2-methyleneglutarate + H2O",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxymethylglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylideneglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27582"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27582"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-methyleneglutarate mutase",
+      "equation": "2-methyleneglutarate = 2-methylene-3-methylsuccinate",
+      "ec": "5.4.99.4",
+      "substrates": [
+        {
+          "metabolite": "2_methylideneglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylene_3_methylsuccinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13793"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methylitaconate Delta-isomerase",
+      "equation": "2-methylene-3-methylsuccinate = dimethylmaleate",
+      "ec": "5.3.3.6",
+      "substrates": [
+        {
+          "metabolite": "2_methylene_3_methylsuccinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylmaleate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dimethylmaleate hydratase",
+      "equation": "(2R,3S)-2,3-dimethylmalate = dimethylmaleate + H2O",
+      "ec": "4.2.1.85",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_2_3_dimethylmalate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylmaleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20253"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20253"
+          }
+        ]
+      }
+    }
+  ]
+}

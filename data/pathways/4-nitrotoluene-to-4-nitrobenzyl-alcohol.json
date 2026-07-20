@@ -1,0 +1,342 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-nitrotoluene-to-4-nitrobenzyl-alcohol",
+  "name": "4-nitrotoluene to 4-nitrobenzyl alcohol",
+  "category": "redox-detox",
+  "summary": "A 3-step route from 4-nitrotoluene to 4-nitrobenzyl alcohol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80359"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35227"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_nitrotoluene",
+      "name": "4-nitrotoluene",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35227"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_nitrobenzyl_alcohol",
+      "name": "4-nitrobenzyl alcohol",
+      "short": "4-nitrobenzyl…",
+      "formula": "C7H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41214"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_nitrobenzaldehyde",
+      "name": "4-nitrobenzaldehyde",
+      "formula": "C7H5NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:66926"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "6_deoxyerythronolide_b",
+      "name": "6-deoxyerythronolide B",
+      "short": "6-deoxyerythronolid…",
+      "formula": "C21H38O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16089"
+      }
+    },
+    {
+      "id": "erythronolide_b",
+      "name": "erythronolide B",
+      "formula": "C21H38O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27977"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_35",
+      "name": "6-deoxyerythronolide B hydroxylase",
+      "ec": [
+        "1.14.15.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-nitrotoluene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 4-nitrobenzyl alcohol ...",
+      "equation": "4-nitrotoluene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 4-nitrobenzyl alcohol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "4_nitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80359"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80359"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-nitrobenzyl alcohol + O2 = 4-nitrobenzaldehyde + H2O2",
+      "equation": "4-nitrobenzyl alcohol + O2 = 4-nitrobenzaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "4_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80379"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80379"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-nitrobenzaldehyde + NADPH + H(+) = 4-nitrobenzyl alcohol + NADP(+)",
+      "equation": "4-nitrobenzaldehyde + NADPH + H(+) = 4-nitrobenzyl alcohol + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "4_nitrobenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_nitrobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "6-deoxyerythronolide B hydroxylase",
+      "equation": "6-deoxyerythronolide B + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = erythronolide B + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.35",
+      "substrates": [
+        {
+          "metabolite": "6_deoxyerythronolide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "erythronolide_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40299"
+          }
+        ]
+      }
+    }
+  ]
+}

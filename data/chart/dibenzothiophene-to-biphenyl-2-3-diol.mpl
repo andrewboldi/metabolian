@@ -20,13 +20,13 @@ pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_dihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_5_methylsulfanyl_pentanal_oxime
+    <-> . +22_oxodocosanoate +fmnh2 +o2 +h2o +hplus
+    docosanedioate
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_8_2_5 [1.8.2.5] +iron +h2s +fe2
-    trioxidosulfanidosulfate
+    <-> . +nad +h2o +nadh +hplus
+    h2s
   }
 }

@@ -123,13 +123,13 @@
       }
     },
     {
-      "id": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
-      "name": "N2-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine",
-      "short": "N2-[(3R)-3-(2-satur…",
-      "formula": "C10H16N2O5R2",
+      "id": "8_hydroxyfurocoumarin",
+      "name": "8-hydroxyfurocoumarin",
+      "short": "8-hydroxyfurocoumar…",
+      "formula": "C11HO4R5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138473"
+        "chebi": "CHEBI:52025"
       }
     },
     {
@@ -143,33 +143,32 @@
       }
     },
     {
-      "id": "n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith",
-      "name": "N5,N5,N5-trimethyl-N2-[(3R)-3-(acyloxy)acyl]-L-ornithine betaine",
-      "short": "N5,N5,N5-trimethyl-…",
-      "formula": "C13H22N2O5R2",
+      "id": "8_methoxyfurocoumarin",
+      "name": "8-methoxyfurocoumarin",
+      "short": "8-methoxyfurocoumar…",
+      "formula": "C12H3O4R5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138481"
+        "chebi": "CHEBI:52028"
       }
     },
     {
-      "id": "2_4_diacetylphloroglucinol",
-      "name": "2,4-diacetylphloroglucinol",
-      "short": "2,4-diacetylphlorog…",
-      "formula": "C10H9O5",
+      "id": "n_acetyl_l_glutaminate",
+      "name": "N-acetyl-L-glutaminate",
+      "short": "N-acetyl-L-glutamin…",
+      "formula": "C7H11N2O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140662"
+        "chebi": "CHEBI:143879"
       }
     },
     {
-      "id": "2_4_6_trihydroxyacetophenone",
-      "name": "2',4',6'-trihydroxyacetophenone",
-      "short": "2',4',6'-trihydroxy…",
-      "formula": "C8H8O4",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64344"
+        "chebi": "CHEBI:58359"
       }
     }
   ],
@@ -196,17 +195,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_344",
-      "name": "ornithine lipid N-methyltransferase",
+      "id": "ec_2_1_1_70",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
       "ec": [
-        "2.1.1.344"
-      ]
-    },
-    {
-      "id": "ec_3_7_1_24",
-      "name": "2,4-diacetylphloroglucinol hydrolase",
-      "ec": [
-        "3.7.1.24"
+        "2.1.1.70"
       ]
     }
   ],
@@ -360,61 +352,60 @@
     },
     {
       "id": "r4",
-      "name": "ornithine lipid N-methyltransferase",
-      "equation": "an N(2)-[(3R)-3-(2-saturated-acyloxy)acyl]-L-ornithine lipid + 3 S-adenosyl-L-methionine = an N,N,N-trimethylornithine lipid + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.344",
+      "name": "8-hydroxyfuranocoumarin 8-O-methyltransferase",
+      "equation": "an 8-hydroxyfurocoumarin + S-adenosyl-L-methionine = an 8-methoxyfurocoumarin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.70",
       "substrates": [
         {
-          "metabolite": "n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine",
+          "metabolite": "8_hydroxyfurocoumarin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith",
+          "metabolite": "8_methoxyfurocoumarin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_344"
+          "enzyme": "ec_2_1_1_70"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:20461"
+        "rhea": "RHEA:21244"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:20461"
+            "id": "RHEA:21244"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2,4-diacetylphloroglucinol hydrolase",
-      "equation": "2,4-diacetylphloroglucinol + H2O = 2-acetylphloroglucinol + acetate",
-      "ec": "3.7.1.24",
+      "name": "N-acetyl-L-glutamine + H2O = L-glutamine + acetate",
+      "equation": "N-acetyl-L-glutamine + H2O = L-glutamine + acetate",
       "substrates": [
         {
-          "metabolite": "2_4_diacetylphloroglucinol",
+          "metabolite": "n_acetyl_l_glutaminate",
           "stoichiometry": 1
         },
         {
@@ -424,7 +415,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_4_6_trihydroxyacetophenone",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -432,22 +423,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_7_1_24"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59184"
+        "rhea": "RHEA:67368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59184"
+            "id": "RHEA:67368"
           }
         ]
       }

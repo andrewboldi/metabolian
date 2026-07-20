@@ -24,8 +24,8 @@ pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspar
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_99_7 [3.5.99.7] +1_aminocyclopropanecarboxylic_acid +h2o
-    oxobut
+    <-> . +hydroxylamine +h2o +hplus
+    hydrazine
   }
 
   branch from mesaconyl_coa side left {
@@ -36,7 +36,7 @@ pathway threo-3-methyl-l-aspartate-to-3-methylfumaryl-co "threo-3-methyl-L-aspar
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
-    5r_5_hydroxy_l_lysine_1
+    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
+    cis_3_hydroxy_l_proline
   }
 }

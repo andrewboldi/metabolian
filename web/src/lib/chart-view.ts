@@ -279,6 +279,8 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
    *  it is read at overview zoom where those labels are not legible. Sheets are
    *  far below this and keep the full treatment. */
   const CROWDED = ir.nodes.length > 400;
+  /** Cells on a crowded chart whose text has not been built yet, keyed by node id. */
+  const pendingText = new Map<string, { fill: () => void; n: ChartNode }>();
   /** .met-formula font size — the band the formula occupies at the cell foot. */
   const FORMULA_FONT = 9;
   /** .enz-ec font size — used to reconstruct an EC's box when CSS has it hidden. */
@@ -470,6 +472,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       // overview, so incoming arrowheads docked against blank paper.
       g.append(s("rect", { class: "met-box name-only", x: 0, y: 0, width: n.w, height: n.h }));
     }
+    // Per-cell text is built LAZILY on a crowded chart. Every element below is
+    // hidden by LOD at overview — the zoom the wall chart is read at — yet 16,111
+    // cells still cost ~64,000 DOM nodes to create up front, which is what took
+    // first paint from 2.1s to 5.8s. apply() fills a cell the moment it is both
+    // in view and past overview, so nothing legible is ever missing.
+    const fillText = () => {
     const name = displayLabel(n.label);
     // Wrap to the cell's own width (11px uppercase advances ~7px with tracking)
     // rather than a fixed character count, which overflowed narrow cells.
@@ -505,6 +513,9 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       nameBoxes.push({ x: n.x, y: n.y + n.h - 4 - FORMULA_FONT, w: n.w, h: FORMULA_FONT + 4 });
     }
     g.setAttribute("data-structure-top", String(top));
+    };
+    if (CROWDED) pendingText.set(n.id, { fill: fillText, n });
+    else fillText();
     g.addEventListener("click", (e) => { e.stopPropagation(); hooks.onMetabolite?.(n); });
     layerNodes.append(g);
     nodeEls.set(n.id, g);
@@ -1032,6 +1043,20 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     const gs = Math.min(8, Math.max(1, 6 / (7 * k)));
     for (const gl of regGlyphs) {
       gl.el.setAttribute("transform", `translate(${gl.x},${gl.y}) scale(${Math.min(gs, gl.cap)})`);
+    }
+    // Fill deferred cell text for what is actually on screen: only on a crowded
+    // chart, only past overview, and only for cells in view. The wall chart pays
+    // for the labels the reader can see, when they zoom in to see them.
+    if (pendingText.size && lod !== "overview") {
+      const vr = canvas.getBoundingClientRect();
+      const x0 = -tx / k, y0 = -ty / k;
+      const x1 = x0 + vr.width / k, y1 = y0 + vr.height / k;
+      for (const [id, item] of [...pendingText]) {
+        const nd = item.n;
+        if (nd.x + nd.w < x0 || nd.x > x1 || nd.y + nd.h < y0 || nd.y > y1) continue;
+        item.fill();
+        pendingText.delete(id);
+      }
     }
     declutterLabels(lod);
     scheduleLoad();

@@ -1,0 +1,435 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydrazine-to-nitrate",
+  "name": "hydrazine to nitrate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from hydrazine to nitrate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23232"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15571"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15571"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "dinitrogen",
+      "name": "dinitrogen",
+      "formula": "N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17997"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dinitrogen_oxide",
+      "name": "dinitrogen oxide",
+      "formula": "N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17045"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17632"
+      }
+    },
+    {
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15429"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_2_8",
+      "name": "hydrazine dehydrogenase",
+      "ec": [
+        "1.7.2.8"
+      ]
+    },
+    {
+      "id": "ec_1_7_2_4",
+      "name": "nitrous-oxide reductase",
+      "ec": [
+        "1.7.2.4"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_14",
+      "name": "nitric oxide reductase [NAD(P)(+), nitrous oxide-forming]",
+      "ec": [
+        "1.7.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_17",
+      "name": "nitric oxide dioxygenase",
+      "ec": [
+        "1.14.12.17"
+      ]
+    },
+    {
+      "id": "ec_1_7_2_9",
+      "name": "hydroxylamine oxidase",
+      "ec": [
+        "1.7.2.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydrazine dehydrogenase",
+      "equation": "hydrazine + 4 Fe(III)-[cytochrome c] = N2 + 4 Fe(II)-[cytochrome c] + 4 H(+)",
+      "ec": "1.7.2.8",
+      "substrates": [
+        {
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dinitrogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nitrous-oxide reductase",
+      "equation": "N2 + 2 Fe(III)-[cytochrome c] + H2O = nitrous oxide + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.7.2.4",
+      "substrates": [
+        {
+          "metabolite": "dinitrogen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dinitrogen_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitric oxide reductase [NAD(P)(+), nitrous oxide-forming]",
+      "equation": "nitrous oxide + NAD(+) + H2O = 2 nitric oxide + NADH + H(+)",
+      "ec": "1.7.1.14",
+      "substrates": [
+        {
+          "metabolite": "dinitrogen_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:29607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nitric oxide dioxygenase",
+      "equation": "2 nitric oxide + NADH + 2 O2 = 2 nitrate + NAD(+) + H(+)",
+      "ec": "1.14.12.17",
+      "substrates": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19469"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19469"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hydroxylamine oxidase",
+      "equation": "hydroxylamine + 3 Fe(III)-[cytochrome c] = nitric oxide + 3 Fe(II)-[cytochrome c] + 3 H(+)",
+      "ec": "1.7.2.9",
+      "substrates": [
+        {
+          "metabolite": "hydroxylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:45036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45036"
+          }
+        ]
+      }
+    }
+  ]
+}

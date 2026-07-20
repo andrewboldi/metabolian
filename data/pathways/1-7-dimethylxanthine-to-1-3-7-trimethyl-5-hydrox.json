@@ -140,23 +140,33 @@
       }
     },
     {
-      "id": "vitexin_2_o_l_rhamnoside",
-      "name": "vitexin 2''-O-β-L-rhamnoside",
-      "short": "vitexin 2''-O-β-L-r…",
-      "formula": "C27H29O14",
-      "charge": -1,
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78636"
+        "chebi": "CHEBI:64612"
       }
     },
     {
-      "id": "7_o_methylvitexin_2_o_l_rhamnoside",
-      "name": "7-O-methylvitexin 2''-O-β-L-rhamnoside",
-      "short": "7-O-methylvitexin…",
-      "formula": "C28H31O14",
-      "charge": -1,
+      "id": "1_2_diacyl_sn_glycero_3_phospho_n_methylethanola",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-N-methylethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C8H14NO8PR2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78640"
+        "chebi": "CHEBI:64573"
+      }
+    },
+    {
+      "id": "1_3_7_9_tetramethyluric_acid",
+      "name": "1,3,7,9-tetramethyluric acid",
+      "short": "1,3,7,9-tetramethyl…",
+      "formula": "C9H12N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139388"
       }
     }
   ],
@@ -183,10 +193,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_153",
-      "name": "vitexin 2''-O-rhamnoside 7-O-methyltransferase",
+      "id": "ec_2_1_1_17",
+      "name": "phosphatidylethanolamine N-methyltransferase",
       "ec": [
-        "2.1.1.153"
+        "2.1.1.17"
       ]
     }
   ],
@@ -348,12 +358,12 @@
     },
     {
       "id": "r4",
-      "name": "vitexin 2''-O-rhamnoside 7-O-methyltransferase",
-      "equation": "vitexin 2''-O-beta-L-rhamnoside + S-adenosyl-L-methionine = 7-O-methylvitexin 2''-O-beta-L-rhamnoside + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.153",
+      "name": "phosphatidylethanolamine N-methyltransferase",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + S-adenosyl-L-methionine = a 1,2-diacyl-sn-glycero-3-phospho-N-methylethanolamine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.17",
       "substrates": [
         {
-          "metabolite": "vitexin_2_o_l_rhamnoside",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
           "stoichiometry": 1
         },
         {
@@ -363,7 +373,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_o_methylvitexin_2_o_l_rhamnoside",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_n_methylethanola",
           "stoichiometry": 1
         },
         {
@@ -377,20 +387,63 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_153"
+          "enzyme": "ec_2_1_1_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:11432"
+        "rhea": "RHEA:11164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11432"
+            "id": "RHEA:11164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1,3,7-trimethylurate + S-adenosyl-L-methionine = theacrine + S-adenosyl-L-homocysteine ...",
+      "equation": "1,3,7-trimethylurate + S-adenosyl-L-methionine = theacrine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_3_7_trimethyluric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_7_9_tetramethyluric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65536"
           }
         ]
       }

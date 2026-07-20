@@ -189,23 +189,59 @@
       }
     },
     {
-      "id": "malate",
-      "name": "L-Malate ((S)-malate)",
-      "short": "L-Malate ((S)-malat…",
-      "formula": "C4H4O5",
-      "charge": -2,
+      "id": "isovaleryl_coa",
+      "name": "Isovaleryl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15589"
+        "chebi": "CHEBI:57345"
       }
     },
     {
-      "id": "3s_3_carboxy_3_hydroxypropanoyl_coa",
-      "name": "(3S)-3-carboxy-3-hydroxypropanoyl-CoA",
-      "short": "3-carboxy-3-hydroxy…",
-      "formula": "C25H35N7O20P3S",
-      "charge": -5,
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57317"
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_hydroxyisovaleryl_coa",
+      "name": "2-hydroxyisovaleryl-CoA",
+      "short": "2-hydroxyisovaleryl…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138296"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxocyclohexane_1_carbonyl_coa",
+      "name": "2-hydroxy-6-oxocyclohexane-1-carbonyl-CoA",
+      "short": "2-hydroxy-6-oxocycl…",
+      "formula": "C28H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76527"
       }
     }
   ],
@@ -257,13 +293,6 @@
       "name": "3-hydroxypimeloyl-CoA dehydrogenase",
       "ec": [
         "1.1.1.259"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_22",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "ec": [
-        "2.8.3.22"
       ]
     }
   ],
@@ -642,45 +671,82 @@
     },
     {
       "id": "r9",
-      "name": "succinyl-CoA--L-malate CoA-transferase",
-      "equation": "succinyl-CoA + (S)-malate = (S)-malyl-CoA + succinate",
-      "ec": "2.8.3.22",
+      "name": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate...",
+      "equation": "3-methylbutanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxy-3-methylbutanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "succinyl_coa",
+          "metabolite": "isovaleryl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malate",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_carboxy_3_hydroxypropanoyl_coa",
+          "metabolite": "2_hydroxyisovaleryl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_8_3_22"
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:38255"
+        "rhea": "RHEA:54612"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:38255"
+            "id": "RHEA:54612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "6-oxocyclohex-1-ene-1-carbonyl-CoA + H2O = 2-hydroxy-6-oxocyclohexane-1-carbonyl-CoA",
+      "equation": "6-oxocyclohex-1-ene-1-carbonyl-CoA + H2O = 2-hydroxy-6-oxocyclohexane-1-carbonyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "6_oxocyclohex_1_ene_1_carbonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxocyclohexane_1_carbonyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:40063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40063"
           }
         ]
       }

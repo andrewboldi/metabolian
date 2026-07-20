@@ -12,25 +12,31 @@ pathway methanesulfinate-to-sulfate "methanesulfinate to sulfate" {
     methanesulfonate
     <-> ec_1_14_13_111 [1.14.13.111] +nadh +o2 -formaldehyde -nad -h2o
     sulfite
-    <-> ec_1_8_3_1 [1.8.3.1] +o2 +h2o -h2o2
-    sulfate
+    <-> ec_1_8_5_6 [1.8.5.6] +1_4_benzoquinones +h2o -sulfate
+    hydroquinones
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +gsh +fmnh2 +o2 +h2o +hplus
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_11_65 [1.14.11.65] +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    l_lysinium
+    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    a_1_methyl_3_phenylurea
   }
 
-  branch from sulfate side left {
+  branch from hydroquinones side left {
+    hydroquinones
+    <-> . +l_methionine +1_4_benzoquinones +h2o
+    l_methionine_s_s_oxide
+  }
+
+  branch from sulfate side right {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +n_octyl_sulfate +akg +o2 +succinate +co2 +hplus
-    octanal
+    <-> . +z_n_sulfonatooxy_alkenimidothioate
+    alkenyl_isothiocyanate
   }
 }

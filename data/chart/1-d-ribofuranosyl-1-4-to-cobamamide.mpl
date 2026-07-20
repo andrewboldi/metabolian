@@ -22,27 +22,27 @@ pathway 1-d-ribofuranosyl-1-4-to-cobamamide "1-(β-D-ribofuranosyl)-1,4… to co
     cobamamide
   }
 
-  branch from hydroquinones side left {
-    hydroquinones
-    <-> ec_1_5_5_2 [1.5.5.2] +l_proline +1_4_benzoquinones +hplus
-    s_1_pyrroline_5_carboxylate
+  branch from n_ribosylnicotinamide side left {
+    n_ribosylnicotinamide
+    <-> . +h2o +nicotinamide +hplus
+    d_ribofuranose
   }
 
-  branch from nmn side right {
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> ec_1_1_5_8 [1.1.5.8] +quinate +1_4_benzoquinones
+    3_dehydroquinate
+  }
+
+  branch from nmn side left {
     nmn
     <-> ec_2_7_7_1 [2.7.7.1] +atp +hplus +nad
     ppi
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
-    glyoxylate
-  }
-
-  branch from ribazole_5_phosphate side right {
-    ribazole_5_phosphate
-    <-> ec_3_1_3_73 [3.1.3.73] +h2o +pi
-    ribazole
+  branch from nicotinate_d_ribonucleotide side right {
+    nicotinate_d_ribonucleotide
+    <-> . +h2o +pi
+    d_ribosylnicotinate
   }
 }

@@ -18,13 +18,13 @@ pathway 4-nitrobenzoyl-coa-to-di-sulfido-diiron "4-nitrobenzoyl-CoA to di-μ-sul
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
-    8_methoxyfurocoumarin
+    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
+    puromycin
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
-    pulcherriminate
+    <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
+    22r_22_hydroxycholesterol
   }
 }

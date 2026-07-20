@@ -16,9 +16,21 @@ pathway s-s-butane-2-3-diol-to-butane-2-3-dione "(S,S)-butane-2,3-diol to butane
     butane_2_3_dione
   }
 
-  branch from r_acetoin side left {
+  branch from s_acetoin side left {
+    s_acetoin
+    <-> . +nad +nadh +hplus
+    meso_butane_2_3_diol
+  }
+
+  branch from r_acetoin side right {
     r_acetoin
     <-> ec_4_1_1_5 [4.1.1.5] +hplus +co2
     2s_2_hydroxy_2_methyl_3_oxobutanoate
+  }
+
+  branch from butane_2_3_dione side left {
+    butane_2_3_dione
+    <-> . +nadp +nadph +hplus
+    acetoin
   }
 }

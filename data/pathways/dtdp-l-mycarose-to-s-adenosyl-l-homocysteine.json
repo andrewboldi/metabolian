@@ -102,49 +102,51 @@
       }
     },
     {
-      "id": "dttp",
-      "name": "dTTP",
-      "formula": "C10H13N2O14P3",
-      "charge": -4,
+      "id": "dtdp_l_vancosamine",
+      "name": "dTDP-β-L-vancosamine",
+      "formula": "C17H28N3O13P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:37568"
+        "chebi": "CHEBI:76839"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
+      "id": "devancoaminyl_vancomycin",
+      "name": "devancoaminyl vancomycin",
+      "short": "devancoaminyl…",
+      "formula": "C59H62Cl2N8O22",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:75953"
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "vancomycin",
+      "name": "vancomycin",
+      "formula": "C66H76Cl2N9O24",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:76842"
       }
     },
     {
-      "id": "2_iodophenol",
-      "name": "2-iodophenol",
-      "formula": "C6H5IO",
-      "charge": 0,
+      "id": "1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium",
+      "name": "1-benzyl-1,2,3,4-tetrahydroisoquinolin-2-ium",
+      "short": "1-benzyl-1,2,3,4-te…",
+      "formula": "C16H18N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16706"
+        "chebi": "CHEBI:57902"
       }
     },
     {
-      "id": "1_iodo_2_methoxybenzene",
-      "name": "1-iodo-2-methoxybenzene",
-      "short": "1-iodo-2-methoxyben…",
-      "formula": "C7H7IO",
-      "charge": 0,
+      "id": "1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini",
+      "name": "1-benzyl-2-methyl-1,2,3,4-tetrahydroisoquinolinium",
+      "short": "1-benzyl-2-methyl-1…",
+      "formula": "C17H20N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16355"
+        "chebi": "CHEBI:57598"
       }
     }
   ],
@@ -171,17 +173,17 @@
       ]
     },
     {
-      "id": "ec_3_6_1_39",
-      "name": "thymidine-triphosphatase",
+      "id": "ec_2_4_1_322",
+      "name": "devancosaminyl-vancomycin vancosaminetransferase",
       "ec": [
-        "3.6.1.39"
+        "2.4.1.322"
       ]
     },
     {
-      "id": "ec_2_1_1_26",
-      "name": "iodophenol O-methyltransferase",
+      "id": "ec_2_1_1_115",
+      "name": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline N-methyltransferase",
       "ec": [
-        "2.1.1.26"
+        "2.1.1.115"
       ]
     }
   ],
@@ -335,26 +337,26 @@
     },
     {
       "id": "r4",
-      "name": "thymidine-triphosphatase",
-      "equation": "dTTP + H2O = dTDP + phosphate + H(+)",
-      "ec": "3.6.1.39",
+      "name": "devancosaminyl-vancomycin vancosaminetransferase",
+      "equation": "dTDP-beta-L-vancosamine + devancoaminyl-vancomycin = vancomycin + dTDP + H(+)",
+      "ec": "2.4.1.322",
       "substrates": [
         {
-          "metabolite": "dttp",
+          "metabolite": "dtdp_l_vancosamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "devancoaminyl_vancomycin",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dtdp",
+          "metabolite": "vancomycin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "dtdp",
           "stoichiometry": 1
         },
         {
@@ -364,32 +366,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_39"
+          "enzyme": "ec_2_4_1_322"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19013"
+        "rhea": "RHEA:39891"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19013"
+            "id": "RHEA:39891"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "iodophenol O-methyltransferase",
-      "equation": "2-iodophenol + S-adenosyl-L-methionine = 1-iodo-2-methoxybenzene + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.26",
+      "name": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline N-methyltransferase",
+      "equation": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline + S-adenosyl-L-methionine = N-methyl-(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.115",
       "substrates": [
         {
-          "metabolite": "2_iodophenol",
+          "metabolite": "1_benzyl_1_2_3_4_tetrahydroisoquinolin_2_ium",
           "stoichiometry": 1
         },
         {
@@ -399,7 +401,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_iodo_2_methoxybenzene",
+          "metabolite": "1_benzyl_2_methyl_1_2_3_4_tetrahydroisoquinolini",
           "stoichiometry": 1
         },
         {
@@ -413,20 +415,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_26"
+          "enzyme": "ec_2_1_1_115"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:14313"
+        "rhea": "RHEA:13005"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14313"
+            "id": "RHEA:13005"
           }
         ]
       }

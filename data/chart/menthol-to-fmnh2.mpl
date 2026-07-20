@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
-  spacing 220
+  spacing 184
 
   spine at 0,0 {
     menthol
@@ -14,8 +14,8 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
     pulegone
     <-> ec_1_14_14_143 [1.14.14.143] +fmnh2 +o2 -fmn -h2o -hplus
     menthofuran
-    <-> ec_1_3_8_16 [1.3.8.16] +2_azaniumyl_2_deoxyisochorismate +fmn -fmnh2
-    3_1_carboxylatovinyloxy_anthranilate
+    <-> ec_1_2_8_1 [1.2.8.1] +fmn +pyruvate +coa +hplus -acetyl_coa -co2
+    fmnh2
   }
 
   branch from pulegone side left {
@@ -26,13 +26,13 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
-    salutaridinium
+    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_cheilanthifoline
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_57 [1.14.14.57] +taurochenodeoxycholate +o2 +fmn +h2o +hplus
-    taurohyocholate
+    <-> . +tyrosine +o2 +fmn +h2o +hplus
+    n_hydroxy_l_tyrosinate
   }
 }

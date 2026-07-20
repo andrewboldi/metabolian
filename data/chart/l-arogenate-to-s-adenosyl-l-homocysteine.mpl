@@ -4,33 +4,51 @@
 # edit the generator, not this file.
 
 pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-homocysteine" {
-  spacing 196
+  spacing 280
 
   spine at 0,0 {
     l_arogenate
-    <-> ec_1_3_1_78 [1.3.1.78] +nadp -co2 -nadph
-    tyrosine
-    <-> ec_4_1_1_25 [4.1.1.25] +hplus -co2
-    tyraminium
-    <-> ec_2_1_1_27 [2.1.1.27] +sam -sah -hplus
-    n_methyltyraminium
+    <-> ec_2_6_1_78 [2.6.1.78] +oxaloacetate -aspartate
+    1s_4s_prephenate
+    <-> ec_1_3_1_12 [1.3.1.12] +nad -co2 -nadh
+    3_4_hydroxyphenyl_pyruvate
+    <-> ec_4_1_1_80 [4.1.1.80] +hplus -co2
+    4_hydroxyphenyl_acetaldehyde
+    <-> ec_3_5_99_14 [3.5.99.14] +dopamine -h2o
+    s_norcoclaurinium
+    <-> ec_2_1_1_128 [2.1.1.128] +sam -sah -hplus
+    s_coclaurinium
+    <-> ec_2_1_1_140 [2.1.1.140] +sam -sah -hplus
+    s_n_methylcoclaurinium
+    <-> ec_1_14_14_102 [1.14.14.102] +fmnh2 +o2 -fmn -h2o -hplus
+    s_3_hydroxy_n_methylcoclaurinium
+    <-> ec_2_1_1_116 [2.1.1.116] +sam -sah -hplus
+    s_reticulinium
+    <-> ec_2_1_1_291 [2.1.1.291] +sam -sah -hplus
+    s_laudanine
   }
 
-  branch from tyrosine side left {
-    tyrosine
-    <-> ec_5_4_3_6 [5.4.3.6]
-    3_amino_3_4_hydroxyphenyl_propanoic_acid
+  branch from 1s_4s_prephenate side left {
+    1s_4s_prephenate
+    <-> ec_4_1_1_100 [4.1.1.100] +hplus +co2
+    4r_3_4_dihydro_4_hydroxyphenylpyruvate
   }
 
-  branch from tyraminium side right {
-    tyraminium
-    <-> ec_2_3_1_110 [2.3.1.110] +trans_feruloyl_coa +coa +hplus
-    n_feruloyltyramine
+  branch from aspartate side right {
+    aspartate
+    <-> ec_3_5_1_26 [3.5.1.26] +n4_n_acetyl_d_glucosaminyl_l_asparagine +h2o +hplus
+    n_acetyl_d_glucosaminylamine
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_147 [2.1.1.147] +palmatine +sam +nadph +nadp
-    corydaline
+  branch from 3_4_hydroxyphenyl_pyruvate side left {
+    3_4_hydroxyphenyl_pyruvate
+    <-> . +atp +h2o +amp +ppi +hplus
+    2s_2_4_hydoxybenzyl_3_4_hydroxyphenyl_2_furonol
+  }
+
+  branch from 4_hydroxyphenyl_acetaldehyde side right {
+    4_hydroxyphenyl_acetaldehyde
+    <-> . +tyraminium +o2 +h2o +h2o2
+    nh3
   }
 }

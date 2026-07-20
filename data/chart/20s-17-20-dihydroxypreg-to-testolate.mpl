@@ -20,25 +20,25 @@ pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to te
 
   branch from 17_hydroxyprogesterone side left {
     17_hydroxyprogesterone
-    <-> ec_1_14_14_19 [1.14.14.19] +fmnh2 +o2 +fmn +h2o +hplus
-    progesterone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    algestone
   }
 
   branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
-    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
-    11_hydroxyandrost_4_ene_3_17_dione
+    <-> . +testosterone +hydrogen_acceptor
+    hydrogen_donor
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_11_1_2 [3.11.1.2] +h2o +pi +hplus
-    hydrogen_phosphonatoacetate
+    <-> ec_2_8_3_14 [2.8.3.14] +5_hydroxypentanoate +acetyl_coa
+    5_hydroxypentanoyl_coa
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_138 [1.14.14.138] +lithocholate +fmnh2 +o2 +h2o +hplus
-    murideoxycholate
+    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +fmnh2 +o2 +h2o +hplus
+    s_perillyl_alcohol
   }
 }

@@ -1,0 +1,239 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-palmitoyl-sn-glycerol-to-1-hexadecanoyl-2-5z-8",
+  "name": "1-palmitoyl-sn-glycerol… to 1-hexadecanoyl-2-(5Z,8Z,1…",
+  "category": "other",
+  "summary": "A 3-step route from 1-palmitoyl-sn-glycerol 3-phosphate(2−) to 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35915"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57518"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_palmitoyl_sn_glycerol_3_phosphate",
+      "name": "1-palmitoyl-sn-glycerol 3-phosphate",
+      "short": "1-palmitoyl-sn-glyc…",
+      "formula": "C19H37O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57518"
+      }
+    },
+    {
+      "id": "arachidonoyl_coa",
+      "name": "arachidonoyl-CoA",
+      "formula": "C41H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57368"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate",
+      "short": "1-hexadecanoyl-2-(5…",
+      "formula": "C39H67O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:72864"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_palmitoyl_2_arachidonoyl_sn_glycerol",
+      "name": "1-palmitoyl-2-arachidonoyl-sn-glycerol",
+      "short": "1-palmitoyl-2-arach…",
+      "formula": "C39H68O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77096"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphate + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = 1-hexade...",
+      "equation": "1-hexadecanoyl-sn-glycero-3-phosphate + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arachidonoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35915"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35915"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + H2O = 1-hexa...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + H2O = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_palmitoyl_2_arachidonoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + ATP = 1-hexadecanoyl-2-...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycerol + ATP = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + ADP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_2_arachidonoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40335"
+          }
+        ]
+      }
+    }
+  ]
+}

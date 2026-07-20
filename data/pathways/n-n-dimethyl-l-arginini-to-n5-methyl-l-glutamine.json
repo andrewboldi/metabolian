@@ -185,68 +185,75 @@
       }
     },
     {
-      "id": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
-      "name": "(2S)-2-ammonio-5-{[iminio(methylamino)methyl]amino}pentanoate",
-      "short": "2-ammonio-5-{[imini…",
-      "formula": "C7H17N4O2",
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:114953"
+        "chebi": "CHEBI:32682"
       }
     },
     {
-      "id": "d_synephrine",
-      "name": "D-synephrine",
-      "formula": "C9H14NO2",
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:63694"
+        "chebi": "CHEBI:28938"
       }
     },
     {
-      "id": "4_hydroxyphenyl_acetaldehyde",
-      "name": "(4-hydroxyphenyl)acetaldehyde",
-      "short": "(4-hydroxyphenyl)ac…",
-      "formula": "C8H8O2",
+      "id": "n_methyl_l_alanine",
+      "name": "N-methyl-L-alanine",
+      "formula": "C4H9NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15621"
+        "chebi": "CHEBI:58175"
       }
     },
     {
-      "id": "methanesulfonate",
-      "name": "methanesulfonate",
-      "formula": "CH3O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:25224"
-      }
-    },
-    {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57618"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58210"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
-      "charge": -2,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17359"
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "1_7_dimethylxanthine",
+      "name": "1,7-dimethylxanthine",
+      "formula": "C7H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25858"
+      }
+    },
+    {
+      "id": "7_methylxanthine",
+      "name": "7-methylxanthine",
+      "formula": "C6H6N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48991"
       }
     }
   ],
@@ -280,17 +287,24 @@
       ]
     },
     {
-      "id": "ec_4_2_1_88",
-      "name": "synephrine dehydratase",
+      "id": "ec_3_5_3_6",
+      "name": "arginine deiminase",
       "ec": [
-        "4.2.1.88"
+        "3.5.3.6"
       ]
     },
     {
-      "id": "ec_1_14_14_34",
-      "name": "methanesulfonate monooxygenase (FMNH2)",
+      "id": "ec_1_4_1_17",
+      "name": "N-methylalanine dehydrogenase",
       "ec": [
-        "1.14.14.34"
+        "1.4.1.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_178",
+      "name": "methylxanthine N(1)-demethylase",
+      "ec": [
+        "1.14.13.178"
       ]
     }
   ],
@@ -509,12 +523,12 @@
     },
     {
       "id": "r5",
-      "name": "dimethylargininase",
-      "equation": "N(omega)-methyl-L-arginine + H2O = L-citrulline + methylamine",
-      "ec": "3.5.3.18",
+      "name": "arginine deiminase",
+      "equation": "L-arginine + H2O = L-citrulline + NH4(+)",
+      "ec": "3.5.3.6",
       "substrates": [
         {
-          "metabolite": "2s_2_ammonio_5_iminio_methylamino_methyl_amino",
+          "metabolite": "arginine",
           "stoichiometry": 1
         },
         {
@@ -528,97 +542,113 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "methylamine",
+          "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_3_18"
+          "enzyme": "ec_3_5_3_6"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:25173"
+        "rhea": "RHEA:19597"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25173"
+            "id": "RHEA:19597"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "synephrine dehydratase",
-      "equation": "(R)-synephrine = (4-hydroxyphenyl)acetaldehyde + methylamine",
-      "ec": "4.2.1.88",
+      "name": "N-methylalanine dehydrogenase",
+      "equation": "N-methyl-L-alanine + NADP(+) + H2O = methylamine + pyruvate + NADPH + H(+)",
+      "ec": "1.4.1.17",
       "substrates": [
         {
-          "metabolite": "d_synephrine",
+          "metabolite": "n_methyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "metabolite": "methylamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "methylamine",
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_1_88"
+          "enzyme": "ec_1_4_1_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:32203"
+        "rhea": "RHEA:21768"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32203"
+            "id": "RHEA:21768"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "methanesulfonate monooxygenase (FMNH2)",
-      "equation": "methanesulfonate + FMNH2 + O2 = FMN + sulfite + formaldehyde + H2O + 2 H(+)",
-      "ec": "1.14.14.34",
+      "name": "methylxanthine N(1)-demethylase",
+      "equation": "1,7-dimethylxanthine + NADPH + O2 + H(+) = 7-methylxanthine + formaldehyde + NADP(+) + H2O",
+      "ec": "1.14.13.178",
       "substrates": [
         {
-          "metabolite": "methanesulfonate",
+          "metabolite": "1_7_dimethylxanthine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfite",
+          "metabolite": "7_methylxanthine",
           "stoichiometry": 1
         },
         {
@@ -626,30 +656,30 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_34"
+          "enzyme": "ec_1_14_13_178"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:29307"
+        "rhea": "RHEA:36283"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29307"
+            "id": "RHEA:36283"
           }
         ]
       }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "r-3-phenyllactate-to-fmn",
   "name": "(R)-3-phenyllactate to FMN",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from (R)-3-phenyllactate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,40 +137,51 @@
       }
     },
     {
-      "id": "ipecoside",
-      "name": "ipecoside",
-      "formula": "C27H35NO12",
-      "charge": 0,
+      "id": "2r_3r_3_hydroxylittorine",
+      "name": "(2R,3R)-3-hydroxylittorine",
+      "short": "(2R,3R)-3-hydroxyli…",
+      "formula": "C17H24NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:5952"
+        "chebi": "CHEBI:234344"
       }
     },
     {
-      "id": "ipecoside_aglycone",
-      "name": "ipecoside aglycone",
-      "formula": "C21H25NO7",
+      "id": "d_glucitol",
+      "name": "D-glucitol",
+      "formula": "C6H14O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195262"
+        "chebi": "CHEBI:17924"
       }
     },
     {
-      "id": "s_averantin",
-      "name": "(S)-averantin",
-      "formula": "C20H19O7",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "dehydroepiandrosterone_sulfate",
+      "name": "dehydroepiandrosterone sulfate",
+      "short": "dehydroepiandroster…",
+      "formula": "C19H27O5S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77899"
+        "chebi": "CHEBI:57905"
       }
     },
     {
-      "id": "1_s_5_r_5_hydroxyaverantin",
-      "name": "(1'S,5'R)-5'-hydroxyaverantin",
-      "short": "(1'S,5'R)-5'-hydrox…",
-      "formula": "C20H20O8",
-      "charge": 0,
+      "id": "16_hydroxydehydroepiandrosterone_3_sulfate",
+      "name": "16α-hydroxydehydroepiandrosterone 3-sulfate",
+      "short": "16α-hydroxydehydroe…",
+      "formula": "C19H27O6S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71536"
+        "chebi": "CHEBI:87538"
       }
     }
   ],
@@ -194,20 +205,6 @@
       "name": "littorine mutase",
       "ec": [
         "1.14.14.195"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_220",
-      "name": "ipecoside beta-D-glucosidase",
-      "ec": [
-        "3.2.1.220"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_116",
-      "name": "averantin hydroxylase",
-      "ec": [
-        "1.14.14.116"
       ]
     }
   ],
@@ -361,57 +358,11 @@
     },
     {
       "id": "r4",
-      "name": "ipecoside beta-D-glucosidase",
-      "equation": "ipecoside + H2O = ipecoside aglycone + D-glucose",
-      "ec": "3.2.1.220",
+      "name": "(R)-littorine + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-3-hydroxylittorin...",
+      "equation": "(R)-littorine + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3R)-3-hydroxylittorine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "ipecoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ipecoside_aglycone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_220"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:78743"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78743"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "averantin hydroxylase",
-      "equation": "(1'S)-averantin + reduced [NADPH--hemoprotein reductase] + O2 = (1'S,5'R)-5'-hydroxyaverantin + oxidized [NADPH--hemoprotein reductase] + H2O",
-      "ec": "1.14.14.116",
-      "substrates": [
-        {
-          "metabolite": "s_averantin",
+          "metabolite": "r_littorine",
           "stoichiometry": 1
         },
         {
@@ -425,7 +376,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_s_5_r_5_hydroxyaverantin",
+          "metabolite": "2r_3r_3_hydroxylittorine",
           "stoichiometry": 1
         },
         {
@@ -435,24 +386,113 @@
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_1_14_14_116"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35575"
+        "rhea": "RHEA:85419"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35575"
+            "id": "RHEA:85419"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "D-sorbitol + O2 = D-glucose + H2O2",
+      "equation": "D-sorbitol + O2 = D-glucose + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:69524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alph...",
+      "equation": "dehydroepiandrosterone 3-sulfate + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha-hydroxydehydroepiandrosterone 3-sulfate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dehydroepiandrosterone_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxydehydroepiandrosterone_3_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47224"
           }
         ]
       }

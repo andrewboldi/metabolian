@@ -20,25 +20,19 @@ pathway l-2-4-diazaniumylbutyrate-to-hypoxanthine "L-2,4-diazaniumylbutyrate to 
 
   branch from trimethylenediaminium side left {
     trimethylenediaminium
-    <-> ec_1_5_3_15 [1.5.3.15] +n8_acetylspermidinium +o2 +h2o +h2o2
-    4_acetamidobutanal
+    <-> ec_1_5_1_43 [1.5.1.43] +carboxynorspermidine +nadp +h2o +nadph +hplus
+    l_aspartic_acid_4_semialdehyde
   }
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +spermidine +hplus
-    n4_bis_aminopropyl_spermidine
+    <-> ec_4_4_1_42 [4.4.1.42] +sam
+    l_homoserine_lactone
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
-  }
-
-  branch from hypoxanthine side right {
-    hypoxanthine
-    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyinosine +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
+    2_4_dihydroxypteridine
   }
 }

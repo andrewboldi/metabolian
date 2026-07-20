@@ -18,7 +18,7 @@ pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" 
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_141 [2.5.1.141] +ferroheme_b +fpp +h2o
-    ferroheme_o
+    <-> ec_4_2_3_98 [4.2.3.98] +fpp +h2o
+    muurolol
   }
 }

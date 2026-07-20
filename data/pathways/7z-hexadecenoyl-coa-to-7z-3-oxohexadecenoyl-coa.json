@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7z-hexadecenoyl-coa-to-7z-3-oxohexadecenoyl-coa",
+  "name": "(7Z)-hexadecenoyl-CoA to (7Z)-3-oxohexadecenoyl-CoA",
+  "category": "redox-detox",
+  "summary": "A 3-step route from (7Z)-hexadecenoyl-CoA(4−) to (7Z)-3-oxohexadecenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86487"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87698"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7z_hexadecenoyl_coa",
+      "name": "(7Z)-hexadecenoyl-CoA",
+      "short": "hexadecenoyl-CoA",
+      "formula": "C37H60N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87698"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2e_7z_hexadecadienoyl_coa",
+      "name": "(2E,7Z)-hexadecadienoyl-CoA",
+      "short": "(2E,7Z)-hexadecadie…",
+      "formula": "C37H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87717"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3r_7z_hydroxyhexadec_7_enoyl_coa",
+      "name": "(3R,7Z)-hydroxyhexadec-7-enoyl-CoA",
+      "short": "(3R,7Z)-hydroxyhexa…",
+      "formula": "C37H60N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:235453"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "7z_3_oxohexadecenoyl_coa",
+      "name": "(7Z)-3-oxohexadecenoyl-CoA",
+      "short": "3-oxohexadecenoyl-C…",
+      "formula": "C37H58N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87719"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(7Z)-hexadecenoyl-CoA + O2 = (2E,7Z)-hexadecadienoyl-CoA + H2O2",
+      "equation": "(7Z)-hexadecenoyl-CoA + O2 = (2E,7Z)-hexadecadienoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "7z_hexadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_7z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86487"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E,7Z)-hexadecadienoyl-CoA + H2O = (3R)-hydroxy-(7Z)-hexadecenoyl-CoA",
+      "equation": "(2E,7Z)-hexadecadienoyl-CoA + H2O = (3R)-hydroxy-(7Z)-hexadecenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_7z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_7z_hydroxyhexadec_7_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86587"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86587"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3R)-hydroxy-(7Z)-hexadecenoyl-CoA + NAD(+) = 3-oxo-(7Z-hexadecenoyl)-CoA + NADH + H(+)",
+      "equation": "(3R)-hydroxy-(7Z)-hexadecenoyl-CoA + NAD(+) = 3-oxo-(7Z-hexadecenoyl)-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_7z_hydroxyhexadec_7_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7z_3_oxohexadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86187"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86187"
+          }
+        ]
+      }
+    }
+  ]
+}

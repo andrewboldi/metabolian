@@ -18,13 +18,13 @@ pathway s-tetrahydrocolumbamine-to-fmn-22536 "(S)-tetrahydrocolumbamine to FMN" 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
-    iodomethane
+    <-> ec_2_1_1_277 [2.1.1.277] +anthranilate +sam
+    methyl_anthranilate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_30 [1.14.14.30] +2_methylpropanaminium +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_2_methylpropanamine
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose +fmnh2 +h2o +hplus
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 }

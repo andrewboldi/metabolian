@@ -26,19 +26,19 @@ pathway 3-hydroxy-steroid-to-dihydroxyacetone "3β-hydroxy steroid to dihydroxya
 
   branch from monoacylglycerol side right {
     monoacylglycerol
-    <-> ec_2_7_1_94 [2.7.1.94] +atp +adp +hplus
-    monoacyl_sn_glycerol_3_phosphate
+    <-> . +h2o +fatty-acid +hplus
+    1_3_diacyl_sn_glycerol
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_26 [3.1.1.26] +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    3_o_d_galactopyranosyl_sn_glycerol
+    <-> ec_3_1_1_28 [3.1.1.28] +o_acyl_l_carnitine +h2o +hplus
+    carnitine
   }
 
   branch from glycerol side right {
     glycerol
-    <-> ec_1_1_1_372 [1.1.1.372] +nadp +nadph +hplus
-    l_glyceraldehyde
+    <-> ec_3_1_3_19 [3.1.3.19] +h2o +pi
+    glycerol_2_phosphate
   }
 }

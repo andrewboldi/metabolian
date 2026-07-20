@@ -1,0 +1,256 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "magnesium-protoporphyrin-to-l-methionine",
+  "name": "magnesium protoporphyrin… to L-methionine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from magnesium protoporphyrin 13-monomethyl ester(1−) to L-methionine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49100"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60491"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "magnesium_protoporphyrin_13_monomethyl_ester",
+      "name": "magnesium protoporphyrin 13-monomethyl ester",
+      "short": "magnesium…",
+      "formula": "C35H33MgN4O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60491"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "magnesium_131_hydroxyprotoporphyrin_13_monomethy",
+      "name": "magnesium 131-hydroxyprotoporphyrin 13-monomethyl ester",
+      "short": "magnesium…",
+      "formula": "C35H33MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60489"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "magnesium_131_oxoprotoporphyrin_13_monomethyl_es",
+      "name": "magnesium 131-oxoprotoporphyrin 13-monomethyl ester",
+      "short": "magnesium…",
+      "formula": "C35H31MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60490"
+      }
+    },
+    {
+      "id": "2_4_divinyl_protochlorophyllide_a",
+      "name": "2,4-divinyl protochlorophyllide a",
+      "short": "2,4-divinyl…",
+      "formula": "C35H28MgN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58632"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Mg-protoporphyrin IX 13-monomethyl ester + S-adenosyl-L-methionine + H2O = Mg-13(1)-hyd...",
+      "equation": "Mg-protoporphyrin IX 13-monomethyl ester + S-adenosyl-L-methionine + H2O = Mg-13(1)-hydroxyprotoporphyrin 13-monomethyl ester + 5'-deoxyadenosine + L-methionine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "magnesium_protoporphyrin_13_monomethyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "magnesium_131_hydroxyprotoporphyrin_13_monomethy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Mg-13(1)-hydroxyprotoporphyrin 13-monomethyl ester + S-adenosyl-L-methionine = Mg-13(1)...",
+      "equation": "Mg-13(1)-hydroxyprotoporphyrin 13-monomethyl ester + S-adenosyl-L-methionine = Mg-13(1)-oxoprotoporphyrin 13-monomethyl ester + 5'-deoxyadenosine + L-methionine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "magnesium_131_hydroxyprotoporphyrin_13_monomethy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "magnesium_131_oxoprotoporphyrin_13_monomethyl_es",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Mg-13(1)-oxoprotoporphyrin 13-monomethyl ester + S-adenosyl-L-methionine = 3,8-divinyl ...",
+      "equation": "Mg-13(1)-oxoprotoporphyrin 13-monomethyl ester + S-adenosyl-L-methionine = 3,8-divinyl protochlorophyllide a + 5'-deoxyadenosine + L-methionine + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "magnesium_131_oxoprotoporphyrin_13_monomethyl_es",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_divinyl_protochlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49108"
+          }
+        ]
+      }
+    }
+  ]
+}

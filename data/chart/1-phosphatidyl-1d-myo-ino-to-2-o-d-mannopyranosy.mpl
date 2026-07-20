@@ -16,9 +16,9 @@ pathway 1-phosphatidyl-1d-myo-ino-to-2-o-d-mannopyranosy "1-phosphatidyl-1D-myo-
     2_o_d_mannopyranosyl_6_o_6_acyl_d_mannopyranosyl
   }
 
-  branch from 2_o_d_mannopyranosyl_6_o_6_acyl_d_mannopyranosyl side left {
-    2_o_d_mannopyranosyl_6_o_6_acyl_d_mannopyranosyl
-    <-> ec_2_3_1_265 [2.3.1.265] +acyl_coa +coa
+  branch from 2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi side left {
+    2_o_d_mannopyranosyl_1_phosphatidyl_1d_myo_inosi
+    <-> ec_2_4_1_346 [2.4.1.346] +gdp_d_mannose +gdp +hplus
     2_6_o_bis_d_mannopyranosyl_1_phosphatidyl_1d_myo
   }
 }

@@ -18,13 +18,13 @@ pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosph
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_78 [4.2.3.78] +fpp
-    chamigrene
+    <-> . +linoleate +atp +coa +amp
+    linoleoyl_coa
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +hydrogen_donor +o2 +hplus +carbon_monoxide +fe2 +h2o
-    biliverdin
+    <-> . +dihydroserpentine +hydrogen_donor
+    serpentine
   }
 }

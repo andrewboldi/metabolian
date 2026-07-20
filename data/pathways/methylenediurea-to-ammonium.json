@@ -1,0 +1,316 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "methylenediurea-to-ammonium",
+  "name": "methylenediurea to ammonium",
+  "category": "redox-detox",
+  "summary": "A 3-step route from methylenediurea to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22240"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10790"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "methylenediurea",
+      "name": "methylenediurea",
+      "formula": "C3H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10790"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_carboxylatoaminomethyl_urea",
+      "name": "N-(carboxylatoaminomethyl)urea",
+      "short": "N-(carboxylatoamino…",
+      "formula": "C3H6N3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57415"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_ammoniomethyl_urea",
+      "name": "N-(ammoniomethyl)urea",
+      "short": "N-(ammoniomethyl)ur…",
+      "formula": "C2H8N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57431"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "n_hydroxymethyl_urea",
+      "name": "N-(hydroxymethyl)urea",
+      "short": "N-(hydroxymethyl)ur…",
+      "formula": "C2H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16481"
+      }
+    },
+    {
+      "id": "pyridoxamine_5_phosphate",
+      "name": "pyridoxamine 5'-phosphate",
+      "short": "pyridoxamine 5'-P",
+      "formula": "C8H12N2O5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58451"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "plp",
+      "name": "Pyridoxal 5'-phosphate (PLP)",
+      "short": "Pyridoxal 5'-P (PLP)",
+      "formula": "C8H8NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:597326"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_3_5",
+      "name": "pyridoxal 5'-phosphate synthase",
+      "ec": [
+        "1.4.3.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methylenediurea + H2O = N-(carboxyaminomethyl)urea + NH4(+)",
+      "equation": "methylenediurea + H2O = N-(carboxyaminomethyl)urea + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "methylenediurea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_carboxylatoaminomethyl_urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-(carboxyaminomethyl)urea + 2 H(+) = N-(aminomethyl)urea + CO2",
+      "equation": "N-(carboxyaminomethyl)urea + 2 H(+) = N-(aminomethyl)urea + CO2",
+      "substrates": [
+        {
+          "metabolite": "n_carboxylatoaminomethyl_urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_ammoniomethyl_urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-(aminomethyl)urea + H2O = N-(hydroxymethyl)urea + NH4(+)",
+      "equation": "N-(aminomethyl)urea + H2O = N-(hydroxymethyl)urea + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "n_ammoniomethyl_urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxymethyl_urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyridoxal 5'-phosphate synthase",
+      "equation": "pyridoxamine 5'-phosphate + O2 + H2O = pyridoxal 5'-phosphate + H2O2 + NH4(+)",
+      "ec": "1.4.3.5",
+      "substrates": [
+        {
+          "metabolite": "pyridoxamine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "plp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15817"
+          }
+        ]
+      }
+    }
+  ]
+}

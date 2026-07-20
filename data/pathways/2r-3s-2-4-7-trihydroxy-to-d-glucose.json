@@ -1,0 +1,304 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-3s-2-4-7-trihydroxy-to-d-glucose",
+  "name": "(2R,3S)-2,4',7-trihydroxy… to β-D-glucose",
+  "category": "other",
+  "summary": "A 3-step route from (2R,3S)-2,4',7-trihydroxyisoflavanone to β-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16445"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:63325"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_3s_2_4_7_trihydroxyisoflavanone",
+      "name": "(2R,3S)-2,4',7-trihydroxyisoflavanone",
+      "short": "(2R,3S)-2,4',7-trih…",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63325"
+      }
+    },
+    {
+      "id": "daidzein",
+      "name": "daidzein",
+      "formula": "C15H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77764"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "daidzein_7_o_d_glucoside",
+      "name": "daidzein 7-O-β-D-glucoside",
+      "short": "daidzein 7-O-β-D-gl…",
+      "formula": "C21H20O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:42202"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    },
+    {
+      "id": "phlorizin",
+      "name": "phlorizin",
+      "formula": "C21H24O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8113"
+      }
+    },
+    {
+      "id": "phloretin",
+      "name": "phloretin",
+      "formula": "C15H14O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_105",
+      "name": "2-hydroxyisoflavanone dehydratase",
+      "ec": [
+        "4.2.1.105"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_170",
+      "name": "isoflavone 7-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.170"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxyisoflavanone dehydratase",
+      "equation": "(2R,3S)-2,4',7-trihydroxyisoflavanone = daidzein + H2O + H(+)",
+      "ec": "4.2.1.105",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_2_4_7_trihydroxyisoflavanone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isoflavone 7-O-glucosyltransferase",
+      "equation": "daidzein + UDP-alpha-D-glucose = daidzein 7-O-beta-D-glucoside + UDP",
+      "ec": "2.4.1.170",
+      "substrates": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daidzein_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_170"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56048"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56048"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "daidzein 7-O-beta-D-glucoside + H2O = daidzein + beta-D-glucose + H(+)",
+      "equation": "daidzein 7-O-beta-D-glucoside + H2O = daidzein + beta-D-glucose + H(+)",
+      "substrates": [
+        {
+          "metabolite": "daidzein_7_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phlorizin + H2O = phloretin + beta-D-glucose",
+      "equation": "phlorizin + H2O = phloretin + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "phlorizin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phloretin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69639"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69639"
+          }
+        ]
+      }
+    }
+  ]
+}

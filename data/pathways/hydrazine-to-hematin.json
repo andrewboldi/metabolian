@@ -1,0 +1,365 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hydrazine-to-hematin",
+  "name": "hydrazine to β-hematin",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from hydrazine to β-hematin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49816"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15571"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15571"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "ferriheme_b",
+      "name": "ferriheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:55376"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17632"
+      }
+    },
+    {
+      "id": "hematin",
+      "name": "β-hematin",
+      "formula": "C68H60Fe2N8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:55377"
+      }
+    },
+    {
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30011"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_glutamyl_lysine",
+      "name": "N6-(γ-glutamyl)lysine",
+      "short": "N6-(γ-glutamyl)lysi…",
+      "formula": "C11H17N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138370"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_2_7",
+      "name": "hydrazine synthase",
+      "ec": [
+        "1.7.2.7"
+      ]
+    },
+    {
+      "id": "ec_4_99_1_8",
+      "name": "heme ligase",
+      "ec": [
+        "4.99.1.8"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_13",
+      "name": "protein-glutamine gamma-glutamyltransferase",
+      "ec": [
+        "2.3.2.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hydrazine synthase",
+      "equation": "hydrazine + 3 Fe(III)-[cytochrome c] + H2O = nitric oxide + 3 Fe(II)-[cytochrome c] + NH4(+) + 2 H(+)",
+      "ec": "1.7.2.7",
+      "substrates": [
+        {
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Fe(II)-heme b-[protein] + nitric oxide + O2 = Fe(III)-heme b-[protein] + nitrate",
+      "equation": "Fe(II)-heme b-[protein] + nitric oxide + O2 = Fe(III)-heme b-[protein] + nitrate",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferriheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78091"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78091"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "heme ligase",
+      "equation": "2 Fe(III)-heme b = beta-hematin",
+      "ec": "4.99.1.8",
+      "substrates": [
+        {
+          "metabolite": "ferriheme_b",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hematin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_99_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "protein-glutamine gamma-glutamyltransferase",
+      "equation": "L-glutaminyl-[protein] + L-lysyl-[protein] = [protein]-L-lysyl-N(6)-5-L-glutamyl-[protein] + NH4(+)",
+      "ec": "2.3.2.13",
+      "substrates": [
+        {
+          "metabolite": "l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_glutamyl_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:54816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54816"
+          }
+        ]
+      }
+    }
+  ]
+}

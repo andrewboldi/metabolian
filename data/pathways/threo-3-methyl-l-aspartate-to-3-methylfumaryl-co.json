@@ -101,22 +101,30 @@
       }
     },
     {
-      "id": "1_aminocyclopropanecarboxylic_acid",
-      "name": "1-aminocyclopropanecarboxylic acid",
-      "short": "1-aminocyclopropane…",
-      "formula": "C4H7NO2",
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58360"
+        "chebi": "CHEBI:15429"
       }
     },
     {
-      "id": "oxobut",
-      "name": "2-Oxobutanoate",
-      "formula": "C4H5O3",
-      "charge": -1,
+      "id": "hydrazine",
+      "name": "hydrazine",
+      "formula": "H4N2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16763"
+        "chebi": "CHEBI:15571"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -130,12 +138,12 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:60039"
       }
     },
     {
@@ -157,13 +165,13 @@
       }
     },
     {
-      "id": "5r_5_hydroxy_l_lysine_1",
-      "name": "(5R)-5-hydroxy-L-lysine(1+)",
-      "short": "5-hydroxy-L-lysine(…",
-      "formula": "C6H13N2O2",
-      "charge": 1,
+      "id": "cis_3_hydroxy_l_proline",
+      "name": "cis-3-hydroxy-L-proline",
+      "short": "cis-3-hydroxy-L-pro…",
+      "formula": "C5H9NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133442"
+        "chebi": "CHEBI:60041"
       }
     },
     {
@@ -206,13 +214,6 @@
       ]
     },
     {
-      "id": "ec_3_5_99_7",
-      "name": "1-aminocyclopropane-1-carboxylate deaminase",
-      "ec": [
-        "3.5.99.7"
-      ]
-    },
-    {
       "id": "ec_4_2_1_148",
       "name": "2-methylfumaryl-CoA hydratase",
       "ec": [
@@ -220,10 +221,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_4",
-      "name": "procollagen-lysine 5-dioxygenase",
+      "id": "ec_1_14_11_28",
+      "name": "proline 3-hydroxylase",
       "ec": [
-        "1.14.11.4"
+        "1.14.11.28"
       ]
     }
   ],
@@ -394,22 +395,11 @@
     },
     {
       "id": "r5",
-      "name": "1-aminocyclopropane-1-carboxylate deaminase",
-      "equation": "1-aminocyclopropane-1-carboxylate + H2O = 2-oxobutanoate + NH4(+)",
-      "ec": "3.5.99.7",
+      "name": "hydroxylamine + NH4(+) = hydrazine + H2O + H(+)",
+      "equation": "hydroxylamine + NH4(+) = hydrazine + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "1_aminocyclopropanecarboxylic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxobut",
+          "metabolite": "hydroxylamine",
           "stoichiometry": 1
         },
         {
@@ -417,22 +407,31 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_3_5_99_7"
+          "metabolite": "hydrazine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:16933"
+        "rhea": "RHEA:11928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16933"
+            "id": "RHEA:11928"
           }
         ]
       }
@@ -480,12 +479,12 @@
     },
     {
       "id": "r7",
-      "name": "procollagen-lysine 5-dioxygenase",
-      "equation": "L-lysyl-[collagen] + 2-oxoglutarate + O2 = (5R)-5-hydroxy-L-lysyl-[collagen] + succinate + CO2",
-      "ec": "1.14.11.4",
+      "name": "proline 3-hydroxylase",
+      "equation": "L-proline + 2-oxoglutarate + O2 = cis-3-hydroxy-L-proline + succinate + CO2",
+      "ec": "1.14.11.28",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
@@ -499,7 +498,7 @@
       ],
       "products": [
         {
-          "metabolite": "5r_5_hydroxy_l_lysine_1",
+          "metabolite": "cis_3_hydroxy_l_proline",
           "stoichiometry": 1
         },
         {
@@ -513,20 +512,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_4"
+          "enzyme": "ec_1_14_11_28"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:16569"
+        "rhea": "RHEA:20265"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16569"
+            "id": "RHEA:20265"
           }
         ]
       }

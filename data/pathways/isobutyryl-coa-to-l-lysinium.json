@@ -1,0 +1,402 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isobutyryl-coa-to-l-lysinium",
+  "name": "isobutyryl-CoA to L-lysinium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from isobutyryl-CoA(4−) to L-lysinium residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44180"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57338"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isobutyryl_coa",
+      "name": "Isobutyryl-CoA",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57338"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methacrylyl_coa",
+      "name": "Methacrylyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62500"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_2_methylpropenoyl_l_lysine",
+      "name": "N6-(2-methylpropenoyl)-L-lysine",
+      "short": "N6-(2-methylpropeno…",
+      "formula": "C10H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:233147"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "methacrylate",
+      "name": "methacrylate",
+      "formula": "C4H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:25218"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_o_methacrylyl_adp_d_ribose",
+      "name": "2''-O-methacrylyl-ADP-D-ribose",
+      "short": "2''-O-methacrylyl-A…",
+      "formula": "C19H25N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:234234"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_8_5",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
+      "ec": [
+        "1.3.8.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "short-chain 2-methylacyl-CoA dehydrogenase",
+      "equation": "2-methylpropanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = 2-methylpropenoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.5",
+      "substrates": [
+        {
+          "metabolite": "isobutyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methacrylyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-methylpropenoyl-CoA + L-lysyl-[protein] = N(6)-methacrylyl-L-lysyl-[protein] + CoA + ...",
+      "equation": "2-methylpropenoyl-CoA + L-lysyl-[protein] = N(6)-methacrylyl-L-lysyl-[protein] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "methacrylyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_2_methylpropenoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:83547"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83547"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N(6)-methacrylyl-L-lysyl-[protein] + H2O = 2-methylprop-2-enoate + L-lysyl-[protein]",
+      "equation": "N(6)-methacrylyl-L-lysyl-[protein] + H2O = 2-methylprop-2-enoate + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_2_methylpropenoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methacrylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:83551"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83551"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N(6)-methacrylyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-methacrylyl-ADP-D-ribose + ni...",
+      "equation": "N(6)-methacrylyl-L-lysyl-[protein] + NAD(+) + H2O = 2''-O-methacrylyl-ADP-D-ribose + nicotinamide + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_2_methylpropenoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methacrylyl_adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:85159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate syn...",
+      "equation": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate synthase] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:55544"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55544"
+          }
+        ]
+      }
+    }
+  ]
+}

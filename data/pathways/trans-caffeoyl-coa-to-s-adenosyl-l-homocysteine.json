@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-caffeoyl-coa-to-s-adenosyl-l-homocysteine",
+  "name": "trans-caffeoyl-CoA to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from trans-caffeoyl-CoA(4−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36307"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87136"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzaldehyde",
+      "name": "3,4-dihydroxybenzaldehyde",
+      "short": "3,4-dihydroxybenzal…",
+      "formula": "C7H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50205"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36241"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "vanillate",
+      "name": "vanillate",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16632"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "2_o_methylguanosine_5_monophosphate_1",
+      "name": "2'-O-methylguanosine 5'-monophosphate(1−)",
+      "short": "2'-O-methylguanosin…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74445"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_61",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "ec": [
+        "4.1.2.61"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "equation": "(E)-caffeoyl-CoA + H2O = 3,4-dihydroxybenzaldehyde + acetyl-CoA",
+      "ec": "4.1.2.61",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3,4-dihydroxybenzaldehyde + NADP(+) + H2O = 3,4-dihydroxybenzoate + NADPH + 2 H(+)",
+      "equation": "3,4-dihydroxybenzaldehyde + NADP(+) + H2O = 3,4-dihydroxybenzoate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:72539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,4-dihydroxybenzoate + S-adenosyl-L-methionine = vanillate + S-adenosyl-L-homocysteine...",
+      "equation": "3,4-dihydroxybenzoate + S-adenosyl-L-methionine = vanillate + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "guanosine(1145) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(1145) in 1...",
+      "equation": "guanosine(1145) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylguanosine(1145) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47776"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -20,15 +20,15 @@ pathway digallate-to-2-oxopent-4-enoate "digallate to 2-oxopent-4-enoate" {
     2_oxopent_4_enoate
   }
 
-  branch from gallate side left {
-    gallate
-    <-> ec_1_13_11_57 [1.13.11.57] +o2 +hplus
-    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
+  branch from pyrogallol side left {
+    pyrogallol
+    <-> . +3_methoxycatechol +fadh2 +o2 +fad +h2o +hplus
+    formaldehyde
   }
 
   branch from 2z_4e_2_hydroxymuconate side right {
     2z_4e_2_hydroxymuconate
-    <-> ec_1_2_1_85 [1.2.1.85] +nad +h2o +nadh +hplus
-    2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
+    <-> ec_3_5_99_11 [3.5.99.11] +2z_4e_2_ammoniomuconate +h2o
+    nh3
   }
 }

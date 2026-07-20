@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway guanosine-5-monophosphat-to-s-adenosyl-l-homocys "guanosine 5'-monophosphat… to S-adenosyl-L-homocysteine" {
-  spacing 280
+  spacing 264
 
   spine at 0,0 {
     guanosine_5_monophosphate_1
@@ -12,37 +12,13 @@ pathway guanosine-5-monophosphat-to-s-adenosyl-l-homocys "guanosine 5'-monophosp
     n1_methylguanosine_5_monophosphate_1
     <-> ec_4_1_3_44 [4.1.3.44] +pyruvate +sam -5_deoxyadenosine -methionine -co2 -h2o
     4_demethylwyosine_5_monophosphate_1
-    <-> ec_2_5_1_114 [2.5.1.114] +sam -5_s_methyl_5_thioadenosine -hplus
-    4_demethyl_7_3_amino_3_carboxypropyl_wyosine_5_m
-    <-> ec_2_1_1_282 [2.1.1.282] +sam -sah -hplus
-    7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp
-    <-> ec_2_1_1_290 [2.1.1.290] +sam -sah
-    7_3s_3_amino_3_methoxycarbonyl_propyl_wyosine_5
-    <-> ec_2_3_1_231 [2.3.1.231] +sam +co2 -sah -hplus
-    wybutosine_5_monophosphate_1
+    <-> . +sam -sah -hplus
+    isowyosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_151 [2.1.1.151] +cobalt_precorrin_2 +sam +hplus
-    cobalt_precorrin_3
-  }
-
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +methionine +hplus
-    bacteriochlorophyllide_f
-  }
-
-  branch from methionine side left {
-    methionine
-    <-> ec_1_3_98_6 [1.3.98.6] +fe_coproporphyrin_iii +sam +5_deoxyadenosine +co2
-    ferroheme_b
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_24 [2.5.1.24] +n6_dimethylallyladenine +sam +hplus
-    discadenine
+    <-> ec_2_1_1_226 [2.1.1.226] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

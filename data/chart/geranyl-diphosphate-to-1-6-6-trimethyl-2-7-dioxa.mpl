@@ -18,15 +18,21 @@ pathway geranyl-diphosphate-to-1-6-6-trimethyl-2-7-dioxa "geranyl diphosphate to
     1_6_6_trimethyl_2_7_dioxabicyclo_3_2_2_nonan_3_o
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_68 [4.2.3.68] +fpp +h2o
-    eudesmol
+  branch from 1_8_cineole side left {
+    1_8_cineole
+    <-> . +h2o +ppi
+    neryl_diphosphate
   }
 
-  branch from fmn side right {
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
+    2_methylisoborneol
+  }
+
+  branch from fmn side left {
     fmn
-    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
-    4as_10br_noroxomaritidine
+    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
+    20_hetre
   }
 }

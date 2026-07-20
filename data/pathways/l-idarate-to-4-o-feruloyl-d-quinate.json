@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-idarate-to-4-o-feruloyl-d-quinate",
+  "name": "L-idarate to 4-O-feruloyl-D-quinate",
+  "category": "other",
+  "summary": "A 3-step route from L-idarate(2−) to 4-O-feruloyl-D-quinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35619"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:21332"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_idarate",
+      "name": "L-idarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:21332"
+      }
+    },
+    {
+      "id": "d_glucarate",
+      "name": "D-glucarate",
+      "formula": "C6H8O8",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30612"
+      }
+    },
+    {
+      "id": "chlorogenate",
+      "name": "chlorogenate",
+      "formula": "C16H17O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57644"
+      }
+    },
+    {
+      "id": "2_o_caffeoylglucarate",
+      "name": "2-O-caffeoylglucarate",
+      "short": "2-O-caffeoylglucara…",
+      "formula": "C15H14O11",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58157"
+      }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "trans_feruloyl_coa",
+      "name": "trans-feruloyl-CoA",
+      "formula": "C31H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87305"
+      }
+    },
+    {
+      "id": "4_o_feruloyl_d_quinate",
+      "name": "4-O-feruloyl-D-quinate",
+      "short": "4-O-feruloyl-D-quin…",
+      "formula": "C17H19O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60078"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_dehydroquinate",
+      "name": "3-dehydroquinate",
+      "formula": "C7H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32364"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_98",
+      "name": "chlorogenate--glucarate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.98"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_99",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.99"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_24",
+      "name": "quinate/shikimate dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.24"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_282",
+      "name": "quinate/shikimate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.282"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-idarate = D-glucarate",
+      "equation": "L-idarate = D-glucarate",
+      "substrates": [
+        {
+          "metabolite": "l_idarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorogenate--glucarate O-hydroxycinnamoyltransferase",
+      "equation": "chlorogenate + D-glucarate = 2-O-caffeoylglucarate + L-quinate",
+      "ec": "2.3.1.98",
+      "substrates": [
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_caffeoylglucarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_98"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quinate O-hydroxycinnamoyltransferase",
+      "equation": "L-quinate + (E)-feruloyl-CoA = 4-O-feruloyl-D-quinate + CoA",
+      "ec": "2.3.1.99",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_feruloyl_d_quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15021"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15021"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quinate/shikimate dehydrogenase (NAD(+))",
+      "equation": "L-quinate + NAD(+) = 3-dehydroquinate + NADH + H(+)",
+      "ec": "1.1.1.24",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydroquinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22364"
+          }
+        ]
+      }
+    }
+  ]
+}

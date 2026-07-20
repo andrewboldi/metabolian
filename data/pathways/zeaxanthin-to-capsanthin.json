@@ -1,0 +1,402 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "zeaxanthin-to-capsanthin",
+  "name": "zeaxanthin to capsanthin",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from zeaxanthin to capsanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32443"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27547"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "zeaxanthin",
+      "name": "zeaxanthin",
+      "formula": "C40H56O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27547"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "all_trans_violaxanthin",
+      "name": "all-trans-violaxanthin",
+      "short": "all-trans-violaxant…",
+      "formula": "C40H56O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35288"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38290"
+      }
+    },
+    {
+      "id": "antheraxanthin",
+      "name": "antheraxanthin",
+      "formula": "C40H56O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27867"
+      }
+    },
+    {
+      "id": "l_dehydroascorbate",
+      "name": "L-dehydroascorbate",
+      "formula": "C6H5O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58539"
+      }
+    },
+    {
+      "id": "capsanthin",
+      "name": "capsanthin",
+      "formula": "C40H56O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3375"
+      }
+    },
+    {
+      "id": "capsanthin_5_6_epoxide",
+      "name": "capsanthin 5,6-epoxide",
+      "short": "capsanthin…",
+      "formula": "C40H56O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91165"
+      }
+    },
+    {
+      "id": "acetochlor",
+      "name": "acetochlor",
+      "formula": "C14H20ClNO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2394"
+      }
+    },
+    {
+      "id": "n_2_ethyl_6_methylphenyl_2_chloroacetamide",
+      "name": "N-(2-ethyl-6-methylphenyl)-2-chloroacetamide",
+      "short": "N-(2-ethyl-6-methyl…",
+      "formula": "C11H14ClNO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136494"
+      }
+    },
+    {
+      "id": "ethyl_formate",
+      "name": "ethyl formate",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52342"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_21",
+      "name": "zeaxanthin epoxidase",
+      "ec": [
+        "1.14.15.21"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_8",
+      "name": "capsanthin/capsorubin synthase",
+      "ec": [
+        "5.3.99.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "zeaxanthin epoxidase",
+      "equation": "all-trans-zeaxanthin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = all-trans-violaxanthin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.15.21",
+      "substrates": [
+        {
+          "metabolite": "zeaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_violaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "all-trans-violaxanthin + L-ascorbate = all-trans-antheraxanthin + L-dehydroascorbate + H2O",
+      "equation": "all-trans-violaxanthin + L-ascorbate = all-trans-antheraxanthin + L-dehydroascorbate + H2O",
+      "substrates": [
+        {
+          "metabolite": "all_trans_violaxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "antheraxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_dehydroascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "capsanthin/capsorubin synthase",
+      "equation": "all-trans-antheraxanthin = all-trans-capsanthin",
+      "ec": "5.3.99.8",
+      "substrates": [
+        {
+          "metabolite": "antheraxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "capsanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17373"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17373"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "all-trans-violaxanthin = (5R,6S)-5,6-epoxi-capsanthin",
+      "equation": "all-trans-violaxanthin = (5R,6S)-5,6-epoxi-capsanthin",
+      "substrates": [
+        {
+          "metabolite": "all_trans_violaxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "capsanthin_5_6_epoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:49320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acetochlor + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = N-(2-ethyl-6-methylphenyl)...",
+      "equation": "acetochlor + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = N-(2-ethyl-6-methylphenyl)-2-chloroacetamide + ethyl formate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "acetochlor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2_ethyl_6_methylphenyl_2_chloroacetamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethyl_formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:52212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52212"
+          }
+        ]
+      }
+    }
+  ]
+}

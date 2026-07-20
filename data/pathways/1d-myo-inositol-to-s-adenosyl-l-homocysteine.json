@@ -76,13 +76,13 @@
       }
     },
     {
-      "id": "1d_1_o_methyl_myo_inositol",
-      "name": "1D-1-O-methyl-myo-inositol",
-      "short": "1D-1-O-methyl-myo-i…",
+      "id": "1d_3_o_methyl_myo_inositol",
+      "name": "1D-3-O-methyl-myo-inositol",
+      "short": "1D-3-O-methyl-myo-i…",
       "formula": "C7H14O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18427"
+        "chebi": "CHEBI:28310"
       }
     },
     {
@@ -105,33 +105,23 @@
       }
     },
     {
-      "id": "1d_myo_inositol_5_phosphate",
-      "name": "1D-myo-inositol 5-phosphate",
-      "short": "1D-myo-inositol 5-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
+      "id": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
+      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene",
+      "short": "3-methyl-1,2-didehy…",
+      "formula": "C31H52",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84141"
+        "chebi": "CHEBI:70863"
       }
     },
     {
-      "id": "n_methylethanolaminium_phosphate",
-      "name": "N-methylethanolaminium phosphate",
-      "short": "N-methylethanolamin…",
-      "formula": "C3H9NO4P",
-      "charge": -1,
+      "id": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
+      "name": "3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene",
+      "short": "3,20-dimethyl-1,2,2…",
+      "formula": "C32H54",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57781"
-      }
-    },
-    {
-      "id": "n_n_dimethylethanolamine_phosphate",
-      "name": "N,N-dimethylethanolamine phosphate",
-      "short": "N,N-dimethylethanol…",
-      "formula": "C4H11NO4P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58641"
+        "chebi": "CHEBI:70865"
       }
     }
   ],
@@ -151,17 +141,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_40",
-      "name": "inositol 1-methyltransferase",
+      "id": "ec_2_1_1_39",
+      "name": "inositol 3-methyltransferase",
       "ec": [
-        "2.1.1.40"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_103",
-      "name": "phosphoethanolamine N-methyltransferase",
-      "ec": [
-        "2.1.1.103"
+        "2.1.1.39"
       ]
     }
   ],
@@ -258,9 +241,9 @@
     },
     {
       "id": "r3",
-      "name": "inositol 1-methyltransferase",
-      "equation": "myo-inositol + S-adenosyl-L-methionine = 1D-1-O-methyl-myo-inositol + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.40",
+      "name": "inositol 3-methyltransferase",
+      "equation": "myo-inositol + S-adenosyl-L-methionine = 1D-3-O-methyl-myo-inositol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.39",
       "substrates": [
         {
           "metabolite": "myo_inositol",
@@ -273,7 +256,7 @@
       ],
       "products": [
         {
-          "metabolite": "1d_1_o_methyl_myo_inositol",
+          "metabolite": "1d_3_o_methyl_myo_inositol",
           "stoichiometry": 1
         },
         {
@@ -287,77 +270,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_40"
+          "enzyme": "ec_2_1_1_39"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 3,
       "xrefs": {
-        "rhea": "RHEA:17565"
+        "rhea": "RHEA:18877"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17565"
+            "id": "RHEA:18877"
           }
         ]
       }
     },
     {
       "id": "r4",
-      "name": "inositol-phosphate phosphatase",
-      "equation": "1D-myo-inositol 5-phosphate + H2O = myo-inositol + phosphate",
-      "ec": "3.1.3.25",
+      "name": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimeth...",
+      "equation": "3-methyl-1,2-didehydro-2,3-dihydrobotryococcene + S-adenosyl-L-methionine = 3,20-dimethyl-1,2,21,22-tetradehydro-2,3,20,21-tetrahydrobotryococcene + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "1d_myo_inositol_5_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "myo_inositol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_3_25"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:44156"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:44156"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "phosphoethanolamine N-methyltransferase",
-      "equation": "N-methylethanolamine phosphate + S-adenosyl-L-methionine = N,N-dimethylethanolamine phosphate + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.103",
-      "substrates": [
-        {
-          "metabolite": "n_methylethanolaminium_phosphate",
+          "metabolite": "3_methyl_1_2_didehydro_2_3_dihydrobotryococcene",
           "stoichiometry": 1
         },
         {
@@ -367,7 +304,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_n_dimethylethanolamine_phosphate",
+          "metabolite": "3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t",
           "stoichiometry": 1
         },
         {
@@ -379,22 +316,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_103"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25321"
+        "rhea": "RHEA:34671"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25321"
+            "id": "RHEA:34671"
           }
         ]
       }

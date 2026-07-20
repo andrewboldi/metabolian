@@ -16,15 +16,21 @@ pathway n-ethylglycine-to-l-glutamate "N-ethylglycine to L-glutamate" {
     ethylaminium
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> ec_4_1_3_14 [4.1.3.14] +3r_3_hydroxy_l_aspartate
-    glycine
+  branch from ethylaminium side left {
+    ethylaminium
+    <-> . +hplus +co2
+    alanine
   }
 
-  branch from glutamate side right {
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> ec_4_1_1_47 [4.1.1.47] +hplus +co2
+    2_hydroxy_3_oxopropanoate
+  }
+
+  branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_17 [2.6.1.17] +n_3_carboxylatopropionyl_ll_2_6_diaminopimelate +akg
-    l_2_succinylamino_6_oxoheptanedioate
+    <-> ec_5_1_1_3 [5.1.1.3]
+    d_glutamate
   }
 }

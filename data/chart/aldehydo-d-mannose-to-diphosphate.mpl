@@ -18,7 +18,7 @@ pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate"
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_pimara_8_14_15_diene
+    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
+    epi_cedrol
   }
 }

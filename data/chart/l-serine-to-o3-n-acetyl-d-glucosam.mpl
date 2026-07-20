@@ -15,4 +15,10 @@ pathway l-serine-to-o3-n-acetyl-d-glucosam "L-serine to O3-[N-acetyl-β-D-glucos
     <-> ec_2_4_1_148 [2.4.1.148] +udpglcnac -udp -hplus
     o3_n_acetyl_d_glucosaminyl_1_3_n_acetyl_d_glucos
   }
+
+  branch from o_n_acetyl_d_galactosaminyl_l_serine side left {
+    o_n_acetyl_d_galactosaminyl_l_serine
+    <-> . +udp_d_galactose +udp +hplus
+    o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l
+  }
 }

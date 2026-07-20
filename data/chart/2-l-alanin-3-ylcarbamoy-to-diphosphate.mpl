@@ -18,7 +18,7 @@ pathway 2-l-alanin-3-ylcarbamoy-to-diphosphate "2-[(L-alanin-3-ylcarbamoy… to 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
-    2_epi_prezizaene
+    <-> ec_2_7_7_87 [2.7.7.87] +threonine +hco3 +atp +h2o
+    l_threonylcarbamoyladenylate
   }
 }

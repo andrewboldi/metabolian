@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy",
+  "name": "N-terminal glycyl-L-lysyl… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N-terminal glycyl-L-lysyl-L-glutamate(1+) residue to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58444"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142597"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_terminal_glycyl_l_lysyl_l_glutamate_1",
+      "name": "N-terminal glycyl-L-lysyl-L-glutamate(1+)",
+      "short": "N-terminal…",
+      "formula": "C13H24N4O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142597"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_terminal_n_methyl_l_glycyl_l_lysyl_l_glutamate",
+      "name": "N-terminal N-methyl-L-glycyl-L-lysyl-L-glutamate(1+)",
+      "short": "N-terminal…",
+      "formula": "C14H26N4O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142598"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_terminal_n_n_dimethyl_l_glycyl_l_lysyl_l_gluta",
+      "name": "N-terminal N,N-dimethyl-L-glycyl-L-lysyl-L-glutamate(1+)",
+      "short": "N-terminal…",
+      "formula": "C15H28N4O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142599"
+      }
+    },
+    {
+      "id": "n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl",
+      "name": "N-terminal N,N,N-trimethyl-L-glycyl-L-lysyl-L-glutamate",
+      "short": "N-terminal…",
+      "formula": "C16H30N4O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142600"
+      }
+    },
+    {
+      "id": "s_norreticuline",
+      "name": "(S)-norreticuline",
+      "formula": "C18H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143273"
+      }
+    },
+    {
+      "id": "s_norcodamine",
+      "name": "(S)-norcodamine",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143271"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-terminal glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine = N-terminal N...",
+      "equation": "N-terminal glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine = N-terminal N-methyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_glycyl_l_lysyl_l_glutamate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_methyl_l_glycyl_l_lysyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-terminal N-methyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine = N-t...",
+      "equation": "N-terminal N-methyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine = N-terminal N,N-dimethyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_n_methyl_l_glycyl_l_lysyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_n_dimethyl_l_glycyl_l_lysyl_l_gluta",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-terminal N,N-dimethyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine =...",
+      "equation": "N-terminal N,N-dimethyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-methionine = N-terminal N,N,N-trimethyl-glycyl-L-lysyl-L-glutamyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_n_n_dimethyl_l_glycyl_l_lysyl_l_gluta",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(S)-norreticuline + S-adenosyl-L-methionine = (S)-norcodamine + S-adenosyl-L-homocystei...",
+      "equation": "(S)-norreticuline + S-adenosyl-L-methionine = (S)-norcodamine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_norreticuline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_norcodamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22180"
+          }
+        ]
+      }
+    }
+  ]
+}

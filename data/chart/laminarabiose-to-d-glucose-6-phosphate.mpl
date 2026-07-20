@@ -24,25 +24,25 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
 
   branch from g1p side left {
     g1p
-    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
-    maltose
+    <-> ec_5_4_2_2 [5.4.2.2]
+    d_glucose_6_phosphate
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
-    1_2_di_o_sinapoyl_d_glucose
+    <-> ec_2_4_1_279 [2.4.1.279] +pi +d_glucose_1_phosphate
+    nigerose
   }
 
   branch from adp_d_glucoside side left {
     adp_d_glucoside
-    <-> ec_2_4_1_342 [2.4.1.342] +g1p +adp +hplus
-    maltose_1_phosphate
+    <-> ec_2_4_1_266 [2.4.1.266] +pg3 +adp +hplus
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_11 [2.7.7.11] +d_xylose_1_phosphate +utp +hplus
-    udp_d_xylose
+    <-> ec_4_6_1_1 [4.6.1.1] +atp
+    camp
   }
 }

@@ -20,7 +20,7 @@ pathway trans-polycis-decaprenyl-to-d-galf-1-5-d-galf "trans,polycis-decaprenylâ
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_4_1_326 [2.4.1.326] +dtdp_l_rhodosamine +aklavinone +hplus
-    aclacinomycin_t
+    <-> . +dtmp
+    dttp
   }
 }

@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-4-4-dimethylst-to-4-methyl-3-oxosteroi",
+  "name": "3β-hydroxy-4,4-dimethylst… to 4α-methyl-3-oxosteroid",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 3β-hydroxy-4,4-dimethylsteroid to 4α-methyl-3-oxosteroid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:60052"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143563"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_4_4_dimethylsteroid",
+      "name": "3β-hydroxy-4,4-dimethylsteroid",
+      "short": "3β-hydroxy-4,4-dime…",
+      "formula": "C21H35OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143563"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
+      "name": "3β-hydroxy-4β-hydroxymethyl-4α-methylsteroid",
+      "short": "3β-hydroxy-4β-hydro…",
+      "formula": "C21H35O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143566"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxy_4_formyl_4_methylsteroid",
+      "name": "3β-hydroxy-4β-formyl-4α-methylsteroid",
+      "short": "3β-hydroxy-4β-formy…",
+      "formula": "C21H33O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143568"
+      }
+    },
+    {
+      "id": "3_hydroxy_4_methylsteroid_4_carboxylate",
+      "name": "3β-hydroxy-4α-methylsteroid-4β-carboxylate",
+      "short": "3β-hydroxy-4α-methy…",
+      "formula": "C21H32O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143569"
+      }
+    },
+    {
+      "id": "4_methyl_3_oxosteroid",
+      "name": "4α-methyl-3-oxosteroid",
+      "short": "4α-methyl-3-oxoster…",
+      "formula": "C20H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143570"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_417",
+      "name": "3beta-hydroxysteroid-4beta-carboxylate 3-dehydrogenase (decarboxylating)",
+      "ec": [
+        "1.1.1.417"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 3beta-hydroxy-4,4-dimethylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-hydroxym...",
+      "equation": "a 3beta-hydroxy-4,4-dimethylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_4_4_dimethylsteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:60052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NADH + O2 + H(+) = a 3beta-h...",
+      "equation": "a 3beta-hydroxy-4beta-hydroxymethyl-4alpha-methylsteroid + NADH + O2 + H(+) = a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NAD(+) + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_4_hydroxymethyl_4_methylsteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_4_formyl_4_methylsteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NADH + O2 = a 3beta-hydroxy-4alpha-...",
+      "equation": "a 3beta-hydroxy-4beta-formyl-4alpha-methylsteroid + NADH + O2 = a 3beta-hydroxy-4alpha-methylsteroid-4beta-carboxylate + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_4_formyl_4_methylsteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_4_methylsteroid_4_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3beta-hydroxysteroid-4beta-carboxylate 3-dehydrogenase (decarboxylating)",
+      "equation": "a 3beta-hydroxy-4alpha-methylsteroid-4beta-carboxylate + NAD(+) = a 4alpha-methyl-3-oxosteroid + CO2 + NADH",
+      "ec": "1.1.1.417",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_4_methylsteroid_4_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methyl_3_oxosteroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_417"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60084"
+          }
+        ]
+      }
+    }
+  ]
+}

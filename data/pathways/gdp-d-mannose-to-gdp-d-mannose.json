@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gdp-d-mannose-to-gdp-d-mannose",
+  "name": "GDP-α-D-mannose to GDP-α-D-mannose",
+  "category": "other",
+  "summary": "A 3-step route from GDP-α-D-mannose(2−) to GDP-α-D-mannose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:63800"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57527"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "gdp_l_gulose",
+      "name": "GDP-β-L-gulose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149550"
+      }
+    },
+    {
+      "id": "gdp_l_galactose",
+      "name": "GDP-β-L-galactose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61454"
+      }
+    },
+    {
+      "id": "d_mannose_1_phosphate",
+      "name": "α-D-mannose 1-phosphate",
+      "short": "α-D-mannose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58409"
+      }
+    },
+    {
+      "id": "l_galactose_1_phosphate",
+      "name": "β-L-galactose 1-phosphate",
+      "short": "β-L-galactose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75522"
+      }
+    },
+    {
+      "id": "ins_1_p_cer_d18_0_24_0",
+      "name": "Ins-1-P-Cer(d18:0/24:0)",
+      "short": "Ins-1-P-Cer(d18:0/2…",
+      "formula": "C48H95NO11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65091"
+      }
+    },
+    {
+      "id": "man_ins_1_p_cer_d18_0_24_0",
+      "name": "Man-Ins-1-P-Cer(d18:0/24:0)",
+      "short": "Man-Ins-1-P-Cer(d18…",
+      "formula": "C54H105NO16P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167525"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_3_18",
+      "name": "GDP-mannose 3,5-epimerase",
+      "ec": [
+        "5.1.3.18"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_69",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.69"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "GDP-mannose 3,5-epimerase",
+      "equation": "GDP-alpha-D-mannose = GDP-beta-L-gulose",
+      "ec": "5.1.3.18",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_l_gulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:63800"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63800"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "GDP-mannose 3,5-epimerase",
+      "equation": "GDP-beta-L-gulose = GDP-beta-L-galactose",
+      "ec": "5.1.3.18",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_gulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "equation": "GDP-beta-L-galactose + alpha-D-mannose 1-phosphate = beta-L-galactose 1-phosphate + GDP-alpha-D-mannose",
+      "ec": "2.7.7.69",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_galactose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "N-tetracosanoylsphinganine-(1D-myo-inositol) + GDP-alpha-D-mannose = mannosyl-alpha-1->...",
+      "equation": "N-tetracosanoylsphinganine-(1D-myo-inositol) + GDP-alpha-D-mannose = mannosyl-alpha-1->6-inositol phospho-N-tetracosanoylsphinganine + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ins_1_p_cer_d18_0_24_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "man_ins_1_p_cer_d18_0_24_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33851"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33851"
+          }
+        ]
+      }
+    }
+  ]
+}

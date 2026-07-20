@@ -1,0 +1,351 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-trihomomethionine-to-e-6-methylsulfanyl-hex",
+  "name": "L-trihomomethionine to (E)-6-(methylsulfanyl)hex…",
+  "category": "other",
+  "summary": "A 3-step route from L-trihomomethionine zwitterion to (E)-6-(methylsulfanyl)hexanal oxime, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25711"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134633"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_trihomomethionine",
+      "name": "L-trihomomethionine",
+      "formula": "C8H17NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134633"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_hydroxy_l_trihomomethioninate",
+      "name": "N-hydroxy-L-trihomomethioninate",
+      "short": "N-hydroxy-L-trihomo…",
+      "formula": "C8H16NO3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134666"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_n_dihydroxy_l_trihomomethioninate",
+      "name": "N,N-dihydroxy-L-trihomomethioninate",
+      "short": "N,N-dihydroxy-L-tri…",
+      "formula": "C8H16NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134667"
+      }
+    },
+    {
+      "id": "e_6_methylsulfanyl_hexanal_oxime",
+      "name": "(E)-6-(methylsulfanyl)hexanal oxime",
+      "short": "6-(methylsulfanyl)h…",
+      "formula": "C7H15NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134681"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "valine",
+      "name": "L-Valine",
+      "formula": "C5H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57762"
+      }
+    },
+    {
+      "id": "e_2_methylpropanal_oxime",
+      "name": "(E)-2-methylpropanal oxime",
+      "short": "2-methylpropanal…",
+      "formula": "C4H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61143"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_38",
+      "name": "valine N-monooxygenase",
+      "ec": [
+        "1.14.14.38"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-trihomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-trihomo...",
+      "equation": "L-trihomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N-hydroxy-L-trihomomethionine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_trihomomethionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_hydroxy_l_trihomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25711"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-hydroxy-L-trihomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N,N-dihyd...",
+      "equation": "N-hydroxy-L-trihomomethionine + reduced [NADPH--hemoprotein reductase] + O2 = N,N-dihydroxy-L-trihomomethionine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_hydroxy_l_trihomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dihydroxy_l_trihomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N,N-dihydroxy-L-trihomomethionine + H(+) = (E)-6-(methylsulfanyl)hexanal oxime + CO2 + H2O",
+      "equation": "N,N-dihydroxy-L-trihomomethionine + H(+) = (E)-6-(methylsulfanyl)hexanal oxime + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_n_dihydroxy_l_trihomomethioninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_6_methylsulfanyl_hexanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25719"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "valine N-monooxygenase",
+      "equation": "L-valine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-2-methylpropanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.38",
+      "substrates": [
+        {
+          "metabolite": "valine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_2_methylpropanal_oxime",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28606"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28606"
+          }
+        ]
+      }
+    }
+  ]
+}

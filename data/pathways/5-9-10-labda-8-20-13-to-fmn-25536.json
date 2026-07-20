@@ -112,41 +112,40 @@
       }
     },
     {
-      "id": "ditp",
-      "name": "dITP",
-      "formula": "C10H11N4O13P3",
-      "charge": -4,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:61382"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "2_deoxyinosine_5_phosphate",
-      "name": "2'-deoxyinosine 5'-phosphate",
-      "short": "2'-deoxyinosine 5'-P",
-      "formula": "C10H11N4O7P",
-      "charge": -2,
+      "id": "cuprenene",
+      "name": "(−)-α-cuprenene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61194"
+        "chebi": "CHEBI:63701"
       }
     },
     {
-      "id": "triacontanoate",
-      "name": "triacontanoate",
-      "formula": "C30H59O2",
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:31004"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "hydroxytriacontanoate",
-      "name": "ω-hydroxytriacontanoate",
-      "short": "ω-hydroxytriacontan…",
-      "formula": "C30H59O3",
+      "id": "11s_12r_eet",
+      "name": "(11S,12R)-EET",
+      "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76044"
+        "chebi": "CHEBI:131969"
       }
     }
   ],
@@ -173,24 +172,10 @@
       ]
     },
     {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
+      "id": "ec_4_2_3_95",
+      "name": "(-)-alpha-cuprenene synthase",
       "ec": [
-        "3.6.1.9"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_66",
-      "name": "XTP/dITP diphosphatase",
-      "ec": [
-        "3.6.1.66"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_177",
-      "name": "ultra-long-chain fatty acid omega-hydroxylase",
-      "ec": [
-        "1.14.14.177"
+        "4.2.3.95"
       ]
     }
   ],
@@ -352,61 +337,52 @@
     },
     {
       "id": "r4",
-      "name": "nucleotide diphosphatase",
-      "equation": "dITP + H2O = dIMP + diphosphate + H(+)",
-      "ec": "3.6.1.9",
+      "name": "(-)-alpha-cuprenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cuprenene + diphosphate",
+      "ec": "4.2.3.95",
       "substrates": [
         {
-          "metabolite": "ditp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_deoxyinosine_5_phosphate",
+          "metabolite": "cuprenene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_1_9"
+          "enzyme": "ec_4_2_3_95"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:28342"
+        "rhea": "RHEA:32027"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28342"
+            "id": "RHEA:32027"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "ultra-long-chain fatty acid omega-hydroxylase",
-      "equation": "triacontanoate + reduced [NADPH--hemoprotein reductase] + O2 = omega-hydroxy-triacontanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.177",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,12R)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "triacontanoate",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -420,7 +396,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxytriacontanoate",
+          "metabolite": "11s_12r_eet",
           "stoichiometry": 1
         },
         {
@@ -436,22 +412,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_177"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50336"
+        "rhea": "RHEA:49876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50336"
+            "id": "RHEA:49876"
           }
         ]
       }

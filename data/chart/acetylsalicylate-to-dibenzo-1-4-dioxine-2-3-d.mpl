@@ -18,19 +18,19 @@ pathway acetylsalicylate-to-dibenzo-1-4-dioxine-2-3-d "acetylsalicylate to diben
 
   branch from salicylate side left {
     salicylate
-    <-> ec_4_2_99_21 [4.2.99.21] +pyruvate
-    isochorismate
+    <-> . +udp_d_glucose +udp +hplus
+    2_d_glucopyranosyloxy_benzoate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_5_1_52 [2.5.1.52] +pyridine_3_4_diol +o_acetyl_l_serine +hplus
-    3_3_4_dihydroxypyridinium_1_yl_l_alanine
+    <-> ec_3_1_1_66 [3.1.1.66] +5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene +h2o +hplus
+    5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene
   }
 
   branch from catechol side left {
     catechol
-    <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
-    1r_2r_cyclohexa_3_5_diene_1_2_diol
+    <-> ec_4_1_1_46 [4.1.1.46] +hplus +co2
+    2_3_dihydroxybenzoate
   }
 }

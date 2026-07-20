@@ -1,0 +1,423 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-dopa-to-r-rosmarinate",
+  "name": "L-dopa to (R)-rosmarinate",
+  "category": "other",
+  "summary": "A 4-step route from L-dopa zwitterion to (R)-rosmarinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24760"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57504"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57504"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_3_4_dihydroxyphenyl_propanoate",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate",
+      "short": "3-(3,4-dihydroxyphe…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58744"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57770"
+      }
+    },
+    {
+      "id": "dihydrocaffeoyl_coa",
+      "name": "dihydrocaffeoyl-CoA",
+      "formula": "C30H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87137"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "2r_3_3_4_dihydroxyphenyl_lactate",
+      "name": "(2R)-3-(3,4-dihydroxyphenyl)lactate",
+      "short": "3-(3,4-dihydroxyphe…",
+      "formula": "C9H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71492"
+      }
+    },
+    {
+      "id": "r_rosmarinate",
+      "name": "(R)-rosmarinate",
+      "formula": "C18H15O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71493"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "l_thialysinium",
+      "name": "L-thialysinium",
+      "formula": "C5H13N2O2S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:156132"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_acetaldehyde_l_cysteine",
+      "name": "S-(acetaldehyde)-L-cysteine",
+      "short": "S-(acetaldehyde)-L-…",
+      "formula": "C5H9NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_1_22",
+      "name": "3,4-dihydroxyphenylalanine reductive deaminase",
+      "ec": [
+        "4.3.1.22"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_23",
+      "name": "caffeate CoA-transferase",
+      "ec": [
+        "2.8.3.23"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_140",
+      "name": "rosmarinate synthase",
+      "ec": [
+        "2.3.1.140"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3,4-dihydroxyphenylalanine reductive deaminase",
+      "equation": "L-dopa + NADH + H(+) = 3-(3,4-dihydroxyphenyl)propanoate + NH4(+) + NAD(+)",
+      "ec": "4.3.1.22",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "equation": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "caffeate CoA-transferase",
+      "equation": "hydrocaffeoyl-CoA + (E)-caffeate = 3-(3,4-dihydroxyphenyl)propanoate + (E)-caffeoyl-CoA",
+      "ec": "2.8.3.23",
+      "substrates": [
+        {
+          "metabolite": "dihydrocaffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "rosmarinate synthase",
+      "equation": "(2R)-3-(3,4-dihydroxyphenyl)lactate + (E)-caffeoyl-CoA = (R)-rosmarinate + CoA",
+      "ec": "2.3.1.140",
+      "substrates": [
+        {
+          "metabolite": "2r_3_3_4_dihydroxyphenyl_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_rosmarinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_140"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22344"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22344"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NAD...",
+      "equation": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_thialysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetaldehyde_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65196"
+          }
+        ]
+      }
+    }
+  ]
+}

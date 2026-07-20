@@ -15,4 +15,10 @@ pathway chorismate-to-1r-6r-2-3-carboxylatop "chorismate to (1R,6R)-2-(3-carboxy
     <-> ec_4_2_99_20 [4.2.99.20] -pyruvate
     1r_6r_2_3_carboxylatopropanoyl_6_hydroxycyclohe
   }
+
+  branch from isochorismate side left {
+    isochorismate
+    <-> . +glutamate +atp +amp +ppi +hplus
+    isochorismoyl_l_glutamate
+  }
 }

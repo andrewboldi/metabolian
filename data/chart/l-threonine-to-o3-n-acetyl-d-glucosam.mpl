@@ -15,10 +15,4 @@ pathway l-threonine-to-o3-n-acetyl-d-glucosam "L-threonine to O3-[N-acetyl-β-D-
     <-> ec_2_4_1_148 [2.4.1.148] +udpglcnac -udp -hplus
     o3_n_acetyl_d_glucosaminyl_1_3_n_acetyl_d_glucos
   }
-
-  branch from o_n_acetyl_d_galactosaminyl_l_threonine side left {
-    o_n_acetyl_d_galactosaminyl_l_threonine
-    <-> ec_3_2_1_217 [3.2.1.217] +h2o +l_threonine
-    n_acetyl_d_galactosamine
-  }
 }

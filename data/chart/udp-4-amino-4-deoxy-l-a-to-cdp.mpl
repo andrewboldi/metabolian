@@ -34,19 +34,19 @@ pathway udp-4-amino-4-deoxy-l-a-to-cdp "UDP-4-amino-4-deoxy-β-L-a… to CDP" {
 
   branch from formate side right {
     formate
-    <-> ec_1_17_5_3 [1.17.5.3] +1_4_benzoquinones +hplus +co2
-    hydroquinones
+    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
+    16s_deshydroxymethyl_stemmadenine
   }
 
   branch from ditrans_polycis_undecaprenyl_phosphate side left {
     ditrans_polycis_undecaprenyl_phosphate
-    <-> ec_2_7_8_31 [2.7.8.31] +udp_d_glucose +ump
-    d_glucosyl_ditrans_polycis_undecaprenyl_diphosp
+    <-> ec_2_7_8_40 [2.7.8.40] +udp_n_acetyl_d_galactosamine +ump
+    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
   }
 
   branch from ump side right {
     ump
-    <-> ec_2_7_8_32 [2.7.8.32] +d_manp_1_3_d_manp +udp_d_xylose +hplus
-    3_o_6_o_d_xylosylphospho_d_mannopyranosyl_d_mann
+    <-> . +h2o +pi +hplus
+    utp
   }
 }

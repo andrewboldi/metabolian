@@ -28,7 +28,7 @@ pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +fmnh2 +o2 +h2o +hplus
-    24s_24_hydroxycholesterol
+    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
+    epoxysqualene
   }
 }

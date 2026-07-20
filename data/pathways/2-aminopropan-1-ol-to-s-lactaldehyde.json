@@ -1,0 +1,329 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-aminopropan-1-ol-to-s-lactaldehyde",
+  "name": "2-aminopropan-1-ol to (S)-lactaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-aminopropan-1-ol(1+) to (S)-lactaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:76795"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:195439"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_aminopropan_1_ol",
+      "name": "2-aminopropan-1-ol",
+      "formula": "C3H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:195439"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27957"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_propane_1_2_diol",
+      "name": "(S)-propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29002"
+      }
+    },
+    {
+      "id": "s_lactaldehyde",
+      "name": "(S)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18041"
+      }
+    },
+    {
+      "id": "s_piperazin_4_ium_2_carboxamide",
+      "name": "(S)-piperazin-4-ium-2-carboxamide",
+      "short": "piperazin-4-ium-2-c…",
+      "formula": "C5H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58919"
+      }
+    },
+    {
+      "id": "s_piperazine_2_carboxylic_acid",
+      "name": "(S)-piperazine-2-carboxylic acid",
+      "short": "piperazine-2-carbox…",
+      "formula": "C5H10N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58920"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_77",
+      "name": "lactaldehyde reductase",
+      "ec": [
+        "1.1.1.77"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_101",
+      "name": "L-proline amide hydrolase",
+      "ec": [
+        "3.5.1.101"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-aminopropan-1-ol + NAD(+) + H2O = hydroxyacetone + NH4(+) + NADH + H(+)",
+      "equation": "2-aminopropan-1-ol + NAD(+) + H2O = hydroxyacetone + NH4(+) + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_aminopropan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:76795"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76795"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydroxyacetone + NADH + H(+) = (S)-propane-1,2-diol + NAD(+)",
+      "equation": "hydroxyacetone + NADH + H(+) = (S)-propane-1,2-diol + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lactaldehyde reductase",
+      "equation": "(S)-propane-1,2-diol + NAD(+) = (S)-lactaldehyde + NADH + H(+)",
+      "ec": "1.1.1.77",
+      "substrates": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15933"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-proline amide hydrolase",
+      "equation": "(S)-piperazine-2-carboxamide + H2O = (S)-piperazine-2-carboxylate + NH4(+)",
+      "ec": "3.5.1.101",
+      "substrates": [
+        {
+          "metabolite": "s_piperazin_4_ium_2_carboxamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_piperazine_2_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26550"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26550"
+          }
+        ]
+      }
+    }
+  ]
+}

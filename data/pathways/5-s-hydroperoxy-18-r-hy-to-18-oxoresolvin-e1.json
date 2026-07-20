@@ -1,0 +1,212 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-s-hydroperoxy-18-r-hy-to-18-oxoresolvin-e1",
+  "name": "5(S)-hydroperoxy-18(R)-hy… to 18-oxoresolvin E1",
+  "category": "other",
+  "summary": "A 3-step route from 5(S)-hydroperoxy-18(R)-hydroxy-(6E,8Z,11Z,14Z,16E)-icosapentaenoate to 18-oxoresolvin E1(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50268"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:132218"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+      "name": "5(S)-hydroperoxy-18(R)-hydroxy-(6E,8Z,11Z,14Z,16E)-icosapentaenoate",
+      "short": "5(S)-hydroperoxy-18…",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132218"
+      }
+    },
+    {
+      "id": "5_s_6_s_epoxy_18_r_hydroxy_7e_9e_11z_14z_16e_ico",
+      "name": "5(S),6(S)-epoxy-18(R)-hydroxy-(7E,9E,11Z,14Z,16E)-icosapentaenoate",
+      "short": "5(S),6(S)-epoxy-18(…",
+      "formula": "C20H27O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132219"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "resolvin_e1",
+      "name": "resolvin E1",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91000"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "18_oxoresolvin_e1",
+      "name": "18-oxoresolvin E1",
+      "formula": "C20H27O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91001"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate = (5S,6S)-epoxy-(1...",
+      "equation": "(5S)-hydroperoxy-(18R)-hydroxy-(6E,8Z,11Z,14Z,16E)-eicosapentaenoate = (5S,6S)-epoxy-(18R)-hydroxy-(7E,9E,11Z,14Z,16E)-eicosapentaenoate + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_s_6_s_epoxy_18_r_hydroxy_7e_9e_11z_14z_16e_ico",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(5S,6S)-epoxy-(18R)-hydroxy-(7E,9E,11Z,14Z,16E)-eicosapentaenoate + H2O = resolvin E1",
+      "equation": "(5S,6S)-epoxy-(18R)-hydroxy-(7E,9E,11Z,14Z,16E)-eicosapentaenoate + H2O = resolvin E1",
+      "substrates": [
+        {
+          "metabolite": "5_s_6_s_epoxy_18_r_hydroxy_7e_9e_11z_14z_16e_ico",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "resolvin_e1",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "resolvin E1 + NAD(+) = 18-oxo-resolvin E1 + NADH + H(+)",
+      "equation": "resolvin E1 + NAD(+) = 18-oxo-resolvin E1 + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "resolvin_e1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_oxoresolvin_e1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49244"
+          }
+        ]
+      }
+    }
+  ]
+}

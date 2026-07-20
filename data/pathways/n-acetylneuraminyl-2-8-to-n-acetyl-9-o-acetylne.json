@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylneuraminyl-2-8-to-n-acetyl-9-o-acetylne",
+  "name": "α-N-acetylneuraminyl-(2→8… to α-N-acetyl-9-O-acetylneur…",
+  "category": "other",
+  "summary": "A 3-step route from α-N-acetylneuraminyl-(2→8)-α-N-acetylneuraminyl-(2→8)-α-N-acetylneuraminyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide(3−) to α-N-acetyl-9-O-acetylneuraminosyl-(2→8)-N-acetyl-α-neuraminosyl-(2→8)-N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:79583"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:79216"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_8_n",
+      "name": "α-N-acetylneuraminyl-(2→8)-α-N-acetylneuraminyl-(2→8)-α-N-acetylneuraminyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "α-N-acetylneuraminy…",
+      "formula": "C49H75N4O37R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:79216"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneur",
+      "name": "N-acetyl-7-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "N-acetyl-7-O-acetyl…",
+      "formula": "C51H77N4O38R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:230475"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "n_acetyl_8_o_acetylneuraminosyl_2_8_n_acetylneur",
+      "name": "N-acetyl-8-O-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→8)-α-N-acetylneuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1)-ceramide",
+      "short": "N-acetyl-8-O-acetyl…",
+      "formula": "C51H77N4O38R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:230476"
+      }
+    },
+    {
+      "id": "n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne",
+      "name": "α-N-acetyl-9-O-acetylneuraminosyl-(2→8)-N-acetyl-α-neuraminosyl-(2→8)-N-acetyl-α-neuraminosyl-(2→3)-β-D-galactosyl-(1→4)-β-D-glucosyl-(1↔1')-ceramide",
+      "short": "α-N-acetyl-9-O-acet…",
+      "formula": "C51H77N4O38R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:142349"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a ganglioside GT3 + acetyl-CoA = a ganglioside Ac-O-7-GT3 + CoA",
+      "equation": "a ganglioside GT3 + acetyl-CoA = a ganglioside Ac-O-7-GT3 + CoA",
+      "substrates": [
+        {
+          "metabolite": "n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_8_n",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneur",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:79583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79583"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a ganglioside Ac-O-7-GT3 = a ganglioside Ac-O-8-GT3",
+      "equation": "a ganglioside Ac-O-7-GT3 = a ganglioside Ac-O-8-GT3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_7_o_acetylneuraminosyl_2_8_n_acetylneur",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_8_o_acetylneuraminosyl_2_8_n_acetylneur",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a ganglioside Ac-O-8-GT3 = a ganglioside Ac-O-9-GT3",
+      "equation": "a ganglioside Ac-O-8-GT3 = a ganglioside Ac-O-9-GT3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_8_o_acetylneuraminosyl_2_8_n_acetylneur",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79611"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79611"
+          }
+        ]
+      }
+    }
+  ]
+}

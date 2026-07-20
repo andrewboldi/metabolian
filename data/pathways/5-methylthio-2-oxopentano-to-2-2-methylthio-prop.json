@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-methylthio-2-oxopentano-to-2-2-methylthio-prop",
+  "name": "5-methylthio-2-oxopentano… to 2-(2-methylthio)propylmal…",
+  "category": "other",
+  "summary": "A 3-step route from 5-methylthio-2-oxopentanoate to 2-(2-methylthio)propylmaleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25605"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58815"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_methylthio_2_oxopentanoate",
+      "name": "5-methylthio-2-oxopentanoate",
+      "short": "5-methylthio-2-oxop…",
+      "formula": "C6H9O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58815"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_3_methylthiopropyl_malate",
+      "name": "2-(3-methylthiopropyl)malate",
+      "short": "2-(3-methylthioprop…",
+      "formula": "C8H12O5S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58817"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_3_methylthio_propylmalate",
+      "name": "3-(3-methylthio)propylmalate",
+      "short": "3-(3-methylthio)pro…",
+      "formula": "C8H12O5S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:133501"
+      }
+    },
+    {
+      "id": "2_2_methylthio_propylmaleate",
+      "name": "2-(2-methylthio)propylmaleate",
+      "short": "2-(2-methylthio)pro…",
+      "formula": "C8H10O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:133500"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_3_17",
+      "name": "methylthioalkylmalate synthase",
+      "ec": [
+        "2.3.3.17"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_170",
+      "name": "2-(omega-methylthio)alkylmalate dehydratase",
+      "ec": [
+        "4.2.1.170"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methylthioalkylmalate synthase",
+      "equation": "2-(5-methylsulfanyl)oxopentanoate + acetyl-CoA + H2O = 2-(3-methylsulfanyl)propylmalate + CoA + H(+)",
+      "ec": "2.3.3.17",
+      "substrates": [
+        {
+          "metabolite": "5_methylthio_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_methylthiopropyl_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25605"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-(3-methylsulfanyl)propylmalate = 3-(3-methylsulfanyl)propylmalate",
+      "equation": "2-(3-methylsulfanyl)propylmalate = 3-(3-methylsulfanyl)propylmalate",
+      "substrates": [
+        {
+          "metabolite": "2_3_methylthiopropyl_malate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_methylthio_propylmalate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-(omega-methylthio)alkylmalate dehydratase",
+      "equation": "3-(3-methylsulfanyl)propylmalate = 2-(2-methylsulfanyl)propylmaleate + H2O",
+      "ec": "4.2.1.170",
+      "substrates": [
+        {
+          "metabolite": "3_3_methylthio_propylmalate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_methylthio_propylmaleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_170"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50660"
+          }
+        ]
+      }
+    }
+  ]
+}

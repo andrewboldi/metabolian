@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "z-24-ethylidenelophenol-to-4-carboxy-stigmasta",
+  "name": "(Z)-24-ethylidenelophenol to 4α-carboxy-stigmasta-7,24…",
+  "category": "other",
+  "summary": "A 3-step route from (Z)-24-ethylidenelophenol to 4α-carboxy-stigmasta-7,24(241)-dien-3β-ol(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59032"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:33203"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "z_24_ethylidenelophenol",
+      "name": "(Z)-24-ethylidenelophenol",
+      "short": "24-ethylidenelophen…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33203"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxymethyl_stigmasta_7_24_241_dien_3_ol",
+      "name": "4α-hydroxymethyl-stigmasta-7,24(241)-dien-3β-ol",
+      "short": "4α-hydroxymethyl-st…",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142928"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "24z_4_formyl_stigmasta_7_24_241_dien_3_ol",
+      "name": "(24Z)-4α-formyl-stigmasta-7,24(241)-dien-3β-ol",
+      "short": "4α-formyl-stigmasta…",
+      "formula": "C30H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142929"
+      }
+    },
+    {
+      "id": "4_carboxy_stigmasta_7_24_241_dien_3_ol",
+      "name": "4α-carboxy-stigmasta-7,24(241)-dien-3β-ol",
+      "short": "4α-carboxy-stigmast…",
+      "formula": "C30H47O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142919"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(Z)-24-ethylidenelophenol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymeth...",
+      "equation": "(Z)-24-ethylidenelophenol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-hydroxymethyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "z_24_ethylidenelophenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxymethyl_stigmasta_7_24_241_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4alpha-hydroxymethyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O...",
+      "equation": "4alpha-hydroxymethyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = 4alpha-formyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxymethyl_stigmasta_7_24_241_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24z_4_formyl_stigmasta_7_24_241_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4alpha-formyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+...",
+      "equation": "4alpha-formyl-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(II)-[cytochrome b5] + O2 + H(+) = 4alpha-carboxy-stigmasta-7,24(24(1))-dien-3beta-ol + 2 Fe(III)-[cytochrome b5] + H2O",
+      "substrates": [
+        {
+          "metabolite": "24z_4_formyl_stigmasta_7_24_241_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_stigmasta_7_24_241_dien_3_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59040"
+          }
+        ]
+      }
+    }
+  ]
+}

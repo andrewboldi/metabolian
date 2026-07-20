@@ -138,40 +138,21 @@
       }
     },
     {
-      "id": "l_dihomomethionine",
-      "name": "L-dihomomethionine",
-      "formula": "C7H15NO2S",
-      "charge": 0,
+      "id": "22_oxodocosanoate",
+      "name": "22-oxodocosanoate",
+      "formula": "C22H41O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:134632"
+        "chebi": "CHEBI:76298"
       }
     },
     {
-      "id": "e_5_methylsulfanyl_pentanal_oxime",
-      "name": "(E)-5-(methylsulfanyl)pentanal oxime",
-      "short": "5-(methylsulfanyl)p…",
-      "formula": "C6H13NOS",
-      "charge": 0,
+      "id": "docosanedioate",
+      "name": "docosanedioate",
+      "formula": "C22H40O4",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:134682"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "iron",
-      "name": "iron",
-      "formula": "Fe",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:29034"
+        "chebi": "CHEBI:76299"
       }
     },
     {
@@ -182,25 +163,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29919"
-      }
-    },
-    {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:29033"
-      }
-    },
-    {
-      "id": "trioxidosulfanidosulfate",
-      "name": "trioxidosulfanidosulfate",
-      "short": "trioxidosulfanidosu…",
-      "formula": "HO3S2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:33542"
       }
     }
   ],
@@ -231,20 +193,6 @@
       "name": "2-hydroxybiphenyl 3-monooxygenase",
       "ec": [
         "1.14.13.44"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_42",
-      "name": "homomethionine N-monooxygenase",
-      "ec": [
-        "1.14.14.42"
-      ]
-    },
-    {
-      "id": "ec_1_8_2_5",
-      "name": "thiosulfate reductase (cytochrome)",
-      "ec": [
-        "1.8.2.5"
       ]
     }
   ],
@@ -479,110 +427,98 @@
     },
     {
       "id": "r5",
-      "name": "homomethionine N-monooxygenase",
-      "equation": "L-dihomomethionine + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (E)-5-(methylsulfanyl)pentanal oxime + 2 oxidized [NADPH--hemoprotein reductase] + CO2 + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.42",
+      "name": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxid...",
+      "equation": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "l_dihomomethionine",
+          "metabolite": "22_oxodocosanoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_5_methylsulfanyl_pentanal_oxime",
+          "metabolite": "docosanedioate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_42"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:32719"
+        "rhea": "RHEA:39043"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32719"
+            "id": "RHEA:39043"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "thiosulfate reductase (cytochrome)",
-      "equation": "2 Fe(III)-[cytochrome c3] + hydrogen sulfide + sulfite = 2 Fe(II)-[cytochrome c3] + thiosulfate",
-      "ec": "1.8.2.5",
+      "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
+      "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
       "substrates": [
-        {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        },
         {
           "metabolite": "h2s",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sulfite",
-          "stoichiometry": 1
+          "metabolite": "nad",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "fe2",
-          "stoichiometry": 2
+          "metabolite": "sulfite",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "trioxidosulfanidosulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "nadh",
+          "stoichiometry": 3
+        },
         {
-          "enzyme": "ec_1_8_2_5"
+          "metabolite": "hplus",
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:51932"
+        "rhea": "RHEA:55316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51932"
+            "id": "RHEA:55316"
           }
         ]
       }

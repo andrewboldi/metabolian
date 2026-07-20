@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "fadh2-c4-hydroperoxide-to-rifampicin-para-naphth",
+  "name": "FADH2-C4α-hydroperoxide to rifampicin para-naphthoqu…",
+  "category": "other",
+  "summary": "A 3-step route from FADH2-C4α-hydroperoxide(2−) to rifampicin para-naphthoquinone carboxamide(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58700"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142775"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fadh2_c4_hydroperoxide",
+      "name": "FADH2-C4α-hydroperoxide",
+      "short": "FADH2-C4α-hydropero…",
+      "formula": "C27H33N9O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142775"
+      }
+    },
+    {
+      "id": "rifampicin",
+      "name": "rifampicin",
+      "formula": "C43H58N4O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71365"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "rifampicin_hemiaminal",
+      "name": "rifampicin hemiaminal",
+      "short": "rifampicin…",
+      "formula": "C43H56N4O13",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142729"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "rifampicin_ortho_naphthoquinone_carboxamide",
+      "name": "rifampicin ortho-naphthoquinone carboxamide",
+      "short": "rifampicin…",
+      "formula": "C43H56N4O13",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142730"
+      }
+    },
+    {
+      "id": "rifampicin_para_naphthoquinone_carboxamide",
+      "name": "rifampicin para-naphthoquinone carboxamide",
+      "short": "rifampicin…",
+      "formula": "C43H56N4O13",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142731"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "FADH2-C4alpha-hydroperoxide + rifampicin + NADPH = rifampicin hemiaminal + FADH2 + NADP...",
+      "equation": "FADH2-C4alpha-hydroperoxide + rifampicin + NADPH = rifampicin hemiaminal + FADH2 + NADP(+) + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "fadh2_c4_hydroperoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "rifampicin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rifampicin_hemiaminal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "rifampicin hemiaminal = rifampicin ortho-naphthoquinone carboxamide",
+      "equation": "rifampicin hemiaminal = rifampicin ortho-naphthoquinone carboxamide",
+      "substrates": [
+        {
+          "metabolite": "rifampicin_hemiaminal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rifampicin_ortho_naphthoquinone_carboxamide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "rifampicin ortho-naphthoquinone carboxamide = rifampicin para-naphthoquinone carboxamide",
+      "equation": "rifampicin ortho-naphthoquinone carboxamide = rifampicin para-naphthoquinone carboxamide",
+      "substrates": [
+        {
+          "metabolite": "rifampicin_ortho_naphthoquinone_carboxamide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "rifampicin_para_naphthoquinone_carboxamide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58708"
+          }
+        ]
+      }
+    }
+  ]
+}

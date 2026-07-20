@@ -24,7 +24,7 @@ pathway taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4 "taxa-4(20),11-dien-5α-
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_80 [1.14.14.80] +octadecanoate +fmnh2 +o2 +h2o +hplus
-    18_hydroxyoctadecanoate
+    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_h2
   }
 }

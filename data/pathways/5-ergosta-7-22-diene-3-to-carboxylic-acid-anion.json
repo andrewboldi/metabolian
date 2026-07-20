@@ -1,0 +1,385 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-ergosta-7-22-diene-3-to-carboxylic-acid-anion",
+  "name": "5α-ergosta-7,22-diene-3β,… to carboxylic acid anion",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 5α-ergosta-7,22-diene-3β,5-diol to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22064"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17938"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_ergosta_7_22_diene_3_5_diol",
+      "name": "5α-ergosta-7,22-diene-3β,5-diol",
+      "short": "5α-ergosta-7,22-die…",
+      "formula": "C28H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17938"
+      }
+    },
+    {
+      "id": "ergosterol",
+      "name": "ergosterol",
+      "formula": "C28H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16933"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "ergosteryl_ester",
+      "name": "ergosteryl ester",
+      "formula": "C29H43O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52320"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_l_aspartate_adenylyl_1_group",
+      "name": "3'-(L-aspartate)adenylyl(1−) group",
+      "short": "3'-(L-aspartate)ade…",
+      "formula": "C14H17N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78516"
+      }
+    },
+    {
+      "id": "1_ergostan_3_yl_l_aspartate",
+      "name": "1-(ergostan-3β-yl)-L-aspartate",
+      "short": "1-(ergostan-3β-yl)-…",
+      "formula": "C32H49NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195261"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "3_acylpyruvate",
+      "name": "3-acylpyruvate",
+      "formula": "C4H2O4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57278"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_62",
+      "name": "5alpha-hydroxysteroid dehydratase",
+      "ec": [
+        "4.2.1.62"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_37",
+      "name": "ergosteryl-3beta-O-L-aspartate synthase",
+      "ec": [
+        "2.3.2.37"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_5",
+      "name": "acylpyruvate hydrolase",
+      "ec": [
+        "3.7.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5alpha-hydroxysteroid dehydratase",
+      "equation": "5alpha-ergosta-7,22-diene-3beta,5-diol = ergosterol + H2O",
+      "ec": "4.2.1.62",
+      "substrates": [
+        {
+          "metabolite": "5_ergosta_7_22_diene_3_5_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ergosterol + an acyl-CoA = ergosteryl ester + CoA",
+      "equation": "ergosterol + an acyl-CoA = ergosteryl ester + CoA",
+      "substrates": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ergosteryl ester + H2O = ergosterol + a carboxylate + H(+)",
+      "equation": "ergosteryl ester + H2O = ergosterol + a carboxylate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "ergosteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ergosteryl-3beta-O-L-aspartate synthase",
+      "equation": "L-aspartyl-tRNA(Asp) + ergosterol = 1-(ergostan-3beta-yl)-L-aspartate + tRNA(Asp)",
+      "ec": "2.3.2.37",
+      "substrates": [
+        {
+          "metabolite": "3_l_aspartate_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ergosterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_ergostan_3_yl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:76555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "acylpyruvate hydrolase",
+      "equation": "a 3-acylpyruvate + H2O = a carboxylate + pyruvate + H(+)",
+      "ec": "3.7.1.5",
+      "substrates": [
+        {
+          "metabolite": "3_acylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:19009"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19009"
+          }
+        ]
+      }
+    }
+  ]
+}

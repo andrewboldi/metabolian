@@ -18,13 +18,13 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_42 [2.6.1.42] +valine +akg
-    kiv
+    <-> ec_2_6_1_9 [2.6.1.9] +l_histidinol_phosphate +akg
+    3_imidazol_4_yl_2_oxopropyl_phosphate
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +4_methylquinoline +h2o +hydrogen_donor
-    4_methylquinolin_2_1h_one
+    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_donor
+    all_trans_3_4_didehydrolycopene
   }
 }

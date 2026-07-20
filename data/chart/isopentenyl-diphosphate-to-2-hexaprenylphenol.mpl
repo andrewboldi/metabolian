@@ -24,7 +24,7 @@ pathway isopentenyl-diphosphate-to-2-hexaprenylphenol "isopentenyl diphosphate t
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_227 [4.2.3.227] +2_cis_6_trans_farnesyl_diphosphate
-    cedr_8_ene
+    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +selenophosphate +gpp +h2o +hplus +thiogeraniol +pi
+    5_methylaminomethyl_2_selenouridine_5_monophosph
   }
 }

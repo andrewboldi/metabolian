@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "caffeine-to-formaldehyde",
   "name": "caffeine to formaldehyde",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from caffeine to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -127,49 +127,39 @@
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61929"
-      }
-    },
-    {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "diuron",
+      "name": "diuron",
+      "formula": "C9H10Cl2N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:116509"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "diuron_desmethyl",
+      "name": "diuron-desmethyl",
+      "formula": "C8H8Cl2N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83466"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
       }
     }
   ],
@@ -193,13 +183,6 @@
       "name": "7-methylxanthine demethylase",
       "ec": [
         "1.14.13.128"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_68",
-      "name": "[histone H3]-trimethyl-L-lysine(27) demethylase",
-      "ec": [
-        "1.14.11.68"
       ]
     }
   ],
@@ -389,57 +372,55 @@
     },
     {
       "id": "r4",
-      "name": "[histone H3]-trimethyl-L-lysine(27) demethylase",
-      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(27)-[histone H3] + 2 2-oxoglutarate + 2 O2 = N(6)-methyl-L-lysyl(27)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
-      "ec": "1.14.11.68",
+      "name": "diuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3,4-dichlorophenyl)-1-methy...",
+      "equation": "diuron + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 3-(3,4-dichlorophenyl)-1-methylurea + formaldehyde + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "diuron",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
           "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "diuron_desmethyl",
           "stoichiometry": 1
         },
         {
           "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "succinate",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_68"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:60224"
+        "rhea": "RHEA:65788"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60224"
+            "id": "RHEA:65788"
           }
         ]
       }

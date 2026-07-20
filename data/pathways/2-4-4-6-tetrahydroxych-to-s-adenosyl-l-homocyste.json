@@ -105,42 +105,51 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "7_3_methylbut_2_enyl_l_tryptophan",
-      "name": "7-(3-methylbut-2-enyl)-L-tryptophan",
-      "short": "7-(3-methylbut-2-en…",
-      "formula": "C16H20N2O2",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62497"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "4_hydroxyisoflavones",
-      "name": "4'-hydroxyisoflavones",
-      "short": "4'-hydroxyisoflavon…",
-      "formula": "C15HO3R9",
+      "id": "epi_bisabolol",
+      "name": "(+)-epi-α-bisabolol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63328"
+        "chebi": "CHEBI:68658"
       }
     },
     {
-      "id": "4_methoxyisoflavones",
-      "name": "4'-methoxyisoflavones",
-      "short": "4'-methoxyisoflavon…",
-      "formula": "C16H3O3R9",
-      "charge": 0,
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133959"
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74491"
       }
     }
   ],
@@ -167,17 +176,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_80",
-      "name": "7-dimethylallyltryptophan synthase",
+      "id": "ec_4_2_3_138",
+      "name": "(+)-epi-alpha-bisabolol synthase",
       "ec": [
-        "2.5.1.80"
+        "4.2.3.138"
       ]
     },
     {
-      "id": "ec_2_1_1_46",
-      "name": "isoflavone 4'-O-methyltransferase",
+      "id": "ec_2_1_1_180",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
       "ec": [
-        "2.1.1.46"
+        "2.1.1.180"
       ]
     }
   ],
@@ -327,22 +336,22 @@
     },
     {
       "id": "r4",
-      "name": "7-dimethylallyltryptophan synthase",
-      "equation": "dimethylallyl diphosphate + L-tryptophan = 7-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
-      "ec": "2.5.1.80",
+      "name": "(+)-epi-alpha-bisabolol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epi-alpha-bisabolol + diphosphate",
+      "ec": "4.2.3.138",
       "substrates": [
         {
-          "metabolite": "dmapp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "7_3_methylbut_2_enyl_l_tryptophan",
+          "metabolite": "epi_bisabolol",
           "stoichiometry": 1
         },
         {
@@ -352,32 +361,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_80"
+          "enzyme": "ec_4_2_3_138"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:30563"
+        "rhea": "RHEA:34503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30563"
+            "id": "RHEA:34503"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "isoflavone 4'-O-methyltransferase",
-      "equation": "a 4'-hydroxyisoflavone + S-adenosyl-L-methionine = a 4'-methoxyisoflavone + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.46",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
+      "equation": "adenosine(1408) in 16S rRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(1408) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.180",
       "substrates": [
         {
-          "metabolite": "4_hydroxyisoflavones",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -387,7 +396,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_methoxyisoflavones",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -401,20 +410,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_46"
+          "enzyme": "ec_2_1_1_180"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31739"
+        "rhea": "RHEA:42776"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31739"
+            "id": "RHEA:42776"
           }
         ]
       }

@@ -1,0 +1,359 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lanosterol-to-fmn-75103",
+  "name": "lanosterol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from lanosterol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:75103"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16521"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lanosterol",
+      "name": "Lanosterol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16521"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "32_hydroxylanosterol",
+      "name": "32-Hydroxylanosterol",
+      "formula": "C30H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166806"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
+      "name": "4,4-Dimethyl-14a-formyl-5alpha-cholesta-8,24-dien-3beta-ol",
+      "short": "4,4-Dimethyl-14a-fo…",
+      "formula": "C30H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166681"
+      }
+    },
+    {
+      "id": "ffmas",
+      "name": "4,4-Dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol (FF-MAS)",
+      "short": "4,4-Dimethyl-5alpha…",
+      "formula": "C29H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17813"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "5_epi_aristolochene",
+      "name": "(+)-5-epi-aristolochene",
+      "short": "(+)-5-epi-aristoloc…",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:23925"
+      }
+    },
+    {
+      "id": "2_hydroxy_5_epi_aristolochene",
+      "name": "2β-hydroxy-5-epi-aristolochene",
+      "short": "2β-hydroxy-5-epi-ar…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142082"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_151",
+      "name": "premnaspirodiene oxygenase",
+      "ec": [
+        "1.14.14.151"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-hydroxylanosterol + oxidi...",
+      "equation": "lanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-hydroxylanosterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lanosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "32_hydroxylanosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:75103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol +...",
+      "equation": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "32_hydroxylanosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:75107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "32-oxolanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 4,4-dimethyl-5alpha-ch...",
+      "equation": "32-oxolanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 4,4-dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol + formate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ffmas",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:75111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75111"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "premnaspirodiene oxygenase",
+      "equation": "(+)-5-epi-aristolochene + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxy-5-epi-aristolochene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.151",
+      "substrates": [
+        {
+          "metabolite": "5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_5_epi_aristolochene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57672"
+          }
+        ]
+      }
+    }
+  ]
+}

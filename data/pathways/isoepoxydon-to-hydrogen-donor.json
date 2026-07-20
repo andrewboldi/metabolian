@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isoepoxydon-to-hydrogen-donor",
+  "name": "(+)-isoepoxydon to hydrogen donor",
+  "category": "other",
+  "summary": "A 4-step route from (+)-isoepoxydon to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:62216"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:145109"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isoepoxydon",
+      "name": "(+)-isoepoxydon",
+      "formula": "C7H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145109"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "phyllostine",
+      "name": "phyllostine",
+      "formula": "C7H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145110"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "isopatulin",
+      "name": "isopatulin",
+      "formula": "C7H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145111"
+      }
+    },
+    {
+      "id": "e_ascladiol",
+      "name": "(E)-ascladiol",
+      "formula": "C7H8O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145112"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "patulin",
+      "name": "patulin",
+      "formula": "C7H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74926"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57387"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isoepoxydon + NADP(+) = phyllostine + NADPH + H(+)",
+      "equation": "isoepoxydon + NADP(+) = phyllostine + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isoepoxydon",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phyllostine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:62216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phyllostine = neopatulin",
+      "equation": "phyllostine = neopatulin",
+      "substrates": [
+        {
+          "metabolite": "phyllostine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopatulin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:62220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "neopatulin + NADPH + H(+) = (E)-ascladiol + NADP(+)",
+      "equation": "neopatulin + NADPH + H(+) = (E)-ascladiol + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "isopatulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_ascladiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(E)-ascladiol + A = patulin + AH2",
+      "equation": "(E)-ascladiol + A = patulin + AH2",
+      "substrates": [
+        {
+          "metabolite": "e_ascladiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "patulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:62228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62228"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
+      "equation": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:36863"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36863"
+          }
+        ]
+      }
+    }
+  ]
+}

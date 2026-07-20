@@ -20,7 +20,7 @@ pathway sophoradiol-to-soyasaponin-i "sophoradiol to soyasaponin I" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_41 [1.14.14.41] +1e_2s_2_methylbutanal_oxime +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_2_methylbutanenitrile
+    <-> ec_1_14_14_157 [1.14.14.157] +indolin_2_one +fmnh2 +o2 +h2o +hplus
+    3_hydroxyindolin_2_one
   }
 }

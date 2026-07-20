@@ -94,6 +94,25 @@
       "xrefs": {
         "chebi": "CHEBI:139581"
       }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l",
+      "name": "O3-(β-D-galactosyl-(1→3)-N-acetyl-α-D-galactosaminyl)-L-serine",
+      "short": "O3-(β-D-galactosyl-…",
+      "formula": "C17H28N2O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137949"
+      }
     }
   ],
   "enzymes": [
@@ -263,6 +282,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:56188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a 3-O-[N-acetyl-alpha-D-galactosaminyl]-L-seryl-[protein] + UDP-alpha-D-galactose = a 3...",
+      "equation": "a 3-O-[N-acetyl-alpha-D-galactosaminyl]-L-seryl-[protein] + UDP-alpha-D-galactose = a 3-O-[beta-D-galactosyl-(1->3)-N-acetyl-alpha-D-galactosaminyl]-L-seryl-[protein] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "o_n_acetyl_d_galactosaminyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:56200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56200"
           }
         ]
       }

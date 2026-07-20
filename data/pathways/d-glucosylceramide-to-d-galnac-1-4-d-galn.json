@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucosylceramide-to-d-galnac-1-4-d-galn",
+  "name": "β-D-glucosylceramide to α-D-GalNAc-(1→4)-β-D-GalN…",
+  "category": "other",
+  "summary": "A 4-step route from β-D-glucosylceramide to α-D-GalNAc-(1→4)-β-D-GalNAc-(1→4)-β-D-GlcNAc-(1→3)-β-D-Man-(1→4)-β-D-Glc-(1↔1)-Cer, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85943"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83264"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucosylceramide",
+      "name": "β-D-glucosylceramide",
+      "formula": "C10H17NO8R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83264"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "man_1_4glc_ceramide",
+      "name": "Manβ1-4Glc-ceramide",
+      "formula": "C16H27NO13R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234614"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "glcnacbeta1_3manbeta1_4glc_ceramide",
+      "name": "GlcNAcbeta1-3Manbeta1-4Glc-ceramide",
+      "short": "GlcNAcbeta1-3Manbet…",
+      "formula": "C24H40N2O18R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235335"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_d_galactosamine",
+      "name": "UDP-N-acetyl-α-D-galactosamine",
+      "short": "UDP-N-acetyl-α-D-ga…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:67138"
+      }
+    },
+    {
+      "id": "d_galnac_1_4_d_glcnac_1_3_d_man_1_4_d_glc_1_1_c",
+      "name": "β-D-GalNAc-(1→4)-β-D-GlcNAc-(1→3)-β-D-Man-(1→4)-β-D-Glc-(1↔1)-Cer",
+      "short": "β-D-GalNAc-(1→4)-β-…",
+      "formula": "C32H53N3O23R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235469"
+      }
+    },
+    {
+      "id": "d_galnac_1_4_d_galnac_1_4_d_glcnac_1_3_d_man_1",
+      "name": "α-D-GalNAc-(1→4)-β-D-GalNAc-(1→4)-β-D-GlcNAc-(1→3)-β-D-Man-(1→4)-β-D-Glc-(1↔1)-Cer",
+      "short": "α-D-GalNAc-(1→4)-β-…",
+      "formula": "C40H66N4O28R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235470"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a beta-D-glucosylceramide + GDP-alpha-D-mannose = beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-...",
+      "equation": "a beta-D-glucosylceramide + GDP-alpha-D-mannose = beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_glucosylceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "man_1_4glc_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85943"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85943"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + UDP-N-acetyl-alpha-D-glucosamine = a be...",
+      "equation": "beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + UDP-N-acetyl-alpha-D-glucosamine = a beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "man_1_4glc_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glcnacbeta1_3manbeta1_4glc_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85951"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85951"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + UDP-N-acetyl-alp...",
+      "equation": "a beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-ceramide + UDP-N-acetyl-alpha-D-galactosamine = a beta-D-GalNAc-(1->4)-beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-Cer + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "glcnacbeta1_3manbeta1_4glc_ceramide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galnac_1_4_d_glcnac_1_3_d_man_1_4_d_glc_1_1_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86247"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86247"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a beta-D-GalNAc-(1->4)-beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-Cer + ...",
+      "equation": "a beta-D-GalNAc-(1->4)-beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-Cer + UDP-N-acetyl-alpha-D-galactosamine = an alpha-D-GalNAc-(1->4)-beta-D-GalNAc-(1->4)-beta-D-GlcNAc-(1->3)-beta-D-Man-(1->4)-beta-D-Glc-(1<->1)-Cer + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_galnac_1_4_d_glcnac_1_3_d_man_1_4_d_glc_1_1_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galnac_1_4_d_galnac_1_4_d_glcnac_1_3_d_man_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86255"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -111,6 +111,16 @@
       }
     },
     {
+      "id": "pyridinium_3_5_biscarboxylate_mononucleotide",
+      "name": "pyridinium-3,5-biscarboxylate mononucleotide",
+      "short": "pyridinium-3,5-bisc…",
+      "formula": "C12H11NO11P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:137353"
+      }
+    },
+    {
       "id": "l_cysteine",
       "name": "L-cysteine",
       "formula": "C3H5NOS",
@@ -120,40 +130,40 @@
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57305"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "adp_5_ethyl_4_methylthiazole_2_carboxylate",
-      "name": "ADP-5-ethyl-4-methylthiazole-2-carboxylate",
-      "short": "ADP-5-ethyl-4-methy…",
-      "formula": "C17H19N6O12P2S",
+      "id": "pyridinium_3_carboxylate_5_thiocarboxylate_monon",
+      "name": "pyridinium-3-carboxylate-5-thiocarboxylate mononucleotide",
+      "short": "pyridinium-3-carbox…",
+      "formula": "C12H11NO10PS",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:139151"
+        "chebi": "CHEBI:138330"
       }
     },
     {
-      "id": "nicotinamide",
-      "name": "nicotinamide",
-      "formula": "C6H6N2O",
-      "charge": 0,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17154"
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -166,10 +176,10 @@
       ]
     },
     {
-      "id": "ec_2_4_2_60",
-      "name": "cysteine-dependent adenosine diphosphate thiazole synthase",
+      "id": "ec_4_4_1_37",
+      "name": "intrinsic cysteine-dependent pyridinium-3,5-bisthiocarboxylic acid",
       "ec": [
-        "2.4.2.60"
+        "4.4.1.37"
       ]
     }
   ],
@@ -384,20 +394,20 @@
     },
     {
       "id": "r5",
-      "name": "cysteine-dependent adenosine diphosphate thiazole synthase",
-      "equation": "[ADP-thiazole synthase]-L-cysteine + glycine + NAD(+) = [ADP-thiazole synthase]-dehydroalanine + ADP-5-ethyl-4-methylthiazole-2-carboxylate + nicotinamide + 3 H2O + 2 H(+)",
-      "ec": "2.4.2.60",
+      "name": "intrinsic cysteine-dependent pyridinium-3,5-bisthiocarboxylic acid",
+      "equation": "pyridinium-3,5-dicarboxylate mononucleotide + [LarE protein]-L-cysteine + ATP = [LarE protein]-dehydroalanine + pyridinium-3-carboxylate-5-thiocarboxylate mononucleotide + AMP + diphosphate + H(+)",
+      "ec": "4.4.1.37",
       "substrates": [
+        {
+          "metabolite": "pyridinium_3_5_biscarboxylate_mononucleotide",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "l_cysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
@@ -407,38 +417,38 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp_5_ethyl_4_methylthiazole_2_carboxylate",
+          "metabolite": "pyridinium_3_carboxylate_5_thiocarboxylate_monon",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nicotinamide",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 3
+          "metabolite": "ppi",
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_2_60"
+          "enzyme": "ec_4_4_1_37"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:55708"
+        "rhea": "RHEA:54788"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55708"
+            "id": "RHEA:54788"
           }
         ]
       }

@@ -1,0 +1,330 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sitosterol-to-d-glucopyranose",
+  "name": "sitosterol to D-glucopyranose",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from sitosterol to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46576"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27693"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sitosterol",
+      "name": "sitosterol",
+      "formula": "C29H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27693"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "stigmasterol",
+      "name": "stigmasterol",
+      "formula": "C29H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28824"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "stigmasterol_3_o_d_glucoside",
+      "name": "stigmasterol 3-O-β-D-glucoside",
+      "short": "stigmasterol…",
+      "formula": "C35H58O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:68383"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "deacetylisoipecoside",
+      "name": "deacetylisoipecoside",
+      "formula": "C25H34NO11",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58091"
+      }
+    },
+    {
+      "id": "n_deacetylisoipecoside_aglycone",
+      "name": "N-deacetylisoipecoside aglycone",
+      "short": "N-deacetylisoipecos…",
+      "formula": "C19H24NO6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229557"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_41",
+      "name": "sterol 22-desaturase",
+      "ec": [
+        "1.14.19.41"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sterol 22-desaturase",
+      "equation": "sitosterol + NADPH + O2 + H(+) = stigmasterol + NADP(+) + 2 H2O",
+      "ec": "1.14.19.41",
+      "substrates": [
+        {
+          "metabolite": "sitosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stigmasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "stigmasterol + UDP-alpha-D-glucose = stigmasteryl 3-beta-D-glucoside + UDP + H(+)",
+      "equation": "stigmasterol + UDP-alpha-D-glucose = stigmasteryl 3-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "stigmasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stigmasterol_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "stigmasteryl 3-beta-D-glucoside + H2O = stigmasterol + D-glucose",
+      "equation": "stigmasteryl 3-beta-D-glucoside + H2O = stigmasterol + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "stigmasterol_3_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stigmasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62028"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "deacetylisoipecoside + H2O = deacetylisoipecoside aglycone + D-glucose",
+      "equation": "deacetylisoipecoside + H2O = deacetylisoipecoside aglycone + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "deacetylisoipecoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_deacetylisoipecoside_aglycone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78887"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78887"
+          }
+        ]
+      }
+    }
+  ]
+}

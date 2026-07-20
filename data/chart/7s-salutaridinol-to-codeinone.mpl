@@ -20,14 +20,14 @@ pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
 
   branch from thebaine side left {
     thebaine
-    <-> ec_1_14_11_32 [1.14.11.32] +akg +o2 +formaldehyde +succinate +co2
-    oripavine
+    <-> . +akg +o2 +formaldehyde +succinate +co2 +hplus
+    6_o_demethylthebaine
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_76 [3.5.1.76] +n_acetylphenylethylamine +h2o
-    2_phenylethanaminium
+    <-> . +1_decyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_decyl_sn_glycero_3_phosphocholine
   }
 
   branch from neopinone side left {
@@ -38,7 +38,7 @@ pathway 7s-salutaridinol-to-codeinone "(7S)-salutaridinol to codeinone" {
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +1_7_dimethylxanthine +nadph +o2 +hplus +nadp +h2o
-    7_methylxanthine
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    15_oxo_bilirubin
   }
 }

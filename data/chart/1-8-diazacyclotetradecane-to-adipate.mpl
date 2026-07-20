@@ -16,17 +16,27 @@ pathway 1-8-diazacyclotetradecane-to-adipate "1,8-diazacyclotetradecane… to ad
     6_oxohexanoate
     <-> ec_1_2_1_63 [1.2.1.63] +nadp +h2o -nadph -hplus
     adipate
+    <-> . +glutaryl_coa -glutarate
+    adipoyl_coa
+    <-> . +h2o -coa -hplus
+    adipate
   }
 
   branch from 6_oxohexanoate side left {
     6_oxohexanoate
-    <-> ec_1_1_1_258 [1.1.1.258] +nad +nadh +hplus
-    6_hydroxyhexanoate
+    <-> ec_3_7_1_11 [3.7.1.11] +h2o +hplus
+    cyclohexane_1_2_dione
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_1_4_1_13 [1.4.1.13] +nadp +akg +nadph +hplus
+    <-> ec_1_4_1_14 [1.4.1.14] +nad +akg +nadh +hplus
     glutamine
+  }
+
+  branch from glutarate side left {
+    glutarate
+    <-> . +itaconate +glutaryl_coa
+    itaconyl_coa
   }
 }

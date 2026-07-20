@@ -1,0 +1,187 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4z-7z-10z-13z-16z-19z-d-to-13r-14s-dihydroxy-4z",
+  "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-d… to (13R,14S)-dihydroxy-(4Z,7…",
+  "category": "other",
+  "summary": "A 3-step route from (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate to (13R,14S)-dihydroxy-(4Z,7Z,9E,11E,16Z,19Z )-docosahexaenoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41332"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77016"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "14_s_hpdhe",
+      "name": "14(S)-HPDHE",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78048"
+      }
+    },
+    {
+      "id": "13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen",
+      "name": "(13S,14S)-epoxy-(4Z,7Z,9E,11E,16Z,19Z)-docosahexaenoate",
+      "short": "(13S,14S)-epoxy-(4Z…",
+      "formula": "C22H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:131958"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "13r_14s_dihydroxy_4z_7z_9e_11e_16z_19z_docosahe",
+      "name": "(13R,14S)-dihydroxy-(4Z,7Z,9E,11E,16Z,19Z )-docosahexaenoate",
+      "short": "(13R,14S)-dihydroxy…",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137442"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = (14S)-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + O2 = (14S)-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19Z)-docosahexaenoate",
+      "substrates": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_s_hpdhe",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(14S)-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19Z)-docosahexaenoate = (13S,14S)-epoxy-(4Z,7Z,9E,...",
+      "equation": "(14S)-hydroperoxy-(4Z,7Z,10Z,12E,16Z,19Z)-docosahexaenoate = (13S,14S)-epoxy-(4Z,7Z,9E,11E,16Z,19Z)-docosahexaenoate + H2O",
+      "substrates": [
+        {
+          "metabolite": "14_s_hpdhe",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(13S,14S)-epoxy-(4Z,7Z,9E,11E,16Z,19Z)-docosahexaenoate + H2O = (13R,14S)-dihydroxy-(4Z...",
+      "equation": "(13S,14S)-epoxy-(4Z,7Z,9E,11E,16Z,19Z)-docosahexaenoate + H2O = (13R,14S)-dihydroxy-(4Z,7Z,9E,11E,16Z,19Z)-docosahexaenoate",
+      "substrates": [
+        {
+          "metabolite": "13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13r_14s_dihydroxy_4z_7z_9e_11e_16z_19z_docosahe",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53536"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -20,25 +20,25 @@ pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
 
   branch from alcohol side left {
     alcohol
-    <-> ec_3_1_1_1 [3.1.1.1] +carboxylic_ester +h2o +hplus
-    carboxylic_acid_anion
+    <-> ec_1_11_1_27 [1.11.1.27] +peroxol +gsh +h2o
+    gssg
   }
 
   branch from n_terminal_amino_acid_1 side right {
     n_terminal_amino_acid_1
-    <-> ec_2_3_2_6 [2.3.2.6] +3_l_phenylalanyl_adenylyl_1_group +amp_3_end_1
-    n_terminal_l_phenylalanyl_l_amino_acid_1
+    <-> . +acetyl_coa +coa +hplus
+    n_acetylamino_acid
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_1_2_1_70 [1.2.1.70] +s_4_amino_5_oxopentanoic_acid +nadp +nadph +hplus
-    3_l_glutamate_adenylyl_1_group
+    <-> ec_6_1_1_14 [6.1.1.14] +glycine +atp +amp +ppi
+    3_glycyladenylyl_zwitterionic_group
   }
 
   branch from arginine side right {
     arginine
-    <-> ec_1_5_1_11 [1.5.1.11] +nad +h2o +pyruvate +nadh +hplus
-    d_octopine_dizwitterion
+    <-> ec_1_13_12_1 [1.13.12.1] +o2 +co2 +h2o
+    4_guanidiniumylbutanamide
   }
 }

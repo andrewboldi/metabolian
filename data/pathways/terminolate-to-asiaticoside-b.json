@@ -1,0 +1,224 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "terminolate-to-asiaticoside-b",
+  "name": "terminolate to Asiaticoside B",
+  "category": "other",
+  "summary": "A 3-step route from terminolate to Asiaticoside B, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:84943"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:234051"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "terminolate",
+      "name": "terminolate",
+      "formula": "C30H47O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234051"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "terminolic_acid_28_o_d_glucoside",
+      "name": "terminolic acid 28-O-β-D-glucoside",
+      "short": "terminolic acid…",
+      "formula": "C36H58O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234055"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "terminolic_acid_28_o_d_glucosyl_1_6_d_glucoside",
+      "name": "terminolic acid 28-O-[β-D-glucosyl-(1→6)-β-D-glucoside]",
+      "short": "terminolic acid…",
+      "formula": "C42H68O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234057"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_l_rhamnose",
+      "name": "UDP-β-L-rhamnose",
+      "formula": "C15H22N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83836"
+      }
+    },
+    {
+      "id": "asiaticoside_b",
+      "name": "Asiaticoside B",
+      "formula": "C48H78O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:187486"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "terminolate + UDP-alpha-D-glucose = terminolic acid 28-O-beta-D-glucoside + UDP",
+      "equation": "terminolate + UDP-alpha-D-glucose = terminolic acid 28-O-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "terminolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terminolic_acid_28_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:84943"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84943"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "terminolic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = terminolic acid 28-O-[bet...",
+      "equation": "terminolic acid 28-O-beta-D-glucoside + UDP-alpha-D-glucose = terminolic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "terminolic_acid_28_o_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terminolic_acid_28_o_d_glucosyl_1_6_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84955"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "terminolic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = ...",
+      "equation": "terminolic acid 28-O-[beta-D-glucosyl-(1->6)-beta-D-glucoside] + UDP-beta-L-rhamnose = asiaticoside B + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "terminolic_acid_28_o_d_glucosyl_1_6_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_l_rhamnose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "asiaticoside_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84967"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84967"
+          }
+        ]
+      }
+    }
+  ]
+}

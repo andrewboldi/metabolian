@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-phospho-cyclic-to-nicotinate-adenine",
+  "name": "2'-phospho-cyclic… to nicotinate-adenine…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from 2'-phospho-cyclic ADP-ribose(3−) to nicotinate-adenine dinucleotide phosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38607"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75970"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_phospho_cyclic_adp_ribose",
+      "name": "2'-phospho-cyclic ADP-ribose",
+      "short": "2'-phospho-cyclic…",
+      "formula": "C15H19N5O16P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75970"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "nicotinate_adenine_dinucleotide_phosphate",
+      "name": "nicotinate-adenine dinucleotide phosphate",
+      "short": "nicotinate-adenine…",
+      "formula": "C21H23N6O18P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:75967"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "naadph",
+      "name": "NAADPH",
+      "formula": "C21H24N6O18P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:235461"
+      }
+    },
+    {
+      "id": "6pgl",
+      "name": "6-Phospho-D-glucono-1,5-lactone",
+      "short": "6-Phospho-D-glucono…",
+      "formula": "C6H9O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57955"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "superoxide",
+      "name": "superoxide",
+      "formula": "O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18421"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2'-phospho-cyclic ADP-ribose + nicotinate = NAADP(+)",
+      "equation": "2'-phospho-cyclic ADP-ribose + nicotinate = NAADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2_phospho_cyclic_adp_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAADP(+) + D-glucose 6-phosphate = NAADPH + 6-phospho-D-glucono-1,5-lactone + H(+)",
+      "equation": "NAADP(+) + D-glucose 6-phosphate = NAADPH + 6-phospho-D-glucono-1,5-lactone + H(+)",
+      "substrates": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "naadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6pgl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "NAADPH + O2 + H(+) = NAADP(+) + H2O2",
+      "equation": "NAADPH + O2 + H(+) = NAADP(+) + H2O2",
+      "substrates": [
+        {
+          "metabolite": "naadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:86235"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86235"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "NAADPH + 2 O2 = NAADP(+) + 2 superoxide + H(+)",
+      "equation": "NAADPH + 2 O2 = NAADP(+) + 2 superoxide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "naadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nicotinate_adenine_dinucleotide_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "superoxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:86239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86239"
+          }
+        ]
+      }
+    }
+  ]
+}

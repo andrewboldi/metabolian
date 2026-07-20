@@ -30,25 +30,19 @@ pathway o-s-3r-hydroxytetradec-to-cytidine-5-monophospha "O-[S-(3R)-hydroxytetra
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_181 [2.3.1.181] +o_s_octanoylpantetheine_4_phosphoryl_serine_1 +l_lysinium +hplus
-    n6_octanoyl_l_lysine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> ec_3_7_1_6 [3.7.1.6] +h2o +pyruvate +hplus
-    acetylpyruvate
-  }
-
-  branch from lipid_iva side left {
-    lipid_iva
-    <-> ec_2_3_1_251 [2.3.1.251] +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +2_acyl_sn_glycero_3_phosphocholine
-    lipid_ivb
+    <-> . +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
   }
 
   branch from kdo_lipid_iva side right {
     kdo_lipid_iva
     <-> ec_2_7_1_166 [2.7.1.166] +atp +adp +hplus
     4_phospho_kdo_lipid_iva
+  }
+
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
   }
 }

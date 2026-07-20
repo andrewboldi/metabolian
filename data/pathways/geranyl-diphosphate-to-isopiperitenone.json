@@ -129,21 +129,58 @@
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
       "id": "limonene_1_2_epoxide",
       "name": "limonene 1,2-epoxide",
       "formula": "C10H16O",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16431"
+      }
+    },
+    {
+      "id": "tuberculosinyl_diphosphate",
+      "name": "tuberculosinyl diphosphate",
+      "short": "tuberculosinyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58822"
+      }
+    },
+    {
+      "id": "tuberculosinol",
+      "name": "tuberculosinol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50387"
+      }
+    },
+    {
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16469"
+      }
+    },
+    {
+      "id": "15_hydroxyestradiol",
+      "name": "15α-hydroxyestradiol",
+      "formula": "C18H24O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87593"
+      }
+    },
+    {
+      "id": "cis_isopulegone",
+      "name": "(+)-cis-isopulegone",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37047"
       }
     },
     {
@@ -156,50 +193,12 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "3s_6e_nerolidol",
-      "name": "(3S,6E)-nerolidol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:59958"
-      }
-    },
-    {
-      "id": "3_hydroxy_ent_sandaracopimaradiene",
-      "name": "3α-hydroxy-ent-sandaracopimaradiene",
-      "short": "3α-hydroxy-ent-sand…",
-      "formula": "C20H32O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78255"
-      }
-    },
-    {
-      "id": "oryzalexin_d",
-      "name": "oryzalexin D",
-      "formula": "C20H32O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78256"
-      }
-    },
-    {
-      "id": "cis_isopulegone",
-      "name": "(+)-cis-isopulegone",
-      "formula": "C10H16O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:37047"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -233,17 +232,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_48",
-      "name": "(3S,6E)-nerolidol synthase",
+      "id": "ec_2_5_1_153",
+      "name": "adenosine tuberculosinyltransferase",
       "ec": [
-        "4.2.3.48"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_123",
-      "name": "oryzalexin D synthase",
-      "ec": [
-        "1.14.14.123"
+        "2.5.1.153"
       ]
     },
     {
@@ -405,7 +397,7 @@
     {
       "id": "r4",
       "name": "limonene 1,2-monooxygenase",
-      "equation": "(4S)-limonene + NADPH + O2 + H(+) = limonene 1,2-epoxide + NADP(+) + H2O",
+      "equation": "(4S)-limonene + NADH + O2 + H(+) = limonene 1,2-epoxide + NAD(+) + H2O",
       "ec": "1.14.13.107",
       "substrates": [
         {
@@ -413,7 +405,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -431,7 +423,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -447,26 +439,26 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:26085"
+        "rhea": "RHEA:26089"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26085"
+            "id": "RHEA:26089"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(3S,6E)-nerolidol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (3S,6E)-nerolidol + diphosphate",
-      "ec": "4.2.3.48",
+      "name": "adenosine tuberculosinyltransferase",
+      "equation": "tuberculosinyl diphosphate + H2O = tuberculosinol + diphosphate",
+      "ec": "2.5.1.153",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "tuberculosinyl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -476,7 +468,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_6e_nerolidol",
+          "metabolite": "tuberculosinol",
           "stoichiometry": 1
         },
         {
@@ -486,32 +478,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_48"
+          "enzyme": "ec_2_5_1_153"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27530"
+        "rhea": "RHEA:31783"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27530"
+            "id": "RHEA:31783"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "oryzalexin D synthase",
-      "equation": "ent-sandaracopimaradien-3beta-ol + reduced [NADPH--hemoprotein reductase] + O2 = oryzalexin D + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.123",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxy-17beta...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxy-17beta-estradiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_ent_sandaracopimaradiene",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
@@ -525,7 +516,7 @@
       ],
       "products": [
         {
-          "metabolite": "oryzalexin_d",
+          "metabolite": "15_hydroxyestradiol",
           "stoichiometry": 1
         },
         {
@@ -541,22 +532,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_123"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:41472"
+        "rhea": "RHEA:47276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41472"
+            "id": "RHEA:47276"
           }
         ]
       }

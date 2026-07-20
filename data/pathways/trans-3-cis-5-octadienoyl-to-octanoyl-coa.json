@@ -1,0 +1,369 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-3-cis-5-octadienoyl-to-octanoyl-coa",
+  "name": "trans-3-cis-5-octadienoyl… to octanoyl-CoA",
+  "category": "other",
+  "summary": "A 4-step route from trans-3-cis-5-octadienoyl-CoA(4−) to octanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45244"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85108"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_3_cis_5_octadienoyl_coa",
+      "name": "trans-3-cis-5-octadienoyl-CoA",
+      "short": "trans-3-cis-5-octad…",
+      "formula": "C29H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85108"
+      }
+    },
+    {
+      "id": "trans_trans_octa_2_4_dienoyl_coa",
+      "name": "trans,trans-octa-2,4-dienoyl-CoA",
+      "short": "trans,trans-octa-2,…",
+      "formula": "C29H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62243"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3e_octenoyl_coa",
+      "name": "(3E)-octenoyl-CoA",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:131962"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "trans_oct_2_enoyl_coa",
+      "name": "trans-oct-2-enoyl-CoA",
+      "short": "trans-oct-2-enoyl-C…",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62242"
+      }
+    },
+    {
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57386"
+      }
+    },
+    {
+      "id": "cis_3_octenoyl_coa",
+      "name": "cis-3-octenoyl-CoA",
+      "formula": "C29H44N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85640"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "o_octanoyl_l_carnitine",
+      "name": "O-octanoyl-L-carnitine",
+      "short": "O-octanoyl-L-carnit…",
+      "formula": "C15H29NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18102"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_137",
+      "name": "carnitine O-octanoyltransferase",
+      "ec": [
+        "2.3.1.137"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(3E,5Z)-octadienoyl-CoA = (2E,4E)-octadienoyl-CoA",
+      "equation": "(3E,5Z)-octadienoyl-CoA = (2E,4E)-octadienoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_3_cis_5_octadienoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_trans_octa_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E,4E)-octadienoyl-CoA + NADPH + H(+) = (3E)-octenoyl-CoA + NADP(+)",
+      "equation": "(2E,4E)-octadienoyl-CoA + NADPH + H(+) = (3E)-octenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_trans_octa_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3e_octenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84583"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84583"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3E)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "equation": "(3E)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "3e_octenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(2E)-octenoyl-CoA + NADPH + H(+) = octanoyl-CoA + NADP(+)",
+      "equation": "(2E)-octenoyl-CoA + NADPH + H(+) = octanoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "equation": "(3Z)-octenoyl-CoA = (2E)-octenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "cis_3_octenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_oct_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:46044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "carnitine O-octanoyltransferase",
+      "equation": "octanoyl-CoA + (R)-carnitine = O-octanoyl-(R)-carnitine + CoA",
+      "ec": "2.3.1.137",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_octanoyl_l_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_137"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:17177"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17177"
+          }
+        ]
+      }
+    }
+  ]
+}

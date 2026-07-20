@@ -91,6 +91,52 @@
       "xrefs": {
         "chebi": "CHEBI:15361"
       }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "isochorismoyl_l_glutamate",
+      "name": "isochorismoyl-L-glutamate",
+      "short": "isochorismoyl-L-glu…",
+      "formula": "C15H14NO9",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:195519"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -240,6 +286,57 @@
           {
             "db": "Rhea",
             "id": "RHEA:25597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "isochorismate + L-glutamate + ATP = isochorismoyl-L-glutamate + AMP + diphosphate + H(+)",
+      "equation": "isochorismate + L-glutamate + ATP = isochorismoyl-L-glutamate + AMP + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isochorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isochorismoyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77091"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77091"
           }
         ]
       }

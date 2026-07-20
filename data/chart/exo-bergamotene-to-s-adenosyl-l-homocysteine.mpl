@@ -18,14 +18,14 @@ pathway exo-bergamotene-to-s-adenosyl-l-homocysteine "(+)-exo-β-bergamotene to 
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_63 [1.14.14.63] +oleanolate +fmnh2 +o2 +h2o +hplus
-    cochalate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> . +gibberellin_a53 +akg +o2 +co2 +h2o +hplus
+    gibberellin_a17
   }
 
   branch from 5_dehydrofumagillol side left {
@@ -36,7 +36,7 @@ pathway exo-bergamotene-to-s-adenosyl-l-homocysteine "(+)-exo-β-bergamotene to 
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
-    pterostilbene
+    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
+    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
   }
 }

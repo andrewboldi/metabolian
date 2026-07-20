@@ -1,0 +1,356 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranylhydroquinone-to-fmn",
+  "name": "geranylhydroquinone to FMN",
+  "category": "other",
+  "summary": "A 3-step route from geranylhydroquinone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82847"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:24233"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "geranylhydroquinone",
+      "name": "geranylhydroquinone",
+      "formula": "C16H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24233"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "wigandol",
+      "name": "wigandol",
+      "formula": "C16H20O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232537"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "arnebinol_a",
+      "name": "arnebinol A",
+      "formula": "C16H16O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232560"
+      }
+    },
+    {
+      "id": "clavilactone_a",
+      "name": "clavilactone A",
+      "formula": "C16H16O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232538"
+      }
+    },
+    {
+      "id": "3s_6e_nerolidol",
+      "name": "(3S,6E)-nerolidol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59958"
+      }
+    },
+    {
+      "id": "e_4_8_dimethyl_1_3_7_nonatriene",
+      "name": "(E)-4,8-dimethyl-1,3,7-nonatriene",
+      "short": "4,8-dimethyl-1,3,7-…",
+      "formula": "C11H18",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60158"
+      }
+    },
+    {
+      "id": "buten_2_one",
+      "name": "buten-2-one",
+      "formula": "C4H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48058"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_59",
+      "name": "dimethylnonatriene synthase",
+      "ec": [
+        "1.14.14.59"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E)-geranylhydroquinone + reduced [NADPH--hemoprotein reductase] + O2 = wigandol + oxi...",
+      "equation": "(2E)-geranylhydroquinone + reduced [NADPH--hemoprotein reductase] + O2 = wigandol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "geranylhydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "wigandol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82847"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "wigandol + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = arnebinol A + 4 oxidized [...",
+      "equation": "wigandol + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = arnebinol A + 4 oxidized [NADPH--hemoprotein reductase] + 6 H2O + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "wigandol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arnebinol_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82867"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82867"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "arnebinol A + reduced [NADPH--hemoprotein reductase] + O2 = clavilactone A + oxidized [...",
+      "equation": "arnebinol A + reduced [NADPH--hemoprotein reductase] + O2 = clavilactone A + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "arnebinol_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "clavilactone_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82871"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82871"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dimethylnonatriene synthase",
+      "equation": "(3S,6E)-nerolidol + reduced [NADPH--hemoprotein reductase] + O2 = (3E)-4,8-dimethylnona-1,3,7-triene + but-3-en-2-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.59",
+      "substrates": [
+        {
+          "metabolite": "3s_6e_nerolidol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_8_dimethyl_1_3_7_nonatriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "buten_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55424"
+          }
+        ]
+      }
+    }
+  ]
+}

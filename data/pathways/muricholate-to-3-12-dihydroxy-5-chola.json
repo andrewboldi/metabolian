@@ -1,0 +1,304 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "muricholate-to-3-12-dihydroxy-5-chola",
+  "name": "β-muricholate to 3β,12α-dihydroxy-5β-chola…",
+  "category": "other",
+  "summary": "A 3-step route from β-muricholate to 3β,12α-dihydroxy-5β-cholan-24-oate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53784"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:134119"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "muricholate",
+      "name": "β-muricholate",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134119"
+      }
+    },
+    {
+      "id": "deoxycholoyl_coa",
+      "name": "deoxycholoyl-CoA",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58810"
+      }
+    },
+    {
+      "id": "muricholoyl_coa",
+      "name": "β-muricholoyl-CoA",
+      "formula": "C45H70N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137668"
+      }
+    },
+    {
+      "id": "deoxycholate",
+      "name": "deoxycholate",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23614"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "12_hydroxy_3_oxo_5_cholan_24_oate",
+      "name": "12α-hydroxy-3-oxo-5β-cholan-24-oate",
+      "short": "12α-hydroxy-3-oxo-5…",
+      "formula": "C24H37O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87734"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_12_dihydroxy_5_cholan_24_oate",
+      "name": "3β,12α-dihydroxy-5β-cholan-24-oate",
+      "short": "3β,12α-dihydroxy-5β…",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87733"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "12_dehydrodeoxycholate",
+      "name": "12-dehydrodeoxycholate",
+      "short": "12-dehydrodeoxychol…",
+      "formula": "C24H37O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233653"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-muricholate + deoxycholoyl-CoA = beta-muricholoyl-CoA + deoxycholate",
+      "equation": "beta-muricholate + deoxycholoyl-CoA = beta-muricholoyl-CoA + deoxycholate",
+      "substrates": [
+        {
+          "metabolite": "muricholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "deoxycholoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "muricholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "deoxycholate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53784"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "deoxycholate + NAD(+) = 12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NADH + H(+)",
+      "equation": "deoxycholate + NAD(+) = 12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "deoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_hydroxy_3_oxo_5_cholan_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47484"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47484"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NADH + H(+) = isodeoxycholate + NAD(+)",
+      "equation": "12alpha-hydroxy-3-oxo-5beta-cholan-24-oate + NADH + H(+) = isodeoxycholate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "12_hydroxy_3_oxo_5_cholan_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_12_dihydroxy_5_cholan_24_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47492"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "deoxycholate + NADP(+) = 12-dehydrodeoxycholate + NADPH + H(+)",
+      "equation": "deoxycholate + NADP(+) = 12-dehydrodeoxycholate + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "deoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "12_dehydrodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:84223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84223"
+          }
+        ]
+      }
+    }
+  ]
+}

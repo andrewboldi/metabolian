@@ -18,13 +18,13 @@ pathway d-galactosyl-1-4-l-rh-to-dtdp-d-galacturonate "β-D-galactosyl-(1→4)-L
 
   branch from l_rhamnopyranose side left {
     l_rhamnopyranose
-    <-> ec_3_2_1_190 [3.2.1.190] +dioscin +h2o
-    diosgenin_3_o_d_glucoside
+    <-> ec_3_2_1_40 [3.2.1.40] +quercitrin_7_olate +h2o
+    quercetin_7_olate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_4_11 [6.3.4.11] +l_lysinium +biotinate +atp +amp +hplus
-    biotinyl_l_lysine
+    <-> ec_6_1_3_1 [6.1.3.1] +2r_3s_2_alkyl_3_hydroxyalkanoate +atp +amp
+    cis_3_4_dialkyloxetan_2_one
   }
 }

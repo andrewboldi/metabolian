@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy",
+  "name": "N-terminal L-alanyl-L-pro… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N-terminal L-alanyl-L-prolyl-L-lysyl(2+) residue to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54096"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_terminal_l_alanyl_l_prolyl_l_lysyl_2",
+      "name": "N-terminal L-alanyl-L-prolyl-L-lysyl(2+)",
+      "short": "N-terminal…",
+      "formula": "C14H27N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:138057"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_terminal_n_methyl_l_alanyl_l_prolyl_l_lysyl_2",
+      "name": "N-terminal N-methyl-L-alanyl-L-prolyl-L-lysyl(2+)",
+      "short": "N-terminal…",
+      "formula": "C15H29N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:138058"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_terminal_n_n_dimethyl_l_alanyl_l_prolyl_l_lysy",
+      "name": "N-terminal N,N-dimethyl-L-alanyl-L-prolyl-L-lysyl(2+)",
+      "short": "N-terminal…",
+      "formula": "C16H31N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:138286"
+      }
+    },
+    {
+      "id": "n_terminal_n_n_n_trimethyl_l_alanyl_l_prolyl_l_l",
+      "name": "N-terminal N,N,N-trimethyl-L-alanyl-L-prolyl-L-lysyl(2+)",
+      "short": "N-terminal…",
+      "formula": "C17H33N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:138315"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "n_methylnicotinate",
+      "name": "N-methylnicotinate",
+      "formula": "C7H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18123"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_299",
+      "name": "protein N-terminal monomethyltransferase",
+      "ec": [
+        "2.1.1.299"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_7",
+      "name": "nicotinate N-methyltransferase",
+      "ec": [
+        "2.1.1.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein N-terminal monomethyltransferase",
+      "equation": "N-terminal L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N-terminal N-methyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.299",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_l_alanyl_l_prolyl_l_lysyl_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_methyl_l_alanyl_l_prolyl_l_lysyl_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_299"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-terminal N-methyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N-t...",
+      "equation": "N-terminal N-methyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N-terminal N,N-dimethyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_n_methyl_l_alanyl_l_prolyl_l_lysyl_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_n_dimethyl_l_alanyl_l_prolyl_l_lysy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-terminal N,N-dimethyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-methionine =...",
+      "equation": "N-terminal N,N-dimethyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N-terminal N,N,N-trimethyl-L-alanyl-L-prolyl-L-lysyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_n_n_dimethyl_l_alanyl_l_prolyl_l_lysy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_n_n_n_trimethyl_l_alanyl_l_prolyl_l_l",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nicotinate N-methyltransferase",
+      "equation": "nicotinate + S-adenosyl-L-methionine = N-methylnicotinate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.7",
+      "substrates": [
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylnicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20241"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20241"
+          }
+        ]
+      }
+    }
+  ]
+}

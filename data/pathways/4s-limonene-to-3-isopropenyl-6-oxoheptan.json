@@ -1,0 +1,453 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4s-limonene-to-3-isopropenyl-6-oxoheptan",
+  "name": "(4S)-limonene to 3-isopropenyl-6-oxoheptan…",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from (4S)-limonene to 3-isopropenyl-6-oxoheptanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26085"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15383"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4s_limonene",
+      "name": "(4S)-limonene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15383"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "limonene_1_2_epoxide",
+      "name": "limonene 1,2-epoxide",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16431"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "limonene_1_2_diol",
+      "name": "limonene-1,2-diol",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17219"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "1_hydroxylimonen_2_one",
+      "name": "1-hydroxylimonen-2-one",
+      "short": "1-hydroxylimonen-2-…",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50246"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "7_hydroxy_4_isopropenyl_7_methyloxepan_2_one",
+      "name": "7-hydroxy-4-isopropenyl-7-methyloxepan-2-one",
+      "short": "7-hydroxy-4-isoprop…",
+      "formula": "C10H16O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64274"
+      }
+    },
+    {
+      "id": "3_isopropenyl_6_oxoheptanoate",
+      "name": "3-isopropenyl-6-oxoheptanoate",
+      "short": "3-isopropenyl-6-oxo…",
+      "formula": "C10H15O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64234"
+      }
+    },
+    {
+      "id": "4r_limonene",
+      "name": "(4R)-limonene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15382"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_107",
+      "name": "limonene 1,2-monooxygenase",
+      "ec": [
+        "1.14.13.107"
+      ]
+    },
+    {
+      "id": "ec_3_3_2_8",
+      "name": "limonene-1,2-epoxide hydrolase",
+      "ec": [
+        "3.3.2.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "limonene 1,2-monooxygenase",
+      "equation": "(4S)-limonene + NADPH + O2 + H(+) = limonene 1,2-epoxide + NADP(+) + H2O",
+      "ec": "1.14.13.107",
+      "substrates": [
+        {
+          "metabolite": "4s_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonene_1_2_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26085"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26085"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "limonene-1,2-epoxide hydrolase",
+      "equation": "limonene 1,2-epoxide + H2O = limonene-1,2-diol",
+      "ec": "3.3.2.8",
+      "substrates": [
+        {
+          "metabolite": "limonene_1_2_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonene_1_2_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "limonene-1,2-diol + NAD(+) = 1-hydroxylimonen-2-one + NADH + H(+)",
+      "equation": "limonene-1,2-diol + NAD(+) = 1-hydroxylimonen-2-one + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "limonene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_hydroxylimonen_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "1-hydroxylimonen-2-one + NADPH + O2 + H(+) = 7-hydroxy-4-isopropenyl-7-methyloxepan-2-o...",
+      "equation": "1-hydroxylimonen-2-one + NADPH + O2 + H(+) = 7-hydroxy-4-isopropenyl-7-methyloxepan-2-one + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "1_hydroxylimonen_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_hydroxy_4_isopropenyl_7_methyloxepan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "7-hydroxy-4-isopropenyl-7-methyloxepan-2-one = 3-isopropenyl-6-oxoheptanoate + H(+)",
+      "equation": "7-hydroxy-4-isopropenyl-7-methyloxepan-2-one = 3-isopropenyl-6-oxoheptanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_hydroxy_4_isopropenyl_7_methyloxepan_2_one",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_isopropenyl_6_oxoheptanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:32599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "limonene 1,2-monooxygenase",
+      "equation": "(4R)-limonene + NADPH + O2 + H(+) = limonene 1,2-epoxide + NADP(+) + H2O",
+      "ec": "1.14.13.107",
+      "substrates": [
+        {
+          "metabolite": "4r_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "limonene_1_2_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:26097"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26097"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -150,40 +150,40 @@
       }
     },
     {
-      "id": "oleanolate",
-      "name": "oleanolate",
-      "formula": "C30H47O3",
-      "charge": -1,
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82828"
+        "chebi": "CHEBI:17347"
       }
     },
     {
-      "id": "cochalate",
-      "name": "cochalate",
-      "formula": "C30H47O4",
-      "charge": -1,
+      "id": "2_hydroxytestosterone",
+      "name": "2β-hydroxytestosterone",
+      "short": "2β-hydroxytestoster…",
+      "formula": "C19H28O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138946"
+        "chebi": "CHEBI:137077"
       }
     },
     {
-      "id": "l_aspartate",
-      "name": "L-aspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
+      "id": "gibberellin_a53",
+      "name": "gibberellin A53",
+      "formula": "C20H26O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:29961"
+        "chebi": "CHEBI:143954"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_aspartate",
-      "name": "(3S)-3-hydroxy-L-aspartate",
-      "short": "3-hydroxy-L-asparta…",
-      "formula": "C4H4NO4",
-      "charge": -1,
+      "id": "gibberellin_a17",
+      "name": "gibberellin A17",
+      "formula": "C20H23O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138111"
+        "chebi": "CHEBI:143958"
       }
     },
     {
@@ -214,21 +214,23 @@
       }
     },
     {
-      "id": "trans_resveratrol",
-      "name": "trans-resveratrol",
-      "formula": "C14H12O3",
-      "charge": 0,
+      "id": "5_carboxymethylaminomethyluridine_5_monophosphat",
+      "name": "5-carboxymethylaminomethyluridine 5'-monophosphate(1−)",
+      "short": "5-carboxymethylamin…",
+      "formula": "C12H15N3O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:45713"
+        "chebi": "CHEBI:74508"
       }
     },
     {
-      "id": "pterostilbene",
-      "name": "pterostilbene",
-      "formula": "C16H16O3",
-      "charge": 0,
+      "id": "5_carboxymethylaminomethyl_2_o_methyluridine_5_m",
+      "name": "5-carboxymethylaminomethyl-2'-O-methyluridine 5'-monophosphate(1−)",
+      "short": "5-carboxymethylamin…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:8630"
+        "chebi": "CHEBI:74511"
       }
     }
   ],
@@ -255,20 +257,6 @@
       ]
     },
     {
-      "id": "ec_1_14_14_63",
-      "name": "beta-amyrin 16beta-monooxygenase",
-      "ec": [
-        "1.14.14.63"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_n4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "ec": [
-        "1.14.11.n4"
-      ]
-    },
-    {
       "id": "ec_1_1_1_437",
       "name": "5-dehydrofumagillol 5-reductase",
       "ec": [
@@ -276,10 +264,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_240",
-      "name": "trans-resveratrol di-O-methyltransferase",
+      "id": "ec_2_1_1_207",
+      "name": "tRNA (cytidine(34)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.240"
+        "2.1.1.207"
       ]
     }
   ],
@@ -445,12 +433,11 @@
     },
     {
       "id": "r4",
-      "name": "beta-amyrin 16beta-monooxygenase",
-      "equation": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = cochalate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.63",
+      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxytestosterone ...",
+      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2beta-hydroxytestosterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "oleanolate",
+          "metabolite": "testosterone",
           "stoichiometry": 1
         },
         {
@@ -464,7 +451,7 @@
       ],
       "products": [
         {
-          "metabolite": "cochalate",
+          "metabolite": "2_hydroxytestosterone",
           "stoichiometry": 1
         },
         {
@@ -480,75 +467,72 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_63"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:55444"
+        "rhea": "RHEA:53264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55444"
+            "id": "RHEA:53264"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "equation": "L-aspartyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-aspartyl-[ankyrin-repeat domain protein] + succinate + CO2",
-      "ec": "1.14.11.n4",
+      "name": "gibberellin A53 + 3 2-oxoglutarate + 3 O2 = gibberellin A17 + 3 succinate + 3 CO2 + H2O...",
+      "equation": "gibberellin A53 + 3 2-oxoglutarate + 3 O2 = gibberellin A17 + 3 succinate + 3 CO2 + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "l_aspartate",
+          "metabolite": "gibberellin_a53",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_aspartate",
+          "metabolite": "gibberellin_a17",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "stoichiometry": 3
+        },
         {
-          "enzyme": "ec_1_14_11_n4"
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54280"
+        "rhea": "RHEA:60792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54280"
+            "id": "RHEA:60792"
           }
         ]
       }
@@ -604,49 +588,49 @@
     },
     {
       "id": "r7",
-      "name": "trans-resveratrol di-O-methyltransferase",
-      "equation": "trans-resveratrol + 2 S-adenosyl-L-methionine = pterostilbene + 2 S-adenosyl-L-homocysteine + 2 H(+)",
-      "ec": "2.1.1.240",
+      "name": "tRNA (cytidine(34)-2'-O)-methyltransferase",
+      "equation": "5-carboxymethylaminomethyluridine(34) in tRNA(Leu) + S-adenosyl-L-methionine = 5-carboxymethylaminomethyl-2'-O-methyluridine(34) in tRNA(Leu) + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.207",
       "substrates": [
         {
-          "metabolite": "trans_resveratrol",
+          "metabolite": "5_carboxymethylaminomethyluridine_5_monophosphat",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pterostilbene",
+          "metabolite": "5_carboxymethylaminomethyl_2_o_methyluridine_5_m",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_240"
+          "enzyme": "ec_2_1_1_207"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:32103"
+        "rhea": "RHEA:43088"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:32103"
+            "id": "RHEA:43088"
           }
         ]
       }

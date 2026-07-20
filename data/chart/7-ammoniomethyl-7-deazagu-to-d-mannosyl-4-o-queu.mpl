@@ -20,19 +20,25 @@ pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deaz
 
   branch from guanine side left {
     guanine
-    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyguanosine +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> . +2_deoxyguanosine_5_monophosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
   }
 
-  branch from methionine side right {
+  branch from adenine side right {
+    adenine
+    <-> . +atp +h2o
+    d_ribose_5_triphosphate
+  }
+
+  branch from methionine side left {
     methionine
-    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
-    8_methyladenosine_5_monophosphate_1
+    <-> ec_2_8_4_5 [2.8.4.5] +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +thiol_group +hydrogen_donor +sam +h_group +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_3_99_6 [1.3.99.6] +3_oxo_5_steroid +hydrogen_donor
-    3_oxo_4_steroid
+  branch from queuosine_5_phosphate_1 side right {
+    queuosine_5_phosphate_1
+    <-> . +guanosine_5_monophosphate_1 +guanine
+    queuine
   }
 }

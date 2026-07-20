@@ -15,4 +15,16 @@ pathway e-cinnamyl-alcohol-to-trans-pinosylvin "(E)-cinnamyl alcohol to trans-pi
     <-> ec_2_3_1_146 [2.3.1.146] +malonyl-coa +hplus -co2 -coa
     trans_pinosylvin
   }
+
+  branch from e_cinnamaldehyde side left {
+    e_cinnamaldehyde
+    <-> . +o2 +h2o +h2o2 +hplus
+    trans_cinnamate
+  }
+
+  branch from e_cinnamoyl_coa side right {
+    e_cinnamoyl_coa
+    <-> . +trans_cinnamate +atp +coa +amp
+    ppi
+  }
 }

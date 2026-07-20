@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-2-octenedioyl-coa-to-adipoyl-coa",
+  "name": "trans-2-octenedioyl-CoA to adipoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from trans-2-octenedioyl-CoA(5−) to adipoyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22532"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76330"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_2_octenedioyl_coa",
+      "name": "trans-2-octenedioyl-CoA",
+      "short": "trans-2-octenedioyl…",
+      "formula": "C29H41N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:76330"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_3_hydroxyoctanedioyl_coa",
+      "name": "(S)-3-hydroxyoctanedioyl-CoA",
+      "short": "3-hydroxyoctanedioy…",
+      "formula": "C29H43N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:76333"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxooctanedioyl_coa",
+      "name": "3-oxooctanedioyl-CoA",
+      "formula": "C29H41N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:76335"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "adipoyl_coa",
+      "name": "adipoyl-CoA",
+      "formula": "C27H39N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:76327"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E)-octenedioyl-CoA + H2O = (3S)-hydroxyoctanedioyl-CoA",
+      "equation": "(2E)-octenedioyl-CoA + H2O = (3S)-hydroxyoctanedioyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_2_octenedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_hydroxyoctanedioyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3S)-hydroxyoctanedioyl-CoA + NAD(+) = 3-oxooctanedioyl-CoA + NADH + H(+)",
+      "equation": "(3S)-hydroxyoctanedioyl-CoA + NAD(+) = 3-oxooctanedioyl-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxyoctanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxooctanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22848"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxooctanedioyl-CoA + CoA = hexanedioyl-CoA + acetyl-CoA",
+      "equation": "3-oxooctanedioyl-CoA + CoA = hexanedioyl-CoA + acetyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "3_oxooctanedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adipoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39067"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39067"
+          }
+        ]
+      }
+    }
+  ]
+}

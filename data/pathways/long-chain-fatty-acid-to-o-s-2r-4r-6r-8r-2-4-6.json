@@ -169,51 +169,22 @@
       }
     },
     {
-      "id": "long_chain_fatty_aldehyde",
-      "name": "long-chain fatty aldehyde",
+      "id": "long_chain_fatty_acyl_coa",
+      "name": "long-chain fatty acyl-CoA",
       "short": "long-chain fatty…",
-      "formula": "CHOR",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:83139"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17176"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "n_n_dimethyl_4_nitrosoaniline",
-      "name": "N,N-dimethyl-4-nitrosoaniline",
-      "short": "N,N-dimethyl-4-nitr…",
-      "formula": "C8H10N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:59990"
-      }
-    },
-    {
-      "id": "4_hydroxylamino_n_n_dimethylaniline",
-      "name": "4-(hydroxylamino)-N,N-dimethylaniline",
-      "short": "4-(hydroxylamino)-N…",
-      "formula": "C8H12N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:59991"
+        "chebi": "CHEBI:13193"
       }
     },
     {
@@ -226,31 +197,41 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
-      "charge": -1,
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:17499"
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
+      "id": "long_chain_fatty_aldehyde",
+      "name": "long-chain fatty aldehyde",
+      "short": "long-chain fatty…",
+      "formula": "CHOR",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:17176"
       }
     },
     {
-      "id": "3_l_glutamate_adenylyl_1_group",
-      "name": "3'-(L-glutamate)adenylyl(1−) group",
-      "short": "3'-(L-glutamate)ade…",
-      "formula": "C15H19N6O9P",
-      "charge": -1,
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:78520"
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "r_linalool",
+      "name": "(R)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28"
       }
     }
   ],
@@ -277,13 +258,6 @@
       ]
     },
     {
-      "id": "ec_1_2_1_48",
-      "name": "long-chain-aldehyde dehydrogenase",
-      "ec": [
-        "1.2.1.48"
-      ]
-    },
-    {
       "id": "ec_1_1_99_36",
       "name": "alcohol dehydrogenase (nicotinoprotein)",
       "ec": [
@@ -291,10 +265,17 @@
       ]
     },
     {
-      "id": "ec_6_1_1_24",
-      "name": "glutamate--tRNA(Gln) ligase",
+      "id": "ec_1_2_1_80",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
       "ec": [
-        "6.1.1.24"
+        "1.2.1.80"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_26",
+      "name": "R-linalool synthase",
+      "ec": [
+        "4.2.3.26"
       ]
     }
   ],
@@ -468,16 +449,11 @@
     },
     {
       "id": "r4",
-      "name": "long-chain-aldehyde dehydrogenase",
-      "equation": "a long-chain fatty aldehyde + NAD(+) + H2O = a long-chain fatty acid + NADH + 2 H(+)",
-      "ec": "1.2.1.48",
+      "name": "a long-chain fatty acyl-CoA + H2O = a long-chain fatty acid + CoA + H(+)",
+      "equation": "a long-chain fatty acyl-CoA + H2O = a long-chain fatty acid + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "long_chain_fatty_aldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "long_chain_fatty_acyl_coa",
           "stoichiometry": 1
         },
         {
@@ -491,30 +467,25 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_2_1_48"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:10652"
+        "rhea": "RHEA:67680"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10652"
+            "id": "RHEA:67680"
           }
         ]
       }
@@ -522,25 +493,25 @@
     {
       "id": "r5",
       "name": "alcohol dehydrogenase (nicotinoprotein)",
-      "equation": "N,N-dimethyl-4-nitrosoaniline + ethanol = 4-(hydroxylamino)-N,N-dimethylaniline + acetaldehyde",
+      "equation": "ethanol + A = acetaldehyde + AH2",
       "ec": "1.1.99.36",
       "substrates": [
         {
-          "metabolite": "n_n_dimethyl_4_nitrosoaniline",
+          "metabolite": "ethanol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ethanol",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxylamino_n_n_dimethylaniline",
+          "metabolite": "acetaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetaldehyde",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         }
       ],
@@ -552,44 +523,89 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27538"
+        "rhea": "RHEA:33567"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27538"
+            "id": "RHEA:33567"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "glutamate--tRNA(Gln) ligase",
-      "equation": "tRNA(Glx) + L-glutamate + ATP = L-glutamyl-tRNA(Glx) + AMP + diphosphate",
-      "ec": "6.1.1.24",
+      "name": "long-chain acyl-[acyl-carrier-protein] reductase",
+      "equation": "a long-chain fatty aldehyde + holo-[ACP] + NADP(+) = a long-chain fatty acyl-[ACP] + NADPH + H(+)",
+      "ec": "1.2.1.80",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "long_chain_fatty_aldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
+          "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "metabolite": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:54176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "R-linalool synthase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (R)-linalool + diphosphate",
+      "ec": "4.2.3.26",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_linalool",
           "stoichiometry": 1
         },
         {
@@ -599,20 +615,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_24"
+          "enzyme": "ec_4_2_3_26"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:18397"
+        "rhea": "RHEA:15809"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18397"
+            "id": "RHEA:15809"
           }
         ]
       }

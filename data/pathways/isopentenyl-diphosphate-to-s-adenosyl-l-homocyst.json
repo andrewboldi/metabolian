@@ -135,31 +135,30 @@
       }
     },
     {
-      "id": "5_epi_aristolochene",
-      "name": "(+)-5-epi-aristolochene",
-      "short": "(+)-5-epi-aristoloc…",
-      "formula": "C15H24",
+      "id": "car_3_ene",
+      "name": "(+)-car-3-ene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:23925"
+        "chebi": "CHEBI:7"
       }
     },
     {
-      "id": "demethylspheroidene",
-      "name": "demethylspheroidene",
-      "formula": "C40H58O",
+      "id": "trans_anol",
+      "name": "trans-anol",
+      "formula": "C9H10O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62505"
+        "chebi": "CHEBI:73343"
       }
     },
     {
-      "id": "spheroidene",
-      "name": "spheroidene",
-      "formula": "C41H60O",
+      "id": "trans_anethole",
+      "name": "trans-anethole",
+      "formula": "C10H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35330"
+        "chebi": "CHEBI:35616"
       }
     }
   ],
@@ -186,17 +185,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_61",
-      "name": "5-epiaristolochene synthase",
+      "id": "ec_4_2_3_107",
+      "name": "(+)-car-3-ene synthase",
       "ec": [
-        "4.2.3.61"
+        "4.2.3.107"
       ]
     },
     {
-      "id": "ec_2_1_1_210",
-      "name": "demethylspheroidene O-methyltransferase",
+      "id": "ec_2_1_1_279",
+      "name": "trans-anol O-methyltransferase",
       "ec": [
-        "2.1.1.210"
+        "2.1.1.279"
       ]
     }
   ],
@@ -350,10 +349,13 @@
     },
     {
       "id": "r4",
-      "name": "5-epiaristolochene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-5-epi-aristolochene + diphosphate",
-      "ec": "4.2.3.61",
+      "name": "6 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-nonaprenyl diphosp...",
+      "equation": "6 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-nonaprenyl diphosphate + 6 diphosphate",
       "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 6
+        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -361,7 +363,43 @@
       ],
       "products": [
         {
-          "metabolite": "5_epi_aristolochene",
+          "metabolite": "all_trans_nonaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 6
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:55364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(+)-car-3-ene synthase",
+      "equation": "(2E)-geranyl diphosphate = (+)-car-3-ene + diphosphate",
+      "ec": "4.2.3.107",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "car_3_ene",
           "stoichiometry": 1
         },
         {
@@ -371,32 +409,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_61"
+          "enzyme": "ec_4_2_3_107"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:28635"
+        "rhea": "RHEA:32539"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28635"
+            "id": "RHEA:32539"
           }
         ]
       }
     },
     {
-      "id": "r5",
-      "name": "demethylspheroidene O-methyltransferase",
-      "equation": "demethylspheroidene + S-adenosyl-L-methionine = spheroidene + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.210",
+      "id": "r6",
+      "name": "trans-anol O-methyltransferase",
+      "equation": "(E)-anol + S-adenosyl-L-methionine = (E)-anethole + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.279",
       "substrates": [
         {
-          "metabolite": "demethylspheroidene",
+          "metabolite": "trans_anol",
           "stoichiometry": 1
         },
         {
@@ -406,7 +444,7 @@
       ],
       "products": [
         {
-          "metabolite": "spheroidene",
+          "metabolite": "trans_anethole",
           "stoichiometry": 1
         },
         {
@@ -420,20 +458,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_210"
+          "enzyme": "ec_2_1_1_279"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:30903"
+        "rhea": "RHEA:36247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30903"
+            "id": "RHEA:36247"
           }
         ]
       }

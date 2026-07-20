@@ -26,7 +26,7 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… t
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    sibirene
+    <-> ec_2_7_7_65 [2.7.7.65] +gtp
+    c_di_gmp
   }
 }

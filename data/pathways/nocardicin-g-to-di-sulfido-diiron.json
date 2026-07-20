@@ -122,13 +122,22 @@
       }
     },
     {
-      "id": "1_aminocyclopropanecarboxylic_acid",
-      "name": "1-aminocyclopropanecarboxylic acid",
-      "short": "1-aminocyclopropane…",
-      "formula": "C4H7NO2",
+      "id": "n6_dimethylallyladenine",
+      "name": "N6-dimethylallyladenine",
+      "short": "N6-dimethylallylade…",
+      "formula": "C10H13N5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58360"
+        "chebi": "CHEBI:17660"
+      }
+    },
+    {
+      "id": "discadenine",
+      "name": "discadenine",
+      "formula": "C14H20N6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57585"
       }
     },
     {
@@ -141,21 +150,21 @@
       }
     },
     {
-      "id": "spheroidene",
-      "name": "spheroidene",
-      "formula": "C41H60O",
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35330"
+        "chebi": "CHEBI:17251"
       }
     },
     {
-      "id": "spheroiden_2_one",
-      "name": "spheroiden-2-one",
-      "formula": "C41H58O2",
+      "id": "pentalen_13_ol",
+      "name": "pentalen-13-ol",
+      "formula": "C15H24O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62480"
+        "chebi": "CHEBI:63243"
       }
     }
   ],
@@ -182,17 +191,10 @@
       ]
     },
     {
-      "id": "ec_4_4_1_14",
-      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "id": "ec_2_5_1_24",
+      "name": "discadenine synthase",
       "ec": [
-        "4.4.1.14"
-      ]
-    },
-    {
-      "id": "ec_1_14_15_9",
-      "name": "spheroidene monooxygenase",
-      "ec": [
-        "1.14.15.9"
+        "2.5.1.24"
       ]
     }
   ],
@@ -342,10 +344,14 @@
     },
     {
       "id": "r4",
-      "name": "1-aminocyclopropane-1-carboxylate synthase",
-      "equation": "S-adenosyl-L-methionine = 1-aminocyclopropane-1-carboxylate + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "4.4.1.14",
+      "name": "discadenine synthase",
+      "equation": "N(6)-dimethylallyladenine + S-adenosyl-L-methionine = discadenine + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.24",
       "substrates": [
+        {
+          "metabolite": "n6_dimethylallyladenine",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "sam",
           "stoichiometry": 1
@@ -353,7 +359,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_aminocyclopropanecarboxylic_acid",
+          "metabolite": "discadenine",
           "stoichiometry": 1
         },
         {
@@ -367,20 +373,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_4_1_14"
+          "enzyme": "ec_2_5_1_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:21744"
+        "rhea": "RHEA:19581"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21744"
+            "id": "RHEA:19581"
           }
         ]
       }
@@ -424,57 +430,51 @@
     },
     {
       "id": "r6",
-      "name": "spheroidene monooxygenase",
-      "equation": "spheroidene + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = spheroiden-2-one + 4 oxidized [2Fe-2S]-[ferredoxin] + 3 H2O",
-      "ec": "1.14.15.9",
+      "name": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidiz...",
+      "equation": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "spheroidene",
+          "metabolite": "pentalenene",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 2
         },
         {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "spheroiden_2_one",
+          "metabolite": "pentalen_13_ol",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_15_9"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:33027"
+        "rhea": "RHEA:31703"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33027"
+            "id": "RHEA:31703"
           }
         ]
       }

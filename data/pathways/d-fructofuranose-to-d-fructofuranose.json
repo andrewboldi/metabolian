@@ -1,0 +1,309 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-fructofuranose-to-d-fructofuranose",
+  "name": "β-D-fructofuranose… to D-fructofuranose",
+  "category": "carbohydrate-metabolism",
+  "summary": "A 4-step route from β-D-fructofuranose 1-phosphate(2−) to D-fructofuranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:35603"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138881"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_fructofuranose_1_phosphate",
+      "name": "β-D-fructofuranose 1-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138881"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37721"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17992"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "6_o_d_glucopyranosyl_d_fructofuranose",
+      "name": "6-O-α-D-glucopyranosyl-D-fructofuranose",
+      "short": "6-O-α-D-glucopyrano…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18394"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "α-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17925"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_13",
+      "name": "sucrose synthase",
+      "ec": [
+        "2.4.1.13"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_11",
+      "name": "isomaltulose synthase",
+      "ec": [
+        "5.4.99.11"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_219",
+      "name": "palatinase",
+      "ec": [
+        "3.2.1.219"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-D-fructose 1-phosphate + H2O = D-fructose + phosphate",
+      "equation": "beta-D-fructose 1-phosphate + H2O = D-fructose + phosphate",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:35603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sucrose synthase",
+      "equation": "D-fructose + UDP-alpha-D-glucose = sucrose + UDP + H(+)",
+      "ec": "2.4.1.13",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isomaltulose synthase",
+      "equation": "sucrose = 6-O-alpha-D-glucopyranosyl-D-fructose",
+      "ec": "5.4.99.11",
+      "substrates": [
+        {
+          "metabolite": "sucrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "palatinase",
+      "equation": "6-O-alpha-D-glucopyranosyl-D-fructose + H2O = alpha-D-glucose + D-fructose",
+      "ec": "3.2.1.219",
+      "substrates": [
+        {
+          "metabolite": "6_o_d_glucopyranosyl_d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_fructofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_219"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68808"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68808"
+          }
+        ]
+      }
+    }
+  ]
+}

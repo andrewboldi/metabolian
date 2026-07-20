@@ -22,8 +22,8 @@ pathway 1-2-diacyl-sn-glycerol-to-amp-3-end-1 "1,2-diacyl-sn-glycerol… to AMP 
 
   branch from 1_2_diacyl_sn_glycerol_3_phosphate side left {
     1_2_diacyl_sn_glycerol_3_phosphate
-    <-> ec_2_3_1_51 [2.3.1.51] +acyl_coa +coa
-    1_acyl_sn_glycerol_3_phosphate
+    <-> ec_2_3_1_n4 [2.3.1.n4] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +1_acyl_sn_glycerol_3_phosphate
+    holo-acp
   }
 
   branch from cdp_diacylglycerol side right {
@@ -34,13 +34,13 @@ pathway 1-2-diacyl-sn-glycerol-to-amp-3-end-1 "1,2-diacyl-sn-glycerol… to AMP 
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
-    3_l_threonyl_adenylyl_1_group
+    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
+    2_cis_6_trans_farnesyl_diphosphate
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_6_d_galactosyl_1_4_d_gluco
+    <-> ec_2_7_8_38 [2.7.8.38] +cdp_2_3_bis_o_phytanyl_sn_glycerol +serine +hplus
+    2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
   }
 }

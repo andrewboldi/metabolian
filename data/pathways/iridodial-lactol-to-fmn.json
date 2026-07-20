@@ -1,0 +1,331 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "iridodial-lactol-to-fmn",
+  "name": "(+)-iridodial lactol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (+)-iridodial lactol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57564"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:26"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "iridodial_lactol",
+      "name": "(+)-iridodial lactol",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "7_deoxyloganetic_alcohol",
+      "name": "7-deoxyloganetic alcohol",
+      "short": "7-deoxyloganetic…",
+      "formula": "C10H16O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141988"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "7_deoxyloganetic_aldehyde",
+      "name": "7-deoxyloganetic aldehyde",
+      "short": "7-deoxyloganetic…",
+      "formula": "C10H14O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141989"
+      }
+    },
+    {
+      "id": "7_deoxyloganetate",
+      "name": "7-deoxyloganetate",
+      "formula": "C10H13O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76846"
+      }
+    },
+    {
+      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
+      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
+      "short": "all-cis-5,8,11,14,1…",
+      "formula": "C20H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58562"
+      }
+    },
+    {
+      "id": "19_hepe",
+      "name": "19-HEPE",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76636"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-cis-trans-nepetalactol + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxylogan...",
+      "equation": "(+)-cis-trans-nepetalactol + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxyloganetic alcohol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "iridodial_lactol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganetic_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-deoxyloganetic alcohol + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxyloganet...",
+      "equation": "7-deoxyloganetic alcohol + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxyloganetic aldehyde + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganetic_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganetic_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "7-deoxyloganetic aldehyde + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxylogane...",
+      "equation": "7-deoxyloganetic aldehyde + reduced [NADPH--hemoprotein reductase] + O2 = 7-deoxyloganetate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganetic_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 1...",
+      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "19_hepe",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:39787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39787"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine",
   "name": "N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine…",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from N4-(β-N-acetyl-D-glucosaminyl)-L-asparagine zwitterion to N-acetyl-D-glucosamine 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -160,49 +160,40 @@
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:29991"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:28938"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_asparagine",
-      "name": "(3S)-3-hydroxy-L-asparagine",
-      "short": "3-hydroxy-L-asparag…",
-      "formula": "C4H8N2O4",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58850"
+        "chebi": "CHEBI:37563"
       }
     },
     {
-      "id": "succinate",
-      "name": "Succinate",
-      "formula": "C4H4O4",
-      "charge": -2,
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:30031"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:58069"
       }
     },
     {
@@ -213,34 +204,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:58516"
-      }
-    },
-    {
-      "id": "1h_pyrazole",
-      "name": "1H-pyrazole",
-      "formula": "C3H4N2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17241"
-      }
-    },
-    {
-      "id": "o_acetyl_l_serine",
-      "name": "O-acetyl-L-serine",
-      "formula": "C5H9NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58340"
-      }
-    },
-    {
-      "id": "3_pyrazol_1_yl_l_alanine",
-      "name": "3-(pyrazol-1-yl)-L-alanine",
-      "short": "3-(pyrazol-1-yl)-L-…",
-      "formula": "C6H9N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57747"
       }
     }
   ],
@@ -281,10 +244,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_39",
-      "name": "L-asparagine oxygenase",
+      "id": "ec_6_3_1_4",
+      "name": "aspartate--ammonia ligase (ADP-forming)",
       "ec": [
-        "1.14.11.39"
+        "6.3.1.4"
       ]
     },
     {
@@ -292,13 +255,6 @@
       "name": "phosphoglucosamine mutase",
       "ec": [
         "5.4.2.10"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_51",
-      "name": "beta-pyrazolylalanine synthase",
-      "ec": [
-        "2.5.1.51"
       ]
     }
   ],
@@ -538,59 +494,106 @@
     },
     {
       "id": "r6",
-      "name": "L-asparagine oxygenase",
-      "equation": "L-asparagine + 2-oxoglutarate + O2 = (2S,3S)-3-hydroxyasparagine + succinate + CO2",
-      "ec": "1.14.11.39",
+      "name": "aspartate--ammonia ligase (ADP-forming)",
+      "equation": "L-aspartate + NH4(+) + ATP = L-asparagine + ADP + phosphate + H(+)",
+      "ec": "6.3.1.4",
       "substrates": [
         {
-          "metabolite": "l_asparagine",
+          "metabolite": "aspartate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_asparagine",
+          "metabolite": "l_asparagine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "succinate",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_39"
+          "enzyme": "ec_6_3_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:25772"
+        "rhea": "RHEA:14197"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25772"
+            "id": "RHEA:14197"
           }
         ]
       }
     },
     {
       "id": "r7",
+      "name": "N-acetyl-D-glucosamine + CTP = N-acetyl-D-glucosamine 6-phosphate + CDP + H(+)",
+      "equation": "N-acetyl-D-glucosamine + CTP = N-acetyl-D-glucosamine 6-phosphate + CDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:74651"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74651"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
       "name": "phosphoglucosamine mutase",
       "equation": "alpha-D-glucosamine 1-phosphate = D-glucosamine 6-phosphate",
       "ec": "5.4.2.10",
@@ -612,7 +615,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:23424"
       },
@@ -622,55 +625,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:23424"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "beta-pyrazolylalanine synthase",
-      "equation": "pyrazole + O-acetyl-L-serine = 3-(pyrazol-1-yl)-L-alanine + acetate + H(+)",
-      "ec": "2.5.1.51",
-      "substrates": [
-        {
-          "metabolite": "1h_pyrazole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o_acetyl_l_serine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_pyrazol_1_yl_l_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_51"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:13117"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:13117"
           }
         ]
       }

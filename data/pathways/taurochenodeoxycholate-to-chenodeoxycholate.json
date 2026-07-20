@@ -112,24 +112,6 @@
       }
     },
     {
-      "id": "taurocyamine",
-      "name": "taurocyamine",
-      "formula": "C3H9N3O3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58064"
-      }
-    },
-    {
-      "id": "urea",
-      "name": "Urea",
-      "formula": "CH4N2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16199"
-      }
-    },
-    {
       "id": "nad",
       "name": "NAD+",
       "formula": "C21H26N7O14P2",
@@ -139,13 +121,13 @@
       }
     },
     {
-      "id": "3_oxochenodeoxycholoyl_coa",
-      "name": "3-oxochenodeoxycholoyl-CoA",
-      "short": "3-oxochenodeoxychol…",
-      "formula": "C45H68N7O19P3S",
-      "charge": -4,
+      "id": "7_hydroxy_3_oxo_5_cholan_24_oate",
+      "name": "7α-hydroxy-3-oxo-5β-cholan-24-oate",
+      "short": "7α-hydroxy-3-oxo-5β…",
+      "formula": "C24H37O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:136698"
+        "chebi": "CHEBI:87731"
       }
     },
     {
@@ -155,6 +137,43 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "n_stearoyltaurine",
+      "name": "N-stearoyltaurine",
+      "formula": "C20H40NO4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:132047"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "glycochenodeoxycholate",
+      "name": "Glycochenodeoxycholate",
+      "short": "Glycochenodeoxychol…",
+      "formula": "C26H42NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36252"
       }
     },
     {
@@ -168,12 +187,12 @@
       }
     },
     {
-      "id": "amorpha_4_11_diene",
-      "name": "amorpha-4,11-diene",
+      "id": "cadinene",
+      "name": "(+)-γ-cadinene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52026"
+        "chebi": "CHEBI:63205"
       }
     }
   ],
@@ -200,24 +219,10 @@
       ]
     },
     {
-      "id": "ec_3_5_3_17",
-      "name": "guanidinopropionase",
+      "id": "ec_4_2_3_92",
+      "name": "(+)-gamma-cadinene synthase",
       "ec": [
-        "3.5.3.17"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_395",
-      "name": "3alpha-hydroxybile acid CoA 3-dehydrogenase",
-      "ec": [
-        "1.1.1.395"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_24",
-      "name": "amorpha-4,11-diene synthase",
-      "ec": [
-        "4.2.3.24"
+        "4.2.3.92"
       ]
     }
   ],
@@ -371,57 +376,11 @@
     },
     {
       "id": "r4",
-      "name": "guanidinopropionase",
-      "equation": "taurocyamine + H2O = urea + taurine",
-      "ec": "3.5.3.17",
+      "name": "chenodeoxycholate + NAD(+) = 3-oxochenodeoxycholate + NADH + H(+)",
+      "equation": "chenodeoxycholate + NAD(+) = 3-oxochenodeoxycholate + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "taurocyamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "urea",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_3_17"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:75931"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75931"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "3alpha-hydroxybile acid CoA 3-dehydrogenase",
-      "equation": "chenodeoxycholoyl-CoA + NAD(+) = 7alpha-hydroxy-3-oxochol-24-oyl-CoA + NADH + H(+)",
-      "ec": "1.1.1.395",
-      "substrates": [
-        {
-          "metabolite": "chenodeoxycholoyl_coa",
+          "metabolite": "chenodeoxycholate",
           "stoichiometry": 1
         },
         {
@@ -431,7 +390,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_oxochenodeoxycholoyl_coa",
+          "metabolite": "7_hydroxy_3_oxo_5_cholan_24_oate",
           "stoichiometry": 1
         },
         {
@@ -443,31 +402,112 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_395"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52584"
+        "rhea": "RHEA:47532"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52584"
+            "id": "RHEA:47532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "taurine + octadecanoyl-CoA = N-octadecanoyl-taurine + CoA + H(+)",
+      "equation": "taurine + octadecanoyl-CoA = N-octadecanoyl-taurine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_stearoyltaurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:50112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50112"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "amorpha-4,11-diene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-amorpha-4,11-diene + diphosphate",
-      "ec": "4.2.3.24",
+      "name": "chenodeoxycholoyl-CoA + glycine = glycochenodeoxycholate + CoA + H(+)",
+      "equation": "chenodeoxycholoyl-CoA + glycine = glycochenodeoxycholate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycochenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:49788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49788"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "(+)-gamma-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-gamma-cadinene + diphosphate",
+      "ec": "4.2.3.92",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -476,7 +516,7 @@
       ],
       "products": [
         {
-          "metabolite": "amorpha_4_11_diene",
+          "metabolite": "cadinene",
           "stoichiometry": 1
         },
         {
@@ -486,20 +526,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_24"
+          "enzyme": "ec_4_2_3_92"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:18325"
+        "rhea": "RHEA:31827"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18325"
+            "id": "RHEA:31827"
           }
         ]
       }

@@ -14,14 +14,18 @@ pathway leukotriene-c4-to-fmnh2 "leukotriene C4 to FMNH2" {
     leukotriene_b4
     <-> ec_1_14_14_94 [1.14.14.94] +fmnh2 +o2 -fmn -h2o -hplus
     20_hydroxy_leukotriene_b4
-    <-> ec_1_2_8_1 [1.2.8.1] +fmn +pyruvate +coa +hplus -acetyl_coa -co2
-    fmnh2
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    20_oxoleukotriene_b4
+    <-> . +fmnh2 +o2 -fmn -h2o -hplus
+    20_hydroxy_20_oxoleukotriene_b4
+    <-> ec_1_3_8_17 [1.3.8.17] +f420_0 +fmn +hplus -fmnh2
+    dehydro_coenzyme_f420_0
   }
 
   branch from leukotriene_a4 side left {
     leukotriene_a4
-    <-> ec_1_13_11_34 [1.13.11.34] +o2 +h2o
-    arachidonate
+    <-> . +h2o
+    5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate
   }
 
   branch from gsh side right {
@@ -30,15 +34,15 @@ pathway leukotriene-c4-to-fmnh2 "leukotriene C4 to FMNH2" {
     coa_glutathione
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_cheilanthifoline
+  branch from leukotriene_b4 side left {
+    leukotriene_b4
+    <-> . +nadp +nadph +hplus
+    12_dehydro_leukotriene_b4
   }
 
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_14_14_18 [1.14.14.18] +ferroheme_b +o2 +carbon_monoxide +fe2 +fmn +h2o +hplus
-    biliverdin
+  branch from 20_hydroxy_leukotriene_b4 side right {
+    20_hydroxy_leukotriene_b4
+    <-> . +nadp +nadph +hplus
+    12_oxo_20_hydroxyleukotriene_b4
   }
 }

@@ -121,22 +121,31 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "s_carnitinyl_coa",
+      "name": "(S)-carnitinyl-CoA",
+      "formula": "C28H46N8O18P3S",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:62047"
       }
     },
     {
-      "id": "cubenene",
-      "name": "(+)-cubenene",
-      "formula": "C15H24",
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "terpinene",
+      "name": "α-terpinene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61685"
+        "chebi": "CHEBI:10334"
       }
     }
   ],
@@ -163,10 +172,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_63",
-      "name": "(+)-cubenene synthase",
+      "id": "ec_4_2_3_115",
+      "name": "alpha-terpinene synthase",
       "ec": [
-        "4.2.3.63"
+        "4.2.3.115"
       ]
     }
   ],
@@ -357,18 +366,49 @@
     },
     {
       "id": "r5",
-      "name": "(+)-cubenene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
-      "ec": "4.2.3.63",
+      "name": "(R)-carnitinyl-CoA = (S)-carnitinyl-CoA",
+      "equation": "(R)-carnitinyl-CoA = (S)-carnitinyl-CoA",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "r_carnitinyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cubenene",
+          "metabolite": "s_carnitinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:30539"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30539"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "alpha-terpinene synthase",
+      "equation": "(2E)-geranyl diphosphate = alpha-terpinene + diphosphate",
+      "ec": "4.2.3.115",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "terpinene",
           "stoichiometry": 1
         },
         {
@@ -378,20 +418,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_63"
+          "enzyme": "ec_4_2_3_115"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:29475"
+        "rhea": "RHEA:32563"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29475"
+            "id": "RHEA:32563"
           }
         ]
       }

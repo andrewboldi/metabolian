@@ -1,0 +1,413 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "arachidonate-to-fmn-23728",
+  "name": "arachidonate to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from arachidonate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23728"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:32395"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57405"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "thromboxane_a2",
+      "name": "thromboxane A2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57445"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "19_hydroxythromboxane_a2",
+      "name": "19-hydroxythromboxane A2",
+      "short": "19-hydroxythromboxa…",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137988"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_amino_6_hydroxyaminopurine",
+      "name": "2-amino-6-hydroxyaminopurine",
+      "short": "2-amino-6-hydroxyam…",
+      "formula": "C5H6N6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78685"
+      }
+    },
+    {
+      "id": "9h_purine_2_6_diamine",
+      "name": "9H-purine-2,6-diamine",
+      "short": "9H-purine-2,6-diami…",
+      "formula": "C5H6N6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40235"
+      }
+    },
+    {
+      "id": "nataloe_emodin",
+      "name": "nataloe-emodin",
+      "formula": "C15H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:152055"
+      }
+    },
+    {
+      "id": "cladofulvin",
+      "name": "cladofulvin",
+      "formula": "C30H16O10",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:152057"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_1",
+      "name": "prostaglandin-endoperoxide synthase",
+      "ec": [
+        "1.14.99.1"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_5",
+      "name": "thromboxane-A synthase",
+      "ec": [
+        "5.3.99.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin-endoperoxide synthase",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + AH2 + 2 O2 = prostaglandin H2 + A + H2O",
+      "ec": "1.14.99.1",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23728"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thromboxane-A synthase",
+      "equation": "prostaglandin H2 = thromboxane A2",
+      "ec": "5.3.99.5",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thromboxane_a2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "thromboxane A2 + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-thromboxane A...",
+      "equation": "thromboxane A2 + reduced [NADPH--hemoprotein reductase] + O2 = 19-hydroxy-thromboxane A2 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "thromboxane_a2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "19_hydroxythromboxane_a2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-amino-N(6)-hydroxyadenine + AH2 = 2,6-diaminopurine + A + H2O",
+      "equation": "2-amino-N(6)-hydroxyadenine + AH2 = 2,6-diaminopurine + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_amino_6_hydroxyaminopurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9h_purine_2_6_diamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:84591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2 nataloe emodin + reduced [NADPH--hemoprotein reductase] + O2 = cladofulvin + oxidized...",
+      "equation": "2 nataloe emodin + reduced [NADPH--hemoprotein reductase] + O2 = cladofulvin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "nataloe_emodin",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cladofulvin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64288"
+          }
+        ]
+      }
+    }
+  ]
+}

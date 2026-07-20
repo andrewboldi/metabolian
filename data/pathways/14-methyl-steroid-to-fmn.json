@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "14-methyl-steroid-to-fmn",
+  "name": "14α-methyl steroid to FMN",
+  "category": "other",
+  "summary": "A 3-step route from 14α-methyl steroid to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:68060"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138029"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "14_methyl_steroid",
+      "name": "14α-methyl steroid",
+      "formula": "C20H33R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138029"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "14_hydroxymethyl_steroid",
+      "name": "14α-hydroxymethyl steroid",
+      "short": "14α-hydroxymethyl…",
+      "formula": "C20H33OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176901"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "14_formyl_steroid",
+      "name": "14α-formyl steroid",
+      "formula": "C20H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176902"
+      }
+    },
+    {
+      "id": "14_steroid",
+      "name": "Δ14 steroid",
+      "formula": "C19H29R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138031"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "4_hydroxycholesterol",
+      "name": "4β-hydroxycholesterol",
+      "short": "4β-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85778"
+      }
+    },
+    {
+      "id": "4_7_dihydroxycholesterol",
+      "name": "4β,7α-dihydroxycholesterol",
+      "short": "4β,7α-dihydroxychol…",
+      "formula": "C27H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85779"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 14alpha-methyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 14alpha-hydr...",
+      "equation": "a 14alpha-methyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 14alpha-hydroxymethyl steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "14_methyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_hydroxymethyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:68060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68060"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 14alpha-hydroxymethyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 14alp...",
+      "equation": "a 14alpha-hydroxymethyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 14alpha-formyl steroid + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "14_hydroxymethyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_formyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68064"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68064"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 14alpha-formyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a Delta(14) st...",
+      "equation": "a 14alpha-formyl steroid + reduced [NADPH--hemoprotein reductase] + O2 = a Delta(14) steroid + formate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "14_formyl_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "14_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:68068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4beta-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta,7alpha-d...",
+      "equation": "4beta-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta,7alpha-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_7_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46120"
+          }
+        ]
+      }
+    }
+  ]
+}

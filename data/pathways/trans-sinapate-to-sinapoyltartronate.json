@@ -1,0 +1,421 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-sinapate-to-sinapoyltartronate",
+  "name": "trans-sinapate to sinapoyltartronate",
+  "category": "other",
+  "summary": "A 3-step route from trans-sinapate to sinapoyltartronate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:72603"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30023"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_sinapate",
+      "name": "trans-sinapate",
+      "formula": "C11H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30023"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_sinapoyl_amp",
+      "name": "trans-sinapoyl-AMP",
+      "formula": "C21H23N5O11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:192469"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hydroxymalonate",
+      "name": "hydroxymalonate",
+      "formula": "C3H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17649"
+      }
+    },
+    {
+      "id": "sinapoyltartronate",
+      "name": "sinapoyltartronate",
+      "formula": "C14H12O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57680"
+      }
+    },
+    {
+      "id": "esculetin",
+      "name": "esculetin",
+      "formula": "C9H6O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:490095"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "8_geranylesculetin",
+      "name": "8-geranylesculetin",
+      "formula": "C19H22O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134359"
+      }
+    },
+    {
+      "id": "e_sinapaldehyde",
+      "name": "(E)-sinapaldehyde",
+      "formula": "C11H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27949"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_106",
+      "name": "tartronate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.106"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_138",
+      "name": "coumarin 8-geranyltransferase",
+      "ec": [
+        "2.5.1.138"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_44",
+      "name": "cinnamoyl-CoA reductase",
+      "ec": [
+        "1.2.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
+      "equation": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "trans_sinapate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_sinapoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:72603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-sinapoyl-AMP + CoA = (E)-sinapoyl-CoA + AMP + H(+)",
+      "equation": "(E)-sinapoyl-AMP + CoA = (E)-sinapoyl-CoA + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_sinapoyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:72607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tartronate O-hydroxycinnamoyltransferase",
+      "equation": "hydroxymalonate + (E)-sinapoyl-CoA = (E)-sinapoyltartronate + CoA",
+      "ec": "2.3.1.106",
+      "substrates": [
+        {
+          "metabolite": "hydroxymalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinapoyltartronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "coumarin 8-geranyltransferase",
+      "equation": "esculetin + (2E)-geranyl diphosphate = 8-geranylesculetin + diphosphate",
+      "ec": "2.5.1.138",
+      "substrates": [
+        {
+          "metabolite": "esculetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_geranylesculetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_138"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51864"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "cinnamoyl-CoA reductase",
+      "equation": "(E)-sinapaldehyde + NADP(+) + CoA = (E)-sinapoyl-CoA + NADPH + H(+)",
+      "ec": "1.2.1.44",
+      "substrates": [
+        {
+          "metabolite": "e_sinapaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64656"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64656"
+          }
+        ]
+      }
+    }
+  ]
+}

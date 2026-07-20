@@ -53,14 +53,13 @@ function categoryFor(ecs, names) {
 }
 
 const chebi = chebiTable();
-// Only EC-annotated reactions become sheets. The .mpl grammar requires an enzyme
-// token on every step, and for the 56% of Rhea reactions with no EC assignment
-// the generator was emitting "spontaneous" — which asserts a mechanism Rhea
-// never claims. That is fabricated biochemistry, and this project's first rule
-// forbids it. Restricting to EC-annotated steps means every enzyme label on an
-// ingested sheet is the accepted ExPASy name for a real, assigned activity.
-const { reactions: allReactions } = loadReactions(chebi);
-const reactions = allReactions.filter((r) => r.ec.length);
+// The WHOLE vetted corpus, not just the EC-annotated part. Restricting to EC was
+// a workaround for the .mpl grammar demanding an enzyme token on every step: for
+// the 56% of Rhea reactions with no EC assignment the generator had been writing
+// "spontaneous", which asserts a mechanism Rhea never claims. The grammar now has
+// "." for a step with no assigned enzyme — which is what the poster draws, a
+// plain arrow — so those reactions can be carried honestly instead of dropped.
+const { reactions } = loadReactions(chebi);
 
 // ------------------------------------------------- reuse the repo's own naming
 // The hand-authored modules already carry 300+ curated ChEBI -> id/name
@@ -364,7 +363,7 @@ for (const chain of sheets) {
       ...cofIn.map((c) => `+${metIds.get(c)}`),
       ...cofOut.map((c) => `-${metIds.get(c)}`),
     ].join(" ");
-    lines.push(`    <-> ${enz}${ecTag}${side ? ` ${side}` : ""}`);
+    lines.push(`    <-> ${enz || "."}${ecTag}${side ? ` ${side}` : ""}`);
     lines.push(`    ${metIds.get(nextMain)}`);
     carry = nextMain;
   }
@@ -375,7 +374,7 @@ for (const chain of sheets) {
   branches.forEach((b, bi) => {
     const r = reactions[b.rxnIdx];
     const enz = r.ec[0] ? ecSeen.get(r.ec[0]) : null;
-    if (!enz || !metIds.get(b.anchor) || !metIds.get(b.far)) return;
+    if (!metIds.get(b.anchor) || !metIds.get(b.far)) return;
     const cof = [...r.substrates, ...r.products]
       .map((pp) => pp.chebi)
       .filter((c) => c !== b.anchor && c !== b.far);
@@ -383,7 +382,7 @@ for (const chain of sheets) {
     lines.push("");
     lines.push(`  branch from ${metIds.get(b.anchor)} side ${bi % 2 ? "right" : "left"} {`);
     lines.push(`    ${metIds.get(b.anchor)}`);
-    lines.push(`    <-> ${enz} [${r.ec[0]}]${side ? ` ${side}` : ""}`);
+    lines.push(`    <-> ${enz || "."}${r.ec[0] ? ` [${r.ec[0]}]` : ""}${side ? ` ${side}` : ""}`);
     lines.push(`    ${metIds.get(b.far)}`);
     lines.push("  }");
   });

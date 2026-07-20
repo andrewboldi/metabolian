@@ -169,69 +169,52 @@
       }
     },
     {
-      "id": "maltose",
-      "name": "maltose",
+      "id": "d_glucose_6_phosphate",
+      "name": "α-D-glucose 6-phosphate",
+      "short": "α-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58225"
+      }
+    },
+    {
+      "id": "nigerose",
+      "name": "nigerose",
       "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17306"
+        "chebi": "CHEBI:7570"
       }
     },
     {
-      "id": "1_o_sinapoyl_d_glucose",
-      "name": "1-O-sinapoyl-β-D-glucose",
-      "short": "1-O-sinapoyl-β-D-gl…",
-      "formula": "C17H22O10",
-      "charge": 0,
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:16546"
+        "chebi": "CHEBI:58272"
       }
     },
     {
-      "id": "1_2_di_o_sinapoyl_d_glucose",
-      "name": "1,2-di-O-sinapoyl-β-D-glucose",
-      "short": "1,2-di-O-sinapoyl-β…",
-      "formula": "C28H32O14",
-      "charge": 0,
+      "id": "2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate",
+      "name": "2-O-(α-D-glucopyranosyl)-3-O-phosphonato-D-glycerate",
+      "short": "2-O-(α-D-glucopyran…",
+      "formula": "C9H14O12P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:27993"
+        "chebi": "CHEBI:62600"
       }
     },
     {
-      "id": "maltose_1_phosphate",
-      "name": "maltose 1-phosphate",
-      "formula": "C12H21O14P",
-      "charge": -2,
+      "id": "camp",
+      "name": "3',5'-Cyclic AMP (cAMP)",
+      "short": "3',5'-Cyclic AMP…",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:63576"
-      }
-    },
-    {
-      "id": "d_xylose_1_phosphate",
-      "name": "α-D-xylose 1-phosphate",
-      "short": "α-D-xylose 1-P",
-      "formula": "C5H9O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57559"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "udp_d_xylose",
-      "name": "UDP-α-D-xylose",
-      "formula": "C14H20N2O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57632"
+        "chebi": "CHEBI:58165"
       }
     }
   ],
@@ -279,31 +262,38 @@
       ]
     },
     {
-      "id": "ec_2_4_1_139",
-      "name": "maltose synthase",
+      "id": "ec_5_4_2_2",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
       "ec": [
-        "2.4.1.139"
+        "5.4.2.2"
       ]
     },
     {
-      "id": "ec_2_3_1_103",
-      "name": "sinapoylglucose--sinapoylglucose O-sinapoyltransferase",
+      "id": "ec_5_4_2_5",
+      "name": "phosphoglucomutase (glucose-cofactor)",
       "ec": [
-        "2.3.1.103"
+        "5.4.2.5"
       ]
     },
     {
-      "id": "ec_2_4_1_342",
-      "name": "alpha-maltose-1-phosphate synthase",
+      "id": "ec_2_4_1_279",
+      "name": "nigerose phosphorylase",
       "ec": [
-        "2.4.1.342"
+        "2.4.1.279"
       ]
     },
     {
-      "id": "ec_2_7_7_11",
-      "name": "UTP--xylose-1-phosphate uridylyltransferase",
+      "id": "ec_2_4_1_266",
+      "name": "glucosyl-3-phosphoglycerate synthase",
       "ec": [
-        "2.7.7.11"
+        "2.4.1.266"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_1",
+      "name": "adenylate cyclase",
+      "ec": [
+        "4.6.1.1"
       ]
     }
   ],
@@ -580,63 +570,59 @@
     },
     {
       "id": "r7",
-      "name": "maltose synthase",
-      "equation": "2 alpha-D-glucose 1-phosphate + H2O = D-maltose + 2 phosphate",
-      "ec": "2.4.1.139",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "equation": "alpha-D-glucose 1-phosphate = alpha-D-glucose 6-phosphate",
+      "ec": "5.4.2.2",
       "substrates": [
         {
           "metabolite": "g1p",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "maltose",
+          "metabolite": "d_glucose_6_phosphate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_139"
+          "enzyme": "ec_5_4_2_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:22320"
+        "rhea": "RHEA:23536"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22320"
+            "id": "RHEA:23536"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "sinapoylglucose--sinapoylglucose O-sinapoyltransferase",
-      "equation": "2 1-O-(trans-sinapoyl)-beta-D-glucose = 1,2-di-O-sinapoyl beta-D-glucose + D-glucose",
-      "ec": "2.3.1.103",
+      "name": "nigerose phosphorylase",
+      "equation": "nigerose + phosphate = beta-D-glucose 1-phosphate + D-glucose",
+      "ec": "2.4.1.279",
       "substrates": [
         {
-          "metabolite": "1_o_sinapoyl_d_glucose",
-          "stoichiometry": 2
+          "metabolite": "nigerose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_2_di_o_sinapoyl_d_glucose",
+          "metabolite": "d_glucose_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -646,42 +632,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_103"
+          "enzyme": "ec_2_4_1_279"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:22664"
+        "rhea": "RHEA:32523"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22664"
+            "id": "RHEA:32523"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "alpha-maltose-1-phosphate synthase",
-      "equation": "ADP-alpha-D-glucose + alpha-D-glucose 1-phosphate = alpha-maltose 1-phosphate + ADP + H(+)",
-      "ec": "2.4.1.342",
+      "name": "glucosyl-3-phosphoglycerate synthase",
+      "equation": "ADP-alpha-D-glucose + (2R)-3-phosphoglycerate = (2R)-2-O-(alpha-D-glucopyranosyl)-3-phospho-glycerate + ADP + H(+)",
+      "ec": "2.4.1.266",
       "substrates": [
         {
           "metabolite": "adp_d_glucoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "g1p",
+          "metabolite": "pg3",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "maltose_1_phosphate",
+          "metabolite": "2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate",
           "stoichiometry": 1
         },
         {
@@ -695,46 +681,38 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_342"
+          "enzyme": "ec_2_4_1_266"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:50692"
+        "rhea": "RHEA:31311"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50692"
+            "id": "RHEA:31311"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "UTP--xylose-1-phosphate uridylyltransferase",
-      "equation": "alpha-D-xylose 1-phosphate + UTP + H(+) = UDP-alpha-D-xylose + diphosphate",
-      "ec": "2.7.7.11",
+      "name": "adenylate cyclase",
+      "equation": "ATP = 3',5'-cyclic AMP + diphosphate",
+      "ec": "4.6.1.1",
       "substrates": [
         {
-          "metabolite": "d_xylose_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "udp_d_xylose",
+          "metabolite": "camp",
           "stoichiometry": 1
         },
         {
@@ -744,20 +722,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_11"
+          "enzyme": "ec_4_6_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:18389"
+        "rhea": "RHEA:15389"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18389"
+            "id": "RHEA:15389"
           }
         ]
       }

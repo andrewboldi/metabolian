@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aurachin-c-to-4-hydroxy-2-methyl-3-oxo",
+  "name": "aurachin C to 4-hydroxy-2-methyl-3-oxo-…",
+  "category": "other",
+  "summary": "A 3-step route from aurachin C to 4-hydroxy-2-methyl-3-oxo-[(2E,6E)-farnesyl]-3,4-dihydroquinoline-1-oxide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49008"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90888"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aurachin_c",
+      "name": "aurachin C",
+      "formula": "C25H33NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90888"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "aurachin_c_epoxide",
+      "name": "aurachin C epoxide",
+      "formula": "C25H33NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90889"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_farnesyl_3_hydroxy_2_methyl_1_oxo_1_5_quinolin",
+      "name": "3-farnesyl-3-hydroxy-2-methyl-1-oxo-1λ5-quinolin-4-one",
+      "short": "3-farnesyl-3-hydrox…",
+      "formula": "C25H33NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90890"
+      }
+    },
+    {
+      "id": "4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy",
+      "name": "4-hydroxy-2-methyl-3-oxo-[(2E,6E)-farnesyl]-3,4-dihydroquinoline-1-oxide",
+      "short": "4-hydroxy-2-methyl-…",
+      "formula": "C25H33NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90785"
+      }
+    },
+    {
+      "id": "aurachin_b",
+      "name": "aurachin B",
+      "formula": "C25H32NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90784"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_394",
+      "name": "aurachin B dehydrogenase",
+      "ec": [
+        "1.1.1.394"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aurachin C + NADPH + O2 + H(+) = aurachin C epoxide + NADP(+) + H2O",
+      "equation": "aurachin C + NADPH + O2 + H(+) = aurachin C epoxide + NADP(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "aurachin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aurachin_c_epoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49008"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aurachin C epoxide = 2-hydroxy-1a-methyl-7a-[(2E,6E)-farnesyl]-1a,2-dihydrooxireno[2,3-...",
+      "equation": "aurachin C epoxide = 2-hydroxy-1a-methyl-7a-[(2E,6E)-farnesyl]-1a,2-dihydrooxireno[2,3-b]quinolin-7(7aH)-one",
+      "substrates": [
+        {
+          "metabolite": "aurachin_c_epoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_farnesyl_3_hydroxy_2_methyl_1_oxo_1_5_quinolin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxy-1a-methyl-7a-[(2E,6E)-farnesyl]-1a,2-dihydrooxireno[2,3-b]quinolin-7(7aH)-one...",
+      "equation": "2-hydroxy-1a-methyl-7a-[(2E,6E)-farnesyl]-1a,2-dihydrooxireno[2,3-b]quinolin-7(7aH)-one = 4-hydroxy-2-methyl-3-oxo-4-[(2E,6E)-farnesyl]-3,4-dihydroquinoline 1-oxide",
+      "substrates": [
+        {
+          "metabolite": "3_farnesyl_3_hydroxy_2_methyl_1_oxo_1_5_quinolin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "aurachin B dehydrogenase",
+      "equation": "aurachin B + NAD(+) + H2O = 4-hydroxy-2-methyl-3-oxo-4-[(2E,6E)-farnesyl]-3,4-dihydroquinoline 1-oxide + NADH",
+      "ec": "1.1.1.394",
+      "substrates": [
+        {
+          "metabolite": "aurachin_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_2_methyl_3_oxo_2e_6e_farnesyl_3_4_dihy",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_394"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:48720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48720"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -30,13 +30,13 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_4_1_322 [2.4.1.322] +dtdp_l_vancosamine +devancoaminyl_vancomycin +hplus
-    vancomycin
+    <-> . +dttp +2_deoxyguanosine_5_monophosphate
+    dgdp
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_7_12 [1.3.7.12] +primary_fluorescent_chlorophyll_catabolite +di_sulfido_diiron +hplus
-    red_chlorophyll_catabolite
+    <-> ec_1_17_7_4 [1.17.7.4] +ipp +h2o +di_sulfido_diiron +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 }

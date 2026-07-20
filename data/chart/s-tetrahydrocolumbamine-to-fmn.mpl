@@ -24,13 +24,13 @@ pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    18_r_hete
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_164 [2.1.1.164] +4_demethylrebeccamycin +sam +hplus
-    rebeccamycin
+    <-> . +lathosterone +sam +hplus
+    4_methyllathosterone
   }
 }

@@ -1,0 +1,364 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "p-xylene-to-p-toluate",
+  "name": "p-xylene to p-toluate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from p-xylene to p-toluate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51596"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27417"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "p_xylene",
+      "name": "p-xylene",
+      "formula": "C8H10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27417"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_methylbenzyl_alcohol",
+      "name": "4-methylbenzyl alcohol",
+      "short": "4-methylbenzyl…",
+      "formula": "C8H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1895"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "p_tolualdehyde",
+      "name": "p-tolualdehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28617"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "p_toluate",
+      "name": "p-toluate",
+      "formula": "C8H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28856"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "chlorophyllide_a",
+      "name": "chlorophyllide a",
+      "formula": "C35H32MgN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83348"
+      }
+    },
+    {
+      "id": "71_hydroxychlorophyllide_a",
+      "name": "71-hydroxychlorophyllide a",
+      "short": "71-hydroxychlorophy…",
+      "formula": "C35H32MgN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83357"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_26",
+      "name": "toluene methyl-monooxygenase",
+      "ec": [
+        "1.14.15.26"
+      ]
+    },
+    {
+      "id": "ec_1_17_7_2",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "ec": [
+        "1.17.7.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "toluene methyl-monooxygenase",
+      "equation": "p-xylene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 4-methylbenzyl alcohol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.26",
+      "substrates": [
+        {
+          "metabolite": "p_xylene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-methylbenzyl alcohol + O2 = 4-methylbenzaldehyde + H2O2",
+      "equation": "4-methylbenzyl alcohol + O2 = 4-methylbenzaldehyde + H2O2",
+      "substrates": [
+        {
+          "metabolite": "4_methylbenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_tolualdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80435"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80435"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-methylbenzaldehyde + NAD(+) + H2O = 4-methylbenzoate + NADH + 2 H(+)",
+      "equation": "4-methylbenzaldehyde + NAD(+) + H2O = 4-methylbenzoate + NADH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "p_tolualdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "p_toluate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "7-hydroxymethyl chlorophyll a reductase",
+      "equation": "chlorophyllide a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = 7(1)-hydroxychlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.2",
+      "substrates": [
+        {
+          "metabolite": "chlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "71_hydroxychlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:31751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31751"
+          }
+        ]
+      }
+    }
+  ]
+}

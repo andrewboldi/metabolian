@@ -22,9 +22,15 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
     3_hydroxy_steroid
   }
 
-  branch from hydrogen_donor side right {
+  branch from 3_oxo_1_steroid side right {
+    3_oxo_1_steroid
+    <-> . +h2o
+    1_hydroxy_3_oxo_steroid
+  }
+
+  branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_5_ol +hydrogen_acceptor +h2o
-    5_hydroxyquinolin_2_1h_one
+    <-> . +butyryl_coa +hydrogen_acceptor
+    crotonoyl_coa
   }
 }

@@ -1,0 +1,456 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-mevalonate-to-isopentenyl-diphosphate-42884",
+  "name": "(R)-mevalonate to isopentenyl diphosphate",
+  "category": "other",
+  "summary": "A 4-step route from (R)-mevalonate to isopentenyl diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42884"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:36464"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mevalonate",
+      "name": "(R)-Mevalonate",
+      "formula": "C6H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36464"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "r_3_phosphonatomevalonate",
+      "name": "(R)-3-phosphonatomevalonate",
+      "short": "3-phosphonatomevalo…",
+      "formula": "C6H10O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:82773"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_3_5_bisphosphonatomevalonate",
+      "name": "(R)-3,5-bisphosphonatomevalonate",
+      "short": "3,5-bisphosphonatom…",
+      "formula": "C6H9O10P2",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:82774"
+      }
+    },
+    {
+      "id": "isopentenyl_phosphate",
+      "name": "isopentenyl phosphate",
+      "short": "isopentenyl P",
+      "formula": "C5H9O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:65078"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "2e_3_methylpent_2_enoate_5_phosphate",
+      "name": "(2E)-3-methylpent-2-enoate 5-phosphate",
+      "short": "3-methylpent-2-enoa…",
+      "formula": "C6H8O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:229665"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_185",
+      "name": "mevalonate 3-kinase",
+      "ec": [
+        "2.7.1.185"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_186",
+      "name": "mevalonate-3-phosphate 5-kinase",
+      "ec": [
+        "2.7.1.186"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_110",
+      "name": "bisphosphomevalonate decarboxylase",
+      "ec": [
+        "4.1.1.110"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_26",
+      "name": "isopentenyl phosphate kinase",
+      "ec": [
+        "2.7.4.26"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_126",
+      "name": "anhydromevalonate phosphate decarboxylase",
+      "ec": [
+        "4.1.1.126"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_2",
+      "name": "isopentenyl-diphosphate Delta-isomerase",
+      "ec": [
+        "5.3.3.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mevalonate 3-kinase",
+      "equation": "(R)-mevalonate + ATP = (R)-3-phosphomevalonate + ADP + H(+)",
+      "ec": "2.7.1.185",
+      "substrates": [
+        {
+          "metabolite": "mevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_phosphonatomevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_185"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42884"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mevalonate-3-phosphate 5-kinase",
+      "equation": "(R)-3-phosphomevalonate + ATP = (R)-3,5-bisphosphomevalonate + ADP + H(+)",
+      "ec": "2.7.1.186",
+      "substrates": [
+        {
+          "metabolite": "r_3_phosphonatomevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_5_bisphosphonatomevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_186"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:42888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42888"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "bisphosphomevalonate decarboxylase",
+      "equation": "(R)-3,5-bisphosphomevalonate + H(+) = isopentenyl phosphate + CO2 + phosphate",
+      "ec": "4.1.1.110",
+      "substrates": [
+        {
+          "metabolite": "r_3_5_bisphosphonatomevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopentenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "isopentenyl phosphate kinase",
+      "equation": "isopentenyl phosphate + ATP = isopentenyl diphosphate + ADP",
+      "ec": "2.7.4.26",
+      "substrates": [
+        {
+          "metabolite": "isopentenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:33963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "anhydromevalonate phosphate decarboxylase",
+      "equation": "(2E)-3-methyl-5-phosphooxypent-2-enoate + H(+) = isopentenyl phosphate + CO2",
+      "ec": "4.1.1.126",
+      "substrates": [
+        {
+          "metabolite": "2e_3_methylpent_2_enoate_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isopentenyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:78971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "isopentenyl-diphosphate Delta-isomerase",
+      "equation": "isopentenyl diphosphate = dimethylallyl diphosphate",
+      "ec": "5.3.3.2",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:23284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23284"
+          }
+        ]
+      }
+    }
+  ]
+}

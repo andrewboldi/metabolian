@@ -1,0 +1,208 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prostaglandin-a1-to-15-o-d-glucuronosyl-p",
+  "name": "prostaglandin A1 to 15-O-(β-D-glucuronosyl)-p…",
+  "category": "other",
+  "summary": "A 3-step route from prostaglandin A1(1−) to 15-O-(β-D-glucuronosyl)-prostaglandin B1(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10460"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57398"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "prostaglandin_a1",
+      "name": "prostaglandin A1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57398"
+      }
+    },
+    {
+      "id": "prostaglandin_c1",
+      "name": "prostaglandin C1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57399"
+      }
+    },
+    {
+      "id": "prostaglandin_b1",
+      "name": "prostaglandin B1",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133393"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "15_o_d_glucuronosyl_prostaglandin_b1",
+      "name": "15-O-(β-D-glucuronosyl)-prostaglandin B1",
+      "short": "15-O-(β-D-glucurono…",
+      "formula": "C26H38O10",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231330"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_9",
+      "name": "prostaglandin-A1 Delta-isomerase",
+      "ec": [
+        "5.3.3.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin-A1 Delta-isomerase",
+      "equation": "prostaglandin A1 = prostaglandin C1",
+      "ec": "5.3.3.9",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_a1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_c1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin C1 = prostaglandin B1",
+      "equation": "prostaglandin C1 = prostaglandin B1",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_c1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_b1",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:50552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin B1 + UDP-alpha-D-glucuronate = 15-O-(beta-D-glucuronosyl)-prostaglandin B...",
+      "equation": "prostaglandin B1 + UDP-alpha-D-glucuronate = 15-O-(beta-D-glucuronosyl)-prostaglandin B1 + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_o_d_glucuronosyl_prostaglandin_b1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79935"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79935"
+          }
+        ]
+      }
+    }
+  ]
+}

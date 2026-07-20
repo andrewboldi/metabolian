@@ -1,0 +1,407 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "campesterol-to-fmn",
+  "name": "campesterol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from campesterol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69835"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "campesterol",
+      "name": "campesterol",
+      "formula": "C28H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28623"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "22s_22_hydroxycampesterol",
+      "name": "(22S)-22-hydroxycampesterol",
+      "short": "22-hydroxycampester…",
+      "formula": "C28H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72331"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "22r_23r_22_23_dihydroxycampesterol",
+      "name": "(22R,23R)-22,23-dihydroxycampesterol",
+      "short": "(22R,23R)-22,23-dih…",
+      "formula": "C28H48O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80401"
+      }
+    },
+    {
+      "id": "22r_23r_22_23_dihydroxycampest_4_en_3_one",
+      "name": "(22R,23R)-22,23-dihydroxycampest-4-en-3-one",
+      "short": "(22R,23R)-22,23-dih…",
+      "formula": "C28H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80402"
+      }
+    },
+    {
+      "id": "22s_22_hydroxycampest_4_en_3_one",
+      "name": "(22S)-22-hydroxycampest-4-en-3-one",
+      "short": "22-hydroxycampest-4…",
+      "formula": "C28H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72330"
+      }
+    },
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17347"
+      }
+    },
+    {
+      "id": "16_hydroxytestosterone",
+      "name": "16α-hydroxytestosterone",
+      "short": "16α-hydroxytestoste…",
+      "formula": "C19H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34172"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_79",
+      "name": "3beta,22alpha-dihydroxysteroid 3-dehydrogenase",
+      "ec": [
+        "1.14.19.79"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "campesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycampesterol...",
+      "equation": "campesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycampesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "campesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22s_22_hydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69835"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(22S)-22-hydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-2...",
+      "equation": "(22S)-22-hydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-22,23-dihydroxycampesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "22s_22_hydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69827"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69827"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(22R,23R)-22,23-dihydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (2...",
+      "equation": "(22R,23R)-22,23-dihydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,23R)-22,23-dihydroxycampest-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_23r_22_23_dihydroxycampest_4_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:69979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3beta,22alpha-dihydroxysteroid 3-dehydrogenase",
+      "equation": "(22S)-22-hydroxycampesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycampest-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.79",
+      "substrates": [
+        {
+          "metabolite": "22s_22_hydroxycampesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22s_22_hydroxycampest_4_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:69971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17beta-dihydroxyan...",
+      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 16alpha,17beta-dihydroxyandrost-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxytestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53196"
+          }
+        ]
+      }
+    }
+  ]
+}

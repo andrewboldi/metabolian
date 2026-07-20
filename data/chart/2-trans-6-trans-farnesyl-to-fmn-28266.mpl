@@ -18,13 +18,13 @@ pathway 2-trans-6-trans-farnesyl-to-fmn-28266 "2-trans,6-trans-farnesyl… to FM
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    tuberculosinol
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_dodecaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
+    2_demethylmenaquinol_12
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_65 [1.14.14.65] +ferruginol +fmnh2 +o2 +h2o +hplus
-    sugiol
+    <-> ec_1_14_14_71 [1.14.14.71] +cucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_oxocucurbitadienol
   }
 }

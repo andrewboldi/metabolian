@@ -1,0 +1,329 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-s-hpete-to-13-14-dihydrolipoxin-a4",
+  "name": "5(S)-HPETE to 13,14-dihydrolipoxin A4",
+  "category": "other",
+  "summary": "A 5-step route from 5(S)-HPETE(1−) to 13,14-dihydrolipoxin A4(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17961"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57450"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_s_hpete",
+      "name": "5(S)-HPETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57450"
+      }
+    },
+    {
+      "id": "leukotriene_a4",
+      "name": "leukotriene A4",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57463"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "lipoxin_a4",
+      "name": "lipoxin A4",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:67026"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "15_oxolipoxin_a4",
+      "name": "15-oxolipoxin A4",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78311"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "13_14_dihydro_15_oxolipoxin_a4",
+      "name": "13,14-dihydro-15-oxolipoxin A4",
+      "short": "13,14-dihydro-15-ox…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78325"
+      }
+    },
+    {
+      "id": "13_14_dihydrolipoxin_a4",
+      "name": "13,14-dihydrolipoxin A4",
+      "short": "13,14-dihydrolipoxi…",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78329"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = leukotriene A4 + H2O",
+      "equation": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate = leukotriene A4 + H2O",
+      "substrates": [
+        {
+          "metabolite": "5_s_hpete",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17961"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin A4",
+      "equation": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin A4",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipoxin_a4",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48584"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lipoxin A4 + NAD(+) = 15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z,13E)-eicosatetraenoate + NADH...",
+      "equation": "lipoxin A4 + NAD(+) = 15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z,13E)-eicosatetraenoate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_oxolipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z,13E)-eicosatetraenoate + NADH + H(+) = 15-oxo-(5S,6...",
+      "equation": "15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z,13E)-eicosatetraenoate + NADH + H(+) = 15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z)-eicosatrienoate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "15_oxolipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_14_dihydro_15_oxolipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:41592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z)-eicosatrienoate + NADH + H(+) = (5S,6R,15S)-trihyd...",
+      "equation": "15-oxo-(5S,6R)-dihydroxy-(7E,9E,11Z)-eicosatrienoate + NADH + H(+) = (5S,6R,15S)-trihydroxy-(7E,9E,11Z)-eicosatrienoate + NAD(+)",
+      "substrates": [
+        {
+          "metabolite": "13_14_dihydro_15_oxolipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_14_dihydrolipoxin_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41596"
+          }
+        ]
+      }
+    }
+  ]
+}

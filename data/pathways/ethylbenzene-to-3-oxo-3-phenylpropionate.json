@@ -146,31 +146,69 @@
       }
     },
     {
-      "id": "3_3_5_triiodo_l_thyronine",
-      "name": "3,3',5-triiodo-L-thyronine",
-      "short": "3,3',5-triiodo-L-th…",
-      "formula": "C15H12I3NO4",
+      "id": "pregna_4_9_11_diene_3_20_dione",
+      "name": "pregna-4,9(11)-diene-3,20-dione",
+      "short": "pregna-4,9(11)-dien…",
+      "formula": "C21H28O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:533015"
+        "chebi": "CHEBI:16744"
       }
     },
     {
-      "id": "iodide",
-      "name": "iodide",
-      "formula": "I",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9_11_epoxypregn_4_ene_3_20_dione",
+      "name": "9,11α-epoxypregn-4-ene-3,20-dione",
+      "short": "9,11α-epoxypregn-4-…",
+      "formula": "C21H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17206"
+      }
+    },
+    {
+      "id": "1_phenylethanol",
+      "name": "1-phenylethanol",
+      "formula": "C8H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:669"
+      }
+    },
+    {
+      "id": "s_3_ammonio_3_phenylpropanoate",
+      "name": "(S)-3-ammonio-3-phenylpropanoate",
+      "short": "3-ammonio-3-phenylp…",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:68506"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16382"
-      }
-    },
-    {
-      "id": "l_thyroxine",
-      "name": "L-thyroxine",
-      "formula": "C15H11I4NO4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58448"
+        "chebi": "CHEBI:29985"
       }
     }
   ],
@@ -197,10 +235,10 @@
       ]
     },
     {
-      "id": "ec_1_21_99_4",
-      "name": "thyroxine 5'-deiodinase",
+      "id": "ec_1_14_99_24",
+      "name": "steroid 9alpha-monooxygenase",
       "ec": [
-        "1.21.99.4"
+        "1.14.99.24"
       ]
     }
   ],
@@ -366,16 +404,26 @@
     },
     {
       "id": "r4",
-      "name": "thyroxine 5'-deiodinase",
-      "equation": "3,3',5-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
-      "ec": "1.21.99.4",
+      "name": "steroid 9alpha-monooxygenase",
+      "equation": "pregna-4,9(11)-diene-3,20-dione + AH2 + O2 = 9,11alpha-epoxypregn-4-ene-3,20-dione + A + H2O",
+      "ec": "1.14.99.24",
       "substrates": [
         {
-          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "metabolite": "pregna_4_9_11_diene_3_20_dione",
           "stoichiometry": 1
         },
         {
-          "metabolite": "iodide",
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_11_epoxypregn_4_ene_3_20_dione",
           "stoichiometry": 1
         },
         {
@@ -383,36 +431,108 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_thyroxine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_21_99_4"
+          "enzyme": "ec_1_14_99_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:19745"
+        "rhea": "RHEA:19557"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19745"
+            "id": "RHEA:19557"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1-phenylethanol + NAD(+) = acetophenone + NADH + H(+)",
+      "equation": "1-phenylethanol + NAD(+) = acetophenone + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_phenylethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64700"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "(S)-3-amino-3-phenylpropanoate + 2-oxoglutarate = 3-oxo-3-phenylpropanoate + L-glutamate",
+      "equation": "(S)-3-amino-3-phenylpropanoate + 2-oxoglutarate = 3-oxo-3-phenylpropanoate + L-glutamate",
+      "substrates": [
+        {
+          "metabolite": "s_3_ammonio_3_phenylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_3_phenylpropionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:47320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47320"
           }
         ]
       }

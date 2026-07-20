@@ -113,22 +113,69 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "5_methylaminomethyl_2_thiouridine_5_monophosphat",
+      "name": "5-methylaminomethyl-2-thiouridine 5'-monophosphate zwitterion",
+      "short": "5-methylaminomethyl…",
+      "formula": "C11H16N3O7PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:162247"
+        "chebi": "CHEBI:74455"
       }
     },
     {
-      "id": "cedr_8_ene",
-      "name": "cedr-8-ene",
-      "formula": "C15H24",
+      "id": "selenophosphate",
+      "name": "selenophosphate",
+      "formula": "O3PSe",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16144"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10216"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_methylaminomethyl_2_selenouridine_5_monophosph",
+      "name": "5-methylaminomethyl-2-selenouridine 5'-monophosphate zwitterion",
+      "short": "5-methylaminomethyl…",
+      "formula": "C11H16N3O7PSe",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82743"
+      }
+    },
+    {
+      "id": "thiogeraniol",
+      "name": "thiogeraniol",
+      "formula": "C10H18S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143703"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -162,10 +209,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_227",
-      "name": "(-)-alpha-cedrene synthase",
+      "id": "ec_2_9_1_3",
+      "name": "tRNA 2-selenouridine synthase",
       "ec": [
-        "4.2.3.227"
+        "2.9.1.3"
       ]
     }
   ],
@@ -348,18 +395,42 @@
     },
     {
       "id": "r5",
-      "name": "(-)-alpha-cedrene synthase",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "ec": "4.2.3.227",
+      "name": "tRNA 2-selenouridine synthase",
+      "equation": "5-methylaminomethyl-2-thiouridine(34) in tRNA + selenophosphate + (2E)-geranyl diphosphate + H2O + H(+) = 5-methylaminomethyl-2-selenouridine(34) in tRNA + (2E)-thiogeraniol + phosphate + diphosphate",
+      "ec": "2.9.1.3",
       "substrates": [
         {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
+          "metabolite": "5_methylaminomethyl_2_thiouridine_5_monophosphat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "selenophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cedr_8_ene",
+          "metabolite": "5_methylaminomethyl_2_selenouridine_5_monophosph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thiogeraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
           "stoichiometry": 1
         },
         {
@@ -369,20 +440,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_227"
+          "enzyme": "ec_2_9_1_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31423"
+        "rhea": "RHEA:42716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31423"
+            "id": "RHEA:42716"
           }
         ]
       }

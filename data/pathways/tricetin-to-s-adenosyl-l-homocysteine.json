@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tricetin-to-s-adenosyl-l-homocysteine",
+  "name": "tricetin to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from tricetin(1-) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27493"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60045"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tricetin",
+      "name": "tricetin",
+      "formula": "C15H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60045"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "3_o_methyltricetin",
+      "name": "3'-O-methyltricetin",
+      "formula": "C16H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60014"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_di_o_methyltricetin",
+      "name": "3',5'-di-O-methyltricetin",
+      "short": "3',5'-di-O-methyltr…",
+      "formula": "C17H13O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60016"
+      }
+    },
+    {
+      "id": "3_4_5_o_trimethyltricetin",
+      "name": "3',4',5'-O-trimethyltricetin",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60020"
+      }
+    },
+    {
+      "id": "gibberellin_a34",
+      "name": "gibberellin A34",
+      "formula": "C19H23O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73258"
+      }
+    },
+    {
+      "id": "gibberellin_a34_methyl_ester",
+      "name": "gibberellin A34 methyl ester",
+      "short": "gibberellin A34…",
+      "formula": "C20H26O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73260"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_275",
+      "name": "gibberellin A9 O-methyltransferase",
+      "ec": [
+        "2.1.1.275"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_276",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": [
+        "2.1.1.276"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tricetin + S-adenosyl-L-methionine = 3'-O-methyltricetin + S-adenosyl-L-homocysteine + ...",
+      "equation": "tricetin + S-adenosyl-L-methionine = 3'-O-methyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3'-O-methyltricetin + S-adenosyl-L-methionine = 3',5'-di-O-methyltricetin + S-adenosyl-...",
+      "equation": "3'-O-methyltricetin + S-adenosyl-L-methionine = 3',5'-di-O-methyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_di_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27497"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3',5'-di-O-methyltricetin + S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + S-...",
+      "equation": "3',5'-di-O-methyltricetin + S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_5_di_o_methyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_5_o_trimethyltricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27501"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "gibberellin A9 O-methyltransferase",
+      "equation": "gibberellin A34 + S-adenosyl-L-methionine = O-methyl gibberellin A34 + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.275",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a34",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a34_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:36127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36127"
+          }
+        ]
+      }
+    }
+  ]
+}
