@@ -185,25 +185,6 @@
       }
     },
     {
-      "id": "3_5_phosphooxy_l_glutamate_adenylyl_2_group",
-      "name": "3'-(5-phosphooxy-L-glutamate)adenylyl(2−) group",
-      "short": "3'-(5-phosphooxy-L-…",
-      "formula": "C15H19N6O12P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:142449"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
       "id": "cysteine",
       "name": "L-Cysteine",
       "formula": "C3H7NO2S",
@@ -268,10 +249,10 @@
       ]
     },
     {
-      "id": "ec_6_1_1_24",
-      "name": "glutamate--tRNA(Gln) ligase",
+      "id": "ec_6_1_1_17",
+      "name": "glutamate--tRNA ligase",
       "ec": [
-        "6.1.1.24"
+        "6.1.1.17"
       ]
     },
     {
@@ -453,9 +434,9 @@
     },
     {
       "id": "r4",
-      "name": "glutamate--tRNA(Gln) ligase",
-      "equation": "tRNA(Glx) + L-glutamate + ATP = L-glutamyl-tRNA(Glx) + AMP + diphosphate",
-      "ec": "6.1.1.24",
+      "name": "glutamate--tRNA ligase",
+      "equation": "tRNA(Glu) + L-glutamate + ATP = L-glutamyl-tRNA(Glu) + AMP + diphosphate",
+      "ec": "6.1.1.17",
       "substrates": [
         {
           "metabolite": "amp_3_end_1",
@@ -486,108 +467,26 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_24"
+          "enzyme": "ec_6_1_1_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:18397"
+        "rhea": "RHEA:23540"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18397"
+            "id": "RHEA:23540"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-glutamyl-tRNA(Gln) + ATP = 5-phosphooxy-L-glutamyl-tRNA(Gln) + ADP",
-      "equation": "L-glutamyl-tRNA(Gln) + ATP = 5-phosphooxy-L-glutamyl-tRNA(Gln) + ADP",
-      "substrates": [
-        {
-          "metabolite": "3_l_glutamate_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_5_phosphooxy_l_glutamate_adenylyl_2_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:57908"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57908"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "5-phosphooxy-L-glutamyl-tRNA(Gln) + NH4(+) = L-glutaminyl-tRNA(Gln) + phosphate + H(+)",
-      "equation": "5-phosphooxy-L-glutamyl-tRNA(Gln) + NH4(+) = L-glutaminyl-tRNA(Gln) + phosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_5_phosphooxy_l_glutamate_adenylyl_2_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_l_glutaminyl_adenylyl_zwitterionic_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:57912"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57912"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "glutamate--cysteine ligase",
       "equation": "L-cysteine + L-glutamate + ATP = gamma-L-glutamyl-L-cysteine + ADP + phosphate + H(+)",
       "ec": "6.3.2.2",
@@ -629,7 +528,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:13285"
       },
@@ -644,7 +543,7 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r6",
       "name": "cysteine-conjugate transaminase",
       "equation": "S-(4-bromophenyl)-L-cysteine + 2-oxoglutarate = 3-((4-bromophenyl)sulfanyl)-2-oxopropanoate + L-glutamate",
       "ec": "2.6.1.75",
@@ -674,7 +573,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:13485"
       },

@@ -24,14 +24,14 @@ pathway 6-oxocampestanol-to-fmn "6-oxocampestanol to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    25_hydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    7_hete
   }
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    hydroxycholesterol_27
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    13_hete
   }
 
   branch from teasterone side right {

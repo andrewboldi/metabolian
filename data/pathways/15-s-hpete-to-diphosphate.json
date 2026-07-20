@@ -173,42 +173,40 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "4e_6e_2_6_dimethylocta_2_4_6_triene",
-      "name": "(4E,6E)-2,6-dimethylocta-2,4,6-triene",
-      "short": "(4E,6E)-2,6-dimethy…",
-      "formula": "C10H16",
+      "id": "pre_putrebactin",
+      "name": "pre-putrebactin",
+      "formula": "C16H30N4O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:141222"
+        "chebi": "CHEBI:229777"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "maaliene",
-      "name": "β-maaliene",
-      "formula": "C15H24",
+      "id": "putrebactin",
+      "name": "putrebactin",
+      "formula": "C16H28N4O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132831"
+        "chebi": "CHEBI:50432"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "sobralene",
+      "name": "sobralene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229939"
       }
     }
   ],
@@ -433,52 +431,64 @@
     },
     {
       "id": "r6",
-      "name": "(2E)-geranyl diphosphate = (4E,6E)-allo-ocimene + diphosphate",
-      "equation": "(2E)-geranyl diphosphate = (4E,6E)-allo-ocimene + diphosphate",
+      "name": "pre-putrebactin + ATP = putrebactin + AMP + diphosphate + H(+)",
+      "equation": "pre-putrebactin + ATP = putrebactin + AMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "pre_putrebactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4e_6e_2_6_dimethylocta_2_4_6_triene",
+          "metabolite": "putrebactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:73947"
+        "rhea": "RHEA:79287"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73947"
+            "id": "RHEA:79287"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "(2E,6E)-farnesyl diphosphate = beta-maaliene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-maaliene + diphosphate",
+      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = sobralene + diphosphate",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = sobralene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "maaliene",
+          "metabolite": "sobralene",
           "stoichiometry": 1
         },
         {
@@ -489,14 +499,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:73951"
+        "rhea": "RHEA:79459"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73951"
+            "id": "RHEA:79459"
           }
         ]
       }

@@ -30,37 +30,37 @@ pathway 7-7-dimethyl-2-methyl-to-nad "(-)-7,7-Dimethyl-2-methyl… to NAD" {
 
   branch from h side left {
     h
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_galactose +4_nitrophenol +h2o
-    4_nitrophenyl_d_galactoside
+    <-> . +adp +phosphate +atp +h2o
+    5_hepe
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_22 [3.2.1.22] +4_nitrophenol +4_nitrophenyl_d_galactoside +h2o
-    d_galactopyranose
+    <-> . +adp +18_r_hepe +phosphate +18_r_hepe +h2o
+    atp
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_149 [1.14.14.149] +h +o2 +1_deoxycapsidiol +nadp +h2o
-    capsidiol
+    <-> . +formaldehyde +h +sarcosine +nadp +h2o
+    n_n_dimethylglycine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_75 [1.3.1.75] +h +3_8_divinyl_protochlorophyllide_a +nadp
-    protochlorophyllide_a
+    <-> . +3_3_5_triiodo_l_thyronine +iodide +nadp
+    l_thyroxine
   }
 
   branch from nad side left {
     nad
-    <-> . +3_methylcatechol +nadh +co2 +h
-    1_6_dihydroxy_5_methylcyclohexa_2_4_dienecarboxy
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +h2o
+    3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylic
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2_methyl_3_ketovaleric_acid
-    2_methyl_3_hydroxyvaleric_acid
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +h2o
+    4beta_carboxy_4alpha_methyl_5alpha_cholesta_8_en
   }
 }

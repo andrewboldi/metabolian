@@ -63,8 +63,16 @@
     body[data-page] .readout dt { text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); font-size: 0.88em; }
     body[data-page] .readout dd { margin: 0; color: var(--text); }
 
-    /* --- prose ------------------------------------------------------------- */
-    body[data-page] .prose { max-width: 68ch; }
+    /* --- prose ---------------------------------------------------------------
+       The measure lives on the text elements, not on .prose, so a data table can
+       use the full column while running prose stays at a readable 68ch.
+       min(…, 100%) keeps the wide elements inside the grid column at the
+       breakpoint where the TOC rail appears. */
+    body[data-page] .prose { max-width: min(90ch, 100%); }
+    body[data-page] .prose > p,
+    body[data-page] .prose > ul,
+    body[data-page] .prose > ol,
+    body[data-page] .prose .callout p { max-width: 68ch; }
     body[data-page] .prose p, body[data-page] .prose li { line-height: var(--lead-copy, 1.6); }
     body[data-page] .prose h2 {
       display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 0.4rem; align-items: baseline;
@@ -148,7 +156,12 @@
        and to the line/head/colour that schema/arrows.json declares for each
        type. The vocabulary is therefore shown here at the same size and stroke
        the legend and the chart draw it — a specimen, not an illustration. */
-    body[data-page="learn"] .spec { display: block; overflow: visible; flex: none; }
+    /* base.css sets `svg { max-width: 100% }`. Inside a shrink-to-fit `width: 1%`
+       table cell that makes the specimen's min-content contribution zero, the
+       column collapses, and the arrows render at zero width. The specimens are
+       fixed-size diagrams, so the cap has to be lifted for their intrinsic
+       width/height attributes to take effect. */
+    body[data-page="learn"] .spec { display: block; overflow: visible; flex: none; max-width: none; }
     body[data-page="learn"] .dtable td.speccell { width: 1%; padding-right: var(--sp-5); vertical-align: middle; }
     body[data-page="learn"] .dtable .aname {
       font-family: var(--font-mono); color: var(--text); white-space: nowrap;
@@ -225,7 +238,7 @@
 
         <h2 id="enzymes"><span class="h-num">03</span><span>Enzymes and EC numbers</span></h2>
         <p>Every enzyme has a four-part <strong>EC number</strong> classifying the reaction it catalyses. <code>2.7.1.1</code> is hexokinase: class 2 a transferase, 2.7 transferring a phosphorus group, 2.7.1 onto an alcohol, and the final digit naming the specific activity. Read left to right, an EC number is a sentence about chemistry.</p>
-        <p>In Metabolian, EC numbers appear as monospace chips on essentially every enzyme — 12,133 of 12,182 enzyme records carry one. Gene symbols and UniProt accessions are rarer: about 383 records have them today, and those are the enzymes that open directly in the <a href="protein.html">3D structure viewer</a>. If an enzyme has no structure link, that is a gap in our annotation, not a claim that no structure exists.</p>
+        <p>In Metabolian, EC numbers appear as monospace chips on essentially every enzyme — 99.6% of enzyme records carry one. Gene symbols and UniProt accessions are far rarer: under 3% of records have them, and those are the enzymes that open directly in the <a href="protein.html">3D structure viewer</a>. If an enzyme has no structure link, that is a gap in our annotation, not a claim that no structure exists.</p>
 
         <h2 id="cofactors"><span class="h-num">04</span><span>Cofactors and coenzymes</span></h2>
         <p>Many enzymes need a non-protein helper: a metal ion like Mg²⁺, or a coenzyme like NAD⁺ derived from a vitamin. On the sheet these do not sit in the main line of flow — they arrive on their own <strong>dashed arc</strong>, curving into the reaction and away again. That convention is Michal's, and it is what keeps a dense sheet readable: the backbone of a pathway stays a straight line, and everything that merely assists bends around it.</p>
@@ -277,7 +290,7 @@
             </tbody>
           </table>
         </div>
-        <p>All 30 arrow types live in <a href="index.html#grammar">the grammar of metabolism</a>. Regulation is also the thinnest part of the atlas today — 224 regulatory links against 26,510 reactions — so a pathway drawn without regulators is usually a statement about our coverage, not about the biology. The <a href="about.html#limits">known limits</a> are stated in full.</p>
+        <p>All 30 arrow types live in <a href="index.html#grammar">the grammar of metabolism</a>. Regulation is also the thinnest part of the atlas today — 224 regulatory links against <span data-atlas="reactions">—</span> reactions — so a pathway drawn without regulators is usually a statement about our coverage, not about the biology. The <a href="about.html#limits">known limits</a> are stated in full.</p>
 
         <h2 id="reading"><span class="h-num">06</span><span>Reading the sheet</span></h2>
         <p>Open <a href="chart.html">the chart</a>. It is drawn in Michal's visual language, so a handful of marks carry the whole notation:</p>
@@ -366,5 +379,25 @@
   </main>
   <div id="app-footer"></div>
   <script type="module" src="/src/pages/learn.ts"></script>
+  <script type="module">
+    /* Atlas totals are read from the build's own index.json, never hardcoded.
+       data/ grows continuously — the corpus went from 2,496 to 3,308 modules
+       during a single afternoon of authoring — and a stale figure on a
+       citation-grounded atlas is the one error this project cannot afford.
+       Elements keep their em-dash placeholder if anything goes wrong. */
+    const slots = document.querySelectorAll("[data-atlas]");
+    if (slots.length) {
+      try {
+        const res = await fetch(new URL("graph/index.json", document.baseURI));
+        const { stats } = await res.json();
+        const nf = new Intl.NumberFormat("en-US");
+        const derived = { entries: (stats.metabolites ?? 0) + (stats.enzymes ?? 0) };
+        for (const el of slots) {
+          const v = derived[el.dataset.atlas] ?? stats[el.dataset.atlas];
+          if (typeof v === "number" && v > 0) el.textContent = nf.format(v);
+        }
+      } catch { /* placeholders stand */ }
+    }
+  </script>
 </body>
 </html>

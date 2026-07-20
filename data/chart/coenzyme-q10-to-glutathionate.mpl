@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-q10-to-glutathionate "coenzyme Q10 to glutathionate" {
-  spacing 304
+  spacing 292
 
   spine at 0,0 {
     coenzyme_q10
@@ -28,51 +28,39 @@ pathway coenzyme-q10-to-glutathionate "coenzyme Q10 to glutathionate" {
     ubiquinone_10
   }
 
-  branch from trioxidosulfanidosulfate side left {
-    trioxidosulfanidosulfate
-    <-> ec_2_8_5_2 [2.8.5.2] +l_cysteine +iron +fe2 +hplus
-    s_sulfosulfanyl_l_cysteine_1
-  }
-
-  branch from gssg side right {
+  branch from gssg side left {
     gssg
     <-> . +12_s_hpete +gsh +h2o
     12_s_hete
   }
 
-  branch from gssg side left {
+  branch from gssg side right {
     gssg
     <-> . +cumene_hydroperoxide +gsh +h2o
     2_phenylpropan_2_ol
   }
 
+  branch from h2s side left {
+    h2s
+    <-> ec_6_2_2_1 [6.2.2.1] +glycine +atp +adp +pi
+    thioglycine
+  }
+
   branch from h2s side right {
     h2s
     <-> . +cysteine +hplus
-    2_ammonioprop_2_enoate
-  }
-
-  branch from h2s side left {
-    h2s
-    <-> ec_1_8_5_8 [1.8.5.8] +1_4_benzoquinones +gsh +hplus +hydroquinones
-    s_sulfanylglutathionate
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> . +isethionate +hydrogen_donor +hydrogen_acceptor +hplus
-    ethanol
+    l_lanthionine_dizwitterion
   }
 
   branch from gsh side left {
     gsh
-    <-> ec_4_4_1_34 [4.4.1.34] +s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione
-    3r_3_4_epoxy_3_methylbut_1_ene
+    <-> . +11_s_hydroxy_14_s_15_s_hepoxilin_a3
+    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
   }
 
   branch from gsh side right {
     gsh
-    <-> . +11_s_hydroxy_14_s_15_s_hepoxilin_a3
-    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
+    <-> . +prostaglandin_a2
+    s_pga2_s_glutathione_conjugate
   }
 }

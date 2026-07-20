@@ -28,38 +28,38 @@ pathway imp-to-arbekacin-2-phosphate "IMP to arbekacin 2''-phosphate" {
 
   branch from idp side left {
     idp
-    <-> ec_2_7_1_1 [2.7.1.1] +itp +d_mannopyranose +h
-    alpha_d_mannose_6_phosphate
+    <-> ec_6_2_1_4 [6.2.1.4] +itp +succinate +coa +phosphate
+    succinyl_coa
   }
 
   branch from idp side right {
     idp
-    <-> ec_6_2_1_4 [6.2.1.4] +itp +succinate +coa +phosphate
-    succinyl_coa
+    <-> ec_6_2_1_4 [6.2.1.4] +itp +itaconate +coa +phosphate
+    itaconyl_coa
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    l_methionine_r_s_oxide
+    distearoyl_phosphatidylglycerol
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    thiamine
+    phosphatidylglycerophosphate_dihexadecanoyl_n_c1
   }
 
   branch from itp side left {
     itp
-    <-> ec_2_7_1_1 [2.7.1.1] +idp +beta_d_fructose_6_phosphate +h
-    d_fructofuranose
+    <-> ec_2_7_1_1 [2.7.1.1] +h +hexopyranose +idp
+    6_o_phosphonohexopyranose
   }
 
   branch from itp side right {
     itp
-    <-> ec_6_2_1_4 [6.2.1.4] +itaconate +coa +idp +phosphate
-    itaconyl_coa
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_glucosamine +idp
+    alpha_d_glucosamine_6_phosphate
   }
 
   branch from cytidine side left {
@@ -70,32 +70,32 @@ pathway imp-to-arbekacin-2-phosphate "IMP to arbekacin 2''-phosphate" {
 
   branch from cytidine side right {
     cytidine
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dgdp
-    dgtp
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dudp
+    dutp
   }
 
   branch from beta_d_fructose_6_phosphate side left {
-    beta_d_fructose_6_phosphate
-    <-> . +nh4 +h2o
-    alpha_d_glucosamine_1_phosphate
-  }
-
-  branch from beta_d_fructose_6_phosphate side right {
     beta_d_fructose_6_phosphate
     <-> . +h
     d_allulose_6_phosphate
   }
 
+  branch from beta_d_fructose_6_phosphate side right {
+    beta_d_fructose_6_phosphate
+    <-> . +l_lysine +h +h2o
+    glucoselysine_6_phosphate
+  }
+
   branch from h side left {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +androstenediol_3_sulfate +nadp +nadph
-    dehydroepiandrosterone_3_sulfate
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +fluoride
+    alpha_d_glucopyranosyl_fluoride
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +androstane_3_17_diol +nadp +nadph
-    3alpha_hydroxy_5beta_androstan_17_one
+    <-> ec_1_1_1_184 [1.1.1.184] +cyclohex_2_en_1_ol +nadp +nadph
+    cyclohex_2_enone
   }
 
   branch from beta_d_fructose side left {
@@ -112,73 +112,67 @@ pathway imp-to-arbekacin-2-phosphate "IMP to arbekacin 2''-phosphate" {
 
   branch from datp side left {
     datp
-    <-> ec_2_7_2_2 [2.7.2.2] +carbamoyl_phosphate +dadp
-    carbamate
+    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +o2 +1_methyl_datp
+    2_oxoglutarate
   }
 
   branch from datp side right {
     datp
-    <-> ec_2_7_2_3 [2.7.2.3] +glyceric_acid_1_3_biphosphate +dadp +h
-    2r_3_phosphoglycerate
+    <-> . +fmnh2 +h +atp +h2o
+    fmn
   }
 
   branch from dttp side left {
     dttp
-    <-> ec_2_7_1_74 [2.7.1.74] +dtdp +h +dcmp
-    2_deoxycytidine
-  }
-
-  branch from dttp side right {
-    dttp
-    <-> ec_2_7_7_24 [2.7.7.24] +dtdp_alpha_d_glucose +diphosphate +h
-    d_glucopyranose_1_phosphate
-  }
-
-  branch from dadp side left {
-    dadp
-    <-> ec_2_7_1_1 [2.7.1.1] +datp +alpha_d_mannose_6_phosphate +h
-    d_mannopyranose
+    <-> . +dtdp +adp
+    amp
   }
 
   branch from dadp side right {
     dadp
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_glucose_6_phosphate +h +datp
-    beta_d_glucose
+    <-> . +cmp +datp
+    cdp
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +beta_d_ribf_1_4_beta_d_gal_1_3_alpha_d_galnac_di +h
-    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
+  branch from dadp side left {
+    dadp
+    <-> . +gdp +gtp
+    damp
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +beta_d_ribf_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_4_deoxy_4_n_acetyl_l_seryl_amino_alpha_d_qu +h
-    beta_d_qui4n_l_serac_1_3_beta_d_ribf_1_4_alpha_d
+    <-> . +beta_d_man_1_3_beta_d_glc_1_3_alpha_d_glcnac_pp +dtdp_3_deoxy_3_formamido_alpha_d_fucose +h
+    alpha_d_fuc3nfo_1_3_beta_d_man_1_3_beta_d_glc_1
   }
 
-  branch from gtp side left {
-    gtp
-    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_7 +h +phosphate +l_glutamate
-    oxidized_factor_420_6
+  branch from dtdp side left {
+    dtdp
+    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
+    alpha_d_qui3nac_1_3_alpha_d_man_1_3_alpha_l_fuc
   }
 
   branch from gtp side right {
     gtp
-    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_8 +h +phosphate +l_glutamate
-    oxidized_factor_420_7
+    <-> ec_6_2_1_13 [6.2.1.13] +gdp +acetyl_coa +phosphate +coa
+    acetate
   }
 
-  branch from gdp side left {
-    gdp
-    <-> ec_2_4_1_353 [2.4.1.353] +gdp_6_deoxy_d_altrose +sordaricin +h
-    4_o_demethylsordarin
+  branch from gtp side left {
+    gtp
+    <-> ec_6_2_1_4 [6.2.1.4] +gdp +itaconyl_coa +phosphate +coa
+    itaconate
   }
 
   branch from gdp side right {
     gdp
-    <-> ec_6_2_1_13 [6.2.1.13] +acetyl_coa +phosphate +gtp +coa
-    acetate
+    <-> ec_2_4_1_308 [2.4.1.308] +l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho +h +d_gal_1_3_d_galnac_1_3_d_galnac_diphospho_ditra
+    gdp_l_fucose
+  }
+
+  branch from gdp side left {
+    gdp
+    <-> . +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h +gtp
+    4_amino_5_hydroxymethyl_2_methylpyrimidine
   }
 }

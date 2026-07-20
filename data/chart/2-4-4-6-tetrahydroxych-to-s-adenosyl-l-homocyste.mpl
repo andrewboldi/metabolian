@@ -18,25 +18,25 @@ pathway 2-4-4-6-tetrahydroxych-to-s-adenosyl-l-homocyste "2',4,4',6'-tetrahydrox
 
   branch from ppi side left {
     ppi
-    <-> . +2e_enoyl_fatty_acid_anion +atp +hplus
-    2e_2_fatty_enoyladenylate
+    <-> . +fpp
+    barbatene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_206 [4.2.3.206] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cyatha_3_12_diene
+    <-> . +fpp
+    sativene
   }
 
   branch from sah side left {
     sah
-    <-> . +g5_ppp5_aaca_mrna +sam +hplus
-    g5_ppp5_m2_aaca_mrna
+    <-> . +taxifolin +sam +hplus
+    taxifolin_4_methyl_ether
   }
 
   branch from sah side right {
     sah
-    <-> . +g5_ppp5_m2_aaca_mrna +sam
-    m7g5_ppp5_m2_aaca_mrna
+    <-> . +taxifolin +sam +hplus
+    dihydroisorhamnetin
   }
 }

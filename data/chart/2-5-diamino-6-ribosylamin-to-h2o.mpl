@@ -18,22 +18,22 @@ pathway 2-5-diamino-6-ribosylamin-to-h2o "2,5-diamino-6-ribosylamin… to H2O" {
     7_8_dihydroneopterin_2_3_cyclic_phosphate
   }
 
-  branch from formamidopyrimidine_nucleoside_triphosphate side left {
-    formamidopyrimidine_nucleoside_triphosphate
-    <-> ec_3_5_4_16 [3.5.4.16] +h +h2o
-    gtp
+  branch from h2o side left {
+    h2o
+    <-> . +l_alanine +l_leucine +l_arginine
+    leucyl_alanyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_asparagine +l_aspartate +l_valine
-    aspartyl_valyl_asparagine
+    <-> . +l_leucine +l_asparagine +l_aspartate
+    leucyl_asparaginyl_aspartate
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +atorvastatin_acid
-    atorvastatin_lactone
+  branch from 2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py side left {
+    2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py
+    <-> ec_3_5_4_25 [3.5.4.25] +h2o +diphosphate +h +formate
+    gtp
   }
 
   branch from 2_5_diamino_6_hydroxy_4_5_phosphoribosylamino_py side right {
@@ -44,38 +44,38 @@ pathway 2-5-diamino-6-ribosylamin-to-h2o "2,5-diamino-6-ribosylamin… to H2O" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +9e_myristelaidoyl_coa +h +amp +atp +coa
-    9e_tetradecenoic_acid
+    <-> . +h +simvastatin +amp +atp
+    simvastatin_hydroxy_acid
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +trans_9_octadecenoyl_coa +amp +atp +coa
-    9e_octadecenoate
+    <-> ec_4_2_3_190 [4.2.3.190] +manoyl_oxide
+    copal_8_ol_diphosphate
   }
 
   branch from h side left {
     h
-    <-> . +adp +11_dehydrothromboxane_b2 +phosphate +11_dehydrothromboxane_b2 +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    n_carbamoylputrescine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    4_hydroxynon_2_enal
+    <-> . +adp +n_desmethyl_rosuvastatin +phosphate +n_desmethyl_rosuvastatin +h2o
+    atp
   }
 
   branch from formate side left {
     formate
-    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +formyl_coa
-    acetate
+    <-> ec_1_1_5_6 [1.1.5.6] +phylloquinone +h +co2
+    phylloquinol
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_13_11_54 [1.13.11.54] +h +2_oxopentanoate +1_2_dihydroxyhex_1_en_3_one
-    o2
+    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_9 +co2 +h
+    ubiquinone_9
   }
 
   branch from dihydroneopterin_phosphate side left {

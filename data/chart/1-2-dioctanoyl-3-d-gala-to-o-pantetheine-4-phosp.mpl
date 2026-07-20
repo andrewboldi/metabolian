@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioctanoyl-3-d-gala-to-o-pantetheine-4-phosp "1,2-dioctanoyl-3-β-D-gala… to O-(pantetheine-4'-phospho…" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     1_2_dioctanoyl_3_d_galactosyl_sn_glycerol
@@ -20,49 +20,37 @@ pathway 1-2-dioctanoyl-3-d-gala-to-o-pantetheine-4-phosp "1,2-dioctanoyl-3-β-D-
 
   branch from octanoate side left {
     octanoate
-    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
-    sphinganine
-  }
-
-  branch from octanoate side right {
-    octanoate
     <-> ec_6_2_1_3 [6.2.1.3] +octanoyl_coa +diphosphate +amp +coa
     atp
   }
 
+  branch from octanoate side right {
+    octanoate
+    <-> . +h +o2 +nadph +nadp +h2o
+    7_hydroxy_octanoate
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_121 [4.2.3.121] +gpp
-    pinene
+    <-> ec_4_2_3_137 [4.2.3.137] +fpp
+    e_2_epi_caryophyllene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_122 [4.2.3.122] +gpp
-    pinene
-  }
-
-  branch from o_s_octanoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_octanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +o_s_2e_octenoylpantetheine_4_phosphoryl_serine_1
-    nad
-  }
-
-  branch from o_s_octanoylpantetheine_4_phosphoryl_serine_1 side right {
-    o_s_octanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_1_10 [1.3.1.10] +h +o_s_2e_octenoylpantetheine_4_phosphoryl_serine_1 +nadph
-    nadp
+    <-> . +atp +hplus
+    p1_p4_bis_5_adenosyl_tetraphosphate
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> ec_6_2_1_51 [6.2.1.51] +17_4_hydroxyphenyl_heptadecanoate +atp +amp +ppi
+    o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_1_2_1_80 [1.2.1.80] +long_chain_fatty_aldehyde +nad +nadh +hplus
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> . +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
   }
 }

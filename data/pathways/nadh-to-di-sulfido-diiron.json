@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-di-sulfido-diiron",
+  "name": "NADH to di-μ-sulfido-diiron",
+  "category": "other",
+  "summary": "A 3-step route from NADH to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR206566"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "7alpha_hydroxycholest_4_en_3_one",
+      "name": "7alpha-hydroxycholest-4-en-3-one",
+      "short": "7alpha-hydroxychole…",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM730346"
+      }
+    },
+    {
+      "id": "25r_cholest_5_ene_3_26_diol",
+      "name": "(25R)-cholest-5-ene-3β,26-diol",
+      "short": "cholest-5-ene-3β,26…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76591"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "25r_3_hydroxycholest_5_en_26_al",
+      "name": "(25R)-3β-hydroxycholest-5-en-26-al",
+      "short": "3β-hydroxycholest-5…",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86096"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "25r_3_hydroxycholest_5_en_26_oate",
+      "name": "(25R)-3β-hydroxycholest-5-en-26-oate",
+      "short": "3β-hydroxycholest-5…",
+      "formula": "C27H43O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:86098"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR206566",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7alpha_hydroxycholest_4_en_3_one",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_cholest_5_ene_3_26_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR206566"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206566"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(25R)-cholest-5-ene-3beta,26-diol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-3beta...",
+      "equation": "(25R)-cholest-5-ene-3beta,26-diol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-3beta-hydroxy-5-cholesten-26-al + 2 oxidized [adrenodoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "25r_cholest_5_ene_3_26_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_3_hydroxycholest_5_en_26_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(25R)-3beta-hydroxy-5-cholesten-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3be...",
+      "equation": "(25R)-3beta-hydroxy-5-cholesten-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3beta-hydroxy-5-cholestenoate + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "25r_3_hydroxycholest_5_en_26_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "25r_3_hydroxycholest_5_en_26_oate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45236"
+          }
+        ]
+      }
+    }
+  ]
+}

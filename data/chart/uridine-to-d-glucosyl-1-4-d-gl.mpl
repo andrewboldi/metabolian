@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway uridine-to-d-glucosyl-1-4-d-gl "uridine to β-D-glucosyl-(1→4)-β-D-gl…" {
-  spacing 306
+  spacing 288
 
   spine at 0,0 {
     uridine
@@ -38,115 +38,97 @@ pathway uridine-to-d-glucosyl-1-4-d-gl "uridine to β-D-glucosyl-(1→4)-β-D-gl
 
   branch from beta_d_ribofuranose side left {
     beta_d_ribofuranose
-    <-> ec_3_2_2_1 [3.2.2.1] +beta_nicotinamide_d_riboside +h2o +h
-    nicotinamide
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from beta_d_ribofuranose side right {
     beta_d_ribofuranose
-    <-> ec_3_2_2_1 [3.2.2.1] +7h_purine +h2o
-    nebularine
+    <-> ec_2_7_1_15 [2.7.1.15] +adp +h +atp
+    alpha_d_ribofuranose_5_phosphate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_99_46 [1.14.99.46] +fmnh2 +thymine +h +o2
-    z_2_methylureidoperacrylic_acid
+    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +h +taurine +o2 +sulfite +h2o
+    aminoacetaldehyde
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_99_46 [1.14.99.46] +fmnh2 +h +o2 +z_2_methylureidoperacrylic_acid
-    thymine
-  }
-
-  branch from ureidoperacrylic_acid side left {
-    ureidoperacrylic_acid
-    <-> ec_3_5_1_110 [3.5.1.110] +z_3_aminoperacrylic_acid +nh4 +h +h2o
-    co2
-  }
-
-  branch from alpha_d_glucose_1_phosphate side right {
-    alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_31 [2.4.1.31] +alpha_d_glucose +phosphate
-    beta_d_glucosyl_1_3_d_glucose
+    <-> ec_1_2_7_1 [1.2.7.1] +acetyl_coa +fmnh2 +co2 +h +coa
+    pyruvate
   }
 
   branch from alpha_d_glucose_1_phosphate side left {
     alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_139 [2.4.1.139] +phosphate +h2o
-    alpha_maltose
+    <-> ec_2_7_1_62 [2.7.1.62] +beta_d_glucose +phosphoramidate +h
+    nh4
   }
 
-  branch from h side right {
-    h
-    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate +chloride
-    trans_4_carboxymethylenebut_2_en_4_olide
+  branch from alpha_d_glucose_1_phosphate side right {
+    alpha_d_glucose_1_phosphate
+    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +h +nh4
+    alpha_d_glucose
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44 +co2 +gibberellin_a19
-    succinate
+    <-> . +adp +phosphate +atp +h2o
+    2_4r_4_3r_5r_9s_10s_12s_13r_14s_17r_3_12_dihydro
   }
 
-  branch from riboflavin side right {
-    riboflavin
-    <-> ec_1_5_1_30 [1.5.1.30] +h +nadph +4a_5_dihydroriboflavin
-    nadp
+  branch from h side right {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    coproporphyrin_i
   }
 
   branch from riboflavin side left {
     riboflavin
-    <-> ec_1_14_13_7 [1.14.13.7] +nadh +h +nad
+    <-> . +h +h2o +o2
     4a_5_dihydroriboflavin
   }
 
-  branch from beta_cellobiose side right {
-    beta_cellobiose
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o
-    glucose
+  branch from riboflavin side right {
+    riboflavin
+    <-> . +nadh +h +4a_5_dihydroriboflavin
+    nad
   }
 
   branch from beta_cellobiose side left {
     beta_cellobiose
-    <-> ec_1_1_99_18 [1.1.99.18] +h2o2 +o2
-    d_cellobiono_1_5_lactone
+    <-> ec_3_6_3_42 [3.6.3.42] +h +phosphate +atp +h2o
+    adp
   }
 
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate +h2o
-    atp
+  branch from beta_cellobiose side right {
+    beta_cellobiose
+    <-> . +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +pyruvate +h
+    phosphoenolpyruvate
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    glycerophosphoserine
+    5_6_eet
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_13_52 [1.14.13.52] +biochanin_a +h +o2 +nadph +nadp
-    pratensein
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    8_9_eet
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_5_1 [3.5.5.1] +h +phenylacetonitrile +phenyl_acetate
-    nh4
+    <-> . +l_valine +l_cysteine +l_arginine
+    arginyl_valyl_cysteine
   }
 
-  branch from cellotetraose side right {
-    cellotetraose
-    <-> ec_3_2_1_74 [3.2.1.74] +beta_d_glucose +h2o
-    cellopentaose
-  }
-
-  branch from cellotetraose side left {
-    cellotetraose
-    <-> ec_3_2_1_74 [3.2.1.74] +cellopentaose +h2o
-    alpha_d_glucose
+  branch from h2o side right {
+    h2o
+    <-> . +l_valine +l_arginine +l_tryptophan
+    arginyl_valyl_tryptophan
   }
 }

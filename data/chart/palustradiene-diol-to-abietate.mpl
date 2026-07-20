@@ -22,38 +22,38 @@ pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
 
   branch from palustradienal side left {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
     levopimaradienol
   }
 
   branch from palustradienal side right {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienol
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    palustradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +mycothiol +h2o2
-    mycothione
+    <-> ec_3_2_1_20 [3.2.1.20] +isomaltotriose +isomaltose
+    alpha_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan
-    o_s_2e_17z_29z_octatetracontatrienoylpantetheine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +glycylglycine
+    leu_gly_gly
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante +h +nadph
-    o_s_5z_17z_3_oxohexatriacontadienoylpantetheine
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0066905 +h +nadph
+    p_fluorobenzyl_alcohol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan +h +nadph
-    o_s_15z_27z_3_oxohexatetracontadienoylpantethein
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0063751 +h +nadph
+    p_chlorophenylglyoxal
   }
 
   branch from abietol side left {
@@ -64,31 +64,31 @@ pathway palustradiene-diol-to-abietate "palustradiene-diol to abietate" {
 
   branch from abietol side right {
     abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nad
-    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
+    nad
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_s_hete
+    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
+    3_5_dihydroxyflavanone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +prostaglandin_e1 +fmnh2 +o2 +h2o +hplus
-    20_hydroxyprostaglandin_e1
+    <-> ec_1_14_14_64 [1.14.14.64] +amyrin +fmnh2 +o2 +h2o +hplus
+    daturadiol
   }
 
   branch from abietal side left {
     abietal
-    <-> . +o2 +nadph +nadp +h2o
-    abieta_7_13_dien_18_oate
+    <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienol +nad
+    nadh
   }
 
   branch from abietal side right {
     abietal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    palustradienol
+    isopimara_7_15_dienol
   }
 }

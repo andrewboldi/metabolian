@@ -30,25 +30,25 @@ pathway beta-tri-n-acetylchitotri-to-h2o "beta-tri-N-acetylchitotri… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +h +vinylacetyl_coa +amp +but_3_enoic_acid
-    coa
+    <-> . +h +adp +phosphate +h2o
+    d_ribopyranose
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    crotono_betaine
+    <-> ec_6_3_2_7 [6.3.2.7] +l_lysine +h +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_d_glutama +adp +phosphate
+    udp_n_acetylmuramoyl_l_alanyl_alpha_d_glutamyl_l
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_18_1 [1.14.18.1] +4_bromocatechol +h2o2
-    4_bromophenol
+    <-> . +l_leucine +l_leucyl_l_alanine
+    leu_leu_ala
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h +benzoate
-    betamipron
+    <-> ec_3_1_1_1 [3.1.1.1] +3_2_2_dichlorovinyl_2_2_dimethylcyclopropanecarb +3_phenoxyphenyl_methanol
+    cis_permethrin
   }
 }

@@ -48,13 +48,13 @@ pathway 4-o-methylrhodomycin-d-to-artemetin "4-O-methylrhodomycin D to Artemetin
 
   branch from h side right {
     h
-    <-> . +cmp +phosphatidylserine_ditetradecanoyl_n_c14_0 +l_serine
-    cdp_1_2_ditetradecanoylglycerol
+    <-> . +udp +3_3_5_triiodothyroacetate_beta_d_glucuronoside +3_3_5_triiodothyroacetate
+    udp_alpha_d_glucuronate
   }
 
   branch from h side left {
     h
-    <-> . +cmp +phosphatidylserine_ditetradec_7_enoyl_n_c14_1 +l_serine
-    cdp_1_2_ditetradec_7_enoylglycerol
+    <-> . +udp +3_5_3_triiodothyroacetate_beta_d_glucuronoside +udp_alpha_d_glucuronate
+    tiratricol
   }
 }

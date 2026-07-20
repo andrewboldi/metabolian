@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acetyl-coa-to-20alphas-19-20-dihydro",
+  "name": "acetyl-CoA to (20alphaS)-19,20--dihydro…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from acetyl-CoA to (20alphaS)-19,20--dihydrovomilenine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197957"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "16_epivellosimine",
+      "name": "16-epivellosimine",
+      "formula": "C19H20N2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732388"
+      }
+    },
+    {
+      "id": "vinorine",
+      "name": "vinorine",
+      "formula": "C21H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371436"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "vomilenine",
+      "name": "vomilenine",
+      "formula": "C21H22N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726775"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "20alphas_19_20_dihydrovomilenine",
+      "name": "(20alphaS)-19,20--dihydrovomilenine",
+      "short": "(20alphaS)-19,20--d…",
+      "formula": "C21H24N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819161"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_160",
+      "name": "vinorine synthase",
+      "ec": [
+        "2.3.1.160"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_75",
+      "name": "EC 1.14.13.75",
+      "ec": [
+        "1.14.13.75"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "vinorine synthase",
+      "ec": "2.3.1.160",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "16_epivellosimine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vinorine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_160"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197957"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR149399",
+      "ec": "1.14.13.75",
+      "substrates": [
+        {
+          "metabolite": "vinorine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vomilenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR149399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR164536",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vomilenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "20alphas_19_20_dihydrovomilenine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR164536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164536"
+          }
+        ]
+      }
+    }
+  ]
+}

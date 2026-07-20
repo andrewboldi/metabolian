@@ -20,14 +20,14 @@ pathway 4-4-dimethyl-5-cholest-7-to-4-methyllathosterone "4,4-dimethyl-5α-chole
 
   branch from 4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol side left {
     4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadp +h2o +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +nadph
-    h
+    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene +h2o
+    nadp
   }
 
   branch from 4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol side right {
     4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +nadph +3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene +h2o
-    nadp
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +nad +h2o
+    3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene
   }
 
   branch from 4_methyllathosterone side left {

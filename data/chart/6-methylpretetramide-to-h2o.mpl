@@ -36,13 +36,13 @@ pathway 6-methylpretetramide-to-h2o "6-methylpretetramide to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +12_20_dioxoleukotriene_b4 +h
-    12_oxo_20_dihydroxy_leukotriene_b4
+    <-> . +5_s_6_s_epoxy_15_r_hepe
+    15_epi_lipoxin_a5
   }
 
   branch from h2o side left {
     h2o
-    <-> . +12_oxo_20_carboxy_leukotriene_b4
-    12_oxo_20_trihydroxy_leukotriene_b4
+    <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +coa
+    omega_carboxy_trinor_leukotriene_b4
   }
 }

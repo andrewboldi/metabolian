@@ -26,14 +26,14 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_99_34 [1.14.99.34] +7_o_methylluteone_epoxide +h2o +h +o2 +nadph
-    7_o_methylluteone
+    <-> ec_1_14_13_74 [1.14.13.74] +loganin +h2o +h +o2 +nadph
+    7_deoxyloganin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit +nadph
-    2_4_dinitrophenol
+    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +toluene +h2o
+    2_hydroxytoluene
   }
 
   branch from ent_kaur_16_en_19_oate side left {
@@ -44,14 +44,14 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_1_10_3_12 [1.10.3.12] +o2 +menaquinol
-    menaquinone_2
+    <-> ec_1_4_1_11 [1.4.1.11] +nadh +h +5s_5_amino_3_oxohexanoate +nh4 +nad
+    3r_5r_3_5_diammoniohexanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o2 +menaquinol +menaquinone_2
-    pmf
+    <-> . +h +tropate +tropine
+    l_hyoscyamine
   }
 
   branch from ent_7alpha_hydroxykaur_16_en_19_oate side right {
@@ -68,14 +68,14 @@ pathway ent-kaur-16-en-19-al-to-h2o "ent-kaur-16-en-19-al to H2O" {
 
   branch from co2 side right {
     co2
-    <-> . +2_aminoethyl_phosphonate
-    2_amino_3_phosphonopropanoic_acid
+    <-> . +tetracenomycin_b1
+    tetracenomycin_b3
   }
 
   branch from co2 side left {
     co2
-    <-> . +styrene
-    3_isochromanone
+    <-> . +tetralin
+    5_6_7_8_tetrahydro_2_naphthoic_acid
   }
 
   branch from succinate side right {

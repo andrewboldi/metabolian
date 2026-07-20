@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxepin-2-3h-ylideneace-to-3-oxo-5-6-dehydrosub "2-oxepin-2(3H)-ylideneace… to 3-oxo-5,6-dehydrosuberyl-…" {
-  spacing 296
+  spacing 290
 
   spine at 0,0 {
     2_oxepin_2_3h_ylideneacetyl_coa
@@ -18,13 +18,7 @@ pathway 2-oxepin-2-3h-ylideneace-to-3-oxo-5-6-dehydrosub "2-oxepin-2(3H)-ylidene
     3_oxo_5_6_dehydrosuberyl_coa
   }
 
-  branch from 2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa side left {
-    2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa
-    <-> ec_1_14_13_149 [1.14.13.149] +nadph +o2 +hplus +nadp +h2o
-    phenylacetyl_coa
-  }
-
-  branch from 3_oxo_5_6_dehydrosuberyl_coa side right {
+  branch from 3_oxo_5_6_dehydrosuberyl_coa side left {
     3_oxo_5_6_dehydrosuberyl_coa
     <-> ec_2_3_1_223 [2.3.1.223] +acetyl_coa +coa
     2_3_didehydroadipoyl_coa

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-adp-d-ribosyl-l-argi-to-adp-d-ribose "Nω-(ADP-D-ribosyl)-L-argi… to ADP-D-ribose" {
-  spacing 300
+  spacing 294
 
   spine at 0,0 {
     n_adp_d_ribosyl_l_argininium_1
@@ -22,21 +22,15 @@ pathway n-adp-d-ribosyl-l-argi-to-adp-d-ribose "Nω-(ADP-D-ribosyl)-L-argi… to
     n_phospho_l_arginine_1
   }
 
-  branch from l_argininium side right {
-    l_argininium
-    <-> . +udpglcnac +udp +hplus
-    n_n_acetyl_d_glucosaminyl_l_arginyl_1
+  branch from nicotinamide side right {
+    nicotinamide
+    <-> . +2_deoxyguanosine_5_monophosphate +nad +hplus
+    n2_adp_d_ribosyl_dgmp
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +2_deoxyguanosine +nad +hplus
-    n2_adp_d_ribosyl_2_deoxyguanosine
-  }
-
-  branch from nicotinamide side right {
-    nicotinamide
-    <-> . +gmp +nad +hplus
-    n2_adp_d_ribosyl_gmp
+    <-> . +dgtp +nad +hplus
+    n2_adp_d_ribosyl_dgtp
   }
 }

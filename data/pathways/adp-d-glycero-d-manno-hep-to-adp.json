@@ -142,12 +142,13 @@
       }
     },
     {
-      "id": "7z_octadecenoic_acid",
-      "name": "7Z-octadecenoic acid",
-      "formula": "C18H34O2",
-      "charge": 0,
+      "id": "sphingomyelin_homo_sapiens",
+      "name": "Sphingomyelin (homo sapiens)",
+      "short": "Sphingomyelin…",
+      "formula": "C28H60N3O6P",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:170099"
+        "metanetx": "MNXM5930"
       }
     },
     {
@@ -169,30 +170,21 @@
       }
     },
     {
-      "id": "linoelaidic_acid",
-      "name": "linoelaidic acid",
-      "formula": "C18H32O2",
-      "charge": 0,
+      "id": "spermine",
+      "name": "spermine",
+      "formula": "C10H30N4",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:75108"
+        "metanetx": "MNXM408"
       }
     },
     {
-      "id": "nonadecanoic_acid",
-      "name": "nonadecanoic acid",
-      "formula": "C19H38O2",
+      "id": "paracetamol_sulfate",
+      "name": "paracetamol sulfate",
+      "formula": "C8H9NO5S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:39246"
-      }
-    },
-    {
-      "id": "gadoleic_acid",
-      "name": "gadoleic acid",
-      "formula": "C20H38O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:32419"
+        "chebi": "CHEBI:32635"
       }
     }
   ],
@@ -223,6 +215,13 @@
       "name": "lipopolysaccharide heptosyltransferase III",
       "ec": [
         "2.4.99.25"
+      ]
+    },
+    {
+      "id": "ec_7_6_2_11",
+      "name": "ABC-type polyamine transporter",
+      "ec": [
+        "7.6.2.11"
       ]
     }
   ],
@@ -493,18 +492,18 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR158288",
+      "name": "Reaction MNXR162753",
       "substrates": [
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "7z_octadecenoic_acid",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "sphingomyelin_homo_sapiens",
           "stoichiometry": 1
         },
         {
@@ -514,11 +513,11 @@
       ],
       "products": [
         {
-          "metabolite": "7z_octadecenoic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "sphingomyelin_homo_sapiens",
           "stoichiometry": 1
         },
         {
@@ -529,26 +528,22 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR158288"
+        "metanetx": "MNXR162753"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158288"
+            "id": "MNXR162753"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR158290",
+      "name": "Reaction MNXR162754",
       "substrates": [
-        {
-          "metabolite": "linoelaidic_acid",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -558,17 +553,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "sphingomyelin_homo_sapiens",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "linoelaidic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "sphingomyelin_homo_sapiens",
           "stoichiometry": 1
         },
         {
@@ -579,26 +578,23 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR158290"
+        "metanetx": "MNXR162754"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158290"
+            "id": "MNXR162754"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR158292",
+      "name": "ABC-type polyamine transporter",
+      "ec": "7.6.2.11",
       "substrates": [
-        {
-          "metabolite": "nonadecanoic_acid",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -608,17 +604,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "spermine",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nonadecanoic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "spermine",
           "stoichiometry": 1
         },
         {
@@ -626,35 +626,40 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_7_6_2_11"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR158292"
+        "metanetx": "MNXR162759"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158292"
+            "id": "MNXR162759"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR158299",
+      "name": "Reaction MNXR162799",
       "substrates": [
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "paracetamol_sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gadoleic_acid",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -664,11 +669,11 @@
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "paracetamol_sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gadoleic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -679,14 +684,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR158299"
+        "metanetx": "MNXR162799"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158299"
+            "id": "MNXR162799"
           }
         ]
       }

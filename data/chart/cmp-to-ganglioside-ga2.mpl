@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cmp-to-ganglioside-ga2 "CMP to Ganglioside GA2…" {
-  spacing 218
+  spacing 194
 
   spine at 0,0 {
     cmp
@@ -20,18 +20,6 @@ pathway cmp-to-ganglioside-ga2 "CMP to Ganglioside GA2…" {
     udp_alpha_d_galactose
   }
 
-  branch from cmp_n_acetyl_beta_neuraminate side left {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +disialyllacto_n_tetraose +h
-    ls_tetrasaccharide_a
-  }
-
-  branch from cmp_n_acetyl_beta_neuraminate side right {
-    cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +ls_tetrasaccharide_c +h
-    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
-  }
-
   branch from ganglioside_gm3_d18_1_12_0 side left {
     ganglioside_gm3_d18_1_12_0
     <-> . +ganglioside_gm2_d18_1_12_0 +h2o
@@ -40,49 +28,37 @@ pathway cmp-to-ganglioside-ga2 "CMP to Ganglioside GA2…" {
 
   branch from udp side right {
     udp
-    <-> ec_2_7_1_36 [2.7.1.36] +utp +r_mevalonate +h
-    r_5_phosphomevalonate
+    <-> . +udp_4_acetamido_4_6_dideoxy_alpha_l_galactose +4_e_2_isocyanoethenyl_phenol +h
+    rhabduscin
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +etiocholan_3_ol_17_one_3_o_d_glucuronide +h +3alpha_hydroxy_5beta_androstan_17_one
-    udp_alpha_d_glucuronate
+    <-> . +udp_4_acetamido_4_6_dideoxy_alpha_l_galactose +e_4_2_isocyanovinyl_phenol +h
+    n_2s_3s_4r_5s_6r_4_5_dihydroxy_6_4_e_2_isocyanoe
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pe_18_3_9z_12z_15z_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +gramicidin_s +phosphate +gramicidin_s +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nodularin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_125 [3.2.1.125] +alpha_d_glucose +vomilenine
-    raucaffricine
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    anabaenopeptilide_90b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_105 [3.2.1.105] +beta_d_glucose +strictosidine_aglycone
-    3alpha_s_strictosidine
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1 +h
-    alpha_d_d_hep_1_2_alpha_l_d_hep_1_3_alpha_l_d_he
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_alpha_d_d_hep +h
-    alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    anabaenopeptilide_90a
   }
 }

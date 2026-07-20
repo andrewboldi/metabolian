@@ -111,41 +111,49 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "streptidine",
+      "name": "streptidine",
+      "formula": "C8H20N6O4",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:184376"
       }
     },
     {
-      "id": "gurjunene",
-      "name": "γ-gurjunene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:178033"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "6_o_adenylylstreptidine",
+      "name": "6-O-adenylylstreptidine",
+      "short": "6-O-adenylylstrepti…",
+      "formula": "C18H31N11O10P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:60374"
+        "chebi": "CHEBI:184375"
       }
     },
     {
-      "id": "e_bisabolene",
-      "name": "(E)-γ-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:49239"
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "3_5_cyclic_ump",
+      "name": "3',5'-cyclic UMP",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:184387"
       }
     }
   ],
@@ -169,6 +177,13 @@
       "name": "alpha-pinene-oxide decyclase",
       "ec": [
         "5.5.1.10"
+      ]
+    },
+    {
+      "id": "ec_4_6_1_26",
+      "name": "uridylate cyclase",
+      "ec": [
+        "4.6.1.26"
       ]
     }
   ],
@@ -310,17 +325,21 @@
     },
     {
       "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = gamma-gurjunene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = gamma-gurjunene + diphosphate",
+      "name": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
+      "equation": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "streptidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gurjunene",
+          "metabolite": "6_o_adenylylstreptidine",
           "stoichiometry": 1
         },
         {
@@ -331,31 +350,32 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:68400"
+        "rhea": "RHEA:69544"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68400"
+            "id": "RHEA:69544"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2Z,6Z)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (E)-gamma-bisabolene + diphosphate",
+      "name": "uridylate cyclase",
+      "equation": "UTP = 3',5'-cyclic UMP + diphosphate",
+      "ec": "4.6.1.26",
       "substrates": [
         {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "metabolite": "utp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_bisabolene",
+          "metabolite": "3_5_cyclic_ump",
           "stoichiometry": 1
         },
         {
@@ -363,17 +383,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_26"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68468"
+        "rhea": "RHEA:69603"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68468"
+            "id": "RHEA:69603"
           }
         ]
       }

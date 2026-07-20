@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-2-oleoyl-sn-glycer-to-h2o "1-acyl-2-oleoyl-sn-glycer… to H2O" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     1_acyl_2_oleoyl_sn_glycero_3_phosphoserine
@@ -32,33 +32,27 @@ pathway 1-acyl-2-oleoyl-sn-glycer-to-h2o "1-acyl-2-oleoyl-sn-glycer… to H2O" {
     1_oleoyl_2_stearoyl_sn_glycero_3_phospho_l_serin
   }
 
-  branch from 1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri side left {
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri
-    <-> ec_2_7_8_29 [2.7.8.29] +ethanolamine +l_serine
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    validamycin_a
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    xxxg_xyloglucan_oligosaccharide
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    turanose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    melezitose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    o_phosphoviomycin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    gxgg_xyloglucan_oligosaccharide
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    viomycin
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +atp
+    docosanoyl_coa
   }
 }

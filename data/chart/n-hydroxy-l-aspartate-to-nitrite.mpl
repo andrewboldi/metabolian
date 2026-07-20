@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hydroxy-l-aspartate-to-nitrite "N-hydroxy-L-aspartate to nitrite" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_hydroxy_l_aspartate
@@ -16,17 +16,5 @@ pathway n-hydroxy-l-aspartate-to-nitrite "N-hydroxy-L-aspartate to nitrite" {
     2_nitrobutanedioate
     <-> ec_4_3_99_5 [4.3.99.5] -nitrite -hplus
     fumarate
-  }
-
-  branch from 2_nitrobutanedioate side left {
-    2_nitrobutanedioate
-    <-> ec_1_14_13_248 [1.14.13.248] +nadph +o2 +hplus +nadp +h2o
-    aspartate
-  }
-
-  branch from 2_nitrobutanedioate side right {
-    2_nitrobutanedioate
-    <-> . +hplus +co2
-    3_nitropropanoate
   }
 }

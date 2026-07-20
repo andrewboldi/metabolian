@@ -26,25 +26,25 @@ pathway h-to-herquline-a "H to herquline A" {
 
   branch from fmn side left {
     fmn
-    <-> . +9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9_10_epoxy_18_hydroxyoctadecanoate
+    <-> ec_1_14_14_171 [1.14.14.171] +amyrin +fmnh2 +o2 +h2o +hplus
+    16_hydroxy_amyrin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +9_10_epome +fmnh2 +o2 +h2o +hplus
-    9_10_epoxy_18_hydroxy_12z_octadecenoate
+    <-> ec_1_14_14_162 [1.14.14.162] +flavanones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyflavanones
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_alanyl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_n_n_trimethyl_l_alanyl_l_prolyl_l_l
+    <-> ec_2_1_1_353 [2.1.1.353] +demethyldeoxyspectinabilin +sam
+    deoxyspectinabilin
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_seryl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_n_n_trimethyl_l_seryl_l_prolyl_l_ly
+    <-> . +s_reticulinium +sam +hplus
+    s_codamine
   }
 }

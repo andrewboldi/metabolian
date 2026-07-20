@@ -245,98 +245,39 @@
       }
     },
     {
-      "id": "trioxidosulfanidosulfate",
-      "name": "trioxidosulfanidosulfate",
-      "short": "trioxidosulfanidosu…",
-      "formula": "HO3S2",
+      "id": "isethionate",
+      "name": "isethionate",
+      "formula": "C2H5O4S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:33542"
+        "chebi": "CHEBI:61904"
       }
     },
     {
-      "id": "gsh",
-      "name": "Glutathione (reduced, GSH)",
-      "short": "Glutathione…",
-      "formula": "C10H16N3O6S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57925"
-      }
-    },
-    {
-      "id": "s_sulfanylglutathionate",
-      "name": "S-sulfanylglutathionate",
-      "short": "S-sulfanylglutathio…",
-      "formula": "C10H16N3O6S2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58905"
-      }
-    },
-    {
-      "id": "tetra_3_sulfido_tetrairon",
-      "name": "tetra-μ3-sulfido-tetrairon",
-      "short": "tetra-μ3-sulfido-te…",
-      "formula": "H4Fe4S4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:33722"
-      }
-    },
-    {
-      "id": "taurine",
-      "name": "Taurine",
-      "formula": "C2H7NO3S",
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:507393"
+        "chebi": "CHEBI:17499"
       }
     },
     {
-      "id": "ammonioacetaldehyde",
-      "name": "ammonioacetaldehyde",
-      "formula": "C2H6NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58213"
-      }
-    },
-    {
-      "id": "tetra_3_sulfido_tetrairon",
-      "name": "tetra-μ3-sulfido-tetrairon",
-      "short": "tetra-μ3-sulfido-te…",
-      "formula": "H4Fe4S4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:33723"
-      }
-    },
-    {
-      "id": "2_monoglyceride",
-      "name": "2-monoglyceride",
-      "formula": "C4H7O4R",
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17389"
+        "chebi": "CHEBI:16236"
       }
     },
     {
-      "id": "acyl_coa",
-      "name": "acyl-CoA",
-      "formula": "C22H31N7O17P3SR",
-      "charge": -4,
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58342"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:13193"
       }
     },
     {
@@ -367,6 +308,26 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:64940"
+      }
+    },
+    {
+      "id": "n_tetracosanoylsphinganine",
+      "name": "N-tetracosanoylsphinganine",
+      "short": "N-tetracosanoylsphi…",
+      "formula": "C42H85NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52961"
+      }
+    },
+    {
+      "id": "ins_1_p_cer_d18_0_24_0",
+      "name": "Ins-1-P-Cer(d18:0/24:0)",
+      "short": "Ins-1-P-Cer(d18:0/2…",
+      "formula": "C48H95NO11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65091"
       }
     },
     {
@@ -932,25 +893,29 @@
     },
     {
       "id": "r11",
-      "name": "thiosulfate + glutathione = S-sulfanylglutathione + sulfite + H(+)",
-      "equation": "thiosulfate + glutathione = S-sulfanylglutathione + sulfite + H(+)",
+      "name": "2-hydroxyethane-1-sulfonate + AH2 = ethanol + sulfite + A + H(+)",
+      "equation": "2-hydroxyethane-1-sulfonate + AH2 = ethanol + sulfite + A + H(+)",
       "substrates": [
         {
-          "metabolite": "trioxidosulfanidosulfate",
+          "metabolite": "isethionate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gsh",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_sulfanylglutathionate",
+          "metabolite": "ethanol",
           "stoichiometry": 1
         },
         {
           "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
@@ -961,110 +926,20 @@
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:55976"
+        "rhea": "RHEA:81427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55976"
+            "id": "RHEA:81427"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "2 oxidized [4Fe-4S]-[ferredoxin] + taurine + H2O = aminoacetaldehyde + 2 reduced [4Fe-4...",
-      "equation": "2 oxidized [4Fe-4S]-[ferredoxin] + taurine + H2O = aminoacetaldehyde + 2 reduced [4Fe-4S]-[ferredoxin] + sulfite + 3 H(+)",
-      "substrates": [
-        {
-          "metabolite": "tetra_3_sulfido_tetrairon",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "taurine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ammonioacetaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tetra_3_sulfido_tetrairon",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "sulfite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:80635"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:80635"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "a 2-acylglycerol + an acyl-CoA = a 1,2-diacyl-sn-glycerol + CoA",
-      "equation": "a 2-acylglycerol + an acyl-CoA = a 1,2-diacyl-sn-glycerol + CoA",
-      "substrates": [
-        {
-          "metabolite": "2_monoglyceride",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dag",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 13,
-      "xrefs": {
-        "rhea": "RHEA:32947"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32947"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r14",
       "name": "an N-acyl-(4R)-4-hydroxysphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inosito...",
       "equation": "an N-acyl-(4R)-4-hydroxysphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an N-acyl-(4R)-4-hydroxysphinganine-1-phosphoinositol + a 1,2-diacyl-sn-glycerol",
       "substrates": [
@@ -1088,7 +963,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 14,
+      "pathwayStep": 12,
       "xrefs": {
         "rhea": "RHEA:33471"
       },
@@ -1103,7 +978,46 @@
       }
     },
     {
-      "id": "r15",
+      "id": "r13",
+      "name": "N-tetracosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-te...",
+      "equation": "N-tetracosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-tetracosanoylsphinganine-(1D-myo-inositol) + a 1,2-diacyl-sn-glycerol",
+      "substrates": [
+        {
+          "metabolite": "n_tetracosanoylsphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ins_1_p_cer_d18_0_24_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:33723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r14",
       "name": "sulfoquinovose isomerase",
       "equation": "6-sulfo-beta-D-quinovose = 6-sulfo-D-rhamnose",
       "ec": "5.3.1.31",
@@ -1125,7 +1039,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 15,
+      "pathwayStep": 14,
       "xrefs": {
         "rhea": "RHEA:70707"
       },
@@ -1140,7 +1054,7 @@
       }
     },
     {
-      "id": "r16",
+      "id": "r15",
       "name": "sulfolactaldehyde 3-reductase",
       "equation": "(2S)-3-sulfopropanediol + NAD(+) = (2S)-3-sulfolactaldehyde + NADH + H(+)",
       "ec": "1.1.1.373",
@@ -1174,7 +1088,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 16,
+      "pathwayStep": 15,
       "xrefs": {
         "rhea": "RHEA:40511"
       },
@@ -1189,7 +1103,7 @@
       }
     },
     {
-      "id": "r17",
+      "id": "r16",
       "name": "(2R)-3-sulfolactate dehydrogenase (NADP(+))",
       "equation": "(2R)-3-sulfolactate + NADP(+) = 3-sulfopyruvate + NADPH + H(+)",
       "ec": "1.1.1.338",
@@ -1223,7 +1137,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 17,
+      "pathwayStep": 16,
       "xrefs": {
         "rhea": "RHEA:15537"
       },

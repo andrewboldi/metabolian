@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p",
   "name": "N-hexadecanoyl-1,2-dihexa… to 1,2-dipalmitoyl-3-palmito…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from N-hexadecanoyl-1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine(1−) to 1,2-dipalmitoyl-3-palmitoleoyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -114,42 +114,69 @@
       }
     },
     {
-      "id": "1_palmitoyl_sn_glycerol_3_phosphate",
-      "name": "1-palmitoyl-sn-glycerol 3-phosphate",
-      "short": "1-palmitoyl-sn-glyc…",
-      "formula": "C19H37O7P",
+      "id": "dipalmitoyl_phosphatidylglycerol",
+      "name": "dipalmitoyl phosphatidylglycerol",
+      "short": "dipalmitoyl…",
+      "formula": "C38H75O10P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60724"
+      }
+    },
+    {
+      "id": "cardiolipin_tetrahexadecanoyl_n_c16_0",
+      "name": "Cardiolipin (tetrahexadecanoyl, n-C16:0)",
+      "short": "Cardiolipin…",
+      "formula": "C73H140O17P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57518"
+        "metanetx": "MNXM736425"
       }
     },
     {
-      "id": "palmitoyl_coa",
-      "name": "Palmitoyl-CoA",
-      "formula": "C37H62N7O17P3S",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57379"
+        "metanetx": "MNXM1103718"
       }
     },
     {
-      "id": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
-      "name": "O-(S-hexadecanoylpantetheine-4'-phosphoryl)serine(1−)",
-      "short": "O-(S-hexadecanoylpa…",
-      "formula": "C30H55N3O9PS",
-      "charge": -1,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:78483"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
-      "charge": -1,
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:64479"
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "cdp_dipalmitoyl_sn_glycerol",
+      "name": "CDP-dipalmitoyl-sn-glycerol",
+      "short": "CDP-dipalmitoyl-sn-…",
+      "formula": "C44H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77190"
       }
     },
     {
@@ -193,7 +220,15 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_41",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": [
+        "2.7.7.41"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -318,78 +353,86 @@
     },
     {
       "id": "r4",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphate + hexadecanoyl-CoA = 1,2-dihexadecanoyl-sn-glycer...",
-      "equation": "1-hexadecanoyl-sn-glycero-3-phosphate + hexadecanoyl-CoA = 1,2-dihexadecanoyl-sn-glycero-3-phosphate + CoA",
+      "name": "Reaction MNXR153209",
       "substrates": [
-        {
-          "metabolite": "1_palmitoyl_sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palmitoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "dipalmitoyl_phosphatidylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cardiolipin_tetrahexadecanoyl_n_c16_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:35903"
+        "metanetx": "MNXR153209"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:35903"
+            "db": "MetaNetX",
+            "id": "MNXR153209"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "hexadecanoyl-[ACP] + 1-hexadecanoyl-sn-glycero-3-phosphate = 1,2-dihexadecanoyl-sn-glyc...",
-      "equation": "hexadecanoyl-[ACP] + 1-hexadecanoyl-sn-glycero-3-phosphate = 1,2-dihexadecanoyl-sn-glycero-3-phosphate + holo-[ACP]",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": "2.7.7.41",
       "substrates": [
         {
-          "metabolite": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
+          "metabolite": "ctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_palmitoyl_sn_glycerol_3_phosphate",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
+          "metabolite": "diphosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "holo-acp",
+          "metabolite": "cdp_dipalmitoyl_sn_glycerol",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_41"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54972"
+        "metanetx": "MNXR190200"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:54972"
+            "db": "MetaNetX",
+            "id": "MNXR190200"
           }
         ]
       }

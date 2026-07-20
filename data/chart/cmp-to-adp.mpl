@@ -24,14 +24,14 @@ pathway cmp-to-adp "CMP to ADP" {
 
   branch from cmp side right {
     cmp
-    <-> ec_2_7_8_5 [2.7.8.5] +phosphatidylglycerophosphate_dihexadecanoyl_n_c1 +sn_glycerol_3_phosphate
-    cdp_dipalmitoyl_sn_glycerol
+    <-> ec_2_7_8_5 [2.7.8.5] +phosphatidylglycerophosphate_dioctadecanoyl_n_c1 +cdp_1_2_dioctadecanoylglycerol
+    sn_glycerol_3_phosphate
   }
 
   branch from cmp side left {
     cmp
-    <-> ec_2_7_8_5 [2.7.8.5] +phosphatidylglycerophosphate_dihexadec_9_enoyl_n +cdp_1_2_dihexadec_9_enoylglycerol
-    sn_glycerol_3_phosphate
+    <-> ec_2_7_8_8 [2.7.8.8] +h +phosphatidylserine_dihexadecanoyl_n_c16_0 +l_serine
+    cdp_dipalmitoyl_sn_glycerol
   }
 
   branch from alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_e_coli side right {
@@ -42,25 +42,25 @@ pathway cmp-to-adp "CMP to ADP" {
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +compound_0047511 +h2o +chloride
-    butan_1_ol
+    <-> . +2_alpha_d_mannosyl_d_glycerate +phosphoenolpyruvate +2_alpha_d_mannosyl_6_phosphate_d_glycerate
+    pyruvate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_218 [1.1.1.218] +nadh +ethylmorphinone +nad
-    ethylmorphine
+    <-> ec_1_14_12_17 [1.14.12.17] +nadh +nitric_oxide +o2 +nad
+    nitric_acid
   }
 
   branch from adp side left {
     adp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +atp +mg +h2o +h +phosphate
-    mg_protoporphyrin_ix
+    <-> ec_2_7_1_1 [2.7.1.1] +n_acetyl_beta_d_glucosamine_6_phosphate +h +aldehydo_n_acetyl_d_glucosamine
+    atp
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin +atp +mg +h2o +h +phosphate
-    mg_protoporphyrin_ix
+    <-> ec_3_6_3_33 [3.6.3.33] +h +phosphate +atp +h2o
+    adenosylcob_iii_alamin
   }
 }

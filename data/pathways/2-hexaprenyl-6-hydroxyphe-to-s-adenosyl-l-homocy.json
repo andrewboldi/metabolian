@@ -152,33 +152,42 @@
       }
     },
     {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65315"
+        "chebi": "CHEBI:30011"
       }
     },
     {
-      "id": "5_methyluridine_5_monophosphate_1",
-      "name": "5-methyluridine 5'-monophosphate(1−)",
-      "short": "5-methyluridine…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
+      "id": "n5_methyl_l_glutamine",
+      "name": "N5-methyl-L-glutamine",
+      "short": "N5-methyl-L-glutami…",
+      "formula": "C6H10N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74447"
+        "chebi": "CHEBI:61891"
       }
     },
     {
-      "id": "2_o_methyluridine_5_monophosphate_1",
-      "name": "2'-O-methyluridine 5'-monophosphate(1−)",
-      "short": "2'-O-methyluridine…",
-      "formula": "C10H12N2O8P",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74478"
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "n1_methylguanosine_5_monophosphate_1",
+      "name": "N1-methylguanosine 5'-monophosphate(1−)",
+      "short": "N1-methylguanosine…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73542"
       }
     },
     {
@@ -253,17 +262,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_35",
-      "name": "tRNA (uracil(54)-C(5))-methyltransferase",
+      "id": "ec_2_1_1_297",
+      "name": "peptide chain release factor N(5)-glutamine methyltransferase",
       "ec": [
-        "2.1.1.35"
+        "2.1.1.297"
       ]
     },
     {
-      "id": "ec_2_1_1_166",
-      "name": "23S rRNA (uridine(2552)-2'-O)-methyltransferase",
+      "id": "ec_2_1_1_187",
+      "name": "23S rRNA (guanine(745)-N(1))-methyltransferase",
       "ec": [
-        "2.1.1.166"
+        "2.1.1.187"
       ]
     },
     {
@@ -464,12 +473,12 @@
     },
     {
       "id": "r5",
-      "name": "tRNA (uracil(54)-C(5))-methyltransferase",
-      "equation": "uridine(54) in tRNA + S-adenosyl-L-methionine = 5-methyluridine(54) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.35",
+      "name": "peptide chain release factor N(5)-glutamine methyltransferase",
+      "equation": "L-glutaminyl-[peptide chain release factor] + S-adenosyl-L-methionine = N(5)-methyl-L-glutaminyl-[peptide chain release factor] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.297",
       "substrates": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -479,7 +488,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
+          "metabolite": "n5_methyl_l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -493,32 +502,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_35"
+          "enzyme": "ec_2_1_1_297"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:42712"
+        "rhea": "RHEA:42896"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42712"
+            "id": "RHEA:42896"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "23S rRNA (uridine(2552)-2'-O)-methyltransferase",
-      "equation": "uridine(2552) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methyluridine(2552) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.166",
+      "name": "23S rRNA (guanine(745)-N(1))-methyltransferase",
+      "equation": "guanosine(745) in 23S rRNA + S-adenosyl-L-methionine = N(1)-methylguanosine(745) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.187",
       "substrates": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -528,7 +537,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methyluridine_5_monophosphate_1",
+          "metabolite": "n1_methylguanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -542,20 +551,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_166"
+          "enzyme": "ec_2_1_1_187"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42720"
+        "rhea": "RHEA:42900"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42720"
+            "id": "RHEA:42900"
           }
         ]
       }

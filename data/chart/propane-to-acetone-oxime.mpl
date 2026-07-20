@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propane-to-acetone-oxime "propane to acetone oxime" {
-  spacing 216
+  spacing 210
 
   spine at 0,0 {
     propane
@@ -17,12 +17,6 @@ pathway propane-to-acetone-oxime "propane to acetone oxime" {
   }
 
   branch from acetone side left {
-    acetone
-    <-> ec_4_1_99_16 [4.1.99.16] +1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
-    1s_4as_1_4a_dimethyl_1_2_3_4_4a_5_6_8a_octahydr
-  }
-
-  branch from acetone side right {
     acetone
     <-> . +discoidol +fmnh2 +o2 +fmn +h2o +hplus
     discodiene

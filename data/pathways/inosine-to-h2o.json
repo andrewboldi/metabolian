@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "inosine-to-h2o",
   "name": "inosine to H2O",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from inosine to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -151,52 +151,76 @@
       }
     },
     {
-      "id": "3_s_hydroxy_pravastatin_tetranor",
-      "name": "3'-S-hydroxy-pravastatin-tetranor",
-      "short": "3'-S-hydroxy-pravas…",
-      "formula": "C19H27NaO6",
+      "id": "glycine",
+      "name": "glycine",
+      "formula": "C2H5NO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744434"
+        "metanetx": "MNXM29"
       }
     },
     {
-      "id": "3_s_hydroxy_pravastatin",
-      "name": "3'-S-hydroxy-pravastatin",
-      "short": "3'-S-hydroxy-pravas…",
-      "formula": "C23H35NaO8",
+      "id": "gliclazide",
+      "name": "gliclazide",
+      "formula": "C15H21N3O3S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744432"
+        "chebi": "CHEBI:31654"
       }
     },
     {
-      "id": "3_hydroxy_simvastatin_lactone_form",
-      "name": "3'-hydroxy-simvastatin-lactone form",
-      "short": "3'-hydroxy-simvasta…",
-      "formula": "C25H38O6",
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744436"
+        "metanetx": "MNXM738804"
       }
     },
     {
-      "id": "3_hydroxy_simvastatin_acid_form",
-      "name": "3'-hydroxy-simvastatin-acid form",
-      "short": "3'-hydroxy-simvasta…",
-      "formula": "C25H40O7",
-      "charge": 0,
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM744437"
+        "metanetx": "MNXM741173"
       }
     },
     {
-      "id": "4_beta_oh_gliclazide",
-      "name": "4-beta-OH-gliclazide",
-      "formula": "C15H21N3O4S",
+      "id": "glutamyl_methionine",
+      "name": "Glutamyl-Methionine",
+      "formula": "C10H17N2O5S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM744718"
+      }
+    },
+    {
+      "id": "l_lysine",
+      "name": "L-lysine",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1364268"
+      }
+    },
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H9NO3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744447"
+        "metanetx": "MNXM142"
+      }
+    },
+    {
+      "id": "glutamyl_threonyl_lysine",
+      "name": "Glutamyl-Threonyl-Lysine",
+      "short": "Glutamyl-Threonyl-L…",
+      "formula": "C15H28N4O7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM744721"
       }
     }
   ],
@@ -488,18 +512,18 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR153951",
+      "name": "Reaction MNXR157892",
       "substrates": [
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_s_hydroxy_pravastatin_tetranor",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
@@ -509,11 +533,11 @@
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "glycine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_s_hydroxy_pravastatin_tetranor",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -524,21 +548,21 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR153951"
+        "metanetx": "MNXR157892"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153951"
+            "id": "MNXR157892"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR153953",
+      "name": "Reaction MNXR157893",
       "substrates": [
         {
           "metabolite": "h",
@@ -549,7 +573,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_s_hydroxy_pravastatin",
+          "metabolite": "gliclazide",
           "stoichiometry": 1
         },
         {
@@ -563,7 +587,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_s_hydroxy_pravastatin",
+          "metabolite": "gliclazide",
           "stoichiometry": 1
         },
         {
@@ -574,98 +598,94 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR153953"
+        "metanetx": "MNXR157893"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153953"
+            "id": "MNXR157893"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR153956",
+      "name": "Reaction MNXR157827",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_simvastatin_lactone_form",
+          "metabolite": "l_methionine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_glutamate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxy_simvastatin_acid_form",
+          "metabolite": "glutamyl_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR153956"
+        "metanetx": "MNXR157827"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153956"
+            "id": "MNXR157827"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR154002",
+      "name": "Reaction MNXR157836",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "l_lysine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "4_beta_oh_gliclazide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "l_glutamate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_beta_oh_gliclazide",
+          "metabolite": "glutamyl_threonyl_lysine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR154002"
+        "metanetx": "MNXR157836"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154002"
+            "id": "MNXR157836"
           }
         ]
       }

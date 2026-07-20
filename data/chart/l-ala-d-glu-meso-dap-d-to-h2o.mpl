@@ -48,13 +48,13 @@ pathway l-ala-d-glu-meso-dap-d-to-h2o "L-Ala-γ-D-Glu-meso-Dap-D-… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phosphatidylglycerophosphate_dioctadec_11_enoyl
+    <-> . +h +sulfate +3_3_diiodo_l_thyronine
+    3_3_diiodo_l_thyronine_sulfate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_3_27 [3.1.3.27] +dilauroyl_phosphatidylglycerol +phosphate
-    phosphatidylglycerophosphate_didodecanoyl_n_c12
+    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +sulfate +3_monoiodo_l_thyronine
+    h
   }
 }

@@ -86,46 +86,59 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
+      "id": "ecgonone",
+      "name": "(+)-ecgonone",
+      "formula": "C9H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234007"
+      }
+    },
+    {
+      "id": "ecgononium_methyl_ester",
+      "name": "ecgononium methyl ester",
+      "short": "ecgononium methyl…",
+      "formula": "C10H16NO3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:66941"
       }
     },
     {
-      "id": "n6_n6_dimethyl_l_lysinium",
-      "name": "N6,N6-dimethyl-L-lysinium",
-      "short": "N6,N6-dimethyl-L-ly…",
-      "formula": "C8H19N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:193107"
-      }
-    },
-    {
-      "id": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
-      "name": "3',4',5-trihydroxy-3-methoxyflavon-7-olate",
-      "short": "3',4',5-trihydroxy-…",
-      "formula": "C16H11O7",
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57928"
+        "chebi": "CHEBI:32544"
       }
     },
     {
-      "id": "3_3_o_dimethylquercetin",
-      "name": "3,3'-O-dimethylquercetin",
-      "short": "3,3'-O-dimethylquer…",
-      "formula": "C17H13O7",
-      "charge": -1,
+      "id": "methyl_nicotinate",
+      "name": "methyl nicotinate",
+      "formula": "C7H7NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194063"
+        "chebi": "CHEBI:134761"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_403",
+      "name": "methylecgonone synthase",
+      "ec": [
+        "2.1.1.403"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_401",
+      "name": "nicotinate methyltransferase",
+      "ec": [
+        "2.1.1.401"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -258,54 +271,57 @@
     },
     {
       "id": "r4",
-      "name": "L-lysine + 2 S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysine + 2 S-adenosyl-L-hom...",
-      "equation": "L-lysine + 2 S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysine + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "name": "methylecgonone synthase",
+      "equation": "(+)-ecgonone + S-adenosyl-L-methionine = ecgonone methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.403",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "ecgonone",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysinium",
+          "metabolite": "ecgononium_methyl_ester",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
-        },
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "enzyme": "ec_2_1_1_403"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:74523"
+        "rhea": "RHEA:85367"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74523"
+            "id": "RHEA:85367"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3',4',5,7-tetrahydroxy-3-methoxyflavone + S-adenosyl-L-methionine = 3,3'-O-dimethylquer...",
-      "equation": "3',4',5,7-tetrahydroxy-3-methoxyflavone + S-adenosyl-L-methionine = 3,3'-O-dimethylquercetin + S-adenosyl-L-homocysteine + H(+)",
+      "name": "nicotinate methyltransferase",
+      "equation": "nicotinate + S-adenosyl-L-methionine = methyl nicotinate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.401",
       "substrates": [
         {
-          "metabolite": "3_4_5_trihydroxy_3_methoxyflavon_7_olate",
+          "metabolite": "nicotinate",
           "stoichiometry": 1
         },
         {
@@ -315,29 +331,30 @@
       ],
       "products": [
         {
-          "metabolite": "3_3_o_dimethylquercetin",
+          "metabolite": "methyl_nicotinate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_401"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:74715"
+        "rhea": "RHEA:85447"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74715"
+            "id": "RHEA:85447"
           }
         ]
       }

@@ -30,13 +30,13 @@ pathway n-formyl-l-methionyl-l-ph-to-n-propanoyl-l-methi "N-formyl-L-methionyl-L
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_5_4_3_10 [5.4.3.10]
-    r_3_ammonio_3_phenylpropanoate
+    <-> ec_1_14_16_7 [1.14.16.7] +sapropterin +o2 +4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
+    l_m_tyrosine
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_5_4_3_11 [5.4.3.11]
-    s_3_ammonio_3_phenylpropanoate
+    <-> . +arachidonate +h2o
+    n_arachidonoyl_l_phenylalaninate
   }
 }

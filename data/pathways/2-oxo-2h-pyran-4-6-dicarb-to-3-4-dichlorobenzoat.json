@@ -82,39 +82,31 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
+      "id": "trimethylamine",
+      "name": "trimethylamine",
+      "formula": "C3H10N",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM10"
+        "metanetx": "MNXM1094294"
       }
     },
     {
-      "id": "1r_5r_alpha_pinene",
-      "name": "(1R,5R)-alpha-pinene",
-      "formula": "C10H16",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364658"
-      }
-    },
-    {
-      "id": "alpha_pinene_oxide",
-      "name": "alpha-Pinene-oxide",
-      "formula": "C10H16O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM2972"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "3r_3_hydroxy_4_oxobutanoate",
+      "name": "(3R)-3-hydroxy-4-oxobutanoate",
+      "short": "3-hydroxy-4-oxobuta…",
+      "formula": "C4H5O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "chebi": "CHEBI:138809"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
       }
     },
     {
@@ -127,21 +119,39 @@
       }
     },
     {
-      "id": "echinenone",
-      "name": "echinenone",
-      "formula": "C40H54O",
+      "id": "s_carnitine",
+      "name": "(S)-carnitine",
+      "formula": "C7H15NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4746"
+        "chebi": "CHEBI:11060"
       }
     },
     {
-      "id": "3_hydroxyechinenone",
-      "name": "3-Hydroxyechinenone",
-      "formula": "C40H54O2",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:80215"
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
       }
     }
   ],
@@ -151,13 +161,6 @@
       "name": "protocatechuate 4,5-dioxygenase",
       "ec": [
         "1.13.11.8"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_129",
-      "name": "EC 1.14.13.129",
-      "ec": [
-        "1.14.13.129"
       ]
     }
   ],
@@ -284,14 +287,28 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR173490",
+      "name": "Reaction MNXR182247",
       "substrates": [
         {
-          "metabolite": "nadh",
+          "metabolite": "trimethylamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1r_5r_alpha_pinene",
+          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_carnitine",
           "stoichiometry": 1
         },
         {
@@ -301,62 +318,37 @@
         {
           "metabolite": "o2",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alpha_pinene_oxide",
-          "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR173490"
+        "metanetx": "MNXR182247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR173490"
+            "id": "MNXR182247"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR173526",
-      "ec": "1.14.13.129",
+      "name": "Reaction MNXR182248",
       "substrates": [
         {
-          "metabolite": "nadh",
+          "metabolite": "trimethylamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "echinenone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxyechinenone",
+          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
           "stoichiometry": 1
         },
         {
@@ -368,22 +360,35 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_1_14_13_129"
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR173526"
+        "metanetx": "MNXR182248"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR173526"
+            "id": "MNXR182248"
           }
         ]
       }

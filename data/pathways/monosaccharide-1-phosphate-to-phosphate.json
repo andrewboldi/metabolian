@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "monosaccharide-1-phosphate-to-phosphate",
   "name": "monosaccharide 1-phosphate to phosphate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 4-step route from monosaccharide 1-phosphate(2−) to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -176,31 +176,21 @@
       }
     },
     {
-      "id": "d_xylose_1_phosphate",
-      "name": "α-D-xylose 1-phosphate",
-      "short": "α-D-xylose 1-P",
-      "formula": "C5H9O8P",
-      "charge": -2,
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57559"
+        "chebi": "CHEBI:78442"
       }
     },
     {
-      "id": "udp_d_xylose",
-      "name": "UDP-α-D-xylose",
-      "formula": "C14H20N2O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57632"
-      }
-    },
-    {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:46858"
+        "chebi": "CHEBI:58359"
       }
     },
     {
@@ -213,22 +203,31 @@
       }
     },
     {
-      "id": "o_adenyl_l_tyrosine_1",
-      "name": "O-adenyl-L-tyrosine(1−)",
-      "short": "O-adenyl-L-tyrosine…",
-      "formula": "C19H20N6O8P",
-      "charge": -1,
+      "id": "3_l_glutaminyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-glutaminyl)adenylyl zwitterionic group",
+      "short": "3'-(L-glutaminyl)ad…",
+      "formula": "C15H21N7O8P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:83624"
+        "chebi": "CHEBI:78521"
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
       }
     },
     {
@@ -238,6 +237,24 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_phenylalanine",
+      "name": "D-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57981"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
       }
     },
     {
@@ -347,17 +364,17 @@
       ]
     },
     {
-      "id": "ec_2_7_7_11",
-      "name": "UTP--xylose-1-phosphate uridylyltransferase",
+      "id": "ec_6_1_1_18",
+      "name": "glutamine--tRNA ligase",
       "ec": [
-        "2.7.7.11"
+        "6.1.1.18"
       ]
     },
     {
-      "id": "ec_2_7_7_42",
-      "name": "[glutamine synthetase] adenylyltransferase",
+      "id": "ec_5_1_1_11",
+      "name": "phenylalanine racemase (ATP-hydrolyzing)",
       "ec": [
-        "2.7.7.42"
+        "5.1.1.11"
       ]
     },
     {
@@ -386,6 +403,13 @@
       "name": "EC 3.6.3.21",
       "ec": [
         "3.6.3.21"
+      ]
+    },
+    {
+      "id": "ec_7_4_2_10",
+      "name": "ABC-type glutathione transporter",
+      "ec": [
+        "7.4.2.10"
       ]
     }
   ],
@@ -593,61 +617,16 @@
     },
     {
       "id": "r5",
-      "name": "UTP--xylose-1-phosphate uridylyltransferase",
-      "equation": "alpha-D-xylose 1-phosphate + UTP + H(+) = UDP-alpha-D-xylose + diphosphate",
-      "ec": "2.7.7.11",
+      "name": "glutamine--tRNA ligase",
+      "equation": "tRNA(Gln) + L-glutamine + ATP = L-glutaminyl-tRNA(Gln) + AMP + diphosphate",
+      "ec": "6.1.1.18",
       "substrates": [
         {
-          "metabolite": "d_xylose_1_phosphate",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_d_xylose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_11"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:18389"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:18389"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "[glutamine synthetase] adenylyltransferase",
-      "equation": "[glutamine synthetase]-L-tyrosine + ATP = [glutamine synthetase]-O(4)-(5'-adenylyl)-L-tyrosine + diphosphate",
-      "ec": "2.7.7.42",
-      "substrates": [
-        {
-          "metabolite": "l_tyrosine",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -657,7 +636,11 @@
       ],
       "products": [
         {
-          "metabolite": "o_adenyl_l_tyrosine_1",
+          "metabolite": "3_l_glutaminyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -667,20 +650,77 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_42"
+          "enzyme": "ec_6_1_1_18"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:18589"
+        "rhea": "RHEA:20121"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18589"
+            "id": "RHEA:20121"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "phenylalanine racemase (ATP-hydrolyzing)",
+      "equation": "L-phenylalanine + ATP + H2O = D-phenylalanine + AMP + diphosphate + H(+)",
+      "ec": "5.1.1.11",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:20201"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20201"
           }
         ]
       }
@@ -785,56 +825,6 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR100366",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR100366"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR100366"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "Reaction MNXR100367",
       "ec": "3.6.3.21",
       "substrates": [
@@ -875,7 +865,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "metanetx": "MNXR100367"
       },
@@ -890,7 +880,7 @@
       }
     },
     {
-      "id": "r11",
+      "id": "r10",
       "name": "Reaction MNXR100447",
       "substrates": [
         {
@@ -925,7 +915,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "metanetx": "MNXR100447"
       },
@@ -935,6 +925,62 @@
           {
             "db": "MetaNetX",
             "id": "MNXR100447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "ABC-type glutathione transporter",
+      "ec": "7.4.2.10",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_7_4_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "metanetx": "MNXR100448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100448"
           }
         ]
       }

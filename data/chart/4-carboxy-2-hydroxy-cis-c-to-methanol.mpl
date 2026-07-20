@@ -20,38 +20,38 @@ pathway 4-carboxy-2-hydroxy-cis-c-to-methanol "4-carboxy-2-hydroxy-cis,c… to m
 
   branch from h side left {
     h
-    <-> . +fadh2 +2_6_dimethyl_trans_2_heptenoyl_coa +2s_2_6_dimethylheptanoyl_coa
-    fad
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
   branch from h side right {
     h
-    <-> . +adp +rosuvastatin_5s_lactone +phosphate +rosuvastatin_5s_lactone +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_phenylalanine
-    phenylalanyl_leucine
+    <-> . +l_aspartate +l_arginine +l_tyrosine
+    tyrosyl_aspartyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_lysine +l_phenylalanine
-    phenylalanyl_lysyl_alanine
+    <-> . +l_glutamate +l_tyrosine
+    tyrosyl_glutamate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_2_3_1 [1.2.3.1] +h +3_hydroxy_4_methoxybenzoate +h2o2 +h2o
-    isovanillin
+    <-> . +all_trans_beta_carotene +h +nadph +cryptoxanthin +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_12_3 [1.13.12.3] +co2 +3_methylsulfanylpropanamide +h2o
-    l_methionine
+    <-> . +all_trans_zeaxanthin +nadp +h2o +h +nadph
+    cryptoxanthin
   }
 
   branch from 3_4_5_trihydroxybenzoate side left {
@@ -68,13 +68,13 @@ pathway 4-carboxy-2-hydroxy-cis-c-to-methanol "4-carboxy-2-hydroxy-cis,c… to m
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_1 [3.1.1.1] +acibenzolar +h2o
-    acibenzolar_s_methyl
+    <-> ec_1_14_18_3 [1.14.18.3] +phylloquinone +h2o +o2 +methane
+    phylloquinol
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_2_3_1_152 [2.3.1.152] +alpha_d_glucose +methyl_trans_cinnamate
-    1_o_trans_cinnamoyl_beta_d_glucose
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +o2 +methane +h2o
+    ubiquinone_9
   }
 }

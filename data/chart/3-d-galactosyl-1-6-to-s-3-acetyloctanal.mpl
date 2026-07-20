@@ -20,14 +20,14 @@ pathway 3-d-galactosyl-1-6-to-s-3-acetyloctanal "3-[α-D-galactosyl-(1→6)-β�
 
   branch from octanoate side left {
     octanoate
-    <-> . +h +o2 +nadph +nadp +h2o
-    7_hydroxy_octanoate
+    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa +h2o +h +nadph
+    malonyl_coa
   }
 
   branch from octanoate side right {
     octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +co2 +nadp +coa +h2o +h +nadph
-    malonyl_coa
+    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
+    co2
   }
 
   branch from octanal side left {
@@ -38,14 +38,14 @@ pathway 3-d-galactosyl-1-6-to-s-3-acetyloctanal "3-[α-D-galactosyl-(1→6)-β�
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_105 [4.2.3.105] +gpp
-    tricyclene
+    <-> ec_4_2_3_142 [4.2.3.142] +fpp
+    7_epi_zingiberene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_106 [4.2.3.106] +gpp
-    e_ocimene
+    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
+    deoxybrevianamide_e
   }
 
   branch from e_oct_2_enal side right {

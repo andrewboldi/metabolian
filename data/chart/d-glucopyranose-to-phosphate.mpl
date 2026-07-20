@@ -30,37 +30,37 @@ pathway d-glucopyranose-to-phosphate "D-glucopyranose to phosphate" {
 
   branch from nh4 side left {
     nh4
-    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h2o
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> ec_3_5_1_4 [3.5.1.4] +2_hydroxyisobutyramide +h2o
+    2_hydroxyisobutyrate
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +3_dimethylselenopropanal +h2o2 +o2 +h2o
-    dimethylselenopropanoate_amine
+    <-> ec_4_4_1_13 [4.4.1.13] +l_djenkolic_acid +h2o +pyruvate
+    s_sulfanylmethyl_l_cysteine
   }
 
   branch from alpha_alpha_trehalose side left {
     alpha_alpha_trehalose
-    <-> ec_2_3_1_279 [2.3.1.279] +octadecanoyl_coa +coa
-    alpha_d_glucopyranosyl_2_o_stearoyl_alpha_d_gluc
+    <-> ec_2_3_1_122 [2.3.1.122] +alpha_alpha_trehalose_6_6_bismycolate
+    alpha_alpha_trehalose_6_alpha_mycolate
   }
 
   branch from alpha_alpha_trehalose side right {
     alpha_alpha_trehalose
-    <-> . +trehalose_cis_methoxy_di_mycolate
-    trehalose_cis_methoxy_mono_mycolate
+    <-> ec_2_4_1_64 [2.4.1.64] +beta_d_glucose_1_phosphate +phosphate
+    beta_d_glucose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    <-> ec_2_5_1_95 [2.5.1.95] +4_6_ch3_coo_c_beta_d_man_1_4_beta_glca_1_2_6_o_a +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al
+    phosphoenolpyruvate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o
-    1d_myo_inositol_1_3_4_5_6_pentakisphosphate
+    <-> ec_2_7_4_27 [2.7.4.27] +diphosphate +h +l_threonine
+    o_phospho_l_threonine
   }
 }

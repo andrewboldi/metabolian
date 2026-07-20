@@ -30,49 +30,49 @@ pathway methyl-1-4-benzoquinol-to-6-glutathion-s-yl-2-me "methyl-1,4-benzoquinol
 
   branch from h side left {
     h
-    <-> ec_1_1_1_188 [1.1.1.188] +nadh +9_10_phenanthroquinone +nad
-    phenanthrene_9_10_diol
+    <-> ec_1_2_1_57 [1.2.1.57] +nadh +hexanoyl_coa +hexanal +nad
+    coa
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +valerylhydroxamic_acid +nh4 +hydroxylamine
-    pentanamide
+    <-> ec_1_1_1_10 [1.1.1.10] +isatin +nadph +nadp
+    2_3_dihydroxyindole
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +h +l_xylose +nadp
-    xylitol
+    <-> ec_1_1_1_2 [1.1.1.2] +16_ketoestrone +h +nadp
+    16_hydroxyestrone
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_47 [1.2.1.47] +h +4_trimethylamino_butanoate +nadp +h2o
-    4_trimethylamino_butanal
+    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +h +nadp
+    2r_butan_2_ol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +5beta_pregnan_3_20_dione
-    3beta_hydroxy_5beta_pregnane_20_one
+    <-> ec_1_1_1_328 [1.1.1.328] +nadh +duroquinone +h
+    durohydroquinone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +4_nitroacetophenone
-    1_4_nitrophenyl_ethanol
+    <-> ec_1_11_1_1 [1.11.1.1] +nadh +2_5_dimethyl_1_4_benzoquinone +h
+    compound_0069549
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +glutathione_disulfide
-    2_2_dithiodiethanol
+    <-> . +4_methoxyindol_3_ylmethyl_isothiocyanate
+    glutathion_s_yl_4_methoxy_3_indolylmethylisothi
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +4_methoxyindol_3_ylmethyl_isothiocyanate
-    glutathion_s_yl_4_methoxy_3_indolylmethylisothi
+    <-> ec_2_5_1_18 [2.5.1.18] +indol_3_ylmethylisothiocyanate_glutathione
+    indolylmethylisothiocyanate
   }
 }

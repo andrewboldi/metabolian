@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-ergosta-7-22-diene-3-to-carboxylic-acid-anion",
   "name": "5α-ergosta-7,22-diene-3β,… to carboxylic acid anion",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 5α-ergosta-7,22-diene-3β,5-diol to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -93,42 +93,60 @@
       }
     },
     {
-      "id": "n_acyl_aromatic_l_amino_acid_anion",
-      "name": "N-acyl-aromatic L-α-amino-acid anion",
-      "short": "N-acyl-aromatic…",
-      "formula": "C3H2NO3R2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:138093"
-      }
-    },
-    {
-      "id": "aromatic_l_amino_acid",
-      "name": "aromatic L-α-amino acid",
-      "short": "aromatic L-α-amino…",
-      "formula": "C2H4NO2R",
+      "id": "a_peroxy_acid",
+      "name": "a peroxy acid",
+      "formula": "CHO3R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84824"
+        "chebi": "CHEBI:177878"
       }
     },
     {
-      "id": "n2_acyl_l_glutaminate",
-      "name": "N2-acyl-L-glutaminate",
-      "short": "N2-acyl-L-glutamina…",
-      "formula": "C6H8N2O4R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:87584"
-      }
-    },
-    {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "aliphatic_sulfonate_oxoanion",
+      "name": "aliphatic sulfonate oxoanion",
+      "short": "aliphatic…",
+      "formula": "CH2O3SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231625"
+      }
+    },
+    {
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33722"
+      }
+    },
+    {
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33723"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
       }
     }
   ],
@@ -141,17 +159,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_114",
-      "name": "N-acyl-aromatic-L-amino acid amidohydrolase",
+      "id": "ec_1_97_1_13",
+      "name": "aliphatic sulfonate oxidoreductase",
       "ec": [
-        "3.5.1.114"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_133",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "ec": [
-        "3.5.1.133"
+        "1.97.1.13"
       ]
     }
   ],
@@ -281,12 +292,11 @@
     },
     {
       "id": "r4",
-      "name": "N-acyl-aromatic-L-amino acid amidohydrolase",
-      "equation": "an N-acyl-aromatic L-alpha-amino acid + H2O = an aromatic L-alpha-amino acid + a carboxylate",
-      "ec": "3.5.1.114",
+      "name": "a percarboxylic acid + H2O = a carboxylate + H2O2 + H(+)",
+      "equation": "a percarboxylic acid + H2O = a carboxylate + H2O2 + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acyl_aromatic_l_amino_acid_anion",
+          "metabolite": "a_peroxy_acid",
           "stoichiometry": 1
         },
         {
@@ -296,75 +306,86 @@
       ],
       "products": [
         {
-          "metabolite": "aromatic_l_amino_acid",
+          "metabolite": "carboxylic_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "carboxylic_acid_anion",
+          "metabolite": "h2o2",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_5_1_114"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:54184"
+        "rhea": "RHEA:68396"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54184"
+            "id": "RHEA:68396"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N(alpha)-acyl-L-glutamine aminoacylase",
-      "equation": "an N(2)-acyl-L-glutamine + H2O = a carboxylate + L-glutamine",
-      "ec": "3.5.1.133",
+      "name": "aliphatic sulfonate oxidoreductase",
+      "equation": "an aliphatic sulfonate + 4 oxidized [4Fe-4S]-[ferredoxin] + 2 H2O = 4 reduced [4Fe-4S]-[ferredoxin] + a carboxylate + sulfite + 6 H(+)",
+      "ec": "1.97.1.13",
       "substrates": [
         {
-          "metabolite": "n2_acyl_l_glutaminate",
+          "metabolite": "aliphatic_sulfonate_oxoanion",
           "stoichiometry": 1
         },
         {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 4
+        },
+        {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
+        {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 4
+        },
         {
           "metabolite": "carboxylic_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamine",
+          "metabolite": "sulfite",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 6
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_133"
+          "enzyme": "ec_1_97_1_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59984"
+        "rhea": "RHEA:80643"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59984"
+            "id": "RHEA:80643"
           }
         ]
       }

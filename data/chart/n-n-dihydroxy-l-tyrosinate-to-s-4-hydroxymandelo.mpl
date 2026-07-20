@@ -24,13 +24,13 @@ pathway n-n-dihydroxy-l-tyrosinate-to-s-4-hydroxymandelo "N,N-dihydroxy-L-tyrosi
 
   branch from fmn side right {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    18_hydroxylinoleate
+    <-> ec_1_14_14_178 [1.14.14.178] +c28_steroid +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxy_c28_steroid
   }
 
   branch from fmn side left {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9z_12z_17_hydroxyoctadeca_9_12_dienoate
+    <-> ec_1_14_14_178 [1.14.14.178] +c29_steroid +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxy_c29_steroid
   }
 }

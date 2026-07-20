@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocystei
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +r_coclaurine +h
-    r_norcoclaurine
+    <-> . +s_adenosyl_l_homocysteine +chrysosplenetin +h
+    chrysosplenol_c
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +hmdboa_glucoside +h
-    dimboa_beta_d_glucoside
+    <-> . +dtdp_l_oleandrose +s_adenosyl_l_homocysteine +h
+    dtdp_l_olivose
   }
 
   branch from e_coniferol side left {
@@ -48,14 +48,14 @@ pathway s-adenosyl-l-homocysteine-to-e-caffeyl-aldehyde "S-adenosyl-L-homocystei
 
   branch from h2o side right {
     h2o
-    <-> . +dca_cl
-    dehydrodiconiferyl_acid_aldehyde_gem_diol
+    <-> ec_3_1_1_83 [3.1.1.83] +6_isopropenyl_3_methyloxepan_2_one +h
+    a_6_hydroxy_5_isopropenyl_2_methylhexanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dca_cl
-    dehydrodiconiferyl_acid_gem_diol
+    <-> ec_3_3_2_8 [3.3.2.8] +1s_2s_4r_limonene_1_2_diol
+    4r_limonene_1alpha_2alpha_epoxide
   }
 
   branch from e_caffeyl_aldehyde side right {

@@ -20,13 +20,13 @@ pathway d-murnac-1-4-d-glcnac-to-n-acetyl-d-glucosamine "β-D-MurNAc-(1→4)-D-G
 
   branch from l_histidine side left {
     l_histidine
-    <-> ec_2_7_1_200 [2.7.1.200] +galactitol +n_phosphonato_l_histidine
-    galactitol_1_phosphate
+    <-> ec_2_7_1_204 [2.7.1.204] +n_phosphonato_l_histidine +d_galactopyranose
+    d_galactopyranose_6_phosphate
   }
 
   branch from l_histidine side right {
     l_histidine
-    <-> ec_2_7_1_202 [2.7.1.202] +d_fructofuranose +n_phosphonato_l_histidine
-    d_fructofuranose_1_phosphate
+    <-> ec_2_7_1_208 [2.7.1.208] +maltose +n_phosphonato_l_histidine
+    maltose_6_phosphate
   }
 }

@@ -18,14 +18,14 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +3_6_dichloro_3a_methyl_dihydro_3h_furo_3_2_b_fur
-    2_5_dichloro_3_methyl_muconolactone
+    <-> . +2_3_dioxo_l_gulonate
+    dehydroascorbate_bicyclic_form
   }
 
   branch from h side right {
     h
-    <-> . +2_chloro_3_methyl_maleylacetate +h2o
-    2_chloro_3_methyl_dienelactone
+    <-> . +4_o_oxalyl_l_threonate +h2o
+    cyclic_3_4_o_oxalyl_l_threonate
   }
 
   branch from betalamic_acid side left {
@@ -60,14 +60,14 @@ pathway 2-descarboxy-betanidin-to-h2o "2-Descarboxy-betanidin to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +16_hydroxyhexadecanoyl_coa +h +o2 +nadph +nadp
-    10_16_dihydroxypalmitoyl_coa
+    <-> . +4_chloro_3_hydroxybutyryl_coa
+    4_chloro_crotonyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +4_methylumbelliferone
-    glucose
+    <-> . +vincaleukoblastine
+    3_4_anhydrovinblastine
   }
 
   branch from dopaxanthin_quinone side right {

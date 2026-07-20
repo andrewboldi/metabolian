@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway silphinene-to-penifulvin-a "silphinene to Penifulvin A" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     silphinene
@@ -14,17 +14,5 @@ pathway silphinene-to-penifulvin-a "silphinene to Penifulvin A" {
     lactone_2_keto_5_5_5_5_fenestrane
     <-> . +nadph +o2 +hplus -nadp -h2o
     penifulvin_a
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +campesine_b +fmnh2 +o2 +h2o +hplus
-    campesine_f
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
-    15alpha_hydroxyprogesterone
   }
 }

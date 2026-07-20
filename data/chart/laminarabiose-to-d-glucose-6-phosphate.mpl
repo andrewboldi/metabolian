@@ -24,56 +24,56 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
 
   branch from g1p side left {
     g1p
-    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
-    maltose
-  }
-
-  branch from g1p side right {
-    g1p
     <-> ec_5_4_2_2 [5.4.2.2]
     d_glucose_6_phosphate
   }
 
+  branch from g1p side right {
+    g1p
+    <-> . +udp_d_glucose +h2o +hplus
+    ump
+  }
+
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp_d_galactose +udp +hplus
-    lactose
+    <-> ec_1_1_1_47 [1.1.1.47] +nad +nadh +hplus
+    d_glucono_1_5_lactone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +avenacoside_a +h2o
-    26_desglucoavenacoside_a
+    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
+    gdp_d_glucose
   }
 
   branch from adp_d_glucoside side left {
-    adp_d_glucoside
-    <-> ec_2_4_1_245 [2.4.1.245] +glucose +adp +hplus
-    trehalose
-  }
-
-  branch from adp_d_glucoside side right {
     adp_d_glucoside
     <-> ec_2_4_1_268 [2.4.1.268] +d_glycerate +adp +hplus
     2_o_d_glucopyranosyl_d_glycerate
   }
 
+  branch from adp_d_glucoside side right {
+    adp_d_glucoside
+    <-> ec_2_4_1_342 [2.4.1.342] +g1p +adp +hplus
+    maltose_1_phosphate
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_24 [6.2.1.24] +phytanate +atp +coa +amp
-    phytanoyl_coa
+    <-> ec_6_1_1_2 [6.1.1.2] +amp_3_end_1 +l_tryptophan +atp +amp +hplus
+    3_l_tryptophyl_adenylyl_1_group
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
-    prenol
+    <-> ec_4_2_3_25 [4.2.3.25] +gpp +h2o
+    s_linalool
   }
 
-  branch from 2_o_d_glucopyranosyl_glycerol side left {
-    2_o_d_glucopyranosyl_glycerol
-    <-> . +glucose +glycerol
-    h2o
+  branch from d_glucose_1_phosphate side left {
+    d_glucose_1_phosphate
+    <-> ec_2_4_1_8 [2.4.1.8] +pi +glucose
+    maltose
   }
 
   branch from d_glucose_1_phosphate side right {
@@ -90,8 +90,8 @@ pathway laminarabiose-to-d-glucose-6-phosphate "laminarabiose to β-D-glucose 6-
 
   branch from glycerol side right {
     glycerol
-    <-> . +1_oleoylglycerol
-    1_2_dioleoylglycerol
+    <-> . +1_monostearoylglycerol +h2o +hplus
+    octadecanoate
   }
 
   branch from d_glucose_6_phosphate side left {

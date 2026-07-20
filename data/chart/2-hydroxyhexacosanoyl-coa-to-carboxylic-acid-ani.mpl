@@ -56,14 +56,14 @@ pathway 2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani "2-hydroxyhexacosanoyl-
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +all_trans_retinyl_ester +h2o +hplus
-    all_trans_retinol
+    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoserine
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_acyl_2_oleoyl_sn_glycero_3_phosphate +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from 2_monoglyceride side right {
@@ -80,25 +80,25 @@ pathway 2-hydroxyhexacosanoyl-coa-to-carboxylic-acid-ani "2-hydroxyhexacosanoyl-
 
   branch from 1_2_diglyceride side right {
     1_2_diglyceride
-    <-> . +glycerol
-    1_monoglyceride
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +triglyceride
+    2_o_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from 1_2_diglyceride side left {
     1_2_diglyceride
-    <-> . +2_monoglyceride +phosphatidylcholine
-    acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +triglyceride
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> . +h2o +h2o2 +hplus
-    a_peroxy_acid
+    <-> . +tetra_3_sulfido_tetrairon +aldehyde +h2o +hplus
+    tetra_3_sulfido_tetrairon
   }
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> ec_1_97_1_13 [1.97.1.13] +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +sulfite +hplus
-    tetra_3_sulfido_tetrairon
+    <-> . +thioester +h2o +hplus
+    thiol
   }
 }

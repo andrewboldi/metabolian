@@ -24,13 +24,13 @@ pathway n-octanoylsphingosine-to-h2o "N-octanoylsphingosine… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_55 [3.6.3.55] +h +adp +tungstate +phosphate +tungstate
-    atp
+    <-> . +h +adp +phosphate +atp
+    propanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +thromboxane_b2
-    thromboxane_a2
+    <-> . +h +adp +phosphate +atp
+    choloyl_coa
   }
 }

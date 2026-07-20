@@ -1,0 +1,215 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-maltose-to-coa",
+  "name": "D-maltose to CoA",
+  "category": "other",
+  "summary": "A 3-step route from D-maltose to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192213"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_maltose",
+      "name": "D-maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106000"
+      }
+    },
+    {
+      "id": "alpha_maltose",
+      "name": "alpha-maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106002"
+      }
+    },
+    {
+      "id": "alpha_alpha_trehalose",
+      "name": "alpha,alpha-trehalose",
+      "short": "alpha,alpha-trehalo…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364185"
+      }
+    },
+    {
+      "id": "octadecanoyl_coa",
+      "name": "octadecanoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104352"
+      }
+    },
+    {
+      "id": "alpha_d_glucopyranosyl_2_o_stearoyl_alpha_d_gluc",
+      "name": "alpha-D-Glucopyranosyl 2-O-stearoyl-alpha-D-glucopyranoside",
+      "short": "alpha-D-Glucopyrano…",
+      "formula": "C30H56O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177503"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_3_21",
+      "name": "maltose epimerase",
+      "ec": [
+        "5.1.3.21"
+      ]
+    },
+    {
+      "id": "ec_5_4_99_16",
+      "name": "maltose alpha-D-glucosyltransferase",
+      "ec": [
+        "5.4.99.16"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_279",
+      "name": "long-chain-acyl-CoA--trehalose acyltransferase",
+      "ec": [
+        "2.3.1.279"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "maltose epimerase",
+      "ec": "5.1.3.21",
+      "substrates": [
+        {
+          "metabolite": "d_maltose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_maltose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192213"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192213"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "maltose alpha-D-glucosyltransferase",
+      "ec": "5.4.99.16",
+      "substrates": [
+        {
+          "metabolite": "alpha_maltose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_alpha_trehalose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR145722"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145722"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "long-chain-acyl-CoA--trehalose acyltransferase",
+      "ec": "2.3.1.279",
+      "substrates": [
+        {
+          "metabolite": "octadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_alpha_trehalose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_glucopyranosyl_2_o_stearoyl_alpha_d_gluc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_279"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR120831"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR120831"
+          }
+        ]
+      }
+    }
+  ]
+}

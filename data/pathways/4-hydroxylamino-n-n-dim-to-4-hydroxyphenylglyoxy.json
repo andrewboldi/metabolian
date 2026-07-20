@@ -107,77 +107,48 @@
       }
     },
     {
-      "id": "cyanide",
-      "name": "cyanide",
-      "formula": "CN",
-      "charge": -1,
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1107738"
+        "metanetx": "MNXM01"
       }
     },
     {
-      "id": "4_hydroxymandelonitrile",
-      "name": "4-hydroxymandelonitrile",
-      "short": "4-hydroxymandelonit…",
-      "formula": "C8H7NO2",
-      "charge": 0,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM97038"
+        "metanetx": "MNXM40333"
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104266"
-      }
-    },
-    {
-      "id": "s_lactate",
-      "name": "(S)-lactate",
-      "formula": "C3H5O3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1371363"
-      }
-    },
-    {
-      "id": "acetate",
-      "name": "acetate",
-      "formula": "C2H3O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM26"
-      }
-    },
-    {
-      "id": "lactoyl_coa",
-      "name": "lactoyl-CoA",
-      "formula": "C24H40N7O18P3S",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM726793"
-      }
-    },
-    {
-      "id": "dtdp_beta_l_rhamnose",
-      "name": "dTDP-beta-L-rhamnose",
-      "formula": "C16H24N2O15P2",
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1106112"
+        "metanetx": "MNXM9"
       }
     },
     {
-      "id": "dtdp_l_dihydrostreptose",
-      "name": "dTDP-L-dihydrostreptose",
-      "short": "dTDP-L-dihydrostrep…",
-      "formula": "C16H26N2O15P2",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM734119"
+        "metanetx": "WATER"
       }
     }
   ],
@@ -194,20 +165,6 @@
       "name": "benzoylformate decarboxylase",
       "ec": [
         "4.1.1.7"
-      ]
-    },
-    {
-      "id": "ec_4_1_2_47",
-      "name": "(S)-hydroxynitrile lyase",
-      "ec": [
-        "4.1.2.47"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_1",
-      "name": "propionate CoA-transferase",
-      "ec": [
-        "2.8.3.1"
       ]
     }
   ],
@@ -346,126 +303,100 @@
     },
     {
       "id": "r4",
-      "name": "(S)-hydroxynitrile lyase",
-      "ec": "4.1.2.47",
+      "name": "Reaction MNXR154820",
       "substrates": [
         {
-          "metabolite": "cyanide",
-          "stoichiometry": 1
+          "metabolite": "pmf",
+          "stoichiometry": 467
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 100
         },
         {
-          "metabolite": "4_hydroxybenzaldehyde",
-          "stoichiometry": 1
+          "metabolite": "adp",
+          "stoichiometry": 100
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 100
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxymandelonitrile",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "pmf",
+          "stoichiometry": 467
+        },
         {
-          "enzyme": "ec_4_1_2_47"
+          "metabolite": "atp",
+          "stoichiometry": 100
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 100
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR195363"
+        "metanetx": "MNXR154820"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR195363"
+            "id": "MNXR154820"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "propionate CoA-transferase",
-      "ec": "2.8.3.1",
+      "name": "Reaction MNXR154821",
       "substrates": [
         {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "s_lactate",
-          "stoichiometry": 1
+          "metabolite": "pmf",
+          "stoichiometry": 13
         },
         {
           "metabolite": "h",
-          "stoichiometry": 4
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "acetate",
-          "stoichiometry": 1
+          "metabolite": "pmf",
+          "stoichiometry": 13
         },
         {
-          "metabolite": "lactoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "metabolite": "atp",
+          "stoichiometry": 3
+        },
         {
-          "enzyme": "ec_2_8_3_1"
+          "metabolite": "h2o",
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR149232"
+        "metanetx": "MNXR154821"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR149232"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR149238",
-      "substrates": [
-        {
-          "metabolite": "dtdp_beta_l_rhamnose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dtdp_l_dihydrostreptose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR149238"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR149238"
+            "id": "MNXR154821"
           }
         ]
       }

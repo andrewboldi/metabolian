@@ -105,88 +105,85 @@
       }
     },
     {
-      "id": "4_8_dihydroxyflavone_7_olate",
-      "name": "4',8-dihydroxyflavone-7-olate",
-      "short": "4',8-dihydroxyflavo…",
-      "formula": "C15H9O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192709"
-      }
-    },
-    {
-      "id": "8_hydroxy_4_methoxyflavone_7_olate",
-      "name": "8-hydroxy-4'-methoxyflavone-7-olate",
-      "short": "8-hydroxy-4'-methox…",
-      "formula": "C16H11O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192777"
-      }
-    },
-    {
-      "id": "an_8_hydroxyflavone",
-      "name": "an 8-hydroxyflavone",
-      "formula": "C15HO3R9",
+      "id": "piceatannol",
+      "name": "piceatannol",
+      "formula": "C14H12O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192819"
+        "chebi": "CHEBI:28814"
       }
     },
     {
-      "id": "an_8_methoxyflavone",
-      "name": "an 8-methoxyflavone",
-      "formula": "C16H3O3R9",
+      "id": "rhapontigenin",
+      "name": "rhapontigenin",
+      "formula": "C15H14O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192820"
+        "chebi": "CHEBI:174376"
       }
     },
     {
-      "id": "plastoquinol_9",
-      "name": "plastoquinol-9",
-      "formula": "C53H82O2",
+      "id": "isorhapontigenin",
+      "name": "isorhapontigenin",
+      "formula": "C15H14O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM6387"
+        "chebi": "CHEBI:167830"
       }
     },
     {
-      "id": "2_methyl_6_solanyl_1_4_benzoquinol",
-      "name": "2-Methyl-6-solanyl-1,4-benzoquinol",
-      "short": "2-Methyl-6-solanyl-…",
-      "formula": "C52H80O2",
+      "id": "4_o_methylisorhapontigenin",
+      "name": "4'-O-methylisorhapontigenin",
+      "short": "4'-O-methylisorhapo…",
+      "formula": "C16H16O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1370219"
+        "chebi": "CHEBI:232111"
       }
     },
     {
-      "id": "methyl_gibberellin_a34",
-      "name": "methyl gibberellin A34",
+      "id": "methyl_gibberellin_a4",
+      "name": "Methyl gibberellin A4",
+      "short": "Methyl gibberellin…",
+      "formula": "C20H26O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364435"
+      }
+    },
+    {
+      "id": "gibberellin_a4",
+      "name": "Gibberellin A4",
+      "formula": "C19H24O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364183"
+      }
+    },
+    {
+      "id": "methyl_gibberellin_a4",
+      "name": "methyl gibberellin A4",
       "short": "methyl gibberellin…",
-      "formula": "C20H26O6",
+      "formula": "C20H26O5",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368642"
-      }
-    },
-    {
-      "id": "gibberellin_a34",
-      "name": "Gibberellin A34",
-      "formula": "C19H24O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364237"
+        "metanetx": "MNXM1364436"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_295",
-      "name": "2-methyl-6-phytyl-1,4-hydroquinone methyltransferase",
+      "id": "ec_2_1_1_399",
+      "name": "resveratrol 4'-O-methyltransferase",
       "ec": [
-        "2.1.1.295"
+        "2.1.1.399"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_276",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": [
+        "2.1.1.276"
       ]
     }
   ],
@@ -321,11 +318,12 @@
     },
     {
       "id": "r4",
-      "name": "4',7,8-trihydroxyflavone + S-adenosyl-L-methionine = 7,8-dihydroxy-4'-methoxyflavone + ...",
-      "equation": "4',7,8-trihydroxyflavone + S-adenosyl-L-methionine = 7,8-dihydroxy-4'-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "name": "resveratrol 4'-O-methyltransferase",
+      "equation": "piceatannol + S-adenosyl-L-methionine = rhapontigenin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.399",
       "substrates": [
         {
-          "metabolite": "4_8_dihydroxyflavone_7_olate",
+          "metabolite": "piceatannol",
           "stoichiometry": 1
         },
         {
@@ -335,7 +333,7 @@
       ],
       "products": [
         {
-          "metabolite": "8_hydroxy_4_methoxyflavone_7_olate",
+          "metabolite": "rhapontigenin",
           "stoichiometry": 1
         },
         {
@@ -347,28 +345,34 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_399"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:73295"
+        "rhea": "RHEA:82191"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73295"
+            "id": "RHEA:82191"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "an 8-hydroxyflavone + S-adenosyl-L-methionine = an 8-methoxyflavone + S-adenosyl-L-homo...",
-      "equation": "an 8-hydroxyflavone + S-adenosyl-L-methionine = an 8-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "name": "resveratrol 4'-O-methyltransferase",
+      "equation": "isorhapontigenin + S-adenosyl-L-methionine = 4'-O-methylisorhapontigenin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.399",
       "substrates": [
         {
-          "metabolite": "an_8_hydroxyflavone",
+          "metabolite": "isorhapontigenin",
           "stoichiometry": 1
         },
         {
@@ -378,7 +382,7 @@
       ],
       "products": [
         {
-          "metabolite": "an_8_methoxyflavone",
+          "metabolite": "4_o_methylisorhapontigenin",
           "stoichiometry": 1
         },
         {
@@ -390,36 +394,41 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_399"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:73495"
+        "rhea": "RHEA:82215"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73495"
+            "id": "RHEA:82215"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2-methyl-6-phytyl-1,4-hydroquinone methyltransferase",
-      "ec": "2.1.1.295",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": "2.1.1.276",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "methyl_gibberellin_a4",
           "stoichiometry": 1
         },
         {
-          "metabolite": "plastoquinol_9",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
@@ -429,40 +438,41 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_methyl_6_solanyl_1_4_benzoquinol",
+          "metabolite": "gibberellin_a4",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_295"
+          "enzyme": "ec_2_1_1_276"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR196387"
+        "metanetx": "MNXR198074"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196387"
+            "id": "MNXR198074"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR196605",
+      "name": "gibberellin A4 carboxyl methyltransferase",
+      "ec": "2.1.1.276",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "methyl_gibberellin_a34",
+          "metabolite": "methyl_gibberellin_a4",
           "stoichiometry": 1
         },
         {
@@ -476,21 +486,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "gibberellin_a34",
+          "metabolite": "gibberellin_a4",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_276"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR196605"
+        "metanetx": "MNXR198075"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196605"
+            "id": "MNXR198075"
           }
         ]
       }

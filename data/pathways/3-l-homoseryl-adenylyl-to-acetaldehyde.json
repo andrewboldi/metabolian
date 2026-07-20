@@ -138,6 +138,25 @@
       }
     },
     {
+      "id": "3_l_alanyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-alanyl)adenylyl zwitterionic group",
+      "short": "3'-(L-alanyl)adenyl…",
+      "formula": "C13H18N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78497"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
       "id": "3_l_seryl_adenylyl_1_group",
       "name": "3'-(L-seryl)adenylyl(1−) group",
       "short": "3'-(L-seryl)adenyly…",
@@ -154,16 +173,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:33384"
-      }
-    },
-    {
-      "id": "3_l_threonyl_adenylyl_1_group",
-      "name": "3'-(L-threonyl)adenylyl(1−) group",
-      "short": "3'-(L-threonyl)aden…",
-      "formula": "C14H19N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78534"
       }
     },
     {
@@ -401,8 +410,51 @@
     },
     {
       "id": "r5",
-      "name": "L-seryl-tRNA(Ala) + H2O = tRNA(Ala) + L-serine",
-      "equation": "L-seryl-tRNA(Ala) + H2O = tRNA(Ala) + L-serine",
+      "name": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
+      "equation": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:74243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
+      "equation": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
       "substrates": [
         {
           "metabolite": "3_l_seryl_adenylyl_1_group",
@@ -424,55 +476,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:74223"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74223"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-threonyl-tRNA(Ile) + H2O = tRNA(Ile) + L-threonine",
-      "equation": "L-threonyl-tRNA(Ile) + H2O = tRNA(Ile) + L-threonine",
-      "substrates": [
-        {
-          "metabolite": "3_l_threonyl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "threonine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:74227"
+        "rhea": "RHEA:74551"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74227"
+            "id": "RHEA:74551"
           }
         ]
       }

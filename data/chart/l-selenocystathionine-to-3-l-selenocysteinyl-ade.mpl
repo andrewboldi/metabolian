@@ -32,14 +32,14 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from nh3 side left {
     nh3
-    <-> . +pyrazinecarboxamide +h2o
-    pyrazine_2_carboxylate
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nadp +h2o +nadph +hplus
+    5_guanidino_2_oxopentanoic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
-    4_hydroxy_3_nitrophenylacetaldehyde
+    <-> ec_4_2_1_168 [4.2.1.168] +gdp_4_dehydro_6_deoxy_d_mannose +glutamate +akg
+    gdp_4_dehydro_3_6_dideoxy_d_mannose
   }
 
   branch from alanine side left {
@@ -50,31 +50,31 @@ pathway l-selenocystathionine-to-3-l-selenocysteinyl-ade "L-selenocystathionine 
 
   branch from alanine side right {
     alanine
-    <-> . +mmsa +pyruvate
-    s_3_aminoisobutyric_acid
+    <-> ec_2_6_1_113 [2.6.1.113] +1_4_butanediammonium +pyruvate
+    4_ammoniobutanal
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +palmitoleoyl_coa +hydrogen_donor +o2 +h2o
-    9z_12z_hexadecadienoyl_coa
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    15_r_hepe
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +hydrogen_donor +o2 +h2o
-    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +hydrogen_donor +o2 +h2o
+    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
   }
 
   branch from selenophosphate side left {
     selenophosphate
-    <-> ec_2_9_1_2 [2.9.1.2] +h2o +3_l_selenocysteinyl_adenylyl_1_group +pi
-    3_o_phosphonato_l_seryl_adenylyl_2_group
+    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +gpp +h2o +hplus +thiogeraniol +pi +ppi
+    5_methylaminomethyl_2_selenouridine_5_monophosph
   }
 
   branch from selenophosphate side right {
     selenophosphate
-    <-> ec_2_9_1_3 [2.9.1.3] +5_methylaminomethyl_2_thiouridine_5_monophosphat +gpp +h2o +hplus +thiogeraniol +pi +ppi
-    5_methylaminomethyl_2_selenouridine_5_monophosph
+    <-> . +udp_d_glucose +h2o +udp +pi +hplus
+    1_seleno_d_glucose
   }
 }

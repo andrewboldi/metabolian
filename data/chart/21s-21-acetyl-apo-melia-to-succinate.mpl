@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 21s-21-acetyl-apo-melia-to-succinate "(21S)-21-acetyl-apo-melia… to succinate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     21s_21_acetyl_apo_melianone
@@ -20,17 +20,5 @@ pathway 21s-21-acetyl-apo-melia-to-succinate "(21S)-21-acetyl-apo-melia… to su
     1s_3br_4r_5ar_9ar_9br_11as_1_1_hydroxy_4_oxobut
     <-> . +akg +o2 -succinate -co2 -h2o
     azadirone
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +5_pregnan_3_11_20_trione +fmnh2 +o2 +h2o +hplus
-    17_hydroxy_5_pregnan_3_11_20_trione
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_191 [1.14.14.191] +taxa_4_20_11_diene_2_5_7_9_10_13_hexayl_hexaacet +fmnh2 +o2 +h2o +hplus
-    1_dehydroxybaccatin_iv
   }
 }

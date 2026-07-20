@@ -20,13 +20,13 @@ pathway 2-5-diamino-6-1-d-ribity-to-d-ribose-1-5-bisphos "2,5-diamino-6-(1-D-rib
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_100 [3.5.1.100] +r_nipecotamide +h2o
-    r_nipecotic_acid
+    <-> ec_2_3_2_1 [2.3.2.1] +d_glutamine +d_glutamate
+    d_glutamyl_d_glutamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_27 [4.3.1.27] +3r_3_hydroxy_d_aspartate
-    oxaloacetate
+    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
+    2_4_dihydroxypteridine
   }
 }

@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "actn-to-ubiquinone-9",
+  "name": "ACTN to ubiquinone-9",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from ACTN to ubiquinone-9, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "actn",
+      "name": "ACTN",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1137655"
+      }
+    },
+    {
+      "id": "r_acetoin",
+      "name": "(R)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM664"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "1_deoxy_d_altro_heptulose_7_phosphate",
+      "name": "1-deoxy-D-altro-heptulose 7-phosphate",
+      "short": "1-deoxy-D-altro-hep…",
+      "formula": "C7H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM4231"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "ubiquinol_9",
+      "name": "ubiquinol-9",
+      "formula": "C54H84O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84424"
+      }
+    },
+    {
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108092"
+      }
+    },
+    {
+      "id": "ubiquinone_9",
+      "name": "ubiquinone-9",
+      "formula": "C54H82O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363635"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_2_4",
+      "name": "acetoin racemase",
+      "ec": [
+        "5.1.2.4"
+      ]
+    },
+    {
+      "id": "ec_2_2_1_4",
+      "name": "acetoin--ribose-5-phosphate transaldolase",
+      "ec": [
+        "2.2.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_5",
+      "name": "alcohol dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acetoin racemase",
+      "ec": "5.1.2.4",
+      "substrates": [
+        {
+          "metabolite": "actn",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetoin--ribose-5-phosphate transaldolase",
+      "ec": "2.2.1.4",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "1_deoxy_d_altro_heptulose_7_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173290"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173290"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase (quinone)",
+      "ec": "1.1.5.5",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_9",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR182133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182133"
+          }
+        ]
+      }
+    }
+  ]
+}

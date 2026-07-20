@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-beta-d-glucosyl-2-hyd-to-h2o "cis-beta-D-glucosyl-2-hyd… to H2O" {
-  spacing 202
+  spacing 208
 
   spine at 0,0 {
     cis_beta_d_glucosyl_2_hydroxycinnamate
@@ -18,43 +18,49 @@ pathway cis-beta-d-glucosyl-2-hyd-to-h2o "cis-beta-D-glucosyl-2-hyd… to H2O" {
 
   branch from alpha_d_glucose side left {
     alpha_d_glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
+    <-> ec_3_2_1_177 [3.2.1.177] +alpha_d_xylose +h2o
+    isoprimeverose
   }
 
   branch from alpha_d_glucose side right {
     alpha_d_glucose
-    <-> .
+    <-> ec_2_3_1_103 [2.3.1.103] +1_2_di_o_sinapoyl_beta_d_glucose
+    1_o_trans_sinapoyl_beta_d_glucose
+  }
+
+  branch from cis_2_coumarate side left {
+    cis_2_coumarate
+    <-> ec_3_2_1_21 [3.2.1.21] +cis_beta_d_glucosyl_2_hydroxycinnamate +h2o
     glucose
   }
 
-  branch from coumarin side left {
+  branch from coumarin side right {
     coumarin
     <-> . +nadh +h +nad
     3_4_dihydrocoumarin
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_4_4_1_13 [4.4.1.13] +h +pyruvate +e_2_indol_3_yl_1_thioacetohydroximate +nh4
-    s_indolylmethylthiohydroximoyl_l_cysteine
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +3_carbamoyl_2_phenylpropionic_acid
-    5_phenyl_1_3_oxazinane_2_4_dione
+    <-> . +l_asparagine +l_phenylalanine +l_tyrosine
+    asparaginyl_tyrosyl_phenylalanine
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +d_galactopyranuronic_acid +h +nadph
-    l_galactonic_acid
+  branch from h2o side right {
+    h2o
+    <-> . +l_asparagine +l_threonine +l_tyrosine
+    asparaginyl_tyrosyl_threonine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +cinchoninone +nadph
-    cinchonine
+    <-> . +nonadecanoyl_coa +h +nadph
+    2e_nonadecenoyl_coenzyme_a
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> . +h +nadph +3_oxoheneicosanoyl_coenzyme_a
+    3_hydroxyheneicosanoyl_coenzyme_a
   }
 }

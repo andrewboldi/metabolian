@@ -18,13 +18,13 @@ pathway n-terminal-l-seryl-l-prol-to-s-adenosyl-l-homocy "N-terminal L-seryl-L-p
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_177 [2.1.1.177] +pseudouridine_5_phosphate_1 +sam +hplus
-    n3_methylpseudouridine_5_monophosphate_1
+    <-> ec_2_1_1_200 [2.1.1.200] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 }

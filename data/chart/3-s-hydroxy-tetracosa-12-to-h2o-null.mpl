@@ -20,38 +20,38 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1r_hydroxy_2r_glutathionyl_1_2_dihydronaphthale +glutathione
-    1r_2s_naphthalene_1_2_oxide
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +5_methyl_3_oxo_4_hexenoyl_coa +nad
+    3_hydroxy_5_methylhex_4_enoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1r_glutathionyl_2r_hydroxy_1_2_dihydronaphthale +glutathione
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh +2_fluorobenzoic_acid +o2 +nad
+    6_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +trichloroethene +h +o2 +nadp +h2o
-    trichloroacetaldehyde
+    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadp +h2o
+    4_hydroxyifosfamide
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +2_bromoacetaldehyde +bromide +h2o +o2
-    1_2_dibromoethane
+    <-> ec_1_14_14_1 [1.14.14.1] +p_hydroxyfelbamate +nadp +h2o +h +o2
+    felbamate
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_74 [2.3.1.74] +trans_caffeoyl_coa +h +co2 +coa
-    trans_2_3_4_4_6_pentahydroxychalcone
+    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +h +co2 +coa
+    4_hydroxy_6_2_oxoheptyl_pyran_2_one
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> ec_2_3_1_206 [2.3.1.206] +hexanoyl_coa +h +co2 +coa
-    olivetol
+    <-> . +h +co2 +coa +h2o
+    6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2
   }
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side left {
@@ -68,37 +68,37 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o-null "3(S)-hydroxy-tetracosa-12… to H2
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_49 [3.6.3.49] +h +adp +phosphate +h2o
-    chloride
+    <-> ec_2_7_1_163 [2.7.1.163] +h +adp +4_o_phosphohygromycin
+    hygromycin_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +h2o
-    beta_d_glucan
+    <-> . +diphosphate +indol_3_yl_acetyl_l_isoleucine +h +amp +l_isoleucine
+    indol_3_yl_acetate
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_5 [2.3.1.5] +4_acetamido_2_amino_6_nitrotoluene +2_4_diamino_6_nitrotoluene
-    acetyl_coa
+    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_7_methylthioheptanoic_acid +h2o
+    2_5_methylthio_pentylmalic_acid
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_methylbut_2_enoyl_coa +h
-    5_methyl_3_oxo_4_hexenoyl_coa
+    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_8_methylthiooctanoic_acid +h2o
+    2_6_methylthio_hexylmalic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_nitronaphthalene_5_6_oxide
-    1_nitro_5_6_dihydroxy_dihydronaphthalene
+    <-> . +isoniazid_pyruvate +h +isoniazide
+    pyruvate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_3_4_oxide
-    bromobenzene_3_4_dihydrodiol
+    <-> . +isoniazid_alpha_ketoglutaric_acid +h +isoniazide
+    2_oxoglutarate
   }
 }

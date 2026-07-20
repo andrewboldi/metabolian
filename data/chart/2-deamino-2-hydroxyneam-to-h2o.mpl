@@ -20,26 +20,26 @@ pathway 2-deamino-2-hydroxyneam-to-h2o "2'-deamino-2'-hydroxyneam… to H2O" {
 
   branch from glutamate side left {
     glutamate
-    <-> . +hydroxylamine +atp +adp +pi
-    glutamine_hydroxamate
+    <-> . +amp_3_end_1 +atp +amp +ppi
+    3_l_glutamate_adenylyl_1_group
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_109 [2.6.1.109] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +akg
-    7r_6_deoxy_d_manno_oct_7_ulosuronate
+    <-> . +n_oleoyl_l_glutamate +h2o
+    oleate
   }
 
   branch from o2 side left {
     o2
-    <-> . +9_cis_retinal +h +nadph +nadp +h2o
-    4_oh_9_cis_retinal
+    <-> . +h +13_hydroxy_gama_tocopherol +nadph +nadp +h2o
+    13_carboxy_gamma_tocopherol
   }
 
   branch from o2 side right {
     o2
-    <-> . +9_cis_retinal +h +nadph +nadp +h2o
-    4_oh_retinal
+    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o
+    nadp
   }
 
   branch from 2_deamino_2_hydroxyparomamine side left {
@@ -62,25 +62,25 @@ pathway 2-deamino-2-hydroxyneam-to-h2o "2'-deamino-2'-hydroxyneam… to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    pristanoyl_coa
+    <-> . +fructosylglycine +h +adp
+    fructoseglycine_ketone_3_phosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_32 [3.6.3.32] +h +adp +phosphate +h2o
-    l_proline_betaine
+    <-> . +d_glucitol_3_phosphate +adp +h
+    d_sorbitol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol +h +dodecanoate
-    dilauroyl_phosphatidylglycerol
+    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate
+    15_epi_lipoxin_a4
   }
 
   branch from h2o side left {
     h2o
-    <-> . +9e_tetradecenoic_acid +1_acyl_sn_glycero_3_phosphoglycerol_n_c14_1
-    phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1
+    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h
+    15_epi_lipoxin_b4
   }
 }

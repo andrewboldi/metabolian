@@ -18,14 +18,14 @@ pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_324 [1.1.1.324] +e_hept_2_enal +nadph +nadp
-    trans_2_heptenol
+    <-> ec_1_1_1_145 [1.1.1.145] +androst_5_ene_3_17_dione +nadph +3beta_hydroxyandrost_5_en_17_one
+    nadp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +testosterone +nadph +nadp
-    androst_4_ene_3alpha_17beta_diol
+    <-> ec_1_1_1_184 [1.1.1.184] +1_4_nitrophenyl_ethanol +nadp +nadph
+    4_nitroacetophenone
   }
 
   branch from n_acetyl_beta_d_glucosamine side left {
@@ -42,14 +42,14 @@ pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
 
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_1_1_1 [3.1.1.1] +hexanoate +h +h2o
-    4_nitrophenyl_hexanoate
+    <-> ec_3_2_1_31 [3.2.1.31] +h +beta_d_glucuronate +h2o
+    p_nitrophenyl_beta_d_glucuronide
   }
 
   branch from 4_nitrophenol side right {
     4_nitrophenol
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +nitrobenzene +o2 +h2o
-    nad
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_galactose +h +h2o
+    4_nitrophenyl_d_galactoside
   }
 
   branch from n_acetyl_d_mannosamine side left {
@@ -66,25 +66,25 @@ pathway p-nitrophenyl-n-acetyl-be-to-h2o "p-Nitrophenyl-N-acetyl-be… to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    d_mannitol
+    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +mg +h2o +h +adp +phosphate
+    mg_protoporphyrin_ix
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phospho_heptosyl_phospho_heptosyl_heptosyl_kdo2
-    inner_core_oligosaccharide_lipid_a
+    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin +mg +h2o +h +adp +phosphate
+    mg_protoporphyrin_ix
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +4_methylumbelliferone
-    4_methylumbelliferyl_d_galactoside
+    <-> ec_3_5_1_14 [3.5.1.14] +l_proline +h +acetate
+    n_acetyl_l_proline
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_14_5 [3.4.14.5] +glycyl_l_proline_2_naphthylamide +2_naphthylamine
-    gly_pro
+    <-> ec_3_5_1_11 [3.5.1.11] +d_4_hydroxyphenylglycine_methyl_ester +methanol
+    d_4_hydroxyphenylglycine
   }
 }

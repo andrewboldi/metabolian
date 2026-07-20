@@ -34,8 +34,8 @@ pathway 5-methyltetrahydropteroyl-to-ammonium "5-methyltetrahydropteroyl… to a
 
   branch from methionine side left {
     methionine
-    <-> ec_1_21_98_4 [1.21.98.4] +exxxy_peptide +sam +5_deoxyadenosine +hplus
-    e_y_cross_linked_exxxy_peptide_residues
+    <-> ec_1_8_98_7 [1.8.98.7] +l_cysteine +sam +h2o +h2s +5_deoxyadenosine +hplus
+    l_3_oxoalanine
   }
 
   branch from alanine side right {
@@ -52,14 +52,14 @@ pathway 5-methyltetrahydropteroyl-to-ammonium "5-methyltetrahydropteroyl… to a
 
   branch from 2_oxoglutaramate side right {
     2_oxoglutaramate
-    <-> ec_2_6_1_100 [2.6.1.100] +2_deoxy_scyllo_inosose +glutamine
-    2_deoxy_scyllo_inosamine
+    <-> . +o2 +h2o +h2o2 +nh3
+    d_glutamine
   }
 
   branch from 2_oxoglutaramate side left {
     2_oxoglutaramate
-    <-> . +oxobut +glutamine
-    l_aminobutyrate
+    <-> . +glyoxylate +glutamine
+    glycine
   }
 
   branch from akg side right {
@@ -76,13 +76,13 @@ pathway 5-methyltetrahydropteroyl-to-ammonium "5-methyltetrahydropteroyl… to a
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_13_99_3 [1.13.99.3] +l_tryptophan +o2 +hplus +co2
-    3_indoleglycolaldehyde
+    <-> ec_3_5_4_45 [3.5.4.45] +melamine +h2o
+    ammeline
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_13 [3.5.4.13] +dctp +h2o +hplus
-    dutp
+    <-> ec_3_5_4_45 [3.5.4.45] +ammeline +h2o +hplus
+    ammelide
   }
 }

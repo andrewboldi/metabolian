@@ -24,26 +24,26 @@ pathway 3-indoleglyoxylic-acid-to-2-formaminobenzoylacet "3-indoleglyoxylic acid
 
   branch from h side right {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate
-    5_chloromuconolactone
+    <-> ec_3_5_1_4 [3.5.1.4] +4_nitroacetanilide +h2o +acetate
+    4_nitroaniline
   }
 
   branch from h side left {
     h
-    <-> . +3_4_6_trichlorocatechol +chloride
-    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_2_5_1_18 [2.5.1.18] +s_chloromethyl_glutathione +chloride +glutathione
+    dichloromethane
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
-    17_r_hdohe
+    <-> ec_1_1_3_7 [1.1.3.7] +h2o2 +3_chlorobenzaldehyde
+    3_chlorophenyl_methanol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_2_3_1 [1.2.3.1] +nicotine_delta1_5_iminium_ion +h2o +h +h2o2
-    cotinine
+    <-> ec_1_1_3_7 [1.1.3.7] +compound_0066905 +h2o2
+    p_fluorobenzyl_alcohol
   }
 
   branch from indol_3_yl_acetate side right {
@@ -60,13 +60,13 @@ pathway 3-indoleglyoxylic-acid-to-2-formaminobenzoylacet "3-indoleglyoxylic acid
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph
-    o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor
+    <-> ec_1_2_3_1 [1.2.3.1] +n_2_dimethylaminoethyl_9_oxo_10h_acridine_4_carb +h2o2 +o2
+    n_2_dimethylaminoethyl_acridine_4_carboxamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4
-    o_s_2e_13z_dotriacontadienoylpantetheine_4_phosp
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +2_naphthol
+    2_naphthyl_beta_d_galactopyranoside
   }
 }

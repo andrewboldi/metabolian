@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pyridoxal-to-l-cysteine",
+  "name": "pyridoxal to L-cysteine",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from pyridoxal(1+) to L-cysteine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR103365"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:131530"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pyridoxal",
+      "name": "pyridoxal",
+      "formula": "C8H10NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:131530"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "pyridoxamine",
+      "name": "pyridoxamine",
+      "formula": "C8H14N2O2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:131533"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM331"
+      }
+    },
+    {
+      "id": "2_oxo_3_sulfanylpropanoate",
+      "name": "2-oxo-3-sulfanylpropanoate",
+      "short": "2-oxo-3-sulfanylpro…",
+      "formula": "C3H3O3S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1214"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738068"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_3_5",
+      "name": "pyridoxal 5'-phosphate synthase",
+      "ec": [
+        "1.4.3.5"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_31",
+      "name": "pyridoxamine--oxaloacetate transaminase",
+      "ec": [
+        "2.6.1.31"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_54",
+      "name": "pyridoxamine-phosphate transaminase",
+      "ec": [
+        "2.6.1.54"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_1",
+      "name": "aspartate transaminase",
+      "ec": [
+        "2.6.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pyridoxal 5'-phosphate synthase",
+      "ec": "1.4.3.5",
+      "substrates": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxamine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR103365"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "pyridoxamine--oxaloacetate transaminase",
+      "ec": "2.6.1.31",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyridoxamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR109876"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aspartate transaminase",
+      "ec": "2.6.1.1",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_3_sulfanylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173133"
+          }
+        ]
+      }
+    }
+  ]
+}

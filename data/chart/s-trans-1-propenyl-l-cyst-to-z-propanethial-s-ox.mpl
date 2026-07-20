@@ -18,14 +18,14 @@ pathway s-trans-1-propenyl-l-cyst-to-z-propanethial-s-ox "S-trans-1-propenyl-L-c
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_15 [1.1.3.15] +3_chlorolactic_acid +o2 +h
-    compound_0039890
+    <-> . +9z_12z_15z_octadecatrienoate +h +aplotaxene +h2o
+    co2
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_1_8 [1.11.1.8] +thyroglobulin_triiodothyronine +thyroglobulin_dehydroalanine +h2o +thyroglobulin_3_iodotyrosine
-    thyroglobulin_3_5_diiodotyrosine
+    <-> ec_1_1_3_9 [1.1.3.9] +d_galactopyranose +o2 +h2o +h
+    d_galactonate
   }
 
   branch from s_1_propenyl_l_cysteine_sulfoxide side left {

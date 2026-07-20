@@ -1,0 +1,373 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "quinate-to-3-2-carboxylatoethenyl",
+  "name": "(−)-quinate to 3-(2-carboxylatoethenyl)-…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (−)-quinate to 3-(2-carboxylatoethenyl)-cis,cis-muconate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82247"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29751"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "chlorogenate",
+      "name": "chlorogenate",
+      "formula": "C16H17O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57644"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57770"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_2_carboxylatoethenyl_cis_cis_muconate",
+      "name": "3-(2-carboxylatoethenyl)-cis,cis-muconate",
+      "short": "3-(2-carboxylatoeth…",
+      "formula": "C9H5O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57713"
+      }
+    },
+    {
+      "id": "e_caffeoylpyruvate",
+      "name": "(E)-caffeoylpyruvate",
+      "formula": "C12H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:190290"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "3_4_dihydroxystyrene",
+      "name": "3,4-Dihydroxystyrene",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1390"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_42",
+      "name": "chlorogenate hydrolase",
+      "ec": [
+        "3.1.1.42"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_22",
+      "name": "caffeate 3,4-dioxygenase",
+      "ec": [
+        "1.13.11.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-quinate + (E)-caffeoyl-CoA = chlorogenate + CoA",
+      "equation": "L-quinate + (E)-caffeoyl-CoA = chlorogenate + CoA",
+      "substrates": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82247"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82247"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorogenate hydrolase",
+      "equation": "chlorogenate + H2O = L-quinate + (E)-caffeate + H(+)",
+      "ec": "3.1.1.42",
+      "substrates": [
+        {
+          "metabolite": "chlorogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20689"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20689"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "caffeate 3,4-dioxygenase",
+      "equation": "(E)-caffeate + O2 = 3-(2-carboxyethenyl)-cis,cis-muconate + 2 H(+)",
+      "ec": "1.13.11.22",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_2_carboxylatoethenyl_cis_cis_muconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(E)-caffeoylpyruvate + H2O = (E)-caffeate + pyruvate + H(+)",
+      "equation": "(E)-caffeoylpyruvate + H2O = (E)-caffeate + pyruvate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "e_caffeoylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:71155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(E)-caffeate + H(+) = 3,4-dihydroxystyrene + CO2",
+      "equation": "(E)-caffeate + H(+) = 3,4-dihydroxystyrene + CO2",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxystyrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:75055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75055"
+          }
+        ]
+      }
+    }
+  ]
+}

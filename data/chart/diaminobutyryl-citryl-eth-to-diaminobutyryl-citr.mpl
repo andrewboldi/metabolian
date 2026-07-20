@@ -30,49 +30,49 @@ pathway diaminobutyryl-citryl-eth-to-diaminobutyryl-citr "diaminobutyryl-citryl-
 
   branch from h side left {
     h
-    <-> . +lambertine +nadph +nadp
-    r_canadine
+    <-> . +3_methyl_pyrroline_5_carboxylate +h2o
+    5_5_dihydroxy_leucine
   }
 
   branch from h side right {
     h
-    <-> . +2r_3r_4s_5s_1_3_4_5_tetrahydroxy_6_oxohexan_2_a
-    nojirimycin_b
+    <-> . +echinocandin_c +nadp +h2o +o2 +nadph
+    echinocandin_d
   }
 
   branch from amp side left {
     amp
-    <-> . +diphosphate +h +indol_3_yl_acetyl_l_glutamine +indol_3_yl_acetate +atp
-    l_glutamine
+    <-> ec_6_2_1_33 [6.2.1.33] +diphosphate +4_iodobenzoyl_coa +atp +coa
+    4_iodobenzoate
   }
 
   branch from amp side right {
     amp
-    <-> . +diphosphate +propanoyl_coa +nadp +h2o +h +atp +nadph +3_hydroxypropanoate
-    coa
+    <-> ec_3_6_1_21 [3.6.1.21] +alpha_d_ribose_1_phosphate +h +h2o
+    adp_beta_d_ribose
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +l_homotyrosine +o2 +3_hydroxy_l_homotyrosine +succinate
-    co2
+    <-> . +gibberellin_a28 +o2 +co2 +h +succinate
+    2betaoh_gibberellin28
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +trans_caffeoyl_coa +o2 +co2 +succinate
-    2_4_6_trihydroxycinnamoyl_coa
+    <-> . +gibberellin_a4 +co2 +h +succinate +nadph +nadp +o2
+    gibberellin_a36
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_26 [6.2.1.26] +2_succinylbenzoate +coa +2_succinylbenzoyl_coa +phosphate
-    adp
+    <-> . +h +adp +phosphate +h2o
+    selenate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +adp +phosphate +2_oxoglutarate +co2
-    h2o
+    <-> . +h +adp +phosphate +h2o
+    selenite
   }
 }

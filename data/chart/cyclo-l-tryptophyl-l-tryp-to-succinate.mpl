@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclo-l-tryptophyl-l-tryp-to-succinate "cyclo(L-tryptophyl-L-tryp… to succinate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     cyclo_l_tryptophyl_l_tryptophyl
@@ -18,17 +18,5 @@ pathway cyclo-l-tryptophyl-l-tryp-to-succinate "cyclo(L-tryptophyl-L-tryp… to 
     12_deshydroxyl_okaramine_e
     <-> . +akg +o2 -succinate -co2
     okaramine_e
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_197 [1.14.14.197] +testosterone +fmnh2 +o2 +h2o +hplus
-    11alpha_17beta_dihydroxyandrost_4_en_3_one
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_197 [1.14.14.197] +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
-    11_hydroxycorticosterone
   }
 }

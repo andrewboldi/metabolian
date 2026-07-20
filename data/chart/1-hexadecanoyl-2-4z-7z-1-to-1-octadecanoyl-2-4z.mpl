@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-2-4z-7z-1-to-1-octadecanoyl-2-4z "1-hexadecanoyl-2-(4Z,7Z,1… to 1-octadecanoyl-2-(4Z,7Z,1…" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
@@ -22,25 +22,19 @@ pathway 1-hexadecanoyl-2-4z-7z-1-to-1-octadecanoyl-2-4z "1-hexadecanoyl-2-(4Z,7Z
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
+    <-> . +gtp +sam
+    7_methyl_gtp
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from 1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex side left {
     1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
     <-> . +h2o +1_hexadecanoyl_sn_glycero_3_phosphocholine +hplus
     4z_7z_10z_13z_16z_19z_docosahexaenoate
-  }
-
-  branch from 2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce side right {
-    2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
-    <-> . +1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe +h2o +hplus
-    tetradecanoate
   }
 }

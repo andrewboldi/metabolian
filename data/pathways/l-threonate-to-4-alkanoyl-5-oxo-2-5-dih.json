@@ -191,13 +191,12 @@
       }
     },
     {
-      "id": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
-      "name": "O-(S-hexadecanoylpantetheine-4'-phosphoryl)serine(1−)",
-      "short": "O-(S-hexadecanoylpa…",
-      "formula": "C30H55N3O9PS",
-      "charge": -1,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:78483"
+        "chebi": "CHEBI:57384"
       }
     },
     {
@@ -210,12 +209,13 @@
       }
     },
     {
-      "id": "hexadecan_1_ol",
-      "name": "hexadecan-1-ol",
-      "formula": "C16H34O",
-      "charge": 0,
+      "id": "o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p",
+      "name": "O-[S-(4a,5-dihydro-ML-236C carboxy)pantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(4a,5-dihydro-…",
+      "formula": "C32H53N3O11PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16125"
+        "chebi": "CHEBI:142039"
       }
     },
     {
@@ -228,22 +228,49 @@
       }
     },
     {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:43474"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "hexadecanoyl_phosphate",
-      "name": "hexadecanoyl phosphate",
-      "short": "hexadecanoyl P",
-      "formula": "C16H31O5P",
+      "id": "icosanoate",
+      "name": "icosanoate",
+      "formula": "C20H39O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32360"
+      }
+    },
+    {
+      "id": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
+      "name": "O-(S-icosanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-icosanoylpante…",
+      "formula": "C34H63N3O9PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87848"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138436"
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -284,6 +311,13 @@
       "name": "3-dehydro-4-phosphotetronate decarboxylase",
       "ec": [
         "4.1.1.104"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "ec": [
+        "6.2.1.59"
       ]
     },
     {
@@ -623,86 +657,112 @@
     },
     {
       "id": "r9",
-      "name": "hexadecanoyl-[ACP] + 2 NADPH + 2 H(+) = hexadecan-1-ol + holo-[ACP] + 2 NADP(+)",
-      "equation": "hexadecanoyl-[ACP] + 2 NADPH + 2 H(+) = hexadecan-1-ol + holo-[ACP] + 2 NADP(+)",
+      "name": "holo-[compactin nonaketide synthase] + 9 malonyl-CoA + 11 NADPH + 20 H(+) = dihydro-ML-...",
+      "equation": "holo-[compactin nonaketide synthase] + 9 malonyl-CoA + 11 NADPH + 20 H(+) = dihydro-ML-236C-[compactin nonaketide synthase] + 9 CO2 + 11 NADP(+) + 9 CoA + 6 H2O",
       "substrates": [
-        {
-          "metabolite": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexadecan_1_ol",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 20
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 9
+        },
+        {
           "metabolite": "nadp",
-          "stoichiometry": 2
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:54328"
+        "rhea": "RHEA:57612"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54328"
+            "id": "RHEA:57612"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "hexadecanoyl-[ACP] + phosphate = hexadecanoyl phosphate + holo-[ACP]",
-      "equation": "hexadecanoyl-[ACP] + phosphate = hexadecanoyl phosphate + holo-[ACP]",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "eicosanoate + holo-[(phenol)carboxyphthiodiolenone synthase] + ATP = icosanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
       "substrates": [
         {
-          "metabolite": "o_s_hexadecanoylpantetheine_4_phosphoryl_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "hexadecanoyl_phosphate",
+          "metabolite": "icosanoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:54964"
+        "rhea": "RHEA:59156"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54964"
+            "id": "RHEA:59156"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp "3-(4-oxo-4,5-dihydro-1H-i… to N2-formyl-N1-(5-phospho-β…" {
-  spacing 280
+  spacing 268
 
   spine at 0,0 {
     3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoate
@@ -20,37 +20,25 @@ pathway 3-4-oxo-4-5-dihydro-1h-i-to-n2-formyl-n1-5-phosp "3-(4-oxo-4,5-dihydro-1
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_45 [3.5.4.45] +melamine +h2o
-    ammeline
+    <-> . +3_oxocyclopentanecarbonitrile +h2o
+    3_oxocyclopentanecarboxylate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_45 [3.5.4.45] +ammeline +h2o +hplus
-    ammelide
-  }
-
-  branch from formate side left {
-    formate
-    <-> . +primary_fluorescent_chlorophyll_catabolite +fmnh2 +o2 +fmn +hplus
-    primary_fluorescent_dioxobilin_type_chlorophyll
-  }
-
-  branch from formate side right {
-    formate
-    <-> . +eburicol +fmnh2 +o2 +fmn +h2o +hplus
-    4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
+    <-> . +methyl_3_cyano_2_phenylpropanoate +h2o
+    4_methoxy_4_oxo_3_phenylbutanoate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
-    ctp
+    <-> ec_3_4_19_13 [3.4.19.13] +gsh +h2o
+    cysgly
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +gsh +h2o
-    cysgly
+    <-> . +l_alanyl_l_glutamate +h2o
+    alanine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodothyronamine-to-hydrogen-donor "3'-iodothyronamine to hydrogen donor" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     3_iodothyronamine
@@ -14,23 +14,5 @@ pathway 3-iodothyronamine-to-hydrogen-donor "3'-iodothyronamine to hydrogen dono
     3_3_5_triiodothyronamine
     <-> . +iodide +hydrogen_acceptor +hplus -hydrogen_donor
     3_3_5_5_tetraiodothyronamine
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_iodo_l_thyronine +iodide +hydrogen_acceptor +hplus
-    3_5_diiodo_l_thyronine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one +hydrogen_acceptor
-    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_ol
-  }
-
-  branch from 3_3_5_triiodothyronamine side left {
-    3_3_5_triiodothyronamine
-    <-> . +iodide +hydrogen_acceptor +hplus +hydrogen_donor
-    3_3_diiodothyronamine
   }
 }

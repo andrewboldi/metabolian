@@ -1,0 +1,215 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-4-dihydroxybenzoate-to-4-amino-3-hydroxybenzoa",
+  "name": "3,4-dihydroxybenzoate to 4-amino-3-hydroxybenzoate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 3,4-dihydroxybenzoate to 4-amino-3-hydroxybenzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196571"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1137687"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2_hydroxy_5_carboxymuconate_6_semialdehyde",
+      "name": "2-hydroxy-5-carboxymuconate-6-semialdehyde",
+      "short": "2-hydroxy-5-carboxy…",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1369704"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "2z_4e_5_amino_2_formylhexa_2_4_dienedioate",
+      "name": "(2Z,4E)-5-amino-2-formylhexa-2,4-dienedioate",
+      "short": "(2Z,4E)-5-amino-2-f…",
+      "formula": "C7H5NO5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM171841"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "4_amino_3_hydroxybenzoate",
+      "name": "4-amino-3-hydroxybenzoate",
+      "short": "4-amino-3-hydroxybe…",
+      "formula": "C7H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM97664"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196571",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_5_carboxymuconate_6_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR176599",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_5_carboxymuconate_6_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_4e_5_amino_2_formylhexa_2_4_dienedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176599"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR176598",
+      "substrates": [
+        {
+          "metabolite": "2z_4e_5_amino_2_formylhexa_2_4_dienedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_amino_3_hydroxybenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR176598"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176598"
+          }
+        ]
+      }
+    }
+  ]
+}

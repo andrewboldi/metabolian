@@ -30,25 +30,25 @@ pathway geranylgeranyl-diphosphate-to-nadp "geranylgeranyl diphosphate to NADP" 
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_2_7_1_25 [2.7.1.25] +3_phosphoadenylyl_sulfate +adp +sulfate
-    atp
+    <-> . +h +amp +baumannoferrin_b +atp +n5_2_4_diaminobutanoate_n1_citryl_n3_decanoyl_n3
+    2_oxoglutarate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_2_7_7_64 [2.7.7.64] +udp_n_acetyl_alpha_d_mannosamine +h +n_acetyl_d_mannosamine_1_phosphate
-    utp
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_decyl_4_undecyloxetan_2_one +2r_3s_2_decyl_3_hydroxytetradecanoate
+    atp
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    neoisodihydrocarveol
+    <-> ec_1_5_1_3 [1.5.1.3] +6s_5_6_7_8_tetrahydrofolate +h +nadph
+    folate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    neodihydrocarveol
+    <-> ec_1_5_1_33 [1.5.1.33] +5_6_7_8_tetrahydrobiopterin +h +nadph
+    tetrahydrobiopterin_4a_carbinolamine
   }
 }

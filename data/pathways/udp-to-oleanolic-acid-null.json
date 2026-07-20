@@ -92,45 +92,55 @@
       }
     },
     {
-      "id": "3_o_d_galactosyl_1_2_d_glucuronosyl_quillate",
-      "name": "3-O-[β-D-galactosyl-(1→2)-β-D-glucuronosyl]-quillate",
-      "short": "3-O-[β-D-galactosyl…",
-      "formula": "C42H62O16",
+      "id": "beta_d_gal_1_4_alpha_d_glcnac_1_2_alpha_d_d_hep",
+      "name": "beta-D-Gal-(1->4)-alpha-D-GlcNAc-(1->2)-[alpha-D,D-Hep-(1->3)]3-alpha-D-Glu-(1->3)-[alpha-D-Glu-(1->6)]3-alpha-D,D-Hep-(1->3)-beta-L-Fuc-(1->3)-alpha-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol",
+      "short": "beta-D-Gal-(1->4)-a…",
+      "formula": "C135H224N2O70P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:234160"
+        "metanetx": "MNXM1560187"
       }
     },
     {
-      "id": "3_o_d_glucuronosyl_quillate",
-      "name": "3-O-(β-D-glucuronosyl)-quillate",
-      "short": "3-O-(β-D-glucuronos…",
-      "formula": "C36H52O11",
+      "id": "alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g",
+      "name": "alpha-D-GlcNAc-(1->2)-[alpha-D,D-Hep-(1->3)]3-alpha-D-Glu-(1->3)-[alpha-D-Glu-(1->6)]3-alpha-D,D-Hep-(1->3)-beta-L-Fuc-(1->3)-alpha-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol",
+      "short": "alpha-D-GlcNAc-(1->…",
+      "formula": "C129H214N2O65P2",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:234159"
+        "metanetx": "MNXM1560186"
       }
     },
     {
-      "id": "3_n_methylgalacamine",
-      "name": "3-N-methylgalacamine",
-      "formula": "C13H28N2O8",
-      "charge": 2,
+      "id": "beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4",
+      "name": "beta-D-Gal-(1->4)-alpha-D-GlcNAc-(1->2)-beta-D-Gal-(1->4)-[alpha-L-Fuc-(1->3)]-alpha-D-GlcNAc-(1->2)-[alpha-D,D-Hep-(1->3)]3-alpha-D-Glu-(1->3)-[alpha-D-Glu-(1->6)]3-alpha-D,D-Hep-(1->3)-beta-L-Fuc-(1->3)-alpha-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol",
+      "short": "beta-D-Gal-(1->4)-a…",
+      "formula": "C155H257N3O84P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1559735"
+        "metanetx": "MNXM1560190"
       }
     },
     {
-      "id": "hyosamine",
-      "name": "hyosamine",
-      "formula": "C7H18N2O3",
-      "charge": 2,
+      "id": "alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1",
+      "name": "alpha-D-GlcNAc-(1->2)-beta-D-Gal-(1->4)-[alpha-L-Fuc-(1->3)]-alpha-D-GlcNAc-(1->2)-[alpha-D,D-Hep-(1->3)]3-alpha-D-Glu-(1->3)-[alpha-D-Glu-(1->6)]3-alpha-D,D-Hep-(1->3)-beta-L-Fuc-(1->3)-alpha-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol",
+      "short": "alpha-D-GlcNAc-(1->…",
+      "formula": "C149H247N3O79P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1559738"
+        "metanetx": "MNXM1560189"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_38",
+      "name": "beta-N-acetylglucosaminylglycopeptide beta-1,4-galactosyltransferase",
+      "ec": [
+        "2.4.1.38"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -260,14 +270,15 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR199195",
+      "name": "beta-N-acetylglucosaminylglycopeptide beta-1,4-galactosyltransferase",
+      "ec": "2.4.1.38",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_o_d_galactosyl_1_2_d_glucuronosyl_quillate",
+          "metabolite": "beta_d_gal_1_4_alpha_d_glcnac_1_2_alpha_d_d_hep",
           "stoichiometry": 1
         },
         {
@@ -281,35 +292,41 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_o_d_glucuronosyl_quillate",
+          "metabolite": "alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR199195"
+        "metanetx": "MNXR200628"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR199195"
+            "id": "MNXR200628"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR199831",
+      "name": "beta-N-acetylglucosaminylglycopeptide beta-1,4-galactosyltransferase",
+      "ec": "2.4.1.38",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_n_methylgalacamine",
+          "metabolite": "beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4",
           "stoichiometry": 1
         },
         {
@@ -323,21 +340,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hyosamine",
+          "metabolite": "alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_38"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR199831"
+        "metanetx": "MNXR200632"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR199831"
+            "id": "MNXR200632"
           }
         ]
       }

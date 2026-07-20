@@ -213,12 +213,40 @@
       }
     },
     {
-      "id": "vinorine",
-      "name": "vinorine",
-      "formula": "C21H22N2O2",
+      "id": "cyclosporin_a_metabolite_m18",
+      "name": "cyclosporin A metabolite M18",
+      "short": "cyclosporin A…",
+      "formula": "C62H111N11O13",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1371436"
+        "chebi": "CHEBI:140175"
+      }
+    },
+    {
+      "id": "am1ac_cyclosporine",
+      "name": "AM1Ac (cyclosporine)",
+      "formula": "C62H109N11O14",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM744606"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "cyclosporin_a",
+      "name": "cyclosporin A",
+      "formula": "C62H111N11O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4031"
       }
     },
     {
@@ -249,52 +277,6 @@
       }
     },
     {
-      "id": "vomilenine",
-      "name": "vomilenine",
-      "formula": "C21H22N2O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM726775"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "urobilinogen",
-      "name": "urobilinogen",
-      "formula": "C33H42N4O6",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:228218"
-      }
-    },
-    {
-      "id": "3_2e_2_3_2_carboxyethyl_5_3_ethyl_4_methyl_5_oxo",
-      "name": "3-[(2E)-2-[[3-(2-Carboxyethyl)-5-[(3-ethyl-4-methyl-5-oxo-1,2-dihydropyrrol-2-yl)methyl]-4-methyl-1H-pyrrol-2-yl]methylene]-5-[(4-ethyl-3-methyl-5-oxo-1,2-dihydropyrrol-2-yl)methyl]-4-methyl-pyrrol-3-yl]propanoic acid",
-      "short": "3-[(2E)-2-[[3-(2-Ca…",
-      "formula": "C33H42N4O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:181920"
-      }
-    },
-    {
-      "id": "o_orsellinate",
-      "name": "o-orsellinate",
-      "formula": "C8H7O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16162"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -305,43 +287,25 @@
       }
     },
     {
-      "id": "sesquisabinene_a",
-      "name": "sesquisabinene A",
-      "formula": "C15H24",
+      "id": "acorenol",
+      "name": "(−)-α-acorenol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:143551"
+        "chebi": "CHEBI:167324"
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "4_terpineol",
-      "name": "4-terpineol",
-      "formula": "C10H18O",
+      "id": "koraiol",
+      "name": "koraiol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78884"
+        "chebi": "CHEBI:167323"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_13_75",
-      "name": "EC 1.14.13.75",
-      "ec": [
-        "1.14.13.75"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -622,11 +586,48 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR149399",
-      "ec": "1.14.13.75",
+      "name": "Reaction MNXR154606",
       "substrates": [
         {
-          "metabolite": "vinorine",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyclosporin_a_metabolite_m18",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "am1ac_cyclosporine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR154606"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154606"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "Reaction MNXR154619",
+      "substrates": [
+        {
+          "metabolite": "cyclosporin_a",
           "stoichiometry": 1
         },
         {
@@ -648,93 +649,46 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "vomilenine",
+          "metabolite": "cyclosporin_a_metabolite_m18",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_75"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR149399"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR149399"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "Reaction MNXR149450",
-      "substrates": [
-        {
-          "metabolite": "h",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "urobilinogen",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_2e_2_3_2_carboxyethyl_5_3_ethyl_4_methyl_5_oxo",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR149450"
+        "metanetx": "MNXR154619"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR149450"
+            "id": "MNXR154619"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "orsellinate + (2E,6E)-farnesyl diphosphate = ilicicolinate B + diphosphate",
-      "equation": "orsellinate + (2E,6E)-farnesyl diphosphate = ilicicolinate B + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = (-)-alpha-acorenol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (-)-alpha-acorenol + diphosphate",
       "substrates": [
         {
-          "metabolite": "o_orsellinate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fpp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ilicicolinate_b",
+          "metabolite": "acorenol",
           "stoichiometry": 1
         },
         {
@@ -745,31 +699,35 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:63012"
+        "rhea": "RHEA:66636"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63012"
+            "id": "RHEA:66636"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = sesquisabinene A + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = koraiol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = koraiol + diphosphate",
       "substrates": [
         {
           "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sesquisabinene_a",
+          "metabolite": "koraiol",
           "stoichiometry": 1
         },
         {
@@ -780,53 +738,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:60020"
+        "rhea": "RHEA:66640"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60020"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "(2E)-geranyl diphosphate + H2O = 4-terpineol + diphosphate",
-      "equation": "(2E)-geranyl diphosphate + H2O = 4-terpineol + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_terpineol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:60028"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60028"
+            "id": "RHEA:66640"
           }
         ]
       }

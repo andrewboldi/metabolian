@@ -22,14 +22,14 @@ pathway 1-2-di-palmitoleoyl-2-sn-to-10-hydroxyoctadecano "1,2-di-palmitoleoyl-2-
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
-    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+    <-> . +d_galp_1_3_d_galpnac_1_3_d_galp_1_4_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
+    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
+    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
   }
 
   branch from 1_9z_hexadecenoyl_sn_glycero_3_phosphocholine side left {

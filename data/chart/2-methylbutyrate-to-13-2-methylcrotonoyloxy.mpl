@@ -30,14 +30,14 @@ pathway 2-methylbutyrate-to-13-2-methylcrotonoyloxy "2-methylbutyrate to 13-(2-m
 
   branch from ppi side left {
     ppi
-    <-> . +tardioxopiperazine_a +dmapp
-    variecolorin_l
+    <-> ec_4_2_3_225 [4.2.3.225] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    cattleyene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +neoechinulin_a +dmapp
-    isoechinulin_a
+    <-> ec_4_2_3_229 [4.2.3.229] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_beyerene
   }
 
   branch from tiglyl_coa side left {

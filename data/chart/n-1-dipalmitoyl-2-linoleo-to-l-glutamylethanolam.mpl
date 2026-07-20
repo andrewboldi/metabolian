@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam "N,1-dipalmitoyl-2-linoleo… to γ-L-glutamylethanolamide" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     n_1_dipalmitoyl_2_linoleoyl_sn_glycero_3_phospho
@@ -20,14 +20,14 @@ pathway n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam "N,1-dipalmitoyl-2-lino
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_62 [1.13.11.62] +o2
-    8e_10r_12z_10_hydroperoxy_8_12_octadecadienoate
+    <-> ec_1_13_11_77 [1.13.11.77] +o2
+    8e_10s_12z_10_hydroperoxyoctadeca_8_12_dienoate
   }
 
   branch from linoleate side right {
     linoleate
-    <-> ec_1_13_11_77 [1.13.11.77] +o2
-    8e_10s_12z_10_hydroperoxyoctadeca_8_12_dienoate
+    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
+    1_3_dilinoleoylglycerol
   }
 
   branch from palmitoyl_ethanolamide side left {
@@ -38,31 +38,25 @@ pathway n-1-dipalmitoyl-2-linoleo-to-l-glutamylethanolam "N,1-dipalmitoyl-2-lino
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +myristoyl_coa +coa
-    1_hexadecanoyl_2_tetradecanoyl_sn_glycero_3_phos
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +stearoyl_coa +coa
-    1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
-  }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +n_15z_tetracosenoyl_ethanolamine +h2o
-    15z_tetracosenoate
-  }
-
-  branch from palmitate side left {
-    palmitate
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero3_phosphose +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phospho_l_serine
+    <-> . +h2o +palmitate +hplus
+    sn_glycerol_3_phosphate
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp +h2o +hplus
+    2_stearoyl_sn_glycero_3_phosphocholine
+  }
+
+  branch from palmitate side left {
+    palmitate
+    <-> . +tripalmitin +h2o +hplus
+    dihexadecanoylglycerol
   }
 }

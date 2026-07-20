@@ -32,14 +32,14 @@ pathway 12-hydroxyeicosatetraenoa-to-h2o "12-hydroxyeicosatetraenoa… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_289 [1.1.1.289] +l_sorbopyranose +h +nadph
-    d_sorbitol
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +h2o
+    3_hydroxyvalproic_acid
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_77 [1.3.1.77] +3_hydroxy_2_phenylchromenylium +h +nadph
-    2r_3r_flavan_3_ol
+    <-> ec_1_8_1_12 [1.8.1.12] +bis_glutathionyl_spermine_disulfide +h +nadph
+    bis_glutathionyl_spermine
   }
 
   branch from 20_hydroxy_leukotriene_b4 side left {
@@ -50,13 +50,13 @@ pathway 12-hydroxyeicosatetraenoa-to-h2o "12-hydroxyeicosatetraenoa… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +glutathione_episulfonium_ion +h
-    s_2_hydroxyethyl_glutathione
+    <-> . +h +glutathione +glutathionylaminopropylcadaverine
+    homotrypanothione
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_s_glutathionyl_acetyl_glutathione +h +2_s_glutathionyl_acetate
-    glutathione
+    <-> . +h +demecolcine +formate
+    n_formyldemecolcine
   }
 }

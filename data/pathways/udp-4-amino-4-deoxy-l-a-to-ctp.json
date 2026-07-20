@@ -383,25 +383,6 @@
       }
     },
     {
-      "id": "uridylyl_l_tyrosine_1",
-      "name": "uridylyl-L-tyrosine(1−)",
-      "short": "uridylyl-L-tyrosine…",
-      "formula": "C18H19N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90602"
-      }
-    },
-    {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:46858"
-      }
-    },
-    {
       "id": "dtdp_beta_l_rhamnose",
       "name": "dTDP-beta-L-rhamnose",
       "formula": "C16H24N2O15P2",
@@ -458,15 +439,6 @@
       }
     },
     {
-      "id": "datp",
-      "name": "dATP",
-      "formula": "C10H12N5O12P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61404"
-      }
-    },
-    {
       "id": "dtmp",
       "name": "dTMP",
       "formula": "C10H13N2O8P",
@@ -476,12 +448,21 @@
       }
     },
     {
-      "id": "dadp",
-      "name": "dADP",
-      "formula": "C10H12N5O9P2",
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57667"
+        "chebi": "CHEBI:58593"
       }
     },
     {
@@ -533,15 +514,6 @@
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
       "id": "1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate",
       "name": "1-stearoyl-2-arachidonoyl-sn-glycero-3-phosphate",
       "short": "1-stearoyl-2-arachi…",
@@ -559,6 +531,26 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:85349"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate",
+      "short": "1-hexadecanoyl-2-(5…",
+      "formula": "C39H67O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:72864"
+      }
+    },
+    {
+      "id": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
+      "name": "CDP-1-palmitoyl-2-arachidonoyl-sn-glycerol",
+      "short": "CDP-1-palmitoyl-2-a…",
+      "formula": "C48H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85350"
       }
     }
   ],
@@ -1308,43 +1300,43 @@
     },
     {
       "id": "r15",
-      "name": "[protein-PII]-uridylyl-L-tyrosine + H2O = [protein-PII]-L-tyrosine + UMP + H(+)",
-      "equation": "[protein-PII]-uridylyl-L-tyrosine + H2O = [protein-PII]-L-tyrosine + UMP + H(+)",
+      "name": "UTP + 2 H2O = UMP + 2 phosphate + 2 H(+)",
+      "equation": "UTP + 2 H2O = UMP + 2 phosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "uridylyl_l_tyrosine_1",
+          "metabolite": "utp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
-        {
-          "metabolite": "l_tyrosine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "ump",
           "stoichiometry": 1
         },
         {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 15,
       "xrefs": {
-        "rhea": "RHEA:48600"
+        "rhea": "RHEA:64896"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48600"
+            "id": "RHEA:64896"
           }
         ]
       }
@@ -1435,45 +1427,6 @@
     },
     {
       "id": "r18",
-      "name": "dATP + dTMP = dADP + dTDP",
-      "equation": "dATP + dTMP = dADP + dTDP",
-      "substrates": [
-        {
-          "metabolite": "datp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dtmp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dtdp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 18,
-      "xrefs": {
-        "rhea": "RHEA:82683"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82683"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r19",
       "name": "dTMP + CTP = CDP + dTDP",
       "equation": "dTMP + CTP = CDP + dTDP",
       "substrates": [
@@ -1497,7 +1450,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 19,
+      "pathwayStep": 18,
       "xrefs": {
         "rhea": "RHEA:82687"
       },
@@ -1507,6 +1460,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:82687"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r19",
+      "name": "dCTP + dTMP = dCDP + dTDP",
+      "equation": "dCTP + dTMP = dCDP + dTDP",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 19,
+      "xrefs": {
+        "rhea": "RHEA:82691"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82691"
           }
         ]
       }
@@ -1605,49 +1597,6 @@
     },
     {
       "id": "r22",
-      "name": "CTP + H2O + H(+) = UTP + NH4(+)",
-      "equation": "CTP + H2O + H(+) = UTP + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "utp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 22,
-      "xrefs": {
-        "rhea": "RHEA:30335"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30335"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r23",
       "name": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) =...",
       "equation": "1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
       "substrates": [
@@ -1675,7 +1624,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 23,
+      "pathwayStep": 22,
       "xrefs": {
         "rhea": "RHEA:45648"
       },
@@ -1685,6 +1634,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:45648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r23",
+      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) =...",
+      "equation": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 23,
+      "xrefs": {
+        "rhea": "RHEA:45652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45652"
           }
         ]
       }

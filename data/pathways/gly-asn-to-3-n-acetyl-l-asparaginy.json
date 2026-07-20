@@ -183,12 +183,12 @@
       }
     },
     {
-      "id": "cerotate",
-      "name": "cerotate",
-      "formula": "C26H51O2",
-      "charge": -1,
+      "id": "hexacosanoyl_coa",
+      "name": "hexacosanoyl-CoA",
+      "formula": "C47H82N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:31013"
+        "chebi": "CHEBI:64868"
       }
     },
     {
@@ -202,12 +202,23 @@
       }
     },
     {
-      "id": "hexacosanoyl_coa",
-      "name": "hexacosanoyl-CoA",
-      "formula": "C47H82N7O17P3S",
+      "id": "chenodeoxycholoyl_coa",
+      "name": "Chenodeoxycholoyl-CoA",
+      "short": "Chenodeoxycholoyl-C…",
+      "formula": "C45H70N7O19P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:64868"
+        "chebi": "CHEBI:62989"
+      }
+    },
+    {
+      "id": "glycochenodeoxycholate",
+      "name": "Glycochenodeoxycholate",
+      "short": "Glycochenodeoxychol…",
+      "formula": "C26H42NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36252"
       }
     },
     {
@@ -230,6 +241,25 @@
       }
     },
     {
+      "id": "2_cis_6_trans_farnesyl_diphosphate",
+      "name": "2-cis,6-trans-farnesyl diphosphate",
+      "short": "2-cis,6-trans-farne…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:162247"
+      }
+    },
+    {
+      "id": "cedr_8_ene",
+      "name": "cedr-8-ene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10216"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -240,21 +270,13 @@
       }
     },
     {
-      "id": "cubenene",
-      "name": "(+)-cubenene",
+      "id": "exo_bergamotene",
+      "name": "(−)-exo-α-bergamotene",
+      "short": "(−)-exo-α-bergamote…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61685"
-      }
-    },
-    {
-      "id": "epicubenol",
-      "name": "(+)-epicubenol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61686"
+        "chebi": "CHEBI:62756"
       }
     }
   ],
@@ -267,17 +289,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_63",
-      "name": "(+)-cubenene synthase",
+      "id": "ec_4_2_3_227",
+      "name": "(-)-alpha-cedrene synthase",
       "ec": [
-        "4.2.3.63"
+        "4.2.3.227"
       ]
     },
     {
-      "id": "ec_4_2_3_64",
-      "name": "(+)-epicubenol synthase",
+      "id": "ec_4_2_3_81",
+      "name": "exo-alpha-bergamotene synthase",
       "ec": [
-        "4.2.3.64"
+        "4.2.3.81"
       ]
     }
   ],
@@ -497,45 +519,6 @@
     },
     {
       "id": "r6",
-      "name": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
-      "equation": "hexacosanoate + glycine = N-hexacosanoylglycine + H2O",
-      "substrates": [
-        {
-          "metabolite": "cerotate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_hexacosanoylglycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:47124"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:47124"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
       "equation": "hexacosanoyl-CoA + glycine = N-hexacosanoylglycine + CoA + H(+)",
       "substrates": [
@@ -563,7 +546,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:49772"
       },
@@ -573,6 +556,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:49772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "chenodeoxycholoyl-CoA + glycine = glycochenodeoxycholate + CoA + H(+)",
+      "equation": "chenodeoxycholoyl-CoA + glycine = glycochenodeoxycholate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycochenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:49788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49788"
           }
         ]
       }
@@ -622,18 +648,18 @@
     },
     {
       "id": "r9",
-      "name": "(+)-cubenene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
-      "ec": "4.2.3.63",
+      "name": "(-)-alpha-cedrene synthase",
+      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "ec": "4.2.3.227",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cubenene",
+          "metabolite": "cedr_8_ene",
           "stoichiometry": 1
         },
         {
@@ -643,42 +669,38 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_63"
+          "enzyme": "ec_4_2_3_227"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:29475"
+        "rhea": "RHEA:31423"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29475"
+            "id": "RHEA:31423"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(+)-epicubenol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epicubenol + diphosphate",
-      "ec": "4.2.3.64",
+      "name": "exo-alpha-bergamotene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
+      "ec": "4.2.3.81",
       "substrates": [
         {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "epicubenol",
+          "metabolite": "exo_bergamotene",
           "stoichiometry": 1
         },
         {
@@ -688,20 +710,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_64"
+          "enzyme": "ec_4_2_3_81"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:29479"
+        "rhea": "RHEA:31427"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:29479"
+            "id": "RHEA:31427"
           }
         ]
       }

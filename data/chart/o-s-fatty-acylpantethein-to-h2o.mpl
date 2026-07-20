@@ -54,25 +54,25 @@ pathway o-s-fatty-acylpantethein-to-h2o "O-(S-fatty acylpantethein… to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +demethylmenaquinone_7 +h +nadph
-    2_demethylmenaquinol_7
+    <-> . +2_hexaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
+    2_hexaprenylphenol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +menaquinol_7 +h +nadph
-    menaquinone_7
+    <-> . +2_hexaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
+    2_hexaprenylphenol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +raocyclamide_b +phosphate +raocyclamide_b
-    atp
+    <-> . +sucrose +beta_d_fructose
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    tenuecyclamide_b
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_d_glucose +beta_d_galactose
+    beta_lactose
   }
 }

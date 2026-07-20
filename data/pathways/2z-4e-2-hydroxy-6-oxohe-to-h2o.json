@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2z-4e-2-hydroxy-6-oxohe-to-h2o",
+  "name": "(2Z,4E)-2-hydroxy-6-oxohe… to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2Z,4E)-2-hydroxy-6-oxohexa-2,4-dienoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197848"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71198"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate",
+      "name": "(2Z,4E)-2-hydroxy-6-oxohexa-2,4-dienoate",
+      "short": "(2Z,4E)-2-hydroxy-6…",
+      "formula": "C6H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:71198"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "3_carboxy_2_hydroxymuconate_semialdehyde",
+      "name": "3-carboxy-2-hydroxymuconate semialdehyde",
+      "short": "3-carboxy-2-hydroxy…",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371577"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM455"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "2_keto_4_pentenoate",
+      "name": "2-keto-4-pentenoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364413"
+      }
+    },
+    {
+      "id": "2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hexa_2_4_d",
+      "name": "2-hydroxy-6-oxo-6-(2,3-dihydroxyphenyl)-hexa-2,4-dienoate",
+      "short": "2-hydroxy-6-oxo-6-(…",
+      "formula": "C12H9O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1369706"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_14",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "ec": [
+        "1.13.11.14"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_8",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": [
+        "3.7.1.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197848",
+      "substrates": [
+        {
+          "metabolite": "2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_carboxy_2_hydroxymuconate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197848"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,3-dihydroxybenzoate 3,4-dioxygenase",
+      "ec": "1.13.11.14",
+      "substrates": [
+        {
+          "metabolite": "3_carboxy_2_hydroxymuconate_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197819"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197819"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": "3.7.1.8",
+      "substrates": [
+        {
+          "metabolite": "2_keto_4_pentenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hexa_2_4_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR176612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176612"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -30,13 +30,13 @@ pathway 7r-7-5-carboxy-5-oxope-to-cephalosporin-c "(7R)-7-(5-carboxy-5-oxope… 
 
   branch from acetate side left {
     acetate
-    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
-    1_tetradecyl_sn_glycero_3_phosphocholine
+    <-> . +n_acetylcadaverine +h2o
+    cadaverine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_dodecyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_dodecyl_sn_glycero_3_phosphocholine
+    <-> . +n1_acetylspermidinium +h2o
+    spermidine
   }
 }

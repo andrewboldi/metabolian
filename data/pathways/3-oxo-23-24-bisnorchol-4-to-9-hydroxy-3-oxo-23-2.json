@@ -169,25 +169,6 @@
       }
     },
     {
-      "id": "2_cis_6_trans_farnesyl_diphosphate",
-      "name": "2-cis,6-trans-farnesyl diphosphate",
-      "short": "2-cis,6-trans-farne…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:162247"
-      }
-    },
-    {
-      "id": "cedr_8_ene",
-      "name": "cedr-8-ene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:10216"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -198,29 +179,37 @@
       }
     },
     {
-      "id": "exo_bergamotene",
-      "name": "(−)-exo-α-bergamotene",
-      "short": "(−)-exo-α-bergamote…",
+      "id": "cadinene",
+      "name": "(−)-δ-cadinene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62756"
+        "chebi": "CHEBI:63703"
+      }
+    },
+    {
+      "id": "cubebene",
+      "name": "β-cubebene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10363"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_227",
-      "name": "(-)-alpha-cedrene synthase",
+      "id": "ec_4_2_3_97",
+      "name": "(-)-delta-cadinene synthase",
       "ec": [
-        "4.2.3.227"
+        "4.2.3.97"
       ]
     },
     {
-      "id": "ec_4_2_3_81",
-      "name": "exo-alpha-bergamotene synthase",
+      "id": "ec_4_2_3_128",
+      "name": "beta-cubebene synthase",
       "ec": [
-        "4.2.3.81"
+        "4.2.3.128"
       ]
     }
   ],
@@ -458,50 +447,9 @@
     },
     {
       "id": "r6",
-      "name": "(-)-alpha-cedrene synthase",
-      "equation": "(2Z,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "ec": "4.2.3.227",
-      "substrates": [
-        {
-          "metabolite": "2_cis_6_trans_farnesyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cedr_8_ene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_227"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:31423"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:31423"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "exo-alpha-bergamotene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1S,5S,6R)-alpha-bergamotene + diphosphate",
-      "ec": "4.2.3.81",
+      "name": "(-)-delta-cadinene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-delta-cadinene + diphosphate",
+      "ec": "4.2.3.97",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -510,7 +458,7 @@
       ],
       "products": [
         {
-          "metabolite": "exo_bergamotene",
+          "metabolite": "cadinene",
           "stoichiometry": 1
         },
         {
@@ -520,20 +468,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_81"
+          "enzyme": "ec_4_2_3_97"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:31427"
+        "rhea": "RHEA:32015"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31427"
+            "id": "RHEA:32015"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "beta-cubebene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-cubebene + diphosphate",
+      "ec": "4.2.3.128",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cubebene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:32019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32019"
           }
         ]
       }

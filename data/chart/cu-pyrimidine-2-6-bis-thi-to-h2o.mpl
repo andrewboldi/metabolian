@@ -24,37 +24,37 @@ pathway cu-pyrimidine-2-6-bis-thi-to-h2o "Cu:pyrimidine-2,6-bis(thi… to H2O" {
 
   branch from h side right {
     h
-    <-> . +adp +dehydroepiandrosterone_3_sulfate +phosphate +dehydroepiandrosterone_3_sulfate +h2o
+    <-> . +adp +1_docosatetraenoylglycerophosphocholine_delta_7 +phosphate +1_docosatetraenoylglycerophosphocholine_delta_7 +h2o
     atp
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    3beta_hydroxyandrost_5_en_17_one
+    1_docosapentenoylglycerophosphocholine_delta_4_7
   }
 
   branch from chloride side right {
-    chloride
-    <-> ec_1_14_20_15 [1.14.20.15] +2_oxoglutarate +h +o2 +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +succinate +o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl +h2o
-    co2
-  }
-
-  branch from chloride side left {
     chloride
     <-> ec_3_8_1_5 [3.8.1.5] +h +2_3_4_5_6_pentachlorocyclohexanol +h2o
     beta_hexachlorocyclohexane
   }
 
+  branch from chloride side left {
+    chloride
+    <-> ec_3_6_3_11 [3.6.3.11] +h +phosphate +atp +h2o
+    adp
+  }
+
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_threonine +l_cysteine
-    cystyl_leucyl_threonine
+    <-> . +l_asparagine +l_methionine +l_tyrosine
+    methionyl_asparaginyl_tyrosine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_serine +l_cysteine +l_methionine
-    cystyl_seryl_methionine
+    <-> . +l_glutamine +l_methionine +l_tyrosine
+    met_gln_tyr
   }
 }

@@ -18,38 +18,38 @@ pathway nadh-to-11-oxotestosterone "NADH to 11-oxotestosterone" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_deoxy_3_dehydro_d_ribonate
-    2_deoxy_d_ribonic_acid
+    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
+    d_arabinopyranose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +o2 +6_hydroxypicolinic_acid +h2o
-    3_6_dihydroxypicolinate
+    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
+    d_arabinopyranose
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car
+    <-> . +erythromycin_a +h2o
+    hydrolyzed_erythromycin_a
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    6r_5_10_methylene_5_6_7_8_tetrahydrofolate
+    <-> . +pgp +phosphate +h2o
+    guanosine_3_5_bis_diphosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_206 [1.1.1.206] +3_methylcyclohexanone +h +nadp
-    3_methylcyclohexanol
+    <-> ec_1_14_13_158 [1.14.13.158] +artemisinic_alcohol +nadp +h2o +h +o2
+    amorpha_4_11_diene
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_206 [1.1.1.206] +4_methylcyclohexanone +h +nadp
-    4_methylcyclohexan_1_ol
+    <-> . +artemisinic_alcohol +h +o2 +nadp +h2o
+    artemisinic_aldehyde
   }
 
   branch from 11_oxotestosterone side left {

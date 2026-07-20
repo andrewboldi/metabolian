@@ -18,25 +18,25 @@ pathway 15-methylhexadecasphing-4-to-diphosphate "15-methylhexadecasphing-4… t
 
   branch from sah side left {
     sah
-    <-> . +e_5_hydroxyferulate +sam +hplus
-    trans_sinapate
+    <-> . +2_deoxycytidine_5_monophosphate_1 +sam +atp +h2o +adp +pi +hplus
+    5_methyl_dcmp_1
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_380 [2.1.1.380] +3_amino_2_4_dihydroxybenzoate +sam +hplus
+    3_amino_2_hydroxy_4_methoxybenzoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_6_1_26 [4.6.1.26] +utp
-    3_5_cyclic_ump
+    <-> ec_4_2_3_207 [4.2.3.207] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    neoverrucosan_5_ol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +phenylacetate +atp +hplus
-    phenylacetyl_amp
+    <-> ec_4_2_3_208 [4.2.3.208] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    verrucosan_2_ol
   }
 }

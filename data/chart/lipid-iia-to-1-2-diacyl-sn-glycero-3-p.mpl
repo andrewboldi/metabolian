@@ -26,14 +26,14 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> ec_2_3_1_251 [2.3.1.251] +a_lipid_iva +phosphatidylcholine
-    a_lipid_ivb
+    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
+    1_3_diacyl_sn_glycerol
   }
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side right {
     2_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diacyl_sn_glycerol
+    <-> . +phosphatidylcholine +1_3_diacyl_sn_glycerol
+    3_acyl_sn_glycerol
   }
 
   branch from 2_acyl_sn_glycero_3_phosphate side left {
@@ -44,26 +44,26 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 1_acyl_sn_glycerol_3_phosphate side right {
     1_acyl_sn_glycerol_3_phosphate
-    <-> . +oleoyl_coa +coa
-    1_acyl_2_oleoyl_sn_glycero_3_phosphate
+    <-> . +arachidonoyl_coa +coa
+    1_acyl_2_arachidonoyl_sn_glycero_3_phosphate
   }
 
   branch from 1_acyl_sn_glycerol_3_phosphate side left {
     1_acyl_sn_glycerol_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_acyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> . +h2o +serine +hplus
+    1_acyl_sn_glycero_3_phosphoserine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
-    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
+    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
   }
 
   branch from 1_acyl_sn_glycerol side right {
@@ -80,14 +80,14 @@ pathway lipid-iia-to-1-2-diacyl-sn-glycero-3-p "lipid IIA to 1,2-diacyl-sn-glyce
 
   branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +palmitoyl_coa +coa
-    1_acyl_2_hexadecanoyl_sn_glycero_3_phosphocholin
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +phosphatidylcholine
+    1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
     1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    choline_alfoscerate
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +phosphatidylcholine
+    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from dag side right {

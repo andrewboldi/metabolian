@@ -30,14 +30,14 @@ pathway chenodeoxycholate-3-o-d-to-adenosine-3-5-bismono "chenodeoxycholate-3-O-
 
   branch from glucose side left {
     glucose
-    <-> . +h2o
-    cellotetraose
+    <-> ec_2_3_1_213 [2.3.1.213] +1_o_trans_sinapoyl_beta_d_glucose +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside +h
+    cyanidin_3_o_6_o_sinapoyl_beta_d_glucosyl_1_6_be
   }
 
   branch from glucose side right {
     glucose
-    <-> . +h2o
-    cellotetraose
+    <-> ec_5_3_1_5 [5.3.1.5]
+    keto_d_fructose
   }
 
   branch from glycochenodeoxycholate side left {

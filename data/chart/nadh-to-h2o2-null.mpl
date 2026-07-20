@@ -18,50 +18,50 @@ pathway nadh-to-h2o2-null "NADH to H2O2" {
 
   branch from butanoyl_coa side left {
     butanoyl_coa
-    <-> . +ubiquinone_10 +2e_butenoyl_coa
-    ubiquinol_10
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from butanoyl_coa side right {
     butanoyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
-    butanoyl_cholesterol
+    <-> . +h +phosphate +atp +h2o
+    adp
   }
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +fumarate
-    succinate
+    <-> . +z_tetradec_7_enoyl_coa +h2o +fadh2 +h
+    3_hydroxy_tetradecenoyl_7_coenzyme_a
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_1_99_5 [1.1.99.5] +fadh2 +h +dihydroxyacetone_phosphate
-    sn_glycerol_3_phosphate
+    <-> . +tetradecanoyl_coa +h2o +fadh2 +h
+    3s_hydroxytetradecanoyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_7_1_1 [1.7.1.1] +nitrite +h2o +nadh
-    nitric_acid
+    <-> ec_1_14_13_7 [1.14.13.7] +nadh +h +riboflavin
+    4a_5_dihydroriboflavin
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_19 [1.14.12.19] +nadh +3_phenylpropanoate +h +o2
-    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
+    <-> . +nadh +h +2_methyl_3_ketovaleric_acid
+    2_methyl_3_hydroxyvaleric_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_5_1 [3.5.5.1] +gamma_amino_gamma_cyanobutanoic_acid +l_glutamate
-    nh4
+    <-> . +h +mycinamicin_v +o2 +nadph +mycinamicin_ii
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_4_19 [3.5.4.19] +1_5_phospho_beta_d_ribosyl_5_5_phospho_beta_d_ri +h
-    1_5_phosphoribosyl_amp
+    <-> . +h +mycinamicin_v +o2 +nadph +nadp
+    mycinamicin_ii
   }
 
   branch from 4_hydroxybutanoyl_coa side left {
@@ -84,13 +84,13 @@ pathway nadh-to-h2o2-null "NADH to H2O2" {
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_1_3_4 [1.1.3.4] +d_mannono_1_5_lactone +o2
-    d_mannopyranose
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +fluvastatin +nadp +n_desisopropyl_fluvastatin
+    s_adenosyl_l_methionine
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_4 [1.1.3.4] +2_dehydro_d_glucose +o2
-    2_dehydro_d_glucono_1_5_lactone
+    <-> . +2e_4z_7z_decatrienoyl_coa +o2
+    4z_7z_decadienoyl_coa
   }
 }

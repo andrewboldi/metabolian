@@ -28,14 +28,14 @@ pathway 3-5-6-trichloro-2-pyridin-to-5-amino-2-4-5-triox "3,5,6-trichloro-2-pyri
 
   branch from h side right {
     h
-    <-> . +1d_myo_inositol_3_4_bisphosphate +adp +atp
-    1d_myo_inositol_4_phosphate
+    <-> . +3_phosphonopyruvate +n_acetyl_2s_6s_2_6_diaminopimelate +2_amino_3_phosphonopropanoic_acid
+    l_2_acetamido_6_oxoheptanedioate
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_29 [3.6.3.29] +adp +molybdate +phosphate +molybdate +h2o
-    atp
+    <-> . +ammonium_hydroxide +h2o
+    nh4
   }
 
   branch from chloride side right {
@@ -52,14 +52,14 @@ pathway 3-5-6-trichloro-2-pyridin-to-5-amino-2-4-5-triox "3,5,6-trichloro-2-pyri
 
   branch from nad side right {
     nad
-    <-> ec_1_6_5_3 [1.6.5.3] +nadh +ubiquinone_8 +h +ubiquinol_8
-    pmf
+    <-> ec_1_1_1_1 [1.1.1.1] +5_hydroxyindol_3_yl_acetaldehyde +nadh +h
+    5_hydroxytryptophol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +2_demethylmenaquinone_8 +pmf
-    2_demethylmenaquinol_8
+    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
+    20_hydroxycholesterol
   }
 
   branch from 3_6_dihydroxypyridine_2_5_dione side right {

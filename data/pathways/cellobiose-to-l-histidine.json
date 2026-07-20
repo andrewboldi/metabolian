@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cellobiose-to-l-histidine",
   "name": "cellobiose to L-histidine",
-  "category": "carbohydrate-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from cellobiose to L-histidine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -112,41 +112,42 @@
       }
     },
     {
-      "id": "ascorbate",
-      "name": "L-Ascorbate (vitamin C)",
-      "short": "L-Ascorbate…",
-      "formula": "C6H7O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:38290"
-      }
-    },
-    {
-      "id": "l_ascorbate_6_phosphate",
-      "name": "L-ascorbate 6-phosphate",
-      "short": "L-ascorbate 6-P",
-      "formula": "C6H6O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:61698"
-      }
-    },
-    {
-      "id": "sucrose",
-      "name": "sucrose",
-      "formula": "C12H22O11",
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17992"
+        "chebi": "CHEBI:37721"
       }
     },
     {
-      "id": "sucrose_6g_phosphate",
-      "name": "sucrose 6G-phosphate",
-      "formula": "C12H21O14P",
+      "id": "d_fructofuranose_1_phosphate",
+      "name": "D-fructofuranose 1-phosphate",
+      "short": "D-fructofuranose 1-P",
+      "formula": "C6H11O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:91002"
+        "chebi": "CHEBI:58674"
+      }
+    },
+    {
+      "id": "2_amino_2_deoxy_d_gluconic_acid",
+      "name": "2-amino-2-deoxy-D-gluconic acid",
+      "short": "2-amino-2-deoxy-D-g…",
+      "formula": "C6H13NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58269"
+      }
+    },
+    {
+      "id": "d_glucosaminic_acid_6_phosphate",
+      "name": "D-glucosaminic acid 6-phosphate",
+      "short": "D-glucosaminic…",
+      "formula": "C6H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75705"
       }
     }
   ],
@@ -173,17 +174,17 @@
       ]
     },
     {
-      "id": "ec_2_7_1_194",
-      "name": "protein-N(pi)-phosphohistidine--L-ascorbate phosphotransferase",
+      "id": "ec_2_7_1_202",
+      "name": "protein-N(pi)-phosphohistidine--D-fructose phosphotransferase",
       "ec": [
-        "2.7.1.194"
+        "2.7.1.202"
       ]
     },
     {
-      "id": "ec_2_7_1_211",
-      "name": "protein-N(pi)-phosphohistidine--sucrose phosphotransferase",
+      "id": "ec_2_7_1_203",
+      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
       "ec": [
-        "2.7.1.211"
+        "2.7.1.203"
       ]
     }
   ],
@@ -329,22 +330,22 @@
     },
     {
       "id": "r4",
-      "name": "protein-N(pi)-phosphohistidine--L-ascorbate phosphotransferase",
-      "equation": "N(pros)-phospho-L-histidyl-[protein] + L-ascorbate(out) = L-ascorbate 6-phosphate(in) + L-histidyl-[protein]",
-      "ec": "2.7.1.194",
+      "name": "protein-N(pi)-phosphohistidine--D-fructose phosphotransferase",
+      "equation": "D-fructose(out) + N(pros)-phospho-L-histidyl-[protein] = D-fructose 1-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.202",
       "substrates": [
         {
-          "metabolite": "n_phosphonato_l_histidine",
+          "metabolite": "d_fructofuranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ascorbate",
+          "metabolite": "n_phosphonato_l_histidine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_ascorbate_6_phosphate",
+          "metabolite": "d_fructofuranose_1_phosphate",
           "stoichiometry": 1
         },
         {
@@ -354,42 +355,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_194"
+          "enzyme": "ec_2_7_1_202"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42436"
+        "rhea": "RHEA:49252"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42436"
+            "id": "RHEA:49252"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "protein-N(pi)-phosphohistidine--sucrose phosphotransferase",
-      "equation": "N(pros)-phospho-L-histidyl-[protein](out) + sucrose = sucrose 6(G)-phosphate(in) + L-histidyl-[protein]",
-      "ec": "2.7.1.211",
+      "name": "protein-N(pi)-phosphohistidine--D-glucosaminate phosphotransferase",
+      "equation": "2-amino-2-deoxy-D-gluconate(out) + N(pros)-phospho-L-histidyl-[protein] = 2-amino-2-deoxy-D-gluconate 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.203",
       "substrates": [
         {
-          "metabolite": "n_phosphonato_l_histidine",
+          "metabolite": "2_amino_2_deoxy_d_gluconic_acid",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sucrose",
+          "metabolite": "n_phosphonato_l_histidine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "sucrose_6g_phosphate",
+          "metabolite": "d_glucosaminic_acid_6_phosphate",
           "stoichiometry": 1
         },
         {
@@ -399,20 +400,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_1_211"
+          "enzyme": "ec_2_7_1_203"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49236"
+        "rhea": "RHEA:49256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49236"
+            "id": "RHEA:49256"
           }
         ]
       }

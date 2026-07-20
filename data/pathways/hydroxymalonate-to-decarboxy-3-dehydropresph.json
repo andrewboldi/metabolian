@@ -140,35 +140,6 @@
       }
     },
     {
-      "id": "o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser",
-      "name": "O-[S-(11Z)-hexadecenoylpantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(11Z)-hexadece…",
-      "formula": "C30H53N3O9PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78778"
-      }
-    },
-    {
-      "id": "malonyl-acp",
-      "name": "Malonyl-[ACP]",
-      "formula": "C17H26N3O11PS",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:78449"
-      }
-    },
-    {
-      "id": "o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory",
-      "name": "O-[S-(13Z)-3-oxooctadecenoylpantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(13Z)-3-oxooct…",
-      "formula": "C32H55N3O10PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78779"
-      }
-    },
-    {
       "id": "2_o_acyl_3_o_d_galactosyl_sn_glycerol",
       "name": "2-O-acyl-3-O-β-D-galactosyl-sn-glycerol",
       "short": "2-O-acyl-3-O-β-D-ga…",
@@ -197,6 +168,81 @@
       "xrefs": {
         "chebi": "CHEBI:17615"
       }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho",
+      "name": "O-[S-(dihydromonacolin L carboxy)pantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(dihydromonaco…",
+      "formula": "C33H55N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:79032"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
     }
   ],
   "enzymes": [
@@ -219,6 +265,13 @@
       "name": "galactosylacylglycerol O-acyltransferase",
       "ec": [
         "2.3.1.141"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_161",
+      "name": "lovastatin nonaketide synthase",
+      "ec": [
+        "2.3.1.161"
       ]
     }
   ],
@@ -401,53 +454,6 @@
     },
     {
       "id": "r5",
-      "name": "(11Z)-hexadecenoyl-[ACP] + malonyl-[ACP] + H(+) = 3-oxo-(13Z)-octadecenoyl-[ACP] + holo...",
-      "equation": "(11Z)-hexadecenoyl-[ACP] + malonyl-[ACP] + H(+) = 3-oxo-(13Z)-octadecenoyl-[ACP] + holo-[ACP] + CO2",
-      "substrates": [
-        {
-          "metabolite": "o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "holo-acp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:14565"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14565"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "galactosylacylglycerol O-acyltransferase",
       "equation": "a 2-acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a fatty acyl-[ACP] = a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + holo-[ACP]",
       "ec": "2.3.1.141",
@@ -477,7 +483,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:17057"
       },
@@ -487,6 +493,79 @@
           {
             "db": "Rhea",
             "id": "RHEA:17057"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "lovastatin nonaketide synthase",
+      "equation": "holo-[lovastatin nonaketide synthase] + 9 malonyl-CoA + S-adenosyl-L-methionine + 11 NADPH + 19 H(+) = dihydromonacolin L-[lovastatin nonaketide synthase] + S-adenosyl-L-homocysteine + 9 CO2 + 11 NADP(+) + 9 CoA + 6 H2O",
+      "ec": "2.3.1.161",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 19
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_161"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:18565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18565"
           }
         ]
       }

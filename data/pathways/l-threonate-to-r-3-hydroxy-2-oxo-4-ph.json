@@ -200,16 +200,6 @@
       }
     },
     {
-      "id": "r_3_4_dihydroxy_2_oxobutanoate",
-      "name": "(R)-3,4-dihydroxy-2-oxobutanoate",
-      "short": "3,4-dihydroxy-2-oxo…",
-      "formula": "C4H5O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136668"
-      }
-    },
-    {
       "id": "2_epi_5_epi_valiolone",
       "name": "2-epi-5-epi-valiolone",
       "short": "2-epi-5-epi-valiolo…",
@@ -227,35 +217,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:132139"
-      }
-    },
-    {
-      "id": "6_deoxy_6_sulfo_d_fructofuranose",
-      "name": "6-deoxy-6-sulfo-D-fructofuranose",
-      "short": "6-deoxy-6-sulfo-D-f…",
-      "formula": "C6H11O8S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:77133"
-      }
-    },
-    {
-      "id": "l_3_sulfolactaldehyde",
-      "name": "L-3-sulfolactaldehyde",
-      "short": "L-3-sulfolactaldehy…",
-      "formula": "C3H5O5S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90109"
-      }
-    },
-    {
-      "id": "d_erythronate",
-      "name": "D-erythronate",
-      "formula": "C4H7O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136591"
       }
     }
   ],
@@ -310,13 +271,6 @@
       ]
     },
     {
-      "id": "ec_5_3_1_35",
-      "name": "2-dehydrotetronate isomerase",
-      "ec": [
-        "5.3.1.35"
-      ]
-    },
-    {
       "id": "ec_4_2_3_152",
       "name": "2-epi-5-epi-valiolone synthase",
       "ec": [
@@ -328,13 +282,6 @@
       "name": "demethyl-4-deoxygadusol synthase",
       "ec": [
         "4.2.3.154"
-      ]
-    },
-    {
-      "id": "ec_2_2_1_14",
-      "name": "6-deoxy-6-sulfo-D-fructose transaldolase",
-      "ec": [
-        "2.2.1.14"
       ]
     }
   ],
@@ -711,43 +658,6 @@
     },
     {
       "id": "r9",
-      "name": "2-dehydrotetronate isomerase",
-      "equation": "2-dehydro-D-erythronate = 3-dehydro-D-erythronate",
-      "ec": "5.3.1.35",
-      "substrates": [
-        {
-          "metabolite": "r_3_4_dihydroxy_2_oxobutanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_2_4_dihydroxy_3_oxobutanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:52560"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52560"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "2-epi-5-epi-valiolone synthase",
       "equation": "D-sedoheptulose 7-phosphate = 2-epi-5-epi-valiolone + phosphate",
       "ec": "4.2.3.152",
@@ -773,7 +683,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:44184"
       },
@@ -788,7 +698,7 @@
       }
     },
     {
-      "id": "r11",
+      "id": "r10",
       "name": "demethyl-4-deoxygadusol synthase",
       "equation": "D-sedoheptulose 7-phosphate = (R)-demethyl-4-deoxygadusol + phosphate + H2O + H(+)",
       "ec": "4.2.3.154",
@@ -822,7 +732,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:49560"
       },
@@ -832,90 +742,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:49560"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "6-deoxy-6-sulfo-D-fructose transaldolase",
-      "equation": "6-deoxy-6-sulfo-D-fructose + D-erythrose 4-phosphate = (2S)-3-sulfolactaldehyde + D-sedoheptulose 7-phosphate",
-      "ec": "2.2.1.14",
-      "substrates": [
-        {
-          "metabolite": "6_deoxy_6_sulfo_d_fructofuranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "e4p",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_3_sulfolactaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "s7p",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_2_1_14"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:66920"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66920"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "4-phospho-D-erythronate + H2O = D-erythronate + phosphate",
-      "equation": "4-phospho-D-erythronate + H2O = D-erythronate + phosphate",
-      "substrates": [
-        {
-          "metabolite": "4_o_phosphonato_d_erythronate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_erythronate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 13,
-      "xrefs": {
-        "rhea": "RHEA:86555"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:86555"
           }
         ]
       }

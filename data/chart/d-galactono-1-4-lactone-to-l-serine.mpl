@@ -42,7 +42,7 @@ pathway d-galactono-1-4-lactone-to-l-serine "D-galactono-1,4-lactone to L-serine
 
   branch from serine side right {
     serine
-    <-> . +n_arachidonoyl_l_serine +h2o
-    arachidonate
+    <-> . +thr_ser +h2o
+    threonine
   }
 }

@@ -30,14 +30,14 @@ pathway l-alanine-to-2-propylpiperidine "L-alanine to 2-propylpiperidine" {
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +mono_methylsulfanyl_gliotoxin +dithiolgliotoxin
-    s_adenosyl_l_methionine
+    <-> . +2_chloro_2_2_chloro_4_methyl_5_oxofuran_2_yl_ace +5_chloro_2_methyl_dienelactone
+    chloride
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +bisdethiobis_methylthio_gliotoxin +s_adenosyl_l_methionine
-    mono_methylsulfanyl_gliotoxin
+    <-> . +cis_2_methyl_4_carboxylatomethylenebut_2_en_1_4 +chloride
+    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
   }
 
   branch from gamma_coniceine side left {
@@ -48,31 +48,31 @@ pathway l-alanine-to-2-propylpiperidine "L-alanine to 2-propylpiperidine" {
 
   branch from h2o side right {
     h2o
-    <-> . +gamma_l_glutamyl_s_allyl_l_cysteine +glycine
-    2_glutathion_s_yl_propene
+    <-> . +isotrichodiol
+    12_13_epoxytrichothec_9_ene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +methylsulfanol
-    methanesulfinylsulfanyl_methane
+    <-> ec_1_10_3_4 [1.10.3.4] +3_hydroxy_4_methyl_anthranilate_pentapeptide_lac +o2
+    actinomycin_d
   }
 
   branch from nadp side right {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +s_methylmalonyl_coa +h +nadph +decarboxy_dehydroxy_demycosaminyl_nystatin +coa +h2o
+    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +o_s_c37_phthioceranylpantetheine_4_phosphoryl_l +coa +h2o
     co2
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +l_1_piperideine_6_carboxylate
-    l_pipecolate
+    <-> ec_2_3_1_292 [2.3.1.292] +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +malonyl_coa +s_methylmalonyl_coa +h +nadph +co2 +coa +h2o
+    o_s_c34_carboxyphthiodiolenoneylpantetheine_4_ph
   }
 
   branch from 2_propylpiperidine side right {
     2_propylpiperidine
-    <-> . +methylconiine +s_adenosyl_l_methionine
-    s_adenosyl_l_homocysteine
+    <-> . +s_adenosyl_l_homocysteine +methylconiine
+    s_adenosyl_l_methionine
   }
 }

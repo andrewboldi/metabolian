@@ -18,73 +18,73 @@ pathway 7-hydroxypregnenolone-to-h2o "7α-hydroxypregnenolone to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    narbomycin
+    <-> ec_2_7_2_10 [2.7.2.10] +glyceric_acid_1_3_biphosphate +adp +atp
+    2r_3_phosphoglycerate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    pikromycin
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    d_xylp_1_4_d_xylp_1_4_d_xylp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_3_99_2 [1.3.99.2] +2e_2_methylbut_2_enoyl_coa +h2o
-    2s_2_methylbutanoyl_coa
+    <-> . +2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
+    1_2_dihydroxyfluorene
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_99_2 [1.3.99.2] +2_methylpropanoyl_coa +h2o
-    2_methylpropenoyl_coa
+    <-> . +h +1_2_dihydroxyfluorene
+    2_hydroxy_4_2_oxo_1_3_dihydro_2h_inden_1_ylidene
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +2_4_dinitrophenol +nadp
-    2_4_dinitrophenol_hydride_sigma_complex
+    <-> . +bellidin +nadp +h2o +h +o2
+    1_3_5_trihydroxyxanthone
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_5_1_3 [1.5.1.3] +6s_5_6_7_8_tetrahydrofolate +nadp +h
-    folate
+    <-> . +nadp +h2o +o2 +1_3_5_trihydroxyxanthone
+    1_3_5_6_tetrahydroxyxanthone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_5_1_33 [1.5.1.33] +5_6_7_8_tetrahydrobiopterin +h +nadph
-    tetrahydrobiopterin_4a_carbinolamine
+    <-> . +r_2s_5r_5_ethenyl_1_azabicyclo_2_2_2_octan_2_yl +cinchonine +h +nadph
+    cinchoninone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_330 [1.1.1.330] +s_3_hydroxyoctadecanoyl_coa +h +nadph
-    3_oxooctadecanoyl_coa
+    <-> . +cinchonine +h +cinchoninone +nadph
+    cinchonidine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_o_alpha_l_mycarosylerythronolide_b
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +glycine
+    leu_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    lincomycin
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine
+    leucyl_leucine
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    n_demethyllincomycin
+    <-> ec_7_2_2_18 [7.2.2.18] +h +adp +phosphate +h2o
+    iron_iii_dicitrate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    lincomycin_b
+    <-> ec_3_6_3_34 [3.6.3.34] +h +adp +phosphate +h2o
+    fe_iii_dicitrate
   }
 }

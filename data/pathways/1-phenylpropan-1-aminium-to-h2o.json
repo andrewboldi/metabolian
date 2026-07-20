@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-phenylpropan-1-aminium-to-h2o",
   "name": "1-phenylpropan-1-aminium to H2O",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 5-step route from 1-phenylpropan-1-aminium to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -193,39 +193,58 @@
       }
     },
     {
-      "id": "2_methyl_l_serine",
-      "name": "2-methyl-L-serine",
-      "formula": "C4H9NO3",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:149759"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "formaldehyde",
-      "name": "formaldehyde",
-      "formula": "CH2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16842"
-      }
-    },
-    {
-      "id": "2_phenylethanaminium",
-      "name": "2-phenylethanaminium",
-      "formula": "C8H12N",
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:225237"
+        "chebi": "CHEBI:15378"
       }
     },
     {
-      "id": "phenylacetaldehyde",
-      "name": "phenylacetaldehyde",
-      "formula": "C8H8O",
+      "id": "l_alanyl_amp",
+      "name": "L-alanyl-AMP",
+      "formula": "C13H19N6O8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16424"
+        "chebi": "CHEBI:144940"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "3_phenylpropylaminium",
+      "name": "3-phenylpropylaminium",
+      "short": "3-phenylpropylamini…",
+      "formula": "C9H14N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:150861"
+      }
+    },
+    {
+      "id": "3_phenylpropanal",
+      "name": "3-phenylpropanal",
+      "formula": "C9H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39940"
       }
     },
     {
@@ -328,49 +347,59 @@
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
+      "id": "2_formylbenzoate",
+      "name": "2-formylbenzoate",
+      "formula": "C8H5O3",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM40333"
+        "metanetx": "MNXM1883"
       }
     },
     {
-      "id": "taurochenodeoxycholate",
-      "name": "Taurochenodeoxycholate",
-      "short": "Taurochenodeoxychol…",
-      "formula": "C26H45NO6S",
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "trans_2_carboxybenzylidenepyruvic_acid",
+      "name": "trans-2-carboxybenzylidenepyruvic acid",
+      "short": "trans-2-carboxybenz…",
+      "formula": "C11H8O5",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM731820"
+        "metanetx": "MNXM735667"
       }
     },
     {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
+      "id": "3_beta_d_galactosyl_sn_glycerol",
+      "name": "3-beta-D-galactosyl-sn-glycerol",
+      "short": "3-beta-D-galactosyl…",
+      "formula": "C9H18O8",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM9"
+        "metanetx": "MNXM1105770"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "aldehydo_d_galactose",
+      "name": "aldehydo-D-galactose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM3"
+        "chebi": "CHEBI:17118"
       }
     },
     {
-      "id": "sulfate",
-      "name": "sulfate",
-      "formula": "O4S",
-      "charge": -2,
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM58"
+        "metanetx": "MNXM89612"
       }
     }
   ],
@@ -387,6 +416,13 @@
       "name": "4-hydroxyacetophenone monooxygenase",
       "ec": [
         "1.14.13.84"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_34",
+      "name": "4-(2-carboxyphenyl)-2-oxobut-3-enoate aldolase",
+      "ec": [
+        "4.1.2.34"
       ]
     }
   ],
@@ -657,46 +693,54 @@
     },
     {
       "id": "r7",
-      "name": "2-methyl-L-serine = formaldehyde + L-alanine",
-      "equation": "2-methyl-L-serine = formaldehyde + L-alanine",
+      "name": "L-alanine + ATP + H(+) = L-alanyl-5'-AMP + diphosphate",
+      "equation": "L-alanine + ATP + H(+) = L-alanyl-5'-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_methyl_l_serine",
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "formaldehyde",
+          "metabolite": "l_alanyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:64164"
+        "rhea": "RHEA:61804"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64164"
+            "id": "RHEA:61804"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "2-phenylethylamine + pyruvate = 2-phenylacetaldehyde + L-alanine",
-      "equation": "2-phenylethylamine + pyruvate = 2-phenylacetaldehyde + L-alanine",
+      "name": "3-phenylpropylamine + pyruvate = 3-phenylpropanal + L-alanine",
+      "equation": "3-phenylpropylamine + pyruvate = 3-phenylpropanal + L-alanine",
       "substrates": [
         {
-          "metabolite": "2_phenylethanaminium",
+          "metabolite": "3_phenylpropylaminium",
           "stoichiometry": 1
         },
         {
@@ -706,7 +750,7 @@
       ],
       "products": [
         {
-          "metabolite": "phenylacetaldehyde",
+          "metabolite": "3_phenylpropanal",
           "stoichiometry": 1
         },
         {
@@ -717,14 +761,14 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:64284"
+        "rhea": "RHEA:64300"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64284"
+            "id": "RHEA:64300"
           }
         ]
       }
@@ -955,32 +999,25 @@
     },
     {
       "id": "r14",
-      "name": "Reaction MNXR105431",
+      "name": "4-(2-carboxyphenyl)-2-oxobut-3-enoate aldolase",
+      "ec": "4.1.2.34",
       "substrates": [
         {
+          "metabolite": "2_formylbenzoate",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurochenodeoxycholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "taurochenodeoxycholate",
+          "metabolite": "trans_2_carboxybenzylidenepyruvic_acid",
           "stoichiometry": 1
         },
         {
@@ -988,49 +1025,32 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_34"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 14,
       "xrefs": {
-        "metanetx": "MNXR105431"
+        "metanetx": "MNXR108190"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR105431"
+            "id": "MNXR108190"
           }
         ]
       }
     },
     {
       "id": "r15",
-      "name": "Reaction MNXR105437",
+      "name": "Reaction MNXR108298",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfate",
+          "metabolite": "3_beta_d_galactosyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -1038,17 +1058,27 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 15,
       "xrefs": {
-        "metanetx": "MNXR105437"
+        "metanetx": "MNXR108298"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR105437"
+            "id": "MNXR108298"
           }
         ]
       }

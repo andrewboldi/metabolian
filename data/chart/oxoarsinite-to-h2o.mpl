@@ -18,25 +18,25 @@ pathway oxoarsinite-to-h2o "oxoarsinite to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_di_o_palmitoyl_sn_glycero_3_phosphocholine
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_hexadecanoyl_sn_glycero_3_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_isoleucine +l_serine +l_arginine
-    isolecyl_seryl_arginine
+    <-> . +l_threonine +l_methionine +l_arginine
+    threonyl_methionyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_leucine +l_arginine
-    leucyl_alanyl_arginine
+    <-> . +l_threonine +l_arginine +l_phenylalanine
+    threonyl_phenylalanyl_arginine
   }
 }

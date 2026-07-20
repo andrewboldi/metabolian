@@ -214,71 +214,73 @@
       }
     },
     {
-      "id": "barbatene",
-      "name": "(−)-β-barbatene",
-      "formula": "C15H24",
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "camphene",
+      "name": "camphene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193072"
+        "chebi": "CHEBI:3830"
       }
     },
     {
-      "id": "discoidol",
-      "name": "discoidol",
-      "formula": "C15H26O",
+      "id": "isoterpinolene",
+      "name": "isoterpinolene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192996"
+        "chebi": "CHEBI:88840"
       }
     },
     {
-      "id": "e_5_hydroxyferuloyl_coa",
-      "name": "(E)-5-hydroxyferuloyl-CoA",
-      "short": "5-hydroxyferuloyl-C…",
-      "formula": "C31H40N7O20P3S",
-      "charge": -4,
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:156249"
+        "chebi": "CHEBI:58189"
       }
     },
     {
-      "id": "sinapoyl_coa",
-      "name": "sinapoyl-CoA",
-      "formula": "C32H42N7O20P3S",
-      "charge": -4,
+      "id": "7_methylguanosine_5_diphosphate",
+      "name": "7-methylguanosine 5'-diphosphate",
+      "short": "7-methylguanosine…",
+      "formula": "C11H15N5O11P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57393"
+        "chebi": "CHEBI:63714"
       }
     },
     {
-      "id": "g5_ppp5_aaca_mrna",
-      "name": "G5'ppp5'AACA-mRNA",
-      "formula": "C50H57N22O36P6",
-      "charge": -6,
+      "id": "2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy",
+      "name": "2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate",
+      "short": "2-(2,4-dihydroxy-6-…",
+      "formula": "C14H10O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:156484"
+        "chebi": "CHEBI:193062"
       }
     },
     {
-      "id": "m7g5_ppp5_m2_aaca_mrna",
-      "name": "m7G5'ppp5'm2'AACA-mRNA",
-      "short": "m7G5'ppp5'm2'AACA-m…",
-      "formula": "C52H62N22O36P6",
-      "charge": -5,
+      "id": "griseophenone_d",
+      "name": "griseophenone D",
+      "formula": "C15H12O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:156483"
+        "chebi": "CHEBI:193064"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_375",
-      "name": "NNS virus cap methyltransferase",
-      "ec": [
-        "2.1.1.375"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -618,17 +620,17 @@
     },
     {
       "id": "r9",
-      "name": "(2E,6E)-farnesyl diphosphate = (-)-beta-barbatene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-beta-barbatene + diphosphate",
+      "name": "(2E)-geranyl diphosphate = camphene + diphosphate",
+      "equation": "(2E)-geranyl diphosphate = camphene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "barbatene",
+          "metabolite": "camphene",
           "stoichiometry": 1
         },
         {
@@ -639,35 +641,31 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:73983"
+        "rhea": "RHEA:80391"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73983"
+            "id": "RHEA:80391"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(2E,6E)-farnesyl diphosphate + H2O = discoidol + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = discoidol + diphosphate",
+      "name": "(2E)-geranyl diphosphate = isoterpinolene + diphosphate",
+      "equation": "(2E)-geranyl diphosphate = isoterpinolene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "discoidol",
+          "metabolite": "isoterpinolene",
           "stoichiometry": 1
         },
         {
@@ -678,25 +676,25 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:73987"
+        "rhea": "RHEA:80395"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73987"
+            "id": "RHEA:80395"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-h...",
-      "equation": "(E)-5-hydroxyferuloyl-CoA + S-adenosyl-L-methionine = (E)-sinapoyl-CoA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "GDP + S-adenosyl-L-methionine = N(7)-methyl-GDP + S-adenosyl-L-homocysteine",
+      "equation": "GDP + S-adenosyl-L-methionine = N(7)-methyl-GDP + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "e_5_hydroxyferuloyl_coa",
+          "metabolite": "gdp",
           "stoichiometry": 1
         },
         {
@@ -706,78 +704,68 @@
       ],
       "products": [
         {
-          "metabolite": "sinapoyl_coa",
+          "metabolite": "7_methylguanosine_5_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:64860"
+        "rhea": "RHEA:73807"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64860"
+            "id": "RHEA:73807"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "NNS virus cap methyltransferase",
-      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.375",
+      "name": "2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate + S-adenosyl-L-methionin...",
+      "equation": "2-(2,4-dihydroxy-6-oxidobenzoyl)-5-hydroxy-3-methylbenzenolate + S-adenosyl-L-methionine = griseophenone D + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "g5_ppp5_aaca_mrna",
+          "metabolite": "2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "m7g5_ppp5_m2_aaca_mrna",
+          "metabolite": "griseophenone_d",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_375"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:65376"
+        "rhea": "RHEA:73923"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65376"
+            "id": "RHEA:73923"
           }
         ]
       }

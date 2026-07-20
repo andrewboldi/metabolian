@@ -1,0 +1,383 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-methyl-2-oxopentanoate-to-2-methylbutyl-acetat",
+  "name": "3-methyl-2-oxopentanoate to 2-methylbutyl acetate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-methyl-2-oxopentanoate to 2-methylbutyl acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198587"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_methyl_2_oxopentanoate",
+      "name": "3-methyl-2-oxopentanoate",
+      "short": "3-methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1363844"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "2_methylbutanal",
+      "name": "2-methylbutanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2604"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2_methylbutan_1_ol",
+      "name": "2-methylbutan-1-ol",
+      "formula": "C5H12O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48945"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "2_methylbutyl_acetate",
+      "name": "2-methylbutyl acetate",
+      "short": "2-methylbutyl…",
+      "formula": "C7H14O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50585"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "2_methylbutyl_butanoate",
+      "name": "2-methylbutyl butanoate",
+      "short": "2-methylbutyl…",
+      "formula": "C9H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156490"
+      }
+    },
+    {
+      "id": "hexanoyl_coa",
+      "name": "hexanoyl-CoA",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62620"
+      }
+    },
+    {
+      "id": "2_methylbutyl_hexanoate",
+      "name": "2-methylbutyl hexanoate",
+      "short": "2-methylbutyl…",
+      "formula": "C11H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156542"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_72",
+      "name": "branched-chain-2-oxoacid decarboxylase",
+      "ec": [
+        "4.1.1.72"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "branched-chain-2-oxoacid decarboxylase",
+      "ec": "4.1.1.72",
+      "substrates": [
+        {
+          "metabolite": "3_methyl_2_oxopentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylbutanal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198587"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198587"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylbutanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR95716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-methylbutan-1-ol + acetyl-CoA = 2-methylbutyl acetate + CoA",
+      "equation": "2-methylbutan-1-ol + acetyl-CoA = 2-methylbutyl acetate + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-methylbutan-1-ol + butanoyl-CoA = 2-methylbutyl butanoate + CoA",
+      "equation": "2-methylbutan-1-ol + butanoyl-CoA = 2-methylbutyl butanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutyl_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:65464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-methylbutan-1-ol + hexanoyl-CoA = 2-methylbutyl hexanoate + CoA",
+      "equation": "2-methylbutan-1-ol + hexanoyl-CoA = 2-methylbutyl hexanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_methylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutyl_hexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65532"
+          }
+        ]
+      }
+    }
+  ]
+}

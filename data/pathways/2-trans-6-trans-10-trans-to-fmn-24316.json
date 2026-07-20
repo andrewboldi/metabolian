@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-10-trans-to-fmn-24316",
+  "name": "2-trans,6-trans,10-trans-… to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-trans,6-trans,10-trans-geranylgeranyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24316"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58756"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9α,10β-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58635"
+      }
+    },
+    {
+      "id": "abieta_7_13_diene",
+      "name": "abieta-7,13-diene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30232"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "abietol",
+      "name": "abietol",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29510"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_5_1_12",
+      "name": "copalyl diphosphate synthase",
+      "ec": [
+        "5.5.1.12"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_18",
+      "name": "abieta-7,13-diene synthase",
+      "ec": [
+        "4.2.3.18"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_144",
+      "name": "abieta-7,13-diene hydroxylase",
+      "ec": [
+        "1.14.14.144"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "copalyl diphosphate synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (+)-copalyl diphosphate",
+      "ec": "5.5.1.12",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "abieta-7,13-diene synthase",
+      "equation": "(+)-copalyl diphosphate = abieta-7,13-diene + diphosphate",
+      "ec": "4.2.3.18",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "abieta_7_13_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13873"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13873"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "abieta-7,13-diene hydroxylase",
+      "equation": "abieta-7,13-diene + reduced [NADPH--hemoprotein reductase] + O2 = abieta-7,13-dien-18-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.144",
+      "substrates": [
+        {
+          "metabolite": "abieta_7_13_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "abietol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:26217"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26217"
+          }
+        ]
+      }
+    }
+  ]
+}

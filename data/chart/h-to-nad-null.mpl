@@ -30,38 +30,38 @@ pathway h-to-nad-null "H to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +alpha_hydroxy_n_desmethyltamoxifen
-    nadp
+    <-> ec_1_8_1_9 [1.8.1.9] +methylselenol +nadp +h +nadph
+    methylseleninic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2 +nadph +nadp
-    4_hydroxycyclophosphamide
+    <-> ec_3_3_2_8 [3.3.2.8] +1r_2r_4s_limonene_1_2_diol
+    4s_limonene_1_2_epoxide
   }
 
   branch from d_glucono_1_5_lactone side left {
-    d_glucono_1_5_lactone
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +nad
-    hexopyranose
-  }
-
-  branch from d_glucono_1_5_lactone side right {
     d_glucono_1_5_lactone
     <-> ec_1_1_3_5 [1.1.3.5] +glucose +o2
     h2o2
   }
 
+  branch from d_glucono_1_5_lactone side right {
+    d_glucono_1_5_lactone
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +nad
+    d_aldose
+  }
+
   branch from h side left {
     h
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +4_fluorocatechol +nad
-    4_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_5_5_1_7 [5.5.1.7] +tetrachloro_cis_cis_muconic_acid +chloride
+    2_3_5_trichlorodienelactone
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +codeine_6_glucuronide +codeine
-    udp_alpha_d_glucuronate
+    <-> . +10_oxabenzo_def_chrysen_9_one +formate
+    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
   }
 
   branch from pyrroloquinoline_quinol side left {
@@ -78,25 +78,25 @@ pathway h-to-nad-null "H to NAD" {
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +s_4_hydroxymandelonitrile +h2o
-    dhurrin
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +h2o
+    2_hydroxy_2_methylpropanenitrile
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +2r_2_hydroxy_2_methylbutanenitrile +h2o
-    lotaustralin
+    <-> ec_3_2_1_3 [3.2.1.3] +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
+    d_maltose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +alcophosphamide +nadh +h
-    aldophosphamide
+    <-> . +benzo_a_pyrene_cis_4_5_dihydrodiol +nadh +h +o2
+    benzo_a_pyrene
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +aldophosphamide +h2o
-    carboxyphosphamide
+    <-> . +nadh +h +benzo_a_pyrene +o2
+    benzo_a_pyrene_cis_11_12_dihydrodiol
   }
 }

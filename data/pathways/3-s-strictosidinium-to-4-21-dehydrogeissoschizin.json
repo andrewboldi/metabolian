@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-s-strictosidinium-to-4-21-dehydrogeissoschizin",
   "name": "3α(S)-strictosidinium to 4,21-dehydrogeissoschizine",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 3α(S)-strictosidinium(1+) to 4,21-dehydrogeissoschizine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -85,52 +85,50 @@
       }
     },
     {
-      "id": "5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1",
-      "name": "(5R)-5-[(α-D-glucosyl-(1→2)-β-D-galactosyl)oxy]-L-lysine(1+)",
-      "short": "5-[(α-D-glucosyl-(1…",
-      "formula": "C18H33N2O12",
-      "charge": 1,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:133452"
+        "chebi": "CHEBI:456216"
       }
     },
     {
-      "id": "5r_5_d_galactosyloxy_l_lysine_1",
-      "name": "(5R)-5-(β-D-galactosyloxy)-L-lysine(1+)",
-      "short": "5-(β-D-galactosylox…",
-      "formula": "C12H23N2O7",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:133443"
-      }
-    },
-    {
-      "id": "d_glcp_1_2_d_glcp",
-      "name": "α-D-Glcp-(1→2)-D-Glcp",
-      "short": "α-D-Glcp-(1→2)-D-Gl…",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142460"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "d_glucose_1_phosphate",
-      "name": "β-D-glucose 1-phosphate",
-      "short": "β-D-glucose 1-P",
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
       "formula": "C6H11O9P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57684"
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "cholesteryl_d_glucoside",
+      "name": "cholesteryl β-D-glucoside",
+      "short": "cholesteryl…",
+      "formula": "C33H56O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17495"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
       }
     },
     {
@@ -215,17 +213,17 @@
       ]
     },
     {
-      "id": "ec_3_2_1_107",
-      "name": "protein-glucosylgalactosylhydroxylysine glucosidase",
+      "id": "ec_2_7_1_147",
+      "name": "ADP-specific glucose/glucosamine kinase",
       "ec": [
-        "3.2.1.107"
+        "2.7.1.147"
       ]
     },
     {
-      "id": "ec_2_4_1_230",
-      "name": "kojibiose phosphorylase",
+      "id": "ec_3_2_1_104",
+      "name": "steryl-beta-glucosidase",
       "ec": [
-        "2.4.1.230"
+        "3.2.1.104"
       ]
     },
     {
@@ -358,12 +356,61 @@
     },
     {
       "id": "r4",
-      "name": "protein-glucosylgalactosylhydroxylysine glucosidase",
-      "equation": "(5R)-5-O-[alpha-D-glucosyl-(1->2)-beta-D-galactosyl]-5-hydroxy-L-lysyl-[collagen] + H2O = (5R)-5-O-(beta-D-galactosyl)-5-hydroxy-L-lysyl-[collagen] + D-glucose",
-      "ec": "3.2.1.107",
+      "name": "ADP-specific glucose/glucosamine kinase",
+      "equation": "D-glucose + ADP = D-glucose 6-phosphate + AMP + H(+)",
+      "ec": "2.7.1.147",
       "substrates": [
         {
-          "metabolite": "5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1",
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:11460"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11460"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "steryl-beta-glucosidase",
+      "equation": "cholesteryl 3-beta-D-glucoside + H2O = cholesterol + D-glucose",
+      "ec": "3.2.1.104",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_d_glucoside",
           "stoichiometry": 1
         },
         {
@@ -373,7 +420,7 @@
       ],
       "products": [
         {
-          "metabolite": "5r_5_d_galactosyloxy_l_lysine_1",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -383,65 +430,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_107"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:11068"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:11068"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "kojibiose phosphorylase",
-      "equation": "kojibiose + phosphate = beta-D-glucose 1-phosphate + D-glucose",
-      "ec": "2.4.1.230",
-      "substrates": [
-        {
-          "metabolite": "d_glcp_1_2_d_glcp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_glucose_1_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_230"
+          "enzyme": "ec_3_2_1_104"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:11176"
+        "rhea": "RHEA:11956"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11176"
+            "id": "RHEA:11956"
           }
         ]
       }

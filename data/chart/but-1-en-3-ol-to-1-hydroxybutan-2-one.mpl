@@ -18,14 +18,14 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from h side left {
     h
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadp +nadph
-    geranylgeranyl_bacteriochlorophyllide_a
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan +nadp +nadph
+    o_s_17z_29z_3_oxooctatetracontadienoylpantethein
   }
 
   branch from h side right {
     h
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadph +nadp
-    tetrahydrogeranylgeranyl_bacteriochlorophyll_a
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph +nadp +nadph
+    o_s_5z_3_oxotetracosenoylpantetheine_4_phosphory
   }
 
   branch from butan_2_ol side left {
@@ -42,25 +42,25 @@ pathway but-1-en-3-ol-to-1-hydroxybutan-2-one "but-1-en-3-ol to 1-hydroxybutan-2
 
   branch from o2 side left {
     o2
-    <-> . +all_trans_beta_carotene +ionone
-    4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
+    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
+    17_r_hdohe
   }
 
   branch from o2 side right {
     o2
-    <-> . +dihydroartemisinate
-    dihydroartemisinic_acid_hydroperoxide
+    <-> ec_1_13_11_34 [1.13.11.34] +h +17_r_hdohe
+    4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyll_a +nadp
-    bacteriochlorophyll_a
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine +nadp +h
+    o_s_17z_3_oxohexatriacontenoylpantetheine_4_phos
   }
 
   branch from nadph side right {
     nadph
-    <-> . +4_hydroxylaminotoluene +nadp +h2o +h
-    4_nitrotoluene
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth +nadp +h
+    o_s_19z_31z_3_oxopentacontadienoylpantetheine_4
   }
 }

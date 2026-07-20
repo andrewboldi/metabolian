@@ -234,30 +234,59 @@
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "4_methoxybenzoate",
+      "name": "4-methoxybenzoate",
+      "formula": "C8H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16639"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
+        "chebi": "CHEBI:57783"
       }
     },
     {
-      "id": "3_2_cgamp",
-      "name": "3',2'-cGAMP",
-      "formula": "C20H22N10O13P2",
-      "charge": -2,
+      "id": "p_methoxybenzaldehyde",
+      "name": "p-methoxybenzaldehyde",
+      "short": "p-methoxybenzaldehy…",
+      "formula": "C8H8O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:177334"
+        "chebi": "CHEBI:28235"
       }
     },
     {
-      "id": "pppa_2_5_pg",
-      "name": "pppA(2'→5')pG",
-      "formula": "C20H23N10O20P4",
-      "charge": -5,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:177335"
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cadinene",
+      "name": "α-cadinene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80749"
       }
     },
     {
@@ -778,60 +807,72 @@
     },
     {
       "id": "r9",
-      "name": "GTP + ATP = 3',2'-cGAMP + 2 diphosphate",
-      "equation": "GTP + ATP = 3',2'-cGAMP + 2 diphosphate",
+      "name": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NA...",
+      "equation": "4-methoxybenzoate + ATP + NADPH + H(+) = 4-methoxybenzaldehyde + AMP + diphosphate + NADP(+)",
       "substrates": [
         {
-          "metabolite": "gtp",
+          "metabolite": "4_methoxybenzoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_2_cgamp",
+          "metabolite": "p_methoxybenzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:68344"
+        "rhea": "RHEA:68900"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68344"
+            "id": "RHEA:68900"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "GTP + ATP = pppA(2'-5')pG + diphosphate",
-      "equation": "GTP + ATP = pppA(2'-5')pG + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
       "substrates": [
         {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pppa_2_5_pg",
+          "metabolite": "cadinene",
           "stoichiometry": 1
         },
         {
@@ -842,14 +883,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:68348"
+        "rhea": "RHEA:69444"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68348"
+            "id": "RHEA:69444"
           }
         ]
       }

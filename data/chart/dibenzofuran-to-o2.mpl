@@ -40,14 +40,14 @@ pathway dibenzofuran-to-o2 "dibenzofuran to O2" {
 
   branch from h2o side right {
     h2o
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate
-    15_epi_lipoxin_a4
+    <-> . +20_dihydroxyleukotriene_b4
+    20_oxo_leukotriene_b4
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h
-    15_epi_lipoxin_b4
+    <-> . +12_20_dioxoleukotriene_b4 +h
+    12_oxo_20_dihydroxy_leukotriene_b4
   }
 
   branch from 3_propylcatechol side right {
@@ -64,13 +64,13 @@ pathway dibenzofuran-to-o2 "dibenzofuran to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +lithocholate +deoxycholate +h2o
-    nadp
+    <-> . +10_11_dihydro_ltb4_coa +h2o2
+    5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +12_dehydro_leukotriene_b4 +nadph +nadp +h2o
-    12_oxo_20_hydroxy_leukotriene_b4
+    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
+    15_r_hepe
   }
 }

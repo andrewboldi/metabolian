@@ -110,30 +110,50 @@
       }
     },
     {
-      "id": "s_citronellal",
-      "name": "(S)-(−)-citronellal",
-      "formula": "C10H18O",
-      "charge": 0,
+      "id": "6_phospho_d_glucono_1_5_lactone",
+      "name": "6-phospho-D-glucono-1,5-lactone",
+      "short": "6-phospho-D-glucono…",
+      "formula": "C6H9O9P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:368"
+        "metanetx": "MNXM1104491"
       }
     },
     {
-      "id": "isomenthol",
-      "name": "(+)-isomenthol",
-      "formula": "C10H20O",
-      "charge": 0,
+      "id": "alpha_d_glucose_6_phosphate",
+      "name": "alpha-D-glucose 6-phosphate",
+      "short": "alpha-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM9354"
+        "metanetx": "MNXM1105855"
       }
     },
     {
-      "id": "neoisomenthol",
-      "name": "neoisomenthol",
-      "formula": "C10H20O",
+      "id": "vitamin_b12r",
+      "name": "Vitamin B12r",
+      "formula": "C62H87CoN13O14P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104738"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18451"
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "aquacobalamin",
+      "name": "Aquacobalamin",
+      "formula": "C62H89CoN13O15P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106043"
       }
     }
   ],
@@ -153,10 +173,17 @@
       ]
     },
     {
-      "id": "ec_1_1_1_71",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "id": "ec_1_1_1_49",
+      "name": "glucose-6-phosphate dehydrogenase (NADP(+))",
       "ec": [
-        "1.1.1.71"
+        "1.1.1.49"
+      ]
+    },
+    {
+      "id": "ec_1_16_1_5",
+      "name": "EC 1.16.1.5",
+      "ec": [
+        "1.16.1.5"
       ]
     }
   ],
@@ -357,15 +384,15 @@
     },
     {
       "id": "r5",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "glucose-6-phosphate dehydrogenase (NADP(+))",
+      "ec": "1.1.1.49",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "6_phospho_d_glucono_1_5_lactone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_citronellal",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
@@ -375,56 +402,60 @@
       ],
       "products": [
         {
-          "metabolite": "nadp",
+          "metabolite": "alpha_d_glucose_6_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "isomenthol",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_1_1_49"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR181395"
+        "metanetx": "MNXR192435"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181395"
+            "id": "MNXR192435"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "Reaction MNXR192587",
+      "ec": "1.16.1.5",
       "substrates": [
         {
-          "metabolite": "neoisomenthol",
-          "stoichiometry": 1
+          "metabolite": "vitamin_b12r",
+          "stoichiometry": 2
         },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_citronellal",
+          "metabolite": "nadp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aquacobalamin",
+          "stoichiometry": 2
         },
         {
           "metabolite": "nadph",
@@ -433,20 +464,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_16_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR181401"
+        "metanetx": "MNXR192587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181401"
+            "id": "MNXR192587"
           }
         ]
       }

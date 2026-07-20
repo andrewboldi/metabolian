@@ -1,0 +1,294 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "agmatinium-to-aminobutyric-acid",
+  "name": "agmatinium to γ-aminobutyric acid",
+  "category": "redox-detox",
+  "summary": "A 3-step route from agmatinium(2+) to γ-aminobutyric acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13929"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58145"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58145"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_ammoniobutanal",
+      "name": "4-ammoniobutanal",
+      "formula": "C4H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58264"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_3_11",
+      "name": "agmatinase",
+      "ec": [
+        "3.5.3.11"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_10",
+      "name": "putrescine oxidase",
+      "ec": [
+        "1.4.3.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "agmatinase",
+      "equation": "agmatine + H2O = urea + putrescine",
+      "ec": "3.5.3.11",
+      "substrates": [
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13929"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13929"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "putrescine oxidase",
+      "equation": "putrescine + O2 + H2O = 4-aminobutanal + H2O2 + NH4(+)",
+      "ec": "1.4.3.10",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-aminobutanal + NADP(+) + H2O = 4-aminobutanoate + NADPH + 2 H(+)",
+      "equation": "4-aminobutanal + NADP(+) + H2O = 4-aminobutanoate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30803"
+          }
+        ]
+      }
+    }
+  ]
+}

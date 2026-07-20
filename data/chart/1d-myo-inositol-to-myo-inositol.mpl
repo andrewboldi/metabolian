@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1d-myo-inositol-to-myo-inositol "1D-myo-inositol… to myo-inositol…" {
-  spacing 246
+  spacing 234
 
   spine at 0,0 {
     1d_myo_inositol_3_4_bisphosphate
@@ -28,37 +28,25 @@ pathway 1d-myo-inositol-to-myo-inositol "1D-myo-inositol… to myo-inositol…" 
 
   branch from h side right {
     h
-    <-> . +trans_2_methyl_4_carboxylatomethylenebut_2_en_1 +chloride
-    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    <-> . +p_nitrostyrene_oxide +bromide
+    r_p_nitro_2_bromo_1_phenylethanol
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
-    4_chloro_2_methyl_cis_cis_muconate
+    <-> . +s_2_chloro_1_phenylethanol +chloride
+    s_styrene_oxide
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_20 [2.7.1.20] +2_methyladenosine_5_monophosphate +h +atp
-    2_methyladenosine
+    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_xylose +atp +h
+    alpha_d_xylose_1_phosphate
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_4_1_21 [2.4.1.21] +d_glcp_1_4_d_glcp_1_4_d_glcp +adp_alpha_d_glucose +h
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-  }
-
-  branch from myo_inositol_1_3_4_5_6_pentakisphosphate side right {
-    myo_inositol_1_3_4_5_6_pentakisphosphate
-    <-> . +1d_myo_inositol_1_3_4_trisphosphate +1d_myo_inositol_3_4_5_6_tetrakisphosphate
-    1d_myo_inositol_1_3_4_5_tetrakisphosphate
-  }
-
-  branch from myo_inositol_1_3_4_5_6_pentakisphosphate side left {
-    myo_inositol_1_3_4_5_6_pentakisphosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +h2o +pi
-    1d_myo_inositol_1_4_5_6_tetrakisphosphate
+    <-> ec_2_7_4_14 [2.7.4.14] +l_ddcdp +h +atp
+    l_ddcmp
   }
 }

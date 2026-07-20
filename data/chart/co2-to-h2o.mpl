@@ -24,37 +24,37 @@ pathway co2-to-h2o "CO2 to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_nitro_1_naphthoate +nad +h2o
-    5_nitro_1_naphthaldehyde
+    <-> . +nadh +octane +o2 +nad +h2o
+    octan_1_ol
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +6_dimethylamino_2_naphthoic_acid +nad +h2o
-    6_dimethylamino_2_naphthaldehyde
+    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2
+    3_demethylubiquinone_6
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_5_99_2 [1.5.99.2] +fadh2 +formaldehyde +h +sarcosine +h2o
-    n_n_dimethylglycine
+    <-> ec_1_1_99_3 [1.1.99.3] +fadh2 +h +2_dehydro_d_gluconate
+    d_gluconate
   }
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +menaquinone_6
-    menaquinol_6
+    <-> . +fadh2 +h +d_gluconate
+    2_dehydro_d_gluconate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_phenylpropionitrile
-    3_phenylpropionaldoxim
+    <-> . +2_oxospirilloxanthin +o2
+    2_2_dioxospirilloxanthin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +e_2_methylpropanal_oxime
-    2_methylpropanenitrile
+    <-> . +hydroxyspheroidene +o2
+    hydroxyspheroidenone
   }
 }

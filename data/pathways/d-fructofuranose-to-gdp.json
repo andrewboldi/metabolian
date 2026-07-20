@@ -1,0 +1,403 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-fructofuranose-to-gdp",
+  "name": "β-D-fructofuranose… to GDP",
+  "category": "other",
+  "summary": "A 3-step route from β-D-fructofuranose 1-phosphate(2−) to GDP, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134301"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138881"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_fructofuranose_1_phosphate",
+      "name": "β-D-fructofuranose 1-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138881"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "beta_d_fructose_1_6_bisphosphate",
+      "name": "beta-D-fructose 1,6-bisphosphate",
+      "short": "beta-D-fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364229"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1103285"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103553"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "GMP",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1101285"
+      }
+    },
+    {
+      "id": "alpha_d_glucose",
+      "name": "alpha-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105027"
+      }
+    },
+    {
+      "id": "beta_d_fructose",
+      "name": "beta-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364098"
+      }
+    },
+    {
+      "id": "trehalulose",
+      "name": "trehalulose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:79284"
+      }
+    },
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363863"
+      }
+    },
+    {
+      "id": "leucrose",
+      "name": "Leucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1133032"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_68",
+      "name": "2-deoxyglucose-6-phosphatase",
+      "ec": [
+        "3.1.3.68"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_11",
+      "name": "6-phosphofructokinase",
+      "ec": [
+        "2.7.1.11"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_8",
+      "name": "guanylate kinase",
+      "ec": [
+        "2.7.4.8"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_20",
+      "name": "alpha-glucosidase",
+      "ec": [
+        "3.2.1.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-deoxyglucose-6-phosphatase",
+      "ec": "3.1.3.68",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134301"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-phosphofructokinase",
+      "ec": "2.7.1.11",
+      "substrates": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR133444"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "guanylate kinase",
+      "ec": "2.7.4.8",
+      "substrates": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172462"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172462"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-glucosidase",
+      "ec": "3.2.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR194870"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR194870"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "alpha-glucosidase",
+      "ec": "3.2.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leucrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR194872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR194872"
+          }
+        ]
+      }
+    }
+  ]
+}

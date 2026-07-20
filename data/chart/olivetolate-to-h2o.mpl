@@ -18,14 +18,14 @@ pathway olivetolate-to-h2o "olivetolate to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    cadinene
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    talarodiene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp +h2o
-    cadinol
+    <-> ec_4_2_3_211 [4.2.3.211] +fpp
+    exo_bergamotene
   }
 
   branch from cannabinolic_acid side left {
@@ -36,13 +36,13 @@ pathway olivetolate-to-h2o "olivetolate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    allolactose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cefaloridine +phosphate +cefaloridine
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    alpha_maltose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    cefalotin
   }
 }

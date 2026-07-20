@@ -20,14 +20,14 @@ pathway s-adenosyl-l-homocysteine-to-h2o-null "S-adenosyl-L-homocysteine to H2O"
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +chrysosplenol_c
-    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+    <-> ec_2_1_1_115 [2.1.1.115] +s_reticuline +s_adenosyl_l_homocysteine +h
+    s_norreticuline
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +chrysosplenetin +h
-    chrysosplenol_c
+    <-> . +s_adenosyl_l_homocysteine +oxyayanin_b
+    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
   }
 
   branch from lathosterol side left {
@@ -38,50 +38,50 @@ pathway s-adenosyl-l-homocysteine-to-h2o-null "S-adenosyl-L-homocysteine to H2O"
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nadh +h +o2
-    3_chlorotoluene
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +4_nitroacetophenone
+    1_4_nitrophenyl_ethanol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_chlorobenzaldehyde
-    3_chlorophenyl_methanol
+    <-> ec_1_1_1_188 [1.1.1.188] +nadh +prostaglandin_d2 +h
+    11beta_prostaglandin_f2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +5_deoxy_dihydrokalafungin +o2
-    dihydrokalafungin
+    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h +dodecanoate
+    o_lauroyl_l_carnitine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth
-    o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p
+    <-> ec_3_1_1_28 [3.1.1.28] +hexadecanoate +r_carnitine +h
+    o_hexadecanoyl_r_carnitine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +h +o_s_3_oxodocosanoylpantetheine_4_phosphoryl_l_se +nadph
-    o_s_3r_hydroxydocosanoylpantetheine_4_phosphoryl
+    <-> ec_1_1_1_149 [1.1.1.149] +acetylacetone +h +nadph
+    compound_0000420
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_3_hydroxytriacontenoylpantetheine_4_p +h +nadph
-    o_s_11z_3_oxotriacontenoylpantetheine_4_phosphor
+    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexa_3_5_diene_1_one +h +nadph
+    cyclohexa_3_5_diene_1_2_diol
   }
 
   branch from cholesterol side right {
     cholesterol
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_octadecadienoate +h +h2o
-    cholesteryl_linoleate
+    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
+    cholesteryl_palmitate
   }
 
   branch from cholesterol side left {
     cholesterol
-    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
-    cholesteryl_palmitate
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_acetate +h2o +h
+    acetate
   }
 
   branch from cholesteryl_9z_octadecenoate side right {

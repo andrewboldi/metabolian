@@ -42,25 +42,25 @@ pathway 6-o-trans-methoxy-mycolyl-to-h2o "6-O-trans-methoxy-mycolyl… to H2O" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +6_methoxypodophyllotoxin_7_glucoside +h
-    5_methoxypodophyllotoxin
+    <-> . +udp +epicatechin_3_o_glucoside +h
+    epicatechin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +5_demethoxy_6_methoxypodophyllotoxin_7_glucoside +h
-    5_demethoxy_6_methoxypodophyllotoxin
+    <-> . +udp +glc_aatgal_pp_undecaprenol +h
+    2_acetamido_4_amino_2_4_6_trideoxy_alpha_d_galac
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_89 [4.2.1.89] +r_carnitine
-    e_4_trimethylammonio_but_2_enoate
+    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +3_acetylpyridine +h
+    3_acetylpyridine_adenine_dinucleotide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +4_hydroxy_2_oxopentanoic_acid
-    2_hydroxypenta_2_4_dienoic_acid
+    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +thionicotinamide
+    thionicotinamide_adenine_dinucleotide
   }
 }

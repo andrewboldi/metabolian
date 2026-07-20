@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palmatine-to-h2o2 "palmatine to H2O2" {
-  spacing 296
+  spacing 290
 
   spine at 0,0 {
     palmatine
@@ -18,26 +18,26 @@ pathway palmatine-to-h2o2 "palmatine to H2O2" {
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_5_dichloro_3_methyl_muconate
-    2_5_dichloro_3_methyl_muconolactone
+    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
+    chitobiose_6_phosphate
   }
 
   branch from h side right {
     h
-    <-> . +5_chloro_2_methyl_maleylacetate +h2o
-    5_chloro_2_methyl_dienelactone
+    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
+    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_67 [1.13.11.67] +14_apo_beta_carotenal +e_e_2_methyl_6_oxohepta_2_4_dienol
-    8_apo_beta_carotenol
+    <-> . +8_8a_deoxyoleandolide +h2o
+    oleandolide
   }
 
   branch from o2 side right {
     o2
-    <-> . +3_chloro_5_fluorocatechol +h
-    2_chloro_4_fluoromuconate
+    <-> . +h +2z_4z_2_amino_5_formylhexa_2_4_dienedioate
+    4_amino_3_hydroxybenzoate
   }
 
   branch from s_tetrahydrocolumbamine side left {
@@ -46,33 +46,27 @@ pathway palmatine-to-h2o2 "palmatine to H2O2" {
     s_canadine
   }
 
-  branch from s_tetrahydrocolumbamine side right {
-    s_tetrahydrocolumbamine
-    <-> ec_2_1_1_117 [2.1.1.117] +s_adenosyl_l_homocysteine +h +s_s_adenosyl_l_methionine
-    s_scoulerine
-  }
-
-  branch from s_s_adenosyl_l_methionine side left {
+  branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_6_o_methylnorlaudanosoline
     norlaudanosoline
   }
 
-  branch from s_s_adenosyl_l_methionine side right {
+  branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_6_o_methylnorlaudanosoline
     s_norlaudanosoline
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +melatonin +h2o
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
-  }
-
   branch from h2o2 side right {
     h2o2
-    <-> . +e_p_coumaroylagmatine +h2o
-    hordatine_a
+    <-> . +hexadecanoate +h +1_pentadecene +h2o
+    co2
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +9z_octadecenoate +h +co2 +h2o
+    1e_8z_heptadecadiene
   }
 }

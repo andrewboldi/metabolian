@@ -24,14 +24,14 @@ pathway 5-10-methylenetetrahydrom-to-adp "5,10-methylenetetrahydrom… to ADP" {
 
   branch from h side right {
     h
-    <-> . +l_alanine +l_glutamate +l_tryptophan +h2o
-    glu_trp_ala
+    <-> . +adp +1_tridecanoylglycerophosphoethanolamine_c13_0_pe +phosphate +1_tridecanoylglycerophosphoethanolamine_c13_0_pe +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +glycyl_dl_phenylalanine +phosphate +glycyl_dl_phenylalanine +h2o
-    atp
+    <-> . +acetyl_coa +3z_6z_dodecadienoyl_coa +coa
+    3_oxo_cis_cis_5_8_tetradecadienoyl_coa
   }
 
   branch from 5_10_methenyl_5_6_7_8_tetrahydromethanopterin side right {
@@ -48,14 +48,14 @@ pathway 5-10-methylenetetrahydrom-to-adp "5,10-methylenetetrahydrom… to ADP" {
 
   branch from beta_d_glucose_6_phosphate side right {
     beta_d_glucose_6_phosphate
-    <-> ec_2_7_1_142 [2.7.1.142] +glycerol +beta_d_glucose
-    sn_glycerol_3_phosphate
+    <-> . +pyruvate +beta_d_glucose
+    phosphoenolpyruvate
   }
 
   branch from beta_d_glucose_6_phosphate side left {
     beta_d_glucose_6_phosphate
-    <-> . +phosphate
-    2_deoxy_scyllo_inosose
+    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nadph
+    nadp
   }
 
   branch from coenzyme_gamma_f420_2 side right {
@@ -72,25 +72,25 @@ pathway 5-10-methylenetetrahydrom-to-adp "5,10-methylenetetrahydrom… to ADP" {
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_1_1_1_119 [1.1.1.119] +d_glucono_1_4_lactone +h +nadph
-    nadp
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
   }
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
-    o2
+    <-> ec_3_1_1_33 [3.1.1.33] +h +acetate +h2o
+    6_o_acetyl_beta_d_glucose
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    gliclazide
+    all_trans_retinal
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    guanidinoacetate
+    rosuvastatin
   }
 }

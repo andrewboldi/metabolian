@@ -85,13 +85,13 @@
       }
     },
     {
-      "id": "geranylgeranyl_diphosphate",
-      "name": "geranylgeranyl diphosphate",
-      "short": "geranylgeranyl PP",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57533"
+        "chebi": "CHEBI:175763"
       }
     },
     {
@@ -104,31 +104,21 @@
       }
     },
     {
-      "id": "s_nephthenol",
-      "name": "(S)-nephthenol",
-      "formula": "C20H34O",
+      "id": "palustrol",
+      "name": "palustrol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193073"
+        "chebi": "CHEBI:231493"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "elemene",
-      "name": "δ-elemene",
-      "formula": "C15H24",
+      "id": "selina_6_en_4_ol",
+      "name": "selina-6-en-4-ol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132830"
+        "chebi": "CHEBI:231497"
       }
     }
   ],
@@ -290,11 +280,11 @@
     },
     {
       "id": "r4",
-      "name": "geranylgeranyl diphosphate + H2O = (S)-(+)-nephthenol + diphosphate",
-      "equation": "geranylgeranyl diphosphate + H2O = (S)-(+)-nephthenol + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = palustrol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = palustrol + diphosphate",
       "substrates": [
         {
-          "metabolite": "geranylgeranyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
@@ -304,7 +294,7 @@
       ],
       "products": [
         {
-          "metabolite": "s_nephthenol",
+          "metabolite": "palustrol",
           "stoichiometry": 1
         },
         {
@@ -315,31 +305,35 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:73995"
+        "rhea": "RHEA:80399"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73995"
+            "id": "RHEA:80399"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (1R,2R)-delta-elemene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1R,2R)-delta-elemene + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = selina-6-en-4-ol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = selina-6-en-4-ol + diphosphate",
       "substrates": [
         {
           "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "elemene",
+          "metabolite": "selina_6_en_4_ol",
           "stoichiometry": 1
         },
         {
@@ -350,14 +344,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:74143"
+        "rhea": "RHEA:80403"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74143"
+            "id": "RHEA:80403"
           }
         ]
       }

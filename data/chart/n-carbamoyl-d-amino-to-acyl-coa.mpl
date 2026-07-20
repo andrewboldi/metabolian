@@ -58,14 +58,14 @@ pathway n-carbamoyl-d-amino-to-acyl-coa "N-carbamoyl-D-α-amino… to acyl-CoA" 
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_23 [1.14.99.23] +3_hydroxybenzoate +o2 +hydrogen_acceptor +h2o
-    2_3_dihydroxybenzoate
+    <-> . +2_aminophenol +hydrogen_acceptor +o2 +h2o
+    2_aminophenoxazin_3_one
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_9 [1.1.99.9] +pyridoxine +hydrogen_acceptor
-    isopyridoxal
+    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +hydrogen_acceptor +h2o
+    2_oxo_1_2_dihydroquinoline_4_carboxylate
   }
 
   branch from aldehyde side left {

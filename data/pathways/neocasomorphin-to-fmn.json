@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "neocasomorphin-to-fmn",
   "name": "neocasomorphin to FMN",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from neocasomorphin(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -183,41 +183,43 @@
       }
     },
     {
-      "id": "long_chain_alkane",
-      "name": "long-chain alkane",
-      "formula": "HR",
-      "charge": 0,
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:83563"
+        "chebi": "CHEBI:77016"
       }
     },
     {
-      "id": "long_chain_fatty_alcohol",
-      "name": "long-chain fatty alcohol",
-      "short": "long-chain fatty…",
-      "formula": "HOR",
-      "charge": 0,
+      "id": "4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate",
+      "name": "(4Z,7Z,13Z,16Z,19Z)-10,11-epoxydocosapentaenoate",
+      "short": "(4Z,7Z,13Z,16Z,19Z)…",
+      "formula": "C22H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17135"
+        "chebi": "CHEBI:133934"
       }
     },
     {
-      "id": "1_4_cineole",
-      "name": "1,4-cineole",
-      "formula": "C10H18O",
-      "charge": 0,
+      "id": "7z_10z_13z_16z_19z_docosapentaenoate",
+      "name": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate",
+      "short": "(7Z,10Z,13Z,16Z,19Z…",
+      "formula": "C22H33O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:80788"
+        "chebi": "CHEBI:77224"
       }
     },
     {
-      "id": "2_exo_hydroxy_1_4_cineole",
-      "name": "2-exo-hydroxy-1,4-cineole",
-      "short": "2-exo-hydroxy-1,4-c…",
-      "formula": "C10H18O2",
-      "charge": 0,
+      "id": "7z_10z_13z_16z_19_20_epoxydocosatetraenoate",
+      "name": "(7Z,10Z,13Z,16Z)-19,20-epoxydocosatetraenoate",
+      "short": "(7Z,10Z,13Z,16Z)-19…",
+      "formula": "C22H33O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90956"
+        "chebi": "CHEBI:133935"
       }
     },
     {
@@ -287,13 +289,6 @@
       "name": "EC 1.14.13.117",
       "ec": [
         "1.14.13.117"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_28",
-      "name": "long-chain alkane monooxygenase",
-      "ec": [
-        "1.14.14.28"
       ]
     }
   ],
@@ -517,12 +512,11 @@
     },
     {
       "id": "r5",
-      "name": "long-chain alkane monooxygenase",
-      "equation": "a long-chain alkane + FMNH2 + O2 = a long chain fatty alcohol + FMN + H2O + H(+)",
-      "ec": "1.14.14.28",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 10,11-epoxy-(4Z,7Z,13Z,16Z,19Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "long_chain_alkane",
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
           "stoichiometry": 1
         },
         {
@@ -536,7 +530,7 @@
       ],
       "products": [
         {
-          "metabolite": "long_chain_fatty_alcohol",
+          "metabolite": "4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate",
           "stoichiometry": 1
         },
         {
@@ -552,33 +546,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_28"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49060"
+        "rhea": "RHEA:51092"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49060"
+            "id": "RHEA:51092"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole +...",
-      "equation": "1,4-cineole + reduced [NADPH--hemoprotein reductase] + O2 = 2-exo-hydroxy-1,4-cineole + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = ...",
+      "equation": "(7Z,10Z,13Z,16Z,19Z)-docosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = 19,20-epoxy-(7Z,10Z,13Z,16Z)-docosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "1_4_cineole",
+          "metabolite": "7z_10z_13z_16z_19z_docosapentaenoate",
           "stoichiometry": 1
         },
         {
@@ -592,7 +581,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_exo_hydroxy_1_4_cineole",
+          "metabolite": "7z_10z_13z_16z_19_20_epoxydocosatetraenoate",
           "stoichiometry": 1
         },
         {
@@ -611,14 +600,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:49160"
+        "rhea": "RHEA:51096"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49160"
+            "id": "RHEA:51096"
           }
         ]
       }

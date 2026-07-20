@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "malonyl-coa-to-acetoacetate",
+  "name": "malonyl-CoA to acetoacetate",
+  "category": "other",
+  "summary": "A 3-step route from malonyl-CoA(5−) to acetoacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:63068"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "triacetate_lactone",
+      "name": "triacetate lactone",
+      "formula": "C6H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16458"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "triacetate",
+      "name": "triacetate",
+      "formula": "C6H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57814"
+      }
+    },
+    {
+      "id": "acetoacetyl_coa",
+      "name": "Acetoacetyl-CoA",
+      "formula": "C25H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57286"
+      }
+    },
+    {
+      "id": "acetoacetate",
+      "name": "Acetoacetate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13705"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_38",
+      "name": "triacetate-lactonase",
+      "ec": [
+        "3.1.1.38"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_319",
+      "name": "3,5-dioxohexanoate:acetyl-CoA acetone transferase",
+      "ec": [
+        "2.3.1.319"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2 malonyl-CoA + acetyl-CoA + 2 H(+) = triacetate lactone + 2 CO2 + 3 CoA",
+      "equation": "2 malonyl-CoA + acetyl-CoA + 2 H(+) = triacetate lactone + 2 CO2 + 3 CoA",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triacetate_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:63068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "triacetate-lactonase",
+      "equation": "triacetate lactone + H2O = 3,5-dioxohexanoate + H(+)",
+      "ec": "3.1.1.38",
+      "substrates": [
+        {
+          "metabolite": "triacetate_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,5-dioxohexanoate:acetyl-CoA acetone transferase",
+      "equation": "3,5-dioxohexanoate + acetyl-CoA = acetoacetyl-CoA + acetoacetate",
+      "ec": "2.3.1.319",
+      "substrates": [
+        {
+          "metabolite": "triacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetoacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_319"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79655"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79655"
+          }
+        ]
+      }
+    }
+  ]
+}

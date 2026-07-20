@@ -1,0 +1,292 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phosphatidylglycerol-to-h2o",
+  "name": "Phosphatidylglycerol… to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from Phosphatidylglycerol (ditetradecanoyl, n-C14:0) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR96782"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+      "name": "Phosphatidylglycerol (ditetradecanoyl, n-C14:0)",
+      "short": "Phosphatidylglycero…",
+      "formula": "C34H66O10P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM737417"
+      }
+    },
+    {
+      "id": "cardiolipin_tetratetradecanoyl_n_c14_0",
+      "name": "Cardiolipin (tetratetradecanoyl, n-C14:0)",
+      "short": "Cardiolipin…",
+      "formula": "C65H124O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM740794"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89612"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "dimyristoyl_phosphatidic_acid",
+      "name": "dimyristoyl phosphatidic acid",
+      "short": "dimyristoyl…",
+      "formula": "C31H61O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62085"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "cdp_1_2_ditetradecanoylglycerol",
+      "name": "CDP-1,2-ditetradecanoylglycerol",
+      "short": "CDP-1,2-ditetradeca…",
+      "formula": "C40H71N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736328"
+      }
+    },
+    {
+      "id": "glycerophosphatidylethanolamine",
+      "name": "glycerophosphatidylethanolamine",
+      "short": "glycerophosphatidyl…",
+      "formula": "C5H14NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52330"
+      }
+    },
+    {
+      "id": "acyl_phosphatidylglycerol_n_c14_0",
+      "name": "Acyl phosphatidylglycerol (n-C14:0)",
+      "short": "Acyl phosphatidylgl…",
+      "formula": "C48H92O11P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM735476"
+      }
+    },
+    {
+      "id": "pe_0_0_14_0",
+      "name": "PE(0:0/14:0)",
+      "formula": "C19H40NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145244"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_26",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": [
+        "3.6.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR96782",
+      "substrates": [
+        {
+          "metabolite": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cardiolipin_tetratetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR96782"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR96775",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cardiolipin_tetratetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR96775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": "3.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimyristoyl_phosphatidic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_2_ditetradecanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153146"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR101170",
+      "substrates": [
+        {
+          "metabolite": "glycerophosphatidylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_phosphatidylglycerol_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pe_0_0_14_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylglycerol_ditetradecanoyl_n_c14_0",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR101170"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101170"
+          }
+        ]
+      }
+    }
+  ]
+}

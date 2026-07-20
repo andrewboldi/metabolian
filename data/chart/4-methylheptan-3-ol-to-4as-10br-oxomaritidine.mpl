@@ -34,26 +34,26 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine "4-Methylheptan-3-ol to (4
 
   branch from h2o side right {
     h2o
-    <-> . +10_deoxymethymycin +h +o2 +nadph +nadp
-    methymycin
+    <-> . +glycine +l_cysteine +l_arginine
+    arginyl_cystinyl_glycine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +pikromycin +nadp +h +nadph +narbomycin
-    o2
+    <-> . +l_serine +l_cysteine +l_arginine
+    arginyl_cystinyl_serine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +31_o_demethyl_fk_506 +h
-    15_31_o_didesmethyl_tacrolimus
+    <-> . +chaxamycin_b_rel +s_adenosyl_l_homocysteine +h
+    3_demethylchaxamycin_b
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
-    15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
+    <-> . +s_adenosyl_l_homocysteine +h +3_o_methylprotoansatrienin
+    protoansatrienin
   }
 
   branch from norbelladine side right {
@@ -64,25 +64,25 @@ pathway 4-methylheptan-3-ol-to-4as-10br-oxomaritidine "4-Methylheptan-3-ol to (4
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_49 [2.1.1.49] +secondary_ammonium_ion +sam +hplus
-    methylated_secondary_ammonium_ion
+    <-> ec_2_1_1_351 [2.1.1.351] +nocamycin_e +sam
+    nocamycin_i
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_49 [2.1.1.49] +tertiary_ammonium_ion +sam +hplus
-    methylated_tertiary_amine
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from fmn side left {
     fmn
-    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
-    cholesta_5_7_dien_3_24s_diol
+    <-> ec_1_14_14_71 [1.14.14.71] +cucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_oxocucurbitadienol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
-    7_ketocholesterol
+    <-> . +cucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_hydroxycucurbitadienol
   }
 }

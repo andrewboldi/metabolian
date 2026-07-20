@@ -24,26 +24,26 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +myristoyl_coa +coa
-    1_palmitoyl_2_myristoyl_sn_glycero_3_phosphochol
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
     <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +n_acetylsphingosine
     1_o_arachidonoyl_n_acetylsphingosine
   }
 
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    linoleate
+  }
+
   branch from h side right {
     h
-    <-> . +5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
-    5_oxo_6_trans_leukotriene_b4
+    <-> ec_3_1_6_2 [3.1.6.2] +sulfate +cholesterol +h2o
+    cholesterol_sulfate
   }
 
   branch from h side left {
     h
-    <-> . +leukotriene_c5 +h2o +l_glutamate
-    leukotriene_d5
+    <-> . +succinyl_coa +r_carnitine +coa
+    o_succinylcarnitine
   }
 
   branch from 6z_9z_12z_octadecatrienoate side right {
@@ -60,37 +60,37 @@ pathway 1-palmitoyl-2-6z-9z-12z-to-h2o "1-palmitoyl-2-[(6Z,9Z,12Z… to H2O" {
 
   branch from cholesterol side right {
     cholesterol
-    <-> ec_3_1_6_2 [3.1.6.2] +h +sulfate +h2o
-    cholesterol_sulfate
-  }
-
-  branch from cholesterol side left {
-    cholesterol
     <-> ec_2_3_1_26 [2.3.1.26] +2e_hexadecenoyl_coa +coa
     cholesteryl_palmitoleate
   }
 
+  branch from cholesterol side left {
+    cholesterol
+    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
+    cholesteryl_palmitate
+  }
+
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sulfoacetate
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    l_threonine
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
-    sulfate
+    <-> . +h +adp +phosphate +h2o
+    testosterone_17_o_d_glucuronide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_7z_10z_13z_16z_docosapentaenoyl_coa
-    7z_10z_13z_16z_s_3_hydroxydocosatetraenoyl_coa
+    <-> ec_3_3_2_9 [3.3.2.9] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben
+    1a_11b_dihydro_4_9_dimethylbenz_a_anthra_3_4_b_o
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
-    2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
+    <-> . +dibenzo_a_l_pyrene_11_12_diol
+    dibenzo_a_l_pyrene_11_12_epoxide
   }
 }

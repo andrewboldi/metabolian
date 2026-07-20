@@ -221,86 +221,58 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "4_methylsalicylic_acid",
-      "name": "4-methylsalicylic acid",
-      "short": "4-methylsalicylic…",
-      "formula": "C8H8O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:20450"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "formononetin",
+      "name": "formononetin",
+      "formula": "C16H11O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "metanetx": "MNXM1232"
       }
     },
     {
-      "id": "4_methylcatechol",
-      "name": "4-methylcatechol",
-      "formula": "C7H8O2",
+      "id": "2_7_dihydroxy_4_methoxyisoflavanone",
+      "name": "2,7-dihydroxy-4'-methoxyisoflavanone",
+      "short": "2,7-dihydroxy-4'-me…",
+      "formula": "C16H14O5",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM961"
+        "chebi": "CHEBI:62734"
       }
     },
     {
-      "id": "cyclohexylamine",
-      "name": "cyclohexylamine",
-      "formula": "C6H14N",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM2010"
-      }
-    },
-    {
-      "id": "formate",
-      "name": "formate",
-      "formula": "CHO2",
+      "id": "3_5_dibromo_4_hydroxybenzonitrile",
+      "name": "3,5-dibromo-4-hydroxybenzonitrile",
+      "short": "3,5-dibromo-4-hydro…",
+      "formula": "C7H2Br2NO",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM39"
+        "metanetx": "MNXM2933"
       }
     },
     {
-      "id": "n_cyclohexylformamide",
-      "name": "N-cyclohexylformamide",
-      "short": "N-cyclohexylformami…",
-      "formula": "C7H13NO",
+      "id": "3_5_dibromo_4_hydroxybenzamide",
+      "name": "3,5-dibromo-4-hydroxybenzamide",
+      "short": "3,5-dibromo-4-hydro…",
+      "formula": "C7H5Br2NO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM3667"
+        "chebi": "CHEBI:19896"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_13_1",
-      "name": "salicylate 1-monooxygenase",
+      "id": "ec_4_2_1_105",
+      "name": "2-hydroxyisoflavanone dehydratase",
       "ec": [
-        "1.14.13.1"
+        "4.2.1.105"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_84",
+      "name": "nitrile hydratase",
+      "ec": [
+        "4.2.1.84"
       ]
     }
   ],
@@ -615,11 +587,11 @@
     },
     {
       "id": "r9",
-      "name": "salicylate 1-monooxygenase",
-      "ec": "1.14.13.1",
+      "name": "2-hydroxyisoflavanone dehydratase",
+      "ec": "4.2.1.105",
       "substrates": [
         {
-          "metabolite": "nadh",
+          "metabolite": "formononetin",
           "stoichiometry": 1
         },
         {
@@ -627,68 +599,47 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "4_methylsalicylic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_methylcatechol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "2_7_dihydroxy_4_methoxyisoflavanone",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_1"
+          "enzyme": "ec_4_2_1_105"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR110664"
+        "metanetx": "MNXR111316"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR110664"
+            "id": "MNXR111316"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR110665",
+      "name": "nitrile hydratase",
+      "ec": "4.2.1.84",
       "substrates": [
         {
-          "metabolite": "cyclohexylamine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "formate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_cyclohexylformamide",
+          "metabolite": "3_5_dibromo_4_hydroxybenzonitrile",
           "stoichiometry": 1
         },
         {
@@ -696,17 +647,28 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "3_5_dibromo_4_hydroxybenzamide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_84"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR110665"
+        "metanetx": "MNXR111365"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR110665"
+            "id": "MNXR111365"
           }
         ]
       }

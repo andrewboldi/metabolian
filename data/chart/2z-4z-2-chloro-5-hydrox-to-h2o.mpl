@@ -22,14 +22,14 @@ pathway 2z-4z-2-chloro-5-hydrox-to-h2o "(2Z,4Z)-2-chloro-5-hydrox… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_3_1_298 [2.3.1.298] +4r_hydroxysphinganine +30_hydroxytriacontanoyl_coa +n_30_hydroxytriacontanoyl_phytosphingosine
-    coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_0_18_2_pe
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_298 [2.3.1.298] +coa +n_30_hydroxytriacontanoyl_sphinganine +30_hydroxytriacontanoyl_coa
-    sphinganine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    24_0_18_2_pe
   }
 
   branch from 2z_4z_2_amino_5_chlorohexa_2_4_dienedioate side left {
@@ -40,37 +40,37 @@ pathway 2z-4z-2-chloro-5-hydrox-to-h2o "(2Z,4Z)-2-chloro-5-hydrox… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_isoleucine +l_tryptophan
-    trp_ile_trp
+    <-> ec_3_2_1_125 [3.2.1.125] +alpha_d_glucose +vomilenine
+    raucaffricine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_valine +l_tryptophan
-    tryptophanyl_leucyl_valine
+    <-> ec_3_2_1_105 [3.2.1.105] +beta_d_glucose +strictosidine_aglycone
+    3alpha_s_strictosidine
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +linalool +h +o2 +h2o
-    6e_8_hydroxylinalool
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    thujan_3_ol
   }
 
   branch from nad side left {
     nad
-    <-> . +4_oxahomoadamantan_5_one +h2o +nadh +h +o2
-    adamantanone
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1r_2s_4r_borneol
   }
 
   branch from o2 side right {
     o2
-    <-> . +icosan_1_ol +h2o2
-    eicosanal
+    <-> . +9z_12z_octadecadienoate +h +nadph +nadp +h2o
+    vernolic_acid
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_oxahomoadamantan_5_one +nadh +h +nad +h2o
-    1_hydroxy_4_oxahomoadamantan_5_one
+    <-> . +nadh +h +vernolic_acid +nad +h2o
+    9z_12z_octadecadienoate
   }
 }

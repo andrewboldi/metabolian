@@ -18,13 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-rhamnosyl-tricyclic "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin +h
-    5_hydroxy_desmethylanthrotainin
+    <-> . +s_adenosyl_l_homocysteine +grayanate +h
+    4_o_demethylgrayanate
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin
-    5_hydroxy_desmethylanthrotainin
+    <-> . +s_adenosyl_l_homocysteine +bdgt_0 +h
+    glycerol_dibiphytanyl_glycerol_tetraether
   }
 }

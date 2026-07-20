@@ -18,25 +18,25 @@ pathway s-citronellol-to-coa "(S)-(−)-citronellol to CoA" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    3r_6e_nerolidol
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +bisnorlipoic_acid +h
+    4_6_dimercaptohexanoic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    2_cis_6_cis_farnesol
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +tetranorlipoic_acid +h
+    2_4_dimercaptobutanoic_acid
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_20 [2.3.1.20] +butanoyl_coa +2s_3_hydroxy_1_2_propanediyl_dibutanoate
-    tributyrin
+    <-> ec_2_3_2_35 [2.3.2.35] +h +nordihydrocapsaicin +7_methyloctanoyl_coa
+    vanillylamine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_20 [2.3.1.20] +hexadecanoyl_coa +1_2_dipalmitoylglycerol
-    tripalmitin
+    <-> ec_2_3_2_35 [2.3.2.35] +4e_6_methylhept_4_enoyl_coa +vanillylamine +h
+    dinorcapsaicin
   }
 }

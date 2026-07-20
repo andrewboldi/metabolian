@@ -28,13 +28,13 @@ pathway 2e-5z-8z-11z-14z-icosap-to-3-s-hydroxy-dihomo-g "(2E,5Z,8Z,11Z,14Z)-icos
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadph
-    l_arabinitol
+    <-> ec_1_1_1_25 [1.1.1.25] +3_5_dehydroshikimate +nadph
+    3_dehydroshikimate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadph
-    xylitol
+    <-> . +h +nadph +3_dehydroshikimate
+    3_5_didehydroshikimate
   }
 }

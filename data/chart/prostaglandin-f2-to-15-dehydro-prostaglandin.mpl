@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prostaglandin-f2-to-15-dehydro-prostaglandin "prostaglandin F2α… to 15-dehydro-prostaglandin…" {
-  spacing 290
+  spacing 272
 
   spine at 0,0 {
     prostaglandin_f2_1_glyceryl_ester
@@ -19,28 +19,10 @@ pathway prostaglandin-f2-to-15-dehydro-prostaglandin "prostaglandin F2α… to 1
   branch from prostaglandin_f2 side left {
     prostaglandin_f2
     <-> . +nadp +nadph +hplus
-    prostaglandin_h2
-  }
-
-  branch from prostaglandin_f2 side right {
-    prostaglandin_f2
-    <-> . +nadp +nadph +hplus
     15_oxoprostaglandin_f2
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> . +1_all_cis_docosa_4_7_10_13_16_19_hexaenoyl_glyce +h2o +hplus
-    4z_7z_10z_13z_16z_19z_docosahexaenoate
-  }
-
-  branch from glycerol side right {
-    glycerol
-    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
-    sn_glycerol_3_phosphate
-  }
-
-  branch from prostaglandin_d2 side left {
+  branch from prostaglandin_d2 side right {
     prostaglandin_d2
     <-> . +h2o
     prostaglandin_j2

@@ -18,38 +18,38 @@ pathway levopiramadiene-diol-to-fmn "levopiramadiene-diol to FMN" {
 
   branch from levopimaradienal side left {
     levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
     levopimaradienol
   }
 
   branch from levopimaradienal side right {
     levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienol
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    palustradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante
-    o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4
+    <-> . +tyr_gly +l_tyrosine
+    glycine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan
-    o_s_2e_15z_27z_hexatetracontatrienoylpantetheine
+    <-> . +l_proline +l_phenylalanine
+    pro_phe
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_7z_19z_3_hydroxyoctatriacontadienoylpante +h +nadph
-    o_s_7z_19z_3_oxooctatriacontadienoylpantetheine
+    <-> ec_1_1_1_21 [1.1.1.21] +h +3_methylbenzaldehyde +nadph
+    3_methylbenzyl_alcohol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3_oxoicosanoylpantetheine_4_phosphoryl_l_ser +h +nadph
-    o_s_3r_hydroxyicosanoylpantetheine_4_phosphoryl
+    <-> ec_1_1_1_21 [1.1.1.21] +3_cyanobenzaldehyde +h +nadph
+    3_cyanobenzyl_alcohol
   }
 
   branch from abietol side left {
@@ -60,19 +60,19 @@ pathway levopiramadiene-diol-to-fmn "levopiramadiene-diol to FMN" {
 
   branch from abietol side right {
     abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +abietal +nad
-    nadh
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
+    nad
   }
 
   branch from fmn side left {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    13_r_hode
+    <-> . +n_12_oxojasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
+    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
   }
 
   branch from fmn side right {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9_r_hode
+    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
+    maniladiol
   }
 }

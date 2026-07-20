@@ -28,14 +28,14 @@ pathway s-averantin-to-versicolorin-a "(S)-averantin to versicolorin A" {
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_r_18_s_eetetr
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    22r_22_hydroxycholesterol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_s_18_r_eetetr
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    24r_24_hydroxycholesterol
   }
 
   branch from s_5_oxoaverantin side left {

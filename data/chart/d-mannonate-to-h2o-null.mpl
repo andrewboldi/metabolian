@@ -20,14 +20,14 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> . +codeinone +nad
-    hydrocodone
+    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +h +nad
+    d_erythro_7_8_dihydrobiopterin
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_1_1_27 [1.1.1.27] +h +2_oxopentanoate +nad
-    2_hydroxypentanoate
+    <-> . +h +m_xylene +o2 +nad +h2o
+    3_methylbenzyl_alcohol
   }
 
   branch from d_fructofuranuronic_acid side left {
@@ -50,14 +50,14 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +crotonaldehyde +h
-    crotyl_alcohol
+    <-> ec_1_6_99_3 [1.6.99.3] +nadh +ubiquinone_6 +h
+    ubiquinol_6
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_7_dimethyl_2z_6e_octadienoic_acid +h +h2o
-    neral
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +ubiquinol_6
+    ubiquinone_6
   }
 
   branch from aldehydo_d_glucuronate side right {
@@ -74,13 +74,13 @@ pathway d-mannonate-to-h2o-null "D-mannonate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_31 [3.2.1.31] +h +4_nitrophenol +beta_d_glucuronate
-    p_nitrophenyl_beta_d_glucuronide
+    <-> . +nicotinamide +h +nad
+    adp_beta_d_ribose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_4_dinitrophenol +h
-    3_4_dinitrophenyl_beta_d_galactopyranoside
+    <-> ec_1_7_1_1 [1.7.1.1] +nitrite +nad +nadh
+    nitric_acid
   }
 }

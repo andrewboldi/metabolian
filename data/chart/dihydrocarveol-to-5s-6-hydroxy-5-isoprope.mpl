@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope "(+)-dihydrocarveol to (5S)-6-Hydroxy-5-isoprope…" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     dihydrocarveol
@@ -22,39 +22,33 @@ pathway dihydrocarveol-to-5s-6-hydroxy-5-isoprope "(+)-dihydrocarveol to (5S)-6-
     neodihydrocarveol
   }
 
-  branch from dihydrocarvone side right {
-    dihydrocarvone
-    <-> .
-    isodihydrocarvone
-  }
-
-  branch from 3s_6r_6_isopropenyl_3_methyloxepan_2_one side left {
+  branch from 3s_6r_6_isopropenyl_3_methyloxepan_2_one side right {
     3s_6r_6_isopropenyl_3_methyloxepan_2_one
     <-> ec_1_14_13_105 [1.14.13.105] +nadph +o2 +hplus +nadp +h2o
     isodihydrocarvone
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o +h +o2 +nadph
-    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
-  }
-
   branch from nadp side left {
     nadp
-    <-> . +h +12_oxo_c_ltb3 +nadph
-    11_12_dihydro_12r_hydroxyleukotriene_c4
+    <-> . +all_trans_retinal +h +o2 +nadph +h2o
+    4_oh_retinal
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_3_27 [3.1.3.27] +h +phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 +phosphate
-    phosphatidylglycerophosphate_dioctadec_11_enoyl
+  branch from nadp side right {
+    nadp
+    <-> . +all_trans_retinol +h +o2 +nadph +h2o
+    4_hydroxyvitamin_a1
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phylloquinone
+    <-> . +neocasomorphin +l_isoleucine
+    neocasomorphin_1_5
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +apelin_13 +l_phenylalanine
+    apelin_1_12
   }
 }

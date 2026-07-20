@@ -18,14 +18,14 @@ pathway sep-384-to-l-glutamate "SEP-384 to L-glutamate" {
 
   branch from glycine side left {
     glycine
-    <-> ec_2_1_2_1 [2.1.2.1] +5_10_methylenetetrahydropteroyl_tri_l_glutamate +h2o +l_serine
-    tetrahydropteroyltri_l_glutamate
+    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylpentan_1_ol_l_cysteine +h2o
+    s_5_hydroxypentan_3_yl_l_cysteinylglycine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_1_2_1 [2.1.2.1] +5_10_methylenetetrahydropteroyl_tetra_l_glutamat +h2o +l_serine
-    tetrahydropteroyl_tetra_l_glutamate
+    <-> ec_3_4_13_23 [3.4.13.23] +s_4_hydroxy_2_methylpentan_2_yl_l_cysteine +h2o
+    s_4_hydroxy_2_methylpentan_2_yl_l_cysteinylglyci
   }
 
   branch from 6_n_4_dehydro_l_glycero_beta_d_manno_heptosyl_ad side left {
@@ -36,13 +36,13 @@ pathway sep-384-to-l-glutamate "SEP-384 to L-glutamate" {
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +2_oxoglutarate +nadp +coa +n_2_acetyl_l_ornithine +phosphate
-    adp
+    <-> ec_6_3_2_17 [6.3.2.17] +5_10_methylenetetrahydropteroyl_penta_l_glutamat +h +adp +phosphate +atp
+    5_10_methylenetetrahydropteroyl_tetra_l_glutamat
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_1_3_3 [2.1.3.3] +hydrogencarbonate +l_glutamine +atp +ornithine +h2o +h +adp +phosphate
-    l_citrulline
+    <-> . +tetrahydrofolyl_poly_glutamic_acid_macromolecule +h2o +h
+    6s_5_6_7_8_tetrahydrofolate
   }
 }

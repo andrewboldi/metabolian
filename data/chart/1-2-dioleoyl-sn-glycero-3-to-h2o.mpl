@@ -40,43 +40,43 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-h2o "1,2-dioleoyl-sn-glycero-3… to H2O" {
 
   branch from 1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc side right {
     1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
-    <-> . +h2o +oleate +hplus
-    sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +sn_glycero_3_phospho_1_sn_glycerol
+    1_oleoyl_sn_glycero_3_phospho_3_oleoyl_1_sn_glyc
   }
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoyl_sn_glycerol +h2o +hplus
-    1_oleoyl_sn_glycerol
+    <-> . +n_icosanoyl_1_oleoyl_sn_glycero_3_phosphoethanol +h2o +hplus
+    n_icosanoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_acetyl_sn_glycero_3_phosphocholine
+    <-> . +n_oleoyl_l_glutaminate +h2o
+    glutamine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +maltodecaose +glucose
-    maltononaose
+    <-> . +13_14_epoxy_retinol
+    13_14_dihydroxy_retinol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +h +dynorphin_a_6_8
-    dynorphin_a_1_8
+    <-> . +nitrite +h +hypochlorous_acid
+    nitryl_chloride
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    phytanoyl_coa
+    sulfoacetate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_serine
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
+    sulfate
   }
 }

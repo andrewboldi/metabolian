@@ -157,12 +157,21 @@
       }
     },
     {
-      "id": "alpha_lactose",
-      "name": "alpha-lactose",
-      "formula": "C12H22O11",
+      "id": "j_104303",
+      "name": "J-104303",
+      "formula": "C20H11N3O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1104434"
+        "metanetx": "MNXM1368712"
+      }
+    },
+    {
+      "id": "j_109384",
+      "name": "J-109384",
+      "formula": "C26H21N3O9",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368714"
       }
     },
     {
@@ -175,40 +184,21 @@
       }
     },
     {
-      "id": "beta_d_galactose",
-      "name": "beta-D-galactose",
-      "formula": "C6H12O6",
+      "id": "be_13793c",
+      "name": "BE 13793C",
+      "formula": "C20H11N3O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM112"
+        "metanetx": "MNXM1368713"
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104266"
-      }
-    },
-    {
-      "id": "6_o_acetyl_beta_d_glucose",
-      "name": "6-O-acetyl-beta-D-glucose",
-      "short": "6-O-acetyl-beta-D-g…",
-      "formula": "C8H14O7",
+      "id": "ed_110",
+      "name": "ED 110",
+      "formula": "C26H21N3O9",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM722855"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
+        "metanetx": "MNXM1368715"
       }
     },
     {
@@ -256,20 +246,6 @@
       "name": "cyanidin 3-O-glucoside 7-O-glucosyltransferase (acyl-glucose)",
       "ec": [
         "2.4.1.300"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_108",
-      "name": "lactase",
-      "ec": [
-        "3.2.1.108"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_79",
-      "name": "maltose O-acetyltransferase",
-      "ec": [
-        "2.3.1.79"
       ]
     }
   ],
@@ -506,11 +482,20 @@
     },
     {
       "id": "r6",
-      "name": "lactase",
-      "ec": "3.2.1.108",
+      "name": "Reaction MNXR196566",
       "substrates": [
         {
-          "metabolite": "alpha_lactose",
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "j_104303",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "j_109384",
           "stoichiometry": 1
         },
         {
@@ -518,76 +503,55 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "beta_d_galactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_108"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR189268"
+        "metanetx": "MNXR196566"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR189268"
+            "id": "MNXR196566"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "maltose O-acetyltransferase",
-      "ec": "2.3.1.79",
+      "name": "Reaction MNXR196567",
       "substrates": [
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "be_13793c",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_o_acetyl_beta_d_glucose",
+          "metabolite": "ed_110",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_79"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR189582"
+        "metanetx": "MNXR196567"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR189582"
+            "id": "MNXR196567"
           }
         ]
       }

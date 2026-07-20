@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isoxazolin-5-one-to-n4-acetylcytidine "isoxazolin-5-one to N4-acetylcytidine…" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     isoxazolin_5_one
@@ -14,18 +14,6 @@ pathway isoxazolin-5-one-to-n4-acetylcytidine "isoxazolin-5-one to N4-acetylcyti
     acetyl_amp
     <-> . +cytidine_5_monophosphate_1 -amp -hplus
     n4_acetylcytidine_5_monophosphate_1
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
-    4_hydroxybenzaldehyde
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +ac_o_9_sialylglycoconjugate_anion +h2o +hplus
-    sialylglycoconjugate_anion
   }
 
   branch from acetyl_amp side left {
@@ -42,13 +30,13 @@ pathway isoxazolin-5-one-to-n4-acetylcytidine "isoxazolin-5-one to N4-acetylcyti
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    abieta_8_14_12_diene
+    <-> ec_6_2_1_36 [6.2.1.36] +3_hydroxypropionate +atp +coa +amp
+    3_hydroxypropanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemar_13_ene
+    <-> ec_4_2_3_46 [4.2.3.46] +fpp
+    e_e_farnesene
   }
 }

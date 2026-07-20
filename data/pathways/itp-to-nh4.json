@@ -1,0 +1,496 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "itp-to-nh4",
+  "name": "ITP to NH4",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from ITP to NH4(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR192114"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103428"
+      }
+    },
+    {
+      "id": "d_sorbitol",
+      "name": "D-sorbitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736685"
+      }
+    },
+    {
+      "id": "d_sorbitol_6_phosphate",
+      "name": "D-sorbitol 6-phosphate",
+      "short": "D-sorbitol 6-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104463"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1104559"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ditp",
+      "name": "dITP",
+      "formula": "C10H11N4O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM728062"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "prostaglandin_h3",
+      "name": "prostaglandin H3",
+      "formula": "C20H29O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133134"
+      }
+    },
+    {
+      "id": "pgi3",
+      "name": "PGI3",
+      "formula": "C20H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165339"
+      }
+    },
+    {
+      "id": "txa3",
+      "name": "TXA3",
+      "formula": "C20H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165349"
+      }
+    },
+    {
+      "id": "l_citrulline",
+      "name": "L-citrulline",
+      "formula": "C6H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1582139"
+      }
+    },
+    {
+      "id": "l_arginine",
+      "name": "L-arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM739527"
+      }
+    },
+    {
+      "id": "2_2_difluorodeoxyuridine",
+      "name": "2,2-Difluorodeoxyuridine",
+      "short": "2,2-Difluorodeoxyur…",
+      "formula": "C9H10F2N2O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1560587"
+      }
+    },
+    {
+      "id": "gemcitabine",
+      "name": "gemcitabine",
+      "formula": "C9H11F2N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:175901"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_4",
+      "name": "prostaglandin-I synthase",
+      "ec": [
+        "5.3.99.4"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_5",
+      "name": "thromboxane-A synthase",
+      "ec": [
+        "5.3.99.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_sorbitol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_sorbitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR192114"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192114"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "d_sorbitol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_sorbitol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR191244"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191244"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR153314",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ditp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153314"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153314"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "prostaglandin-I synthase",
+      "ec": "5.3.99.4",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pgi3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR200078"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "thromboxane-A synthase",
+      "ec": "5.3.99.5",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prostaglandin_h3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "txa3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR200080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR204248",
+      "substrates": [
+        {
+          "metabolite": "l_citrulline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR204248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204248"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR204559",
+      "substrates": [
+        {
+          "metabolite": "2_2_difluorodeoxyuridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gemcitabine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR204559"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204559"
+          }
+        ]
+      }
+    }
+  ]
+}

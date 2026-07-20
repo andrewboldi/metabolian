@@ -24,38 +24,38 @@ pathway 18-carboxy-dinor-lte4-to-nad "18-carboxy-dinor-LTE4 to NAD" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3_amino_3_deoxy_d_glucopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cadeguomycin +phosphate +cadeguomycin
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +alpha_d_quinovopyranose +phosphate +alpha_d_quinovopyranose
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    candicidin_d
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    d_fructopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    bleomycin_a2
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    beta_d_fructopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    bleomycin_b2
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +4_3_methylbutanoyl_sucrose
-    2_isobutanoyl_4_3_methylbutanoyl_sucrose
+    <-> ec_3_1_2_2 [3.1.2.2] +8z_11z_14z_eicosatrienoyl_coa +h2o +h
+    8z_11z_14z_eicosatrienoate
   }
 
   branch from coa side left {
     coa
-    <-> . +dodecanoyl_coa +3_2_methylbutanoyl_4_3_methylbutanoyl_sucrose
-    3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano
+    <-> . +13z_16z_docosadienoyl_coa +h2o
+    13z_16z_docosadienoic_acid
   }
 
   branch from 18_r_hydroxy_20_oxo_20_coa_lte4 side right {
@@ -66,13 +66,13 @@ pathway 18-carboxy-dinor-lte4-to-nad "18-carboxy-dinor-LTE4 to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    neodihydrocarveol
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +beta_d_ribofuranose
+    xylitol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +neodihydrocarveol
-    2e_geranial
+    <-> . +nadh +h +4_hydroxymethyl_3_5_methylhexanoyl_5h_furan_2_on
+    6_dehydro_virginiae_butanolide_a
   }
 }

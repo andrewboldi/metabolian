@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-dis… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 304
+  spacing 298
 
   spine at 0,0 {
     3_d_glucuronosyl_n2_6_disulfonato_d_glucosamine
@@ -42,32 +42,20 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
-    hexanal
-  }
-
-  branch from sulfate side right {
-    sulfate
     <-> ec_1_14_11_77 [1.14.11.77] +nonyl_sulfate +akg +o2 +succinate +co2 +hplus
     nonanal
   }
 
-  branch from n_acetyl_d_galactosamine_1_phosphate side left {
-    n_acetyl_d_galactosamine_1_phosphate
-    <-> ec_2_7_1_157 [2.7.1.157] +atp +adp +hplus
-    n_acetyl_d_galactosamine
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +decyl_sulfate +akg +o2 +succinate +co2 +hplus
+    decanal
   }
 
-  branch from n_acetyl_d_galactosamine_1_phosphate side right {
+  branch from n_acetyl_d_galactosamine_1_phosphate side left {
     n_acetyl_d_galactosamine_1_phosphate
     <-> . +udp_n_acetyl_d_galactosamine +h2o +hplus
     ump
-  }
-
-  branch from udp_n_acetyl_d_galactosamine side left {
-    udp_n_acetyl_d_galactosamine
-    <-> ec_2_4_1_40 [2.4.1.40] +l_fucosyl_1_2_d_galactoside +udp +hplus
-    n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
   }
 
   branch from udp_n_acetyl_d_galactosamine side right {
@@ -76,15 +64,21 @@ pathway 3-d-glucuronosyl-n2-6-dis-to-5-o-phosphonato-d-r "3-D-glucuronosyl-N2,6-
     n_acetyl_d_galactosaminyl_1_4_n_acetyl_d_glucosa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
-    3_adenylylstreptomycin
+  branch from udp_n_acetyl_d_galactosamine side left {
+    udp_n_acetyl_d_galactosamine
+    <-> ec_5_1_3_7 [5.1.3.7]
+    udpglcnac
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
-    3_l_arginyl_adenylyl_1_group
+    <-> ec_6_1_3_1 [6.1.3.1] +2r_3s_2_alkyl_3_hydroxyalkanoate +atp +amp
+    cis_3_4_dialkyloxetan_2_one
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
+    4_hydroxybutyryl_coa
   }
 }

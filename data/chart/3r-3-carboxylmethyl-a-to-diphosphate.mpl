@@ -16,39 +16,27 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate "(3R)-3-[(carboxylmethyl)a… to di
     an_isonitrile_lipopeptide
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +trihazone_a +akg +o2 +hplus +co2 +h2o
-    trihazone_d
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +s_reticulinium +akg +o2 +formaldehyde +co2
-    s_6_o_demethylreticuline
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_168 [4.2.3.168] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    3e_7e_dolathalia_3_7_11_triene
+    <-> ec_2_5_1_142 [2.5.1.142] +ipp +dmapp
+    nerylneryl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_169 [4.2.3.169] +fpp +h2o
-    7_epi_eudesmol
+    <-> . +l_cysteinate_group +carbamoyl_p +atp +h2o +amp +pi +hplus
+    c_terminal_s_carbamoyl_l_cysteinate
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_cysteinyl_amp +amp +hplus
-    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
+    <-> . +l_tryptophyl_amp +amp
+    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_69 [6.2.1.69] +atp +o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin +amp +ppi
-    cysteine
+    <-> . +l_alanyl_amp +amp +hplus
+    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
   }
 }

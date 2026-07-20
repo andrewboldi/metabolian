@@ -22,13 +22,13 @@ pathway d-glucopyranose-to-coa "D-glucopyranose to CoA" {
 
   branch from coa side left {
     coa
-    <-> . +6z_9z_12z_octadecatrienoyl_coa +acetyl_coa
-    8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa
+    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
+    2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_6
   }
 
   branch from coa side right {
     coa
-    <-> . +10z_heptadecenoyl_coa +cholesterol
-    cholest_5_en_3b_yl_9z_heptadecenoate
+    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
+    2_4_6_tri_2_methyl_butanoyl_3_4_methyl_pentanoyl
   }
 }

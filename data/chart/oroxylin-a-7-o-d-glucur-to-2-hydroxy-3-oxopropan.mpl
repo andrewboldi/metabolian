@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan "oroxylin A 7-O-β-D-glucur… to 2-hydroxy-3-oxopropanoate" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     oroxylin_a_7_o_d_glucuronate
@@ -16,18 +16,6 @@ pathway oroxylin-a-7-o-d-glucur-to-2-hydroxy-3-oxopropan "oroxylin A 7-O-β-D-gl
     5_dehydro_4_deoxy_d_glucarate
     <-> . -pyruvate
     2_hydroxy_3_oxopropanoate
-  }
-
-  branch from d_glucopyranuronate side left {
-    d_glucopyranuronate
-    <-> . +4z_15z_bilirubin_ix_c8_d_glucuronoside +h2o +hplus
-    bilirubin
-  }
-
-  branch from d_glucopyranuronate side right {
-    d_glucopyranuronate
-    <-> . +h2o +bilirubin +hplus
-    4z_15z_bilirubin_ix_c12_d_glucuronoside
   }
 
   branch from d_glucarate side left {

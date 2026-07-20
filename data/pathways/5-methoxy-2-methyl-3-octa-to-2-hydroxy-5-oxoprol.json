@@ -130,12 +130,12 @@
       }
     },
     {
-      "id": "pyr1_apelin_13",
-      "name": "[Pyr1]apelin-13",
-      "formula": "C69H110N22O16S",
-      "charge": 2,
+      "id": "apelin_17",
+      "name": "apelin-17",
+      "formula": "C96H162N34O20S",
+      "charge": 6,
       "xrefs": {
-        "chebi": "CHEBI:147415"
+        "chebi": "CHEBI:147421"
       }
     },
     {
@@ -148,30 +148,32 @@
       }
     },
     {
-      "id": "pyr1_apelin_12",
-      "name": "[Pyr1]apelin-12",
-      "formula": "C60H101N21O15S",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:147416"
-      }
-    },
-    {
-      "id": "apelin_17",
-      "name": "apelin-17",
-      "formula": "C96H162N34O20S",
-      "charge": 6,
-      "xrefs": {
-        "chebi": "CHEBI:147421"
-      }
-    },
-    {
       "id": "apelin_16",
       "name": "apelin-16",
       "formula": "C87H153N33O19S",
       "charge": 6,
       "xrefs": {
         "chebi": "CHEBI:147422"
+      }
+    },
+    {
+      "id": "n_dha_l_phenylalanine",
+      "name": "N-DHA-L-phenylalanine",
+      "short": "N-DHA-L-phenylalani…",
+      "formula": "C31H40NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149701"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77016"
       }
     }
   ],
@@ -318,45 +320,6 @@
     },
     {
       "id": "r4",
-      "name": "[Pyr1]apelin-13 + H2O = [Pyr1]apelin-12 + L-phenylalanine",
-      "equation": "[Pyr1]apelin-13 + H2O = [Pyr1]apelin-12 + L-phenylalanine",
-      "substrates": [
-        {
-          "metabolite": "pyr1_apelin_13",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyr1_apelin_12",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:63604"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63604"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "apelin-17 + H2O = apelin-16 + L-phenylalanine",
       "equation": "apelin-17 + H2O = apelin-16 + L-phenylalanine",
       "substrates": [
@@ -380,7 +343,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:63608"
       },
@@ -390,6 +353,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:63608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19...",
+      "equation": "N-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-L-phenylalanine + H2O = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + L-phenylalanine",
+      "substrates": [
+        {
+          "metabolite": "n_dha_l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64132"
           }
         ]
       }

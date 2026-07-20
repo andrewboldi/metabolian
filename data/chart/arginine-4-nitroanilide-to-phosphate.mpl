@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway arginine-4-nitroanilide-to-phosphate "Arginine-4-nitroanilide to phosphate" {
-  spacing 240
+  spacing 234
 
   spine at 0,0 {
     arginine_4_nitroanilide
@@ -20,14 +20,14 @@ pathway arginine-4-nitroanilide-to-phosphate "Arginine-4-nitroanilide to phospha
 
   branch from 4_nitroaniline side left {
     4_nitroaniline
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
-    d_alanine_p_nitroanilide
+    <-> ec_3_3_2_6 [3.3.2.6] +l_proline +h2o
+    prolyl_p_nitroanilide
   }
 
   branch from 4_nitroaniline side right {
     4_nitroaniline
-    <-> ec_3_3_2_6 [3.3.2.6] +l_proline +h2o
-    prolyl_p_nitroanilide
+    <-> ec_3_4_11_10 [3.4.11.10] +h2o +glycine
+    glycine_p_nitroanilide
   }
 
   branch from arginine side left {
@@ -44,61 +44,55 @@ pathway arginine-4-nitroanilide-to-phosphate "Arginine-4-nitroanilide to phospha
 
   branch from glycylglycine side left {
     glycylglycine
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
-    d_ala_gly_gly
-  }
-
-  branch from glycylglycine side right {
-    glycylglycine
-    <-> ec_3_4_11_15 [3.4.11.15] +l_lysine +h +h2o
-    lys_gly_gly
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +l_alanine +ala_gly
-    ala_ala_gly
+    <-> . +l_arginine +h2o
+    arginyl_glycyl_glycine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ala_tyr +glycine
-    gly_ala_tyr
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +methanol
+    methyl_beta_d_galactoside
   }
 
-  branch from h side left {
-    h
-    <-> . +r_2_chloro_1_phenylethanol +chloride
-    s_styrene_oxide
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
+    alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +epibromohydrin +bromide
-    2_3_dibromo_1_propanol
+    <-> ec_4_6_1_2 [4.6.1.2] +thiopyrophosphate +3_5_cyclic_gmp
+    guanosine_5_gamma_thio_triphosphate
   }
 
-  branch from adp side left {
-    adp
-    <-> ec_2_7_1_1 [2.7.1.1] +1_5_anhydro_d_glucitol_6_phosphate +h +atp
-    1_5_anhydro_d_glucitol
+  branch from h side left {
+    h
+    <-> ec_3_5_4_5 [3.5.4.5] +cytarabine +h2o +nh4
+    spongouridin
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_1 [2.7.1.1] +d_arabinose_5_phosphate +h +atp
-    d_arabinofuranose
+    <-> ec_3_6_3_41 [3.6.3.41] +h +phosphate +atp +h2o
+    heme
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> ec_2_4_2_28 [2.4.2.28] +3_deazaadenine +5_methylsulfanyl_alpha_d_ribose_1_phosphate +h
-    5_deoxy_5_methylthio_3_deazaadenosine
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    9z_octadecenoyl_coa
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_48 [3.1.3.48] +l_phosphotyrosine +h2o +h
-    l_tyrosine
+    <-> ec_3_1_3_2 [3.1.3.2] +4_methyl_umbelliferyl_phosphate +h2o
+    4_methylumbelliferone
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_36 [3.1.3.36] +3_o_methylfluorescein +h +h2o
+    3_o_methylfluorescein_6_phosphate
   }
 }

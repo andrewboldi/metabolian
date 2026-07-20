@@ -30,14 +30,14 @@ pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy
 
   branch from glycine side left {
     glycine
-    <-> . +cerotate +h2o
+    <-> . +hexacosanoyl_coa +coa +hplus
     n_hexacosanoylglycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +n_hexacosanoylglycinate +coa +hplus
-    hexacosanoyl_coa
+    <-> . +chenodeoxycholoyl_coa +coa +hplus
+    glycochenodeoxycholate
   }
 
   branch from 3_l_asparaginyl_adenylyl_1_group side left {
@@ -48,13 +48,13 @@ pathway gly-asn-to-3-n-acetyl-l-asparaginy "Gly-Asn to 3'-(N-acetyl-L-asparaginy
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_63 [4.2.3.63] +fpp
-    cubenene
+    <-> ec_4_2_3_227 [4.2.3.227] +2_cis_6_trans_farnesyl_diphosphate
+    cedr_8_ene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
-    epicubenol
+    <-> ec_4_2_3_81 [4.2.3.81] +fpp
+    exo_bergamotene
   }
 }

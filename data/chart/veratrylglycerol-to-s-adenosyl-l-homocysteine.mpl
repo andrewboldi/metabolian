@@ -22,14 +22,14 @@ pathway veratrylglycerol-to-s-adenosyl-l-homocysteine "veratrylglycerol… to S-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocopherol +sam +hplus
-    tocopherol
+    <-> ec_2_1_1_172 [2.1.1.172] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
-    tocotrienol
+    <-> ec_2_1_1_173 [2.1.1.173] +sam +n2_methylguanosine_5_monophosphate_1 +hplus
+    guanosine_5_monophosphate_1
   }
 
   branch from resorcinol side left {

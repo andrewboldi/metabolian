@@ -20,14 +20,14 @@ pathway c2-c8-saturated-to-nad "C2-C8-saturated… to NAD" {
 
   branch from fmn side left {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
+    <-> . +1_4_cineole +fmnh2 +o2 +h2o +hplus
+    2_exo_hydroxy_1_4_cineole
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxytestosterone
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose +fmnh2 +h2o +hplus
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
   branch from fmn side left {
@@ -44,38 +44,38 @@ pathway c2-c8-saturated-to-nad "C2-C8-saturated… to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> . +2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
+    <-> . +18e_20_oxo_20_coa_ltb4
+    20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
-    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
+    <-> . +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +nh4
+    s_2_carboxy_1_1h_imidazol_4_yl_ethyl_3_thiolacta
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +2_oxopentanoate +fmn
-    2_hydroxypentanoate
+    <-> . +h +fe_iii_enterobactin +fmn +enterobactin
+    fe
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +2_oxohexanoate +fmn
-    2_hydroxyhexanoate
+    <-> ec_1_1_99_31 [1.1.99.31] +h +3_phenylpyruvate +fmn
+    r_3_phenyllactate
   }
 
   branch from h side left {
     h
-    <-> . +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o +3_oxo_10_s_hydroxy_octadeca_6e_8e_12z_trienoate
-    coa
+    <-> . +acetyl_coa +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +coa
+    n_acetyl_s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l
   }
 
   branch from h side right {
     h
-    <-> . +prostaglandin_d2 +h2o
-    15_deoxy_pgd2
+    <-> . +hexadecanoate +11_cis_retinol +h2o
+    all_trans_retinyl_palmitate
   }
 
   branch from 4_methyl_2_oxopentanoate side left {
@@ -104,13 +104,13 @@ pathway c2-c8-saturated-to-nad "C2-C8-saturated… to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_147 [1.1.1.147] +nadh +h +16_oxosteroid
-    16alpha_hydroxysteroid
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +11_deoxycortisol
+    17alpha_21_dihydroxypregnenolone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +h +cyclohexan_1_2_dione
-    2_hydroxycyclohexan_1_one
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh +h +4_isopropylbenzaldehyde
+    4_isopropylbenzyl_alcohol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate to L-γ-glutamyl-L-cysteinyl-…" {
-  spacing 240
+  spacing 234
 
   spine at 0,0 {
     3_aci_nitropropanoate
@@ -18,14 +18,14 @@ pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate t
 
   branch from 3_oxopropanoate side left {
     3_oxopropanoate
-    <-> . +o2 +h2o +h2o2 +hplus
-    malonaldehyde
+    <-> . +n6_pyridoxal_phosphate_l_lysine_2 +l_histidine +iron +h2o +2s_2_amino_5_hydroxy_4_oxopentanoate +4_amino_2_methyl_5_phosphonatooxymethylpyrimidin +fe2 +hplus
+    l_lysinium
   }
 
   branch from 3_oxopropanoate side right {
     3_oxopropanoate
-    <-> . +n6_pyridoxal_phosphate_l_lysine_2 +l_histidine +iron +h2o +2s_2_amino_5_hydroxy_4_oxopentanoate +4_amino_2_methyl_5_phosphonatooxymethylpyrimidin +fe2 +hplus
-    l_lysinium
+    <-> . +nad +h2o +nadh +hplus
+    malonaldehyde
   }
 
   branch from nitrite side left {
@@ -42,13 +42,7 @@ pathway 3-aci-nitropropanoate-to-l-glutamyl-l-cysteinyl "3-aci-nitropropanoate t
 
   branch from alanine side left {
     alanine
-    <-> . +histaminium +atp +amp +ppi +hplus
-    carcininium
-  }
-
-  branch from alanine side right {
-    alanine
-    <-> . +dopamine +atp +amp +ppi +hplus
-    n_alanyldopamine
+    <-> . +arginine +ornithine
+    3_guanidinopropanoic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
-  spacing 294
+  spacing 288
 
   spine at 0,0 {
     d_allothreonine
@@ -26,26 +26,26 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
 
   branch from glycine side left {
     glycine
-    <-> ec_3_5_1_58 [3.5.1.58] +n_benzyloxycarbonylglycinate +h2o +hplus +co2
-    benzyl_alcohol
+    <-> ec_2_6_1_44 [2.6.1.44] +alanine +pyruvate
+    glyoxylate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_3_5_3_2 [3.5.3.2] +guanidinoacetic_acid +h2o
-    urea
+    <-> ec_2_3_1_192 [2.3.1.192] +phenylacetyl_coa +coa +hplus
+    phenylacetylglycine
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine +h2o
-    udp_3_o_3r_hydroxyacyl_d_glucosamine
+    <-> . +pyrrolizixenacetamide +h2o +hplus
+    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one
   }
 
   branch from acetate side right {
     acetate
-    <-> . +h2o +h2o2 +hplus
-    peracetic_acid
+    <-> . +n_acetyl_d_glucosaminyl_1_4_n_acetyl_d_muramate +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_muramate_zwitterio
   }
 
   branch from trans_coumaryl_acetate side left {
@@ -54,75 +54,69 @@ pathway d-allothreonine-to-l-methionine "D-allothreonine to L-methionine" {
     coa
   }
 
-  branch from trans_coumaryl_acetate side right {
-    trans_coumaryl_acetate
-    <-> . +h2o +h +acetate
-    trans_p_coumaryl_alcohol
-  }
-
-  branch from chavicol side left {
+  branch from chavicol side right {
     chavicol
     <-> ec_3_2_1_161 [3.2.1.161] +d_apiofuranosyl_1_6_d_glucopyranose +h2o
     furcatin
   }
 
-  branch from acetate side right {
+  branch from acetate side left {
     acetate
     <-> ec_1_2_2_2 [1.2.2.2] +ubiquinone_8 +pyruvate +h2o +ubiquinol_8
     co2
   }
 
-  branch from acetate side left {
+  branch from acetate side right {
     acetate
     <-> . +l_asparagine +h +h2o
     n_acetyl_l_asparagine
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +h2o +h +o2 +nadph
-    tolbutamide
+    <-> . +h +ebastine +o2 +nadph +h2o
+    hydroxyebastine
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
-    8_methoxyfurocoumarin
+  branch from nadp side right {
+    nadp
+    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +o2 +nadph +h2o
+    7alpha_hydroxycholesterol
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
-    s_2e_6e_farnesyl_l_cysteine_methyl_ester
+    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
+    puromycin
   }
 
-  branch from s_s_adenosyl_l_methionine side right {
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
+  }
+
+  branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +n_methylpyrazole
     1h_pyrazole
   }
 
-  branch from s_s_adenosyl_l_methionine side left {
+  branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
     <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +magnesium_protoporphyrin_monomethyl_ester
     magnesium_protoporphyrin
-  }
-
-  branch from l_methionine side right {
-    l_methionine
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
-    atp
   }
 
   branch from l_methionine side left {
     l_methionine
     <-> . +diphosphate +indol_3_yl_acetyl_l_methionine +h +amp +atp
     indol_3_yl_acetate
+  }
+
+  branch from l_methionine side right {
+    l_methionine
+    <-> . +5_deoxyadenosine +2_methylbacteriohopanetetrol +cob_iii_alamin +methylcobalamin +bacteriohopanetetrol
+    s_adenosyl_l_methionine
   }
 }

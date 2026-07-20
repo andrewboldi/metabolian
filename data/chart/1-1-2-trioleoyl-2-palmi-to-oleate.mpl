@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1-2-trioleoyl-2-palmi-to-oleate "1,1',2-trioleoyl-2'-palmi… to oleate" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     1_1_2_trioleoyl_2_palmitoyl_cardiolipin
@@ -23,12 +23,6 @@ pathway 1-1-2-trioleoyl-2-palmi-to-oleate "1,1',2-trioleoyl-2'-palmi… to oleat
   }
 
   branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphocholine side right {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_diheptanoyl_sn_glycero_3_phosphocholine +1_heptanoyl_2_hexadecanoyl_sn_glycero_3_phosphoc
-    1_hexadecanoyl_2_heptanoyl_sn_glycero_3_phosphoc
-  }
-
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
     <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
     2_linoleoyl_sn_glycero_3_phosphocholine

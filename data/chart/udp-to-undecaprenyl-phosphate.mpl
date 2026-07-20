@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-undecaprenyl-phosphate "UDP to Undecaprenyl phosphate" {
-  spacing 318
+  spacing 306
 
   spine at 0,0 {
     udp
@@ -18,26 +18,14 @@ pathway udp-to-undecaprenyl-phosphate "UDP to Undecaprenyl phosphate" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_39 [2.4.1.39] +udp +h +17_alpha_n_acetyl_alpha_d_glucosaminyl_estradiol
-    estradiol_17_alpha_3_d_glucuronoside
+    <-> . +utp +n_acetyl_beta_d_glucosamine_6_phosphate +h
+    diphosphate
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_255 [2.4.1.255] +udp +h +o_n_acetyl_d_glucosaminyl_l_threonine
-    l_threonine
-  }
-
-  branch from ump side left {
-    ump
-    <-> ec_2_4_2_9 [2.4.2.9] +5_phospho_alpha_d_ribose_1_diphosphate +uracil
-    diphosphate
-  }
-
-  branch from ump side right {
-    ump
-    <-> ec_3_6_1_54 [3.6.1.54] +lipid_x_h_pylori +h +h2o
-    udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox
+    <-> ec_2_4_1_212 [2.4.1.212] +udp +h +d_glcpnac_1_4_d_glcpa +h2o
+    udp_alpha_d_glucuronate
   }
 
   branch from undecaprenyl_diphospho_n_acetyl_glucosamine side left {
@@ -48,14 +36,14 @@ pathway udp-to-undecaprenyl-phosphate "UDP to Undecaprenyl phosphate" {
 
   branch from h side right {
     h
-    <-> . +2_oxo_4_phenylbutyric_acid +co2
-    2_benzyl_3_oxobutanedioate
+    <-> . +3e_phycoerythrobilin
+    3z_phycoerythrobilin
   }
 
   branch from h side left {
     h
-    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o
-    oxythiamine
+    <-> . +2r_3e_phycocyanobilin
+    3z_phycocyanobilin
   }
 
   branch from undecaprenyl_phosphate side right {

@@ -20,25 +20,25 @@ pathway l-rhamnulose-1-phosphate-to-h2o "L-rhamnulose 1-phosphate to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +9z_12z_octadecadienoate +h +linoleyl_amp
-    diphosphate
+    <-> . +diphosphate +h +amp +indol_3_yl_acetyl_l_glutamine +indol_3_yl_acetate
+    l_glutamine
   }
 
   branch from atp side right {
     atp
-    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +l_serine +nadph
-    malonyl_coa
+    <-> . +1d_myo_inositol_3_4_bisphosphate +h +adp
+    1d_myo_inositol_3_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_oxocholest_4_24_dien_26_oyl_coa
-    24_hydroxy_3_oxocholest_4_en_26_oyl_coa
+    <-> ec_4_2_1_119 [4.2.1.119] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa
+    3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_oxo_24_isopropanoyl_cholest_4_24_dien_26_oyl_c +3_24_dioxo_cholest_4_en_26_oate
-    propanoyl_coa
+    <-> ec_4_2_1_119 [4.2.1.119] +2e_5e_dodeca_2_5_dienoyl_coa
+    3r_hydroxy_5_trans_dodecenoyl_coa
   }
 }

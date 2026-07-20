@@ -18,13 +18,13 @@ pathway tricetin-to-s-adenosyl-l-homocysteine "tricetin to S-adenosyl-L-homocyst
 
   branch from sah side left {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
+    soppiline_b
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> ec_2_1_1_296 [2.1.1.296] +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib
   }
 }

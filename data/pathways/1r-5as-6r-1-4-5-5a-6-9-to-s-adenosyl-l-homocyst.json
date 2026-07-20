@@ -293,43 +293,43 @@
       }
     },
     {
-      "id": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter",
-      "name": "2-[(3S)-3-amino-3-carboxypropyl]-L-histidine zwitterion",
-      "short": "2-[(3S)-3-amino-3-c…",
-      "formula": "C10H14N4O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:73995"
-      }
-    },
-    {
-      "id": "diphthine_methyl_ester",
-      "name": "diphthine methyl ester",
-      "short": "diphthine methyl…",
-      "formula": "C14H23N4O3",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:79005"
-      }
-    },
-    {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:74411"
       }
     },
     {
-      "id": "n7_methylguanosine_5_phosphate_zwitterion",
-      "name": "N7-methylguanosine 5'-phosphate zwitterion",
-      "short": "N7-methylguanosine…",
-      "formula": "C11H14N5O7P",
-      "charge": 0,
+      "id": "n6_n6_dimethyladenosine_5_monophosphate_1",
+      "name": "N6,N6-dimethyladenosine 5'-monophosphate(1−)",
+      "short": "N6,N6-dimethyladeno…",
+      "formula": "C12H15N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74480"
+        "chebi": "CHEBI:74493"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82748"
+      }
+    },
+    {
+      "id": "2_o_methylcytidine_5_monophosphate_1",
+      "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
+      "short": "2'-O-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74495"
       }
     }
   ],
@@ -349,17 +349,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_314",
-      "name": "diphthine methyl ester synthase",
+      "id": "ec_2_1_1_184",
+      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
       "ec": [
-        "2.1.1.314"
+        "2.1.1.184"
       ]
     },
     {
-      "id": "ec_2_1_1_33",
-      "name": "tRNA (guanine(46)-N(7))-methyltransferase",
+      "id": "ec_2_1_1_186",
+      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.33"
+        "2.1.1.186"
       ]
     }
   ],
@@ -867,61 +867,61 @@
     },
     {
       "id": "r12",
-      "name": "diphthine methyl ester synthase",
-      "equation": "2-[(3S)-amino-3-carboxypropyl]-L-histidyl-[translation elongation factor 2] + 4 S-adenosyl-L-methionine = diphthine methyl ester-[translation elongation factor 2] + 4 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.314",
+      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
+      "equation": "adenosine(2085) in 23S rRNA + 2 S-adenosyl-L-methionine = N(6)-dimethyladenosine(2085) in 23S rRNA + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.184",
       "substrates": [
         {
-          "metabolite": "2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "diphthine_methyl_ester",
+          "metabolite": "n6_n6_dimethyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_314"
+          "enzyme": "ec_2_1_1_184"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:42652"
+        "rhea": "RHEA:42784"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42652"
+            "id": "RHEA:42784"
           }
         ]
       }
     },
     {
       "id": "r13",
-      "name": "tRNA (guanine(46)-N(7))-methyltransferase",
-      "equation": "guanosine(46) in tRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(46) in tRNA + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.33",
+      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
+      "equation": "cytidine(2498) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(2498) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.186",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -931,30 +931,34 @@
       ],
       "products": [
         {
-          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
+          "metabolite": "2_o_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_33"
+          "enzyme": "ec_2_1_1_186"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:42708"
+        "rhea": "RHEA:42788"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42708"
+            "id": "RHEA:42788"
           }
         ]
       }

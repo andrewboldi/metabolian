@@ -103,40 +103,41 @@
       }
     },
     {
-      "id": "n_acetylsphingosine",
-      "name": "N-acetylsphingosine",
-      "formula": "C20H39NO3",
+      "id": "udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine",
+      "name": "UDP-3-O-[(3R)-hydroxyacyl]-N-acetyl-α-D-glucosamine",
+      "short": "UDP-3-O-[(3R)-hydro…",
+      "formula": "C20H28N3O19P2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:173225"
+      }
+    },
+    {
+      "id": "udp_3_o_3r_hydroxyacyl_d_glucosamine",
+      "name": "UDP-3-O-[(3R)-hydroxyacyl]-α-D-glucosamine",
+      "short": "UDP-3-O-[(3R)-hydro…",
+      "formula": "C18H27N3O18P2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137740"
+      }
+    },
+    {
+      "id": "peracetic_acid",
+      "name": "peracetic acid",
+      "formula": "C2H4O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:46979"
+        "chebi": "CHEBI:42530"
       }
     },
     {
-      "id": "sphingosine",
-      "name": "Sphingosine",
-      "formula": "C18H38NO2",
-      "charge": 1,
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57756"
-      }
-    },
-    {
-      "id": "dihydroprecondylocarpine_acetate",
-      "name": "dihydroprecondylocarpine acetate",
-      "short": "dihydroprecondyloca…",
-      "formula": "C23H29N2O4",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:142770"
-      }
-    },
-    {
-      "id": "catharanthine",
-      "name": "catharanthine",
-      "formula": "C21H25N2O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:142675"
+        "chebi": "CHEBI:16240"
       }
     },
     {
@@ -179,25 +180,6 @@
       }
     },
     {
-      "id": "z_n_sulfonatooxy_alkenimidothioate",
-      "name": "(Z)-N-(sulfonatooxy)alkenimidothioate",
-      "short": "N-(sulfonatooxy)alk…",
-      "formula": "C3H3NO4S2R",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:183084"
-      }
-    },
-    {
-      "id": "epithionitrile",
-      "name": "epithionitrile",
-      "formula": "C3H3NSR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:183085"
-      }
-    },
-    {
       "id": "z_n_sulfonatooxy_prop_2_enimidothioate",
       "name": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate",
       "short": "N-(sulfonatooxy)pro…",
@@ -215,6 +197,26 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:183064"
+      }
+    },
+    {
+      "id": "z_n_sulfonatooxy_alkenimidothioate",
+      "name": "(Z)-N-(sulfonatooxy)alkenimidothioate",
+      "short": "N-(sulfonatooxy)alk…",
+      "formula": "C3H3NO4S2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:183084"
+      }
+    },
+    {
+      "id": "alkenyl_isothiocyanate",
+      "name": "alkenyl isothiocyanate",
+      "short": "alkenyl isothiocyan…",
+      "formula": "C3H3NSR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:183102"
       }
     }
   ],
@@ -241,6 +243,13 @@
       ]
     },
     {
+      "id": "ec_3_5_1_108",
+      "name": "UDP-3-O-acyl-N-acetylglucosamine deacetylase",
+      "ec": [
+        "3.5.1.108"
+      ]
+    },
+    {
       "id": "ec_2_8_2_10",
       "name": "Renilla-luciferin sulfotransferase",
       "ec": [
@@ -252,13 +261,6 @@
       "name": "galactosylceramide sulfotransferase",
       "ec": [
         "2.8.2.11"
-      ]
-    },
-    {
-      "id": "ec_4_8_1_6",
-      "name": "N-(sulfonatooxy)alkenimidothioic acid sulfate-lyase (epithionitrile-",
-      "ec": [
-        "4.8.1.6"
       ]
     },
     {
@@ -419,11 +421,12 @@
     },
     {
       "id": "r4",
-      "name": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
-      "equation": "N-(acetyl)-sphing-4-enine + H2O = sphing-4-enine + acetate",
+      "name": "UDP-3-O-acyl-N-acetylglucosamine deacetylase",
+      "equation": "a UDP-3-O-[(3R)-3-hydroxyacyl]-N-acetyl-alpha-D-glucosamine + H2O = a UDP-3-O-[(3R)-3-hydroxyacyl]-alpha-D-glucosamine + acetate",
+      "ec": "3.5.1.108",
       "substrates": [
         {
-          "metabolite": "n_acetylsphingosine",
+          "metabolite": "udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine",
           "stoichiometry": 1
         },
         {
@@ -433,7 +436,7 @@
       ],
       "products": [
         {
-          "metabolite": "sphingosine",
+          "metabolite": "udp_3_o_3r_hydroxyacyl_d_glucosamine",
           "stoichiometry": 1
         },
         {
@@ -441,38 +444,47 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_108"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:58484"
+        "rhea": "RHEA:67816"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58484"
+            "id": "RHEA:67816"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "dihydroprecondylocarpine acetate = catharanthine + acetate + H(+)",
-      "equation": "dihydroprecondylocarpine acetate = catharanthine + acetate + H(+)",
+      "name": "peracetic acid + H2O = acetate + H2O2 + H(+)",
+      "equation": "peracetic acid + H2O = acetate + H2O2 + H(+)",
       "substrates": [
         {
-          "metabolite": "dihydroprecondylocarpine_acetate",
+          "metabolite": "peracetic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "catharanthine",
+          "metabolite": "acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetate",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -483,14 +495,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:58580"
+        "rhea": "RHEA:68392"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58580"
+            "id": "RHEA:68392"
           }
         ]
       }
@@ -595,47 +607,6 @@
     },
     {
       "id": "r8",
-      "name": "N-(sulfonatooxy)alkenimidothioic acid sulfate-lyase (epithionitrile-",
-      "equation": "a (Z)-N-(sulfonatooxy)alkenimidothioate = an epithionitrile + sulfate",
-      "ec": "4.8.1.6",
-      "substrates": [
-        {
-          "metabolite": "z_n_sulfonatooxy_alkenimidothioate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "epithionitrile",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_8_1_6"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:69228"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69228"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "N-(sulfonatooxy)prop-2-enimidothioate sulfolyase",
       "equation": "(Z)-N-(sulfonatooxy)prop-2-enimidothioate = 2-(thiiran-2-yl)acetonitrile + sulfate",
       "ec": "4.8.1.8",
@@ -661,7 +632,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:69252"
       },
@@ -671,6 +642,41 @@
           {
             "db": "Rhea",
             "id": "RHEA:69252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "a (Z)-N-(sulfonatooxy)alkenimidothioate = an alkenyl isothiocyanate + sulfate",
+      "equation": "a (Z)-N-(sulfonatooxy)alkenimidothioate = an alkenyl isothiocyanate + sulfate",
+      "substrates": [
+        {
+          "metabolite": "z_n_sulfonatooxy_alkenimidothioate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alkenyl_isothiocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:69268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69268"
           }
         ]
       }

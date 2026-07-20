@@ -32,14 +32,14 @@ pathway n-arachidonoylsphingosine-to-n-acylsphingosine "N-arachidonoylsphingosin
 
   branch from n_acylsphingosine side left {
     n_acylsphingosine
-    <-> . +udp_d_galactose +udp +hplus
-    n_acyl_d_galactosylsphingosine
+    <-> . +d_glucosyl_n_acylsphingosine +cholesterol
+    cholesteryl_d_glucoside
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> . +d_glucosyl_n_acylsphingosine +cholesterol
-    cholesteryl_d_glucoside
+    <-> . +fe2 +o2 +hplus +iron +h2o
+    n_acyl_4e_14z_sphingadienine
   }
 
   branch from n_acyl_d_galactosylsphingosine side left {

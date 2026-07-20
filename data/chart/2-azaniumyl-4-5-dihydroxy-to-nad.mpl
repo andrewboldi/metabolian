@@ -44,13 +44,13 @@ pathway 2-azaniumyl-4-5-dihydroxy-to-nad "2-azaniumyl-4,5-dihydroxy… to NAD" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
-    20_hydroxycholesterol
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxohexadec_9_enoyl_coa +h
+    3s_9z_3_hydroxyhexadecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +all_trans_3_4_didehydroretinoate +h2o
-    all_trans_3_4_didehydroretinol
+    <-> . +nadh +z_3_oxotetradec_7_enoyl_coa +h
+    cis_3s_hydroxytetradec_7_enoyl_coa
   }
 }

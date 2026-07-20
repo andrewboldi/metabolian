@@ -28,13 +28,12 @@ const OUT = join(ROOT, "data", "pathways");
 
 const MIN_SPINE = Number(process.env.MIN_SPINE || 3);
 const MAX_SPINE = Number(process.env.MAX_SPINE || 16);  // a sheet can carry a long route
-// This one BINDS, deliberately. The corpus supports ~7,000 thin sheets, and at
-// that count the master wall chart takes 36.9s to first paint and reads as a
-// black smudge at the 2% zoom it fits at — unusable, and the exact regression
-// issue #309 was about. The same chemistry rides on ~2,500 RICHER sheets
-// instead (longer spines, more branches), which keeps the master renderable
-// without dropping a single reaction on the floor.
-const MAX_SHEETS = Number(process.env.MAX_SHEETS || 2600);
+// Does not bind: extraction exhausts the combined corpus at ~3,300 sheets on
+// its own. This is a runaway guard. It USED to bind, back when the master wall
+// chart drew every sheet and 7,000 of them took 36.9s to paint — the master is
+// now capped by its own cell budget instead, which decouples how large the
+// atlas can be from what one poster can draw.
+const MAX_SHEETS = Number(process.env.MAX_SHEETS || 20000);
 
 // Trailing hyphens are trimmed AFTER the length cut, not before: slicing a long
 // name mid-word leaves one behind, and the schema's id pattern rejects it.

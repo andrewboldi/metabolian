@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
-  spacing 326
+  spacing 308
 
   spine at 0,0 {
     d_apiitol
@@ -42,91 +42,73 @@ pathway d-apiitol-to-nitrate "D-apiitol to nitrate" {
     nitrate
   }
 
-  branch from dhap side left {
-    dhap
-    <-> . +sn_glycerol_3_phosphate +hydrogen_acceptor
-    hydrogen_donor
-  }
-
-  branch from dhap side right {
-    dhap
-    <-> . +o_s_8_methyl_3_oxononanoylpantetheine_4_phosphor +holo-acp
-    2_oxo_3_phosphooxy_propyl_8_methyl_3_oxononanoat
-  }
-
-  branch from d_fructofuranose_6_phosphate side left {
-    d_fructofuranose_6_phosphate
-    <-> ec_5_3_1_9 [5.3.1.9]
-    d_fructofuranose_6_phosphate
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_41 [2.5.1.41] +sn_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    sn_3_o_geranylgeranyl_glycerol_1_phosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_17 [4.2.3.17] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    taxa_4_11_diene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_1 [2.7.7.1] +atp +hplus +nad
-    nmn
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +pentalenolactone_e +akg +o2 +co2
-    pentalenolactone_f
+    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_oct_2_ulosonate +ctp
+    cmp_3_deoxy_d_manno_octulosonate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
-    3s_3_hydroxy_l_enduracididine
+    <-> ec_1_14_11_43 [1.14.11.43] +s_2_4_chloro_2_methylphenoxy_propanoate +akg +o2 +pyruvate +co2
+    4_chloro_2_methylphenol
   }
 
-  branch from urea side right {
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
+    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+  }
+
+  branch from urea side left {
     urea
     <-> ec_3_5_3_16 [3.5.3.16] +methylguanidinium +h2o
     methylamine
   }
 
-  branch from urea side left {
+  branch from urea side right {
     urea
-    <-> ec_3_5_3_11 [3.5.3.11] +agmatinium +h2o
-    1_4_butanediammonium
+    <-> ec_3_5_3_14 [3.5.3.14] +n_amidino_l_aspartate +h2o
+    aspartate
   }
 
-  branch from ubiquinol_8 side right {
+  branch from ubiquinol_8 side left {
     ubiquinol_8
     <-> . +ubiquinone_8 +aspartate
     iminoaspartate
   }
 
-  branch from ubiquinol_8 side left {
+  branch from ubiquinol_8 side right {
     ubiquinol_8
     <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +ubiquinone_8
     orotate
   }
 
-  branch from ubiquinone_8 side right {
-    ubiquinone_8
-    <-> . +malate +ubiquinol_8
-    oxaloacetate
-  }
-
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> ec_1_18_99_1 [1.18.99.1] +h2 +ubiquinol_8
+    <-> ec_1_6_5_3 [1.6.5.3] +nadh +h +ubiquinol_8 +nad
     pmf
   }
 
-  branch from nitrite side right {
+  branch from ubiquinone_8 side right {
+    ubiquinone_8
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +h +pmf +ubiquinol_8
+    nad
+  }
+
+  branch from nitrite side left {
     nitrite
     <-> ec_1_7_1_4 [1.7.1.4] +nad +h2o +nadh +hplus
     nh3
   }
 
-  branch from nitrite side left {
+  branch from nitrite side right {
     nitrite
     <-> ec_1_7_3_1 [1.7.3.1] +secondary_nitroalkane +o2 +h2o +h2o2 +hplus
     ketone

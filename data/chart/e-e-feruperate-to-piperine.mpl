@@ -24,14 +24,14 @@ pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
 
   branch from fmn side right {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_8_hydroxyoleoyl_sn_glycero_3_phosphocholine
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    15_r_hete
   }
 
   branch from fmn side left {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_11_hydroxyoleoyl_sn_glycero_3_phosphocholine
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    13_r_hode
   }
 
   branch from e_e_piperonyl_coa side right {
@@ -42,13 +42,13 @@ pathway e-e-feruperate-to-piperine "(E,E)-feruperate to piperine" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_160 [4.2.3.160] +fpp
-    2s_3r_6s_9s_protoillud_7_ene
+    <-> . +8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct +atp +coa +amp
+    opc8_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_161 [4.2.3.161] +fpp
-    3s_asterisca_2_9_6_diene
+    <-> . +6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en +atp +coa +amp
+    9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co
   }
 }

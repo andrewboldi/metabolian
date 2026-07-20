@@ -18,37 +18,37 @@ pathway 2e-4e-undeca-2-4-dieno-to-nad "(2E, 4E)-undeca-2,4-dieno… to NAD" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_4 [1.13.11.4] +2e_3_methyl_4_6_dioxohept_2_enedioate +h
-    4_methylgentisate
+    <-> . +arteannuin +h2o +h
+    dihydroartemisinic_acid_hydroperoxide
   }
 
   branch from o2 side right {
     o2
-    <-> . +4_hydroxy_3_hydroxymethyl_benzoate +nadp +h2o +nadph
-    4_hydroxy_3_methylbenzoic_acid
+    <-> ec_1_10_3_1 [1.10.3.1] +cis_caffeic_acid +h +h2o
+    2z_3_3_4_dioxocyclohexa_1_5_dien_1_yl_prop_2_en
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +9z_11e_tetradecadien_1_ol
-    9z_11e_tetradecadienyl_acetate
+    <-> . +benzoyl_holothin +benzoyl_coa
+    holothin
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +11z_tetradecenol
-    11z_tetradecenyl_acetate
+    <-> . +holothin +acetyl_coa
+    holomycin
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +butan_2_one +h +o2 +h2o
-    ethyl_acetate
+    <-> . +bixin_dialdehyde +h2o +nadh +h
+    norbixin
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +2_methylprop_1_ene +h +o2 +h2o
-    2_2_dimethyloxirane
+    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +6_8_dihydroxypurine +h2o
+    hypoxanthine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-6-dichlorocatechol-to-2-2-4-dichloro-5-oxo-2-5 "3,6-dichlorocatechol to 2-(2,4-dichloro-5-oxo-2,5…" {
-  spacing 204
+  spacing 198
 
   spine at 0,0 {
     3_6_dichlorocatechol
@@ -18,23 +18,17 @@ pathway 3-6-dichlorocatechol-to-2-2-4-dichloro-5-oxo-2-5 "3,6-dichlorocatechol t
 
   branch from 2_5_dichloro_cis_cis_muconate side left {
     2_5_dichloro_cis_cis_muconate
-    <-> ec_5_5_1_7 [5.5.1.7] +chloride
-    cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid
-  }
-
-  branch from 2_5_dichloro_cis_cis_muconate side right {
-    2_5_dichloro_cis_cis_muconate
     <-> ec_5_5_1_11 [5.5.1.11] +h
     2_chloro_2_4_chloro_5_oxo_2h_furan_2_yl_acetate
   }
 
-  branch from chloride side left {
+  branch from chloride side right {
     chloride
     <-> . +h +1_chloro_2_2_bis_4_chlorophenyl_ethylene
     ddd
   }
 
-  branch from chloride side right {
+  branch from chloride side left {
     chloride
     <-> . +h +unsym_bis_4_chlorophenyl_ethylene
     1_chloro_2_2_bis_4_chlorophenyl_ethane

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-isobutyryl-l-lysine-to-o-s-3r-hydroxy-4-methy "N6-isobutyryl-L-lysine to O-[S-(3R)-hydroxy-4-methy…" {
-  spacing 316
+  spacing 304
 
   spine at 0,0 {
     n6_isobutyryl_l_lysine
@@ -16,17 +16,5 @@ pathway n6-isobutyryl-l-lysine-to-o-s-3r-hydroxy-4-methy "N6-isobutyryl-L-lysine
     o_s_3_oxo_4_methylpentanoylpantetheine_4_phospho
     <-> . +nadph +hplus -nadp
     o_s_3r_hydroxy_4_methylpentanoylpantetheine_4_ph
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +n6_2_methylpropenoyl_l_lysine +h2o
-    methacrylate
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +n6_tetradecanoyl_l_lysine +h2o
-    tetradecanoate
   }
 }

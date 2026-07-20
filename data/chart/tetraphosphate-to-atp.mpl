@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetraphosphate-to-atp "tetraphosphate to ATP" {
-  spacing 204
+  spacing 198
 
   spine at 0,0 {
     tetraphosphate
@@ -18,49 +18,43 @@ pathway tetraphosphate-to-atp "tetraphosphate to ATP" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +e_cinnamaldehyde +nad
-    cinnamyl_alcohol
+    <-> ec_1_1_1_21 [1.1.1.21] +d_fucopyranose +nadph +nadp
+    l_fucitol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_28 [1.1.1.28] +nadh +3_bromopyruvic_acid +nad
-    3_bromolactate
+    <-> ec_1_1_1_21 [1.1.1.21] +aldehydo_l_idose +nadph +nadp
+    l_iditol
   }
 
   branch from triphosphate side left {
-    triphosphate
-    <-> . +adenosyl_cobyrinate_diamide +h +atp
-    cob_i_yrinate_a_c_diamide
-  }
-
-  branch from triphosphate side right {
     triphosphate
     <-> ec_2_7_4_3 [2.7.4.3] +diphosphate +adp +h
     amp
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +atp +h2o
-    glycyl_l_leucine
-  }
-
   branch from phosphate side right {
     phosphate
-    <-> . +l_glutamate_5_semialdehyde +h +nad +d_alpha_glutamyl_phosphate
-    nadh
+    <-> . +h +adp +atp +h2o
+    meso_lanthionine
   }
 
-  branch from atp side left {
-    atp
-    <-> . +d_ribose +nicotinamide +adp +h2o
-    beta_nicotinamide_d_ribonucleotide
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    l_lanthionine_dizwitterion
   }
 
   branch from atp side right {
     atp
-    <-> . +myo_inositol +h +adp
-    1d_myo_inositol_hexakisphosphate
+    <-> . +h +adp +phosphate +h2o
+    cold_adapted_kdo_2_lipid_a
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_7_63 [2.7.7.63] +lipoyl_amp +diphosphate +h
+    r_lipoate
   }
 }

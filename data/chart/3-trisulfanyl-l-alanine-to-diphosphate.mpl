@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to diphosphate" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     3_trisulfanyl_l_alanine
@@ -28,27 +28,15 @@ pathway 3-trisulfanyl-l-alanine-to-diphosphate "3-trisulfanyl-L-alanine to dipho
     3e_phycoerythrobilin
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +progesterone +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxyprogesterone
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +androst_4_ene_3_17_dione +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxyandrost_4_ene_3_17_dione
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +2_methylvalerate +atp +coa +amp
-    2_methylpentanoyl_coa
+    <-> . +2_cis_6_cis_farnesyl_diphosphate +h2o
+    6z_nerolidol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2s_4s_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
-    5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    6r_7s_2_2_6_trimethyl_10_methylenebicyclo_5_4_0
   }
 }

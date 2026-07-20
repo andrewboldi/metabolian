@@ -20,13 +20,13 @@ pathway stachyose-to-hexadecanoate "stachyose to hexadecanoate" {
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> ec_3_2_1_108 [3.2.1.108] +lactose +h2o
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
     alpha_d_glucose
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> ec_3_2_1_108 [3.2.1.108] +h2o +alpha_d_glucose
-    alpha_lactose
+    <-> ec_2_7_1_6 [2.7.1.6] +atp +h +adp
+    alpha_d_galactose_1_phosphate
   }
 }

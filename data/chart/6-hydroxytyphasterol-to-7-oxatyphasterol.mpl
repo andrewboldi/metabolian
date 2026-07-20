@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-hydroxytyphasterol-to-7-oxatyphasterol "6α-hydroxytyphasterol to 7-oxatyphasterol" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     6_hydroxytyphasterol
@@ -16,39 +16,27 @@ pathway 6-hydroxytyphasterol-to-7-oxatyphasterol "6α-hydroxytyphasterol to 7-ox
     7_oxatyphasterol
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_5_dodecanediol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_4_dodecanediol
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +h +plastoquinone_9 +nadph
-    plastoquinol_9
+    <-> . +2_octaprenyl_6_hydroxyphenol +h2o +h +o2 +nadph
+    2_octaprenylphenol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +h +nadph
-    ubiquinone_9
+    <-> ec_1_7_1_6 [1.7.1.6] +para_dimethylamino_azobenzene +h +nadph +aniline
+    n_n_dimethyl_1_4_phenylenediamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +scyptolin_a +phosphate +scyptolin_a
-    atp
+    <-> ec_3_2_1_80 [3.2.1.80] +sucrose +beta_d_fructose
+    1_f_beta_d_fructosylsucrose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    schizopeptin_791
+    <-> . +beta_d_fructose +neokestose
+    6g_6_kestotetraose
   }
 }

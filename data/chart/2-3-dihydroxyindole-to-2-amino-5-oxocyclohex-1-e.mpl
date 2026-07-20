@@ -24,8 +24,8 @@ pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to
 
   branch from anthranilate side right {
     anthranilate
-    <-> ec_1_14_13_35 [1.14.13.35] +nadph +o2 +hplus +nh3 +nadp
-    2_3_dihydroxybenzoate
+    <-> ec_4_1_3_27 [4.1.3.27] +chorismate +glutamine +pyruvate +hplus
+    glutamate
   }
 
   branch from anthraniloyl_coa side left {
@@ -42,13 +42,13 @@ pathway 2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e "2,3-dihydroxyindole to
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
-    3_l_threonyl_adenylyl_1_group
+    <-> ec_4_2_3_120 [4.2.3.120] +gpp
+    pinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_65 [2.7.7.65] +gtp
-    c_di_gmp
+    <-> ec_4_2_3_113 [4.2.3.113] +gpp
+    terpinolene
   }
 }

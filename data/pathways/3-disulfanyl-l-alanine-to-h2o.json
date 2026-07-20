@@ -1,0 +1,302 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-disulfanyl-l-alanine-to-h2o",
+  "name": "3-disulfanyl-L-alanine to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 3-disulfanyl-L-alanine residue to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51224"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61963"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H5NOS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61963"
+      }
+    },
+    {
+      "id": "trioxidosulfanidosulfate",
+      "name": "trioxidosulfanidosulfate",
+      "short": "trioxidosulfanidosu…",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33542"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "s_2_sulfodisulfanyl_l_cysteine_1",
+      "name": "S-(2-sulfodisulfanyl)-L-cysteine(1−)",
+      "short": "S-(2-sulfodisulfany…",
+      "formula": "C3H4NO4S4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140664"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_trisulfanyl_l_alanine",
+      "name": "3-trisulfanyl-L-alanine",
+      "short": "3-trisulfanyl-L-ala…",
+      "formula": "C3H5NOS3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139319"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM58"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_5_2",
+      "name": "L-cysteine S-thiosulfotransferase",
+      "ec": [
+        "2.8.5.2"
+      ]
+    },
+    {
+      "id": "ec_3_1_6_20",
+      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
+      "ec": [
+        "3.1.6.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-cysteine S-thiosulfotransferase",
+      "equation": "S-sulfanyl-L-cysteinyl-[SoxY protein] + thiosulfate + 2 Fe(III)-[cytochrome c] = S-(2-sulfodisulfanyl)-L-cysteinyl-[SoxY protein] + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "2.8.5.2",
+      "substrates": [
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
+      "equation": "S-(2-sulfodisulfanyl)-L-cysteinyl-[SoxY protein] + H2O = S-disulfanyl-L-cysteinyl-[SoxY protein] + sulfate + H(+)",
+      "ec": "3.1.6.20",
+      "substrates": [
+        {
+          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_trisulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
+      "ec": "3.1.6.20",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_trisulfanyl_l_alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR163647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163647"
+          }
+        ]
+      }
+    }
+  ]
+}

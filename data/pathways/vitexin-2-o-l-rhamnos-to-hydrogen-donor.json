@@ -226,31 +226,30 @@
       }
     },
     {
-      "id": "3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en",
-      "name": "(3Z,5S)-3-(1-oxidoethylidene)-5-{[4-(3-methylbut-2-en-1-yl)-1H-indol-3-yl]methyl}pyrrolidine-2,4-dione",
-      "short": "(3Z,5S)-3-(1-oxidoe…",
-      "formula": "C20H21N2O3",
+      "id": "s_mandelate",
+      "name": "(S)-mandelate",
+      "formula": "C8H7O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58067"
+        "chebi": "CHEBI:17756"
       }
     },
     {
-      "id": "cyclopiazonate",
-      "name": "α-cyclopiazonate",
-      "formula": "C20H19N2O3",
+      "id": "phenylglyoxylate",
+      "name": "phenylglyoxylate",
+      "formula": "C8H5O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58256"
+        "chebi": "CHEBI:36656"
       }
     },
     {
-      "id": "2_aminophenol",
-      "name": "2-aminophenol",
-      "formula": "C6H7NO",
-      "charge": 0,
+      "id": "tryptaminium",
+      "name": "tryptaminium",
+      "formula": "C10H13N2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:18112"
+        "chebi": "CHEBI:57887"
       }
     },
     {
@@ -263,13 +262,12 @@
       }
     },
     {
-      "id": "2_aminophenoxazin_3_one",
-      "name": "2-aminophenoxazin-3-one",
-      "short": "2-aminophenoxazin-3…",
-      "formula": "C12H8N2O2",
-      "charge": 0,
+      "id": "4_hydroxytryptamine",
+      "name": "4-hydroxytryptamine",
+      "formula": "C10H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:17293"
+        "chebi": "CHEBI:139069"
       }
     }
   ],
@@ -317,10 +315,17 @@
       ]
     },
     {
-      "id": "ec_1_21_99_1",
-      "name": "beta-cyclopiazonate dehydrogenase",
+      "id": "ec_1_1_99_31",
+      "name": "(S)-mandelate dehydrogenase",
       "ec": [
-        "1.21.99.1"
+        "1.1.99.31"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_59",
+      "name": "tryptamine 4-monooxygenase",
+      "ec": [
+        "1.14.99.59"
       ]
     }
   ],
@@ -672,12 +677,12 @@
     },
     {
       "id": "r8",
-      "name": "beta-cyclopiazonate dehydrogenase",
-      "equation": "beta-cyclopiazonate + A = alpha-cyclopiazonate + AH2",
-      "ec": "1.21.99.1",
+      "name": "(S)-mandelate dehydrogenase",
+      "equation": "(S)-mandelate + A = phenylglyoxylate + AH2",
+      "ec": "1.1.99.31",
       "substrates": [
         {
-          "metabolite": "3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en",
+          "metabolite": "s_mandelate",
           "stoichiometry": 1
         },
         {
@@ -687,7 +692,7 @@
       ],
       "products": [
         {
-          "metabolite": "cyclopiazonate",
+          "metabolite": "phenylglyoxylate",
           "stoichiometry": 1
         },
         {
@@ -697,35 +702,36 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_21_99_1"
+          "enzyme": "ec_1_1_99_31"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:14525"
+        "rhea": "RHEA:15749"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14525"
+            "id": "RHEA:15749"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
-      "equation": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
+      "name": "tryptamine 4-monooxygenase",
+      "equation": "tryptamine + AH2 + O2 = 4-hydroxytryptamine + A + H2O",
+      "ec": "1.14.99.59",
       "substrates": [
         {
-          "metabolite": "2_aminophenol",
-          "stoichiometry": 2
+          "metabolite": "tryptaminium",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         },
         {
@@ -735,29 +741,34 @@
       ],
       "products": [
         {
-          "metabolite": "2_aminophenoxazin_3_one",
+          "metabolite": "4_hydroxytryptamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:14681"
+        "rhea": "RHEA:15865"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14681"
+            "id": "RHEA:15865"
           }
         ]
       }

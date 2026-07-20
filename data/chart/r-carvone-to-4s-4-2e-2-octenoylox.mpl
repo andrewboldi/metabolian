@@ -18,26 +18,26 @@ pathway r-carvone-to-4s-4-2e-2-octenoylox "(R)-carvone to (4S)-4-[(2E)-2-Octenoy
 
   branch from 2e_octenoyl_coa side left {
     2e_octenoyl_coa
-    <-> . +octanoyl_coa +ubiquinone_10
-    ubiquinol_10
-  }
-
-  branch from 2e_octenoyl_coa side right {
-    2e_octenoyl_coa
     <-> . +3_oxooctanoyl_coa +nadh +h +h2o
     nad
   }
 
+  branch from 2e_octenoyl_coa side right {
+    2e_octenoyl_coa
+    <-> . +co2 +nadph +nadp
+    hexylmalonyl_coa
+  }
+
   branch from coa side left {
     coa
-    <-> . +7z_hexadecenoyl_coa +h2o
-    7_palmitoleic_acid
+    <-> . +r_carnitine +heneicosanoyl_coenzyme_a
+    heneicosanoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +10z_heptadecenoyl_coa +h2o
-    10z_heptadecenoic_acid
+    <-> . +r_carnitine +docosanoyl_coa
+    o_behenoylcarnitine
   }
 
   branch from 4s_4_2e_2_octenoyloxy_4_trimethylammonio_butano side left {

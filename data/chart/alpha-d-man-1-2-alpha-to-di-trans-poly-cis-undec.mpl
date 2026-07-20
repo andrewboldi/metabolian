@@ -18,25 +18,25 @@ pathway alpha-d-man-1-2-alpha-to-di-trans-poly-cis-undec "alpha-D-Man-(1->2)-alp
 
   branch from h side left {
     h
-    <-> . +adp +molybdate +phosphate +molybdate +h2o
-    atp
+    <-> ec_3_1_1_88 [3.1.1.88] +cyanide +3_phenoxybenzaldehyde +2_4_chlorophenyl_3_methylbutyric_acid +h2o
+    fenvalerate
   }
 
   branch from h side right {
     h
-    <-> . +r_mevalonate +h2o
-    s_mevalonolactone
+    <-> ec_2_1_2_11 [2.1.2.11] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +2_oxobutanoate +h2o +akos006378692
+    6s_5_6_7_8_tetrahydrofolate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu +h
-    cyanidin_3_o_6_o_4_coumaroyl_beta_d_sambubioside
+    <-> ec_2_4_1_219 [2.4.1.219] +udp +raucaffricine +h
+    vomilenine
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +arabidopsis_anthocyanin_a3 +h
-    cyanidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glucosi
+    <-> ec_2_4_1_103 [2.4.1.103] +udp +1_hydroxy_2_beta_d_glucosyloxy_9_10_anthraquinon +h
+    alizarin
   }
 }

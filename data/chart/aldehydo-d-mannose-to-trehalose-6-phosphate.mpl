@@ -24,25 +24,25 @@ pathway aldehydo-d-mannose-to-trehalose-6-phosphate "aldehydo-D-mannose to α,α
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> ec_5_3_1_15 [5.3.1.15]
-    keto_d_fructose
-  }
-
-  branch from d_mannopyranose side right {
-    d_mannopyranose
     <-> ec_3_2_1_137 [3.2.1.137] +s_cerevisiae_mannan_fragment +h2o
     s_cerevisiae_mannan_fragment_with_alpha_1_2_mann
   }
 
+  branch from d_mannopyranose side right {
+    d_mannopyranose
+    <-> . +h2o
+    d_manp_1_2_d_manp
+  }
+
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +6_kestotriose
-    6_6_kestotetraose
+    <-> ec_3_2_1_126 [3.2.1.126] +trans_sinapyl_alcohol +h2o
+    syringin
   }
 
   branch from glucose side right {
     glucose
-    <-> . +sucrose +6_kestotriose
-    6_6_kestotetraose
+    <-> ec_3_2_1_126 [3.2.1.126] +trans_p_coumaryl_alcohol +h2o
+    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 }

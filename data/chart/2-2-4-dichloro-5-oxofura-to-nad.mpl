@@ -18,25 +18,25 @@ pathway 2-2-4-dichloro-5-oxofura-to-nad "2-(2,4-dichloro-5-oxofura… to NAD" {
 
   branch from o2 side left {
     o2
-    <-> . +o_methylandrocymbine +h2o
-    n_formyldemecolcine
+    <-> . +fumiquinazoline_a +h2o2
+    fumiquinazoline_c
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_6_trans_tridecadienoyl_coa +h2o2
-    6_trans_tridecenoyl_coa
+    <-> . +2_methyl_3_n_amyl_pyrrole +h2o2
+    2_methyl_3_n_amyl_dihydropyrrole
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +cortisol
-    20alpha_hydroxycortisol
+    <-> ec_1_3_1_56 [1.3.1.56] +nadh +4_bromo_2_3_dihydroxydiphenyl_ether +h
+    4_bromo_2_3_dihydrodiol_diphenyl_ether
   }
 
   branch from nad side right {
     nad
-    <-> . +dehydrodiconiferyl_alcohol +nadh +h
-    dehydrodiconiferyl_aldehyde
+    <-> ec_1_1_1_396 [1.1.1.396] +nadh +h +3_acetyl_3_devinylchlorophyllide_a
+    3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
   }
 }

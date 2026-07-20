@@ -24,14 +24,14 @@ pathway nadh-to-5-androstane-3-17-dione "NADH to 5α-androstane-3,17-dione" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinofuranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +hexacosanal
+    hexacosan_1_ol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinopyranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +triacontanal
+    triacontan_1_ol
   }
 
   branch from androsterone side right {
@@ -48,14 +48,14 @@ pathway nadh-to-5-androstane-3-17-dione "NADH to 5α-androstane-3,17-dione" {
 
   branch from fmn side right {
     fmn
-    <-> . +ent_cassa_12_15_dien_2_3_diol +fmnh2 +o2 +h2o +hplus
-    ent_3_hydroxycassa_12_15_dien_2_one
+    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
+    2s_dihydrotricetin
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_72 [1.14.14.72] +drimenol +fmnh2 +o2 +h2o +hplus
-    drimendiol
+    <-> . +fmnh2 +o2 +2s_dihydrotricetin +h2o +hplus
+    s_naringenin
   }
 
   branch from 5_androstane_3_17_dione side right {

@@ -18,26 +18,26 @@ pathway adenosine-5-phospho-n-me-to-n-acetylimidazole "Adenosine-5'-phospho-N-me
 
   branch from h side left {
     h
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +5beta_androstane_3_17_dione +nad
-    5_dihydrotestosterone
+    <-> ec_3_2_1_177 [3.2.1.177] +alpha_d_xylose +4_nitrophenol +h2o
+    4_nitrophenyl_d_xyloside
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +estrone_3_sulfate +nad
-    17_estradiol_3_sulfate
+    <-> ec_2_5_1_18 [2.5.1.18] +fluoride +s_2_4_dinitrophenyl_glutathione +glutathione
+    1_fluoro_2_4_dinitrobenzene
   }
 
   branch from amp side left {
     amp
-    <-> ec_3_6_1_21 [3.6.1.21] +alpha_d_ribose_1_phosphate +h +h2o
-    adp_beta_d_ribose
+    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +11z_octadecenoyl_coa +11z_octadecenoate +atp +coa
+    pmf
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_2_1_3 [6.2.1.3] +decanoate +atp +coa +diphosphate
-    decanoyl_coa
+    <-> ec_2_7_4_3 [2.7.4.3] +h +adp +adenosine_5_o_3_thiodiphophate
+    adenosine_5_gamma_thio_triphosphate
   }
 
   branch from s_s_adenosyl_l_methionine side left {

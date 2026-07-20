@@ -24,14 +24,14 @@ pathway 2r-3r-2-3-dihydroxy-3-m-to-n6-r-s8-isobutyryldi "(2R,3R)-2,3-dihydroxy-3
 
   branch from kmv side right {
     kmv
-    <-> . +o2 +h2o +h2o2 +nh3
-    d_alloisoleucine
+    <-> . +isoleucine +glyoxylate
+    glycine
   }
 
   branch from kiv side left {
     kiv
-    <-> . +valine +glyoxylate
-    glycine
+    <-> . +valine +glycine
+    glyoxylate
   }
 
   branch from kiv side right {

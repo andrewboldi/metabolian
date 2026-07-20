@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-mandelate-to-1-4-benzosemiquinone "(S)-mandelate to 1,4-benzosemiquinone" {
-  spacing 288
+  spacing 282
 
   spine at 0,0 {
     s_mandelate
@@ -22,49 +22,43 @@ pathway s-mandelate-to-1-4-benzosemiquinone "(S)-mandelate to 1,4-benzosemiquino
 
   branch from bh2 side left {
     bh2
-    <-> ec_4_2_1_96 [4.2.1.96] +h2o
-    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
-  }
-
-  branch from bh2 side right {
-    bh2
     <-> . +sapropterin +l_phenylalanine +o2 +h2o
     tyrosine
   }
 
-  branch from 4_hydroxybenzaldehyde side left {
+  branch from 4_hydroxybenzaldehyde side right {
     4_hydroxybenzaldehyde
     <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
     trans_4_coumaroyl_coa
   }
 
-  branch from 4_hydroxybenzaldehyde side right {
+  branch from 4_hydroxybenzaldehyde side left {
     4_hydroxybenzaldehyde
     <-> . +4_hydroxybenzoate +atp +nadph +hplus +amp +nadp
     ppi
   }
 
-  branch from 4_hydroxybenzoate side left {
+  branch from 4_hydroxybenzoate side right {
     4_hydroxybenzoate
     <-> ec_6_2_1_50 [6.2.1.50] +holo-acp +atp +amp +ppi
     o_s_4_hydroxybenzoyl_pantetheine_4_phosphoryl_se
   }
 
-  branch from 4_hydroxybenzoate side right {
+  branch from 4_hydroxybenzoate side left {
     4_hydroxybenzoate
     <-> ec_1_14_19_55 [1.14.19.55] +bromide +nadph +o2 +hplus +co2 +nadp +h2o
     2_4_dibromophenol
-  }
-
-  branch from quinol side left {
-    quinol
-    <-> ec_4_1_1_62 [4.1.1.62] +hplus +co2
-    2_5_dihydroxybenzoate
   }
 
   branch from quinol side right {
     quinol
     <-> ec_1_6_5_6 [1.6.5.6] +nadph +hplus +nadp
     quinone
+  }
+
+  branch from quinol side left {
+    quinol
+    <-> . +chlorohydroquinone +gsh +chloride +hplus
+    gssg
   }
 }

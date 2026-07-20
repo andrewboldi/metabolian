@@ -1,0 +1,260 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "diacetyl-to-o2",
+  "name": "diacetyl to O2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from diacetyl to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95421"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "diacetyl",
+      "name": "diacetyl",
+      "formula": "C4H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1467"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "r_acetoin",
+      "name": "(R)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM664"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM75"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "nitroethane",
+      "name": "nitroethane",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364198"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_12_16",
+      "name": "nitronate monooxygenase",
+      "ec": [
+        "1.13.12.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR95421",
+      "substrates": [
+        {
+          "metabolite": "diacetyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95421"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95421"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103380",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitronate monooxygenase",
+      "ec": "1.13.12.16",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitroethane",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_12_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR172936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172936"
+          }
+        ]
+      }
+    }
+  ]
+}

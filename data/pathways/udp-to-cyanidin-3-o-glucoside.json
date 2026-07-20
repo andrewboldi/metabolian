@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-cyanidin-3-o-glucoside",
   "name": "UDP to Cyanidin 3-O-glucoside",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from UDP to Cyanidin 3-O-glucoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -108,57 +108,48 @@
       }
     },
     {
-      "id": "l_threonine",
-      "name": "L-threonine",
-      "formula": "C4H9NO3",
-      "charge": 0,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM142"
+        "metanetx": "MNXM40333"
       }
     },
     {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H11NO3",
+      "id": "l_fructopyranose",
+      "name": "β-L-fructopyranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM76"
+        "chebi": "CHEBI:37729"
       }
     },
     {
-      "id": "tyrosyl_threonine",
-      "name": "Tyrosyl-Threonine",
-      "formula": "C13H18N2O5",
-      "charge": 0,
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM744967"
+        "metanetx": "MNXM9"
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM741553"
+        "metanetx": "MNXM3"
       }
     },
     {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
+      "id": "l_fructofuranose",
+      "name": "α-L-fructofuranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM741664"
-      }
-    },
-    {
-      "id": "tyr_trp_phe",
-      "name": "Tyr-Trp-Phe",
-      "formula": "C29H30N4O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:166008"
+        "chebi": "CHEBI:37727"
       }
     }
   ],
@@ -175,6 +166,13 @@
       "name": "anthocyanidin 3-O-glucoside 5-O-glucosyltransferase",
       "ec": [
         "2.4.1.298"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
       ]
     }
   ],
@@ -357,20 +355,33 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR163149",
+      "name": "Reaction MNXR174696",
+      "ec": "3.6.3.17",
       "substrates": [
         {
-          "metabolite": "l_threonine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tyrosine",
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_fructopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "tyrosyl_threonine",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_fructopyranose",
           "stoichiometry": 1
         },
         {
@@ -378,59 +389,78 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR163149"
+        "metanetx": "MNXR174696"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR163149"
+            "id": "MNXR174696"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR163151",
+      "name": "Reaction MNXR174697",
+      "ec": "3.6.3.17",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "l_fructofuranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_phenylalanine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tyrosine",
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "tyr_trp_phe",
+          "metabolite": "l_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR163151"
+        "metanetx": "MNXR174697"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR163151"
+            "id": "MNXR174697"
           }
         ]
       }

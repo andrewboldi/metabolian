@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-mannose "GDP to α-D-mannose…" {
-  spacing 206
+  spacing 212
 
   spine at 0,0 {
     gdp
@@ -18,53 +18,59 @@ pathway gdp-to-d-mannose "GDP to α-D-mannose…" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> ec_2_4_1_83 [2.4.1.83] +gdp +h +dolichyl_beta_d_mannosyl_phosphate
-    dolichyl_phosphate
+    <-> ec_2_4_1_361 [2.4.1.361] +gdp +h +2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo
+    bis_myo_inositol_1_3_phosphate
   }
 
   branch from gdp_alpha_d_mannose side right {
     gdp_alpha_d_mannose
-    <-> ec_2_4_1_83 [2.4.1.83] +gdp +dolichyl_phosphate_d_mannose +h
-    dolichol_phosphate_human_uterine_homolog
+    <-> . +gdp +beta_d_man_1_3_beta_d_glc_1_3_alpha_d_glcnac_pp +h
+    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_1 [2.5.1.1] +2_hydroxygenistein +dimethylallyl_diphosphate +licoisoflavone_a
-    diphosphate
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_triacontadienoylpantetheine_4_phospho +nad
+    o_s_11z_triacontenoylpantetheine_4_phosphoryl_l
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_1 [2.5.1.1] +isowighteone +diphosphate +genistein
-    dimethylallyl_diphosphate
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho +nadp +nadph
+    o_s_9z_3_oxooctacosenoylpantetheine_4_phosphoryl
   }
 
   branch from alpha_d_mannose_1_phosphate side left {
-    alpha_d_mannose_1_phosphate
-    <-> ec_2_7_1_106 [2.7.1.106] +glyceric_acid_1_3_biphosphate +h +d_mannose_1_6_bisphosphate
-    2r_3_phosphoglycerate
-  }
-
-  branch from alpha_d_mannose_1_phosphate side right {
     alpha_d_mannose_1_phosphate
     <-> ec_2_4_1_320 [2.4.1.320] +aldehydo_n_acetyl_d_glucosamine +phosphate
     d_manp_1_4_d_glcpnac
   }
 
-  branch from adp side left {
-    adp
-    <-> ec_2_7_1_11 [2.7.1.11] +alpha_d_ribose_1_phosphate +h +atp
-    alpha_d_ribose
+  branch from alpha_d_mannose_1_phosphate side right {
+    alpha_d_mannose_1_phosphate
+    <-> ec_2_4_1_281 [2.4.1.281] +beta_d_glucose +phosphate
+    d_manp_1_4_d_glcp
+  }
+
+  branch from gdp_beta_l_galactose side left {
+    gdp_beta_l_galactose
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp +l_galactose_1_phosphate +h
+    phosphate
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_66 [2.7.1.66] +dolichol_phosphate_human_uterine_homolog +h +atp
-    dolichol
+    <-> ec_2_7_1_1 [2.7.1.1] +1_5_anhydro_d_glucitol_6_phosphate +h +atp
+    1_5_anhydro_d_glucitol
   }
 
-  branch from d_mannose_1_6_bisphosphate side left {
+  branch from adp side left {
+    adp
+    <-> ec_2_7_1_1 [2.7.1.1] +d_arabinose_5_phosphate +h +atp
+    d_arabinofuranose
+  }
+
+  branch from d_mannose_1_6_bisphosphate side right {
     d_mannose_1_6_bisphosphate
     <-> . +atp +h +adp
     d_mannose_1_phosphate

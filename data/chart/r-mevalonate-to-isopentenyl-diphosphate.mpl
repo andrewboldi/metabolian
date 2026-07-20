@@ -24,13 +24,13 @@ pathway r-mevalonate-to-isopentenyl-diphosphate "(R)-mevalonate to isopentenyl d
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_1 [2.5.1.1] +dmapp +ppi
-    gpp
+    <-> ec_5_3_3_2 [5.3.3.2]
+    dmapp
   }
 
   branch from ipp side left {
     ipp
-    <-> ec_5_3_3_2 [5.3.3.2]
-    dmapp
+    <-> ec_1_17_7_4 [1.17.7.4] +di_sulfido_diiron +h2o +di_sulfido_diiron +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 }

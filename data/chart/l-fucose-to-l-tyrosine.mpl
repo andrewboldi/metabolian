@@ -32,14 +32,14 @@ pathway l-fucose-to-l-tyrosine "α-L-fucose to L-tyrosine" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_75 [2.5.1.75] +adenosine_5_monophosphate_1 +dmapp
-    n6_dimethylallyladenine_5_monophosphate_1
+    <-> ec_4_2_3_60 [4.2.3.60] +fpp
+    germacrene_c
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_46 [4.2.3.46] +fpp
-    e_e_farnesene
+    <-> ec_3_6_1_9 [3.6.1.9] +datp +h2o +hplus
+    2_deoxyadenosine_5_monophosphate
   }
 
   branch from tyrosine side left {

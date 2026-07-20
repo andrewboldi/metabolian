@@ -133,37 +133,53 @@
       }
     },
     {
-      "id": "4_amino_l_phenylalanine",
-      "name": "4-amino-L-phenylalanine",
-      "short": "4-amino-L-phenylala…",
-      "formula": "C9H12N2O2",
-      "charge": 0,
+      "id": "heliamine",
+      "name": "heliamine",
+      "formula": "C11H16NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:143072"
+        "chebi": "CHEBI:194515"
       }
     },
     {
-      "id": "4_methylamino_l_phenylalanine",
-      "name": "4-methylamino-L-phenylalanine",
-      "short": "4-methylamino-L-phe…",
-      "formula": "C10H14N2O2",
-      "charge": 0,
+      "id": "n_methylheliamine",
+      "name": "N-methylheliamine",
+      "formula": "C12H18NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:176804"
+        "chebi": "CHEBI:194516"
       }
     },
     {
-      "id": "4_dimethylamino_l_phenylalanine",
-      "name": "4-dimethylamino-L-phenylalanine",
-      "short": "4-dimethylamino-L-p…",
-      "formula": "C11H16N2O2",
+      "id": "an_s_7_8_13_14_tetrahydroprotoberberine",
+      "name": "an (S)-7,8,13,14-tetrahydroprotoberberine",
+      "short": "an (S)-7,8,13,14-te…",
+      "formula": "C17H13NO4R4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:176805"
+        "chebi": "CHEBI:194528"
+      }
+    },
+    {
+      "id": "an_s_cis_n_methyl_7_8_13_14_tetrahydroprotoberbe",
+      "name": "an (S)-cis-N-methyl-7,8,13,14-tetrahydroprotoberberine",
+      "short": "an (S)-cis-N-methyl…",
+      "formula": "C18H16NO4R4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:194529"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_122",
+      "name": "(S)-tetrahydroprotoberberine N-methyltransferase",
+      "ec": [
+        "2.1.1.122"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -300,11 +316,11 @@
     },
     {
       "id": "r4",
-      "name": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-a...",
-      "equation": "4-amino-L-phenylalanine + S-adenosyl-L-methionine = 4-methylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
+      "name": "heliamine + S-adenosyl-L-methionine = N-methylheliamine + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "heliamine + S-adenosyl-L-methionine = N-methylheliamine + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "4_amino_l_phenylalanine",
+          "metabolite": "heliamine",
           "stoichiometry": 1
         },
         {
@@ -314,7 +330,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_methylamino_l_phenylalanine",
+          "metabolite": "n_methylheliamine",
           "stoichiometry": 1
         },
         {
@@ -329,25 +345,26 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:67960"
+        "rhea": "RHEA:76059"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67960"
+            "id": "RHEA:76059"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalani...",
-      "equation": "4-methylamino-L-phenylalanine + S-adenosyl-L-methionine = 4-dimethylamino-L-phenylalanine + S-adenosyl-L-homocysteine + H(+)",
+      "name": "(S)-tetrahydroprotoberberine N-methyltransferase",
+      "equation": "an (S)-7,8,13,14-tetrahydroprotoberberine + S-adenosyl-L-methionine = an (S)-cis-N-methyl-7,8,13,14-tetrahydroprotoberberine + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.122",
       "substrates": [
         {
-          "metabolite": "4_methylamino_l_phenylalanine",
+          "metabolite": "an_s_7_8_13_14_tetrahydroprotoberberine",
           "stoichiometry": 1
         },
         {
@@ -357,29 +374,30 @@
       ],
       "products": [
         {
-          "metabolite": "4_dimethylamino_l_phenylalanine",
+          "metabolite": "an_s_cis_n_methyl_7_8_13_14_tetrahydroprotoberbe",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_122"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:67964"
+        "rhea": "RHEA:76067"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67964"
+            "id": "RHEA:76067"
           }
         ]
       }

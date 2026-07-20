@@ -1,0 +1,239 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "co2-to-isopentenyl-diphosphate",
+  "name": "CO2 to isopentenyl diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from CO2 to isopentenyl diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199418"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "6_carboxy_2_demethylmenaquinol_8",
+      "name": "6-carboxy-2-demethylmenaquinol-8",
+      "short": "6-carboxy-2-demethy…",
+      "formula": "C51H71O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559546"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "all_trans_octaprenyl_diphosphate",
+      "name": "all-trans-octaprenyl diphosphate",
+      "short": "all-trans-octapreny…",
+      "formula": "C40H65O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1372305"
+      }
+    },
+    {
+      "id": "1_4_dihydroxy_6_naphthoate",
+      "name": "1,4-dihydroxy-6-naphthoate",
+      "short": "1,4-dihydroxy-6-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64254"
+      }
+    },
+    {
+      "id": "farnesyl_diphosphate",
+      "name": "farnesyl diphosphate",
+      "formula": "C15H28O7P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363834"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_90",
+      "name": "all-trans-octaprenyl-diphosphate synthase",
+      "ec": [
+        "2.5.1.90"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR199418",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_carboxy_2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR199417",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_carboxy_2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_octaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_6_naphthoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR199417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "all-trans-octaprenyl-diphosphate synthase",
+      "ec": "2.5.1.90",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "all_trans_octaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198497"
+          }
+        ]
+      }
+    }
+  ]
+}

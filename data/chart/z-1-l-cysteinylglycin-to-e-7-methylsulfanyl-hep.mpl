@@ -24,26 +24,26 @@ pathway z-1-l-cysteinylglycin-to-e-7-methylsulfanyl-hep "(Z)-1-(L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +acetyl_coa +h +coa
-    n_acetylglycine
+    <-> . +l_serine +l_glutamate +h2o
+    seryl_glycyl_glutamate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_histidine +l_asparagine +h2o
-    glycyl_histidyl_asparagine
+    <-> . +octanedioyl_coa +h +suberylglycine
+    coa
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    alaninamide
+    <-> . +r_carnitine +5z_8z_11z_eicosatrienoyl_coenzyme_a +coa
+    acar_20_3
   }
 
   branch from h side right {
     h
-    <-> . +adp +5alpha_pregnane_3_20_dione +phosphate +5alpha_pregnane_3_20_dione +h2o
-    atp
+    <-> . +nonadecanoyl_coa +acetyl_coa +coa
+    3_oxoheneicosanoyl_coenzyme_a
   }
 
   branch from e_7_methylsulfanyl_heptanal_oxime side left {
@@ -54,49 +54,49 @@ pathway z-1-l-cysteinylglycin-to-e-7-methylsulfanyl-hep "(Z)-1-(L-cysteinylglyci
 
   branch from o2 side right {
     o2
-    <-> . +octadecanoyl_coa +h +nadph +nadp +h2o
-    13z_octadecenoyl_coa
+    <-> ec_1_13_12_3 [1.13.12.3] +co2 +3_methylsulfanylpropanamide +h2o
+    l_methionine
   }
 
   branch from o2 side left {
     o2
-    <-> . +octadecanoyl_coa +h +nadph +nadp +h2o
-    vaccenyl_coenzyme_a
+    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +acetone +h2o2 +h2o
+    2_nitropropane
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +l_asparagine +h2o
-    asn_cys_cys
+    <-> . +l_asparagine +l_proline +h2o
+    prolyl_asparaginyl_cysteine
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +l_asparagine +l_phenylalanine +h2o
-    asparaginyl_phenylalanyl_cysteine
+    <-> . +l_proline +h2o
+    prolyl_cysteine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +octadecanoyl_coa +h +o2 +nadp +h2o
-    7z_octadecenoyl_coa
+    <-> . +2_methylpropanoyl_coa +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon
   }
 
   branch from nadph side left {
     nadph
-    <-> . +17z_hexacosenoyl_coa +nadp +h
-    2e_17z_hexacosadi_2_17_enoyl_coa
+    <-> ec_1_3_1_20 [1.3.1.20] +1r_2s_1_2_dihydronaphthalene_1_2_diol +nadp +h
+    naphthalene_1_2_diol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +9s_10r_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9s_10r_9_10_epoxy_18_hydroxyoctadecanoate
+    <-> ec_1_14_19_54 [1.14.19.54] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    reticulinylium
   }
 
   branch from fmn side left {
     fmn
-    <-> . +9r_10s_9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
-    9r_10s_9_10_epoxy_18_hydroxyoctadecanoate
+    <-> ec_1_14_14_76 [1.14.14.76] +ent_isokaurene +fmnh2 +o2 +h2o +hplus
+    2_3_dihydroxy_ent_isokaurene
   }
 }

@@ -137,50 +137,35 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "neoverrucosan_5_ol",
-      "name": "neoverrucosan-5β-ol",
-      "formula": "C20H34O",
+      "id": "isosativene",
+      "name": "(−)-isosativene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194191"
+        "chebi": "CHEBI:231814"
       }
     },
     {
-      "id": "verrucosan_2_ol",
-      "name": "verrucosan-2β-ol",
-      "formula": "C20H34O",
+      "id": "z_e_farnesene",
+      "name": "(Z,E)-α-farnesene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194192"
+        "chebi": "CHEBI:39238"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_207",
-      "name": "neoverrucosan-5beta-ol synthase",
-      "ec": [
-        "4.2.3.207"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_208",
-      "name": "verrucosan-2beta-ol synthase",
-      "ec": [
-        "4.2.3.208"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -317,22 +302,17 @@
     },
     {
       "id": "r4",
-      "name": "neoverrucosan-5beta-ol synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = neoverrucosan-5beta-ol + diphosphate",
-      "ec": "4.2.3.207",
+      "name": "(2E,6E)-farnesyl diphosphate = (-)-isosativene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-isosativene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "neoverrucosan_5_ol",
+          "metabolite": "isosativene",
           "stoichiometry": 1
         },
         {
@@ -340,44 +320,34 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_207"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:75151"
+        "rhea": "RHEA:81543"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75151"
+            "id": "RHEA:81543"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "verrucosan-2beta-ol synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = verrucosan-2beta-ol + diphosphate",
-      "ec": "4.2.3.208",
+      "name": "(2E,6E)-farnesyl diphosphate = (3Z,6E)-alpha-farnesene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (3Z,6E)-alpha-farnesene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "verrucosan_2_ol",
+          "metabolite": "z_e_farnesene",
           "stoichiometry": 1
         },
         {
@@ -385,22 +355,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_208"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:75155"
+        "rhea": "RHEA:82411"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75155"
+            "id": "RHEA:82411"
           }
         ]
       }

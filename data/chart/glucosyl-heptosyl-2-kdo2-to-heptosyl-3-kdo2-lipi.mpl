@@ -18,26 +18,26 @@ pathway glucosyl-heptosyl-2-kdo2-to-heptosyl-3-kdo2-lipi "glucosyl-(heptosyl)2-K
 
   branch from h side left {
     h
-    <-> . +adenosine_3_5_bisphosphate +deoxycylindrospermopsin +desulfo_7_deoxycylindrospermopsin
-    3_phosphoadenylyl_sulfate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_tetracosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_4_11 [3.1.4.11] +1d_myo_inositol_1_4_5_trisphosphate +1_stearoyl_2_arachidonoyl_sn_glycerol +h2o
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    d_selenomethionine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    24_1_18_3_pe
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_2_1_13 [6.2.1.13] +2_methylpropanoyl_coa +phosphate +atp +coa
-    2_methylpropanoate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    ps_20_0_18_1_9z
   }
 
   branch from glucosyl_heptosyl_3_kdo2_lipid_a_phosphate_e_col side left {
@@ -48,13 +48,13 @@ pathway glucosyl-heptosyl-2-kdo2-to-heptosyl-3-kdo2-lipi "glucosyl-(heptosyl)2-K
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +gomphrenin_i +h
-    betanidin
+    <-> . +udp +ansamitocinoside_p3 +h
+    n_demethylansamitocin_p_3
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm +h
-    6c_glucosyl_2_hydroxynaringenin
+    <-> . +udp +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h
+    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
   }
 }

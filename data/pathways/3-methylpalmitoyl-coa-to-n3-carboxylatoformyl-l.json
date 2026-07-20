@@ -148,13 +148,12 @@
       }
     },
     {
-      "id": "12_epi_fischerindole_u",
-      "name": "12-epi-fischerindole U",
-      "short": "12-epi-fischerindol…",
-      "formula": "C21H24N2",
-      "charge": 0,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:140442"
+        "chebi": "CHEBI:32551"
       }
     },
     {
@@ -176,13 +175,12 @@
       }
     },
     {
-      "id": "12_epi_fischerindole_g",
-      "name": "12-epi-fischerindole G",
-      "short": "12-epi-fischerindol…",
-      "formula": "C21H23ClN2",
-      "charge": 0,
+      "id": "4_chloro_l_lysinium",
+      "name": "4-chloro-L-lysinium",
+      "formula": "C6H14ClN2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:141002"
+        "chebi": "CHEBI:143276"
       }
     },
     {
@@ -195,23 +193,21 @@
       }
     },
     {
-      "id": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
-      "name": "O-[S-(L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(L-threonyl)pa…",
-      "formula": "C18H33N4O10PS",
-      "charge": 0,
+      "id": "gibberellin_a53",
+      "name": "gibberellin A53",
+      "formula": "C20H26O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:144927"
+        "chebi": "CHEBI:143954"
       }
     },
     {
-      "id": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
-      "name": "O-[S-(4-chloro-L-threonyl)pantetheine-4'-phosphoryl]-L-serine residue",
-      "short": "O-[S-(4-chloro-L-th…",
-      "formula": "C18H32ClN4O10PS",
-      "charge": 0,
+      "id": "gibberellin_a17",
+      "name": "gibberellin A17",
+      "formula": "C20H23O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:144979"
+        "chebi": "CHEBI:143958"
       }
     },
     {
@@ -264,20 +260,6 @@
       "name": "2,3-diaminopropionate N-oxalyltransferase",
       "ec": [
         "2.3.1.58"
-      ]
-    },
-    {
-      "id": "ec_1_14_20_14",
-      "name": "hapalindole-type alkaloid chlorinase",
-      "ec": [
-        "1.14.20.14"
-      ]
-    },
-    {
-      "id": "ec_1_14_20_15",
-      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
-      "ec": [
-        "1.14.20.15"
       ]
     }
   ],
@@ -462,12 +444,11 @@
     },
     {
       "id": "r5",
-      "name": "hapalindole-type alkaloid chlorinase",
-      "equation": "12-epi-fischerindole U + chloride + 2-oxoglutarate + O2 + H(+) = 12-epi-fischerindole G + succinate + CO2 + H2O",
-      "ec": "1.14.20.14",
+      "name": "L-lysine + chloride + 2-oxoglutarate + O2 + H(+) = 4-chloro-L-lysine + succinate + CO2 ...",
+      "equation": "L-lysine + chloride + 2-oxoglutarate + O2 + H(+) = 4-chloro-L-lysine + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "12_epi_fischerindole_u",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -489,7 +470,7 @@
       ],
       "products": [
         {
-          "metabolite": "12_epi_fischerindole_g",
+          "metabolite": "4_chloro_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -505,46 +486,54 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_20_14"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56764"
+        "rhea": "RHEA:59884"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56764"
+            "id": "RHEA:59884"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-threonyl-[L-threonyl-carrier protein] 4-chlorinase",
-      "equation": "L-threonyl-[peptidyl-carrier protein] + chloride + 2-oxoglutarate + O2 + H(+) = 4-chloro-L-threonyl-[peptidyl-carrier protein] + succinate + CO2 + H2O",
-      "ec": "1.14.20.15",
+      "name": "gibberellin A53 + 3 2-oxoglutarate + 3 O2 = gibberellin A17 + 3 succinate + 3 CO2 + H2O...",
+      "equation": "gibberellin A53 + 3 2-oxoglutarate + 3 O2 = gibberellin A17 + 3 succinate + 3 CO2 + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "chloride",
+          "metabolite": "gibberellin_a53",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a17",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -552,40 +541,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_20_15"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:56812"
+        "rhea": "RHEA:60792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56812"
+            "id": "RHEA:60792"
           }
         ]
       }

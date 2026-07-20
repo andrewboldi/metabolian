@@ -1,0 +1,237 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-beta-l-rhamnose-to-alpha-l-rhamnosyl-1-4",
+  "name": "dTDP-beta-L-rhamnose to alpha-L-Rhamnosyl-(1->4)-…",
+  "category": "other",
+  "summary": "A 3-step route from dTDP-beta-L-rhamnose to alpha-L-Rhamnosyl-(1->4)-D-glucuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR164423"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp_beta_l_rhamnose",
+      "name": "dTDP-beta-L-rhamnose",
+      "formula": "C16H24N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1106112"
+      }
+    },
+    {
+      "id": "20s_ginsenoside_rh1",
+      "name": "(20S)-ginsenoside Rh1",
+      "short": "ginsenoside Rh1",
+      "formula": "C36H62O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142487"
+      }
+    },
+    {
+      "id": "ginsenoside_rg2",
+      "name": "ginsenoside Rg2",
+      "formula": "C42H72O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77151"
+      }
+    },
+    {
+      "id": "dtdp",
+      "name": "dTDP",
+      "formula": "C10H13N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM152"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_rhamnopyranose",
+      "name": "L-rhamnopyranose",
+      "formula": "C6H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62346"
+      }
+    },
+    {
+      "id": "4_deoxy_l_threo_hex_4_enopyranuronate",
+      "name": "4-deoxy-L-threo-hex-4-enopyranuronate",
+      "short": "4-deoxy-L-threo-hex…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:195277"
+      }
+    },
+    {
+      "id": "alpha_l_rhamnosyl_1_4_d_glucuronate",
+      "name": "alpha-L-Rhamnosyl-(1->4)-D-glucuronate",
+      "short": "alpha-L-Rhamnosyl-(…",
+      "formula": "C12H20O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1556251"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_2_28",
+      "name": "alpha-L-rhamnosyl-(1->4)-beta-D-glucuronate lyase",
+      "ec": [
+        "4.2.2.28"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR164423",
+      "substrates": [
+        {
+          "metabolite": "dtdp_beta_l_rhamnose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "20s_ginsenoside_rh1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_rg2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR164423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR118781",
+      "substrates": [
+        {
+          "metabolite": "ginsenoside_rg2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_rhamnopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "20s_ginsenoside_rh1",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118781"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118781"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-L-rhamnosyl-(1->4)-beta-D-glucuronate lyase",
+      "ec": "4.2.2.28",
+      "substrates": [
+        {
+          "metabolite": "l_rhamnopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_deoxy_l_threo_hex_4_enopyranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_l_rhamnosyl_1_4_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_2_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR199281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199281"
+          }
+        ]
+      }
+    }
+  ]
+}

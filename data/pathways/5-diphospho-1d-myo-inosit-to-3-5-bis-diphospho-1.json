@@ -99,52 +99,12 @@
       }
     },
     {
-      "id": "phosphomycoketide_c32",
-      "name": "phosphomycoketide C32",
-      "short": "phosphomycoketide…",
-      "formula": "C32H65O4P",
-      "charge": -2,
+      "id": "s_oxalatosuccinate",
+      "name": "(S)-oxalatosuccinate",
+      "formula": "C6H3O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:139144"
-      }
-    },
-    {
-      "id": "c32_mycoketide",
-      "name": "C32 mycoketide",
-      "formula": "C32H66O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77479"
-      }
-    },
-    {
-      "id": "1d_myo_inositol_1_4_5_6_tetrakisphosphate",
-      "name": "1D-myo-inositol 1,4,5,6-tetrakisphosphate",
-      "short": "1D-myo-inositol…",
-      "formula": "C6H8O18P4",
-      "charge": -8,
-      "xrefs": {
-        "metanetx": "MNXM1102088"
-      }
-    },
-    {
-      "id": "1d_myo_inositol_1_2_4_5_6_pentakisphosphate",
-      "name": "1D-myo-inositol 1,2,4,5,6-pentakisphosphate",
-      "short": "1D-myo-inositol…",
-      "formula": "C6H7O21P5",
-      "charge": -10,
-      "xrefs": {
-        "metanetx": "MNXM730292"
-      }
-    },
-    {
-      "id": "1d_myo_inositol_hexakisphosphate",
-      "name": "1D-myo-inositol hexakisphosphate",
-      "short": "1D-myo-inositol…",
-      "formula": "C6H6O24P6",
-      "charge": -12,
-      "xrefs": {
-        "metanetx": "MNXM1364235"
+        "chebi": "CHEBI:153066"
       }
     },
     {
@@ -157,12 +117,69 @@
       }
     },
     {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
       "id": "h2o",
       "name": "H2O",
       "formula": "H2O",
       "charge": 0,
       "xrefs": {
         "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3s_3_isopropenyl_6_oxoheptanoyl_coa",
+      "name": "(3S)-3-isopropenyl-6-oxoheptanoyl-CoA",
+      "short": "3-isopropenyl-6-oxo…",
+      "formula": "C31H50N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:212"
+      }
+    },
+    {
+      "id": "3s_3_isopropenyl_6_oxoheptanoate",
+      "name": "(3S)-3-isopropenyl-6-oxoheptanoate",
+      "short": "3-isopropenyl-6-oxo…",
+      "formula": "C10H15O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:211"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_hexakisphosphate",
+      "name": "1D-myo-inositol hexakisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H6O24P6",
+      "charge": -12,
+      "xrefs": {
+        "metanetx": "MNXM1364235"
       }
     }
   ],
@@ -179,6 +196,13 @@
       "name": "diphosphoinositol-polyphosphate diphosphatase",
       "ec": [
         "3.6.1.52"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_7",
+      "name": "2-oxoglutarate carboxylase",
+      "ec": [
+        "6.4.1.7"
       ]
     },
     {
@@ -337,62 +361,70 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR120745",
+      "name": "2-oxoglutarate carboxylase",
+      "ec": "6.4.1.7",
       "substrates": [
         {
-          "metabolite": "phosphomycoketide_c32",
+          "metabolite": "s_oxalatosuccinate",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "c32_mycoketide",
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR120745"
+        "metanetx": "MNXR122337"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120745"
+            "id": "MNXR122337"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR121906",
+      "name": "Reaction MNXR122812",
       "substrates": [
         {
-          "metabolite": "1d_myo_inositol_1_4_5_6_tetrakisphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "h",
+          "metabolite": "3s_3_isopropenyl_6_oxoheptanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -400,21 +432,39 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "1d_myo_inositol_1_2_4_5_6_pentakisphosphate",
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3s_3_isopropenyl_6_oxoheptanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR121906"
+        "metanetx": "MNXR122812"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR121906"
+            "id": "MNXR122812"
           }
         ]
       }

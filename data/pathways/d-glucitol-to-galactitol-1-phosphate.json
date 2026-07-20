@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucitol-to-galactitol-1-phosphate",
+  "name": "D-glucitol to galactitol 1-phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-glucitol to galactitol 1-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51552"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17924"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucitol",
+      "name": "D-glucitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17924"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "l_xylo_3_hexulose",
+      "name": "L-xylo-3-hexulose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134214"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "galactitol",
+      "name": "galactitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1233"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "galactitol_1_phosphate",
+      "name": "galactitol 1-phosphate",
+      "short": "galactitol 1-P",
+      "formula": "C6H13O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM731248"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_12",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": [
+        "1.1.1.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-sorbitol + NADP(+) = L-xylo-3-hexulose + NADPH + H(+)",
+      "equation": "D-sorbitol + NADP(+) = L-xylo-3-hexulose + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_glucitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylo_3_hexulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51552"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51552"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-arabinitol 4-dehydrogenase",
+      "ec": "1.1.1.12",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_xylo_3_hexulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR117337"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117337"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR100018",
+      "substrates": [
+        {
+          "metabolite": "galactitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "galactitol_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR100018"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR100018"
+          }
+        ]
+      }
+    }
+  ]
+}

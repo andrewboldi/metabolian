@@ -142,51 +142,39 @@
       }
     },
     {
-      "id": "l_glutaminiumyl_group",
-      "name": "L-glutaminiumyl group",
-      "short": "L-glutaminiumyl…",
-      "formula": "C5H10N2O2",
-      "charge": 1,
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64722"
+        "chebi": "CHEBI:17544"
       }
     },
     {
-      "id": "l_glutamyl_zwitterionic_group",
-      "name": "L-α-glutamyl zwitterionic group",
-      "short": "L-α-glutamyl…",
-      "formula": "C5H8NO3",
-      "charge": 0,
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:64721"
+        "chebi": "CHEBI:13941"
       }
     },
     {
-      "id": "2_iminio_3_indol_3_yl_propanoate",
-      "name": "2-iminio-3-(indol-3-yl)propanoate",
-      "short": "2-iminio-3-(indol-3…",
-      "formula": "C11H10N2O2",
-      "charge": 0,
+      "id": "1_carboxybiuret",
+      "name": "1-carboxybiuret",
+      "formula": "C3H4N3O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:59193"
+        "chebi": "CHEBI:142864"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "chromopyrrolate",
-      "name": "chromopyrrolate",
-      "formula": "C22H13N3O4",
+      "id": "1_3_dicarboxyurea",
+      "name": "1,3-dicarboxyurea",
+      "formula": "C3H2N2O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:133898"
+        "chebi": "CHEBI:142865"
       }
     }
   ],
@@ -213,17 +201,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_122",
-      "name": "protein N-terminal glutamine amidohydrolase",
+      "id": "ec_3_5_1_131",
+      "name": "1-carboxybiuret hydrolase",
       "ec": [
-        "3.5.1.122"
-      ]
-    },
-    {
-      "id": "ec_1_21_98_2",
-      "name": "dichlorochromopyrrolate synthase",
-      "ec": [
-        "1.21.98.2"
+        "3.5.1.131"
       ]
     }
   ],
@@ -416,22 +397,11 @@
     },
     {
       "id": "r5",
-      "name": "protein N-terminal glutamine amidohydrolase",
-      "equation": "N-terminal L-glutaminyl-[protein] + H2O = N-terminal L-glutamyl-[protein] + NH4(+)",
-      "ec": "3.5.1.122",
+      "name": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
+      "equation": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "l_glutaminiumyl_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_glutamyl_zwitterionic_group",
+          "metabolite": "hco3",
           "stoichiometry": 1
         },
         {
@@ -439,75 +409,76 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_122"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:50680"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:50680"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "dichlorochromopyrrolate synthase",
-      "equation": "2 2-iminio-3-(indol-3-yl)propanoate + H2O2 = chromopyrrolate + NH4(+) + 2 H2O + H(+)",
-      "ec": "1.21.98.2",
-      "substrates": [
-        {
-          "metabolite": "2_iminio_3_indol_3_yl_propanoate",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "chromopyrrolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "carbamate",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_21_98_2"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50920"
+        "rhea": "RHEA:57716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50920"
+            "id": "RHEA:57716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-carboxybiuret hydrolase",
+      "equation": "1-carboxybiuret + H2O = urea-1,3-dicarboxylate + NH4(+)",
+      "ec": "3.5.1.131",
+      "substrates": [
+        {
+          "metabolite": "1_carboxybiuret",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_dicarboxyurea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:58900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58900"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-erythro-biopterin-to-nadph "L-erythro-biopterin to NADPH" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     l_erythro_biopterin
@@ -18,26 +18,14 @@ pathway l-erythro-biopterin-to-nadph "L-erythro-biopterin to NADPH" {
 
   branch from nadp side left {
     nadp
-    <-> . +r_coclaurine +h +nadph
-    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
+    <-> . +s_macrocarpen_15_ol +h2o +h +o2 +nadph
+    s_macrocarpene
   }
 
   branch from nadp side right {
     nadp
-    <-> . +n_hydroxyhistamine +h2o +o2 +nadph
-    histamine
-  }
-
-  branch from l_erythro_7_8_dihydrobiopterin side left {
-    l_erythro_7_8_dihydrobiopterin
-    <-> . +nadh +h +nad
-    sapropterin
-  }
-
-  branch from anthranilate side right {
-    anthranilate
-    <-> ec_1_7_1_6 [1.7.1.6] +nadh +methyl_red +h +nad
-    n_n_dimethyl_1_4_phenylenediamine
+    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +h2o +h +o2 +nadph
+    s_macrocarpen_15_ol
   }
 
   branch from anthranilate side left {
@@ -46,27 +34,33 @@ pathway l-erythro-biopterin-to-nadph "L-erythro-biopterin to NADPH" {
     co2
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +fadh2 +h +bromide +o_s_5_bromopyrrole_2_carbonyl_pantetheine_4_phos +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +h2o
-    fad
+  branch from anthranilate side right {
+    anthranilate
+    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +diphosphate +amp +h2o +l_tryptophan
+    atp
   }
 
   branch from o2 side left {
     o2
-    <-> . +fadh2 +h +bromide +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +fad +h2o
-    o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine
+    <-> . +nadh +linalool +h +nad +h2o
+    6e_8_hydroxylinalool
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h +vomilenine +nadp
-    20alphas_19_20_dihydrovomilenine
+  branch from o2 side right {
+    o2
+    <-> . +4_oxahomoadamantan_5_one +nad +h2o +nadh +h
+    adamantanone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +nadp +h +20alphas_19_20_dihydrovomilenine
-    17_o_acetylnorajmaline
+    <-> . +11alpha_30_dihydroxy_beta_amyrin +nadp +h2o +h +o2
+    30_hydroxy_beta_amyrin
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_188 [1.14.13.188] +h +6_deoxyerythronolide_b +o2 +nadp +h2o
+    erythronolide_b
   }
 }

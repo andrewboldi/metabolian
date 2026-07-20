@@ -24,25 +24,25 @@ pathway n-octyl-sulfate-to-h2o "n-octyl sulfate to H2O" {
 
   branch from succinate side right {
     succinate
-    <-> . +berkeleyone_b +akg +o2 +co2 +h2o
-    berkeleydione
+    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +akg +o2 +h2o +glyoxal +co2
+    2_deoxycytidine_5_monophosphate_1
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_76 [1.14.11.76] +glutamate +akg +o2 +co2
-    3r_3_hydroxy_l_glutamate
+    <-> . +3_n4_etheno_2_deoxycytidine_5_monophosphate_1 +akg +o2 +h2o +2_deoxycytidine_5_monophosphate_1 +co2
+    glyoxal
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    9z_12z_octadecadienoate
+    <-> . +4_hydroxy_1_pyrroline_2_carboxylate +h
+    2_oxo_4_hydroxy_5_aminovalerate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    9e_octadecenoate
+    <-> . +h +1_ribosylimidazole_4_acetate +phosphate
+    1_5_phosphoribosyl_imidazole_4_acetate
   }
 }

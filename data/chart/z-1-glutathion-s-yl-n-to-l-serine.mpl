@@ -24,14 +24,14 @@ pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-ser
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_11_7 [3.4.11.7] +gamma_l_glutamyl_s_allyl_l_cysteine +h2o
-    s_allylcysteine
+    <-> . +2_oxoglutarate +3r_beta_leucine
+    4_methyl_3_oxopentanoate
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +2_oxoglutarate +validamine_7_phosphate
-    validone_7_phosphate
+    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_glutamate +h2o
+    n_beta_d_glucosyl_indol_3_yl_acetate
   }
 
   branch from ser_gly side right {
@@ -60,31 +60,31 @@ pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-ser
 
   branch from glycine side right {
     glycine
-    <-> . +2_glutathion_s_yl_2_carboxypropane +h2o
-    gamma_l_glutamyl_s_2_carboxypropyl_l_cysteine
+    <-> . +gamma_l_glutamyl_s_allyl_l_cysteine +h2o
+    2_glutathion_s_yl_propene
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +3_hydroxyquinaldate_adenylate
-    3_hydroxyquinaldic_acid
+    <-> . +4_hydroxybenzoyl_acetate +h +amp +phosphate +4_hydroxyacetophenone +h2o
+    co2
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +c27_mycolipanoyl_coa +amp +coa
-    c27_mycolipanoate
+    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +adp
+    diphosphate
   }
 
   branch from l_serine side left {
     l_serine
-    <-> . +diphosphate +l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph +h +amp +atp +l_arginine +h2o
-    l_4_hydroxymethyl_glycine
+    <-> . +2_oxoglutarate +l_glutamate
+    3_hydroxypyruvate
   }
 
   branch from l_serine side right {
     l_serine
-    <-> . +2_oxoglutarate +l_glutamate
-    3_hydroxypyruvate
+    <-> . +ser_gly_gly +h2o
+    glycylglycine
   }
 }

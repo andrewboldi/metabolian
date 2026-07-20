@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-d-man-1-2-d-man-to-h2o "N4-{α-D-Man-(1→2)-α-D-Man… to H2O" {
-  spacing 266
+  spacing 260
 
   spine at 0,0 {
     n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_6_d_man
@@ -18,21 +18,15 @@ pathway n4-d-man-1-2-d-man-to-h2o "N4-{α-D-Man-(1→2)-α-D-Man… to H2O" {
     n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man
   }
 
-  branch from n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man side left {
-    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man
-    <-> ec_3_2_1_209 [3.2.1.209] +beta_d_mannose +h2o
-    n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +17z_hexacosenoate +phosphate +17z_hexacosenoate
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_dehydroascorbic_acid +all_trans_zeaxanthin +all_trans_antheraxanthin +l_ascorbate
-    h
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +d_alanyl_d_alanine +l_arginine +h
-    arg_ala_ala
+    <-> . +h +adp +phosphate +atp
+    all_cis_8_11_14_17_icosatetraenoic_acid
   }
 }

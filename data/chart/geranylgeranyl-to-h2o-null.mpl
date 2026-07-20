@@ -18,14 +18,14 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
-    15beta_hydroxytestosterone
+    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
+    glyceollin_i
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
-    1_hydroxytestosterone
+    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +h2o +h +o2 +nadph
+    n_hydroxy_l_tyrosine
   }
 
   branch from 7r_8z_bacteriochlorophyll_b side left {
@@ -42,14 +42,14 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_12z_octadecadienoate +nad +h2o
-    a_linoleate_group
+    <-> ec_3_1_1_17 [3.1.1.17] +l_arabino_1_5_lactone +h2o
+    l_arabinonate
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +2_butenoic_acid +nad +h2o
-    crotonaldehyde
+    <-> ec_4_1_1_5 [4.1.1.5] +2s_2_acetolactate +co2
+    actn
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
@@ -66,37 +66,37 @@ pathway geranylgeranyl-to-h2o-null "Geranylgeranyl… to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> . +1_chloroethenyl_oxirane +nadp +h2o +h +chloroprene
-    o2
+    <-> . +h2 +h +cinchoninone +cinchonine +nadp
+    cinchonidine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_55 [1.14.14.55] +2_hydroxynevirapine +nadp +h2o +h +o2
-    11_cyclopropyl_5_11_dihydro_4_methyl_6h_dipyrido
+    <-> ec_1_14_99_34 [1.14.99.34] +7_o_methylluteone_epoxide +nadp +h2o +h +o2
+    7_o_methylluteone
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    d_galactopyranose
+    <-> ec_2_7_3_10 [2.7.3.10] +h +adp +phosphoagmatine
+    agmatine
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    4_trimethylamino_butanoate
+    <-> ec_2_7_1_119 [2.7.1.119] +h +hygromycin_b +adp
+    7_o_phosphohygromycin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_99_1_5 [4.99.1.5] +butyronitrile
-    butanal_oxime
+    <-> ec_3_1_1_57 [3.1.1.57] +2_oxo_2h_pyran_4_6_dicarboxylate +h
+    4_carboxy_2_hydroxyhexa_2_4_dienedioate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_99_1_5 [4.99.1.5] +pyridine_2_aldoxime
-    2_cyanopyridine
+    <-> . +5alpha_cholestane_3beta_5_6beta_triol
+    5_6beta_epoxy_5alpha_cholestan_3beta_ol
   }
 }

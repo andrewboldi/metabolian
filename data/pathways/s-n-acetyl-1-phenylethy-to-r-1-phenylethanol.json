@@ -120,6 +120,24 @@
       }
     },
     {
+      "id": "ala_thr",
+      "name": "Ala-Thr",
+      "formula": "C7H14N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74390"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
       "id": "anticapsin",
       "name": "anticapsin",
       "formula": "C9H13NO4",
@@ -162,26 +180,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
-      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol",
-      "short": "(2S,3S,5R,10R,12S,1…",
-      "formula": "C22H48NO5",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:62526"
-      }
-    },
-    {
-      "id": "3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd",
-      "name": "(3S,5R,10R,12S,14S,15R,16R)-3,5,10,14,15-pentahydroxy-12,16-dimethylicosan-2-one",
-      "short": "(3S,5R,10R,12S,14S,…",
-      "formula": "C22H44O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:133941"
       }
     }
   ],
@@ -331,6 +329,45 @@
     },
     {
       "id": "r4",
+      "name": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "equation": "L-alanyl-L-threonine + H2O = L-threonine + L-alanine",
+      "substrates": [
+        {
+          "metabolite": "ala_thr",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:37299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37299"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
       "name": "L-alanine--L-anticapsin ligase",
       "equation": "L-anticapsin + L-alanine + ATP = bacilysin + ADP + phosphate + H(+)",
       "ec": "6.3.2.49",
@@ -372,7 +409,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:44332"
       },
@@ -382,45 +419,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:44332"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + pyru...",
-      "equation": "(2S,3S,5R,10R,12S,14S,15R,16R)-2-amino-12,16-dimethylicosane-3,5,10,14,15-pentol + pyruvate = (3S,5R,10R,12S,14S,15R,16R)-3,5,10,14,15-pentahydroxy-12,16-dimethylicosan-2-one + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:51068"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:51068"
           }
         ]
       }

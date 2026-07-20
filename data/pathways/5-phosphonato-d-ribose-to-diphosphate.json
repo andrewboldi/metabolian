@@ -103,60 +103,31 @@
       }
     },
     {
-      "id": "butyrolactone_ii",
-      "name": "butyrolactone II",
-      "formula": "C19H16O7",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:191395"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:57907"
       }
     },
     {
-      "id": "butyrolactone_i",
-      "name": "butyrolactone I",
-      "formula": "C24H24O7",
+      "id": "somaliensene_a",
+      "name": "somaliensene A",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:191397"
+        "chebi": "CHEBI:209271"
       }
     },
     {
-      "id": "3_indol_3_yl_pyruvate",
-      "name": "3-(indol-3-yl)pyruvate",
-      "short": "3-(indol-3-yl)pyruv…",
-      "formula": "C11H8NO3",
-      "charge": -1,
+      "id": "somaliensene_b",
+      "name": "(−)-somaliensene B",
+      "formula": "C25H40",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17640"
-      }
-    },
-    {
-      "id": "didemethylasterriquinone_d",
-      "name": "didemethylasterriquinone D",
-      "short": "didemethylasterriqu…",
-      "formula": "C22H13N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192553"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:209277"
       }
     }
   ],
@@ -176,10 +147,17 @@
       ]
     },
     {
-      "id": "ec_6_4_1_12",
-      "name": "didemethylasterriquinone D synthase",
+      "id": "ec_4_2_3_216",
+      "name": "somaliensene A synthase",
       "ec": [
-        "6.4.1.12"
+        "4.2.3.216"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_217",
+      "name": "somaliensene B synthase",
+      "ec": [
+        "4.2.3.217"
       ]
     }
   ],
@@ -325,21 +303,18 @@
     },
     {
       "id": "r4",
-      "name": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
-      "equation": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
+      "name": "somaliensene A synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = somaliensene A + diphosphate",
+      "ec": "4.2.3.216",
       "substrates": [
         {
-          "metabolite": "butyrolactone_ii",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "butyrolactone_i",
+          "metabolite": "somaliensene_a",
           "stoichiometry": 1
         },
         {
@@ -347,70 +322,63 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_216"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:72903"
+        "rhea": "RHEA:78279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72903"
+            "id": "RHEA:78279"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "didemethylasterriquinone D synthase",
-      "equation": "2 indole-3-pyruvate + 2 ATP = didemethylasterriquinone D + 2 AMP + 2 diphosphate + H(+)",
-      "ec": "6.4.1.12",
+      "name": "somaliensene B synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-somaliensene B + diphosphate",
+      "ec": "4.2.3.217",
       "substrates": [
         {
-          "metabolite": "3_indol_3_yl_pyruvate",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 2
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "didemethylasterriquinone_d",
+          "metabolite": "somaliensene_b",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "ppi",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_4_1_12"
+          "enzyme": "ec_4_2_3_217"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:72975"
+        "rhea": "RHEA:78283"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72975"
+            "id": "RHEA:78283"
           }
         ]
       }

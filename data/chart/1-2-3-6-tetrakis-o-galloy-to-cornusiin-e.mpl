@@ -18,14 +18,14 @@ pathway 1-2-3-6-tetrakis-o-galloy-to-cornusiin-e "1,2,3,6-tetrakis-O-galloy… t
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
-    mandelonitrile
+    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
+    1_2_di_o_sinapoyl_d_glucose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
-    g6p
+    <-> . +melibiose +h2o
+    d_galactopyranose
   }
 
   branch from tellimagrandin_ii side left {

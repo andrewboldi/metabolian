@@ -20,38 +20,38 @@ pathway umbelliferone-to-2-nitropropane "umbelliferone to 2-nitropropane" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_211 [4.2.3.211] +fpp
-    exo_bergamotene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_12e_labda_8_17_12_14_triene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2e_enoyl_fatty_acid_anion +holo-acp +atp +amp
-    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    16_hydroxy_ent_kaurene
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +9e_octadecenoate +h +nadph +h2o
-    cis_9_octadecenal
+    <-> ec_1_6_5_2 [1.6.5.2] +2_3_dichloro_5_6_dicyanohydroquinone +h +nadph
+    2_3_dichloro_5_6_dicyano_1_4_benzoquinone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +cis_9_octadecenal +h2o
-    6z_octadecenoate
+    <-> ec_1_6_5_2 [1.6.5.2] +2_5_dihydroxybiphenyl +h +nadph
+    phenyl_1_4_benzoquinone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +d_manp_1_6_d_manp +phosphate +d_manp_1_6_d_manp
-    atp
+    <-> . +4_methoxyglucobrassicin +beta_d_glucose +h
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    ciceritol
+    <-> ec_3_1_1_19 [3.1.1.19] +aldehydo_d_glucuronate +h
+    d_glucurono_6_2_lactone
   }
 
   branch from acetone side left {
@@ -74,13 +74,13 @@ pathway umbelliferone-to-2-nitropropane "umbelliferone to 2-nitropropane" {
 
   branch from o2 side right {
     o2
-    <-> . +luteolin +h +nadph +nadp +h2o
-    tricetin
+    <-> . +2s_2_amino_3_3z_indol_3_ylidene_propanoate +h2o2
+    l_tryptophan
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +30_hydroxy_11_oxo_amyrin +nadph +nadp +h2o
-    glycyrrhetaldehyde
+    <-> . +fadh2 +pyrrolomycin_c +h +chloride +fad +h2o
+    pyrrolomycin_d
   }
 }

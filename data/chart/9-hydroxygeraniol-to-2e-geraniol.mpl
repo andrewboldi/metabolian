@@ -20,38 +20,38 @@ pathway 9-hydroxygeraniol-to-2e-geraniol "9-Hydroxygeraniol to (2E)-geraniol" {
 
   branch from h side left {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +sisomicin_2_phosphate +sisomicin
-    gtp
+    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_c +12_ethyl_8_isobutylbacteriochlorophyllide_c
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +netilmycin_2_phosphate +gtp
-    netilmicin
+    <-> . +formaldehyde +acetate
+    hydroxymethylene_acetate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_10_3_4 [1.10.3.4] +3_hydroxy_4_methyl_anthranilate_pentapeptide_lac +h2o
-    actinomycin_d
+    <-> . +neoabietadienal +nadph +nadp +h2o
+    neoabietic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_10_3_4 [1.10.3.4] +actinocin +h2o
-    3_hydroxy_4_methylanthranilate
+    <-> . +h +palustradiene +nadph +nadp +h2o
+    palustradienol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_2_3_1_292 [2.3.1.292] +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +malonyl_coa +s_methylmalonyl_coa +h +o_s_c34_carboxyphthiodiolenoneylpantetheine_4_ph +nadp +coa +h2o
-    co2
+    <-> ec_1_3_1_51 [1.3.1.51] +2_hydroxygenistein +h +nadp
+    dalbergioidin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +c31_phthiodiolone_a +h +nadp
-    c31_phthiotriol
+    <-> . +h +coumarin +nadp
+    3_4_dihydrocoumarin
   }
 
   branch from 2e_geraniol side left {
@@ -68,14 +68,14 @@ pathway 9-hydroxygeraniol-to-2e-geraniol "9-Hydroxygeraniol to (2E)-geraniol" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_28 [3.5.1.28] +peptidoglycan_dimer_with_a_single_pentapeptide_s +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
-    peptidoglycan_dimer_with_pentapeptide_stems_meso
+    <-> . +2_2_methylsulfanyl_butyl_maleate +h
+    3_4_methylthio_butylmalic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +cytidine +agmatine
-    agmatidine
+    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
+    2_5_methylthio_pentylmalic_acid
   }
 
   branch from udp_alpha_d_xylose side left {
@@ -92,13 +92,13 @@ pathway 9-hydroxygeraniol-to-2e-geraniol "9-Hydroxygeraniol to (2E)-geraniol" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +apigenin_7_o_gentiobioside
-    apigenin_7_o_beta_d_glucoside
+    <-> . +udp +myricetin_3_o_gentiobioside
+    myricetin_3_o_d_glucopyranoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +luteolin_7_o_gentiobioside
-    luteolin_7_o_beta_d_glucoside
+    <-> . +udp +h +3_7_4_trimethylquercetagetin_3_o_beta_d_glucosid
+    oxyayanin_b
   }
 }

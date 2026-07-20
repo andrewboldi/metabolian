@@ -20,14 +20,14 @@ pathway beta-d-glc-1-3-6-o-suc-to-beta-d-mannaca-1-4-alp "beta-D-Glc-(1->3)-6-O-
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +13_16_19_docosatrienoic_acid +13_16_19_docosatrienoic_acid +h2o
-    atp
+    <-> . +h +adp +atp +h2o
+    ursocholate
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    all_cis_docosa_7_10_13_16_tetraenoic_acid
+    ursodeoxycholic_acid_3_sulfate
   }
 
   branch from di_trans_octa_cis_undecaprenyl_diphosphate side left {
@@ -38,19 +38,19 @@ pathway beta-d-glc-1-3-6-o-suc-to-beta-d-mannaca-1-4-alp "beta-D-Glc-(1->3)-6-O-
 
   branch from di_trans_octa_cis_undecaprenyl_diphosphate side right {
     di_trans_octa_cis_undecaprenyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    tetracosatetraenoic_acid_n_6
+    <-> . +adenosine_3_5_bisphosphate +ursodeoxycholic_acid_3_sulfate +ursodeoxycholate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    6z_9z_12z_15z_18z_tetracosapentaenoate
+    20_hete_d6
   }
 }

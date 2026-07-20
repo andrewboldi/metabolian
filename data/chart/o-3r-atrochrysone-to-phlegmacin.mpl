@@ -20,13 +20,13 @@ pathway o-3r-atrochrysone-to-phlegmacin "O-((3R)-atrochrysone… to phlegmacin" 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_77 [2.1.1.77] +d_aspartate +sam
-    d_aspartate_methyl_ester
+    <-> . +picrinine +sam +hplus
+    ervincine
   }
 
   branch from sah side right {
     sah
-    <-> . +esculetin +sam +hplus
-    isoscopoletin
+    <-> . +perivine +sam +hplus
+    vobasine
   }
 }

@@ -24,13 +24,13 @@ pathway 1-o-hexadecyl-2-8-carbox-to-di-sulfido-diiron "1-O-hexadecyl-2-(8-carbox
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +25r_3_26_dihydroxycholest_5_en_7_one +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_hydroxycholest_5_en_7_one_26_al
+    <-> . +cryptoxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    3s_5r_6s_cryptoxanthin_5_6_epoxide
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +25r_3_hydroxycholest_5_en_7_one_26_al +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_hydroxycholest_5_en_7_one_26_oate
+    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_23_24_trihydroxyvitamin_d3
   }
 }

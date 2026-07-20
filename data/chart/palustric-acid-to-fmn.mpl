@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway palustric-acid-to-fmn "Palustric acid to FMN" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     palustric_acid
@@ -20,121 +20,109 @@ pathway palustric-acid-to-fmn "Palustric acid to FMN" {
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4 +nad
-    o_s_5z_17z_hexatriacontadienoylpantetheine_4_pho
+    <-> . +epibromohydrin +bromide
+    2_3_dibromo_1_propanol
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4 +nad
-    o_s_11z_23z_dotetracontadienoylpantetheine_4_pho
+    <-> . +glycidol +bromide
+    3_bromopropane_1_2_diol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +e_cinnamaldehyde +h2o2
-    cinnamyl_alcohol
+    <-> ec_1_14_18_1 [1.14.18.1] +4_methyl_o_benzoquinone +h2o
+    4_methylcatechol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +2e_4e_2_4_hexadien_1_ol +e_e_2_4_hexadienal
-    h2o2
+    <-> ec_1_14_18_1 [1.14.18.1] +4_tert_butylcatechol +h2o
+    4_tert_butyl_benzo_1_2_quinone
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante +nadp +h
-    o_s_11z_23z_3_oxodotetracontadienoylpantetheine
+    <-> ec_1_1_1_21 [1.1.1.21] +4_bromophenylglyoxal +h +nadp
+    4_bromobenzoyl_methanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan +nadp +h
-    o_s_17z_29z_3_oxooctatetracontadienoylpantethein
+    <-> ec_1_1_1_21 [1.1.1.21] +compound_0280197 +nadp +h
+    2_2_dimethylpropanal
   }
 
   branch from palustradienal side left {
     palustradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    neoabietadienol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    palustradienol
   }
 
   branch from palustradienal side right {
     palustradienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    palustradienol
+    isopimara_7_15_dienol
   }
 
   branch from abietol side left {
-    abietol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    isopimara_7_15_dienal
-  }
-
-  branch from abietol side right {
     abietol
     <-> . +h +o2 +nadph +nadp +h2o
     abieta_7_13_diene
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_triacontadienoylpantetheine_4_phospho +h
-    o_s_11z_triacontenoylpantetheine_4_phosphoryl_l
-  }
-
   branch from nad side right {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_9z_octacosadienoylpantetheine_4_phosphory +h
-    o_s_9z_octacosenoylpantetheine_4_phosphoryl_l_se
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_octanone
+    2s_octan_2_ol
   }
 
-  branch from abietal side left {
-    abietal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    levopimaradienol
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
+    heptan_2r_ol
   }
 
   branch from abietal side right {
     abietal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    isopimara_7_15_dienol
+    levopimaradienol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph +h +nadph
-    o_s_5z_3_oxotetracosenoylpantetheine_4_phosphory
+    <-> ec_1_1_1_21 [1.1.1.21] +h +2_naphthaldehyde +nadph
+    2_naphthyl_methanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine +h +nadph
-    o_s_17z_3_oxohexatriacontenoylpantetheine_4_phos
+    <-> ec_1_1_1_21 [1.1.1.21] +4_hydroxynon_2_enal +h +nadph
+    4_hydroxynonenol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine
-    o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho
+    <-> . +l_alanine +ala_gly
+    ala_ala_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> . +simvastatin
-    simvastatin_hydroxy_acid
+    <-> . +ala_tyr +glycine
+    gly_ala_tyr
   }
 
   branch from fmn side left {
     fmn
-    <-> . +prostaglandin_a1 +fmnh2 +o2 +h2o +hplus
-    20_hydroxyprostaglandin_a1
+    <-> ec_1_14_14_67 [1.14.14.67] +11_hydroxysugiol +fmnh2 +o2 +h2o +hplus
+    11_20_dihydroxysugiol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxytestosterone
+    <-> ec_1_14_14_68 [1.14.14.68] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_diene_3_ol
   }
 }

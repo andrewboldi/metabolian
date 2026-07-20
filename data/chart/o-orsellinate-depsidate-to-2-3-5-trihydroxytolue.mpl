@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-orsellinate-depsidate-to-2-3-5-trihydroxytolue "o-orsellinate depsidate to 2,3,5-trihydroxytoluene" {
-  spacing 192
+  spacing 186
 
   spine at 0,0 {
     o_orsellinate_depsidate
@@ -20,11 +20,5 @@ pathway o-orsellinate-depsidate-to-2-3-5-trihydroxytolue "o-orsellinate depsidat
     o_orsellinate
     <-> . +acetyl_coa +hplus +co2 +coa
     malonyl-coa
-  }
-
-  branch from orcinol side right {
-    orcinol
-    <-> . +sam +sah +hplus
-    3_methoxy_5_methylphenol
   }
 }

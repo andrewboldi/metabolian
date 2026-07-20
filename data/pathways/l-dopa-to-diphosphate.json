@@ -1,0 +1,286 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-dopa-to-diphosphate",
+  "name": "L-dopa to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from L-dopa zwitterion to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24760"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57504"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ldopa",
+      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
+      "short": "3,4-Dihydroxy-L-phe…",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57504"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_3_4_dihydroxyphenyl_propanoate",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate",
+      "short": "3-(3,4-dihydroxyphe…",
+      "formula": "C9H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58744"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57770"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_1_22",
+      "name": "3,4-dihydroxyphenylalanine reductive deaminase",
+      "ec": [
+        "4.3.1.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3,4-dihydroxyphenylalanine reductive deaminase",
+      "equation": "L-dopa + NADH + H(+) = 3-(3,4-dihydroxyphenyl)propanoate + NH4(+) + NAD(+)",
+      "ec": "4.3.1.22",
+      "substrates": [
+        {
+          "metabolite": "ldopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24760"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "equation": "3-(3,4-dihydroxyphenyl)propanoate + NAD(+) = (E)-caffeate + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_3_4_dihydroxyphenyl_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(E)-caffeate + ATP + CoA = (E)-caffeoyl-CoA + AMP + diphosphate",
+      "equation": "(E)-caffeate + ATP + CoA = (E)-caffeoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36299"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36299"
+          }
+        ]
+      }
+    }
+  ]
+}

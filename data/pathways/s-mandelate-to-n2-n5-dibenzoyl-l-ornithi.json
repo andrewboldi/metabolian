@@ -173,6 +173,24 @@
       }
     },
     {
+      "id": "benzyl_alcohol",
+      "name": "benzyl alcohol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17987"
+      }
+    },
+    {
+      "id": "benzyl_benzoate",
+      "name": "benzyl benzoate",
+      "formula": "C14H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41237"
+      }
+    },
+    {
       "id": "malonyl-coa",
       "name": "Malonyl-CoA",
       "formula": "C24H33N7O19P3S",
@@ -182,40 +200,13 @@
       }
     },
     {
-      "id": "3_5_dihydroxybiphenyl",
-      "name": "3,5-dihydroxybiphenyl",
-      "short": "3,5-dihydroxybiphen…",
-      "formula": "C12H10O2",
-      "charge": 0,
+      "id": "2_4_6_trihydroxybenzophenone",
+      "name": "2,4,6-trihydroxybenzophenone",
+      "short": "2,4,6-trihydroxyben…",
+      "formula": "C13H9O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:52069"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "3_hydroxybenzoyl_coa",
-      "name": "3-hydroxybenzoyl-CoA",
-      "formula": "C28H36N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57342"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
+        "chebi": "CHEBI:77765"
       }
     }
   ],
@@ -256,17 +247,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_177",
-      "name": "3,5-dihydroxybiphenyl synthase",
+      "id": "ec_2_3_1_196",
+      "name": "benzyl alcohol O-benzoyltransferase",
       "ec": [
-        "2.3.1.177"
+        "2.3.1.196"
       ]
     },
     {
-      "id": "ec_1_14_13_58",
-      "name": "benzoyl-CoA 3-monooxygenase",
+      "id": "ec_2_3_1_220",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
       "ec": [
-        "1.14.13.58"
+        "2.3.1.220"
       ]
     }
   ],
@@ -545,9 +536,54 @@
     },
     {
       "id": "r7",
-      "name": "3,5-dihydroxybiphenyl synthase",
-      "equation": "benzoyl-CoA + 3 malonyl-CoA + 3 H(+) = biphenyl-3,5-diol + 4 CO2 + 4 CoA",
-      "ec": "2.3.1.177",
+      "name": "benzyl alcohol O-benzoyltransferase",
+      "equation": "benzyl alcohol + benzoyl-CoA = benzyl benzoate + CoA",
+      "ec": "2.3.1.196",
+      "substrates": [
+        {
+          "metabolite": "benzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzyl_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_196"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:30411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "2,4,6-trihydroxybenzophenone synthase",
+      "equation": "benzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,4,6-trihydroxybenzophenone + 3 CO2 + 4 CoA",
+      "ec": "2.3.1.220",
       "substrates": [
         {
           "metabolite": "benzoyl_coa",
@@ -559,17 +595,17 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_dihydroxybiphenyl",
+          "metabolite": "2_4_6_trihydroxybenzophenone",
           "stoichiometry": 1
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 4
+          "stoichiometry": 3
         },
         {
           "metabolite": "coa",
@@ -578,77 +614,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_177"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:22292"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:22292"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "benzoyl-CoA 3-monooxygenase",
-      "equation": "benzoyl-CoA + NADPH + O2 + H(+) = 3-hydroxybenzoyl-CoA + NADP(+) + H2O",
-      "ec": "1.14.13.58",
-      "substrates": [
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxybenzoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_58"
+          "enzyme": "ec_2_3_1_220"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:23216"
+        "rhea": "RHEA:35143"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23216"
+            "id": "RHEA:35143"
           }
         ]
       }

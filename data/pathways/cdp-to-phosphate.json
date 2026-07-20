@@ -1,0 +1,272 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-to-phosphate",
+  "name": "CDP to phosphate",
+  "category": "other",
+  "summary": "A 3-step route from CDP to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204502"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102191"
+      }
+    },
+    {
+      "id": "beta_d_fructose_1_6_bisphosphate",
+      "name": "beta-D-fructose 1,6-bisphosphate",
+      "short": "beta-D-fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364229"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103718"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "alpha_d_ribofuranose_5_phosphate",
+      "name": "alpha-D-ribofuranose 5-phosphate",
+      "short": "alpha-D-ribofuranos…",
+      "formula": "C5H11O8P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363910"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "octulose_8_phosphate",
+      "name": "octulose 8-phosphate",
+      "formula": "C8H17O11P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134365"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "1_deoxy_d_xylulose",
+      "name": "1-deoxy-D-xylulose",
+      "formula": "C5H10O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732962"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204502",
+      "substrates": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204502"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204502"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR183971",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "octulose_8_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR183971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR137385",
+      "substrates": [
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_deoxy_d_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR137385"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137385"
+          }
+        ]
+      }
+    }
+  ]
+}

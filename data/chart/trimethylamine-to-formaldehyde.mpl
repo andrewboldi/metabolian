@@ -22,61 +22,61 @@ pathway trimethylamine-to-formaldehyde "trimethylamine to formaldehyde" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_246 [1.1.1.246] +3r_vestitone +nadph +medicarpin +h2o
+    <-> ec_1_1_1_105 [1.1.1.105] +retinal +nadph +retinol
     nadp
   }
 
   branch from h side right {
     h
-    <-> ec_4_1_1_5 [4.1.1.5] +2s_2_acetolactate +co2
-    actn
+    <-> . +13_cis_retinoate +o2 +nadph +nadp +h2o
+    5_8_epoxy_13_cis_retinoate
   }
 
   branch from 2_demethylmenaquinol_8 side left {
-    2_demethylmenaquinol_8
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +h +2_demethylmenaquinone_8
-    1_d_ribofuranosyl_1_4_dihydronicotinamide
-  }
-
-  branch from 2_demethylmenaquinol_8 side right {
     2_demethylmenaquinol_8
     <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +2_demethylmenaquinone_8
     tetrathionate
   }
 
+  branch from 2_demethylmenaquinol_8 side right {
+    2_demethylmenaquinol_8
+    <-> . +d_alanine +2_demethylmenaquinone_8 +h2o +nh4
+    pyruvate
+  }
+
   branch from menaquinol_8 side left {
     menaquinol_8
-    <-> . +l_aspartate +menaquinone_8
-    iminoaspartate
+    <-> . +adenosine_3_5_bisphosphate +menaquinone_8 +h +sulfite
+    3_phosphoadenylyl_sulfate
   }
 
   branch from menaquinol_8 side right {
     menaquinol_8
-    <-> . +o2 +menaquinone_8 +h2o
-    pmf
+    <-> . +beta_d_glucose +menaquinone_8
+    d_glucono_1_5_lactone
   }
 
   branch from sah side left {
     sah
-    <-> . +indol_3_ylmethylamine +sam +hplus
-    3_methylaminomethyl_indole
+    <-> ec_2_1_1_313 [2.1.1.313] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +3_methylaminomethyl_indole +sam +hplus
-    gramine
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_alanyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_alanyl_l_prolyl_l_l
   }
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +s_adenosyl_l_homocysteine +h +2_demethylmenaquinone_8
-    s_adenosyl_l_methionine
+    <-> . +nitrite +menaquinol_8 +h +h2o
+    nitric_oxide
   }
 
   branch from menaquinone_8 side right {
     menaquinone_8
-    <-> ec_1_2_2_1 [1.2.2.1] +pmf +menaquinol_8 +co2 +pmf +h
-    formate
+    <-> . +selenite +h2o +menaquinol_8
+    selenate
   }
 }

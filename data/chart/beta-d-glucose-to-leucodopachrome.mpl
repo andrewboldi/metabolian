@@ -18,13 +18,13 @@ pathway beta-d-glucose-to-leucodopachrome "beta-D-glucose to leucodopachrome" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_neu5ac_2_3_alpha_d_glc_1_2_beta_d_glc_1_3 +h
-    alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_galnac_p
+    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
-    beta_d_gal_1_3_alpha_d_galnac_pp_und
+    <-> ec_2_4_1_295 [2.4.1.295] +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
+    pelargonidin_3_o_d_sambubioside
   }
 }

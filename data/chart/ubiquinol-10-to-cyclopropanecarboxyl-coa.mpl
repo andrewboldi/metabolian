@@ -18,49 +18,49 @@ pathway ubiquinol-10-to-cyclopropanecarboxyl-coa "ubiquinol-10 to Cyclopropaneca
 
   branch from ubiquinone_10 side left {
     ubiquinone_10
-    <-> . +2e_tetradecenoyl_coa +ubiquinol_10
-    tetradecanoyl_coa
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinol_10
+    tetrathionate
   }
 
   branch from ubiquinone_10 side right {
     ubiquinone_10
-    <-> ec_1_1_5_8 [1.1.5.8] +ubiquinol_10 +3_dehydroquinate
-    l_quinate
+    <-> . +ubiquinol_10 +pyruvate
+    r_lactate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pe_20_2_11z_14z_18_2_9z_12z
+    <-> ec_3_6_3_33 [3.6.3.33] +h +adp +hydroxycobalamin +phosphate +hydroxycobalamin
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pe_20_2_11z_14z_18_3_9z_12z_15z
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    kdo_lipid_a
   }
 
   branch from ubiquinol_10 side left {
     ubiquinol_10
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +ubiquinone_10 +h
-    1_d_ribofuranosyl_1_4_dihydronicotinamide
+    <-> ec_1_1_5_2 [1.1.5.2] +d_glucono_1_5_lactone +ubiquinone_10
+    beta_d_glucose
   }
 
   branch from ubiquinol_10 side right {
     ubiquinol_10
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_10
-    tetrathionate
+    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +ubiquinone_10 +h2o
+    nitrate
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +1_stearoyl_2_linoleoyl_sn_glycero_3_phosphoethan +h
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se
+    <-> ec_4_1_1_65 [4.1.1.65] +1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade +h
+    20_3_18_3_ps
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol +h
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phospho_l_seri
+    <-> ec_4_1_1_65 [4.1.1.65] +22_0_18_3_pe +h
+    22_0_18_3_ps
   }
 }

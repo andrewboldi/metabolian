@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "m-xylene-to-m-toluate",
   "name": "m-xylene to m-toluate",
-  "category": "lipid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from m-xylene to m-toluate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,41 +128,33 @@
       }
     },
     {
-      "id": "1_acyl_2_palmitoylglycerolipid",
-      "name": "1-acyl-2-palmitoylglycerolipid",
-      "short": "1-acyl-2-palmitoylg…",
-      "formula": "C20H36O5R2",
+      "id": "20s_hydroxyvitamin_d3",
+      "name": "(20S)-hydroxyvitamin D3",
+      "short": "hydroxyvitamin D3",
+      "formula": "C27H44O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:86999"
+        "chebi": "CHEBI:90983"
       }
     },
     {
-      "id": "1_acyl_2_palmitoleoylglycerolipid",
-      "name": "1-acyl-2-palmitoleoylglycerolipid",
-      "short": "1-acyl-2-palmitoleo…",
-      "formula": "C20H34O5R2",
+      "id": "20s_24r_dihydroxyvitamin_d3",
+      "name": "(20S,24R)-dihydroxyvitamin D3",
+      "short": "(20S,24R)-dihydroxy…",
+      "formula": "C27H44O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87003"
+        "chebi": "CHEBI:90985"
       }
     },
     {
-      "id": "dihydrocaffeoyl_coa",
-      "name": "dihydrocaffeoyl-CoA",
-      "formula": "C30H40N7O19P3S",
-      "charge": -4,
+      "id": "20s_24s_dihydroxyvitamin_d3",
+      "name": "(20S,24S)-dihydroxyvitamin D3",
+      "short": "(20S,24S)-dihydroxy…",
+      "formula": "C27H44O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87137"
-      }
-    },
-    {
-      "id": "trans_caffeoyl_coa",
-      "name": "trans-caffeoyl-CoA",
-      "formula": "C30H38N7O19P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:87136"
+        "chebi": "CHEBI:90986"
       }
     }
   ],
@@ -172,20 +164,6 @@
       "name": "toluene methyl-monooxygenase",
       "ec": [
         "1.14.15.26"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_27",
-      "name": "sn-2 palmitoyl-lipid 9-desaturase",
-      "ec": [
-        "1.14.19.27"
-      ]
-    },
-    {
-      "id": "ec_1_3_1_108",
-      "name": "caffeoyl-CoA reductase",
-      "ec": [
-        "1.3.1.108"
       ]
     }
   ],
@@ -335,12 +313,11 @@
     },
     {
       "id": "r4",
-      "name": "sn-2 palmitoyl-lipid 9-desaturase",
-      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(9Z)-hexadecenoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.27",
+      "name": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,24R-dihydroxyc...",
+      "equation": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,24R-dihydroxycholecalciferol + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "1_acyl_2_palmitoylglycerolipid",
+          "metabolite": "20s_hydroxyvitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -358,7 +335,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_palmitoleoylglycerolipid",
+          "metabolite": "20s_24r_dihydroxyvitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -367,37 +344,31 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_27"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:46768"
+        "rhea": "RHEA:49204"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46768"
+            "id": "RHEA:49204"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "caffeoyl-CoA reductase",
-      "equation": "hydrocaffeoyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + 2 NAD(+) = (E)-caffeoyl-CoA + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 NADH",
-      "ec": "1.3.1.108",
+      "name": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,24S-dihydroxyc...",
+      "equation": "20S-hydroxycholecalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 20S,24S-dihydroxycholecalciferol + 2 oxidized [adrenodoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "dihydrocaffeoyl_coa",
+          "metabolite": "20s_hydroxyvitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -405,13 +376,17 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "nad",
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "trans_caffeoyl_coa",
+          "metabolite": "20s_24s_dihydroxyvitamin_d3",
           "stoichiometry": 1
         },
         {
@@ -419,26 +394,21 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_3_1_108"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46956"
+        "rhea": "RHEA:49208"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46956"
+            "id": "RHEA:49208"
           }
         ]
       }

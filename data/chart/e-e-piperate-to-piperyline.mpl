@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway e-e-piperate-to-piperyline "(E,E)-piperate to piperyline" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     e_e_piperate
@@ -14,17 +14,5 @@ pathway e-e-piperate-to-piperyline "(E,E)-piperate to piperyline" {
     e_e_piperonyl_coa
     <-> . +pyrrolidinium_ion -coa -hplus
     piperyline
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +framycetin +atp
-    4_adenylylframycetin_b
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +paromomycin +atp
-    4_adenylylparomomycin
   }
 }

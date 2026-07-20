@@ -46,14 +46,14 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from glycine side left {
     glycine
-    <-> . +l_kynurenine +glyoxylate
-    4_2_aminophenyl_2_4_dioxobutanoate
+    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
+    amino_oxobutanoate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_3_1_29 [2.3.1.29] +acetyl_coa +coa
-    amino_oxobutanoate
+    <-> ec_3_5_1_58 [3.5.1.58] +n_benzyloxycarbonylglycinate +h2o +hplus +co2
+    benzyl_alcohol
   }
 
   branch from thiol side left {
@@ -70,14 +70,14 @@ pathway organohalogen-compound-to-adenosine-3-5-bismonop "organohalogen compound
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
-    2_formylglutarate
+    <-> ec_1_4_1_15 [1.4.1.15] +l_lysinium +nad +nadh +hplus
+    1_piperideine_2_carboxylic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_84 [3.5.1.84] +biuret +h2o
-    urea_1_carboxylate
+    <-> ec_4_5_1_2 [4.5.1.2] +h2o +chloride +pyruvate +hplus
+    3_chloro_d_alanine
   }
 
   branch from adenosine_3_5_bismonophosphate side left {

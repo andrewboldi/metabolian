@@ -18,49 +18,49 @@ pathway tetraphosphate-to-h2o "tetraphosphate to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_dihomo_linolenoylglycerophosphoethanolamine_20
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_l_serine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_linoleoylglycerophosphoethanolamine_delta_9_12
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    r_1_2_distearoylphosphatidylethanolamine
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_xylose +nadph
-    xylitol
+    <-> ec_1_14_15_5 [1.14.15.5] +18_hydroxycorticosterone +h2o +h +o2 +nadph
+    corticosterone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_l_arabinofuranose +nadph
-    l_arabinitol
+    <-> ec_1_14_15_5 [1.14.15.5] +18_hydroxycorticosterone +h +o2 +nadph +h2o
+    aldosterone
   }
 
   branch from atp side left {
     atp
     <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
+    1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    protoporphyrin_ix
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_asparagine +l_methionine +l_tyrosine
-    methionyl_asparaginyl_tyrosine
+    <-> . +l_proline +l_valine +l_tryptophan
+    tryptophanyl_prolyl_valine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_lysine +l_methionine
-    methionyl_histidyl_lysine
+    <-> . +l_serine +l_tryptophan +l_tyrosine
+    tryptophanyl_seryl_tyrosine
   }
 }

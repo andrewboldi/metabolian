@@ -28,13 +28,7 @@ pathway 1d-myo-inositol-to-acetate "1D-myo-inositol… to acetate" {
     acetate
   }
 
-  branch from myo_2_inosose side left {
-    myo_2_inosose
-    <-> . +nad +nadh +hplus
-    3_dehydro_scyllo_inosose
-  }
-
-  branch from malonate side right {
+  branch from malonate side left {
     malonate
     <-> . +h2o +coa +hplus
     malonyl-coa

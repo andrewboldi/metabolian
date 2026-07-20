@@ -18,13 +18,13 @@ pathway 19-4-hydroxyphenyl-nonad-to-o-s-c37-phenol-carbo "19-(4-hydroxyphenyl)no
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
-    guanosine_3_diphosphate_5_triphosphate_hexaanion
+    <-> ec_2_5_1_112 [2.5.1.112] +dmapp +atp
+    n6_dimethylallyl_adenosine_5_triphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_125 [4.2.3.125] +fpp
-    muurolene
+    <-> ec_2_7_7_87 [2.7.7.87] +threonine +hco3 +atp +h2o
+    l_threonylcarbamoyladenylate
   }
 }

@@ -124,32 +124,57 @@
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60374"
+        "chebi": "CHEBI:57770"
       }
     },
     {
-      "id": "bisabolene",
-      "name": "β-bisabolene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "trans_caffeoyl_amp",
+      "name": "trans-caffeoyl-AMP",
+      "formula": "C19H19N5O10P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:49249"
+        "chebi": "CHEBI:192349"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "trans_sinapate",
+      "name": "trans-sinapate",
+      "formula": "C11H11O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:30023"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
       }
     },
     {
@@ -413,17 +438,25 @@
     },
     {
       "id": "r5",
-      "name": "(2Z,6Z)-farnesyl diphosphate = beta-bisabolene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = beta-bisabolene + diphosphate",
+      "name": "(E)-caffeate + ATP + H(+) = (E)-caffeoyl-AMP + diphosphate",
+      "equation": "(E)-caffeate + ATP + H(+) = (E)-caffeoyl-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "bisabolene",
+          "metabolite": "trans_caffeoyl_amp",
           "stoichiometry": 1
         },
         {
@@ -434,31 +467,43 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68524"
+        "rhea": "RHEA:72431"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68524"
+            "id": "RHEA:72431"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = beta-bisabolene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-bisabolene + diphosphate",
+      "name": "(E)-sinapate + ATP + CoA = (E)-sinapoyl-CoA + AMP + diphosphate",
+      "equation": "(E)-sinapate + ATP + CoA = (E)-sinapoyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "trans_sinapate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "bisabolene",
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -469,14 +514,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:68528"
+        "rhea": "RHEA:72587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68528"
+            "id": "RHEA:72587"
           }
         ]
       }

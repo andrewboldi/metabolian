@@ -24,49 +24,49 @@ pathway 2-3-dihydroxy-n-benzoylse-to-h2o "2,3-dihydroxy-N-benzoylse… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +2_phenylpropionaldoxime
-    2_phenylpropiononitrile
+    <-> . +2_2_bis_4_hydroxyphenyl_1_propanol +o2
+    2_2_bis_4_hydroxyphenyl_propanoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +mandelonitrile
-    mandelaldoxime
+    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +o2 +nad
+    all_trans_antheraxanthin
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +2_4_dinitrobenzoate +nad +h2o
-    2_4_dinitrobenzaldehyde
+    <-> . +2_s_glutathionyl_acetyl_chloride +h2o +chloride
+    2_s_glutathionyl_acetate
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +veratrate +nad +h2o
-    3_4_dimethoxybenzaldehyde
+    <-> . +imp +h2o
+    3_5_cyclic_imp
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +4_hydroxynon_2_enal +nadp +h2o +h
-    4_hydroxynon_2_enoic_acid
+    <-> . +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit +nadp
+    2_4_dinitrophenol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +decanoate +h +nadp +h2o
-    decanal
+    <-> . +1_6_8_trihydroxy_1h_3h_cyclohepta_c_furan_5_one +o2 +nadp +h2o
+    stipitalide
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_7_27 [2.7.7.27] +adp_alpha_d_glucose +diphosphate +h
-    d_glucopyranose_1_phosphate
+    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
+    d_alanyl_l_alanyl_poly_glycerol_phosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose_6_phosphate +h +adp
-    beta_d_fructose
+    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +alanyl_poly_glycerolphosphate +h +adp +phosphate
+    d_alanyl_alanyl_poly_glycerolphosphate
   }
 }

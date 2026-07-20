@@ -42,107 +42,89 @@ pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-ho
 
   branch from ipp side left {
     ipp
-    <-> . +diphosphate +di_trans_poly_cis_decaprenyl_diphosphate
-    all_trans_nonaprenyl_diphosphate
+    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate
+    2e_geranyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_decaprenyl_diphosphate
-    2e_6e_farnesyl_diphosphate
-  }
-
-  branch from 4_hydroxy_3_all_trans_decaprenylbenzoate side left {
-    4_hydroxy_3_all_trans_decaprenylbenzoate
-    <-> ec_1_14_15_45 [1.14.15.45] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_decaprenyl_4_5_dihydroxybenzoate
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_205 [4.2.3.205] +pre_sodorifen_diphosphate
-    sodorifen
+    <-> ec_2_5_1_89 [2.5.1.89] +tri_trans_hexa_cis_decaprenyl_diphosphate +diphosphate
+    2e_6e_10e_geranylgeranyl_diphosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_204 [4.2.3.204] +fpp +h2o
-    valerianol
+    <-> . +fpp +h2o
+    trichobrasilenol
   }
 
-  branch from 2_decaprenyl_6_methoxyphenol side right {
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    african_3_ene
+  }
+
+  branch from 2_decaprenyl_6_methoxyphenol side left {
     2_decaprenyl_6_methoxyphenol
     <-> . +o2 +h2o
     2_decaprenyl_6_methoxy_1_4_benzoquinone
   }
 
-  branch from sah side left {
-    sah
-    <-> . +5_carboxymethoxy_uridine_5_phosphate_2 +sam
-    5_methoxycarbonylmethoxyuridine_1
-  }
-
   branch from sah side right {
     sah
-    <-> ec_2_1_1_299 [2.1.1.299] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2
+    <-> . +3_hydroxy_d_kynurenine +sam +hplus
+    3_hydroxy_4_methyl_d_kynurenine
   }
 
-  branch from 2_decaprenyl_6_methoxyhydroquinone side left {
+  branch from sah side left {
+    sah
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
+  }
+
+  branch from 2_decaprenyl_6_methoxyhydroquinone side right {
     2_decaprenyl_6_methoxyhydroquinone
     <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +2_decaprenyl_6_methoxy_1_4_benzoquinone
     nad
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +18_hydroxycortisol +di_sulfido_diiron +o2 +hplus +h2o
-    18_oxocortisol
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    18_hydroxydeoxycorticosterone
-  }
-
-  branch from 3_demethylubiquinol_10 side right {
+  branch from 3_demethylubiquinol_10 side left {
     3_demethylubiquinol_10
-    <-> . +nadh +hplus +nad
+    <-> . +nadph +hplus +nadp
     3_demethylubiquinone_10
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +chenodeoxycholate +o2 +nadph +h2o
-    7_ketolithocholate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m17 +h2o
-    am19_cyclosporine
+    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadph +h2o
+    germacra_1_10_4_11_13_trien_12_ol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_26 [3.2.1.26] +d_fructofuranose +d_glucose_6_phosphate
-    sucrose_6g_phosphate
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_14_1 [1.14.14.1] +4_methylamino_antipyrine +formaldehyde +h2o +h +o2 +nadph
+    aminophenazone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ortho_hydroxyatorvastatin
-    2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
+    <-> . +l_leucine +l_glutamate
+    glutamyl_leucine
   }
 
-  branch from ubiquinol_10 side left {
+  branch from h2o side left {
+    h2o
+    <-> . +l_histidine +l_methionine +l_glutamate
+    glutamyl_methioninyl_histidine
+  }
+
+  branch from ubiquinol_10 side right {
     ubiquinol_10
     <-> . +nadph +hplus +nadp
     coenzyme_q10
   }
 
-  branch from ubiquinol_10 side right {
+  branch from ubiquinol_10 side left {
     ubiquinol_10
     <-> . +2e_hexadecenoyl_coa +ubiquinone_10
     hexadecanoyl_coa

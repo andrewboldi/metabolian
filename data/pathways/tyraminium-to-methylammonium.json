@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tyraminium-to-methylammonium",
+  "name": "tyraminium to methylammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from tyraminium to methylammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57132"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:327995"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:327995"
+      }
+    },
+    {
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38290"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2r_4_2_ammonio_1_hydroxyethyl_phenol",
+      "name": "(2R)-4-(2-ammonio-1-hydroxyethyl)phenol",
+      "short": "4-(2-ammonio-1-hydr…",
+      "formula": "C8H12NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141486"
+      }
+    },
+    {
+      "id": "l_dehydroascorbate",
+      "name": "L-dehydroascorbate",
+      "formula": "C6H5O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58539"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "d_synephrine",
+      "name": "D-synephrine",
+      "formula": "C9H14NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:63694"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_hydroxyphenyl_acetaldehyde",
+      "name": "(4-hydroxyphenyl)acetaldehyde",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15621"
+      }
+    },
+    {
+      "id": "methylamine",
+      "name": "Methylamine",
+      "formula": "CH6N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59338"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_88",
+      "name": "synephrine dehydratase",
+      "ec": [
+        "4.2.1.88"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tyramine + L-ascorbate + O2 = (R)-octopamine + L-dehydroascorbate + H2O",
+      "equation": "tyramine + L-ascorbate + O2 = (R)-octopamine + L-dehydroascorbate + H2O",
+      "substrates": [
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_4_2_ammonio_1_hydroxyethyl_phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_dehydroascorbate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-octopamine + S-adenosyl-L-methionine = (R)-synephrine + S-adenosyl-L-homocysteine +...",
+      "equation": "(R)-octopamine + S-adenosyl-L-methionine = (R)-synephrine + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2r_4_2_ammonio_1_hydroxyethyl_phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_synephrine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70519"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70519"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "synephrine dehydratase",
+      "equation": "(R)-synephrine = (4-hydroxyphenyl)acetaldehyde + methylamine",
+      "ec": "4.2.1.88",
+      "substrates": [
+        {
+          "metabolite": "d_synephrine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32203"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32203"
+          }
+        ]
+      }
+    }
+  ]
+}

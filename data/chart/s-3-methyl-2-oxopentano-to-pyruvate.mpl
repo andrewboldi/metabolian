@@ -18,14 +18,14 @@ pathway s-3-methyl-2-oxopentano-to-pyruvate "(S)-3-methyl-2-oxopentano… to pyr
 
   branch from 4_methylsulfanyl_2_oxobutanoate side left {
     4_methylsulfanyl_2_oxobutanoate
-    <-> . +fadh2 +h +nh4 +fad +h2o
-    d_methionine
+    <-> ec_2_6_1_88 [2.6.1.88] +pyruvate +l_methionine
+    l_alanine
   }
 
   branch from 4_methylsulfanyl_2_oxobutanoate side right {
     4_methylsulfanyl_2_oxobutanoate
-    <-> . +co2 +s_methyl_propanethioate
-    h
+    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_methionine
+    l_ornithine
   }
 
   branch from l_isoleucine side left {
@@ -36,20 +36,20 @@ pathway s-3-methyl-2-oxopentano-to-pyruvate "(S)-3-methyl-2-oxopentano… to pyr
 
   branch from l_isoleucine side right {
     l_isoleucine
-    <-> . +l_histidine +l_lysine +h +h2o
-    his_lys_ile
+    <-> . +l_histidine +l_lysine +his_lys_ile +h2o
+    h
   }
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_2_6_1_21 [2.6.1.21] +d_aspartate +4_hydroxy_2_oxoglutarate
-    4s_4_hydroxy_l_glutamate
+    <-> ec_1_1_99_16 [1.1.99.16] +s_malate +menaquinone_6
+    menaquinol_6
   }
 
   branch from oxaloacetate side right {
     oxaloacetate
-    <-> . +s_malate +ubiquinone_2
-    ubiquinol_2
+    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +phylloquinone
+    phylloquinol
   }
 
   branch from l_methionine side left {
@@ -66,25 +66,25 @@ pathway s-3-methyl-2-oxopentano-to-pyruvate "(S)-3-methyl-2-oxopentano… to pyr
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +coa
-    7_hydroxyflavone_7_o_6_malonyl_beta_d_glucoside
-  }
-
-  branch from malonyl_coa side right {
-    malonyl_coa
     <-> . +nadp +h2o +o2 +nadph
     3_oxopropanoyl_coa
   }
 
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> . +e_feruloyl_coa +h +s_homoeriodictyol +coa
+    co2
+  }
+
   branch from pyruvate side left {
     pyruvate
-    <-> ec_4_4_1_3 [4.4.1.3] +nh4 +methanol +h2o
-    o_methyl_dl_serine
+    <-> ec_4_4_1_3 [4.4.1.3] +thioglycolate +nh4 +h2o
+    s_carboxymethyl_l_cysteine
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_4_1_3 [4.4.1.3] +thioglycolate +nh4 +h2o
-    s_carboxymethyl_l_cysteine
+    <-> ec_4_1_99_1 [4.1.99.1] +o_nitrobenzenethiol +nh4 +h2o
+    s_o_nitrophenyl_l_cysteine
   }
 }

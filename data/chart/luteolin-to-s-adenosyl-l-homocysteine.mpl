@@ -20,14 +20,14 @@ pathway luteolin-to-s-adenosyl-l-homocysteine "luteolin to S-adenosyl-L-homocyst
 
   branch from h2o side left {
     h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
-    7e_9e_11z_14z_18r_16e_5s_6s_5_6_epoxyicosa_15_h
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_lyxopyranose +phosphate +l_lyxopyranose
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ferroheme_op2
-    ferroheme_op1
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
   }
 
   branch from luteolin_7_olate side left {
@@ -44,13 +44,13 @@ pathway luteolin-to-s-adenosyl-l-homocysteine "luteolin to S-adenosyl-L-homocyst
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_347 [2.1.1.347] +kolavelool +sam +hplus
-    o_methylkolavelool
+    <-> . +eriodictyol +sam +hplus
+    homoeriodictyol
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_67 [2.1.1.67] +tioguanine +sam +hplus
-    6_methylthioguanine
+    <-> . +e_5_hydroxyferulate +sam +hplus
+    trans_sinapate
   }
 }

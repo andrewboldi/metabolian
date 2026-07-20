@@ -44,14 +44,14 @@ pathway butanoyl-coa-to-2e-glutaconyl-coa "butanoyl-CoA to (2E)-glutaconyl-CoA" 
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylbutan_2_one +nad
-    r_3_methylbutan_2_ol
+    <-> ec_1_1_1_2 [1.1.1.2] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +nadp +nadph
+    bornane_2_3_dione
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +nad
-    s_2_hexanol
+    <-> ec_1_1_1_209 [1.1.1.209] +1_2_dihydro_1_2_acenaphthylenediol +nadp +nadph
+    acenaphthene_1_2_dione
   }
 
   branch from r_2_hydroxyglutaryl_coa side left {

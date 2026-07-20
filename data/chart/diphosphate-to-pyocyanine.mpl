@@ -18,26 +18,26 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> ec_6_3_5_5 [6.3.5.5] +carbamoyl_phosphate +h +adp +l_glutamate +phosphate +atp +h2o
-    co2
+    <-> . +l_asparagine +h2o
+    glutaminyl_asparaginyl_glutamine
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> ec_4_3_3_6 [4.3.3.6] +alpha_d_ribofuranose_5_phosphate +d_glyceraldehyde_3_phosphate +h +l_glutamate +phosphate +h2o
-    pyridoxal_5_phosphate
+    <-> . +l_histidine +h2o
+    glutaminyl_histidyl_histidine
   }
 
   branch from atp side left {
     atp
-    <-> . +fructoselysine_3_phosphate +h +adp
-    1_deoxy_1_n6_lysino_d_fructose
+    <-> ec_2_7_1_15 [2.7.1.15] +d_ribose +h +adp
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_6 [2.7.1.6] +2_amino_2_deoxy_d_galactopyranose +h +adp
-    d_galactosamine_1_phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_ribose
   }
 
   branch from phenazine_1_carboxylate side left {
@@ -54,25 +54,25 @@ pathway diphosphate-to-pyocyanine "diphosphate to pyocyanine" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +phe_gly
-    phe_gly_leu_ala
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_nitrophenol
+    m_nitrophenyl_beta_d_galactoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_24_27 [3.4.24.27] +leu_gly_pro +z_gly_pro
-    z_gly_pro_leu_gly_pro
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_methylphenol
+    3_methylphenyl_beta_d_galactopyranoside
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_337 [2.1.1.337] +s_glaucine +sam +hplus
-    s_1_2_9_10_tetramethoxy_6_methylaporphine
+    <-> ec_2_1_1_299 [2.1.1.299] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_337 [2.1.1.337] +bulbocapnine +sam +hplus
-    n_methylbulbocapnine
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

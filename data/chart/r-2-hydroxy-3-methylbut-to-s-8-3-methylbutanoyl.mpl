@@ -30,26 +30,26 @@ pathway r-2-hydroxy-3-methylbut-to-s-8-3-methylbutanoyl "(R)-2-hydroxy-3-methylb
 
   branch from 4_methyl_2_oxopentanoate side left {
     4_methyl_2_oxopentanoate
-    <-> . +l_leucine +indole_3_pyruvate
-    l_tryptophan
-  }
-
-  branch from 4_methyl_2_oxopentanoate side right {
-    4_methyl_2_oxopentanoate
     <-> ec_1_2_4_4 [1.2.4.4] +co2 +3_methyl_1_hydroxybutyl_thpp +h
     thiamine_diphosphate
   }
 
+  branch from 4_methyl_2_oxopentanoate side right {
+    4_methyl_2_oxopentanoate
+    <-> . +l_leucine +3_4_hydroxyphenyl_pyruvate
+    l_tyrosine
+  }
+
   branch from co2 side left {
     co2
-    <-> . +r_allantoin +h2o
-    s_5_hydroxyisourate
+    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +butin +o2 +trans_fustin
+    succinate
   }
 
   branch from co2 side right {
     co2
-    <-> . +s_5_hydroxyisourate +h2o
-    s_allantoin
+    <-> ec_1_14_11_23 [1.14.11.23] +galangin +succinate +h2o +pinobanksin +o2
+    2_oxoglutarate
   }
 
   branch from s_8_3_methylbutanoyl_dihydrolipoamide side left {

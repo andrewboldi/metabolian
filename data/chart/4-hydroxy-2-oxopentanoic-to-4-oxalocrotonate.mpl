@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxy-2-oxopentanoic-to-4-oxalocrotonate "4-hydroxy-2-oxopentanoicâ€¦ to 4-oxalocrotonate" {
-  spacing 220
+  spacing 208
 
   spine at 0,0 {
     4_hydroxy_2_oxopentanoic_acid
@@ -16,52 +16,40 @@ pathway 4-hydroxy-2-oxopentanoic-to-4-oxalocrotonate "4-hydroxy-2-oxopentanoicâ€
     h
   }
 
-  branch from z_5_oxohex_2_enedioate side left {
-    z_5_oxohex_2_enedioate
-    <-> ec_3_5_99_5 [3.5.99.5] +h +nh4 +h2o
-    2e_4z_2_aminomuconic_acid
+  branch from h side left {
+    h
+    <-> . +d_glucono_1_5_lactone +h2o
+    d_gluconate
   }
 
   branch from h side right {
     h
-    <-> . +o2 +nadph +19_hydroxyandrost_4_ene_3_17_dione +3_17_dioxoandrost_4_en_19_al +h2o
-    nadp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +nadp +h2o +o2 +nadph
-    n_hydroxy_l_tyrosine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +2_oxospirilloxanthin +o2
-    spirilloxanthin
+    <-> ec_4_1_1_42 [4.1.1.42] +r_carnitine +co2
+    2_methylcholine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_oxospirilloxanthin +o2
-    2_2_dioxospirilloxanthin
+    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +l_serine
+    cystathionine
   }
 
-  branch from 1_2_3_trihydroxybenzene side right {
-    1_2_3_trihydroxybenzene
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +catechol +o2 +h2o
-    nad
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_68 [3.1.1.68] +l_lyxonate +h
+    d_xylono_1_4_lactone
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_11_1_8 [1.11.1.8] +thyroglobulin_3_5_diiodotyrosine +thyroglobulin_l_thyroxine +h2o
-    thyroglobulin_dehydroalanine
+    <-> ec_1_2_3_1 [1.2.3.1] +5_hydroxyindol_3_yl_acetaldehyde +o2 +h2o +h
+    5_hydroxyindol_3_yl_acetate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +1_piperideinium +nh4 +o2
-    cadaverine
+    <-> ec_1_1_3_4 [1.1.3.4] +2_dehydro_d_glucose +o2
+    2_dehydro_d_glucono_1_5_lactone
   }
 
   branch from 4_oxalocrotonate side left {

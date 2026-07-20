@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-octadecanoyl-2-octanoyl-to-diphosphate "1-octadecanoyl-2-octanoyl… to diphosphate" {
-  spacing 212
+  spacing 194
 
   spine at 0,0 {
     1_octadecanoyl_2_octanoyl_sn_glycero_3_phosphoch
@@ -28,57 +28,39 @@ pathway 1-octadecanoyl-2-octanoyl-to-diphosphate "1-octadecanoyl-2-octanoyl… t
     1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
   }
 
-  branch from octanoate side right {
-    octanoate
-    <-> ec_2_3_1_85 [2.3.1.85] +acetyl_coa +malonyl_coa +h +nadph +nadp +coa +h2o
-    co2
-  }
-
-  branch from octadecanoate side left {
-    octadecanoate
-    <-> . +13_octadecanoyloxy_octadecanoate +h2o +hplus
-    13_hydroxyoctadecanoate
-  }
-
   branch from octadecanoate side right {
     octadecanoate
     <-> . +1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
     2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine
-    1_acyl_sn_glycero_2_3_cyclic_phosphate
+  branch from octadecanoate side left {
+    octadecanoate
+    <-> . +n_stearoyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +n_docosanoyl_ethanolamine +h2o
-    behenate
-  }
-
-  branch from stearoyl_coa side left {
+  branch from stearoyl_coa side right {
     stearoyl_coa
     <-> . +serine +hplus +co2 +coa
     c20_3_dehydrosphinganine
   }
 
-  branch from stearoyl_coa side right {
+  branch from stearoyl_coa side left {
     stearoyl_coa
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +coa
     1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_84 [2.7.7.84] +atp
-    pppa2_p5_a2_p5_a
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_140 [4.2.3.140] +copal_8_ol_diphosphate
-    cis_abienol
+    <-> ec_6_1_2_2 [6.1.2.2] +kanamycin_a +carbamoyl_p +atp +h2o +amp +pi +hplus
+    6_o_carbamoylkanamycin_a
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_147 [4.2.3.147] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    pimara_8_14_15_diene
   }
 }

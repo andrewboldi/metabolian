@@ -18,13 +18,13 @@ pathway ent-cassa-12-15-diene-to-fmn "ent-cassa-12,15-diene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_178 [1.14.14.178] +c28_steroid +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxy_c28_steroid
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    15_hydroxytestosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_178 [1.14.14.178] +c29_steroid +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxy_c29_steroid
+    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
+    15alpha_hydroxyprogesterone
   }
 }

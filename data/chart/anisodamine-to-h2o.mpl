@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway anisodamine-to-h2o "Anisodamine to H2O" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     anisodamine
@@ -18,79 +18,73 @@ pathway anisodamine-to-h2o "Anisodamine to H2O" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +o2 +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put +co2 +succinate
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
+    <-> ec_2_5_1_64 [2.5.1.64] +h +isochorismate +co2 +pyruvate
+    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +22r_22_26_dihydroxycholesterol +o2 +co2 +succinate
-    16alpha_22_26_trihydroxycholesterol
-  }
-
-  branch from l_hyoscyamine side left {
-    l_hyoscyamine
-    <-> .
-    r_littorine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +cis_cis_tetradeca_5_8_dienoyl_coa +h +trans_2_cis_cis_5_8_tetradecatrienoyl_coenzyme_a
-    h2o2
+    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +nadp +coa +n_2_acetyl_l_ornithine +phosphate
+    adp
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_trans_6_cis_dodeca_2_6_dienoyl_coa +h2o2 +h
-    cis_6_dodecenoyl_coenzyme_a
+    <-> ec_1_14_13_142 [1.14.13.142] +nadh +h +androsta_1_4_diene_3_17_dione +nad +h2o
+    9_hydroxyandrosta_1_4_diene_3_17_dione
   }
 
-  branch from co2 side right {
-    co2
-    <-> . +nadh +udp_ribose +h +nad +h2o
-    udp_alpha_d_glucuronate
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +s_linalool +h +nad +h2o
+    6e_8_hydroxylinalool
   }
 
   branch from co2 side left {
     co2
-    <-> . +urea_1_carboxylate +h
-    1_3_dicarboxyurea
+    <-> ec_2_3_1_199 [2.3.1.199] +15z_tetracosenoyl_coa +malonyl_coa +h +3_oxo_17z_hexacosenoyl_coa
+    coa
   }
 
-  branch from h side right {
-    h
-    <-> . +l_lysine +l_glutamine +h2o
-    gln_lys_lys
+  branch from co2 side right {
+    co2
+    <-> . +4alpha_14alpha_dimethyl_ergosta_8_25_27_dienol +h
+    4beta_carboxycyclolaudenol
   }
 
   branch from h side left {
     h
-    <-> . +l_lysine +l_glutamine +l_tryptophan +h2o
-    gln_lys_trp
+    <-> . +adp +phosphate +atp +h2o
+    pravastatin_sodium
   }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_6_2_1_4 [6.2.1.4] +succinyl_coa +8_azaguanosine_5_diphosphate +phosphate +h +8_azaguanosine_5_triphosphate
-    coa
+  branch from h side right {
+    h
+    <-> . +adp +pravastatin_glucuronide +phosphate +pravastatin_glucuronide +h2o
+    atp
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_1 [1.14.11.1] +s_carnitine +co2 +2_oxoglutarate +o2
-    4_trimethylamino_butanoate
+    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_7 +fumarate
+    ubiquinone_7
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +fluvastatin
-    trans_lactone_fluvastatin
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +2_oxoglutarate +h +o2 +chloride +co2 +h2o
+    12_epi_hapalindole_e
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_glutamine +l_glutamate
-    glutaminyl_prolyl_glutamate
+    <-> . +l_glutamine +l_phenylalanine
+    phenylalanyl_glutaminyl_phenylalanine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_leucine +l_aspartate +l_phenylalanine
+    phenylalanyl_leucyl_aspartate
   }
 }

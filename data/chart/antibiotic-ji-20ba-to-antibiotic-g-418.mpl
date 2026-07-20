@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway antibiotic-ji-20ba-to-antibiotic-g-418 "Antibiotic JI-20Ba to Antibiotic G-418" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     antibiotic_ji_20ba
@@ -18,37 +18,31 @@ pathway antibiotic-ji-20ba-to-antibiotic-g-418 "Antibiotic JI-20Ba to Antibiotic
 
   branch from antibiotic_ji_20b side left {
     antibiotic_ji_20b
-    <-> . +2_oxoglutarate +h +h2o2 +geneticin_cation +l_glutamate
-    o2
-  }
-
-  branch from antibiotic_ji_20b side right {
-    antibiotic_ji_20b
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +3_aminopropanesulfonic_acid +2_oxoglutarate
-    3_oxopropane_1_sulfonate
-  }
-
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +2_oxoglutarate +h +antibiotic_ji_20a +h2o2 +o2
-    gentamicin_x2_cation
+    <-> ec_3_4_11_7 [3.4.11.7] +s_trans_1_propenyl_l_cysteine +h +h2o
+    n_gamma_glutamyl_s_trans_1_propenyl_cysteine
   }
 
-  branch from fad side left {
-    fad
-    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +glycine_betaine +h2o
-    betaine_aldehyde
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> ec_3_4_11_7 [3.4.11.7] +gamma_l_glutamyl_s_allyl_l_cysteine +h2o
+    s_allylcysteine
   }
 
   branch from fad side right {
     fad
     <-> . +fadh2 +iminoaspartate +h
     l_aspartate
+  }
+
+  branch from fad side left {
+    fad
+    <-> . +fadh2 +h +menaquinone_2 +menaquinol
+    pmf
   }
 }

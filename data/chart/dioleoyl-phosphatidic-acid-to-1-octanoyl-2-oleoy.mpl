@@ -18,38 +18,38 @@ pathway dioleoyl-phosphatidic-acid-to-1-octanoyl-2-oleoy "dioleoyl phosphatidic 
 
   branch from h side left {
     h
-    <-> ec_3_5_1_3 [3.5.1.3] +2_methylbutanedioic_acid +h2o +methanol
-    succinate
+    <-> ec_2_3_1_60 [2.3.1.60] +acetyl_coa +tobramycin +coa
+    n3_acetyltobramycin
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_n_benzylthiocarbamoyl_glutathione +glutathione
-    benzyl_isothiocyanate
+    <-> ec_1_1_1_239 [1.1.1.239] +nadh +5beta_androstane_3_17_dione +nad
+    5_dihydrotestosterone
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_21 [2.7.1.21] +acyclovir +h +adp
-    acyclovir_monophosphate
+    <-> . +h +adp +phosphate +h2o
+    arsenobetaine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_21 [2.7.1.21] +h +3_azido_3_deoxythymidine_5_phosphate +adp
-    zidovudine
+    <-> ec_6_2_1_3 [6.2.1.3] +decanoate +coa +diphosphate +amp
+    decanoyl_coa
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side left {
     1_2_dioleoyl_sn_glycerol
-    <-> . +lauroyl_coa +coa
-    1_2_dioleoyl_3_lauroyl_sn_glycerol
+    <-> . +stearoyl_coa +coa
+    1_2_dioleoyl_3_stearoyl_sn_glycerol
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side right {
     1_2_dioleoyl_sn_glycerol
-    <-> . +stearoyl_coa +coa
-    1_2_dioleoyl_3_stearoyl_sn_glycerol
+    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphoethanola +1_2_dioleoyl_3_stearoyl_sn_glycerol
+    1_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from 2_oleoylglycerol side left {

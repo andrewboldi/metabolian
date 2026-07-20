@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-2-didecanoylglycerol-to-10-oxocaprate",
   "name": "1,2-didecanoylglycerol to 10-oxocaprate",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 1,2-didecanoylglycerol to 10-oxocaprate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -182,42 +182,39 @@
       }
     },
     {
-      "id": "24s_24_hydroxycholesterol",
-      "name": "(24S)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:34310"
+        "chebi": "CHEBI:16469"
       }
     },
     {
-      "id": "24s_7_24_dihydroxycholesterol",
-      "name": "(24S)-7α,24-dihydroxycholesterol",
-      "short": "7α,24-dihydroxychol…",
-      "formula": "C27H46O3",
+      "id": "16_hydroxyestradiol",
+      "name": "16β-hydroxyestradiol",
+      "formula": "C18H24O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:37640"
+        "chebi": "CHEBI:87620"
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "lipoxin_a4",
+      "name": "lipoxin A4",
+      "formula": "C20H31O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:67026"
       }
     },
     {
-      "id": "4_hydroxycholesterol",
-      "name": "4β-hydroxycholesterol",
-      "short": "4β-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "20_hydroxylipoxin_a4",
+      "name": "20-hydroxylipoxin A4",
+      "formula": "C20H31O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:85778"
+        "chebi": "CHEBI:90707"
       }
     }
   ],
@@ -227,13 +224,6 @@
       "name": "omega-hydroxydecanoate dehydrogenase",
       "ec": [
         "1.1.1.66"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_26",
-      "name": "24-hydroxycholesterol 7alpha-hydroxylase",
-      "ec": [
-        "1.14.14.26"
       ]
     }
   ],
@@ -479,12 +469,11 @@
     },
     {
       "id": "r6",
-      "name": "24-hydroxycholesterol 7alpha-hydroxylase",
-      "equation": "(24S)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-7alpha-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.26",
+      "name": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol ...",
+      "equation": "17beta-estradiol + reduced [NADPH--hemoprotein reductase] + O2 = 16beta,17beta-estriol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "24s_24_hydroxycholesterol",
+          "metabolite": "17_estradiol",
           "stoichiometry": 1
         },
         {
@@ -498,7 +487,7 @@
       ],
       "products": [
         {
-          "metabolite": "24s_7_24_dihydroxycholesterol",
+          "metabolite": "16_hydroxyestradiol",
           "stoichiometry": 1
         },
         {
@@ -514,33 +503,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_26"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46124"
+        "rhea": "RHEA:47336"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46124"
+            "id": "RHEA:47336"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 4beta-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxid...",
+      "equation": "lipoxin A4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin A4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "lipoxin_a4",
           "stoichiometry": 1
         },
         {
@@ -554,7 +538,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_hydroxycholesterol",
+          "metabolite": "20_hydroxylipoxin_a4",
           "stoichiometry": 1
         },
         {
@@ -573,14 +557,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:46128"
+        "rhea": "RHEA:48648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46128"
+            "id": "RHEA:48648"
           }
         ]
       }

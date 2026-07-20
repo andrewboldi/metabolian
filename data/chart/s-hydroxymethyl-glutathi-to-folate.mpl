@@ -24,14 +24,14 @@ pathway s-hydroxymethyl-glutathi-to-folate "S-(hydroxymethyl)glutathi… to fola
 
   branch from formate side left {
     formate
-    <-> ec_1_14_15_36 [1.14.15.36] +14_methyl_steroid +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    14_steroid
+    <-> . +primary_fluorescent_chlorophyll_catabolite +fmnh2 +o2 +fmn +hplus
+    primary_fluorescent_dioxobilin_type_chlorophyll
   }
 
   branch from formate side right {
     formate
-    <-> . +obtusifoliol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    4_methyl_5_ergosta_8_14_24_28_trien_3_ol
+    <-> . +eburicol +fmnh2 +o2 +fmn +h2o +hplus
+    4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
   }
 
   branch from gsh side left {

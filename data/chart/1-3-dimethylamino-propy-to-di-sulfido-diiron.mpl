@@ -30,14 +30,14 @@ pathway 1-3-dimethylamino-propy-to-di-sulfido-diiron "1-[3-(dimethylamino)propyâ
 
   branch from h2o2 side left {
     h2o2
-    <-> . +5_hydroxymethylfurfural +o2
-    2_5_furandimethanol
+    <-> . +2_dihydroxymethyl_furan +o2 +h
+    2_furoate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +s_scoulerine +h +o2
-    dehydroscoulerine
+    <-> . +co2 +nonadec_1_ene +h2o +h
+    eicosanoate
   }
 
   branch from dimethylamine side left {
@@ -54,37 +54,37 @@ pathway 1-3-dimethylamino-propy-to-di-sulfido-diiron "1-[3-(dimethylamino)propyâ
 
   branch from h side left {
     h
-    <-> ec_3_5_1_97 [3.5.1.97] +3_oxooctanoic_acid +l_homoserine_lactone +h2o
-    3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
+    <-> . +neocarrabiose +sulfate +h2o
+    neocarrabiose_sulfate
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o
-    hai_1
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +acetate +h2o
+    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +butanoate
-    a_s_butyr_amido_r_butyrolactone
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +9_methylthio_nonyl_thiohydroximic_acid
+    ser_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
-    n_3_oxooctanoyl_l_homoserine
+    <-> . +petivericin
+    phenylmethanesulfenate
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +gibberellin_a15_2_diacid_form +di_sulfido_diiron +o2 +hplus +h2o
-    gibberellin_a24
+    <-> . +androst_4_ene_3_17_dione +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxyandrost_4_ene_3_17_dione
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +julichrome_q6 +di_sulfido_diiron +o2 +hplus +h2o
-    julichrome_q6_6
+    <-> . +testosterone +di_sulfido_diiron +o2 +hplus +h2o
+    11_hydroxytestosterone
   }
 }

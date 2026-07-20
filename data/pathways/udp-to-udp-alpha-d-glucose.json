@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-udp-alpha-d-glucose",
   "name": "UDP to UDP-alpha-D-glucose",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from UDP to UDP-alpha-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -81,87 +81,57 @@
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1101474"
-      }
-    },
-    {
-      "id": "d_glucopyranose_1_phosphate",
-      "name": "D-glucopyranose 1-phosphate",
-      "short": "D-glucopyranose 1-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1364212"
-      }
-    },
-    {
-      "id": "diphosphate",
-      "name": "diphosphate",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM11"
-      }
-    },
-    {
-      "id": "dolichyl_beta_d_glucosyl_phosphate",
-      "name": "dolichyl beta-D-glucosyl phosphate",
-      "short": "dolichyl beta-D-glu…",
-      "formula": "C31H55O9P",
+      "id": "phenyl_beta_d_glucopyranoside",
+      "name": "Phenyl beta-D-glucopyranoside",
+      "short": "Phenyl beta-D-gluco…",
+      "formula": "C12H16O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM728542"
+        "chebi": "CHEBI:8083"
       }
     },
     {
-      "id": "dolichyl_phosphate",
-      "name": "dolichyl phosphate",
-      "formula": "C25H45O4P",
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1107957"
+        "metanetx": "MNXM320"
+      }
+    },
+    {
+      "id": "sterol_3_beta_d_glucoside",
+      "name": "Sterol 3-beta-D-glucoside",
+      "short": "Sterol 3-beta-D-glu…",
+      "formula": "C23H38O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740646"
+      }
+    },
+    {
+      "id": "3beta_hydroxysterol",
+      "name": "3beta-Hydroxysterol",
+      "formula": "C17H28O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729150"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_7_7_23",
-      "name": "UDP-N-acetylglucosamine diphosphorylase",
+      "id": "ec_2_4_1_35",
+      "name": "phenol beta-glucosyltransferase",
       "ec": [
-        "2.7.7.23"
+        "2.4.1.35"
       ]
     },
     {
-      "id": "ec_2_7_7_33",
-      "name": "glucose-1-phosphate cytidylyltransferase",
+      "id": "ec_2_4_1_173",
+      "name": "sterol 3beta-glucosyltransferase",
       "ec": [
-        "2.7.7.33"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_64",
-      "name": "UTP-monosaccharide-1-phosphate uridylyltransferase",
-      "ec": [
-        "2.7.7.64"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_9",
-      "name": "UTP--glucose-1-phosphate uridylyltransferase",
-      "ec": [
-        "2.7.7.9"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_117",
-      "name": "dolichyl-phosphate beta-glucosyltransferase",
-      "ec": [
-        "2.4.1.117"
+        "2.4.1.173"
       ]
     }
   ],
@@ -294,15 +264,15 @@
     },
     {
       "id": "r4",
-      "name": "UDP-N-acetylglucosamine diphosphorylase",
-      "ec": "2.7.7.23",
+      "name": "phenol beta-glucosyltransferase",
+      "ec": "2.4.1.35",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_glucopyranose_1_phosphate",
+          "metabolite": "phenyl_beta_d_glucopyranoside",
           "stoichiometry": 1
         },
         {
@@ -312,38 +282,38 @@
       ],
       "products": [
         {
-          "metabolite": "diphosphate",
+          "metabolite": "udp_alpha_d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_alpha_d_glucose",
+          "metabolite": "phenol",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_23"
+          "enzyme": "ec_2_4_1_35"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR152165"
+        "metanetx": "MNXR152290"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR152165"
+            "id": "MNXR152290"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "dolichyl-phosphate beta-glucosyltransferase",
-      "ec": "2.4.1.117",
+      "name": "sterol 3beta-glucosyltransferase",
+      "ec": "2.4.1.173",
       "substrates": [
         {
           "metabolite": "udp",
@@ -354,36 +324,36 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "dolichyl_beta_d_glucosyl_phosphate",
+          "metabolite": "sterol_3_beta_d_glucoside",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dolichyl_phosphate",
+          "metabolite": "udp_alpha_d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp_alpha_d_glucose",
+          "metabolite": "3beta_hydroxysterol",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_117"
+          "enzyme": "ec_2_4_1_173"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR152286"
+        "metanetx": "MNXR152312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR152286"
+            "id": "MNXR152312"
           }
         ]
       }

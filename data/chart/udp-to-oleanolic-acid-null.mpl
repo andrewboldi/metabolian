@@ -18,13 +18,13 @@ pathway udp-to-oleanolic-acid-null "UDP to oleanolic acid…" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +3_o_d_galactosyl_1_2_d_glucuronosyl_quillate +h
-    3_o_d_glucuronosyl_quillate
+    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_alpha_d_d_hep +h
+    alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +3_n_methylgalacamine +h
-    hyosamine
+    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4 +h
+    alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1
   }
 }

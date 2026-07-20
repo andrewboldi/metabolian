@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prostaglandin-f2-to-fmn",
+  "name": "prostaglandin F2α to FMN",
+  "category": "other",
+  "summary": "A 3-step route from prostaglandin F2α(1−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45312"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57404"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "prostaglandin_f2",
+      "name": "prostaglandin F2α",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57404"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57405"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "prostaglandin_e2",
+      "name": "prostaglandin E2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:606564"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "20_hydroxyprostaglandin_e2",
+      "name": "20-hydroxyprostaglandin E2",
+      "short": "20-hydroxyprostagla…",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136653"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_99_3",
+      "name": "prostaglandin-E synthase",
+      "ec": [
+        "5.3.99.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prostaglandin F2alpha + NADP(+) = prostaglandin H2 + NADPH + H(+)",
+      "equation": "prostaglandin F2alpha + NADP(+) = prostaglandin H2 + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_f2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "prostaglandin-E synthase",
+      "equation": "prostaglandin H2 = prostaglandin E2",
+      "ec": "5.3.99.3",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_e2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12893"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12893"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "prostaglandin E2 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy prostagland...",
+      "equation": "prostaglandin E2 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy prostaglandin E2 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_e2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxyprostaglandin_e2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:52488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52488"
+          }
+        ]
+      }
+    }
+  ]
+}

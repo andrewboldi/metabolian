@@ -118,40 +118,41 @@
       }
     },
     {
-      "id": "3_hydroxybutane_1_2_3_tricarboxylate",
-      "name": "3-hydroxybutane-1,2,3-tricarboxylate",
-      "short": "3-hydroxybutane-1,2…",
-      "formula": "C7H7O7",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:141790"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
-      }
-    },
-    {
-      "id": "scopoletin",
-      "name": "scopoletin",
-      "formula": "C10H8O4",
+      "id": "31_hydroxy_l_isoleucine",
+      "name": "31-hydroxy-L-isoleucine",
+      "short": "31-hydroxy-L-isoleu…",
+      "formula": "C6H13NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17488"
+        "chebi": "CHEBI:149627"
       }
     },
     {
-      "id": "fraxetin",
-      "name": "fraxetin",
-      "formula": "C10H8O5",
+      "id": "4s_31_4_dihydroxy_l_isoleucine",
+      "name": "(4S)-31,4-dihydroxy-L-isoleucine",
+      "short": "31,4-dihydroxy-L-is…",
+      "formula": "C6H13NO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:5169"
+        "chebi": "CHEBI:149628"
+      }
+    },
+    {
+      "id": "preaustinoid_a1",
+      "name": "preaustinoid A1",
+      "formula": "C26H36O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:69026"
+      }
+    },
+    {
+      "id": "berkeleyone_b",
+      "name": "berkeleyone B",
+      "formula": "C26H34O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:69025"
       }
     }
   ],
@@ -171,10 +172,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_60",
-      "name": "scopoletin 8-hydroxylase",
+      "id": "ec_1_14_11_75",
+      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
       "ec": [
-        "1.14.11.60"
+        "1.14.11.75"
       ]
     }
   ],
@@ -389,47 +390,12 @@
     },
     {
       "id": "r5",
-      "name": "3-hydroxybutane-1,2,3-tricarboxylate = pyruvate + succinate",
-      "equation": "3-hydroxybutane-1,2,3-tricarboxylate = pyruvate + succinate",
+      "name": "3(1)-hydroxy-L-isoleucine 4-dioxygenase",
+      "equation": "3(1)-hydroxy-L-isoleucine + 2-oxoglutarate + O2 = (4S)-3(1),4-dihydroxy-L-isoleucine + succinate + CO2",
+      "ec": "1.14.11.75",
       "substrates": [
         {
-          "metabolite": "3_hydroxybutane_1_2_3_tricarboxylate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:57504"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57504"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "scopoletin 8-hydroxylase",
-      "equation": "scopoletin + 2-oxoglutarate + O2 = fraxetin + succinate + CO2",
-      "ec": "1.14.11.60",
-      "substrates": [
-        {
-          "metabolite": "scopoletin",
+          "metabolite": "31_hydroxy_l_isoleucine",
           "stoichiometry": 1
         },
         {
@@ -443,7 +409,7 @@
       ],
       "products": [
         {
-          "metabolite": "fraxetin",
+          "metabolite": "4s_31_4_dihydroxy_l_isoleucine",
           "stoichiometry": 1
         },
         {
@@ -457,20 +423,71 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_60"
+          "enzyme": "ec_1_14_11_75"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57848"
+        "rhea": "RHEA:63876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57848"
+            "id": "RHEA:63876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
+      "equation": "preaustinoid A1 + 2-oxoglutarate + O2 = berkeleyone B + succinate + CO2 + H2O",
+      "substrates": [
+        {
+          "metabolite": "preaustinoid_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "berkeleyone_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:65184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65184"
           }
         ]
       }

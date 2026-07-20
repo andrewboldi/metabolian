@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "xylotetraose-to-d-xylotrionate",
+  "name": "xylotetraose to D-xylotrionate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from xylotetraose to D-xylotrionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR194772"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62972"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "xylotetraose",
+      "name": "xylotetraose",
+      "formula": "C20H34O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62972"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+      "name": "β-D-Xylp-(1→4)-β-D-Xylp-(1→4)-D-Xylp",
+      "short": "β-D-Xylp-(1→4)-β-D-…",
+      "formula": "C15H26O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62783"
+      }
+    },
+    {
+      "id": "beta_d_xylose",
+      "name": "beta-D-xylose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM5071"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_xylotriono_1_5_lactone",
+      "name": "D-xylotriono-1,5-lactone",
+      "short": "D-xylotriono-1,5-la…",
+      "formula": "C15H24O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143164"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_xylotrionate",
+      "name": "D-xylotrionate",
+      "formula": "C15H25O14",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143167"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_37",
+      "name": "xylan 1,4-beta-xylosidase",
+      "ec": [
+        "3.2.1.37"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "xylan 1,4-beta-xylosidase",
+      "ec": "3.2.1.37",
+      "substrates": [
+        {
+          "metabolite": "xylotetraose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR194772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR194772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-xylotriose + O2 = D-xylotriono-1,5-lactone + H2O2",
+      "equation": "D-xylotriose + O2 = D-xylotriono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_xylp_1_4_d_xylp_1_4_d_xylp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-xylotriono-1,5-lactone + H2O = D-xylotrionate + H(+)",
+      "equation": "D-xylotriono-1,5-lactone + H2O = D-xylotrionate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_xylotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylotrionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59648"
+          }
+        ]
+      }
+    }
+  ]
+}

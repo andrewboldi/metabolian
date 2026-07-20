@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei "Nε-(5'-guanylyl)-L-lysine… to S-adenosyl-L-homocysteine" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     n_5_guanylyl_l_lysine_1
@@ -18,31 +18,25 @@ pathway n-5-guanylyl-l-lysine-to-s-adenosyl-l-homocystei "Nε-(5'-guanylyl)-L-ly
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +3r_3_6_diammoniohexanoate +atp +amp +ppi +hplus
-    n6_3r_3_6_diaminohexanoyl_l_lysine_2
+    <-> . +n6_2_methylpropenoyl_l_lysine +nad +h2o +nicotinamide
+    2_o_methacrylyl_adp_d_ribose
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +benzoyl_coa +coa +hplus
-    n6_benzoyl_l_lysine
-  }
-
-  branch from 5_n7_methyl_5_triphosphoguanosine_ribonucleoside side left {
-    5_n7_methyl_5_triphosphoguanosine_ribonucleoside
     <-> . +sam +sah +hplus
-    5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +scopoletin +sam +hplus
-    scoparone
+    n6_methyl_l_lysinium
   }
 
   branch from sah side left {
     sah
-    <-> . +7_8_dihydroxycoumarin +sam +hplus
-    7_hydroxy_8_methoxycoumarin
+    <-> ec_2_1_1_395 [2.1.1.395] +7_o_demethylcephaeline +sam +hplus
+    cephaeline
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_396 [2.1.1.396] +cephaeline +sam +hplus
+    emetine
   }
 }

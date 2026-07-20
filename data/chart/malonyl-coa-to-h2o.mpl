@@ -18,49 +18,49 @@ pathway malonyl-coa-to-h2o "malonyl-CoA to H2O" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_60 [4.1.1.60] +puberulate +h +h2o
-    puberulic_acid
+    <-> . +2_oxo_8_methylthiooctanoic_acid +h
+    3_carboxy_8_methylsulfanyl_2_oxooctanoate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +nadp +coa +h2o
-    o_s_c37_phthioceranylpantetheine_4_phosphoryl_l
+    <-> . +2_oxo_7_methylthioheptanoic_acid +h
+    3_carboxy_7_methylsulfanyl_2_oxoheptanoate
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_51 [2.3.1.51] +9z_12z_18_hydroxyoctadecadienoyl_coa +1_18_hydroxyoleoyl_sn_glycrol_3_phosphate
-    1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce
+    <-> . +acetyl_coa +11e_tetradecen_1_ol
+    11e_tetradecenyl_acetate
   }
 
   branch from coa side right {
     coa
-    <-> . +18_hydroxyoleoyl_coa +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc
-    tri_acyl_estolide
+    <-> ec_2_3_1_155 [2.3.1.155] +9z_myristoleoyl_coa +acetyl_coa
+    11z_3_oxohexadecenoyl_coa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +stipitaldehydate +h +o2 +nadph +h2o
-    stipitatonate
+    <-> ec_1_1_1_348 [1.1.1.348] +h +sophorol +nadph
+    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
   }
 
   branch from nadp side right {
     nadp
-    <-> . +8_o_methylfusarubinaldehyde +h +o2 +nadph +h2o
-    8_o_methyl_5_hydroxy_fusarubinaldehyde
+    <-> ec_1_3_1_72 [1.3.1.72] +cycloartenol +h +nadph
+    cycloartanol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +9z_12z_octadecadienoate +echinocandin_b_nucleus
-    echinocandin_b
+    <-> ec_4_2_1_74 [4.2.1.74] +e_z_dodeca_2_5_dienoyl_coa
+    s_z_3_hydroxydodec_5_enoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +3s_11z_3_hydroxyhexadec_11_enoyl_coa
-    2e_11z_hexadec_2_11_dienoyl_coa
+    <-> ec_3_4_21_4 [3.4.21.4] +l_4_hydroxyphenylglycyl_l_arginine +d_4_hydroxyphenylglycine_l_seryl_l_4_hydroxyphen +h
+    l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph
   }
 }

@@ -18,14 +18,14 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl
 
   branch from trans_4_coumaroyl_coa side left {
     trans_4_coumaroyl_coa
-    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa +hplus
-    myricetin_3_o_6_o_trans_4_coumaroyl_d_glucosyl_1
+    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
+    avenanthramide_a
   }
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> ec_1_2_1_44 [1.2.1.44] +nadp +coa +nadph +hplus
-    4_hydroxycinnamaldehyde
+    <-> . +2r_3s_piscidate +coa
+    cimicifugate_k
   }
 
   branch from isorhamnetin_3_o_d_glucopyranoside side left {
@@ -42,14 +42,14 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +sulfurein
-    sulfuretin
+    <-> . +udp +6_o_beta_d_glucosyl_6_hydroxyflavone +h
+    6_hydroxyflavone
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_5_o_diglucoside
-    quercetin_3_o_d_glucopyranoside
+    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +udp +h
+    7_hydroxyflavone
   }
 
   branch from isorhamnetin side left {
@@ -72,13 +72,13 @@ pathway isorhamnetin-to-s-adenosyl-l-homocysteine "isorhamnetin… to S-adenosyl
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_343 [2.1.1.343] +8_amino_8_demethylriboflavin +sam +hplus
-    roseoflavin
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_340 [2.1.1.340] +indol_3_ylmethylamine +sam +hplus
-    gramine
+    <-> . +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

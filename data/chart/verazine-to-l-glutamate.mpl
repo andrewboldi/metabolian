@@ -18,25 +18,25 @@ pathway verazine-to-l-glutamate "verazine to L-glutamate" {
 
   branch from nadp side left {
     nadp
-    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +h +nadph
-    geranylgeranyl_bacteriochlorophyll_a
+    <-> ec_1_1_1_71 [1.1.1.71] +r_linalool +h +nadph
+    2e_geranial
   }
 
   branch from nadp side right {
     nadp
-    <-> . +4_chloronitrobenzene +h +nadph +h2o
-    1_chloro_4_nitrosobenzene
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    s_linalool
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_6_3_2_17 [6.3.2.17] +5_10_methylenetetrahydropteroyl_tetra_l_glutamat +h +adp +phosphate +atp
-    5_10_methylenetetrahydropteroyl_tri_l_glutamate
+    <-> ec_3_4_19_13 [3.4.19.13] +s_1_hydroxyhexan_3_yl_l_cysteinylglycine +h2o
+    3_glutathion_s_yl_hexan_1_ol
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_6_3_2_17 [6.3.2.17] +5_10_methylenetetrahydropteroyl_penta_l_glutamat +h +adp +phosphate +atp
-    5_10_methylenetetrahydropteroyl_tetra_l_glutamat
+    <-> ec_3_4_19_13 [3.4.19.13] +s_methyl_l_cysteinylglycine +h2o
+    s_methyl_glutathione
   }
 }

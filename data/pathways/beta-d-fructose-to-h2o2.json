@@ -1,0 +1,259 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-fructose-to-h2o2",
+  "name": "beta-D-fructose to H2O2",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from beta-D-fructose to H2O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR207101"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_fructose",
+      "name": "beta-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364098"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "alpha_d_glucosamine_6_phosphate",
+      "name": "alpha-D-glucosamine 6-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104065"
+      }
+    },
+    {
+      "id": "beta_d_glucosamine",
+      "name": "beta-D-glucosamine",
+      "formula": "C6H13NO5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105684"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_amino_2_deoxy_d_gluconate",
+      "name": "2-amino-2-deoxy-D-gluconate",
+      "short": "2-amino-2-deoxy-D-g…",
+      "formula": "C6H13NO6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2469"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR207101",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR207101"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR207101"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173266"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173266"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR107250",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_amino_2_deoxy_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR107250"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107250"
+          }
+        ]
+      }
+    }
+  ]
+}

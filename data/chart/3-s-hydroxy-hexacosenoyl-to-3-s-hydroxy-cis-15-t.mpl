@@ -30,14 +30,14 @@ pathway 3-s-hydroxy-hexacosenoyl-to-3-s-hydroxy-cis-15-t "3(S)-Hydroxy-Hexacosen
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pe_20_0_18_2_9z_12z
+    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +n_1_n_12_diacetylspermine +phosphate +n_1_n_12_diacetylspermine
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pe_20_1_11z_18_2_9z_12z
+    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +atp
+    thermospermine
   }
 
   branch from 15z_tetracosenoyl_coa side right {
@@ -48,7 +48,7 @@ pathway 3-s-hydroxy-hexacosenoyl-to-3-s-hydroxy-cis-15-t "3(S)-Hydroxy-Hexacosen
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +amp +15z_tetracosenoate +coa
-    atp
+    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +amp +15z_tetracosenoate +atp
+    coa
   }
 }

@@ -18,25 +18,25 @@ pathway petroselinamide-to-1-oleoyl-2-6z-octadecen "petroselinamide to 1-oleoyl-
 
   branch from nh3 side left {
     nh3
-    <-> . +s_ethyl_l_cysteine +h2o +pyruvate
-    ethanethiol
+    <-> ec_2_6_1_123 [2.6.1.123] +chorismate +glutamine +h2o +glutamate
+    4_amino_4_deoxychorismate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_18 [1.4.1.18] +l_thialysinium +nad +nadh +hplus
-    4s_5_6_dihydro_4h_1_3_thiazine_4_carboxylate
+    <-> . +2_azaniumyl_2_deoxyisochorismate +glutamine +h2o +4_amino_4_deoxychorismate
+    glutamate
   }
 
   branch from ppi side left {
     ppi
-    <-> . +isomyristate +atp +coa +amp
-    isomyristoyl_coa
+    <-> ec_4_2_3_157 [4.2.3.157] +fpp +h2o
+    isoafricanol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +3_hydroxytetradecanoate +atp +coa +amp
-    3_hydroxytetradecanoyl_coa
+    <-> ec_4_2_3_158 [4.2.3.158] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    spiroviolene
   }
 }

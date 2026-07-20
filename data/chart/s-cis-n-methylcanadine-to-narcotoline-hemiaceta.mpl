@@ -26,37 +26,37 @@ pathway s-cis-n-methylcanadine-to-narcotoline-hemiaceta "(S)-cis-N-methylcanadin
 
   branch from fmn side left {
     fmn
-    <-> . +6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    28_norteasterone
+    <-> . +steroid +fmnh2 +o2 +h2o +hplus
+    15_hydroxy_steroid
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_28_norteasterone
+    <-> . +octadecanal +fmnh2 +o2 +co2 +h2o +hplus
+    heptadecane
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +barbamide +phosphate +barbamide +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    octyl_6_o_d_galactofuranosyl_d_glucopyranoside
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    curacin_a
+    <-> . +adp +octyl_alpha_d_mannopyranoside +phosphate +octyl_alpha_d_mannopyranoside +h2o
+    atp
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_6 [3.1.1.6] +h +z_octadec_11_enol +h2o
-    z_octadec_11_enyl_acetate
+    <-> . +deoxynivalenol +h +h2o
+    3_acetyldeoxynivalenol
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinone_6 +pyruvate +h2o +ubiquinol_6
-    co2
+    <-> . +deoxynivalenol +h +h2o
+    15_acetyldeoxynivalenol
   }
 }

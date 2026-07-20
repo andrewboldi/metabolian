@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate" {
-  spacing 262
+  spacing 256
 
   spine at 0,0 {
     d_xylulose_1_phosphate
@@ -18,14 +18,14 @@ pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate
 
   branch from h side left {
     h
-    <-> ec_1_13_11_4 [1.13.11.4] +3_bromo_4_hydroxy_6_oxo_hepta_2_4_dienedioic_aci +o2
-    3_bromogentisate
+    <-> . +3_bromo_2e_acrylic_acid +h2o +bromide
+    3_oxopropanoate
   }
 
   branch from h side right {
     h
-    <-> . +d_tyrosinamide +h2o +nh4
-    d_tyrosine
+    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +nadph +nadp
+    r_indan_1_ol
   }
 
   branch from glycolaldehyde side left {
@@ -36,14 +36,14 @@ pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +hydroquinone +1_4_benzoquinone
-    sn_glycerol_3_phosphate
+    <-> ec_1_1_99_5 [1.1.99.5] +fadh2 +h +sn_glycerol_3_phosphate
+    fad
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_4_1_2_13 [4.1.2.13] +aldehydo_d_ribose_5_phosphate +h
-    d_glycero_d_altro_octulose_1_8_bisphosphate
+    <-> . +fadh2 +h +fad
+    sn_glycerol_3_phosphate
   }
 
   branch from 5_amino_1_5_phospho_beta_d_ribosyl_imidazole side right {
@@ -54,43 +54,37 @@ pathway d-xylulose-1-phosphate-to-phosphate "D-Xylulose 1-phosphate to phosphate
 
   branch from h2o side left {
     h2o
-    <-> . +d_tryptophan +nh4 +h
-    d_tryptophanamide
+    <-> ec_4_2_1_40 [4.2.1.40] +l_idarate
+    5_dehydro_4_deoxy_d_glucarate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_7_1_8 [3.7.1.8] +2_hydroxy_3_chloro_6_oxo_6_phenylhexa_2_4_dienoa +h +2_hydroxy_3_chloropenta_2_4_dienoate
-    benzoate
+    <-> ec_3_1_1_7 [3.1.1.7] +propanoate +thiocholine +h
+    propionylthiocholine
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    fe
+    3_n_morpholino_propanesulfonate
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    n_alpha_formyl_l_methionine
-  }
-
-  branch from 5_amino_1_5_phospho_d_ribosyl_imidazole_4_carbox side left {
-    5_amino_1_5_phospho_d_ribosyl_imidazole_4_carbox
-    <-> . +5_amino_1_5_phospho_d_ribosyl_imidazole
-    co2
-  }
-
-  branch from phosphate side right {
-    phosphate
-    <-> . +l_glutamate_5_semialdehyde +h +nadp +d_alpha_glutamyl_phosphate
-    nadph
+    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +atp +mg +h2o +h +phosphate
+    magnesium_protoporphyrin
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +d_glyceraldehyde_3_phosphate +h +pyruvate +h2o +co2
-    1_deoxy_d_xylulose
+    <-> ec_3_1_3_25 [3.1.3.25] +1d_myo_inositol_1_phosphate +h2o
+    inositol
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_25 [3.1.3.25] +h2o +inositol
+    1d_myo_inositol_4_phosphate
   }
 }

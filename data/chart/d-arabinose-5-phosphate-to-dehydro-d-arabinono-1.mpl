@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphate to dehydro-D-arabinono-1,4-l…" {
-  spacing 256
+  spacing 250
 
   spine at 0,0 {
     d_arabinose_5_phosphate
@@ -20,37 +20,31 @@ pathway d-arabinose-5-phosphate-to-dehydro-d-arabinono-1 "D-arabinose 5-phosphat
 
   branch from aldehydo_d_arabinose side left {
     aldehydo_d_arabinose
-    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +nadp +h
-    nadph
+    <-> . +d_galactopyranose +h2o
+    3_o_d_galactopyranosyl_d_arabinose
   }
 
   branch from aldehydo_d_arabinose side right {
     aldehydo_d_arabinose
-    <-> ec_4_1_2_23 [4.1.2.23] +pyruvate
-    3_deoxy_d_manno_octulosonate
+    <-> . +beta_d_galactose +3_o_d_galactopyranosyl_d_arabinose
+    h2o
   }
 
   branch from atp side left {
     atp
-    <-> . +histidyltryptophyldiketopiperazine +diphosphate +h +amp +l_tryptophan
-    l_histidine
+    <-> . +diphosphate +h +amp +n_indole_3_acetyl_l_aspartate +indol_3_yl_acetate
+    l_aspartate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_47 [6.3.2.47] +3_2r_3r_3_carbamoyloxiran_2_yl_carbonyl_amino_l +l_valine +h +adp +phosphate
-    dapdiamide_e
+    <-> . +diphosphate +indole_3_acetyl_l_glutamic_acid +amp +h +l_glutamate
+    indol_3_yl_acetate
   }
 
   branch from d_arabinopyranose side left {
     d_arabinopyranose
-    <-> . +adp +h +atp
-    alpha_d_arabinopyranose_1_phosphate
-  }
-
-  branch from d_arabinopyranose side right {
-    d_arabinopyranose
-    <-> . +h +adp +phosphate +atp
-    h2o
+    <-> . +h +adp +atp +h2o
+    phosphate
   }
 }

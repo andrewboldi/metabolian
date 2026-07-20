@@ -18,14 +18,14 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4 "NADH to CoA-18-COOH-15E-dinor-LTE4" 
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_19 [1.3.1.19] +nadh +phthalate +h
-    1_2_dihydrophthalic_acid
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +3_fluorocatechol
+    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +anthracene +o2
-    anthracene_cis_1_2_dihydrodiol
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
+    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from 16e_18_oxo_18_coa_dinor_lte4 side left {
@@ -36,14 +36,14 @@ pathway nadh-to-coa-18-cooh-15e-dinor-lte4 "NADH to CoA-18-COOH-15E-dinor-LTE4" 
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +3_4_dihydrorhodovibrin
-    3_4_dihydroanhydrorhodovibrin
+    <-> . +3_phenylpropionaldoxim +co2 +nadp +h +nadph +l_homophenylalanine
+    o2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +chlorobactene
-    hydroxychlorobactene
+    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +nh4 +p_hydroxyphenylacetothiohydroximate
+    s_hydroxyphenylacetothiohydroximoyl_l_cysteine
   }
 
   branch from coa_18_cooh_15e_dinor_lte4 side right {

@@ -18,14 +18,14 @@ pathway carotene-to-all-trans-violaxanthin "β-carotene to all-trans-violaxanthi
 
   branch from zeaxanthin side left {
     zeaxanthin
-    <-> ec_1_23_5_1 [1.23.5.1] +all_trans_violaxanthin +ascorbate +h2o
-    l_dehydroascorbate
+    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
+    3r_11_cis_3_hydroxyretinal
   }
 
   branch from zeaxanthin side right {
     zeaxanthin
-    <-> ec_1_13_11_65 [1.13.11.65] +o2 +3r_all_trans_3_hydroxyretinal
-    3r_11_cis_3_hydroxyretinal
+    <-> . +o2 +hydroxy_cyclocitral
+    3r_3_hydroxy_8_apo_carotenal
   }
 
   branch from 3r_hydroxy_ionone side left {
@@ -36,13 +36,13 @@ pathway carotene-to-all-trans-violaxanthin "β-carotene to all-trans-violaxanthi
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_hydroxymethylzymosterol +nad +h2o
-    4_formylzymosterol
+    <-> ec_1_14_20_10 [1.14.20.10] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +2_oxoglutarate +h +co2 +succinate +h2o
+    e_4_2_isocyanovinyl_phenol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +h +4_methyl_5_cholest_8_en_3_ol +nadph +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
-    nadp
+    <-> ec_1_13_11_90 [1.13.11.90] +1r_1_hydroxy_2_trimethylamino_ethyl_phosphonate +glycine_betaine +phosphate
+    h
   }
 }

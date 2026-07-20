@@ -20,14 +20,14 @@ pathway 7-methyl-gtp-to-l-lysinium "7-methyl-GTP to L-lysinium" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_213 [4.2.3.213] +all_trans_hexaprenyl_diphosphate +h2o
-    colleterpenol
+    <-> . +tobramycin +atp
+    4_adenylyltobramycin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +utp
-    2_3_cyclic_di_ump
+    <-> . +kanamycin_a +ctp
+    4_cytidylylkanamycin_a
   }
 
   branch from l_histidine side left {
@@ -38,13 +38,13 @@ pathway 7-methyl-gtp-to-l-lysinium "7-methyl-GTP to L-lysinium" {
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +l_methionine +h2o2 +h2o +hplus
-    s_l_lysyl_l_methionine_sulfilimine
+    <-> . +benzoyl_coa +coa +hplus
+    n6_benzoyl_l_lysine
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +hypobromite +s_l_lysyl_l_methionine_sulfilimine +bromide +h2o +hplus
-    l_methionine
+    <-> . +n6_benzoyl_l_lysine +nad +h2o +nicotinamide
+    2_o_benzoyl_adp_d_ribose
   }
 }

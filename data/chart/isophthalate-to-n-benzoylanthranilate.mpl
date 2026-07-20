@@ -18,25 +18,25 @@ pathway isophthalate-to-n-benzoylanthranilate "isophthalate to N-benzoylanthrani
 
   branch from ppi side left {
     ppi
-    <-> . +2_methylhexadecanoate +atp +coa +amp
-    2_methylhexadecanoyl_coa
+    <-> . +5_hete +atp +coa +amp
+    5_hydroxy_6e_8z_11z_14z_icosatetraenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +3_methylundecanoate +atp +coa +amp
-    3_methylundecanoyl_coa
+    <-> . +12_hete +atp +coa +amp
+    12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa
   }
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> ec_1_14_13_208 [1.14.13.208] +nadph +o2 +hplus +nadp +h2o
-    2_3_epoxy_2_3_dihydrobenzoyl_coa
+    <-> . +3_hydroxybenzyl_alcohol +coa
+    3_hydroxybenzyl_benzoate
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> . +ethanol +coa
-    ethyl_benzoate
+    <-> . +geraniol +coa
+    geranyl_benzoate
   }
 }

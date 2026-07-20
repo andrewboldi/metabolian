@@ -18,49 +18,49 @@ pathway diphosphate-to-13-16-19-docosatrienoic "diphosphate to 13,16,19-Docosatr
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nodularin_v
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_o_hexadecanoyl_2_o_z_octadec_9_enoyl_sn_glyce
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    bistratamide_a
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    bistratamide_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    16_0_18_3_ps
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    bistratamide_e
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +alpha_l_fuc_1_3_alpha_d_glc_pp_und
-    2_3_o_ac_alpha_l_fuc_1_3_alpha_d_glc_pp_und
+    <-> . +hexanoyl_coa +h +nadph +hexanal
+    nadp
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
-    2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_6
+    <-> ec_2_3_1_51 [2.3.1.51] +octadecanoyl_coa +1_stearoyl_sn_glycero_3_phosphate
+    1_2_dioctadecanoyl_sn_glycerol_3_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +beta_d_glucose
-    beta_d_galactose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    dendroamide_a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1r_2s_1_2_dihydronaphthalene_1_2_diol
-    1r_2s_naphthalene_1_2_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    obyanamide
   }
 }

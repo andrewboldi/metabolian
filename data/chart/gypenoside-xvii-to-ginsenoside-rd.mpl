@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gypenoside-xvii-to-ginsenoside-rd "gypenoside XVII to ginsenoside Rd" {
-  spacing 250
+  spacing 238
 
   spine at 0,0 {
     gypenoside_xvii
@@ -24,39 +24,27 @@ pathway gypenoside-xvii-to-ginsenoside-rd "gypenoside XVII to ginsenoside Rd" {
     ginsenoside_f2
   }
 
-  branch from ginsenoside_rb1 side right {
-    ginsenoside_rb1
-    <-> . +glucose +h2o
-    3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
+  branch from h2o side right {
+    h2o
+    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +acetate
+    n_acetyl_d_glucosaminyl_tunicaminyl_uracil
   }
 
   branch from h2o side left {
     h2o
-    <-> . +homo_uwm6
-    homo_prejadomycin
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +tirandamycin_a +h +o2 +nadph +nadp
-    tirandamycin_b
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +deacetylisoipecoside +h2o
-    n_deacetylisoipecoside_aglycone
+    <-> . +2_2_methylsulfanyl_butyl_maleate +h
+    2_4_methylthio_butylmalic_acid
   }
 
   branch from glucose side right {
     glucose
-    <-> . +6_o_methyldeacetylisoipecoside +h2o
-    6_o_methyldeacetylisoipecoside_aglycone
+    <-> . +des_methyl_avenacin_a_1 +beta_glucopyranosyl_anthranilate
+    des_acyl_avenacin_a
   }
 
-  branch from 20s_ginsenoside_rg3 side left {
-    20s_ginsenoside_rg3
-    <-> . +20s_ginsenoside_rh2 +h2o
-    beta_d_glucose
+  branch from glucose side left {
+    glucose
+    <-> . +ellagic_acid
+    pedunculagin
   }
 }

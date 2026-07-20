@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone "1-(3-sn-phosphatidyl)-sn-â€¦ to cardiolipin ketone" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     1_3_sn_phosphatidyl_sn_glycerol_3_phosphate
@@ -14,11 +14,5 @@ pathway 1-3-sn-phosphatidyl-sn-to-cardiolipin-ketone "1-(3-sn-phosphatidyl)-sn-â
     cardiolipin
     <-> . +nad -nadh -hplus
     cardiolipin_ketone
-  }
-
-  branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side left {
-    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> . +nad +nadh +hplus
-    1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerone
   }
 }

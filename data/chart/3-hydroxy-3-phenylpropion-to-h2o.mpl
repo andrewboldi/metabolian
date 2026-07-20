@@ -18,73 +18,73 @@ pathway 3-hydroxy-3-phenylpropion-to-h2o "3-hydroxy-3-phenylpropion… to H2O" {
 
   branch from h side left {
     h
-    <-> . +emodin +emodin_anthrone +h2o
-    emodin_dianthrone
+    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose
+    gdp_4_keto_6_deoxy_d_lyxo_heptose
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_26 [3.1.1.26] +9z_octadecenoate +mgmg_0_0_16_0 +h2o
-    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
+    <-> . +gdp_4_keto_6_deoxy_d_lyxo_heptose
+    gdp_6_deoxy_4_keto_l_ribo_heptose
   }
 
   branch from acetate side left {
     acetate
-    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
-    4_hydroxy_2_nonenal_n_acetyl_l_cysteine
+    <-> . +4_sulfophenyl_acetate +h2o
+    4_hydroxybenzenesulfonic_acid
   }
 
   branch from acetate side right {
     acetate
-    <-> . +3_aminobutan_2_ol +h2o
-    n_3_hydroxybutan_2_yl_acetamide
+    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +r_lactate
+    r_lactoyl_coa
   }
 
   branch from benzaldehyde side left {
-    benzaldehyde
-    <-> ec_1_14_13_84 [1.14.13.84] +benzoate +nadp +h2o +nadph
-    o2
-  }
-
-  branch from benzaldehyde side right {
     benzaldehyde
     <-> ec_4_1_2_26 [4.1.2.26] +glycine
     l_threo_3_phenylserine
   }
 
-  branch from benzyl_alcohol side left {
-    benzyl_alcohol
-    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +benzaldehyde
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_1_1_99_36 [1.1.99.36] +3_4_dimethoxybenzaldehyde +benzyl_alcohol
     3_4_dimethoxyphenyl_methanol
   }
 
-  branch from benzyl_alcohol side right {
+  branch from benzyl_alcohol side left {
     benzyl_alcohol
     <-> ec_3_5_1_133 [3.5.1.133] +co2 +l_glutamine +h +h2o
     n_carbobenzyloxy_l_glutamine
   }
 
+  branch from benzyl_alcohol side right {
+    benzyl_alcohol
+    <-> ec_3_2_1_149 [3.2.1.149] +d_apiofuranosyl_1_6_d_glucopyranose +h2o
+    icariside_f2
+  }
+
   branch from nadp side left {
     nadp
-    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadph +h2o
-    bombykol
+    <-> ec_1_2_1_84 [1.2.1.84] +16_hydroxyhexadecanoyl_coa +h +nadph +coa
+    1_16_hexadecanediol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +2_5_dihydroxybenzoate +h2o
-    2_5_dihydroxybenzaldehyde
+    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxyoleoyl_coa +h +nadph +coa
+    9z_octadec_9_ene_1_18_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +glycine +s_4_hydroxy_nonenal_3_yl_l_cysteine
-    s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
+    <-> ec_3_1_1_97 [3.1.1.97] +diphthine +methanol
+    diphthine_methyl_ester
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +linalool +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
-    linalyl_beta_primeveroside
+    <-> . +2_dihydroxymethyl_furan
+    furfural
   }
 }

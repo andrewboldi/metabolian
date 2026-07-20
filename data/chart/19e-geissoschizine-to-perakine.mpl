@@ -22,14 +22,14 @@ pathway 19e-geissoschizine-to-perakine "(19E)-geissoschizine to perakine" {
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    15_hydroxyestradiol
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    21_hdohe
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    4_hydroxy_17_estradiol
+    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
+    20_hetre
   }
 
   branch from perakine side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     udp
@@ -24,28 +24,16 @@ pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
     3_o_l_rha_1_3_d_gal_1_2_d_glca_quillaic_acid_d_f
   }
 
-  branch from quercetin_3_gentiobioside side right {
-    quercetin_3_gentiobioside
-    <-> . +udp +h +udp_alpha_d_glucose
-    quercetin_3_gentiotrioside
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +luteolin_7_o_gentiobioside
+    luteolin_7_o_beta_d_glucoside
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +quercetin_3_7_di_o_d_glucoside
-    quercetin_7_o_beta_d_glucoside
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +h +quercetin_3_gentiotrioside
-    quercetin_3_o_gentiotetroside
-  }
-
-  branch from quercetin_3_o_d_glucopyranoside side left {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +h2o +d_glucose
-    quercetin_7_olate
+    <-> . +udp +sesaminol_2_o_beta_d_gentiotrioside +h
+    sesaminol_2_o_d_gentiobioside
   }
 
   branch from quercetin_3_o_d_glucopyranoside side right {
@@ -54,7 +42,13 @@ pathway udp-to-quercetin-3-o-6-o-caffe "UDP to quercetin 3-O-[(6-O-caffe…" {
     trans_4_coumaroyl_coa
   }
 
-  branch from quercetin_3_o_d_glucosyl_1_2_d_glucoside side left {
+  branch from quercetin_3_o_d_glucopyranoside side left {
+    quercetin_3_o_d_glucopyranoside
+    <-> . +trans_4_coumaroyl_coa +h +coa
+    quercetin_3_o_3_o_4_coumaroyl_glucoside
+  }
+
+  branch from quercetin_3_o_d_glucosyl_1_2_d_glucoside side right {
     quercetin_3_o_d_glucosyl_1_2_d_glucoside
     <-> ec_2_4_1_240 [2.4.1.240] +udp +udp_alpha_d_glucose
     quercetin_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_gl

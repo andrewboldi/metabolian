@@ -24,8 +24,8 @@ pathway roxarsone-iii-glutathio-to-h2o "roxarsone (III)-glutathio… to H2O" {
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +h +bromide +2_glutathion_s_yl_3_4_nitrophenyl_propanoate
-    2_bromo_3_4_nitrophenyl_propanoate
+    <-> ec_2_5_1_18 [2.5.1.18] +3z_hex_3_en_1_ol
+    3_glutathion_s_yl_hexan_1_ol
   }
 
   branch from roxarsone_iii side left {
@@ -36,25 +36,25 @@ pathway roxarsone-iii-glutathio-to-h2o "roxarsone (III)-glutathio… to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_eicosapentenoylglycerophosphocholine_delta_5_8
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_docosatetraenoylglycerophosphocholine_delta_7
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_tryptophan
-    leucyl_leucyl_tryptophan
+    <-> . +l_threonine +l_methionine +l_tyrosine
+    threonyl_tyrosyl_methionine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_proline +l_arginine
-    leucyl_prolyl_arginine
+    <-> . +l_alanine +l_proline +l_tryptophan
+    tryptophanyl_alanyl_proline
   }
 }

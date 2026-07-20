@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno",
   "name": "UDP-4-ammonio-α-D-fucose to flavanone 7-O-[α-L-rhamno…",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from UDP-4-ammonio-α-D-fucose(1−) to flavanone 7-O-[α-L-rhamnosyl-(1→2)-β-D-glucoside], ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -132,50 +132,69 @@
       }
     },
     {
-      "id": "l_m_tyrosine",
-      "name": "L-m-tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78290"
-      }
-    },
-    {
-      "id": "3_hydroxyphenylpyruvate",
-      "name": "3-hydroxyphenylpyruvate",
-      "short": "3-hydroxyphenylpyru…",
-      "formula": "C9H7O4",
+      "id": "udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr",
+      "name": "UDP-2-acetamido-3-ammonio-2,3-dideoxy-α-D-glucopyranose",
+      "short": "UDP-2-acetamido-3-a…",
+      "formula": "C17H27N4O16P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167869"
+        "chebi": "CHEBI:184123"
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos",
+      "name": "UDP-2-acetamido-2-deoxy-3-dehydro-α-D-glucopyranose",
+      "short": "UDP-2-acetamido-2-d…",
+      "formula": "C17H23N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78981"
+      }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "l_glutamylspermidine",
+      "name": "γ-L-glutamylspermidine",
+      "short": "γ-L-glutamylspermid…",
+      "formula": "C12H28N4O3",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:193051"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:456216"
       }
     },
     {
-      "id": "prekainate",
-      "name": "prekainate",
-      "formula": "C10H16NO4",
-      "charge": -1,
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:170011"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:43474"
       }
     },
     {
@@ -229,6 +248,13 @@
       "name": "flavanone 7-O-glucoside 2''-O-beta-L-rhamnosyltransferase",
       "ec": [
         "2.4.1.236"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_122",
+      "name": "UDP-N-acetyl-3-dehydro-alpha-D-glucosamine 3-aminotranferase",
+      "ec": [
+        "2.6.1.122"
       ]
     }
   ],
@@ -403,11 +429,12 @@
     },
     {
       "id": "r5",
-      "name": "3-hydroxy-L-phenylalanine + 2-oxoglutarate = 3-(3-hydroxyphenyl)pyruvate + L-glutamate",
-      "equation": "3-hydroxy-L-phenylalanine + 2-oxoglutarate = 3-(3-hydroxyphenyl)pyruvate + L-glutamate",
+      "name": "UDP-N-acetyl-3-dehydro-alpha-D-glucosamine 3-aminotranferase",
+      "equation": "UDP-2-acetamido-3-amino-2,3-dideoxy-alpha-D-glucopyranose + 2-oxoglutarate = UDP-2-acetamido-3-dehydro-2-deoxy-alpha-D-glucopyranose + L-glutamate",
+      "ec": "2.6.1.122",
       "substrates": [
         {
-          "metabolite": "l_m_tyrosine",
+          "metabolite": "udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr",
           "stoichiometry": 1
         },
         {
@@ -417,7 +444,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_hydroxyphenylpyruvate",
+          "metabolite": "udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos",
           "stoichiometry": 1
         },
         {
@@ -425,56 +452,73 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_122"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:67168"
+        "rhea": "RHEA:69468"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67168"
+            "id": "RHEA:69468"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "dimethylallyl diphosphate + L-glutamate = prekainate + diphosphate",
-      "equation": "dimethylallyl diphosphate + L-glutamate = prekainate + diphosphate",
+      "name": "spermidine + L-glutamate + ATP = gamma-L-glutamylspermidine + ADP + phosphate + H(+)",
+      "equation": "spermidine + L-glutamate + ATP = gamma-L-glutamylspermidine + ADP + phosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "dmapp",
+          "metabolite": "spermidine",
           "stoichiometry": 1
         },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "prekainate",
+          "metabolite": "l_glutamylspermidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:67476"
+        "rhea": "RHEA:73891"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67476"
+            "id": "RHEA:73891"
           }
         ]
       }

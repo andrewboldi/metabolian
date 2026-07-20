@@ -18,13 +18,13 @@ pathway 3a-deolivosylpremithramyc-to-dtdp-beta-d-mycaros "3A-Deolivosylpremithra
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +s_2_methylscoulerine
-    s_scoulerine
+    <-> . +s_adenosyl_l_homocysteine +s_methyl_l_cysteinyl_adenylate +h
+    l_cysteinyl_amp
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +3_5_dibromo_2_3_5_dibromo_2_methoxyphenoxy_pheno
-    2_4_dibromo_6_2_4_dibromo_6_hydroxyphenoxy_pheno
+    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_h +h
+    pyrrolomycin_g
   }
 }

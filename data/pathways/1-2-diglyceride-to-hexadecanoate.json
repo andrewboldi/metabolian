@@ -1,0 +1,347 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-diglyceride-to-hexadecanoate",
+  "name": "1,2-diglyceride to hexadecanoate",
+  "category": "lipid-metabolism",
+  "summary": "A 5-step route from 1,2-diglyceride to hexadecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78183"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:49172"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_diglyceride",
+      "name": "1,2-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49172"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17855"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "all_trans_retinol",
+      "name": "all-trans-retinol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17336"
+      }
+    },
+    {
+      "id": "all_trans_retinyl_ester",
+      "name": "all-trans-retinyl ester",
+      "short": "all-trans-retinyl…",
+      "formula": "C21H29O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63410"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "all_trans_retinyl_palmitate",
+      "name": "all-trans-retinyl palmitate",
+      "short": "all-trans-retinyl…",
+      "formula": "C36H60O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17616"
+      }
+    },
+    {
+      "id": "retinol",
+      "name": "retinol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50211"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "equation": "a 1,2-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,2-diacylglycerol",
+      "equation": "a triacylglycerol + all-trans-retinol = an all-trans-retinyl ester + a 1,2-diacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_retinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78063"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "an all-trans-retinyl ester + H2O = all-trans-retinol + a fatty acid + H(+)",
+      "equation": "an all-trans-retinyl ester + H2O = all-trans-retinol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38555"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38555"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "all-trans-retinol + hexadecanoyl-CoA = all-trans-retinyl hexadecanoate + CoA",
+      "equation": "all-trans-retinol + hexadecanoyl-CoA = all-trans-retinyl hexadecanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinyl_palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:38175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "all-trans-retinyl hexadecanoate + H2O = retinol + hexadecanoate + H(+)",
+      "equation": "all-trans-retinyl hexadecanoate + H2O = retinol + hexadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinyl_palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "retinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:21508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21508"
+          }
+        ]
+      }
+    }
+  ]
+}

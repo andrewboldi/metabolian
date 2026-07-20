@@ -20,38 +20,26 @@ pathway udp-to-h "UDP to H" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_143 [2.4.1.143] +udp +h +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
+    <-> ec_2_4_1_39 [2.4.1.39] +udp +h +17_alpha_n_acetyl_alpha_d_glucosaminyl_estradiol
+    estradiol_17_alpha_3_d_glucuronoside
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_39 [2.4.1.39] +udp +17alpha_n_acetyl_d_glucosaminyl_estradiol_3_d_gl
-    17alpha_estradiol_3_o_beta_d_glucuronate
-  }
-
-  branch from ump side left {
-    ump
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dgtp +h
-    dgdp
-  }
-
-  branch from ump side right {
-    ump
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dttp +h
-    dtdp
+    <-> ec_2_4_1_255 [2.4.1.255] +udp +h +o_n_acetyl_d_glucosaminyl_l_threonine
+    l_threonine
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_158 [2.4.1.158] +udp +13_sophorosyloxydocosanoic_acid
-    13_beta_d_glucosyloxy_docosanoate
+    <-> . +udp +tuberonic_acid_glucoside
+    12_hydroxyjasmonate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_66 [2.4.1.66] +udp +h +5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1
-    5r_5_d_galactosyloxy_l_lysine_1
+    <-> . +udp +quercetin_4_o_d_glucopyranoside +h
+    quercetin
   }
 
   branch from udp side left {
@@ -62,19 +50,19 @@ pathway udp-to-h "UDP to H" {
 
   branch from udp side right {
     udp
-    <-> . +h +beta_d_galactosyl_1_4_alpha_d_galactosyl_1_3_n_n +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
-    udp_alpha_d_galactose
+    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o +h
+    4_o_acetyl_n_acetylmannosamine
   }
 
   branch from h side left {
     h
-    <-> . +2_dihydroxymethyl_furan +o2 +h2o2
-    2_furoate
+    <-> ec_1_5_3_12 [1.5.3.12] +dihydrochelerythrine +o2 +h2o2
+    chelerythrine
   }
 
   branch from h side right {
     h
-    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +4_amino_3_hydroxybenzoate
-    o2
+    <-> . +2r_3r_4s_5s_1_3_4_5_tetrahydroxy_6_oxohexan_2_a
+    nojirimycin_b
   }
 }

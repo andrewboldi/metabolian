@@ -22,14 +22,14 @@ pathway 5-end-n7-methyl-to-bacimethrin "5'-end (N7-methyl… to bacimethrin" {
 
   branch from 5_end_ribonucleotide_2 side left {
     5_end_ribonucleotide_2
-    <-> . +atp +hplus +ppi
-    adenosine_5_diphospho_5_ribonucleotide_2
+    <-> . +5_end_n7_methyl_5_triphospho_guanosine_guanosine +h2o +hplus
+    n7_methyl_5_triphospho_guanosine_guanosine
   }
 
   branch from 5_end_ribonucleotide_2 side right {
     5_end_ribonucleotide_2
-    <-> . +sam +sah
-    5_end_phopshomethylribonucleoside_1
+    <-> . +h2o +nad +hplus
+    5_end_nad_phospho_ribonucleoside
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -58,14 +58,14 @@ pathway 5-end-n7-methyl-to-bacimethrin "5'-end (N7-methyl… to bacimethrin" {
 
   branch from h side left {
     h
-    <-> . +succinyl_coa +r_carnitine +o_succinylcarnitine
-    coa
+    <-> . +adp +phosphate +atp +h2o
+    tetracosanoate
   }
 
   branch from h side right {
     h
-    <-> . +d_tagatose_1_phosphate +pyruvate +phosphoenolpyruvate
-    keto_d_tagatose
+    <-> . +adp +phosphate +atp +h2o
+    9z_hexadecenoate
   }
 
   branch from s_adenosyl_l_methionine side left {

@@ -235,76 +235,68 @@
       }
     },
     {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1104266"
+        "metanetx": "MNXM10"
       }
     },
     {
-      "id": "histamine",
-      "name": "histamine",
-      "formula": "C5H10N3",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM635"
-      }
-    },
-    {
-      "id": "n_acetylhistamine",
-      "name": "N-acetylhistamine",
-      "formula": "C7H11N3O",
+      "id": "1_4_dichlorobenzene",
+      "name": "1,4-dichlorobenzene",
+      "formula": "C6H4Cl2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM12367"
+        "metanetx": "MNXM4219"
       }
     },
     {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
-    },
-    {
-      "id": "pyrimidine",
-      "name": "pyrimidine",
-      "formula": "C4H4N2",
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1094080"
+        "metanetx": "MNXM735438"
       }
     },
     {
-      "id": "d_ribose",
-      "name": "D-ribose",
-      "formula": "C5H10O5",
+      "id": "3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol",
+      "name": "3,6-dichloro-cis-cyclohexa-3,5-diene-1,2-diol",
+      "short": "3,6-dichloro-cis-cy…",
+      "formula": "C6H6Cl2O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1108051"
+        "metanetx": "MNXM36140"
       }
     },
     {
-      "id": "pyrimidine_nucleoside",
-      "name": "Pyrimidine nucleoside",
-      "short": "Pyrimidine…",
-      "formula": "C9H13N2O4",
-      "charge": 1,
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM730841"
+        "metanetx": "MNXM8"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "ethylbenzene",
+      "name": "ethylbenzene",
+      "formula": "C8H10",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM2120"
+      }
+    },
+    {
+      "id": "cis_1_2_dihydro_3_ethylcatechol",
+      "name": "cis-1,2-dihydro-3-ethylcatechol",
+      "short": "cis-1,2-dihydro-3-e…",
+      "formula": "C8H12O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3563"
       }
     }
   ],
@@ -331,10 +323,10 @@
       ]
     },
     {
-      "id": "ec_3_2_2_8",
-      "name": "ribosylpyrimidine nucleosidase",
+      "id": "ec_1_14_12_26",
+      "name": "chlorobenzene dioxygenase",
       "ec": [
-        "3.2.2.8"
+        "1.14.12.26"
       ]
     }
   ],
@@ -692,20 +684,11 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR107334",
+      "name": "chlorobenzene dioxygenase",
+      "ec": "1.14.12.26",
       "substrates": [
         {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "histamine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetylhistamine",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -713,69 +696,86 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "1_4_dichlorobenzene",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR107334"
+        "metanetx": "MNXR109577"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR107334"
+            "id": "MNXR109577"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "ribosylpyrimidine nucleosidase",
-      "ec": "3.2.2.8",
+      "name": "Reaction MNXR109588",
       "substrates": [
         {
-          "metabolite": "pyrimidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_ribose",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethylbenzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pyrimidine_nucleoside",
+          "metabolite": "cis_1_2_dihydro_3_ethylcatechol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_2_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR107347"
+        "metanetx": "MNXR109588"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR107347"
+            "id": "MNXR109588"
           }
         ]
       }

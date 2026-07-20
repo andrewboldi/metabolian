@@ -1,0 +1,227 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "11-cis-retinal-to-fmn",
+  "name": "11-cis-retinal to FMN",
+  "category": "other",
+  "summary": "A 3-step route from 11-cis-retinal to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR146230"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "11_cis_retinal",
+      "name": "11-cis-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364166"
+      }
+    },
+    {
+      "id": "all_trans_retinal",
+      "name": "all-trans-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364167"
+      }
+    },
+    {
+      "id": "9_cis_retinal",
+      "name": "9-cis-retinal",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78273"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9_cis_retinoate",
+      "name": "9-cis-retinoate",
+      "formula": "C20H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78630"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_2_1_3",
+      "name": "EC 5.2.1.3",
+      "ec": [
+        "5.2.1.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR146230",
+      "ec": "5.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "11_cis_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR146230"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146230"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103423",
+      "substrates": [
+        {
+          "metabolite": "all_trans_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_cis_retinal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "9-cis-retinal + reduced [NADPH--hemoprotein reductase] + O2 = 9-cis-retinoate + oxidize...",
+      "equation": "9-cis-retinal + reduced [NADPH--hemoprotein reductase] + O2 = 9-cis-retinoate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "9_cis_retinal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_cis_retinoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65524"
+          }
+        ]
+      }
+    }
+  ]
+}

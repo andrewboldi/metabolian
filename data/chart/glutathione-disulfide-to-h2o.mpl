@@ -19,48 +19,48 @@ pathway glutathione-disulfide-to-h2o "glutathione disulfide to H2O" {
   branch from glutathione side left {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    6_methylthiohexanonitrile_oxide
+    7_methylthioheptanonitrile_oxide
   }
 
   branch from glutathione side right {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_7_aci_nitroheptane
+    1_methylsulfanyl_8_aci_nitrooctane
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_coumaroyl_3_4_dihydroxyphenyllactate +nadp +h2o +h +4_coumaroyl_4_hydroxyphenyllactate
-    nadph
+    <-> . +h +alpha_hydroxyheme +verdoheme +h2o
+    carbon_monoxide
   }
 
   branch from o2 side right {
     o2
-    <-> . +24z_ethylidene_cholest_5_en_3beta_22s_diol +nadp +h2o +h +nadph
-    isofucosterol
+    <-> . +h +itatartarate
+    2_hydroxyparaconate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    xylotetraose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pc_18_2_9z_12z_18_3_9z_12z_15z
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    cellopentaose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +1_2_dihydroxypropyl_benzene
-    trans_2_methylstyrene_7_8_oxide
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    1_3_beta_xylobiose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_hexa_l_glutamate +tetrahydropteroyl_hexa_l_glutamate
-    l_serine
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    1_3_beta_xylotriose
   }
 }

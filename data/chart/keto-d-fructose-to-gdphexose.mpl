@@ -20,74 +20,74 @@ pathway keto-d-fructose-to-gdphexose "keto-D-fructose… to GDPhexose" {
 
   branch from beta_d_fructose_1_6_bisphosphate side left {
     beta_d_fructose_1_6_bisphosphate
-    <-> ec_3_1_3_68 [3.1.3.68] +phosphate +h2o
-    d_fructofuranose_1_phosphate
+    <-> ec_2_7_1_11 [2.7.1.11] +utp +beta_d_fructose_6_phosphate +h
+    udp
   }
 
   branch from beta_d_fructose_1_6_bisphosphate side right {
     beta_d_fructose_1_6_bisphosphate
-    <-> ec_4_1_2_13 [4.1.2.13] +h +dihydroxyacetone_phosphate
-    glyceraldehyde_3_phosphate
+    <-> . +phosphate
+    1_deoxy_2_3_hexodiulose_6_phosphate
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +9z_octadecenoyl_coa +sphing_4_enine +coa
-    n_oleoyl_d_sphingosine
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +pentane_2_3_dione +nad
+    2_3_pentanediol
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_24 [2.3.1.24] +hexanoyl_coa +sphing_4_enine +coa
-    n_hexanoyl_d_erythro_sphingosine
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +diacetyl +nad
+    butane_2_3_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +thionicotinamide
-    thionicotinamide_adenine_dinucleotide
+    <-> ec_1_14_13_84 [1.14.13.84] +1h_pyrrol_2_yl_acetate +nadp +h +o2 +nadph
+    2_acetylpyrrole
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +1h_imidazole +p_dimethylamino_cinnamate
-    p_dimethylamino_cinnamoylimidazole
+    <-> ec_3_1_1_25 [3.1.1.25] +4_hydroxypelargonic_acid
+    nonanolactone
   }
 
   branch from keto_d_fructose_6_phosphate side left {
     keto_d_fructose_6_phosphate
-    <-> ec_3_5_99_6 [3.5.99.6] +alpha_d_glucosamine_6_phosphate +h2o
-    nh4
+    <-> ec_2_7_1_4 [2.7.1.4] +keto_d_fructose +udp +h
+    utp
   }
 
   branch from keto_d_fructose_6_phosphate side right {
     keto_d_fructose_6_phosphate
-    <-> ec_5_3_1_27 [5.3.1.27]
-    d_arabino_hex_3_ulose_6_phosphate
+    <-> ec_2_7_1_1 [2.7.1.1] +keto_d_fructose +atp +h
+    adp
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_5_1_56 [2.5.1.56] +n_propanoylmannosamine +h +phosphoenolpyruvate +h2o
-    n_propanoylneuraminate
+    <-> ec_3_1_3_48 [3.1.3.48] +2_chloro_4_nitrophenol +h +h2o
+    2_chloro_4_nitrophenyl_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_1_20_1_1 [1.20.1.1] +h +nadph +phosphite +h2o
-    nadp
+    <-> ec_3_1_3_48 [3.1.3.48] +3_nitrophenol +h +h2o
+    3_nitrophenyl_phosphate
   }
 
   branch from gtp side left {
     gtp
-    <-> ec_2_7_1_81 [2.7.1.81] +gdp +5r_5_phosphooxy_l_lysine
-    threo_5_hydroxy_l_lysine
+    <-> . +h +phosphate +h2o
+    guanosine
   }
 
   branch from gtp side right {
     gtp
-    <-> . +h +phosphate +h2o
-    guanosine
+    <-> ec_3_6_5_1 [3.6.5.1] +gdp +h +phosphate +h2o
+    pmf
   }
 
   branch from beta_d_fructose side left {
@@ -104,13 +104,13 @@ pathway keto-d-fructose-to-gdphexose "keto-D-fructose… to GDPhexose" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +longipinene
+    <-> . +cyclosativene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +2e_6e_farnesyl_diphosphate
-    cyclosativene
+    <-> . +2e_geranyl_diphosphate
+    2_carene
   }
 }

@@ -18,61 +18,61 @@ pathway secalciferol-to-nadph "secalciferol to NADPH" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    thujan_3_ol
+    <-> ec_2_3_1_86 [2.3.1.86] +tetradecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    hexadecanoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    1r_2s_4r_borneol
+    <-> ec_2_3_1_86 [2.3.1.86] +octadecanoyl_coa +co2 +coa +h2o +hexadecanoyl_coa +h +nadph
+    malonyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    neuraminic_acid
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    neopentalenolactone_d
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_mannose +phosphate +l_mannose
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    neopentalenolactone_f
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    l_mannose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    pentalenolactone_e
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    2h_pyran_2_one
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neopentalenolactone_e
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +tryptamine +nad +h2o
-    serotonin
+    <-> ec_1_13_12_14 [1.13.12.14] +71_hydroxychlorophyllide_a +h +nadph +nadp +h2o
+    chlorophyllide_b
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +h +phenazine_1_carboxylate +nad +h2o
-    2_hydroxyphenazine_1_carboxylic_acid
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a1 +2_oxoglutarate +co2 +succinate
+    gibberellin_a8
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +borneol +nadp +h
-    phellandral
+    <-> ec_2_3_1_86 [2.3.1.86] +octanoyl_coa +co2 +nadp +coa +h2o +malonyl_coa +h
+    acetyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    s_terpineol
+    <-> ec_1_1_1_42 [1.1.1.42] +2_oxoglutarate +co2 +nadp
+    isocitrate
   }
 }

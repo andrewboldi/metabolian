@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propanoate-to-o2 "propanoate to O2" {
-  spacing 340
+  spacing 326
 
   spine at 0,0 {
     propanoate
@@ -18,32 +18,20 @@ pathway propanoate-to-o2 "propanoate to O2" {
 
   branch from deamido_nad side left {
     deamido_nad
-    <-> ec_1_11_1_1 [1.11.1.1] +h2o +nicotinamide_hypoxanthine_dinucleotide
-    h2o2
-  }
-
-  branch from deamido_nad side right {
-    deamido_nad
     <-> ec_3_6_1_22 [3.6.1.22] +h2o +h +amp
     nicotinate_beta_d_ribonucleotide
   }
 
-  branch from propanal side left {
-    propanal
-    <-> ec_4_2_1_28 [4.2.1.28] +h2o
-    r_propane_1_2_diol
-  }
-
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_phenylalanine
-    pro_phe
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +octan_1_ol
+    octyl_beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +isomaltotriose +isomaltose
-    alpha_d_glucose
+    <-> ec_3_5_1_1 [3.5.1.1] +methionyl_asparagine +h +nh4
+    l_methionyl_l_aspartate
   }
 
   branch from oxaloacetate side right {
@@ -54,25 +42,19 @@ pathway propanoate-to-o2 "propanoate to O2" {
 
   branch from oxaloacetate side left {
     oxaloacetate
-    <-> ec_1_1_1_28 [1.1.1.28] +nadh +h +nad
-    r_malate
-  }
-
-  branch from nicotinamide_hypoxanthine_dinucleotide side right {
-    nicotinamide_hypoxanthine_dinucleotide
-    <-> ec_1_1_1_37 [1.1.1.37] +s_malate +h +oxaloacetate
-    nicotinamide_hypoxanthine_dinucleotide
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_methyl_o_benzoquinone +h2o
-    4_methylcatechol
+    <-> . +s_malate +ubiquinone_2
+    ubiquinol_2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_tert_butylcatechol +h2o
-    4_tert_butyl_benzo_1_2_quinone
+    <-> ec_1_14_13_84 [1.14.13.84] +4_aminoacetophenone +nadph +nadp +h2o
+    4_aminophenyl_acetate
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_84 [1.14.13.84] +3_hydroxyphenylacetate +nadp +h2o +nadph
+    compound_0039020
   }
 }

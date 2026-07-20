@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-to-h2o "myo-inositol to H2O" {
-  spacing 228
+  spacing 234
 
   spine at 0,0 {
     myo_inositol
@@ -40,55 +40,61 @@ pathway myo-inositol-to-h2o "myo-inositol to H2O" {
 
   branch from myo_inositol side right {
     myo_inositol
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactosyl_1_3_1d_myo_inositol +h2o
-    alpha_d_galactose
+    <-> . +5_dehydro_2_deoxy_d_gluconate +h +nadph
+    nadp
   }
 
   branch from myo_inositol side left {
     myo_inositol
-    <-> ec_2_7_8_11 [2.7.8.11] +cmp +h +dipalmitoyl_l_1_phosphatidyl_inositol
-    cdp_dipalmitoyl_sn_glycerol
+    <-> . +h +nadph +nadp
+    scyllo_inosose
   }
 
   branch from 2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox side right {
     2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
     <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
-    beta_d_galactose
+    alpha_d_galactose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_serine +l_tryptophan
-    seryl_tryptophanyl_histidine
+  branch from 2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox side left {
+    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +h2o
+    beta_d_galactose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threonine +l_arginine +l_tyrosine
-    threonyl_arginyl_tyrosine
+    <-> . +ferroheme_op2
+    ferroheme_op1
   }
 
-  branch from raffinose side left {
+  branch from h2o side left {
+    h2o
+    <-> . +2_deoxy_d_ribonic_acid
+    2_deoxy_ribono_1_5_lactone
+  }
+
+  branch from raffinose side right {
     raffinose
     <-> ec_2_4_1_166 [2.4.1.166] +sucrose
     3f_alpha_d_galactosylraffinose
   }
 
-  branch from raffinose side right {
+  branch from raffinose side left {
     raffinose
     <-> . +sucrose +stellariose
     1_f_alpha_d_galactosylraffinose
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_2_1_53 [6.2.1.53] +l_proline +h +l_prolyl_adenylate
-    diphosphate
-  }
-
   branch from atp side right {
     atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_alanine +l_glutamate +h +adp +phosphate
-    gamma_l_glutamyl_d_alanine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    2_16_1_lysophosphatidylglycerol
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc
   }
 }

@@ -24,26 +24,26 @@ pathway z-1-l-cysteinylglycin-to-e-9-methylsulfanyl-non "(Z)-1-(L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +l_lysine +l_phenylalanine +h2o
-    glycyl_lysyl_phenylalanine
+    <-> . +l_aspartate +l_tryptophan +h2o
+    tryptophanyl_glycyl_aspartate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_lysine +l_tyrosine +h2o
-    glycyl_tyrosyl_lysine
+    <-> . +l_valine +l_tryptophan +h2o
+    tryptophanyl_glycyl_valine
   }
 
   branch from h side left {
     h
-    <-> . +adp +5_6_eet +phosphate +5_6_eet +h2o
+    <-> . +adp +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +phosphate +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +h2o
     atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    8_9_eet
+    lovastatin
   }
 
   branch from e_9_methylsulfanyl_nonanal_oxime side left {
@@ -54,49 +54,49 @@ pathway z-1-l-cysteinylglycin-to-e-9-methylsulfanyl-non "(Z)-1-(L-cysteinylglyci
 
   branch from o2 side right {
     o2
-    <-> . +17z_hexacosenoyl_coa +2e_17z_hexacosadi_2_17_enoyl_coa
-    h2o2
+    <-> ec_1_1_3_42 [1.1.3.42] +prosolanapyrone_ii +h2o2
+    solanapyrone_a
   }
 
   branch from o2 side left {
     o2
-    <-> . +erucoyl_coa +h2o2
-    2e_13z_docosadienoyl_coa
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
+    beta_d_glucose
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +l_aspartate +l_phenylalanine +h2o
-    cystyl_aspartyl_phenylalanine
+    <-> . +l_threonine +l_tyrosine +h2o
+    tyrosyl_cysteinyl_threonine
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +h2o
-    cystyl_cysteine
+    <-> . +iaox_n_oxide +h2o
+    s_indolylmethylthiohydroximoyl_l_cysteine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +losartan +h +o2 +nadp +h2o
-    losartan_m1
+    <-> ec_1_14_13_126 [1.14.13.126] +calcitriol +h +o2 +nadp +h2o
+    calcitetrol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +losartan +h +o2 +nadp +h2o
-    losartan_m2
+    <-> ec_1_14_13_120 [1.14.13.120] +germacra_1_10_4_11_13_trien_12_oate +h +o2 +nadp +h2o
+    costunolide
   }
 
   branch from fmn side right {
     fmn
-    <-> . +11_12_eet +fmnh2 +o2 +h2o +hplus
-    11_12_epoxy_20_hydroxy_5z_8z_14z_icosatrienoate
+    <-> . +4a_5_dihydro_ml_236c_carboxylate +fmnh2 +o2 +h2o +hplus
+    3_hydroxy_3_5_dihydro_ml_236c_carboxylate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +14_15_eet +fmnh2 +o2 +h2o +hplus
-    14_15_epoxy_20_hydroxy_5z_8z_11z_icosatrienoate
+    <-> ec_1_14_14_151 [1.14.14.151] +valencene +fmnh2 +o2 +h2o +hplus
+    nootkatone
   }
 }

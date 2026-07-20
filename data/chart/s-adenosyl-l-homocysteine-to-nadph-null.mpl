@@ -18,37 +18,37 @@ pathway s-adenosyl-l-homocysteine-to-nadph-null "S-adenosyl-L-homocysteine to NA
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_141 [2.1.1.141] +s_adenosyl_l_homocysteine +methyl_jasmonate
-    jasmonic_acid_anion
+    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_b +h
+    7_demethylmitomycin_b
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +menaquinone_7 +h
-    demethylmenaquinone_7
+    <-> ec_2_1_1_365 [2.1.1.365] +s_adenosyl_l_homocysteine +1_3_3_tri_o_methyl_4alpha_mannobiose +h
+    d_man3me_1_4_d_man3me
   }
 
   branch from h side left {
     h
-    <-> . +adp +2_linoleoylglycerophosphocholine +phosphate +2_linoleoylglycerophosphocholine +h2o
-    atp
+    <-> ec_3_1_1_19 [3.1.1.19] +beta_d_glucuronate +h2o
+    d_glucurono_6_2_lactone
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    2_oleoylglycerophosphocholine
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +adp +beta_l_arabinofuranose
+    atp
   }
 
   branch from nadph side left {
     nadph
-    <-> . +1s_4s_camphor +h +nadp
-    1s_2r_4s_borneol
+    <-> . +levopiramadiene_diol +nadp +h2o +h +o2
+    levopimaradienol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_376 [1.1.1.376] +d_talopyranose +nadp +h
-    d_talono_1_4_lactone
+    <-> . +dehydroabietadiene_diol +nadp +h2o +h +dehydroabietadienol
+    o2
   }
 }

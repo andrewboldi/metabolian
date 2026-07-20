@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "docosanoyl-coa-to-n-docosanoylglycinate",
+  "name": "docosanoyl-CoA to N-docosanoylglycinate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from docosanoyl-CoA(4−) to N-docosanoylglycinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81731"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65059"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "docosanoyl_coa",
+      "name": "docosanoyl-CoA",
+      "formula": "C43H74N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:65059"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "docosan_1_ol",
+      "name": "docosan-1-ol",
+      "formula": "C22H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31000"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "docosanal",
+      "name": "docosanal",
+      "formula": "C22H44O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM17381"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "behenate",
+      "name": "behenate",
+      "formula": "C22H43O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23858"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n_docosanoylglycinate",
+      "name": "N-docosanoylglycinate",
+      "short": "N-docosanoylglycina…",
+      "formula": "C24H46NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87410"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "docosanoyl-CoA + 2 NADPH + 2 H(+) = docosan-1-ol + 2 NADP(+) + CoA",
+      "equation": "docosanoyl-CoA + 2 NADPH + 2 H(+) = docosan-1-ol + 2 NADP(+) + CoA",
+      "substrates": [
+        {
+          "metabolite": "docosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "docosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "docosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "docosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "docosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR181853"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181853"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "docosanoate + glycine = N-docosanoylglycine + H2O",
+      "equation": "docosanoate + glycine = N-docosanoylglycine + H2O",
+      "substrates": [
+        {
+          "metabolite": "behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_docosanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47120"
+          }
+        ]
+      }
+    }
+  ]
+}

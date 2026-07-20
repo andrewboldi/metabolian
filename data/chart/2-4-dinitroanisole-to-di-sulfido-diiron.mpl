@@ -18,13 +18,13 @@ pathway 2-4-dinitroanisole-to-di-sulfido-diiron "2,4-dinitroanisole to di-μ-sul
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +hydroxycholesterol_27 +o2 +hplus +di_sulfido_diiron +h2o
-    3_hydroxycholest_5_en_26_al
+    <-> ec_1_14_19_36 [1.14.19.36] +1_linoleoyl_2_acylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_linolenoyl_2_acylglycerolipid
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +25r_3_hydroxycholest_5_en_26_al +o2 +hplus +di_sulfido_diiron +h2o
-    25r_3_hydroxycholest_5_en_26_oate
+    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +nad +di_sulfido_diiron +nadh
+    trans_caffeoyl_coa
   }
 }

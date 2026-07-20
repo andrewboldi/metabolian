@@ -24,14 +24,14 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +25_hydroxy_24_oxocalciol +o2 +hplus +di_sulfido_diiron +h2o
-    23_s_25_dihydroxy_24_oxovitamin_d3
+    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +o2 +hplus +di_sulfido_diiron +h2o
+    rhizobitoxine
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +cryptoxanthin +o2 +hplus +di_sulfido_diiron +h2o
-    3s_5r_6s_cryptoxanthin_5_6_epoxide
+    <-> . +julichrome_q6 +o2 +hplus +di_sulfido_diiron +h2o
+    julichrome_q6_6
   }
 
   branch from 5_hydroxymethyldeoxycytidylate side left {
@@ -42,13 +42,13 @@ pathway gdp-4-amino-4-6-dideoxy-to-2-deoxy-5-hydroxymeth "GDP-4-amino-4,6-dideox
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    decanoate
+    <-> . +cyclopropanecarboxylic_acid +h +atp +coa +phosphate
+    cyclopropanecarboxyl_coa
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    dodecanoate
+    <-> . +h +atp +10s_juvenile_hormone_iii_diol
+    10s_juvenile_hormone_iii_diol_phosphate
   }
 }

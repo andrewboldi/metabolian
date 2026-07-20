@@ -26,38 +26,38 @@ pathway 7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd "7-Benzyloxyquinoline t
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> ec_4_1_2_38 [4.1.2.38]
-    r_benzoin
-  }
-
-  branch from benzaldehyde side right {
-    benzaldehyde
     <-> ec_4_1_2_10 [4.1.2.10] +r_mandelonitrile +h
     cyanide
   }
 
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +h
+    s_mandelonitrile
+  }
+
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +h +nadph
-    1s_bornane_2_3_dione
+    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
+    15beta_hydroxytestosterone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +h +nadph
-    1r_bornane_2_3_dione
+    <-> ec_1_14_14_55 [1.14.14.55] +testosterone +h +o2 +nadph +h2o
+    1_hydroxytestosterone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_81 [3.2.1.81] +neoagarobiose
-    neoagarotetraose
+    <-> . +propionaldoxime
+    propionitrile
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_beta_d_fucopyranoside +beta_d_fucose
-    4_methylumbelliferone
+    <-> . +n_valeraldoxime
+    pentanenitrile
   }
 
   branch from c_glucosyl_2_hydroxyflavanone side left {
@@ -74,14 +74,14 @@ pathway 7-benzyloxyquinoline-to-2-5-7-trihydroxy-2-4-hyd "7-Benzyloxyquinoline t
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +kinetin_7_n_glucoside +h
-    kinetin
+    <-> . +udp +kaempferol_3_o_rhamnoside_7_o_glucoside
+    afzelin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +kinetin
-    9_d_glucosyl_kinetin
+    <-> . +udp +quercetin_3_7_di_o_d_glucoside
+    quercetin_3_o_d_glucopyranoside
   }
 
   branch from 2_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_dihydro_4 side left {

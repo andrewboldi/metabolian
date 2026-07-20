@@ -20,26 +20,26 @@ pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€
 
   branch from d_xylulose_5_phosphate side left {
     d_xylulose_5_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +keto_d_fructose +d_glyceraldehyde_3_phosphate
-    d_erythrose
+    <-> . +d_xylopyranose +phosphoenolpyruvate
+    pyruvate
   }
 
   branch from d_xylulose_5_phosphate side right {
     d_xylulose_5_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +beta_d_fructose_6_phosphate +glyceraldehyde_3_phosphate +h
-    d_erythrose_4_phosphate
+    <-> . +d_ribulose +atp +h
+    adp
   }
 
   branch from h side left {
     h
-    <-> . +terpendole_e +o2 +nadph +formate +nadp +h2o
-    13_desoxyterpendole_i
+    <-> ec_5_5_1_7 [5.5.1.7] +3_6_dichloro_3a_methyl_dihydro_3h_furo_3_2_b_fur
+    2_5_dichloro_3_methyl_muconolactone
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +3_oxosteroid +nad
-    3alpha_hydroxysteroid
+    <-> . +2_chloro_3_methyl_maleylacetate +h2o
+    2_chloro_3_methyl_dienelactone
   }
 
   branch from thiamine_diphosphate side left {
@@ -56,26 +56,26 @@ pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€
 
   branch from glyceraldehyde_3_phosphate side left {
     glyceraldehyde_3_phosphate
-    <-> ec_1_2_1_12 [1.2.1.12] +nadh +2r_3_phospho_glyceroyl_phosphate +h +phosphate
-    nad
-  }
-
-  branch from glyceraldehyde_3_phosphate side right {
-    glyceraldehyde_3_phosphate
     <-> ec_1_2_1_13 [1.2.1.13] +h +nadph +nadp +phosphate
     2r_3_phospho_glyceroyl_phosphate
   }
 
+  branch from glyceraldehyde_3_phosphate side right {
+    glyceraldehyde_3_phosphate
+    <-> ec_2_7_1_28 [2.7.1.28] +adp +h +d_glyceraldehyde
+    atp
+  }
+
   branch from d_sedoheptulose_7_phosphate side left {
     d_sedoheptulose_7_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +aldehydo_d_ribose_5_phosphate +l_xylulose
-    glyceraldehyde
+    <-> ec_2_7_1_11 [2.7.1.11] +utp +h +d_sedoheptulose_1_7_bisphosphate
+    udp
   }
 
   branch from d_sedoheptulose_7_phosphate side right {
     d_sedoheptulose_7_phosphate
-    <-> ec_5_3_1_28 [5.3.1.28] +h
-    d_glycero_d_manno_heptose_7_phosphate
+    <-> ec_2_7_1_90 [2.7.1.90] +diphosphate +h +phosphate
+    d_sedoheptulose_1_7_bisphosphate
   }
 
   branch from methylglyoxal side left {
@@ -86,43 +86,43 @@ pathway alpha-beta-dihydroxyethyl-to-r-lactaldehyde "alpha,beta-Dihydroxyethylâ€
 
   branch from methylglyoxal side right {
     methylglyoxal
-    <-> .
-    enolaldehyde
+    <-> ec_1_1_1_156 [1.1.1.156] +h +nadph +nadp
+    lactaldehyde
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +salbostatin_6_phosphate +h2o +h
-    salbostatin
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1 +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_216 [2.4.1.216] +beta_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
-    alpha_alpha_trehalose_6_phosphate
+    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h2o
+    1d_myo_inositol_1_3_4_5_6_pentakisphosphate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_213 [1.1.1.213] +h +nadph +3alpha_hydroxysteroid
-    3_oxosteroid
+    <-> . +h +o2 +nadph +n_3_carboxypropanoyl_n_hydroxyputrescine +h2o
+    3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_6_3_5 [1.6.3.5] +h +nadph +o2
-    h2o2
+    <-> . +2s_3_sulfopropanediol +h +nadph
+    1_hydroxy_2_oxo_3_sulfopropane
   }
 
   branch from r_lactaldehyde side left {
     r_lactaldehyde
-    <-> ec_4_2_1_30 [4.2.1.30] +h2o
-    glycerol
+    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
+    r_lactate
   }
 
   branch from r_lactaldehyde side right {
     r_lactaldehyde
     <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +nadp +h2o
-    r_lactate
+    s_lactate
   }
 }

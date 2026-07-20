@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway thymidine-3-monophosphate-to-succinate "thymidine 3'-monophosphate to succinate" {
-  spacing 182
+  spacing 170
 
   spine at 0,0 {
     thymidine_3_monophosphate
@@ -18,33 +18,21 @@ pathway thymidine-3-monophosphate-to-succinate "thymidine 3'-monophosphate to su
     5_hydroxymethyluracil
   }
 
-  branch from 2_deoxy_d_ribofuranose_5_phosphate side left {
-    2_deoxy_d_ribofuranose_5_phosphate
-    <-> . +5_end_2_deoxyribose_deoxyribonucleotide +h2o +hplus
-    5_end_2_deoxyribonucleotide_2
-  }
-
-  branch from thymine side right {
+  branch from thymine side left {
     thymine
     <-> ec_1_3_1_1 [1.3.1.1] +nad +nadh +hplus
     5_6_dihydrothymine
   }
 
-  branch from thymine side left {
-    thymine
-    <-> . +fmn_n5_peroxide +z_2_methylureidoacrylate +hplus
-    fmn_n5_oxide
-  }
-
   branch from succinate side right {
     succinate
-    <-> . +lauroyl_coa +akg +o2 +co2
-    2_hydroxydodecanoyl_coa
+    <-> ec_1_14_20_12 [1.14.20.12] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +akg +o2 +hplus +co2 +h2o
+    3_e_2_isocyanovinyl_indole
   }
 
   branch from succinate side left {
     succinate
-    <-> . +myristoyl_coa +akg +o2 +co2
-    2_hydroxytetradecanoyl_coa
+    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 }

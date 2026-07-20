@@ -18,37 +18,37 @@ pathway h-to-h2o2 "H to H2O2" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m21 +h2o
-    am4n9_cyclosporine
+    <-> ec_1_1_1_206 [1.1.1.206] +4_methylcyclohexanone +h +nadph
+    4_methylcyclohexan_1_ol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +cyclosporin_a +h +o2 +nadph +h2o
-    cyclosporin_a_metabolite_m1
+    <-> . +2_4_dimethyl_3_pentanone +h +nadph
+    compound_0286204
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_beta_carboxy_simvastatin_lactone_form
-    6_beta_carboxy_simvastatin_acid_form
+    <-> . +l_histidine +l_cysteine +l_arginine +h
+    his_arg_cys
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_beta_hydroxy_lovastatin_lactone_form
-    6_beta_hydroxy_lovastatin_acid_form
+    <-> . +l_histidine +l_serine +l_arginine
+    histidyl_arginyl_serine
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +nadh +11z_eicosenoyl_coa +acetyl_coa +h +coa +o2 +nad +h2o
-    erucoyl_coa
+    <-> ec_1_3_3_8 [1.3.3.8] +coptisine +h +o2
+    s_stylopine
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoyl_coa +o2
-    2_4_7_10_13_16_docosahexenoyl_coenzyme_a
+    <-> ec_1_3_3_8 [1.3.3.8] +h +o2 +sinactine
+    epiberberine
   }
 }

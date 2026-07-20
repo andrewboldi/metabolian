@@ -18,14 +18,14 @@ pathway 17-4-hydroxyphenyl-hepta-to-o-s-c35-phenol-carbo "17-(4-hydroxyphenyl)he
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    car_3_ene
+    <-> ec_4_2_3_143 [4.2.3.143] +fpp +h2o
+    kunzeaol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_123 [4.2.3.123] +fpp
-    sesquiphellandrene
+    <-> ec_2_5_1_112 [2.5.1.112] +dmapp +adp
+    n6_dimethylallyl_adenosine_5_diphosphate
   }
 
   branch from o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine side left {

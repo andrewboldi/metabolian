@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADPH" {
-  spacing 284
+  spacing 278
 
   spine at 0,0 {
     13_14_dihydro_15_keto_pgf2
@@ -22,21 +22,15 @@ pathway 13-14-dihydro-15-keto-pgf-to-nadph "13,14-dihydro-15-keto-PGF… to NADP
     prostaglandin_f2alpha
   }
 
-  branch from 15_oxoprostaglandin_f2 side right {
-    15_oxoprostaglandin_f2
-    <-> .
-    prostaglandin_i2
+  branch from nadph side right {
+    nadph
+    <-> ec_1_2_1_5 [1.2.1.5] +h +hva +nadp +h2o
+    4_hydroxy_3_methoxyphenyl_acetaldehyde
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +10_11_dihydro_12_oxo_ltb4 +nadp
-    6_7_dihydro_12_epi_ltb4
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +leukotriene_b4 +nadp +h
-    5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
+    <-> ec_1_8_1_10 [1.8.1.10] +glutathione +nadp +l_cysteine
+    l_cysteine_glutathione_disulfide
   }
 }

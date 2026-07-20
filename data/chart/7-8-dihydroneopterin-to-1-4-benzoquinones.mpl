@@ -36,13 +36,13 @@ pathway 7-8-dihydroneopterin-to-1-4-benzoquinones "7,8-dihydroneopterin to 1,4-b
 
   branch from 1_4_benzoquinones side right {
     1_4_benzoquinones
-    <-> ec_1_5_5_3 [1.5.5.3] +trans_4_hydroxy_l_proline +hydroquinones +hplus
-    3r_5s_1_pyrroline_3_hydroxy_5_carboxylate
+    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrinogen9 +hydroquinones
+    protoporphyrin9
   }
 
   branch from 1_4_benzoquinones side left {
     1_4_benzoquinones
-    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrinogen9 +hydroquinones
-    protoporphyrin9
+    <-> . +nadh +hplus +nad
+    1_4_benzosemiquinones
   }
 }

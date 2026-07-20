@@ -38,14 +38,14 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
 
   branch from ump side left {
     ump
-    <-> ec_2_7_6_1 [2.7.6.1] +utp +aldehydo_d_ribose_5_phosphate +h
-    5_phospho_alpha_d_ribose_1_diphosphate
+    <-> ec_2_7_1_48 [2.7.1.48] +uridine +itp +h
+    idp
   }
 
   branch from ump side right {
     ump
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +itp +h
-    idp
+    <-> ec_3_5_4_12 [3.5.4.12] +cmp +h +h2o
+    nh4
   }
 
   branch from alpha_d_galactose_1_phosphate side left {
@@ -62,13 +62,13 @@ pathway udp-to-d-galf-1-5-d-galf "UDP to [β-D-Galf-(1→5)-β-D-Galf-…" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5_phenyl_1_3_oxazinane_2_4_dione +nad
-    4_hydroxy_5_phenyltetrahydro_1_3_oxazin_2_one
+    <-> . +nadh +pyrene_4_5_dione +nad
+    4_5_dihydroxypyrene
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +carbamazepine +o2 +nadph +carbamazepine_10_11_epoxide +h2o
-    nadp
+    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +nadh +nad
+    2_methyl_3_oxoadipate
   }
 }

@@ -18,13 +18,13 @@ pathway sitosterol-to-d-glucopyranose "sitosterol to D-glucopyranose" {
 
   branch from glucose side left {
     glucose
-    <-> . +benzylglucosinolate_aglycone +h +h2o
-    z_glucotropeolin
+    <-> . +celosianin_i +h +1_o_4_coumaroyl_d_glucose
+    amaranthin
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_147 [3.2.1.147] +z_indol_3_yl_n_sulfonatooxy_methanimidothioate +h +h2o
-    z_glucobrassicin
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +6_kestotriose
+    6_6_kestotetraose
   }
 }

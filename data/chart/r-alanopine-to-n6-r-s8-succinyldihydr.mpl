@@ -43,5 +43,4 @@ pathway r-alanopine-to-n6-r-s8-succinyldihydr "(R)-β-alanopine to N6-[(R)-S8-su
 
 
 
-
 }

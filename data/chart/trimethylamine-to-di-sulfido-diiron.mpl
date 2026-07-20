@@ -18,57 +18,51 @@ pathway trimethylamine-to-di-sulfido-diiron "trimethylamine to di-μ-sulfido-dii
     isoproturon_monodemethyl
   }
 
-  branch from methyl_coenzyme_m side left {
-    methyl_coenzyme_m
-    <-> ec_2_1_1_251 [2.1.1.251] +cbl +h +coenzyme_m
-    methylcobalamin
-  }
-
-  branch from dimethylamine side right {
+  branch from dimethylamine side left {
     dimethylamine
     <-> . +co2 +3_4_dichloroaniline +h +h2o
     diuron
   }
 
-  branch from dimethylamine side left {
+  branch from dimethylamine side right {
     dimethylamine
     <-> . +co2 +aniline +h +h2o
     fenuron
   }
 
-  branch from h side right {
-    h
-    <-> ec_2_5_1_18 [2.5.1.18] +1s_hydroxy_2s_glutathionyl_1_2_dihydronaphthale +glutathione
-    1s_2r_naphthalene_1_2_oxide
-  }
-
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_hydroxy_8_glutathionyl_7_8_dihydronaph +1_nitronaphthalene_7_8_oxide
-    glutathione
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +codeine_6_glucuronide +codeine
+    udp_alpha_d_glucuronate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +3_5_dibromo_4_hydroxybenzoate +nh4
-    3_5_dibromo_4_hydroxybenzamide
+  branch from h side right {
+    h
+    <-> . +co2 +nh4 +atropaldehyde
+    3_carbamoyl_2_phenylpropionaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +hydrogencarbonate +benzoate
-    terephthalate
+    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
+    glyoxylate
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +4_amino_3_all_trans_hexaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
-    4_amino_5_hydroxy_3_all_trans_hexaprenylbenzoate
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
+    formate
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +gibberellin_a12 +di_sulfido_diiron +o2 +hplus +h2o
-    gibberellin_a15_2_diacid_form
+    <-> ec_1_14_15_44 [1.14.15.44] +2_22_dideoxy_3_dehydroecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    3_dehydro_2_deoxyecdysone
+  }
+
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_44 [1.14.15.44] +14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione +di_sulfido_diiron +o2 +hplus +h2o
+    2_25_dideoxy_3_dehydroecdysone
   }
 }

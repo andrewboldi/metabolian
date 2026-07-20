@@ -50,14 +50,14 @@ pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
 
   branch from phylloquinol side right {
     phylloquinol
-    <-> ec_4_1_1_90 [4.1.1.90] +co2 +l_glutamic_acid +o2 +2_3_epoxyphylloquinone +carboxy_l_glutamate_2 +h2o
-    h
+    <-> ec_1_1_5_8 [1.1.5.8] +phylloquinone +l_quinate
+    3_dehydroquinate
   }
 
   branch from phylloquinol side left {
     phylloquinol
-    <-> ec_1_1_5_8 [1.1.5.8] +phylloquinone +l_quinate
-    3_dehydroquinate
+    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +phylloquinone +1_d_ribofuranosyl_1_4_dihydronicotinamide
+    h
   }
 
   branch from orotate side right {
@@ -92,13 +92,13 @@ pathway ubiquinone-0-to-h2o "ubiquinone-0 to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphatidylglycerol_ditetradecanoyl_n_c14_0 +phosphate +phosphatidylglycerol_ditetradecanoyl_n_c14_0
+    <-> . +h +adp +prostaglandin_e2 +phosphate +prostaglandin_e2
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
+    l_proline
   }
 }

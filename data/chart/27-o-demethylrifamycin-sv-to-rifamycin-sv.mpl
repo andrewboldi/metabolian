@@ -20,13 +20,13 @@ pathway 27-o-demethylrifamycin-sv-to-rifamycin-sv "27-O-demethylrifamycin SV to 
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
-    gibberellin_a3_methyl_ester
+    <-> ec_2_1_1_95 [2.1.1.95] +tocotrienol +sam +hplus
+    tocotrienol
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a20 +sam
-    gibberellin_a20_methyl_ester
+    <-> . +n_methyl_l_histidine +sam +hplus
+    n_n_dimethyl_l_histidine
   }
 }

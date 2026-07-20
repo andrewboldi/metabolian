@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway mercaptoethanol-to-l-xylo-hex-2-ulono-1-4-la "mercaptoethanol to L-xylo-hex-2-ulono-1,4-la…" {
-  spacing 268
+  spacing 262
 
   spine at 0,0 {
     mercaptoethanol
@@ -18,59 +18,53 @@ pathway mercaptoethanol-to-l-xylo-hex-2-ulono-1-4-la "mercaptoethanol to L-xylo-
 
   branch from ethanol side left {
     ethanol
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +ethane +h +o2 +h2o
-    nad
-  }
-
-  branch from ethanol side right {
-    ethanol
     <-> ec_3_4_21_104 [3.4.21.104] +n_benzoyl_arginine +h2o
     bz_arg_oet
   }
 
-  branch from thiocyanate side left {
-    thiocyanate
-    <-> . +p_hydroxybenzyl_alcohol +h +h2o
-    4_hydroxybenzyl_isothiocyanate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_7_3_1 [1.7.3.1] +butanal +nitrite +h2o2 +o2 +h2o
-    1_nitrobutane
+  branch from ethanol side right {
+    ethanol
+    <-> . +12r_hydroxy_9z_octadecenoate +h2o
+    lesquerolate
   }
 
   branch from h side left {
     h
-    <-> . +3_oxopropanoate +bromide +h2o
-    trans_3_bromoacrylic_acid
+    <-> . +l_dehydroascorbic_acid +20_hydroxy_d4_neuroprostane +h2o +l_ascorbate
+    20_hydroperoxy_h4_neuroprostane
   }
 
-  branch from l_ascorbate side right {
-    l_ascorbate
-    <-> . +l_dehydroascorbic_acid +13_hydroxy_e4_neuroprostane +h2o +h
-    13_hydroperoxy_h4_neuroprostane
+  branch from h side right {
+    h
+    <-> . +20_hydroxy_e4_neuroprostane +h2o +20_hydroperoxy_h4_neuroprostane +l_ascorbate
+    l_dehydroascorbic_acid
   }
 
   branch from l_ascorbate side left {
     l_ascorbate
-    <-> . +l_dehydroascorbic_acid +20_hydroxy_d4_neuroprostane +h2o +h
-    20_hydroperoxy_h4_neuroprostane
+    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +4_trifluoromethyl_phenylethanolamine +h2o +h +o2
+    4_trifluoromethyl_phenethylamine
   }
 
-  branch from indolylmethylisothiocyanate side right {
+  branch from l_ascorbate side right {
+    l_ascorbate
+    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +phenylethanolamine +h2o +h +o2
+    2_phenylethylamine
+  }
+
+  branch from indolylmethylisothiocyanate side left {
     indolylmethylisothiocyanate
     <-> . +z_indol_3_yl_n_sulfonatooxy_methanimidothioate
     sulfate
   }
 
-  branch from indolylmethylisothiocyanate side left {
+  branch from indolylmethylisothiocyanate side right {
     indolylmethylisothiocyanate
     <-> . +sulfate
     indol_3_ylacetothiohydroxamate_o_sulfonate
   }
 
-  branch from l_xylo_hex_2_ulono_1_4_lactone side right {
+  branch from l_xylo_hex_2_ulono_1_4_lactone side left {
     l_xylo_hex_2_ulono_1_4_lactone
     <-> ec_1_1_3_8 [1.1.3.8] +l_gulono_1_4_lactone +o2
     h2o2

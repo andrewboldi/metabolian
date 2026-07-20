@@ -32,49 +32,49 @@ pathway 4-methoxybenzoate-to-formaldehyde "4-methoxybenzoate to formaldehyde" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_6_dichlorosalicylate
+    <-> . +5_methyltriphosphate_guanosine_ribonucleotide_4 +akg +o2 +succinate +co2 +hplus
+    5_end_gtp_ribonucleotide_5
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
+    <-> . +n3_methylcytidine_5_monophosphate_1 +akg +o2 +succinate +co2
+    cytidine_5_monophosphate_1
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +3_methylquinoline +h2o +hydrogen_donor
-    3_methylquinolin_2_1h_one
+    <-> ec_1_3_7_8 [1.3.7.8] +nh3 +adp +pi +hplus +hydrogen_donor +atp +h2o
+    hydroxylamine
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +4_methylquinoline +h2o +hydrogen_donor
-    4_methylquinolin_2_1h_one
+    <-> ec_1_3_99_30 [1.3.99.30] +15_cis_phytoene +hydrogen_donor
+    all_trans_3_4_didehydrolycopene
   }
 
   branch from phenol side left {
-    phenol
-    <-> ec_4_1_99_2 [4.1.99.2] +tyrosine +h2o +pyruvate
-    nh3
-  }
-
-  branch from phenol side right {
     phenol
     <-> . +tyrosine
     2_ammonioprop_2_enoate
   }
 
+  branch from phenol side right {
+    phenol
+    <-> . +nadh +o2 +hplus +nad +h2o
+    quinol
+  }
+
   branch from sah side left {
     sah
-    <-> ec_2_1_1_344 [2.1.1.344] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +sam +hplus
-    n5_n5_n5_trimethyl_n2_3r_3_acyloxy_acyl_l_ornith
+    <-> ec_2_1_1_100 [2.1.1.100] +s_2e_6e_farnesyl_l_cysteinate +sam
+    s_2e_6e_farnesyl_l_cysteine_methyl_ester
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
+    2e_2_methoxycarbonylmethyl_but_2_enedioate
   }
 }

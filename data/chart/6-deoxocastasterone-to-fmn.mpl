@@ -18,14 +18,14 @@ pathway 6-deoxocastasterone-to-fmn "6-deoxocastasterone to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
-    20_hetre
+    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
+    1_aci_nitro_2_phenyl_ethane
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_19 [1.14.14.19] +pregnenolone +fmnh2 +o2 +h2o +hplus
-    17_hydroxypregnenolone
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    9z_12z_11_hydroxyoctadecadienoate
   }
 
   branch from castasterone side left {

@@ -1,0 +1,272 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-fructose-to-h2o-null",
+  "name": "beta-D-fructose… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-fructose 6-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR179285"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_fructose_6_phosphate",
+      "name": "beta-D-fructose 6-phosphate",
+      "short": "beta-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107898"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde_3_phosphate",
+      "name": "D-glyceraldehyde 3-phosphate",
+      "short": "D-glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372045"
+      }
+    },
+    {
+      "id": "l_xylulose_5_phosphate",
+      "name": "L-xylulose 5-phosphate",
+      "short": "L-xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1238"
+      }
+    },
+    {
+      "id": "d_erythrose_4_phosphate",
+      "name": "D-erythrose 4-phosphate",
+      "short": "D-erythrose 4-P",
+      "formula": "C4H7O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM258"
+      }
+    },
+    {
+      "id": "d_ribulose_5_phosphate",
+      "name": "D-ribulose 5-phosphate",
+      "short": "D-ribulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM145"
+      }
+    },
+    {
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM37"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    },
+    {
+      "id": "pyridoxal_5_phosphate",
+      "name": "pyridoxal 5'-phosphate",
+      "short": "pyridoxal 5'-P",
+      "formula": "C8H8NO6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM161"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_2_1_1",
+      "name": "transketolase",
+      "ec": [
+        "2.2.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "transketolase",
+      "ec": "2.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_erythrose_4_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR179285"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179285"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR179397",
+      "substrates": [
+        {
+          "metabolite": "l_xylulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR179397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR179397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR160469",
+      "substrates": [
+        {
+          "metabolite": "d_ribulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyridoxal_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR160469"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR160469"
+          }
+        ]
+      }
+    }
+  ]
+}

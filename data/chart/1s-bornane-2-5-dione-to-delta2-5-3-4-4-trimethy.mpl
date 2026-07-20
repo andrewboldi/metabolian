@@ -28,37 +28,37 @@ pathway 1s-bornane-2-5-dione-to-delta2-5-3-4-4-trimethy "(1S)-bornane-2,5-dione 
 
   branch from fmn side right {
     fmn
-    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_25s_cholest_5_en_3_24_26_triol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    14s_15r_eet
   }
 
   branch from fmn side left {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_24s_dihydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    14r_15s_eet
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_85 [2.7.7.85] +atp
-    cyclic_di_amp
+    <-> . +nonadecanoate +atp +coa +amp
+    nonadecanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_142 [4.2.3.142] +fpp
-    7_epi_zingiberene
+    <-> . +2_methylhexadecanoate +atp +coa +amp
+    2_methylhexadecanoyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +prostaglandin_a1 +glutathione
-    s_pga1_glutathione
+    <-> . +adp +7alpha_hydroxycholest_4_en_3_one +phosphate +7alpha_hydroxycholest_4_en_3_one +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +hexadecanoate +11_cis_retinol +h2o
-    all_trans_retinyl_palmitate
+    <-> . +adp +phosphate +atp +h2o
+    7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 }

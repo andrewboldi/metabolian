@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dimethylselenoniopropanoa-to-h2o "dimethylselenoniopropanoa… to H2O" {
-  spacing 300
+  spacing 276
 
   spine at 0,0 {
     dimethylselenoniopropanoate
@@ -22,85 +22,61 @@ pathway dimethylselenoniopropanoa-to-h2o "dimethylselenoniopropanoa… to H2O" {
 
   branch from h side left {
     h
-    <-> . +acetyl_coa +blasticidin_s +coa
-    acetylblasticidin_s
+    <-> . +stipitaldehydate +o2 +nadph +nadp +h2o
+    stipitatonate
   }
 
   branch from h side right {
     h
-    <-> . +3e_phycoerythrobilin
-    3z_phycoerythrobilin
+    <-> ec_4_1_1_60 [4.1.1.60] +co2 +puberulate +h2o
+    puberulic_acid
   }
 
   branch from acryloyl_coa side left {
     acryloyl_coa
-    <-> ec_4_2_1_54 [4.2.1.54] +h +h2o
-    lactoyl_coa
+    <-> ec_1_3_1_85 [1.3.1.85] +co2 +nadph +r_methylmalonyl_coa
+    nadp
   }
 
   branch from acryloyl_coa side right {
     acryloyl_coa
-    <-> ec_4_2_1_54 [4.2.1.54] +h2o
-    s_lactoyl_coa
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +but_3_enoic_acid +h
-    vinylacetyl_coa
-  }
-
-  branch from acetoacetate side right {
-    acetoacetate
-    <-> . +acetyl_coa +2_deoxy_3_dehydro_d_ribonate
-    d_glyceroyl_coa
+    <-> ec_4_3_1_6 [4.3.1.6] +nh4
+    beta_alanyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
-    kaempferol_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluc
+    <-> ec_2_3_1_26 [2.3.1.26] +9z_octadecenoyl_coa +lanosterol
+    lanosteryl_oleate
   }
 
   branch from coa side right {
     coa
-    <-> . +isorhamnetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
-    isorhamnetin_3_o_3_6_o_di_4_coumaroyl_glucoside
-  }
-
-  branch from 3_hydroxypropanoate side left {
-    3_hydroxypropanoate
-    <-> ec_3_1_2_4 [3.1.2.4] +h2o +h +coa
-    3_hydroxypropanoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +glucose +5_methoxypodophyllotoxin
-    6_methoxypodophyllotoxin_7_glucoside
+    <-> ec_2_3_1_26 [2.3.1.26] +9z_octadecenoyl_coa +ergosterol
+    ergosteryl_oleate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +podophyllotoxin +glucose
-    podophyllotoxin_7_glucoside
+    <-> . +homo_uwm6
+    homo_prejadomycin
   }
 
-  branch from 3_dimethylsulfoniopropionaldehyde side right {
-    3_dimethylsulfoniopropionaldehyde
-    <-> . +3_aminopropyl_dimethylsulfanium +o2 +h2o +h2o2
-    nh4
+  branch from h2o side right {
+    h2o
+    <-> . +8_o_methylfusarubinaldehyde +h +o2 +nadph +nadp
+    8_o_methyl_5_hydroxy_fusarubinaldehyde
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_4_methyl_benzoate +h +o2 +h2o
-    4_methylgentisate
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxotetradec_7_enoyl_coa +h
+    3s_7z_3_hydroxytetradec_7_enoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +2_5_xylenol +h +o2 +h2o
-    5_hydroxymethyl_2_methylphenol
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxododec_5_enoyl_coa +h
+    s_z_3_hydroxydodec_5_enoyl_coa
   }
 }

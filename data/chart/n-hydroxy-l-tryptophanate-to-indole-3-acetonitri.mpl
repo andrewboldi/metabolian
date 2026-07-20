@@ -18,13 +18,13 @@ pathway n-hydroxy-l-tryptophanate-to-indole-3-acetonitri "N-hydroxy-L-tryptophan
 
   branch from fmn side left {
     fmn
-    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
-    2s_dihydrotricetin
+    <-> . +3_dehydro_6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    3_dehydro_6_hydroxy_28_norteasterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +taxifolin +fmnh2 +o2 +h2o +hplus
-    dihydromyricetin
+    <-> . +3_dehydro_6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    6_dehydro_28_norteasterone
   }
 }

@@ -20,14 +20,14 @@ pathway 4-5-didehydrojasmonate-to-diphosphate "4,5-didehydrojasmonate to diphosp
 
   branch from jasmonic_acid_anion side left {
     jasmonic_acid_anion
-    <-> ec_6_3_2_52 [6.3.2.52] +1_aminocyclopropane_1_carboxylate +atp +a_jasmonoyl_1_aminocyclopropane_1_carboxylate +h +amp
-    diphosphate
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_glutamine +h +amp +atp
+    l_glutamine
   }
 
   branch from jasmonic_acid_anion side right {
     jasmonic_acid_anion
-    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_glutamine +h +amp +atp
-    l_glutamine
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +a_jasmonoyl_l_isoleucine +h +amp +l_isoleucine
+    atp
   }
 
   branch from n_jasmonyl_l_amino_acid_anion side left {
@@ -38,13 +38,13 @@ pathway 4-5-didehydrojasmonate-to-diphosphate "4,5-didehydrojasmonate to diphosp
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    z_biformene
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_nonaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
+    2_demethylmenaquinol_9
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    copalol
+    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_decaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
+    2_demethylmenaquinol_10
   }
 }

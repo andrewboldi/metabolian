@@ -60,26 +60,26 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +z_3_oxododec_5_enoyl_coa +h
-    3_s_3_hydroxydodecen_5z_oyl_coa
+    <-> . +nadh +h +18_20_dioxo_20_coa_leukotriene_b4
+    20_coa_20_oxo_18r_hydroxyleucotriene_b4
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_48 [1.3.1.48] +nadh +h +12_dehydro_leukotriene_b4
-    leukotriene_b4
+    <-> ec_1_6_1_2 [1.6.1.2] +nadh +nadp +nadph
+    pmf
   }
 
   branch from h2o side left {
     h2o
-    <-> . +prostaglandin_pge2_1_glyceryl_ester +h +glycerol
-    prostaglandin_e2
+    <-> . +12_oxo_20_carboxy_leukotriene_b4
+    12_oxo_20_trihydroxy_leukotriene_b4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +prostaglandin_pge2_3_glyceryl_ester +h +prostaglandin_e2
-    glycerol
+    <-> . +eicosa_2e_8z_11z_14z_17z_pentaenoyl_coa +h
+    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
   }
 
   branch from n_formylanthranilate side left {
@@ -108,25 +108,25 @@ pathway isatin-to-l-tryptophan "isatin to L-tryptophan" {
 
   branch from o2 side left {
     o2
-    <-> . +h +12_oxo_20_hydroxy_leukotriene_b4 +nadph +nadp +h2o
-    12_oxo_20_dihydroxy_leukotriene_b4
+    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +12_oxo_20_dihydroxy_leukotriene_b4 +nadph +nadp +h2o
-    12_oxo_20_trihydroxy_leukotriene_b4
+    <-> . +5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
+    5_oxo_6e_8z_11z_14z_eicosatetraenoate
   }
 
   branch from l_tryptophan side left {
     l_tryptophan
-    <-> . +d_mannopyranose +h2o
-    1_1_2_3_4_5_pentahydroxypent_1_yl_1_2_3_4_tetrah
+    <-> . +diphosphate +indol_3_yl_acetyl_l_tryptophan +h +amp +atp
+    indol_3_yl_acetate
   }
 
   branch from l_tryptophan side right {
     l_tryptophan
-    <-> . +diphosphate +indol_3_yl_acetyl_l_tryptophan +h +amp +atp
-    indol_3_yl_acetate
+    <-> . +diphosphate +h +amp +h2o +anthranilate +atp
+    asperlicin_d
   }
 }

@@ -143,41 +143,41 @@
       }
     },
     {
-      "id": "gibberellin_a3",
-      "name": "gibberellin A3",
-      "formula": "C19H21O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58590"
-      }
-    },
-    {
-      "id": "gibberellin_a3_methyl_ester",
-      "name": "gibberellin A3 methyl ester",
-      "short": "gibberellin A3…",
-      "formula": "C20H24O6",
+      "id": "tocotrienol",
+      "name": "δ-tocotrienol",
+      "formula": "C27H40O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73253"
+        "chebi": "CHEBI:33276"
       }
     },
     {
-      "id": "gibberellin_a20",
-      "name": "gibberellin A20",
-      "formula": "C19H23O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58526"
-      }
-    },
-    {
-      "id": "gibberellin_a20_methyl_ester",
-      "name": "gibberellin A20 methyl ester",
-      "short": "gibberellin A20…",
-      "formula": "C20H26O5",
+      "id": "tocotrienol",
+      "name": "β-tocotrienol",
+      "formula": "C28H42O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73257"
+        "chebi": "CHEBI:33275"
+      }
+    },
+    {
+      "id": "n_methyl_l_histidine",
+      "name": "Nα-methyl-L-histidine",
+      "short": "Nα-methyl-L-histidi…",
+      "formula": "C7H11N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75895"
+      }
+    },
+    {
+      "id": "n_n_dimethyl_l_histidine",
+      "name": "Nα,Nα-dimethyl-L-histidine",
+      "short": "Nα,Nα-dimethyl-L-hi…",
+      "formula": "C8H13N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57610"
       }
     }
   ],
@@ -190,17 +190,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_275",
-      "name": "gibberellin A9 O-methyltransferase",
+      "id": "ec_2_1_1_95",
+      "name": "tocopherol C-methyltransferase",
       "ec": [
-        "2.1.1.275"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_276",
-      "name": "gibberellin A4 carboxyl methyltransferase",
-      "ec": [
-        "2.1.1.276"
+        "2.1.1.95"
       ]
     }
   ],
@@ -377,12 +370,12 @@
     },
     {
       "id": "r5",
-      "name": "gibberellin A9 O-methyltransferase",
-      "equation": "gibberellin A3 + S-adenosyl-L-methionine = O-methyl gibberellin A3 + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.275",
+      "name": "tocopherol C-methyltransferase",
+      "equation": "delta-tocotrienol + S-adenosyl-L-methionine = beta-tocotrienol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.95",
       "substrates": [
         {
-          "metabolite": "gibberellin_a3",
+          "metabolite": "tocotrienol",
           "stoichiometry": 1
         },
         {
@@ -392,42 +385,45 @@
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a3_methyl_ester",
+          "metabolite": "tocotrienol",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_275"
+          "enzyme": "ec_2_1_1_95"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:36115"
+        "rhea": "RHEA:38091"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36115"
+            "id": "RHEA:38091"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "gibberellin A9 O-methyltransferase",
-      "equation": "gibberellin A20 + S-adenosyl-L-methionine = gibberellin A20 methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.275",
+      "name": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-hi...",
+      "equation": "N(alpha)-methyl-L-histidine + S-adenosyl-L-methionine = N(alpha),N(alpha)-dimethyl-L-histidine + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "gibberellin_a20",
+          "metabolite": "n_methyl_l_histidine",
           "stoichiometry": 1
         },
         {
@@ -437,30 +433,29 @@
       ],
       "products": [
         {
-          "metabolite": "gibberellin_a20_methyl_ester",
+          "metabolite": "n_n_dimethyl_l_histidine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_1_1_275"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:36123"
+        "rhea": "RHEA:38479"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36123"
+            "id": "RHEA:38479"
           }
         ]
       }

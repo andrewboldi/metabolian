@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-butein "S-adenosyl-L-homocysteine to butein" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -24,55 +24,49 @@ pathway s-adenosyl-l-homocysteine-to-butein "S-adenosyl-L-homocysteine to butein
     3_hydroxyphloretin
   }
 
-  branch from s_eriodictyol side right {
-    s_eriodictyol
-    <-> ec_3_2_1_62 [3.2.1.62] +glucose +h2o
-    eriodictyol_7_o_d_glucopyranoside
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +n_dimethylethanolamine
+    n_methylethanolamine
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_3_1_161 [2.3.1.161] +s_adenosyl_l_homocysteine +co2 +dihydromonacolin_l +nadp +coa +h2o +malonyl_coa +h +nadph
-    acetyl_coa
-  }
-
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +5_methyltetrahydropteroyltri_l_glutamate
-    tetrahydropteroyltri_l_glutamate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +o_s_3r_15z_3_hydroxytetratriacontenoylpantethein
-    o_s_2e_15z_tetratriacontadienoylpantetheine_4_ph
+    <-> . +s_adenosyl_l_homocysteine +h +choline
+    n_dimethylethanolamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_7z_3_hydroxyhexacosenoylpantetheine_4_pho
-    o_s_2e_7z_hexacosadienoylpantetheine_4_phosphory
+    <-> . +val_phe +l_phenylalanine
+    l_valine
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_13_237 [1.14.13.237] +glucohirsutin +nadp +h2o +h +nadph
-    8_methylsulfanyl_octyl_glucosinolate
+  branch from h2o side left {
+    h2o
+    <-> . +glycine +l_phenylalanine
+    phe_gly
   }
 
   branch from o2 side right {
     o2
-    <-> . +glucoraphanin +h +gluconapin
-    methanesulfonate
+    <-> ec_1_1_3_7 [1.1.3.7] +3_methoxybenzaldehyde +h2o2
+    3_methoxybenzyl_alcohol
   }
 
-  branch from butein side left {
+  branch from o2 side left {
+    o2
+    <-> ec_1_1_3_7 [1.1.3.7] +isovanillyl_alcohol +h2o2
+    isovanillin
+  }
+
+  branch from butein side right {
     butein
     <-> ec_5_5_1_6 [5.5.1.6]
     butin
   }
 
-  branch from butein side right {
+  branch from butein side left {
     butein
     <-> . +udp +coreopsin +h
     udp_alpha_d_glucose

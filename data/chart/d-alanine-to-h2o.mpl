@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanine-to-h2o "D-alanine to H2O" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     d_alanine
@@ -16,27 +16,15 @@ pathway d-alanine-to-h2o "D-alanine to H2O" {
     peptidoglycan_dimer_with_pentapeptide_stems_meso
   }
 
-  branch from peptidoglycan_dimer_with_tetrapeptide_and_tripep side left {
-    peptidoglycan_dimer_with_tetrapeptide_and_tripep
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +h2o
-    peptidoglycan_dimer_with_tetrapeptide_stems_meso
+  branch from h2o side left {
+    h2o
+    <-> . +3_carbamoyl_2_phenylpropionic_acid
+    5_phenyl_1_3_oxazinane_2_4_dione
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glycine +glycyl_dl_phenylalanine
-    gly_gly_phe
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_7_99_4 [1.7.99.4] +nitrite +ubiquinone_2 +nitrate
-    ubiquinol_2
-  }
-
-  branch from peptidoglycan_dimer_with_pentapeptide_stems_meso side right {
-    peptidoglycan_dimer_with_pentapeptide_stems_meso
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +h2o
-    peptidoglycan_dimer_with_pentapeptide_and_tetrap
+    <-> . +3_hydroxyvalproic_acid
+    2_n_propyl_2_pentenoic_acid
   }
 }

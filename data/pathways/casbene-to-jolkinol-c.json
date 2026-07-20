@@ -128,6 +128,26 @@
       }
     },
     {
+      "id": "4_o_methylnorbelladine",
+      "name": "4'-O-methylnorbelladine",
+      "short": "4'-O-methylnorbella…",
+      "formula": "C16H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:133993"
+      }
+    },
+    {
+      "id": "4ar_10bs_noroxomaritidine",
+      "name": "(4aR,10bS)-noroxomaritidine",
+      "short": "(4aR,10bS)-noroxoma…",
+      "formula": "C16H18NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:133996"
+      }
+    },
+    {
       "id": "arachidonate",
       "name": "arachidonate",
       "formula": "C20H31O2",
@@ -137,21 +157,12 @@
       }
     },
     {
-      "id": "14r_15s_eet",
-      "name": "(14R,15S)-EET",
+      "id": "14_15_eet",
+      "name": "14,15-EET",
       "formula": "C20H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:131965"
-      }
-    },
-    {
-      "id": "11s_12r_eet",
-      "name": "(11S,12R)-EET",
-      "formula": "C20H31O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:131969"
+        "chebi": "CHEBI:84024"
       }
     },
     {
@@ -164,7 +175,15 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_50",
+      "name": "noroxomaritidine synthase",
+      "ec": [
+        "1.14.19.50"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -364,11 +383,12 @@
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (14R,15S)-epoxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "noroxomaritidine synthase",
+      "equation": "4'-O-methylnorbelladine + reduced [NADPH--hemoprotein reductase] + O2 = (10bS,4aR)-noroxomaritidine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.50",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "4_o_methylnorbelladine",
           "stoichiometry": 1
         },
         {
@@ -382,7 +402,7 @@
       ],
       "products": [
         {
-          "metabolite": "14r_15s_eet",
+          "metabolite": "4ar_10bs_noroxomaritidine",
           "stoichiometry": 1
         },
         {
@@ -391,32 +411,37 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_50"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49860"
+        "rhea": "RHEA:51264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49860"
+            "id": "RHEA:51264"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,12R)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 14,15...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 14,15-epoxy-(5Z,8Z,11Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "arachidonate",
@@ -433,7 +458,7 @@
       ],
       "products": [
         {
-          "metabolite": "11s_12r_eet",
+          "metabolite": "14_15_eet",
           "stoichiometry": 1
         },
         {
@@ -452,14 +477,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:49876"
+        "rhea": "RHEA:51472"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49876"
+            "id": "RHEA:51472"
           }
         ]
       }

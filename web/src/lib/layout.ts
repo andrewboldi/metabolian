@@ -181,7 +181,7 @@ const CHROME_CSS = `
 .is-ext::after { content: "↗"; margin-left: 0.28em; font-size: 0.85em; opacity: 0.65; }
 
 /* The footer columns are navigation, not running prose, so the standing
-   underline base.css puts on `li a` does not buy the WCAG distinguishability it
+   underline base.css puts on "li a" does not buy the WCAG distinguishability it
    is there for — it just prints 13 rules across the colophon. Underline on
    hover instead, in the sheet's own hover ink. */
 .site-footer .footer-grid a,

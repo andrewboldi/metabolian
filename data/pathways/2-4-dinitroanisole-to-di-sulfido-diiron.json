@@ -136,13 +136,13 @@
       }
     },
     {
-      "id": "hydroxycholesterol_27",
-      "name": "27-Hydroxycholesterol",
-      "short": "27-Hydroxycholester…",
-      "formula": "C27H46O2",
+      "id": "1_linoleoyl_2_acylglycerolipid",
+      "name": "1-linoleoyl-2-acylglycerolipid",
+      "short": "1-linoleoyl-2-acylg…",
+      "formula": "C22H36O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17703"
+        "chebi": "CHEBI:87010"
       }
     },
     {
@@ -155,33 +155,31 @@
       }
     },
     {
-      "id": "3_hydroxycholest_5_en_26_al",
-      "name": "3β-hydroxycholest-5-en-26-al",
-      "short": "3β-hydroxycholest-5…",
-      "formula": "C27H44O2",
+      "id": "1_linolenoyl_2_acylglycerolipid",
+      "name": "1-α-linolenoyl 2-acylglycerolipid",
+      "short": "1-α-linolenoyl…",
+      "formula": "C22H34O5R2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84145"
+        "chebi": "CHEBI:87023"
       }
     },
     {
-      "id": "25r_3_hydroxycholest_5_en_26_al",
-      "name": "(25R)-3β-hydroxycholest-5-en-26-al",
-      "short": "3β-hydroxycholest-5…",
-      "formula": "C27H44O2",
-      "charge": 0,
+      "id": "dihydrocaffeoyl_coa",
+      "name": "dihydrocaffeoyl-CoA",
+      "formula": "C30H40N7O19P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:86096"
+        "chebi": "CHEBI:87137"
       }
     },
     {
-      "id": "25r_3_hydroxycholest_5_en_26_oate",
-      "name": "(25R)-3β-hydroxycholest-5-en-26-oate",
-      "short": "3β-hydroxycholest-5…",
-      "formula": "C27H43O3",
-      "charge": -1,
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:86098"
+        "chebi": "CHEBI:87136"
       }
     }
   ],
@@ -198,6 +196,20 @@
       "name": "formate dehydrogenase (NAD(+), ferredoxin)",
       "ec": [
         "1.17.1.11"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_36",
+      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "ec": [
+        "1.14.19.36"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_108",
+      "name": "caffeoyl-CoA reductase",
+      "ec": [
+        "1.3.1.108"
       ]
     }
   ],
@@ -357,11 +369,12 @@
     },
     {
       "id": "r4",
-      "name": "26-hydroxycholesterol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (3beta)-hydroxy...",
-      "equation": "26-hydroxycholesterol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (3beta)-hydroxy-cholest-5-en-26-al + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "equation": "a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z,12Z,15Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.36",
       "substrates": [
         {
-          "metabolite": "hydroxycholesterol_27",
+          "metabolite": "1_linoleoyl_2_acylglycerolipid",
           "stoichiometry": 1
         },
         {
@@ -379,7 +392,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_hydroxycholest_5_en_26_al",
+          "metabolite": "1_linolenoyl_2_acylglycerolipid",
           "stoichiometry": 1
         },
         {
@@ -391,28 +404,34 @@
           "stoichiometry": 2
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_36"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:43840"
+        "rhea": "RHEA:46784"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43840"
+            "id": "RHEA:46784"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(25R)-3beta-hydroxy-5-cholesten-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3be...",
-      "equation": "(25R)-3beta-hydroxy-5-cholesten-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3beta-hydroxy-5-cholestenoate + 2 oxidized [adrenodoxin] + H2O",
+      "name": "caffeoyl-CoA reductase",
+      "equation": "hydrocaffeoyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + 2 NAD(+) = (E)-caffeoyl-CoA + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 NADH",
+      "ec": "1.3.1.108",
       "substrates": [
         {
-          "metabolite": "25r_3_hydroxycholest_5_en_26_al",
+          "metabolite": "dihydrocaffeoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -420,17 +439,13 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "nad",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "25r_3_hydroxycholest_5_en_26_oate",
+          "metabolite": "trans_caffeoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -438,21 +453,26 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_108"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:45236"
+        "rhea": "RHEA:46956"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:45236"
+            "id": "RHEA:46956"
           }
         ]
       }

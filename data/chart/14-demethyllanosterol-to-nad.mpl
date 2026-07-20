@@ -36,55 +36,49 @@ pathway 14-demethyllanosterol-to-nad "14-demethyllanosterol to NAD" {
 
   branch from h side left {
     h
-    <-> . +inner_core_oligosaccharide_lipid_a_with_kdo_iii +dtdp_beta_l_rhamnose +inner_core_oligosaccharide_lipid_a_e_coli
-    dtdp
+    <-> . +adp +phosphate +atp +h2o
+    9e_octadecenoate
   }
 
   branch from h side right {
     h
-    <-> ec_1_13_11_52 [1.13.11.52] +formyl_5_hydroxykynurenamine +o2
-    serotonin
-  }
-
-  branch from zymosterone side left {
-    zymosterone
-    <-> . +nad +co2 +nadh
-    4_carboxyzymosterol
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_8_1_10 [1.8.1.10] +glutathione +nadp +l_cysteine
-    l_cysteine_glutathione_disulfide
+    <-> . +adp +phosphate +atp +h2o
+    9z_12z_15z_octadecatrienoate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +cholesterol +o2 +nadp +h2o
-    5_6_epoxy_5_cholestan_3_ol
+    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp +h
+    acenaphthene_1_2_dione
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +trans_4_coumarate
-    e_caffeate
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_8 [1.14.13.8] +h +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +o2 +nadp +h2o
+    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_23 [1.1.3.23] +thiamine +thiamine_1_aldehyde
-    h2o2
+    <-> ec_1_13_11_38 [1.13.11.38] +1_hydroxy_2_naphthoate +h
+    trans_2_carboxybenzylidenepyruvic_acid
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +h +5beta_dihydrocorticosterone
-    tetrahydrocorticosterone
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +h2o
+    3_4_5_trihydroxybenzoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_53 [1.1.1.53] +nadh +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
-    3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
+    <-> . +nadh +h +2_3_dihydroxy_ddt
+    1s_2s_ddt_2_3_dihydrodiol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_6_dichlorocatechol
+    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
   }
 }

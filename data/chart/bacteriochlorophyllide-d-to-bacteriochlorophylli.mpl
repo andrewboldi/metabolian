@@ -20,13 +20,13 @@ pathway bacteriochlorophyllide-d-to-bacteriochlorophylli "bacteriochlorophyllide
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_304 [2.1.1.304] +tyrosine +sam +hplus
-    3_methyl_l_tyrosine
+    <-> ec_2_1_1_179 [2.1.1.179] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_189 [2.1.1.189] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_180 [2.1.1.180] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 }

@@ -28,7 +28,7 @@ pathway d-arabinitol-to-2-5-dioxopentanoate "D-arabinitol to 2,5-dioxopentanoate
 
   branch from d_arabinopyranose side right {
     d_arabinopyranose
-    <-> ec_5_3_1_3 [5.3.1.3]
-    alpha_d_ribulose
+    <-> . +alpha_d_arabinopyranose_1_phosphate +adp +atp
+    h
   }
 }

@@ -20,14 +20,14 @@ pathway h-to-amicoumacin-a "H to amicoumacin A" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_2_2 [2.7.2.2] +carbamoyl_phosphate +h +adp +nh4
-    co2
+    <-> . +h +adp +phosphate +h2o
+    am1c9_cyclosporine
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    coprogen
+    cyclosporin_a_metabolite_m18
   }
 
   branch from ai_77_b side left {
@@ -38,13 +38,13 @@ pathway h-to-amicoumacin-a "H to amicoumacin A" {
 
   branch from h2o side right {
     h2o
-    <-> . +15_stemmadenine
-    catharanthine
+    <-> . +h +adp +phosphate +atp
+    am1c_glucuronide_cyclosporine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +minovincinine
-    tabersonine
+    <-> . +cyclosporin_a +h +o2 +nadph +cyclosporin_a_metabolite_m17
+    nadp
   }
 }

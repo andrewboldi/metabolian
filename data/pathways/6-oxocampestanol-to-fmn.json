@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-oxocampestanol-to-fmn",
   "name": "6-oxocampestanol to FMN",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 6-oxocampestanol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -155,32 +155,30 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "25_hydroxycholesterol",
-      "name": "25-hydroxycholesterol",
-      "short": "25-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "7_hete",
+      "name": "7-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:42977"
+        "chebi": "CHEBI:136523"
       }
     },
     {
-      "id": "hydroxycholesterol_27",
-      "name": "27-Hydroxycholesterol",
-      "short": "27-Hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "13_hete",
+      "name": "13-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17703"
+        "chebi": "CHEBI:136524"
       }
     },
     {
@@ -414,11 +412,11 @@
     },
     {
       "id": "r5",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 25-hydroxycholesterol + oxi...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 25-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 7-hyd...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 7-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -432,7 +430,7 @@
       ],
       "products": [
         {
-          "metabolite": "25_hydroxycholesterol",
+          "metabolite": "7_hete",
           "stoichiometry": 1
         },
         {
@@ -451,25 +449,25 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50256"
+        "rhea": "RHEA:52288"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50256"
+            "id": "RHEA:52288"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxi...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hy...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -483,7 +481,7 @@
       ],
       "products": [
         {
-          "metabolite": "hydroxycholesterol_27",
+          "metabolite": "13_hete",
           "stoichiometry": 1
         },
         {
@@ -502,14 +500,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:50264"
+        "rhea": "RHEA:52292"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50264"
+            "id": "RHEA:52292"
           }
         ]
       }

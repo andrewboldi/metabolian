@@ -18,13 +18,13 @@ pathway 7-demethylsuberosin-to-fmn "7-demethylsuberosin to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
-    miltiradien_20_al
+    <-> . +2_hydroxymethyl_3_pentylphenol +fmnh2 +o2 +h2o +hplus
+    8s_annullatin_e
   }
 
   branch from fmn side right {
     fmn
-    <-> . +ferruginol +fmnh2 +o2 +h2o +hplus
-    pisiferate
+    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
+    3_hydroxylaurate
   }
 }

@@ -20,14 +20,14 @@ pathway n-n-dimethylurea-to-h2o "N,N'-dimethylurea to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_3_9 [1.2.3.9] +3_4_dihydroxybenzoate +h +h2o2 +o2
-    3_4_dihydroxybenzaldehyde
+    <-> . +o_s_3r_7z_19z_3_hydroxyoctatriacontadienoylpante
+    o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +vindoline +h2o2 +catharanthine
-    alpha_3_4_anhydrovinblastine_radical
+    <-> . +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe
+    o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph
   }
 
   branch from 3_6_8_trimethylallantoin side left {
@@ -44,14 +44,14 @@ pathway n-n-dimethylurea-to-h2o "N,N'-dimethylurea to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +lupiwighteone +genistein
-    dimethylallyl_diphosphate
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe +nadp +nadph
+    o_s_9z_21z_3_oxotetracontadienoylpantetheine_4_p
   }
 
   branch from h side right {
     h
-    <-> . +malonyl_coa +3_methylbutanoyl_coa +co2 +coa
-    6_4_methyl_2_oxopentyl_4_hydroxy_2_pyrone
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4 +nadp +nadph
+    o_s_13z_3_oxodotriacontenoylpantetheine_4_phosph
   }
 
   branch from 1_3_7_trimethyl_5_hydroxyisouric_acid side left {

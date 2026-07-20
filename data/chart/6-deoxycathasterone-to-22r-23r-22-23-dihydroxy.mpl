@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-deoxycathasterone-to-22r-23r-22-23-dihydroxy "6-deoxycathasterone to (22R,23R)-22,23-dihydroxy…" {
-  spacing 238
+  spacing 226
 
   spine at 0,0 {
     6_deoxycathasterone
@@ -20,17 +20,5 @@ pathway 6-deoxycathasterone-to-22r-23r-22-23-dihydroxy "6-deoxycathasterone to (
     5_22s_24r_22_hydroxyergostan_3_one
     <-> . +nadp +nadph +hplus
     22s_22_hydroxycampest_4_en_3_one
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_3_dodecanediol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_7_decanediol
   }
 }

@@ -62,38 +62,38 @@ pathway h-to-4-methylcatechol "H to 4-methylcatechol" {
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_phenylpropanoate +h +h2o
-    3_phenylpropanal
+    <-> ec_1_2_99_5 [1.2.99.5] +nadh +co2 +methanofuran +h2o
+    n_formylmethanofuran
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_19 [1.2.1.19] +nadh +r_glycerate +h +h2o
-    glyceraldehyde
+    <-> . +nadh +h +dihydrokalafungin
+    dihydrokalafungin_dihydroquinone_form
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +phenanthrene_9_carboxylate +h +nad
-    phenanthrene_9_carboxaldehyde
+    <-> . +hemeo +o2
+    hemea
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +cl_75947_quinoline_3_carboxylic_acid +h +nad
-    quinoline_3_carboxaldehyde
+    <-> ec_1_10_3_12 [1.10.3.12] +o2 +menaquinol
+    menaquinone_2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +co2 +bromosuccinate +4_trimethylamino_butanoate
-    3_bromo_2_ketoglutarate
+    <-> ec_1_14_13_8 [1.14.13.8] +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +methane +methanol
+    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_4_3_21 [1.4.3.21] +compound_0066903 +nh4 +h2o2 +h +h2o
-    4_methoxyphenylethylamine
+    <-> ec_1_14_12_12 [1.14.12.12] +ethylbenzene
+    1_phenylethanol
   }
 
   branch from 4_methylcatechol side right {

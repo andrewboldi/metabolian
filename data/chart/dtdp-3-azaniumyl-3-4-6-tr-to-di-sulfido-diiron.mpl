@@ -18,14 +18,14 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> . +c30_botryococcene +sam +hplus
+    3_methyl_1_2_didehydro_2_3_dihydrobotryococcene
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
-    4_3_methylbut_2_enyl_l_abrine
+    <-> . +20_methyl_21_22_didehydro_20_21_dihydrobotryococ +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from 10_deoxymethymycin side left {
@@ -42,13 +42,13 @@ pathway dtdp-3-azaniumyl-3-4-6-tr-to-di-sulfido-diiron "dTDP-3-azaniumyl-3,4,6-t
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    2_oxospirilloxanthin
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
+    pikromycin
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_10 [1.14.15.10] +di_sulfido_diiron +r_camphor +o2 +hplus +h2o
-    6_endo_hydroxycamphor
+    <-> ec_1_14_15_35 [1.14.15.35] +6_deoxyerythronolide_b +di_sulfido_diiron +o2 +hplus +h2o
+    erythronolide_b
   }
 }

@@ -30,13 +30,13 @@ pathway 15-s-hpete-to-diphosphate "15(S)-HPETE to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    4e_6e_2_6_dimethylocta_2_4_6_triene
+    <-> . +pre_putrebactin +atp +amp +hplus
+    putrebactin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    maaliene
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    sobralene
   }
 }

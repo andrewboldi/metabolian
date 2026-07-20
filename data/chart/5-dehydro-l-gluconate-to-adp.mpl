@@ -18,26 +18,26 @@ pathway 5-dehydro-l-gluconate-to-adp "5-dehydro-L-gluconate to ADP" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_42 [1.1.1.42] +2_oxoglutarate +co2 +nadph
-    isocitrate
+    <-> ec_1_14_14_156 [1.14.14.156] +indol_3_yl_acetaldehyde_oxime +co2 +h2o +h +nadph +l_tryptophan
+    o2
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_42 [1.1.1.42] +h +nadph +isocitrate
-    s_oxalatosuccinate
+    <-> ec_1_14_14_38 [1.14.14.38] +2_methylpropanal_oxime +co2 +h2o +h +o2 +nadph
+    l_valine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gentamicin_b1
+    <-> ec_3_1_3_23 [3.1.3.23] +2s_4r_5s_6r_6_hydroxymethyl_oxane_2_4_5_triol +h +phosphate
+    2_deoxy_d_glucose_6_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    fortimicin_kl1
+    <-> . +s_4_5_dihydroxypentane_2_3_dione
+    4_hydroxy_5_methyl_3_furanone
   }
 
   branch from 2_dehydro_3_deoxy_d_galactonate_6_phosphate side left {
@@ -48,25 +48,25 @@ pathway 5-dehydro-l-gluconate-to-adp "5-dehydro-L-gluconate to ADP" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    premithramycin_a2
+    <-> . +6_7_dihydroxy_3_isocyanochromen_2_one
+    2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    premithramycin_a3
+    <-> ec_2_7_4_21 [2.7.4.21] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +atp +adp
+    5_6_bis_diphospho_1d_myo_inositol_tetrakisphosph
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    premithramycin_a3
+    <-> ec_2_7_4_24 [2.7.4.24] +5_diphospho_1d_myo_inositol_1_2_3_4_6_pentakisph +atp
+    a_bis_diphospho_1d_myo_inositol_tetrakisphosphat
   }
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    premithramycin_a4
+    <-> . +ochratoxin_b +phosphate +atp +l_phenylalanine
+    7_carboxymellein
   }
 }

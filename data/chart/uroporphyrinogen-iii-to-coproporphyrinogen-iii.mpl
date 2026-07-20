@@ -18,14 +18,14 @@ pathway uroporphyrinogen-iii-to-coproporphyrinogen-iii "uroporphyrinogen III to 
 
   branch from h2o2 side left {
     h2o2
-    <-> . +hexacosan_1_ol +o2
-    hexacosanal
+    <-> ec_1_3_3_16 [1.3.3.16] +prepatellamide_a_containing_thiazoline_residues +o2
+    prepatellamide_a_containing_thiazole_residues
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +tetracosan_1_ol +o2
-    tetracosanal
+    <-> ec_1_3_3_16 [1.3.3.16] +patellamide_c_precursor_peptide_containing_thiaz +o2
+    prepatellamide_c_containing_thiazoline_residues
   }
 
   branch from coproporphyrinogen_iii side left {

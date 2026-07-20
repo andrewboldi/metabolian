@@ -30,49 +30,49 @@ pathway 25r-cholest-5-en-3beta-to-25r-7-26-dihydroxycho "(25R)-cholest-5-en-3bet
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pc_20_0_18_2_9z_12z
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gly_asn
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_20_1_11z_18_2_9z_12z +phosphate +pc_20_1_11z_18_2_9z_12z +h2o
-    atp
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    ala_thr
   }
 
   branch from o2 side left {
     o2
-    <-> . +chlorophyllide_a +h2o
-    chlorophyllide_b
+    <-> ec_1_14_13_15 [1.14.13.15] +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +nadp +h2o +h +nadph
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_99_33 [1.14.99.33] +9z_12z_octadecadienoate +h +nadph +nadp +h2o
-    crepenynate
+    <-> . +h +benzoate +nadph +nadp +h2o
+    salicylate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_117 [1.1.1.117] +d_arabinopyranose +nadp +h
-    d_arabinono_1_4_lactone
+    <-> . +l_alanine +h +nadp +h2o
+    s_2_aminopropanal
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nadp
-    afzelechin
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_ribofuranose +nadp
+    xylitol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +11_hydroxycucurbitadienol +fmnh2 +o2 +h2o +hplus
-    11_oxocucurbitadienol
+    <-> . +nataloe_emodin +fmnh2 +o2 +h2o +hplus
+    cladofulvin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cortisol +fmnh2 +o2 +h2o +hplus
-    6_hydroxycortisol
+    <-> . +20_hete +fmnh2 +o2 +h2o +hplus
+    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 }

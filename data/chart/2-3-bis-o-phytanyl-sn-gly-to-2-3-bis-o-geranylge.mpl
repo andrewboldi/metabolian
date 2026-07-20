@@ -32,14 +32,14 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_62 [4.2.3.62] +2_cis_6_trans_farnesyl_diphosphate
-    cadinene
+    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
+    2_epi_prezizaene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_65 [4.2.3.65] +fpp
-    zingiberene
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    curcumene
   }
 
   branch from 2_3_bis_o_geranylgeranyl_sn_glycero_3_phospho_l side left {
@@ -50,13 +50,13 @@ pathway 2-3-bis-o-phytanyl-sn-gly-to-2-3-bis-o-geranylge "2,3-bis-O-phytanyl-sn-
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosylceramide +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_1_n_acylsphingosi
   }
 }

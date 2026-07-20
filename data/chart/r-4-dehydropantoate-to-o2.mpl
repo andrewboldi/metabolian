@@ -18,13 +18,13 @@ pathway r-4-dehydropantoate-to-o2 "(R)-4-dehydropantoate to O2" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +h +4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol +nadph +4_formyl_4_methyl_5_8_cholesten_3_ol +h2o
-    nadp
+    <-> . +coelenterazine_disulfonate_dioxetanone +h +amp +h2o
+    adenylylcoelenterazine_disulfonate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol +nad +h2o
-    4_formyl_4_methyl_5_8_cholesten_3_ol
+    <-> . +2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate +h2o
+    2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan
   }
 }

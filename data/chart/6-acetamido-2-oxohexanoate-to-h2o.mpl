@@ -18,14 +18,14 @@ pathway 6-acetamido-2-oxohexanoate-to-h2o "6-acetamido-2-oxohexanoate to H2O" {
 
   branch from acetate side left {
     acetate
-    <-> . +itaconyl_coa +itaconate
-    acetyl_coa
+    <-> ec_3_1_1_6 [3.1.1.6] +13_sophorosyloxydocosanoic_acid +h2o
+    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +2_3_4_saturated_fatty_acid
-    2_3_4_saturated_fatty_acyl_coa
+    <-> ec_3_1_1_6 [3.1.1.6] +h +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos +h2o
+    13_sophorosyloxydocosanoate_6_6_diacetate
   }
 
   branch from 6_amino_2_oxohexanoate side left {
@@ -48,25 +48,25 @@ pathway 6-acetamido-2-oxohexanoate-to-h2o "6-acetamido-2-oxohexanoate to H2O" {
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +s_2_methyl_3_oxopropanoate +h +h2o
-    trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
+    <-> ec_2_6_1_58 [2.6.1.58] +2_oxo_4_phenylbutyric_acid +l_alanine +l_homophenylalanine
+    h
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +formaldehyde +h +hydroxyacetone
-    co2
+    <-> . +sulfonopine +nadp +h2o +h +nadph
+    s_methyl_l_methionine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +demecolcine +formate
-    n_formyldemecolcine
+    <-> ec_3_3_2_9 [3.3.2.9] +7_12_dimethylbenz_a_anthracene_5_6_oxide
+    trans_5_6_dihydro_5_6_dihydroxy_7_12_dimethylben
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_36 [3.1.1.36] +limonin
-    limonoate_a_ring_lactone
+    <-> . +h +9_10_dihydroxyoctadecanoate +o2 +nadph +9_10_18_trihydroxyoctadecanoic_acid
+    nadp
   }
 }

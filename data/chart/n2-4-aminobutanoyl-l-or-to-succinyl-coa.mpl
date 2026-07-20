@@ -18,26 +18,26 @@ pathway n2-4-aminobutanoyl-l-or-to-succinyl-coa "N2-(4-aminobutanoyl)-L-or… to
 
   branch from ornithine side left {
     ornithine
-    <-> ec_2_3_1_109 [2.3.1.109] +succinyl_coa +coa +hplus
-    n2_succinyl_l_ornithinate
-  }
-
-  branch from ornithine side right {
-    ornithine
     <-> . +taurine +arginine
     taurocyamine
   }
 
+  branch from ornithine side right {
+    ornithine
+    <-> . +pyruvate +alanine
+    5_amino_2_oxopentanoic_acid
+  }
+
   branch from glycine side left {
     glycine
-    <-> . +arachidonoyl_coa +coa +hplus
-    n_arachidonoylglycinate
+    <-> . +palmitoleoyl_coa +coa +hplus
+    n_9z_hexadecenoyl_glycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +stearoyl_coa +coa +hplus
-    n_octadecanoylglycinate
+    <-> . +5_10_methylenetetrahydrosulfopterin +h2o +serine
+    tetrahydrosulfopterin
   }
 
   branch from succinyl_coa side left {

@@ -30,25 +30,25 @@ pathway prostaglandin-d2-to-s-11-oh-9-deoxy-delta9-1 "prostaglandin D2 to S-(11-
 
   branch from h2o side left {
     h2o
-    <-> . +h +o2 +nadph +typhasterol +nadp
-    castasterone
+    <-> ec_3_1_1_36 [3.1.1.36] +limonin
+    limonoate_a_ring_lactone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +6_deoxotyphasterol +o2 +nadph +nadp
-    6_deoxocastasterone
+    <-> . +n_hydroxyl_tryptamine +nadp +nadph +tryptamine
+    o2
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_172 [1.14.13.172] +h +salicylate +o2 +nadph +h2o
-    2_5_dihydroxybenzoate
+    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +h +nadph
+    homotrypanothione
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +2_nitrobenzoate +h2o
-    2_hydroxylaminobenzoic_acid
+    <-> . +h +nadph +n_demethylnarwedine
+    norgalanthamine
   }
 }

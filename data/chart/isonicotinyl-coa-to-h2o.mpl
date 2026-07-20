@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     isonicotinyl_coa
@@ -20,61 +20,55 @@ pathway isonicotinyl-coa-to-h2o "isonicotinyl-CoA to H2O" {
 
   branch from isonicotinate side left {
     isonicotinate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +hydrazine +h2o
-    isoniazide
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +nad +h2o
+    4_pyridinecarboxaldehyde
   }
 
   branch from isonicotinate side right {
     isonicotinate
-    <-> ec_1_2_1_5 [1.2.1.5] +4_pyridinecarboxaldehyde +nadp +h2o +h
-    nadph
+    <-> . +h +glycine +h2o
+    isonicotinylglycine
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +myristoyl_coa +coa +hplus
-    n6_tetradecanoyl_l_lysine
+    <-> ec_2_1_1_367 [2.1.1.367] +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_354 [2.1.1.354] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> ec_2_1_1_369 [2.1.1.369] +sam +n6_methyl_l_lysinium +hplus
+    sah
   }
 
   branch from n_acetylisoniazid side left {
     n_acetylisoniazid
-    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +isoniazide
+    <-> . +acetyl_coa +isoniazide
     coa
-  }
-
-  branch from n_acetylisoniazid side right {
-    n_acetylisoniazid
-    <-> . +isoniazide +coa
-    acetyl_coa
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +6_hydroxykynurenic_acid
-    4_2_amino_5_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_98 [4.2.1.98] +16_17_didehydropregnenolone
-    16alpha_hydroxypregnenolone
+    <-> . +naphthyl_2_hydroxymethyl_succinyl_coa
+    naphthyl_2_methylene_succinyl_coa
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_2_1_32 [6.2.1.32] +diphosphate +n_methylanthraniloyl_coa +amp +coa
-    n_methylanthranilate
+  branch from h2o side left {
+    h2o
+    <-> . +nadh +h +1_methylnaphthalene +o2 +nad
+    1_naphthyl_methanol
   }
 
   branch from atp side right {
     atp
-    <-> . +cyclopropanecarboxylic_acid +h +coa +adp +phosphate
-    cyclopropanecarboxyl_coa
+    <-> . +malonyl_coa +h +l_glutamine +h2o +malonamoyl_coa +amp +l_glutamate
+    diphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_2_7_7_72 [2.7.7.72] +diphosphate +trna_with_a_3_cca_end +h
+    trna_with_a_3_cc_end
   }
 }

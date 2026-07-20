@@ -24,37 +24,37 @@ pathway tocotrienol-to-h2o "γ-tocotrienol to H2O" {
 
   branch from sah side right {
     sah
-    <-> . +3_methyl_1_2_didehydro_2_3_dihydrobotryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a20 +sam
+    gibberellin_a20_methyl_ester
   }
 
   branch from sah side left {
     sah
-    <-> . +malonyl-coa +sam
-    malonyl_coa_methyl_ester
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
+    gibberellin_a34_methyl_ester
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +15_oxo_lipoxin_a4 +nadph
-    13_14_dihydro_15_oxo_lipoxin_a4
+    <-> . +adrenochrome +nadph +h
+    adrenochrome_o_semiquinone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +o2 +nadph +h2o
-    16alpha_hydroxyestrone
+    <-> . +h +noradrenochrome_o_semiquinone +nadph
+    noradrenochrome
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +h +3_monoiodo_l_thyronine
-    sulfate
+    <-> . +all_trans_retinol
+    anhydrovitamin_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> . +kinetensin +kinetensin_1_7 +l_phenylalanine
+    l_leucine
   }
 }

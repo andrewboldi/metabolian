@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ginsenoside-re-to-h2o "ginsenoside Re to H2O" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     ginsenoside_re
@@ -20,20 +20,8 @@ pathway ginsenoside-re-to-h2o "ginsenoside Re to H2O" {
 
   branch from l_rhamnopyranose side left {
     l_rhamnopyranose
-    <-> . +ginsenoside_rg2 +h2o
-    20s_ginsenoside_rh1
-  }
-
-  branch from l_rhamnopyranose side right {
-    l_rhamnopyranose
-    <-> ec_3_2_1_194 [3.2.1.194] +ginsenoside_rg2 +h2o +protopanaxatriol
-    glucose
-  }
-
-  branch from l_rhamnofuranose side left {
-    l_rhamnofuranose
     <-> .
-    alpha_l_rhamnose
+    l_rhamnulose
   }
 
   branch from beta_l_rhamnose side right {
@@ -62,13 +50,13 @@ pathway ginsenoside-re-to-h2o "ginsenoside Re to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +neocasomorphin +l_isoleucine
-    neocasomorphin_1_5
+    <-> . +5_6_epoxy_alpha_tocopheryl_quinone +h2o2
+    7_8_epoxy_8alpha_hydroperoxytocopherone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +apelin_13 +l_phenylalanine
-    apelin_1_12
+    <-> . +2_3_epoxy_alpha_tocopheryl_quinone +h2o2
+    4alpha_5_epoxy_8alpha_hydroperoxytocopherone
   }
 }

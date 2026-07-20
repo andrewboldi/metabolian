@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-heptyl-1-hydroxy-4-1h-to-s-adenosyl-l-homocyst "2-heptyl-1-hydroxy-4(1H)-… to S-adenosyl-L-homocysteine" {
-  spacing 340
+  spacing 334
 
   spine at 0,0 {
     2_heptyl_1_hydroxy_4_1h_quinolinone
@@ -20,14 +20,14 @@ pathway 2-heptyl-1-hydroxy-4-1h-to-s-adenosyl-l-homocyst "2-heptyl-1-hydroxy-4(1
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_213 [2.1.1.213] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_226 [2.1.1.226] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_227 [2.1.1.227] +sam +2_o_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 
   branch from s_adenosyl_l_methionine side left {
@@ -48,33 +48,27 @@ pathway 2-heptyl-1-hydroxy-4-1h-to-s-adenosyl-l-homocyst "2-heptyl-1-hydroxy-4(1
     2_hydroxylamino_benzoyloctanoate
   }
 
-  branch from 2_heptyl_4_hydroxyquinoline_n_oxide side right {
-    2_heptyl_4_hydroxyquinoline_n_oxide
-    <-> . +h2o
-    2_hydroxylamino_benzoyloctanoate
-  }
-
-  branch from s_adenosyl_l_homocysteine side left {
+  branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
     <-> ec_2_1_1_210 [2.1.1.210] +h +3_4_3_4_tetrahydrospirilloxanthin +s_adenosyl_l_methionine
     3_4_dihydrorhodovibrin
   }
 
-  branch from s_adenosyl_l_homocysteine side right {
+  branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
     <-> ec_2_1_1_150 [2.1.1.150] +isoformononetin +s_adenosyl_l_methionine
     daidzein
   }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    9z_12z_15z_octadecatrienoate
-  }
-
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    tetracosanoate
+    <-> . +5_pyridoxate +h2o
+    5_pyridoxolactone
+  }
+
+  branch from h side left {
+    h
+    <-> . +cholest_5_ene +o2 +nadph +5_6alpha_epoxy_5alpha_cholestane +h2o
+    nadp
   }
 }

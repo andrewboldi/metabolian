@@ -30,7 +30,7 @@ pathway n8-acetylspermidinium-to-spermidine "N8-acetylspermidinium to spermidine
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_157 [2.5.1.157] +sam +n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> ec_2_5_1_161 [2.5.1.161] +sam +nad +hplus
+    4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino
   }
 }

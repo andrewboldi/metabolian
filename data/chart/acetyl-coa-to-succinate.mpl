@@ -18,49 +18,49 @@ pathway acetyl-coa-to-succinate "acetyl-CoA to succinate" {
 
   branch from coa side left {
     coa
-    <-> . +2_sinapoyloxy_3_butenylglucosinolate +e_sinapoyl_coa
-    xi_progoitrin
+    <-> . +4_methylumbelliferyl_d_glucoside +malonyl_coa
+    4_methylumbelliferone_6_o_malonylglucoside
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +l_ornithine +h
-    n5_acetyl_l_ornithine
+    <-> ec_2_3_1_176 [2.3.1.176] +3_oxochol_4_en_24_oyl_coa +propanoyl_coa
+    3_24_dioxocholest_4_en_26_oyl_coa
   }
 
   branch from co2 side left {
     co2
-    <-> . +1_2_dihydropyrimidine +3_6_dihydronicotinate
-    h
+    <-> . +n_o_dimethylhydroxylamine +3_4_dichloroaniline +h2o
+    linuron
   }
 
   branch from co2 side right {
     co2
-    <-> . +nonadec_1_ene +h2o +h +h2o2
-    eicosanoate
+    <-> . +2_keto_4_hydroxy_5_phosphopentanoate +oxaloacetate +phosphonoacetaldehyde
+    h
   }
 
   branch from succinate side left {
-    succinate
-    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2 +h2o
-    8beta_hydroxyfusicocca_1_10_14_diene_16_al
-  }
-
-  branch from succinate side right {
     succinate
     <-> . +sulfinosuccinate +h2o +h
     sulfite
   }
 
+  branch from succinate side right {
+    succinate
+    <-> . +l_leucine +2_oxoglutarate +o2 +co2
+    5_hydroxy_leucine
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h +2s_3_hydroxy_1_2_propanediyl_dibutanoate
-    butanoate
+    <-> ec_3_2_1_149 [3.2.1.149] +2_phenylethanol +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
+    2_phenylethyl_primeveroside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +15_16_dihode
-    15_16_epode
+    <-> ec_3_2_1_149 [3.2.1.149] +linalyl_beta_vicianoside +vicianose
+    linalool
   }
 }

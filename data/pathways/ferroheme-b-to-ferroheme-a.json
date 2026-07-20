@@ -1,0 +1,294 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ferroheme-b-to-ferroheme-a",
+  "name": "ferroheme b to ferroheme a",
+  "category": "cofactor-vitamin-metabolism",
+  "summary": "A 4-step route from ferroheme b(2−) to ferroheme a(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28070"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60344"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ferroheme_b",
+      "name": "ferroheme b",
+      "formula": "C34H30FeN4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60344"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ferroheme_o",
+      "name": "ferroheme o",
+      "formula": "C49H56FeN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60530"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "fe_ii_heme_i",
+      "name": "Fe(II)-heme i",
+      "formula": "C49H56FeN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:147291"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "fe_ii_hydroxyheme_i",
+      "name": "Fe(II)-hydroxyheme i",
+      "formula": "C49H56FeN4O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:147292"
+      }
+    },
+    {
+      "id": "ferroheme_a",
+      "name": "ferroheme a",
+      "formula": "C49H54FeN4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61715"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_141",
+      "name": "heme o synthase",
+      "ec": [
+        "2.5.1.141"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "heme o synthase",
+      "equation": "heme b + (2E,6E)-farnesyl diphosphate + H2O = Fe(II)-heme o + diphosphate",
+      "ec": "2.5.1.141",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_141"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28070"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28070"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
+      "equation": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
+      "substrates": [
+        {
+          "metabolite": "ferroheme_o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe_ii_heme_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:63392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Fe(II)-heme i + A + H2O = Fe(II)-hydroxyheme i + AH2",
+      "equation": "Fe(II)-heme i + A + H2O = Fe(II)-hydroxyheme i + AH2",
+      "substrates": [
+        {
+          "metabolite": "fe_ii_heme_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe_ii_hydroxyheme_i",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Fe(II)-hydroxyheme i = Fe(II)-heme a + H2O",
+      "equation": "Fe(II)-hydroxyheme i = Fe(II)-heme a + H2O",
+      "substrates": [
+        {
+          "metabolite": "fe_ii_hydroxyheme_i",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:63400"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63400"
+          }
+        ]
+      }
+    }
+  ]
+}

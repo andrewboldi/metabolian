@@ -24,13 +24,13 @@ pathway l-methionyl-l-aspartyl-to-amp-3-end-1 "L-methionyl-L-aspartyl… to AMP 
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_6_1_1_11 [6.1.1.11] +serine +atp +amp +ppi +hplus
-    3_l_seryl_adenylyl_1_group
+    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    l_leucyl_l_arginyl_2_group
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_2_3_2_21 [2.3.2.21] +3_l_tyrosyl_adenylyl_1_group
-    cyclo_l_tyrosyl_l_tyrosyl
+    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
+    glycine
   }
 }

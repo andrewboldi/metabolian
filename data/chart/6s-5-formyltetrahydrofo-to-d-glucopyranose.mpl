@@ -22,13 +22,13 @@ pathway 6s-5-formyltetrahydrofo-to-d-glucopyranose "(6S)-5-formyltetrahydrofo…
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    nigerose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_7_1_41 [2.7.1.41] +alpha_d_glucose_1_6_bisphosphate
-    alpha_d_glucose_1_phosphate
+    <-> ec_3_2_1_21 [3.2.1.21] +cellobiosan +h2o
+    levoglucosan
   }
 }

@@ -20,26 +20,26 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from sah side left {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
+    methylated_primary_amine
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> ec_2_1_1_117 [2.1.1.117] +s_scoulerine +sam +hplus
+    s_tetrahydrocolumbamine
   }
 
   branch from nadh side left {
     nadh
-    <-> ec_1_6_5_3 [1.6.5.3] +ubiquinone_8 +h +ubiquinol_8 +nad
-    pmf
+    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nad +h2o
+    ammonium_hydroxide
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +h +2_demethylmenaquinone_8 +pmf +nad
-    2_demethylmenaquinol_8
+    <-> . +h +7alpha_hydroxycholest_4_en_3_one +o2 +nad +h2o
+    7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 
   branch from co2 side left {
@@ -56,13 +56,13 @@ pathway 24-methylidenelophenol-to-avenasterol "24-methylidenelophenol to avenast
 
   branch from nadp side left {
     nadp
-    <-> . +alpha_pinene +h +o2 +nadph +h2o
-    alpha_pinene_oxide
+    <-> . +h +estrone +o2 +nadph +h2o
+    4_hydroxyestrone
   }
 
   branch from nadp side right {
     nadp
-    <-> . +4_hydroxydebrisoquin +h2o +h +o2 +nadph
-    debrisoquin
+    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadph
+    5_hydroxytryptophol
   }
 }

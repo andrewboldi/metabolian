@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-hydroxy-l-valinate-to-linamarin",
   "name": "N-hydroxy-L-valinate to linamarin",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 6-step route from N-hydroxy-L-valinate to linamarin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -158,39 +158,42 @@
       }
     },
     {
-      "id": "9_cis_retinal",
-      "name": "9-cis-retinal",
-      "formula": "C20H28O",
+      "id": "preaspterpenacid_acid_i",
+      "name": "preaspterpenacid acid I",
+      "short": "preaspterpenacid…",
+      "formula": "C25H42O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78273"
+        "chebi": "CHEBI:191389"
       }
     },
     {
-      "id": "9_cis_retinoate",
-      "name": "9-cis-retinoate",
-      "formula": "C20H27O2",
-      "charge": -1,
+      "id": "preaspterpenacid_acid_ii",
+      "name": "preaspterpenacid acid II",
+      "short": "preaspterpenacid…",
+      "formula": "C25H42O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78630"
+        "chebi": "CHEBI:191390"
       }
     },
     {
-      "id": "casbene",
-      "name": "(−)-casbene",
-      "formula": "C20H32",
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:157595"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "4_hydroxycasbene",
-      "name": "4-hydroxycasbene",
-      "formula": "C20H32O",
+      "id": "16s_22s_dihydroxycholesterol",
+      "name": "(16S,22S)-dihydroxycholesterol",
+      "short": "(16S,22S)-dihydroxy…",
+      "formula": "C27H46O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156578"
+        "chebi": "CHEBI:191938"
       }
     }
   ],
@@ -466,11 +469,11 @@
     },
     {
       "id": "r7",
-      "name": "9-cis-retinal + reduced [NADPH--hemoprotein reductase] + O2 = 9-cis-retinoate + oxidize...",
-      "equation": "9-cis-retinal + reduced [NADPH--hemoprotein reductase] + O2 = 9-cis-retinoate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "name": "preaspterpenacid acid I + reduced [NADPH--hemoprotein reductase] + O2 = preaspterpenaci...",
+      "equation": "preaspterpenacid acid I + reduced [NADPH--hemoprotein reductase] + O2 = preaspterpenacid acid II + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "9_cis_retinal",
+          "metabolite": "preaspterpenacid_acid_i",
           "stoichiometry": 1
         },
         {
@@ -484,7 +487,7 @@
       ],
       "products": [
         {
-          "metabolite": "9_cis_retinoate",
+          "metabolite": "preaspterpenacid_acid_ii",
           "stoichiometry": 1
         },
         {
@@ -494,6 +497,57 @@
         {
           "metabolite": "h2o",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:71999"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "cholesterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (16S,22S)-dihydroxychol...",
+      "equation": "cholesterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (16S,22S)-dihydroxycholesterol + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16s_22s_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
@@ -501,67 +555,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:65524"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65524"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "(-)-casbene + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxycasbene + oxidized...",
-      "equation": "(-)-casbene + reduced [NADPH--hemoprotein reductase] + O2 = 4-hydroxycasbene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "casbene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_hydroxycasbene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:65588"
+        "rhea": "RHEA:72191"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65588"
+            "id": "RHEA:72191"
           }
         ]
       }

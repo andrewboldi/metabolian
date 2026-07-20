@@ -22,26 +22,26 @@ pathway 15-methylhexadecasphingan-to-1-z-alk-1-enyl-2-ac "15-methylhexadecasphin
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    ylangene
+    <-> ec_4_2_3_209 [4.2.3.209] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_axinyssene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +anthranilate +atp +hplus
-    2_aminobenzoyl_amp
+    <-> ec_4_2_3_210 [4.2.3.210] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    lydicene
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d_glcnac_1_2 +cmp_n_acetyl_neuraminate +hplus
+    n4_d_glcnac_1_2_d_man_1_3_neu5ac_2_3_d_gal_1_4_d
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    an_n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1
+    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }
 
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine side left {

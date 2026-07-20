@@ -26,8 +26,8 @@ pathway oligoglycosyl-1-4-d-g-to-cytidine-5-monophosphat "oligoglycosyl-(1→4)-
 
   branch from n_acylsphingoid side right {
     n_acylsphingoid
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
+    <-> . +man_1_6_ins_1_p_cer +h2o +hplus
+    d_mannosyl_1_6_1d_myo_inositol_1_phosphate
   }
 
   branch from cytidine_5_monophosphate side left {

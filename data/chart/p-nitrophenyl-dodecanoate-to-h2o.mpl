@@ -20,50 +20,50 @@ pathway p-nitrophenyl-dodecanoate-to-h2o "p-Nitrophenyl dodecanoate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +1r_bornane_2_3_dione +nad
-    1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol
+    <-> ec_1_1_1_2 [1.1.1.2] +3_methoxybenzaldehyde +nadph +nadp
+    3_methoxybenzyl_alcohol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +6_tert_butyl_2_3_epoxy_5_cyclohexene_1_4_dione +nad
-    6_tert_butyl_2_3_epoxy_4_hydroxy_5_cyclohexene_1
+    <-> ec_1_1_1_2 [1.1.1.2] +4_methoxybenzyl_alcohol +nadp +nadph
+    4_methoxybenzaldehyde
   }
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +4_methylumbelliferyl_laurate +h2o +h
-    4_methylumbelliferone
+    <-> . +nadh +h +o2 +nad +h2o
+    12_hydroxydodecanoate
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +malonyl_coa +h +glycine +coa +4_keto_2_undecylpyrroline +h2o
-    co2
+    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +atp +coa +nad +h2o
+    fad
   }
 
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_2_1_1 [3.2.1.1] +maltoheptaose +h +h2o
-    p_nitrophenylmaltoheptaoside
+    <-> ec_3_1_1_1 [3.1.1.1] +hexanoate +h +h2o
+    4_nitrophenyl_hexanoate
   }
 
   branch from 4_nitrophenol side right {
     4_nitrophenol
-    <-> ec_3_2_1_161 [3.2.1.161] +beta_d_glucose +h +h2o
-    4_nitrophenyl_d_glucoside
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +nitrobenzene +o2 +h2o
+    nad
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_25 [3.1.1.25] +4_hydroxypelargonic_acid
-    nonanolactone
+    <-> . +2_phenylpropionaldoxime
+    2_phenylpropiononitrile
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_25 [3.1.1.25] +dl_4_hydroxy_caproic_acid
-    caprolactone
+    <-> . +mandelonitrile
+    mandelaldoxime
   }
 
   branch from 1_2_didodecanoyl_sn_glycero_3_phosphoethanolamin side left {
@@ -74,13 +74,13 @@ pathway p-nitrophenyl-dodecanoate-to-h2o "p-Nitrophenyl dodecanoate to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_41 [3.6.3.41] +h +adp +phosphate +h2o
-    heme
+    <-> ec_2_7_1_6 [2.7.1.6] +2_amino_2_deoxy_d_galactopyranose +h +adp
+    d_galactosamine_1_phosphate
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    9z_octadecenoyl_coa
+    crotono_betaine
   }
 }

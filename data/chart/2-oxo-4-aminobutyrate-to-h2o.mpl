@@ -18,85 +18,85 @@ pathway 2-oxo-4-aminobutyrate-to-h2o "2-Oxo-4-aminobutyrate to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +diclofenac +h +nadph +nadp +h2o
-    4_hydroxydiclofenac
+    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h +hexanal
+    1_nitrohexane
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +h +nadph +2_hydroxytestosterone +h2o
-    nadp
+    <-> ec_1_1_3_15 [1.1.3.15] +3_chlorolactic_acid +h +h2o2
+    compound_0039890
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +beta_d_glucose
-    dimboa_beta_d_glucoside
+    <-> . +l_alanine +l_valine
+    ala_val
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +hexadecanoate +h +4_methylumbelliferone
-    4_methylumbelliferyl_palmitate
+    <-> . +phenylalanyl_phenylalanine
+    l_phenylalanine
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +delta_amorphene
+    <-> . +beta_amorphene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    beta_amorphene
+    beta_muurolene
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +o2 +nadph +nadp +h2o
-    16_hydroxytestosterone
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh +keto_d_sorbose +nad
+    l_glucitol
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_18 [3.5.1.18] +l_leucine +l_aspartate +h2o
-    asp_leu
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +indan_1_one +nad
+    r_indan_1_ol
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_78 [2.3.1.78] +acetyl_coa +beta_d_glucosamine
-    n_acetyl_beta_d_galactosamine
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +spermine +h
+    n_1_n_12_diacetylspermine
   }
 
   branch from coa side right {
     coa
-    <-> . +methylmalonate +h +h2o
-    r_methylmalonyl_coa
+    <-> . +malonyl_coa +h +h2o +6_carboxyhexanoyl_coa +o2
+    co2
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +11z_octadecenoyl_coa +11z_octadecenoate +atp +coa
-    pmf
+    <-> ec_6_2_1_7 [6.2.1.7] +3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan +diphosphate +atp +coa
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 
   branch from amp side right {
     amp
-    <-> ec_2_7_4_3 [2.7.4.3] +h +adp +adenosine_5_o_3_thiodiphophate
-    adenosine_5_gamma_thio_triphosphate
+    <-> . +diphosphate +3r_3_isopropenyl_6_oxoheptanoyl_coa +h +atp +coa
+    3r_3_isopropenyl_6_oxoheptanoate
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_12 [6.3.2.12] +6r_10_formyltetrahydrofolate +h +l_glutamate +adp +phosphate
-    6r_10_formyltetrahydropteroyldiglutamate
+    <-> . +h +adp +phosphate +h2o
+    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
   }
 
   branch from atp side right {
     atp
-    <-> . +s_4_deoxygadusol +glycine +h +adp +phosphate
-    mycosporine_glycine
+    <-> . +h +adp +phosphate +h2o
+    l_prolylglycine
   }
 }

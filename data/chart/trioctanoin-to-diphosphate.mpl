@@ -20,26 +20,26 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
 
   branch from octanoate side left {
     octanoate
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_dioctoanoyl +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_monooctanoyl_sn
-  }
-
-  branch from octanoate side right {
-    octanoate
     <-> . +1_2_dioctanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
     3_d_galactosyl_monooctanoyl_sn_glycerol
   }
 
+  branch from octanoate side right {
+    octanoate
+    <-> ec_3_5_1_23 [3.5.1.23] +n_octanoyldihydrosphingosine +h2o
+    sphinganine
+  }
+
   branch from glycerol side left {
     glycerol
-    <-> ec_2_4_1_359 [2.4.1.359] +2_o_d_glucopyranosyl_glycerol +pi
-    g1p
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_3_phosphate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +1_linolenoylglycerol +h2o +hplus
-    linolenate
+    <-> . +r_s_glycero_1_phospho_3_9z_octadecenoyl_1_glyce +1_oleoyl_sn_glycerol
+    s_s_bis_3_oleoylglycero_1_phosphate
   }
 
   branch from octanoyl_coa side left {
@@ -56,13 +56,13 @@ pathway trioctanoin-to-diphosphate "trioctanoin to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_116 [4.2.3.116] +gpp
-    camphene
+    <-> ec_4_2_3_135 [4.2.3.135] +fpp
+    6_protoilludene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
-    2_methylisoborneol
+    <-> ec_4_2_3_136 [4.2.3.136] +fpp
+    isocomene
   }
 }

@@ -26,73 +26,73 @@ pathway siroheme-to-h2o "siroheme to H2O" {
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_1_21_98_3 [1.21.98.3] +magnesium_protoporphyrin_13_monomethyl_ester +sam +h2o +methionine +hplus
-    2_4_divinyl_protochlorophyllide_a
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +methionine +hplus
+    bacteriochlorophyllide_e
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +methionine +hplus
+    bacteriochlorophyllide_f
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_c +sam +h2o +5_deoxyadenosine +hplus
-    bacteriochlorophyllide_e
+    <-> ec_1_21_98_4 [1.21.98.4] +exxxy_peptide +sam +5_deoxyadenosine +hplus
+    e_y_cross_linked_exxxy_peptide_residues
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_1_17_98_2 [1.17.98.2] +bacteriochlorophyllide_d +sam +h2o +5_deoxyadenosine +hplus
-    bacteriochlorophyllide_f
+    <-> ec_2_3_1_311 [2.3.1.311] +uridine_5_monophosphate_1 +acetyl_coa +sam +h2o +5_deoxyadenosine +coa +hplus
+    5_carboxymethyl_uridine_5_monophosphate_2
   }
 
   branch from acetate side right {
     acetate
-    <-> . +melatonin +h2o
-    5_methoxytryptamine
+    <-> . +acetyltaurine +h2o
+    taurine
   }
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetyl_l_glutaminate +h2o
-    glutamine
+    <-> . +n_acetyl_l_leucinate +h2o
+    leucine
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +8_methylquinoline +h2o +hydrogen_donor
-    8_methylquinolin_2_1h_one
+    <-> . +spermidine +trimethylenediaminium +hydrogen_donor
+    1_pyrrolinium
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +8_chloroquinoline +h2o +hydrogen_donor
-    8_chloroquinolin_2_1h_one
+    <-> . +hydroxylamine +nh3 +hydrogen_donor +h2o +hplus
+    dinitrogen
   }
 
   branch from atp side right {
     atp
-    <-> . +d_tagatose_1_phosphate +adp +h
-    keto_d_tagatose
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
   }
 
   branch from atp side left {
     atp
-    <-> . +l_alanine +h +adp +phosphate
-    d_alanyl_d_alanine
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    l_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h
-    hepta_acylated_core_oligosaccharide_lipid_a
+    <-> . +hexadecanoate +glycerophosphatidylethanolamine +h
+    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli
+    <-> . +leukotriene_f4_cytosol +glycine
+    leukotriene_c4
   }
 }

@@ -18,26 +18,26 @@ pathway methostenol-to-nad "Methostenol to NAD" {
 
   branch from co2 side left {
     co2
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +h +2_oxo_10_methylthiodecanoic_acid +nad
-    3_7_methylthio_heptylmalic_acid
+    <-> ec_4_3_99_2 [4.3.99.2] +biotinyl_protein +h
+    carboxybiotinyl_protein
   }
 
   branch from co2 side right {
     co2
-    <-> . +l_leucine +h +o2 +nadph +nadp +h2o
-    3_methylbutyraldehyde_oxime
+    <-> . +2_oxo_4_phenylbutyric_acid +nadh +h +nad
+    3_benzylmalic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +n_demethylnarwedine
-    norgalanthamine
+    <-> ec_1_1_1_323 [1.1.1.323] +thujan_3_ol +h +nadph
+    thujone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_1 [1.1.1.1] +h +betaine_aldehyde +nadph
-    choline
+    <-> . +h +o2 +nadph +z_2_methylpropanal_oxime +h2o
+    2_hydroxy_2_methylpropanenitrile
   }
 
   branch from lathosterol side left {
@@ -54,14 +54,14 @@ pathway methostenol-to-nad "Methostenol to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_10_3_4 [1.10.3.4] +2_aminophenol +o2
-    6_iminocyclohexa_2_4_dienone
+    <-> ec_3_2_1_175 [3.2.1.175] +glucose +h +2_cis_abscisate
+    abscisic_acid_d_glucopyranosyl_ester
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2_3_5_trichlorodienelactone
-    2_3_5_trichloromaleylacetic_acid
+    <-> . +3_deoxo_4b_deoxypaxilline +formate +nadp +o2 +nadph
+    paspaline_b
   }
 
   branch from 7_dehydrocholesterol side left {
@@ -90,13 +90,13 @@ pathway methostenol-to-nad "Methostenol to NAD" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h
-    cdp_ascarylose
+    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujone
+    thujan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +o2 +1_2_3_4_tetrachlorobenzene
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +furfural
+    furfuryl_alcohol
   }
 }

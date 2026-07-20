@@ -20,13 +20,13 @@ pathway oleoyl-sn-glycero-3-phosp-to-3s-4s-5s-3-4-5-6-te "oleoyl-sn-glycero-3-ph
 
   branch from oleate side left {
     oleate
-    <-> . +r_r_bis_2_oleoylglycero_3_phosphate +h2o +hplus
-    r_r_2_oleoylglycero_1_phospho_1_glycerol
+    <-> . +1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3 +h2o +hplus
+    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphocholine
+    <-> . +1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s +h2o +hplus
+    2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero
   }
 }

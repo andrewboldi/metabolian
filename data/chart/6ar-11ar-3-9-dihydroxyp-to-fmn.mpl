@@ -18,25 +18,25 @@ pathway 6ar-11ar-3-9-dihydroxyp-to-fmn "(6aR,11aR)-3,9-dihydroxyp… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +fmnh2 +o2 +h2o +hplus
-    zealexin_a1
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    10_hydroxymyristate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_162 [1.14.14.162] +flavanones +fmnh2 +o2 +h2o +hplus
-    2_hydroxyflavanones
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    11_hydroxymyristate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o
-    nerol
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    cedr_8_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +icas_10 +atp +coa +amp
-    ic_asc_c9_coa
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    trans_farnesene
   }
 }

@@ -18,25 +18,25 @@ pathway s-adenosyl-l-homocysteine-to-cobalt-dihydrosiroh "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_150 [2.1.1.150] +s_adenosyl_l_homocysteine +h +7_methoxyisoflavone
-    7_hydroxyisoflavone
+    <-> . +s_adenosyl_l_homocysteine +h +15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
+    15_31_o_didesmethyl_tacrolimus
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +diacylglyceryl_n_n_n_trimethylhomoserine
-    diacylglycerylhomoserine
+    <-> . +s_adenosyl_l_homocysteine +h +15_31_o_didesmethyl_tacrolimus
+    31_o_demethyl_fk_506
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_5_1 [3.5.5.1] +l_alanine +nh4 +h2o
-    alpha_aminopropionitrile
+    <-> . +dehydroxypaxilline +o2 +nadph +nadp +h2o
+    paspalicine
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_4_1 [1.2.4.1] +r_lipoamide +pyruvate +r_s_6_acetyldihydrolipoamide
-    co2
+    <-> . +paspalicine +o2 +nadph +nadp +h2o
+    paspalinine
   }
 }

@@ -26,19 +26,19 @@ pathway sucrose-6f-phosphate-to-h2o "sucrose 6F-phosphate to H2O" {
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    beta_d_glucose
+    <-> ec_5_3_1_7 [5.3.1.7]
+    alpha_d_mannopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    ascarylopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +2_acetyl_6_hydroxyneomycin_c +phosphate +2_acetyl_6_hydroxyneomycin_c
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +yersiniose_a +phosphate +yersiniose_a
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    1r_2r_3s_4r_6s_4_6_diamino_3_hydroxy_2_d_mannop
   }
 }

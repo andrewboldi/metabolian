@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo "β-D-glucosyl-N-(oleoyl)sp… to N-octadecanoylsphingosine" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     d_glucosyl_n_oleoyl_sphingosine
@@ -38,11 +38,5 @@ pathway d-glucosyl-n-oleoyl-sp-to-n-octadecanoylsphingo "β-D-glucosyl-N-(oleoyl
     cholesteryl_d_glucoside
     <-> . +c8_d_glucosyl_n_acylsphingosine +cholesterol
     n_octanoylsphingosine
-  }
-
-  branch from n_octadecanoylsphingosine side left {
-    n_octadecanoylsphingosine
-    <-> . +cholesterol +cholesteryl_d_glucoside
-    d_glucosyl_n_octadecanoylsphingosine
   }
 }

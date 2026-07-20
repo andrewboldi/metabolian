@@ -30,13 +30,13 @@ pathway 3-hydroxy-5-steroid-to-hydrogen-donor "3β-hydroxy-Δ5-steroid to hydrog
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +spermidine +hydrogen_acceptor +trimethylenediaminium
-    1_pyrrolinium
+    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +hydrogen_acceptor +h2o +hplus
+    4_4_diapolycopen_4_oate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +hydroxylamine +hydrogen_acceptor +nh3 +h2o +hplus
-    dinitrogen
+    <-> . +3_hydroxychol_5_en_24_oyl_coa +hydrogen_acceptor
+    3_hydroxychola_5_22_dien_24_oyl_coa
   }
 }

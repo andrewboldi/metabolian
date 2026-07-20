@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-3-hydroxydecanoyl-coa "NADH to 3-hydroxydecanoyl-CoA" {
-  spacing 224
+  spacing 206
 
   spine at 0,0 {
     nadh
@@ -32,75 +32,57 @@ pathway nadh-to-3-hydroxydecanoyl-coa "NADH to 3-hydroxydecanoyl-CoA" {
     3_hydroxydecanoyl_coa
   }
 
-  branch from z_tetradec_7_enoyl_coa side left {
-    z_tetradec_7_enoyl_coa
-    <-> . +coa +acetyl_coa
-    z_3_oxohexadec_9_enoyl_coa
-  }
-
-  branch from z_tetradec_7_enoyl_coa side right {
-    z_tetradec_7_enoyl_coa
-    <-> . +fad +h2o +fadh2 +h
-    3_hydroxy_tetradecenoyl_7_coenzyme_a
-  }
-
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +2_dehydro_d_gluconate
-    d_gluconate
+    <-> . +fadh2 +h +3_hydroxyoctadecadienoyl_coenzyme_a +h2o
+    9z_12z_octadecadienoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +5_guanidino_2_oxopentanoate +fadh2 +h +nh4 +h2o
-    d_arginine
+    <-> . +nadh +acetyl_coa +fadh2 +z_hex_3_enoyl_coa +h +coa +nad +h2o
+    5z_octenoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +glycine +h
-    glycochenodeoxycholate
+    <-> . +hexadecanedioyl_coa +r_carnitine +h
+    o_15_carboxypentadecanoyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +taurine
-    taurochenodeoxycholate
+    <-> . +r_carnitine +3_hydroxyoctadecadienoyl_coenzyme_a
+    3_hydroxyoctadecadienoylcarnitine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +s_acetoin
-    s_s_butane_2_3_diol
+    <-> . +decanoyl_coa +nadh +acetyl_coa +h +coa +h2o
+    2e_dodecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +h +ethene_1_2_diyl_group +o2 +h2o
-    epoxy_group
+    <-> . +nadh +acetyl_coa +h +3_6_9_12_octadecatetraenoyl_coenzyme_a +coa +h2o
+    2_5_8_11_14_eicosapentaenoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +l_serine
-    cystathionine
+    <-> . +l_dehydroascorbic_acid +10_hydroxy_d4_neuroprostane +h +l_ascorbate
+    10_hydroperoxy_h4_neuroprostane
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_12 [1.14.13.12] +4_hydroxybenzoate +nadp +h +o2 +nadph
-    benzoate
+    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h +xanthopterin_b2
+    nh4
   }
 
   branch from trans_dec_2_enoyl_coa side left {
     trans_dec_2_enoyl_coa
     <-> . +fad +hplus +fadh2
     decanoyl_coa
-  }
-
-  branch from trans_dec_2_enoyl_coa side right {
-    trans_dec_2_enoyl_coa
-    <-> . +oxaloacetate +hplus +coa +h2o
-    4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a
   }
 }

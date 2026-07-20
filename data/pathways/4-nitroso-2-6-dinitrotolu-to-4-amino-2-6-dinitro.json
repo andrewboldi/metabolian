@@ -156,39 +156,40 @@
       }
     },
     {
-      "id": "mercaptoethanol",
-      "name": "mercaptoethanol",
-      "formula": "C2H6OS",
+      "id": "4_pyridinecarboxaldehyde",
+      "name": "4-pyridinecarboxaldehyde",
+      "short": "4-pyridinecarboxald…",
+      "formula": "C6H5NO",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1093356"
+        "metanetx": "MNXM163569"
       }
     },
     {
-      "id": "2_2_dithiodiethanol",
-      "name": "2,2'-dithiodiethanol",
-      "formula": "C4H10O2S2",
+      "id": "4_pyridinemethanol",
+      "name": "4-Pyridinemethanol",
+      "formula": "C6H7NO",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM14109"
+        "metanetx": "MNXM164319"
       }
     },
     {
-      "id": "duroquinol",
-      "name": "Duroquinol",
-      "formula": "C10H14O2",
+      "id": "1_2_naphthoquinone",
+      "name": "1,2-naphthoquinone",
+      "formula": "C10H6O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM167675"
+        "chebi": "CHEBI:34055"
       }
     },
     {
-      "id": "duroquinone",
-      "name": "duroquinone",
-      "formula": "C10H12O2",
+      "id": "naphthalene_1_2_diol",
+      "name": "naphthalene-1,2-diol",
+      "formula": "C10H8O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM17440"
+        "metanetx": "MNXM842"
       }
     },
     {
@@ -204,17 +205,24 @@
   ],
   "enzymes": [
     {
-      "id": "ec_1_8_4_2",
-      "name": "protein-disulfide reductase (glutathione)",
+      "id": "ec_1_1_1_184",
+      "name": "carbonyl reductase (NADPH)",
       "ec": [
-        "1.8.4.2"
+        "1.1.1.184"
       ]
     },
     {
-      "id": "ec_1_1_1_188",
-      "name": "prostaglandin-F synthase",
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
       "ec": [
-        "1.1.1.188"
+        "1.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
       ]
     },
     {
@@ -222,6 +230,13 @@
       "name": "3alpha-hydroxysteroid 3-dehydrogenase (Si-specific)",
       "ec": [
         "1.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_65",
+      "name": "pyridoxine 4-dehydrogenase",
+      "ec": [
+        "1.1.1.65"
       ]
     }
   ],
@@ -450,21 +465,11 @@
     },
     {
       "id": "r6",
-      "name": "protein-disulfide reductase (glutathione)",
-      "ec": "1.8.4.2",
+      "name": "carbonyl reductase (NADPH)",
+      "ec": "1.1.1.184",
       "substrates": [
         {
-          "metabolite": "mercaptoethanol",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_2_dithiodiethanol",
+          "metabolite": "4_pyridinecarboxaldehyde",
           "stoichiometry": 1
         },
         {
@@ -476,45 +481,41 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "4_pyridinemethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_8_4_2"
+          "enzyme": "ec_1_1_1_184"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR129410"
+        "metanetx": "MNXR130107"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR129410"
+            "id": "MNXR130107"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "prostaglandin-F synthase",
-      "ec": "1.1.1.188",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": "1.1.1.2",
       "substrates": [
-        {
-          "metabolite": "duroquinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "duroquinone",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -522,24 +523,38 @@
         {
           "metabolite": "nadph",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_naphthoquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "naphthalene_1_2_diol",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_188"
+          "enzyme": "ec_1_1_1_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR129423"
+        "metanetx": "MNXR130108"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR129423"
+            "id": "MNXR130108"
           }
         ]
       }

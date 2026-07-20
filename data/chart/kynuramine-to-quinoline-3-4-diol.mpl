@@ -18,13 +18,13 @@ pathway kynuramine-to-quinoline-3-4-diol "kynuramine to quinoline-3,4-diol" {
 
   branch from nh3 side left {
     nh3
-    <-> . +glutamine +o2 +h2o +h2o2
-    2_oxoglutaramate
+    <-> . +l_glutamine +serotonin
+    n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +o2 +h2o +pyruvate +h2o2
-    alanine
+    <-> . +l_glutamine +dopamine
+    n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine
   }
 }

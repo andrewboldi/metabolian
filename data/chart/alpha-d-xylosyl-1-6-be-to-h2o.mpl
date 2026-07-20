@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-d-xylosyl-1-6-be-to-h2o "alpha-D-xylosyl-(1->6)-be… to H2O" {
-  spacing 314
+  spacing 308
 
   spine at 0,0 {
     alpha_d_xylosyl_1_6_beta_d_glucosyl_1_4_beta_d_g
@@ -16,33 +16,27 @@ pathway alpha-d-xylosyl-1-6-be-to-h2o "alpha-D-xylosyl-(1->6)-be… to H2O" {
     atp
   }
 
-  branch from xxxg_xyloglucan_oligosaccharide side left {
-    xxxg_xyloglucan_oligosaccharide
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +h2o
-    xllg_xyloglucan_oligosaccharide
+  branch from h2o side left {
+    h2o
+    <-> . +carbonyl_sulfide
+    carbonothioic_o_o_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +neocarrabiose +neocarrabiose_sulfate
-    neocarratetraose_4_o_sulfate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_3_38 [4.2.3.38] +diphosphate +alpha_bisabolol
-    2e_6e_farnesyl_diphosphate
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +l_leucine +demethylblasticidin_s +adp +phosphate
-    l_leucyl_demethyl_blasticidin_s
+    <-> ec_4_2_1_84 [4.2.1.84] +propionamide
+    propionitrile
   }
 
   branch from atp side left {
     atp
-    <-> . +cytosinine +3s_beta_arginine +h +adp +phosphate
-    demethylblasticidin_s
+    <-> . +l_alanine +indol_3_yl_acetate +n_indole_3_acetyl_l_alanine +amp
+    diphosphate
+  }
+
+  branch from atp side right {
+    atp
+    <-> . +l_leucine +indol_3_yl_acetate +diphosphate +amp
+    n_indole_3_acetyl_l_leucine
   }
 }

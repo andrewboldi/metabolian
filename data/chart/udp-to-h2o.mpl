@@ -18,38 +18,38 @@ pathway udp-to-h2o "UDP to H2O" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_155 [2.4.1.155] +udp +n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac +h
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
+    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +udp +h
+    n_acetyl_tunicaminyl_uracil
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_201 [2.4.1.201] +udp +n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac +h
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
+    <-> ec_3_2_1_183 [3.2.1.183] +udp +h +h2o
+    n_acetyl_d_mannosamine
   }
 
   branch from ump side left {
-    ump
-    <-> . +udp_n_acetyl_alpha_d_galactosamine +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +h
-    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
-  }
-
-  branch from ump side right {
     ump
     <-> . +udp_n_acetyl_alpha_d_galactosamine +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
     galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
   }
 
+  branch from ump side right {
+    ump
+    <-> ec_2_7_6_1 [2.7.6.1] +utp +aldehydo_d_ribose_5_phosphate +h
+    5_phospho_alpha_d_ribose_1_diphosphate
+  }
+
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_glutathionyl_6_hydroxy_5_6_dihydronaph +glutathione
-    1_nitronaphthalene_5_6_oxide
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
+    dtdp_4_oxo_2_6_dideoxy_l_mannose
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +3_4_dihydro_3_hydroxy_4_s_glutathionyl_bromobenz +glutathione
-    bromobenzene_3_4_oxide
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxo_10_methylthiodecanoic_acid +nad
+    3_7_methylthio_heptylmalic_acid
   }
 
   branch from n_acetyl_d_mannosamine_1_phosphate side left {
@@ -60,19 +60,19 @@ pathway udp-to-h2o "UDP to H2O" {
 
   branch from n_acetyl_d_mannosamine_1_phosphate side right {
     n_acetyl_d_mannosamine_1_phosphate
-    <-> ec_2_7_7_23 [2.7.7.23] +utp +h +udp_n_acetyl_alpha_d_glucosamine
-    diphosphate
+    <-> . +diphosphate +utp +h
+    udp_n_acetyl_alpha_d_galactosamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_59 [3.1.1.59] +10s_juvenile_hormone_iii_diol +methanol
-    10s_juvenile_hormone_iii_acid_diol
+    <-> . +s_2_methyl_3_oxopropanoate +h +pyruvate
+    trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
   }
 
   branch from h2o side right {
     h2o
-    <-> . +juvenile_hormone_iii
-    10s_juvenile_hormone_iii_diol
+    <-> . +h +5_nitro_o_toluidine +nadph +2_4_diaminotoluene
+    nadp
   }
 }

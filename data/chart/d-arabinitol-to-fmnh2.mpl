@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
-  spacing 322
+  spacing 316
 
   spine at 0,0 {
     d_arabinitol
@@ -44,87 +44,81 @@ pathway d-arabinitol-to-fmnh2 "D-arabinitol to FMNH2" {
     l_ribulose_5_phosphate
   }
 
-  branch from x5p side right {
-    x5p
-    <-> ec_2_2_1_15 [2.2.1.15] +6_deoxy_6_sulfo_d_fructofuranose +g3p
-    4_deoxy_4_sulfo_d_erythrose
-  }
-
-  branch from g3p side left {
+  branch from g3p side right {
     g3p
     <-> ec_4_1_2_8 [4.1.2.8] +1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
     1h_indole
   }
 
-  branch from g3p side right {
+  branch from g3p side left {
     g3p
     <-> ec_1_1_1_177 [1.1.1.177] +nadp +nadph +hplus
     sn_glycerol_3_phosphate
   }
 
-  branch from sulfonatoacetaldehyde side left {
+  branch from sulfonatoacetaldehyde side right {
     sulfonatoacetaldehyde
     <-> ec_1_4_99_2 [1.4.99.2] +taurine +hydrogen_acceptor +h2o +nh3
     hydrogen_donor
   }
 
-  branch from sulfonatoacetaldehyde side right {
+  branch from sulfonatoacetaldehyde side left {
     sulfonatoacetaldehyde
     <-> ec_1_1_1_313 [1.1.1.313] +nadp +nadph +hplus
     isethionate
   }
 
-  branch from sulfonatoacetate side left {
+  branch from sulfonatoacetate side right {
     sulfonatoacetate
     <-> . +atp +coa +amp +ppi
     sulfoacetyl_coa
   }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +fmnh2 +o2 +h2o +hplus
-    hydroxycholesterol_7a
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_tyrosinate
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
+    glyceollin
   }
 
-  branch from sulfite side right {
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +sulfite +h2o +hplus
+    aldehyde
+  }
+
+  branch from sulfite side left {
     sulfite
     <-> ec_4_4_1_24 [4.4.1.24] +pyruvate +hplus
     r_3_sulfolactate
   }
 
-  branch from sulfite side left {
+  branch from sulfite side right {
     sulfite
-    <-> ec_1_14_14_5 [1.14.14.5] +alkanesulfonate_oxoanion +fmnh2 +o2 +fmn +h2o +hplus
-    aldehyde
+    <-> . +3_sulfino_l_alanine +h2o +hplus
+    alanine
   }
 
-  branch from glyoxylate side right {
+  branch from glyoxylate side left {
     glyoxylate
     <-> ec_4_1_1_47 [4.1.1.47] +hplus +co2
     2_hydroxy_3_oxopropanoate
   }
 
-  branch from glyoxylate side left {
+  branch from glyoxylate side right {
     glyoxylate
     <-> ec_2_3_3_7 [2.3.3.7] +butyryl_coa +h2o +coa +hplus
     3_ethylmalate
   }
 
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +o2 +fmn +h2o +hplus
-    24s_24_hydroxycholesterol
-  }
-
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +o2 +fmn +h2o +hplus
-    glyceollin
+    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +o2 +fmn +h2o +hplus
+    s_perillyl_alcohol
+  }
+
+  branch from fmnh2 side right {
+    fmnh2
+    <-> ec_1_14_19_66 [1.14.19.66] +r_n_methylcoclaurinium +s_n_methylcoclaurinium +o2 +fmn +h2o +hplus
+    berbamuninium
   }
 }

@@ -24,14 +24,14 @@ pathway gibberellin-a53-to-succinate-60800 "gibberellin A53 to succinate" {
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_62 [1.14.11.62] +trans_4_coumaroyl_coa +akg +o2 +co2
-    trans_2_4_dihydroxy_cinnamoyl_coa
+    <-> . +berkeleyone_b +akg +o2 +co2 +h2o
+    berkeleydione
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    5s_5_hydroxy_l_lysinium
+    <-> ec_1_14_11_76 [1.14.11.76] +glutamate +akg +o2 +co2
+    3r_3_hydroxy_l_glutamate
   }
 
   branch from gibberellin_a17 side right {

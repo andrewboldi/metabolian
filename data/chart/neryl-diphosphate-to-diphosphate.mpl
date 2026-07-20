@@ -20,14 +20,14 @@ pathway neryl-diphosphate-to-diphosphate "neryl diphosphate to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_2_63 [6.3.2.63] +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
-    putrebactin
+    <-> . +fpp
+    2z_4e_ionylideneethane
   }
 
   branch from ppi side right {
     ppi
-    <-> . +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
-    pre_putrebactin
+    <-> . +l_oxindolylalanine +l_leucyl_o_isoindolinone_l_homoserine +atp +amp +hplus
+    l_leu_l_isd_l_oid
   }
 
   branch from 2e_6e_farnesyl_diphosphate side left {
@@ -44,13 +44,13 @@ pathway neryl-diphosphate-to-diphosphate "neryl diphosphate to diphosphate" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_6_2_1_2 [6.2.1.2] +amp +4_oxopentanoyl_coa +atp +coa
-    4_oxopentanoate
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +4_nonyl_3_octyl_oxetan_2_one +2r_3s_2_octyl_3_hydroxydodecanoate
+    atp
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_6_2_1_2 [6.2.1.2] +4_hydroxy_valeric_acid +atp +coa +h +4_hydroxypentanoyl_coa
-    amp
+    <-> . +tabtoxin +h +amp +tabtoxinine_lactam +atp
+    l_threonine
   }
 }

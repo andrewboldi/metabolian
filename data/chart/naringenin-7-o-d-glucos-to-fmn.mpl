@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway naringenin-7-o-d-glucos-to-fmn "naringenin 7-O-β-D-glucos… to FMN" {
-  spacing 228
+  spacing 210
 
   spine at 0,0 {
     naringenin_7_o_d_glucoside
@@ -24,33 +24,15 @@ pathway naringenin-7-o-d-glucos-to-fmn "naringenin 7-O-β-D-glucos… to FMN" {
     udp_d_glucose
   }
 
-  branch from s_naringenin side right {
-    s_naringenin
-    <-> . +sam +sah +hplus
-    4_methoxy_5_7_dihydroxyflavanone
+  branch from sah side right {
+    sah
+    <-> . +r_norprotosinomenium +sam +hplus
+    r_6_o_methylnorprotosinomenium
   }
 
   branch from sah side left {
     sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +2r_4_2_ammonio_1_hydroxyethyl_phenol +sam +hplus
-    d_synephrine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +2_hydroxymethyl_3_pentylphenol +fmnh2 +o2 +h2o +hplus
-    8s_annullatin_e
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +decane +fmnh2 +o2 +h2o +hplus
-    decan_3_ol
+    <-> . +l_tryptophan +sam +hplus
+    n_methyl_l_tryptophan
   }
 }

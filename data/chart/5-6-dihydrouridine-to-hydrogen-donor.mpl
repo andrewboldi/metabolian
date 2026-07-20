@@ -34,21 +34,111 @@ pathway 5-6-dihydrouridine-to-hydrogen-donor "5,6-dihydrouridine… to hydrogen 
     akg
   }
 
+  branch from 5_6_dihydrouracil side left {
+    5_6_dihydrouracil
+    <-> ec_3_5_2_2 [3.5.2.2] +h2o +hplus
+    n_carbamoyl_alaninate
+  }
 
+  branch from uracil side right {
+    uracil
+    <-> ec_1_14_11_10 [1.14.11.10] +2_deoxyuridine +akg +o2 +succinate +co2
+    2_deoxy_d_ribono_1_4_lactone
+  }
 
+  branch from uracil side left {
+    uracil
+    <-> . +dump +h2o
+    2_deoxyribose_5_monophosphate_1
+  }
 
+  branch from acetate side right {
+    acetate
+    <-> ec_4_1_3_6 [4.1.3.6] +citrate
+    oxaloacetate
+  }
 
+  branch from acetate side left {
+    acetate
+    <-> ec_2_5_1_51 [2.5.1.51] +1h_pyrazole +o_acetyl_l_serine +hplus
+    3_pyrazol_1_yl_l_alanine
+  }
 
+  branch from glutamate side right {
+    glutamate
+    <-> . +4_hydroxy_l_glutamate +akg
+    4_hydroxy_2_oxoglutarate
+  }
 
+  branch from glutamate side left {
+    glutamate
+    <-> ec_1_4_1_3 [1.4.1.3] +nadp +h2o +akg +nadph +hplus
+    nh3
+  }
 
+  branch from 5_aminopentanoic_acid side right {
+    5_aminopentanoic_acid
+    <-> . +h2o2 +co2 +h2o
+    6_amino_2_oxohexanoic_acid
+  }
 
+  branch from 5_oxopentanoate side left {
+    5_oxopentanoate
+    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+  }
 
+  branch from glutarate side right {
+    glutarate
+    <-> . +itaconate +glutaryl_coa
+    itaconyl_coa
+  }
 
+  branch from glutarate side left {
+    glutarate
+    <-> . +3_hydroxy_3_methylglutarate +glutaryl_coa
+    hmg_coa
+  }
 
+  branch from s_2_hydroxyglutarate side right {
+    s_2_hydroxyglutarate
+    <-> ec_1_1_5_13 [1.1.5.13] +1_4_benzoquinones +akg
+    hydroquinones
+  }
 
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_20_5 [1.14.20.5] +flavanones +akg +o2 +co2 +h2o
+    flavones
+  }
 
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_20_4 [1.14.20.4] +cis_3_4_leucopelargonidin +akg +o2 +co2 +h2o +hplus
+    4s_2_3_dehydroleucopelargonidin
+  }
 
+  branch from akg side left {
+    akg
+    <-> ec_2_3_3_4 [2.3.3.4] +lauroyl_coa +h2o +coa +hplus
+    3s_4s_3_hydroxytetradecane_1_3_4_tricarboxylate
+  }
 
+  branch from akg side right {
+    akg
+    <-> ec_4_1_1_71 [4.1.1.71] +hplus +co2
+    4_oxobutanoate
+  }
 
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_5 [1.3.99.5] +3_oxo_5_steroid +hydrogen_acceptor
+    3_oxo_4_steroid
+  }
 
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> ec_1_14_99_22 [1.14.99.22] +ecdysone +o2 +hydrogen_acceptor +h2o
+    20_hydroxyecdysone
+  }
 }

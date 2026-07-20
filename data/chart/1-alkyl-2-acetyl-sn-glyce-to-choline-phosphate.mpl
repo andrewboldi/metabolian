@@ -18,13 +18,13 @@ pathway 1-alkyl-2-acetyl-sn-glyce-to-choline-phosphate "1-alkyl-2-acetyl-sn-glyc
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_gal_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_neu5ac_2
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d_glcnac_1_2 +cmp_n_acetyl_neuraminate +hplus
-    n4_d_glcnac_1_2_d_man_1_3_neu5ac_2_3_d_gal_1_4_d
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
   }
 }

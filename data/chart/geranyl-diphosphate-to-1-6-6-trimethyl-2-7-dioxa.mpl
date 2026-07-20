@@ -20,25 +20,25 @@ pathway geranyl-diphosphate-to-1-6-6-trimethyl-2-7-dioxa "geranyl diphosphate to
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate +h2o
-    6z_nerolidol
+    <-> . +neoechinulin_b_anion +dmapp
+    isoechinulin_b_anion
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    6r_7s_2_2_6_trimethyl_10_methylenebicyclo_5_4_0
+    <-> . +gpp
+    4e_6e_2_6_dimethylocta_2_4_6_triene
   }
 
   branch from fmn side left {
     fmn
-    <-> . +preasperterpenoid_a +fmnh2 +o2 +h2o +hplus
-    asperterpenoid_a
+    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
+    5_hydroxylaurate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +asperterpenoid_a +fmnh2 +o2 +h2o +hplus
-    asperterpenoid_b
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    7_hydroxymyristate
   }
 }

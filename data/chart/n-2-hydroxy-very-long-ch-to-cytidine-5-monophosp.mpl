@@ -33,12 +33,12 @@ pathway n-2-hydroxy-very-long-ch-to-cytidine-5-monophosp "N-(2-hydroxy-very-long
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
     <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 }

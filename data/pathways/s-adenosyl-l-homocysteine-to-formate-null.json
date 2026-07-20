@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-formate-null",
+  "name": "S-adenosyl-L-homocysteine to formate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to formate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198608"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "mk_8",
+      "name": "MK-8",
+      "formula": "C51H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:205208"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinone_8",
+      "name": "2-demethylmenaquinone-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48455"
+      }
+    },
+    {
+      "id": "pmf",
+      "name": "PMF",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM01"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_6_5_3",
+      "name": "EC 1.6.5.3",
+      "ec": [
+        "1.6.5.3"
+      ]
+    },
+    {
+      "id": "ec_1_1_5_6",
+      "name": "EC 1.1.5.6",
+      "ec": [
+        "1.1.5.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR198608",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mk_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR101866",
+      "ec": "1.6.5.3",
+      "substrates": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pmf",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR101866"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101866"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR182146",
+      "ec": "1.1.5.6",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR182146"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182146"
+          }
+        ]
+      }
+    }
+  ]
+}

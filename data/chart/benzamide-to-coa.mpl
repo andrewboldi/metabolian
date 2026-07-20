@@ -20,26 +20,26 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from benzoate side left {
     benzoate
-    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp +atp
-    l_glutamate
-  }
-
-  branch from benzoate side right {
-    benzoate
     <-> . +h +o2 +nadph +1_hydroxy_6_oxocyclohex_2_ene_1_carboxylate
     nadp
   }
 
+  branch from benzoate side right {
+    benzoate
+    <-> ec_1_14_13_84 [1.14.13.84] +nadp +h2o +o2 +nadph
+    benzaldehyde
+  }
+
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_1_101 [3.5.1.101] +h +s_piperidine_2_carboxamide +h2o
-    l_pipecolate
+    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h2o
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +3_4_hydroxyphenyl_pyruvate +h +nad +h2o
-    l_tyrosine
+    <-> . +3_dimethylselenopropanal +h2o2 +o2 +h2o
+    dimethylselenopropanoate_amine
   }
 
   branch from benzoyl_coa side left {
@@ -68,14 +68,14 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from coa side left {
     coa
-    <-> . +s_carnitine +h +h2o
-    s_carnitinyl_coa
+    <-> . +s_malate +trans_caffeoyl_coa +h
+    caffeoylmalic_acid
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +13_sophorosyloxydocosanoic_acid +h
-    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
+    <-> . +acetyl_coa +h +n_hydroxycadaverine
+    n_hydroxy_n_acetylcadaverine
   }
 
   branch from benzoylacetyl_coa side left {
@@ -92,14 +92,14 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from h side left {
     h
-    <-> . +benzo_a_pyrene_cis_11_12_dihydrodiol +nad +benzo_a_pyrene +o2
-    nadh
+    <-> . +dtdp +calicheamicin_t0 +calicheamicinone
+    dtdp_4_hydroxyamino_4_6_dideoxy_alpha_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +nadh +pyrene_4_5_dione +nad
-    4_5_dihydroxypyrene
+    <-> . +dtdp +4_deoxy_4_thio_alpha_d_digitoxosyl_calicheamicin +dtdp_4_deoxy_4_thio_alpha_d_digitoxose
+    calicheamicin_t0
   }
 
   branch from 3_oxo_3_phenylpropionate side left {
@@ -110,13 +110,13 @@ pathway benzamide-to-coa "benzamide to CoA" {
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +indol_3_yl_acetyl_l_tyrosine +h +amp +l_tyrosine
-    indol_3_yl_acetate
+    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
+    7_hydroxylaurate
   }
 
   branch from atp side left {
     atp
-    <-> . +l_proline +indol_3_yl_acetate +diphosphate +h +amp
-    indol_3_yl_acetyl_l_proline
+    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa
+    r_r_chrysanthemate
   }
 }

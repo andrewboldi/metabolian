@@ -30,13 +30,13 @@ pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxy-3-oxo-23-2 "3-oxo-23,24-bisnorchol
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_227 [4.2.3.227] +2_cis_6_trans_farnesyl_diphosphate
-    cedr_8_ene
+    <-> ec_4_2_3_97 [4.2.3.97] +fpp
+    cadinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_81 [4.2.3.81] +fpp
-    exo_bergamotene
+    <-> ec_4_2_3_128 [4.2.3.128] +fpp
+    cubebene
   }
 }

@@ -24,49 +24,49 @@ pathway l-dehydroascorbic-acid-to-h2o-null "L-dehydroascorbic acid to H2O" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_1_18_3_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    ceftriaxone
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_tetracosanoyl_2_9z_octadecenoyl_sn_glycero_3_p
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    nisin
   }
 
   branch from l_ascorbate side right {
     l_ascorbate
-    <-> ec_1_11_1_11 [1.11.1.11] +l_dehydroascorbic_acid +h2o +h
-    h2o2
+    <-> . +l_ascorbic_acid_2_phosphate +h2o +h
+    phosphate
   }
 
   branch from l_ascorbate side left {
     l_ascorbate
-    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
-    all_trans_antheraxanthin
+    <-> . +h2o +h +phosphate
+    2_phospho_l_ascorbate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o
-    ubiquinol_8
+    <-> ec_1_10_3_2 [1.10.3.2] +tetramethoxy_azobismethylene_quinine +h2o
+    syringaldazine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinol_10 +h2o
-    ubiquinone_10
+    <-> . +o4_o5_dimethylthujaplicatin +h +nadph +nadp +h2o
+    dihydroanhydropodorhizol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    24_0_18_2_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +enterocin +phosphate +enterocin
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    24_0_18_3_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    streptothricin_f_acid
   }
 }

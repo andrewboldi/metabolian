@@ -30,26 +30,26 @@ pathway glutarate-to-h2o "glutarate to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_262 [1.1.1.262] +nadh +2s_2_amino_3_oxo_4_phosphonatooxy_butanoate +h
-    4_phosphooxy_l_threonine
+    <-> . +nadh +h +3_methylphenol +o2 +h2o
+    3_hydroxybenzyl_alcohol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
-    s_1_2_epoxypropane
+    <-> ec_1_2_1_28 [1.2.1.28] +3_hydroxybenzoate +nadh +h +h2o
+    3_hydroxybenzaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +cis_2_6_dimethyl_5_methylenehept_2_enoic_acid +nad
-    z_2_methyl_5_isopropylhexa_2_5_dienal
+    <-> . +trichloroacetaldehyde
+    chloral_hydrate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadph +2_hydroxyhexano_6_lactone
-    nadp
+    <-> ec_3_3_2_10 [3.3.2.10] +h +5_6_eet
+    5_6_dhet
   }
 
   branch from 5_hydroxypentanoate side left {

@@ -24,26 +24,26 @@ pathway 5-chloro-5-deoxy-d-ribona-to-3e-2-chloro-5-oxohe "5-chloro-5-deoxy-D-rib
 
   branch from h2o side right {
     h2o
-    <-> . +20s_ginsenoside_rg1 +d_xylopyranose
-    ginsenoside_r1
+    <-> . +gamma_l_glutamyl_s_methyl_l_cysteine +glycine
+    s_methyl_glutathione
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glucose +20s_ginsenoside_rh1
-    ginsenoside_rf
+    <-> . +6_hydroxy_2_4_glucosyl_hydroxyphenyl_methyl_1_be
+    hispidol_4_o_beta_d_glucoside
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +gliotoxin +n_desmethyl_gliotoxin
-    s_adenosyl_l_methionine
+    <-> . +echinocandin_c +o2 +nadph +nadp +h2o
+    echinocandin_b
   }
 
   branch from h side left {
     h
-    <-> . +dihydromonacolin_l_carboxylate +h2o
-    dihydromonacolin_l
+    <-> . +ellagic_acid +h2o
+    4_4_5_5_6_6_hexahydroxydiphenate
   }
 
   branch from 3e_2_chloro_5_oxohex_3_enedioate side right {

@@ -18,13 +18,13 @@ pathway queuosine-to-nicotinamide "queuosine to nicotinamide" {
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_hexadecanoyl_l_lysine +nad +h2o +l_lysinium
-    2_o_hexadecanoyl_adp_d_ribose
+    <-> . +n6_capryl_l_lysine +nad +h2o +l_lysinium
+    2_o_decanoyl_adp_d_ribose
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_tetradecanoyl_l_lysine +nad +h2o +l_lysinium
-    2_o_tetradecanoyl_adp_d_ribose
+    <-> . +n6_hexanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_hexanoyl_adp_d_ribose
   }
 }

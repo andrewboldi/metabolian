@@ -20,14 +20,14 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nadh side left {
     nadh
-    <-> ec_1_1_1_53 [1.1.1.53] +h +tetrahydrocortisol +nad
-    cortol
+    <-> . +acetyl_coa +h +coa +nad
+    oxirane
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_1_1_50 [1.1.1.50] +5beta_dihydroaldosterone +h +nad
-    3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
+    <-> ec_1_3_1_19 [1.3.1.19] +h +3_vinylcatechol +nad
+    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
   }
 
   branch from co2 side left {
@@ -44,13 +44,13 @@ pathway 24-methylidenelophenol-to-episterol-ester "24-methylidenelophenol to epi
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_272 [1.1.1.272] +h +3_sulfopyruvate +nadph
-    2s_3_sulfolactate
+    <-> . +h +o2 +nadph +toluene +h2o
+    3_methylphenol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +h +hva +nadph +h2o
-    4_hydroxy_3_methoxyphenyl_acetaldehyde
+    <-> ec_1_14_13_7 [1.14.13.7] +3_methylcatechol +h2o +h +3_methylphenol +nadph
+    o2
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-s-benzyl-l-cyste-to-acetate "N-acetyl-S-benzyl-L-cyste… to acetate" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     n_acetyl_s_benzyl_l_cysteine
@@ -18,27 +18,9 @@ pathway n-acetyl-s-benzyl-l-cyste-to-acetate "N-acetyl-S-benzyl-L-cyste… to ac
     cysteine
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +3_o_d_glucopyranosyl_isomotiol +fmnh2 +o2 +h2o +hplus
-    2_deacetoxyfuscoatroside
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +isomotiol +fmnh2 +o2 +h2o +hplus
-    19_hydroxyisomotiol
-  }
-
   branch from cysteine side left {
     cysteine
-    <-> ec_1_13_11_95 [1.13.11.95] +o2 +co2 +h2o
-    2_oxoethane_1_sulfonamide
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +o2 +co2 +h2o
-    z_2_aminoethene_1_so_thioperoxol
+    <-> . +pyruvate +alanine
+    mercaptopyruvate
   }
 }

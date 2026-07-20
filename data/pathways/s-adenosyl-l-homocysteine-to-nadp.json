@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-nadp",
+  "name": "S-adenosyl-L-homocysteine to NADP",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195786"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_6_o_methylnorlaudanosoline",
+      "name": "(S)-6-O-methylnorlaudanosoline",
+      "short": "6-O-methylnorlaudan…",
+      "formula": "C17H19NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2340"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "norlaudanosoline",
+      "name": "norlaudanosoline",
+      "formula": "C16H17NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364804"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_4_dihydroxyphenylacetaldehyde",
+      "name": "3,4-dihydroxyphenylacetaldehyde",
+      "short": "3,4-dihydroxyphenyl…",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1401"
+      }
+    },
+    {
+      "id": "dopamine",
+      "name": "dopamine",
+      "formula": "C8H12NO2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM205"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "hydroxytyrosol",
+      "name": "hydroxytyrosol",
+      "formula": "C8H10O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:68889"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_128",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": [
+        "2.1.1.128"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": "2.1.1.128",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_6_o_methylnorlaudanosoline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "norlaudanosoline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_128"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195786"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195786"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR103580",
+      "substrates": [
+        {
+          "metabolite": "norlaudanosoline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxyphenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dopamine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR103580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR153898",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxyphenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxytyrosol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153898"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153898"
+          }
+        ]
+      }
+    }
+  ]
+}

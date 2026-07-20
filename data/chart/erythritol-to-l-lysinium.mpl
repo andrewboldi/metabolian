@@ -33,7 +33,7 @@ pathway erythritol-to-l-lysinium "erythritol to L-lysinium" {
   branch from d_erythrulose side right {
     d_erythrulose
     <-> .
-    d_erythrose
+    d_threose
   }
 
   branch from n6_d_erythrulosyl_l_lysinium side left {
@@ -44,13 +44,13 @@ pathway erythritol-to-l-lysinium "erythritol to L-lysinium" {
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +propionyl_coa +coa +hplus
-    n6_propanoyl_l_lysine
+    <-> . +sam +sah +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +glyoxal
+    n6_1_hydroxy_2_oxoethyl_l_lysinium
   }
 }

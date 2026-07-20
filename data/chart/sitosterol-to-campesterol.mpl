@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sitosterol-to-campesterol "sitosterol to campesterol" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     sitosterol
@@ -16,63 +16,51 @@ pathway sitosterol-to-campesterol "sitosterol to campesterol" {
     s_adenosyl_l_methionine
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_6_dodecanediol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_9_dodecanediol
-  }
-
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +gramicidin_b +phosphate +gramicidin_b +h2o
-    atp
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_glucose +atp +6_o_phosphonohexopyranose
+    adp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    gramicidin_c
+    <-> ec_2_7_1_1 [2.7.1.1] +d_tagatopyranose +atp +adp
+    6_o_phosphonohexopyranose
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +1_phenylpropan_2_amine +h +nadph +nadp +h2o
-    n_1_phenylpropan_2_yl_hydroxylamine
+    <-> ec_1_13_11_11 [1.13.11.11] +1_methyl_l_tryptophan
+    n_formyl_methyl_l_kynurenine
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_thiophene_2_carboxamide +nadp +h2o
-    5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen
+    <-> ec_1_13_11_52 [1.13.11.52] +5_methoxy_n_formylkynurenine
+    5_methoxy_dl_tryptophan
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinone_1 +h +nadp
-    2_3_dimethoxy_5_methyl_6_3_methyl_2_buten_1_yl_1
+    <-> . +methyl_1r_12s_20r_12_ethyl_14_oxa_8_17_diazahexa +nadp +h2o +o2
+    tabersonine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +3_sulfopropanoic_acid +nadp +h2o
-    3_oxopropane_1_sulfonate
+    <-> . +nadp +h2o +h +tabersonine +o2
+    lochnericine
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +6_dehydrogingerdione +h
-    1e_3z_1_3_4_dihydroxyphenyl_3_hydroxydeca_1_3_d
+    <-> ec_2_1_1_210 [2.1.1.210] +s_adenosyl_l_homocysteine +h +spheroidene
+    demethylspheroidene
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_3_1_229 [2.3.1.229] +s_methyl_5_thioadenosine +n_4_coumaroyl_l_homoserine_lactone +h +coa
-    trans_4_coumaroyl_coa
+    <-> ec_2_1_1_231 [2.1.1.231] +s_adenosyl_l_homocysteine +h +4_methoxyflavanone
+    4_hydroxyflavanone
   }
 }

@@ -20,14 +20,14 @@ pathway 2-amino-2-deoxy-d-gluconi-to-3-deoxy-d-glycero-h "2-amino-2-deoxy-D-gluc
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_25 [1.4.3.25] +arginine +o2 +h2o +h2o2
-    5_guanidino_2_oxopentanoic_acid
+    <-> . +ornithine +o2 +h2o +h2o2
+    5_amino_2_oxopentanoic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
-    3_amino_d_alanine
+    <-> . +l_cystine +o2 +h2o +h2o2
+    2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop
   }
 
   branch from 3_deoxy_d_glycero_hexo_2_5_diulosonate side left {

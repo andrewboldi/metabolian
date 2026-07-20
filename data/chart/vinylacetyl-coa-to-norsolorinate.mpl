@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway vinylacetyl-coa-to-norsolorinate "vinylacetyl-CoA to norsolorinate" {
-  spacing 308
+  spacing 296
 
   spine at 0,0 {
     vinylacetyl_coa
@@ -88,14 +88,14 @@ pathway vinylacetyl-coa-to-norsolorinate "vinylacetyl-CoA to norsolorinate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_75 [4.2.3.75] +fpp
-    germacrene_d
+    <-> ec_6_3_5_4 [6.3.5.4] +aspartate +glutamine +atp +h2o +glutamate +amp +hplus
+    l_asparagine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_6 [4.2.3.6] +fpp
-    trichodiene
+    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
+    3_l_alanyl_adenylyl_zwitterionic_group
   }
 
   branch from butyryl-acp side right {
@@ -124,20 +124,8 @@ pathway vinylacetyl-coa-to-norsolorinate "vinylacetyl-CoA to norsolorinate" {
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_129 [2.3.1.129] +o_s_3r_hydroxytetradecanoylpantetheine_4_phospho +udpglcnac
-    udp_3_o_3r_3_hydroxytetradecanoyl_n_acetylglucos
-  }
-
-  branch from o_s_2e_hexenoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_2e_hexenoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_1_10 [1.3.1.10] +h +nadp +o_s_hexanoylpantetheine_4_phosphoryl_serine_1
-    nadph
-  }
-
-  branch from o_s_hexanoylpantetheine_4_phosphoryl_serine_1 side right {
-    o_s_hexanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_14_19_40 [1.14.19.40] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    o_s_5_hexenoylpantetheine_4_phosphoryl_serine_1
+    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
+    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
   }
 
   branch from o_s_hexanoylpantetheine_4_phosphoryl_serine_1 side left {

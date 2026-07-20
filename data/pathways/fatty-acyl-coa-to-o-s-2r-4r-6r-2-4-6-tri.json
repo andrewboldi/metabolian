@@ -187,52 +187,31 @@
       }
     },
     {
-      "id": "long_chain_fatty_aldehyde",
-      "name": "long-chain fatty aldehyde",
-      "short": "long-chain fatty…",
-      "formula": "CHOR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17176"
-      }
-    },
-    {
-      "id": "long_chain_fatty_acyl_coa",
-      "name": "long-chain fatty acyl-CoA",
-      "short": "long-chain fatty…",
-      "formula": "C22H31N7O17P3SR",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:83139"
-      }
-    },
-    {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
+      "id": "all_trans_hexaprenyl_diphosphate",
+      "name": "all-trans-hexaprenyl diphosphate",
+      "short": "all-trans-hexapreny…",
+      "formula": "C30H49O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:58179"
       }
     },
     {
-      "id": "astellatene",
-      "name": "(−)-astellatene",
-      "formula": "C25H40",
+      "id": "macrophomene",
+      "name": "macrophomene",
+      "formula": "C30H48",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:191388"
+        "chebi": "CHEBI:192980"
       }
     },
     {
-      "id": "preaspterpenacid_acid_i",
-      "name": "preaspterpenacid acid I",
-      "short": "preaspterpenacid…",
-      "formula": "C25H42O",
+      "id": "talaropentaene",
+      "name": "talaropentaene",
+      "formula": "C30H48",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:191389"
+        "chebi": "CHEBI:192978"
       }
     }
   ],
@@ -266,10 +245,17 @@
       ]
     },
     {
-      "id": "ec_1_2_1_108",
-      "name": "alcohol-forming fatty acyl-CoA reductase (NADH)",
+      "id": "ec_4_2_3_221",
+      "name": "macrophomene synthase",
       "ec": [
-        "1.2.1.108"
+        "4.2.3.221"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_220",
+      "name": "talaropentaene synthase",
+      "ec": [
+        "4.2.3.220"
       ]
     }
   ],
@@ -500,170 +486,82 @@
     },
     {
       "id": "r5",
-      "name": "a long-chain primary fatty alcohol + NADP(+) = a long-chain fatty aldehyde + NADPH + H(+)",
-      "equation": "a long-chain primary fatty alcohol + NADP(+) = a long-chain fatty aldehyde + NADPH + H(+)",
+      "name": "macrophomene synthase",
+      "equation": "all-trans-hexaprenyl diphosphate = macrophomene + diphosphate",
+      "ec": "4.2.3.221",
       "substrates": [
         {
-          "metabolite": "long_chain_primary_fatty_alcohol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "long_chain_fatty_aldehyde",
+          "metabolite": "macrophomene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "ppi",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_4_2_3_221"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59452"
+        "rhea": "RHEA:77967"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59452"
+            "id": "RHEA:77967"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "alcohol-forming fatty acyl-CoA reductase (NADH)",
-      "equation": "a long-chain fatty acyl-CoA + 2 NADH + 2 H(+) = a long-chain primary fatty alcohol + 2 NAD(+) + CoA",
-      "ec": "1.2.1.108",
+      "name": "talaropentaene synthase",
+      "equation": "all-trans-hexaprenyl diphosphate = talaropentaene + diphosphate",
+      "ec": "4.2.3.220",
       "substrates": [
         {
-          "metabolite": "long_chain_fatty_acyl_coa",
+          "metabolite": "all_trans_hexaprenyl_diphosphate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "long_chain_primary_fatty_alcohol",
+          "metabolite": "talaropentaene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_108"
+          "enzyme": "ec_4_2_3_220"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:84767"
+        "rhea": "RHEA:77971"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:84767"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "astellatene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:71991"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:71991"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "preaspterpenacid_acid_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:71995"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:71995"
+            "id": "RHEA:77971"
           }
         ]
       }

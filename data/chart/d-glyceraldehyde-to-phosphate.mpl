@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glyceraldehyde-to-phosphate "D-glyceraldehyde… to phosphate" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     d_glyceraldehyde_3_phosphate
@@ -24,63 +24,51 @@ pathway d-glyceraldehyde-to-phosphate "D-glyceraldehyde… to phosphate" {
     d_erythro_alpha_d_gluco_octopyranose1_phosphate
   }
 
-  branch from d_xylulose_5_phosphate side left {
-    d_xylulose_5_phosphate
-    <-> . +d_glyceraldehyde_3_phosphate +d_sedoheptulose_7_phosphate
-    alpha_d_ribose_5_phosphate
-  }
-
-  branch from d_glyceraldehyde_3_phosphate side right {
+  branch from d_glyceraldehyde_3_phosphate side left {
     d_glyceraldehyde_3_phosphate
     <-> ec_2_7_1_28 [2.7.1.28] +h +adp +atp
     glyceraldehyde
   }
 
-  branch from d_glyceraldehyde_3_phosphate side left {
+  branch from d_glyceraldehyde_3_phosphate side right {
     d_glyceraldehyde_3_phosphate
-    <-> . +alpha_d_ribofuranose_5_phosphate +octulose_8_phosphate
-    keto_d_fructose_6_phosphate
-  }
-
-  branch from h side right {
-    h
-    <-> . +co2 +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
-    3_carboxy_2_hydroxymuconate_semialdehyde
+    <-> ec_1_2_1_12 [1.2.1.12] +nadh +glyceric_acid_1_3_biphosphate +h +phosphate
+    nad
   }
 
   branch from h side left {
     h
-    <-> ec_5_1_1_14 [5.1.1.14] +isonocardicin_a
-    nocardicin_b
+    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +2_oxoglutarate +s_succinyl_dihydrolipoamide
+    co2
   }
 
-  branch from d_erythrose_4_phosphate side right {
-    d_erythrose_4_phosphate
-    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole +h
-    dialurate
+  branch from h side right {
+    h
+    <-> ec_4_1_2_21 [4.1.2.21] +glyceraldehyde_3_phosphate +pyruvate
+    2_dehydro_3_deoxy_6_phospho_d_galactonate
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_7_35 [2.7.7.35] +phosphate +aldehydo_d_ribose_5_phosphate +h
-    adp_beta_d_ribose
+    <-> . +h +phosphate +atp +h2o
+    7_hydroxy_3_alpha_iso_pravastatin
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    d_allose
+    acetylcholine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +aldehydo_d_ribose_5_phosphate +h2o
-    alpha_d_ribose
+    <-> . +h +adp +atp +h2o
+    acetaminophen_glutathione_conjugate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +atp +h2o
-    d_allopyranose
+    <-> . +h +adp +atp +h2o
+    acetaminophen_o_d_glucosiduronate
   }
 }

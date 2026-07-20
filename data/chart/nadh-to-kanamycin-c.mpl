@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-kanamycin-c "NADH to kanamycin C" {
-  spacing 326
+  spacing 320
 
   spine at 0,0 {
     nadh
@@ -16,21 +16,15 @@ pathway nadh-to-kanamycin-c "NADH to kanamycin C" {
     kanamycin_c
   }
 
-  branch from gentamicin_a2 side left {
-    gentamicin_a2
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    atp
+  branch from nad side left {
+    nad
+    <-> . +nadh +3_5_dihydroxy_1_4_naphthoquinone +h
+    naphthalene_1_2_4_8_tetrol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +2_phytyl_1_4_naphthoquinone
-    2_phytyl_1_4_dihydroxynaphthalene
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +ubiquinone_1 +h
-    2_3_dimethoxy_5_methyl_6_3_methyl_2_buten_1_yl_1
+    <-> . +nadh +h +naphthalene_1_2_4_8_tetrol
+    3_5_dihydroxy_1_4_naphthoquinone
   }
 }

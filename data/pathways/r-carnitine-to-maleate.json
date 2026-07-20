@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-carnitine-to-maleate",
+  "name": "(R)-carnitine to maleate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (R)-carnitine to maleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:55396"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16347"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3r_3_hydroxy_4_oxobutanoate",
+      "name": "(3R)-3-hydroxy-4-oxobutanoate",
+      "short": "3-hydroxy-4-oxobuta…",
+      "formula": "C4H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138809"
+      }
+    },
+    {
+      "id": "trimethylammonium",
+      "name": "trimethylammonium",
+      "formula": "C3H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58389"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "r_malate",
+      "name": "(R)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15588"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "maleate",
+      "name": "maleate",
+      "formula": "C4H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30780"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_239",
+      "name": "carnitine monooxygenase",
+      "ec": [
+        "1.14.13.239"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_31",
+      "name": "maleate hydratase",
+      "ec": [
+        "4.2.1.31"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "carnitine monooxygenase",
+      "equation": "(R)-carnitine + NADH + O2 + H(+) = (3R)-3-hydroxy-4-oxobutanoate + trimethylamine + NAD(+) + H2O",
+      "ec": "1.14.13.239",
+      "substrates": [
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trimethylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_239"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:55396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-3-hydroxy-4-oxobutanoate + NADP(+) + H2O = (R)-malate + NADPH + 2 H(+)",
+      "equation": "(3R)-3-hydroxy-4-oxobutanoate + NADP(+) + H2O = (R)-malate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81423"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81423"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "maleate hydratase",
+      "equation": "(R)-malate = maleate + H2O",
+      "ec": "4.2.1.31",
+      "substrates": [
+        {
+          "metabolite": "r_malate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23692"
+          }
+        ]
+      }
+    }
+  ]
+}

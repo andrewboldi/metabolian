@@ -18,37 +18,37 @@ pathway s-adenosyl-l-homocysteine-to-luteolin-glucoside "S-adenosyl-L-homocystei
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +9_n_methoxy_tryptophan +h
-    9_n_hydroxy_l_tryptophan
+    <-> . +3_hydroxy_5_methoxybiphenyl +s_adenosyl_l_homocysteine +h
+    3_5_dihydroxybiphenyl
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +fusarin_c
-    carboxy_fusarin_c
+    <-> . +s_adenosyl_l_homocysteine +h +aucuparin
+    noraucuparin
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_126 [2.4.1.126] +udp +h +4_o_beta_d_glucosyl_daphnetin
-    7_8_dihydroxycoumarin
+    <-> . +udp +h +rubusoside
+    19_o_beta_glucopyranosyl_steviol
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_91 [2.4.1.91] +udp +h +7_8_dihydroxycoumarin
-    3_o_beta_d_glucosyl_daphnetin
+    <-> ec_2_4_1_178 [2.4.1.178] +udp +h +r_3_4_dihydroxymandelonitrile_beta_d_glucoside
+    r_3_4_dihydroxymandelonitrile
   }
 
   branch from udp side left {
     udp
-    <-> . +octyl_6_o_d_galactofuranosyl_d_glucopyranoside +h +octyl_d_glucopyranoside
-    udp_d_galactofuranose
+    <-> ec_2_4_1_17 [2.4.1.17] +h +trans_3_hydroxycotinine_glucuronide +trans_3_hydroxycotinine
+    udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +h +trans_3_hydroxycotinine_glucuronide +trans_3_hydroxycotinine
-    udp_alpha_d_glucuronate
+    <-> ec_2_4_1_17 [2.4.1.17] +cotinine_glucuronide +udp_alpha_d_glucuronate
+    cotinine
   }
 }

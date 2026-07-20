@@ -24,8 +24,8 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to d
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_5_1_109 [3.5.1.109] +sphingomyelin +h2o
-    sphingosine_1_phosphocholine
+    <-> . +phosphatidylcholine +h2o +hplus
+    choline_alfoscerate
   }
 
   branch from 2_oxo_monocarboxylic_acid_anion side left {
@@ -36,37 +36,37 @@ pathway n-acyl-d-amino-acid-to-di-sulfido-diiron "N-acyl-D-α-amino acid… to d
 
   branch from nh3 side right {
     nh3
-    <-> ec_2_5_1_44 [2.5.1.44] +1_4_butanediammonium
-    sym_homospermidinium
+    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h2o
+    aspartate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_5_1_2 [4.5.1.2] +h2o +chloride +pyruvate +hplus
-    3_chloro_d_alanine
+    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
+    trans_cinnamate
   }
 
   branch from acyl_coa side right {
-    acyl_coa
-    <-> ec_2_3_1_185 [2.3.1.185] +tropinium +coa +hplus
-    o_acyltropine
-  }
-
-  branch from acyl_coa side left {
     acyl_coa
     <-> ec_2_3_1_186 [2.3.1.186] +pseudotropinium +coa +hplus
     o_acylpseudotropine
   }
 
+  branch from acyl_coa side left {
+    acyl_coa
+    <-> . +2_monoglyceride +coa
+    dag
+  }
+
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_7_12 [1.3.7.12] +primary_fluorescent_chlorophyll_catabolite +di_sulfido_diiron +hplus
-    red_chlorophyll_catabolite
+    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +di_sulfido_diiron +h2o +hplus
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_17_7_4 [1.17.7.4] +dmapp +di_sulfido_diiron +h2o +hplus
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_23_dihydroxy_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
+    1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol
   }
 }

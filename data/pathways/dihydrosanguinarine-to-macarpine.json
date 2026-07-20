@@ -149,40 +149,43 @@
       }
     },
     {
-      "id": "taxa_4_11_diene",
-      "name": "taxa-4,11-diene",
-      "formula": "C20H32",
+      "id": "24r_24_hydroxycholesterol",
+      "name": "(24R)-24-hydroxycholesterol",
+      "short": "24-hydroxycholester…",
+      "formula": "C27H46O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30037"
+        "chebi": "CHEBI:50516"
       }
     },
     {
-      "id": "taxa_4_20_11_dien_5_ol",
-      "name": "taxa-4(20),11-dien-5α-ol",
-      "short": "taxa-4(20),11-dien-…",
-      "formula": "C20H32O",
+      "id": "24r_7_24_dihydroxycholesterol",
+      "name": "(24R)-7α,24-dihydroxycholesterol",
+      "short": "7α,24-dihydroxychol…",
+      "formula": "C27H46O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30038"
+        "chebi": "CHEBI:50518"
       }
     },
     {
-      "id": "10_deoxysarpagine",
-      "name": "10-deoxysarpagine",
-      "formula": "C19H22N2O",
-      "charge": 0,
+      "id": "trans_5_o_4_coumaroyl_d_quinate",
+      "name": "trans-5-O-(4-coumaroyl)-D-quinate",
+      "short": "trans-5-O-(4-coumar…",
+      "formula": "C16H17O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16060"
+        "chebi": "CHEBI:57575"
       }
     },
     {
-      "id": "sarpagine",
-      "name": "sarpagine",
-      "formula": "C19H22N2O2",
-      "charge": 0,
+      "id": "trans_5_o_caffeoyl_d_quinate",
+      "name": "trans-5-O-caffeoyl-D-quinate",
+      "short": "trans-5-O-caffeoyl-…",
+      "formula": "C16H17O9",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:9036"
+        "chebi": "CHEBI:57754"
       }
     },
     {
@@ -269,17 +272,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_176",
-      "name": "taxadiene 5alpha-hydroxylase",
+      "id": "ec_1_14_14_96",
+      "name": "5-O-(4-coumaroyl)-D-quinate 3'-monooxygenase",
       "ec": [
-        "1.14.14.176"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_136",
-      "name": "deoxysarpagine hydroxylase",
-      "ec": [
-        "1.14.14.136"
+        "1.14.14.96"
       ]
     },
     {
@@ -554,12 +550,11 @@
     },
     {
       "id": "r6",
-      "name": "taxadiene 5alpha-hydroxylase",
-      "equation": "taxa-4(5),11(12)-diene + reduced [NADPH--hemoprotein reductase] + O2 = taxa-4(20),11-dien-5alpha-ol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.176",
+      "name": "(24R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-7alpha-d...",
+      "equation": "(24R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-7alpha-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "taxa_4_11_diene",
+          "metabolite": "24r_24_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -573,7 +568,7 @@
       ],
       "products": [
         {
-          "metabolite": "taxa_4_20_11_dien_5_ol",
+          "metabolite": "24r_7_24_dihydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -589,34 +584,29 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_176"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:14049"
+        "rhea": "RHEA:16093"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14049"
+            "id": "RHEA:16093"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "deoxysarpagine hydroxylase",
-      "equation": "10-deoxysarpagine + reduced [NADPH--hemoprotein reductase] + O2 = sarpagine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.136",
+      "name": "5-O-(4-coumaroyl)-D-quinate 3'-monooxygenase",
+      "equation": "trans-5-O-(4-coumaroyl)-D-quinate + reduced [NADPH--hemoprotein reductase] + O2 = 5-O-[(E)-caffeoyl]-D-quinate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.96",
       "substrates": [
         {
-          "metabolite": "10_deoxysarpagine",
+          "metabolite": "trans_5_o_4_coumaroyl_d_quinate",
           "stoichiometry": 1
         },
         {
@@ -630,7 +620,7 @@
       ],
       "products": [
         {
-          "metabolite": "sarpagine",
+          "metabolite": "trans_5_o_caffeoyl_d_quinate",
           "stoichiometry": 1
         },
         {
@@ -648,20 +638,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_136"
+          "enzyme": "ec_1_14_14_96"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:14237"
+        "rhea": "RHEA:16265"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14237"
+            "id": "RHEA:16265"
           }
         ]
       }

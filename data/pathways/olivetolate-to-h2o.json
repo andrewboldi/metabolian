@@ -119,6 +119,25 @@
       }
     },
     {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "talarodiene",
+      "name": "talarodiene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193158"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -129,30 +148,13 @@
       }
     },
     {
-      "id": "cadinene",
-      "name": "α-cadinene",
+      "id": "exo_bergamotene",
+      "name": "(+)-exo-β-bergamotene",
+      "short": "(+)-exo-β-bergamote…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80749"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "cadinol",
-      "name": "(−)-δ-cadinol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156223"
+        "chebi": "CHEBI:193166"
       }
     },
     {
@@ -174,21 +176,21 @@
       }
     },
     {
-      "id": "allolactose",
-      "name": "allolactose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:36229"
-      }
-    },
-    {
       "id": "adp",
       "name": "ADP",
       "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "cefaloridine",
+      "name": "cefaloridine",
+      "formula": "C19H17N3O4S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM45946"
       }
     },
     {
@@ -210,12 +212,12 @@
       }
     },
     {
-      "id": "alpha_maltose",
-      "name": "alpha-maltose",
-      "formula": "C12H22O11",
+      "id": "cefalotin",
+      "name": "cefalotin",
+      "formula": "C16H16N2O6S2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1106002"
+        "chebi": "CHEBI:124991"
       }
     }
   ],
@@ -228,10 +230,17 @@
       ]
     },
     {
-      "id": "ec_3_6_3_18",
-      "name": "EC 3.6.3.18",
+      "id": "ec_4_2_3_211",
+      "name": "(+)-exo-beta-bergamotene synthase",
       "ec": [
-        "3.6.3.18"
+        "4.2.3.211"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
+      "ec": [
+        "3.6.3.44"
       ]
     }
   ],
@@ -364,17 +373,17 @@
     },
     {
       "id": "r4",
-      "name": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-cadinene + diphosphate",
+      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cadinene",
+          "metabolite": "talarodiene",
           "stoichiometry": 1
         },
         {
@@ -385,35 +394,32 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:69444"
+        "rhea": "RHEA:74547"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69444"
+            "id": "RHEA:74547"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate + H2O = (-)-delta-cadinol + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (-)-delta-cadinol + diphosphate",
+      "name": "(+)-exo-beta-bergamotene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-exo-beta-bergamotene + diphosphate",
+      "ec": "4.2.3.211",
       "substrates": [
         {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cadinol",
+          "metabolite": "exo_bergamotene",
           "stoichiometry": 1
         },
         {
@@ -421,17 +427,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_211"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:69448"
+        "rhea": "RHEA:74587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69448"
+            "id": "RHEA:74587"
           }
         ]
       }
@@ -472,13 +483,9 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR174802",
-      "ec": "3.6.3.18",
+      "name": "Reaction MNXR175162",
+      "ec": "3.6.3.44",
       "substrates": [
-        {
-          "metabolite": "allolactose",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -488,17 +495,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "cefaloridine",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "allolactose",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "cefaloridine",
           "stoichiometry": 1
         },
         {
@@ -508,31 +519,31 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_18"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR174802"
+        "metanetx": "MNXR175162"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174802"
+            "id": "MNXR175162"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR174803",
-      "ec": "3.6.3.18",
+      "name": "Reaction MNXR175163",
+      "ec": "3.6.3.44",
       "substrates": [
         {
-          "metabolite": "alpha_maltose",
+          "metabolite": "cefalotin",
           "stoichiometry": 1
         },
         {
@@ -550,7 +561,7 @@
       ],
       "products": [
         {
-          "metabolite": "alpha_maltose",
+          "metabolite": "cefalotin",
           "stoichiometry": 1
         },
         {
@@ -564,20 +575,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_18"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR174803"
+        "metanetx": "MNXR175163"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174803"
+            "id": "MNXR175163"
           }
         ]
       }

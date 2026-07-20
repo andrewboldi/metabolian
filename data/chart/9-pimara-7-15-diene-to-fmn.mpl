@@ -18,13 +18,13 @@ pathway 9-pimara-7-15-diene-to-fmn "9β-pimara-7,15-diene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +stellata_2_6_19_triene +fmnh2 +o2 +h2o +hplus
-    stellatate
+    <-> . +all_trans_4_hydroxyretinoate +fmnh2 +o2 +h2o +hplus
+    all_trans_4_oxoretinoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
-    11_oxomiltiradiene
+    <-> ec_1_14_14_97 [1.14.14.97] +s_cis_n_methyltetrahydrothalifendine +fmnh2 +o2 +h2o +hplus
+    7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza
   }
 }

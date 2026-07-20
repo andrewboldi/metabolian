@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
-  spacing 316
+  spacing 310
 
   spine at 0,0 {
     n_acetyl_alaninate
@@ -24,123 +24,117 @@ pathway n-acetyl-alaninate-to-h2o "N-acetyl-β-alaninate to H2O" {
     h
   }
 
-  branch from alanine side left {
-    alanine
-    <-> . +arginine +ornithine
-    3_guanidinopropanoic_acid
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
+    iodomethane
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
-    isoscoparin_7_olate
+    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
+    chloromethane
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from n_methyl_l_histidine side right {
+  branch from n_methyl_l_histidine side left {
     n_methyl_l_histidine
     <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
     l_histidine
   }
 
-  branch from n_methyl_l_histidine side left {
+  branch from n_methyl_l_histidine side right {
     n_methyl_l_histidine
     <-> . +l_histidine +anserine
     carnosine
   }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    methanesulfonate
-  }
-
   branch from h side left {
     h
-    <-> . +3_phosphonopyruvate +n_acetyl_2s_6s_2_6_diaminopimelate +2_amino_3_phosphonopropanoic_acid
-    l_2_acetamido_6_oxoheptanedioate
+    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_didodecanoyl_n_c12_0 +phosphate +h2o
+    1_2_didodecanoyl_sn_glycerol_3_phosphate
   }
 
-  branch from anserine side right {
+  branch from h side right {
+    h
+    <-> ec_3_1_3_4 [3.1.3.4] +1_2_diacyl_sn_glycerol_ditetradec_7_enoyl_n_c14 +phosphate +h2o
+    1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from anserine side left {
     anserine
     <-> ec_2_1_1_22 [2.1.1.22] +s_adenosyl_l_homocysteine +h +carnosine
     s_s_adenosyl_l_methionine
   }
 
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    normetanephrine
-  }
-
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    15z_tetracosenoyl_coa
+    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+  }
+
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    pe_18_1_11z_18_1_9z
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +h +adp +atp +h2o
+    1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    1_2_didodecanoyl_sn_glycerol_3_phosphate
+    phosphatidylglycerol_ditetradecanoyl_n_c14_0
   }
 
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_4 [3.1.3.4] +h +1_2_didodecanoyl_sn_glycerol_3_phosphate +h2o
-    1_2_diacyl_sn_glycerol_didodecanoyl_n_c12_0
-  }
-
-  branch from beta_alanine side left {
+  branch from beta_alanine side right {
     beta_alanine
     <-> . +r_pantothenate +h
     r_pantolactone
   }
 
-  branch from beta_alanine side right {
+  branch from beta_alanine side left {
     beta_alanine
     <-> ec_6_3_2_11 [6.3.2.11] +beta_alanyl_l_lysine +diphosphate +h +amp +atp
     l_lysine
   }
 
-  branch from atp side left {
-    atp
-    <-> . +diphosphate +vaccenyl_coenzyme_a +amp +h +vaccenic_acid
-    coa
-  }
-
   branch from atp side right {
     atp
-    <-> . +diphosphate +9z_octadecenoyl_coa +amp +coa
-    9z_octadecenoate
+    <-> . +pseudoecgonyl_coa +diphosphate +amp +h +coa
+    pseudoecgonine
   }
 
-  branch from beta_aminopropionitrile side left {
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    phosphatidylglycerophosphate_didodecanoyl_n_c12
+  }
+
+  branch from beta_aminopropionitrile side right {
     beta_aminopropionitrile
     <-> ec_2_3_2_2 [2.3.2.2] +gamma_glutamyl_beta_aminopropiononitrile +h2o +h
     l_glutamate
   }
 
-  branch from beta_aminopropionitrile side right {
+  branch from beta_aminopropionitrile side left {
     beta_aminopropionitrile
     <-> . +3_cyano_l_alanine
     co2
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +nh4
-    ammonium_hydroxide
-  }
-
   branch from h2o side right {
     h2o
-    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +nadh +h +ammonium_hydroxide
-    nad
+    <-> . +h +adp +phosphate +atp
+    phosphatidylglycerophosphate_ditetradecanoyl_n_c
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_3_27 [3.1.3.27] +phosphate +phosphatidylglycerophosphate_didodecanoyl_n_c12
+    dilauroyl_phosphatidylglycerol
   }
 }

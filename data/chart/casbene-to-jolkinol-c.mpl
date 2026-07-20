@@ -20,14 +20,14 @@ pathway casbene-to-jolkinol-c "(−)-casbene to jolkinol C" {
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14r_15s_eet
+    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
+    4ar_10bs_noroxomaritidine
   }
 
   branch from fmn side right {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11s_12r_eet
+    14_15_eet
   }
 
   branch from 4_8_dihydroxycasbene side left {

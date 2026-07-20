@@ -21,25 +21,25 @@ pathway h-to-diphosphate-null "H to diphosphate" {
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    cyclosporin_a_metabolite_m1a
+    vaccenic_acid
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    am1al_cyclosporine
+    linoelaidic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +11beta_hydroxyprogesterone +h2o
-    21_deoxycortisol
+    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +h +nadph +r_methylmalonyl_coa
+    malonyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +11beta_hydroxyprogesterone +h2o
-    corticosterone
+    <-> . +malonyl_coa +methylmalonyl_coa +h +nadph +co2 +coa +h2o
+    10_deoxymethynolide
   }
 
   branch from 4_phosphooxymethyl_2_furancarboxaldehyde side left {
@@ -51,24 +51,24 @@ pathway h-to-diphosphate-null "H to diphosphate" {
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    am1c4n9_cyclosporine
+    nonadecanoic_acid
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    am1c9_cyclosporine
+    gadoleic_acid
   }
 
   branch from ppi side right {
     ppi
-    <-> . +utp
-    cyclic_di_ump
+    <-> . +all_trans_pentaprenyl_diphosphate
+    quiannulatene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +utp +ctp
-    3_3_cyclic_cmp_ump
+    <-> . +3_methylvalerate +atp +coa +amp
+    3_methylpentanoyl_coa
   }
 }

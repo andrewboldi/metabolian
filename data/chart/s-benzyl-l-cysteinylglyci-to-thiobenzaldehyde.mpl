@@ -30,25 +30,25 @@ pathway s-benzyl-l-cysteinylglyci-to-thiobenzaldehyde "S-benzyl-L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +palmitoyl_coa +coa +hplus
-    n_hexadecanoylglycinate
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteinylglycin +h2o
+    s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_6_2_1_66 [6.2.1.66] +holo-acp +atp +amp +ppi
-    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
+    <-> . +glycyldehydrophenylalanine +h2o
+    2_3_didehydrophenylalanine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +hexadecanamide +h2o
-    palmitate
+    <-> . +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
+    dump
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +8z_11z_14z_icosatrienamide +h2o
-    all_cis_icosa_8_11_14_trienoate
+    <-> . +serotonin +o2 +h2o +h2o2
+    5_hydroxyindol_3_yl_acetaldehyde
   }
 }

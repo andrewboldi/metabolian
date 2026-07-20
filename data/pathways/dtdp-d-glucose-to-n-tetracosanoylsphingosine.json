@@ -139,21 +139,32 @@
       }
     },
     {
-      "id": "j_104303",
-      "name": "J-104303",
-      "formula": "C20H11N3O4",
-      "charge": 0,
+      "id": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+      "name": "(Z,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
+      "short": "(Z,3S)-2-(3-hydroxy…",
+      "formula": "C5H8NO5S2",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1368712"
+        "metanetx": "MNXM1368612"
       }
     },
     {
-      "id": "j_109384",
-      "name": "J-109384",
-      "formula": "C26H21N3O9",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_2_hydroxybut_3_enylglucosinolate",
+      "name": "(2R)-2-Hydroxybut-3-enylglucosinolate",
+      "short": "2-Hydroxybut-3-enyl…",
+      "formula": "C11H19NO10S2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368714"
+        "chebi": "CHEBI:190717"
       }
     },
     {
@@ -166,21 +177,13 @@
       }
     },
     {
-      "id": "be_13793c",
-      "name": "BE 13793C",
-      "formula": "C20H11N3O4",
-      "charge": 0,
+      "id": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+      "name": "(E,3S)-2-(3-hydroxybutenyl)-thiohydroximate-O-sulfate",
+      "short": "(E,3S)-2-(3-hydroxy…",
+      "formula": "C5H7NO5S2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1368713"
-      }
-    },
-    {
-      "id": "ed_110",
-      "name": "ED 110",
-      "formula": "C26H21N3O9",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368715"
+        "metanetx": "MNXM1368613"
       }
     }
   ],
@@ -190,6 +193,13 @@
       "name": "sphingomyelin deacylase",
       "ec": [
         "3.5.1.109"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_147",
+      "name": "thioglucosidase",
+      "ec": [
+        "3.2.1.147"
       ]
     }
   ],
@@ -366,20 +376,25 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR196566",
+      "name": "thioglucosidase",
+      "ec": "3.2.1.147",
       "substrates": [
         {
           "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "j_104303",
+          "metabolite": "z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "j_109384",
+          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
           "stoichiometry": 1
         },
         {
@@ -387,37 +402,46 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_147"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR196566"
+        "metanetx": "MNXR197037"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196566"
+            "id": "MNXR197037"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR196567",
+      "name": "Reaction MNXR197038",
       "substrates": [
         {
           "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "be_13793c",
+          "metabolite": "e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "ed_110",
+          "metabolite": "2r_2_hydroxybut_3_enylglucosinolate",
           "stoichiometry": 1
         },
         {
@@ -428,14 +452,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR196567"
+        "metanetx": "MNXR197038"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196567"
+            "id": "MNXR197038"
           }
         ]
       }

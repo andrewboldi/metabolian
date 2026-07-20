@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acetyl-coa-to-s-3-hydroxypentanoate",
+  "name": "acetyl-CoA to (S)-3-hydroxypentanoate",
+  "category": "other",
+  "summary": "A 3-step route from acetyl-CoA to (S)-3-hydroxypentanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205492"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_oxopentanoyl_coa",
+      "name": "3-oxopentanoyl-CoA",
+      "formula": "C26H42N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1554512"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "s_3_hydroxypentanoyl_coa",
+      "name": "(S)-3-hydroxypentanoyl-CoA",
+      "short": "3-hydroxypentanoyl-…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138607"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_3_hydroxypentanoate",
+      "name": "(S)-3-hydroxypentanoate",
+      "short": "3-hydroxypentanoate",
+      "formula": "C5H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138608"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205492",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxopentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205492"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205492"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR205491",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_oxopentanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "s_3_hydroxypentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR205491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(3S)-3-hydroxypentanoyl-CoA + H2O = (3S)-3-hydroxypentanoate + CoA + H(+)",
+      "equation": "(3S)-3-hydroxypentanoyl-CoA + H2O = (3S)-3-hydroxypentanoate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_3_hydroxypentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_hydroxypentanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55096"
+          }
+        ]
+      }
+    }
+  ]
+}

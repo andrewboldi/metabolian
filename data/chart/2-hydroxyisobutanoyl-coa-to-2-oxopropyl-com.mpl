@@ -24,14 +24,14 @@ pathway 2-hydroxyisobutanoyl-coa-to-2-oxopropyl-com "2-hydroxyisobutanoyl-CoA to
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_methylpropanoate
-    2_methylpropanoyl_coa
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +4_hydroxybutanoate
+    4_hydroxybutanoyl_coa
   }
 
   branch from acetoacetate side left {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +4_hydroxybutanoate
-    4_hydroxybutanoyl_coa
+    <-> ec_2_6_1_19 [2.6.1.19] +2_oxoglutarate +h +2_methylaspartate +l_glutamate
+    co2
   }
 
   branch from 2_oxopropyl_com side right {

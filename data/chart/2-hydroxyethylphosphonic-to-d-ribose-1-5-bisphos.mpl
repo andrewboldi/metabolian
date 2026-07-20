@@ -34,49 +34,49 @@ pathway 2-hydroxyethylphosphonic-to-d-ribose-1-5-bisphos "2-hydroxyethylphosphon
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +datp +h2o +hplus
-    2_deoxyadenosine_5_monophosphate
+    <-> ec_2_5_1_80 [2.5.1.80] +dmapp +l_tryptophan
+    7_3_methylbut_2_enyl_l_tryptophan
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +dgtp +h2o +hplus
-    2_deoxyguanosine_5_monophosphate
+    <-> ec_6_3_2_14 [6.3.2.14] +2_3_dihydroxybenzoate +serine +atp +amp +hplus
+    enterobactin
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +2_3_di_o_phytanyl_sn_glycerol +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    glycerol_dibiphytanyl_glycerol_tetraether
+    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +methionine +hplus
+    4_phospho_dehydrooxetanocin
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_2_1_1_390 [2.1.1.390] +gentamicin_x2_cation +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
-    geneticin_cation
+    <-> . +2_deoxyadenosine_5_monophosphate +hydrogen_acceptor +4_phospho_dehydrooxetanocin +hydrogen_donor
+    5_deoxyadenosin_5_yl_radical
   }
 
   branch from methionine side left {
     methionine
-    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
-    amp_3_end_1
+    <-> . +cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    cytidine_5_hydroxy_s_2_hydroxypropyl_phosphonoyl
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_5_3_99_13 [5.3.99.13] +2_deoxyadenosine_5_monophosphate +sam +5_deoxyadenosine +hplus
-    4_phospho_dehydrooxetanocin
+    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
+    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_donor
-    7_8_dihydromethanopterin
+    <-> . +arachidonate +hydrogen_donor +o2 +h2o
+    15_r_hete
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +c20_dihydroceramide +hydrogen_donor +o2 +h2o
-    c20_ceramide
+    <-> . +linoleate +hydrogen_donor +o2 +h2o
+    13_hode
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-31r-8-12-diethyl-71 "S-adenosyl-L-homocysteine to (31R)-8,12-diethyl-71,71-…" {
-  spacing 224
+  spacing 218
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -20,14 +20,14 @@ pathway s-adenosyl-l-homocysteine-to-31r-8-12-diethyl-71 "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_9 [2.1.1.9] +s_adenosyl_l_homocysteine +furfuryl_methyl_sulfide +h
-    2_furanmethanethiol
+    <-> . +casticin +s_adenosyl_l_homocysteine +h
+    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +2_hydroxy_3_7_3_4_tetramethylquercetin +h
-    2_hydroxy_3_7_4_trimethylquercetin
+    <-> . +s_adenosyl_l_homocysteine +3_6_7_2_4_pentamethylquercetagetin +h
+    2_hydroxy_3_6_7_4_tetramethylquercetagetin
   }
 
   branch from n1_n5_n10_tri_e_5_hydroxyferuloyl_spermidine side left {
@@ -44,49 +44,43 @@ pathway s-adenosyl-l-homocysteine-to-31r-8-12-diethyl-71 "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +2_hydroxy_3_6_7_3_4_pentamethylquercetagetin +h +s_adenosyl_l_methionine
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin
+    <-> . +4alpha_14alpha_dimethyl_porifersta_8_25_27_dieno +h +s_adenosyl_l_methionine
+    obtusifoliol
   }
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +casticin +h +s_adenosyl_l_methionine
-    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
+    <-> . +h +patuletin +s_adenosyl_l_methionine
+    quercetagetin
   }
 
   branch from h side left {
     h
-    <-> . +2_chloro_4_fluoromuconolactone
-    2_chloro_4_fluoromuconate
+    <-> . +1_methylpyrrolinium +1_2_dihydropyrimidine
+    3_6_dihydronicotine
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +l_thyroxine_acyl_beta_d_glucuronide +l_thyroxine
-    udp_alpha_d_glucuronate
+    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o
+    isocinchomeronic_acid
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +n_acetylphosphinothricyl_l_alanyl_l_leucine +cob_iii_alamin +l_methionine +s_adenosyl_l_methionine +methylcobalamin
-    n_acetyldemethylphosphinothricyl_l_alanyl_l_leuc
-  }
-
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +iminoglycine +nadp +l_methionine +4_methylphenol +s_adenosyl_l_methionine +l_tyrosine
-    nadph
-  }
-
-  branch from l_methionine side left {
-    l_methionine
-    <-> . +n_succinyl_l_methionine +h2o +h
-    succinate
+    <-> . +h2o +adenine
+    5_deoxyribose
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +l_methionine_r_s_oxide +h2o
-    h2o2
+    <-> ec_2_6_1_15 [2.6.1.15] +4_methylsulfanyl_2_oxobutanoate +l_phenylalanine
+    3_phenylpyruvate
+  }
+
+  branch from l_methionine side left {
+    l_methionine
+    <-> ec_2_6_1_27 [2.6.1.27] +4_methylsulfanyl_2_oxobutanoate +l_tryptophan
+    indole_3_pyruvate
   }
 }

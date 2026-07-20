@@ -18,26 +18,26 @@ pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_148 [4.2.3.148] +diphosphate
-    cembrene_c
-  }
-
-  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
-    2e_6e_10e_geranylgeranyl_diphosphate
     <-> ec_4_2_3_149 [4.2.3.149] +diphosphate +h2o
     r_nephthenol
   }
 
+  branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
+    2e_6e_10e_geranylgeranyl_diphosphate
+    <-> ec_4_2_3_150 [4.2.3.150] +diphosphate
+    r_cembrene_a
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_186 [3.2.1.186] +glucose +26_degluco_protogracillin
-    protogracillin
+    <-> ec_3_2_1_56 [3.2.1.56] +4_deoxy_beta_l_erythro_hex_4_enopyranuronosyl_1 +n_sulfo_d_glucosamine
+    4_deoxy_l_threo_hex_4_enopyranuronate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +carbonyl_sulfide
-    carbonothioic_o_o_acid
+    <-> . +n_acetyl_d_galactosamine +4_deoxy_l_threo_hex_4_enopyranuronate
+    4_deoxy_beta_d_gluc_4_enuronosyl_1_4_n_acetyl_d
   }
 
   branch from diphosphate side left {
@@ -54,14 +54,14 @@ pathway diphosphate-to-chlorophyllide-b "diphosphate to chlorophyllide b" {
 
   branch from h side left {
     h
-    <-> . +monacolin_l_carboxylate +h2o
-    monacolin_l
+    <-> . +glucose +4_4_5_5_6_6_hexahydroxydiphenate +h2o
+    pedunculagin
   }
 
   branch from h side right {
     h
-    <-> . +3_hydroxy_3_5_dihydromonacolin_l_carboxylate +h2o
-    3alpha_hydroxy_3_5_dihydromonacolin_l_lactone
+    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +nadph +nadp +coa
+    9z_11e_tetradecadien_1_ol
   }
 
   branch from chlorophyllide_b side left {

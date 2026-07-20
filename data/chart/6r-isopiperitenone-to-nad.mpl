@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6r-isopiperitenone-to-nad "(6R)-isopiperitenone to NAD" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     6r_isopiperitenone
@@ -16,27 +16,21 @@ pathway 6r-isopiperitenone-to-nad "(6R)-isopiperitenone to NAD" {
     1s_6r_isopiperitenol
   }
 
-  branch from isopiperitenone side left {
-    isopiperitenone
-    <-> ec_1_3_1_82 [1.3.1.82] +h +nadph +nadp
-    2r_5r_isopulegone
-  }
-
-  branch from 1s_6r_isopiperitenol side right {
+  branch from 1s_6r_isopiperitenol side left {
     1s_6r_isopiperitenol
     <-> ec_1_14_13_47 [1.14.13.47] +4s_limonene +h +o2 +nadph +h2o
     nadp
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +5_cis_7_trans_3_oxo_tetradecadienoyl_coa +h
-    3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
-  }
-
   branch from nad side right {
     nad
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxopentanoate
-    3_ethylmalate
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_5_methylbenzaldehyde +h
+    3_hydroxymethyl_5_methylphenol
+  }
+
+  branch from nad side left {
+    nad
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh +4_bromodiphenyl_ether +h +o2
+    4_bromo_2_3_dihydrodiol_diphenyl_ether
   }
 }

@@ -20,25 +20,25 @@ pathway diisopropyl-to-l-methionine "diisopropyl… to L-methionine" {
 
   branch from methionine side left {
     methionine
-    <-> . +glycine +fmnh2 +sam +fmnh +5_deoxyadenosine +hplus
-    glycyl_radical
+    <-> . +n_fatty_acyl_l_methionine +h2o
+    fatty-acid
   }
 
   branch from methionine side right {
     methionine
-    <-> . +n_oleoyl_l_methionine +h2o
-    oleate
+    <-> . +ctp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
+    3_deoxy_3_4_didehydro_ctp
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_n4 [2.1.1.n4] +thiocyanate +sam
-    methyl_thiocyanate
+    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
+    4_methoxyflavanones
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_212 [2.1.1.212] +2r_3s_2_4_7_trihydroxyisoflavanone +sam +hplus
-    2r_3s_2_7_dihydroxy_4_methoxyisoflavanone
+    <-> ec_2_1_1_240 [2.1.1.240] +trans_resveratrol +sam +hplus
+    pterostilbene
   }
 }

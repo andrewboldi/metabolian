@@ -66,13 +66,13 @@ pathway r-2-hydroxy-4-methylpen-to-malonyl-coa "(R)-2-hydroxy-4-methylpen… to 
 
   branch from malonyl-coa side right {
     malonyl-coa
-    <-> ec_2_3_1_74 [2.3.1.74] +trans_4_coumaroyl_coa +hplus +co2 +coa
-    2_4_4_6_tetrahydroxychalcone
+    <-> ec_2_3_1_95 [2.3.1.95] +4_coumaroyl_coa +hplus +co2 +coa
+    trans_resveratrol
   }
 
   branch from malonyl-coa side left {
     malonyl-coa
-    <-> ec_2_3_1_95 [2.3.1.95] +4_coumaroyl_coa +hplus +co2 +coa
-    trans_resveratrol
+    <-> . +acetyl_coa +hplus +co2 +coa +h2o
+    3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
   }
 }

@@ -18,25 +18,25 @@ pathway 5-9-10-labda-8-20-13-to-fmn-25759 "5β,9α,10α-labda-8(20),13-… to FM
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    cis_farnesene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_b
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    acoradiene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_c
   }
 
   branch from fmn side left {
     fmn
-    <-> . +nataloe_emodin +fmnh2 +o2 +h2o +hplus
-    cladofulvin
+    <-> . +6_hydroxy_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
+    28_nortyphasterol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +20_hete +fmnh2 +o2 +h2o +hplus
-    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
+    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    28_norcastasterone
   }
 }

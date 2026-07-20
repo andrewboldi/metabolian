@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphosphate" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     3_hydroxybutanoyl_coa
@@ -22,33 +22,27 @@ pathway 3-hydroxybutanoyl-coa-to-diphosphate "3-hydroxybutanoyl-CoA to diphospha
     r_3_hydroxybutanoyl_coa
   }
 
-  branch from acetoacetyl_coa side right {
-    acetoacetyl_coa
-    <-> ec_2_6_1_111 [2.6.1.111] +l_3_aminobutanoyl_coa +akg
-    glutamate
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> ec_2_3_1_319 [2.3.1.319] +acetyl_coa +acetoacetyl_coa
-    triacetate
-  }
-
   branch from acetoacetate side right {
     acetoacetate
     <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +pentanoate
     pentanoyl_coa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +l_selenomethionine +atp +h2o +pi
-    l_adenosylselenomethionine
+  branch from acetoacetate side left {
+    acetoacetate
+    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +2_methylpropanoate
+    2_methylpropanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +ipp +fpp
-    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
+    <-> ec_4_2_3_100 [4.2.3.100] +fpp
+    bicyclogermacrene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_8_14_15_diene
   }
 }

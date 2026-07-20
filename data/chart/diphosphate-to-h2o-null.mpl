@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-h2o-null "diphosphate to H2O" {
-  spacing 236
+  spacing 230
 
   spine at 0,0 {
     diphosphate
@@ -18,14 +18,14 @@ pathway diphosphate-to-h2o-null "diphosphate to H2O" {
 
   branch from fe side left {
     fe
-    <-> . +deferrichrome +h
-    ferrichrome
+    <-> . +hydroxyl +h2o +h +h2o2
+    fe
   }
 
   branch from fe side right {
     fe
-    <-> . +deferrichrome +h
-    ferrichrome
+    <-> . +hydrogen_oxide +h2o +fe +h
+    h2o2
   }
 
   branch from methylglutaconyl_hydroxy_ornithine side left {
@@ -48,55 +48,49 @@ pathway diphosphate-to-h2o-null "diphosphate to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    l_arabinopyranose
+    <-> ec_6_3_2_2 [6.3.2.2] +l_isoleucine +l_glutamate +adp +phosphate
+    l_gamma_glutamyl_l_isoleucine
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ala_his
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyl_adenylate +h
+    r_pantoate
   }
 
   branch from l_serine side right {
-    l_serine
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +h2o
-    ser_pro
-  }
-
-  branch from l_serine side left {
     l_serine
     <-> ec_3_5_1_18 [3.5.1.18] +l_aspartate +h +h2o
     asp_ser
   }
 
+  branch from l_serine side left {
+    l_serine
+    <-> ec_2_3_1_30 [2.3.1.30] +propanoyl_coa +coa
+    o_propionyl_l_serine
+  }
+
   branch from h side right {
     h
-    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_d +31r_8_ethyl_12_methylbacteriochlorophyllide_d
-    2e_6e_farnesyl_diphosphate
+    <-> . +e_feruloyl_coa +serotonin +coa
+    n_feruloylserotonin
   }
 
   branch from h side left {
     h
-    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
-    31r_8_12_diethylbacteriochlorophyllide_d
-  }
-
-  branch from fe_iii_enterobactin side right {
-    fe_iii_enterobactin
-    <-> . +fe +riboflavin +enterobactin +h
-    4a_5_dihydroriboflavin
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +2e_9z_hexadecadienoyl_coa
-    3s_9z_3_hydroxyhexadecenoyl_coa
+    <-> ec_3_1_8_1 [3.1.8.1] +dimethylthiophosphate +4_nitrophenol +h2o
+    parathion_methyl
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +e_z_tetradeca_2_7_dienoyl_coa
-    3s_7z_3_hydroxytetradec_7_enoyl_coa
+    <-> . +dehydroabietadiene_diol
+    dehydroabietadienal
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_165 [4.2.1.165] +3_deacetyl_3_vinylbacteriochlorophyllide_a
+    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
   }
 }

@@ -32,49 +32,49 @@ pathway 6r-l-threo-5-6-7-8-tetr-to-udp-d-xylulose "(6R)-L-threo-5,6,7,8-tetr… 
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate +phosphate +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphate +h2o
-    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    neo_lambda_carrahexaose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_dilinoleoyl_sn_glycero_3_phosphate
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    neo_lambda_carrabiose
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_152 [1.14.13.152] +6e_8_hydroxygeraniol +nadp +h2o +h +o2
-    2e_geraniol
+    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadp
+    palustradienol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +levopiramadiene_diol +nadp +h2o +h +o2
-    levopimaradienol
+    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadp
+    isopimara_7_15_dienol
   }
 
   branch from formate side left {
     formate
-    <-> ec_4_1_99_12 [4.1.99.12] +2_hydroxy_3_oxobutyl_phosphate +h
-    d_ribulose_5_phosphate
+    <-> . +dichlorocarbene +h2o +h
+    chloride
   }
 
   branch from formate side right {
     formate
-    <-> ec_4_1_99_12 [4.1.99.12] +h +d_ribulose_5_phosphate
-    1_deoxy_l_glycero_tetrulose_4_phosphate
+    <-> . +2_4_6_trioxohexanoate +h2o +h
+    acetylpyruvate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +nadp +c30_botryococcene +h +nadph
-    2e_6e_farnesyl_diphosphate
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_3z_6z_9z_12z_pentadeca_3_6_9_12_tetraen_1_yl_4 +6z_9z_12z_15z_3_hydroxy_2_2z_5z_8z_11z_tetradec
+    atp
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_6_2_1_1 [6.2.1.1] +acetyl_coa +amp +atp +coa
-    acetate
+    <-> ec_2_5_1_146 [2.5.1.146] +2e_geranyl_diphosphate +3_z_2_isocyanoethenyl_1h_indole
+    3_geranyl_3_z_2_isocyanoethenyl_1h_indole
   }
 }

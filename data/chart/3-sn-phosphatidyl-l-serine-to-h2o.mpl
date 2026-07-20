@@ -30,25 +30,25 @@ pathway 3-sn-phosphatidyl-l-serine-to-h2o "3-sn-phosphatidyl-L-serine to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    gamma_l_glutamyl_l_cysteinyl_beta_alanine
+    <-> ec_2_7_1_1 [2.7.1.1] +aldehydo_d_mannose +h +adp
+    6_o_phosphonohexopyranose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    gly_glu
+    <-> . +alpha_ribazole_5_phosphate +h +adp
+    ribazole
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    anserine
+    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
+    n_acetyl_muramoyl_l_alanyl_gamma_d_glutamyl_l_ly
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    <-> ec_3_3_2_9 [3.3.2.9] +benzo_a_pyrene_4_5_oxide
+    4r_5r_benzo_a_pyrene_trans_4_5_dihydrodiol
   }
 }

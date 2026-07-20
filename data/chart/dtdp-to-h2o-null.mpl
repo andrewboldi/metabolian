@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-to-h2o-null "dTDP to H2O" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     dtdp
@@ -14,18 +14,6 @@ pathway dtdp-to-h2o-null "dTDP to H2O" {
     2_3_dehydro_uwm6
     <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate -2_3_dehydro_uwm6 -h2o
     atp
-  }
-
-  branch from uwm6 side left {
-    uwm6
-    <-> . +3_5_7_9_11_13_15_17_19_nonaoxoicosanoate +h +o2 +nadph +nadp +h2o
-    co2
-  }
-
-  branch from uwm6 side right {
-    uwm6
-    <-> . +3_5_7_9_11_13_15_17_19_nonaoxoicosanoate +h +o2 +nadph +co2 +h2o
-    nadp
   }
 
   branch from 2_3_dehydro_uwm6 side left {
@@ -42,25 +30,25 @@ pathway dtdp-to-h2o-null "dTDP to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +gypenoside_xvii +gypenoside_lxxv
-    glucose
+    <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
+    neoagarotetraose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq +h
-    2_amino_4_3_2_amino_2_carboxylatoethyl_6_oxocycl
+    <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
+    neoagarohexaose
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +l_aspartyl_adenylate +h
-    l_aspartate
+    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
+    malonyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa
-    2_naphthoic_acid
+    <-> . +diphosphate +n_3_fumaramoyl_s_2_3_diaminopropanoyl_adenylate +h
+    n3_fumaramoyl_s_2_3_diaminopropanoic_acid
   }
 }

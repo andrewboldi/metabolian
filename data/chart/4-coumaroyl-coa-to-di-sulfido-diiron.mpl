@@ -28,14 +28,14 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_4_4_1_42 [4.4.1.42] +sam
-    l_homoserine_lactone
+    <-> ec_2_5_1_79 [2.5.1.79] +s_adenosylmethioninaminium +spermidine +hplus
+    thermosperminium
   }
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_79 [2.5.1.79] +s_adenosylmethioninaminium +spermidine +hplus
-    thermosperminium
+    <-> . +cadaverine +s_adenosylmethioninaminium +hplus
+    aminopropylcadaverine
   }
 
   branch from s_methyl_5_thio_d_ribulose_1_phosphate side left {
@@ -70,13 +70,13 @@ pathway 4-coumaroyl-coa-to-di-sulfido-diiron "4-coumaroyl-CoA to di-μ-sulfido-d
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
-    pikromycin
+    <-> . +calcidiol +o2 +hplus +di_sulfido_diiron +h2o
+    23s_23_25_dihydroxycalciol
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_35 [1.14.15.35] +6_deoxyerythronolide_b +o2 +hplus +di_sulfido_diiron +h2o
-    erythronolide_b
+    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
   }
 }

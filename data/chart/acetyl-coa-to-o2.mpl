@@ -20,38 +20,38 @@ pathway acetyl-coa-to-o2 "acetyl-CoA to O2" {
 
   branch from coa side left {
     coa
-    <-> . +dodecanoyl_coa +sucrose
-    beta_d_fructofuranosyl_4_o_dodecanoyl_alpha_d_gl
+    <-> . +decanoyl_coa +n_3_aminopropyl_hydroxylamine
+    n3_decanoyl_n3_hydroxy_1_3_diaminopropane
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +4_3_methylbutanoyl_sucrose
-    3_isobutanoyl_4_3_methylbutanoyl_sucrose
+    <-> ec_2_3_3_20 [2.3.3.20] +decanoyl_coa +h2o +h
+    2r_2_octyl_3_oxododecanoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    dihydrocarveol
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +demethylmenaquinone_12 +h
+    2_demethylmenaquinol_12
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +dihydrocarveol
-    2e_geranial
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_13 +h
+    2_demethylmenaquinol_13
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +phosphate +1_2_dioctadecanoyl_sn_glycerol_3_phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +jadomycin_a +phosphate +jadomycin_a
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_stearoyl_sn_glycero_3_phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gaudimycin_a
   }
 
   branch from 5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co side left {
@@ -68,13 +68,13 @@ pathway acetyl-coa-to-o2 "acetyl-CoA to O2" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +nadph +4alpha_carboxy_4beta_methyl_5alpha_cholest_7_ene +h2o
-    nadp
+    <-> . +previridicatumtoxin +nadph +nadp +h2o
+    viridicatumtoxin
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +nad +h2o
-    4alpha_carboxy_4beta_methyl_5alpha_cholest_7_ene
+    <-> . +abietatriene +nadp +h2o +h +miltiradiene
+    nadph
   }
 }

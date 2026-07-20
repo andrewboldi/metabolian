@@ -119,41 +119,12 @@
       }
     },
     {
-      "id": "2s_3s_methylphenylalanine",
-      "name": "(2S,3S)-β-methylphenylalanine",
-      "short": "(2S,3S)-β-methylphe…",
-      "formula": "C10H13NO2",
-      "charge": 0,
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:76864"
-      }
-    },
-    {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16810"
-      }
-    },
-    {
-      "id": "3s_3_methyl_2_oxo_3_phenylpropanoate",
-      "name": "(3S)-3-methyl-2-oxo-3-phenylpropanoate",
-      "short": "3-methyl-2-oxo-3-ph…",
-      "formula": "C10H9O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74119"
-      }
-    },
-    {
-      "id": "n_acetyl_l_aspartate",
-      "name": "N-acetyl-L-aspartate",
-      "formula": "C6H7NO5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16953"
+        "chebi": "CHEBI:16947"
       }
     },
     {
@@ -166,12 +137,12 @@
       }
     },
     {
-      "id": "ac_asp_glu",
-      "name": "Ac-Asp-Glu",
-      "formula": "C11H13N2O8",
-      "charge": -3,
+      "id": "citrylglutamate",
+      "name": "β-citrylglutamate",
+      "formula": "C11H11NO10",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:76931"
+        "chebi": "CHEBI:76942"
       }
     },
     {
@@ -190,6 +161,35 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_lysine_1_group",
+      "name": "C-terminal-γ-L-glutamyl-L-lysine(1−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H19N3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78526"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate semialdehyde(2−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H15N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78501"
       }
     },
     {
@@ -237,17 +237,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_107",
-      "name": "beta-methylphenylalanine transaminase",
+      "id": "ec_6_3_1_17",
+      "name": "beta-citrylglutamate synthase",
       "ec": [
-        "2.6.1.107"
+        "6.3.1.17"
       ]
     },
     {
-      "id": "ec_6_3_2_41",
-      "name": "N-acetylaspartylglutamate synthase",
+      "id": "ec_2_6_1_118",
+      "name": "[amino group carrier protein]-gamma-(L-lysyl)-L-glutamate",
       "ec": [
-        "6.3.2.41"
+        "2.6.1.118"
       ]
     },
     {
@@ -402,57 +402,12 @@
     },
     {
       "id": "r4",
-      "name": "beta-methylphenylalanine transaminase",
-      "equation": "(3S)-3-methyl-L-phenylalanine + 2-oxoglutarate = (3S)-2-oxo-3-phenylbutanoate + L-glutamate",
-      "ec": "2.6.1.107",
+      "name": "beta-citrylglutamate synthase",
+      "equation": "citrate + L-glutamate + ATP = beta-citrylglutamate + ADP + phosphate + H(+)",
+      "ec": "6.3.1.17",
       "substrates": [
         {
-          "metabolite": "2s_3s_methylphenylalanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3s_3_methyl_2_oxo_3_phenylpropanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_107"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:39911"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:39911"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "N-acetylaspartylglutamate synthase",
-      "equation": "N-acetyl-L-aspartate + L-glutamate + ATP = N-acetyl-L-aspartyl-L-glutamate + ADP + phosphate + H(+)",
-      "ec": "6.3.2.41",
-      "substrates": [
-        {
-          "metabolite": "n_acetyl_l_aspartate",
+          "metabolite": "citrate",
           "stoichiometry": 1
         },
         {
@@ -466,7 +421,7 @@
       ],
       "products": [
         {
-          "metabolite": "ac_asp_glu",
+          "metabolite": "citrylglutamate",
           "stoichiometry": 1
         },
         {
@@ -484,20 +439,65 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_2_41"
+          "enzyme": "ec_6_3_1_17"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:40035"
+        "rhea": "RHEA:40043"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40035"
+            "id": "RHEA:40043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "[amino group carrier protein]-gamma-(L-lysyl)-L-glutamate",
+      "equation": "[amino-group carrier protein]-C-terminal-gamma-(L-lysyl)-L-glutamate + 2-oxoglutarate = [amino-group carrier protein]-C-terminal-N-(1-carboxy-5-oxopentan-1-yl)-L-glutamine + L-glutamate",
+      "ec": "2.6.1.118",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_lysine_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:41952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41952"
           }
         ]
       }

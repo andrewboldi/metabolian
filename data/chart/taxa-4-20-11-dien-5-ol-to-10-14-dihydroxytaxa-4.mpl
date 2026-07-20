@@ -24,13 +24,13 @@ pathway taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4 "taxa-4(20),11-dien-5α-
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_169 [1.14.14.169] +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o
-    eupatolide
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxycholesterol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
-    6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
+    5_22s_22_hydroxycholestan_3_ol
   }
 }

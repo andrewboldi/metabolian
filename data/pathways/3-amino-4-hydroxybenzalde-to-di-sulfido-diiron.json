@@ -120,30 +120,33 @@
       }
     },
     {
-      "id": "narbomycin",
-      "name": "narbomycin",
-      "formula": "C28H48NO7",
-      "charge": 1,
+      "id": "1_acyl_2_palmitoylglycerolipid",
+      "name": "1-acyl-2-palmitoylglycerolipid",
+      "short": "1-acyl-2-palmitoylg…",
+      "formula": "C20H36O5R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76801"
+        "chebi": "CHEBI:86999"
       }
     },
     {
-      "id": "neopikromycin",
-      "name": "neopikromycin",
-      "formula": "C28H48NO8",
-      "charge": 1,
+      "id": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
+      "name": "1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid",
+      "short": "1-acyl-2-[(3E)-hexa…",
+      "formula": "C20H34O5R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77350"
+        "chebi": "CHEBI:87002"
       }
     },
     {
-      "id": "novapikromycin",
-      "name": "novapikromycin",
-      "formula": "C28H48NO9",
-      "charge": 1,
+      "id": "1_acyl_2_palmitoleoylglycerolipid",
+      "name": "1-acyl-2-palmitoleoylglycerolipid",
+      "short": "1-acyl-2-palmitoleo…",
+      "formula": "C20H34O5R2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77351"
+        "chebi": "CHEBI:87003"
       }
     }
   ],
@@ -170,10 +173,17 @@
       ]
     },
     {
-      "id": "ec_1_14_15_33",
-      "name": "pikromycin synthase",
+      "id": "ec_1_14_19_43",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
       "ec": [
-        "1.14.15.33"
+        "1.14.19.43"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_27",
+      "name": "sn-2 palmitoyl-lipid 9-desaturase",
+      "ec": [
+        "1.14.19.27"
       ]
     }
   ],
@@ -327,12 +337,12 @@
     },
     {
       "id": "r4",
-      "name": "pikromycin synthase",
-      "equation": "narbomycin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = neopikromycin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "ec": "1.14.15.33",
+      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
+      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.43",
       "substrates": [
         {
-          "metabolite": "narbomycin",
+          "metabolite": "1_acyl_2_palmitoylglycerolipid",
           "stoichiometry": 1
         },
         {
@@ -350,7 +360,7 @@
       ],
       "products": [
         {
-          "metabolite": "neopikromycin",
+          "metabolite": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
           "stoichiometry": 1
         },
         {
@@ -359,60 +369,60 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_33"
+          "enzyme": "ec_1_14_19_43"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:40531"
+        "rhea": "RHEA:46764"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40531"
+            "id": "RHEA:46764"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "pikromycin synthase",
-      "equation": "narbomycin + 4 reduced [2Fe-2S]-[ferredoxin] + 2 O2 + 4 H(+) = novapikromycin + 4 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.15.33",
+      "name": "sn-2 palmitoyl-lipid 9-desaturase",
+      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(9Z)-hexadecenoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.27",
       "substrates": [
         {
-          "metabolite": "narbomycin",
+          "metabolite": "1_acyl_2_palmitoylglycerolipid",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 2
         },
         {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "novapikromycin",
+          "metabolite": "1_acyl_2_palmitoleoylglycerolipid",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
@@ -421,20 +431,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_15_33"
+          "enzyme": "ec_1_14_19_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:40535"
+        "rhea": "RHEA:46768"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40535"
+            "id": "RHEA:46768"
           }
         ]
       }

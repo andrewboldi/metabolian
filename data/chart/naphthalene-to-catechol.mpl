@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway naphthalene-to-catechol "naphthalene to catechol" {
-  spacing 322
+  spacing 304
 
   spine at 0,0 {
     naphthalene
@@ -44,25 +44,7 @@ pathway naphthalene-to-catechol "naphthalene to catechol" {
     ppi
   }
 
-  branch from salicylate side right {
-    salicylate
-    <-> . +udp_d_glucose +udp
-    d_glucosyl_salicylate
-  }
-
-  branch from salicylate side left {
-    salicylate
-    <-> ec_2_1_1_382 [2.1.1.382] +o_methylsalicylate +cobalt +hplus
-    methyl_co
-  }
-
   branch from phenol side right {
-    phenol
-    <-> . +nadh +o2 +hplus +nad +h2o
-    quinol
-  }
-
-  branch from phenol side left {
     phenol
     <-> ec_2_7_1_238 [2.7.1.238] +atp +h2o +amp +pi +hplus
     phenyl_phosphate

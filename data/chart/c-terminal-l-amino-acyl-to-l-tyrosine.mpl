@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-l-amino-acyl-to-l-tyrosine "C-terminal L-α-amino-acyl… to L-tyrosine" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     c_terminal_l_amino_acyl_l_glutamyl_l_glutamyl_l
@@ -16,31 +16,25 @@ pathway c-terminal-l-amino-acyl-to-l-tyrosine "C-terminal L-α-amino-acyl… to 
     c_terminal_amino_acyl_l_glutamyl_l_glutamate_2
   }
 
-  branch from c_terminal_amino_acyl_l_glutamyl_l_glutamate_2 side left {
-    c_terminal_amino_acyl_l_glutamyl_l_glutamate_2
-    <-> ec_3_4_17_24 [3.4.17.24] +h2o +glutamate
-    c_terminal_amino_acyl_l_glutamate_2
+  branch from l_phenylalanine side left {
+    l_phenylalanine
+    <-> ec_5_4_3_10 [5.4.3.10]
+    r_3_ammonio_3_phenylpropanoate
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_1_14_16_1 [1.14.16.1] +sapropterin +o2 +tyrosine
-    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
+    <-> ec_5_4_3_11 [5.4.3.11]
+    s_3_ammonio_3_phenylpropanoate
   }
 
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> ec_3_4_17_23 [3.4.17.23] +ile5_angiotensin_ii_dizwitterion +h2o
-    ile5_angiotensin_ii_1_7_dizwitterion
-  }
-
-  branch from tyrosine side right {
+  branch from tyrosine side left {
     tyrosine
     <-> ec_1_3_1_78 [1.3.1.78] +nadp +co2 +nadph
     l_arogenate
   }
 
-  branch from tyrosine side left {
+  branch from tyrosine side right {
     tyrosine
     <-> ec_5_4_3_6 [5.4.3.6]
     3_amino_3_4_hydroxyphenyl_propanoic_acid

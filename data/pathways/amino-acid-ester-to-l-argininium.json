@@ -216,49 +216,22 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
+      "id": "3_l_cysteinyl_adenylyl_zwitterionic_group",
+      "name": "3'-(L-cysteinyl)adenylyl zwitterionic group",
+      "short": "3'-(L-cysteinyl)ade…",
+      "formula": "C13H18N6O7PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:78517"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "3_l_glutamate_adenylyl_1_group",
-      "name": "3'-(L-glutamate)adenylyl(1−) group",
-      "short": "3'-(L-glutamate)ade…",
-      "formula": "C15H19N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78520"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:35235"
       }
     },
     {
@@ -371,10 +344,10 @@
       ]
     },
     {
-      "id": "ec_6_1_1_17",
-      "name": "glutamate--tRNA ligase",
+      "id": "ec_3_6_1_n2",
+      "name": "L-cysteinyl-tRNA(Pro)",
       "ec": [
-        "6.1.1.17"
+        "3.6.1.n2"
       ]
     },
     {
@@ -758,53 +731,49 @@
     },
     {
       "id": "r9",
-      "name": "glutamate--tRNA ligase",
-      "equation": "tRNA(Glu) + L-glutamate + ATP = L-glutamyl-tRNA(Glu) + AMP + diphosphate",
-      "ec": "6.1.1.17",
+      "name": "L-cysteinyl-tRNA(Pro)",
+      "equation": "L-cysteinyl-tRNA(Pro) + H2O = tRNA(Pro) + L-cysteine + H(+)",
+      "ec": "3.6.1.n2",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "3_l_cysteinyl_adenylyl_zwitterionic_group",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "cysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_17"
+          "enzyme": "ec_3_6_1_n2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:23540"
+        "rhea": "RHEA:25351"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23540"
+            "id": "RHEA:25351"
           }
         ]
       }

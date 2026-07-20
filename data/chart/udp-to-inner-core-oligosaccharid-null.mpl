@@ -18,38 +18,38 @@ pathway udp-to-inner-core-oligosaccharid-null "UDP to inner core oligosaccharidâ
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +cicerin_7_o_glucoside
-    cicerin
+    <-> . +udp +cucurbitacin_c_3_o_beta_d_glucopyranoside +h
+    cucurbitacin_c
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +isoorientin_4_o_beta_d_glucoside
-    isoorientin
+    <-> . +udp +cucurbitacin_e_2_o_d_glucopyranoside +h
+    cucurbitacin_e
   }
 
   branch from h side left {
     h
-    <-> . +r_glycerate +coa +h2o
-    d_glyceroyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    20_0_18_2_ps
   }
 
   branch from h side right {
     h
-    <-> . +fadh2 +2_6_dichlorobenzoquinone +2_6_dichloro_4_hydroxyphenolate
-    fad
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    20_0_18_3_ps
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_11_1 [2.7.11.1] +h +atp +kemptide
-    phosphokemptide
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_7_1_179 [2.7.1.179] +h +atp +aldehydo_d_kanosamine
-    3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    ps_20_1_11z_18_3_9z_12z_15z
   }
 
   branch from phospho_heptosyl_heptosyl_kdo2_lipida side left {

@@ -18,14 +18,14 @@ pathway 1-cyclohexenol-to-h2o "1-cyclohexenol to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +diacetyl +nadph +nadp
-    butane_2_3_diol
+    <-> . +3_oxopropanoate +bromide +h2o
+    trans_3_bromoacrylic_acid
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_62 [1.1.1.62] +2_acetylpyridine +nadph +nadp
-    1_pyridin_2_yl_ethanol
+    <-> ec_3_1_1_73 [3.1.1.73] +e_4_coumaric_acid_methyl_ester +h2o +methanol
+    4_coumarate
   }
 
   branch from cyclohex_2_enone side left {
@@ -36,14 +36,14 @@ pathway 1-cyclohexenol-to-h2o "1-cyclohexenol to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +nadp +13_dihydrodaunorubicin
-    daunorubicin
+    <-> . +1_chloroethenyl_oxirane +nadp +h2o +h +o2
+    chloroprene
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +nadp +h
-    bornane_2_3_dione
+    <-> ec_1_14_14_55 [1.14.14.55] +2_hydroxynevirapine +nadp +h2o +h +o2
+    11_cyclopropyl_5_11_dihydro_4_methyl_6h_dipyrido
   }
 
   branch from cyclohexanone side right {
@@ -60,25 +60,25 @@ pathway 1-cyclohexenol-to-h2o "1-cyclohexenol to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_47 [1.1.1.47] +nadh +6_deoxy_d_glucono_1_5_lactone +h
-    d_quinovose
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_fucono_1_4_lactone
+    d_fucopyranose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_22 [1.2.1.22] +nadh +r_lactate +h +h2o
-    lactaldehyde
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +4_hydroxynon_2_enoic_acid +h +h2o
+    4_hydroxynon_2_enal
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +n_acetyl_l_phenylalanine
-    n_acetyl_l_phenylalanine_ethyl_ester
+    <-> ec_1_11_1_14 [1.11.1.14] +3_4_dimethoxybenzaldehyde +3_4_dimethoxyphenyl_methanol
+    h2o2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +phenol
-    phenyl_beta_d_glucopyranoside
+    <-> ec_2_3_2_2 [2.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +2s_2_aminobutanoate
+    l_alpha_methyl_glutamate
   }
 }

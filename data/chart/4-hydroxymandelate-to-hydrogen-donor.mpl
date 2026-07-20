@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxymandelate-to-hydrogen-donor "4-hydroxymandelate to hydrogen donor" {
-  spacing 280
+  spacing 262
 
   spine at 0,0 {
     4_hydroxymandelate
@@ -28,33 +28,15 @@ pathway 4-hydroxymandelate-to-hydrogen-donor "4-hydroxymandelate to hydrogen don
     cu
   }
 
-  branch from p_hydroxybenzyl_alcohol side right {
-    p_hydroxybenzyl_alcohol
-    <-> ec_1_1_1_2 [1.1.1.2] +nadp +4_hydroxybenzaldehyde +nadph
-    h
-  }
-
-  branch from arsenite side left {
-    arsenite
-    <-> . +r_dihydrolipoate +h +ribose_1_arsenate +aldehydo_d_ribose
-    r_lipoate
-  }
-
-  branch from arsenite side right {
-    arsenite
-    <-> . +r_dihydrolipoate +h +ribose_1_arsenate +r_lipoate
-    beta_d_ribopyranose
+  branch from hydrogen_donor side right {
+    hydrogen_donor
+    <-> . +tyrosine +holo-acp +malonyl-coa +acetyl_coa +sam +atp +hplus +hydrogen_acceptor +amp +sah +co2 +ppi +coa +h2o
+    o_s_n_4e_6e_10s_12z_14e_6_10_dimethyl_3_oxohexad
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +dihydroalstonine +hydrogen_acceptor
-    alstonine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +dihydroserpentine +hydrogen_acceptor
-    serpentine
+    <-> . +malonyl-coa +hplus +hydrogen_acceptor +co2 +coa +h2o
+    6_hydroxymellein
   }
 }

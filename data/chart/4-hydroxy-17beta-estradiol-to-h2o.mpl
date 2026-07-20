@@ -18,14 +18,14 @@ pathway 4-hydroxy-17beta-estradiol-to-h2o "4-hydroxy-17beta-estradiol to H2O" {
 
   branch from h side left {
     h
-    <-> . +nadh +phenanthrene +o2 +nad
-    3s_4r_3_4_dihydrophenanthrene_3_4_diol
+    <-> ec_2_5_1_18 [2.5.1.18] +1r_glutathionyl_2r_hydroxy_1_2_dihydronaphthale +glutathione
+    1s_2r_naphthalene_1_2_oxide
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +gibberellin_a24 +o2 +succinate +gibberellin_a36
-    co2
+    <-> ec_2_5_1_18 [2.5.1.18] +1s_hydroxy_2s_glutathionyl_1_2_dihydronaphthale +1s_2r_naphthalene_1_2_oxide
+    glutathione
   }
 
   branch from 17beta_estradiol side left {
@@ -42,61 +42,61 @@ pathway 4-hydroxy-17beta-estradiol-to-h2o "4-hydroxy-17beta-estradiol to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +amyrin
-    soyasapogenol_b
+    <-> . +h +nadph +typhasterol +nadp +h2o
+    castasterone
   }
 
   branch from o2 side right {
     o2
-    <-> . +dihydrokalafungin +h2o
-    5_deoxodihydrokalafungin
+    <-> . +h +6_deoxotyphasterol +nadph +nadp +h2o
+    6_deoxocastasterone
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_362 [1.1.1.362] +auramycinone +nadp +h
-    auraviketone
+    <-> ec_1_1_1_289 [1.1.1.289] +l_sorbopyranose +h +nadp
+    d_sorbitol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +4_ethylphenol +o2 +nadp +h2o
-    4_1_hydroxyethyl_phenol
+    <-> ec_1_3_1_77 [1.3.1.77] +3_hydroxy_2_phenylchromenylium +h +nadp
+    2r_3r_flavan_3_ol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
-    cis_cyclohexane_1_2_diol
+    <-> ec_1_3_1_19 [1.3.1.19] +nadh +phthalate +h
+    1_2_dihydrophthalic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_2_4_trichlorobenzene +o2
-    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +anthracene +o2
+    anthracene_cis_1_2_dihydrodiol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +tetrangulol
-    tetrangomycin
+    <-> . +glutathione_episulfonium_ion +h
+    s_2_hydroxyethyl_glutathione
   }
 
   branch from h2o side right {
     h2o
-    <-> . +urdamycinone_f
-    aquayamycin
+    <-> . +2_s_glutathionyl_acetyl_glutathione +h +glutathione
+    2_s_glutathionyl_acetate
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylaminopropylcadaverine +adp +phosphate
-    homotrypanothione
+    <-> ec_3_6_3_48 [3.6.3.48] +h +adp +phosphate +h2o
+    whwlqlkpgqpmy
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_39 [6.2.1.39] +l_glutamate +4_aminobutyryl_acp +adp +phosphate
-    gamma_l_glutamyl_4_aminobutyryl_acp
+    <-> ec_3_6_3_53 [3.6.3.53] +h +adp +phosphate +h2o
+    ag
   }
 }

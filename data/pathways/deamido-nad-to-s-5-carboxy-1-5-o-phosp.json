@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "deamido-nad-to-s-5-carboxy-1-5-o-phosp",
   "name": "deamido-NAD to S-[5-carboxy-1-(5-O-phosp…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from deamido-NAD(2−) to S-[5-carboxy-1-(5-O-phosphono-β-D-ribofuranosyl)pyridinium-3-carbonyl]-L-cysteine(2−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,50 +140,57 @@
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "c_gmp_ump",
-      "name": "c-GMP-UMP",
-      "formula": "C19H21N7O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:197444"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "5r_12r_14s_dolasta_1_15_8_diene",
-      "name": "(5R,12R,14S)-dolasta-1(15),8-diene",
-      "short": "(5R,12R,14S)-dolast…",
-      "formula": "C20H32",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192990"
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "l_tryptophanal",
+      "name": "L-tryptophanal",
+      "formula": "C11H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:233078"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "amikacin",
+      "name": "amikacin",
+      "formula": "C22H47N5O13",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:84739"
+      }
+    },
+    {
+      "id": "4_adenylylamikacin",
+      "name": "4'-adenylylamikacin",
+      "formula": "C32H58N10O19P",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:233200"
       }
     }
   ],
@@ -193,13 +200,6 @@
       "name": "pyridinium-3,5-biscarboxylic acid mononucleotide synthase",
       "ec": [
         "2.5.1.143"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_214",
-      "name": "dolasta-1(15),8-diene synthase",
-      "ec": [
-        "4.2.3.214"
       ]
     }
   ],
@@ -418,57 +418,76 @@
     },
     {
       "id": "r6",
-      "name": "UTP + GTP = 3',3'-cGMP-UMP + 2 diphosphate",
-      "equation": "UTP + GTP = 3',3'-cGMP-UMP + 2 diphosphate",
+      "name": "L-tryptophan + ATP + NADPH + H(+) = L-tryptophanal + AMP + diphosphate + NADP(+)",
+      "equation": "L-tryptophan + ATP + NADPH + H(+) = L-tryptophanal + AMP + diphosphate + NADP(+)",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "c_gmp_ump",
+          "metabolite": "l_tryptophanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:77707"
+        "rhea": "RHEA:83479"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77707"
+            "id": "RHEA:83479"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "dolasta-1(15),8-diene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (5R,12R,14S)-dolasta-1(15),8-diene + diphosphate",
-      "ec": "4.2.3.214",
+      "name": "amikacin + ATP = 4'-adenylylamikacin + diphosphate",
+      "equation": "amikacin + ATP = 4'-adenylylamikacin + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "amikacin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5r_12r_14s_dolasta_1_15_8_diene",
+          "metabolite": "4_adenylylamikacin",
           "stoichiometry": 1
         },
         {
@@ -476,22 +495,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_214"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:77963"
+        "rhea": "RHEA:83667"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77963"
+            "id": "RHEA:83667"
           }
         ]
       }

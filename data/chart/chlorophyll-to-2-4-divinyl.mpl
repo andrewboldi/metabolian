@@ -44,8 +44,8 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from phytyl_phosphate side right {
     phytyl_phosphate
-    <-> . +datp +phytyl_diphosphate
-    dadp
+    <-> . +itp +phytyl_diphosphate
+    idp
   }
 
   branch from cdp side left {
@@ -62,26 +62,14 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from phytyl_diphosphate side left {
     phytyl_diphosphate
-    <-> ec_2_5_1_62 [2.5.1.62] +chlorophyll_b +diphosphate
-    chlorophyllide_b
-  }
-
-  branch from phytyl_diphosphate side right {
-    phytyl_diphosphate
-    <-> . +2_phytyl_1_4_dihydroxynaphthalene +diphosphate +co2 +1_4_dihydroxy_2_naphthoate
-    h
-  }
-
-  branch from nucleoside_5_diphosphate side left {
-    nucleoside_5_diphosphate
-    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
-    nucleoside_5_monophosphate
+    <-> . +utp +phytyl_phosphate
+    udp
   }
 
   branch from nucleoside_5_diphosphate side right {
     nucleoside_5_diphosphate
-    <-> . +ribonucleoside_5_diphosphate_d_glucose +g6p +hplus
-    trehalose_6_phosphate
+    <-> . +gtp +gdp
+    nucleoside_5_monophosphate
   }
 
   branch from chlorophyll_a side left {
@@ -98,14 +86,14 @@ pathway chlorophyll-to-2-4-divinyl "chlorophyll to 2,4-divinyl…" {
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
-    3_hydroxybenzoyl_coa
+    <-> . +gpp
+    phellandrene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
-    7_8_dihydroneopterin_3_phosphate
+    <-> ec_4_2_3_109 [4.2.3.109] +gpp
+    sabinene
   }
 
   branch from chlorophyllide_a side left {

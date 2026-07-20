@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h2o "GDP to H2O" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     gdp
@@ -18,37 +18,31 @@ pathway gdp-to-h2o "GDP to H2O" {
 
   branch from all_trans_3s_3_s_astaxanthin side left {
     all_trans_3s_3_s_astaxanthin
-    <-> . +nadh +h +o2 +nad +h2o
-    phoenicoxanthin
-  }
-
-  branch from all_trans_3s_3_s_astaxanthin side right {
-    all_trans_3s_3_s_astaxanthin
     <-> . +h2o
     4_4_dihydroxyadonixanthin
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +3_carboxy_8_methylsulfanyl_2_oxooctanoate +h
-    3_5_methylthio_pentylmalic_acid
-  }
-
   branch from nad side right {
     nad
-    <-> . +nadh +3_carboxy_7_methylsulfanyl_2_oxoheptanoate +h
-    3_4_methylthio_butylmalic_acid
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +3_chlorobenzaldehyde
+    3_chlorophenyl_methanol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_74 [4.2.1.74] +e_z_dodeca_2_5_dienoyl_coa
-    s_z_3_hydroxydodec_5_enoyl_coa
+  branch from nad side left {
+    nad
+    <-> ec_1_2_1_28 [1.2.1.28] +nadh +h +3_chlorobenzoate +h2o
+    3_chlorobenzaldehyde
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_21_4 [3.4.21.4] +l_4_hydroxyphenylglycyl_l_arginine +d_4_hydroxyphenylglycine_l_seryl_l_4_hydroxyphen +h
-    l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph
+    <-> . +4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate +2_methyl_3_oxopropanoate
+    pyruvate
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +5_methyl_picolinate
+    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 }

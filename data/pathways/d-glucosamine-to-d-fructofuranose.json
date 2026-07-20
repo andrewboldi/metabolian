@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucosamine-to-d-fructofuranose",
   "name": "α-D-glucosamine… to β-D-fructofuranose…",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from α-D-glucosamine 6-phosphate(1−) to β-D-fructofuranose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -132,39 +132,40 @@
       }
     },
     {
-      "id": "guanosine",
-      "name": "Guanosine",
-      "formula": "C10H13N5O5",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16750"
+        "chebi": "CHEBI:57912"
       }
     },
     {
-      "id": "xanthosine",
-      "name": "xanthosine",
-      "formula": "C10H12N4O6",
-      "charge": 0,
+      "id": "3_indol_3_yl_pyruvate",
+      "name": "3-(indol-3-yl)pyruvate",
+      "short": "3-(indol-3-yl)pyruv…",
+      "formula": "C11H8NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:18107"
+        "chebi": "CHEBI:17640"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "itp",
-      "name": "ITP",
-      "formula": "C10H11N4O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61402"
+        "chebi": "CHEBI:57783"
       }
     }
   ],
@@ -205,24 +206,10 @@
       ]
     },
     {
-      "id": "ec_3_5_4_15",
-      "name": "guanosine deaminase",
+      "id": "ec_1_4_1_19",
+      "name": "tryptophan dehydrogenase",
       "ec": [
-        "3.5.4.15"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_17",
-      "name": "adenosine-phosphate deaminase",
-      "ec": [
-        "3.5.4.17"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_18",
-      "name": "ATP deaminase",
-      "ec": [
-        "3.5.4.18"
+        "1.4.1.19"
       ]
     }
   ],
@@ -462,16 +449,34 @@
     },
     {
       "id": "r6",
-      "name": "guanosine deaminase",
-      "equation": "guanosine + H2O + H(+) = xanthosine + NH4(+)",
-      "ec": "3.5.4.15",
+      "name": "tryptophan dehydrogenase",
+      "equation": "L-tryptophan + NAD(+) + H2O = indole-3-pyruvate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.19",
       "substrates": [
         {
-          "metabolite": "guanosine",
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -479,48 +484,56 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "xanthosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_15"
+          "enzyme": "ec_1_4_1_19"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:12861"
+        "rhea": "RHEA:13473"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12861"
+            "id": "RHEA:13473"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "adenosine-phosphate deaminase",
-      "equation": "ATP + H2O + H(+) = ITP + NH4(+)",
-      "ec": "3.5.4.17",
+      "name": "tryptophan dehydrogenase",
+      "equation": "L-tryptophan + NADP(+) + H2O = indole-3-pyruvate + NH4(+) + NADPH + H(+)",
+      "ec": "1.4.1.19",
       "substrates": [
         {
-          "metabolite": "atp",
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_indol_3_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -528,32 +541,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "itp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_17"
+          "enzyme": "ec_1_4_1_19"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:13037"
+        "rhea": "RHEA:13477"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13037"
+            "id": "RHEA:13477"
           }
         ]
       }

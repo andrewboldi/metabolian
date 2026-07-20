@@ -30,13 +30,13 @@ pathway 1-haloalkane-to-carboxylic-acid-anion "1-haloalkane to carboxylic acid a
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> . +phosphatidylcholine +h2o +hplus
-    choline_alfoscerate
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 }

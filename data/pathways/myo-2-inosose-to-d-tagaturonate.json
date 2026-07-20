@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "myo-2-inosose-to-d-tagaturonate",
+  "name": "myo-2-inosose to D-tagaturonate",
+  "category": "other",
+  "summary": "A 3-step route from myo-2-inosose to D-tagaturonate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53284"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17811"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "myo_2_inosose",
+      "name": "myo-2-inosose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17811"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_dehydro_scyllo_inosose",
+      "name": "3-dehydro-scyllo-inosose",
+      "short": "3-dehydro-scyllo-in…",
+      "formula": "C6H8O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137015"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_dehydro_l_gluconate",
+      "name": "5-dehydro-L-gluconate",
+      "short": "5-dehydro-L-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137108"
+      }
+    },
+    {
+      "id": "d_tagaturonate",
+      "name": "D-tagaturonate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17886"
+      }
+    },
+    {
+      "id": "d_mannonate",
+      "name": "D-mannonate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17767"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_57",
+      "name": "fructuronate reductase",
+      "ec": [
+        "1.1.1.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
+      "equation": "scyllo-inosose + NAD(+) = 3-dehydro-scyllo-inosose + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myo_2_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_dehydro_scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53284"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-dehydro-scyllo-inosose + H2O = 5-dehydro-L-gluconate + H(+)",
+      "equation": "3-dehydro-scyllo-inosose + H2O = 5-dehydro-L-gluconate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_dehydro_scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dehydro_l_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53288"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53288"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-dehydro-L-gluconate = keto-D-tagaturonate",
+      "equation": "5-dehydro-L-gluconate = keto-D-tagaturonate",
+      "substrates": [
+        {
+          "metabolite": "5_dehydro_l_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagaturonate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "fructuronate reductase",
+      "equation": "D-mannonate + NAD(+) = keto-D-tagaturonate + NADH + H(+)",
+      "ec": "1.1.1.57",
+      "substrates": [
+        {
+          "metabolite": "d_mannonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagaturonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:51652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51652"
+          }
+        ]
+      }
+    }
+  ]
+}

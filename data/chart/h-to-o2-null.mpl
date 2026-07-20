@@ -24,49 +24,49 @@ pathway h-to-o2-null "H to O2" {
 
   branch from nadp side right {
     nadp
-    <-> . +brassicasterol +h +nadph
-    ergosterol
+    <-> . +h +1r_4r_camphor +nadph
+    1r_2s_4r_borneol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +cerivastatin +h2o
-    cerivastatin_m23
+    <-> . +1s_4s_camphor +h +nadph
+    1s_2r_4s_borneol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_beta_hydroxy_methyl_simvastatin_lactone_form
-    6_beta_hydroxy_methyl_simvastatin_acid_form
+    <-> . +l_histidine +l_aspartate
+    histidyl_aspartate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_exomethylene_lovastatin_acid_form
-    6_exomethylene_lovastatin_lactone_form
+    <-> . +l_histidine +l_cysteine
+    histidyl_cystyl_cysteine
   }
 
   branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +h +tetracosanal
-    tricosane
-  }
-
-  branch from carbon_monoxide side left {
     carbon_monoxide
     <-> . +h +triacontanal
     nonacosane
   }
 
+  branch from carbon_monoxide side left {
+    carbon_monoxide
+    <-> . +fadh2 +co2 +h +h2o
+    fad
+  }
+
   branch from o2 side right {
     o2
-    <-> . +cyclosporin_a_metabolite_m18 +h2o
-    am1ac_cyclosporine
+    <-> . +2z_4e_2_hydroxyhexa_2_4_dienedioate +h +chloride +h2o
+    3_chlorocatechol
   }
 
   branch from o2 side left {
     o2
-    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o
-    carboxy_gliclazide
+    <-> ec_1_3_3_8 [1.3.3.8] +s_cheilanthifoline +h +dehydrocheilanthifoline
+    h2o2
   }
 }

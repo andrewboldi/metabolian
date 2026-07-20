@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-decaprenyl-4-5-dihydrox-to-h2o "3-decaprenyl-4,5-dihydrox… to H2O" {
-  spacing 322
+  spacing 316
 
   spine at 0,0 {
     3_decaprenyl_4_5_dihydroxybenzoate
@@ -18,43 +18,37 @@ pathway 3-decaprenyl-4-5-dihydrox-to-h2o "3-decaprenyl-4,5-dihydrox… to H2O" {
 
   branch from sah side left {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
-    5_methylorsellinate
+    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
+    4_8_dihydroxy_3_methoxyflavone_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
+    <-> . +s_naringenin +sam +hplus
+    4_methoxy_5_7_dihydroxyflavanone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
-    levopimaradienol
+    <-> ec_1_3_1_71 [1.3.1.71] +fucosterol +h +nadph
+    clionasterol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
-    neoabietadienol
-  }
-
-  branch from 2_decaprenyl_6_methoxyhydroquinone side left {
-    2_decaprenyl_6_methoxyhydroquinone
-    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +nadp
-    2_decaprenyl_6_methoxy_1_4_benzoquinone
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +neoagarooctaose +phosphate +neoagarooctaose
-    atp
+    <-> ec_1_3_1_21 [1.3.1.21] +fucosterol +h +nadph
+    5_dehydroisoavenasterol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    agaroheptaose
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    16alpha_17_epoxy_gibberellin_a12
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +16_17_dihydro_16alpha_17_dihydroxy_gibberellin_a
+    16alpha_17_epoxy_gibberellin_a9
   }
 }

@@ -24,13 +24,13 @@ pathway d-glycero-d-manno-hepto-to-diphosphate "D-glycero-β-D-manno-hepto… to
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    z_bisabolene
+    <-> . +atp
+    cyclic_a_3_5_pa_3_5_pa_3_5_p
   }
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    cedr_8_ene
+    <-> . +butyrolactone_ii +dmapp
+    butyrolactone_i
   }
 }

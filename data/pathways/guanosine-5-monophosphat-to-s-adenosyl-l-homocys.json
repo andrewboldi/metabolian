@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "guanosine-5-monophosphat-to-s-adenosyl-l-homocys",
+  "name": "guanosine 5'-monophosphat… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from guanosine 5'-monophosphate(1−) residue to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36899"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:74269"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n1_methylguanosine_5_monophosphate_1",
+      "name": "N1-methylguanosine 5'-monophosphate(1−)",
+      "short": "N1-methylguanosine…",
+      "formula": "C11H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73542"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "4_demethylwyosine_5_monophosphate_1",
+      "name": "4-demethylwyosine 5'-monophosphate(1−)",
+      "short": "4-demethylwyosine…",
+      "formula": "C13H13N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64315"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isowyosine_5_monophosphate_1",
+      "name": "isowyosine 5'-monophosphate(1−)",
+      "short": "isowyosine 5'-MP(1−)",
+      "formula": "C14H15N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136979"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_228",
+      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
+      "ec": [
+        "2.1.1.228"
+      ]
+    },
+    {
+      "id": "ec_4_1_3_44",
+      "name": "tRNA 4-demethylwyosine synthase (AdoMet-dependent)",
+      "ec": [
+        "4.1.3.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tRNA (guanine(37)-N(1))-methyltransferase",
+      "equation": "guanosine(37) in tRNA + S-adenosyl-L-methionine = N(1)-methylguanosine(37) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.228",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n1_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_228"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tRNA 4-demethylwyosine synthase (AdoMet-dependent)",
+      "equation": "N(1)-methylguanosine(37) in tRNA(Phe) + pyruvate + S-adenosyl-L-methionine = 4-demethylwyosine(37) in tRNA(Phe) + 5'-deoxyadenosine + L-methionine + CO2 + H2O",
+      "ec": "4.1.3.44",
+      "substrates": [
+        {
+          "metabolite": "n1_methylguanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_demethylwyosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-demethylwyosine(37) in tRNA(Phe) + S-adenosyl-L-methionine = isowyosine(37) in tRNA(P...",
+      "equation": "4-demethylwyosine(37) in tRNA(Phe) + S-adenosyl-L-methionine = isowyosine(37) in tRNA(Phe) + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_demethylwyosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isowyosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53056"
+          }
+        ]
+      }
+    }
+  ]
+}

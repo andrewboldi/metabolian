@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-nitrophenol-to-nh4",
   "name": "3-nitrophenol to NH4",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 3-nitrophenol to NH4(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,57 +138,52 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM114"
-      }
-    },
-    {
-      "id": "ornithine",
-      "name": "ornithine",
-      "formula": "C5H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM741174"
-      }
-    },
-    {
-      "id": "d_alanine",
-      "name": "D-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105731"
-      }
-    },
-    {
-      "id": "phylloquinone",
-      "name": "phylloquinone",
-      "formula": "C31H46O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364296"
-      }
-    },
-    {
-      "id": "phylloquinol",
-      "name": "phylloquinol",
-      "formula": "C31H48O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364297"
-      }
-    },
-    {
       "id": "pyruvate",
       "name": "pyruvate",
       "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
         "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "6_chloro_2_phenyl_4_sulfanylpyrimidine",
+      "name": "6-chloro-2-phenyl-4-sulfanylpyrimidine",
+      "short": "6-chloro-2-phenyl-4…",
+      "formula": "C10H7ClN2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818985"
+      }
+    },
+    {
+      "id": "s_fenclorimyl_l_cysteine",
+      "name": "S-fenclorimyl-L-cysteine",
+      "short": "S-fenclorimyl-L-cys…",
+      "formula": "C13H12ClN3O2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818976"
+      }
+    },
+    {
+      "id": "4_mercapto_4_methylpentan_2_one",
+      "name": "4-mercapto-4-methylpentan-2-one",
+      "short": "4-mercapto-4-methyl…",
+      "formula": "C6H12OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77856"
+      }
+    },
+    {
+      "id": "s_4_oxo_2_methylpentan_2_yl_l_cysteine",
+      "name": "S-(4-oxo-2-methylpentan-2-yl)-L-cysteine",
+      "short": "S-(4-oxo-2-methylpe…",
+      "formula": "C9H17NO3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818950"
       }
     }
   ],
@@ -198,6 +193,13 @@
       "name": "3-(hydroxyamino)phenol mutase",
       "ec": [
         "5.4.4.3"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_13",
+      "name": "cysteine-S-conjugate beta-lyase",
+      "ec": [
+        "4.4.1.13"
       ]
     }
   ],
@@ -368,52 +370,25 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR179135",
+      "name": "cysteine-S-conjugate beta-lyase",
+      "ec": "4.4.1.13",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh4",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_chloro_2_phenyl_4_sulfanylpyrimidine",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ornithine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR179135"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR179135"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR181966",
-      "substrates": [
-        {
-          "metabolite": "d_alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phylloquinone",
+          "metabolite": "s_fenclorimyl_l_cysteine",
           "stoichiometry": 1
         },
         {
@@ -421,9 +396,33 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "phylloquinol",
+          "enzyme": "ec_4_4_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR186806"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR186806"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cysteine-S-conjugate beta-lyase",
+      "ec": "4.4.1.13",
+      "substrates": [
+        {
+          "metabolite": "4_mercapto_4_methylpentan_2_one",
           "stoichiometry": 1
         },
         {
@@ -435,17 +434,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "s_4_oxo_2_methylpentan_2_yl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_13"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR181966"
+        "metanetx": "MNXR186984"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181966"
+            "id": "MNXR186984"
           }
         ]
       }

@@ -110,42 +110,43 @@
       }
     },
     {
-      "id": "anthocyanidin_3_o_d_glucoside",
-      "name": "anthocyanidin 3-O-β-D-glucoside",
-      "short": "anthocyanidin…",
-      "formula": "C21H19O10R2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:16307"
-      }
-    },
-    {
-      "id": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
-      "name": "anthocyanidin 3-O-(6-O-malonyl-β-D-glucoside) betaine",
-      "short": "anthocyanidin…",
-      "formula": "C24H20O13R2",
+      "id": "pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d",
+      "name": "pelargonidin 3-O-(6-O-caffeoyl-β-D-glucoside) 5-O-β-D-glucoside betaine",
+      "short": "pelargonidin…",
+      "formula": "C36H36O18",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84163"
+        "chebi": "CHEBI:58640"
       }
     },
     {
-      "id": "3_hydroxybenzoyl_coa",
-      "name": "3-hydroxybenzoyl-CoA",
-      "formula": "C28H36N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57342"
-      }
-    },
-    {
-      "id": "2_3_4_6_tetrahydroxybenzophenone",
-      "name": "2,3',4,6-tetrahydroxybenzophenone",
-      "short": "2,3',4,6-tetrahydro…",
-      "formula": "C13H9O5",
+      "id": "4_demalonylsalvianin",
+      "name": "4'''-demalonylsalvianin",
+      "short": "4'''-demalonylsalvi…",
+      "formula": "C39H37O21",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77647"
+        "chebi": "CHEBI:58638"
+      }
+    },
+    {
+      "id": "n_methylanthraniloyl_coa",
+      "name": "N-methylanthraniloyl-CoA",
+      "short": "N-methylanthraniloy…",
+      "formula": "C29H39N8O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58630"
+      }
+    },
+    {
+      "id": "1_3_dihydroxy_n_methylacridone",
+      "name": "1,3-dihydroxy-N-methylacridone",
+      "short": "1,3-dihydroxy-N-met…",
+      "formula": "C14H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30306"
       }
     },
     {
@@ -167,17 +168,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_171",
-      "name": "anthocyanin 6''-O-malonyltransferase",
+      "id": "ec_2_3_1_172",
+      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
       "ec": [
-        "2.3.1.171"
+        "2.3.1.172"
       ]
     },
     {
-      "id": "ec_2_3_1_151",
-      "name": "2,3',4,6-tetrahydroxybenzophenone synthase",
+      "id": "ec_2_3_1_159",
+      "name": "acridone synthase",
       "ec": [
-        "2.3.1.151"
+        "2.3.1.159"
       ]
     }
   ],
@@ -315,12 +316,12 @@
     },
     {
       "id": "r4",
-      "name": "anthocyanin 6''-O-malonyltransferase",
-      "equation": "an anthocyanidin 3-O-beta-D-glucoside + malonyl-CoA = an anthocyanidin 3-O-(6-O-malonyl-beta-D-glucoside) + CoA",
-      "ec": "2.3.1.171",
+      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
+      "equation": "pelargonidin 3-O-(6-O-[(E)-caffeoyl]-beta-D-glucoside) 5-O-beta-D-glucoside + malonyl-CoA = 4'''-demalonylsalvianin + CoA",
+      "ec": "2.3.1.172",
       "substrates": [
         {
-          "metabolite": "anthocyanidin_3_o_d_glucoside",
+          "metabolite": "pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d",
           "stoichiometry": 1
         },
         {
@@ -330,7 +331,7 @@
       ],
       "products": [
         {
-          "metabolite": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
+          "metabolite": "4_demalonylsalvianin",
           "stoichiometry": 1
         },
         {
@@ -340,32 +341,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_171"
+          "enzyme": "ec_2_3_1_172"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:16025"
+        "rhea": "RHEA:21988"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:16025"
+            "id": "RHEA:21988"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2,3',4,6-tetrahydroxybenzophenone synthase",
-      "equation": "3-hydroxybenzoyl-CoA + 3 malonyl-CoA + 2 H(+) = 2,3',4,6-tetrahydroxybenzophenone + 3 CO2 + 4 CoA",
-      "ec": "2.3.1.151",
+      "name": "acridone synthase",
+      "equation": "N-methylanthraniloyl-CoA + 3 malonyl-CoA + 3 H(+) = 1,3-dihydroxy-N-methylacridone + 3 CO2 + 4 CoA + H2O",
+      "ec": "2.3.1.159",
       "substrates": [
         {
-          "metabolite": "3_hydroxybenzoyl_coa",
+          "metabolite": "n_methylanthraniloyl_coa",
           "stoichiometry": 1
         },
         {
@@ -374,12 +375,12 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "2_3_4_6_tetrahydroxybenzophenone",
+          "metabolite": "1_3_dihydroxy_n_methylacridone",
           "stoichiometry": 1
         },
         {
@@ -389,24 +390,28 @@
         {
           "metabolite": "coa",
           "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_151"
+          "enzyme": "ec_2_3_1_159"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:19305"
+        "rhea": "RHEA:22224"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19305"
+            "id": "RHEA:22224"
           }
         ]
       }

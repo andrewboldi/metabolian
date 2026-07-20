@@ -32,55 +32,49 @@ pathway s-1-2-didecanoylglycerol-to-ammonium "(S)-1,2-didecanoylglycerol to ammo
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_g
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_3_1_4_17 [3.1.4.17] +h2o +hplus
-    3_5_cyclic_cmp
+    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_8_n_acetylneuraminyl_2_3_d
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad +hydrogen_acceptor +h2o
-    2_9s_11r_epidioxy_15s_hydroxy_5z_13e_prostadieno
+    <-> . +9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo +hydrogen_acceptor
+    3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_41 [1.1.99.41] +3r_3_hydroxy_2_3_dihydrotabersoninium +hydrogen_acceptor
-    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
+    <-> . +dihydropyriculol +hydrogen_acceptor
+    pyriculol
   }
 
   branch from h2s side left {
     h2s
-    <-> . +5_methyluridine_5_monophosphate_1 +atp +amp +ppi
-    5_methyl_2_thiouridine_5_phosphate_1
+    <-> . +o2 +hplus
+    sulfate
   }
 
-  branch from h2s side right {
-    h2s
-    <-> ec_6_2_2_1 [6.2.2.1] +glycine +atp +adp +pi
-    thioglycine
-  }
-
-  branch from l_cysteate side left {
+  branch from l_cysteate side right {
     l_cysteate
     <-> . +palmitoyl_coa +hplus +co2 +coa
     2_amino_3_oxo_octadecane_1_sulfonate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> . +chorismate +h2o
-    2_azaniumyl_2_deoxyisochorismate
-  }
-
   branch from nh3 side left {
     nh3
-    <-> . +chorismate +h2o
-    4_amino_4_deoxychorismate
+    <-> . +erucamide +h2o
+    erucate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +gondamide +h2o
+    gondoate
   }
 }

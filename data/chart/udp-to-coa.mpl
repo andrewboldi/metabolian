@@ -18,37 +18,37 @@ pathway udp-to-coa "UDP to CoA" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +6_o_beta_d_glucosyl_6_hydroxyflavone +h
-    6_hydroxyflavone
+    <-> . +udp +16_alpha_hydroxygypsogenate_28_beta_d_glucoside
+    16_hydroxygypsogenate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +udp +h
-    7_hydroxyflavone
+    <-> . +udp +h +medicagenate_23_o_beta_d_glucoside
+    medicagenic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +bromocyclohexane +h2o +bromide
-    cyclohexanol
+    <-> ec_1_17_1_8 [1.17.1.8] +nadh +2_3_dihydrodipicolinate +nad
+    2_3_4_5_tetrahydrodipicolinate
   }
 
   branch from h side right {
     h
-    <-> ec_4_1_1_74 [4.1.1.74] +co2 +4_nitrobenzaldehyde
-    4_nitrobenzoylformate
+    <-> ec_1_1_1_146 [1.1.1.146] +nadh +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nad
+    tetrahydrocorticosterone
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +e_feruloyl_coa +h +s_homoeriodictyol
-    co2
+    <-> ec_2_3_1_51 [2.3.1.51] +1_11z_octadecenoyl_sn_glycero_3_phosphate +h +11z_octadecenoyl_coa
+    pa_18_1_11z_18_1_11z
   }
 
   branch from coa side right {
     coa
-    <-> . +9z_octadecenoyl_coa +h2o
-    octadecenoic_acid
+    <-> . +2e_hexadecenoyl_coa +l_serine +3_dehydrosphingosine
+    co2
   }
 }

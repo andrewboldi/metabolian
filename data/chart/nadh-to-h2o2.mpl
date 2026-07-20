@@ -18,37 +18,37 @@ pathway nadh-to-h2o2 "NADH to H2O2" {
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_4_6_trichlorocatechol
-    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +1_2_anthracenediol
+    anthracene_cis_1_2_dihydrodiol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +bisphenol_a +o2 +h2o
-    1_2_bis_4_hydroxyphenyl_propan_2_ol
+    <-> . +nadh +9h_fluoren_9_one +h +o2
+    1_10_dihydro_1_10_dihydroxyfluoren_9_one
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
-    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+    <-> ec_2_4_1_8 [2.4.1.8] +gamma_carotene
+    1_hydroxy_carotene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_2_bis_4_hydroxyphenyl_propan_2_ol
-    4_4_dihydroxy_alpha_methylstilbene
+    <-> ec_4_2_1_131 [4.2.1.131] +anhydrorhodovibrin
+    rhodovibrin
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_17_3_2 [1.17.3.2] +7_methylxanthine +o2 +h2o
-    7_methyluric_acid
+    <-> ec_1_6_3_5 [1.6.3.5] +h +o2 +nad
+    nadh
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_17_3_2 [1.17.3.2] +purine_6_thiol +o2 +h2o
-    6_thiourate
+    <-> ec_1_6_3_5 [1.6.3.5] +h +nadph +o2
+    nadp
   }
 }

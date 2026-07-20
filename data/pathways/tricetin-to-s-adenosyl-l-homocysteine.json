@@ -86,35 +86,107 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "n6_n6_dimethyl_l_lysine_1",
-      "name": "N6,N6-dimethyl-L-lysine(1+)",
-      "short": "N6,N6-dimethyl-L-ly…",
-      "formula": "C8H17N2O",
-      "charge": 1,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:61976"
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "soppiline_b",
+      "name": "soppiline B",
+      "formula": "C24H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167549"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
+      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(ribonucleotide)(3−)",
+      "short": "5'-(N7-methyl…",
+      "formula": "C22H31N5O23P4R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:167612"
+      }
+    },
+    {
+      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
+      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(2'-O-methyl-ribonucleotide)(3−)",
+      "short": "5'-(N7-methyl…",
+      "formula": "C23H33N5O23P4R2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:167614"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_296",
+      "name": "methyltransferase cap2",
+      "ec": [
+        "2.1.1.296"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -247,21 +319,33 @@
     },
     {
       "id": "r4",
-      "name": "L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(79)-[histone H...",
-      "equation": "L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "11 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + 12 NADPH + 22 H(+) = soppiline ...",
+      "equation": "11 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + 12 NADPH + 22 H(+) = soppiline B + S-adenosyl-L-homocysteine + 12 CO2 + 12 NADP(+) + 12 CoA + 8 H2O",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 12
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 22
         }
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "soppiline_b",
           "stoichiometry": 1
         },
         {
@@ -269,32 +353,45 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "metabolite": "co2",
+          "stoichiometry": 12
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 12
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 12
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 8
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:60332"
+        "rhea": "RHEA:66940"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60332"
+            "id": "RHEA:66940"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-l...",
-      "equation": "N(6)-methyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(79)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "methyltransferase cap2",
+      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(ribonucleotide) in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(2'-O-methyl-ribonucleotide) in mRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.296",
       "substrates": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
           "stoichiometry": 1
         },
         {
@@ -304,7 +401,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
           "stoichiometry": 1
         },
         {
@@ -316,17 +413,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_296"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60336"
+        "rhea": "RHEA:67024"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60336"
+            "id": "RHEA:67024"
           }
         ]
       }

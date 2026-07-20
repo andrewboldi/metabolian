@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucopyranose-to-h2o",
   "name": "D-glucopyranose to H2O",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from D-glucopyranose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -123,43 +123,6 @@
       }
     },
     {
-      "id": "l_alanine",
-      "name": "L-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1105732"
-      }
-    },
-    {
-      "id": "l_leucine",
-      "name": "L-leucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106761"
-      }
-    },
-    {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H8N2O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1107821"
-      }
-    },
-    {
-      "id": "alanyl_asparaginyl_leucine",
-      "name": "Alanyl-Asparaginyl-Leucine",
-      "short": "Alanyl-Asparaginyl-…",
-      "formula": "C13H24N4O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM744600"
-      }
-    },
-    {
       "id": "l_histidine",
       "name": "L-histidine",
       "formula": "C6H9N3O2",
@@ -169,12 +132,49 @@
       }
     },
     {
-      "id": "ala_his_ala",
-      "name": "Ala-His-Ala",
-      "formula": "C12H19N5O4",
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:158202"
+        "metanetx": "MNXM738804"
+      }
+    },
+    {
+      "id": "his_met",
+      "name": "His-Met",
+      "formula": "C11H18N4O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74053"
+      }
+    },
+    {
+      "id": "l_arginine",
+      "name": "L-arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM739527"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM741664"
+      }
+    },
+    {
+      "id": "histidyl_phenylalanyl_arginine",
+      "name": "Histidyl-Phenylalanyl-Arginine",
+      "short": "Histidyl-Phenylalan…",
+      "formula": "C21H31N8O4",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM744749"
       }
     },
     {
@@ -195,16 +195,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:192716"
-      }
-    },
-    {
-      "id": "n4_d_man_1_2_d_man_1_3_d_man_1_3_d_man_1_2_d_man",
-      "name": "N4-{α-D-Man-(1→2)-α-D-Man-(1→3)-[α-D-Man-(1→3)-[α-D-Man-(1→2)-α-D-Man-(1→6)]-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAc-(1→4)-β-D-GlcNAc}-Asn",
-      "short": "N4-{α-D-Man-(1→2)-α…",
-      "formula": "C62H102N4O47",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:60637"
       }
     },
     {
@@ -468,62 +458,62 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR154526",
+      "name": "Reaction MNXR158217",
       "substrates": [
         {
-          "metabolite": "l_alanine",
+          "metabolite": "l_histidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_leucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_asparagine",
+          "metabolite": "l_methionine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "alanyl_asparaginyl_leucine",
+          "metabolite": "his_met",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR154526"
+        "metanetx": "MNXR158217"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154526"
+            "id": "MNXR158217"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR154535",
+      "name": "Reaction MNXR158219",
       "substrates": [
         {
-          "metabolite": "l_alanine",
-          "stoichiometry": 2
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "l_histidine",
+          "metabolite": "l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ala_his_ala",
+          "metabolite": "histidyl_phenylalanyl_arginine",
           "stoichiometry": 1
         },
         {
@@ -534,14 +524,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR154535"
+        "metanetx": "MNXR158219"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154535"
+            "id": "MNXR158219"
           }
         ]
       }
@@ -587,44 +577,6 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR184822",
-      "substrates": [
-        {
-          "metabolite": "n4_d_man_1_2_d_man_1_3_d_man_1_3_d_man_1_2_d_man",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_mannose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR184822"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR184822"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "endoplasmic reticulum Man8GlcNAc2 1,2-alpha-mannosidase",
       "ec": "3.2.1.210",
       "substrates": [
@@ -653,7 +605,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "metanetx": "MNXR185799"
       },

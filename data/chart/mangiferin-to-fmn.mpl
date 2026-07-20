@@ -36,26 +36,26 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
 
   branch from 3_dehydro_d_glucose side left {
     3_dehydro_d_glucose
-    <-> ec_3_2_1_218 [3.2.1.218] +h2o +glucose
-    3_keto_trehalose
+    <-> . +glucose +nadp +h
+    nadph
   }
 
   branch from 3_dehydro_d_glucose side right {
     3_dehydro_d_glucose
-    <-> ec_3_2_1_218 [3.2.1.218] +h2o +glucose
-    3_dehydromaltose
+    <-> . +h2o
+    3_dehydrolevoglucosan
   }
 
   branch from glucose side left {
     glucose
-    <-> . +z_alkenyl_glucosinolate +h2o +hplus
-    z_n_sulfonatooxy_alkenimidothioate
+    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
+    ipecoside_aglycone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +sinigrin +h2o +hplus
-    z_n_sulfonatooxy_prop_2_enimidothioate
+    <-> ec_3_2_1_220 [3.2.1.220] +deacetylipecoside +h2o
+    deacetylipecoside_aglycone
   }
 
   branch from 2_hydroxydaidzein side left {
@@ -66,13 +66,13 @@ pathway mangiferin-to-fmn "mangiferin to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19_20_epoxydocosapentaenoate
+    <-> . +prostaglandin_e1 +fmnh2 +o2 +h2o +hplus
+    20_hydroxyprostaglandin_e1
   }
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
+    <-> . +prostaglandin_a1 +fmnh2 +o2 +h2o +hplus
+    20_hydroxyprostaglandin_a1
   }
 }

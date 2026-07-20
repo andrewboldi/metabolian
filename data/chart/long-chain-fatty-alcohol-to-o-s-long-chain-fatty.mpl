@@ -20,13 +20,13 @@ pathway long-chain-fatty-alcohol-to-o-s-long-chain-fatty "long-chain fatty alcoh
 
   branch from ppi side left {
     ppi
-    <-> . +trans_sinapate +atp +hplus
-    trans_sinapoyl_amp
+    <-> ec_4_2_3_212 [4.2.3.212] +fpp +h2o
+    cadinol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +atp
-    cyclic_a_3_5_pa_3_5_pa_3_5_p
+    <-> ec_4_2_3_215 [4.2.3.215] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    araneosene
   }
 }

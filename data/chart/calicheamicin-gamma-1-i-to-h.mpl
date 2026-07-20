@@ -20,49 +20,49 @@ pathway calicheamicin-gamma-1-i-to-h "Calicheamicin gamma(1)I to H" {
 
   branch from dtdp_beta_l_rhamnose side left {
     dtdp_beta_l_rhamnose
-    <-> . +2_o_alpha_l_rhamnosylisoorietin +dtdp
-    isoorientin
+    <-> . +h
+    dtdp_l_dihydrostreptose
   }
 
   branch from dtdp_beta_l_rhamnose side right {
     dtdp_beta_l_rhamnose
-    <-> ec_1_1_1_133 [1.1.1.133] +nadh +dtdp_4_dehydro_beta_l_rhamnose +h
+    <-> . +nadh +dtdp_4_dehydro_6_deoxy_alpha_d_glucose +h
     nad
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +7_4_dihydroxy_8_methoxyflavone
-    4_8_dihydroxyflavone_7_olate
+    <-> . +s_adenosyl_l_homocysteine +h +tetracenomycin_e
+    tetracenomycin_b3
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +cirsilineol
-    cirsiliol
+    <-> ec_2_1_1_88 [2.1.1.88] +s_adenosyl_l_homocysteine +h +sexangularetin
+    herbacetin
   }
 
   branch from h side left {
     h
-    <-> . +1_methylpyrrolinium +1_2_dihydropyrimidine
-    3_6_dihydronicotine
+    <-> . +2r_3s_tartrate +1_o_4_coumaroyl_d_glucose +glucose
+    2r_3s_trans_coutaric_acid
   }
 
   branch from h side right {
     h
-    <-> . +5_hydroxy_2_furoyl_coa
-    5_oxo_2_furoyl_coa
+    <-> . +acetyl_coa +2r_3s_trans_coutaric_acid +coa
+    2_o_acetyl_3_o_trans_coutarate
   }
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +dtdp_4_oxo_5_c_methyl_l_rhamnose +s_adenosyl_l_methionine +h
-    dtdp_4_dehydro_beta_l_rhamnose
+    <-> . +limocitrin +s_adenosyl_l_methionine
+    3_3_4_5_7_pentahydroxy_8_methoxyflavone
   }
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> ec_2_1_1_297 [2.1.1.297] +h +n5_methyl_l_glutamine +s_adenosyl_l_methionine
-    l_glutamine
+    <-> . +fusicocca_1_10_14_diene_16_hydroxymethyl_3_8beta +h +s_adenosyl_l_methionine
+    fusicocca_1_10_14_diene_3_8beta_16_triol
   }
 }

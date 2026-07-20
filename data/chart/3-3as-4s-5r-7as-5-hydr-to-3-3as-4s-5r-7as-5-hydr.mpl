@@ -18,25 +18,25 @@ pathway 3-3as-4s-5r-7as-5-hydr-to-3-3as-4s-5r-7as-5-hydr "3-[(3aS,4S,5R,7aS)-5-h
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_226 [4.2.3.226] +2_cis_6_trans_farnesyl_diphosphate
-    2_epi_prezizaene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    isopimara_8_14_15_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    curcumene
+    <-> ec_4_2_3_98 [4.2.3.98] +fpp +h2o
+    muurolol
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
-    biliverdin
+    <-> ec_1_14_99_67 [1.14.99.67] +n_dichloroacetyl_p_aminophenylserinol +o2 +hydrogen_acceptor +h2o
+    chloramphenicol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_58 [1.14.99.58] +ferroheme_b +o2 +hplus +carbon_monoxide +fe2 +hydrogen_acceptor +h2o
-    biliverdin
+    <-> . +1_hydroxy_carotene +hydrogen_acceptor
+    1_hydroxytorulene
   }
 }

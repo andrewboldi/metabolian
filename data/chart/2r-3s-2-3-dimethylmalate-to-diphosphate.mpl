@@ -38,20 +38,20 @@ pathway 2r-3s-2-3-dimethylmalate-to-diphosphate "(2R,3S)-2,3-dimethylmalate to d
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_2_3_1_176 [2.3.1.176] +choloyl_coa +coa
-    thca_24oxo_coa
+    <-> ec_2_3_3_11 [2.3.3.11] +glyoxylate +h2o +coa +hplus
+    2_hydroxyglutarate
   }
 
   branch from ppi side left {
     ppi
-    <-> . +cyclo_acetoacetyl_l_tryptophan +dmapp
-    3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en
+    <-> ec_6_3_1_1 [6.3.1.1] +aspartate +nh3 +atp +amp +hplus
+    l_asparagine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_9_1 [2.7.9.1] +pyruvate +pi +atp +amp +hplus
-    phosphonatoenolpyruvate
+    <-> ec_4_2_3_75 [4.2.3.75] +fpp
+    germacrene_d
   }
 
   branch from orotate side left {

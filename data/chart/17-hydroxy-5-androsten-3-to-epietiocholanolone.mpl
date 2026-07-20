@@ -26,8 +26,8 @@ pathway 17-hydroxy-5-androsten-3-to-epietiocholanolone "17β-hydroxy-5-androsten
 
   branch from testosterone side right {
     testosterone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_hydroxytestosterone
+    <-> ec_1_14_14_197 [1.14.14.197] +fmnh2 +o2 +fmn +h2o +hplus
+    11alpha_17beta_dihydroxyandrost_4_en_3_one
   }
 
   branch from 5_androstane_3_17_dione side left {

@@ -24,26 +24,26 @@ pathway 5-9-10-labda-8-20-13-to-succinate "5β,9α,10α-labda-8(20),13-… to su
 
   branch from ppi side left {
     ppi
-    <-> . +o6_methyl_dgtp +h2o +hplus
-    o6_methyl_dgmp
+    <-> . +piperonylate +atp +nadph +hplus +amp +nadp
+    piperonal
   }
 
   branch from ppi side right {
     ppi
-    <-> . +n6_methyl_datp +h2o +hplus
-    n6_methyl_damp
+    <-> . +3_hydroxybenzoate +atp +nadph +hplus +amp +nadp
+    3_hydroxybenzaldehyde
   }
 
   branch from fmn side left {
     fmn
-    <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
-    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
+    <-> ec_1_14_19_79 [1.14.19.79] +22s_22_hydroxycampesterol +fmnh2 +o2 +h2o +hplus
+    22s_22_hydroxycampest_4_en_3_one
   }
 
   branch from fmn side right {
     fmn
-    <-> . +tetrahydroalstonine +fmnh2 +o2 +h2o +hplus
-    dihydroalstonine
+    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxocastasterone +fmnh2 +o2 +h2o +hplus
+    castasterone
   }
 
   branch from gibberellin_a25 side left {

@@ -20,14 +20,14 @@ pathway udp-to-triiodothyronine "UDP to triiodothyronine…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +6_methylsulfanyl_hexyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_heptyl_thiohydroximate
+    <-> ec_2_4_1_85 [2.4.1.85] +udp +h +s_prunasin
+    mandelonitrile
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +7_methylthioheptyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_octyl_thiohydroximate
+    <-> ec_2_4_1_171 [2.4.1.171] +udp +h +cycasin
+    methylazoxymethanol
   }
 
   branch from beta_d_glca_1_2_alpha_d_man_1_3_beta_d_glc_1_4_a side left {
@@ -38,25 +38,25 @@ pathway udp-to-triiodothyronine "UDP to triiodothyronine…" {
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine_3_glucuronide
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine_6_glucuronide
     morphine
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine
-    morphine_6_glucuronide
+    <-> . +udp +1_oh_midazolam_glucuronide
+    1_hydroxymidazolam
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_195 [2.4.1.195] +deoxydesulfoglucohirsutin +h +udp_alpha_d_glucose
-    9_methylthio_nonyl_thiohydroximic_acid
+    <-> ec_2_7_7_37 [2.7.7.37] +beta_l_arabinose_1_phosphate +h +phosphate
+    udp_beta_l_arabinopyranose
   }
 
   branch from udp side left {
     udp
-    <-> . +h +brassinolide_23_o_glucoside +udp_alpha_d_glucose
-    brassinolide
+    <-> ec_2_4_1_117 [2.4.1.117] +a_dolichyl_beta_d_glucosyl_phosphate +udp_alpha_d_glucose
+    c80_dolichol_phosphate
   }
 }

@@ -18,26 +18,26 @@ pathway 4-hydroxynonanal-to-1-hydroperoxy-8-carboxyoc "4-hydroxynonanal to 1-hyd
 
   branch from h side left {
     h
-    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_alpha_neuraminate +acetate +h2o
-    n_acetyl_4_o_acetylneuraminate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_ribose +phosphate +l_ribose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_neuraminic_acid +acetate +h2o
-    neuac9ac
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_d_galactosamine_1_phosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +co2 +9z_tricosene +nadp +h2o +h +o2
-    15_tetracosenal
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    s_terpineol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_121 [1.14.13.121] +h +vetispiradiene +o2 +nadp +h2o
-    solavetivone
+    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nadp
+    isomenthol
   }
 
   branch from 3_4_epoxynonanal side left {

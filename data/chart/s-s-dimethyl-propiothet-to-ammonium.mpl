@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to ammonium" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     s_s_dimethyl_propiothetin
@@ -20,57 +20,51 @@ pathway s-s-dimethyl-propiothet-to-ammonium "S,S-dimethyl-β-propiothet… to am
     menaquinone_8
   }
 
-  branch from dimethyl_sulfoxide side left {
-    dimethyl_sulfoxide
-    <-> ec_1_14_13_245 [1.14.13.245] +nadh +o2 +hplus +nad +h2o
-    sulfonyldimethane
+  branch from menaquinone_8 side left {
+    menaquinone_8
+    <-> . +thiosulfate +menaquinol_8
+    tetrathionate
   }
 
   branch from menaquinone_8 side right {
     menaquinone_8
-    <-> . +menaquinol_8 +glyoxylate
-    glycolate
-  }
-
-  branch from menaquinone_8 side left {
-    menaquinone_8
-    <-> ec_1_18_99_1 [1.18.99.1] +h2 +menaquinol_8
-    pmf
-  }
-
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> ec_1_1_2_3 [1.1.2.3] +pyruvate +menaquinone_8
-    s_lactate
+    <-> . +thiosulfate +h +sulfite +menaquinol_8
+    trithionate
   }
 
   branch from menaquinol_8 side left {
     menaquinol_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +menaquinone_8 +h +pmf
-    nad
+    <-> . +trimethylamine +menaquinone_8 +h2o +trimethylamine_n_oxide
+    h
   }
 
-  branch from oxaloacetate side right {
+  branch from menaquinol_8 side right {
+    menaquinol_8
+    <-> . +l_aspartate +menaquinone_8
+    iminoaspartate
+  }
+
+  branch from oxaloacetate side left {
     oxaloacetate
     <-> ec_2_3_3_1 [2.3.3.1] +acetyl_coa +h2o +coa +hplus
     citrate
   }
 
-  branch from oxaloacetate side left {
+  branch from oxaloacetate side right {
     oxaloacetate
     <-> ec_4_2_1_81 [4.2.1.81] +h2o
     d_tartrate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
-  }
-
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_26 [3.5.4.26] +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o +hplus
-    5_amino_6_5_phospho_d_ribosylamino_uracil
+    <-> ec_1_14_12_14 [1.14.12.14] +2_aminobenzenesulfonate +nadh +o2 +hplus +nad
+    2_3_dihydroxybenzenesulfonate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_2_3_2_14 [2.3.2.14] +d_alanine +glutamine
+    l_glutamyl_d_alaninate
   }
 }

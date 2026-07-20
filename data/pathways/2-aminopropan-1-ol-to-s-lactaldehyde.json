@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-aminopropan-1-ol-to-s-lactaldehyde",
   "name": "2-aminopropan-1-ol to (S)-lactaldehyde",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from 2-aminopropan-1-ol(1+) to (S)-lactaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,77 +100,40 @@
       }
     },
     {
-      "id": "2_azaniumyl_2_deoxyisochorismate",
-      "name": "2-azaniumyl-2-deoxyisochorismate",
-      "short": "2-azaniumyl-2-deoxy…",
-      "formula": "C10H10NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58792"
-      }
-    },
-    {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58359"
-      }
-    },
-    {
-      "id": "4_amino_4_deoxychorismate",
-      "name": "4-amino-4-deoxychorismate",
-      "short": "4-amino-4-deoxychor…",
-      "formula": "C10H10NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58406"
-      }
-    },
-    {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29985"
-      }
-    },
-    {
-      "id": "n_acetylputrescinium",
-      "name": "N-acetylputrescinium",
-      "formula": "C6H15N2O",
+      "id": "s_methioninol",
+      "name": "(S)-methioninol",
+      "formula": "C5H14NOS",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58263"
+        "chebi": "CHEBI:195450"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "1_hydroxy_4_methythio_butan_2_one",
+      "name": "1-hydroxy-4-(methythio)butan-2-one",
+      "short": "1-hydroxy-4-(methyt…",
+      "formula": "C5H10O2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:195451"
       }
     },
     {
-      "id": "4_acetamidobutanal",
-      "name": "4-acetamidobutanal",
-      "formula": "C6H11NO2",
+      "id": "d_alanine",
+      "name": "D-alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:7386"
+        "chebi": "CHEBI:57416"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:15361"
       }
     }
   ],
@@ -329,15 +292,15 @@
     },
     {
       "id": "r4",
-      "name": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glut...",
-      "equation": "(2S)-2-amino-4-deoxychorismate + L-glutamine + H2O = 4-amino-4-deoxychorismate + L-glutamate + NH4(+)",
+      "name": "(S)-methioninol + NAD(+) + H2O = 1-hydroxy-4-(methythio)butan-2-one + NH4(+) + NADH + H(+)",
+      "equation": "(S)-methioninol + NAD(+) + H2O = 1-hydroxy-4-(methythio)butan-2-one + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "metabolite": "s_methioninol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamine",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -347,44 +310,48 @@
       ],
       "products": [
         {
-          "metabolite": "4_amino_4_deoxychorismate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
+          "metabolite": "1_hydroxy_4_methythio_butan_2_one",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:69568"
+        "rhea": "RHEA:76811"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69568"
+            "id": "RHEA:76811"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
-      "equation": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "name": "D-alanine + NAD(+) + H2O = pyruvate + NH4(+) + NADH + H(+)",
+      "equation": "D-alanine + NAD(+) + H2O = pyruvate + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "n_acetylputrescinium",
+          "metabolite": "d_alanine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -394,29 +361,33 @@
       ],
       "products": [
         {
-          "metabolite": "4_acetamidobutanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:70283"
+        "rhea": "RHEA:76815"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70283"
+            "id": "RHEA:76815"
           }
         ]
       }

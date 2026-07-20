@@ -18,14 +18,14 @@ pathway propanoate-to-h2o "propanoate to H2O" {
 
   branch from propanoyl_coa side left {
     propanoyl_coa
-    <-> ec_2_3_1_30 [2.3.1.30] +l_serine +coa
-    o_propionyl_l_serine
+    <-> . +2_methyl_3_oxo_valeryl_coenzyme_a
+    coa
   }
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> . +nadh +co2 +coa +nad
-    r_methylmalonate_semialdehyde
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    10z_heptadecenoyl_coa
   }
 
   branch from butanoate side left {
@@ -42,13 +42,13 @@ pathway propanoate-to-h2o "propanoate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_17_3_2 [1.17.3.2] +guanosine +o2 +8_hydroxyguanosine
-    h2o2
+    <-> ec_3_5_2_16 [3.5.2.16] +glutaramic_acid
+    piperidine_2_6_dione
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_17_3_2 [1.17.3.2] +alloxanthine +h2o2 +o2
-    allopurinol
+    <-> ec_3_5_2_16 [3.5.2.16] +2_carbamothioylamino_acetic_acid
+    thiohydantoin
   }
 }

@@ -22,26 +22,26 @@ pathway 3r-hydroxy-11z-docoseno-to-2e-11z-docosadi-2-11 "3R-hydroxy-(11Z)-docose
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadph +h2o
-    3s_6s_6_isopropenyl_3_methyloxepan_2_one
+    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadph +h2o
+    bromobenzene_2_3_oxide
   }
 
   branch from nadp side right {
     nadp
-    <-> . +20_oxo_5_o_mycaminosyltylactone +h2o +h +o2 +nadph
-    5_o_d_mycaminosyltylactone
+    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
+    benzo_a_pyrene_7_8_oxide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_succinylbenzoate +h
-    spirodilactone
+    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
+    1r_2s_naphthalene_1_2_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_bis_4_chlorophenyl_ethanol
-    unsym_bis_4_chlorophenyl_ethylene
+    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
+    1s_2r_naphthalene_1_2_oxide
   }
 
   branch from 11z_docosenoyl_coa side left {

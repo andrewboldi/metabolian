@@ -262,42 +262,40 @@
       }
     },
     {
-      "id": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro",
-      "name": "(7E,9E,11Z,13E,15R)-(5S,6S)-5,6-epoxyicosa-15-hydroxy-7,9,11,13-tetraenoate",
-      "short": "(7E,9E,11Z,13E,15R)…",
-      "formula": "C20H29O4",
-      "charge": -1,
+      "id": "deamido_nad",
+      "name": "deamido-NAD",
+      "formula": "C21H24N6O15P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM819445"
+        "metanetx": "MNXM1103300"
       }
     },
     {
-      "id": "15_epi_lipoxin_b4",
-      "name": "15-epi-lipoxin B4",
-      "formula": "C20H32O5",
+      "id": "nicotinamide_hypoxanthine_dinucleotide",
+      "name": "nicotinamide hypoxanthine dinucleotide",
+      "short": "nicotinamide…",
+      "formula": "C21H26N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM507495"
+      }
+    },
+    {
+      "id": "his_pro",
+      "name": "His-Pro",
+      "formula": "C11H16N4O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63991"
+        "metanetx": "MNXM1363647"
       }
     },
     {
-      "id": "7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid",
-      "name": "7(S)-hydroperoxy-17(R)-hydroxydocosahexaenoic acid",
-      "short": "7(S)-hydroperoxy-17…",
-      "formula": "C22H32O5",
+      "id": "his_pro_tyr",
+      "name": "His-Pro-Tyr",
+      "formula": "C20H25N5O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138602"
-      }
-    },
-    {
-      "id": "7_8_epoxy_17r_hydroxy_docosahexaenoate",
-      "name": "7(8)-epoxy-17R-hydroxy-docosahexaenoate",
-      "short": "7(8)-epoxy-17R-hydr…",
-      "formula": "C22H29O4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM39221"
+        "metanetx": "MNXM167921"
       }
     }
   ],
@@ -345,10 +343,17 @@
       ]
     },
     {
-      "id": "ec_1_13_11_34",
-      "name": "arachidonate 5-lipoxygenase",
+      "id": "ec_1_11_1_1",
+      "name": "NADH peroxidase",
       "ec": [
-        "1.13.11.34"
+        "1.11.1.1"
+      ]
+    },
+    {
+      "id": "ec_3_4_14_5",
+      "name": "dipeptidyl-peptidase IV",
+      "ec": [
+        "3.4.14.5"
       ]
     }
   ],
@@ -793,59 +798,65 @@
     },
     {
       "id": "r11",
-      "name": "Reaction MNXR123758",
+      "name": "NADH peroxidase",
+      "ec": "1.11.1.1",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro",
+          "metabolite": "deamido_nad",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "15_epi_lipoxin_b4",
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "metanetx": "MNXR123758"
+        "metanetx": "MNXR130193"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR123758"
+            "id": "MNXR130193"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "arachidonate 5-lipoxygenase",
-      "ec": "1.13.11.34",
+      "name": "dipeptidyl-peptidase IV",
+      "ec": "3.4.14.5",
       "substrates": [
         {
-          "metabolite": "7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid",
+          "metabolite": "his_pro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tyrosine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7_8_epoxy_17r_hydroxy_docosahexaenoate",
+          "metabolite": "his_pro_tyr",
           "stoichiometry": 1
         },
         {
@@ -855,20 +866,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_13_11_34"
+          "enzyme": "ec_3_4_14_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "metanetx": "MNXR123769"
+        "metanetx": "MNXR130207"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR123769"
+            "id": "MNXR130207"
           }
         ]
       }

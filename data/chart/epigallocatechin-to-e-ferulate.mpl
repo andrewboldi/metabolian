@@ -24,25 +24,25 @@ pathway epigallocatechin-to-e-ferulate "(+)-epigallocatechin to (E)-ferulate" {
 
   branch from h side right {
     h
-    <-> . +urea_1_carboxylate +h2o
-    carbamate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +22_2_18_3_pc +phosphate +22_2_18_3_pc +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa +h2o
-    4_isopropenyl_pimeloyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_20_1_11z_18_3_9z_12z_15z
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_54 [1.14.13.54] +h +an_oxosteroid +o2 +nadp +h2o
-    steroid_esters
+    <-> ec_1_1_1_71 [1.1.1.71] +r_linalool +nadp +h
+    phellandral
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_99 [1.14.13.99] +h +o2 +24r_24_hydroxycholesterol +nadp +h2o
-    24r_7_24_dihydroxycholesterol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +phellandral
+    s_linalool
   }
 }

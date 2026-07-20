@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine" {
-  spacing 302
+  spacing 290
 
   spine at 0,0 {
     1_4_naphthoquinone_2_carboxylate
@@ -18,38 +18,26 @@ pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-c
 
   branch from 2_phytyl_1_4_naphthoquinone side left {
     2_phytyl_1_4_naphthoquinone
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +phylloquinone +h
-    s_adenosyl_l_methionine
+    <-> ec_1_14_18_3 [1.14.18.3] +2_phytyl_1_4_dihydroxynaphthalene +o2 +methane +h2o
+    methanol
   }
 
   branch from 2_phytyl_1_4_naphthoquinone side right {
     2_phytyl_1_4_naphthoquinone
-    <-> ec_1_1_5_8 [1.1.5.8] +2_phytyl_1_4_dihydroxynaphthalene +3_dehydroquinate
-    l_quinate
+    <-> ec_1_1_5_3 [1.1.5.3] +2_phytyl_1_4_dihydroxynaphthalene +dihydroxyacetone_phosphate
+    sn_glycerol_3_phosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_114 [4.2.3.114] +gpp
-    terpinene
+    <-> ec_4_2_3_139 [4.2.3.139] +fpp
+    valerena_4_7_11_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_115 [4.2.3.115] +gpp
-    terpinene
-  }
-
-  branch from 2_phytyl_1_4_dihydroxynaphthalene side left {
-    2_phytyl_1_4_dihydroxynaphthalene
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +2_phytyl_1_4_naphthoquinone +1_d_ribofuranosyl_1_4_dihydronicotinamide
-    h
-  }
-
-  branch from 2_phytyl_1_4_dihydroxynaphthalene side right {
-    2_phytyl_1_4_dihydroxynaphthalene
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +2_phytyl_1_4_naphthoquinone
-    tetrathionate
+    <-> ec_4_2_3_138 [4.2.3.138] +fpp +h2o
+    epi_bisabolol
   }
 
   branch from phyllohydroquinone side left {
@@ -60,13 +48,13 @@ pathway 1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy "1,4-naphthoquinone-2-c
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_288 [2.1.1.288] +aklanonate +sam
-    methyl_aklanonate
+    <-> ec_2_1_1_168 [2.1.1.168] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_386 [2.1.1.386] +3_end_ribonucleotide_1 +sam +hplus
-    3_end_2_o_methylribonucleotide_1
+    <-> ec_2_1_1_170 [2.1.1.170] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

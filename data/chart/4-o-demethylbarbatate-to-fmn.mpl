@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-demethylbarbatate-to-fmn "4-O-demethylbarbatate to FMN" {
-  spacing 182
+  spacing 170
 
   spine at 0,0 {
     4_o_demethylbarbatate
@@ -18,26 +18,14 @@ pathway 4-o-demethylbarbatate-to-fmn "4-O-demethylbarbatate to FMN" {
 
   branch from sah side left {
     sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam +hplus
-    4_hydroxy_8_methoxyflavone_7_olate
+    <-> . +desmethylrestrictinol +sam +hplus
+    restrictinol
   }
 
   branch from sah side right {
     sah
-    <-> . +scutellarein +sam +hplus
-    scutellarein_7_olate_4_methyl_ether
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +2_hexyl_5_heptylresorcinol +fmnh2 +o2 +h2o +hplus
-    2_hexyl_5_7_hydroxyheptyl_resorcinol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +1r_4r_5s_acoradiene +fmnh2 +o2 +h2o +hplus
-    2_6_9_trimethyl_13_oxatetracyclo_6_3_1_16_9_01_5
+    <-> ec_2_1_1_398 [2.1.1.398] +3_hydroxyisoflavones +sam +hplus
+    3_methoxyisoflavones
   }
 
   branch from atranorin side left {

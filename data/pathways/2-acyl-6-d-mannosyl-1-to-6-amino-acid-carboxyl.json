@@ -213,61 +213,42 @@
       }
     },
     {
-      "id": "n_fatty_acyl_l_serine",
-      "name": "N-(fatty acyl)-L-serine",
-      "short": "N-(fatty acyl)-L-se…",
-      "formula": "C4H5NO4R",
+      "id": "n_fatty_acyl_l_glutamine",
+      "name": "N-(fatty acyl)-L-glutamine",
+      "short": "N-(fatty acyl)-L-gl…",
+      "formula": "C6H8N2O4R",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:149698"
+        "chebi": "CHEBI:149743"
       }
     },
     {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:58359"
       }
     },
     {
-      "id": "n_fatty_acyl_l_asparagine",
-      "name": "N-(fatty acyl)-L-asparagine",
-      "short": "N-(fatty acyl)-L-as…",
-      "formula": "C5H6N2O4R",
+      "id": "1_2_diacyl_sn_glycero_3_phospholipid",
+      "name": "1,2-diacyl-sn-glycero-3-phospholipid",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:149735"
+        "chebi": "CHEBI:136912"
       }
     },
     {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H8N2O3",
-      "charge": 0,
+      "id": "1_acyl_sn_glycero_3_phospholipid",
+      "name": "1-acyl-sn-glycero-3-phospholipid",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C4H6O7PR2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58048"
-      }
-    },
-    {
-      "id": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1,2-dioleoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1,2-dioleoyl-sn-gly…",
-      "formula": "C41H78NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:74986"
-      }
-    },
-    {
-      "id": "1_2_dioleoyl_sn_glycerol",
-      "name": "1,2-dioleoyl-sn-glycerol",
-      "short": "1,2-dioleoyl-sn-gly…",
-      "formula": "C39H72O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:52333"
+        "chebi": "CHEBI:169977"
       }
     },
     {
@@ -289,9 +270,36 @@
       "xrefs": {
         "chebi": "CHEBI:75466"
       }
+    },
+    {
+      "id": "cdp_ethanolamine",
+      "name": "CDP-ethanolamine",
+      "formula": "C11H19N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57876"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_53",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
+      "ec": [
+        "3.6.1.53"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -623,11 +631,11 @@
     },
     {
       "id": "r9",
-      "name": "an N-(fatty acyl)-L-serine + H2O = L-serine + a fatty acid",
-      "equation": "an N-(fatty acyl)-L-serine + H2O = L-serine + a fatty acid",
+      "name": "an N-(fatty acyl)-L-glutamine + H2O = L-glutamine + a fatty acid",
+      "equation": "an N-(fatty acyl)-L-glutamine + H2O = L-glutamine + a fatty acid",
       "substrates": [
         {
-          "metabolite": "n_fatty_acyl_l_serine",
+          "metabolite": "n_fatty_acyl_l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -637,7 +645,7 @@
       ],
       "products": [
         {
-          "metabolite": "serine",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -648,25 +656,25 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:64120"
+        "rhea": "RHEA:64208"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64120"
+            "id": "RHEA:64208"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "an N-(fatty acyl)-L-asparagine + H2O = L-asparagine + a fatty acid",
-      "equation": "an N-(fatty acyl)-L-asparagine + H2O = L-asparagine + a fatty acid",
+      "name": "a glycerophospholipid + H2O = a 1-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
+      "equation": "a glycerophospholipid + H2O = a 1-acyl-sn-glycero-3-phospholipid + a fatty acid + H(+)",
       "substrates": [
         {
-          "metabolite": "n_fatty_acyl_l_asparagine",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospholipid",
           "stoichiometry": 1
         },
         {
@@ -676,50 +684,11 @@
       ],
       "products": [
         {
-          "metabolite": "l_asparagine",
+          "metabolite": "1_acyl_sn_glycero_3_phospholipid",
           "stoichiometry": 1
         },
         {
           "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:64140"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64140"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = phosphoethanolamine +...",
-      "equation": "1,2-di-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = phosphoethanolamine + 1,2-di-(9Z-octadecenoyl)-sn-glycerol + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_2_dioleoyl_sn_glycero_3_phosphoethanolamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "phosphoethanolamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_2_dioleoyl_sn_glycerol",
           "stoichiometry": 1
         },
         {
@@ -728,22 +697,22 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:78955"
+        "rhea": "RHEA:67420"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78955"
+            "id": "RHEA:67420"
           }
         ]
       }
     },
     {
-      "id": "r12",
+      "id": "r11",
       "name": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-hexadecan...",
       "equation": "1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycero-3-phosphoethanolamine + H2O = 1-hexadecanoyl-2-(9Z-octadecenoyl)-sn-glycerol + phosphoethanolamine + H(+)",
       "substrates": [
@@ -771,7 +740,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:86395"
       },
@@ -781,6 +750,55 @@
           {
             "db": "Rhea",
             "id": "RHEA:86395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "Mn(2+)-dependent ADP-ribose/CDP-alcohol diphosphatase",
+      "equation": "CDP-ethanolamine + H2O = phosphoethanolamine + CMP + 2 H(+)",
+      "ec": "3.6.1.53",
+      "substrates": [
+        {
+          "metabolite": "cdp_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:86791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86791"
           }
         ]
       }

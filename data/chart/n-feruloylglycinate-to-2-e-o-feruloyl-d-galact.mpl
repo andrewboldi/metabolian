@@ -18,14 +18,14 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
 
   branch from trans_ferulate side left {
     trans_ferulate
-    <-> ec_4_1_2_65 [4.1.2.65] +h2o +acetate
-    vanillin
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoate
   }
 
   branch from trans_ferulate side right {
     trans_ferulate
-    <-> . +h2o
-    3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoate
+    <-> . +udp_d_glucuronate +udp +hplus
+    e_4_o_d_glucuronosyl_ferulate
   }
 
   branch from glycine side left {
@@ -42,13 +42,13 @@ pathway n-feruloylglycinate-to-2-e-o-feruloyl-d-galact "N-feruloylglycinate to 2
 
   branch from trans_feruloyl_coa side left {
     trans_feruloyl_coa
-    <-> ec_2_1_1_104 [2.1.1.104] +trans_caffeoyl_coa +sam +hplus
-    sah
+    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa +hplus
+    myricetin_3_o_6_o_trans_feruloyl_d_glucosyl_1_2
   }
 
   branch from trans_feruloyl_coa side right {
     trans_feruloyl_coa
-    <-> ec_1_14_11_61 [1.14.11.61] +akg +o2 +succinate +co2
-    trans_6_hydroxyferuloyl_coa
+    <-> ec_4_1_2_61 [4.1.2.61] +h2o +acetyl_coa
+    vanillin
   }
 }

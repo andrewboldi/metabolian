@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amyrin-to-fmn "β-amyrin to FMN" {
-  spacing 210
+  spacing 198
 
   spine at 0,0 {
     amyrin
@@ -18,26 +18,14 @@ pathway amyrin-to-fmn "β-amyrin to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_19 [1.14.14.19] +c21_steroid +fmnh2 +o2 +h2o +hplus
-    17_hydroxy_c21_steroid
+    <-> . +32_hydroxylanosterol +fmnh2 +o2 +h2o +hplus
+    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
   }
 
   branch from fmn side right {
     fmn
-    <-> . +lathosterone +fmnh2 +o2 +h2o +hplus
-    25s_7_dafachronate
-  }
-
-  branch from 11_oxo_amyrin side left {
-    11_oxo_amyrin
-    <-> ec_1_14_13_173 [1.14.13.173] +h +o2 +nadph +30_hydroxy_11_oxo_amyrin +h2o
-    nadp
-  }
-
-  branch from 11_oxo_amyrin side right {
-    11_oxo_amyrin
-    <-> . +glycyrrhetinate +nadp +h2o +o2 +nadph
-    h
+    <-> . +methyl_medium_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    hydroxy_medium_chain_fatty_acid_anion
   }
 
   branch from glycyrrhetinate side left {

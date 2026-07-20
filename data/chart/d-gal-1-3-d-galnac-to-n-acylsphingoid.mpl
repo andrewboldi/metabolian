@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-gal-1-3-d-galnac-to-n-acylsphingoid "β-D-Gal-(1→3)-β-D-GalNAc-… to N-acylsphingoid" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_gl
@@ -28,25 +28,19 @@ pathway d-gal-1-3-d-galnac-to-n-acylsphingoid "β-D-Gal-(1→3)-β-D-GalNAc-… 
     d_galactopyranose
   }
 
-  branch from n_acylsphingoid side left {
-    n_acylsphingoid
-    <-> . +d_glucosylceramide +h2o
-    glucose
-  }
-
-  branch from inositol_phosphoceramide side right {
+  branch from inositol_phosphoceramide side left {
     inositol_phosphoceramide
     <-> . +gdp_d_mannose +gdp +hplus
     mannosylinositol_phosphorylceramide
   }
 
-  branch from inositol_phosphoceramide side left {
+  branch from inositol_phosphoceramide side right {
     inositol_phosphoceramide
     <-> . +gdp_d_mannose +gdp +hplus
     man_1_6_ins_1_p_cer
   }
 
-  branch from 1d_myo_inositol_1_phosphate side right {
+  branch from 1d_myo_inositol_1_phosphate side left {
     1d_myo_inositol_1_phosphate
     <-> . +1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit +h2o +hplus
     1_hexadecanoyl_sn_glycerol

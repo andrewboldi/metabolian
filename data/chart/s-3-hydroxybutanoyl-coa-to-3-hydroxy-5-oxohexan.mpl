@@ -24,37 +24,37 @@ pathway s-3-hydroxybutanoyl-coa-to-3-hydroxy-5-oxohexan "(S)-3-hydroxybutanoyl-C
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +amp +acinetoferrin +atp +n3_oct_2_enoyl_n3_hydroxy_1_3_diaminopropane
-    n1_citryl_n3_oct_2_enoyl_n3_hydroxy_1_3_diaminop
+    <-> ec_6_2_1_1 [6.2.1.1] +propanoate +h +atp
+    propanoyl_amp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_3z_6z_9z_12z_pentadeca_3_6_9_12_tetraen_1_yl_4 +atp
-    6z_9z_12z_15z_3_hydroxy_2_2z_5z_8z_11z_tetradec
+    <-> ec_2_7_7_41 [2.7.7.41] +ctp +1_2_didodecanoyl_sn_glycerol_3_phosphate
+    cdp_1_2_didodecanoylglycerol
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +h +3_pentenoyl_coa +atp +coa
-    trans_pent_3_enoic_acid
+    <-> . +co2 +butan_2_one +atp +h2o +h +phosphate
+    3_oxopentanoate
   }
 
   branch from amp side left {
     amp
-    <-> . +l_alanine +atp +jasmonate +diphosphate +h
-    7_epi_jasmonoyl_l_alanine
+    <-> . +3r_3_hydroxy_l_glutamate +atp +nh4 +diphosphate +h
+    3r_3_hydroxy_l_glutamine
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +fucoxanthinol
-    fucoxanthin
+    <-> . +4_coumaroyl_diketide +e_feruloyl_coa +h +co2
+    demethoxycurcumin
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_84 [2.3.1.84] +ethanol +propanoyl_coa
-    ethyl_propionate
+    <-> . +succinyl_coa +beta_d_glc_1_3_beta_d_glc_1_6_beta_d_glc_1_6_bet
+    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
   }
 }

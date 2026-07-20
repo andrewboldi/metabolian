@@ -198,26 +198,6 @@
       }
     },
     {
-      "id": "2_4_6_trihydroxyacetophenone",
-      "name": "2',4',6'-trihydroxyacetophenone",
-      "short": "2',4',6'-trihydroxy…",
-      "formula": "C8H8O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:64344"
-      }
-    },
-    {
-      "id": "2_4_diacetylphloroglucinol",
-      "name": "2,4-diacetylphloroglucinol",
-      "short": "2,4-diacetylphlorog…",
-      "formula": "C10H9O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:140662"
-      }
-    },
-    {
       "id": "malonyl-coa",
       "name": "Malonyl-CoA",
       "formula": "C24H33N7O19P3S",
@@ -359,52 +339,21 @@
       }
     },
     {
-      "id": "l_l_homocystine",
-      "name": "L,L-homocystine",
-      "formula": "C8H16N2O4S2",
+      "id": "l_homocysteinyl_amp",
+      "name": "L-homocysteinyl-AMP",
+      "formula": "C14H21N6O8PS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140613"
+        "chebi": "CHEBI:233461"
       }
     },
     {
-      "id": "gsh",
-      "name": "Glutathione (reduced, GSH)",
-      "short": "Glutathione…",
-      "formula": "C10H16N3O6S",
-      "charge": -1,
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57925"
-      }
-    },
-    {
-      "id": "gssg",
-      "name": "Glutathione disulfide (oxidized, GSSG)",
-      "short": "Glutathione…",
-      "formula": "C20H30N6O12S2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58297"
-      }
-    },
-    {
-      "id": "2_aminobut_2_enoic_acid",
-      "name": "2-aminobut-2-enoic acid",
-      "short": "2-aminobut-2-enoic…",
-      "formula": "C4H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:48306"
-      }
-    },
-    {
-      "id": "h2s",
-      "name": "Hydrogen sulfide (H2S)",
-      "short": "Hydrogen sulfide…",
-      "formula": "HS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29919"
+        "chebi": "CHEBI:33019"
       }
     },
     {
@@ -455,13 +404,6 @@
       ]
     },
     {
-      "id": "ec_2_3_1_272",
-      "name": "2-acetylphloroglucinol acetyltransferase",
-      "ec": [
-        "2.3.1.272"
-      ]
-    },
-    {
       "id": "ec_2_3_1_253",
       "name": "phloroglucinol synthase",
       "ec": [
@@ -487,13 +429,6 @@
       "name": "purine-nucleoside phosphorylase",
       "ec": [
         "2.4.2.1"
-      ]
-    },
-    {
-      "id": "ec_1_8_4_1",
-      "name": "glutathione--homocystine transhydrogenase",
-      "ec": [
-        "1.8.4.1"
       ]
     }
   ],
@@ -846,51 +781,6 @@
     },
     {
       "id": "r9",
-      "name": "2-acetylphloroglucinol acetyltransferase",
-      "equation": "2 2-acetylphloroglucinol = 2,4-diacetylphloroglucinol + 1,3,5-trihydroxybenzene + H(+)",
-      "ec": "2.3.1.272",
-      "substrates": [
-        {
-          "metabolite": "2_4_6_trihydroxyacetophenone",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_4_diacetylphloroglucinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phloroglucinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_272"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:48236"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48236"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "phloroglucinol synthase",
       "equation": "3 malonyl-CoA + 3 H(+) = 1,3,5-trihydroxybenzene + 3 CO2 + 3 CoA",
       "ec": "2.3.1.253",
@@ -924,7 +814,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:50380"
       },
@@ -939,7 +829,7 @@
       }
     },
     {
-      "id": "r11",
+      "id": "r10",
       "name": "L-lysyl-[histone] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[histone] + S-adenosy...",
       "equation": "L-lysyl-[histone] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[histone] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
@@ -967,7 +857,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:10024"
       },
@@ -982,7 +872,7 @@
       }
     },
     {
-      "id": "r12",
+      "id": "r11",
       "name": "phosphatidylethanolamine N-methyltransferase",
       "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + S-adenosyl-L-methionine = a 1,2-diacyl-sn-glycero-3-phospho-N-methylethanolamine + S-adenosyl-L-homocysteine + H(+)",
       "ec": "2.1.1.17",
@@ -1016,7 +906,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:11164"
       },
@@ -1031,7 +921,7 @@
       }
     },
     {
-      "id": "r13",
+      "id": "r12",
       "name": "AMP nucleosidase",
       "equation": "AMP + H2O = D-ribose 5-phosphate + adenine",
       "ec": "3.2.2.4",
@@ -1061,7 +951,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 12,
       "xrefs": {
         "rhea": "RHEA:20129"
       },
@@ -1076,7 +966,7 @@
       }
     },
     {
-      "id": "r14",
+      "id": "r13",
       "name": "purine-nucleoside phosphorylase",
       "equation": "adenosine + phosphate = alpha-D-ribose 1-phosphate + adenine",
       "ec": "2.4.2.1",
@@ -1106,7 +996,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 14,
+      "pathwayStep": 13,
       "xrefs": {
         "rhea": "RHEA:27642"
       },
@@ -1121,7 +1011,7 @@
       }
     },
     {
-      "id": "r15",
+      "id": "r14",
       "name": "Reaction MNXR116272",
       "substrates": [
         {
@@ -1136,7 +1026,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 15,
+      "pathwayStep": 14,
       "xrefs": {
         "metanetx": "MNXR116272"
       },
@@ -1151,7 +1041,7 @@
       }
     },
     {
-      "id": "r16",
+      "id": "r15",
       "name": "Reaction MNXR119753",
       "substrates": [
         {
@@ -1170,7 +1060,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 16,
+      "pathwayStep": 15,
       "xrefs": {
         "metanetx": "MNXR119753"
       },
@@ -1185,67 +1075,16 @@
       }
     },
     {
-      "id": "r17",
-      "name": "glutathione--homocystine transhydrogenase",
-      "equation": "L,L-homocystine + 2 glutathione = 2 L-homocysteine + glutathione disulfide",
-      "ec": "1.8.4.1",
-      "substrates": [
-        {
-          "metabolite": "l_l_homocystine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "homocysteine",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "gssg",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_8_4_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 17,
-      "xrefs": {
-        "rhea": "RHEA:11464"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:11464"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r18",
-      "name": "L-homocysteine = 2-aminobut-2-enoate + hydrogen sulfide + H(+)",
-      "equation": "L-homocysteine = 2-aminobut-2-enoate + hydrogen sulfide + H(+)",
+      "id": "r16",
+      "name": "L-homocysteine + ATP + H(+) = L-homocysteinyl-AMP + diphosphate",
+      "equation": "L-homocysteine + ATP + H(+) = L-homocysteinyl-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "homocysteine",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_aminobut_2_enoic_acid",
-          "stoichiometry": 1
         },
         {
-          "metabolite": "h2s",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -1253,23 +1092,33 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "l_homocysteinyl_amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 18,
+      "pathwayStep": 16,
       "xrefs": {
-        "rhea": "RHEA:43012"
+        "rhea": "RHEA:83879"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43012"
+            "id": "RHEA:83879"
           }
         ]
       }
     },
     {
-      "id": "r19",
+      "id": "r17",
       "name": "Reaction MNXR123330",
       "substrates": [
         {
@@ -1288,7 +1137,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 19,
+      "pathwayStep": 17,
       "xrefs": {
         "metanetx": "MNXR123330"
       },

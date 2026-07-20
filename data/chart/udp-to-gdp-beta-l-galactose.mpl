@@ -32,37 +32,37 @@ pathway udp-to-gdp-beta-l-galactose "UDP to GDP-beta-L-galactose" {
 
   branch from c80_dolichol_phosphate side left {
     c80_dolichol_phosphate
-    <-> ec_3_1_3_51 [3.1.3.51] +h2o +phosphate
-    c80_dolichol
+    <-> ec_3_1_4_48 [3.1.4.48] +glucose +h +h2o
+    a_dolichyl_beta_d_glucosyl_phosphate
   }
 
   branch from c80_dolichol_phosphate side right {
     c80_dolichol_phosphate
-    <-> ec_3_6_1_43 [3.6.1.43] +h +phosphate +h2o
-    c80_dolichol_diphosphate
+    <-> ec_3_1_4_48 [3.1.4.48] +h +a_dolichyl_beta_d_glucosyl_phosphate +h2o
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_7 [1.14.13.7] +3_methylcatechol +nadp +h +nadph +4_methylphenol
-    o2
+    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
+    s_5_deoxy_d_ribos_5_yl_l_homocysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_57 [3.1.1.57] +2_oxo_2h_pyran_4_6_dicarboxylate +h
-    4_carboxy_2_hydroxyhexa_2_4_dienedioate
+    <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
   }
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +beta_d_man_1_3_beta_d_glc_1_3_alpha_d_glcnac_pp +h
-    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
+    <-> . +gdp +alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac +h
+    beta_d_glcnac_1_4_alpha_d_glcnac_pp_undecaprenol
   }
 
   branch from gdp_alpha_d_mannose side right {
     gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac +h
-    beta_d_glcnac_1_4_alpha_d_glcnac_pp_undecaprenol
+    <-> . +gdp +beta_d_man_1_4_alpha_d_man_1_3_beta_d_glcnac_1_4 +h
+    alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac
   }
 }

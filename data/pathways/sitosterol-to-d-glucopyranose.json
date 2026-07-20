@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sitosterol-to-d-glucopyranose",
   "name": "sitosterol to D-glucopyranose",
-  "category": "energy-metabolism",
+  "category": "carbohydrate-metabolism",
   "summary": "A 3-step route from sitosterol to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,13 +119,12 @@
       }
     },
     {
-      "id": "benzylglucosinolate_aglycone",
-      "name": "benzylglucosinolate aglycone",
-      "short": "benzylglucosinolate…",
-      "formula": "C8H7NO4S2",
+      "id": "celosianin_i",
+      "name": "celosianin I",
+      "formula": "C39H38N2O21",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1370819"
+        "metanetx": "MNXM1368620"
       }
     },
     {
@@ -138,40 +137,49 @@
       }
     },
     {
-      "id": "z_glucotropeolin",
-      "name": "(Z)-glucotropeolin",
-      "formula": "C14H18NO9S2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM734821"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "amaranthin",
+      "name": "amaranthin",
+      "formula": "C30H34N2O19",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "chebi": "CHEBI:2621"
       }
     },
     {
-      "id": "z_indol_3_yl_n_sulfonatooxy_methanimidothioate",
-      "name": "(Z)-(indol-3-yl)-N-(sulfonatooxy)methanimidothioate",
-      "short": "(indol-3-yl)-N-(sul…",
-      "formula": "C10H8N2O4S2",
-      "charge": -2,
+      "id": "1_o_4_coumaroyl_d_glucose",
+      "name": "1-O-(4-coumaroyl)-β-D-glucose",
+      "short": "1-O-(4-coumaroyl)-β…",
+      "formula": "C15H18O8",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195189"
+        "chebi": "CHEBI:71498"
       }
     },
     {
-      "id": "z_glucobrassicin",
-      "name": "(Z)-glucobrassicin",
-      "formula": "C16H19N2O9S2",
-      "charge": -1,
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:187898"
+        "metanetx": "MNXM1104180"
+      }
+    },
+    {
+      "id": "6_kestotriose",
+      "name": "6-kestotriose",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64833"
+      }
+    },
+    {
+      "id": "6_6_kestotetraose",
+      "name": "6,6-kestotetraose",
+      "formula": "C24H42O21",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64836"
       }
     }
   ],
@@ -184,10 +192,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_147",
-      "name": "thioglucosidase",
+      "id": "ec_2_4_1_10",
+      "name": "levansucrase",
       "ec": [
-        "3.2.1.147"
+        "2.4.1.10"
       ]
     }
   ],
@@ -333,90 +341,86 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR196650",
+      "name": "Reaction MNXR197123",
       "substrates": [
         {
           "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "benzylglucosinolate_aglycone",
+          "metabolite": "celosianin_i",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "z_glucotropeolin",
+          "metabolite": "amaranthin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "1_o_4_coumaroyl_d_glucose",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR196650"
+        "metanetx": "MNXR197123"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196650"
+            "id": "MNXR197123"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "thioglucosidase",
-      "ec": "3.2.1.147",
+      "name": "levansucrase",
+      "ec": "2.4.1.10",
       "substrates": [
         {
-          "metabolite": "glucose",
+          "metabolite": "sucrose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "z_indol_3_yl_n_sulfonatooxy_methanimidothioate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
+          "metabolite": "6_kestotriose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "z_glucobrassicin",
+          "metabolite": "6_6_kestotetraose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "glucose",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_147"
+          "enzyme": "ec_2_4_1_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR196781"
+        "metanetx": "MNXR197154"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196781"
+            "id": "MNXR197154"
           }
         ]
       }

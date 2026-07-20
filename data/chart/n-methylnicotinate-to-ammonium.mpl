@@ -20,13 +20,13 @@ pathway n-methylnicotinate-to-ammonium "N-methylnicotinate to ammonium" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +valencene +fmnh2 +o2 +h2o +hplus
-    nootkatone
+    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    carvacrol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +valencene +fmnh2 +o2 +h2o +hplus
-    nootkatol
+    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
+    thymol
   }
 }

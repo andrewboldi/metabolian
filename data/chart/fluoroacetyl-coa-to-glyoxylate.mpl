@@ -18,14 +18,14 @@ pathway fluoroacetyl-coa-to-glyoxylate "fluoroacetyl-CoA to glyoxylate" {
 
   branch from glycolate side left {
     glycolate
-    <-> . +h2o +gtp +hplus
-    n2_1_hydroxy_2_oxoethyl_gtp
+    <-> . +h2o +gdp +hplus
+    n2_1_hydroxy_2_oxoethyl_gdp
   }
 
   branch from glycolate side right {
     glycolate
-    <-> . +h2o +gdp +hplus
-    n2_1_hydroxy_2_oxoethyl_gdp
+    <-> . +n2_1_hydroxy_2_oxoethyl_gmp_1 +h2o +hplus
+    guanosine_5_monophosphate_1
   }
 
   branch from glyoxylate side left {

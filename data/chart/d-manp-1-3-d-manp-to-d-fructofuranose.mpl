@@ -18,14 +18,14 @@ pathway d-manp-1-3-d-manp-to-d-fructofuranose "α-D-Manp-(1→3)-[α-D-Manp-… 
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_glucono_1_5_lactone +h
-    nad
+    <-> .
+    glucose
   }
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_1_1_1_21 [1.1.1.21] +d_mannitol +nadp +nadph
-    h
+    <-> .
+    beta_d_fructose
   }
 
   branch from d_fructofuranose side left {

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "ins-1-p-cer-c-to-fatty-acid-anion",
   "name": "Ins-1-P-Cer-C to fatty acid anion",
-  "category": "lipid-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from Ins-1-P-Cer-C(1−) to fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,26 +122,6 @@
       }
     },
     {
-      "id": "mannosylinositol_phosphorylceramide",
-      "name": "mannosylinositol phosphorylceramide",
-      "short": "mannosylinositol…",
-      "formula": "C16H27NO16PR2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64997"
-      }
-    },
-    {
-      "id": "mannosyl_diphosphorylinositol_ceramide",
-      "name": "mannosyl diphosphorylinositol ceramide",
-      "short": "mannosyl diphosphor…",
-      "formula": "C22H37NO24P2R2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:74997"
-      }
-    },
-    {
       "id": "man_1_6_ins_1_p_cer",
       "name": "Man-α-1→6-Ins-1-P-Cer",
       "short": "Man-α-1→6-Ins-1-P-C…",
@@ -162,42 +142,60 @@
       }
     },
     {
-      "id": "fatty_acid_ethyl_ester",
-      "name": "fatty acid ethyl ester",
-      "short": "fatty acid ethyl…",
-      "formula": "C3H5O2R",
+      "id": "n_acylsphingosine",
+      "name": "N-acylsphingosine",
+      "formula": "C19H36NO3R",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78206"
+        "chebi": "CHEBI:52639"
       }
     },
     {
-      "id": "ethanol",
-      "name": "ethanol",
-      "formula": "C2H6O",
-      "charge": 0,
+      "id": "n_acylsphingosine_1d_myo_inositol",
+      "name": "N-acylsphingosine-(1D-myo-inositol)",
+      "short": "N-acylsphingosine-(…",
+      "formula": "C25H46NO11PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16236"
+        "chebi": "CHEBI:192974"
       }
     },
     {
-      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
-      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
-      "short": "1,2-diacyl-3-β-D-ga…",
-      "formula": "C11H16O10R2",
-      "charge": 0,
+      "id": "n_fatty_acyl_l_phenylalanine",
+      "name": "N-(fatty acyl)-L-phenylalanine",
+      "short": "N-(fatty acyl)-L-ph…",
+      "formula": "C10H9NO3R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17615"
+        "chebi": "CHEBI:149690"
       }
     },
     {
-      "id": "monoacyl_3_o_d_galactosyl_sn_glycerol",
-      "name": "monoacyl-3-O-(β-D-galactosyl)-sn-glycerol",
-      "short": "monoacyl-3-O-(β-D-g…",
-      "formula": "C10H17O9R1",
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:141434"
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "n_fatty_acyl_l_serine",
+      "name": "N-(fatty acyl)-L-serine",
+      "short": "N-(fatty acyl)-L-se…",
+      "formula": "C4H5NO4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149698"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
       }
     }
   ],
@@ -330,45 +328,6 @@
     },
     {
       "id": "r4",
-      "name": "a mannosylinositol-1-phospho-N-acyl-sphingoid base + a 1,2-diacyl-sn-glycero-3-phospho-...",
-      "equation": "a mannosylinositol-1-phospho-N-acyl-sphingoid base + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an inositol phosphomannosylnositol-1-phospho-N-acylsphingoid base + a 1,2-diacyl-sn-glycerol",
-      "substrates": [
-        {
-          "metabolite": "mannosylinositol_phosphorylceramide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_phosphatidyl_1d_myo_inositol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "mannosyl_diphosphorylinositol_ceramide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dag",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:55604"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55604"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "an alpha-mannosylinositol-1-phosphoceramide + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo...",
       "equation": "an alpha-mannosylinositol-1-phosphoceramide + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = an inositol-1-phospho-alpha-mannosylinositol-1-phosphoceramide + a 1,2-diacyl-sn-glycerol",
       "substrates": [
@@ -392,7 +351,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:66304"
       },
@@ -407,12 +366,51 @@
       }
     },
     {
-      "id": "r6",
-      "name": "a fatty acid ethyl ester + H2O = ethanol + a fatty acid + H(+)",
-      "equation": "a fatty acid ethyl ester + H2O = ethanol + a fatty acid + H(+)",
+      "id": "r5",
+      "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + an N-acylsphing-4-enine = an N-ac...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + an N-acylsphing-4-enine = an N-acylsphing-4-enine-(1D-myo-inositol) + a 1,2-diacyl-sn-glycerol",
       "substrates": [
         {
-          "metabolite": "fatty_acid_ethyl_ester",
+          "metabolite": "1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingosine_1d_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:73683"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73683"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "an N-acyl-L-phenylalanine + H2O = L-phenylalanine + a fatty acid",
+      "equation": "an N-acyl-L-phenylalanine + H2O = L-phenylalanine + a fatty acid",
+      "substrates": [
+        {
+          "metabolite": "n_fatty_acyl_l_phenylalanine",
           "stoichiometry": 1
         },
         {
@@ -422,40 +420,36 @@
       ],
       "products": [
         {
-          "metabolite": "ethanol",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         },
         {
           "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:50148"
+        "rhea": "RHEA:64112"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50148"
+            "id": "RHEA:64112"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = an acyl-3-O-(beta-D-galactosyl...",
-      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + H2O = an acyl-3-O-(beta-D-galactosyl)-sn-glycerol + a fatty acid + H(+)",
+      "name": "an N-(fatty acyl)-L-serine + H2O = L-serine + a fatty acid",
+      "equation": "an N-(fatty acyl)-L-serine + H2O = L-serine + a fatty acid",
       "substrates": [
         {
-          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "metabolite": "n_fatty_acyl_l_serine",
           "stoichiometry": 1
         },
         {
@@ -465,29 +459,25 @@
       ],
       "products": [
         {
-          "metabolite": "monoacyl_3_o_d_galactosyl_sn_glycerol",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
           "metabolite": "fatty-acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:57084"
+        "rhea": "RHEA:64120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57084"
+            "id": "RHEA:64120"
           }
         ]
       }

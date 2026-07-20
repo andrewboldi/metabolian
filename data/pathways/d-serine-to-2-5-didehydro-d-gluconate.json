@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-serine-to-2-5-didehydro-d-gluconate",
+  "name": "D-serine to 2,5-didehydro-D-gluconate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from D-serine zwitterion to 2,5-didehydro-D-gluconate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37019"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35247"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dserine",
+      "name": "D-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35247"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17180"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde",
+      "name": "D-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17378"
+      }
+    },
+    {
+      "id": "2_dehydro_d_gluconate",
+      "name": "2-dehydro-D-gluconate",
+      "short": "2-dehydro-D-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16808"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_5_didehydro_d_gluconate",
+      "name": "2,5-didehydro-D-gluconate",
+      "short": "2,5-didehydro-D-glu…",
+      "formula": "C6H7O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11449"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_gluconate",
+      "name": "D-gluconate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18391"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_274",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)",
+      "ec": [
+        "1.1.1.274"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-serine + A + H2O = 3-hydroxypyruvate + AH2 + NH4(+)",
+      "equation": "D-serine + A + H2O = 3-hydroxypyruvate + AH2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "dserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37019"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-glyceraldehyde + 3-hydroxypyruvate = 2-dehydro-D-gluconate",
+      "equation": "D-glyceraldehyde + 3-hydroxypyruvate = 2-dehydro-D-gluconate",
+      "substrates": [
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)",
+      "equation": "2-dehydro-D-gluconate + NADP(+) = 2,5-didehydro-D-gluconate + NADPH + H(+)",
+      "ec": "1.1.1.274",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_didehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_274"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-gluconate + FAD + H(+) = 2-dehydro-D-gluconate + FADH2",
+      "equation": "D-gluconate + FAD + H(+) = 2-dehydro-D-gluconate + FADH2",
+      "substrates": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30779"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30779"
+          }
+        ]
+      }
+    }
+  ]
+}

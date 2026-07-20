@@ -24,14 +24,14 @@ pathway nadh-to-h2o "NADH to H2O" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +tetrachlorocatechol
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> . +5_hydroxymethylfurfural +nadh +h
+    2_5_furandimethanol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_25 [1.14.13.25] +nadh +trichloroethene +h +o2 +h2o
-    trichloroepoxyethane
+    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +3_oxosteroid
+    3alpha_hydroxysteroid
   }
 
   branch from 5alpha_androstan_3_17_dione side right {
@@ -42,25 +42,25 @@ pathway nadh-to-h2o "NADH to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
-    glyoxylate
+    <-> . +3_deoxo_4b_deoxypaxilline +h +o2 +nadph +nadp
+    beta_pc_m6
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_12_11 [1.14.12.11] +nadh +trichloroethene +o2 +h +chloride +nad
-    formate
+    <-> . +r_mandelonitrile +nadp +h +o2 +nadph
+    z_phenylacetaldehyde_oxime
   }
 
   branch from atp side left {
     atp
-    <-> . +h +cyclohexane_1_carbonyl_coa +amp +phosphate +cyclohexane_1_carboxylate +h2o
-    coa
+    <-> . +diphosphate +pre_alcaligin +h +amp
+    3_4_amino_3_hydroxybutyl_hydroxy_carbamoyl_propa
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_163 [2.7.1.163] +h +adp +4_o_phosphohygromycin
-    hygromycin_b
+    <-> . +diphosphate +alcaligin +h +amp
+    pre_alcaligin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-7z-10z-13z-3-hydroxy-to-3e-5z-8z-11z-tetrade "(3S,7Z,10Z,13Z)-3-hydroxy… to (3E,5Z,8Z,11Z)-tetradecat…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     3s_7z_10z_13z_3_hydroxyhexadecatrienoyl_coa
@@ -16,11 +16,5 @@ pathway 3s-7z-10z-13z-3-hydroxy-to-3e-5z-8z-11z-tetrade "(3S,7Z,10Z,13Z)-3-hydro
     2e_5z_8z_11z_tetradecatetraenoyl_coa
     <-> .
     3e_5z_8z_11z_tetradecatetraenoyl_coa
-  }
-
-  branch from 3_oxo_7z_10z_13z_hexadecatrienoyl_coa side left {
-    3_oxo_7z_10z_13z_hexadecatrienoyl_coa
-    <-> . +nad +nadh +hplus
-    3r_7z_10z_13z_3_hydroxyhexadecatrienoyl_coa
   }
 }

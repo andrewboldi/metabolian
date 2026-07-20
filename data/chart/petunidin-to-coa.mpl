@@ -18,14 +18,14 @@ pathway petunidin-to-coa "petunidin to CoA" {
 
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_56 [2.1.1.56] +s_adenosyl_l_homocysteine +7_methylguanosine_5_diphosphate
-    gdp
+    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +h +anisole
+    phenol
   }
 
   branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +h +anisole
-    phenol
+    <-> ec_2_1_1_76 [2.1.1.76] +s_adenosyl_l_homocysteine +h +3_4_5_7_tetrahydroxy_3_methoxyflavone
+    quercetin
   }
 
   branch from delphinidin_3_o_d_glucoside_betaine side left {
@@ -42,13 +42,13 @@ pathway petunidin-to-coa "petunidin to CoA" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetylneuraminate
-    n_acetyl_7_o_acetylneuraminate
+    <-> . +h +2_succinylbenzoyl_coa
+    spirodilactone
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +aniline
-    n_phenylacetamide
+    <-> . +co2 +nh4 +cyclohexane_1_4_dione +h +h2o
+    2_amino_5_oxocyclohex_1_enecarbonyl_coa
   }
 }

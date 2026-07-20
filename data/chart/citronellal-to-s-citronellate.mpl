@@ -24,14 +24,14 @@ pathway citronellal-to-s-citronellate "citronellal to (S)-citronellate" {
 
   branch from h side right {
     h
-    <-> ec_4_5_1_2 [4.5.1.2] +s_carboxymethyl_d_cysteine +chloride +3_chloro_d_alanine
-    thioglycolate
+    <-> . +d_alanyl_d_alanine +l_arginine +h2o
+    arg_ala_ala
   }
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +o_s_2e_hexadecenoylpantetheine_4_phosphoryl_seri +nadph +nadp
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
+    <-> . +l_histidine +l_threonine +l_arginine +h2o
+    arg_his_thr
   }
 
   branch from s_citronellal side right {
@@ -48,13 +48,13 @@ pathway citronellal-to-s-citronellate "citronellal to (S)-citronellate" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_8_1_15 [1.8.1.15] +h +mycothione +nadp
-    mycothiol
+    <-> . +ferroheme_o +nadp +h2o
+    ferroheme_a
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_273 [1.1.1.273] +vellosimine +h +nadp
-    10_deoxysarpagine
+    <-> . +24s_3_7_12_24_tetrahydroxy_5_cholestan_26_oic_a +nadp +h2o +h +3alpha_7alpha_12alpha_24_tetrahydroxy_5beta_chol
+    o2
   }
 }

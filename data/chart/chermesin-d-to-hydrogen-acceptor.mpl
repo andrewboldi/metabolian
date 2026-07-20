@@ -18,13 +18,13 @@ pathway chermesin-d-to-hydrogen-acceptor "chermesin D to hydrogen acceptor" {
 
   branch from sah side left {
     sah
-    <-> . +2_deoxycytidine_5_monophosphate_1 +sam +atp +h2o +adp +pi +hplus
-    5_methyl_dcmp_1
+    <-> . +deacetylisoipecoside +sam +hplus
+    6_o_methyldeacetylisoipecoside
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_380 [2.1.1.380] +3_amino_2_4_dihydroxybenzoate +sam +hplus
-    3_amino_2_hydroxy_4_methoxybenzoate
+    <-> . +7_o_methyldeacetylisoipecoside +sam +hplus
+    6_7_o_o_dimethyldeacetylisoipecoside
   }
 }

@@ -30,25 +30,25 @@ pathway 2r-3s-3-isopropylmalate-to-kynurenate "(2R,3S)-3-isopropylmalate to kynu
 
   branch from leucine side left {
     leucine
-    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
-    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
+    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
+    pf1022c
   }
 
   branch from leucine side right {
     leucine
     <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022a
+    pf1022d
   }
 
   branch from kynurenate side left {
     kynurenate
-    <-> ec_2_6_1_63 [2.6.1.63] +l_kynurenine +glyoxylate +h2o
-    glycine
+    <-> . +l_kynurenine +l_tryptophan +h2o
+    3_indol_3_yl_pyruvate
   }
 
   branch from kynurenate side right {
     kynurenate
-    <-> . +l_kynurenine +l_tryptophan +h2o
-    3_indol_3_yl_pyruvate
+    <-> . +l_kynurenine +oxaloacetate +h2o
+    aspartate
   }
 }

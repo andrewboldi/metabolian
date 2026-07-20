@@ -20,13 +20,13 @@ pathway lutein-to-o2-68432 "lutein to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +strictosamide
-    strictosamide_ketolactam
+    <-> . +methylroxarsone_v +h
+    methylroxarsone_iii
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +4_fluorophenol +nad +h2o
-    4_fluorocatechol
+    <-> . +3_amino_4_hydroxyphenyl_methyl_arsinate +h
+    3_amino_4_hydroxyphenyl_methyl_arsinous_acid
   }
 }

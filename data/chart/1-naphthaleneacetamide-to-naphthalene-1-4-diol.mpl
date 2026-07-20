@@ -18,26 +18,26 @@ pathway 1-naphthaleneacetamide-to-naphthalene-1-4-diol "1-naphthaleneacetamide t
 
   branch from nh3 side left {
     nh3
-    <-> . +l_glutamine +histaminium
-    n_2_1h_imidazol_4_yl_ethyl_l_glutamine
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nadp +h2o +nadph +hplus
+    ketone
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
-    dump
+    <-> . +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_5_1_17 [3.5.1.17] +l_lysine +h2o
-    n_6_acetyl_l_lysine
+    <-> . +acetyl_coa +4_hydroxybutanoate
+    4_hydroxybutanoyl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_1_2_5_2 [1.2.5.2] +h +pyrroloquinoline_quinol +acetaldehyde +h2o
-    pyrroloquinoline_quinone
+    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +h +3_hydroxy_5_oxohexanoate
+    3_hydroxy_5_oxohexanoyl_coa
   }
 
   branch from 1_naphthol side left {

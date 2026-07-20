@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-methyladenosine-to-5-amino-1-5-phosphonato "1-methyladenosine to 5-amino-1-(5-phosphonato-…" {
-  spacing 320
+  spacing 314
 
   spine at 0,0 {
     1_methyladenosine
@@ -38,14 +38,14 @@ pathway 1-methyladenosine-to-5-amino-1-5-phosphonato "1-methyladenosine to 5-ami
 
   branch from d_ribofuranose side right {
     d_ribofuranose
-    <-> . +n_ribosylnicotinamide +h2o +hplus
-    nicotinamide
+    <-> . +nadh +hplus +nad
+    d_ribono_1_4_lactone
   }
 
   branch from d_ribofuranose side left {
     d_ribofuranose
-    <-> . +guanosine +h2o
-    guanine
+    <-> ec_3_2_2_8 [3.2.2.8] +a_pyrimidine_ribonucleoside +h2o
+    pyrimidine_nucleobase
   }
 
   branch from d_ribofuranose_5_phosphate side right {
@@ -56,35 +56,29 @@ pathway 1-methyladenosine-to-5-amino-1-5-phosphonato "1-methyladenosine to 5-ami
 
   branch from d_ribofuranose_5_phosphate side left {
     d_ribofuranose_5_phosphate
-    <-> ec_3_2_2_14 [3.2.2.14] +h2o +nicotinamide +hplus
-    nmn
+    <-> . +2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin +h2o
+    2_5_6_triamino_4_hydroxypyrimidine
   }
 
   branch from thf side right {
     thf
-    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadph +hplus +nadp
-    5_methyluridine_5_monophosphate_1
+    <-> . +methylene_thf +dserine +h2o
+    hydroxymethyl_serine
   }
 
-  branch from thf side left {
-    thf
-    <-> . +methylene_thf +h2o
-    formaldehyde
-  }
-
-  branch from glutamate side right {
+  branch from glutamate side left {
     glutamate
     <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +akg
     3_indol_3_yl_pyruvate
   }
 
-  branch from glutamate side left {
+  branch from glutamate side right {
     glutamate
     <-> ec_2_6_1_52 [2.6.1.52] +pser +akg
     php
   }
 
-  branch from air side right {
+  branch from air side left {
     air
     <-> ec_4_1_99_23 [4.1.99.23] +hydrogen_donor +sam +5_deoxyadenosine +formate +methionine +hydrogen_acceptor +nh3 +pi +hplus
     5_hydroxybenzimidazole

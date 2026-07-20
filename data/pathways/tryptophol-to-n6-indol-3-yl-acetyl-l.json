@@ -184,21 +184,48 @@
       }
     },
     {
-      "id": "indole_3_acetamide",
-      "name": "indole-3-acetamide",
-      "formula": "C10H10N2O",
-      "charge": 0,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:16031"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "skatole",
-      "name": "skatole",
-      "formula": "C9H9N",
-      "charge": 0,
+      "id": "indol_3_ylacetyl_coa",
+      "name": "indol-3-ylacetyl-CoA",
+      "formula": "C31H39N8O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:9171"
+        "chebi": "CHEBI:57271"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "indole_3_acetyl_amp",
+      "name": "indole-3-acetyl-AMP",
+      "formula": "C20H20N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188353"
       }
     }
   ],
@@ -232,17 +259,10 @@
       ]
     },
     {
-      "id": "ec_3_5_1_4",
-      "name": "amidase",
+      "id": "ec_6_2_1_75",
+      "name": "indoleacetate--CoA ligase",
       "ec": [
-        "3.5.1.4"
-      ]
-    },
-    {
-      "id": "ec_4_1_1_115",
-      "name": "indoleacetate decarboxylase",
-      "ec": [
-        "4.1.1.115"
+        "6.2.1.75"
       ]
     }
   ],
@@ -500,57 +520,68 @@
     },
     {
       "id": "r6",
-      "name": "amidase",
-      "equation": "indole-3-acetamide + H2O = (indol-3-yl)acetate + NH4(+)",
-      "ec": "3.5.1.4",
+      "name": "indoleacetate--CoA ligase",
+      "equation": "(indol-3-yl)acetate + ATP + CoA = (indol-3-yl)acetyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.75",
       "substrates": [
-        {
-          "metabolite": "indole_3_acetamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "indole_3_acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indol_3_ylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_4"
+          "enzyme": "ec_6_2_1_75"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:34371"
+        "rhea": "RHEA:69715"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34371"
+            "id": "RHEA:69715"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "indoleacetate decarboxylase",
-      "equation": "(indol-3-yl)acetate + H(+) = skatole + CO2",
-      "ec": "4.1.1.115",
+      "name": "(indol-3-yl)acetate + ATP + H(+) = (indol-3-yl)acetyl-AMP + diphosphate",
+      "equation": "(indol-3-yl)acetate + ATP + H(+) = (indol-3-yl)acetyl-AMP + diphosphate",
       "substrates": [
         {
           "metabolite": "indole_3_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -560,30 +591,25 @@
       ],
       "products": [
         {
-          "metabolite": "skatole",
+          "metabolite": "indole_3_acetyl_amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_115"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:59216"
+        "rhea": "RHEA:69719"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59216"
+            "id": "RHEA:69719"
           }
         ]
       }

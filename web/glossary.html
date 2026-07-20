@@ -190,9 +190,12 @@
       body[data-page="glossary"] .term {
         grid-template-columns: minmax(0, 1fr); gap: 0.35rem 0; padding: 0.85rem 0.25rem;
       }
+      /* grid-row must be reset alongside grid-column: the wide layout pins the
+         name block and the chips to row 1, and leaving that in place stacks
+         them in the same cell instead of one above the other. */
       body[data-page="glossary"] .term > div:first-child,
       body[data-page="glossary"] .term > p,
-      body[data-page="glossary"] .term > .chips { grid-column: 1; }
+      body[data-page="glossary"] .term > .chips { grid-column: 1; grid-row: auto; }
       body[data-page="glossary"] .term > .chips { justify-content: flex-start; }
       body[data-page="glossary"] .count-note { margin-left: 0; }
     }
@@ -218,11 +221,11 @@
       <div class="wrap">
         <p class="eyebrow">Reference · Index</p>
         <h1>Every molecule and enzyme in the atlas</h1>
-        <p class="lead">27,196 entries, searchable, each with the formula, codes, and source-database links it was built from. Search by name, gene, or description; the list renders the first 400 matches, so narrow the query to see further.</p>
+        <p class="lead">Every metabolite and enzyme in the atlas, searchable, each with the formula, codes, and source-database links it was built from. Search by name, gene, or description; the list renders the first 400 matches, so narrow the query to see further.</p>
         <dl class="readout" aria-label="Index summary">
-          <div><dt>Entries</dt><dd>27,196</dd></div>
-          <div><dt>Metabolites</dt><dd>21,235</dd></div>
-          <div><dt>Enzymes</dt><dd>5,961</dd></div>
+          <div><dt>Entries</dt><dd data-atlas="entries">—</dd></div>
+          <div><dt>Metabolites</dt><dd data-atlas="metabolites">—</dd></div>
+          <div><dt>Enzymes</dt><dd data-atlas="enzymes">—</dd></div>
           <div><dt>Source</dt><dd>graph/glossary.json</dd></div>
         </dl>
       </div>
@@ -243,8 +246,7 @@
              assistive tech, which reads each entry's own name and kind instead. -->
         <div class="gl-head" aria-hidden="true">
           <span>Term / Kind</span>
-          <span>Description</span>
-          <span>Identifiers</span>
+          <span>Formula · Codes · Sources</span>
         </div>
       </div>
       <div class="glossary-list" id="glossary-list"></div>
@@ -252,5 +254,25 @@
   </main>
   <div id="app-footer"></div>
   <script type="module" src="/src/pages/glossary.ts"></script>
+  <script type="module">
+    /* Atlas totals are read from the build's own index.json, never hardcoded.
+       data/ grows continuously — the corpus went from 2,496 to 3,308 modules
+       during a single afternoon of authoring — and a stale figure on a
+       citation-grounded atlas is the one error this project cannot afford.
+       Elements keep their em-dash placeholder if anything goes wrong. */
+    const slots = document.querySelectorAll("[data-atlas]");
+    if (slots.length) {
+      try {
+        const res = await fetch(new URL("graph/index.json", document.baseURI));
+        const { stats } = await res.json();
+        const nf = new Intl.NumberFormat("en-US");
+        const derived = { entries: (stats.metabolites ?? 0) + (stats.enzymes ?? 0) };
+        for (const el of slots) {
+          const v = derived[el.dataset.atlas] ?? stats[el.dataset.atlas];
+          if (typeof v === "number" && v > 0) el.textContent = nf.format(v);
+        }
+      } catch { /* placeholders stand */ }
+    }
+  </script>
 </body>
 </html>

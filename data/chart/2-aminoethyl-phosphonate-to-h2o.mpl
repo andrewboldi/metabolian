@@ -20,38 +20,38 @@ pathway 2-aminoethyl-phosphonate-to-h2o "(2-aminoethyl)phosphonate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    pentalenolactone_f
+    <-> ec_5_3_1_6 [5.3.1.6] +alpha_d_ribofuranose_5_phosphate
+    d_ribulose_5_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    pentalenolactone_e
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    d_alanyl_d_alanine
   }
 
   branch from ethanolamine side left {
     ethanolamine
-    <-> ec_2_7_8_29 [2.7.8.29] +1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se +l_serine
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphoethan
+    <-> . +18_2_18_3_ps +l_serine
+    18_2_18_3_pe
   }
 
   branch from ethanolamine side right {
     ethanolamine
-    <-> ec_2_7_8_29 [2.7.8.29] +h +pe_18_3_9z_12z_15z_18_3_9z_12z_15z +l_serine
-    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
+    <-> . +22_0_18_2_ps +l_serine
+    22_0_18_2_pe
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_4_1_281 [2.4.1.281] +alpha_d_glucose +alpha_d_mannose_1_phosphate
-    d_manp_1_4_d_glcp
+    <-> ec_2_4_2_1 [2.4.2.1] +7h_purine +2_deoxy_alpha_d_ribose_1_phosphate
+    2_deoxynebularine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
-    neopentalenolactone
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h2o
+    1d_myo_inositol_hexakisphosphate
   }
 
   branch from 1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce side left {
@@ -62,37 +62,37 @@ pathway 2-aminoethyl-phosphonate-to-h2o "(2-aminoethyl)phosphonate to H2O" {
 
   branch from l_serine side right {
     l_serine
-    <-> ec_2_7_8_29 [2.7.8.29] +ethanolamine +20_0_18_2_ps
-    pe_20_0_18_2_9z_12z
+    <-> . +udp_3_acetamido_2_amino_2_3_dideoxy_alpha_d_gluc +h2o
+    udp_3_acetamido_2_seryl_amino_2_3_dideoxy_alpha
   }
 
   branch from l_serine side left {
     l_serine
-    <-> ec_2_7_8_29 [2.7.8.29] +ethanolamine +1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
-    pe_20_1_11z_18_2_9z_12z
+    <-> . +diphosphate +shinorine +h +amp +atp
+    mycosporine_glycine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    erythromycin_a
+    <-> ec_2_7_7_53 [2.7.7.53] +adenosine_5_phosphosulfate +sulfate
+    p_1_p_4_bis_5_adenosyl_tetraphosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    erythromycin_b
+    <-> . +h +adp +phosphate +h2o
+    aerobactin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    erythromycin_d
+    <-> ec_3_2_2_1 [3.2.2.1] +7h_purine +d_ribose
+    nebularine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    azithromycin
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +alpha_d_galactose
+    alpha_d_glucose
   }
 }

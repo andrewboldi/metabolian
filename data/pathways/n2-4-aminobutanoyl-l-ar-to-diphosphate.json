@@ -234,42 +234,52 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58635"
-      }
-    },
-    {
-      "id": "pimara_8_14_15_diene",
-      "name": "pimara-8(14),15-diene",
-      "short": "pimara-8(14),15-die…",
-      "formula": "C20H32",
+      "id": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
+      "name": "8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonic acid",
+      "short": "8-amino-3,8-dideoxy…",
+      "formula": "C8H15NO7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:8210"
+        "chebi": "CHEBI:87091"
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
+      "name": "CMP-8-amino-3,8-dideoxy-α-D-manno-oct-2-ulosonate",
+      "short": "CMP-8-amino-3,8-did…",
+      "formula": "C17H26N4O14P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91089"
+      }
+    },
+    {
+      "id": "phosphonoformate",
+      "name": "phosphonoformate",
+      "formula": "CHO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:91254"
+      }
+    },
+    {
+      "id": "cmp_5_phosphonoformate",
+      "name": "CMP-5'-phosphonoformate",
+      "short": "CMP-5'-phosphonofor…",
+      "formula": "C10H12N3O12P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "cembrene_c",
-      "name": "cembrene C",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:82798"
+        "chebi": "CHEBI:91255"
       }
     }
   ],
@@ -324,17 +334,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_147",
-      "name": "pimaradiene synthase",
+      "id": "ec_2_7_7_90",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
       "ec": [
-        "4.2.3.147"
+        "2.7.7.90"
       ]
     },
     {
-      "id": "ec_4_2_3_148",
-      "name": "cembrene C synthase",
+      "id": "ec_2_7_7_93",
+      "name": "phosphonoformate cytidylyltransferase",
       "ec": [
-        "4.2.3.148"
+        "2.7.7.93"
       ]
     }
   ],
@@ -725,18 +735,22 @@
     },
     {
       "id": "r9",
-      "name": "pimaradiene synthase",
-      "equation": "(+)-copalyl diphosphate = (-)-pimara-8(14),15-diene + diphosphate",
-      "ec": "4.2.3.147",
+      "name": "8-amino-3,8-dideoxy-manno-octulosonate cytidylyltransferase",
+      "equation": "8-amino-3,8-dideoxy-alpha-D-manno-octulosonate + CTP = CMP-8-amino-3,8-dideoxy-alpha-D-manno-oct-2-ulosonate + diphosphate",
+      "ec": "2.7.7.90",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pimara_8_14_15_diene",
+          "metabolite": "cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate",
           "stoichiometry": 1
         },
         {
@@ -746,38 +760,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_147"
+          "enzyme": "ec_2_7_7_90"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:42984"
+        "rhea": "RHEA:49284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42984"
+            "id": "RHEA:49284"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "cembrene C synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = cembrene C + diphosphate",
-      "ec": "4.2.3.148",
+      "name": "phosphonoformate cytidylyltransferase",
+      "equation": "phosphonoformate + CTP = CMP-5'-phosphonoformate + diphosphate",
+      "ec": "2.7.7.93",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "phosphonoformate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cembrene_c",
+          "metabolite": "cmp_5_phosphonoformate",
           "stoichiometry": 1
         },
         {
@@ -787,20 +805,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_148"
+          "enzyme": "ec_2_7_7_93"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:42988"
+        "rhea": "RHEA:49428"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42988"
+            "id": "RHEA:49428"
           }
         ]
       }

@@ -46,13 +46,13 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-s-adenosyl-l-homocyst "(1R,5aS,6R)-1,4,5,5a,6,
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_314 [2.1.1.314] +2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter +sam +hplus
-    diphthine_methyl_ester
+    <-> ec_2_1_1_184 [2.1.1.184] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_n6_dimethyladenosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_33 [2.1.1.33] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> ec_2_1_1_186 [2.1.1.186] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 }

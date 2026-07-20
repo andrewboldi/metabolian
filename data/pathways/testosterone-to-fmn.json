@@ -1,0 +1,380 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "testosterone-to-fmn",
+  "name": "testosterone to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from testosterone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38191"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17347"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17347"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "17_estradiol",
+      "name": "17β-estradiol",
+      "formula": "C18H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16469"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "estrone",
+      "name": "estrone",
+      "formula": "C18H22O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17263"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "6_hydroxyestrone",
+      "name": "6α-hydroxyestrone",
+      "formula": "C18H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87605"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "17_estradiol_17_glucosiduronate",
+      "name": "17β-estradiol 17-glucosiduronate",
+      "short": "17β-estradiol…",
+      "formula": "C24H31O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82961"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_14",
+      "name": "aromatase",
+      "ec": [
+        "1.14.14.14"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_62",
+      "name": "17beta-estradiol 17-dehydrogenase",
+      "ec": [
+        "1.1.1.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aromatase",
+      "equation": "testosterone + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 17beta-estradiol + formate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.14",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38191"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "17beta-estradiol 17-dehydrogenase",
+      "equation": "17beta-estradiol + NAD(+) = estrone + NADH + H(+)",
+      "ec": "1.1.1.62",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "estrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidize...",
+      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "estrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_hydroxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate)...",
+      "equation": "17beta-estradiol + UDP-alpha-D-glucuronate = 17beta-estradiol 17-O-(beta-D-glucuronate) + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "17_estradiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "17_estradiol_17_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52464"
+          }
+        ]
+      }
+    }
+  ]
+}

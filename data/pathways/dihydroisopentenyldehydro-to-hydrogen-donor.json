@@ -105,40 +105,58 @@
       }
     },
     {
-      "id": "isoechinulin_a",
-      "name": "isoechinulin A",
-      "formula": "C24H29N3O2",
+      "id": "n_3_carboxypropanoyl_n_hydroxyputrescine",
+      "name": "N-(3-carboxypropanoyl)-N-hydroxyputrescine",
+      "short": "N-(3-carboxypropano…",
+      "formula": "C8H16N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193010"
+        "chebi": "CHEBI:229776"
       }
     },
     {
-      "id": "dehydroechinulin",
-      "name": "dehydroechinulin",
-      "formula": "C29H37N3O2",
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "putrebactin",
+      "name": "putrebactin",
+      "formula": "C16H28N4O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193011"
+        "chebi": "CHEBI:50432"
       }
     },
     {
-      "id": "neoechinulin_b_anion",
-      "name": "neoechinulin B (anion)",
-      "short": "neoechinulin B…",
-      "formula": "C19H18N3O2",
-      "charge": -1,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:193005"
+        "chebi": "CHEBI:456215"
       }
     },
     {
-      "id": "isoechinulin_b_anion",
-      "name": "isoechinulin B anion",
-      "formula": "C24H26N3O2",
-      "charge": -1,
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:193026"
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pre_putrebactin",
+      "name": "pre-putrebactin",
+      "formula": "C16H30N4O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229777"
       }
     },
     {
@@ -164,6 +182,13 @@
       "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
       "ec": [
         "2.5.1.150"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_63",
+      "name": "putrebactin synthase",
+      "ec": [
+        "6.3.2.63"
       ]
     },
     {
@@ -316,78 +341,100 @@
     },
     {
       "id": "r4",
-      "name": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
-      "equation": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
+      "name": "putrebactin synthase",
+      "equation": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + 2 ATP = putrebactin + 2 AMP + 2 diphosphate + 2 H(+)",
+      "ec": "6.3.2.63",
       "substrates": [
         {
-          "metabolite": "isoechinulin_a",
-          "stoichiometry": 1
+          "metabolite": "n_3_carboxypropanoyl_n_hydroxyputrescine",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "dehydroechinulin",
+          "metabolite": "putrebactin",
           "stoichiometry": 1
         },
         {
+          "metabolite": "amp",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_63"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:73799"
+        "rhea": "RHEA:79279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73799"
+            "id": "RHEA:79279"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "neoechinulin B + dimethylallyl diphosphate = isoechinulin B + diphosphate",
-      "equation": "neoechinulin B + dimethylallyl diphosphate = isoechinulin B + diphosphate",
+      "name": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + ATP = pre-putrebactin + AMP + diphosphat...",
+      "equation": "2 N-(3-carboxypropanoyl)-N-hydroxyputrescine + ATP = pre-putrebactin + AMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "neoechinulin_b_anion",
-          "stoichiometry": 1
+          "metabolite": "n_3_carboxypropanoyl_n_hydroxyputrescine",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "dmapp",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "isoechinulin_b_anion",
+          "metabolite": "pre_putrebactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:73803"
+        "rhea": "RHEA:79283"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73803"
+            "id": "RHEA:79283"
           }
         ]
       }

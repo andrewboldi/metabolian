@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "fluoroacetyl-coa-to-glyoxylate",
   "name": "fluoroacetyl-CoA to glyoxylate",
-  "category": "redox-detox",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from fluoroacetyl-CoA(4−) to glyoxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,25 +109,6 @@
       }
     },
     {
-      "id": "n2_1_hydroxy_2_oxoethyl_gtp",
-      "name": "N2-(1-hydroxy-2-oxoethyl)-GTP",
-      "short": "N2-(1-hydroxy-2-oxo…",
-      "formula": "C12H14N5O16P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:141571"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
       "id": "n2_1_hydroxy_2_oxoethyl_gdp",
       "name": "N2-(1-hydroxy-2-oxoethyl)-GDP",
       "short": "N2-(1-hydroxy-2-oxo…",
@@ -144,6 +125,26 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "n2_1_hydroxy_2_oxoethyl_gmp_1",
+      "name": "N2-(1-hydroxy-2-oxoethyl)-GMP(1−)",
+      "short": "N2-(1-hydroxy-2-oxo…",
+      "formula": "C12H13N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141581"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
       }
     },
     {
@@ -374,49 +375,6 @@
     },
     {
       "id": "r4",
-      "name": "N(2)-(1-hydroxy-2-oxoethyl)-GTP + H2O = glycolate + GTP + H(+)",
-      "equation": "N(2)-(1-hydroxy-2-oxoethyl)-GTP + H2O = glycolate + GTP + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n2_1_hydroxy_2_oxoethyl_gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glycolate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:57252"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57252"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "N(2)-(1-hydroxy-2-oxoethyl)-GDP + H2O = glycolate + GDP + H(+)",
       "equation": "N(2)-(1-hydroxy-2-oxoethyl)-GDP + H2O = glycolate + GDP + H(+)",
       "substrates": [
@@ -444,7 +402,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:57264"
       },
@@ -454,6 +412,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:57264"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "an N(2)-(1-hydroxy-2-oxoethyl)-guanosine in RNA + H2O = a guanosine in RNA + glycolate ...",
+      "equation": "an N(2)-(1-hydroxy-2-oxoethyl)-guanosine in RNA + H2O = a guanosine in RNA + glycolate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n2_1_hydroxy_2_oxoethyl_gmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:57292"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57292"
           }
         ]
       }

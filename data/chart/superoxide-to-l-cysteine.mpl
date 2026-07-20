@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway superoxide-to-l-cysteine "superoxide to L-cysteine" {
-  spacing 290
+  spacing 248
 
   spine at 0,0 {
     superoxide
@@ -34,13 +34,13 @@ pathway superoxide-to-l-cysteine "superoxide to L-cysteine" {
 
   branch from o2 side left {
     o2
-    <-> . +nadp +n_hydroxy_l_dihomomethioninate +h2o +nadph
-    l_dihomomethionine
+    <-> . +co2 +nadp +e_4_hydroxyphenylacetaldehyde_oxime +h2o +h +l_tyrosine
+    nadph
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +n_hydroxy_l_dihomomethioninate +nadph +n_n_dihydroxy_l_dihomomethioninate +h2o
+    <-> ec_1_14_13_194 [1.14.13.194] +phylloquinone +h +nadph +omega_hydroxyphylloquinone +h2o
     nadp
   }
 
@@ -54,18 +54,6 @@ pathway superoxide-to-l-cysteine "superoxide to L-cysteine" {
     mk_8
     <-> . +menaquinol_8 +fumarate
     succinate
-  }
-
-  branch from 2_demethylmenaquinol_8 side left {
-    2_demethylmenaquinol_8
-    <-> . +co2 +h
-    6_carboxy_2_demethylmenaquinol_8
-  }
-
-  branch from 2_demethylmenaquinol_8 side right {
-    2_demethylmenaquinol_8
-    <-> ec_1_3_99_1 [1.3.99.1] +2_demethylmenaquinone_8 +succinate
-    fumarate
   }
 
   branch from glyoxylate side left {
@@ -82,79 +70,49 @@ pathway superoxide-to-l-cysteine "superoxide to L-cysteine" {
 
   branch from pmf side left {
     pmf
-    <-> ec_7_1_1_2 [7.1.1.2] +nadh +menaquinone_9 +h +nad
-    menaquinol_9
+    <-> . +plastoquinol_9 +o2 +h2o
+    plastoquinone_9
   }
 
   branch from pmf side right {
     pmf
-    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +menaquinone_9 +h2o +menaquinol_9
-    nitrate
-  }
-
-  branch from hydrogen_sulfide side left {
-    hydrogen_sulfide
-    <-> . +hydroxy_sulfanidyl_sulfanylidene_lambda5_arsany +h2o
-    disulfanidyl_sulfanylidene_lambda5_arsanyl_sulf
-  }
-
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
-    <-> . +sulfanylarsonate +h2o +h
-    arsenate
+    <-> ec_7_1_1_12 [7.1.1.12] +menaquinol_9 +fumarate +succinate
+    menaquinone_9
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_19 [3.1.1.19] +d_glucurono_3_6_lactone +h2o
-    beta_d_glucuronate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_d_mannose +phosphate +beta_d_mannose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_19 [3.1.1.19] +beta_d_glucuronate +h2o
-    d_glucurono_6_2_lactone
-  }
-
-  branch from 2_demethylmenaquinone_8 side left {
-    2_demethylmenaquinone_8
-    <-> ec_1_1_5_3 [1.1.5.3] +sn_glycerol_3_phosphate +2_demethylmenaquinol_8
-    dihydroxyacetone_phosphate
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> ec_3_1_1_92 [3.1.1.92] +maleylacetate +h +h2o
-    4_sulfomuconolactone
-  }
-
-  branch from sulfite side left {
-    sulfite
-    <-> . +2_oxohex_3_enedioic_acid +h +o2 +h2o
-    2_3_dihydroxybenzenesulfonate
-  }
-
-  branch from chloride side right {
-    chloride
-    <-> . +h +2e_4z_2_hydroxymuconate +h2o
-    5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    levoglucosan
   }
 
   branch from chloride side left {
     chloride
-    <-> . +fadh2 +h +5_chloro_l_tryptophan +l_tryptophan
-    fad
+    <-> . +h +carbonyl_sulfide +h2o
+    thiophosgene
   }
 
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +iaox_n_oxide +h2o
-    s_indolylmethylthiohydroximoyl_l_cysteine
+  branch from chloride side right {
+    chloride
+    <-> . +trans_2_methyl_4_carboxylatomethylenebut_2_en_1
+    4_chloro_2_methyl_cis_cis_muconate
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +cyclopropene
-    s_allylcysteine
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    leu_cys
+  }
+
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_1 [4.4.1.1] +z_2_aminobutenoic_acid
+    l_l_cystathionine
   }
 }

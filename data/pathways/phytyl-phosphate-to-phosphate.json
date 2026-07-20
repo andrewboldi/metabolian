@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phytyl-phosphate-to-phosphate",
+  "name": "phytyl phosphate to phosphate",
+  "category": "other",
+  "summary": "A 4-step route from phytyl phosphate(2−) to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182269"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75483"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM286"
+      }
+    },
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM735047"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "glyceric_acid_1_3_biphosphate",
+      "name": "Glyceric acid 1,3-biphosphate",
+      "short": "Glyceric acid…",
+      "formula": "C3H8O10P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89363"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_3_phosphoglycerate",
+      "name": "(2R)-3-phosphoglycerate",
+      "short": "3-phosphoglycerate",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM727604"
+      }
+    },
+    {
+      "id": "alpha_d_glucose_1_6_bisphosphate",
+      "name": "alpha-D-glucose 1,6-bisphosphate",
+      "short": "alpha-D-glucose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1102141"
+      }
+    },
+    {
+      "id": "d_glucopyranose_1_phosphate",
+      "name": "D-glucopyranose 1-phosphate",
+      "short": "D-glucopyranose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364212"
+      }
+    },
+    {
+      "id": "2r_3_phospho_glyceroyl_phosphate",
+      "name": "(2R)-3-phospho-glyceroyl phosphate",
+      "short": "3-phospho-glyceroyl…",
+      "formula": "C3H4O10P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364464"
+      }
+    },
+    {
+      "id": "maltopentaose",
+      "name": "maltopentaose",
+      "formula": "C30H52O26",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62006"
+      }
+    },
+    {
+      "id": "maltohexaose",
+      "name": "maltohexaose",
+      "formula": "C36H62O31",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728029"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_2_3",
+      "name": "phosphoglycerate kinase",
+      "ec": [
+        "2.7.2.3"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_1",
+      "name": "glycogen phosphorylase",
+      "ec": [
+        "2.4.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182269",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182269"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglycerate kinase",
+      "ec": "2.7.2.3",
+      "substrates": [
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR144447"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144447"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158872",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucopyranose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phospho_glyceroyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glycogen phosphorylase",
+      "ec": "2.4.1.1",
+      "substrates": [
+        {
+          "metabolite": "maltopentaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maltohexaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR145638"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145638"
+          }
+        ]
+      }
+    }
+  ]
+}

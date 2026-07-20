@@ -18,13 +18,13 @@ pathway r-5-diphosphonatomevalo-to-isopentenyl-alcohol "(R)-5-diphosphonatomeval
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
-    n_1_n_12_diacetylspermine
+    <-> ec_7_6_2_2 [7.6.2.2] +h +adp +phosphate +h2o
+    cefoperazone
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
-    thermospermine
+    <-> . +h +adp +4_phosphopentanoyl_coa
+    4_hydroxypentanoyl_coa
   }
 }

@@ -20,38 +20,38 @@ pathway e-5-hydroxyferulate-to-coa "(E)-5-hydroxyferulate to CoA" {
 
   branch from h side left {
     h
-    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2
-    3_demethylubiquinone_6
+    <-> ec_2_3_1_92 [2.3.1.92] +1_o_trans_sinapoyl_beta_d_glucose +s_malate +2_o_sinapoyl_malate
+    glucose
   }
 
   branch from h side right {
     h
-    <-> ec_5_3_2_1 [5.3.2.1] +2_hydroxy_3_4_hydroxyphenyl_prop_2_enoic_acid
-    3_4_hydroxyphenyl_pyruvate
+    <-> ec_1_13_11_22 [1.13.11.22] +e_caffeate +o2
+    3_2_carboxyethenyl_cis_cis_muconate
   }
 
   branch from o2 side left {
     o2
-    <-> . +superoxide +ferricytochrome_c
-    ferrocytochrome_c
+    <-> ec_1_14_13_37 [1.14.13.37] +allocryptopine +nadp +h2o +nadph
+    s_cis_n_methylcanadine
   }
 
   branch from o2 side right {
     o2
-    <-> . +chromopyrrolate +nadh +h +k_252c +nad +h2o
-    co2
+    <-> ec_1_14_13_50 [1.14.13.50] +2_3_5_6_tetrachlorohydroquinone +nadp +chloride +h2o +nadph
+    pentachlorophenol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp +h2o +h +o2
-    3_2_methoxyphenyl_2_propenoic_acid
+    <-> ec_1_3_1_33 [1.3.1.33] +chlorophyllide_a +nadp +h
+    protochlorophyllide
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +malonaldehyde +nadp +h2o +h
-    3_oxopropanoate
+    <-> . +h +trans_5_o_4_coumaroyl_d_quinate +o2 +nadp +h2o
+    5_o_e_caffeoyl_d_quinate
   }
 
   branch from cyanidin_3_o_glucoside side left {
@@ -80,13 +80,13 @@ pathway e-5-hydroxyferulate-to-coa "(E)-5-hydroxyferulate to CoA" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +r_1_aminoethyl_phosphonic_acid +h
-    1r_1_acetamidoethyl_phosphonate
+    <-> ec_2_3_1_185 [2.3.1.185] +acetyl_coa +tropine +h
+    acetylpseudotropine
   }
 
   branch from coa side right {
     coa
-    <-> ec_4_1_3_36 [4.1.3.36] +1_4_dihydroxy_2_naphthoate
-    2_succinylbenzoyl_coa
+    <-> . +acetyl_coa +deacetylcolchicine
+    s_colchicine
   }
 }

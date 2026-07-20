@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyltaurine-to-taurine "N-oleoyltaurine to taurine" {
-  spacing 228
+  spacing 222
 
   spine at 0,0 {
     n_oleoyltaurine
@@ -42,33 +42,27 @@ pathway n-oleoyltaurine-to-taurine "N-oleoyltaurine to taurine" {
     serine
   }
 
-  branch from ammonioacetaldehyde side right {
-    ammonioacetaldehyde
-    <-> . +hplus +co2
-    l_3_oxoalanine
+  branch from succinate side right {
+    succinate
+    <-> . +prekainate +akg +o2 +co2 +h2o
+    kainate
   }
 
   branch from succinate side left {
     succinate
-    <-> . +n3_methylcytidine_5_monophosphate_1 +akg +o2 +formaldehyde +co2
-    cytidine_5_monophosphate_1
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +n6_methyl_l_lysinium +akg +o2 +formaldehyde +co2
-    l_lysinium
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteinylglycin +h2o
-    s_1_hydroxy_3_methylhexan_3_yl_l_cysteine
+    <-> . +n_geranyl_l_glutamate +akg +o2 +co2 +h2o
+    dainate_a
   }
 
   branch from glycine side right {
     glycine
-    <-> . +glycyldehydrophenylalanine +h2o
-    2_3_didehydrophenylalanine
+    <-> . +n_arachidonoylglycinate +h2o
+    arachidonate
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +fatty_acyl_coa +coa +hplus
+    n_fatty_acyl_glycine
   }
 }

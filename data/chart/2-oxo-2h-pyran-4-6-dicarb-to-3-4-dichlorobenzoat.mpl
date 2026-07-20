@@ -18,13 +18,13 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-3-4-dichlorobenzoat "2-oxo-2H-pyran-4,6-dic
 
   branch from o2 side left {
     o2
-    <-> . +nadh +1r_5r_alpha_pinene +h +nad +h2o
-    alpha_pinene_oxide
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
+    s_carnitine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +echinenone +nad +h2o
-    3_hydroxyechinenone
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nad +h2o +s_carnitine +h
+    nadh
   }
 }

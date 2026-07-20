@@ -142,21 +142,21 @@
       }
     },
     {
-      "id": "d_fructofuranose",
-      "name": "α-D-fructofuranose",
-      "formula": "C6H12O6",
+      "id": "ginsenoside_mx",
+      "name": "ginsenoside Mx",
+      "formula": "C41H70O12",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:37720"
+        "chebi": "CHEBI:77490"
       }
     },
     {
-      "id": "nigerose",
-      "name": "nigerose",
-      "formula": "C12H22O11",
+      "id": "ginsenoside_c_mx1",
+      "name": "ginsenoside C-Mx1",
+      "formula": "C47H80O17",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:7570"
+        "metanetx": "MNXM148259"
       }
     },
     {
@@ -166,6 +166,15 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ginsenoside_mx",
+      "name": "ginsenoside Mx",
+      "formula": "C41H70O12",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368235"
       }
     }
   ],
@@ -196,20 +205,6 @@
       "name": "sugar-terminal-phosphatase",
       "ec": [
         "3.1.3.58"
-      ]
-    },
-    {
-      "id": "ec_5_3_1_5",
-      "name": "xylose isomerase",
-      "ec": [
-        "5.3.1.5"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_20",
-      "name": "alpha-glucosidase",
-      "ec": [
-        "3.2.1.20"
       ]
     }
   ],
@@ -433,53 +428,20 @@
     },
     {
       "id": "r6",
-      "name": "xylose isomerase",
-      "ec": "5.3.1.5",
+      "name": "Reaction MNXR196815",
       "substrates": [
         {
-          "metabolite": "d_fructofuranose",
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_mx",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_5"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR191842"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR191842"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "alpha-glucosidase",
-      "ec": "3.2.1.20",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nigerose",
+          "metabolite": "ginsenoside_c_mx1",
           "stoichiometry": 1
         },
         {
@@ -487,22 +449,55 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_20"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR192331"
+        "metanetx": "MNXR196815"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR192331"
+            "id": "MNXR196815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "Reaction MNXR196816",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ginsenoside_mx",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ginsenoside_c_mx1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "metanetx": "MNXR196816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196816"
           }
         ]
       }

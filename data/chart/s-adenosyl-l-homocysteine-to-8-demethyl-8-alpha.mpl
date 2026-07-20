@@ -20,13 +20,13 @@ pathway s-adenosyl-l-homocysteine-to-8-demethyl-8-alpha "S-adenosyl-L-homocystei
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_a
-    6_demethylmitomycin_a
+    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_j +h
+    pyrrolomycin_d
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +1_5_dibromo_2_2_4_dibromophenoxy_3_methoxybenzen
-    3_5_dibromo_2_2_4_dibromophenoxy_phenol
+    <-> . +s_adenosyl_l_homocysteine +fucosterol +h
+    24_methylenecholesterol
   }
 }

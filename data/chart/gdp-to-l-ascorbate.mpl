@@ -30,55 +30,49 @@ pathway gdp-to-l-ascorbate "GDP to L-ascorbate" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +lyxose +h2o
-    d_ribulose_5_phosphate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_propanoylmannosamine +h +phosphoenolpyruvate +h2o
+    n_propanoylneuraminate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +d_arabinose_5_phosphate +h2o
-    2_3_4_5_tetrahydroxypentanal
+    <-> ec_1_20_1_1 [1.20.1.1] +h +nadph +phosphite +h2o
+    nadp
   }
 
-  branch from gdp_l_galactose side right {
-    gdp_l_galactose
-    <-> ec_2_7_7_69 [2.7.7.69] +g1p +l_galactose_1_phosphate
-    gdp_d_glucose
-  }
-
-  branch from l_galactopyranose side left {
+  branch from l_galactopyranose side right {
     l_galactopyranose
     <-> ec_1_1_1_122 [1.1.1.122] +nad +nadh +hplus
     l_galactono_1_5_lactone
   }
 
-  branch from l_galactopyranose side right {
+  branch from l_galactopyranose side left {
     l_galactopyranose
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from l_galactono_1_4_lactone side left {
+  branch from l_galactono_1_4_lactone side right {
     l_galactono_1_4_lactone
     <-> ec_1_3_2_3 [1.3.2.3] +iron +fe2 +hplus
     l_dehydroascorbate
   }
 
-  branch from l_galactono_1_4_lactone side right {
+  branch from l_galactono_1_4_lactone side left {
     l_galactono_1_4_lactone
     <-> ec_3_1_1_120 [3.1.1.120] +h2o +hplus
     l_galactonate
-  }
-
-  branch from ascorbate side left {
-    ascorbate
-    <-> ec_1_6_5_4 [1.6.5.4] +nadh +hplus +nad
-    mdha
   }
 
   branch from ascorbate side right {
     ascorbate
     <-> . +hplus
     l_xylo_hex_3_ulonolactone
+  }
+
+  branch from ascorbate side left {
+    ascorbate
+    <-> . +antheraxanthin +l_dehydroascorbate +h2o
+    zeaxanthin
   }
 }

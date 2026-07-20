@@ -227,43 +227,6 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa",
-      "name": "15-hydroxy-(5Z,8Z,11Z,13E)-icosatetraenoyl-CoA",
-      "short": "15-hydroxy-(5Z,8Z,1…",
-      "formula": "C41H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:136409"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "fmnh2",
       "name": "FMNH2",
       "formula": "C17H21N4O9P",
@@ -297,6 +260,34 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "15_o_d_glucuronosyl_5z_8z_11z_14z_eicosatetraeno",
+      "name": "15-O-(β-D-glucuronosyl)-(5Z,8Z,11Z,14Z)-eicosatetraenoate",
+      "short": "15-O-(β-D-glucurono…",
+      "formula": "C26H38O9",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231329"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
       }
     },
     {
@@ -597,53 +588,6 @@
     },
     {
       "id": "r7",
-      "name": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-hydroxy-(5Z,8Z,11Z,13E)-e...",
-      "equation": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + ATP + CoA = 15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoyl-CoA + AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "5z_8z_11z_13e_15_hete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:52116"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52116"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] +...",
       "equation": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 15,20-dihydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
@@ -679,7 +623,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:78611"
       },
@@ -689,6 +633,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:78611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + UDP-alpha-D-glucuronate = 15-O-(beta-D-g...",
+      "equation": "15-hydroxy-(5Z,8Z,11Z,13E)-eicosatetraenoate + UDP-alpha-D-glucuronate = 15-O-(beta-D-glucuronosyl)-(5Z,8Z,11Z,14Z)-eicosatetraenoate + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "5z_8z_11z_13e_15_hete",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_o_d_glucuronosyl_5z_8z_11z_14z_eicosatetraeno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:79919"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79919"
           }
         ]
       }

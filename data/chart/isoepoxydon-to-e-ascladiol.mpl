@@ -28,25 +28,25 @@ pathway isoepoxydon-to-e-ascladiol "(+)-isoepoxydon to (E)-ascladiol" {
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +tetrahydroalstonine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
-    alstonine
+    <-> . +malonyl-coa +acetyl_coa +hplus +hydrogen_acceptor +co2 +coa +h2o
+    2_4_dihydroxy_6_methylbenzaldehyde
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +ajmalicine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
-    serpentine
+    <-> . +o_s_2e_4e_6e_octa_2_4_6_trienyl_pantetheine_4_ph +malonyl-coa +hplus +holo-acp +hydrogen_acceptor +co2 +coa +h2o
+    2_4_dihydroxy_6_3e_5e_7e_2_oxonona_3_5_7_trienyl
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +cholesterol +o2 +nadph +h2o
-    5_6beta_epoxy_5beta_cholestan_3beta_ol
+    <-> ec_1_1_1_62 [1.1.1.62] +h +16alpha_hydroxyestrone +nadph
+    16alpha_17beta_estriol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_119 [1.1.1.119] +beta_d_glucose +h +nadph
-    d_glucono_1_5_lactone
+    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadph +h2o
+    2r_5s_2_5_diaminohexanoate
   }
 }

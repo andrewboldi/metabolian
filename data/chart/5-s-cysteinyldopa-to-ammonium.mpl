@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-s-cysteinyldopa-to-ammonium "5-S-cysteinyldopa to ammonium" {
-  spacing 306
+  spacing 288
 
   spine at 0,0 {
     5_s_cysteinyldopa
@@ -30,26 +30,26 @@ pathway 5-s-cysteinyldopa-to-ammonium "5-S-cysteinyldopa to ammonium" {
 
   branch from ldopa side right {
     ldopa
-    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +tyrosine +o2
-    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
-  }
-
-  branch from ldopa side left {
-    ldopa
     <-> ec_1_13_11_30 [1.13.11.30] +o2 +hplus
     5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
+  branch from ldopa side left {
+    ldopa
+    <-> ec_1_13_11_29 [1.13.11.29] +o2 +hplus
+    4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
   branch from dopamine side right {
     dopamine
-    <-> . +oleoyl_coa +coa +hplus
-    n_oleoyldopamine
+    <-> . +acetyl_coa +coa +hplus
+    n_acetyldopamine
   }
 
   branch from dopamine side left {
     dopamine
-    <-> . +acetyl_coa +coa +hplus
-    n_acetyldopamine
+    <-> . +o2 +h2o
+    dopamine_quinone
   }
 
   branch from norepinephrine side right {
@@ -64,51 +64,33 @@ pathway 5-s-cysteinyldopa-to-ammonium "5-S-cysteinyldopa to ammonium" {
     r_noradrenaline_4_o_sulfate
   }
 
-  branch from mdha side right {
-    mdha
-    <-> . +n_acylglycinate +ascorbate +o2 +h2o
-    n_acyl_2s_hydroxyglycinate
-  }
-
-  branch from epinephrine side left {
+  branch from epinephrine side right {
     epinephrine
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
     r_adrenaline_4_o_sulfate
   }
 
-  branch from sah side right {
-    sah
-    <-> . +gtp +sam
-    7_methyl_gtp
-  }
-
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
   }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n2_n2_dimethylguanosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    guanosine_5_monophosphate_1
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +d_dopa +o2 +h2o +h2o2
-    3_4_dihydroxyphenylpyruvate
+  branch from sah side right {
+    sah
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +n_carbamoyl_l_cysteinate +h2o +hplus +co2
-    cysteine
+    <-> . +2s_butan_2_aminium +nad +h2o +nadh +hplus
+    butan_2_one
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +pentan_2_aminium +nad +h2o +nadh +hplus
+    pentan_2_one
   }
 }

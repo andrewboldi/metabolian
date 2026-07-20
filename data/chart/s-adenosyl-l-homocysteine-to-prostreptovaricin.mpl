@@ -18,13 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-prostreptovaricin "S-adenosyl-L-homocystein
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
-    13_15_o_didesmethyl_tacrolimus
+    <-> . +s_adenosyl_l_homocysteine +h +protostreptovaricin_iv
+    protostreptovaricin_iii
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
-    15_31_o_didesmethyl_tacrolimus
+    <-> . +chaxamycin_a_rel +s_adenosyl_l_homocysteine +h
+    3_demethylchaxamycin_a
   }
 }

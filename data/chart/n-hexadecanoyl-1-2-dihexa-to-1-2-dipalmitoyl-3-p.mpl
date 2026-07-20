@@ -18,14 +18,14 @@ pathway n-hexadecanoyl-1-2-dihexa-to-1-2-dipalmitoyl-3-p "N-hexadecanoyl-1,2-dih
 
   branch from 1_2_dihexadecanoyl_sn_glycerol_3_phosphate side left {
     1_2_dihexadecanoyl_sn_glycerol_3_phosphate
-    <-> . +palmitoyl_coa +coa
-    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +dipalmitoyl_phosphatidylglycerol +h2o
+    cardiolipin_tetrahexadecanoyl_n_c16_0
   }
 
   branch from 1_2_dihexadecanoyl_sn_glycerol_3_phosphate side right {
     1_2_dihexadecanoyl_sn_glycerol_3_phosphate
-    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +1_palmitoyl_sn_glycerol_3_phosphate
-    holo-acp
+    <-> ec_2_7_7_41 [2.7.7.41] +ctp +h +cdp_dipalmitoyl_sn_glycerol
+    diphosphate
   }
 
   branch from palmitoyl_ethanolamide side left {

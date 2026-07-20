@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-gal-1-3-d-glcnac-null "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     gdp
@@ -18,25 +18,13 @@ pathway gdp-to-d-gal-1-3-d-glcnac-null "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…"
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_3_digalactosyldiacylglycerol
-    1_18_0_2_18_3_monogalactosyldiacylglycerol
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_0_2_18_3_digalactosyldiacylglycerol
+    1_20_0_2_18_3_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_1_2_18_2_digalactosyldiacylglycerol
-    1_18_1_2_18_2_monogalactosyldiacylglycerol
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_3 +h
-    keratan_sulfate_ii_boisynthesis_precursor_2
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_5 +h
-    keratan_sulfate_ii_biosynthesis_precursor_4
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_1_2_18_2_digalactosyldiacylglycerol
+    1_20_1_2_18_2_monogalactosyldiacylglycerol
   }
 }

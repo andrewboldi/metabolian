@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-acetyl-udp-n-acetylgl-to-udp-n-acetyl-alpha "4-O-acetyl-UDP-N-acetylgl… to UDP-N-acetyl-alpha-D-mura…" {
-  spacing 326
+  spacing 320
 
   spine at 0,0 {
     4_o_acetyl_udp_n_acetylglucosamine
@@ -18,67 +18,61 @@ pathway 4-o-acetyl-udp-n-acetylgl-to-udp-n-acetyl-alpha "4-O-acetyl-UDP-N-acetyl
 
   branch from acetyl_coa side left {
     acetyl_coa
-    <-> ec_2_8_3_1 [2.8.3.1] +r_lactate +r_lactoyl_coa
-    acetate
+    <-> . +3_hydroxytrichothecene +coa
+    isotrichodermin
   }
 
   branch from acetyl_coa side right {
     acetyl_coa
-    <-> . +9z_tetradecen_1_ol +coa
-    9z_tetradecenyl_acetate
+    <-> . +15_o_deacetylcalonectrin +coa
+    calonectrin
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_212 [2.4.1.212] +udp +h +d_glcpnac_1_4_d_glcpa +h2o
-    udp_alpha_d_glucuronate
+    <-> ec_5_1_3_2 [5.1.3.2] +h
+    udp_n_acetylgalactosamine
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_5_1_3_14 [5.1.3.14] +h +n_acetyl_d_mannosamine +h2o
-    udp
+    <-> . +udp +alpha_d_glc_1_6_alpha_d_glc_1_4_beta_d_glcnac_1 +h
+    alpha_d_glc_1_6_alpha_d_glc_1_4_alpha_d_gal_1_3
   }
 
-  branch from ump side left {
-    ump
-    <-> . +2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin +h +h2o
-    udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine
-  }
-
-  branch from n_acetyl_d_hexosamine side right {
+  branch from n_acetyl_d_hexosamine side left {
     n_acetyl_d_hexosamine
     <-> ec_1_1_1_240 [1.1.1.240] +nadh +h +n_acetyl_d_glucosaminate +h2o
     nad
   }
 
-  branch from n_acetyl_d_hexosamine side left {
+  branch from n_acetyl_d_hexosamine side right {
     n_acetyl_d_hexosamine
     <-> ec_3_1_3_10 [3.1.3.10] +phosphate +h2o
     n_acetyl_d_mannosamine_1_phosphate
   }
 
-  branch from h side right {
-    h
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
-    4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate
-  }
-
   branch from h side left {
     h
-    <-> . +c31_phthiodiolenone_a +nadph +nadp
-    c31_phthiodiolone_a
+    <-> . +trimethylaminoacetone +co2
+    3_dehydrocarnitine
   }
 
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_trisphosphate +h2o
-    d_myo_inositol_1_2_3_4_tetrakisphosphate
+  branch from h side right {
+    h
+    <-> . +1_5_diazabicyclo_4_3_0_nonane
+    1_3_aminopropyl_pyrrolinium
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_1_2_3_4_tetrakisphosphate +h2o
-    d_myo_inositol_2_3_4_trisphosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_methoxy_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_cis_methoxy_mono_mycolate
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_methoxy_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_trans_methoxy_mono_mycolate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-hydroxysteroid-4-carb-to-hydrogen-donor",
   "name": "3β-hydroxysteroid-4α-carb… to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 3β-hydroxysteroid-4α-carboxylate to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -165,43 +165,50 @@
       }
     },
     {
-      "id": "4_4_diapolycopen_4_al",
-      "name": "4,4'-diapolycopen-4-al",
-      "short": "4,4'-diapolycopen-4…",
-      "formula": "C30H38O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138599"
-      }
-    },
-    {
-      "id": "4_4_diapolycopen_4_oate",
-      "name": "4,4'-diapolycopen-4-oate",
-      "short": "4,4'-diapolycopen-4…",
-      "formula": "C30H37O2",
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138600"
+        "chebi": "CHEBI:30245"
       }
     },
     {
-      "id": "3_hydroxychol_5_en_24_oyl_coa",
-      "name": "3β-hydroxychol-5-en-24-oyl-CoA",
-      "short": "3β-hydroxychol-5-en…",
-      "formula": "C45H68N7O18P3S",
-      "charge": -4,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:86018"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "3_hydroxychola_5_22_dien_24_oyl_coa",
-      "name": "3β-hydroxychola-5,22-dien-24-oyl-CoA",
-      "short": "3β-hydroxychola-5,2…",
-      "formula": "C45H66N7O18P3S",
-      "charge": -4,
+      "id": "9_hode",
+      "name": "9-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:86037"
+        "chebi": "CHEBI:133820"
+      }
+    },
+    {
+      "id": "7_chloro_l_tryptophan",
+      "name": "7-chloro-L-tryptophan",
+      "short": "7-chloro-L-tryptoph…",
+      "formula": "C11H11ClN2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58713"
+      }
+    },
+    {
+      "id": "monodechloroaminopyrrolnitrin",
+      "name": "monodechloroaminopyrrolnitrin",
+      "short": "monodechloroaminopy…",
+      "formula": "C10H9ClN2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85785"
       }
     }
   ],
@@ -253,13 +260,6 @@
       "name": "3beta-hydroxysteroid 3-dehydrogenase",
       "ec": [
         "1.1.1.270"
-      ]
-    },
-    {
-      "id": "ec_1_2_99_10",
-      "name": "4,4'-diapolycopenoate synthase",
-      "ec": [
-        "1.2.99.10"
       ]
     }
   ],
@@ -542,12 +542,25 @@
     },
     {
       "id": "r7",
-      "name": "4,4'-diapolycopenoate synthase",
-      "equation": "all-trans-4,4'-diapolycopen-4-al + A + H2O = all-trans-4,4'-diapolycopen-4-oate + AH2 + H(+)",
-      "ec": "1.2.99.10",
+      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 9-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
+      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 9-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
       "substrates": [
         {
-          "metabolite": "4_4_diapolycopen_4_al",
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_hode",
           "stoichiometry": 1
         },
         {
@@ -559,75 +572,68 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "4_4_diapolycopen_4_oate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_2_99_10"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:44716"
+        "rhea": "RHEA:50864"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44716"
+            "id": "RHEA:50864"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "3beta-hydroxy-chol-5-ene-24-oyl-CoA + A = 3beta-hydroxy-chol-5,22-dien-24-oyl-CoA + AH2",
-      "equation": "3beta-hydroxy-chol-5-ene-24-oyl-CoA + A = 3beta-hydroxy-chol-5,22-dien-24-oyl-CoA + AH2",
+      "name": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
+      "equation": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
       "substrates": [
         {
-          "metabolite": "3_hydroxychol_5_en_24_oyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_hydroxychola_5_22_dien_24_oyl_coa",
+          "metabolite": "7_chloro_l_tryptophan",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "monodechloroaminopyrrolnitrin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:46320"
+        "rhea": "RHEA:50952"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46320"
+            "id": "RHEA:50952"
           }
         ]
       }

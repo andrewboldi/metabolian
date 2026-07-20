@@ -24,26 +24,26 @@ pathway geranyl-diphosphate-to-isopiperitenone "geranyl diphosphate to (−)-iso
 
   branch from ppi side right {
     ppi
-    <-> . +l_tryptophan +atp +h2o +amp +hplus
-    d_tryptophan
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    e_bisabolene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +l_serine +utp
-    uridylyl_l_serine_1
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    cis_farnesene
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_54 [1.14.19.54] +s_reticulinium +fmnh2 +o2 +h2o +hplus
-    reticulinylium
+    <-> ec_1_14_14_19 [1.14.14.19] +c21_steroid +fmnh2 +o2 +h2o +hplus
+    17_hydroxy_c21_steroid
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_76 [1.14.14.76] +ent_isokaurene +fmnh2 +o2 +h2o +hplus
-    2_3_dihydroxy_ent_isokaurene
+    <-> . +lathosterone +fmnh2 +o2 +h2o +hplus
+    25s_7_dafachronate
   }
 
   branch from isopiperitenone side right {

@@ -24,13 +24,13 @@ pathway olivetolate-to-9-tetrahydrocannabinol "olivetolate to Δ9-tetrahydrocann
 
   branch from ppi side right {
     ppi
-    <-> . +3_methoxybenzoate +atp +nadph +hplus +amp +nadp
-    3_methoxybenzaldehyde
+    <-> . +fpp
+    elemene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +4_methoxybenzoate +atp +nadph +hplus +amp +nadp
-    p_methoxybenzaldehyde
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    alpha_springene
   }
 }

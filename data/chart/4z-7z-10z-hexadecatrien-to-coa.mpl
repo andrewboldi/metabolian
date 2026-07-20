@@ -20,62 +20,62 @@ pathway 4z-7z-10z-hexadecatrien-to-coa "(4Z,7Z,10Z)-hexadecatrien… to CoA" {
 
   branch from fad side left {
     fad
-    <-> ec_1_1_98_3 [1.1.98.3] +fadh2 +trans_octacis_decaprenylphospho_beta_d_erythro_p +h
-    trans_octacis_decaprenylphospho_beta_d_ribofuran
+    <-> . +fadh2 +5_chloro_2_hydroxy_p_benzoquinone +h
+    5_chloro_1_2_4_trihydroxybenzene
   }
 
   branch from fad side right {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +3z_6z_dodecadienoyl_coa +h +coa +nad +h2o
-    cis_cis_tetradeca_5_8_dienoyl_coa
+    <-> . +fadh2 +h +5_chloro_1_2_4_trihydroxybenzene
+    5_chlorohydroxyquinone
   }
 
   branch from 6z_9z_12z_octadecatrienoyl_coa side left {
     6z_9z_12z_octadecatrienoyl_coa
-    <-> . +sn_glycerol_3_phosphate +coa
-    1_6z_9z_12z_octadecatrienoyl_glycero_3_phosphate
+    <-> . +fad +fadh2 +h
+    2e_6z_9z_12z_octadecatetraenoyl_coa
   }
 
   branch from 6z_9z_12z_octadecatrienoyl_coa side right {
     6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nadp +h2o +h +o2 +nadph
-    9e_12e_octadecadienoyl_coa
+    <-> . +o2 +2e_6z_9z_12z_octadecatetraenoyl_coa
+    h2o2
   }
 
   branch from coa side left {
     coa
-    <-> . +decanoyl_coa +n_3_aminopropyl_hydroxylamine
-    n3_decanoyl_n3_hydroxy_1_3_diaminopropane
+    <-> ec_6_2_1_3 [6.2.1.3] +6e_9_methyldec_6_enoate +atp +adp +phosphate
+    6e_9_methyldec_6_enoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_20 [2.3.3.20] +decanoyl_coa +h2o +h
-    2r_2_octyl_3_oxododecanoate
+    <-> ec_6_2_1_3 [6.2.1.3] +8_methylnonanoyl_coa +h +adp +phosphate +atp
+    8_methyl_nonanoic_acid
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
-    isopimara_7_15_dienol
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
+    5_6_dihydrothymine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +palustradienal
-    palustradienol
+    <-> ec_1_1_1_92 [1.1.1.92] +nadh +oxaloglycolate +h +co2
+    r_glycerate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
-    octyl_d_glucopyranoside
+    <-> . +3s_4r_4_6_methylheptanoyl_5_oxooxolan_3_yl_meth +phosphate
+    3r_4r_4_hydroxymethyl_3_6_methylheptanoyl_oxola
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
-    octyl_6_o_d_galactofuranosyl_d_glucopyranoside
+    <-> . +phoenicoxanthin
+    3_4_4_trihydroxyechinenone
   }
 
   branch from cholesteryl_linolenate side left {

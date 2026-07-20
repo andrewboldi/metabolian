@@ -30,37 +30,37 @@ pathway dihydroneopterin-to-h2o "Dihydroneopterin… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_arginine +l_glutamate
-    glutaminyl_arginyl_leucine
+    <-> . +l_alanine +l_lysine +l_phenylalanine
+    phenylalanyl_lysyl_alanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_asparagine +l_glutamate
-    glutaminyl_asparaginyl_leucine
+    <-> . +l_proline +l_lysine +l_phenylalanine
+    phenylalanyl_lysyl_proline
   }
 
   branch from h side left {
     h
-    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +chenodeoxycholate
-    3_phosphoadenylyl_sulfate
+    <-> . +rosuvastatin +h2o
+    rosuvastatin_5s_lactone
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    hexadecanedioic_acid
+    simvastatin
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +z_z_z_7_10_13_hexadecatrienoic_acid +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
+    <-> . +h +adp +sm_d18_0_24_1_sphingomyelin +sm_d18_0_24_1_sphingomyelin +h2o
     atp
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    histamine
+    sm_d18_1_14_0_sphingomyelin
   }
 }

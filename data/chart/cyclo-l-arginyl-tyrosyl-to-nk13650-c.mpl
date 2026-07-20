@@ -22,57 +22,11 @@ pathway cyclo-l-arginyl-tyrosyl-to-nk13650-c "cyclo(L-arginyl-tyrosyl)(… to NK
     nk13650_c
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_13z_19z_16_17_epoxydocosatetraenoate
-  }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_donor
-    5_androstan_1_3_17_trione
-  }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +cholest_4_6_dien_3_one +h2o +hydrogen_donor
-    25_hydroxycholest_4_6_dien_3_one
-  }
 
-  branch from nk13650_b side left {
-    nk13650_b
-    <-> . +aspartate +atp +adp +pi +hplus
-    nk13650_a
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_hexaprenyl_diphosphate
-    hexaprene
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_heptaprenyl_diphosphate
-    heptaprene
-  }
 
-  branch from sah side right {
-    sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
-  }
 }

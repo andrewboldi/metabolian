@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroxykynurenate-to-nadph "7,8-dihydroxykynurenate to NADPH" {
-  spacing 260
+  spacing 254
 
   spine at 0,0 {
     7_8_dihydroxykynurenate
@@ -19,36 +19,30 @@ pathway 7-8-dihydroxykynurenate-to-nadph "7,8-dihydroxykynurenate to NADPH" {
   branch from 5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate side left {
     5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate
     <-> . +co2 +h
-    5_2_formylethyl_4_6_dihydroxypicolinic_acid
-  }
-
-  branch from 5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate side right {
-    5_3_carboxy_3_oxopropyl_4_6_dihydroxypicolinate
-    <-> . +co2 +h
     5_2_formylethyl_4_6_dihydroxypicolinate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_133 [1.1.1.133] +gdp_4_dehydro_6_deoxy_l_mannose +h +nadph
-    gdp_6_deoxy_l_mannose
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_145 [1.1.1.145] +h +11_deoxycortisol +nadph
-    17alpha_21_dihydroxypregnenolone
+    <-> ec_1_7_1_2 [1.7.1.2] +nitrite +h2o +nadph
+    nitric_acid
   }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +nadp +h2o +h +o2
-    22r_22_hydroxycholesterol
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +glyceraldehyde_3_phosphate +nadph +h
+    sn_glycerol_3_phosphate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_68 [1.14.13.68] +z_4_hydroxyphenyl_acetaldehyde_oxime +h +o2 +nadp +h2o
-    s_4_hydroxymandelonitrile
+    <-> ec_1_14_13_12 [1.14.13.12] +4_hydroxybenzoate +nadp +h2o +h +o2
+    benzoate
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> ec_1_14_14_23 [1.14.14.23] +h +cholesterol +o2 +nadp +h2o
+    7alpha_hydroxycholesterol
   }
 }

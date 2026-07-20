@@ -1,0 +1,205 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-farnesyl-to-s-s-drim-8-en-11-ol",
+  "name": "2-trans,6-trans-farnesyl… to (S,S)-drim-8-en-11-ol",
+  "category": "other",
+  "summary": "A 3-step route from 2-trans,6-trans-farnesyl diphosphate(3−) to (S,S)-drim-8-en-11-ol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:80979"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:175763"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "s_s_drim_8_en_11_yl_diphosphate",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate",
+      "short": "(S,S)-drim-8-en-11-…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:231796"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_s_drim_8_en_11_yl_phosphate",
+      "name": "(S,S)-drim-8-en-11-yl phosphate",
+      "short": "(S,S)-drim-8-en-11-…",
+      "formula": "C15H25O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149666"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "s_s_drim_8_en_11_ol",
+      "name": "(S,S)-drim-8-en-11-ol",
+      "short": "(S,S)-drim-8-en-11-…",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:231797"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E,6E)-farnesyl diphosphate = (S,S)-drim-8-en-11-yl diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (S,S)-drim-8-en-11-yl diphosphate",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_drim_8_en_11_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:80979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate + H2O = (S,S)-drim-8-en-11-yl phosphate + phosphate +...",
+      "equation": "(S,S)-drim-8-en-11-yl diphosphate + H2O = (S,S)-drim-8-en-11-yl phosphate + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_s_drim_8_en_11_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_drim_8_en_11_yl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:80983"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S,S)-drim-8-en-11-yl phosphate + H2O = (S,S)-drim-8-en-11-ol + phosphate",
+      "equation": "(S,S)-drim-8-en-11-yl phosphate + H2O = (S,S)-drim-8-en-11-ol + phosphate",
+      "substrates": [
+        {
+          "metabolite": "s_s_drim_8_en_11_yl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_s_drim_8_en_11_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:80987"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80987"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -42,19 +42,19 @@ pathway d-isoleucine-to-phosphate "D-isoleucine to phosphate" {
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_9 [1.1.3.9] +methyl_alpha_d_galacto_hexodialdopyranoside +o2
-    methyl_alpha_d_galactoside
+    <-> ec_1_1_3_10 [1.1.3.10] +2_keto_d_xylose +o2
+    aldehydo_d_xylose
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_3_3_4 [1.3.3.4] +mesoporphyrinogen_ix +o2
-    mesoporphyrin_ix
+    <-> ec_1_1_3_15 [1.1.3.15] +2_hydroxypentanoate +o2
+    2_oxopentanoate
   }
 
   branch from 6s_5_6_7_8_tetrahydrofolate side left {
     6s_5_6_7_8_tetrahydrofolate
-    <-> . +atp +l_glutamate +h +adp +phosphate
+    <-> . +l_glutamate +h2o
     heptaglutamyl_folate_thf
   }
 
@@ -66,25 +66,25 @@ pathway d-isoleucine-to-phosphate "D-isoleucine to phosphate" {
 
   branch from adp side left {
     adp
-    <-> . +d_ribose +h +phosphate +atp +h2o
-    beta_d_ribopyranose
+    <-> ec_2_4_1_56 [2.4.1.56] +adp_l_glycero_d_manno_heptose +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +h
+    core_oligosaccharide_lipid_a
   }
 
   branch from adp side right {
     adp
-    <-> . +acetyl_coa +co2 +atp +h2o +h +phosphate
-    malonyl_coa
+    <-> . +h +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +core_oligosaccharide_lipid_a
+    adp_l_glycero_d_manno_heptose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +floxuridine +h2o
-    5_fluorodeoxyuridine_monophosphate
+    <-> ec_3_6_1_1 [3.6.1.1] +diphosphate +h2o +h
+    pmf
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    toluene
+    <-> . +l_leucine +l_threonine +atp +h +adp
+    thr_leu
   }
 }

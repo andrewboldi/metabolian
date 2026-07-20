@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-glucose "UDP to β-D-glucose" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     udp
@@ -36,14 +36,14 @@ pathway udp-to-d-glucose "UDP to β-D-glucose" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +esculin +h
-    esculetin
+    <-> . +udp +n_methylanthraniloyl_beta_d_glucopyranose
+    n_methylanthranilate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +2_o_beta_d_glucopyranosyl_tylosin +h
-    tylosin
+    <-> . +udp +des_acyl_avenacin_a +h
+    monodeglucosyl_des_acyl_avenacin_a
   }
 
   branch from apigenin side left {
@@ -60,26 +60,26 @@ pathway udp-to-d-glucose "UDP to β-D-glucose" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexan_1_one +h +nadph
-    cyclohexan_1_2_dione
+    <-> ec_1_1_1_21 [1.1.1.21] +h +1_naphthaldehyde +nadph
+    1_naphthyl_methanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_218 [1.1.1.218] +h +hydrocodone +nadph
-    dihydrocodeine
+    <-> ec_1_1_1_2 [1.1.1.2] +2_formylbenzoate +h +nadph
+    2_hydroxymethyl_benzoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h
-    resolvin_d4
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_phenylalanine
+    phe_pro
   }
 
   branch from h2o side right {
     h2o
-    <-> . +formaldehyde +3_3_diindolylmethane
-    indole_3_methanol
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_valine
+    valyl_proline
   }
 
   branch from genistein side left {
@@ -90,13 +90,7 @@ pathway udp-to-d-glucose "UDP to β-D-glucose" {
 
   branch from d_glucose side right {
     d_glucose
-    <-> . +phlorizin +h2o
-    phloretin
-  }
-
-  branch from d_glucose side left {
-    d_glucose
-    <-> . +eriodictyol_7_o_d_glucopyranoside +h2o
-    eriodictyol
+    <-> . +d_glucosyl_1_1_n_hexadecanoylsphinganine +h2o
+    n_hexadecanoylsphinganine
   }
 }

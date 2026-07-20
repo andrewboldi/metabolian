@@ -32,14 +32,14 @@ pathway o-s-7z-tetradecenoylpa-to-h2o "O-(S-(7Z)-tetradecenoylpa… to H2O" {
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p
+    <-> ec_6_2_1_69 [6.2.1.69] +cysteine +atp +amp +ppi
+    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_59 [6.2.1.59] +icosanoate +atp +amp +ppi
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
+    <-> ec_6_2_1_70 [6.2.1.70] +threonine +atp +amp +ppi
+    o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine
   }
 
   branch from o_s_2e_9z_hexadecadienoylpantetheine_4_phosphory side right {
@@ -56,25 +56,25 @@ pathway o-s-7z-tetradecenoylpa-to-h2o "O-(S-(7Z)-tetradecenoylpa… to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_36 [3.6.3.36] +h +adp +phosphate +h2o
-    taurine
+    <-> ec_6_3_2_4 [6.3.2.4] +d_alanyl_d_alanine +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi +h +adp +phosphate
+    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    taurocholate
+    alpha_tocopherol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_9z_octadecadienoyl_coa
-    3_s_hydroxy_cis_9_octadecenoyl_coa
+    <-> ec_3_6_3_5 [3.6.3.5] +h +adp +phosphate +atp
+    zn
   }
 
   branch from h2o side left {
     h2o
-    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +4_hydroperoxy_2_nonenal
-    nonanoate
+    <-> . +h +adp +phosphate +atp
+    1_pentanesulfonate
   }
 }

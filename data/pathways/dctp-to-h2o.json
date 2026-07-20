@@ -1,0 +1,313 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dctp-to-h2o",
+  "name": "dCTP to H2O",
+  "category": "other",
+  "summary": "A 4-step route from dCTP(4−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56968"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61481"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58593"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57566"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "2_deoxycytidine_3_monophosphate",
+      "name": "2'-deoxycytidine 3'-monophosphate",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM729141"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_34",
+      "name": "deoxynucleotide 3'-phosphatase",
+      "ec": [
+        "3.1.3.34"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dCTP + pyruvate = dCDP + phosphoenolpyruvate + H(+)",
+      "equation": "dCTP + pyruvate = dCDP + phosphoenolpyruvate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dCDP + H2O = dCMP + phosphate + H(+)",
+      "equation": "dCDP + H2O = dCMP + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dCMP + H2O = 2'-deoxycytidine + phosphate",
+      "equation": "dCMP + H2O = 2'-deoxycytidine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:29363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "deoxynucleotide 3'-phosphatase",
+      "ec": "3.1.3.34",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytidine_3_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR118742"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118742"
+          }
+        ]
+      }
+    }
+  ]
+}

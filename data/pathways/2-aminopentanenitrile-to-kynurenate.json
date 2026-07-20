@@ -111,58 +111,50 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "5_guanidino_2_oxopentanoic_acid",
-      "name": "5-guanidino-2-oxopentanoic acid",
-      "short": "5-guanidino-2-oxope…",
-      "formula": "C6H11N3O3",
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58489"
+        "chebi": "CHEBI:58315"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
+      "id": "4_hydroxyphenyl_acetaldehyde",
+      "name": "(4-hydroxyphenyl)acetaldehyde",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15621"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "chorismate",
+      "name": "chorismate",
+      "formula": "C10H8O6",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:29748"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "4_amino_4_deoxychorismate",
+      "name": "4-amino-4-deoxychorismate",
+      "short": "4-amino-4-deoxychor…",
+      "formula": "C10H10NO5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
+        "chebi": "CHEBI:58406"
       }
     },
     {
@@ -184,30 +176,30 @@
       }
     },
     {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16452"
+        "chebi": "CHEBI:18005"
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29991"
+        "chebi": "CHEBI:58095"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_4_1_25",
-      "name": "L-arginine dehydrogenase",
+      "id": "ec_4_1_1_108",
+      "name": "4-hydroxyphenylacetaldehyde synthase",
       "ec": [
-        "1.4.1.25"
+        "4.1.1.108"
       ]
     }
   ],
@@ -347,34 +339,20 @@
     },
     {
       "id": "r4",
-      "name": "L-arginine dehydrogenase",
-      "equation": "L-arginine + NAD(+) + H2O = 5-guanidino-2-oxopentanoate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.25",
+      "name": "4-hydroxyphenylacetaldehyde synthase",
+      "equation": "L-tyrosine + O2 + H2O + H(+) = (4-hydroxyphenyl)acetaldehyde + H2O2 + NH4(+) + CO2",
+      "ec": "4.1.1.108",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
@@ -382,38 +360,61 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_1_25"
+          "enzyme": "ec_4_1_1_108"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:47632"
+        "rhea": "RHEA:55528"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47632"
+            "id": "RHEA:55528"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-arginine dehydrogenase",
-      "equation": "L-arginine + NADP(+) + H2O = 5-guanidino-2-oxopentanoate + NH4(+) + NADPH + H(+)",
-      "ec": "1.4.1.25",
+      "name": "chorismate + NH4(+) = 4-amino-4-deoxychorismate + H2O",
+      "equation": "chorismate + NH4(+) = 4-amino-4-deoxychorismate + H2O",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "chorismate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_amino_4_deoxychorismate",
           "stoichiometry": 1
         },
         {
@@ -421,40 +422,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_1_25"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47636"
+        "rhea": "RHEA:55684"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47636"
+            "id": "RHEA:55684"
           }
         ]
       }
@@ -504,15 +482,15 @@
     },
     {
       "id": "r7",
-      "name": "L-kynurenine + oxaloacetate = kynurenate + L-aspartate + H2O",
-      "equation": "L-kynurenine + oxaloacetate = kynurenate + L-aspartate + H2O",
+      "name": "3-phenylpyruvate + L-kynurenine = kynurenate + L-phenylalanine + H2O",
+      "equation": "3-phenylpyruvate + L-kynurenine = kynurenate + L-phenylalanine + H2O",
       "substrates": [
         {
-          "metabolite": "l_kynurenine",
+          "metabolite": "keto_phenylpyruvate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "oxaloacetate",
+          "metabolite": "l_kynurenine",
           "stoichiometry": 1
         }
       ],
@@ -522,7 +500,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "aspartate",
+          "metabolite": "l_phenylalanine",
           "stoichiometry": 1
         },
         {
@@ -533,14 +511,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:66084"
+        "rhea": "RHEA:66092"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66084"
+            "id": "RHEA:66092"
           }
         ]
       }

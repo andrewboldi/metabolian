@@ -18,14 +18,14 @@ pathway d-mannopyranose-to-h2o "D-mannopyranose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +d_fructofuranose
-    alpha_d_glucose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    agarohexaose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_30 [4.2.1.30] +s_lactaldehyde
-    glycerol
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +agaropentaose +phosphate +agaropentaose
+    atp
   }
 
   branch from man9glcnac_periplasm side left {

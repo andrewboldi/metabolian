@@ -328,25 +328,6 @@
       }
     },
     {
-      "id": "leukotriene_f4_cytosol",
-      "name": "Leukotriene F4 cytosol",
-      "short": "Leukotriene F4…",
-      "formula": "C28H42N2O8S",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1104641"
-      }
-    },
-    {
-      "id": "leukotriene_e4",
-      "name": "leukotriene E4",
-      "formula": "C23H36NO5S",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM162503"
-      }
-    },
-    {
       "id": "adp",
       "name": "ADP",
       "formula": "C10H12N5O10P2",
@@ -408,6 +389,13 @@
       "name": "EC 3.6.3.21",
       "ec": [
         "3.6.3.21"
+      ]
+    },
+    {
+      "id": "ec_7_4_2_1",
+      "name": "ABC-type polar-amino-acid transporter",
+      "ec": [
+        "7.4.2.1"
       ]
     }
   ],
@@ -966,10 +954,33 @@
     },
     {
       "id": "r13",
-      "name": "Reaction MNXR100135",
+      "name": "Reaction MNXR100297",
+      "ec": "3.6.3.21",
       "substrates": [
         {
-          "metabolite": "leukotriene_f4_cytosol",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
           "stoichiometry": 1
         },
         {
@@ -977,34 +988,29 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "leukotriene_e4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_glutamate",
-          "stoichiometry": 1
+          "enzyme": "ec_3_6_3_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "metanetx": "MNXR100135"
+        "metanetx": "MNXR100297"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR100135"
+            "id": "MNXR100297"
           }
         ]
       }
     },
     {
       "id": "r14",
-      "name": "Reaction MNXR100297",
+      "name": "Reaction MNXR100299",
       "ec": "3.6.3.21",
       "substrates": [
         {
@@ -1046,14 +1052,14 @@
       "reversibility": "reversible",
       "pathwayStep": 14,
       "xrefs": {
-        "metanetx": "MNXR100297"
+        "metanetx": "MNXR100299"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR100297"
+            "id": "MNXR100299"
           }
         ]
       }

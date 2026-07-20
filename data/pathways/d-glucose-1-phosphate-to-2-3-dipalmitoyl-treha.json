@@ -1,0 +1,305 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucose-1-phosphate-to-2-3-dipalmitoyl-treha",
+  "name": "α-D-glucose 1-phosphate to 2,3-dipalmitoyl-α,α-treha…",
+  "category": "other",
+  "summary": "A 4-step route from α-D-glucose 1-phosphate(2−) to 2,3-dipalmitoyl-α,α-trehalose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47708"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58601"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "adp_d_glucoside",
+      "name": "ADP α-D-glucoside",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57498"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "trehalose",
+      "name": "α,α-trehalose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16551"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "2_o_palmitoyl_trehalose",
+      "name": "2-O-palmitoyl-α,α-trehalose",
+      "short": "2-O-palmitoyl-α,α-t…",
+      "formula": "C28H52O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84041"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "2_3_dipalmitoyl_trehalose",
+      "name": "2,3-dipalmitoyl-α,α-trehalose",
+      "short": "2,3-dipalmitoyl-α,α…",
+      "formula": "C44H82O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84042"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_245",
+      "name": "alpha,alpha-trehalose synthase",
+      "ec": [
+        "2.4.1.245"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alpha-D-glucose 1-phosphate + ADP + H(+) = ADP-alpha-D-glucose + phosphate",
+      "equation": "alpha-D-glucose 1-phosphate + ADP + H(+) = ADP-alpha-D-glucose + phosphate",
+      "substrates": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha,alpha-trehalose synthase",
+      "equation": "ADP-alpha-D-glucose + D-glucose = alpha,alpha-trehalose + ADP + H(+)",
+      "ec": "2.4.1.245",
+      "substrates": [
+        {
+          "metabolite": "adp_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_245"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha,alpha-trehalose + hexadecanoyl-CoA = 2-O-hexadecanoyl-alpha,alpha-trehalose + CoA",
+      "equation": "alpha,alpha-trehalose + hexadecanoyl-CoA = 2-O-hexadecanoyl-alpha,alpha-trehalose + CoA",
+      "substrates": [
+        {
+          "metabolite": "trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_palmitoyl_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44052"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44052"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-O-hexadecanoyl-alpha,alpha-trehalose + hexadecanoyl-CoA = 2-O,3-O-dihexadecanoyl-alph...",
+      "equation": "2-O-hexadecanoyl-alpha,alpha-trehalose + hexadecanoyl-CoA = 2-O,3-O-dihexadecanoyl-alpha,alpha-trehalose + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_o_palmitoyl_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dipalmitoyl_trehalose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44056"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -122,58 +122,31 @@
       }
     },
     {
-      "id": "ppp5_aaca_mrna",
-      "name": "ppp5'AACA-mRNA",
-      "formula": "C40H45N17O32P6",
-      "charge": -7,
-      "xrefs": {
-        "chebi": "CHEBI:156503"
-      }
-    },
-    {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
+      "id": "z_bisabolene",
+      "name": "(Z)-α-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15378"
+        "chebi": "CHEBI:49241"
       }
     },
     {
-      "id": "g5_ppp5_aaca_mrna",
-      "name": "G5'ppp5'AACA-mRNA",
-      "formula": "C50H57N22O36P6",
-      "charge": -6,
+      "id": "cedr_8_ene",
+      "name": "cedr-8-ene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156484"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "cyclic_a_2_5_pa_3_5_pa_3_5_p",
-      "name": "cyclic A(2'-5')pA(3'-5')pA(3'-5')p",
-      "short": "cyclic A(2'-5')pA(3…",
-      "formula": "C30H33N15O18P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:156512"
+        "chebi": "CHEBI:10216"
       }
     }
   ],
@@ -197,13 +170,6 @@
       "name": "cytokinin dehydrogenase",
       "ec": [
         "1.5.99.12"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_88",
-      "name": "GDP polyribonucleotidyltransferase",
-      "ec": [
-        "2.7.7.88"
       ]
     }
   ],
@@ -353,26 +319,17 @@
     },
     {
       "id": "r4",
-      "name": "GDP polyribonucleotidyltransferase",
-      "equation": "a 5'-end triphospho-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + GDP + H(+) = a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + diphosphate",
-      "ec": "2.7.7.88",
+      "name": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
       "substrates": [
         {
-          "metabolite": "ppp5_aaca_mrna",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "g5_ppp5_aaca_mrna",
+          "metabolite": "z_bisabolene",
           "stoichiometry": 1
         },
         {
@@ -380,57 +337,52 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_88"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:65436"
+        "rhea": "RHEA:68532"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65436"
+            "id": "RHEA:68532"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3 ATP = 2',3',3'-c-tri-AMP + 3 diphosphate",
-      "equation": "3 ATP = 2',3',3'-c-tri-AMP + 3 diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
       "substrates": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 3
+          "metabolite": "fpp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyclic_a_2_5_pa_3_5_pa_3_5_p",
+          "metabolite": "cedr_8_ene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:65488"
+        "rhea": "RHEA:68536"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65488"
+            "id": "RHEA:68536"
           }
         ]
       }

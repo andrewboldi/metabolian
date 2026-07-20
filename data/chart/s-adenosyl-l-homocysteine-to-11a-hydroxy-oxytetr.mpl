@@ -26,38 +26,38 @@ pathway s-adenosyl-l-homocysteine-to-11a-hydroxy-oxytetr "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +n_dimethylethanolamine
-    n_methylethanolamine
+    <-> ec_2_1_1_150 [2.1.1.150] +s_adenosyl_l_homocysteine +h +7_methoxyisoflavone
+    7_hydroxyisoflavone
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +choline
-    n_dimethylethanolamine
+    <-> . +s_adenosyl_l_homocysteine +h +diacylglyceryl_n_n_n_trimethylhomoserine
+    diacylglycerylhomoserine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_338 [2.1.1.338] +xanthogalenol +sam +hplus
-    4_o_methylxanthohumol
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +glandicoline_b +sam +hplus
-    meleagrine
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +h +3_methoxybenzaldehyde +nadph
-    3_methoxybenzyl_alcohol
+    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +h2o +h +nadph +22r_22_hydroxycholesterol
+    o2
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +4_methoxybenzyl_alcohol +h +nadph
-    4_methoxybenzaldehyde
+    <-> ec_1_14_13_68 [1.14.13.68] +z_4_hydroxyphenyl_acetaldehyde_oxime +h +o2 +nadph +h2o
+    s_4_hydroxymandelonitrile
   }
 
   branch from oxytetracycline side left {

@@ -102,51 +102,41 @@
       }
     },
     {
-      "id": "didemethylasterriquinone_d",
-      "name": "didemethylasterriquinone D",
-      "short": "didemethylasterriqu…",
-      "formula": "C22H13N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192553"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "asterriquinone_c1",
-      "name": "asterriquinone C1",
-      "formula": "C27H21N2O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192557"
-      }
-    },
-    {
-      "id": "harmol",
-      "name": "harmol",
-      "formula": "C12H10N2O",
+      "id": "variediene",
+      "name": "variediene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192558"
+        "chebi": "CHEBI:177888"
       }
     },
     {
-      "id": "6_3_dimethylallyl_harmol",
-      "name": "6-(3-dimethylallyl)harmol",
-      "short": "6-(3-dimethylallyl)…",
-      "formula": "C17H18N2O",
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57907"
+      }
+    },
+    {
+      "id": "r_2e_cericerene",
+      "name": "(R,2E)-α-cericerene",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192559"
+        "chebi": "CHEBI:228261"
       }
     }
   ],
@@ -170,6 +160,20 @@
       "name": "cyclooctatin synthase",
       "ec": [
         "1.14.99.62"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_218",
+      "name": "variediene synthase",
+      "ec": [
+        "4.2.3.218"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_219",
+      "name": "(2E)-alpha-cericerene synthase",
+      "ec": [
+        "4.2.3.219"
       ]
     }
   ],
@@ -327,21 +331,18 @@
     },
     {
       "id": "r4",
-      "name": "didemethylasterriquinone D + dimethylallyl diphosphate = asterriquinone C1 + diphosphate",
-      "equation": "didemethylasterriquinone D + dimethylallyl diphosphate = asterriquinone C1 + diphosphate",
+      "name": "variediene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = variediene + diphosphate",
+      "ec": "4.2.3.218",
       "substrates": [
         {
-          "metabolite": "didemethylasterriquinone_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "asterriquinone_c1",
+          "metabolite": "variediene",
           "stoichiometry": 1
         },
         {
@@ -349,38 +350,40 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_218"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:72979"
+        "rhea": "RHEA:78287"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72979"
+            "id": "RHEA:78287"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "harmol + dimethylallyl diphosphate = 6-(3-dimethylallyl)harmol + diphosphate",
-      "equation": "harmol + dimethylallyl diphosphate = 6-(3-dimethylallyl)harmol + diphosphate",
+      "name": "(2E)-alpha-cericerene synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (R,2E)-alpha-cericerene + diphosphate",
+      "ec": "4.2.3.219",
       "substrates": [
         {
-          "metabolite": "harmol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_3_dimethylallyl_harmol",
+          "metabolite": "r_2e_cericerene",
           "stoichiometry": 1
         },
         {
@@ -388,17 +391,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_219"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:72983"
+        "rhea": "RHEA:78291"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72983"
+            "id": "RHEA:78291"
           }
         ]
       }

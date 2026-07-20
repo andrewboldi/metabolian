@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hygromycin-c-to-adp "hygromycin C to ADP" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     hygromycin_c
@@ -22,39 +22,33 @@ pathway hygromycin-c-to-adp "hygromycin C to ADP" {
     s_adenosyl_l_methionine
   }
 
-  branch from adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he side right {
-    adp_6_amino_6_deoxy_d_glycero_alpha_d_galacto_he
-    <-> . +2_oxoglutarate +l_glutamate
-    adp_6_oxo_d_glycero_alpha_d_galacto_heptose
-  }
-
-  branch from 3_n_methylgalacamine side left {
+  branch from 3_n_methylgalacamine side right {
     3_n_methylgalacamine
     <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
     galacamine
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly +phosphate +1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly +h2o
-    atp
-  }
-
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pg_18_0_18_0
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_maltose
   }
 
-  branch from adp side right {
-    adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    2_linoleoyl_sn_glycero_3_phosphocholine
+  branch from h side right {
+    h
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +d_galp_1_6_d_galp +phosphate +d_galp_1_6_d_galp +h2o
+    atp
   }
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
-    1_2_di_9z_octadecenoyl_sn_glycero_3_phosphocholi
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    trigalacturonate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
+    udp_2_3_diacetamido_2_3_dideoxy_d_glucuronic_aci
   }
 }

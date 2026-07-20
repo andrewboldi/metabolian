@@ -18,14 +18,14 @@ pathway 5-4-acetoxybut-1-ynyl-2-to-coniferyl-ester "5-(4-acetoxybut-1-ynyl)-2…
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_11 [2.8.3.11] +citramalate +acetyl_coa
-    3s_citramalyl_coa
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylajmalinium +h2o +hplus
+    ajmalinium
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_10 [2.8.3.10] +citrate +acetyl_coa
-    3s_citryl_coa
+    <-> ec_3_5_1_51 [3.5.1.51] +4_acetamidobutanoyl_coa +h2o
+    4_aminobutanoyl_coa
   }
 
   branch from carboxylic_acid_anion side left {

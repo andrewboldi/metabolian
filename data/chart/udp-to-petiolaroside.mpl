@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-petiolaroside "UDP to petiolaroside" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     udp
@@ -20,49 +20,37 @@ pathway udp-to-petiolaroside "UDP to petiolaroside" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_71 [2.4.1.71] +udp +h +n_phenyl_beta_d_glucopyranosylamine
-    aniline
+    <-> . +udp +h +dihydrozeatin_o_glucoside
+    dihydrozeatin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_111 [2.4.1.111] +udp +4_hydroxycinnamyl_alcohol_4_d_glucoside +h
-    trans_p_coumaryl_alcohol
+    <-> . +udp +h +dihydrozeatin
+    dihydrozeatin_o_glucoside
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +h +tomatidine_galactoside
-    tomatidine
+    <-> ec_2_4_1_22 [2.4.1.22] +udp +alpha_lactose +h
+    beta_d_glucose
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
-    beta_d_glucose
-  }
-
-  branch from quercetin_3_o_d_glucopyranoside side left {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +trans_4_coumaroyl_coa +h +coa
-    quercetin_3_o_3_o_4_coumaroyl_glucoside
-  }
-
-  branch from quercetin_3_o_d_glucopyranoside side right {
-    quercetin_3_o_d_glucopyranoside
-    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +coa +h
-    trans_4_coumaroyl_coa
+    <-> ec_2_4_1_22 [2.4.1.22] +udp +alpha_lactose +h
+    alpha_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_40 [4.2.1.40] +l_idarate
-    5_dehydro_4_deoxy_d_glucarate
+    <-> ec_3_4_14_5 [3.4.14.5] +l_alanyl_l_alanine_2_naphthylamide +2_naphthylamine
+    alanylalanine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_7 [3.1.1.7] +propanoate +thiocholine +h
-    propionylthiocholine
+    <-> ec_3_5_2_16 [3.5.2.16] +2_carbamoylbenzoic_acid
+    phthalimide
   }
 }

@@ -30,61 +30,55 @@ pathway phylloquinone-to-methyl-com "phylloquinone to methyl-CoM" {
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    crepenynate
+    <-> ec_1_1_99_35 [1.1.99.35] +glucose +hydrogen_donor
+    d_glucono_1_5_lactone
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_1 [1.14.99.1] +arachidonate +hydrogen_donor +o2 +h2o
-    prostaglandin_h2
+    <-> ec_1_1_99_32 [1.1.99.32] +l_sorbopyranose +hydrogen_donor
+    l_xylo_hexos_2_ulose
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +nad +nicotinamide
-    5_o_adp_d_ribosyl_l_glutamate_2
+    <-> . +glutamate +atp +adp +pi +hplus
+    l_glutamyl_l_glutamate_2
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +5_o_adp_d_ribosyl_l_glutamate_2 +h2o +hplus
-    adp_d_ribose
+    <-> . +l_glutamyl_l_glutamate_2 +h2o
+    glutamate
   }
 
   branch from methyl_l_glutamate side right {
     methyl_l_glutamate
-    <-> ec_2_1_1_80 [2.1.1.80] +s_adenosyl_l_homocysteine +h +l_glutamic_acid
+    <-> ec_2_1_1_80 [2.1.1.80] +s_adenosyl_l_homocysteine +h +glutamic_acid
     s_adenosyl_l_methionine
-  }
-
-  branch from methyl_l_glutamate side left {
-    methyl_l_glutamate
-    <-> ec_3_1_1_61 [3.1.1.61] +l_glutamic_acid +methanol
-    h2o
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
-    7_methoxyisoflavones
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_302 [2.1.1.302] +3_hydroxy_5_methyl_1_naphthoate +sam +hplus
-    3_methoxy_5_methyl_1_naphthoate
+    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyfurocoumarin +sam +hplus
+    5_methoxyfurocoumarin
   }
 
-  branch from methanol side right {
-    methanol
-    <-> . +primary_fluorescent_dioxobilin_type_chlorophyll +h2o +hplus
-    o134_desmethyl_primary_fluorescent_dioxobilin_ty
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_136 [2.1.1.136] +2_4_6_trichlorophenolate +sam
+    2_4_6_trichloroanisole
   }
 
   branch from methanol side left {
     methanol
-    <-> . +h2o +chloride +hplus
-    chloromethane
+    <-> ec_3_1_1_122 [3.1.1.122] +carbendazim +h2o +co2
+    2_aminobenzimidazole
+  }
+
+  branch from methanol side right {
+    methanol
+    <-> . +carbendazim +h2o +hplus
+    n_1h_1_3_benzodiazol_2_yl_carbamate
   }
 }

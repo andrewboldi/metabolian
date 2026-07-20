@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce "N-hexadecanoylphosphatidy… to α-linolenoyl-sn-glycero-3…" {
-  spacing 248
+  spacing 218
 
   spine at 0,0 {
     n_hexadecanoylphosphatidylethanolamine
@@ -26,44 +26,20 @@ pathway n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce "N-hexadecanoylphosphat
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
+    <-> . +n_fatty_acyl_l_asparagine +h2o
+    l_asparagine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +primary_fatty_amide +h2o
-    nh3
+    <-> . +n_fatty_acyl_l_tryptophan +h2o
+    l_tryptophan
   }
 
   branch from 2_monoglyceride side left {
     2_monoglyceride
-    <-> . +acyl_coa +coa
-    2_3_diacyl_sn_glycerol
-  }
-
-  branch from 2_monoglyceride side right {
-    2_monoglyceride
     <-> . +palmitoyl_coa +coa
     1_palmitoyl_2_acylglycerol
-  }
-
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_3_o_alkylglycerol +phosphatidylcholine
-    1_alkyl_3_acylglycerol
-  }
-
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +n_acylethanolamine +phosphatidylcholine
-    n_o_diacylethanolamine
-  }
-
-  branch from dag side left {
-    dag
-    <-> . +1_phosphatidyl_1d_myo_inositol +n_acylsphingosine
-    n_acylsphingosine_1d_myo_inositol
   }
 
   branch from dag side right {
@@ -72,15 +48,9 @@ pathway n-hexadecanoylphosphatidy-to-linolenoyl-sn-glyce "N-hexadecanoylphosphat
     pser
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphocholine side left {
-    2_acyl_sn_glycero_3_phosphocholine
-    <-> . +phosphatidylcholine +n_o_diacylethanolamine
-    n_acylethanolamine
-  }
-
-  branch from 2_acyl_sn_glycero_3_phosphocholine side right {
-    2_acyl_sn_glycero_3_phosphocholine
-    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diglyceride
+  branch from dag side left {
+    dag
+    <-> . +2_acyl_6_d_mannosyl_1_6_d_mannosyl_1_4_d_glucosa +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    2_acyl_6_d_mannosyl_1_6_2_phosphoethanolamine_d
   }
 }

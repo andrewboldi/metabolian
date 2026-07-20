@@ -151,6 +151,15 @@
       }
     },
     {
+      "id": "acetoin",
+      "name": "acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1092472"
+      }
+    },
+    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
@@ -169,43 +178,39 @@
       }
     },
     {
-      "id": "3_oxopentadecanoyl_coenzyme_a",
-      "name": "3-Oxopentadecanoyl Coenzyme A",
-      "short": "3-Oxopentadecanoyl…",
-      "formula": "C36H58N7O18P3S",
-      "charge": -4,
+      "id": "butane_2_3_diol",
+      "name": "butane-2,3-diol",
+      "formula": "C4H10O2",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744554"
+        "chebi": "CHEBI:62064"
       }
     },
     {
-      "id": "3_hydroxypentadecanoyl_coenzyme_a",
-      "name": "3-Hydroxypentadecanoyl Coenzyme A",
-      "short": "3-Hydroxypentadecan…",
-      "formula": "C36H60N7O18P3S",
-      "charge": -4,
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM744544"
+        "metanetx": "MNXM1368744"
       }
     },
     {
-      "id": "3_oxotridecanoyl_coenzyme_a",
-      "name": "3-Oxotridecanoyl Coenzyme A",
-      "short": "3-Oxotridecanoyl…",
-      "formula": "C34H54N7O18P3S",
-      "charge": -4,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744556"
+        "metanetx": "MNXM13"
       }
     },
     {
-      "id": "3_hydroxytridecanoyl_coenzyme_a",
-      "name": "3-Hydroxytridecanoyl Coenzyme A",
-      "short": "3-Hydroxytridecanoy…",
-      "formula": "C34H56N7O18P3S",
-      "charge": -4,
+      "id": "d_erythro_isocitrate",
+      "name": "D-erythro-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM744545"
+        "metanetx": "MNXM3963"
       }
     },
     {
@@ -281,44 +286,6 @@
       "xrefs": {
         "chebi": "CHEBI:57945"
       }
-    },
-    {
-      "id": "d_argininium",
-      "name": "D-argininium",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32689"
-      }
-    },
-    {
-      "id": "5_guanidino_2_oxopentanoic_acid",
-      "name": "5-guanidino-2-oxopentanoic acid",
-      "short": "5-guanidino-2-oxope…",
-      "formula": "C6H11N3O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58489"
-      }
-    },
-    {
-      "id": "d_histidine",
-      "name": "D-histidine",
-      "formula": "C6H9N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142967"
-      }
-    },
-    {
-      "id": "3_imidazol_5_yl_pyruvate",
-      "name": "3-(imidazol-5-yl)pyruvate",
-      "short": "3-(imidazol-5-yl)py…",
-      "formula": "C6H5N2O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58133"
-      }
     }
   ],
   "enzymes": [
@@ -334,6 +301,20 @@
       "name": "[beta-tubulin]-L-lysine N-acetyltransferase",
       "ec": [
         "2.3.1.309"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_4",
+      "name": "(R,R)-butanediol dehydrogenase",
+      "ec": [
+        "1.1.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_286",
+      "name": "isocitrate--homoisocitrate dehydrogenase",
+      "ec": [
+        "1.1.1.286"
       ]
     }
   ],
@@ -519,8 +500,13 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR158634",
+      "name": "(R,R)-butanediol dehydrogenase",
+      "ec": "1.1.1.4",
       "substrates": [
+        {
+          "metabolite": "acetoin",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "nadh",
           "stoichiometry": 1
@@ -528,15 +514,11 @@
         {
           "metabolite": "h",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_oxopentadecanoyl_coenzyme_a",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxypentadecanoyl_coenzyme_a",
+          "metabolite": "butane_2_3_diol",
           "stoichiometry": 1
         },
         {
@@ -544,41 +526,47 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_4"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR158634"
+        "metanetx": "MNXR172874"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158634"
+            "id": "MNXR172874"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR158638",
+      "name": "isocitrate--homoisocitrate dehydrogenase",
+      "ec": "1.1.1.286",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "2_oxoglutarate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_oxotridecanoyl_coenzyme_a",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxytridecanoyl_coenzyme_a",
+          "metabolite": "d_erythro_isocitrate",
           "stoichiometry": 1
         },
         {
@@ -586,17 +574,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_286"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR158638"
+        "metanetx": "MNXR173110"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158638"
+            "id": "MNXR173110"
           }
         ]
       }
@@ -742,100 +735,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:63676"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "D-arginine + O2 + H2O = 5-guanidino-2-oxopentanoate + H2O2 + NH4(+)",
-      "equation": "D-arginine + O2 + H2O = 5-guanidino-2-oxopentanoate + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "d_argininium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:78219"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78219"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "D-histidine + O2 + H2O = 3-(imidazol-5-yl)pyruvate + H2O2 + NH4(+)",
-      "equation": "D-histidine + O2 + H2O = 3-(imidazol-5-yl)pyruvate + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "d_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_imidazol_5_yl_pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:78227"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78227"
           }
         ]
       }

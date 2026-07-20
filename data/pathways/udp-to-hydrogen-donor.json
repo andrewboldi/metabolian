@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-hydrogen-donor",
   "name": "UDP to hydrogen donor",
-  "category": "other",
+  "category": "lipid-metabolism",
   "summary": "A 4-step route from UDP to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -170,15 +170,6 @@
       }
     },
     {
-      "id": "erinacol",
-      "name": "erinacol",
-      "formula": "C20H32O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:194345"
-      }
-    },
-    {
       "id": "nadp",
       "name": "NADP",
       "formula": "C21H25N7O17P3",
@@ -206,32 +197,42 @@
       }
     },
     {
-      "id": "cucurbitadienol",
-      "name": "cucurbitadienol",
-      "formula": "C30H50O",
+      "id": "peregrinol",
+      "name": "peregrinol",
+      "formula": "C20H36O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62456"
+        "chebi": "CHEBI:145550"
       }
     },
     {
-      "id": "11_oxocucurbitadienol",
-      "name": "11-oxocucurbitadienol",
-      "short": "11-oxocucurbitadien…",
-      "formula": "C30H48O2",
+      "id": "labd_13z_ene_9_15_16_triol",
+      "name": "labd-13Z-ene-9,15,16-triol",
+      "short": "labd-13Z-ene-9,15,1…",
+      "formula": "C20H36O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138973"
+        "chebi": "CHEBI:145552"
       }
     },
     {
-      "id": "11_hydroxycucurbitadienol",
-      "name": "11α-hydroxycucurbitadienol",
-      "short": "11α-hydroxycucurbit…",
-      "formula": "C30H50O2",
-      "charge": 0,
+      "id": "methyl_ultra_long_chain_fatty_acid_anion",
+      "name": "ω-methyl-ultra-long-chain fatty acid anion",
+      "short": "ω-methyl-ultra-long…",
+      "formula": "C2H3O2R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138972"
+        "chebi": "CHEBI:147293"
+      }
+    },
+    {
+      "id": "hydroxy_ultra_long_chain_fatty_acid_anion",
+      "name": "ω-hydroxy-ultra-long-chain fatty acid anion",
+      "short": "ω-hydroxy-ultra-lon…",
+      "formula": "C2H3O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147288"
       }
     },
     {
@@ -282,10 +283,10 @@
   ],
   "enzymes": [
     {
-      "id": "ec_1_14_14_71",
-      "name": "cucurbitadienol 11-hydroxylase",
+      "id": "ec_1_14_14_177",
+      "name": "ultra-long-chain fatty acid omega-hydroxylase",
       "ec": [
-        "1.14.14.71"
+        "1.14.14.177"
       ]
     }
   ],
@@ -463,57 +464,6 @@
     },
     {
       "id": "r5",
-      "name": "erinacol + reduced [NADPH--hemoprotein reductase] + O2 = cyathadiol + oxidized [NADPH--...",
-      "equation": "erinacol + reduced [NADPH--hemoprotein reductase] + O2 = cyathadiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "erinacol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cyathadiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:75559"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:75559"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "Reaction MNXR200112",
       "substrates": [
         {
@@ -540,7 +490,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR200112"
       },
@@ -555,115 +505,115 @@
       }
     },
     {
-      "id": "r7",
-      "name": "cucurbitadienol 11-hydroxylase",
-      "equation": "cucurbitadienol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxocucurbitadienol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.71",
+      "id": "r6",
+      "name": "peregrinol + reduced [NADPH--hemoprotein reductase] + O2 = labd-13Z-ene-9,15,16-triol +...",
+      "equation": "peregrinol + reduced [NADPH--hemoprotein reductase] + O2 = labd-13Z-ene-9,15,16-triol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cucurbitadienol",
+          "metabolite": "peregrinol",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11_oxocucurbitadienol",
+          "metabolite": "labd_13z_ene_9_15_16_triol",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_71"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:55508"
+        "rhea": "RHEA:62192"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55508"
+            "id": "RHEA:62192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "ultra-long-chain fatty acid omega-hydroxylase",
+      "equation": "an omega-methyl-ultra-long-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy-ultra-long-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.177",
+      "substrates": [
+        {
+          "metabolite": "methyl_ultra_long_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxy_ultra_long_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:63376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63376"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadien...",
-      "equation": "cucurbitadienol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxycucurbitadienol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "cucurbitadienol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_hydroxycucurbitadienol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:55512"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55512"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "11-O-acetylcyathatriol + UDP-alpha-D-xylose = erinacine Q + UDP + H(+)",
       "equation": "11-O-acetylcyathatriol + UDP-alpha-D-xylose = erinacine Q + UDP + H(+)",
       "substrates": [
@@ -691,7 +641,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:75583"
       },
@@ -706,7 +656,7 @@
       }
     },
     {
-      "id": "r10",
+      "id": "r9",
       "name": "11-O-acetylcyathatriol + UDP-alpha-D-glucose = erinacine Q2 + UDP + H(+)",
       "equation": "11-O-acetylcyathatriol + UDP-alpha-D-glucose = erinacine Q2 + UDP + H(+)",
       "substrates": [
@@ -734,7 +684,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:75587"
       },
@@ -749,7 +699,7 @@
       }
     },
     {
-      "id": "r11",
+      "id": "r10",
       "name": "Reaction MNXR200120",
       "substrates": [
         {
@@ -776,7 +726,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
         "metanetx": "MNXR200120"
       },

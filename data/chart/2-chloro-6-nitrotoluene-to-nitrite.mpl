@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-chloro-6-nitrotoluene-to-nitrite "2-chloro-6-nitrotoluene to nitrite" {
-  spacing 208
+  spacing 202
 
   spine at 0,0 {
     2_chloro_6_nitrotoluene
@@ -32,11 +32,5 @@ pathway 2-chloro-6-nitrotoluene-to-nitrite "2-chloro-6-nitrotoluene to nitrite" 
     no
     <-> ec_1_7_2_9 [1.7.2.9] +iron +fe2 +hplus
     hydroxylamine
-  }
-
-  branch from no side right {
-    no
-    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +fmnh2 +o2 +citrulline +h2o +hplus
-    fmn
   }
 }

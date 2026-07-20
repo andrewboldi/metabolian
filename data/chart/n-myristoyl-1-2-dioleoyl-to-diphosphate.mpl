@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-myristoyl-1-2-dioleoyl-to-diphosphate "N-myristoyl-1,2-dioleoyl-… to diphosphate" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     n_myristoyl_1_2_dioleoyl_sn_glycero_3_phosphoeth
@@ -16,57 +16,51 @@ pathway n-myristoyl-1-2-dioleoyl-to-diphosphate "N-myristoyl-1,2-dioleoyl-… to
     myristoyl_coa
   }
 
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphate side left {
-    1_2_dioleoyl_sn_glycero_3_phosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    atp
+  branch from tetradecanoate side left {
+    tetradecanoate
+    <-> . +tetradecanoate_ester +h2o +hplus
+    aliphatic_alcohol
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> . +nad +h2o +nadh +hplus
-    tetradecanal
-  }
-
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
-    r_3_hydroxytetradecanoate
-  }
-
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    cardiolipin
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    13_hydroxytetradecanoate
   }
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +hplus +co2
-    serine
+    <-> . +1_myristoyl_sn_glycero_3_phosphoethanolamine
+    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
-  branch from myristoyl_coa side right {
+  branch from ethanolaminium side right {
+    ethanolaminium
+    <-> . +n_lauroyl_heptadecasphingosine_1_phosphoethanola
+    n_lauroyl_heptadecasphingosine_1_3_cyclophosphat
+  }
+
+  branch from myristoyl_coa side left {
     myristoyl_coa
     <-> ec_2_3_1_97 [2.3.1.97] +glyciniumyl_group +coa +hplus
     n_tetradecanoylglycyl_group
   }
 
-  branch from myristoyl_coa side left {
+  branch from myristoyl_coa side right {
     myristoyl_coa
     <-> . +fad +hplus +fadh2
     trans_tetradec_2_enoyl_coa
   }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_128 [4.2.3.128] +fpp
-    cubebene
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_96 [4.2.3.96] +fpp +h2o
-    avermitilol
+    <-> ec_4_2_3_130 [4.2.3.130] +all_trans_heptaprenyl_diphosphate
+    r_tetraprenyl_curcumene
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_n9 [2.5.1.n9] +sn_glycerol_1_phosphate +all_trans_heptaprenyl_diphosphate
+    3_heptaprenyl_sn_glycero_1_phosphate
   }
 }

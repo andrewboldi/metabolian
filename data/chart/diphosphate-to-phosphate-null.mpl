@@ -30,38 +30,38 @@ pathway diphosphate-to-phosphate-null "diphosphate to phosphate" {
 
   branch from nadph side left {
     nadph
-    <-> . +20_oh_10_11_dihydro_leukotriene_b4 +h +o2 +nadp +h2o
-    10_11_dihydro_20_dihydroxy_ltb4
+    <-> ec_1_14_13_56 [1.14.13.56] +dihydrosanguinarine +h +o2 +nadp +h2o
+    10_hydroxydihydrosanguinarine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +20_hydroxy_5s_hete +nadp +h2o +h +5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
-    o2
+    <-> ec_1_14_13_57 [1.14.13.57] +dihydrochelirubine +h +o2 +nadp +h2o
+    12_hydroxydihydrochelirubine
   }
 
   branch from 2e_6e_farnesyl_diphosphate side left {
     2e_6e_farnesyl_diphosphate
     <-> . +diphosphate
-    sesquisabinene
+    z_e_farnesene
   }
 
   branch from 2e_6e_farnesyl_diphosphate side right {
     2e_6e_farnesyl_diphosphate
-    <-> . +diphosphate
-    z_e_farnesene
+    <-> ec_4_2_3_21 [4.2.3.21] +diphosphate
+    vetispiradiene
   }
 
   branch from h side left {
     h
-    <-> . +nadh +5e_3_oxo_dodec_5_enoyl_coa +nad
-    3r_hydroxy_5_trans_dodecenoyl_coa
+    <-> ec_2_6_3_1 [2.6.3.1] +pyruvate +acetone_oxime +pyruvate_oxime
+    acetone
   }
 
   branch from h side right {
     h
-    <-> . +nitrite +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit
-    o_5_hydroxynitroso_3_oxidonitroso_2_oxocyclohexy
+    <-> ec_4_5_1_2 [4.5.1.2] +s_carboxymethyl_d_cysteine +chloride +3_chloro_d_alanine
+    thioglycolate
   }
 
   branch from 2e_6e_farnesol side left {
@@ -78,13 +78,13 @@ pathway diphosphate-to-phosphate-null "diphosphate to phosphate" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +phenol +h2o
-    phenyl_phosphate
+    <-> ec_3_1_3_45 [3.1.3.45] +h +3_deoxy_d_manno_octulosonate +h2o
+    8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +o4_phosphonatotyrosine +h2o
-    l_tyrosine
+    <-> ec_2_5_1_54 [2.5.1.54] +h +phosphoenolpyruvate +h2o +8_phospho_3_deoxy_d_manno_oct_2_ulosonic_acid
+    d_arabinose_5_phosphate
   }
 }

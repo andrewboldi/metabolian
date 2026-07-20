@@ -18,25 +18,25 @@ pathway 2e-5s-6e-8e-10e-1-ammon-to-h2o "(2E,5S,6E,8E,10E)-1-ammon… to H2O" {
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +2e_henicosenoyl_coa
-    heneicosanoyl_coenzyme_a
+    <-> . +25s_3_7_12_trihydroxy_5_cholestanoyl_coa +fadh2 +h
+    24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
   }
 
   branch from fad side right {
     fad
-    <-> . +nonadecanoyl_coa +fadh2 +h
-    2e_nonadecenoyl_coenzyme_a
+    <-> . +fadh2 +h +5_chloro_l_tryptophan +l_tryptophan
+    chloride
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycylglycine +l_arginine
-    arginyl_glycyl_glycine
+    <-> . +h +adp +phosphate +atp
+    10z_13z_16z_docosatrienoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_arginine +l_phenylalanine
-    arginyl_leucyl_phenylalanine
+    <-> . +h +2e_nonadecenoyl_coenzyme_a
+    3_hydroxynonadecanoyl_coenzyme_a
   }
 }

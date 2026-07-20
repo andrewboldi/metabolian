@@ -1,0 +1,304 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oleoyl-coa-to-coa",
+  "name": "oleoyl-CoA to CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from oleoyl-CoA(4−) to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45072"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57387"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57387"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "18_hydroxyoleoyl_coa",
+      "name": "18-hydroxyoleoyl-CoA",
+      "formula": "C39H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:86044"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "1_18_hydroxyoleoyl_sn_glycrol_3_phosphate",
+      "name": "1-(18-hydroxyoleoyl)-sn-glycrol 3-phosphate",
+      "short": "1-(18-hydroxyoleoyl…",
+      "formula": "C21H39O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM147668"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "9z_12z_18_hydroxyoctadecadienoyl_coa",
+      "name": "(9Z,12Z)-18-hydroxyoctadecadienoyl-CoA",
+      "short": "(9Z,12Z)-18-hydroxy…",
+      "formula": "C39H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:84904"
+      }
+    },
+    {
+      "id": "1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce",
+      "name": "1-[18-hydroxyoeoyl]-2-[18-hydroxy-lioleoyl]-sn-glycerol 3-phosphate",
+      "short": "1-[18-hydroxyoeoyl]…",
+      "formula": "C39H69O10P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM147667"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_129",
+      "name": "long-chain acyl-CoA omega-monooxygenase",
+      "ec": [
+        "1.14.14.129"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_15",
+      "name": "glycerol-3-phosphate 1-O-acyltransferase",
+      "ec": [
+        "2.3.1.15"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_51",
+      "name": "1-acylglycerol-3-phosphate O-acyltransferase",
+      "ec": [
+        "2.3.1.51"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "long-chain acyl-CoA omega-monooxygenase",
+      "equation": "(9Z)-octadecenoyl-CoA + reduced [NADPH--hemoprotein reductase] + O2 = (9Z)-18-hydroxyoctadecenoyl-CoA + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.129",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "18_hydroxyoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_129"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45072"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45072"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerol-3-phosphate 1-O-acyltransferase",
+      "ec": "2.3.1.15",
+      "substrates": [
+        {
+          "metabolite": "18_hydroxyoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_18_hydroxyoleoyl_sn_glycrol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR119863"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119863"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-acylglycerol-3-phosphate O-acyltransferase",
+      "ec": "2.3.1.51",
+      "substrates": [
+        {
+          "metabolite": "9z_12z_18_hydroxyoctadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_18_hydroxyoleoyl_sn_glycrol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR119864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119864"
+          }
+        ]
+      }
+    }
+  ]
+}

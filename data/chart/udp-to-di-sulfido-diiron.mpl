@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-di-sulfido-diiron "UDP to di-μ-sulfido-diiron" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     udp
@@ -24,37 +24,25 @@ pathway udp-to-di-sulfido-diiron "UDP to di-μ-sulfido-diiron" {
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_2_62 [6.3.2.62] +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
-    l_glutamyl_l_glutamyl_l_glutamate_3
+    <-> ec_2_6_1_125 [2.6.1.125] +arginine +akg
+    5_guanidino_2_oxopentanoic_acid
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_122 [2.6.1.122] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +akg
-    udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos
+    <-> . +citrylglutamate +h2o
+    citrate
   }
 
   branch from propionyl_coa side left {
-    propionyl_coa
-    <-> ec_1_3_1_95 [1.3.1.95] +nad +nadh +hplus
-    acryloyl_coa
-  }
-
-  branch from propionyl_coa side right {
     propionyl_coa
     <-> . +carnitine +coa
     o_propanoyl_l_carnitine
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +o2 +hplus +di_sulfido_diiron +h2o
-    3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +2_n_hydroxynocardicin_c +o2 +hplus +di_sulfido_diiron +h2o
-    2_n_n_dihydroxynocardicin_c
+  branch from propionyl_coa side right {
+    propionyl_coa
+    <-> . +myristoyl_coa +coa
+    2_methyl_3_oxopalmitoyl_coa
   }
 }

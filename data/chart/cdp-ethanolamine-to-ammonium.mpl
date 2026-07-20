@@ -18,25 +18,25 @@ pathway cdp-ethanolamine-to-ammonium "CDP-ethanolamine to ammonium" {
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
+    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
+    an_n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4 +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d
+    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_gal_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_neu5ac_2
   }
 
   branch from serine side left {
     serine
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +nad +nadh +hplus
+    l_3_oxoalanine
   }
 
   branch from serine side right {
     serine
-    <-> . +nad +nadh +hplus
-    l_3_oxoalanine
+    <-> ec_1_1_1_387 [1.1.1.387] +nad +co2 +nadh
+    ammonioacetaldehyde
   }
 }

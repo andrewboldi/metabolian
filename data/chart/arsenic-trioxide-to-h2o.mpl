@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway arsenic-trioxide-to-h2o "arsenic trioxide to H2O" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     arsenic_trioxide
@@ -20,55 +20,49 @@ pathway arsenic-trioxide-to-h2o "arsenic trioxide to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_nonadecanoyl_sn_glycero_3_phosphocholine
+    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_alpha_neuraminate +acetate +h2o
+    n_acetyl_4_o_acetylneuraminate
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosenoylglycerophosphocholine_delta_11_sn1_l
+    <-> ec_3_1_1_53 [3.1.1.53] +n_acetyl_neuraminic_acid +acetate +h2o
+    neuac9ac
   }
 
-  branch from r_dihydrolipoate side left {
-    r_dihydrolipoate
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +r_lipoate +h
-    nad
-  }
-
-  branch from l_ascorbate side right {
+  branch from l_ascorbate side left {
     l_ascorbate
     <-> ec_1_10_3_3 [1.10.3.3] +l_dehydroascorbic_acid +h2o +h
     o2
   }
 
-  branch from l_ascorbate side left {
+  branch from l_ascorbate side right {
     l_ascorbate
-    <-> . +dehydroascorbide +h +nadph
+    <-> . +l_dehydroascorbic_acid +nadph
     nadp
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    1_8z_11z_14z_icosatrienoyl_sn_glycero_3_phosphoc
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_8z_11z_14z_17z_icosatetraenoyl_sn_glycero_3_ph
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_asparagine +l_aspartate
-    leucyl_asparaginyl_aspartate
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    cdp_2_3_bis_o_geranylgeranyl_sn_glycerol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_lysine +l_aspartate
-    leucyl_aspartyl_lysine
+    <-> . +l_threonine +l_serine +l_arginine
+    threonyl_seryl_arginine
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +l_threonine +l_arginine
+    threonyl_threonyl_arginine
   }
 }

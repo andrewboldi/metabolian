@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-end-pnpgpcpcpa-5-to-diphosphate "3'-end pNpGpCpCpA(5−) to diphosphate" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     3_end_pnpgpcpcpa_5
@@ -22,28 +22,16 @@ pathway 3-end-pnpgpcpcpa-5-to-diphosphate "3'-end pNpGpCpCpA(5−) to diphosphat
     trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
   }
 
-  branch from 3_end_ribonucleotide_3_phosphate_3 side left {
-    3_end_ribonucleotide_3_phosphate_3
-    <-> ec_4_6_1_19 [4.6.1.19] +ribonucleotide_ribonucleotide_2 +h2o +hplus
-    5_end_ribonucleoside
-  }
-
-  branch from 3_end_ribonucleotide_3_phosphate_3 side right {
-    3_end_ribonucleotide_3_phosphate_3
-    <-> ec_6_5_1_8 [6.5.1.8] +5_end_ribonucleoside +gtp +gmp +ppi
-    ribonucleotide_ribonucleotide_2
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate +ctp +hplus
-    cdp_1_stearoyl_2_linoleoyl_sn_glycerol
+    <-> ec_4_2_3_169 [4.2.3.169] +fpp +h2o
+    7_epi_eudesmol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
-    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> ec_4_2_3_170 [4.2.3.170] +fpp +h2o
+    4_epi_cubebol
   }
 
   branch from 3_end_ribonucleotide_1 side left {

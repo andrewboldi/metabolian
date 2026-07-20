@@ -18,13 +18,13 @@ pathway 5-methoxy-2-methyl-3-octa-to-2-hydroxy-5-oxoprol "5-methoxy-2-methyl-3-o
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> . +pyr1_apelin_13 +h2o
-    pyr1_apelin_12
+    <-> . +apelin_17 +h2o
+    apelin_16
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> . +apelin_17 +h2o
-    apelin_16
+    <-> . +n_dha_l_phenylalanine +h2o
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
   }
 }

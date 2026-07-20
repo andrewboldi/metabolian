@@ -18,14 +18,14 @@ pathway chloroacetaldehyde-to-nad "chloroacetaldehyde to NAD" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +iodide +glutathione
-    2_4_dinitroiodobenzene
+    <-> ec_1_1_1_10 [1.1.1.10] +l_threose +nadph +nadp
+    d_threitol
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o
-    n_3_hydroxybutanoyl_l_homoserine_lactone
+    <-> ec_1_1_1_10 [1.1.1.10] +3_4_hexanedione +nadph +nadp
+    4_hydroxyhexan_3_one
   }
 
   branch from 2d_2_3_5_4_6_pentahydroxycyclohexanone side left {
@@ -48,19 +48,19 @@ pathway chloroacetaldehyde-to-nad "chloroacetaldehyde to NAD" {
 
   branch from inositol side right {
     inositol
-    <-> ec_1_1_1_18 [1.1.1.18] +nadh +h +nad
-    scyllo_inosose
+    <-> ec_1_1_1_370 [1.1.1.370] +nadh +h +nad
+    l_epi_2_inosose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_210 [1.1.1.210] +nadh +h +5beta_androstane_3_17_dione
-    epietiocholanolone
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylcyclohexanone +h
+    3_methylcyclohexanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_175 [1.1.1.175] +nadh +d_xylono_1_5_lactone +h
-    aldehydo_d_xylose
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
+    3_methyl_2_butanol
   }
 }

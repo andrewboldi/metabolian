@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-ribose-to-d-ribulose "D-ribose to D-ribulose" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     d_ribose
@@ -16,33 +16,27 @@ pathway d-ribose-to-d-ribulose "D-ribose to D-ribulose" {
     d_ribulose
   }
 
-  branch from 1_methyladenosine side left {
-    1_methyladenosine
-    <-> ec_3_2_2_13 [3.2.2.13] +1_methyladenine +h2o
-    beta_d_ribofuranose
+  branch from h2o side left {
+    h2o
+    <-> . +d_urobilinogen +o2
+    d_urobilin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_bis_4_hydroxyphenyl_1_propanol +o2
-    2_2_bis_4_hydroxyphenyl_propanoic_acid
+    <-> ec_3_5_1_26 [3.5.1.26] +l_asparagine +aldehydo_n_acetyl_d_glucosamine
+    n_4_beta_n_acetyl_d_glucosaminyl_l_asparagine
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +3_dehydro_6_deoxoteasterone +o2
-    3_dehydroteasterone
-  }
-
-  branch from aldehydo_d_ribose side right {
+  branch from aldehydo_d_ribose side left {
     aldehydo_d_ribose
     <-> . +aldehydo_d_ribose_5_phosphate +h2o
     phosphate
   }
 
-  branch from aldehydo_d_ribose side left {
+  branch from aldehydo_d_ribose side right {
     aldehydo_d_ribose
-    <-> ec_7_5_2_7 [7.5.2.7] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_2_2_7 [3.2.2.7] +adenosine +h2o
+    adenine
   }
 }

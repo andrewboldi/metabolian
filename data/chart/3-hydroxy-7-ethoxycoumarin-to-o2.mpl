@@ -18,50 +18,50 @@ pathway 3-hydroxy-7-ethoxycoumarin-to-o2 "3-Hydroxy-7-ethoxycoumarin to O2" {
 
   branch from h side left {
     h
-    <-> ec_4_3_1_24 [4.3.1.24] +4_chloro_l_phenylalanine +nh4
-    4_chlorocinnamic_acid
+    <-> ec_3_5_2_6 [3.5.2.6] +3_hydroxybenzoate +phenylacetylglycine +h2o
+    3_phenylacetyl_glycyl_oxybenzoic_acid
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +5_androstane_3_17_diol +nadp +nadph
-    3alpha_hydroxy_5beta_androstan_17_one
+    <-> ec_1_1_1_2 [1.1.1.2] +1_acenaphthalenol +nadp +nadph
+    1_ketoacenaphthalene
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_methylacetophenone +h +nadph +nadp +h2o
-    tolylacetate
+    <-> ec_1_4_3_21 [1.4.3.21] +compound_0066903 +nh4 +h2o2 +h +h2o
+    4_methoxyphenylethylamine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_methoxyacetophenone +h +nadph +nadp +h2o
-    4_methoxyphenylacetic_acid
+    <-> ec_1_7_3_1 [1.7.3.1] +butanal +nitrite +h +h2o2 +h2o
+    1_nitrobutane
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +5_dihydrotestosterone +nadp +h
-    5beta_androstane_3_17_dione
+    <-> ec_1_1_1_2 [1.1.1.2] +d_ribose +h +nadp
+    ribitol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_209 [1.1.1.209] +4_5beta_dihydrocortisone +h +nadp
-    urocortisone
+    <-> ec_1_1_1_184 [1.1.1.184] +h +3_nitrobenzaldehyde +nadp
+    3_nitrobenzyl_alcohol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +4_benzoylpyridine +h +nadph
-    phenyl_pyridin_4_yl_methanol
+    <-> ec_1_1_1_184 [1.1.1.184] +o_nitrobenzyl_alcohol +h +nadph
+    2_nitrobenzaldehyde
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_51 [1.1.1.51] +6_tert_butyl_2_3_epoxy_5_cyclohexene_1_4_dione +h +nadph
-    6_tert_butyl_2_3_epoxy_4_hydroxy_5_cyclohexene_1
+    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +3_chlorobenzaldehyde
+    3_chlorophenyl_methanol
   }
 
   branch from acetaldehyde side left {
@@ -78,13 +78,13 @@ pathway 3-hydroxy-7-ethoxycoumarin-to-o2 "3-Hydroxy-7-ethoxycoumarin to O2" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +dexmethylphenidate +methanol
-    ritalinic_acid
+    <-> ec_1_14_18_1 [1.14.18.1] +4_bromocatechol +h2o2
+    4_bromophenol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +alpha_d_ribose_1_phosphate +h
-    ribose_1_3_cyclic_phosphate
+    <-> ec_3_7_1_3 [3.7.1.3] +l_alanine +h +benzoate
+    betamipron
   }
 }

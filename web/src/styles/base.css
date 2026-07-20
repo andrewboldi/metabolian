@@ -99,8 +99,12 @@ h4 { font-size: var(--step-1); line-height: var(--lead-label);  letter-spacing: 
 p { color: var(--text-dim); text-wrap: pretty; }
 
 a { color: var(--accent); text-decoration: none; }
-/* Links inside running text must be distinguishable by more than color (WCAG). */
-p a, li a, .lead a, .prose a, dd a, .site-footer a { text-decoration: underline; text-underline-offset: 2px; }
+/* Links inside running text must be distinguishable by more than colour (WCAG
+   1.4.1). Deliberately NOT extended to the footer or any nav list: that
+   criterion is about links embedded in prose, where position gives no cue.
+   A column of links is already unambiguous, and underlining it just prints
+   rules across the colophon — layout.ts opts those out on top of this. */
+p a, li a, .lead a, .prose a, dd a { text-decoration: underline; text-underline-offset: 2px; }
 
 img, svg, canvas { max-width: 100%; display: block; }
 img { height: auto; }
@@ -548,15 +552,23 @@ input:disabled, select:disabled, textarea:disabled { opacity: 0.55; cursor: not-
    THESE MUST STAY THE LAST box-shadow DECLARATIONS IN THE FILE. box-shadow is
    a single replaceable property, so a hover or state rule of equal specificity
    declared afterwards would silently take the slot and delete the ring. Rules
-   that carry their own elevation re-declare it here rather than losing it. */
-.btn:focus-visible,
+   that carry their own elevation re-declare it here rather than losing it.
+
+   Several selectors below carry an otherwise-pointless `:not(:disabled)` or
+   `:is(a, button)`: they exist to MIRROR the shape of the hover rule each one
+   has to outrank, so the two tie on specificity and focus wins by position.
+   Without them a hovered-and-focused control silently loses its inner ring —
+   `.btn--ghost:not(:disabled):hover` is (0,3,0) against a bare
+   `.btn:focus-visible` at (0,2,0). Keep them in step if the hover rules move. */
+.btn:not(:disabled):focus-visible,
 .icon-btn:focus-visible,
 .nav a:focus-visible,
 .chip:focus-visible,
+.chip:is(a, button):focus-visible,
 .skip:focus,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible { box-shadow: 0 0 0 2px var(--bg); }
+input:not(:disabled):focus-visible,
+select:not(:disabled):focus-visible,
+textarea:not(:disabled):focus-visible { box-shadow: 0 0 0 2px var(--bg); }
 
 .card:focus-visible,
 .card--link:focus-visible { box-shadow: 0 0 0 2px var(--bg), var(--elev-1); }

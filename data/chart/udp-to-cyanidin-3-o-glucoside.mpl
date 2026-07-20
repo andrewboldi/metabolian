@@ -20,13 +20,13 @@ pathway udp-to-cyanidin-3-o-glucoside "UDP to Cyanidin 3-O-glucoside" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_threonine +l_tyrosine
-    tyrosyl_threonine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_fructopyranose +phosphate +l_fructopyranose
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_tryptophan +l_phenylalanine +l_tyrosine
-    tyr_trp_phe
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_fructofuranose
   }
 }

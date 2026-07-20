@@ -18,14 +18,14 @@ pathway s-atropinium-to-succinyl-coa "(S)-atropinium to succinyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
-    oxalyl_coa
+    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
+    3_oxoacyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_5 [2.8.3.5] +3_oxo_monocarboxylic_acid_anion +succinyl_coa
-    3_oxoacyl_coa
+    <-> ec_1_14_11_20 [1.14.11.20] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +akg +o2 +co2
+    11_o_demethyl_17_o_deacetylvindolinium
   }
 
   branch from succinyl_coa side left {

@@ -18,13 +18,13 @@ pathway dtdp-l-rhodosamine-to-hydrogen-acceptor "dTDP-β-L-rhodosamine to hydrog
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +7_chloro_l_tryptophan +hydrogen_donor +o2 +co2 +h2o
-    monodechloroaminopyrrolnitrin
+    <-> . +cytidine_5_monophosphate_1 +3_disulfanyl_l_alanine +hydrogen_donor +atp +l_cysteine +amp +ppi +hplus
+    2_thiocytidine_5_monophosphate_1
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +8_s_15_s_dihpete +hydrogen_donor +h2o
-    8_s_15_s_dihete
+    <-> . +all_trans_3_4_didehydro_13_14_dihydroretinol +hydrogen_donor
+    all_trans_3_4_didehydroretinol
   }
 }

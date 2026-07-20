@@ -24,14 +24,14 @@ pathway hancockiamide-d-to-hancockiamide-c "hancockiamide D to Hancockiamide C" 
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
-    9_13_r_epoxylabd_14_ene
+    <-> ec_6_2_1_60 [6.2.1.60] +pseudomonate_c +atp +coa +amp
+    pseudomonoyl_coa_c
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_190 [4.2.3.190] +copal_8_ol_diphosphate
-    13r_manoyl_oxide
+    <-> ec_4_2_3_201 [4.2.3.201] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    hydropyrene
   }
 
   branch from hancockiamide_g side right {
@@ -42,13 +42,13 @@ pathway hancockiamide-d-to-hancockiamide-c "hancockiamide D to Hancockiamide C" 
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_20_hydroxydocosapentaenoate
+    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
+    cholestanol_7_8_epoxide
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_50 [1.14.19.50] +4_o_methylnorbelladine +fmnh2 +o2 +h2o +hplus
-    4ar_10bs_noroxomaritidine
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    1_hydroxytestosterone
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-ammonium "2-oxoglutarate to ammonium" {
-  spacing 236
+  spacing 224
 
   spine at 0,0 {
     2_oxoglutarate
@@ -18,13 +18,13 @@ pathway 2-oxoglutarate-to-ammonium "2-oxoglutarate to ammonium" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_68 [4.1.1.68] +cis_2_oxohept_3_enedioic_acid
-    5_carboxy_2_oxohept_3_enedioate
+    <-> . +4_6_dioxoheptanoic_acid
+    3_5_dioxooctanedioic_acid
   }
 
   branch from co2 side right {
     co2
-    <-> ec_2_2_1_7 [2.2.1.7] +glyceraldehyde_3_phosphate +pyruvate +1_deoxy_d_xylulose_5_phosphate
+    <-> . +urea_1_carboxylate +1_3_dicarboxyurea
     h
   }
 
@@ -42,49 +42,37 @@ pathway 2-oxoglutarate-to-ammonium "2-oxoglutarate to ammonium" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +o2 +2r_3s_4s_leucoanthocyanidin +co2 +h2o
-    4s_2_3_dehydroflavan_3_4_diol
+    <-> ec_1_14_20_14 [1.14.20.14] +ambiguine_h +2_oxoglutarate +h +o2 +chloride +co2 +h2o
+    ambiguine_a
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +h +o2 +2r_3s_4s_leucoanthocyanidin +co2 +h2o
-    3_hydroxy_2_phenylchromenylium
+    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +o2 +chloride +ambiguine_c +co2 +h2o
+    ambiguine_b
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> ec_4_1_2_30 [4.1.2.30] +h +17alpha_hydroxypregnenolone +o2 +nadph +3beta_hydroxyandrost_5_en_17_one +h2o
-    nadp
+    <-> . +h2o
+    1_1_ethanediol
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_8
-    ubiquinol_8
+    <-> ec_2_3_1_190 [2.3.1.190] +nadh +acetyl_coa +h +coa +nad
+    r_acetoin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_1_26 [3.6.1.26] +cmp +h +1_2_dihexadec_9_enoyl_sn_glycerol_3_phosphate
-    cdp_1_2_dihexadec_9_enoylglycerol
+    <-> . +fluvastatin
+    trans_lactone_fluvastatin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_1_26 [3.6.1.26] +cmp +3_phosphonooxy_1_2_propanediyl_dioctadecanoate
-    cdp_1_2_dioctadecanoylglycerol
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +1_cyclohexylethanaminium +nadp +h2o +nadph +hplus
-    1_cyclohexylethanone
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +n_4_ammoniobutylpyrrolinium_ion +o2 +h2o +h2o2
-    n_4_oxobutylpyrrolinium_ion
+    <-> . +h +adp +phosphate +atp
+    4_aminobutanoate
   }
 }

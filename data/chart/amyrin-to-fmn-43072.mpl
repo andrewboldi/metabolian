@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway amyrin-to-fmn-43072 "β-amyrin to FMN" {
-  spacing 216
+  spacing 210
 
   spine at 0,0 {
     amyrin
@@ -20,25 +20,19 @@ pathway amyrin-to-fmn-43072 "β-amyrin to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +diol_cdca +fmnh2 +o2 +h2o +hplus
-    5_cholestane_3_7_25_triol
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_9_dodecanediol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
-    carvacrol
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_10_dodecanediol
   }
 
   branch from oleanolate side left {
     oleanolate
     <-> ec_2_4_1_368 [2.4.1.368] +udp_d_glucose +udp +hplus
     oleanolate_3_o_d_glucoside
-  }
-
-  branch from oleanolate side right {
-    oleanolate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    echinocystate
   }
 }

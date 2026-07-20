@@ -30,14 +30,14 @@ pathway abietatriene-to-fmn "abietatriene to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
-    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_17_estradiol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    4_7_dihydroxycholesterol
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    7_hydroxyestradiol
   }
 
   branch from 11_hydroxyferruginol side left {

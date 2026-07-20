@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phloretin-to-4-o-d-glucosyl-trans-4 "phloretin to 4-O-β-D-glucosyl-trans-4-…" {
-  spacing 254
+  spacing 248
 
   spine at 0,0 {
     phloretin
@@ -26,11 +26,5 @@ pathway phloretin-to-4-o-d-glucosyl-trans-4 "phloretin to 4-O-β-D-glucosyl-tran
     trans_4_coumarate
     <-> . +nh4
     3s_3_azaniumyl_3_4_hydroxyphenyl_propanoate
-  }
-
-  branch from trans_4_coumarate side left {
-    trans_4_coumarate
-    <-> ec_1_14_13_11 [1.14.13.11] +nadp +h2o +h +o2 +nadph
-    e_cinnamate
   }
 }

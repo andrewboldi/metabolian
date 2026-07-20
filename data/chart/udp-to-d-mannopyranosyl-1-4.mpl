@@ -20,38 +20,38 @@ pathway udp-to-d-mannopyranosyl-1-4 "UDP to β-D-mannopyranosyl-(1→4)-…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +6c_glucosyl_2_hydroxynaringenin +h
-    2_4_4_6_tetrahydroxydibenzoylmethane
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +c_glucosyl_2_hydroxyflavanone +h
-    dibenzoylmethane
+    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
-    alpha_d_fuc3nac_1_4_beta_d_gal_1_4_alpha_d_glc_1
+    <-> . +dtdp_l_oleandrose +avermectin_b2b_monosaccharide +h
+    avermectin_b2b
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
-    alpha_l_rha_1_4_alpha_d_glcnac_1_4_beta_d_gal_1
+    <-> . +dtdp_l_oleandrose +avermectin_a2b_aglycone +h
+    avermectin_a2b_monosaccharide
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    tetracosahexaenoic_acid_n_3
+    9e_tetradecenoic_acid
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    all_cis_icosa_11_14_17_trienoic_acid
+    thromboxane_b2
   }
 
   branch from d_mannopyranosyl_1_4_l_rhamnopyranosyl_1_3_d_ga side left {

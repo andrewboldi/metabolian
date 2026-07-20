@@ -26,7 +26,7 @@ pathway 2-dehydro-3-deoxy-d-galac-to-2-oxoglutarate "2-dehydro-3-deoxy-D-galacâ€
 
   branch from akg side right {
     akg
-    <-> . +nadp +nadph +hplus
-    2_hydroxyglutarate
+    <-> . +nad +nadh +hplus
+    s_2_hydroxyglutarate
   }
 }

@@ -30,26 +30,26 @@ pathway luteolin-to-h2o "luteolin to H2O" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_2_6_1_31 [2.6.1.31] +pyridoxamine +d_glutamate
-    pyridoxal
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
     <-> ec_2_6_1_124 [2.6.1.124] +c_terminal_l_ornithyl_l_glutamyl_1_group +l_glutamate
     c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
   }
 
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +h +aminobacteriohopanetriol +l_glutamate
+    ribosylhopane
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_1 [1.13.11.1] +3_fluorocatechol
-    2_fluoro_cis_cis_muconate
+    <-> . +9_10_dihydroxybenzo_a_pyrene
+    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_1 [1.13.11.1] +4_fluorocatechol
-    3_fluoro_cis_cis_muconate
+    <-> . +4_5_dihydroxybenzo_a_pyrene
+    4_5_chrysenedicarboxylate
   }
 
   branch from 3_deoxyleucocyanidin side left {
@@ -60,14 +60,14 @@ pathway luteolin-to-h2o "luteolin to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadph +h2o
-    aldophosphamide
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h2o +h +o2 +nadph
+    lsm_36909
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +ifosfamide +o2 +nadph +h2o
-    4_hydroxyifosfamide
+    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h +o2 +nadph +h2o
+    aflatoxin_m1_8_9_epoxide
   }
 
   branch from luteolinidin side right {
@@ -78,14 +78,14 @@ pathway luteolin-to-h2o "luteolin to H2O" {
 
   branch from co2 side left {
     co2
-    <-> . +7_oxoheptanoic_acid +h
-    2_oxosuberate
+    <-> . +4_5_chrysenedicarboxylate
+    4_chrysenecarboxylate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +h +2_oxo_7_methylthioheptanoic_acid +nad
-    3_4_methylthio_butylmalic_acid
+    <-> . +4_5_chrysenedicarboxylate
+    5_chrysenecarboxylate
   }
 
   branch from succinate side left {
@@ -102,13 +102,13 @@ pathway luteolin-to-h2o "luteolin to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_2_5_1_18 [2.5.1.18] +4_glutathionyl_cyclophosphamide +h +aldophosphamide
-    glutathione
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h +lsm_36909 +o2 +nadph
+    aflatoxin_b1_endo_8_9_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +p_hydroxyfelbamate +nadp +h +o2 +nadph
-    felbamate
+    <-> ec_3_3_2_9 [3.3.2.9] +aflatoxin_b1_diol
+    aflatoxin_b1_exo_8_9_epoxide
   }
 }

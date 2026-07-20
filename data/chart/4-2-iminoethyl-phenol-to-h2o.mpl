@@ -22,14 +22,14 @@ pathway 4-2-iminoethyl-phenol-to-h2o "4-(2-iminoethyl)phenol to H2O" {
 
   branch from h side left {
     h
-    <-> . +8_o_methyl_13_carboxynorjavanicin
-    8_o_methyl_fusarubinlactone
+    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +3_aminopropyl_phosphonic_acid +coa
+    2_acetamidopropyl_phosphonate
   }
 
   branch from h side right {
     h
-    <-> . +3_15_acetyldeoxynivalenol +h2o +acetate
-    3_acetyldeoxynivalenol
+    <-> ec_2_7_8_46 [2.7.8.46] +cdp_l_ribitol +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +rib_ol_p_gro_p_mannac_glcnac_pp_undecaprenol
+    cmp
   }
 
   branch from tyramine side left {
@@ -58,14 +58,14 @@ pathway 4-2-iminoethyl-phenol-to-h2o "4-(2-iminoethyl)phenol to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +thiocoraline_dithiol +h2o2
-    thiocoraline
+    <-> . +h +isopimara_7_15_diene +nadph +nadp +h2o
+    isopimara_7_15_dienol
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +bisphenol_a +nadph +nadp +h2o
-    1_2_bis_4_hydroxyphenyl_propan_2_ol
+    <-> . +h +3r_6e_nerolidol +nadph +nadp +e_4_8_dimethyl_1_3_7_nonatriene +h2o
+    buten_2_one
   }
 
   branch from dopamine side left {
@@ -82,25 +82,25 @@ pathway 4-2-iminoethyl-phenol-to-h2o "4-(2-iminoethyl)phenol to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +isoprene +o2 +h2o
-    3r_3_4_epoxy_3_methylbut_1_ene
+    <-> ec_1_1_1_396 [1.1.1.396] +nadh +h +bacteriochlorophyllide_a
+    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +styrene +o2 +h2o
-    r_styrene_oxide
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2z_4e_2_amino_5_methyl_muconate +h2o
+    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_hydroxytrichothecene
-    trichotriol
+    <-> . +2_2_methylsulfanyl_hexyl_maleate +h
+    3_6_methylthio_hexylmalic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_15_acetyldeoxynivalenol +h +acetate
-    15_acetyldeoxynivalenol
+    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
+    2_7_methylthio_heptylmalic_acid
   }
 }

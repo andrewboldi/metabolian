@@ -1,0 +1,304 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-cytosine",
+  "name": "H to cytosine",
+  "category": "other",
+  "summary": "A 4-step route from H(+) to cytosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182572"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dcmp",
+      "name": "dCMP",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM266"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM168"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine",
+      "name": "2'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM625"
+      }
+    },
+    {
+      "id": "cytosine",
+      "name": "cytosine",
+      "formula": "C4H5N3O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM761"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_74",
+      "name": "deoxycytidine kinase",
+      "ec": [
+        "2.7.1.74"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_6",
+      "name": "nucleoside deoxyribosyltransferase",
+      "ec": [
+        "2.4.2.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deoxycytidine kinase",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204139",
+      "substrates": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204139"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "deoxycytidine kinase",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dcmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR181974"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181974"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleoside deoxyribosyltransferase",
+      "ec": "2.4.2.6",
+      "substrates": [
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR131621"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR131621"
+          }
+        ]
+      }
+    }
+  ]
+}

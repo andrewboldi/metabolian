@@ -42,13 +42,13 @@ pathway caldariellaquinone-to-succinate "caldariellaquinone to succinate" {
 
   branch from succinate side left {
     succinate
-    <-> . +co2 +acetate +h2o +h
-    glycolate
+    <-> . +succinyl_coa +3_methylbenzylsuccinate
+    3_methylbenzyl_succinyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +gibberellin_a4 +co2 +h +nadph +gibberellin_a36 +nadp +o2
-    2_oxoglutarate
+    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +h +h2o
+    4_ethoxy_4_oxobutanoic_acid
   }
 }

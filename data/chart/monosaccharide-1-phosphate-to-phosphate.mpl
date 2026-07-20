@@ -20,14 +20,14 @@ pathway monosaccharide-1-phosphate-to-phosphate "monosaccharide 1-phosphate to p
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_11 [2.7.7.11] +d_xylose_1_phosphate +utp +hplus
-    udp_d_xylose
+    <-> ec_6_1_1_18 [6.1.1.18] +amp_3_end_1 +glutamine +atp +amp
+    3_l_glutaminyl_adenylyl_zwitterionic_group
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_42 [2.7.7.42] +l_tyrosine +atp
-    o_adenyl_l_tyrosine_1
+    <-> ec_5_1_1_11 [5.1.1.11] +l_phenylalanine +atp +h2o +amp +hplus
+    d_phenylalanine
   }
 
   branch from nicotinamide side left {
@@ -44,20 +44,20 @@ pathway monosaccharide-1-phosphate-to-phosphate "monosaccharide 1-phosphate to p
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
+    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
     glycine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_21 [3.6.3.21] +glycine +adp +phosphate +glycine +atp
-    h2o
+    <-> . +adp +phosphate +atp +h2o
+    glutathione
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    glutathione
+    <-> ec_7_4_2_10 [7.4.2.10] +h +glutathione +phosphate +atp +glutathione
+    h2o
   }
 
   branch from adp side right {

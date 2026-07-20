@@ -118,71 +118,56 @@
       }
     },
     {
-      "id": "all_trans_decaprenyl_diphosphate",
-      "name": "all-trans-decaprenyl diphosphate",
-      "short": "all-trans-decapreny…",
-      "formula": "C50H81O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:60721"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "1_4_dihydroxy_2_naphthoate",
-      "name": "1,4-dihydroxy-2-naphthoate",
-      "short": "1,4-dihydroxy-2-nap…",
-      "formula": "C11H7O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:11173"
-      }
-    },
-    {
-      "id": "2_demethylmenaquinol_10",
-      "name": "2-demethylmenaquinol-10",
-      "short": "2-demethylmenaquino…",
-      "formula": "C60H88O2",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:84546"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "corvol_ether_b",
+      "name": "(+)-corvol ether B",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:137536"
       }
     },
     {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C22H31O2",
-      "charge": -1,
+      "id": "corvol_ether_a",
+      "name": "(+)-corvol ether A",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77016"
-      }
-    },
-    {
-      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA",
-      "short": "(4Z,7Z,10Z,13Z,16Z,…",
-      "formula": "C43H62N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:74298"
+        "chebi": "CHEBI:137535"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_5_1_74",
-      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "id": "ec_4_2_3_163",
+      "name": "(+)-corvol ether B synthase",
       "ec": [
-        "2.5.1.74"
+        "4.2.3.163"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_171",
+      "name": "(+)-corvol ether A synthase",
+      "ec": [
+        "4.2.3.171"
       ]
     }
   ],
@@ -314,30 +299,22 @@
     },
     {
       "id": "r4",
-      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
-      "equation": "all-trans-decaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-10 + CO2 + diphosphate",
-      "ec": "2.5.1.74",
+      "name": "(+)-corvol ether B synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-corvol ether B + diphosphate",
+      "ec": "4.2.3.163",
       "substrates": [
         {
-          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_4_dihydroxy_2_naphthoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_demethylmenaquinol_10",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
+          "metabolite": "corvol_ether_b",
           "stoichiometry": 1
         },
         {
@@ -347,49 +324,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_74"
+          "enzyme": "ec_4_2_3_163"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:44808"
+        "rhea": "RHEA:53644"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44808"
+            "id": "RHEA:53644"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + ATP + CoA = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahe...",
-      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + ATP + CoA = (4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-CoA + AMP + diphosphate",
+      "name": "(+)-corvol ether A synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-corvol ether A + diphosphate",
+      "ec": "4.2.3.171",
       "substrates": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "corvol_ether_a",
           "stoichiometry": 1
         },
         {
@@ -397,17 +367,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_171"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:44932"
+        "rhea": "RHEA:53648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44932"
+            "id": "RHEA:53648"
           }
         ]
       }

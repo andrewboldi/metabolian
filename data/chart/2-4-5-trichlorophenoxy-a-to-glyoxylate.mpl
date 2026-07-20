@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-5-trichlorophenoxy-a-to-glyoxylate "(2,4,5-trichlorophenoxy)a… to glyoxylate" {
-  spacing 280
+  spacing 256
 
   spine at 0,0 {
     2_4_5_trichlorophenoxy_acetate
@@ -28,18 +28,6 @@ pathway 2-4-5-trichlorophenoxy-a-to-glyoxylate "(2,4,5-trichlorophenoxy)a… to 
     glycolate
   }
 
-  branch from 2_4_5_trichlorophenol side left {
-    2_4_5_trichlorophenol
-    <-> . +nadh +h +o2 +chloride +nad +h2o
-    2_5_dichlorohydroquinone
-  }
-
-  branch from 2_4_5_trichlorophenol side right {
-    2_4_5_trichlorophenol
-    <-> . +fadh2 +h +o2 +chloride +2_5_dichloro_p_benzoquinone +h2o
-    fad
-  }
-
   branch from glyoxal side left {
     glyoxal
     <-> . +gdp
@@ -54,37 +42,25 @@ pathway 2-4-5-trichlorophenoxy-a-to-glyoxylate "(2,4,5-trichlorophenoxy)a… to 
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_328 [1.1.1.328] +nadh +h +2_6_dichloroindophenol
-    reduced_2_6_dichlorophenolindophenol
+    <-> ec_1_1_1_1 [1.1.1.1] +pentan_3_one +nadh +h
+    pentan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_2 [1.1.1.2] +nadh +h +glyceraldehyde
-    glycerol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_oxoretinal
+    all_trans_4_oxoretinol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_2_16 [3.5.2.16] +2_carbamothioylamino_acetic_acid
-    thiohydantoin
+    <-> ec_3_2_1_18 [3.2.1.18] +n_acetylneuraminate +h +4_methylumbelliferone
+    2_4_methylumbelliferyl_alpha_d_n_acetylneuramini
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_carbamoyl_d_hydroxyphenylglycine
-    5_p_hydroxyphenyl_hydantoin
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +l_tryptophan +glycine
-    3_indol_3_yl_pyruvate
-  }
-
-  branch from glyoxylate side right {
-    glyoxylate
-    <-> . +n_n_dimethyl_l_argininium +glycine
-    5_3_3_dimethylguanidino_2_oxopentanoate
+    <-> ec_3_4_11_2 [3.4.11.2] +l_leucine +l_phenylalanine
+    leu_phe
   }
 }

@@ -18,26 +18,26 @@ pathway methanofuran-to-phosphate-ester-of-dihydr "methanofuran… to phosphate-
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato +2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato +h2o
+    <-> . +h +adp +dopamine_3_o_glucuronide +dopamine_3_o_glucuronide +h2o
     atp
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    31_o_demethyl_fk_506
+    dopamine_glucuronide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +z_2_3_dehydroadipyl_coa
-    3s_hydroxyadipyl_coa
+    <-> . +h +adp +phosphate +atp
+    d_ornithine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_3_1_85 [2.3.1.85] +trans_dodec_2_enoyl_acp
-    r_3_hydroxydodecanoyl_acp
+    <-> . +h +adp +phosphate +atp
+    d_proline
   }
 
   branch from phosphate_ester_of_dihydrofuran side left {

@@ -20,13 +20,13 @@ pathway lutein-to-o2 "lutein to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +co2 +nadp +e_4_hydroxyphenylacetaldehyde_oxime +h2o +nadph +l_tyrosine
-    h
+    <-> . +h +methylarsonate
+    methylarsonous_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_194 [1.14.13.194] +phylloquinone +h +nadph +omega_hydroxyphylloquinone +h2o
-    nadp
+    <-> . +tyrindoxyl +h2o
+    tyrindoleninone
   }
 }

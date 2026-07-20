@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methylbutanoyl-phosphate-to-coa "3-methylbutanoyl phosphate to CoA" {
-  spacing 282
+  spacing 276
 
   spine at 0,0 {
     3_methylbutanoyl_phosphate
@@ -22,28 +22,16 @@ pathway 3-methylbutanoyl-phosphate-to-coa "3-methylbutanoyl phosphate to CoA" {
     4_methylpentanoate
   }
 
-  branch from 3_methylbutanoate side right {
-    3_methylbutanoate
-    <-> . +nadh +co2 +h +nad +h2o
-    4_methyl_2_oxopentanoate
+  branch from atp side right {
+    atp
+    <-> . +h +adp +l_glutamyl_l_glutamate_2 +phosphate +l_glutamate
+    l_glutamic_acid
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    3_hydroxy_iso_delta_4_5_hydroxy_acid_form_of_lov
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    lithocholate_sulfate
-  }
-
-  branch from 3_methylbutanoyl_coa side left {
-    3_methylbutanoyl_coa
-    <-> . +sucrose +coa
-    4_3_methylbutanoyl_sucrose
+    <-> . +4_phenylbutyric_acid +coa +h +amp +4_phenylbutanoyl_coa
+    diphosphate
   }
 
   branch from 3_methylbutanoyl_coa side right {
@@ -52,57 +40,63 @@ pathway 3-methylbutanoyl-phosphate-to-coa "3-methylbutanoyl phosphate to CoA" {
     3_4_di_3_methylbutanoyl_sucrose
   }
 
-  branch from adp side left {
-    adp
-    <-> . +h +phosphate +atp +h2o
-    leukotriene_c4
+  branch from 3_methylbutanoyl_coa side left {
+    3_methylbutanoyl_coa
+    <-> . +4_3_methylbutanoyl_sucrose +coa
+    2_4_di_3_methylbutanoyl_sucrose
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    w_carboxy_leukotriene_b4
+    <-> ec_7_5_2_11 [7.5.2.11] +h +phosphate +atp +h2o
+    aldehydo_d_galactose
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    leucyl_leucine
+  branch from adp side left {
+    adp
+    <-> . +h +phosphate +atp +h2o
+    ribazole
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    losartan
+    <-> . +h +1_dephospho_kdo2_lipid_a +h2o
+    h_pylori_kdo2_lipid_a
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +excited_state_firefly_oxyluciferin
-    firefly_oxyluciferin_dioxetanone
+  branch from phosphate side left {
+    phosphate
+    <-> . +h +4_dephosphorylated_1_petn_kdo_lipid_a +h2o
+    1_petn_kdo_lipid_a
   }
 
   branch from co2 side right {
     co2
-    <-> . +coelenterazine_disulfonate_dioxetanone
-    excited_state_coelenteramide_disulfonate_anion
+    <-> . +2_5_dihydroxypyridine +h
+    3_6_dihydroxypicolinate
   }
 
-  branch from 6_isobutyl_4_hydroxy_2_pyrone side left {
+  branch from co2 side left {
+    co2
+    <-> . +3_methylbutyraldehyde_oxime +h2o +h
+    n_n_dihydroxy_l_leucine
+  }
+
+  branch from 6_isobutyl_4_hydroxy_2_pyrone side right {
     6_isobutyl_4_hydroxy_2_pyrone
     <-> . +malonyl_coa +co2 +coa
     5_methyl_3_oxohexanoyl_coa
   }
 
-  branch from coa side right {
-    coa
-    <-> . +r_carnitine +trans_9_octadecenoyl_coa
-    9e_octadec_9_enoylcarnitine
-  }
-
   branch from coa side left {
     coa
-    <-> . +nonadecanoyl_coa +r_carnitine
-    car_19_0
+    <-> . +tetradecanoyl_coa +1_myristoyl_sn_glycero_3_phosphoethanolamine
+    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+  }
+
+  branch from coa side right {
+    coa
+    <-> . +3_o_methyldopa +acetyl_coa
+    n_acetylvanilalanine
   }
 }

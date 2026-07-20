@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
-  spacing 332
+  spacing 320
 
   spine at 0,0 {
     coenzyme_b
@@ -22,61 +22,49 @@ pathway coenzyme-b-to-dtdp "coenzyme B to dTDP" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +epothilone_c +di_sulfido_diiron +o2 +hplus +h2o
-    epothilone_a
+    <-> . +20s_23_dihydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_23_25_trihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +epothilone_d +di_sulfido_diiron +o2 +hplus +h2o
-    epothilone_b
+    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_3_4_didehydroretinol
   }
 
   branch from dctp side left {
     dctp
-    <-> ec_2_7_4_6 [2.7.4.6] +atp +adp
-    dcdp
+    <-> . +h2o +pi +hplus
+    2_deoxycytosine_5_monophosphate
   }
 
   branch from dctp side right {
     dctp
-    <-> . +pyruvate +dcdp +hplus
-    phosphonatoenolpyruvate
-  }
-
-  branch from dump side left {
-    dump
-    <-> . +atp +adp +hplus
-    2_deoxyuridine
-  }
-
-  branch from dump side right {
-    dump
-    <-> . +atp +adp
-    dudp
+    <-> . +h2o +pi +hplus
+    dcdp
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +d_alanine +hydrogen_acceptor +h2o +pyruvate
-    hydrogen_donor
+    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine +h2o +pyruvate
+    3_methyl_3_sulfanylhexan_1_ol
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +l_asparagine +h2o
-    l_aspartate
+    <-> . +3_sulfanylhexan_1_ol_l_cysteine +h2o +pyruvate
+    3_mercaptohexanol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +atp +hplus
-    p1_p4_bis_5_adenosyl_tetraphosphate
+    <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
+    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gtp +atp
-    c_gmp_amp
+    <-> . +25s_cholestenoate +atp +coa +amp
+    25s_3_hydroxy_5_cholesten_26_oyl_coa
   }
 }

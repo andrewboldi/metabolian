@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "kaempferol-oxoanion-to-myricetin-3-o-d-glucosy",
+  "name": "kaempferol oxoanion to myricetin 3-O-β-D-glucosy…",
+  "category": "other",
+  "summary": "A 3-step route from kaempferol oxoanion to myricetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61120"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58573"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58573"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "myricetin",
+      "name": "myricetin",
+      "formula": "C15H9O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58395"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "myricetin_3_o_d_glucopyranoside",
+      "name": "myricetin 3-O-β-D-glucopyranoside",
+      "short": "myricetin…",
+      "formula": "C21H19O13",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144444"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "myricetin_3_o_d_glucosyl_1_2_d_glucoside",
+      "name": "myricetin 3-O-β-D-glucosyl-(1→2)-β-D-glucoside",
+      "short": "myricetin…",
+      "formula": "C27H29O18",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:144439"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [...",
+      "equation": "kaempferol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = myricetin + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "kaempferol_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "myricetin + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "equation": "myricetin + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myricetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61212"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61212"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "myricetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucosyl-(1...",
+      "equation": "myricetin 3-O-beta-D-glucoside + UDP-alpha-D-glucose = myricetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myricetin_3_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myricetin_3_o_d_glucosyl_1_2_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:61172"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61172"
+          }
+        ]
+      }
+    }
+  ]
+}

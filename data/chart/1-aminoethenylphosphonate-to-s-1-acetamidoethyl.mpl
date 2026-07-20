@@ -20,37 +20,37 @@ pathway 1-aminoethenylphosphonate-to-s-1-acetamidoethyl "1-aminoethenylphosphona
 
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +6_hydroxymethyl_2_4_1h_3h_pteridinedione +h +h2o
-    6_hydroxymethyl_pterin
+    <-> ec_3_5_4_11 [3.5.4.11] +2_4_7_trihydroxypteridine +h +h2o
+    2_amino_4_7_dihydroxypteridine
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +l_erythro_biopterin +h +h2o
-    2_4_dihydroxy_6_1_2_dihydroxypropyl_pteridine
+    <-> ec_3_5_4_11 [3.5.4.11] +h +2_amino_4_6_pteridinediol +h2o
+    2_4_6_trihydroxypteridine
   }
 
   branch from h side left {
     h
-    <-> . +tricosanoyl_coa +h2o +tricosanoate
-    coa
+    <-> . +adp +phosphate +atp +h2o
+    l_threonate
   }
 
   branch from h side right {
     h
-    <-> . +adp +tricosanoate +phosphate +tricosanoate +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    taurohyocholic_acid
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +d_fructofuranose_1_phosphate +phosphoenolpyruvate
-    d_fructofuranose
+    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +phosphoenolpyruvate
+    beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +l_fuculose +phosphoenolpyruvate
-    l_fuculose_1_phosphate
+    <-> . +homoisoalliin +h2o +nh4
+    e_but_1_en_1_so_peroxol
   }
 }

@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-ribulose-1-phosphate-to-nad",
+  "name": "D-ribulose 1-phosphate to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-ribulose 1-phosphate(2−) to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205873"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71680"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_ribulose_1_phosphate",
+      "name": "D-ribulose 1-phosphate",
+      "short": "D-ribulose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71680"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "d_xylulose",
+      "name": "D-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371292"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "aldehydo_d_xylose",
+      "name": "aldehydo-D-xylose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734573"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "xylitol",
+      "name": "xylitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM737068"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_430",
+      "name": "D-xylose reductase (NADH)",
+      "ec": [
+        "1.1.1.430"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205873",
+      "substrates": [
+        {
+          "metabolite": "d_ribulose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205873"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205873"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
+      "substrates": [
+        {
+          "metabolite": "d_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197325"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197325"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xylitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR132760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132760"
+          }
+        ]
+      }
+    }
+  ]
+}

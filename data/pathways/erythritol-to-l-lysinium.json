@@ -196,12 +196,12 @@
       }
     },
     {
-      "id": "d_erythrose",
-      "name": "D-erythrose",
+      "id": "d_threose",
+      "name": "D-threose",
       "formula": "C4H8O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27904"
+        "chebi": "CHEBI:28587"
       }
     },
     {
@@ -232,34 +232,6 @@
       }
     },
     {
-      "id": "propionyl_coa",
-      "name": "Propionyl-CoA",
-      "formula": "C24H36N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57392"
-      }
-    },
-    {
-      "id": "n6_propanoyl_l_lysine",
-      "name": "N6-propanoyl-L-lysine",
-      "short": "N6-propanoyl-L-lysi…",
-      "formula": "C9H16N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138019"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
       "id": "sam",
       "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
       "short": "S-Adenosyl-L-methio…",
@@ -270,13 +242,12 @@
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61961"
+        "chebi": "CHEBI:61929"
       }
     },
     {
@@ -287,6 +258,25 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "glyoxal",
+      "name": "glyoxal",
+      "formula": "C2H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:34779"
+      }
+    },
+    {
+      "id": "n6_1_hydroxy_2_oxoethyl_l_lysinium",
+      "name": "N6-(1-hydroxy-2-oxoethyl)-L-lysinium",
+      "short": "N6-(1-hydroxy-2-oxo…",
+      "formula": "C8H15N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141554"
       }
     }
   ],
@@ -671,11 +661,11 @@
     },
     {
       "id": "r9",
-      "name": "D-erythrose = D-erythrulose",
-      "equation": "D-erythrose = D-erythrulose",
+      "name": "D-threose = D-erythrulose",
+      "equation": "D-threose = D-erythrulose",
       "substrates": [
         {
-          "metabolite": "d_erythrose",
+          "metabolite": "d_threose",
           "stoichiometry": 1
         }
       ],
@@ -688,14 +678,14 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:53180"
+        "rhea": "RHEA:53280"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53180"
+            "id": "RHEA:53280"
           }
         ]
       }
@@ -744,25 +734,25 @@
     },
     {
       "id": "r11",
-      "name": "propanoyl-CoA + L-lysyl-[protein] = N(6)-propanoyl-L-lysyl-[protein] + CoA + H(+)",
-      "equation": "propanoyl-CoA + L-lysyl-[protein] = N(6)-propanoyl-L-lysyl-[protein] + CoA + H(+)",
+      "name": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate syn...",
+      "equation": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate synthase] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "propionyl_coa",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_propanoyl_l_lysine",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "sah",
           "stoichiometry": 1
         },
         {
@@ -773,57 +763,49 @@
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:54020"
+        "rhea": "RHEA:55544"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54020"
+            "id": "RHEA:55544"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "L-lysyl-[protein] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl-[prote...",
-      "equation": "L-lysyl-[protein] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl-[protein] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "name": "glyoxal + L-lysyl-[protein] = N(6)-(1-hydroxy-2-oxoethyl)-L-lysyl-[protein]",
+      "equation": "glyoxal + L-lysyl-[protein] = N(6)-(1-hydroxy-2-oxoethyl)-L-lysyl-[protein]",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "glyoxal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 3
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "n6_1_hydroxy_2_oxoethyl_l_lysinium",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:54192"
+        "rhea": "RHEA:57204"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54192"
+            "id": "RHEA:57204"
           }
         ]
       }

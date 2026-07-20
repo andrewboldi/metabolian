@@ -32,37 +32,37 @@ pathway 4-hydroxylamino-n-n-dim-to-nadph "4-(hydroxylamino)-N,N-dim… to NADPH"
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2e_4z_2_aminomuconic_acid +h2o
-    2_aminomuconate_6_semialdehyde
+    <-> . +nadh +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h
+    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_85 [1.2.1.85] +nadh +h +2e_4z_2_hydroxymuconate +h2o
-    2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
+    <-> . +nadh +3_oxo_2s_methylisocapryloyl_coenzyme_a +h
+    3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
   }
 
   branch from h side left {
     h
-    <-> . +vindoline +catharanthine
-    3_4_anhydrovinblastine
+    <-> . +adp +atorvastatin_lactone +phosphate +atorvastatin_lactone +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_53 [1.14.13.53] +formononetin +o2 +nadph +nadp +h2o
-    2_hydroxyformononetin
+    <-> . +adp +phosphate +atp +h2o
+    cyclosporin_a_metabolite_m17
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_89 [1.14.13.89] +biochanin_a +h +o2 +nadp +h2o
-    2_hydroxybiochanin_a
+    <-> . +dihydroxy_4_cholesten_3_one_7a26 +h +o2 +nadp +h2o
+    7alpha_12alpha_26_trihydroxycholest_4_en_3_one
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_4_coumaroylshikimate +o2 +nadp +h2o
-    5_o_e_caffeoyl_shikimate
+    <-> . +nadp +h +7alpha_12alpha_26_trihydroxycholest_4_en_3_one
+    7_12_26_trihydroxy_5_cholestan_3_one
   }
 }

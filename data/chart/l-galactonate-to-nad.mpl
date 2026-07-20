@@ -18,13 +18,13 @@ pathway l-galactonate-to-nad "L-galactonate to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1r_2s_4r_borneol
+    <-> . +nadh +bacteriochlorophyllide_b +h
+    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    borneol
+    <-> . +nadh +h +7_8_dihydroisojusticidin_b
+    7_8_7_8_tetrahydroisojusticidin_b
   }
 }

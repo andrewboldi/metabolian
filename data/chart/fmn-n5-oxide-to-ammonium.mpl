@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fmn-n5-oxide-to-ammonium "FMN-N5-oxide to ammonium" {
-  spacing 252
+  spacing 246
 
   spine at 0,0 {
     fmn_n5_oxide
@@ -18,37 +18,31 @@ pathway fmn-n5-oxide-to-ammonium "FMN-N5-oxide to ammonium" {
 
   branch from fmn_n5_peroxide side left {
     fmn_n5_peroxide
-    <-> . +o2
-    fmnh2
-  }
-
-  branch from fmn_n5_peroxide side right {
-    fmn_n5_peroxide
     <-> ec_1_14_99_46 [1.14.99.46] +fmn_n5_oxide +z_2_methylureidoacrylate +h
     thymine
   }
 
-  branch from h side left {
-    h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dihexadecanoyl_n_c16_0 +l_serine
-    cdp_dipalmitoyl_sn_glycerol
-  }
-
   branch from h side right {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dioctadecanoyl_n_c18_0 +l_serine
-    cdp_1_2_dioctadecanoylglycerol
+    <-> . +succinate_semialdehyde +isochorismate +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    pyruvate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +2s_heptan_2_aminium +nad +h2o +nadh +hplus
-    heptan_2_one
+  branch from h side left {
+    h
+    <-> . +l_ascorbate +phosphoenolpyruvate +pyruvate
+    l_ascorbate_6_phosphate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +5_hydroxyoctan_4_aminium +nad +h2o +nadh +hplus
-    5_hydroxy_4_octanone
+    <-> . +n_carbamoyl_l_phenylalaninate +h2o +hplus +co2
+    l_phenylalanine
+  }
+
+  branch from nh3 side left {
+    nh3
+    <-> . +n_carbamoyl_l_glutamate +h2o +hplus +co2
+    glutamate
   }
 }

@@ -18,14 +18,14 @@ pathway butane-to-butyryl-coa "butane to butyryl-CoA" {
 
   branch from butan_1_ol side left {
     butan_1_ol
-    <-> . +benzoyl_coa +coa
-    butyl_benzoate
+    <-> . +propionyl_coa +coa
+    butyl_propionate
   }
 
   branch from butan_1_ol side right {
     butan_1_ol
-    <-> . +propionyl_coa +coa
-    butyl_propionate
+    <-> . +2_methylsulfanyl_acetyl_coa +coa
+    butyl_2_methylsulfanyl_acetate
   }
 
   branch from butyryl_coa side left {

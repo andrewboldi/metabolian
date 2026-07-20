@@ -24,26 +24,26 @@ pathway udp-to-fmn "UDP to FMN" {
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +beta_d_glca_1_4_beta_d_glca_1_3_alpha_d_galnac_1 +h
-    beta_d_glca_1_3_alpha_d_galnac_1_6_alpha_d_galna
+    <-> . +udp +demethyl_5_6_7_8_tetrahydrocyanopterin +h
+    6_hydroxymethylpterin_beta_galactoside
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +beta_d_glca_1_4_3_o_acetyl_alpha_l_fuc_1_3_beta +h
-    3_o_acetyl_alpha_l_fuc_1_3_beta_d_ribf_1_4_alpha
+    <-> . +udp +1_hydroxy_s_ibuprofen_glucuronide +h
+    1_hydroxyibuprofen
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +15z_tetracosenoate +h +h2o
-    15_tetracosenal
+    <-> ec_1_3_1_32 [1.3.1.32] +nadh +2_bromomaleylacetate +bromide
+    maleylacetate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +r_lactate +h +h2o
-    s_lactaldehyde
+    <-> ec_1_1_1_15 [1.1.1.15] +nadh +l_fructofuranose +h
+    l_glucitol
   }
 
   branch from 5_dihydrotestosterone side left {
@@ -60,25 +60,25 @@ pathway udp-to-fmn "UDP to FMN" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +avilamycin_a +phosphate +avilamycin_a +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    l_methionine_s_oxide
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    colistin_b
+    <-> . +adp +phosphate +atp +h2o
+    l_methionine_s_s_oxide
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_dodecyl_3_oxohexadecanoate +nadp
-    2r_3s_2_dodecyl_3_hydroxyhexadecanoate
+    <-> . +tirandamycin_f +h +o2 +nadp +h2o
+    tirandamycin_e
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +mupirocin_f1 +nadp
-    pseudomonate_a
+    <-> . +tirandamycin_f +h +o2 +nadp +h2o
+    tirandamycin_e
   }
 }

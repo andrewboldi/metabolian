@@ -32,13 +32,13 @@ pathway s-mandelate-to-n2-n5-dibenzoyl-l-ornithi "(S)-mandelate to N2,N5-dibenzo
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> ec_2_3_1_177 [2.3.1.177] +malonyl-coa +hplus +co2 +coa
-    3_5_dihydroxybiphenyl
+    <-> ec_2_3_1_196 [2.3.1.196] +benzyl_alcohol +coa
+    benzyl_benzoate
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> ec_1_14_13_58 [1.14.13.58] +nadph +o2 +hplus +nadp +h2o
-    3_hydroxybenzoyl_coa
+    <-> ec_2_3_1_220 [2.3.1.220] +malonyl-coa +hplus +co2 +coa
+    2_4_6_trihydroxybenzophenone
   }
 }

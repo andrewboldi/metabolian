@@ -252,26 +252,6 @@
       }
     },
     {
-      "id": "1_d_ribofuranosyl_1_4_dihydronicotinamide",
-      "name": "1-(β-D-ribofuranosyl)-1,4-dihydronicotinamide",
-      "short": "1-(β-D-ribosyl)-1,4…",
-      "formula": "C11H16N2O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:55458"
-      }
-    },
-    {
-      "id": "n_ribosylnicotinamide",
-      "name": "N-ribosylnicotinamide",
-      "short": "N-ribosylnicotinami…",
-      "formula": "C11H15N2O5",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15927"
-      }
-    },
-    {
       "id": "quinate",
       "name": "(−)-quinate",
       "formula": "C7H11O6",
@@ -290,12 +270,22 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "s_1_pyrroline_5_carboxylate",
+      "name": "(S)-1-pyrroline-5-carboxylate",
+      "short": "1-pyrroline-5-carbo…",
+      "formula": "C5H6NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:17388"
       }
     },
     {
@@ -315,6 +305,33 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
       }
     },
     {
@@ -405,13 +422,6 @@
       ]
     },
     {
-      "id": "ec_1_10_5_1",
-      "name": "ribosyldihydronicotinamide dehydrogenase (quinone)",
-      "ec": [
-        "1.10.5.1"
-      ]
-    },
-    {
       "id": "ec_1_1_5_8",
       "name": "quinate/shikimate dehydrogenase (quinone)",
       "ec": [
@@ -419,10 +429,10 @@
       ]
     },
     {
-      "id": "ec_1_2_1_88",
-      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
+      "id": "ec_1_5_5_2",
+      "name": "proline dehydrogenase",
       "ec": [
-        "1.2.1.88"
+        "1.5.5.2"
       ]
     },
     {
@@ -825,55 +835,6 @@
     },
     {
       "id": "r9",
-      "name": "ribosyldihydronicotinamide dehydrogenase (quinone)",
-      "equation": "1-(beta-D-ribofuranosyl)-1,4-dihydronicotinamide + a quinone + H(+) = beta-nicotinamide D-riboside + a quinol",
-      "ec": "1.10.5.1",
-      "substrates": [
-        {
-          "metabolite": "1_d_ribofuranosyl_1_4_dihydronicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_4_benzoquinones",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_ribosylnicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydroquinones",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_10_5_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:12364"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:12364"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "quinate/shikimate dehydrogenase (quinone)",
       "equation": "L-quinate + a quinone = 3-dehydroquinate + a quinol",
       "ec": "1.1.5.8",
@@ -903,7 +864,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:23672"
       },
@@ -918,60 +879,56 @@
       }
     },
     {
-      "id": "r11",
-      "name": "L-glutamate gamma-semialdehyde dehydrogenase",
-      "equation": "L-glutamate 5-semialdehyde + NAD(+) + H2O = L-glutamate + NADH + 2 H(+)",
-      "ec": "1.2.1.88",
+      "id": "r10",
+      "name": "proline dehydrogenase",
+      "equation": "L-proline + a quinone = (S)-1-pyrroline-5-carboxylate + a quinol + H(+)",
+      "ec": "1.5.5.2",
       "substrates": [
         {
-          "metabolite": "l_glutamic_5_semialdehyde",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "1_4_benzoquinones",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glutamate",
+          "metabolite": "s_1_pyrroline_5_carboxylate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "hydroquinones",
           "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_88"
+          "enzyme": "ec_1_5_5_2"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:30235"
+        "rhea": "RHEA:23784"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30235"
+            "id": "RHEA:23784"
           }
         ]
       }
     },
     {
-      "id": "r12",
+      "id": "r11",
       "name": "N-acetyl-L-glutamate 5-semialdehyde + H2O = L-glutamate 5-semialdehyde + acetate",
       "equation": "N-acetyl-L-glutamate 5-semialdehyde + H2O = L-glutamate 5-semialdehyde + acetate",
       "substrates": [
@@ -995,7 +952,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:30503"
       },
@@ -1005,6 +962,61 @@
           {
             "db": "Rhea",
             "id": "RHEA:30503"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
+      "equation": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamic_5_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:33207"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33207"
           }
         ]
       }

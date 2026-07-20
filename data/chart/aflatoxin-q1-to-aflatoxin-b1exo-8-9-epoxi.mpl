@@ -18,14 +18,14 @@ pathway aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi "aflatoxin Q1 to Aflatoxin B1e
 
   branch from h side left {
     h
-    <-> . +lesquerella_oil +dodecanoate +h2o
-    triglyceride_estolide
+    <-> . +5_s_cysteinyldopa +h2o
+    1_4_benzothiazinyl_alanine
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +dihydro_4_coumaroyl_coa +phloretin +coa
-    co2
+    <-> . +5_hydroxy_cmp +diphosphate +h2o
+    5_hydroxy_ctp
   }
 
   branch from lsm_36909 side left {
@@ -36,49 +36,49 @@ pathway aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi "aflatoxin Q1 to Aflatoxin B1e
 
   branch from o2 side right {
     o2
-    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +h2o2
-    dehydrorabelomycin
+    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_6_trans_tridecadienoyl_coa +h2o2
+    6_trans_tridecenoyl_coa
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +dehydrorabelomycin
-    3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
+    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa +h2o2
+    5_cis_7_trans_tetradecadienoyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_393 [1.1.1.393] +glycyrrhetinate +nadp +h
-    3_oxoglycyrrhetinate
+    <-> ec_1_1_1_362 [1.1.1.362] +maggiemycin +h +nadp
+    epsilon_rhodomycinone
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_393 [1.1.1.393] +h +3_7_12_trioxo_5_cholan_24_oate +nadp
-    3beta_hydroxy_7_12_dioxo_5beta_cholan_24_oic_aci
+    <-> . +n_3_hydroxybutan_2_yl_acetamide +nadp +h
+    n_3_oxobutan_2_yl_acetamide
   }
 
   branch from nadp side right {
     nadp
-    <-> . +8_8a_deoxyoleandolide +co2 +coa +h2o +s_methylmalonyl_coa +h +nadph
-    acetyl_coa
+    <-> . +9_hydroxy_aurachin_d +h +o2 +nadph +h2o
+    aurachin_re
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +dtdp_4_dehydro_2_6_dideoxy_d_glucose +nadph
-    dtdp_beta_d_oliose
+    <-> . +h +aurachin_d +o2 +nadph +h2o
+    aurachin_c
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> . +neocarrabiose +neocarrabiose_sulfate
+    neocarratetraose_4_o_sulfate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_4_2_3_38 [4.2.3.38] +diphosphate +alpha_bisabolol
+    2e_6e_farnesyl_diphosphate
   }
 }

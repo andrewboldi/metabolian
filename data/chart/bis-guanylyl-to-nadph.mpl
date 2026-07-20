@@ -18,38 +18,38 @@ pathway bis-guanylyl-to-nadph "bis(guanylyl… to NADPH" {
 
   branch from gtp side left {
     gtp
-    <-> ec_2_7_2_10 [2.7.2.10] +gdp +glyceric_acid_1_3_biphosphate +h
-    2r_3_phosphoglycerate
+    <-> . +alpha_d_arabinopyranose_1_phosphate +h +diphosphate
+    gdp_d_arabinopyranose
   }
 
   branch from gtp side right {
     gtp
-    <-> . +hydroxyl +h2o
-    8_oxo_gtp
+    <-> . +h2o +diphosphate +h +formate
+    2_5_diamino_6_ribosylamino_4_3h_pyrimidinone_5_p
   }
 
   branch from h side left {
     h
-    <-> . +adp +7z_10z_13z_16z_19z_docosapentaenoate +phosphate +7z_10z_13z_16z_19z_docosapentaenoate +h2o
+    <-> . +adp +thiomethyl_sulphoxide_acetaminophen_glucuronide +phosphate +thiomethyl_sulphoxide_acetaminophen_glucuronide +h2o
     atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    9z_12z_15z_18z_21z_tetracosapentaenoate
+    thiomethyl_sulphoxide_acetaminophen_sulphate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +17z_hexacosenoyl_coa +amp +atp +17z_hexacosenoate
-    coa
+    <-> . +amp +3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbon +atp +coa
+    3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +amp +atp +coa
-    10z_13z_16z_docosatrienoate
+    <-> . +amp +8_phenyloctanoyl_coa +atp +8_phenyloctanoate
+    coa
   }
 
   branch from gdp_4_dehydro_beta_l_fucose side left {
@@ -60,13 +60,13 @@ pathway bis-guanylyl-to-nadph "bis(guanylyl… to NADPH" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_70 [1.3.1.70] +h +4alpha_methyl_ergosta_8_14_25_27_trienol +nadp
-    4alpha_methyl_ergosta_8_25_27_dienol
+    <-> . +n_hydroxypentahomomethionine +o2 +nadp +h2o
+    n_n_dihydroxy_l_pentahomomethioninate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +tomatid_4_en_3_one +nadp
-    dehydrotomatidine
+    <-> . +l_homomethionine +o2 +nadp +h2o
+    n_hydroxyhomomethionine
   }
 }

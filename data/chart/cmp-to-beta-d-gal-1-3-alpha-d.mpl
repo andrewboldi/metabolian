@@ -18,37 +18,37 @@ pathway cmp-to-beta-d-gal-1-3-alpha-d "CMP to beta-D-Gal-(1->3)-alpha-D…" {
 
   branch from cmp_n_acetyl_beta_neuraminate side left {
     cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +ls_tetrasaccharide_a +h
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
+    <-> . +cmp +disialyllacto_n_tetraose +h
+    ls_tetrasaccharide_a
   }
 
   branch from cmp_n_acetyl_beta_neuraminate side right {
     cmp_n_acetyl_beta_neuraminate
-    <-> . +cmp +h +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
-    ls_tetrasaccharide_b
+    <-> . +cmp +ls_tetrasaccharide_c +h
+    d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
-    1_18_2_2_16_1_monogalactosyldiacylglycerol
+    <-> . +udp +alpha_d_gal_1_3_alpha_l_fucnam_1_3_alpha_d_glcna +h
+    alpha_l_fucnam_1_3_alpha_d_glcnac_pp_undecapreno
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_1_monogalactosyldiacylglycerol
-    1_16_0_2_18_3_digalactosyldiacylglycerol
+    <-> . +udp +beta_d_gal_1_4_alpha_d_glcnac_1_4_beta_d_gal_1_3 +h
+    alpha_d_glcnac_1_4_beta_d_gal_1_3_alpha_d_glcnac
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +peonidin_3_glucoside
-    3_5_7_trihydroxy_2_4_hydroxy_3_methoxyphenyl_chr
+    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
+    delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +cyanidin_5_o_glucoside +h
-    cyanidin
+    <-> . +udp +glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl +h
+    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
   }
 }

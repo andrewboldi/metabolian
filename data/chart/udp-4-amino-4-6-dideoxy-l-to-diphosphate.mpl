@@ -20,13 +20,13 @@ pathway udp-4-amino-4-6-dideoxy-l-to-diphosphate "UDP-4-amino-4,6-dideoxy-L… t
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
-    drimenol
+    <-> ec_4_2_3_86 [4.2.3.86] +fpp
+    7_epi_selinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_57 [4.2.3.57] +fpp
-    caryophyllene
+    <-> ec_4_2_3_76 [4.2.3.76] +fpp
+    selinene
   }
 }

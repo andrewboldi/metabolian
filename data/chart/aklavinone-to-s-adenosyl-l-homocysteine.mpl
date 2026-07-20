@@ -22,25 +22,25 @@ pathway aklavinone-to-s-adenosyl-l-homocysteine "aklavinone to S-adenosyl-L-homo
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    15_r_hepe
+    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
+    mycobilin_b
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +hydrogen_donor +o2 +h2o
-    7z_10z_13r_14e_16z_19z_13_hydroxydocosapentaeno
+    <-> ec_1_1_99_41 [1.1.99.41] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +hydrogen_donor
+    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
   }
 
   branch from sah side left {
     sah
-    <-> . +20_methyl_21_22_didehydro_20_21_dihydrobotryococ +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> . +gibberellin_a1 +sam
+    gibberellin_a1_methyl_ester
   }
 
   branch from sah side right {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    20_methyl_21_22_didehydro_20_21_dihydrobotryococ
+    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a3 +sam
+    gibberellin_a3_methyl_ester
   }
 }

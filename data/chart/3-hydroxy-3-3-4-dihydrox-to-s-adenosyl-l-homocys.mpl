@@ -18,13 +18,13 @@ pathway 3-hydroxy-3-3-4-dihydrox-to-s-adenosyl-l-homocys "3-hydroxy-3-(3,4-dihyd
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_296 [2.1.1.296] +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib +sam +hplus
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib
+    <-> . +kaempferol_oxoanion +sam +hplus
+    3_o_methylkaempferol_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +myricetin +sam +hplus
+    3_o_methylmyricetin_7_olate
   }
 }

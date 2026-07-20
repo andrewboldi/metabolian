@@ -24,8 +24,8 @@ pathway l-histidinol-phosphate-to-l-glutamate "L-histidinol phosphate to L-gluta
 
   branch from l_histidine side right {
     l_histidine
-    <-> ec_2_1_1_44 [2.1.1.44] +sam +sah +hplus
-    n_n_n_trimethyl_l_histidine
+    <-> . +sam +sah +hplus
+    n_methyl_l_histidine
   }
 
   branch from 3_imidazol_5_yl_pyruvate side left {

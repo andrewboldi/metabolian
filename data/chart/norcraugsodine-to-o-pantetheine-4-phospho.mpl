@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway norcraugsodine-to-o-pantetheine-4-phospho "Norcraugsodine to O-(pantetheine-4'-phospho…" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     norcraugsodine
@@ -24,45 +24,33 @@ pathway norcraugsodine-to-o-pantetheine-4-phospho "Norcraugsodine to O-(pantethe
     trans_caffeoyl_coa
   }
 
-  branch from 3_4_dihydroxybenzaldehyde side right {
-    3_4_dihydroxybenzaldehyde
-    <-> . +acetyl_coa +h +h2o
-    caffeoyl_coa
-  }
-
-  branch from tyramine side left {
+  branch from tyramine side right {
     tyramine
     <-> ec_2_3_1_110 [2.3.1.110] +trans_n_p_coumaroyl_tyramine +h +coa
     trans_4_coumaroyl_coa
   }
 
-  branch from o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory side right {
-    o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory
-    <-> . +n_citryl_spermidine +holo-acp +hplus
-    n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_203 [4.2.3.203] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    isoelisabethatriene
+    <-> . +atp
+    cyclic_a_2_5_pa_3_5_pa_3_5_p
   }
 
   branch from ppi side right {
     ppi
-    <-> . +l_tryptophan +gpp
-    2s_3r_3_geranyl_2_3_dihydro_2_n_cyclo_l_tryptop
+    <-> ec_3_1_7_13 [3.1.7.13] +neryl_diphosphate +h2o
+    nerol
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_glutamyl_amp +amp +hplus
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
+    o_s_3_2_4_dioxopentyl_3_6_8_9_tetrahydroxy_1_oxo
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_63 [6.2.1.63] +arginine +atp +amp +ppi
-    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
+    <-> . +malonyl-coa +hplus +co2 +coa +h2o
+    o_3r_atrochrysone_carboxylpantetheine_4_phosphor
   }
 }

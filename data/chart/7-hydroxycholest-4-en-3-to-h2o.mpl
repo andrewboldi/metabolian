@@ -18,25 +18,25 @@ pathway 7-hydroxycholest-4-en-3-to-h2o "7α-hydroxycholest-4-en-3-… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +s_linalool +h +nadph
-    2e_geranial
+    <-> ec_1_1_1_206 [1.1.1.206] +quinuclidinone +h +nadph
+    quinuclidin_2_ol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +h +eicosanoate +nadph +h2o
-    eicosanal
+    <-> ec_1_1_1_206 [1.1.1.206] +8_thiabicyclo_3_2_1_octan_3_ol +h +nadph
+    8_thiabicyclo_3_2_1_octane_3_one
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    mannobiose
+    <-> . +h +3_4_6_trihydroxy_cis_cinnamate
+    esculetin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +maltose_1_phosphate +phosphate +maltose_1_phosphate
-    atp
+    <-> . +s_usnate +h
+    hydratedusnate
   }
 }

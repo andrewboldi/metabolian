@@ -24,25 +24,25 @@ pathway n-acetyl-d-6-sulfogalac-to-h2o "N-acetyl-β-D-6-sulfogalac… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +cholesterol
-    cholesteryl_palmitate
+    <-> . +l_threo_3_methylmalic_acid +h
+    mesaconate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_hexadecenoate +h +cholesterol
-    cholesteryl_palmitoleate
+    <-> ec_4_2_1_84 [4.2.1.84] +indol_3_yl_acetonitrile
+    indole_3_acetamide
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +2e_hexadecenoyl_coa +diphosphate +amp +coa
-    9z_hexadecenoate
+    <-> ec_1_2_1_31 [1.2.1.31] +diphosphate +l_2_aminoadipate_adenylate +h
+    l_2_aminoadipate
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +6z_9z_12z_octadecatrienoyl_coa +diphosphate +amp +coa
-    9z_12z_15z_octadecatrienoate
+    <-> ec_2_7_1_102 [2.7.1.102] +h +d_hamamelose +adp
+    d_hamamelose_2_1_phosphate
   }
 }

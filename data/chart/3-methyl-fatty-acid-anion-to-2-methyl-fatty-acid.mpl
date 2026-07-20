@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid "3-methyl fatty acid anion to 2-methyl fatty acid anion" {
-  spacing 186
+  spacing 180
 
   spine at 0,0 {
     3_methyl_fatty_acid_anion
@@ -20,31 +20,25 @@ pathway 3-methyl-fatty-acid-anion-to-2-methyl-fatty-acid "3-methyl fatty acid an
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_83 [4.2.3.83] +fpp
-    santalene
+    <-> ec_4_2_3_96 [4.2.3.96] +fpp +h2o
+    avermitilol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_82 [4.2.3.82] +fpp
-    santalene
+    <-> ec_4_2_3_95 [4.2.3.95] +fpp
+    cuprenene
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_63 [1.14.11.63] +l_lysinium +akg +o2 +co2
-    3s_3_hydroxy_l_lysine_1
+    <-> . +eriodictyol +akg +o2 +co2
+    taxifolin
   }
 
   branch from succinate side right {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    4_hydroxy_l_lysine_1
-  }
-
-  branch from formyl_coa side left {
-    formyl_coa
-    <-> ec_4_1_1_8 [4.1.1.8] +hplus +co2
-    oxalyl_coa
+    <-> . +taxifolin +akg +o2 +co2 +h2o +hplus
+    quercetin_7_olate
   }
 }

@@ -24,14 +24,14 @@ pathway alpha-d-glucose-to-udp-l-iduronate "alpha-D-glucose to UDP-β-L-iduronat
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +chenodeoxycholate_3_o_d_glucuronide +h
-    chenodeoxycholate
+    <-> . +udp +pitavastatin_glucuronide
+    pitavastatin
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +cerivastatin_m23_glucuronide
-    cerivastatin_m23
+    <-> . +udp +pravastatin_glucuronide
+    pravastatin_sodium
   }
 
   branch from betanin side right {

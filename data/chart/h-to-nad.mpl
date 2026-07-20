@@ -28,62 +28,62 @@ pathway h-to-nad "H to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +chloride
-    beta_hexachlorocyclohexane
+    <-> . +l_leucine +h +o2 +nadph +nadp +3_methylbutyraldehyde_oxime
+    co2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +h +chloride +beta_2_3_5_6_tetrachloro_1_4_cyclohexanediol
-    beta_2_3_4_5_6_pentachlorocyclohexanol
+    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +4_methylthiobutylthiohydroximate +nh4
+    s_4_methylthiobutylthiohydroximoyl_l_cysteine
   }
 
   branch from coa side left {
     coa
-    <-> . +subaphyllin +h +e_feruloyl_coa
-    putrescine
+    <-> . +acetyl_coa +13_sophorosyloxydocosanoic_acid +h
+    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +n_demethyl_desepoxymaytansinol
-    n_demethyl_desepoxyansamitocin_p_3
+    <-> . +acetyl_coa +h +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
+    13_sophorosyloxydocosanoate_6_6_diacetate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +1_2_anthracenediol
-    anthracene_cis_1_2_dihydrodiol
+    <-> ec_1_3_1_25 [1.3.1.25] +nadh +co2 +h +4_fluorocatechol
+    4_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +9h_fluoren_9_one +h +o2
-    1_10_dihydro_1_10_dihydroxyfluoren_9_one
+    <-> ec_1_1_1_1 [1.1.1.1] +alcophosphamide +nadh +h
+    aldophosphamide
   }
 
   branch from o2 side left {
     o2
-    <-> . +1_2_anthracenediol
-    4_3_hydroxy_2_naphthyl_2_oxobut_3_enoic_acid
+    <-> ec_1_10_3_4 [1.10.3.4] +2_aminophenol +h2o
+    6_iminocyclohexa_2_4_dienone
   }
 
   branch from o2 side right {
     o2
-    <-> . +1_2_anthracenediol
-    3_2_carboxyvinyl_naphthalene_2_carboxylic_acid
+    <-> . +nadh +h +1_2_3_4_tetrachlorobenzene +nad
+    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
   }
 
   branch from atp side left {
     atp
-    <-> ec_7_6_2_14 [7.6.2.14] +h +adp +phosphate +h2o
-    alkanesulfonate_oxoanion
+    <-> . +diphosphate +n_benzoyl_l_glutamate +h +amp +l_glutamate
+    benzoate
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +2_3_4_saturated_fatty_acyl_coa +amp +coa
-    2_3_4_saturated_fatty_acid
+    <-> . +diphosphate +n_4_hydroxybenzoyl_l_glutamate +h +amp +l_glutamate
+    4_hydroxybenzoate
   }
 
   branch from 20_cooh_leukotriene_e4 side left {

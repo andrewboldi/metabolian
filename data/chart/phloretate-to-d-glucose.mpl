@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phloretate-to-d-glucose "phloretate to β-D-glucose" {
-  spacing 308
+  spacing 296
 
   spine at 0,0 {
     phloretate
@@ -14,17 +14,5 @@ pathway phloretate-to-d-glucose "phloretate to β-D-glucose" {
     1_o_4_coumaroyl_d_glucose
     <-> ec_2_3_1_213 [2.3.1.213] +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside -d_glucose -hplus
     cyanidin_3_o_6_o_6_o_4_coumaroyl_d_glucosyl_2_o
-  }
-
-  branch from 1_o_4_coumaroyl_d_glucose side left {
-    1_o_4_coumaroyl_d_glucose
-    <-> . +glucose +celosianin_i +h
-    amaranthin
-  }
-
-  branch from 1_o_4_coumaroyl_d_glucose side right {
-    1_o_4_coumaroyl_d_glucose
-    <-> ec_2_3_1_213 [2.3.1.213] +glucose +cyanidin_3_o_6_o_4_coumaroyl_beta_d_glucosyl_1_6 +h
-    cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "valienol-1-phosphate-to-succinate",
   "name": "valienol 1-phosphate to succinate",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from valienol 1-phosphate(2−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -192,32 +192,66 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "r_carnitinyl_coa",
+      "name": "(R)-carnitinyl-CoA",
+      "formula": "C28H46N8O18P3S",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:60932"
       }
     },
     {
-      "id": "trans_farnesene",
-      "name": "trans-β-farnesene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:10418"
+        "chebi": "CHEBI:456215"
       }
     },
     {
-      "id": "2_trans_6_trans_farnesol",
-      "name": "(2-trans,6-trans)-farnesol",
-      "short": "(2-trans,6-trans)-f…",
-      "formula": "C15H26O",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16619"
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "l_seryl_amp",
+      "name": "L-seryl-AMP",
+      "formula": "C13H18N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61231"
       }
     },
     {
@@ -230,42 +264,41 @@
       }
     },
     {
-      "id": "l_aspartate",
-      "name": "L-aspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
+      "id": "icosanoyl_coa",
+      "name": "icosanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:29961"
+        "chebi": "CHEBI:57380"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_aspartate",
-      "name": "(3S)-3-hydroxy-L-aspartate",
-      "short": "3-hydroxy-L-asparta…",
-      "formula": "C4H4NO4",
-      "charge": -1,
+      "id": "2_hydroxyicosanoyl_coa",
+      "name": "2-hydroxyicosanoyl-CoA",
+      "short": "2-hydroxyicosanoyl-…",
+      "formula": "C41H70N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138111"
+        "chebi": "CHEBI:138298"
       }
     },
     {
-      "id": "2r_3s_4s_leucoanthocyanidin",
-      "name": "(2R,3S,4S)-leucoanthocyanidin",
-      "short": "(2R,3S,4S)-leucoant…",
-      "formula": "C15H5O3R9",
-      "charge": 0,
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138176"
+        "chebi": "CHEBI:57394"
       }
     },
     {
-      "id": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
-      "name": "4-unsubstituted 3-hydroxyanthocyanidin betaine",
-      "short": "4-unsubstituted…",
-      "formula": "C15HO2R9",
-      "charge": 0,
+      "id": "2_hydroxystearoyl_coa",
+      "name": "2-hydroxystearoyl-CoA",
+      "short": "2-hydroxystearoyl-C…",
+      "formula": "C39H66N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138177"
+        "chebi": "CHEBI:74116"
       }
     }
   ],
@@ -306,31 +339,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_47",
-      "name": "beta-farnesene synthase",
+      "id": "ec_6_2_1_48",
+      "name": "carnitine--CoA ligase",
       "ec": [
-        "4.2.3.47"
-      ]
-    },
-    {
-      "id": "ec_3_1_7_6",
-      "name": "farnesyl diphosphatase",
-      "ec": [
-        "3.1.7.6"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_n4",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "ec": [
-        "1.14.11.n4"
-      ]
-    },
-    {
-      "id": "ec_1_14_20_4",
-      "name": "anthocyanidin synthase",
-      "ec": [
-        "1.14.20.4"
+        "6.2.1.48"
       ]
     }
   ],
@@ -586,18 +598,30 @@
     },
     {
       "id": "r6",
-      "name": "beta-farnesene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (E)-beta-farnesene + diphosphate",
-      "ec": "4.2.3.47",
+      "name": "carnitine--CoA ligase",
+      "equation": "(R)-carnitine + ATP + CoA = (R)-carnitinyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.48",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_farnesene",
+          "metabolite": "r_carnitinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -607,42 +631,41 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_47"
+          "enzyme": "ec_6_2_1_48"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27425"
+        "rhea": "RHEA:28514"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27425"
+            "id": "RHEA:28514"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "farnesyl diphosphatase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2E,6E)-farnesol + diphosphate",
-      "ec": "3.1.7.6",
+      "name": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
+      "equation": "L-serine + ATP = L-seryl-5'-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_trans_6_trans_farnesol",
+          "metabolite": "l_seryl_amp",
           "stoichiometry": 1
         },
         {
@@ -650,22 +673,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_7_6"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:27526"
+        "rhea": "RHEA:28570"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27526"
+            "id": "RHEA:28570"
           }
         ]
       }
@@ -723,12 +741,11 @@
     },
     {
       "id": "r9",
-      "name": "ankyrin-repeat-histidine dioxagenase",
-      "equation": "L-aspartyl-[ankyrin-repeat domain protein] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-aspartyl-[ankyrin-repeat domain protein] + succinate + CO2",
-      "ec": "1.14.11.n4",
+      "name": "eicosanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyeicosanoyl-CoA + succinate + CO2",
+      "equation": "eicosanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyeicosanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "l_aspartate",
+          "metabolite": "icosanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -742,7 +759,7 @@
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_aspartate",
+          "metabolite": "2_hydroxyicosanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -754,34 +771,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_n4"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:54280"
+        "rhea": "RHEA:54620"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54280"
+            "id": "RHEA:54620"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "anthocyanidin synthase",
-      "equation": "a (2R,3S,4S)-leucoanthocyanidin + 2-oxoglutarate + O2 = a 4-H-anthocyanidin with a 3-hydroxy group + succinate + CO2 + 2 H2O",
-      "ec": "1.14.20.4",
+      "name": "octadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctadecanoyl-CoA + succinate + CO2",
+      "equation": "octadecanoyl-CoA + 2-oxoglutarate + O2 = 2-hydroxyoctadecanoyl-CoA + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "2r_3s_4s_leucoanthocyanidin",
+          "metabolite": "stearoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -795,7 +806,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_unsubstituted_3_hydroxyanthocyanidin_betaine",
+          "metabolite": "2_hydroxystearoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -805,28 +816,19 @@
         {
           "metabolite": "co2",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_20_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:54432"
+        "rhea": "RHEA:54624"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54432"
+            "id": "RHEA:54624"
           }
         ]
       }

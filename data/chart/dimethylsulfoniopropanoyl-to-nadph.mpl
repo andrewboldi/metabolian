@@ -18,26 +18,26 @@ pathway dimethylsulfoniopropanoyl-to-nadph "dimethylsulfoniopropanoyl… to NADP
 
   branch from h side left {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +2_phenylacetamide +h2o +phenyl_acetate
-    nh4
+    <-> . +6r_10_formyltetrahydrofolate +atp +l_glutamate +adp +phosphate +h2o
+    10_formyltetrahydrofolate_glu_5
   }
 
   branch from h side right {
     h
-    <-> ec_1_20_4_1 [1.20.4.1] +arsenate +glutathione +arsenous_acid +h2o
-    glutathione_disulfide
+    <-> . +adp +fluvastatin +phosphate +fluvastatin +h2o
+    atp
   }
 
   branch from coa side left {
     coa
-    <-> . +dodecanedioyl_coa +r_carnitine +h
-    4s_4_11_carboxyundecanoyl_oxy_4_trimethylammoni
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +h2o +h
+    10z_13z_16z_docosatrienoate
   }
 
   branch from coa side right {
     coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +3_6_9_dodecatrienoyl_coenzyme_a +5_8_11_tetradecatrienoyl_coenzyme_a +nad +h2o
-    o2
+    <-> . +7z_hexadecenoyl_coa +r_carnitine
+    2e_hexadecenoylcarnitine
   }
 
   branch from 3_hydroxypropanoyl_coa side left {
@@ -48,14 +48,14 @@ pathway dimethylsulfoniopropanoyl-to-nadph "dimethylsulfoniopropanoyl… to NADP
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +s_lactate
-    s_lactoyl_coa
+    <-> . +digitoxin +h +h2o
+    3_o_acetyldigitoxin
   }
 
   branch from acetate side left {
     acetate
-    <-> . +menaquinol_7 +co2 +pyruvate +h2o
-    menaquinone_7
+    <-> . +ditrans_octacis_undecaprenyldiphospho_n_acetyl_n
+    ditrans_octacis_undecaprenyldiphospho_n_acetylgl
   }
 
   branch from 3_oxopropanoyl_coa side right {
@@ -66,13 +66,13 @@ pathway dimethylsulfoniopropanoyl-to-nadph "dimethylsulfoniopropanoyl… to NADP
 
   branch from nadph side left {
     nadph
-    <-> . +hexanoate +h +o2 +nadp +h2o
-    5_hydroxyhexanoic_acid
+    <-> . +octyl_acetate +nadp +h2o +h +decan_2_one
+    o2
   }
 
   branch from nadph side right {
     nadph
-    <-> . +6_beta_oh_gliclazide +nadp +h2o +h +o2
-    gliclazide
+    <-> . +h +o2 +phenylarsonous_acid +nadp +h2o
+    phenylarsonic_acid
   }
 }

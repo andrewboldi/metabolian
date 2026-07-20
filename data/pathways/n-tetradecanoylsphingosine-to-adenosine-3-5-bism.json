@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "n-tetradecanoylsphingosine-to-adenosine-3-5-bism",
   "name": "N-tetradecanoylsphingosine to adenosine 3',5'-bismonoph…",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from N-tetradecanoylsphingosine to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -121,50 +121,42 @@
       }
     },
     {
-      "id": "c24_1_coa",
-      "name": "C24:1-CoA",
-      "formula": "C45H76N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:74146"
-      }
-    },
-    {
-      "id": "n_tetracosenoylsphingosine",
-      "name": "N-tetracosenoylsphingosine",
-      "short": "N-tetracosenoylsphi…",
-      "formula": "C42H81NO3",
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74457"
+        "chebi": "CHEBI:4139"
       }
     },
     {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:59789"
       }
     },
     {
-      "id": "n_icosanoylsphingosine",
-      "name": "N-icosanoylsphingosine",
-      "short": "N-icosanoylsphingos…",
-      "formula": "C38H75NO3",
+      "id": "n_n_dimethylsphingosine",
+      "name": "N,N-dimethylsphingosine",
+      "short": "N,N-dimethylsphingo…",
+      "formula": "C20H42NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:189587"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72962"
-      }
-    },
-    {
-      "id": "icosanoate",
-      "name": "icosanoate",
-      "formula": "C20H39O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32360"
+        "chebi": "CHEBI:57856"
       }
     },
     {
@@ -175,6 +167,15 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -194,15 +195,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:77392"
-      }
-    },
-    {
-      "id": "d_galactopyranose",
-      "name": "D-galactopyranose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:4139"
       }
     },
     {
@@ -405,54 +397,11 @@
     },
     {
       "id": "r4",
-      "name": "tetracosenoyl-CoA + sphing-4-enine = N-(tetracosenoyl)-sphing-4-enine + CoA + H(+)",
-      "equation": "tetracosenoyl-CoA + sphing-4-enine = N-(tetracosenoyl)-sphing-4-enine + CoA + H(+)",
+      "name": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
+      "equation": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
       "substrates": [
         {
-          "metabolite": "c24_1_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sphingosine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_tetracosenoylsphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:37123"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:37123"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "N-eicosanoyl-sphing-4-enine + H2O = eicosanoate + sphing-4-enine",
-      "equation": "N-eicosanoyl-sphing-4-enine + H2O = eicosanoate + sphing-4-enine",
-      "substrates": [
-        {
-          "metabolite": "n_icosanoylsphingosine",
+          "metabolite": "psychosine",
           "stoichiometry": 1
         },
         {
@@ -462,25 +411,68 @@
       ],
       "products": [
         {
-          "metabolite": "icosanoate",
+          "metabolite": "sphingosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sphingosine",
+          "metabolite": "d_galactopyranose",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:41275"
+        "rhea": "RHEA:43908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41275"
+            "id": "RHEA:43908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "sphing-4-enine + 2 S-adenosyl-L-methionine = N,N-dimethylsphing-4-enine + 2 S-adenosyl-...",
+      "equation": "sphing-4-enine + 2 S-adenosyl-L-methionine = N,N-dimethylsphing-4-enine + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_n_dimethylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:70475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70475"
           }
         ]
       }
@@ -573,45 +565,6 @@
     },
     {
       "id": "r8",
-      "name": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
-      "equation": "beta-D-galactosyl-(1<->1)-sphing-4-enine + H2O = sphing-4-enine + D-galactose",
-      "substrates": [
-        {
-          "metabolite": "psychosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sphingosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_galactopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:43908"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:43908"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "quercetin-3,3'-bissulfate 7-sulfotransferase",
       "equation": "quercetin 3,3'-bissulfate + 3'-phosphoadenylyl sulfate = quercetin 3,3',7-trissulfate + adenosine 3',5'-bisphosphate + H(+)",
       "ec": "2.8.2.28",
@@ -645,7 +598,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:21860"
       },
@@ -660,7 +613,7 @@
       }
     },
     {
-      "id": "r10",
+      "id": "r9",
       "name": "quercetin-3-sulfate 3'-sulfotransferase",
       "equation": "quercetin 3-sulfate + 3'-phosphoadenylyl sulfate = quercetin 3,3'-bissulfate + adenosine 3',5'-bisphosphate + H(+)",
       "ec": "2.8.2.26",
@@ -694,7 +647,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:22504"
       },

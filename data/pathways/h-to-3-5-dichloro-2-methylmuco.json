@@ -82,42 +82,67 @@
       }
     },
     {
-      "id": "2_dehydro_d_gluconate",
-      "name": "2-dehydro-D-gluconate",
-      "short": "2-dehydro-D-glucona…",
-      "formula": "C6H9O7",
-      "charge": -1,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM582"
+        "metanetx": "MNXM10"
       }
     },
     {
-      "id": "2_dehydro_d_glucono_1_5_lactone",
-      "name": "2-Dehydro-D-glucono-1,5-lactone",
-      "short": "2-Dehydro-D-glucono…",
-      "formula": "C6H8O6",
+      "id": "dtdp_d_galacturonate",
+      "name": "dTDP-D-galacturonate",
+      "formula": "C16H24N2O17P2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM34981"
+        "metanetx": "MNXM3267"
       }
     },
     {
-      "id": "enol_oxaloacetate",
-      "name": "enol-oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
+      "id": "dtdp_d_galactose",
+      "name": "dTDP-D-galactose",
+      "formula": "C16H26N2O16P2",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM163366"
+        "chebi": "CHEBI:14086"
       }
     },
     {
-      "id": "acetylenedicarboxylate",
-      "name": "acetylenedicarboxylate",
-      "short": "acetylenedicarboxyl…",
-      "formula": "C4O4",
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "glycyrrhetinate",
+      "name": "glycyrrhetinate",
+      "formula": "C30H45O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1365666"
+      }
+    },
+    {
+      "id": "2_beta_d_glucuronosyl_d_glucuronate",
+      "name": "2-(beta-D-glucuronosyl)-D-glucuronate",
+      "short": "2-(beta-D-glucurono…",
+      "formula": "C12H16O13",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM3207"
+        "metanetx": "MNXM730912"
+      }
+    },
+    {
+      "id": "glycyrrhizinate",
+      "name": "Glycyrrhizinate",
+      "formula": "C42H62O16",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368592"
       }
     }
   ],
@@ -137,10 +162,17 @@
       ]
     },
     {
-      "id": "ec_4_1_1_78",
-      "name": "acetylenedicarboxylate decarboxylase",
+      "id": "ec_1_1_1_186",
+      "name": "dTDP-galactose 6-dehydrogenase",
       "ec": [
-        "4.1.1.78"
+        "1.1.1.186"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_128",
+      "name": "glycyrrhizinate beta-glucuronidase",
+      "ec": [
+        "3.2.1.128"
       ]
     }
   ],
@@ -275,55 +307,77 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR139128",
+      "name": "dTDP-galactose 6-dehydrogenase",
+      "ec": "1.1.1.186",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
+          "metabolite": "nadh",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "2_dehydro_d_gluconate",
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dtdp_d_galacturonate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_dehydro_d_glucono_1_5_lactone",
+          "metabolite": "dtdp_d_galactose",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_186"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR139128"
+        "metanetx": "MNXR148387"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR139128"
+            "id": "MNXR148387"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "acetylenedicarboxylate decarboxylase",
-      "ec": "4.1.1.78",
+      "name": "glycyrrhizinate beta-glucuronidase",
+      "ec": "3.2.1.128",
       "substrates": [
         {
-          "metabolite": "enol_oxaloacetate",
+          "metabolite": "glycyrrhetinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "2_beta_d_glucuronosyl_d_glucuronate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acetylenedicarboxylate",
+          "metabolite": "glycyrrhizinate",
           "stoichiometry": 1
         },
         {
@@ -333,20 +387,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_1_78"
+          "enzyme": "ec_3_2_1_128"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR139258"
+        "metanetx": "MNXR148450"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR139258"
+            "id": "MNXR148450"
           }
         ]
       }

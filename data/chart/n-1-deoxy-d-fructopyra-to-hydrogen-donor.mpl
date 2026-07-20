@@ -36,25 +36,25 @@ pathway n-1-deoxy-d-fructopyra-to-hydrogen-donor "N-(1-deoxy-β-D-fructopyra… 
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nad +h2o +nadh +hplus
-    ketone
+    <-> . +3_aminobutan_1_ol +nad +h2o +nadh +hplus
+    4_hydroxybutan_2_one
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_28 [1.4.1.28] +nadp +h2o +ketone +nadph +hplus
-    two_alkyl_ammonium_ion
+    <-> . +5_hydroxypentan_2_aminium +nad +h2o +nadh +hplus
+    5_hydroxypentan_2_one
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +chrodrimanin_f +hydrogen_acceptor
-    chrodrimanin_h
+    <-> . +holo-acp +malonyl-coa +acetyl_coa +nadph +hplus +hydrogen_acceptor +co2 +nadp +coa +h2o
+    o_s_3r_hydroxyoctadeca_4_10_dienoylpantetheine_4
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_17_99_10 [1.17.99.10] +cholest_1_4_dien_3_one +hydrogen_acceptor +h2o
-    25_hydroxycholest_1_4_dien_3_one
+    <-> . +3_iodo_l_thyronine +iodide +hydrogen_acceptor +hplus
+    3_5_diiodo_l_thyronine
   }
 }

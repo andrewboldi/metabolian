@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2 "dihydroprecondylocarpine… to 3-epoxy-16-methoxy-2,3-di…" {
-  spacing 242
+  spacing 236
 
   spine at 0,0 {
     dihydroprecondylocarpine_acetate
@@ -26,39 +26,33 @@ pathway dihydroprecondylocarpine-to-3-epoxy-16-methoxy-2 "dihydroprecondylocarpi
     r_19_hydroxytabersonine
   }
 
-  branch from tabersoninium side right {
-    tabersoninium
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    lochnericine
+  branch from fmn side right {
+    fmn
+    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_deoxycorticosterone
   }
 
   branch from fmn side left {
     fmn
-    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxylipoxin_a4
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_8_hydroxyoleoyl_sn_glycero_3_phosphocholine
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +lipoxin_b4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxylipoxin_b4
-  }
-
-  branch from 16_methoxytabersoninium side left {
+  branch from 16_methoxytabersoninium side right {
     16_methoxytabersoninium
     <-> . +h2o
     3r_3_hydroxy_16_methoxy_2_3_dihydrotabersonine
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_193 [2.1.1.193] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
-  }
-
   branch from sah side left {
     sah
-    <-> ec_2_1_1_198 [2.1.1.198] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_211 [2.1.1.211] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_213 [2.1.1.213] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
   }
 }

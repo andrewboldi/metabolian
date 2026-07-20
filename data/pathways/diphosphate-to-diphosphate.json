@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "diphosphate-to-diphosphate",
   "name": "diphosphate to diphosphate",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 6-step route from diphosphate to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -133,23 +133,40 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
+      "id": "isopentenyl_phosphate",
+      "name": "isopentenyl phosphate",
+      "short": "isopentenyl P",
+      "formula": "C5H9O4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:65078"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     },
     {
@@ -171,31 +188,62 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "2_phosphonato_l_lactate",
+      "name": "2-phosphonato-L-lactate",
+      "short": "2-phosphonato-L-lac…",
+      "formula": "C3H4O6P",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:59906"
       }
     },
     {
-      "id": "cyclic_hexaadenylate",
-      "name": "cyclic hexaadenylate",
-      "formula": "C60H66N30O36P6",
-      "charge": -6,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142456"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "cyclic_tetraadenylate",
-      "name": "cyclic tetraadenylate",
-      "short": "cyclic tetraadenyla…",
-      "formula": "C40H44N20O24P4",
+      "id": "l_lactyl_2_diphospho_5_guanosine",
+      "name": "L-lactyl-2-diphospho-5'-guanosine",
+      "short": "L-lactyl-2-diphosph…",
+      "formula": "C13H16N5O13P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:59435"
+      }
+    },
+    {
+      "id": "2_aminoethyl_phosphonic_acid",
+      "name": "(2-aminoethyl)phosphonic acid",
+      "short": "(2-aminoethyl)phosp…",
+      "formula": "C2H8NO3P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57418"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142457"
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_2_aminoethyl_phosphonate",
+      "name": "CMP-(2-aminoethyl)phosphonate",
+      "short": "CMP-(2-aminoethyl)p…",
+      "formula": "C11H19N4O10P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:147307"
       }
     }
   ],
@@ -205,6 +253,27 @@
       "name": "trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl",
       "ec": [
         "2.5.1.88"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_76",
+      "name": "prenyl-diphosphate phosphatase",
+      "ec": [
+        "3.6.1.76"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_68",
+      "name": "2-phospho-L-lactate guanylyltransferase",
+      "ec": [
+        "2.7.7.68"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_107",
+      "name": "(2-aminoethyl)phosphonate cytidylyltransferase",
+      "ec": [
+        "2.7.7.107"
       ]
     }
   ],
@@ -491,39 +560,49 @@
     },
     {
       "id": "r8",
-      "name": "2 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2E,6E,10E,14E)-geranylfarne...",
-      "equation": "2 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2E,6E,10E,14E)-geranylfarnesyl diphosphate + 2 diphosphate",
+      "name": "prenyl-diphosphate phosphatase",
+      "equation": "isopentenyl diphosphate + H2O = isopentenyl phosphate + phosphate + H(+)",
+      "ec": "3.6.1.76",
       "substrates": [
         {
           "metabolite": "ipp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
-          "metabolite": "fpp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "metabolite": "isopentenyl_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 2
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_76"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:66852"
+        "rhea": "RHEA:70503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66852"
+            "id": "RHEA:70503"
           }
         ]
       }
@@ -600,70 +679,94 @@
     },
     {
       "id": "r11",
-      "name": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
-      "equation": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
+      "name": "2-phospho-L-lactate guanylyltransferase",
+      "equation": "(2S)-2-phospholactate + GTP + H(+) = (2S)-lactyl-2-diphospho-5'-guanosine + diphosphate",
+      "ec": "2.7.7.68",
       "substrates": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 6
+          "metabolite": "2_phosphonato_l_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyclic_hexaadenylate",
+          "metabolite": "l_lactyl_2_diphospho_5_guanosine",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 6
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_68"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:58276"
+        "rhea": "RHEA:63424"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58276"
+            "id": "RHEA:63424"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
-      "equation": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
+      "name": "(2-aminoethyl)phosphonate cytidylyltransferase",
+      "equation": "(2-aminoethyl)phosphonate + CTP = CMP-(2-aminoethyl)phosphonate + diphosphate",
+      "ec": "2.7.7.107",
       "substrates": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 4
+          "metabolite": "2_aminoethyl_phosphonic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyclic_tetraadenylate",
+          "metabolite": "cmp_2_aminoethyl_phosphonate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 4
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_107"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:58280"
+        "rhea": "RHEA:63448"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58280"
+            "id": "RHEA:63448"
           }
         ]
       }

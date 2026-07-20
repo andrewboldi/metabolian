@@ -18,13 +18,13 @@ pathway 2-isobutyrylphloroglucinol-to-diphosphate "2-isobutyrylphloroglucinol to
 
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    alpha_springene
+    <-> . +fpp +h2o
+    eudesmol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    talarodiene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_trachylobane
   }
 }

@@ -130,12 +130,39 @@
       }
     },
     {
-      "id": "urea_1_carboxylate",
-      "name": "urea-1-carboxylate",
-      "formula": "C2H3N2O3",
-      "charge": -1,
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM1122"
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "22_2_18_3_pc",
+      "name": "22:2-18:3-PC",
+      "formula": "C48H86NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:191355"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
       }
     },
     {
@@ -148,79 +175,40 @@
       }
     },
     {
-      "id": "carbamate",
-      "name": "carbamate",
-      "formula": "CH2NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:13941"
-      }
-    },
-    {
-      "id": "4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa",
-      "name": "4-isopropenyl-2-oxocyclohexane-1-carbonyl-CoA",
-      "short": "4-isopropenyl-2-oxo…",
-      "formula": "C31H48N7O18P3S",
+      "id": "pe_20_1_11z_18_3_9z_12z_15z",
+      "name": "PE(20:1(11Z)/18:3(9Z,12Z,15Z))",
+      "short": "PE(20:1(11Z)/18:3(9…",
+      "formula": "C43H78NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29489"
+        "chebi": "CHEBI:170653"
       }
     },
     {
-      "id": "4_isopropenyl_pimeloyl_coa",
-      "name": "4-(isopropenyl)pimeloyl-CoA",
-      "short": "4-(isopropenyl)pime…",
-      "formula": "C31H45N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "metanetx": "MNXM818348"
-      }
-    },
-    {
-      "id": "an_oxosteroid",
-      "name": "an oxosteroid",
-      "formula": "C17H26O",
+      "id": "r_linalool",
+      "name": "(R)-linalool",
+      "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM66077"
+        "chebi": "CHEBI:28"
       }
     },
     {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
+      "id": "phellandral",
+      "name": "Phellandral",
+      "formula": "C10H16O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM735438"
+        "chebi": "CHEBI:167401"
       }
     },
     {
-      "id": "steroid_esters",
-      "name": "Steroid-Esters",
-      "formula": "C17H26O2",
+      "id": "s_linalool",
+      "name": "(S)-linalool",
+      "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM21884"
-      }
-    },
-    {
-      "id": "24r_24_hydroxycholesterol",
-      "name": "(24R)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50516"
-      }
-    },
-    {
-      "id": "24r_7_24_dihydroxycholesterol",
-      "name": "(24R)-7α,24-dihydroxycholesterol",
-      "short": "7α,24-dihydroxychol…",
-      "formula": "C27H46O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50518"
+        "chebi": "CHEBI:98"
       }
     }
   ],
@@ -247,17 +235,17 @@
       ]
     },
     {
-      "id": "ec_1_14_13_54",
-      "name": "ketosteroid monooxygenase",
+      "id": "ec_3_6_3_1",
+      "name": "EC 3.6.3.1",
       "ec": [
-        "1.14.13.54"
+        "3.6.3.1"
       ]
     },
     {
-      "id": "ec_1_14_13_99",
-      "name": "EC 1.14.13.99",
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
       "ec": [
-        "1.14.13.99"
+        "1.1.1.71"
       ]
     }
   ],
@@ -449,10 +437,33 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR164572",
+      "name": "Reaction MNXR174637",
+      "ec": "3.6.3.1",
       "substrates": [
         {
-          "metabolite": "urea_1_carboxylate",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "22_2_18_3_pc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "22_2_18_3_pc",
           "stoichiometry": 1
         },
         {
@@ -460,37 +471,55 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carbamate",
-          "stoichiometry": 2
+          "enzyme": "ec_3_6_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR164572"
+        "metanetx": "MNXR174637"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR164572"
+            "id": "MNXR174637"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR164615",
+      "name": "Reaction MNXR174641",
+      "ec": "3.6.3.1",
       "substrates": [
         {
-          "metabolite": "4_isopropenyl_2_oxocyclohexane_1_carbonyl_coa",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pe_20_1_11z_18_3_9z_12z_15z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pe_20_1_11z_18_3_9z_12z_15z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -498,139 +527,118 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "h",
-          "stoichiometry": 5
-        },
-        {
-          "metabolite": "4_isopropenyl_pimeloyl_coa",
-          "stoichiometry": 1
+          "enzyme": "ec_3_6_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR164615"
+        "metanetx": "MNXR174641"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR164615"
+            "id": "MNXR174641"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "ketosteroid monooxygenase",
-      "ec": "1.14.13.54",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "an_oxosteroid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "steroid_esters",
+          "metabolite": "r_linalool",
           "stoichiometry": 1
         },
         {
           "metabolite": "nadp",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phellandral",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_54"
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR173925"
+        "metanetx": "MNXR181244"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR173925"
+            "id": "MNXR181244"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR173932",
-      "ec": "1.14.13.99",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "s_linalool",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "24r_24_hydroxycholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nadp",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "24r_7_24_dihydroxycholesterol",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "phellandral",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_13_99"
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR173932"
+        "metanetx": "MNXR181246"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR173932"
+            "id": "MNXR181246"
           }
         ]
       }

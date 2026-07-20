@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-deoxy-11-oxopentalenate-to-neopentalenoketolac "1-deoxy-11-oxopentalenate to neopentalenoketolactone" {
-  spacing 238
+  spacing 220
 
   spine at 0,0 {
     1_deoxy_11_oxopentalenate
@@ -18,57 +18,39 @@ pathway 1-deoxy-11-oxopentalenate-to-neopentalenoketolac "1-deoxy-11-oxopentalen
     neopentalenoketolactone
   }
 
-  branch from neopentalenolactone_d side left {
-    neopentalenolactone_d
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from neopentalenolactone_e side right {
-    neopentalenolactone_e
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    h
-  }
-
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_1_11z_18_2_9z_12z +h
-    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
+    <-> ec_4_1_1_65 [4.1.1.65] +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn +1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    h
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_0_18_3_9z_12z_15z +h
-    20_0_18_3_ps
+    <-> ec_4_1_1_65 [4.1.1.65] +24_1_18_3_pe +h
+    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
   }
 
   branch from succinate side left {
     succinate
-    <-> . +6as_9s_10r_10as_9_ethenyl_10_isocyano_6_6_9_tri +2_oxoglutarate +h +o2 +chloride +co2 +h2o
-    6ar_8r_9s_10r_10as_8_chloro_9_ethenyl_10_isocya
+    <-> . +7s_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +co2 +2_oxoglutarate +o2
+    11s_16s_ent_kauran_11_16_epoxy_19_oate
   }
 
   branch from succinate side right {
     succinate
-    <-> . +ambiguine_b +co2 +h2o +2_oxoglutarate +h +o2 +chloride
-    ambiguine_c
+    <-> ec_1_3_5_1 [1.3.5.1] +plastoquinone_9 +fumarate
+    plastoquinol_9
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    beta_cellobiose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    nitrocefin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_galp_1_6_d_galp
-  }
-
-  branch from neopentalenolactone_f side left {
-    neopentalenolactone_f
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    adp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +imipenem +phosphate +imipenem
+    atp
   }
 }

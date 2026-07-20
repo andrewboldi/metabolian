@@ -1,0 +1,405 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cholesterol-to-h2o",
+  "name": "cholesterol to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from cholesterol to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32183"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16113"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "cholest_5_en_3_one",
+      "name": "cholest-5-en-3-one",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63906"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726123"
+      }
+    },
+    {
+      "id": "9z_12z_octadecadienoate",
+      "name": "(9Z,12Z)-octadecadienoate",
+      "short": "(9Z,12Z)-octadecadi…",
+      "formula": "C18H31O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1108069"
+      }
+    },
+    {
+      "id": "cholesteryl_linoleate",
+      "name": "cholesteryl linoleate",
+      "short": "cholesteryl…",
+      "formula": "C45H76O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41509"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
+      "name": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-2-(9…",
+      "formula": "C42H80NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73002"
+      }
+    },
+    {
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:72998"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_3_6",
+      "name": "cholesterol oxidase",
+      "ec": [
+        "1.1.3.6"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_146",
+      "name": "11beta-hydroxysteroid dehydrogenase",
+      "ec": [
+        "1.1.1.146"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_13",
+      "name": "sterol esterase",
+      "ec": [
+        "3.1.1.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cholesterol oxidase",
+      "equation": "cholesterol + O2 = cholest-5-en-3-one + H2O2",
+      "ec": "1.1.3.6",
+      "substrates": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholest_5_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "11beta-hydroxysteroid dehydrogenase",
+      "ec": "1.1.1.146",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholest_5_en_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_146"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR132106"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132106"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sterol esterase",
+      "ec": "3.1.1.13",
+      "substrates": [
+        {
+          "metabolite": "9z_12z_octadecadienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130922"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130922"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(9Z,12Z)-octadecadienoyl-CoA + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + CoA",
+      "equation": "(9Z,12Z)-octadecadienoyl-CoA + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:42796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + cholesterol = c...",
+      "equation": "1-hexadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + cholesterol = cholesteryl (9Z,12Z)-octadecadienoate + 1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:53472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53472"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucopyranose-to-1-o-trans-cinnamoyl-bet",
   "name": "D-glucopyranose to 1-O-(trans-cinnamoyl)-bet…",
-  "category": "redox-detox",
+  "category": "other",
   "summary": "A 3-step route from D-glucopyranose to 1-O-(trans-cinnamoyl)-beta-D-glucose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -83,6 +83,15 @@
       }
     },
     {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
       "id": "methyl_trans_cinnamate",
       "name": "methyl trans-cinnamate",
       "short": "methyl trans-cinnam…",
@@ -99,15 +108,6 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM729799"
-      }
-    },
-    {
-      "id": "beta_d_glucose",
-      "name": "beta-D-glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364060"
       }
     },
     {
@@ -174,12 +174,13 @@
       }
     },
     {
-      "id": "glucoerucin",
-      "name": "glucoerucin",
-      "formula": "C12H22NO9S3",
-      "charge": -1,
+      "id": "6_o_methyl_n_deacetylipecoside",
+      "name": "6-O-methyl-N-deacetylipecoside",
+      "short": "6-O-methyl-N-deacet…",
+      "formula": "C26H36NO11",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:5404"
+        "chebi": "CHEBI:229558"
       }
     },
     {
@@ -192,40 +193,32 @@
       }
     },
     {
-      "id": "z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim",
-      "name": "(Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate",
-      "short": "4-methylsulfanylbut…",
-      "formula": "C6H12NO4S3",
-      "charge": -1,
+      "id": "6_o_methyl_n_deacetylipecoside_aglycone",
+      "name": "6-O-methyl-N-deacetylipecoside aglycone",
+      "short": "6-O-methyl-N-deacet…",
+      "formula": "C20H26NO6",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:183222"
+        "chebi": "CHEBI:229559"
       }
     },
     {
-      "id": "d_glucitol",
-      "name": "D-glucitol",
-      "formula": "C6H14O6",
-      "charge": 0,
+      "id": "deacetylisoipecoside",
+      "name": "deacetylisoipecoside",
+      "formula": "C25H34NO11",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:17924"
+        "chebi": "CHEBI:58091"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "n_deacetylisoipecoside_aglycone",
+      "name": "N-deacetylisoipecoside aglycone",
+      "short": "N-deacetylisoipecos…",
+      "formula": "C19H24NO6",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:229557"
       }
     },
     {
@@ -286,6 +279,13 @@
       "name": "arylesterase",
       "ec": [
         "3.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_220",
+      "name": "ipecoside beta-D-glucosidase",
+      "ec": [
+        "3.2.1.220"
       ]
     },
     {
@@ -435,7 +435,7 @@
       "ec": "2.3.1.152",
       "substrates": [
         {
-          "metabolite": "glucose",
+          "metabolite": "beta_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -461,14 +461,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR108872"
+        "metanetx": "MNXR173378"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR108872"
+            "id": "MNXR173378"
           }
         ]
       }
@@ -479,7 +479,7 @@
       "ec": "2.3.1.152",
       "substrates": [
         {
-          "metabolite": "beta_d_glucose",
+          "metabolite": "alpha_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -505,14 +505,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR173378"
+        "metanetx": "MNXR173379"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR173378"
+            "id": "MNXR173379"
           }
         ]
       }
@@ -611,11 +611,12 @@
     },
     {
       "id": "r8",
-      "name": "glucoerucin + H2O = (Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate + D-gl...",
-      "equation": "glucoerucin + H2O = (Z)-4-methylsulfanylbutyl-N-(sulfonatooxy)methanimidothioate + D-glucose",
+      "name": "ipecoside beta-D-glucosidase",
+      "equation": "6-O-methyldeacetylipecoside + H2O = 6-O-methyldeacetylipecoside aglycone + D-glucose",
+      "ec": "3.2.1.220",
       "substrates": [
         {
-          "metabolite": "glucoerucin",
+          "metabolite": "6_o_methyl_n_deacetylipecoside",
           "stoichiometry": 1
         },
         {
@@ -625,7 +626,7 @@
       ],
       "products": [
         {
-          "metabolite": "z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim",
+          "metabolite": "6_o_methyl_n_deacetylipecoside_aglycone",
           "stoichiometry": 1
         },
         {
@@ -633,56 +634,61 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_220"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:69320"
+        "rhea": "RHEA:78883"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69320"
+            "id": "RHEA:78883"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "D-sorbitol + O2 = D-glucose + H2O2",
-      "equation": "D-sorbitol + O2 = D-glucose + H2O2",
+      "name": "deacetylisoipecoside + H2O = deacetylisoipecoside aglycone + D-glucose",
+      "equation": "deacetylisoipecoside + H2O = deacetylisoipecoside aglycone + D-glucose",
       "substrates": [
         {
-          "metabolite": "d_glucitol",
+          "metabolite": "deacetylisoipecoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glucose",
+          "metabolite": "n_deacetylisoipecoside_aglycone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "glucose",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:69524"
+        "rhea": "RHEA:78887"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69524"
+            "id": "RHEA:78887"
           }
         ]
       }

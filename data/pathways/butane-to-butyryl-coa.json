@@ -128,24 +128,6 @@
       }
     },
     {
-      "id": "benzoyl_coa",
-      "name": "benzoyl-CoA",
-      "formula": "C28H36N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57369"
-      }
-    },
-    {
-      "id": "butyl_benzoate",
-      "name": "butyl benzoate",
-      "formula": "C11H14O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:156070"
-      }
-    },
-    {
       "id": "propionyl_coa",
       "name": "Propionyl-CoA",
       "formula": "C24H36N7O17P3S",
@@ -161,6 +143,26 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:89831"
+      }
+    },
+    {
+      "id": "2_methylsulfanyl_acetyl_coa",
+      "name": "2-(methylsulfanyl)acetyl-CoA",
+      "short": "2-(methylsulfanyl)a…",
+      "formula": "C24H36N7O17P3S2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:156076"
+      }
+    },
+    {
+      "id": "butyl_2_methylsulfanyl_acetate",
+      "name": "butyl 2-(methylsulfanyl)acetate",
+      "short": "butyl 2-(methylsulf…",
+      "formula": "C7H14O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156077"
       }
     },
     {
@@ -379,45 +381,6 @@
     },
     {
       "id": "r4",
-      "name": "butan-1-ol + benzoyl-CoA = butyl benzoate + CoA",
-      "equation": "butan-1-ol + benzoyl-CoA = butyl benzoate + CoA",
-      "substrates": [
-        {
-          "metabolite": "butan_1_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "benzoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butyl_benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:64636"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:64636"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "butan-1-ol + propanoyl-CoA = butyl propanoate + CoA",
       "equation": "butan-1-ol + propanoyl-CoA = butyl propanoate + CoA",
       "substrates": [
@@ -441,7 +404,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:64644"
       },
@@ -451,6 +414,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:64644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "2-(methylsulfanyl)acetyl-CoA + butan-1-ol = butyl 2-(methylsulfanyl)acetate + CoA",
+      "equation": "2-(methylsulfanyl)acetyl-CoA + butan-1-ol = butyl 2-(methylsulfanyl)acetate + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_methylsulfanyl_acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyl_2_methylsulfanyl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64672"
           }
         ]
       }

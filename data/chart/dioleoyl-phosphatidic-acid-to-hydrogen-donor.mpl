@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dioleoyl-phosphatidic-acid-to-hydrogen-donor "dioleoyl phosphatidic acid to hydrogen donor" {
-  spacing 212
+  spacing 194
 
   spine at 0,0 {
     dioleoyl_phosphatidic_acid
@@ -18,61 +18,43 @@ pathway dioleoyl-phosphatidic-acid-to-hydrogen-donor "dioleoyl phosphatidic acid
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +4_bromobenzaldehyde +nad
-    4_bromobenzyl_alcohol
+    <-> ec_3_1_1_1 [3.1.1.1] +4_methylumbelliferyl_laurate +h2o +dodecanoate
+    4_methylumbelliferone
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_methoxybenzaldehyde +nad
-    3_methoxybenzyl_alcohol
-  }
-
-  branch from dctp side left {
-    dctp
-    <-> . +ctp +fmnh2 +h +h2o
-    fmn
-  }
-
-  branch from dctp side right {
-    dctp
-    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dcdp
-    2_deoxycytidine
+    <-> ec_3_1_1_1 [3.1.1.1] +hexadecanoate +4_methylumbelliferone +h2o
+    4_methylumbelliferyl_palmitate
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side left {
     1_2_dioleoyl_sn_glycerol
-    <-> . +1_oleoyl_2_stearoyl_sn_glycero_3_phosphoethanola +1_oleoyl_sn_glycero_3_phosphoethanolamine
-    1_2_dioleoyl_3_stearoyl_sn_glycerol
+    <-> . +udp_d_galactose +udp +hplus
+    1_2_dioleoyl_3_d_galactosyl_sn_glycerol
   }
 
   branch from 1_2_dioleoyl_sn_glycerol side right {
     1_2_dioleoyl_sn_glycerol
-    <-> . +1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol +1_oleoyl_sn_glycero_3_phosphoethanolamine
-    1_2_dioleoyl_3_linoleoyl_sn_glycerol
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +n_acylsphingosine
+    n_acylsphingosine_1_phosphoethanolamine
   }
 
   branch from dcdp side left {
     dcdp
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dctp
-    cytidine
-  }
-
-  branch from dcdp side right {
-    dcdp
-    <-> . +dctp +amp
-    adp
-  }
-
-  branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side left {
-    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    <-> ec_5_5_1_13 [5.5.1.13]
-    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> . +gdp +dcmp
+    gtp
   }
 
   branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side right {
     2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    <-> ec_5_5_1_12 [5.5.1.12]
+    <-> ec_5_5_1_14 [5.5.1.14]
     5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+  }
+
+  branch from 2_trans_6_trans_10_trans_geranylgeranyl_diphosph side left {
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    <-> ec_5_5_1_15 [5.5.1.15]
+    terpentedienyl_diphosphate
   }
 }

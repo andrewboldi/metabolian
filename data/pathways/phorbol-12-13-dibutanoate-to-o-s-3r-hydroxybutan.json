@@ -185,51 +185,49 @@
       }
     },
     {
-      "id": "1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi",
-      "name": "1-palmitoyl-2-butanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-palmitoyl-2-butan…",
-      "formula": "C28H56NO8P",
+      "id": "monobutyrin",
+      "name": "monobutyrin",
+      "formula": "C7H14O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77832"
+        "chebi": "CHEBI:76503"
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C24H50NO7P",
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:72998"
+        "chebi": "CHEBI:17754"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5α,9β,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58622"
       }
     },
     {
-      "id": "germacrene_a",
-      "name": "germacrene A",
-      "formula": "C15H24",
+      "id": "stemod_13_17_ene",
+      "name": "stemod-13(17)-ene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:36517"
+        "chebi": "CHEBI:50068"
       }
     },
     {
-      "id": "humulene",
-      "name": "γ-humulene",
-      "formula": "C15H24",
+      "id": "9_pimara_7_15_diene",
+      "name": "9β-pimara-7,15-diene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49290"
+        "chebi": "CHEBI:50067"
       }
     }
   ],
@@ -277,10 +275,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_56",
-      "name": "gamma-humulene synthase",
+      "id": "ec_4_2_3_34",
+      "name": "stemod-13(17)-ene synthase",
       "ec": [
-        "4.2.3.56"
+        "4.2.3.34"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_35",
+      "name": "syn-pimara-7,15-diene synthase",
+      "ec": [
+        "4.2.3.35"
       ]
     }
   ],
@@ -554,11 +559,11 @@
     },
     {
       "id": "r7",
-      "name": "1-hexadecanoyl-2-butanoyl-sn-glycero-3-phosphocholine + H2O = butanoate + 1-hexadecanoy...",
-      "equation": "1-hexadecanoyl-2-butanoyl-sn-glycero-3-phosphocholine + H2O = butanoate + 1-hexadecanoyl-sn-glycero-3-phosphocholine + H(+)",
+      "name": "1-butyrylglycerol + H2O = butanoate + glycerol + H(+)",
+      "equation": "1-butyrylglycerol + H2O = butanoate + glycerol + H(+)",
       "substrates": [
         {
-          "metabolite": "1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi",
+          "metabolite": "monobutyrin",
           "stoichiometry": 1
         },
         {
@@ -572,7 +577,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "glycerol",
           "stoichiometry": 1
         },
         {
@@ -583,67 +588,32 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:41195"
+        "rhea": "RHEA:44324"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41195"
+            "id": "RHEA:44324"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
+      "name": "stemod-13(17)-ene synthase",
+      "equation": "9alpha-copalyl diphosphate = stemod-13(17)-ene + diphosphate",
+      "ec": "4.2.3.34",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:25452"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:25452"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "gamma-humulene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = gamma-humulene + diphosphate",
-      "ec": "4.2.3.56",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "humulene",
+          "metabolite": "stemod_13_17_ene",
           "stoichiometry": 1
         },
         {
@@ -653,20 +623,61 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_56"
+          "enzyme": "ec_4_2_3_34"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:25456"
+        "rhea": "RHEA:25556"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25456"
+            "id": "RHEA:25556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "syn-pimara-7,15-diene synthase",
+      "equation": "9alpha-copalyl diphosphate = 9beta-pimara-7,15-diene + diphosphate",
+      "ec": "4.2.3.35",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_pimara_7_15_diene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:25560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25560"
           }
         ]
       }

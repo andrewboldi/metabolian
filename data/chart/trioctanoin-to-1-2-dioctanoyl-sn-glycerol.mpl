@@ -26,26 +26,26 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
 
   branch from octanoate side right {
     octanoate
-    <-> . +1_monooctanoylglycerol +h2o +hplus
-    glycerol
+    <-> . +octanoate_ester +h2o +hplus
+    aliphatic_alcohol
   }
 
   branch from octanoate side left {
     octanoate
-    <-> . +octanoate_ester +h2o +hplus
-    aliphatic_alcohol
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_dioctoanoyl +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_monooctanoyl_sn
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
     <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosylceramide +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_1_n_acylsphingosi
+    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_6_d_galactoside
   }
 
   branch from 1_2_dioctanoyl_sn_glycero_3_phosphate side right {
@@ -56,13 +56,13 @@ pathway trioctanoin-to-1-2-dioctanoyl-sn-glycerol "trioctanoin to 1,2-dioctanoyl
 
   branch from choline side left {
     choline
-    <-> . +1_arachidonoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_arachidonoyl_sn_glycerol_3_phosphate
+    <-> . +1_oleyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_oleyl_sn_glycero_3_phosphate
   }
 
   branch from choline side right {
     choline
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_z_alk_1_enyl_sn_glycero_3_phosphate
+    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
   }
 }

@@ -1,0 +1,218 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phylloquinone-to-diphosphate",
+  "name": "phylloquinone to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from phylloquinone to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR183946"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phylloquinone",
+      "name": "phylloquinone",
+      "formula": "C31H46O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364296"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "menadione",
+      "name": "menadione",
+      "formula": "C11H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2397"
+      }
+    },
+    {
+      "id": "phytol",
+      "name": "phytol",
+      "formula": "C20H40O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2712"
+      }
+    },
+    {
+      "id": "menadiol",
+      "name": "menadiol",
+      "formula": "C11H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6746"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "menaquinol_4",
+      "name": "menaquinol-4",
+      "formula": "C31H42O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193091"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR183946",
+      "substrates": [
+        {
+          "metabolite": "phylloquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menadione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR183946"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR183946"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR187260",
+      "substrates": [
+        {
+          "metabolite": "menadione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menadiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR187260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR187260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "menadiol + (2E,6E,10E)-geranylgeranyl diphosphate = menaquinol-4 + diphosphate",
+      "equation": "menadiol + (2E,6E,10E)-geranylgeranyl diphosphate = menaquinol-4 + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "menadiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menaquinol_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:74083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74083"
+          }
+        ]
+      }
+    }
+  ]
+}

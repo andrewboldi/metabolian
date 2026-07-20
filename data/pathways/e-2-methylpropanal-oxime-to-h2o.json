@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-2-methylpropanal-oxime-to-h2o",
+  "name": "(E)-2-methylpropanal oxime to H2O",
+  "category": "other",
+  "summary": "A 3-step route from (E)-2-methylpropanal oxime to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR133016"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61143"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_2_methylpropanal_oxime",
+      "name": "(E)-2-methylpropanal oxime",
+      "short": "2-methylpropanal…",
+      "formula": "C4H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61143"
+      }
+    },
+    {
+      "id": "2_methylpropanenitrile",
+      "name": "2-methylpropanenitrile",
+      "short": "2-methylpropanenitr…",
+      "formula": "C4H7N",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM8069"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "2_hydroxy_2_methylpropanenitrile",
+      "name": "2-hydroxy-2-methylpropanenitrile",
+      "short": "2-hydroxy-2-methylp…",
+      "formula": "C4H7NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2066"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "beta_d_glcp_1_6_beta_d_glcp",
+      "name": "beta-D-Glcp-(1->6)-beta-D-Glcp",
+      "short": "beta-D-Glcp-(1->6)-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107960"
+      }
+    },
+    {
+      "id": "linustatin",
+      "name": "Linustatin",
+      "formula": "C16H27NO11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6483"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR133016",
+      "substrates": [
+        {
+          "metabolite": "e_2_methylpropanal_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylpropanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR133016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR176874",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylpropanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_2_methylpropanenitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176874"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR118224",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glcp_1_6_beta_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_hydroxy_2_methylpropanenitrile",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linustatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR118224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118224"
+          }
+        ]
+      }
+    }
+  ]
+}

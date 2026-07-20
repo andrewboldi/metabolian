@@ -18,26 +18,26 @@ pathway 4-chloronitrobenzene-to-2-amino-5-chloro-cis-cis "4-Chloronitrobenzene t
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_49 [1.2.1.49] +hydroxypyruvaldehyde +h2o +h +nadph
-    3_hydroxypyruvate
+    <-> ec_1_1_1_21 [1.1.1.21] +4_phenylphenylglyoxal +h +nadph
+    4_phenylbenzoyl_methanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_218 [1.1.1.218] +ethylmorphinone +h +nadph
-    ethylmorphine
+    <-> ec_1_1_1_2 [1.1.1.2] +2_pyridinylmethanol +h +nadph
+    2_formylpyridine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
-    aspirin_triggered_resolvin_d1
+    <-> ec_3_4_14_5 [3.4.14.5] +l_alanine +gly_pro
+    gly_pro_ala
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
-    aspirin_triggered_resolvin_d2
+    <-> ec_3_4_13_9 [3.4.13.9] +l_leucine +l_proline
+    leucyl_proline
   }
 
   branch from 2_amino_5_chloro_cis_cis_muconate_6_semialdehyde side left {

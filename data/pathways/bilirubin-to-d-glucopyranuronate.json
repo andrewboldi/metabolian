@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "bilirubin-to-d-glucopyranuronate",
+  "name": "bilirubin to D-glucopyranuronate",
+  "category": "other",
+  "summary": "A 3-step route from bilirubin(2−) to D-glucopyranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:75099"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57977"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "bilirubin",
+      "name": "bilirubin",
+      "formula": "C33H34N4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57977"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+      "name": "(4Z,15Z)-bilirubin IXα C12-β-D-glucuronoside",
+      "short": "(4Z,15Z)-bilirubin…",
+      "formula": "C39H42N4O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229705"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside",
+      "name": "(4Z,15Z)-bilirubin IXα C8,C12-β-D-bisglucuronoside",
+      "short": "(4Z,15Z)-bilirubin…",
+      "formula": "C45H50N4O18",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:229706"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(4Z,15Z)-bilirubin IXalpha + UDP-alpha-D-glucuronate = (4Z,15Z)-bilirubin IXalpha C12-b...",
+      "equation": "(4Z,15Z)-bilirubin IXalpha + UDP-alpha-D-glucuronate = (4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "bilirubin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:75099"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75099"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + UDP-alpha-D-glucuronate = (4Z,15Z...",
+      "equation": "(4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + UDP-alpha-D-glucuronate = (4Z,15Z)-bilirubin IXalpha C8,C12-beta-D-bisglucuronoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:79075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(4Z,15Z)-bilirubin IXalpha C8,C12-beta-D-bisglucuronoside + H2O = (4Z,15Z)-bilirubin IX...",
+      "equation": "(4Z,15Z)-bilirubin IXalpha C8,C12-beta-D-bisglucuronoside + H2O = (4Z,15Z)-bilirubin IXalpha C12-beta-D-glucuronoside + D-glucuronate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c8_c12_d_bisglucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4z_15z_bilirubin_ix_c12_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79239"
+          }
+        ]
+      }
+    }
+  ]
+}

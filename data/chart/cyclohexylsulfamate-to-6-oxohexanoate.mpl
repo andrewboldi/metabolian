@@ -22,26 +22,26 @@ pathway cyclohexylsulfamate-to-6-oxohexanoate "cyclohexylsulfamate to 6-oxohexan
 
   branch from sulfate side left {
     sulfate
-    <-> . +z_n_sulfonatooxy_alkenimidothioate
-    alkenyl_isothiocyanate
-  }
-
-  branch from sulfate side right {
-    sulfate
     <-> . +z_n_sulfonatooxy_prop_2_enimidothioate
     allyl_isothiocyanate
   }
 
+  branch from sulfate side right {
+    sulfate
+    <-> . +z_n_sulfonatooxy_prop_2_enimidothioate +sulfur_atom
+    allyl_cyanide
+  }
+
   branch from nh3 side left {
     nh3
-    <-> . +aspartate +o2 +h2o +h2o2
-    oxaloacetate
+    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
+    keto_phenylpyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_17 [4.3.1.17] +pyruvate
-    serine
+    <-> ec_3_5_4_36 [3.5.4.36] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 
   branch from 6_oxohexanoate side left {

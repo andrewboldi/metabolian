@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1r-6r-2-3-carboxylatop-to-h2o "(1R,6R)-2-(3-carboxylatop… to H2O" {
-  spacing 316
+  spacing 292
 
   spine at 0,0 {
     1r_6r_2_3_carboxylatopropanoyl_6_hydroxycyclohe
@@ -26,61 +26,37 @@ pathway 1r-6r-2-3-carboxylatop-to-h2o "(1R,6R)-2-(3-carboxylatop… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> . +1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol +dmapp
-    1_hydroxy_3_2_1_1_dimethylallyl_indol_3_yl_methy
+    <-> . +gtp +atp
+    3_2_cgamp
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_methylorsellinate +atp +nadph +hplus +amp +nadp
-    2_4_dihydroxy_5_6_dimethylbenzaldehyde
-  }
-
-  branch from hydrogen_sulfide side left {
-    hydrogen_sulfide
-    <-> ec_4_4_1_2 [4.4.1.2] +l_homocysteine +h
-    z_2_aminobutenoic_acid
-  }
-
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
-    <-> . +thiouracil +h2o +h
-    uracil
+    <-> . +gtp +atp
+    pppa_2_5_pg
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +3_6_anhydro_l_galactopyranose +phosphate +3_6_anhydro_l_galactopyranose +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +carbomycin +phosphate +carbomycin +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    n_acetyl_d_mannosamine
-  }
-
-  branch from sulfite side left {
-    sulfite
-    <-> . +hydrogen_sulfide +menaquinone_8 +h2o +h
-    menaquinol_8
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> . +ferricytochrome_c +h2o +h +sulfate
-    ferrocytochrome_c
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    daunorubicin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    alpha_d_mannopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    premithramycinone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    4_o_methyl_d_glucuronate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    doxorubicin
   }
 }

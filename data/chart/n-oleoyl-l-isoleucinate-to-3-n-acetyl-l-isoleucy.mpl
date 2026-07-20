@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy "N-oleoyl-L-isoleucinate to 3'-(N-acetyl-L-isoleucyl)…" {
-  spacing 192
+  spacing 174
 
   spine at 0,0 {
     n_oleoyl_l_isoleucinate
@@ -18,37 +18,19 @@ pathway n-oleoyl-l-isoleucinate-to-3-n-acetyl-l-isoleucy "N-oleoyl-L-isoleucinat
 
   branch from isoleucine side left {
     isoleucine
-    <-> ec_5_1_1_21 [5.1.1.21]
-    d_alloisoleucine
-  }
-
-  branch from isoleucine side right {
-    isoleucine
-    <-> . +glyoxylate +glycine
-    kmv
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +n_oleoyl_l_tryptophan +h2o
-    l_tryptophan
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_oleoyl_l_tyrosine +h2o
-    tyrosine
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_heptaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
-    2_demethylmenaquinol_7
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_isoleucine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +threonine +atp
-    l_threonyl_amp
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    13_epi_manool
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    ent_copalol
   }
 }

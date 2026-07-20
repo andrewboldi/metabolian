@@ -28,13 +28,13 @@ pathway 10-deacetyl-2-debenzoylba-to-paclitaxel "10-deacetyl-2-debenzoylba… to
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
-    indolin_2_one
+    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_6_methylsulfanyl_hexanal_oxime
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_157 [1.14.14.157] +indolin_2_one +fmnh2 +o2 +h2o +hplus
-    3_hydroxyindolin_2_one
+    <-> ec_1_14_14_133 [1.14.14.133] +1_8_cineole +fmnh2 +o2 +h2o +hplus
+    2_endo_hydroxy_1_8_cineole
   }
 }

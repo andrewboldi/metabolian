@@ -20,26 +20,26 @@ pathway adp-l-glycero-d-manno-h-to-ditrans-polycis-undec "ADP-L-glycero-β-D-man
 
   branch from h side left {
     h
-    <-> ec_3_1_6_20 [3.1.6.20] +sulfate +3_trisulfanyl_l_alanine +h2o
-    s_2_sulfodisulfanyl_l_cysteine_1
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_18_3_2_16_1_phosphatidate
   }
 
   branch from h side right {
     h
-    <-> . +1_dephospho_kdo2_lipid_a +phosphate +h2o
-    h_pylori_kdo2_lipid_a
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_20_0_18_2_9z_12z
   }
 
   branch from adp side left {
     adp
-    <-> ec_7_5_2_11 [7.5.2.11] +h +phosphate +atp +h2o
-    aldehydo_d_galactose
+    <-> ec_3_6_3_1 [3.6.3.1] +h +pc_20_1_11z_18_2_9z_12z +phosphate +pc_20_1_11z_18_2_9z_12z +h2o
+    atp
   }
 
   branch from adp side right {
     adp
-    <-> . +h +ribazole +phosphate +ribazole +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    pc_20_0_18_3_9z_12z_15z
   }
 
   branch from alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli side left {

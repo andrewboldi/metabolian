@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-n6-dimethyl-l-lysinium-to-fmn "N6,N6-dimethyl-L-lysinium to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n6_n6_dimethyl_l_lysinium
@@ -14,17 +14,5 @@ pathway n6-n6-dimethyl-l-lysinium-to-fmn "N6,N6-dimethyl-L-lysinium to FMN" {
     pre_flavunoidine
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     10_hydroxy_pre_flavunoidine
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +2_deoxypolytolypin +fmnh2 +o2 +h2o +hplus
-    polytolypin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_188 [1.14.14.188] +norfluorocurarine +fmnh2 +o2 +h2o +hplus
-    18_hydroxynorfluorocurarine
   }
 }

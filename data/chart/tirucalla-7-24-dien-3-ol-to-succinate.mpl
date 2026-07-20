@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tirucalla-7-24-dien-3-ol-to-succinate "tirucalla-7,24-dien-3β-ol to succinate" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     tirucalla_7_24_dien_3_ol
@@ -34,18 +34,6 @@ pathway tirucalla-7-24-dien-3-ol-to-succinate "tirucalla-7,24-dien-3β-ol to suc
     1r_2r_3s_8r_10r_11r_15s_16s_3_acetyloxy_15_1_hy
     <-> . +akg +o2 -succinate -co2 -h2o
     kihadalactone_a
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +longiborneol +fmnh2 +o2 +h2o +hplus
-    culmorin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +11_ketoprogesterone +fmnh2 +o2 +h2o +hplus
-    21_deoxycortisone
   }
 
   branch from 7_8_epoxymelianol side left {

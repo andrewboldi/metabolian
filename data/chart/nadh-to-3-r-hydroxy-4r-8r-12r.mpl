@@ -18,62 +18,62 @@ pathway nadh-to-3-r-hydroxy-4r-8r-12r "NADH to 3(R)-hydroxy-(4R,8R,12R)-…" {
 
   branch from coa side left {
     coa
-    <-> . +glycosyl_4_4_diaponeurosporenoate +12_methyltetradecanoyl_coa
-    staphyloxanthin
+    <-> . +2e_tetradecenoyl_coa +r_carnitine
+    5z_tetradecenoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_61 [2.3.1.61] +succinyl_coa +r_dihydrolipoamide
-    s_succinyl_dihydrolipoamide
+    <-> . +r_carnitine +3_hydroxyhexadecenoyl_coenzyme_a
+    3_hydroxyhexadecenoylcarnitine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_52 [1.13.11.52] +melatonin
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+    <-> ec_1_13_11_16 [1.13.11.16] +caffeic_acid
+    2_hydroxy_6_oxonona_2_4_7_trienedioic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> . +nitrite +h
-    nitric_acid
+    <-> ec_1_13_11_39 [1.13.11.39] +biphenyl_2_3_diol
+    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_10 [1.1.1.10] +acetoin +nadh +h
-    diacetyl
+    <-> . +nadh +formaldehyde +h +sarcosine +h2o
+    n_n_dimethylglycine
   }
 
   branch from nad side right {
     nad
-    <-> . +acetoin +nadh +h
-    s_s_butane_2_3_diol
+    <-> . +nadh +acetyl_coa +h +5z_octenoyl_coa +coa +h2o
+    2e_7z_decadienoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_9 [1.2.1.9] +glyceraldehyde_3_phosphate +nadp +h +nadph
-    2r_3_phosphoglycerate
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose
+    beta_cellobiose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_2 [3.1.1.2] +h +acetate +phenol
-    phenyl_acetate
+    <-> . +l_dehydroascorbic_acid +10_hydroxy_e4_neuroprostane +h +l_ascorbate
+    10_hydroperoxy_h4_neuroprostane
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +trans_trans_deca_2_4_dienoyl_coa +o2
-    4e_decenoyl_coa
+    <-> . +nadh +7z_hexadecenoyl_coa +acetyl_coa +h +coa +o2 +nad +h2o
+    9z_octadecenoyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +2e_4z_7z_decatrienoyl_coa +o2
-    4z_7z_decadienoyl_coa
+    <-> . +nadh +acetyl_coa +z_hex_3_enoyl_coa +h +coa +o2 +nad +h2o
+    5z_octenoyl_coa
   }
 
   branch from 3_r_hydroxy_4r_8r_12r_trimethyl_tridecanoyl_coa side left {

@@ -18,37 +18,37 @@ pathway ethionamide-to-eth-nad-adduct "ethionamide to ETH-NAD adduct" {
 
   branch from nadp side left {
     nadp
-    <-> . +8z_11z_icosadienoyl_coa +h +o2 +nadph +h2o
-    5z_8z_11z_eicosatrienoyl_coenzyme_a
+    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampesterol +h +o2 +nadph +h2o
+    22r_23r_22_23_dihydroxycampesterol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +6z_9z_12z_octadecatrienoyl_coa +h2o +h +o2 +nadph
-    9z_12z_octadecadienoyl_coa
+    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampest_4_en_3_one +h +o2 +nadph +h2o
+    22r_23r_22_23_dihydroxycampest_4_en_3_one
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_asparagine +l_arginine
-    asparaginyl_asparaginyl_arginine
+    <-> . +8z_11z_14z_eicosatrienoate +h +cholesterol
+    cholesteryl_all_cis_icosa_8_11_14_trienoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_asparagine +l_aspartate +l_phenylalanine
-    asparaginyl_phenylalanyl_aspartate
+    <-> . +cholest_5_en_3_yl_13z_16z_docosadienoate +cholesterol
+    13z_16z_docosadienoic_acid
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +h +amicoumacin_a
-    amicoumacin_c
+    <-> ec_3_5_4_11 [3.5.4.11] +6_hydroxymethyl_2_4_1h_3h_pteridinedione +h +h2o
+    6_hydroxymethyl_pterin
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h +h2o
-    l_leucinamide
+    <-> ec_3_5_4_11 [3.5.4.11] +l_erythro_biopterin +h +h2o
+    2_4_dihydroxy_6_1_2_dihydroxypropyl_pteridine
   }
 }

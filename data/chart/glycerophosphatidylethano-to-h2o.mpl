@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-h2o "glycerophosphatidylethano… to H2O" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
@@ -22,51 +22,45 @@ pathway glycerophosphatidylethano-to-h2o "glycerophosphatidylethano… to H2O" {
     vaccenic_acid
   }
 
-  branch from 2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1 side right {
-    2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
-    <-> . +phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 +amp +9z_octadecenoate +atp
-    diphosphate
-  }
-
-  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side left {
+  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side right {
     phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
     <-> . +vaccenic_acid +h2o
     2_acyl_sn_glycero_3_phosphoglycerol_n_c18_1
   }
 
-  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side right {
+  branch from phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 side left {
     phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
     <-> . +h2o +vaccenic_acid
     1_acyl_sn_glycero_3_phosphoglycerol_n_c18_1
   }
 
-  branch from phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 side left {
+  branch from phosphatidylethanolamine_dioctadec_11_enoyl_n_c1 side right {
     phosphatidylethanolamine_dioctadec_11_enoyl_n_c1
     <-> . +h2o +vaccenic_acid
     1_oleoylglycerophosphoethanolamine_delta_9
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +6_hydroxycyclohex_1_ene_1_carbonyl_coa
-    2_6_dihydroxycyclohexane_1_carbonyl_coa
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +h +pyruvate +1_hydroxy_2_naphthaldehyde
-    cis_4_1_hydroxynaphth_2_yl_2_oxobut_3_enoate
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +nadp
+    2_2_dichloroacetaldehyde
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylspermine +adp +phosphate
-    bis_glutathionyl_spermine
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +1_1_dichloroethylene_epoxide
+    nadp
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylaminopropylcadaverine +phosphate +aminopropylcadaverine
-    glutathione
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    polar_amino_acid
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +h2o
+    beta_d_glucan
   }
 }

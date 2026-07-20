@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-methylsulfanyl-2-3-di-to-xanthurenate "5-(methylsulfanyl)-2,3-di… to xanthurenate" {
-  spacing 242
+  spacing 236
 
   spine at 0,0 {
     5_methylsulfanyl_2_3_dioxopentyl_phosphate
@@ -16,11 +16,5 @@ pathway 5-methylsulfanyl-2-3-di-to-xanthurenate "5-(methylsulfanyl)-2,3-di… to
     4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
     <-> . -h2o
     xanthurenate
-  }
-
-  branch from 4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate side left {
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-    <-> . +3_hydroxy_l_kynurenine +keto_phenylpyruvate
-    l_phenylalanine
   }
 }

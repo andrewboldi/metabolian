@@ -36,14 +36,14 @@ pathway l-threonate-to-4-alkanoyl-5-oxo-2-5-dih "L-threonate to (4-alkanoyl-5-ox
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +hplus +nadp
-    hexadecan_1_ol
+    <-> . +malonyl-coa +nadph +hplus +co2 +nadp +coa +h2o
+    o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +pi
-    hexadecanoyl_phosphate
+    <-> ec_6_2_1_59 [6.2.1.59] +icosanoate +atp +amp +ppi
+    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
   }
 
   branch from 4_alkanoyl_5_oxo_2_5_dihydrofuran_3_yl_methyl_p side left {

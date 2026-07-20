@@ -18,14 +18,14 @@ pathway d-glucopyranose-to-1-o-trans-cinnamoyl-bet "D-glucopyranose to 1-O-(tran
 
   branch from 1_o_trans_cinnamoyl_beta_d_glucose side left {
     1_o_trans_cinnamoyl_beta_d_glucose
-    <-> ec_2_3_1_152 [2.3.1.152] +glucose +methyl_trans_cinnamate
+    <-> ec_2_3_1_152 [2.3.1.152] +beta_d_glucose +methyl_trans_cinnamate
     methanol
   }
 
   branch from 1_o_trans_cinnamoyl_beta_d_glucose side right {
     1_o_trans_cinnamoyl_beta_d_glucose
-    <-> ec_2_3_1_152 [2.3.1.152] +methyl_trans_cinnamate +methanol
-    beta_d_glucose
+    <-> ec_2_3_1_152 [2.3.1.152] +alpha_d_glucose +methanol
+    methyl_trans_cinnamate
   }
 
   branch from 1_propanol side left {
@@ -42,14 +42,14 @@ pathway d-glucopyranose-to-1-o-trans-cinnamoyl-bet "D-glucopyranose to 1-O-(tran
 
   branch from glucose side left {
     glucose
-    <-> . +glucoerucin +h2o
-    z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim
+    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
+    6_o_methyl_n_deacetylipecoside_aglycone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +o2 +h2o2
-    d_glucitol
+    <-> . +deacetylisoipecoside +h2o
+    n_deacetylisoipecoside_aglycone
   }
 
   branch from ethanol side left {

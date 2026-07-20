@@ -18,37 +18,37 @@ pathway 4r-5s-dethiobiotin-to-h2o "(4R,5S)-dethiobiotin to H2O" {
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> . +thiosulfate +menaquinol +h +menaquinone_2
-    sulfite
+    <-> ec_4_4_1_2 [4.4.1.2] +l_homocysteine +h
+    z_2_aminobutenoic_acid
   }
 
   branch from hydrogen_sulfide side right {
     hydrogen_sulfide
-    <-> . +h +2_aminoprop_2_enoate
-    d_cysteine
+    <-> . +thiouracil +h2o +h
+    uracil
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_2_6 [3.5.2.6] +3_hydroxybenzoate +phenylacetylglycine +h2o
-    3_phenylacetyl_glycyl_oxybenzoic_acid
+    <-> ec_2_4_2_31 [2.4.2.31] +nicotinamide +n_omega_adp_d_ribosyl_l_arginine +nad
+    l_arginine
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +catechol +nadph +nadp
-    cyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_arabino_1_5_lactone +nad
+    l_arabinopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_21_26 [3.4.21.26] +coumarin_120 +z_gly_pro
-    z_gly_pro_amc
+    <-> ec_3_4_11_4 [3.4.11.4] +l_leucine +leucyl_leucine
+    l_leucyl_l_leucyl_l_leucine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_18_1 [1.14.18.1] +methyl_3_4_dihydroxybenzoate +h2o2
-    methylparaben
+    <-> . +l_leucine +trp_leu
+    leu_trp_leu
   }
 }

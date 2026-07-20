@@ -232,58 +232,31 @@
       }
     },
     {
-      "id": "acetoacetyl_coa",
-      "name": "acetoacetyl-CoA",
-      "formula": "C25H36N7O18P3S",
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1103802"
+        "metanetx": "MNXM1104266"
       }
     },
     {
-      "id": "3_hydroxypropanoate",
-      "name": "3-hydroxypropanoate",
-      "formula": "C3H5O3",
+      "id": "2_deoxy_3_dehydro_d_ribonate",
+      "name": "2-deoxy-3-dehydro-D-ribonate",
+      "short": "2-deoxy-3-dehydro-D…",
+      "formula": "C5H7O5",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM872"
+        "metanetx": "MNXM819464"
       }
     },
     {
-      "id": "3_hydroxypropanoyl_coa",
-      "name": "3-hydroxypropanoyl-CoA",
-      "short": "3-hydroxypropanoyl-…",
-      "formula": "C24H36N7O18P3S",
+      "id": "d_glyceroyl_coa",
+      "name": "D-glyceroyl-CoA",
+      "formula": "C24H36N7O19P3S",
       "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1363894"
-      }
-    },
-    {
-      "id": "2_oxoglutarate",
-      "name": "2-oxoglutarate",
-      "formula": "C5H4O5",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1368744"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "2_methylaspartate",
-      "name": "2-methylaspartate",
-      "formula": "C5H8NO4",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM89498"
+        "metanetx": "MNXM819465"
       }
     },
     {
@@ -296,12 +269,48 @@
       }
     },
     {
-      "id": "l_glutamate",
-      "name": "L-glutamate",
-      "formula": "C5H8NO4",
-      "charge": -1,
+      "id": "acetone",
+      "name": "acetone",
+      "formula": "C3H6O",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM741173"
+        "metanetx": "MNXM398"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
       }
     },
     {
@@ -376,17 +385,10 @@
       ]
     },
     {
-      "id": "ec_2_8_3_9",
-      "name": "butyrate--acetoacetate CoA-transferase",
+      "id": "ec_6_4_1_6",
+      "name": "acetone carboxylase",
       "ec": [
-        "2.8.3.9"
-      ]
-    },
-    {
-      "id": "ec_2_6_1_19",
-      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
-      "ec": [
-        "2.6.1.19"
+        "6.4.1.6"
       ]
     }
   ],
@@ -854,69 +856,71 @@
     },
     {
       "id": "r11",
-      "name": "butyrate--acetoacetate CoA-transferase",
-      "ec": "2.8.3.9",
+      "name": "Reaction MNXR165006",
       "substrates": [
         {
-          "metabolite": "acetoacetyl_coa",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_hydroxypropanoate",
+          "metabolite": "2_deoxy_3_dehydro_d_ribonate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxypropanoyl_coa",
+          "metabolite": "acetoacetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetoacetate",
+          "metabolite": "d_glyceroyl_coa",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_9"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "metanetx": "MNXR130270"
+        "metanetx": "MNXR165006"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR130270"
+            "id": "MNXR165006"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
-      "ec": "2.6.1.19",
+      "name": "acetone carboxylase",
+      "ec": "6.4.1.6",
       "substrates": [
         {
-          "metabolite": "2_oxoglutarate",
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "acetone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_methylaspartate",
+          "metabolite": "atp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "co2",
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -924,26 +928,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_glutamate",
-          "stoichiometry": 1
+          "metabolite": "phosphate",
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_19"
+          "enzyme": "ec_6_4_1_6"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "metanetx": "MNXR133169"
+        "metanetx": "MNXR191275"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR133169"
+            "id": "MNXR191275"
           }
         ]
       }

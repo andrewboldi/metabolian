@@ -18,26 +18,26 @@ pathway 4-deoxy-2-o-sulfo-beta-l-to-n-sulfo-d-glucosamin "4-deoxy-2-O-sulfo-beta
 
   branch from h side left {
     h
-    <-> ec_2_3_1_260 [2.3.1.260] +malonyl_coa +o_s_malonamoylpantetheine_4_phosphoryl_serine_1 +o_s_18_carbamoyl_3_5_7_9_11_13_15_17_octaoxoocta +coa
-    co2
+    <-> . +acetyl_coa +n6_n6_o_tridemethylpuromycin +coa
+    n_acetyl_n6_n6_o_tridemethylpuromycin
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_46 [2.7.8.46] +cdp_l_ribitol +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +rib_ol_p_gro_p_mannac_glcnac_pp_undecaprenol
-    cmp
+    <-> . +34a_deoxy_rifamycin_w +nadph +proansamycin_x
+    nadp
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_3_1_6_3 [3.1.6.3] +beta_d_glucose +h +h2o
-    d_glucopyranose_6_sulfate
+    <-> ec_3_1_6_1 [3.1.6.1] +h +4_nitrophenol +h2o
+    4_nitrophenyl_sulfate
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_1_8_2_1 [1.8.2.1] +ferrocytochrome_c +h +ferricytochrome_c +h2o
-    sulfite
+    <-> ec_3_1_6_3 [3.1.6.3] +alpha_d_glucose +h +h2o
+    d_glucopyranose_6_sulfate
   }
 
   branch from n_6_o_disulfo_d_glucosamine side left {

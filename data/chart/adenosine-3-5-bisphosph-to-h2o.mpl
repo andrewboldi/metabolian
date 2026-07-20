@@ -48,14 +48,14 @@ pathway adenosine-3-5-bisphosph-to-h2o "adenosine 3',5'-bisphosph… to H2O" {
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_glutathionyl_8_hydroxy_7_8_dihydronaph +1_nitronaphthalene_7_8_oxide
-    glutathione
+    <-> . +co2 +7_oxoheptanoic_acid
+    2_oxosuberate
   }
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_hydroxy_6_glutathionyl_5_6_dihydronaph +glutathione
-    1_nitronaphthalene_5_6_oxide
+    <-> ec_1_11_1_8 [1.11.1.8] +iodide +thyroglobulin_3_5_diiodotyrosine +diiodine
+    thyroglobulin_3_iodotyrosine
   }
 
   branch from glucoalyssin side right {
@@ -66,25 +66,25 @@ pathway adenosine-3-5-bisphosph-to-h2o "adenosine 3',5'-bisphosph… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadph
-    nerol
+    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +h +nadph
+    5_alpha_thdoc
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_183 [1.1.1.183] +s_citronellol +h +nadph
-    s_citronellal
+    <-> . +h +o2 +nadph +1_2_3_4_tetrachlorobenzene
+    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_11_23 [1.14.11.23] +galangin +co2 +succinate +pinobanksin +o2
-    2_oxoglutarate
+    <-> . +nadh +h +2_4_dinitrotoluene +nad
+    4_amino_2_nitrotoluene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +citronellic_acid +s_citronellal
-    nad
+    <-> . +nadh +h +4_amino_2_nitrotoluene +nad
+    2_4_diaminotoluene
   }
 }

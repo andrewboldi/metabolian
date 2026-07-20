@@ -18,14 +18,14 @@ pathway propanoate-to-d-threonine "propanoate to D-threonine" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +laminaritriose +beta_d_glucosyl_1_3_d_glucose
-    beta_d_glucose
+    <-> ec_3_4_14_5 [3.4.14.5] +glycyl_l_proline_2_naphthylamide +2_naphthylamine
+    gly_pro
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +methionyl_asparagine +h +nh4
-    l_methionyl_l_aspartate
+    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +beta_d_glucose
+    dimboa_beta_d_glucoside
   }
 
   branch from 2_oxobutanoate side left {
@@ -42,37 +42,37 @@ pathway propanoate-to-d-threonine "propanoate to D-threonine" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0280197 +nadp +2_2_dimethylpropanal
-    nadph
+    <-> ec_1_14_13_208 [1.14.13.208] +benzoyl_coa +o2 +nadph +2_3_dihydroxy_2_3_dihydrobenzoyl_coa
+    nadp
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +2_naphthaldehyde +nadph +nadp
-    2_naphthyl_methanol
+    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +o2 +nadph +nadp +h2o
+    dihydroxycholesterol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +6_methyl_7_9_dihydropurin_8_one +h2o2 +h2o
-    6_methylpurine
+    <-> ec_1_14_14_1 [1.14.14.1] +diclofenac +h +nadph +nadp +h2o
+    4_hydroxydiclofenac
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +6_methyladenine +h2o +h2o2
-    6_methylamino_7_9_dihydropurin_8_one
+    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +h +nadph +nadp +h2o
+    2_hydroxytestosterone
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_48 [3.1.3.48] +2_chloro_4_nitrophenol +h +h2o
-    2_chloro_4_nitrophenyl_phosphate
+    <-> . +l_glutamate_5_semialdehyde +h +nad +d_alpha_glutamyl_phosphate
+    nadh
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_48 [3.1.3.48] +3_nitrophenol +h +h2o
-    3_nitrophenyl_phosphate
+    <-> . +l_glutamate_5_semialdehyde +h +nadp +d_alpha_glutamyl_phosphate
+    nadph
   }
 }

@@ -20,49 +20,49 @@ pathway 2-hydroxyethylphosphonic-to-1r-2s-epoxypropylpho "2-hydroxyethylphosphon
 
   branch from ppi side left {
     ppi
-    <-> . +15_hydroxypentadecanoate +atp +coa +amp
-    15_hydroxypentadecanoyl_coa
+    <-> ec_4_2_3_159 [4.2.3.159] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    tsukubadiene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +dec_9_enoate +atp +coa +amp
-    9_decenoyl_coa
+    <-> ec_4_2_3_160 [4.2.3.160] +fpp
+    2s_3r_6s_9s_protoillud_7_ene
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_67 [1.14.99.67] +n_dichloroacetyl_p_aminophenylserinol +hydrogen_donor +o2 +h2o
-    chloramphenicol
+    <-> . +chrodrimanin_f +hydrogen_donor
+    chrodrimanin_h
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_68 [1.14.99.68] +4_aminobenzoate +hydrogen_donor +o2 +h2o
-    4_nitrobenzoate
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_1_4_dien_3_one +h2o +hydrogen_donor
+    25_hydroxycholest_1_4_dien_3_one
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_206 [2.1.1.206] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_310 [2.1.1.310] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_207 [2.1.1.207] +sam +2_o_methylcytidine_5_monophosphate_1 +hplus
+    <-> ec_2_1_1_311 [2.1.1.311] +sam +5_methylcytidine_5_monophosphate_1 +hplus
     cytidine_5_monophosphate_1
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neuac_2_3_d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_ga +cmp_n_acetyl_neuraminate +hplus
-    neuac_2_3_d_gal_1_3_neuac_2_6_d_galnac_1_3_d_ga
+    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 }

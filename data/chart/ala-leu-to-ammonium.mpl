@@ -18,37 +18,37 @@ pathway ala-leu-to-ammonium "Ala-Leu to ammonium" {
 
   branch from leucine side left {
     leucine
-    <-> . +r_3_phenyllactate +sam +atp +amp +sah +ppi +hplus
-    pf1022b
+    <-> . +isoleucine +l_asparagine +l_histidine +ornithine +l_lysinium +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
+    bacitracin_a
   }
 
   branch from leucine side right {
     leucine
-    <-> . +r_3_phenyllactate +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022d
+    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine +o2 +h2o +h2o2
+    2_dehydro_d_glucopyranose
   }
 
   branch from alanine side left {
+    alanine
+    <-> . +mmsa +pyruvate
+    s_3_aminoisobutyric_acid
+  }
+
+  branch from alanine side right {
     alanine
     <-> . +palmitoyl_coa +hplus +co2 +coa
     1_deoxy_3_dehydrosphinganine
   }
 
-  branch from alanine side right {
-    alanine
-    <-> . +ala_asp +h2o
-    aspartate
-  }
-
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
-    e_3_indol_3_yl_acrylate
+    <-> ec_1_4_3_25 [1.4.3.25] +arginine +o2 +h2o +h2o2
+    5_guanidino_2_oxopentanoic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_110 [3.5.1.110] +z_2_methylureidoacrylate +h2o +hplus +co2
-    z_3_amino_2_methylacrylate
+    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
+    3_amino_d_alanine
   }
 }

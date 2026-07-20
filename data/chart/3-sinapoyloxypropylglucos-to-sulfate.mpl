@@ -34,14 +34,14 @@ pathway 3-sinapoyloxypropylglucos-to-sulfate "3-sinapoyloxypropylglucos… to su
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_216 [3.2.1.216] +d_glcp_1_2_d_glcp +h2o
-    d_glucose
+    <-> . +6_o_methyldeacetylisoipecoside +h2o
+    6_o_methyldeacetylisoipecoside_aglycone
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +ipecoside +h2o
-    ipecoside_aglycone
+    <-> ec_4_2_99_23 [4.2.99.23] +tulipalin_b
+    6_tuliposide_b
   }
 
   branch from sulfur_atom side left {
@@ -58,37 +58,37 @@ pathway 3-sinapoyloxypropylglucos-to-sulfate "3-sinapoyloxypropylglucos… to su
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +l_cysteine +h
-    l_l_cystathionine
-  }
-
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
     <-> ec_4_2_1_22 [4.2.1.22] +mercaptoethanol +l_cysteine +h
     s_2_hydroxyethyl_l_cysteine
   }
 
+  branch from hydrogen_sulfide side right {
+    hydrogen_sulfide
+    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +l_cysteine +h
+    s_sulfo_l_cysteine
+  }
+
   branch from h side left {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +lanosterol +h2o
-    lanosteryl_oleate
+    <-> . +decanoyl_coa +2s_2_aminobutanoate +s_3_aminotridecan_4_one +coa
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +ergosterol +h2o
-    ergosteryl_oleate
+    <-> . +s_adenosyl_l_homocysteine +arctigenin +matairesinol
+    s_adenosyl_l_methionine
   }
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_8_3_1 [1.8.3.1] +h +ferrocyanide +ferricyanide +h2o
-    sulfite
+    <-> ec_3_1_6_3 [3.1.6.3] +beta_d_glucose +h +h2o
+    d_glucopyranose_6_sulfate
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_1 [3.1.6.1] +2_hydroxy_5_nitrophenyl_hydrogen_sulfate +h2o +h
-    4_nitrocatechol
+    <-> . +h +17alpha_hydroxypregnenolone +h2o
+    17alpha_hydroxypregnenolone_sulfate
   }
 }

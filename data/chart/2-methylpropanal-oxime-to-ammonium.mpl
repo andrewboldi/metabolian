@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-methylpropanal-oxime-to-ammonium "2-methylpropanal oxime to ammonium" {
-  spacing 268
+  spacing 256
 
   spine at 0,0 {
     2_methylpropanal_oxime
@@ -42,18 +42,6 @@ pathway 2-methylpropanal-oxime-to-ammonium "2-methylpropanal oxime to ammonium" 
     nh3
     <-> ec_2_3_2_7 [2.3.2.7] +hydroxylamine +l_asparagine +hplus
     l_aspartylhydroxamic_acid
-  }
-
-  branch from homocysteine side left {
-    homocysteine
-    <-> . +cystathionine
-    2_ammonioprop_2_enoate
-  }
-
-  branch from homocysteine side right {
-    homocysteine
-    <-> . +h2s +hplus
-    l_homolanthionine_dizwitterion
   }
 
   branch from inosine side left {

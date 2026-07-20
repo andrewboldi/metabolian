@@ -30,37 +30,37 @@ pathway 5-s-hete-to-h2o "5(S)-HETE to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +3_hydroxyechinenone +nad +h2o
-    adonixanthin
+    <-> . +2_3z_indol_3_ylidene_acetaldehyde +h2o2
+    indole_3_acetaldehyde
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +2s_flavanone +nadph +3_5_dihydroxyflavanone +h2o
-    nadp
+    <-> ec_1_13_99_3 [1.13.99.3] +indole_3_methanol +h2o2 +h2o
+    skatole
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_manp_1_4_d_glcp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    octanoyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    lactulose
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    2_carboxyhexacosanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    beta_d_glcp_1_6_beta_d_glcp
+    <-> . +trichloroethene
+    2_2_2_trichloroethanol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    3_o_d_galactopyranosyl_d_arabinose
+    <-> . +2s_2_hydroxy_3_4_dioxopentyl_phosphate
+    3_4_4_trihydroxy_5_phosphooxypentan_2_one
   }
 }

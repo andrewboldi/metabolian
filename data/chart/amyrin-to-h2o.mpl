@@ -18,49 +18,49 @@ pathway amyrin-to-h2o "β-amyrin to H2O" {
 
   branch from fmn side left {
     fmn
-    <-> . +c21_steroid +fmnh2 +o2 +h2o +hplus
-    21_hydroxy_c21_steroid
+    <-> ec_1_14_14_196 [1.14.14.196] +polyporic_acid_anion +fmnh2 +o2 +h2o +hplus
+    ascocorynin_anion
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_139 [1.14.14.139] +chenodeoxycholate +fmnh2 +o2 +h2o +hplus
-    cholate
+    <-> . +sakuranetin +fmnh2 +o2 +h2o +hplus
+    2s_carthamidin_7_methyl_ether
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    r_terpineol
+    <-> ec_1_1_1_2 [1.1.1.2] +alpha_d_glucose +h +nadph
+    d_sorbitol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    thujan_3_ol
+    <-> ec_1_1_1_120 [1.1.1.120] +alpha_d_galactose +h +nadph
+    d_galactono_1_5_lactone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_fuculose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    premithramycin_a4
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_galactose +phosphate +l_galactose
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    3a_deolivosylpremithramycin_b
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    l_lyxopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +chromomycin_a3 +phosphate +chromomycin_a3 +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    olivomycin_a
   }
 }

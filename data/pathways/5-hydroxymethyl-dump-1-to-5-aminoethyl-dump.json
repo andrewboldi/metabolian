@@ -205,6 +205,33 @@
       }
     },
     {
+      "id": "linoleate",
+      "name": "linoleate",
+      "formula": "C18H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30245"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9_r_hode",
+      "name": "9(R)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77895"
+      }
+    },
+    {
       "id": "h2o",
       "name": "Water",
       "formula": "H2O",
@@ -214,86 +241,12 @@
       }
     },
     {
-      "id": "5_aminomethyl_dump_zwitterion",
-      "name": "5-aminomethyl-dUMP zwitterion",
-      "short": "5-aminomethyl-dUMP…",
-      "formula": "C10H14N3O7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:190926"
-      }
-    },
-    {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
+      "id": "13_s_hode",
+      "name": "13(S)-HODE",
+      "formula": "C18H31O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36655"
-      }
-    },
-    {
-      "id": "dihydropyriculariol",
-      "name": "dihydropyriculariol",
-      "formula": "C14H18O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142637"
-      }
-    },
-    {
-      "id": "pyriculariol",
-      "name": "pyriculariol",
-      "formula": "C14H16O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:142636"
-      }
-    },
-    {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "Acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57288"
-      }
-    },
-    {
-      "id": "fumigermin",
-      "name": "fumigermin",
-      "formula": "C11H14O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:147341"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57856"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:90850"
       }
     }
   ],
@@ -555,11 +508,25 @@
     },
     {
       "id": "r7",
-      "name": "5-N(alpha)-glycyl-dTMP in DNA + A + H2O = 5-aminomethyl-dUMP in DNA + glyoxylate + AH2",
-      "equation": "5-N(alpha)-glycyl-dTMP in DNA + A + H2O = 5-aminomethyl-dUMP in DNA + glyoxylate + AH2",
+      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
+      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (9R)-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
       "substrates": [
         {
-          "metabolite": "5_n_glycyl_dtmp_1",
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_r_hode",
           "stoichiometry": 1
         },
         {
@@ -568,88 +535,31 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_aminomethyl_dump_zwitterion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glyoxylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:71559"
+        "rhea": "RHEA:75447"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:71559"
+            "id": "RHEA:75447"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "dihydropyriculariol + A = pyriculariol + AH2",
-      "equation": "dihydropyriculariol + A = pyriculariol + AH2",
+      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
+      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = (13S)-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
       "substrates": [
         {
-          "metabolite": "dihydropyriculariol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pyriculariol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:63976"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63976"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 S-adenosyl-L-methionine = fumigermin + A + 3 S-ade...",
-      "equation": "3 malonyl-CoA + acetyl-CoA + AH2 + 3 S-adenosyl-L-methionine = fumigermin + A + 3 S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA + H2O",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
+          "metabolite": "linoleate",
           "stoichiometry": 1
         },
         {
@@ -657,30 +567,18 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 3
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fumigermin",
+          "metabolite": "13_s_hode",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
         },
         {
           "metabolite": "h2o",
@@ -688,16 +586,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:64012"
+        "rhea": "RHEA:75451"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64012"
+            "id": "RHEA:75451"
           }
         ]
       }

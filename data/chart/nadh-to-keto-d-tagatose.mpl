@@ -30,14 +30,14 @@ pathway nadh-to-keto-d-tagatose "NADH to keto-D-tagatose…" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_14 [1.1.1.14] +nadh +h +5_dehydro_d_fructose
-    l_sorbopyranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +cis_3_hexenal
+    e_hex_2_en_1_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +h +acetate +h2o
-    3_oxopropanoate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +e_hex_2_enal +h
+    3z_hex_3_en_1_ol
   }
 
   branch from keto_d_tagatose side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-vanillate "UDP to vanillate" {
-  spacing 308
+  spacing 296
 
   spine at 0,0 {
     udp
@@ -18,27 +18,15 @@ pathway udp-to-vanillate "UDP to vanillate" {
     delphinidin_3_7_di_o_beta_d_glucoside
   }
 
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> . +albireodelphin +coa
-    gentiodelphin
-  }
-
-  branch from trans_caffeoyl_coa side right {
-    trans_caffeoyl_coa
-    <-> . +albireodelphin +coa
-    gentiodelphin
-  }
-
   branch from h side left {
     h
-    <-> . +udp +gitoxigenin_3_o_beta_d_quinovoside +gitoxigenin
-    udp_alpha_d_quinovose
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    24_0_18_3_ps
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_4_61 [3.1.4.61] +2r_2_3_bisphosphoglycerate +h2o
-    cyclic_2_3_bisphosphoglycerate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
   }
 }

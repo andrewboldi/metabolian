@@ -44,13 +44,13 @@ pathway 5-s-glutathionyl-dopachro-to-h2o "5-S-glutathionyl-dopachro… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_1 [1.14.13.1] +nadh +h +4_methylsalicylic_acid +o2 +nad +4_methylcatechol
-    co2
+    <-> ec_4_2_1_105 [4.2.1.105] +formononetin +h
+    2_7_dihydroxy_4_methoxyisoflavanone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +cyclohexylamine +formate
-    n_cyclohexylformamide
+    <-> ec_4_2_1_84 [4.2.1.84] +h +3_5_dibromo_4_hydroxybenzonitrile
+    3_5_dibromo_4_hydroxybenzamide
   }
 }

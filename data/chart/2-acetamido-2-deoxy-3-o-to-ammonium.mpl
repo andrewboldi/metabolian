@@ -32,14 +32,14 @@ pathway 2-acetamido-2-deoxy-3-o-to-ammonium "2-acetamido-2-deoxy-3-O-(… to amm
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
-    10_epi_juneol
+    <-> ec_2_5_1_123 [2.5.1.123] +flaviolin_2_olate +gpp
+    3_linalylflaviolin_2_olate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_6 [4.6.1.6] +ctp
-    3_5_cyclic_cmp
+    <-> ec_2_5_1_29 [2.5.1.29] +ipp +fpp
+    2_trans_6_trans_10_trans_geranylgeranyl_diphosph
   }
 
   branch from nh3 side left {

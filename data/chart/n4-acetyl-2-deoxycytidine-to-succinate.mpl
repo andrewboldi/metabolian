@@ -18,37 +18,37 @@ pathway n4-acetyl-2-deoxycytidine-to-succinate "N4-acetyl-2'-deoxycytidine to su
 
   branch from 2_deoxycytidine side left {
     2_deoxycytidine
-    <-> . +h2o +pi
-    2_deoxycytosine_5_monophosphate
+    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dcdp
+    dctp
   }
 
   branch from 2_deoxycytidine side right {
     2_deoxycytidine
-    <-> ec_3_1_3_34 [3.1.3.34] +phosphate +h2o
-    2_deoxycytidine_3_monophosphate
+    <-> ec_2_7_1_74 [2.7.1.74] +dtdp +h +dcmp
+    dttp
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +arachidonoyl_amine +h2o
-    arachidonate
+    <-> . +norepinephrine +o2 +h2o +h2o2
+    r_3_4_dihydroxymandelaldehyde
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +linoleamide +h2o
-    linoleate
+    <-> . +cadaverine +o2 +h2o +h2o2
+    5_ammoniopentanal
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +chloride +akg +o2 +hplus +co2 +h2o
-    4_chloro_l_lysinium
+    <-> . +fumigatonoid_c +akg +o2 +co2 +h2o
+    novofumigatonin
   }
 
   branch from succinate side right {
     succinate
-    <-> . +gibberellin_a53 +akg +o2 +co2 +h2o +hplus
-    gibberellin_a17
+    <-> . +jasmonate +akg +o2 +co2
+    12_hydroxyjasmonate
   }
 }

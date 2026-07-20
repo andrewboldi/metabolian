@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
-  spacing 282
+  spacing 276
 
   spine at 0,0 {
     5_cis_lycopene
@@ -34,14 +34,14 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o +h +h2o2
-    hydantoin_5_propionate
+    <-> ec_1_14_12_18 [1.14.12.18] +h +4_chlorobiphenyl +nadph +nadp
+    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_23 [1.1.3.23] +h +thiamine_acetate +h2o2 +h2o
-    thiamine_1_aldehyde
+    <-> ec_1_14_12_18 [1.14.12.18] +h +biphenyl +nadph +nadp
+    2r_3s_3_phenylcyclohexa_3_5_diene_1_2_diol
   }
 
   branch from 4_9_dimethyldodeca_2_4_6_8_10_pentaenedial side left {
@@ -52,37 +52,31 @@ pathway 5-cis-lycopene-to-h2o "5-cis-lycopene to H2O" {
 
   branch from lutein side right {
     lutein
-    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +alpha_cryptoxanthin +o2 +h2o
-    nad
-  }
-
-  branch from lutein side left {
-    lutein
-    <-> ec_1_14_99_45 [1.14.99.45] +nadp +h2o +h +o2 +nadph
-    zeinoxanthin
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_147 [1.1.1.147] +h +16_oxosteroid +nadph
-    16alpha_hydroxysteroid
+    <-> . +nadp +h2o +h +o2 +nadph
+    alpha_cryptoxanthin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_99_2 [1.14.99.2] +kynurenate +h +o2 +nadph
-    7_8_dihydro_7_8_dihydroxykynurenate
+    <-> ec_1_1_1_50 [1.1.1.50] +5beta_dihydroaldosterone +h +nadph
+    3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    9z_hexadecenoate
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_146 [1.1.1.146] +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nadph
+    tetrahydrocorticosterone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    8z_11z_14z_eicosatrienoate
+    <-> . +5_6beta_epoxy_5beta_cholestane
+    5alpha_cholestan_5alpha_6beta_diol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +5alpha_cholestan_5alpha_6beta_diol
+    5_6alpha_epoxy_5alpha_cholestane
   }
 }

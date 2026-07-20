@@ -24,25 +24,25 @@ pathway 2-methylpropanaminium-to-h2o "2-methylpropanaminium to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
-    palustradienol
+    <-> . +nadh +2_octaprenyl_6_hydroxyphenol +h +adp +phosphate +atp +h2o
+    2_octaprenylphenol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
-    levopimaradienol
+    <-> . +nadh +9_cis_retinal +h
+    9_cis_retinol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +thiostrepton +phosphate +thiostrepton
-    atp
+    <-> . +h +5_4_hydroxy_3_methoxyphenyl_4_hydroxymethyl_oxol
+    4_4_hydroxy_3_methoxyphenyl_tetrahydro_3h_furo_3
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    l_tyrosyl_l_arginine
+    <-> ec_3_8_1_5 [3.8.1.5] +h +chloride +2_3_4_5_6_pentachlorocyclohexanol
+    gamma_hexachlorocyclohexane
   }
 }

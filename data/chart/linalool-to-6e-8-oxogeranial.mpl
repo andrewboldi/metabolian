@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     linalool
@@ -18,37 +18,31 @@ pathway linalool-to-6e-8-oxogeranial "linalool to (6E)-8-oxogeranial" {
     6e_8_oxogeranial
   }
 
-  branch from geraniol side left {
-    geraniol
-    <-> . +palmitoyl_coa +coa
-    2e_geranyl_hexadecanoate
-  }
-
-  branch from 6e_8_hydroxygeraniol side right {
+  branch from 6e_8_hydroxygeraniol side left {
     6e_8_hydroxygeraniol
     <-> . +nadp +nadph +hplus
     6e_8_hydroxygeranial
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_179 [1.14.14.179] +3_dehydro_6_deoxoteasterone +fmnh2 +o2 +h2o +hplus
-    3_dehydroteasterone
-  }
-
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_178 [1.14.14.178] +a_c27_steroid +fmnh2 +o2 +h2o +hplus
-    a_22s_22_hydroxy_c27_steroid
+    <-> . +isomotiol +fmnh2 +o2 +h2o +hplus
+    19_hydroxyisomotiol
   }
 
-  branch from 6e_8_oxogeranial side left {
+  branch from fmn side left {
+    fmn
+    <-> . +campesine_b +fmnh2 +o2 +h2o +hplus
+    campesine_f
+  }
+
+  branch from 6e_8_oxogeranial side right {
     6e_8_oxogeranial
     <-> ec_1_3_1_123 [1.3.1.123] +nadp +nadph +hplus
     r_8_oxocitronellyl_enol
   }
 
-  branch from 6e_8_oxogeranial side right {
+  branch from 6e_8_oxogeranial side left {
     6e_8_oxogeranial
     <-> ec_1_3_1_122 [1.3.1.122] +nadp +nadph +hplus
     s_8_oxocitronellyl_enol

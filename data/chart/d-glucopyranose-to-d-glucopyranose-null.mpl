@@ -18,25 +18,25 @@ pathway d-glucopyranose-to-d-glucopyranose-null "D-glucopyranose to D-glucopyran
 
   branch from h2o side left {
     h2o
-    <-> . +2_deoxy_d_ribonic_acid
-    2_deoxy_ribono_1_5_lactone
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_xylose +phosphate +l_xylose
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +s_4_hydroxy_2_oxohexanoate
-    2z_2_hydroxyhexa_2_5_dienoate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    lyxulose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein_aglycone +h2o
-    oleuropein
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> ec_3_2_1_118 [3.2.1.118] +r_mandelonitrile +h2o
+    r_prunasin
   }
 }

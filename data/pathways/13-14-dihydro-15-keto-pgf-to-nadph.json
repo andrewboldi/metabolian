@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "13-14-dihydro-15-keto-pgf-to-nadph",
   "name": "13,14-dihydro-15-keto-PGF… to NADPH",
-  "category": "energy-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from 13,14-dihydro-15-keto-PGF2α(1−) to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,51 +140,60 @@
       }
     },
     {
-      "id": "prostaglandin_i2",
-      "name": "prostaglandin I2",
-      "formula": "C20H31O5",
+      "id": "hva",
+      "name": "Homovanillate (homovanillic acid, HVA)",
+      "short": "Homovanillate…",
+      "formula": "C9H9O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1560735"
+        "chebi": "CHEBI:133744"
       }
     },
     {
-      "id": "10_11_dihydro_12_oxo_ltb4",
-      "name": "10,11-dihydro-12-oxo-LTB4",
-      "short": "10,11-dihydro-12-ox…",
-      "formula": "C20H32O4",
+      "id": "4_hydroxy_3_methoxyphenyl_acetaldehyde",
+      "name": "(4-hydroxy-3-methoxyphenyl)acetaldehyde",
+      "short": "(4-hydroxy-3-methox…",
+      "formula": "C9H10O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:175292"
+        "metanetx": "MNXM4183"
       }
     },
     {
-      "id": "6_7_dihydro_12_epi_ltb4",
-      "name": "6,7-dihydro-12-epi-LTB4",
-      "short": "6,7-dihydro-12-epi-…",
-      "formula": "C20H34O4",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:187440"
+        "metanetx": "WATER"
       }
     },
     {
-      "id": "leukotriene_b4",
-      "name": "leukotriene B4",
-      "formula": "C20H31O4",
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1368516"
+        "metanetx": "MNXM490899"
       }
     },
     {
-      "id": "5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno",
-      "name": "5-oxo-12(S)-hydroxy-eicosa-6E,8Z,10E,14Z-tetraenoate",
-      "short": "5-oxo-12(S)-hydroxy…",
-      "formula": "C20H29O4",
-      "charge": -1,
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM162741"
+        "metanetx": "MNXM738068"
+      }
+    },
+    {
+      "id": "l_cysteine_glutathione_disulfide",
+      "name": "L-cysteine glutathione disulfide",
+      "short": "L-cysteine…",
+      "formula": "C13H22N4O8S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:21264"
       }
     }
   ],
@@ -208,6 +217,34 @@
       "name": "15-hydroxyprostaglandin-D dehydrogenase (NADP(+))",
       "ec": [
         "1.1.1.196"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_10",
+      "name": "CoA-glutathione reductase",
+      "ec": [
+        "1.8.1.10"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_9",
+      "name": "thioredoxin-disulfide reductase (NADPH)",
+      "ec": [
+        "1.8.1.9"
+      ]
+    },
+    {
+      "id": "ec_1_8_4_2",
+      "name": "protein-disulfide reductase (glutathione)",
+      "ec": [
+        "1.8.4.2"
       ]
     }
   ],
@@ -379,44 +416,77 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR206439",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
       "substrates": [
         {
-          "metabolite": "15_oxoprostaglandin_f2",
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hva",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "prostaglandin_i2",
+          "metabolite": "4_hydroxy_3_methoxyphenyl_acetaldehyde",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR206439"
+        "metanetx": "MNXR105380"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR206439"
+            "id": "MNXR105380"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR103901",
+      "name": "CoA-glutathione reductase",
+      "ec": "1.8.1.10",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "glutathione",
           "stoichiometry": 1
         },
         {
-          "metabolite": "10_11_dihydro_12_oxo_ltb4",
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_cysteine_glutathione_disulfide",
           "stoichiometry": 1
         },
         {
@@ -424,69 +494,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "6_7_dihydro_12_epi_ltb4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
+          "enzyme": "ec_1_8_1_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR103901"
+        "metanetx": "MNXR106738"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103901"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR103916",
-      "substrates": [
-        {
-          "metabolite": "leukotriene_b4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR103916"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR103916"
+            "id": "MNXR106738"
           }
         ]
       }

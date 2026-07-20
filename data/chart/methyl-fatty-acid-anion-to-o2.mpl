@@ -18,14 +18,14 @@ pathway methyl-fatty-acid-anion-to-o2 "ω-methyl fatty acid anion to O2" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +fmnh2 +o2 +h2o +hplus
-    oryzalexin_d
+    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_25_dihydroxycholesterol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
-    hydroxyphylloquinone
+    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_25s_cholest_5_en_3_24_26_triol
   }
 
   branch from hydroxy_long_chain_fatty_acid_anion side left {
@@ -36,13 +36,13 @@ pathway methyl-fatty-acid-anion-to-o2 "ω-methyl fatty acid anion to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +h +13_hydroxy_gama_tocopherol +nadph +nadp +h2o
-    13_carboxy_gamma_tocopherol
+    <-> . +20_oh_10_11_dihydro_leukotriene_b4 +nadp +h2o +nadph
+    6_7_dihydro_12_epi_ltb4
   }
 
   branch from o2 side left {
     o2
-    <-> . +25r_cholest_5_en_3beta_7alpha_26_triol +h +nadph +3beta_7alpha_dihydroxy_5_cholestenoate +h2o
-    nadp
+    <-> . +h +13_hydroxy_gamma_tocotrienol +nadph +nadp +h2o
+    13_carboxy_tocotrienol
   }
 }

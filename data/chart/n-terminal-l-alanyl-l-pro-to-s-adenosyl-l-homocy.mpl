@@ -18,13 +18,13 @@ pathway n-terminal-l-alanyl-l-pro-to-s-adenosyl-l-homocy "N-terminal L-alanyl-L-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_173 [2.1.1.173] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_198 [2.1.1.198] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_174 [2.1.1.174] +sam +n2_methylguanosine_5_monophosphate_1 +hplus
-    guanosine_5_monophosphate_1
+    <-> ec_2_1_1_199 [2.1.1.199] +cytidine_5_monophosphate_1 +sam +hplus
+    n4_methylcytidine_5_monophosphate_1
   }
 }

@@ -36,28 +36,16 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
     d_glucose_6_phosphate
   }
 
-  branch from cobalt side left {
-    cobalt
-    <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
-    hydrogen_acceptor
-  }
-
-  branch from cobalt side right {
-    cobalt
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_66 [1.14.11.66] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    l_lysinium
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +n6_methyl_l_lysinium +akg +o2 +l_lysinium +co2
+    succinate
   }
 
   branch from copper side left {
@@ -68,14 +56,14 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_4_1_1 [4.4.1.1] +cysteine +h2o +pyruvate +hplus
-    h2s
+    <-> . +4_aminoimidazole +h2o +hplus
+    n_formimidoylglycine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +l_lysinium +nad +h2o +nadh +hplus
-    l_allysine
+    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
+    l_pipecolic_acid
   }
 
   branch from 4_hydroxybenzaldehyde side right {
@@ -92,23 +80,17 @@ pathway guaiacylglycerol-guaiac-to-hydroquinone "guaiacylglycerol-β-guaiac… t
 
   branch from 4_hydroxybenzoate side right {
     4_hydroxybenzoate
-    <-> . +bromide +nadph +o2 +hplus +nadp +h2o
-    3_bromo_4_hydroxybenzoate
-  }
-
-  branch from 4_hydroxybenzoate side left {
-    4_hydroxybenzoate
     <-> ec_4_1_1_123 [4.1.1.123] +pi +hplus +co2 +h2o
     phenyl_phosphate
   }
 
-  branch from quinol side right {
-    quinol
-    <-> . +chlorohydroquinone +gsh +chloride +hplus
-    gssg
+  branch from 4_hydroxybenzoate side left {
+    4_hydroxybenzoate
+    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
+    dideacetyl_astellolide_b
   }
 
-  branch from quinol side left {
+  branch from quinol side right {
     quinol
     <-> . +nadh +hplus +nad
     quinone

@@ -22,14 +22,14 @@ pathway r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox "(R)-2-hydroxy-4-methylp
 
   branch from kynurenate side left {
     kynurenate
-    <-> ec_1_3_99_18 [1.3.99.18] +hydrogen_acceptor +h2o +hydrogen_donor
-    quinaldate
+    <-> ec_2_6_1_7 [2.6.1.7] +l_kynurenine +akg +h2o
+    glutamate
   }
 
   branch from kynurenate side right {
     kynurenate
-    <-> ec_2_6_1_7 [2.6.1.7] +l_kynurenine +akg +h2o
-    glutamate
+    <-> ec_2_6_1_63 [2.6.1.63] +l_kynurenine +glyoxylate +h2o
+    glycine
   }
 
   branch from leucine side left {
@@ -40,19 +40,19 @@ pathway r-2-hydroxy-4-methylpen-to-5-3-carboxylato-3-ox "(R)-2-hydroxy-4-methylp
 
   branch from leucine side right {
     leucine
-    <-> . +r_2_hydroxy_3_methylbutyrate +sam +atp +amp +sah +ppi +hplus
-    bassianolide
+    <-> . +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +ppi +nadp +coa +h2o
+    5s_5_2_methylpropyl_3_2e_6r_8e_10e_12e_6_8_10_1
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_donor +h2o
-    chlorite
+    <-> . +8z_11z_14z_heptadecatrienal +h2o +hydrogen_donor +hplus
+    8z_11z_14z_heptadecatrienoate
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinoline +h2o +hydrogen_donor
-    quinolin_2_1h_one
+    <-> ec_1_14_99_24 [1.14.99.24] +pregna_4_9_11_diene_3_20_dione +hydrogen_donor +o2 +h2o
+    9_11_epoxypregn_4_ene_3_20_dione
   }
 }

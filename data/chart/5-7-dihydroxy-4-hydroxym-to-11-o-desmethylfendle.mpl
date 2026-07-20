@@ -33,24 +33,24 @@ pathway 5-7-dihydroxy-4-hydroxym-to-11-o-desmethylfendle "5,7-dihydroxy-4-(hydro
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    12_hete
+    16_s_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_51 [1.14.19.51] +s_reticulinium +fmnh2 +o2 +h2o +hplus
-    s_corytuberine
+    <-> . +leukotriene_b4 +fmnh2 +o2 +h2o +hplus
+    18_hydroxyleukotriene_b4
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_192 [4.2.3.192] +5s_9s_10s_13e_labda_7_13_dien_15_yl_diphosphate
-    labda_7_13_16_14_triene
+    <-> . +l_tryptophan +gpp
+    2s_3r_3_geranyl_2_3_dihydro_2_n_cyclo_l_tryptop
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_193 [4.2.3.193] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    12e_labda_8_17_12_14_triene
+    <-> . +indole_3_butyrate +glutamine +atp +amp +hplus
+    n2_4_indol_3_yl_butanoyl_l_glutaminate
   }
 }

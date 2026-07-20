@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-dolichyl-hexadecanoate "UDP to dolichyl hexadecanoate" {
-  spacing 280
+  spacing 274
 
   spine at 0,0 {
     udp
@@ -18,61 +18,55 @@ pathway udp-to-dolichyl-hexadecanoate "UDP to dolichyl hexadecanoate" {
 
   branch from dolichyl_phosphate side left {
     dolichyl_phosphate
-    <-> ec_3_6_1_43 [3.6.1.43] +h +phosphate +h2o
-    dolichyl_diphosphate
+    <-> ec_3_1_4_49 [3.1.4.49] +alpha_d_mannopyranose +h2o
+    dolichyl_beta_d_mannosyl_phosphate
   }
 
-  branch from dolichyl_phosphate side right {
-    dolichyl_phosphate
-    <-> ec_3_1_4_48 [3.1.4.48] +glucose +h2o
-    dolichyl_beta_d_glucosyl_phosphate
-  }
-
-  branch from udp_alpha_d_xylose side left {
+  branch from udp_alpha_d_xylose side right {
     udp_alpha_d_xylose
     <-> . +udp +eugenol_beta_primeveroside +h
     eugenyl_o_beta_d_glucopyranoside
   }
 
-  branch from udp_alpha_d_xylose side right {
+  branch from udp_alpha_d_xylose side left {
     udp_alpha_d_xylose
     <-> ec_2_4_2_51 [2.4.2.51] +udp +delphinidin_3_o_beta_d_sambubioside +h
     delphinidin_3_o_d_glucoside_betaine
   }
 
-  branch from h side left {
-    h
-    <-> . +3_keto_beta_d_galactose +nadph +nadp
-    beta_d_galactose
-  }
-
   branch from h side right {
     h
-    <-> ec_1_13_11_8 [1.13.11.8] +4_carboxy_2_hydroxyhexa_2_4_dienedioate +o2
-    3_4_5_trihydroxybenzoate
+    <-> ec_1_3_1_96 [1.3.1.96] +diphosphate +squalene +nadp +nadph
+    presqualene_diphosphate
   }
 
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +distearoyl_phosphatidylglycerol +distearoyl_phosphatidylglycerol +h2o
-    atp
+  branch from h side left {
+    h
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +o2 +nadph +nadp +h2o
+    all_trans_antheraxanthin
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    phosphatidylglycerophosphate_dihexadecanoyl_n_c1
+    <-> ec_3_1_3_63 [3.1.3.63] +2_carboxy_d_arabinitol +h2o
+    2_carboxy_d_arabinitol_1_phosphate
   }
 
-  branch from coa side left {
-    coa
-    <-> . +quercetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluco +quercetin_3_6_ferulylglucoside
-    trans_4_coumaroyl_coa
+  branch from phosphate side left {
+    phosphate
+    <-> ec_1_20_1_1 [1.20.1.1] +nadh +h +nad +h2o
+    phosphite
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_51 [2.3.1.51] +1_11z_octadecenoyl_sn_glycero_3_phosphate +h +11z_octadecenoyl_coa
-    pa_18_1_11z_18_1_11z
+    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +h +deacetylvindoline
+    vindoline
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_3_13 [2.3.3.13] +acetyl_coa +h +2_oxopentanoate +h2o
+    2_propylmalate
   }
 }

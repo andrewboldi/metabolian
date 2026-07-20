@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-5-dimethylorsellinate-to-succinate-82607 "3,5-dimethylorsellinate to succinate" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     3_5_dimethylorsellinate
@@ -36,30 +36,6 @@ pathway 3-5-dimethylorsellinate-to-succinate-82607 "3,5-dimethylorsellinate to s
     andilesin_c
     <-> . +akg +o2 -succinate -co2 -h2o
     anditomin
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_197 [1.14.14.197] +progesterone +fmnh2 +o2 +h2o +hplus
-    11_hydroxyprogesterone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +steroid +fmnh2 +o2 +h2o +hplus
-    11_hydroxy_steroid
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +n_methyl_l_alanine +l_kynurenine +atp +amp +hplus
-    aspkyncin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_6_2_1_78 [6.2.1.78] +r_3_ammonio_3_phenylpropanoate +atp +coa +amp
-    3r_3_ammonio_3_phenylpropanoyl_coa
   }
 
   branch from andilesin_c side left {

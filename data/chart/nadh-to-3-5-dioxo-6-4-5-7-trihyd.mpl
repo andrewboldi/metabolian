@@ -26,26 +26,26 @@ pathway nadh-to-3-5-dioxo-6-4-5-7-trihyd "NADH to 3,5-dioxo-6-[4,5,7-trihyd…" 
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +methylglyoxal
-    lactaldehyde
+    <-> ec_1_1_1_170 [1.1.1.170] +nadh +co2 +h +3_oxosteroid
+    3beta_hydroxysteroid_4alpha_carboxylate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +methylglyoxal
-    s_lactaldehyde
+    <-> . +nadh +isonicotinoylradical +h
+    isonicotinoyl_nad_adduct
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +mycinamicin_v +o2 +nadph +mycinamicin_ii
-    nadp
+    <-> . +h +adp +phosphate +atp
+    15_s_hetre
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +mycinamicin_v +o2 +nadph +nadp
-    mycinamicin_ii
+    <-> . +h +adp +phosphate +atp
+    11z_14z_icosadienoic_acid
   }
 
   branch from carbon_monoxide side right {
@@ -68,14 +68,14 @@ pathway nadh-to-3-5-dioxo-6-4-5-7-trihyd "NADH to 3,5-dioxo-6-[4,5,7-trihyd…" 
 
   branch from h side left {
     h
-    <-> ec_1_3_1_111 [1.3.1.111] +geranylgeranyl_bacteriochlorophyllide_a +nadph +nadp
-    bacteriochlorophyll_a
+    <-> . +adp +phosphate +atp +h2o
+    15_deoxy_12_14_prostaglandin_j2
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_81 [3.1.1.81] +n_butyryl_l_homoserine +h2o
-    a_s_butyr_amido_r_butyrolactone
+    <-> . +adp +phosphate +atp +h2o
+    5_s_glutathionyl_dopamine
   }
 
   branch from 3_5_dioxo_6_4_5_7_trihydroxy_3_3_oxobutanoyl_nap side left {

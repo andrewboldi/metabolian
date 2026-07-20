@@ -24,13 +24,13 @@ pathway n-hydroxy-l-valinate-to-linamarin "N-hydroxy-L-valinate to linamarin" {
 
   branch from fmn side left {
     fmn
-    <-> . +9_cis_retinal +fmnh2 +o2 +h2o +hplus
-    9_cis_retinoate
+    <-> . +preaspterpenacid_acid_i +fmnh2 +o2 +h2o +hplus
+    preaspterpenacid_acid_ii
   }
 
   branch from fmn side right {
     fmn
-    <-> . +casbene +fmnh2 +o2 +h2o +hplus
-    4_hydroxycasbene
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    16s_22s_dihydroxycholesterol
   }
 }

@@ -30,13 +30,13 @@ pathway 1-1-dihydroxy-1-1-2-2-to-1-hydroxytorulene "1,1'-dihydroxy-1,1',2,2'-…
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +dodecanedioyl_coa +hydrogen_acceptor
-    trans_2_dodecenedioyl_coa
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    15_s_hepe
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +decanedioyl_coa +hydrogen_acceptor
-    trans_2_decenedioyl_coa
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    18_s_hepe
   }
 }

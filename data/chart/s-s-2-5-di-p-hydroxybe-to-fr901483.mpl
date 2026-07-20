@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-s-2-5-di-p-hydroxybe-to-fr901483 "(S,S)-2,5-di-(p-hydroxybe… to (−)-FR901483" {
-  spacing 170
+  spacing 152
 
   spine at 0,0 {
     s_s_2_5_di_p_hydroxybenzyl_piperazine
@@ -24,23 +24,5 @@ pathway s-s-2-5-di-p-hydroxybe-to-fr901483 "(S,S)-2,5-di-(p-hydroxybe… to (−
     1s_3s_6s_7s_8s_9s_6_4_methoxyphenyl_methyl_3_me
     <-> . +atp -adp -hplus
     fr901483
-  }
-
-  branch from 1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b side left {
-    1s_4s_4_4_hydroxyphenyl_methyl_2_5_diazaspiro_b
-    <-> . +sam +sah +hplus
-    1s_4s_4_4_methoxyphenyl_methyl_2_5_diazaspiro_b
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +myricetin +sam +hplus
-    3_o_methylmyricetin_7_olate
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
-    3_3_4_5_o_tetramethylmyricetin_7_olate
   }
 }

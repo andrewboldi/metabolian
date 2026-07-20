@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopimaradiene-diol-to-abietol "isopimaradiene-diol to abietol" {
-  spacing 268
+  spacing 262
 
   spine at 0,0 {
     isopimaradiene_diol
@@ -18,26 +18,26 @@ pathway isopimaradiene-diol-to-abietol "isopimaradiene-diol to abietol" {
 
   branch from h side left {
     h
-    <-> ec_3_5_1_6 [3.5.1.6] +co2 +alpha_fluoro_beta_alanine +nh4 +h2o
-    alpha_fluoro_beta_ureidopropionic_acid
+    <-> . +adp +estrone +phosphate +estrone +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +2_oxoglutarate +s_succinyl_dihydrolipoamide
-    co2
+    <-> . +adp +phosphate +atp +h2o
+    estrone_3_sulfate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_2 [1.13.11.2] +2_hydroxy_6_oxohexa_2_4_dienoic_acid
-    catechol
+    <-> . +fadh2 +h +bromide +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +o_s_3_4_5_tribromopyrrole_2_carbonyl_pantetheine +h2o
+    fad
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +atorvastatin_lactone +nadp +h2o
-    2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
+    <-> ec_1_14_20_14 [1.14.20.14] +2_oxoglutarate +h +chloride +12_epi_hapalindole_c_isonitrile +succinate +12_epi_hapalindole_e +h2o
+    co2
   }
 
   branch from isopimara_7_15_dienol side left {
@@ -48,43 +48,37 @@ pathway isopimaradiene-diol-to-abietol "isopimaradiene-diol to abietol" {
 
   branch from isopimara_7_15_dienol side right {
     isopimara_7_15_dienol
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    levopimaradienal
+    <-> ec_1_1_1_71 [1.1.1.71] +h +levopimaradienal +nad
+    nadh
   }
 
   branch from nadph side left {
     nadph
-    <-> . +pravastatin_sodium +h +o2 +nadp +h2o
-    3_alpha_5_beta_dihydroxy_pravastatin_3_alpha5_be
+    <-> ec_1_3_1_70 [1.3.1.70] +h +4alpha_methyl_ergosta_8_14_25_27_trienol +nadp
+    4alpha_methyl_ergosta_8_25_27_dienol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +pravastatin_sodium +h +o2 +nadp +h2o
-    3_s_hydroxy_pravastatin
+    <-> . +h +tomatid_4_en_3_one +nadp
+    dehydrotomatidine
   }
 
   branch from isopimara_7_15_dienal side left {
     isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    neoabietadienol
-  }
-
-  branch from isopimara_7_15_dienal side right {
-    isopimara_7_15_dienal
-    <-> ec_1_1_1_71 [1.1.1.71] +h +neoabietadienol +nad
-    nadh
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +gliclazide +o2 +nadph +h2o
-    4_beta_oh_gliclazide
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
+    palustradienol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +atorvastatin_acid +h +o2 +nadph +h2o
-    para_hydroxyatorvastatin
+    <-> ec_1_1_1_201 [1.1.1.201] +h +nadph +7_oxolithocholate_methyl_ester
+    ursodeoxycholic_acid_methyl_ester
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +hexyl_butyrate +h2o +h +o2 +nadph
+    decan_4_one
   }
 }

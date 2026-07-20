@@ -18,49 +18,49 @@ pathway 1-acylglycerol-3p-9-eicose-to-h2o "1-Acylglycerol-3P-9-Eicose to H2O" {
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinone_6 +dihydroxyacetone_phosphate
-    ubiquinol_6
+    <-> . +9e_myristelaidoyl_coa +coa
+    1_9z_tetradecenoyl_glycero_3_phosphate
   }
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> ec_2_4_1_213 [2.4.1.213] +adp_alpha_d_glucose +h +adp
-    2_o_beta_d_glucosyl_sn_glycerol_3_phosphate
+    <-> . +7z_hexadecenoyl_coa +coa
+    1_acylglycerol_3p_7_hexade
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    18_0_18_3_ps
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    tenuecyclamide_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    18_2_18_2_ps
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    tenuecyclamide_c
   }
 
   branch from coa side left {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
-    2_4_6_tri_2_methyl_butanoyl_3_5_methyl_hexanoyl
+    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_octadecenoyl_coa +nadph +nadp
+    z_octadec_11_enol
   }
 
   branch from coa side right {
     coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
-    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
+    <-> ec_2_3_3_20 [2.3.3.20] +dodecanoyl_coa +h2o +h
+    2r_2_decyl_3_oxotetradecanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1s_2s_1_2_dihydronaphthalene_1_2_diol
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    ulongamide_f
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_7_5_2 [1.7.5.2] +nitric_oxide +menaquinol +menaquinone_2
-    nitrous_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    westiellamide
   }
 }

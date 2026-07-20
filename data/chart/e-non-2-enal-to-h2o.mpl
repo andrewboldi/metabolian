@@ -30,13 +30,13 @@ pathway e-non-2-enal-to-h2o "(E)-non-2-enal to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +ribostamycin +phosphate +ribostamycin
-    atp
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +glutathione
+    1_methylsulfanyl_9_aci_nitrononane
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_deamino_3_hydroxykanamycin_c
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +glutathione
+    9_methylthiononanonitrile_oxide
   }
 }

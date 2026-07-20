@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
-  spacing 264
+  spacing 240
 
   spine at 0,0 {
     retinal
@@ -34,50 +34,26 @@ pathway retinal-to-all-trans-neoxanthin "retinal to all-trans-neoxanthin" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +oxoformycin_b +h2o2 +h2o
-    formycin_b
+    <-> ec_1_14_14_91 [1.14.14.91] +2_nitro_4_hydroxycinnamate +nadp +h2o +h +nadph
+    2_nitrocinnamate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +7h_purine +h2o +h2o2
-    8_hydroxypurine
+    <-> ec_1_3_3_4 [1.3.3.4] +mesoporphyrinogen_ix +h2o2
+    mesoporphyrin_ix
   }
 
   branch from zeaxanthin side left {
-    zeaxanthin
-    <-> . +antheraxanthin +ascorbate +h2o
-    l_dehydroascorbate
-  }
-
-  branch from zeaxanthin side right {
     zeaxanthin
     <-> ec_1_13_11_84 [1.13.11.84] +o2 +hydroxy_cyclocitral
     crocetin_dialdehyde
   }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +di_sulfido_diiron +o2 +hplus +h2o
-    1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
-  }
-
-  branch from antheraxanthin side left {
-    antheraxanthin
-    <-> . +all_trans_violaxanthin +l_dehydroascorbate +h2o
-    ascorbate
-  }
-
-  branch from antheraxanthin side right {
-    antheraxanthin
-    <-> ec_5_3_99_8 [5.3.99.8]
-    capsanthin
+  branch from zeaxanthin side right {
+    zeaxanthin
+    <-> ec_1_23_5_1 [1.23.5.1] +all_trans_violaxanthin +ascorbate +h2o
+    l_dehydroascorbate
   }
 
   branch from all_trans_violaxanthin side left {

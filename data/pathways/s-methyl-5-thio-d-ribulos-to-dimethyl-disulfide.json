@@ -166,40 +166,49 @@
       }
     },
     {
-      "id": "s_citronellal",
-      "name": "(S)-(−)-citronellal",
-      "formula": "C10H18O",
+      "id": "isoavenastenone",
+      "name": "isoavenastenone",
+      "formula": "C29H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:368"
+        "metanetx": "MNXM1132779"
       }
     },
     {
-      "id": "neoisomenthol",
-      "name": "neoisomenthol",
-      "formula": "C10H20O",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18451"
+        "metanetx": "MNXM13"
       }
     },
     {
-      "id": "2e_geranial",
-      "name": "(2E)-geranial",
-      "formula": "C10H16O",
-      "charge": 0,
+      "id": "24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet",
+      "name": "(24E)-4alpha-carboxy-stigmasta-7,24(241)-dien-3beta-ol",
+      "short": "4alpha-carboxy-stig…",
+      "formula": "C30H47O3",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1368412"
+        "metanetx": "MNXM1132785"
       }
     },
     {
-      "id": "1s_2s_4r_endo_fenchol",
-      "name": "(1S,2S,4R)-endo-fenchol",
-      "short": "(1S,2S,4R)-endo-fen…",
-      "formula": "C10H18O",
+      "id": "plastoquinone_9",
+      "name": "plastoquinone-9",
+      "formula": "C53H80O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1371317"
+        "metanetx": "MNXM732531"
+      }
+    },
+    {
+      "id": "plastoquinol_9",
+      "name": "plastoquinol-9",
+      "formula": "C53H82O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6387"
       }
     }
   ],
@@ -219,10 +228,17 @@
       ]
     },
     {
-      "id": "ec_1_1_1_71",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "id": "ec_1_1_1_418",
+      "name": "plant 3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
       "ec": [
-        "1.1.1.71"
+        "1.1.1.418"
+      ]
+    },
+    {
+      "id": "ec_1_6_5_2",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": [
+        "1.6.5.2"
       ]
     }
   ],
@@ -408,25 +424,25 @@
     },
     {
       "id": "r5",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "plant 3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
+      "ec": "1.1.1.418",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "isoavenastenone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_citronellal",
+          "metabolite": "co2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "neoisomenthol",
+          "metabolite": "24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet",
           "stoichiometry": 1
         },
         {
@@ -436,45 +452,45 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_1_1_418"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR181402"
+        "metanetx": "MNXR193733"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181402"
+            "id": "MNXR193733"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "NAD(P)H dehydrogenase (quinone)",
+      "ec": "1.6.5.2",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "2e_geranial",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "plastoquinone_9",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1s_2s_4r_endo_fenchol",
+          "metabolite": "plastoquinol_9",
           "stoichiometry": 1
         },
         {
@@ -484,20 +500,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_6_5_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR181414"
+        "metanetx": "MNXR193949"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181414"
+            "id": "MNXR193949"
           }
         ]
       }

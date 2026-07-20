@@ -18,14 +18,14 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetylsphingosine +h2o
-    sphingosine
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine +h2o
+    udp_3_o_3r_hydroxyacyl_d_glucosamine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +dihydroprecondylocarpine_acetate +hplus
-    catharanthine
+    <-> . +h2o +h2o2 +hplus
+    peracetic_acid
   }
 
   branch from adenosine_3_5_bismonophosphate side left {
@@ -42,13 +42,13 @@ pathway phenyl-acetates-to-sulfate "phenyl acetates to sulfate" {
 
   branch from sulfate side left {
     sulfate
-    <-> ec_4_8_1_6 [4.8.1.6] +z_n_sulfonatooxy_alkenimidothioate
-    epithionitrile
+    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
+    2_thiiran_2_yl_acetonitrile
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
-    2_thiiran_2_yl_acetonitrile
+    <-> . +z_n_sulfonatooxy_alkenimidothioate
+    alkenyl_isothiocyanate
   }
 }

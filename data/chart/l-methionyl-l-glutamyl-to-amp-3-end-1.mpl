@@ -18,13 +18,13 @@ pathway l-methionyl-l-glutamyl-to-amp-3-end-1 "L-methionyl-L-glutamyl… to AMP 
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
-    cyclo_l_leucyl_l_leucyl
+    <-> . +glutamate +atp +amp +ppi
+    3_l_glutamate_adenylyl_1_group
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_2_3_2_6 [2.3.2.6] +l_argininiumyl_2_group +3_l_leucyl_adenylyl_zwitterionic_group +hplus
-    l_leucyl_l_arginyl_2_group
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aspartyl_adenylyl_1_group +h2o +hplus
+    d_aspartate
   }
 }

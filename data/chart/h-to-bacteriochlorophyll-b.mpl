@@ -18,13 +18,13 @@ pathway h-to-bacteriochlorophyll-b "H to bacteriochlorophyll b" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +menaquinone_6 +nadph +menaquinol_6
-    pmf
+    <-> . +10_deoxymethymycin +h +o2 +nadph +h2o
+    methymycin
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_12_17 [1.14.12.17] +nitric_oxide +h +o2 +nadph
-    nitric_acid
+    <-> . +pikromycin +h2o +h +nadph +narbomycin
+    o2
   }
 }

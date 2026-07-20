@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-2-deoxy-d-ribose-to-h2o "aldehydo-2-deoxy-D-ribose to H2O" {
-  spacing 306
+  spacing 300
 
   spine at 0,0 {
     aldehydo_2_deoxy_d_ribose
@@ -32,14 +32,14 @@ pathway aldehydo-2-deoxy-d-ribose-to-h2o "aldehydo-2-deoxy-D-ribose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +acetate +puromycin
-    n_acetylpuromycin
+    <-> . +h +adp +phosphate +atp
+    4_acetamidophenol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_67 [1.14.13.67] +h +quinine +o2 +nadph +3_hydroxyquinine
-    nadp
+    <-> . +h +adp +phosphate +atp
+    3alpha_hydroxy_5beta_androstan_17_one
   }
 
   branch from 2_deoxyadenosine side left {
@@ -62,37 +62,31 @@ pathway aldehydo-2-deoxy-d-ribose-to-h2o "aldehydo-2-deoxy-D-ribose to H2O" {
 
   branch from udp side right {
     udp
-    <-> . +6_beta_oh_gliclazide_glucuronide +6_beta_oh_gliclazide
+    <-> . +am1c_glucuronide_cyclosporine +cyclosporin_a_metabolite_m18
     udp_alpha_d_glucuronate
   }
 
   branch from udp side left {
     udp
-    <-> . +7_beta_oh_gliclazide_glucuronide +udp_alpha_d_glucuronate
-    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
+    <-> . +cerivastatin_m23_glucuronide +udp_alpha_d_glucuronate
+    cerivastatin_m23
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_62 [2.7.1.62] +phosphoramidate +hexopyranose +alpha_d_hexose_1_phosphate
-    nh4
+    <-> ec_2_2_1_7 [2.2.1.7] +glyceraldehyde_3_phosphate +pyruvate +1_deoxy_d_xylulose_5_phosphate
+    co2
   }
 
   branch from h side left {
     h
-    <-> ec_2_6_3_1 [2.6.3.1] +pyruvate +acetone_oxime +pyruvate_oxime
-    acetone
+    <-> ec_4_1_2_14 [4.1.2.14] +glyceraldehyde_3_phosphate +pyruvate
+    2_dehydro_3_deoxy_6_phospho_d_gluconate
   }
 
   branch from damp side right {
     damp
     <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +o2 +1_methyl_damp
     2_oxoglutarate
-  }
-
-  branch from damp side left {
-    damp
-    <-> . +gdp +dadp
-    gtp
   }
 }

@@ -18,38 +18,38 @@ pathway gdp-to-h "GDP to H" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gmp +d_mannose_1_phosphate +h
-    h2o
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
     <-> . +gtp +d_mannose_1_phosphate +h
     diphosphate
   }
 
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> . +gdp +d_mannose_1_phosphate +h
+    phosphate
+  }
+
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_3_digalactosyldiacylglycerol
-    1_9z_12z_octadecadienoyl_2_7z_10z_13z_hexadecatr
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_1_2_18_1_digalactosyldiacylglycerol
+    1_18_1_2_18_1_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_1_digalactosyldiacylglycerol
-    1_18_0_2_18_1_monogalactosyldiacylglycerol
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_3_digalactosyldiacylglycerol
+    1_18_0_2_18_3_monogalactosyldiacylglycerol
   }
 
   branch from udp side left {
     udp
-    <-> . +losartan_n1_glucuronide +losartan
+    <-> . +rosuvastatin_glucuronide +rosuvastatin
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> . +losartan_m4_glucuronide_derivative +udp_alpha_d_glucuronate
-    losartan_carboxylic_acid
+    <-> . +simvastatin_acyl_glucuronide +udp_alpha_d_glucuronate
+    simvastatin_hydroxy_acid
   }
 
   branch from beta_d_galnac_1_4_alpha_l_rha_1_3_alpha_d_glcnac side left {
@@ -60,13 +60,13 @@ pathway gdp-to-h "GDP to H" {
 
   branch from h side right {
     h
-    <-> . +r_carnitine +5z_8z_11z_eicosatrienoyl_coenzyme_a +acar_20_3
-    coa
+    <-> ec_3_2_1_144 [3.2.1.144] +3_deoxy_d_manno_octulosonate +1_petn_kdo_lipid_a +h2o
+    1_petn_kdo2_lipid_a
   }
 
   branch from h side left {
     h
-    <-> . +nonadecanoyl_coa +acetyl_coa +coa
-    3_oxoheneicosanoyl_coenzyme_a
+    <-> ec_5_4_99_67 [5.4.99.67] +4_amino_4_deoxychorismate
+    4_amino_4_deoxyprephenate
   }
 }

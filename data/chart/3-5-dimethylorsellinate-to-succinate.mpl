@@ -28,25 +28,25 @@ pathway 3-5-dimethylorsellinate-to-succinate "3,5-dimethylorsellinate to succina
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    barbatene
+    <-> . +gpp
+    camphene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp +h2o
-    discoidol
+    <-> . +gpp
+    isoterpinolene
   }
 
   branch from sah side left {
     sah
-    <-> . +e_5_hydroxyferuloyl_coa +sam +hplus
-    sinapoyl_coa
+    <-> . +gdp +sam
+    7_methylguanosine_5_diphosphate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_375 [2.1.1.375] +g5_ppp5_aaca_mrna +sam +hplus
-    m7g5_ppp5_m2_aaca_mrna
+    <-> . +2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy +sam +hplus
+    griseophenone_d
   }
 }

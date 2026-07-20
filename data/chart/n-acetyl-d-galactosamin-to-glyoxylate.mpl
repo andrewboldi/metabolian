@@ -42,49 +42,43 @@ pathway n-acetyl-d-galactosamin-to-glyoxylate "N-acetyl-α-D-galactosamin… to 
     2_3_bis_o_phytanyl_sn_glycero_3_phospho_l_serine
   }
 
-  branch from d_ribose_1_5_bisphosphate side right {
-    d_ribose_1_5_bisphosphate
-    <-> ec_2_4_2_57 [2.4.2.57] +amp +pi
-    adenine
-  }
-
-  branch from 2_phosphonatoglycolate side left {
+  branch from 2_phosphonatoglycolate side right {
     2_phosphonatoglycolate
     <-> . +3_end_deoxyribonucleotide_3_phosphoglycolate_3 +h2o +hplus
     3_end_deoxyribonucleotide_1
   }
 
-  branch from pg3 side right {
-    pg3
-    <-> ec_2_7_2_3 [2.7.2.3] +atp +adp
-    bpg13
-  }
-
   branch from pg3 side left {
     pg3
-    <-> ec_2_7_1_31 [2.7.1.31] +atp +adp +hplus
-    d_glycerate
+    <-> ec_2_4_1_266 [2.4.1.266] +udp_d_glucose +udp +hplus
+    2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
   }
 
-  branch from glycolate side right {
+  branch from pg3 side right {
+    pg3
+    <-> ec_3_7_1_28 [3.7.1.28] +h2o +glycolate +hplus
+    3_oxoisoapionate_4_phosphate
+  }
+
+  branch from glycolate side left {
     glycolate
     <-> . +h2o +hplus
     glyoxal
   }
 
-  branch from glycolate side left {
+  branch from glycolate side right {
     glycolate
-    <-> ec_3_7_1_28 [3.7.1.28] +h2o +pg3 +hplus
-    3_oxoisoapionate_4_phosphate
+    <-> ec_3_5_1_124 [3.5.1.124] +n_1_hydroxy_2_oxoethyl_l_argininium +h2o +hplus
+    l_argininium
   }
 
-  branch from glyoxylate side right {
+  branch from glyoxylate side left {
     glyoxylate
     <-> ec_1_2_3_5 [1.2.3.5] +o2 +h2o +h2o2 +hplus
     oxalate
   }
 
-  branch from glyoxylate side left {
+  branch from glyoxylate side right {
     glyoxylate
     <-> ec_4_1_3_24 [4.1.3.24] +acetyl_coa
     3s_3_carboxy_3_hydroxypropanoyl_coa

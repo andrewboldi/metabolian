@@ -26,37 +26,37 @@ pathway phosphoramidate-to-cytidine-3-phospho-5-di "phosphoramidate to cytidine 
 
   branch from h2o side right {
     h2o
-    <-> . +l_valine +l_arginine +l_tyrosine
-    argtyrval
+    <-> . +h +cholesterol +7z_10z_13z_16z_19z_docosapentaenoate
+    cholesteryl_7z_10z_13z_16z_19z_docosapentaenoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_valine +l_arginine +l_tryptophan
-    arginyl_valyl_tryptophan
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_4z_7z_10z_13z_16z_19z_docosahexaenoa +h +cholesterol
+    4z_7z_10z_13z_16z_19z_docosahexaenoate
   }
 
   branch from ppi side right {
     ppi
-    <-> . +r_lavandulyl_diphosphate +h2o
-    r_lavandulol
+    <-> . +2_methylvalerate +atp +coa +amp
+    2_methylpentanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> . +l_tryptophan +atp
-    l_tryptophyl_amp
+    <-> . +2s_4s_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
+    5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
-    l_glutamyl_l_glutamyl_l_glutamate_3
+    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi +hplus
+    1_l_glutamo_2_n6_l_lysinohydrazine
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamate +atp +adp +pi +hplus
-    l_glutamyl_l_glutamate_2
+    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi
+    o_glutamyl_n6_hydroxy_l_lysine
   }
 }

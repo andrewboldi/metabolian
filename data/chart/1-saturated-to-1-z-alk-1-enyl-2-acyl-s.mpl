@@ -32,14 +32,14 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_acyl_sn_glycerol_3_phosphate
+    <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
+    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
-    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
+    <-> . +1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
+    1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
   }
 
   branch from 1_z_alk_1_enyl_sn_glycero_3_phosphocholine side left {
@@ -56,13 +56,13 @@ pathway 1-saturated-to-1-z-alk-1-enyl-2-acyl-s "1-(α,β-saturated… to 1-(Z)-a
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_5_1_23 [3.5.1.23] +n_acylsphingosine +h2o
-    sphingosine
+    <-> . +n_acylphytosphingosine +h2o
+    phytosphingosine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_acylphytosphingosine +h2o
-    phytosphingosine
+    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
   }
 }

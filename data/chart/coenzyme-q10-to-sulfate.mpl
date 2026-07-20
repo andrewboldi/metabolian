@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coenzyme-q10-to-sulfate "coenzyme Q10 to sulfate" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     coenzyme_q10
@@ -14,18 +14,6 @@ pathway coenzyme-q10-to-sulfate "coenzyme Q10 to sulfate" {
     sulfite
     <-> ec_1_8_3_1 [1.8.3.1] +o2 +h2o -h2o2
     sulfate
-  }
-
-  branch from s_sulfanylglutathionate side left {
-    s_sulfanylglutathionate
-    <-> . +o2 +hplus
-    glutathione_s_sulfinate
-  }
-
-  branch from s_sulfanylglutathionate side right {
-    s_sulfanylglutathionate
-    <-> . +gsh +h2s +hplus
-    gssg
   }
 
   branch from ubiquinol_10 side left {
@@ -42,25 +30,25 @@ pathway coenzyme-q10-to-sulfate "coenzyme Q10 to sulfate" {
 
   branch from gsh side left {
     gsh
-    <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +h2o
-    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
+    <-> . +1_aci_nitro_2_phenyl_ethane +h2o
+    z_1_glutathione_s_yl_2_phenylacetohydroximate
   }
 
   branch from gsh side right {
     gsh
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
+    <-> . +nad +nadh +hplus
+    gssg
   }
 
   branch from sulfate side left {
     sulfate
-    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +sulfur_atom +hplus
-    5_methylsulfanyl_pentanenitrile
+    <-> . +1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce +h2o +hplus
+    1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol
   }
 
   branch from sulfate side right {
     sulfate
-    <-> . +1_alkyl_2_acyl_3_3_o_sulfo_d_galactosyl_sn_glyce +h2o +hplus
-    1_alkyl_2_acyl_3_d_galactosyl_sn_glycerol
+    <-> . +1_3_o_sulfonato_d_galactosyl_ceramide +h2o +hplus
+    galactosylceramide
   }
 }

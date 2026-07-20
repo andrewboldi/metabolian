@@ -20,14 +20,14 @@ pathway udp-n-acetylgalactosamine-to-h2o "UDP-N-acetylgalactosamine… to H2O" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_3_beta_d_galnac_1_3_alpha_d_gal +h
-    beta_d_galnac_1_3_alpha_d_gal_1_4_beta_d_gal_1_3
+    <-> . +udp +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
+    beta_d_gal_1_3_alpha_d_galnac_pp_und
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_galnac_1_3_beta_d_glcnac_1_2_beta_d_man +h
-    alpha_d_galnac_1_3_beta_d_man_1_4_beta_d_glc_1_3
+    <-> ec_2_4_1_227 [2.4.1.227] +udp +undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl +h
+    undecaprenyl_diphospho_n_acetylmuramoyl_l_alanyl
   }
 
   branch from n_acetyl_alpha_d_glucosaminyl_diphospho_trans_oc side left {
@@ -44,13 +44,13 @@ pathway udp-n-acetylgalactosamine-to-h2o "UDP-N-acetylgalactosamine… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_20 [1.14.13.20] +h +o2 +nadph +2_chloro_4_methylphenol +3_chloro_5_methylcatechol
-    nadp
+    <-> . +indol_3_ylmethyl_glutathione +indole_3_methanol
+    glutathione
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_28 [1.2.1.28] +nadh +h +3_chlorobenzoate +nad
-    3_chlorobenzaldehyde
+    <-> . +indol_3_ylmethyl_l_cysteine +l_cysteine
+    indole_3_methanol
   }
 }

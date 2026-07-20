@@ -18,37 +18,37 @@ pathway dtdp-beta-l-rhamnose-to-coa "dTDP-beta-L-rhamnose to CoA" {
 
   branch from dtdp side left {
     dtdp
-    <-> . +h +phosphoenolpyruvate +dttp
-    pyruvate
+    <-> . +beta_d_ribf_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_4_deoxy_4_n_acetyl_l_seryl_amino_alpha_d_qu +h
+    beta_d_qui4n_l_serac_1_3_beta_d_ribf_1_4_alpha_d
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +20s_ginsenoside_rh1 +h
-    ginsenoside_rg2
+    <-> . +alpha_d_glcnac_1_3_alpha_l_quinac_1_3_alpha_d_gl +dtdp_4_deoxy_4_s_3_hydroxybutanoyl_d_alanyl_amin +h
+    beta_d_qui4n_d_ala_shb_1_6_alpha_d_glcnac_1_3_al
   }
 
   branch from h side left {
     h
-    <-> . +huvastatin_acid +h2o
-    huvastatin_lactone
+    <-> ec_1_2_1_84 [1.2.1.84] +11z_tetradecenol +nadp +coa +nadph
+    cis_tetradec_11_enoyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +monacolin_j_carboxylate +2_dimethylbutanoyl_s_methyl_mercaptopropanoate +simvastatin_hydroxy_acid
-    methyl_mercaptopropanoate
+    <-> ec_1_2_1_84 [1.2.1.84] +9z_myristoleoyl_coa +nadph +nadp +coa
+    9z_tetradecen_1_ol
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
-    sn_2_c16_0_dca_lpa
+    <-> . +isorhamnetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
+    isorhamnetin_3_o_3_6_o_di_4_coumaroyl_glucoside
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +docosanoyl_coa
-    sn_glycerol_3_phosphate
+    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
+    isorhamnetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gl
   }
 }

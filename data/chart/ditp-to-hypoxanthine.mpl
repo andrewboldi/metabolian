@@ -24,13 +24,13 @@ pathway ditp-to-hypoxanthine "dITP to hypoxanthine" {
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    elemene
+    <-> . +preechinulin +dmapp
+    tardioxopiperazine_b
   }
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    germacrene_d
+    <-> . +preechinulin +dmapp
+    tardioxopiperazine_a
   }
 }

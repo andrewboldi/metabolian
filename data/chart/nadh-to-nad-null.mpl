@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nad-null "NADH to NAD" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     nadh
@@ -22,59 +22,53 @@ pathway nadh-to-nad-null "NADH to NAD" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o_xylene +o2 +h2o
-    2_methylbenzyl_alcohol
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    8z_11z_icosadienoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +1_1_dichloro_2_2_bis_4_chlorophenyl_ethylene +o2
-    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
-  }
-
-  branch from 4_r_8_dimethyl_trans_2_nonenoyl_coa side left {
-    4_r_8_dimethyl_trans_2_nonenoyl_coa
-    <-> . +h2o
-    3_s_hydroxy_4_r_8_dimethyl_nonanoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_13_50 [1.14.13.50] +2_3_5_6_tetrachlorohydroquinone +nadp +chloride +o2 +nadph
-    pentachlorophenol
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    5z_8z_11z_eicosatrienoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_113 [4.2.1.113] +2_succinylbenzoate +h
-    2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
+    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
   }
 
-  branch from fad side right {
-    fad
-    <-> . +tetradecanoyl_coa +h2o +fadh2 +h
-    3s_hydroxytetradecanoyl_coa
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_1_4 [3.5.1.4] +h +2_phenylacetamide +phenyl_acetate
+    nh4
   }
 
   branch from fad side left {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +5_8_11_tetradecatrienoyl_coenzyme_a +coa +nad +h2o
-    7z_10z_13z_hexadecatrienoyl_coa
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    4z_7z_10z_13z_16z_docosapentaenoyl_coa
   }
 
-  branch from coa side right {
-    coa
-    <-> . +r_carnitine +3_hydroxyhexadecenoyl_coenzyme_a
-    3_hydroxyhexadecenoylcarnitine
+  branch from fad side right {
+    fad
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    13z_16z_docosadienoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +hexadecanedioyl_coa +r_carnitine +h
-    o_15_carboxypentadecanoyl_carnitine
+    <-> . +10z_heptadecenoyl_coa +h2o
+    10z_heptadecenoic_acid
   }
 
-  branch from 3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa side right {
+  branch from coa side right {
+    coa
+    <-> . +diphosphate +trans_9_octadecenoyl_coa +amp +atp
+    9e_octadecenoate
+  }
+
+  branch from 3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa side left {
     3_r_hydroxy_2s_6r_10_trimethyl_hendecanoyl_coa
     <-> . +h2o
     2s_6r_10r_trimethyl_2e_hendecenoyl_coa

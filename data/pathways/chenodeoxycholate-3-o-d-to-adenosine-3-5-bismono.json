@@ -152,30 +152,51 @@
       }
     },
     {
-      "id": "cellotetraose",
-      "name": "cellotetraose",
-      "formula": "C24H42O21",
+      "id": "1_o_trans_sinapoyl_beta_d_glucose",
+      "name": "1-O-(trans-sinapoyl)-beta-D-glucose",
+      "short": "1-O-(trans-sinapoyl…",
+      "formula": "C17H22O10",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1371943"
+        "metanetx": "MNXM1106720"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine",
+      "short": "cyanidin 3-O-(6-O-g…",
+      "formula": "C32H38O20",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM1368532"
       }
     },
     {
-      "id": "cellotetraose",
-      "name": "cellotetraose",
-      "formula": "C24H42O21",
+      "id": "cyanidin_3_o_6_o_sinapoyl_beta_d_glucosyl_1_6_be",
+      "name": "cyanidin 3-O-[6-O-sinapoyl-beta-D-glucosyl-(1->6)]-[beta-D-xylosyl-(1->2)]-beta-D-galactoside",
+      "short": "cyanidin 3-O-[6-O-s…",
+      "formula": "C43H47O24",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368274"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62974"
+        "metanetx": "MNXM1363863"
       }
     },
     {
@@ -261,6 +282,27 @@
       "name": "glycochenodeoxycholate sulfotransferase",
       "ec": [
         "2.8.2.34"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_213",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "ec": [
+        "2.3.1.213"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_9",
+      "name": "glucose-6-phosphate isomerase",
+      "ec": [
+        "5.3.1.9"
       ]
     }
   ],
@@ -480,68 +522,84 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR196833",
+      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) 6'''-O-",
+      "ec": "2.3.1.213",
       "substrates": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 4
+          "metabolite": "1_o_trans_sinapoyl_beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cellotetraose",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 3
+          "metabolite": "cyanidin_3_o_6_o_sinapoyl_beta_d_glucosyl_1_6_be",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_213"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR196833"
+        "metanetx": "MNXR197641"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196833"
+            "id": "MNXR197641"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR196834",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
       "substrates": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 4
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cellotetraose",
+          "metabolite": "glucose",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 3
+          "enzyme": "ec_5_3_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR196834"
+        "metanetx": "MNXR197791"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196834"
+            "id": "MNXR197791"
           }
         ]
       }

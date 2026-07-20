@@ -32,25 +32,25 @@ pathway dtdp-l-evernosamine-to-dtdp-3-amino-2-3-6-trideo "dTDP-β-L-evernosamine
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +c35_phenolphthiocerol_a +h
-    c34_phenolphthiotriol_a
+    <-> . +s_adenosyl_l_homocysteine +beta_bixin +h
+    norbixin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +p_hbad_i +h
-    4_o_alpha_l_rhamnopyranosyl_hydroxybenzoate_meth
+    <-> . +s_adenosyl_l_homocysteine +trans_methylbixin +h
+    beta_bixin
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_2_3_1_292 [2.3.1.292] +malonyl_coa +s_methylmalonyl_coa +h +o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1 +o_s_c32_carboxyphthiodiolenoneylpantetheine_4_ph +nadp +coa +h2o
-    co2
+    <-> . +4_hydroxycinnamoylmethane +h +nadp
+    raspberry_ketone
   }
 
   branch from nadph side right {
     nadph
-    <-> . +c33_phthiodiolone_a +h +nadp
-    c33_phthiotriol_a
+    <-> . +formaldehyde +acetate +nadp +h2o +o2
+    hydroxyacetone
   }
 }

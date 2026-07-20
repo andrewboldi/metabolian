@@ -24,61 +24,49 @@ pathway o-s-4-aminobutanoyl-pan-to-h2o "O-[S-4-(aminobutanoyl)pan… to H2O" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_79 [1.14.19.79] +22s_22_hydroxycampesterol +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxycampest_4_en_3_one
+    <-> . +n1_n5_n10_e_tri_p_coumaroylspermidine +fmnh2 +o2 +h2o +hplus
+    n1_n5_n10_tris_e_caffeoyl_spermidine
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_179 [1.14.14.179] +6_deoxocastasterone +fmnh2 +o2 +h2o +hplus
-    castasterone
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +malonyl-coa +acetyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    o_s_dodecapentaenoylpantetheine_4_phosphoryl_ser
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +fumagillol +o_s_dodecapentaenoylpantetheine_4_phosphoryl_ser
-    prefumagillin
+    <-> . +12_deshydroxyl_okaramine_e +fmnh2 +o2 +h2o +hplus
+    3_desmethyl_okaramine_b
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    d_apiofuranosyl_1_6_d_glucopyranose
+    <-> . +terpinene
+    alpha_terpinyl_cation
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    lambda_carratetraose
+    <-> . +alpha_terpinyl_cation
+    phellandrene
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    tetraacyldisaccharide_4_phosphate
+    <-> . +h +adp +phosphate +h2o
+    6_kestotriose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_maltose
+    <-> . +h +adp +phosphate +h2o
+    neokestose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
-    l_hydroxyarginine
+    <-> . +h +adp +phosphate +atp
+    aldehydo_d_apiose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
-    d_asparagine
+    <-> . +h +adp +phosphate +atp
+    maltose_6_phosphate
   }
 }

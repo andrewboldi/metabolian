@@ -30,8 +30,8 @@ pathway diphosphate-to-diphosphate "diphosphate to diphosphate" {
 
   branch from ipp side right {
     ipp
-    <-> . +fpp +ppi
-    all_trans_pentaprenyl_diphosphate
+    <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
+    isopentenyl_phosphate
   }
 
   branch from 2_cis_6_trans_farnesyl_diphosphate side left {
@@ -48,13 +48,13 @@ pathway diphosphate-to-diphosphate "diphosphate to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +atp
-    cyclic_hexaadenylate
+    <-> ec_2_7_7_68 [2.7.7.68] +2_phosphonato_l_lactate +gtp +hplus
+    l_lactyl_2_diphospho_5_guanosine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +atp
-    cyclic_tetraadenylate
+    <-> ec_2_7_7_107 [2.7.7.107] +2_aminoethyl_phosphonic_acid +ctp
+    cmp_2_aminoethyl_phosphonate
   }
 }

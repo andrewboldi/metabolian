@@ -38,25 +38,25 @@ pathway 5z-8z-11z-13e-15s-17z-1-to-h2o "(5Z,8Z,11Z,13E,15S,17Z)-1… to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +r_methylmalonyl_coa +coa
-    methylmalonate
+    <-> ec_6_2_1_32 [6.2.1.32] +diphosphate +n_methylanthraniloyl_coa +amp +coa
+    n_methylanthranilate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_102 [2.7.1.102] +h +d_hamamelose +adp
-    d_hamamelose_2_1_phosphate
+    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylspermine +phosphate +glutathione
+    spermine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_13_11_3 [1.13.11.3] +2_oxo_2h_pyran_4_6_dicarboxylate +h +o2
-    3_4_5_trihydroxybenzoate
+    <-> . +6_carboxyhex_2_enoyl_coa +h
+    3_hydroxy_6_carboxyhexanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
-    aldehydo_d_galactose
+    <-> . +h +6_hydroxycyclohex_1_ene_1_carbonyl_coa
+    2_6_dihydroxycyclohexane_1_carbonyl_coa
   }
 }

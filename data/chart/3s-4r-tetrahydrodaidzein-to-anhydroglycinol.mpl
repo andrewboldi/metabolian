@@ -18,14 +18,14 @@ pathway 3s-4r-tetrahydrodaidzein-to-anhydroglycinol "(3S,4R)-Tetrahydrodaidzein 
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +cyanate +phosphate +cyanate
-    atp
+    <-> . +l_lysine +l_valine +l_tryptophan
+    lysyl_valyl_tryptophan
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    s_5_acetamido_2_hydroxyphenyl_cysteine
+    <-> . +l_leucine +l_methionine +l_arginine
+    methionyl_arginyl_leucine
   }
 
   branch from daidzein side left {
@@ -36,25 +36,25 @@ pathway 3s-4r-tetrahydrodaidzein-to-anhydroglycinol "(3S,4R)-Tetrahydrodaidzein 
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    d_alanine
+    <-> . +adp +1_eicosenoylglycerophosphocholine_delta_11_sn1_l +phosphate +1_eicosenoylglycerophosphocholine_delta_11_sn1_l +h2o
+    atp
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    d_arginine
+    1_8z_11z_14z_icosatrienoyl_sn_glycero_3_phosphoc
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +o2 +thiomethyl_conjugate_acetaminophen +nadp +h2o
-    thiomethyl_sulphoxide_conjugate_acetaminophen
+    <-> ec_1_14_13_150 [1.14.13.150] +1e_4e_8e_humulene +h +o2 +nadp +h2o
+    8_hydroxy_humulene
   }
 
   branch from nadph side left {
     nadph
-    <-> . +hydroxy_torasemide +nadp +h2o +h +torasemide
-    o2
+    <-> ec_1_1_1_323 [1.1.1.323] +h +thujan_3_one +nadp
+    thujan_3_ol
   }
 }

@@ -18,37 +18,37 @@ pathway 1-hexadecanoyl-2-9z-octa-to-h2o "1-hexadecanoyl-2-(9Z-octa… to H2O" {
 
   branch from 2_oleoyl_sn_glycero_3_phosphoethanolamine side left {
     2_oleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
-    n_1_2_trioleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from 2_oleoyl_sn_glycero_3_phosphoethanolamine side right {
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
     <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +coa
     palmitoyl_coa
   }
 
+  branch from 2_oleoyl_sn_glycero_3_phosphoethanolamine side right {
+    2_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +oleoyl_coa +coa
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+  }
+
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    mediose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    amiclenomycin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_manp_1_3_d_manp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    penem_cgp31608
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    3_o_6_o_d_xylosylphospho_d_mannopyranosyl_d_mann
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    cephradine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_xylobiose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    fosmidomycin
   }
 }

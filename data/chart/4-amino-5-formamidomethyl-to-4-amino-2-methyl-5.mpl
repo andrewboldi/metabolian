@@ -18,13 +18,13 @@ pathway 4-amino-5-formamidomethyl-to-4-amino-2-methyl-5 "4-amino-5-formamidometh
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_38 [3.5.4.38] +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
-    dump
+    <-> . +5_methoxytryptamine +o2 +h2o +h2o2
+    5_methoxyindoleacetaldehyde
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_35 [3.5.4.35] +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
+    <-> . +spermidine +o2 +h2o +h2o2
+    4_ammoniobutyl_3_oxopropyl_azanium
   }
 }

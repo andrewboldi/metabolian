@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-succinate "S-adenosyl-L-homocysteine to succinate" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,25 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-succinate "S-adenosyl-L-homocysteine to suc
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +17_o_acetylajmaline +h
-    17_o_acetylnorajmaline
+    <-> . +s_adenosyl_l_homocysteine +pdgt_1 +h
+    bdgt_1
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +premithramycinone +h
-    4_demethylpremithramycinone
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +perivine +sam +hplus
-    vobasine
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_391 [2.1.1.391] +demethylgadusol +sam +hplus
-    gadusol
+    <-> . +s_adenosyl_l_homocysteine +bdgt_2 +h
+    caldarchaeol_2
   }
 }

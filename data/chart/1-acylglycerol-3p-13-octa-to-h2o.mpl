@@ -18,14 +18,14 @@ pathway 1-acylglycerol-3p-13-octa-to-h2o "1-Acylglycerol-3P-13-Octa… to H2O" {
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> ec_2_7_8_5 [2.7.8.5] +cmp +h +1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly
-    1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho
+    <-> ec_2_7_8_5 [2.7.8.5] +cmp +phosphatidylglycerophosphate_didodecanoyl_n_c12
+    cdp_1_2_didodecanoylglycerol
   }
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> ec_1_1_99_5 [1.1.99.5] +ubiquinol_7 +dihydroxyacetone_phosphate
-    ubiquinone_7
+    <-> . +menaquinol_8 +dihydroxyacetone_phosphate
+    mk_8
   }
 
   branch from 13z_octadecenoyl_coa side left {
@@ -36,37 +36,37 @@ pathway 1-acylglycerol-3p-13-octa-to-h2o "1-Acylglycerol-3P-13-Octa… to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    nostocyclamide
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    nostocyclamide_m
   }
 
   branch from coa side right {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_4_methyl_pentanoyl_su
-    2_4_6_tri_2_methyl_butanoyl_3_4_methyl_pentanoyl
+    <-> . +r_3_hydroxyisobutyrate +h +h2o
+    r_3_hydroxy_isobutanoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
-    2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_6_i
+    <-> . +acetyl_coa +fucoxanthinol
+    fucoxanthin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1s_2s_1_2_dihydronaphthalene_1_2_diol
-    1r_2s_naphthalene_1_2_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    raocyclamide_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1r_2s_1_2_dihydronaphthalene_1_2_diol
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    raocyclamide_b
   }
 }

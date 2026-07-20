@@ -18,37 +18,37 @@ pathway 2-oxopentanoate-to-nadph "2-oxopentanoate to NADPH" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +beta_d_ribofuranose
-    l_arabinitol
+    <-> ec_1_1_1_14 [1.1.1.14] +nadh +d_xylulofuranose +h
+    xylitol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +beta_d_ribofuranose
-    xylitol
+    <-> ec_1_1_1_13 [1.1.1.13] +nadh +3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol +h
+    l_arabinitol
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +kanamycin_a +phosphate +kanamycin_a +h2o
-    atp
+    <-> . +9z_hexadecenoate
+    palmitelaidic_acid
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    kanamycin_c
+    <-> . +colibactin +nh4 +h2o
+    precolibactin_16b
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_119 [1.1.1.119] +alpha_d_glucose +nadp +h
-    d_glucono_1_4_lactone
+    <-> ec_1_14_14_37 [1.14.14.37] +4_hydroxyphenylacetaldehyde_oxime +h +o2 +nadp +h2o
+    4_hydroxymandelonitrile
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_120 [1.1.1.120] +d_galactopyranose +nadp +h
-    d_galactono_1_4_lactone
+    <-> . +z_4_hydroxyphenyl_acetaldehyde_oxime +h +o2 +nadp +4_hydroxymandelonitrile
+    h2o
   }
 }

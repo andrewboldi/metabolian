@@ -20,25 +20,25 @@ pathway 1-hexadecyl-2-succinyl-sn-to-n-oleoyl-l-phenylal "1-hexadecyl-2-succinyl
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_12 [1.14.20.12] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +akg +o2 +hplus +co2 +h2o
-    3_e_2_isocyanovinyl_indole
+    <-> ec_1_14_11_60 [1.14.11.60] +scopoletin +akg +o2 +co2
+    fraxetin
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_73 [1.14.11.73] +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
+    <-> . +l_lysinium +akg +o2 +co2
+    5s_5_hydroxy_l_lysinium
   }
 
   branch from oleate side left {
     oleate
-    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_9z_octadecenoyl_sn_glycero_3_phospho_1_sn_glyc +h2o +hplus
+    sn_glycero_3_phospho_1_sn_glycerol
   }
 }

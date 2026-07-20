@@ -137,21 +137,21 @@
       }
     },
     {
-      "id": "17_estradiol",
-      "name": "17β-estradiol",
-      "formula": "C18H24O2",
+      "id": "15_hydroxyestrone",
+      "name": "15α-hydroxyestrone",
+      "formula": "C18H22O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16469"
+        "chebi": "CHEBI:87618"
       }
     },
     {
       "id": "6_hydroxyestrone",
-      "name": "6α-hydroxyestrone",
+      "name": "6β-hydroxyestrone",
       "formula": "C18H22O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87605"
+        "chebi": "CHEBI:87626"
       }
     },
     {
@@ -165,48 +165,40 @@
       }
     },
     {
-      "id": "isethionate",
-      "name": "isethionate",
-      "formula": "C2H5O4S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:61904"
-      }
-    },
-    {
-      "id": "glycolaldehyde",
-      "name": "glycolaldehyde",
-      "formula": "C2H4O2",
+      "id": "liquiritigenin",
+      "name": "liquiritigenin",
+      "formula": "C15H12O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17071"
+        "chebi": "CHEBI:28777"
       }
     },
     {
-      "id": "sulfite",
-      "name": "sulfite",
-      "formula": "O3S",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:17359"
-      }
-    },
-    {
-      "id": "carotene",
-      "name": "α-carotene",
-      "formula": "C40H56",
+      "id": "2r_3s_2_4_7_trihydroxyisoflavanone",
+      "name": "(2R,3S)-2,4',7-trihydroxyisoflavanone",
+      "short": "(2R,3S)-2,4',7-trih…",
+      "formula": "C15H12O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28425"
+        "chebi": "CHEBI:63325"
       }
     },
     {
-      "id": "cryptoxanthin",
-      "name": "α-cryptoxanthin",
-      "formula": "C40H56O",
+      "id": "1h_indole",
+      "name": "1H-indole",
+      "formula": "C8H7N",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10223"
+        "chebi": "CHEBI:16881"
+      }
+    },
+    {
+      "id": "indolin_2_one",
+      "name": "indolin-2-one",
+      "formula": "C8H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31697"
       }
     }
   ],
@@ -219,17 +211,17 @@
       ]
     },
     {
-      "id": "ec_1_1_1_62",
-      "name": "17beta-estradiol 17-dehydrogenase",
+      "id": "ec_1_14_14_87",
+      "name": "2-hydroxyisoflavanone synthase",
       "ec": [
-        "1.1.1.62"
+        "1.14.14.87"
       ]
     },
     {
-      "id": "ec_1_14_14_158",
-      "name": "carotene epsilon-hydroxylase",
+      "id": "ec_1_14_14_153",
+      "name": "indole-2-monooxygenase",
       "ec": [
-        "1.14.14.158"
+        "1.14.14.153"
       ]
     }
   ],
@@ -379,26 +371,33 @@
     },
     {
       "id": "r4",
-      "name": "17beta-estradiol 17-dehydrogenase",
-      "equation": "17beta-estradiol + NADP(+) = estrone + NADPH + H(+)",
-      "ec": "1.1.1.62",
+      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxyestrone + oxidiz...",
+      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
-        {
-          "metabolite": "17_estradiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "estrone",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_hydroxyestrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -406,30 +405,25 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_62"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:24616"
+        "rhea": "RHEA:47312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24616"
+            "id": "RHEA:47312"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidize...",
-      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyestrone + oxidized...",
+      "equation": "estrone + reduced [NADPH--hemoprotein reductase] + O2 = 6beta-hydroxyestrone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "estrone",
@@ -465,14 +459,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:47308"
+        "rhea": "RHEA:47340"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:47308"
+            "id": "RHEA:47340"
           }
         ]
       }
@@ -522,11 +516,12 @@
     },
     {
       "id": "r7",
-      "name": "2-hydroxyethane-1-sulfonate + FMNH2 + O2 = glycolaldehyde + FMN + sulfite + H2O + 2 H(+)",
-      "equation": "2-hydroxyethane-1-sulfonate + FMNH2 + O2 = glycolaldehyde + FMN + sulfite + H2O + 2 H(+)",
+      "name": "2-hydroxyisoflavanone synthase",
+      "equation": "(2S)-liquiritigenin + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3S)-2,4',7-trihydroxyisoflavanone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.87",
       "substrates": [
         {
-          "metabolite": "isethionate",
+          "metabolite": "liquiritigenin",
           "stoichiometry": 1
         },
         {
@@ -540,63 +535,7 @@
       ],
       "products": [
         {
-          "metabolite": "glycolaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sulfite",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:29715"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:29715"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "carotene epsilon-hydroxylase",
-      "equation": "alpha-carotene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-cryptoxanthin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.158",
-      "substrates": [
-        {
-          "metabolite": "carotene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cryptoxanthin",
+          "metabolite": "2r_3s_2_4_7_trihydroxyisoflavanone",
           "stoichiometry": 1
         },
         {
@@ -614,20 +553,77 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_158"
+          "enzyme": "ec_1_14_14_87"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:30399"
+        "rhea": "RHEA:31723"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30399"
+            "id": "RHEA:31723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "indole-2-monooxygenase",
+      "equation": "indole + reduced [NADPH--hemoprotein reductase] + O2 = indolin-2-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.153",
+      "substrates": [
+        {
+          "metabolite": "1h_indole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "indolin_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_153"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:31899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31899"
           }
         ]
       }

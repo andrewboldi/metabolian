@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-5z-8z-11z-tetradecat-to-5z-octenoyl-coa "(3E,5Z,8Z,11Z)-tetradecat… to (5Z)-octenoyl-CoA" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     3e_5z_8z_11z_tetradecatetraenoyl_coa
@@ -48,22 +48,10 @@ pathway 3e-5z-8z-11z-tetradecat-to-5z-octenoyl-coa "(3E,5Z,8Z,11Z)-tetradecat…
     3r_8z_11z_3_hydroxytetradecadienoyl_coa
   }
 
-  branch from 2e_6z_9z_dodecatrienoyl_coa side right {
-    2e_6z_9z_dodecatrienoyl_coa
-    <-> .
-    3_6_9_dodecatrienoyl_coenzyme_a
-  }
-
-  branch from 3e_7z_decadienoyl_coa side left {
+  branch from 3e_7z_decadienoyl_coa side right {
     3e_7z_decadienoyl_coa
     <-> .
     2_7_decadienoylcoa
-  }
-
-  branch from 3e_7z_decadienoyl_coa side right {
-    3e_7z_decadienoyl_coa
-    <-> . +nadp +h +nadph
-    2_4_7_decatrienoylcoa
   }
 
   branch from 2e_7z_decadienoyl_coa side left {

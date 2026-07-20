@@ -36,13 +36,13 @@ pathway 12-phosphonooxy-octadeca-to-4-hydroxy-6-11-hydro "12-(phosphonooxy)octad
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_92 [4.2.3.92] +fpp
-    cadinene
+    <-> ec_4_2_3_122 [4.2.3.122] +gpp
+    pinene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_93 [4.2.3.93] +fpp
-    guaiene
+    <-> ec_4_2_3_105 [4.2.3.105] +gpp
+    tricyclene
   }
 }

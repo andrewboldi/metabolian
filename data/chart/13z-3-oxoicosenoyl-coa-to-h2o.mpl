@@ -46,37 +46,37 @@ pathway 13z-3-oxoicosenoyl-coa-to-h2o "(13Z)-3-oxoicosenoyl-CoA to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    cellopentaose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    oleandomycin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    beta_d_cellohexaose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    rifamycin_b
   }
 
   branch from coa side left {
     coa
-    <-> . +2_methylpropanoyl_coa +3_dodecanoyl_4_3_methylbutanoyl_sucrose
-    3_dodecanoyl_3_isobutanoyl_4_3_methylbutanoyl_su
+    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +atp +diphosphate +amp
+    5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_5 [2.3.1.5] +2_aminofluorene +acetyl_coa
-    2_acetamidofluorene
+    <-> . +atp +diphosphate +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h +amp
+    6_7_dihydro_5_oxo_12_epi_ltb4
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_3_beta_xylobiose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    streptomycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_3_beta_xylotriose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    tuberactinomycin_a
   }
 }

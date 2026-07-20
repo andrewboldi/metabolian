@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to 3,7-dimethylocta-2,6-dien…" {
-  spacing 262
+  spacing 256
 
   spine at 0,0 {
     gpp
@@ -34,14 +34,14 @@ pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to
 
   branch from ppi side left {
     ppi
-    <-> . +piperonylate +atp +nadph +hplus +amp +nadp
-    piperonal
+    <-> . +fpp +h2o
+    discoidol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +o_methylsalicylate +atp +nadph +hplus +amp +nadp
-    2_methoxybenzaldehyde
+    <-> . +geranylgeranyl_diphosphate +h2o
+    s_nephthenol
   }
 
   branch from geranial side left {
@@ -52,37 +52,31 @@ pathway geranyl-diphosphate-to-3-7-dimethylocta-2-6-dien "geranyl diphosphate to
 
   branch from geranate side right {
     geranate
-    <-> . +h +coa +h2o
-    trans_geranyl_coa
-  }
-
-  branch from geranate side left {
-    geranate
-    <-> . +h +coa +h2o
-    trans_geranyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    2e_geraniol
+    <-> ec_1_2_1_5 [1.2.1.5] +2e_geranial +nadp +h2o +h
+    nadph
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    3s_6e_nerolidol
+    <-> ec_1_1_1_112 [1.1.1.112] +nadh +indan_1_one +h
+    indan_1_ol
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +d_threose +phosphate +d_threose
-    atp
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +cathinone
+    cathine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    alpha_d_xylose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cephamycin_c +phosphate +cephamycin_c
+    atp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    methicillin
   }
 }

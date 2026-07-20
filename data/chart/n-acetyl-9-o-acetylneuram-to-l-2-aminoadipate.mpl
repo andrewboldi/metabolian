@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-9-o-acetylneuram-to-l-2-aminoadipate "N-acetyl-9-O-acetylneuram… to L-2-aminoadipate" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     n_acetyl_9_o_acetylneuraminate
@@ -28,31 +28,19 @@ pathway n-acetyl-9-o-acetylneuram-to-l-2-aminoadipate "N-acetyl-9-O-acetylneuram
 
   branch from n_acetylneuraminate side right {
     n_acetylneuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +acetyltaurine +h2o
-    taurine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_leucinate +h2o
-    leucine
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1 +h2o
+    neu5ac_2_3_gal_1_4_glc_1_1_cer_d18_1_18_0
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    stemod_13_17_ene
+    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
+    2_trans_6_trans_farnesol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    9_pimara_7_15_diene
+    <-> ec_4_2_3_49 [4.2.3.49] +fpp +h2o
+    3r_6e_nerolidol
   }
 }

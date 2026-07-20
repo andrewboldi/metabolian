@@ -50,85 +50,73 @@ pathway 4-hydroxy-3-octaprenylben-to-h2o "4-hydroxy-3-octaprenylben… to H2O" {
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    <-> . +l_lysinium +sam +hplus
     n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_361 [2.1.1.361] +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
   }
 
   branch from ubiquinol_8 side right {
     ubiquinol_8
-    <-> ec_2_1_1_64 [2.1.1.64] +s_adenosyl_l_homocysteine +h +2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
-    s_adenosyl_l_methionine
+    <-> . +pmf +ubiquinone_8 +h +formate +pmf
+    co2
   }
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> . +glucose +ubiquinone_8
-    d_glucono_1_5_lactone
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +ubiquinone_8 +h +pmf +co2
+    formate
   }
 
   branch from pmf side right {
     pmf
-    <-> ec_7_1_1_3 [7.1.1.3] +plastoquinol_9 +o2 +h2o
-    plastoquinone_9
+    <-> . +ubiquinol_10 +ferricytochrome_c +ferrocytochrome_c +h
+    ubiquinone_10
   }
 
   branch from pmf side left {
     pmf
-    <-> . +partially_degraded_s_cerevisiae_mannan_extracell
-    partially_degraded_s_cerevisiae_mannan_periplasm
-  }
-
-  branch from ubiquinone_8 side right {
-    ubiquinone_8
-    <-> . +nitrite +ubiquinol_8 +h +h2o
-    nitric_oxide
-  }
-
-  branch from ubiquinone_8 side left {
-    ubiquinone_8
-    <-> . +h +phosphate +atp +h2o
-    adp
+    <-> . +nadh +h +pyruvate +s_lactate
+    nad
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    n_acetyl_alpha_neuraminate
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    6_deamino_6_oxoparomomycin_ii
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    n_acetyl_neuraminic_acid
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    l_glutamylbutirosin_b
   }
 
   branch from s_lactate side right {
     s_lactate
-    <-> . +ubiquinol_7 +pyruvate
-    ubiquinone_7
+    <-> . +menaquinol_9 +pyruvate
+    menaquinone_9
   }
 
   branch from s_lactate side left {
     s_lactate
-    <-> . +ubiquinol_9 +pyruvate
-    ubiquinone_9
+    <-> . +h +nadph +s_lactaldehyde +h2o
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    isopropyl_d_galactopyranoside
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    butirosin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    2_deoxy_2_fluoro_beta_d_galactose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    xylostasin
   }
 }

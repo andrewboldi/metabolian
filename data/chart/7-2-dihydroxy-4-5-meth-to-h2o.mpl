@@ -18,37 +18,37 @@ pathway 7-2-dihydroxy-4-5-meth-to-h2o "7,2'-dihydroxy-4',5'-meth… to H2O" {
 
   branch from h side left {
     h
-    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_c +12_ethyl_8_propylbacteriochlorophyllide_c
-    2e_6e_farnesyl_diphosphate
+    <-> . +2_o_alpha_l_rhamnosylisoorietin +h2o
+    maysin
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
-    12_ethyl_8_isobutylbacteriochlorophyllide_c
+    <-> . +trichloroacetate +h2o +o2
+    2_2_2_trichloroethanol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_348 [1.1.1.348] +h +sophorol +nadp
-    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
+    <-> . +deacetylcolchicine +formaldehyde +nadp +h2o +h +o2
+    demecolcine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_72 [1.3.1.72] +cycloartenol +h +nadp
-    cycloartanol
+    <-> . +3_nonaprenyl_4_5_dihydroxybenzoic_acid +nadp +h2o +h +o2
+    4_hydroxy_3_all_trans_nonaprenylbenzoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_10_3_1 [1.10.3.1] +2_6_dimethoxyphenol +o2
-    coerulignone
+    <-> . +dalcochinin +glucose
+    dalcochinin_8_o_beta_glucoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_1_63 [3.6.1.63] +diphosphate +alpha_d_ribose_1_2_n_acetamidomethylphosphonate +h
-    alpha_d_ribose_1_acetamidomethylphosphonate_5_tr
+    <-> . +2_hydroxy_2_2_methylidenecyclopropyl_butanedioic +coa +h +2_oxohexa_4_5_cyclopropyl_5_enoate
+    acetyl_coa
   }
 }

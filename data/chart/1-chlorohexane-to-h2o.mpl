@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
-  spacing 298
+  spacing 292
 
   spine at 0,0 {
     1_chlorohexane
@@ -30,26 +30,26 @@ pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
 
   branch from h side right {
     h
-    <-> ec_4_6_1_2 [4.6.1.2] +thiopyrophosphate +3_5_cyclic_gmp
-    guanosine_5_gamma_thio_triphosphate
+    <-> ec_3_8_1_5 [3.8.1.5] +bromocyclohexane +h2o +bromide
+    cyclohexanol
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_phenylpropionaldehyde +nad
-    s_2_phenylpropanol
+    <-> ec_3_8_1_5 [3.8.1.5] +cyclohexanol +chloride +h2o
+    monochlorocyclohexane
   }
 
   branch from chloride side right {
     chloride
-    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +h +h2o
-    compound_0054382
+    <-> ec_2_5_1_18 [2.5.1.18] +dcnb_3_4_dichloronitrobenzene +glutathione
+    s_2_chloro_4_nitrophenyl_glutathione
   }
 
   branch from chloride side left {
     chloride
-    <-> ec_2_5_1_18 [2.5.1.18] +dcnb_3_4_dichloronitrobenzene +glutathione
-    s_2_chloro_4_nitrophenyl_glutathione
+    <-> ec_3_8_1_5 [3.8.1.5] +1_3_dichloropropane +h2o +h
+    compound_0040745
   }
 
   branch from hexanal side right {
@@ -67,36 +67,30 @@ pathway 1-chlorohexane-to-h2o "1-Chlorohexane to H2O" {
   branch from allyl_alcohol side right {
     allyl_alcohol
     <-> . +h +formate +h2o
-    but_3_enoic_acid
-  }
-
-  branch from allyl_alcohol side left {
-    allyl_alcohol
-    <-> . +h +formate +h2o
     vinyl_acetate
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +isatin +h
-    2_3_dihydroxyindole
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +1s_bornane_2_3_dione +h
-    1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +6_dimethylamino_2_naphthoic_acid +h2o
+    6_dimethylamino_2_naphthaldehyde
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_12_17 [1.14.12.17] +nadh +h +cumene_hydroperoxide +nad
-    2_phenylpropan_2_ol
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_phenylpropanoate +h +h2o
+    3_phenylpropanal
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_11_1_21 [1.11.1.21] +nadh +h +tert_butyl_hydroperoxide +nad
-    tert_butanol
+    <-> ec_4_99_1_5 [4.99.1.5] +butyronitrile
+    butanal_oxime
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_99_1_5 [4.99.1.5] +pyridine_2_aldoxime
+    2_cyanopyridine
   }
 }

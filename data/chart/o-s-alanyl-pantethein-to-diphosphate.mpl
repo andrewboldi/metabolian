@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-alanyl-pantethein-to-diphosphate "O-[S-(β-alanyl)pantethein… to diphosphate" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res
@@ -18,25 +18,13 @@ pathway o-s-alanyl-pantethein-to-diphosphate "O-[S-(β-alanyl)pantethein… to d
 
   branch from dopamine side left {
     dopamine
-    <-> . +o2
-    tyraminium
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    dopamine_3_o_sulfate
   }
 
   branch from dopamine side right {
     dopamine
     <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    dopamine_3_o_sulfate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +l_tryptophan +atp +nadph +hplus +amp +nadp
-    l_tryptophanal
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +amikacin +atp
-    4_adenylylamikacin
+    dopamine_4_o_sulfate
   }
 }

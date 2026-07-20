@@ -26,26 +26,26 @@ pathway 3-deoxo-4b-deoxypaxilline-to-diphosphate "3-Deoxo-4b-deoxypaxilline to d
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +7_dehydroporiferasterol
-    porifersta_5_7_dienol
+    <-> . +lambertine +h +nadph
+    r_canadine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +porifersta_7_25_27_dienol +h +nadph
-    poriferast_7_en_3beta_ol
+    <-> . +5_10_methylene_tetrahydromethanopterin_iminium_f +h +nadph
+    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_13_23 [3.4.13.23] +l_cys_ian +glycine
-    cys_ian_gly
+    <-> . +11_dehydro_15_oxo_spinosyn_macrolactone
+    15_oxo_spinosyn_macrolactone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_oxotetradecanoyl_coa +coa
-    3_oxotetradecanoic_acid
+    <-> ec_3_4_19_13 [3.4.19.13] +l_glutamate +s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
+    3_glutathion_s_yl_4_hydroxynonanal
   }
 
   branch from terpendole_j side right {

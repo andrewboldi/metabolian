@@ -18,13 +18,13 @@ pathway n-n-diacetylchitotriose-to-n-n-n-triacetylchitot "N,N''-diacetylchitotri
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_31 [3.2.1.31] +luteolin +beta_d_glucuronate
-    luteolin_7_o_beta_d_glucuronide
+    <-> . +s_adenosyl_l_homocysteine +co2 +2_4_dihydroxy_3_6_dimethylbenzaldehyde +nadp +coa +malonyl_coa +s_adenosyl_l_methionine +h +nadph
+    acetyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +isoepoxydon
-    2_5_dihydroxybenzaldehyde
+    <-> . +stipitaldehydate +nadp +h +o2 +nadph
+    stipitalide
   }
 }

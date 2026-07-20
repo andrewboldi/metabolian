@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-amino-4-6-dideoxy-to-h "DTDP-4-amino-4,6-dideoxy-… to H" {
-  spacing 318
+  spacing 312
 
   spine at 0,0 {
     dtdp_4_amino_4_6_dideoxy_d_galactose
@@ -18,69 +18,63 @@ pathway dtdp-4-amino-4-6-dideoxy-to-h "DTDP-4-amino-4,6-dideoxy-… to H" {
     beta_d_qui4nac_1_2_alpha_l_rha_1_3_alpha_d_man_1
   }
 
-  branch from dtdp_4_dehydro_6_deoxy_alpha_d_glucose side left {
-    dtdp_4_dehydro_6_deoxy_alpha_d_glucose
-    <-> . +nadh +h +dtdp_beta_l_rhamnose
-    nad
+  branch from l_glutamate side left {
+    l_glutamate
+    <-> ec_2_6_1_13 [2.6.1.13] +s_1_pyrroline_5_carboxylate +h +h2o +2_oxoglutarate
+    l_ornithine
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_13_7 [3.4.13.7] +h +h2o
-    glu_glu
-  }
-
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +dtdp_3_amino_4_dehydro_2_3_6_trideoxy_beta_l_glu +2_oxoglutarate +h
-    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +succinate +oxyayanin_b
-    co2
+    <-> ec_3_4_17_11 [3.4.17.11] +4_2_amino_4_hydroxypteridin_6_yl_methyl_amino_be +h2o
+    folate
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +h +o2 +gibberellin_a15_2_diacid_form +co2 +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
-    succinate
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +o2
+    gibberellin_a20
   }
 
-  branch from h side right {
-    h
-    <-> ec_1_1_1_145 [1.1.1.145] +progesterone +nadph +pregnenolone
-    nadp
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +h +succinate +gibberellin_a20
+    o2
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_145 [1.1.1.145] +testosterone +nadph +nadp
-    androst_5_ene_3_17_diol
+    <-> ec_1_14_12_19 [1.14.12.19] +nadh +3_phenylpropanoate +o2 +nad
+    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
   }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +h2 +glycine
-    l_threonine
+  branch from h side right {
+    h
+    <-> ec_3_5_4_19 [3.5.4.19] +1_5_phospho_beta_d_ribosyl_5_5_phospho_beta_d_ri +h2o
+    1_5_phosphoribosyl_amp
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_94 [2.3.1.94] +methylmalonyl_coa +propanoyl_coa +h +nadph +co2 +nadp +h2o
-    6_deoxyerythronolide_b
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
+    all_trans_retinyl_hexadecanoate
   }
 
-  branch from dtdp side right {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
-    alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +isocitrate
+    2_e_caffeoyl_d_threo_isocitrate
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p +h
-    alpha_l_rha_1_2_alpha_l_rha_1_4_alpha_d_glc_1_3
+    <-> . +dtdp_beta_l_rhamnose +alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d +h
+    alpha_l_rha_1_4_alpha_d_glc_1_4_beta_d_gal_1_3_g
+  }
+
+  branch from dtdp side right {
+    dtdp
+    <-> . +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_glcna +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
+    beta_d_fucnac_1_6_alpha_d_glc_1_4_alpha_d_galnac
   }
 }

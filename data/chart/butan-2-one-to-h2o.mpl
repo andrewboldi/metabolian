@@ -30,13 +30,13 @@ pathway butan-2-one-to-h2o "butan-2-one to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_83 [4.2.1.83] +2s_2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
-    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
+    <-> ec_4_2_1_113 [4.2.1.113] +2_succinylbenzoate +h
+    2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_80 [4.2.1.80] +trans_2_oxohex_4_enoate
-    s_4_hydroxy_2_oxohexanoate
+    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_5_o_4_coumaroyl_d_quinate +o2 +nadph +chlorogenate
+    nadp
   }
 }

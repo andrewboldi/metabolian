@@ -18,26 +18,26 @@ pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… t
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +nadh +hplus +nad +h2o
-    dodecanal
+    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_didodecanoyl +h2o +hplus
+    3_d_galactosyl_1_6_d_galactosyl_monododecanoyl_s
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> ec_1_14_14_130 [1.14.14.130] +fmnh2 +o2 +fmn +h2o +hplus
-    7_hydroxylaurate
+    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
+    1_d_galactosyl_monododecanoyl_sn_glycerol
   }
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_palmitoyl_sn_glycerol_3_phosphate
+    <-> . +n_acyl_sphingosylphosphoethanolamine
+    n_acyl_sphingosyl_1_3_cyclicphosphate
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_myristoyl_sn_glycero_3_phosphoethanolamine
-    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from lauroyl_coa side left {
@@ -54,13 +54,13 @@ pathway n-lauroyl-1-2-dioleoyl-sn-to-diphosphate "N-lauroyl-1,2-dioleoyl-sn… t
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_95 [4.2.3.95] +fpp
-    cuprenene
+    <-> . +linoleate +atp +coa +amp
+    linoleoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_94 [4.2.3.94] +fpp
-    curcumene
+    <-> ec_2_5_1_125 [2.5.1.125] +2_o_3_dimethylflaviolin_7_olate +gpp +hplus
+    7_o_geranyl_2_o_3_dimethylflaviolin
   }
 }

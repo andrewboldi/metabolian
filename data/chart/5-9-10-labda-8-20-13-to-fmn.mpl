@@ -18,25 +18,25 @@ pathway 5-9-10-labda-8-20-13-to-fmn "5β,9α,10α-labda-8(20),13-… to FMN" {
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    e_bisabolene
+    <-> . +fpp
+    ylangene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    cis_farnesene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    fusoxypene_a
   }
 
   branch from fmn side left {
     fmn
-    <-> . +peregrinol +fmnh2 +o2 +h2o +hplus
-    labd_13z_ene_9_15_16_triol
+    <-> . +6_deoxo_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
+    28_nortyphasterol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_177 [1.14.14.177] +methyl_ultra_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    hydroxy_ultra_long_chain_fatty_acid_anion
+    <-> . +6_deoxo_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_28_nortyphasterol
   }
 }

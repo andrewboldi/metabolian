@@ -18,25 +18,25 @@ pathway 2-hydroxy-5-methyl-1-naph-to-diphosphate "2-hydroxy-5-methyl-1-naph… t
 
   branch from sah side left {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +1_hydroxy_6_methoxyphenazine_n10_oxide +sam
+    1_6_dimethoxyphenazine_n5_oxide
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa +h2o
+    4_o_demethylbarbatate
   }
 
   branch from ppi side left {
     ppi
-    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2r_3s_11s_aszonalenin
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    penichrysol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2s_3r_11r_aszonalenin
+    <-> . +l_lysinium +atp +hplus
+    l_lysyl_5_amp
   }
 }

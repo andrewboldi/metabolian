@@ -22,25 +22,25 @@ pathway ent-kaurene-to-s-adenosyl-l-homocysteine "ent-kaurene to S-adenosyl-L-ho
 
   branch from fmn side left {
     fmn
-    <-> . +6_hydroxy_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
-    28_nortyphasterol
+    <-> . +steroid +fmnh2 +o2 +h2o +hplus
+    11_hydroxy_steroid
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
-    28_norcastasterone
+    <-> ec_1_14_14_197 [1.14.14.197] +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxycorticosterone
   }
 
   branch from sah side left {
     sah
-    <-> . +avenanthramide_c +sam +hplus
-    avenanthramide_b
+    <-> . +rhamnetin_3_olate +sam +hplus
+    7_4_o_dimethylquercetin_3_olate
   }
 
   branch from sah side right {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    soppiline_b
+    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
+    7_3_4_5_o_tetramethylmyricetin_3_olate
   }
 }

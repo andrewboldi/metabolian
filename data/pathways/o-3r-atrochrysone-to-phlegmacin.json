@@ -132,40 +132,39 @@
       }
     },
     {
-      "id": "d_aspartate",
-      "name": "D-aspartate",
-      "formula": "C4H4NO3",
-      "charge": -1,
+      "id": "picrinine",
+      "name": "picrinine",
+      "formula": "C20H22N2O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29962"
+        "chebi": "CHEBI:70505"
       }
     },
     {
-      "id": "d_aspartate_methyl_ester",
-      "name": "D-aspartate methyl ester",
-      "short": "D-aspartate methyl…",
-      "formula": "C5H7NO3",
+      "id": "ervincine",
+      "name": "ervincine",
+      "formula": "C21H24N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:176590"
+        "chebi": "CHEBI:194555"
       }
     },
     {
-      "id": "esculetin",
-      "name": "esculetin",
-      "formula": "C9H6O4",
-      "charge": 0,
+      "id": "perivine",
+      "name": "perivine",
+      "formula": "C20H23N2O3",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:490095"
+        "chebi": "CHEBI:194556"
       }
     },
     {
-      "id": "isoscopoletin",
-      "name": "isoscopoletin",
-      "formula": "C10H8O4",
+      "id": "vobasine",
+      "name": "vobasine",
+      "formula": "C21H24N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:81484"
+        "chebi": "CHEBI:10015"
       }
     }
   ],
@@ -182,13 +181,6 @@
       "name": "torosachrysone-coupling peroxygenase",
       "ec": [
         "1.11.2.7"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_77",
-      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
-      "ec": [
-        "2.1.1.77"
       ]
     }
   ],
@@ -375,12 +367,11 @@
     },
     {
       "id": "r5",
-      "name": "protein-L-isoaspartate(D-aspartate) O-methyltransferase",
-      "equation": "[protein]-D-aspartate + S-adenosyl-L-methionine = [protein]-D-aspartate methyl ester + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.77",
+      "name": "picrinine + S-adenosyl-L-methionine = ervincine + S-adenosyl-L-homocysteine + H(+)",
+      "equation": "picrinine + S-adenosyl-L-methionine = ervincine + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "d_aspartate",
+          "metabolite": "picrinine",
           "stoichiometry": 1
         },
         {
@@ -390,51 +381,7 @@
       ],
       "products": [
         {
-          "metabolite": "d_aspartate_methyl_ester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_77"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:68048"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68048"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "esculetin + S-adenosyl-L-methionine = isoscopoletin + S-adenosyl-L-homocysteine + H(+)",
-      "equation": "esculetin + S-adenosyl-L-methionine = isoscopoletin + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "esculetin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isoscopoletin",
+          "metabolite": "ervincine",
           "stoichiometry": 1
         },
         {
@@ -447,16 +394,59 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68944"
+        "rhea": "RHEA:76143"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68944"
+            "id": "RHEA:76143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "perivine + S-adenosyl-L-methionine = vobasine + S-adenosyl-L-homocysteine + 2 H(+)",
+      "equation": "perivine + S-adenosyl-L-methionine = vobasine + S-adenosyl-L-homocysteine + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "perivine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vobasine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:76147"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76147"
           }
         ]
       }

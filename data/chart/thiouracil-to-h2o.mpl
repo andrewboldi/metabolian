@@ -24,43 +24,31 @@ pathway thiouracil-to-h2o "thiouracil to H2O" {
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> . +sulfanylarsonate +h +h2o
-    dihydroxy_sulfanylidene_lambda5_arsanyl_sulfani
+    <-> . +l_alanine +nadp +nadph
+    l_cysteine
   }
 
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
-    <-> . +dihydroxy_sulfanylidene_lambda5_arsanyl_sulfani +h2o
-    hydroxy_sulfanidyl_sulfanylidene_lambda5_arsany
-  }
-
-  branch from uracil side left {
+  branch from uracil side right {
     uracil
     <-> ec_2_5_1_53 [2.5.1.53] +o_acetyl_l_serine +h +acetate
     isowillardiine
   }
 
-  branch from uracil side right {
+  branch from uracil side left {
     uracil
     <-> . +alpha_d_ribose_5_phosphate +h2o
     psi_ump
   }
 
-  branch from h side left {
-    h
-    <-> ec_2_7_1_106 [2.7.1.106] +2_deoxy_d_ribose_1_5_bisphosphate +2r_3_phosphoglycerate +glyceric_acid_1_3_biphosphate
-    2_deoxy_alpha_d_ribose_1_phosphate
-  }
-
   branch from h side right {
     h
-    <-> ec_3_2_1_40 [3.2.1.40] +p_nitrophenyl_alpha_l_rhamnopyranoside +h2o +l_rhamnose
-    4_nitrophenol
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    2h_pyran_2_one
   }
 
-  branch from chloride side left {
-    chloride
-    <-> ec_3_6_3_11 [3.6.3.11] +h +adp +phosphate +h2o
+  branch from h side left {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_streptose +phosphate +l_streptose +h2o
     atp
   }
 
@@ -70,10 +58,10 @@ pathway thiouracil-to-h2o "thiouracil to H2O" {
     2_5_dichloro_3_methyl_muconolactone
   }
 
-  branch from sulfur_atom side left {
-    sulfur_atom
-    <-> ec_3_2_1_147 [3.2.1.147] +glucose +indol_3_yl_acetonitrile +h +sulfate +h2o
-    glucobrassicin
+  branch from chloride side left {
+    chloride
+    <-> . +h +2e_4z_2_hydroxymuconate +h2o
+    5_chlorocarbonyl_2_hydroxy_penta_2_4_dienate
   }
 
   branch from sulfur_atom side right {
@@ -84,13 +72,13 @@ pathway thiouracil-to-h2o "thiouracil to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_valine +glycine +l_arginine
-    valyl_arginyl_glycine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_lyxopyranose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_asparagine +l_valine
-    valyl_histidyl_asparagine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_lyxopyranose
   }
 }

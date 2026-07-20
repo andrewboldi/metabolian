@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-ethyl-l-serine-to-r-2-ethylmalate "2-ethyl-L-serine to (R)-2-ethylmalate" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     2_ethyl_l_serine
@@ -28,18 +28,6 @@ pathway 2-ethyl-l-serine-to-r-2-ethylmalate "2-ethyl-L-serine to (R)-2-ethylmala
     keto_phenylpyruvate
   }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +hydrogen_acceptor +h2o +hydrogen_donor
-    n6_methyl_l_lysinium
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n6_methyl_l_lysinium +hydrogen_acceptor +h2o +hydrogen_donor
-    l_lysinium
-  }
-
   branch from oxobut side left {
     oxobut
     <-> . +n_n_dimethyl_l_argininium +l_aminobutyrate
@@ -54,13 +42,13 @@ pathway 2-ethyl-l-serine-to-r-2-ethylmalate "2-ethyl-L-serine to (R)-2-ethylmala
 
   branch from nh3 side left {
     nh3
-    <-> . +2_deoxyadenosine_5_monophosphate_1 +acetyl_coa +hydrogen_donor +o2 +hydrogen_acceptor +coa +h2o +hplus
-    n6_methylcarbamoyl_2_deoxyadenosine_5_monophosph
+    <-> . +n_carbamoyl_l_cysteinate +h2o +hplus +co2
+    cysteine
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +l_glutamine +serotonin
-    n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine
+    <-> . +n_carbamoyl_l_tryptophanate +h2o +hplus +co2
+    l_tryptophan
   }
 }

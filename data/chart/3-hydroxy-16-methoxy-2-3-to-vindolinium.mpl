@@ -30,13 +30,13 @@ pathway 3-hydroxy-16-methoxy-2-3-to-vindolinium "3-hydroxy-16-methoxy-2,3-… to
 
   branch from succinate side left {
     succinate
-    <-> ec_2_8_3_15 [2.8.3.15] +r_2_benzylsuccinate +succinyl_coa
-    r_2_benzylsuccinyl_coa
+    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
+    5r_5_hydroxy_l_lysine_1
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_4 [1.14.11.4] +l_lysinium +akg +o2 +co2
-    5r_5_hydroxy_l_lysine_1
+    <-> ec_1_14_11_2 [1.14.11.2] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 }

@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "malonyl-coa-to-3-hydroxyhispidin",
+  "name": "malonyl-CoA to 3-hydroxyhispidin",
+  "category": "other",
+  "summary": "A 3-step route from malonyl-CoA to 3-hydroxyhispidin(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200340"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "4e_5_3_4_dihydroxyphenyl_3_oxopent_4_enoyl_coa",
+      "name": "(4E)-5-(3,4-dihydroxyphenyl)-3-oxopent-4-enoyl-CoA",
+      "short": "5-(3,4-dihydroxyphe…",
+      "formula": "C32H40N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1560049"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "hispidin",
+      "name": "hispidin",
+      "formula": "C13H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:190288"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxyhispidin",
+      "name": "3-hydroxyhispidin",
+      "formula": "C13H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:190289"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR200340",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4e_5_3_4_dihydroxyphenyl_3_oxopent_4_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR200341",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4e_5_3_4_dihydroxyphenyl_3_oxopent_4_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hispidin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR200341"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hispidin + NADH + O2 + H(+) = 3-hydroxyhispidin + NAD(+) + H2O",
+      "equation": "hispidin + NADH + O2 + H(+) = 3-hydroxyhispidin + NAD(+) + H2O",
+      "substrates": [
+        {
+          "metabolite": "hispidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyhispidin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:71115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71115"
+          }
+        ]
+      }
+    }
+  ]
+}

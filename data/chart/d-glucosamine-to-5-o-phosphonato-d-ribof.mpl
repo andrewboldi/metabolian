@@ -40,25 +40,25 @@ pathway d-glucosamine-to-5-o-phosphonato-d-ribof "α-D-glucosamine… to 5-O-pho
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
-    3_l_aspartate_adenylyl_1_group
+    <-> ec_6_2_1_24 [6.2.1.24] +phytanate +atp +coa +amp
+    phytanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
-    arachidonoyl_coa
+    <-> ec_3_1_7_1 [3.1.7.1] +dmapp +h2o
+    prenol
   }
 
   branch from adenine side right {
     adenine
-    <-> . +atp +h2o
-    d_ribose_5_triphosphate
+    <-> . +2_deoxyadenosine_5_monophosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
   }
 
   branch from adenine side left {
     adenine
-    <-> . +2_deoxyadenosine_5_monophosphate +h2o
-    2_deoxy_d_ribofuranose_5_phosphate
+    <-> . +datp +h2o
+    2_deoxyribose_5_triphosphate
   }
 }

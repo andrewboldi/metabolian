@@ -42,37 +42,37 @@ pathway 6-o-cis-methoxy-mycolyl-t-to-atp "6-O-cis-methoxy-mycolyl-t… to ATP" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +des_acyl_avenacin_a +h
-    monodeglucosyl_des_acyl_avenacin_a
+    <-> . +udp +calycosin_7_o_d_glucoside
+    calycosin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +podophyllotoxin_7_glucoside +h
-    podophyllotoxin
+    <-> ec_2_4_1_338 [2.4.1.338] +udp +validienamycin +h
+    1_1_bis_valienamine
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +tetrabromohydroquinone
-    tetrabromo_1_4_benzoquinone
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +compound_0045496
+    tetrafluoro_1_4_benzoquinone
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +2_6_dimethyl_1_4_benzenediol
-    2_6_dimethyl_1_4_benzoquinone
+    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +h2o
+    allolactose
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_gamma_glutamyl_l_norvaline +adp +phosphate +l_glutamate
-    l_2_aminopentanoate
+    <-> . +3_methylpyrrole_2_4_dicarboxylic_acid +3_amino_4_7_dihydroxy_8_methylcoumarin +h +coumeroic_acid +amp
+    diphosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_leucine +l_glutamate +adp +phosphate
-    h_gamma_glu_leu_oh
+    <-> . +diphosphate +h +coumermic_acid +amp +coumeroic_acid
+    3_amino_4_7_dihydroxy_8_methylcoumarin
   }
 }

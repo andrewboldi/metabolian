@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanyl-amp-to-isoindolamide-a "D-alanyl-AMP to isoindolamide A" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     d_alanyl_amp
@@ -18,17 +18,5 @@ pathway d-alanyl-amp-to-isoindolamide-a "D-alanyl-AMP to isoindolamide A" {
     o_chloroisoindolinone_l_homoserine
     <-> . +leucine +atp -adp -pi -hplus
     isoindolamide_a
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +2e_2_fatty_enoyladenylate +amp +hplus
-    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +n2_3r_3_hydroxyacyl_glycinate +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    n2_3r_3_acyloxy_acyl_glycinate
   }
 }

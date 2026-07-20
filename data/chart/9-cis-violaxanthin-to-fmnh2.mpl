@@ -46,25 +46,25 @@ pathway 9-cis-violaxanthin-to-fmnh2 "9-cis-violaxanthin to FMNH2" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
-    5_hydroxypseudobaptigenin
+    <-> . +valine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_valinate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_38 [1.14.14.38] +valine +fmnh2 +o2 +co2 +h2o +hplus
-    e_2_methylpropanal_oxime
+    <-> ec_1_14_14_134 [1.14.14.134] +sophoradiol +fmnh2 +o2 +h2o +hplus
+    soyasapogenol_b
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +premnaspirodiene +o2 +fmn +h2o +hplus
-    solavetivol
+    <-> ec_1_14_14_10 [1.14.14.10] +nitrilotriacetate +o2 +fmn +glyoxylate +h2o
+    ammoniodiacetate
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> . +solavetivol +o2 +fmn +h2o +hplus
-    solavetivone
+    <-> ec_1_14_99_46 [1.14.99.46] +thymine +nadh +o2 +fmn +nad +h2o +hplus
+    z_2_methylureidoacrylate
   }
 }

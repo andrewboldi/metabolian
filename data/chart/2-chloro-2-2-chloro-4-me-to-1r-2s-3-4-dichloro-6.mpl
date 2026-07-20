@@ -18,14 +18,14 @@ pathway 2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6 "2-chloro-2-(2-chloro-4
 
   branch from h side left {
     h
-    <-> . +2_oxoglutarate +35_aminobacteriohopane_32_33_34_triol +formyl_hopane
-    l_glutamate
+    <-> . +co2 +r_phenylhexane_2_5_dione +trans_benzylideneacetone
+    pyruvate
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa +s_4_hydroxy_nonenal_3_yl_l_cysteine +4_hydroxy_2_nonenal_n_acetyl_l_cysteine
-    coa
+    <-> . +co2 +3_2_hydroxyphenyl_1_phenylpentane_1_4_dione +pyruvate
+    2_hydroxychalcone
   }
 
   branch from 2_3_dichloro_5_methyl_muconate side left {
@@ -36,25 +36,25 @@ pathway 2-chloro-2-2-chloro-4-me-to-1r-2s-3-4-dichloro-6 "2-chloro-2-(2-chloro-4
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa +h2o2
-    5_cis_7_trans_tetradecadienoyl_coa
+    <-> . +2_6_oxo_1_oxaspiro_2_5_octa_4_glucosyl_6_hydroxy +h2o2
+    6_hydroxy_2_4_glucosyl_phenoxymethylene_benzofur
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_amino_4_hydroxypteridine +h2o2
-    7_8_dihydropterin
+    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +nadph +nadp +h2o
+    10_2_dihydroxy_4_5_methylenedioxy_isoflav_8_ene
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_29 [1.2.1.29] +nadh +glycosmisate +h +h2o
-    dehydrodiconiferyl_aldehyde
+    <-> ec_1_14_13_223 [1.14.13.223] +nadh +o_s_3_hydroxy_4_methylanthraniloyl_pantetheine_4 +h +o2 +h2o
+    o_s_3_5_dihydroxy_4_methylanthraniloyl_pantethei
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_144 [1.1.1.144] +nadh +4r_perillyl_aldehyde +h
-    r_perillyl_alcohol
+    <-> . +nadh +butan_2_one +h +o2 +h2o
+    ethyl_acetate
   }
 }

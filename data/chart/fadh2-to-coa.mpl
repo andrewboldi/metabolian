@@ -18,61 +18,61 @@ pathway fadh2-to-coa "FADH2 to CoA" {
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +2e_4z_7z_decatrienoyl_coa
-    4z_7z_decadienoyl_coa
+    <-> . +nonadecanoyl_coa +fadh2 +h
+    2e_nonadecenoyl_coenzyme_a
   }
 
   branch from fad side right {
     fad
-    <-> . +decanoyl_coa +h2o +fadh2 +h
-    3s_hydroxydecanoyl_coa
+    <-> . +erucoyl_coa +fadh2 +h
+    2e_13z_docosadienoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_68 [3.1.1.68] +l_lyxonate +h
-    d_xylono_1_4_lactone
+    <-> . +l_homomethionine +h +o2 +nadph +nadp +4_methylthiobutanaldoxime
+    co2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_82 [4.2.1.82] +l_lyxonate
-    2_dehydro_3_deoxy_d_arabinonate
+    <-> ec_1_14_21_7 [1.14.21.7] +3_8_biflaviolin +nadp +h +o2 +nadph
+    flaviolin
   }
 
   branch from coa side left {
     coa
-    <-> . +propanoyl_coa
-    2_methyl_3_oxo_valeryl_coenzyme_a
+    <-> . +diphosphate +vaccenyl_coenzyme_a +amp +h +atp +vaccenic_acid
+    pmf
   }
 
   branch from coa side right {
     coa
-    <-> . +3_hydroxyadipyl_coa +h +h2o
-    3_hydroxyadipic_acid
+    <-> . +dodecanedioyl_coa +r_carnitine +h
+    4s_4_11_carboxyundecanoyl_oxy_4_trimethylammoni
   }
 
   branch from 9z_12z_octadecadienoyl_coa side left {
     9z_12z_octadecadienoyl_coa
-    <-> . +nadh +h +o2 +nad +h2o
-    11z_octadecenoyl_coa
+    <-> . +coa +h2o
+    linoelaidic_acid
   }
 
   branch from 9z_12z_octadecadienoyl_coa side right {
     9z_12z_octadecadienoyl_coa
-    <-> . +fadh2 +h +fad +h2o
-    3_hydroxyoctadecadienoyl_coenzyme_a
+    <-> . +9z_octadecenoyl_coa +h +o2 +nadph +h2o
+    nadp
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +phenylglyoxylate
-    s_mandelate
+    <-> . +nadh +h +11_dehydrothromboxane_b2
+    thromboxane_b2
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_186 [1.1.1.186] +nadh +h +dtdp_d_galacturonate +h2o
-    dtdp_d_galactose
+    <-> . +nadh +3_oxodocosanoyl_coa +h
+    3_hydroxydocosanoyl_coa
   }
 }

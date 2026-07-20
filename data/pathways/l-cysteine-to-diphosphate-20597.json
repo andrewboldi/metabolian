@@ -1,0 +1,382 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-cysteine-to-diphosphate-20597",
+  "name": "L-cysteine to diphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-cysteine zwitterion to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20597"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35235"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_cystine",
+      "name": "L-cystine",
+      "formula": "C6H12N2O4S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35491"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H7NO2S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58591"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g",
+      "name": "3'-[(S)-sulfanyl-L-cysteinyl]adenylyl zwitterionic group",
+      "short": "3'-[(S)-sulfanyl-L-…",
+      "formula": "C13H18N6O7PS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229520"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "3_sulfanylpentan_1_ol_l_cysteine",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine",
+      "short": "3-sulfanylpentan-1-…",
+      "formula": "C8H17NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156143"
+      }
+    },
+    {
+      "id": "3_mercaptopentanol",
+      "name": "3-mercaptopentanol",
+      "formula": "C5H12OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156144"
+      }
+    },
+    {
+      "id": "s_ethyl_l_cysteine",
+      "name": "S-ethyl-L-cysteine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156145"
+      }
+    },
+    {
+      "id": "ethanethiol",
+      "name": "ethanethiol",
+      "formula": "C2H6S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46511"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_8_1_6",
+      "name": "cystine reductase",
+      "ec": [
+        "1.8.1.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cystine reductase",
+      "equation": "2 L-cysteine + NAD(+) = L-cystine + NADH + H(+)",
+      "ec": "1.8.1.6",
+      "substrates": [
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_cystine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20597"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20597"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-cystine = S-sulfanyl-L-cysteine + 2-aminoprop-2-enoate",
+      "equation": "L-cystine = S-sulfanyl-L-cysteine + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "l_cystine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52040"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52040"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "S-sulfanyl-L-cysteine + tRNA(Cys) + ATP = (S)-sulfanyl-L-cysteinyl-tRNA(Cys) + AMP + di...",
+      "equation": "S-sulfanyl-L-cysteine + tRNA(Cys) + ATP = (S)-sulfanyl-L-cysteinyl-tRNA(Cys) + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:78647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78647"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine = 3-sulfanyl-1-pentanol + 2-aminoprop-2-enoate",
+      "equation": "3-sulfanylpentan-1-ol-L-cysteine = 3-sulfanyl-1-pentanol + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "3_sulfanylpentan_1_ol_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_mercaptopentanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "S-ethyl-L-cysteine = ethanethiol + 2-aminoprop-2-enoate",
+      "equation": "S-ethyl-L-cysteine = ethanethiol + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "s_ethyl_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ethanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64784"
+          }
+        ]
+      }
+    }
+  ]
+}

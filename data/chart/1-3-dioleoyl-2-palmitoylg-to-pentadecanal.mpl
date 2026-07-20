@@ -18,14 +18,14 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    2_oleoylglycerol
+    <-> . +h2o +coa +hplus
+    oleoyl_coa
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    sn_glycero_3_phosphoserine
   }
 
   branch from 1_oleoylglycerone_3_phosphate side left {
@@ -36,13 +36,13 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-pentadecanal "1,3-dioleoyl-2-palmitoylg… 
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +octadecan_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_octadecylglycerone_3_phosphate
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphocholine
+    <-> . +9z_12z_octadecadien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_9z_12z_octadecadienylglycerone_3_phosphate
   }
 }

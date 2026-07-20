@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway vibriobactin-to-deoxyhypusine "vibriobactin to deoxyhypusine" {
-  spacing 260
+  spacing 254
 
   spine at 0,0 {
     vibriobactin
@@ -32,56 +32,44 @@ pathway vibriobactin-to-deoxyhypusine "vibriobactin to deoxyhypusine" {
 
   branch from 2_3_dihydroxybenzoate side left {
     2_3_dihydroxybenzoate
-    <-> . +naphthalene_1_2_4_8_tetrol +o2 +h2o +h
-    pyruvate
-  }
-
-  branch from 2_3_dihydroxybenzoate side right {
-    2_3_dihydroxybenzoate
     <-> . +h +o2
     2_carboxymuconate
   }
 
-  branch from propane_1_3_diamine side left {
+  branch from propane_1_3_diamine side right {
     propane_1_3_diamine
     <-> . +n_3_aminopropyl_hydroxylamine +nadp +h2o +o2
     nadph
   }
 
-  branch from propane_1_3_diamine side right {
+  branch from propane_1_3_diamine side left {
     propane_1_3_diamine
     <-> . +h +adp +phosphate +h2o
     atp
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +fumiquinazoline_a +o2
-    fumiquinazoline_c
-  }
-
   branch from h2o2 side right {
     h2o2
-    <-> . +2_methyl_3_n_amyl_pyrrole +o2
-    2_methyl_3_n_amyl_dihydropyrrole
+    <-> . +indolin_2_one +h2o
+    indole
   }
 
-  branch from 3_aminopropanal side left {
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_21_98_2 [1.21.98.2] +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +h2o
+    2_iminio_3_7_chloroindol_3_yl_propionate
+  }
+
+  branch from 3_aminopropanal side right {
     3_aminopropanal
     <-> ec_1_5_3_16 [1.5.3.16] +n_n_bis_3_aminopropyl_trans_2_butene_1_4_diamine +h +o2 +h2o +h2o2
     trans_n_3_aminopropyl_but_2_ene_1_4_diamine
   }
 
-  branch from 3_aminopropanal side right {
+  branch from 3_aminopropanal side left {
     3_aminopropanal
     <-> ec_1_5_3_16 [1.5.3.16] +alpha_methylspermidine +h2o2 +h +o2 +h2o
     alpha_methylspermine
-  }
-
-  branch from spermidine side left {
-    spermidine
-    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_phosphate +h +phosphate
-    n_carbamoylspermidine
   }
 
   branch from spermidine side right {
@@ -90,39 +78,45 @@ pathway vibriobactin-to-deoxyhypusine "vibriobactin to deoxyhypusine" {
     carboxyspermidine
   }
 
-  branch from fad side left {
-    fad
-    <-> . +fadh2 +h +fe_iii_enterobactin +enterobactin
-    fe
+  branch from spermidine side left {
+    spermidine
+    <-> ec_3_5_1_78 [3.5.1.78] +glutathione +h2o
+    glutathionylspermidine
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +h +menaquinone_2 +menaquinol
-    pmf
+    <-> . +fadh2 +6_carboxyhex_2_enoyl_coa +h
+    6_carboxyhexanoyl_coa
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +2s_bisdechlorogeodin
-    asterric_acid
+  branch from fad side left {
+    fad
+    <-> . +l_glutamate_5_semialdehyde +fadh2 +h +h2o
+    l_proline
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +glucose
-    linustatin
+    <-> . +isoepoxydon
+    2_5_dihydroxybenzaldehyde
   }
 
-  branch from h side left {
-    h
-    <-> . +5_s_cysteinyldopa +h2o
-    1_4_benzothiazinyl_alanine
+  branch from h2o side left {
+    h2o
+    <-> . +glucose +5_methoxypodophyllotoxin
+    6_methoxypodophyllotoxin_7_glucoside
   }
 
   branch from h side right {
     h
-    <-> . +5_hydroxy_cmp +diphosphate +h2o
-    5_hydroxy_ctp
+    <-> . +acetyl_coa +blasticidin_s +acetylblasticidin_s
+    coa
+  }
+
+  branch from h side left {
+    h
+    <-> . +gdp_mycosamine +demycosaminyl_candicidin_iii +candicidin_d
+    gdp
   }
 }

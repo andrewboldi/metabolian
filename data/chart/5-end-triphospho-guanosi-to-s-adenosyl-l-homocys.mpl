@@ -26,14 +26,14 @@ pathway 5-end-triphospho-guanosi-to-s-adenosyl-l-homocys "5'-end triphospho-guan
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_151 [4.2.3.151] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    1s_4e_8e_12e_2_2_5_9_13_pentamethylcyclopentade
+    <-> ec_2_5_1_138 [2.5.1.138] +esculetin +gpp
+    8_geranylesculetin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_4_19 [6.3.4.19] +cytidine_5_monophosphate_1 +l_lysinium +atp +amp +hplus
-    lysidine_monophosphate_zwitterion
+    <-> ec_2_5_1_139 [2.5.1.139] +umbelliferone +dmapp
+    osthenol
   }
 
   branch from 5_end_n7_methyl_5_triphospho_guanosine_guanosine side right {
@@ -44,13 +44,13 @@ pathway 5-end-triphospho-guanosi-to-s-adenosyl-l-homocys "5'-end triphospho-guan
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_223 [2.1.1.223] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_204 [2.1.1.204] +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

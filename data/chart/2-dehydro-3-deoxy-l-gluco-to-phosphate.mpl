@@ -18,50 +18,50 @@ pathway 2-dehydro-3-deoxy-l-gluco-to-phosphate "2-dehydro-3-deoxy-L-gluco… to 
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex +h2o +h
-    2_methyl_3_oxopropanoate
+    <-> . +ubiquinol_9 +nh4 +ubiquinone_9 +h2o
+    d_alanine
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_4_1_4 [4.4.1.4] +ethylsulfenate +nh4 +h2o
-    ethiin
+    <-> . +d_alanine +ubiquinone_10 +h2o +nh4
+    ubiquinol_10
   }
 
   branch from glycerol side left {
     glycerol
-    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +h2o
-    beta_d_galactose
+    <-> . +2_o_caffeoylglycerol +h +coa
+    caffeoyl_coa
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_1_1_23 [3.1.1.23] +9z_octadecenoate +h +h2o
+    1_oleoyl_sn_glycerol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_91 [1.14.13.91] +nadh +h +10_deoxysarpagine +o2 +h2o
-    sarpagine
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
+    isopimara_7_15_dienol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +o2 +h2o
-    benzyl_acetate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +isopimara_7_15_dienal
+    palustradienol
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +agaroheptaose +phosphate +agaroheptaose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pa_18_0_18_3_9z_12z_15z
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    neo_lambda_carratetraose
   }
 
   branch from sn_glycerol_3_phosphate side left {
@@ -72,19 +72,19 @@ pathway 2-dehydro-3-deoxy-l-gluco-to-phosphate "2-dehydro-3-deoxy-L-gluco… to 
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> ec_2_7_8_5 [2.7.8.5] +cmp +1_2_dihexadecanoyl_sn_glycero_3_phospho_1_sn_gly +h
-    cdp_dipalmitoyl_sn_glycerol
+    <-> ec_2_7_8_5 [2.7.8.5] +cmp +h +1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly
+    1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_4_1_329 [2.4.1.329] +sucrose +d_glucopyranose_1_phosphate
-    keto_d_fructose
+    <-> ec_2_4_1_230 [2.4.1.230] +beta_d_glucose_1_phosphate +beta_d_glucose
+    d_glcp_1_2_d_glcp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_320 [2.4.1.320] +alpha_d_mannose_1_phosphate +d_mannopyranose
-    mannobiose
+    <-> ec_2_4_1_230 [2.4.1.230] +beta_d_glucose_1_phosphate +d_glcp_1_2_d_glcp
+    alpha_d_glucose
   }
 }

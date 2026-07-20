@@ -26,14 +26,14 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_asparagine +akg +o2 +co2
-    3s_3_hydroxy_l_asparagine
+    <-> . +decanoyl_coa +akg +o2 +co2
+    2_hydroxydecanoyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> . +heptadecanoyl_coa +akg +o2 +co2
+    2_hydroxyheptadecanoyl_coa
   }
 
   branch from 2_hydroxy_6_oxo_6_2_hydroxyphenyl_hexa_2_4_dieno side right {
@@ -44,14 +44,14 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
+    <-> . +hexadecanoate +h +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+    dipalmitoyl_phosphatidylglycerol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +pe_18_1_11z_18_1_9z +phosphate +pe_18_1_11z_18_1_9z
-    atp
+    <-> . +h +adp +phosphate +atp
+    pristanoyl_coa
   }
 
   branch from biphenyl_2_2_3_triol side left {
@@ -62,13 +62,13 @@ pathway 2e-4z-2-hydroxy-6-oxono-to-o2 "(2E,4Z)-2-hydroxy-6-oxono… to O2" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_4_3_5 [1.4.3.5] +pyridoxal +nh4 +h2o +h2o2
-    pyridoxamine
+    <-> . +13_cis_retinal +h +nadph +nadp +h2o
+    4_oh_13_cis_retinal
   }
 
   branch from o2 side left {
     o2
-    <-> . +co2 +3_hydroxyisovaleric_acid +h
-    4_methyl_2_oxopentanoate
+    <-> . +11_cis_retinal +h +nadph +nadp +h2o
+    4_oh_9_cis_retinal
   }
 }

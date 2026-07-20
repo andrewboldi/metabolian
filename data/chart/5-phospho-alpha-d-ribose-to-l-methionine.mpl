@@ -30,49 +30,49 @@ pathway 5-phospho-alpha-d-ribose-to-l-methionine "5-phospho-alpha-D-ribose… to
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +c33_botryococcene
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> . +dtdp_3_n_methylamino_4_oxo_2_3_6_trideoxy_alpha +s_adenosyl_l_homocysteine +h
+    dtdp_3_amino_2_3_6_trideoxy_d_threo_hexopyranos
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +a_c34_botryococcenes
-    c33_botryococcene
+    <-> ec_2_1_1_9 [2.1.1.9] +s_adenosyl_l_homocysteine +s_methyl_benzenecarbothioate +h
+    thiobenzoate
   }
 
   branch from h side left {
     h
-    <-> . +adenosine_5_phosphosulfate +glutathione +amp
-    s_sulfoglutathione
+    <-> . +dehydroprephenate +3_cyclohexa_1_3_dien_1_yl_2_oxopropanoate +h2o
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_4_99_1_2 [4.99.1.2] +hg +benzene +acetate
-    phenylmercury_acetate
+    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
+    dtdp_4_dehydro_2_6_dideoxy_beta_l_glucose
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_1_21_98_3 [1.21.98.3] +h +l_methionine +divinylprotochlorophyllide +s_adenosyl_l_methionine +h2o
-    mg_protoporphyrin_ix_13_monomethyl_ester
+    <-> . +n_acetylphosphinothricyl_l_alanyl_l_leucine +cob_iii_alamin +l_methionine +s_adenosyl_l_methionine +methylcobalamin
+    n_acetyldemethylphosphinothricyl_l_alanyl_l_leuc
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +h +l_methionine +s_adenosyl_l_methionine +mg_protoporphyrin_ix_13_monomethyl_ester +h2o
-    13_1_hydroxy_mg_protoporphyrin_ix_13_monomethyl
+    <-> . +iminoglycine +nadp +l_methionine +4_methylphenol +s_adenosyl_l_methionine +l_tyrosine
+    nadph
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> ec_1_4_1_2 [1.4.1.2] +nadh +h +4_methylsulfanyl_2_oxobutanoate +nh4 +h2o
-    nad
+    <-> . +n_succinyl_l_methionine +h2o +h
+    succinate
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +l_leucine +h2o
-    leu_met
+    <-> . +l_methionine_r_s_oxide +h2o
+    h2o2
   }
 }

@@ -34,38 +34,38 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
 
   branch from h side left {
     h
-    <-> . +rac_5_6_epoxy_retinoyl_beta_d_glucuronide +udp +rac_5_6_epoxy_retinoate
-    udp_alpha_d_glucuronate
+    <-> . +erucoyl_coa +h2o +coa
+    13z_docosenoate
   }
 
   branch from h side right {
     h
-    <-> . +udp +4_oxo_9_cis_retinoyl_beta_glucuronide +udp_alpha_d_glucuronate
-    4_oxo_9_cis_retinoate
+    <-> . +6_7_dihydro_5_oxo_12_epi_ltb4 +nadp +nadph
+    5_oxo_6e_12_epi_leukotriene_b4
   }
 
   branch from nadph side left {
     nadph
-    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +nadp +h
-    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
+    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +h +nadp
+    6_7_dihydro_leukotriene_b4
   }
 
   branch from nadph side right {
     nadph
-    <-> . +3_s_hydroxy_11_cis_eicosenoyl_coa +nadp +h
-    11z_3_oxoicosa_11_enoyl_coa
+    <-> . +h +12_dehydro_leukotriene_b4 +nadp
+    10_11_dihydro_12_oxo_ltb4
   }
 
   branch from 6_hydroxymethyl_7_8_dihydropterin side left {
     6_hydroxymethyl_7_8_dihydropterin
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +triphosphate
-    acetate
+    <-> ec_2_5_1_15 [2.5.1.15] +diphosphate +h +7_8_dihydropteroate +amp +4_aminobenzoate
+    atp
   }
 
   branch from 6_hydroxymethyl_7_8_dihydropterin side right {
     6_hydroxymethyl_7_8_dihydropterin
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +glycolaldehyde
-    triphosphate
+    <-> ec_4_1_2_60 [4.1.2.60] +7_8_dihydroneopterin_3_triphosphate +h
+    glycolaldehyde_triphosphate
   }
 
   branch from glycolaldehyde side left {
@@ -76,7 +76,7 @@ pathway 7-8-dihydroneopterin-to-5-dehydro-d-gluconate "7,8-dihydroneopterin to 5
 
   branch from glycolaldehyde side right {
     glycolaldehyde
-    <-> ec_2_2_1_1 [2.2.1.1] +d_xylulose +d_glyceraldehyde_3_phosphate
-    keto_d_fructose_6_phosphate
+    <-> ec_1_2_1_19 [1.2.1.19] +h +glycolate +nadph +nadp
+    h2o
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tuberculostearic-acid-to-h2o "tuberculostearic acid to H2O" {
-  spacing 270
+  spacing 252
 
   spine at 0,0 {
     tuberculostearic_acid
@@ -26,38 +26,38 @@ pathway tuberculostearic-acid-to-h2o "tuberculostearic acid to H2O" {
 
   branch from h side left {
     h
-    <-> . +2e_henicosenoyl_coa +h2o
-    3_hydroxyheneicosanoyl_coenzyme_a
+    <-> ec_2_8_2_39 [2.8.2.39] +adenosine_3_5_bisphosphate +12_sulfooxyjasmonate +12_hydroxyjasmonate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +2e_17z_hexacosadi_2_17_enoyl_coa +h2o
-    3_s_hydroxy_hexacosenoyl_coenzyme_a
+    <-> ec_1_14_20_4 [1.14.20.4] +3_hydroxy_2_phenylchromenylium +h2o
+    4s_2_3_dehydroflavan_3_4_diol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +octyl_acetate +nadp +h2o +h +decan_2_one
-    o2
+    <-> . +nadp +n_hydroxy_l_hexahomomethioninate +h2o +o2
+    l_hexahomomethionine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +o2 +phenylarsonous_acid +nadp +h2o
-    phenylarsonic_acid
+    <-> ec_1_14_13_81 [1.14.13.81] +h +o2 +mg_protoporphyrin_ix_13_monomethyl_ester +nadp +h2o
+    divinylprotochlorophyllide
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_62 [2.1.1.62] +s_adenosyl_l_homocysteine +h +m7g_5_pppm6am
-    m7g_5_pppam
+    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_a +h
+    7_demethylmitomycin_a
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_80 [2.1.1.80] +s_adenosyl_l_homocysteine +h +methyl_l_glutamate
-    glutamic_acid
+    <-> . +s_adenosyl_l_homocysteine +lincomycin +h
+    n_demethyllincomycin
   }
 
   branch from 9z_octadecenoate side left {
@@ -72,33 +72,15 @@ pathway tuberculostearic-acid-to-h2o "tuberculostearic acid to H2O" {
     adp
   }
 
-  branch from 1_oleoylglycerophosphoethanolamine_delta_9 side left {
-    1_oleoylglycerophosphoethanolamine_delta_9
-    <-> . +glycerophosphatidylethanolamine +h2o
-    vaccenic_acid
-  }
-
-  branch from 1_oleoylglycerophosphoethanolamine_delta_9 side right {
-    1_oleoylglycerophosphoethanolamine_delta_9
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +2e_13z_icosadienoyl_coa
-    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
+    <-> . +pitavastatin
+    pitavastatin_lactone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +trans_2_heptadecenoyl_coa
-    3_hydroxyheptadecanoyl_coenzyme_a
-  }
-
-  branch from 1_2_dioctadec_11_enoyl_sn_glycerol_3_phosphate side left {
-    1_2_dioctadec_11_enoyl_sn_glycerol_3_phosphate
-    <-> . +phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 +h2o
-    cardiolipin_tetraoctadec_11_enoyl_n_c18_1
+    <-> . +2e_9z_12z_octadecatrienoyl_coa
+    3s_3_hydroxylinoleoyl_coa
   }
 }

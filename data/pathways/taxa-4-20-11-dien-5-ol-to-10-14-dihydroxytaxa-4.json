@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "taxa-4-20-11-dien-5-ol-to-10-14-dihydroxytaxa-4",
   "name": "taxa-4(20),11-dien-5α-ol to 10β,14β-dihydroxytaxa-4(2…",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from taxa-4(20),11-dien-5α-ol to 10β,14β-dihydroxytaxa-4(20),11-dien-5α-yl acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -150,32 +150,41 @@
       }
     },
     {
-      "id": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
-      "name": "8β-hydroxygermacra-1(10),4,11(13)-trien-12-oate",
-      "short": "8β-hydroxygermacra-…",
-      "formula": "C15H21O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142464"
-      }
-    },
-    {
-      "id": "eupatolide",
-      "name": "eupatolide",
-      "formula": "C15H20O3",
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4935"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
-      "name": "6α,8β-hydroxygermacra-1(10),4,11(13)-trien-12-oate",
-      "short": "6α,8β-hydroxygermac…",
-      "formula": "C15H21O4",
-      "charge": -1,
+      "id": "22s_22_hydroxycholesterol",
+      "name": "(22S)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142466"
+        "chebi": "CHEBI:1301"
+      }
+    },
+    {
+      "id": "5_cholestan_3_ol",
+      "name": "(5α)-cholestan-3β-ol",
+      "formula": "C27H48O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86570"
+      }
+    },
+    {
+      "id": "5_22s_22_hydroxycholestan_3_ol",
+      "name": "(5α,22S)-22-hydroxycholestan-3β-ol",
+      "short": "(5α,22S)-22-hydroxy…",
+      "formula": "C27H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188465"
       }
     }
   ],
@@ -206,13 +215,6 @@
       "name": "taxane oxetanase 1",
       "ec": [
         "1.14.14.191"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_169",
-      "name": "eupatolide synthase",
-      "ec": [
-        "1.14.14.169"
       ]
     }
   ],
@@ -435,12 +437,11 @@
     },
     {
       "id": "r5",
-      "name": "eupatolide synthase",
-      "equation": "8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = eupatolide + oxidized [NADPH--hemoprotein reductase] + 2 H2O",
-      "ec": "1.14.14.169",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholesterol...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -454,7 +455,7 @@
       ],
       "products": [
         {
-          "metabolite": "eupatolide",
+          "metabolite": "22s_22_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -463,36 +464,35 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
+          "stoichiometry": 1
+        },
         {
-          "enzyme": "ec_1_14_14_169"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57972"
+        "rhea": "RHEA:69839"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57972"
+            "id": "RHEA:69839"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reduct...",
-      "equation": "8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + reduced [NADPH--hemoprotein reductase] + O2 = 6alpha,8beta-hydroxygermacra-1(10),4,11(13)-trien-12-oate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "cholestanol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholestanol...",
+      "equation": "cholestanol + reduced [NADPH--hemoprotein reductase] + O2 = (22S)-22-hydroxycholestanol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "metabolite": "5_cholestan_3_ol",
           "stoichiometry": 1
         },
         {
@@ -506,7 +506,7 @@
       ],
       "products": [
         {
-          "metabolite": "6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate",
+          "metabolite": "5_22s_22_hydroxycholestan_3_ol",
           "stoichiometry": 1
         },
         {
@@ -525,14 +525,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:58016"
+        "rhea": "RHEA:69871"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58016"
+            "id": "RHEA:69871"
           }
         ]
       }

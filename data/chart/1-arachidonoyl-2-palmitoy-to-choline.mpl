@@ -28,26 +28,26 @@ pathway 1-arachidonoyl-2-palmitoy-to-choline "1-arachidonoyl-2-palmitoy… to ch
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +9z_12z_15z_octadecatrien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
+    1_9z_12z_15z_octadecatrienylglycerone_3_phosphat
   }
 
   branch from palmitate side left {
     palmitate
-    <-> . +tripalmitin +h2o +hplus
-    2_3_dipalmitoyl_sn_glycerol
+    <-> . +1_palmitoylglycerone_3_phosphate +linoleate
+    1_linoleoylglycerone_3_phosphate
   }
 
   branch from choline_alfoscerate side right {
     choline_alfoscerate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    oleate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from choline_alfoscerate side left {
     choline_alfoscerate
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    1_2_dihexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +1_o_acyl_sn_glycero_3_phosphocholine
+    1_2_diacyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from arachidonate side right {
@@ -64,26 +64,26 @@ pathway 1-arachidonoyl-2-palmitoy-to-choline "1-arachidonoyl-2-palmitoy… to ch
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> ec_2_4_1_137 [2.4.1.137] +udp_d_galactose +udp +hplus
-    2_d_galactosyl_sn_glycerol_3_phosphate
-  }
-
-  branch from sn_glycerol_3_phosphate side left {
-    sn_glycerol_3_phosphate
     <-> ec_2_4_1_96 [2.4.1.96] +udp_d_galactose +udp +hplus
     1_d_galactosyl_sn_glycerol_3_phosphate
   }
 
+  branch from sn_glycerol_3_phosphate side left {
+    sn_glycerol_3_phosphate
+    <-> ec_2_3_1_198 [2.3.1.198] +acyl_coa +coa
+    2_acyl_sn_glycero_3_phosphate
+  }
+
   branch from choline side right {
     choline
-    <-> . +1_oleyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_oleyl_sn_glycero_3_phosphate
+    <-> . +phosphatidylcholine +serine
+    3_sn_phosphatidyl_l_serine
   }
 
   branch from choline side left {
     choline
-    <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
+    <-> . +1_myristoyl_sn_glycero_3_phosphocholine
+    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from phosphocholine side right {

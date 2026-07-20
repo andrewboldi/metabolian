@@ -18,73 +18,73 @@ pathway nadp-to-h2o "NADP to H2O" {
 
   branch from levopimaradienal side left {
     levopimaradienal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    neoabietadienol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    palustradienol
   }
 
   branch from levopimaradienal side right {
     levopimaradienal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    palustradienol
+    isopimara_7_15_dienol
   }
 
   branch from o2 side left {
     o2
-    <-> . +all_trans_beta_carotene +h2o
-    echinenone
+    <-> ec_1_14_11_70 [1.14.11.70] +2_oxoglutarate +deoxycylindrospermopsin +succinate +7_epi_cylindrospermopsin
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_63 [1.13.11.63] +retinal
-    all_trans_beta_carotene
+    <-> . +fadh2 +h +bromide +o_s_5_bromopyrrole_2_carbonyl_pantetheine_4_phos +o_s_4_5_dibromopyrrole_2_carbonyl_pantetheine_4 +h2o
+    fad
   }
 
   branch from nadph side left {
     nadph
-    <-> . +4_hydroxymidazolam +h +o2 +nadp +h2o
-    1_4_dihydroxymidazolam
+    <-> . +n_hydroxyhistamine +nadp +h2o +o2
+    histamine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +o2 +nadp +1_4_dihydroxymidazolam +h2o
-    1_hydroxymidazolam
+    <-> . +17_o_acetylnorajmaline +nadp +h
+    20alphas_19_20_dihydrovomilenine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +formaldehyde +h +sarcosine +h2o
-    n_n_dimethylglycine
+    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +h +lathosterone
+    3beta_hydroxy_5alpha_cholest_7_ene_4alpha_carbox
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +h +4z_7z_decadienoyl_coa +2e_6z_9z_dodecatrienoyl_coa +h2o
-    coa
+    <-> . +nadh +h +2_deoxy_3_dehydro_d_ribonate
+    2_deoxy_d_ribonic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> . +1_hydroxymidazolam +h2o +h +o2 +nadph
-    midazolam
+    <-> . +h +nadph +11r_dihydroartemisinic_aldehyde
+    11r_dihydroartemisinic_alcohol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +atorvastatin_acid +h +o2 +nadph +h2o
-    ortho_hydroxyatorvastatin
+    <-> ec_1_1_1_270 [1.1.1.270] +h +nadph +31_norcycloartanone
+    31_norcycloartanol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_3_1_85 [2.3.1.85] +o_s_3r_hydroxyoctanoylpantetheine_4_phosphoryl_s
-    o_s_2e_octenoylpantetheine_4_phosphoryl_serine_1
+    <-> . +h +adp +31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus +phosphate +31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_1_13 [3.6.1.13] +adp_alpha_d_glucose +h +amp
-    d_glucopyranose_1_phosphate
+    <-> . +h +adp +phosphate +atp
+    17_estradiol_3_o_d_glucuronide
   }
 }

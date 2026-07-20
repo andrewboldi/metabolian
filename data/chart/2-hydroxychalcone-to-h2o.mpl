@@ -30,14 +30,14 @@ pathway 2-hydroxychalcone-to-h2o "2'-hydroxychalcone to H2O" {
 
   branch from co2 side left {
     co2
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +h +3_fluorocatechol +nad
-    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> ec_4_1_1_95 [4.1.1.95] +4_aminobutyryl_acp
+    gamma_l_glutamyl_acp
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_3_1_25 [1.3.1.25] +nadh +h +4_fluorocatechol +nad
-    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> . +phenanthrene_4_carboxylate
+    phenanthrene_4_5_dicarboxylate
   }
 
   branch from succinate side left {
@@ -66,13 +66,13 @@ pathway 2-hydroxychalcone-to-h2o "2'-hydroxychalcone to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadph +nadp
-    tamoxifen_n_oxide
+    <-> . +5_5_dehydrodivanillate +h +o2 +nadph +nadp +5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+    formaldehyde
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadph +nadp
-    afimoxifene
+    <-> . +nadh +3_nitrophenol +h +nad
+    3_hydroxyaminophenol
   }
 }

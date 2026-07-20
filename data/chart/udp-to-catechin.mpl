@@ -18,13 +18,13 @@ pathway udp-to-catechin "UDP to (−)-catechin" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +22_oxodocosanoate +nadph
-    22_hydroxydocosanoate
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    r_terpineol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +docosanedioate +h +nadph +h2o
-    22_oxodocosanoate
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    thujan_3_ol
   }
 }

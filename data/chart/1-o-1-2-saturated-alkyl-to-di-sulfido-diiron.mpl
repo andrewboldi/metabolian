@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)… to di-μ-sulfido-diiron" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     1_o_1_2_saturated_alkyl_sn_glycerol
@@ -22,45 +22,39 @@ pathway 1-o-1-2-saturated-alkyl-to-di-sulfido-diiron "1-O-(1,2-saturated-alkyl)�
     primary_alcohol
   }
 
-  branch from aldehyde side right {
-    aldehyde
-    <-> . +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +sulfite +hplus
-    tetra_3_sulfido_tetrairon
+  branch from glycerol side right {
+    glycerol
+    <-> . +1_acyl_sn_glycerol
+    dag
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +1_oleoylglycerol +h2o +hplus
-    oleate
+    <-> . +2_palmitoylglycerol +h2o +hplus
+    palmitate
   }
 
-  branch from glycerol side right {
-    glycerol
-    <-> . +h2o +oleate +hplus
-    2_oleoylglycerol
-  }
-
-  branch from carboxylic_acid_anion side left {
+  branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
     <-> . +h2o +coa +hplus
     acyl_coa
   }
 
-  branch from carboxylic_acid_anion side right {
+  branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> . +aldehyde +h2o +tetra_3_sulfido_tetrairon +hplus
-    tetra_3_sulfido_tetrairon
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +o2 +hplus +di_sulfido_diiron +h2o
-    pulcherriminate
+    <-> . +n6_acyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_6 [1.14.15.6] +cholesterol +o2 +hplus +pregnenolone +di_sulfido_diiron +h2o
-    4_methylpentanal
+    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    linolenoyl_containing_glycerolipid
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    7z_10z_13z_hexadecatrienoyl_containing_glycerol
   }
 }

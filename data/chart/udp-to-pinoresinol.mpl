@@ -20,14 +20,14 @@ pathway udp-to-pinoresinol "UDP to (−)-pinoresinol" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_181 [2.4.1.181] +udp +h +glucosyloxyanthraquinone
-    1_hydroxyanthraquinone
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +h +p_hydroxybenzyldesulphoglucosinolate
+    p_hydroxyphenylacetothiohydroximate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_170 [2.4.1.170] +udp +glycitin +h
-    glycitein
+    <-> ec_2_4_1_210 [2.4.1.210] +udp +h +limonin_17_beta_d_glucoside
+    limonoate_a_ring_lactone
   }
 
   branch from pinoresinol side left {

@@ -30,26 +30,26 @@ pathway 3-5-unsubstituted-to-r-allantoin "3',5'-unsubstituted… to (R)-(−)-al
 
   branch from fmn side left {
     fmn
-    <-> . +24r_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24r_7_24_dihydroxycholesterol
+    <-> ec_1_14_14_82 [1.14.14.82] +3_unsubstituted_flavone +fmnh2 +o2 +h2o +hplus
+    3_hydroxyflavonoid
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_96 [1.14.14.96] +trans_5_o_4_coumaroyl_d_quinate +fmnh2 +o2 +h2o +hplus
-    trans_5_o_caffeoyl_d_quinate
+    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
+    salutaridinium
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
-    1_10_e_4e_6s_7r_germacradien_6_ol
+    <-> ec_2_5_1_58 [2.5.1.58] +l_cysteine +fpp
+    s_2e_6e_farnesyl_l_cysteine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_5_4 [6.3.5.4] +aspartate +glutamine +atp +h2o +glutamate +amp +hplus
-    l_asparagine
+    <-> ec_2_7_7_39 [2.7.7.39] +sn_glycerol_3_phosphate +ctp +hplus
+    2r_cdp_glycerol
   }
 
   branch from xanthine side left {

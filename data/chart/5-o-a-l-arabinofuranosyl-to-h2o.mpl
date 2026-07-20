@@ -18,14 +18,14 @@ pathway 5-o-a-l-arabinofuranosyl-to-h2o "5-O-a-L-Arabinofuranosyl-… to H2O" {
 
   branch from aldehydo_l_arabinose side left {
     aldehydo_l_arabinose
-    <-> ec_1_1_1_175 [1.1.1.175] +nadh +l_arabinono_1_4_lactone +h
-    nad
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
+    atp
   }
 
   branch from aldehydo_l_arabinose side right {
     aldehydo_l_arabinose
-    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
-    atp
+    <-> ec_5_3_1_4 [5.3.1.4]
+    l_ribulose
   }
 
   branch from 1_5_l_arabinotriose side left {
@@ -36,13 +36,13 @@ pathway 5-o-a-l-arabinofuranosyl-to-h2o "5-O-a-L-Arabinofuranosyl-… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +hydrobenzoin
-    trans_stilbene_oxide
+    <-> ec_3_4_21_104 [3.4.21.104] +p_tosyl_l_arginine +methanol
+    tame
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_4_5 [3.5.4.5] +cytarabine +h +nh4
-    spongouridin
+    <-> ec_3_5_1_88 [3.5.1.88] +met_ala_ser +formate
+    n_formyl_l_methionyl_l_alanyl_l_serinate
   }
 }

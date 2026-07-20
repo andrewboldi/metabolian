@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     nadh
@@ -26,62 +26,50 @@ pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +carnitine
-    o_acetyl_r_carnitine
+    <-> . +acetyl_coa +s_5_acetamido_2_hydroxyphenyl_cysteine
+    acetaminophen_mercapturate_conjugate_n_acetyl_cy
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_157 [2.3.1.157] +acetyl_coa +alpha_d_glucosamine_1_phosphate +h
-    n_acetyl_d_mannosamine_1_phosphate
+    <-> . +erucoyl_coa +diphosphate +amp +atp
+    13z_docosenoate
   }
 
   branch from o2 side left {
     o2
-    <-> . +nitrite
-    nitrate
+    <-> ec_1_13_11_36 [1.13.11.36] +5_amino_4_chloro_2_2_3_dihydroxyphenyl_pyridazin
+    5_amino_4_chloro_2_5_hydroxymuconoyl_3_2h_pyrida
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_41 [1.13.11.41] +4_hydroxybenzoate +h +formate
-    2_4_dihydroxyacetophenone
-  }
-
-  branch from 5_tetradecenoyl_coenzyme_a side left {
-    5_tetradecenoyl_coenzyme_a
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
-    7_hexadecenoyl_coa
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_241 [1.1.1.241] +nadh +6_oxocineole +h
-    6_endo_hydroxycineole
+    <-> ec_1_14_13_89 [1.14.13.89] +2_hydroxygenistein +nadp +h2o +h +nadph
+    genistein
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +3_oxo_delta5_steroid
-    3beta_hydroxy_delta5_steroid
+    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h +coa +h2o
+    2_7_10_13_16_19_docosahexenoyl_coenzyme_a
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_4_49 [3.1.4.49] +dolichyl_phosphate +d_mannopyranose
-    dolichyl_beta_d_mannosyl_phosphate
+  branch from nad side right {
+    nad
+    <-> . +octanoyl_coa +fad +coa +h2o +nadh +acetyl_coa +fadh2 +h
+    hexanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_23 [1.14.14.23] +h +cholesterol +o2 +nadph +nadp
-    7alpha_hydroxycholesterol
+    <-> . +4_hydroxy_2_oxoheptanedioate +h
+    2_hydroxyhepta_2_4_dienedioic_acid
   }
 
-  branch from 7z_hexadecenoyl_coa side right {
-    7z_hexadecenoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
-    9z_octadecenoyl_coa
+  branch from h2o side right {
+    h2o
+    <-> . +4_hydroxy_2_oxoheptanedioate
+    2z_4z_2_hydroxyhepta_2_4_dienedioate
   }
 
   branch from 7z_hexadecenoyl_coa side left {
@@ -90,13 +78,19 @@ pathway nadh-to-o-5z-tetradecenoyl-l "NADH to O-[(5Z)-tetradecenoyl]-L-…" {
     7_palmitoleic_acid
   }
 
-  branch from 2e_7z_hexadecadienoyl_coa side right {
+  branch from 7z_hexadecenoyl_coa side right {
+    7z_hexadecenoyl_coa
+    <-> . +nadp +h2o +h +o2 +nadph
+    hexadecanoyl_coa
+  }
+
+  branch from 2e_7z_hexadecadienoyl_coa side left {
     2e_7z_hexadecadienoyl_coa
     <-> . +7z_hexadecenoyl_coa +fad +h
     fadh2
   }
 
-  branch from 2e_7z_hexadecadienoyl_coa side left {
+  branch from 2e_7z_hexadecadienoyl_coa side right {
     2e_7z_hexadecadienoyl_coa
     <-> . +h +h2o
     s_3_hydroxy_7_hexadecenoyl_coenzyme_a

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
-  spacing 276
+  spacing 264
 
   spine at 0,0 {
     dihydrophloroglucinol
@@ -48,8 +48,8 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from l_argininium side right {
     l_argininium
-    <-> ec_2_1_1_319 [2.1.1.319] +sam +sah +hplus
-    n_n_dimethyl_l_arginine_1
+    <-> . +udpglcnac +udp +hplus
+    n_n_acetyl_d_glucosaminyl_l_arginyl_1
   }
 
   branch from s_lactaldehyde side left {
@@ -60,79 +60,67 @@ pathway dihydrophloroglucinol-to-nadph "dihydrophloroglucinol to NADPH" {
 
   branch from s_lactaldehyde side right {
     s_lactaldehyde
-    <-> ec_1_2_1_87 [1.2.1.87] +nadh +h +s_lactoyl_coa +nad
-    coa
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
+    methylglyoxal
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_3_dihydroxy_ddt
-    1s_2s_ddt_2_3_dihydrodiol
+    <-> . +nadh +h +2_2_bis_4_hydroxyphenyl_1_propanol +o2 +h2o
+    2_3_bis_4_hydroxyphenyl_1_2_propanediol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_6_dichlorocatechol
-    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_14_13_84 [1.14.13.84] +nadh +h +4_hydroxyacetophenone
+    4_1_hydroxyethyl_phenol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +indol_3_yl_acetonitrile
-    indole_3_acetamide
+    <-> . +tetrangulol
+    tetrangomycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_11 [4.2.1.11] +3_phospho_d_erythronic_acid
-    2_hydroxy_3_phosphonooxybut_3_enoic_acid
-  }
-
-  branch from propane_1_2_diol side left {
-    propane_1_2_diol
-    <-> ec_1_1_1_1 [1.1.1.1] +nadp +h +nadph
-    hydroxyacetone
-  }
-
-  branch from propane_1_2_diol side right {
-    propane_1_2_diol
-    <-> ec_1_1_1_1 [1.1.1.1] +nadp +h +nadph
-    lactaldehyde
+    <-> . +urdamycinone_f
+    aquayamycin
   }
 
   branch from h side left {
     h
-    <-> . +5_pyridoxate +h2o
-    5_pyridoxolactone
+    <-> . +dtdp_l_oleandrose +avermectin_a2a_aglycone +avermectin_a2a_monosaccharide
+    dtdp
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_4_20 [3.5.4.20] +1_4_amino_2_methylpyrimidin_5_ylmethyl_3_2_hydro +h2o +1_4_hydroxy_2_methylpyrimidin_5_ylmethyl_3_2_hyd
-    nh4
+    <-> . +dtdp_l_oleandrose +avermectin_a2a_monosaccharide +dtdp
+    avermectin_a2a
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_18 [1.14.12.18] +h +biphenyl +nadph +nadp
-    2r_3s_3_phenylcyclohexa_3_5_diene_1_2_diol
+    <-> . +h +nadph +4_1_hydroxyethyl_phenol +nadp +h2o
+    4_ethylphenol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_3 [1.13.11.3] +h +3_4_dihydroxybenzenesulfonate
-    3_sulfomuconate
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +1_methylnaphthalene +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_50 [1.1.1.50] +5beta_dihydroaldosterone +h +nadp
-    3alpha_11beta_21_trihydroxy_20_oxo_5beta_pregnan
+    <-> ec_1_1_1_362 [1.1.1.362] +auramycinone +nadp +h
+    auraviketone
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_146 [1.1.1.146] +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione +nadp
-    tetrahydrocorticosterone
+    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp +h2o
+    1s_2r_naphthalene_1_2_oxide
   }
 }

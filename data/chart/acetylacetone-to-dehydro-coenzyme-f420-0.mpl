@@ -46,26 +46,26 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from acetate side left {
     acetate
-    <-> . +s_malyl_n_acetyl_d_glucosaminide +h2o
-    s_malyl_d_glucosaminide
+    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +diacetylchitobiose_6_phosphate +h2o
-    n_monoacetylchitobiose_6_phosphate
+    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
+    1_tetradecyl_sn_glycero_3_phosphocholine
   }
 
   branch from d_glyceraldehyde side left {
     d_glyceraldehyde
-    <-> ec_4_1_2_51 [4.1.2.51] +pyruvate
-    2_dehydro_3_deoxy_d_gluconate
+    <-> . +3_hydroxypyruvate
+    3r_4s_5r_3_4_5_6_tetrahydroxy_2_oxohexanoate
   }
 
   branch from d_glyceraldehyde side right {
     d_glyceraldehyde
-    <-> ec_1_2_1_89 [1.2.1.89] +nadp +h2o +nadph +hplus
-    d_glycerate
+    <-> . +3_hydroxypyruvate
+    2_dehydro_d_galactonate
   }
 
   branch from r5p side left {
@@ -76,14 +76,14 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from formate side right {
     formate
-    <-> ec_3_5_1_49 [3.5.1.49] +h2o +nh3
-    formamide
+    <-> ec_3_5_1_88 [3.5.1.88] +n_formyl_l_methionyl_group +h2o
+    l_methioniniumyl_group
   }
 
   branch from formate side left {
     formate
-    <-> ec_3_5_4_25 [3.5.4.25] +gtp +h2o +pi +hplus
-    2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin
+    <-> . +n_formylmethanofuran +h2o
+    methanofuranate
   }
 
   branch from 5_amino_6_d_ribitylamino_uracil side right {
@@ -118,20 +118,20 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_4_1_3_44 [4.1.3.44] +n1_methylguanosine_5_monophosphate_1 +pyruvate +sam +methionine +co2 +h2o
-    4_demethylwyosine_5_monophosphate_1
+    <-> ec_2_8_4_5 [2.8.4.5] +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +thiol_group +hydrogen_donor +sam +h_group +methionine +hydrogen_acceptor +sah +hplus
+    2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_2_5_1_120 [2.5.1.120] +3_1_carboxylatovinyl_oxy_benzoate +sam +h2o +hco3 +hplus
-    aminodeoxyfutalosinate
+    <-> . +h2o +glycine
+    gly_met
   }
 
   branch from methionine side left {
     methionine
-    <-> ec_2_8_4_5 [2.8.4.5] +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +thiol_group +hydrogen_donor +sam +h_group +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
-    2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
+    <-> . +met_ala +h2o
+    alanine
   }
 
   branch from 7_8_didemethyl_8_hydroxy_5_deazariboflavin side right {
@@ -142,13 +142,13 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
-    akg
+    <-> ec_3_5_1_2 [3.5.1.2] +glutamine +h2o
+    glutamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
-    o_carbamoyl_l_serine
+    <-> ec_3_5_3_21 [3.5.3.21] +methylenediurea +h2o +hplus +co2
+    n_hydroxymethyl_urea
   }
 }

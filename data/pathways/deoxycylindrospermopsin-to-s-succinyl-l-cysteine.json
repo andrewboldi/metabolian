@@ -175,41 +175,50 @@
       }
     },
     {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
-      "charge": 1,
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29965"
+        "chebi": "CHEBI:74483"
       }
     },
     {
-      "id": "3r_3_hydroxy_l_argininium",
-      "name": "(3R)-3-hydroxy-L-argininium",
-      "short": "3-hydroxy-L-arginin…",
-      "formula": "C6H13N4O2",
-      "charge": 1,
+      "id": "5_formyl_cmp_1",
+      "name": "5-formyl CMP(1−)",
+      "formula": "C10H11N3O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78294"
+        "chebi": "CHEBI:138075"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "4r_4_hydroxy_l_lysine",
-      "name": "(4R)-4-hydroxy-L-lysine",
-      "short": "4-hydroxy-L-lysine",
-      "formula": "C6H15N2O3",
-      "charge": 1,
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77410"
+        "chebi": "CHEBI:50342"
+      }
+    },
+    {
+      "id": "trans_3_hydroxy_l_proline",
+      "name": "trans-3-hydroxy-L-proline",
+      "short": "trans-3-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:85428"
       }
     }
   ],
@@ -226,13 +235,6 @@
       "name": "fumarate reductase (cytochrome)",
       "ec": [
         "1.3.2.4"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_47",
-      "name": "[50S ribosomal protein L16]-arginine 3-hydroxylase",
-      "ec": [
-        "1.14.11.47"
       ]
     }
   ],
@@ -428,64 +430,62 @@
     },
     {
       "id": "r5",
-      "name": "[50S ribosomal protein L16]-arginine 3-hydroxylase",
-      "equation": "L-arginyl-[ribosomal protein uL16] + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-arginyl-[ribosomal protein uL16] + succinate + CO2",
-      "ec": "1.14.11.47",
+      "name": "5-methylcytidine(34) in mitochondrial tRNA(Met) + 2 2-oxoglutarate + 2 O2 = 5-formylcyt...",
+      "equation": "5-methylcytidine(34) in mitochondrial tRNA(Met) + 2 2-oxoglutarate + 2 O2 = 5-formylcytidine(34) in mitochondrial tRNA(Met) + 2 succinate + 2 CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "l_argininium",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3r_3_hydroxy_l_argininium",
+          "metabolite": "5_formyl_cmp_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+          "stoichiometry": 2
+        },
         {
-          "enzyme": "ec_1_14_11_47"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41556"
+        "rhea": "RHEA:54144"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41556"
+            "id": "RHEA:54144"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-lysine + 2-oxoglutarate + O2 = (4R)-4-hydroxy-L-lysine + succinate + CO2",
-      "equation": "L-lysine + 2-oxoglutarate + O2 = (4R)-4-hydroxy-L-lysine + succinate + CO2",
+      "name": "[ribosomal protein uS12]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein uS12]-(3S...",
+      "equation": "[ribosomal protein uS12]-L-proline + 2-oxoglutarate + O2 = [ribosomal protein uS12]-(3S)-3-hydroxy-L-proline + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
@@ -499,7 +499,7 @@
       ],
       "products": [
         {
-          "metabolite": "4r_4_hydroxy_l_lysine",
+          "metabolite": "trans_3_hydroxy_l_proline",
           "stoichiometry": 1
         },
         {
@@ -514,14 +514,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42420"
+        "rhea": "RHEA:54156"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42420"
+            "id": "RHEA:54156"
           }
         ]
       }

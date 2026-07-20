@@ -92,43 +92,60 @@
       }
     },
     {
-      "id": "purpurea_glycoside_a",
-      "name": "purpurea glycoside A",
-      "formula": "C47H74O18",
-      "charge": 0,
+      "id": "solasodine_3_o_beta_d_glucoside",
+      "name": "solasodine 3-O-beta-D-glucoside",
+      "short": "solasodine…",
+      "formula": "C33H54NO7",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM819581"
+        "metanetx": "MNXM21800"
       }
     },
     {
-      "id": "digitoxin",
-      "name": "digitoxin",
-      "formula": "C41H64O13",
-      "charge": 0,
+      "id": "solasodine",
+      "name": "solasodine",
+      "formula": "C27H44NO2",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1105847"
+        "chebi": "CHEBI:145043"
       }
     },
     {
-      "id": "purpurea_glycoside_b",
-      "name": "purpurea glycoside B",
-      "formula": "C47H74O19",
+      "id": "sucrose",
+      "name": "sucrose",
+      "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM819583"
+        "metanetx": "MNXM1104180"
       }
     },
     {
-      "id": "gitoxin",
-      "name": "gitoxin",
-      "formula": "C41H64O14",
+      "id": "beta_d_fructopyranose",
+      "name": "beta-D-fructopyranose",
+      "short": "beta-D-fructopyrano…",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM54997"
+        "metanetx": "MNXM43814"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_173",
+      "name": "sterol 3beta-glucosyltransferase",
+      "ec": [
+        "2.4.1.173"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_13",
+      "name": "sucrose synthase",
+      "ec": [
+        "2.4.1.13"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -300,7 +317,8 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR165177",
+      "name": "sterol 3beta-glucosyltransferase",
+      "ec": "2.4.1.173",
       "substrates": [
         {
           "metabolite": "udp",
@@ -311,13 +329,13 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "purpurea_glycoside_a",
+          "metabolite": "solasodine_3_o_beta_d_glucoside",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "digitoxin",
+          "metabolite": "solasodine",
           "stoichiometry": 1
         },
         {
@@ -325,35 +343,41 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_173"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR165177"
+        "metanetx": "MNXR176273"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165177"
+            "id": "MNXR176273"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR165182",
+      "name": "sucrose synthase",
+      "ec": "2.4.1.13",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "sucrose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "purpurea_glycoside_b",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
@@ -363,21 +387,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "gitoxin",
+          "metabolite": "beta_d_fructopyranose",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR165182"
+        "metanetx": "MNXR182256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165182"
+            "id": "MNXR182256"
           }
         ]
       }

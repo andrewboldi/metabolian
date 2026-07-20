@@ -22,37 +22,37 @@ pathway d-ribitol-5-phosphate-to-h2o "D-ribitol 5-phosphate to H2O" {
 
   branch from alpha_d_ribulose side left {
     alpha_d_ribulose
-    <-> ec_5_3_1_3 [5.3.1.3]
-    aldehydo_d_arabinose
+    <-> ec_1_1_1_56 [1.1.1.56] +nadh +h +nad
+    ribitol
   }
 
   branch from alpha_d_ribulose side right {
     alpha_d_ribulose
-    <-> ec_5_3_1_20 [5.3.1.20]
-    beta_d_ribofuranose
+    <-> ec_5_3_1_3 [5.3.1.3]
+    d_arabinopyranose
   }
 
   branch from atp side left {
-    atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_lysine
-  }
-
-  branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
     d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
   }
 
+  branch from atp side right {
+    atp
+    <-> ec_7_4_2_11 [7.4.2.11] +h +adp +phosphate +h2o
+    d_methionine
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_5 [3.1.1.5] +9e_tetradecenoic_acid +sn_glycerol_3_phosphate
-    1_7z_tetradecenoyl_sn_glycero_3_phosphate
+    <-> . +2_methylfumaryl_coa +pyruvate
+    acetyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hexadecanoate +glycerophosphatidylethanolamine +h
-    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
+    l_methionine
   }
 }

@@ -22,13 +22,13 @@ pathway udp-to-soyasaponin-iii "UDP to Soyasaponin III" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_b
-    soyasapogenol_b_22_o_beta_d_glucoside
+    <-> . +udp +h +epiheterodendrin
+    r_2_hydroxy_3_methybutanenitrile
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_b
-    soyasapogenol_b_3_o_beta_d_glucoside
+    <-> . +udp +h +osmaronin
+    z_4_hydroxy_3_methylbut_2_enenitrile
   }
 }

@@ -36,14 +36,14 @@ pathway met-enkephalin-arg-phe-to-l-phenylalanine "Met-enkephalin-Arg-Phe to L-p
 
   branch from l_methionine side right {
     l_methionine
-    <-> ec_1_21_98_3 [1.21.98.3] +5_deoxyadenosine +h +3_8_divinyl_protochlorophyllide_a +magnesium_protoporphyrin_ix_13_monomethyl_ester +h2o
-    s_adenosyl_l_methionine
+    <-> . +h2o +l_phenylalanine
+    met_phe
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +n_methyl_l_valyl_l_tryptophanol +l_homocysteine +nadp +h2o +h +nadph +l_tryptophan
-    l_valine
+    <-> ec_3_4_11_4 [3.4.11.4] +h2o +glycylglycine
+    met_gly_gly
   }
 
   branch from l_phenylalanine side right {

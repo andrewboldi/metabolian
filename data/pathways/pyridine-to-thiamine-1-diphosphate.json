@@ -190,69 +190,31 @@
       }
     },
     {
-      "id": "4_hydroxybutyrate",
-      "name": "4-hydroxybutyrate",
-      "formula": "C4H7O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16724"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "4_hydroxybutyryl_coa",
-      "name": "4-hydroxybutyryl-CoA",
-      "formula": "C25H38N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58574"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "3_6_9_trihydroxypterocarpan",
-      "name": "3,6,9-trihydroxypterocarpan",
-      "short": "3,6,9-trihydroxypte…",
-      "formula": "C15H12O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15649"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
-      "name": "(6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan",
-      "short": "(6aS,11aS)-4-dimeth…",
-      "formula": "C20H20O5",
+      "id": "guaia_6_9_diene",
+      "name": "(+)-guaia-6,9-diene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50036"
+        "chebi": "CHEBI:49204"
+      }
+    },
+    {
+      "id": "germacrene_a",
+      "name": "germacrene A",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36517"
       }
     },
     {
@@ -333,20 +295,6 @@
       "name": "aminopyrimidine aminohydrolase",
       "ec": [
         "3.5.99.2"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_40",
-      "name": "4-hydroxybutyrate--CoA ligase (AMP-forming)",
-      "ec": [
-        "6.2.1.40"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_36",
-      "name": "trihydroxypterocarpan dimethylallyltransferase",
-      "ec": [
-        "2.5.1.36"
       ]
     }
   ],
@@ -737,30 +685,17 @@
     },
     {
       "id": "r9",
-      "name": "4-hydroxybutyrate--CoA ligase (AMP-forming)",
-      "equation": "4-hydroxybutanoate + ATP + CoA = 4-hydroxybutanoyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.40",
+      "name": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-guaia-6,9-diene + diphosphate",
       "substrates": [
         {
-          "metabolite": "4_hydroxybutyrate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxybutyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "guaia_6_9_diene",
           "stoichiometry": 1
         },
         {
@@ -768,44 +703,34 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_40"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:23128"
+        "rhea": "RHEA:25448"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23128"
+            "id": "RHEA:25448"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "trihydroxypterocarpan dimethylallyltransferase",
-      "equation": "(6aS,11aS)-3,6a,9-trihydroxypterocarpan + dimethylallyl diphosphate = (6aS,11aS)-4-dimethylallyl-3,6a,9-trihydroxypterocarpan + diphosphate",
-      "ec": "2.5.1.36",
+      "name": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene A + diphosphate",
       "substrates": [
         {
-          "metabolite": "3_6_9_trihydroxypterocarpan",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero",
+          "metabolite": "germacrene_a",
           "stoichiometry": 1
         },
         {
@@ -813,22 +738,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_36"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:23184"
+        "rhea": "RHEA:25452"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:23184"
+            "id": "RHEA:25452"
           }
         ]
       }

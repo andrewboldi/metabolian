@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-oxido-6-methylpyridiniu-to-ammonium "5-oxido-6-methylpyridiniu… to ammonium" {
-  spacing 316
+  spacing 304
 
   spine at 0,0 {
     5_oxido_6_methylpyridinium_3_4_dicarboxylate
@@ -14,17 +14,5 @@ pathway 5-oxido-6-methylpyridiniu-to-ammonium "5-oxido-6-methylpyridiniu… to a
     2_acetamidomethylidene_succinate
     <-> ec_3_5_1_29 [3.5.1.29] +h2o +hplus -acetate -nh3 -co2
     4_oxobutanoate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +n_carbamoylglycinate +h2o +hplus +co2
-    glycine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +n_carbamoyl_l_tyrosinate +h2o +hplus +co2
-    tyrosine
   }
 }

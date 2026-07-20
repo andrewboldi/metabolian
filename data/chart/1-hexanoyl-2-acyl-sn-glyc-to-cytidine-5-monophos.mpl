@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos "1-hexanoyl-2-acyl-sn-glyc… to cytidine 5'-monophosphate" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     1_hexanoyl_2_acyl_sn_glycero_3_phosphocholine
@@ -18,37 +18,25 @@ pathway 1-hexanoyl-2-acyl-sn-glyc-to-cytidine-5-monophos "1-hexanoyl-2-acyl-sn-g
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
-    3_d_galactosyl_mono_long_chain_acyl_sn_glycerol
+    <-> . +primary_fatty_amide +h2o
+    nh3
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_mono_long_chain
-  }
-
-  branch from phosphatidylcholine side left {
-    phosphatidylcholine
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
-    1_acyl_sn_glycero_3_phospho_1_sn_glycerol
-  }
-
-  branch from phosphatidylcholine side right {
-    phosphatidylcholine
-    <-> . +1_alkyl_2_acetyl_sn_glycerol +1_o_acyl_sn_glycero_3_phosphocholine
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    <-> . +fatty_acid_taurine_conjugate +h2o
+    taurine
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> ec_3_1_4_17 [3.1.4.17] +h2o +hplus
+    3_5_cyclic_cmp
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> ec_2_4_99_14 [2.4.99.14] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    a_kdo_3_lipid_iva
   }
 }

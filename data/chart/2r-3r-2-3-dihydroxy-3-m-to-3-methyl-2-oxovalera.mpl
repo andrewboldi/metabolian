@@ -30,25 +30,25 @@ pathway 2r-3r-2-3-dihydroxy-3-m-to-3-methyl-2-oxovalera "(2R,3R)-2,3-dihydroxy-3
 
   branch from h2o side left {
     h2o
-    <-> . +l_valine +l_serine +l_arginine
-    valyl_seryl_arginine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +n_acetyl_d_glucosamine +phosphate +n_acetyl_d_glucosamine
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_valine +l_tryptophan +l_phenylalanine
-    valyl_tryptophanyl_phenylalanine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    n_acetyl_beta_d_galactosamine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_keto_beta_d_galactose +h
-    beta_d_galactose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    thujan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
-    cdp_d_abequose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    r_terpineol
   }
 }

@@ -26,26 +26,26 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-h2o "4-Hydroxy-2-oxo-5-methylh… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +2_formylbenzoate +nadph +nadp
-    2_hydroxymethyl_benzoic_acid
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o
+    n_3_hydroxybutanoyl_l_homoserine_lactone
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +nadph +nadp
-    4_pyridinemethanol
+    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_phenylalanine_methyl_ester +h2o +methanol
+    n_acetyl_l_phenylalanine
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_4_4_1_3 [4.4.1.3] +nh4 +l_cysteine +h2o
-    l_lanthionine_dizwitterion
+    <-> ec_2_7_1_40 [2.7.1.40] +8_bromoadenosine_5_diphosphate +h +phosphoenolpyruvate
+    8_bromoadenosine_5_triphosphate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_1_99_1 [4.1.99.1] +o_nitrobenzenethiol +nh4 +h2o
-    s_o_nitrophenyl_l_cysteine
+    <-> . +beta_d_fructose_6_phosphate +phosphoenolpyruvate
+    d_fructofuranose
   }
 
   branch from isobutyraldehyde side left {
@@ -62,62 +62,62 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-h2o "4-Hydroxy-2-oxo-5-methylh… to H2O" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_22 [1.14.14.22] +nadh +h +nad +h2o
-    fmn_n5_oxide
+    <-> ec_2_1_1_45 [2.1.1.45] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +fmnh2 +h +dump +dtmp
+    6s_5_6_7_8_tetrahydrofolate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_19_6_1 [1.19.6.1] +fmnh2 +acetylene +atp +h2o +h +adp +ethene +phosphate
-    h2
+    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +h +o2 +l_arginine +l_citrulline +h2o
+    nitric_oxide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +4_nitrophenol
-    p_nitrophenyl_palmitate
+    <-> . +n_carbamoyl_d_hydroxyphenylglycine
+    5_p_hydroxyphenyl_hydantoin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_21_4 [3.4.21.4] +coumarin_120 +z_arg_arg
-    z_arg_arg_nhmec
+    <-> ec_3_5_1_88 [3.5.1.88] +2_2_2_amino_4_methylthio_1_oxobutyl_amino_4_meth +formate
+    n_formyl_l_methionyl_l_leucyl_l_phenylalaninate
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_2_1_1_45 [2.1.1.45] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +h +dump +fmn +dtmp
-    6s_5_6_7_8_tetrahydrofolate
+    <-> ec_1_14_99_46 [1.14.99.46] +uracil +h +o2 +fmn
+    ureidoperacrylic_acid
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_35 [1.14.14.35] +h +sulfonyldimethane +o2 +fmn +methanesulfonate +h2o
-    formaldehyde
+    <-> ec_1_14_99_46 [1.14.99.46] +thymine +h +o2 +fmn
+    z_2_methylureidoperacrylic_acid
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_115 [2.1.1.115] +s_reticuline +s_adenosyl_l_homocysteine +h
-    s_norreticuline
+    <-> ec_2_1_1_4 [2.1.1.4] +s_adenosyl_l_homocysteine +5_methoxyindole_3_acetic_acid
+    5_hydroxyindol_3_yl_acetate
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +oxyayanin_b
-    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+    <-> ec_2_1_1_142 [2.1.1.142] +s_adenosyl_l_homocysteine +h +24r_24_methylcycloart_25_en_3beta_ol
+    cycloartenol
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +betaine_aldehyde
-    choline
+    <-> ec_1_3_5_1 [1.3.5.1] +fadh2 +h +fumarate
+    succinate
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_4_99_1 [1.4.99.1] +d_alanine +h2o +fadh2 +h +pyruvate
-    nh4
+    <-> . +fadh2 +h +succinate
+    fumarate
   }
 
   branch from fe side left {
@@ -128,8 +128,8 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-h2o "4-Hydroxy-2-oxo-5-methylh… to H2O" {
 
   branch from fe side right {
     fe
-    <-> . +fadh2 +h +ferrichrome +fad
-    deferrichrome
+    <-> . +nadh +s_adenosyl_l_homocysteine +siroheme +h +s_adenosyl_l_methionine +nad
+    uroporphyrinogen_iii
   }
 
   branch from co side left {
@@ -140,8 +140,8 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-h2o "4-Hydroxy-2-oxo-5-methylh… to H2O" {
 
   branch from co side right {
     co
-    <-> ec_1_2_5_3 [1.2.5.3] +co2 +hydroquinone +h2o
-    1_4_benzoquinone
+    <-> ec_1_2_5_3 [1.2.5.3] +menaquinol_9 +co2 +h2o
+    menaquinone_9
   }
 
   branch from protoheme side left {
@@ -158,25 +158,25 @@ pathway 4-hydroxy-2-oxo-5-methylh-to-h2o "4-Hydroxy-2-oxo-5-methylh… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyhydratropate +nadp +h2o +h +nadph
-    p_hydroxypropiophenone
+    <-> . +n_nitrosomethanamine +formaldehyde +nadp +h2o +h +nadph
+    n_nitrosodimethylamine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +4_aminoacetophenone +nadph +nadp +h2o
-    4_aminophenyl_acetate
+    <-> . +hydroxymephenytoin +nadp +h2o +h +nadph
+    mephenytoin
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +h +1_2_naphthoquinone +nadp
-    naphthalene_1_2_diol
+    <-> ec_1_1_1_21 [1.1.1.21] +2_benzoylpyridine +h +nadp
+    phenyl_pyridin_2_yl_methanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_10 [1.1.1.10] +isatin +h +nadp
-    2_3_dihydroxyindole
+    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +nadp +h2o +h +o2
+    fenthion
   }
 }

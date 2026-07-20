@@ -20,14 +20,14 @@ pathway 2-6-dihydroxypseudooxynic-to-4-oxobutanoate "2,6-Dihydroxypseudooxynicâ€
 
   branch from o2 side left {
     o2
-    <-> . +hydroxymephenytoin +nadp +h2o +h +nadph
-    mephenytoin
+    <-> ec_1_14_14_1 [1.14.14.1] +formate +nadp +estrone +h2o +nadph
+    3_17_dioxoandrost_4_en_19_al
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +nadp +h2o +h +nadph
-    fenthion
+    <-> ec_1_14_15_4 [1.14.15.4] +h +17alpha_hydroxyprogesterone +nadph +nadp +h2o
+    21_deoxycortisol
   }
 
   branch from methylamine side left {
@@ -44,38 +44,38 @@ pathway 2-6-dihydroxypseudooxynic-to-4-oxobutanoate "2,6-Dihydroxypseudooxynicâ€
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2e_9z_octadecadienoyl_coa +o2
-    9z_octadecenoyl_coa
+    <-> ec_1_11_1_8 [1.11.1.8] +thyroglobulin_triiodothyronine +thyroglobulin_dehydroalanine +h2o +thyroglobulin_3_iodotyrosine
+    thyroglobulin_3_5_diiodotyrosine
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +4_methylphenol +h2o
-    4_methylcatechol
+    <-> ec_1_11_1_8 [1.11.1.8] +thyroglobulin_3_5_diiodotyrosine +thyroglobulin_l_thyroxine +h2o
+    thyroglobulin_dehydroalanine
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +o2 +nadph +nadp +h2o
-    fenthion_sulfone
+    <-> ec_1_1_1_184 [1.1.1.184] +methyl_4_chloro_3_hydroxybutanoate +nadp +nadph
+    methyl_4_chloro_3_oxobutanoate
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_3 [3.2.1.3] +beta_d_glucose +2_4_dinitrophenol +h2o
-    2_4_dinitrophenyl_alpha_d_glucopyranoside
+    <-> ec_1_1_1_184 [1.1.1.184] +methyl_2_chloro_3_hydroxybutanoate +nadp +nadph
+    methyl_2_chloro_3_oxobutanoate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadp
-    aldehydo_d_xylose
+    <-> ec_1_1_1_1 [1.1.1.1] +acetoin +h +nadp
+    butane_2_3_diol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +testosterone +h +nadp
-    4_androstenediol
+    <-> ec_1_5_1_34 [1.5.1.34] +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +h +nadp
+    6_7_dimethyltetrahydropterin
   }
 
   branch from 4_6_hydroxypyridin_3_yl_4_oxobutyrate side left {

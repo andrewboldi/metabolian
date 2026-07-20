@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gama-glutamylglutathione-to-h2o "Gama-glutamylglutathione to H2O" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     gama_glutamylglutathione
@@ -18,14 +18,14 @@ pathway gama-glutamylglutathione-to-h2o "Gama-glutamylglutathione to H2O" {
 
   branch from glutathione side left {
     glutathione
-    <-> . +r_s_lactoylglutathione +h2o +h
-    lactate
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h
+    11_s_15_s_dihydroxy_14_r_s_glutathionyl_5_z_8_z
   }
 
   branch from glutathione side right {
     glutathione
-    <-> . +3_hydroxykynurenine_o_beta_d_glucoside +h2o
-    glutathionyl_3_hydroxykynurenine_glucoside
+    <-> ec_2_3_2_15 [2.3.2.15] +glu_cys_n_gly +h +glu_cys_n_1_gly
+    glycine
   }
 
   branch from 5_oxo_l_proline side left {
@@ -40,33 +40,27 @@ pathway gama-glutamylglutathione-to-h2o "Gama-glutamylglutathione to H2O" {
     l_histidyl_l_prolylamide
   }
 
-  branch from gamma_l_glutamyl_l_cysteine side left {
-    gamma_l_glutamyl_l_cysteine
-    <-> ec_3_4_17_25 [3.4.17.25] +glutathione +h2o
-    glycine
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +adp
+    l_xylulose_1_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> . +l_leucine +l_threonine +h +adp +phosphate
-    thr_leu
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    meso_lanthionine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_11_1_14 [1.11.1.14] +3_4_dimethoxybenzaldehyde +h2o2
-    3_4_dimethoxyphenyl_methanol
+    <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +adp
+    l_xylulose_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_3_2_2 [2.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +2s_2_aminobutanoate
-    l_alpha_methyl_glutamate
+    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +d_galactose
+    beta_d_glucose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_1_1_78 [4.1.1.78] +enol_oxaloacetate
+    acetylenedicarboxylate
   }
 }

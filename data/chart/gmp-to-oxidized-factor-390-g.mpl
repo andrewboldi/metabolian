@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gmp-to-oxidized-factor-390-g "GMP to oxidized factor 390-G" {
-  spacing 242
+  spacing 236
 
   spine at 0,0 {
     gmp
@@ -20,21 +20,15 @@ pathway gmp-to-oxidized-factor-390-g "GMP to oxidized factor 390-G" {
     diphosphate
   }
 
-  branch from l_lactyl_2_diphospho_5_guanosine side left {
-    l_lactyl_2_diphospho_5_guanosine
-    <-> ec_2_7_7_68 [2.7.7.68] +2_phosphonato_l_lactate +gtp +hplus
-    ppi
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +borneol +h +h2o
+    bornyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +13e_labdene_8alpha_15_diol +h2o
-    copal_8_ol_diphosphate
-  }
-
-  branch from diphosphate side left {
-    diphosphate
-    <-> ec_4_2_3_51 [4.2.3.51] +phellandrene
-    neryl_diphosphate
+    <-> ec_2_7_7_64 [2.7.7.64] +udp_n_acetyl_alpha_d_mannosamine +h +n_acetyl_d_mannosamine_1_phosphate
+    utp
   }
 }

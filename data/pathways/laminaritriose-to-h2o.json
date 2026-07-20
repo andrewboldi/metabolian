@@ -82,31 +82,60 @@
       }
     },
     {
-      "id": "beta_d_glucosyl_1_3_d_glucose",
-      "name": "beta-D-glucosyl-(1->3)-D-glucose",
-      "short": "beta-D-glucosyl-(1-…",
-      "formula": "C12H22O11",
+      "id": "nafamostat",
+      "name": "nafamostat",
+      "formula": "C19H17N5O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM732730"
+        "chebi": "CHEBI:135466"
       }
     },
     {
-      "id": "octan_1_ol",
-      "name": "octan-1-ol",
-      "formula": "C8H18O",
+      "id": "6_amidino_2_naphthol",
+      "name": "6-Amidino-2-naphthol",
+      "formula": "C11H10N2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM2410"
+        "metanetx": "MNXM166613"
       }
     },
     {
-      "id": "octyl_beta_d_glucose",
-      "name": "octyl beta-D-glucose",
-      "formula": "C14H28O6",
+      "id": "4_guanidinobenzoic_acid",
+      "name": "4-guanidinobenzoic acid",
+      "short": "4-guanidinobenzoic…",
+      "formula": "C8H9N3O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM65383"
+        "chebi": "CHEBI:125204"
+      }
+    },
+    {
+      "id": "alpha_d_galactose",
+      "name": "alpha-D-galactose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364486"
+      }
+    },
+    {
+      "id": "4_methylumbelliferone",
+      "name": "4-methylumbelliferone",
+      "short": "4-methylumbellifero…",
+      "formula": "C10H8O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM3866"
+      }
+    },
+    {
+      "id": "4_methylumbelliferyl_d_galactoside",
+      "name": "4-methylumbelliferyl α-D-galactoside",
+      "short": "4-methylumbellifery…",
+      "formula": "C16H18O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91115"
       }
     }
   ],
@@ -126,17 +155,31 @@
       ]
     },
     {
-      "id": "ec_3_2_1_21",
-      "name": "beta-glucosidase",
+      "id": "ec_3_1_1_1",
+      "name": "carboxylesterase",
       "ec": [
-        "3.2.1.21"
+        "3.1.1.1"
       ]
     },
     {
-      "id": "ec_3_2_1_25",
-      "name": "beta-mannosidase",
+      "id": "ec_3_1_1_2",
+      "name": "arylesterase",
       "ec": [
-        "3.2.1.25"
+        "3.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_22",
+      "name": "alpha-galactosidase",
+      "ec": [
+        "3.2.1.22"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_49",
+      "name": "alpha-N-acetylgalactosaminidase",
+      "ec": [
+        "3.2.1.49"
       ]
     }
   ],
@@ -319,17 +362,11 @@
     },
     {
       "id": "r5",
-      "name": "beta-glucosidase",
-      "ec": "3.2.1.21",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
       "substrates": [
         {
-          "metabolite": "beta_d_glucose",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "beta_d_glucosyl_1_3_d_glucose",
+          "metabolite": "nafamostat",
           "stoichiometry": 1
         },
         {
@@ -337,43 +374,53 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "6_amidino_2_naphthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_guanidinobenzoic_acid",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_21"
+          "enzyme": "ec_3_1_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR130822"
+        "metanetx": "MNXR131612"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR130822"
+            "id": "MNXR131612"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "beta-glucosidase",
-      "ec": "3.2.1.21",
+      "name": "alpha-galactosidase",
+      "ec": "3.2.1.22",
       "substrates": [
         {
-          "metabolite": "beta_d_glucose",
+          "metabolite": "alpha_d_galactose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "octan_1_ol",
+          "metabolite": "4_methylumbelliferone",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "octyl_beta_d_glucose",
+          "metabolite": "4_methylumbelliferyl_d_galactoside",
           "stoichiometry": 1
         },
         {
@@ -383,20 +430,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_21"
+          "enzyme": "ec_3_2_1_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR130824"
+        "metanetx": "MNXR131749"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR130824"
+            "id": "MNXR131749"
           }
         ]
       }

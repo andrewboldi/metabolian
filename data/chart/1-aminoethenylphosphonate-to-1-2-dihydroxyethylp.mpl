@@ -26,37 +26,37 @@ pathway 1-aminoethenylphosphonate-to-1-2-dihydroxyethylp "1-aminoethenylphosphon
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_histidine +l_glutamine +h2o
-    histidyl_glutamyl_glutamine
+    <-> . +l_proline +l_tryptophan +h2o
+    tryptophanyl_glutamyl_proline
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_histidine +h2o
-    histidyl_glutamate
+    <-> . +l_tryptophan +l_tyrosine +h2o
+    tryptophanyl_glutamyl_tyrosine
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxo_cis_8_tetradecenoyl_coenzyme_a
-    3s_3_hydroxy_cis_8_tetradecenoyl_coenzyme_a
+    <-> ec_1_14_13_162 [1.14.13.162] +nadh +1r_4r_bornane_2_5_dione +h +o2 +h2o
+    1r_4r_5_oxo_1_2_campholide
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_oxopristanoyl_coa
-    3_r_hydroxy_pristanoyl_coenzyme_a
+    <-> ec_1_1_1_418 [1.1.1.418] +3_hydroxy_9_9_19_cyclolanost_24_en_28_oate +nadh +31_norcycloartenone
+    co2
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    13z_docosenoate
+    taurodeoxycholic_acid_3_sulfate
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    cetoleic_acid
+    5_8_tetradecadienoic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway neurotensin-to-s-adenosyl-l-homocysteine "neurotensin to S-adenosyl-L-homocysteine" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     neurotensin
@@ -16,39 +16,27 @@ pathway neurotensin-to-s-adenosyl-l-homocysteine "neurotensin to S-adenosyl-L-ho
     3r_3_4_dimethyl_2_oxopentanoate
   }
 
-  branch from leucine side left {
-    leucine
-    <-> . +n_1_deoxy_d_fructopyranos_1_yl_l_leucine_betaine +o2 +h2o +h2o2
-    2_dehydro_d_glucopyranose
-  }
-
-  branch from leucine side right {
-    leucine
-    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
-    n_amidino_l_leucine
-  }
-
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_26 [1.4.3.26] +3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr +o2 +h2o +h2o2
-    premycofactocin
+    <-> . +d_tyrosine +o2 +h2o +h2o2
+    3_4_hydroxyphenyl_pyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +h2o +hplus +premycofactocin
-    5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr
+    <-> . +d_dopa +o2 +h2o +h2o2
+    3_4_dihydroxyphenylpyruvate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
-    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
+    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_313 [2.1.1.313] +sam +n3_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
   }
 }

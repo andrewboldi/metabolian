@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxylamino-n-n-dim-to-h2o2 "4-(hydroxylamino)-N,N-dim… to H2O2" {
-  spacing 262
+  spacing 250
 
   spine at 0,0 {
     4_hydroxylamino_n_n_dimethylaniline
@@ -24,14 +24,14 @@ pathway 4-hydroxylamino-n-n-dim-to-h2o2 "4-(hydroxylamino)-N,N-dim… to H2O2" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_211 [1.1.1.211] +nadh +h +6z_9z_12z_15z_18z_3_oxotetracosapentaenoyl_coa
-    6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1
+    <-> . +nadh +protoporphyrin_ix +h
+    protoporphyrinogen_ix
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +2r_3_phosphoglycerate +h2o
-    glyceraldehyde_3_phosphate
+    <-> . +nadh +h +3_oxopristanoyl_coa
+    3_r_hydroxy_pristanoyl_coenzyme_a
   }
 
   branch from 3_4_dimethoxyphenyl_methanol side left {
@@ -40,27 +40,15 @@ pathway 4-hydroxylamino-n-n-dim-to-h2o2 "4-(hydroxylamino)-N,N-dim… to H2O2" {
     3_phenylbutanal
   }
 
-  branch from 3_4_dimethoxyphenyl_methanol side right {
-    3_4_dimethoxyphenyl_methanol
-    <-> ec_1_1_99_36 [1.1.99.36] +hydroxyacetone +3_4_dimethoxybenzaldehyde
-    methylglyoxal
-  }
-
-  branch from 3_4_dimethoxybenzaldehyde side left {
-    3_4_dimethoxybenzaldehyde
-    <-> ec_1_1_99_36 [1.1.99.36] +propane_1_2_diol +3_4_dimethoxyphenyl_methanol
-    hydroxyacetone
-  }
-
   branch from h2o2 side right {
     h2o2
-    <-> . +nadh +octanedioyl_coa +acetyl_coa +h +coa +o2 +nad +h2o
-    decanedioyl_coa
+    <-> . +glutathione_disulfide +o2 +h2o
+    glutathione
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +nadh +acetyl_coa +3z_6z_dodecadienoyl_coa +h +coa +o2 +nad +h2o
-    cis_cis_tetradeca_5_8_dienoyl_coa
+    <-> . +17z_hexacosenoyl_coa +o2
+    2e_17z_hexacosadi_2_17_enoyl_coa
   }
 }

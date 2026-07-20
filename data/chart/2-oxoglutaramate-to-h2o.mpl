@@ -26,40 +26,16 @@ pathway 2-oxoglutaramate-to-h2o "2-oxoglutaramate to H2O" {
     atp
   }
 
-  branch from 2_oxo_3_sulfanylpropanoate side left {
-    2_oxo_3_sulfanylpropanoate
-    <-> ec_2_6_1_1 [2.6.1.1] +d_glutamate +l_cysteine
-    2_oxoglutarate
-  }
-
-  branch from l_glutamine side right {
-    l_glutamine
-    <-> ec_2_3_2_2 [2.3.2.2] +l_glutamine_hydroxamate +nh4 +h
-    hydroxylamine
-  }
-
   branch from l_glutamine side left {
     l_glutamine
     <-> . +2_oxoglutaramate +nadh +h +1_amino_1_deoxy_scyllo_inositol +nad
     myo_inositol
   }
 
-  branch from thiocyanate side right {
-    thiocyanate
-    <-> ec_2_8_1_1 [2.8.1.1] +cyanide +h +sulfite
-    thiosulfate
-  }
-
-  branch from thiocyanate side left {
-    thiocyanate
-    <-> . +h +indole_3_methanol +h2o
-    indolylmethylisothiocyanate
-  }
-
-  branch from pyruvate side right {
-    pyruvate
-    <-> ec_2_6_1_21 [2.6.1.21] +d_alanine +2_oxobutanoate
-    aminobutyric_acid
+  branch from l_glutamine side right {
+    l_glutamine
+    <-> ec_6_3_5_5 [6.3.5.5] +carbamoyl_phosphate +h +adp +l_glutamate +phosphate +atp +h2o
+    co2
   }
 
   branch from pyruvate side left {
@@ -68,46 +44,46 @@ pathway 2-oxoglutaramate-to-h2o "2-oxoglutaramate to H2O" {
     l_thialysinium
   }
 
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
-    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +l_cysteine +h
-    s_sulfo_l_cysteine
+  branch from pyruvate side right {
+    pyruvate
+    <-> ec_4_4_1_3 [4.4.1.3] +nh4 +methanol +h2o
+    o_methyl_dl_serine
   }
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> ec_2_5_1_47 [2.5.1.47] +cyanide +l_cysteine
-    3_cyano_l_alanine
+    <-> . +thiosulfate +menaquinol +h +sulfite
+    menaquinone_2
   }
 
-  branch from h side right {
-    h
-    <-> . +glycidol +bromide
-    3_bromopropane_1_2_diol
+  branch from hydrogen_sulfide side right {
+    hydrogen_sulfide
+    <-> . +h +2_aminoprop_2_enoate
+    d_cysteine
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexa_3_5_diene_1_one +nadph +nadp
-    cyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_2_1_72 [1.2.1.72] +nadh +d_erythronate +nad +h2o
+    d_erythrose
   }
 
-  branch from cyanate side right {
-    cyanate
-    <-> . +h +phosphate
-    carbamoyl_phosphate
+  branch from h side right {
+    h
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_phenylpropionaldehyde +nad
+    s_2_phenylpropanol
   }
 
   branch from cyanate side left {
     cyanate
-    <-> ec_4_2_1_104 [4.2.1.104] +h2o
-    carbamate
+    <-> . +h +sulfite +h2o +h2o2
+    cyanosulfurous_acid_anion
   }
 
   branch from 1_5_dihydrocoenzyme_f420 side right {
     1_5_dihydrocoenzyme_f420
-    <-> ec_1_17_1_9 [1.17.1.9] +coenzyme_gamma_f420_2 +h +formate
-    co2
+    <-> ec_1_17_1_9 [1.17.1.9] +coenzyme_gamma_f420_2 +h +co2
+    formate
   }
 
   branch from 1_5_dihydrocoenzyme_f420 side left {
@@ -118,14 +94,14 @@ pathway 2-oxoglutaramate-to-h2o "2-oxoglutaramate to H2O" {
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxymuconate +o2 +h2o
-    2_3_dihydroxybenzenesulfonate
+    <-> ec_1_8_4_2 [1.8.4.2] +glutathione_disulfide +h +l_cysteine +s_sulfo_l_cysteine
+    glutathione
   }
 
   branch from sulfite side left {
     sulfite
-    <-> . +fmnh2 +h +1_pentanesulfonate +o2 +pentanal +h2o
-    fmn
+    <-> ec_4_4_1_24 [4.4.1.24] +h +pyruvate
+    2s_3_sulfolactate
   }
 
   branch from coenzyme_gamma_f420_2 side right {
@@ -142,14 +118,14 @@ pathway 2-oxoglutaramate-to-h2o "2-oxoglutaramate to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_149 [1.1.1.149] +pregnanediol +h +nadph
-    3_hydroxy_5_pregnan_20_one
+    <-> ec_1_1_1_51 [1.1.1.51] +6_tert_butyl_2_3_epoxy_5_cyclohexene_1_4_dione +h +nadph
+    6_tert_butyl_2_3_epoxy_4_hydroxy_5_cyclohexene_1
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +3_fluorobenzyl_alcohol +h +nadph
-    3_fluorobenzaldehyde
+    <-> ec_1_1_1_209 [1.1.1.209] +1_7_7_trimethylbicyclo_2_2_1_heptane_2_3_diol +h +nadph
+    1r_bornane_2_3_dione
   }
 
   branch from tetracycline side right {
@@ -158,33 +134,27 @@ pathway 2-oxoglutaramate-to-h2o "2-oxoglutaramate to H2O" {
     3_2z_4z_5_carbamoyl_3_dimethylamino_4_hydroxypen
   }
 
-  branch from tetracycline side left {
-    tetracycline
-    <-> . +nadp +carbon_monoxide +h2o +h +o2 +nadph
-    3_2z_4z_5_carbamoyl_3_dimethylamino_4_hydroxypen
+  branch from atp side left {
+    atp
+    <-> ec_6_2_1_3 [6.2.1.3] +hexanoyl_coa +diphosphate +amp +coa
+    hexanoate
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +2_5_anhydro_d_mannitol +h +adp
-    2_5_anhydro_d_mannitol_6_phosphate
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_40 [2.7.1.40] +2_oxobutanoate +h +adp
-    3_methylphosphoenolpyruvate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +ala_gly +glycine
-    gly_ala_gly
+    <-> . +h +adp +phosphate +h2o
+    hexadecenoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_19 [1.2.1.19] +h +glycolate +nadph +nadp
-    glycolaldehyde
+    <-> ec_3_4_21_4 [3.4.21.4] +coumarin_120 +z_arg_arg
+    z_arg_arg_nhmec
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_3_2_10 [3.3.2.10] +hydrobenzoin
+    trans_stilbene_oxide
   }
 }

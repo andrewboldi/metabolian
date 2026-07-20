@@ -30,14 +30,14 @@ pathway 2e-decenoate-to-nad "(2E)-decenoate to NAD" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_178 [4.2.3.178] +all_trans_pentaprenyl_diphosphate
-    stellata_2_6_19_triene
+    <-> ec_2_7_7_108 [2.7.7.108] +l_serine +atp
+    o_adenylyl_l_serine_1
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_179 [4.2.3.179] +fpp
-    guaia_4_6_diene
+    <-> ec_4_2_3_196 [4.2.3.196] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    dolabradiene
   }
 
   branch from o_s_5z_3_oxododecenoylpantetheine_4_phosphoryl_l side right {
@@ -48,14 +48,14 @@ pathway 2e-decenoate-to-nad "(2E)-decenoate to NAD" {
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +glycyl_amp +amp +hplus
-    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
+    <-> . +l_arginyl_amp +amp +hplus
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_72 [6.2.1.72] +serine +atp +amp +ppi
-    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
+    <-> ec_6_2_1_74 [6.2.1.74] +3_amino_5_hydroxybenzoate +atp +amp +ppi
+    o_s_3_hydroxy_5_benzoyl_pantetheine_4_phosphoryl
   }
 
   branch from o_s_3r_hydroxy_5z_dodecenoylpantetheine_4_phosph side left {
@@ -66,13 +66,13 @@ pathway 2e-decenoate-to-nad "(2E)-decenoate to NAD" {
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_56 [1.3.1.56] +nadh +h +4_chlorobiphenyl_2_3_diol
-    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
+    <-> . +nadh +h +phenanthrene +o2 +h2o
+    1_phenanthrol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_18 [1.14.12.18] +nadh +h +o2 +1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
-    4_chlorobiphenyl
+    <-> ec_1_1_1_262 [1.1.1.262] +nadh +2s_2_amino_3_oxo_4_phosphonatooxy_butanoate +h
+    4_phosphooxy_l_threonine
   }
 }

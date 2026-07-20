@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glutathione-disulfide-to-glycine "glutathione disulfide to glycine" {
-  spacing 314
+  spacing 302
 
   spine at 0,0 {
     glutathione_disulfide
@@ -29,13 +29,13 @@ pathway glutathione-disulfide-to-glycine "glutathione disulfide to glycine" {
   branch from glutathione side right {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    5_methylthiopentanonitrile_oxide
+    6_methylthiohexanonitrile_oxide
   }
 
   branch from glutathione side left {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_6_aci_nitrohexane
+    1_methylsulfanyl_7_aci_nitroheptane
   }
 
   branch from 13s_14s_epoxy_4z_7z_9e_11e_16z_19z_docosahexaen side right {
@@ -50,27 +50,15 @@ pathway glutathione-disulfide-to-glycine "glutathione disulfide to glycine" {
     7r_14s_dihydroxy_4z_8e_10e_12z_16z_19z_docosahe
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> . +spermidine +atp +adp +pi +hplus
-    l_glutamylspermidine
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +spermine +atp +adp +pi +hplus
-    l_glutamylspermine
-  }
-
   branch from glycine side right {
     glycine
-    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_fatty_acid +holo-acp +hplus +h2o
-    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
+    <-> . +glycocholate +arginine
+    l_arginocholate
   }
 
   branch from glycine side left {
     glycine
-    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +glyoxylate
-    5_3_methylguanidino_2_oxopentanoate
+    <-> . +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +holo-acp +hplus
+    n2_3r_3_hydroxyacyl_glycinate
   }
 }

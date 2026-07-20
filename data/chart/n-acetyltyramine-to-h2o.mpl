@@ -20,37 +20,37 @@ pathway n-acetyltyramine-to-h2o "N-acetyltyramine to H2O" {
 
   branch from tyraminium side left {
     tyraminium
-    <-> . +ascorbate +o2 +l_dehydroascorbate +h2o
-    2r_4_2_ammonio_1_hydroxyethyl_phenol
-  }
-
-  branch from tyraminium side right {
-    tyraminium
     <-> . +butyryl_coa +coa +hplus
     n_butanoyltyramine
   }
 
+  branch from tyraminium side right {
+    tyraminium
+    <-> . +hexanoyl_coa +coa +hplus
+    n_hexanoyltyramine
+  }
+
   branch from sah side left {
     sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> . +rs_isococlaurinium +sam +hplus
+    rs_7_o_methylcoclaurinium
   }
 
   branch from sah side right {
     sah
-    <-> . +sam +5_methyluridine_5_monophosphate_1 +hplus
-    uridine_5_monophosphate_1
+    <-> . +s_norprotosinomenium +sam +hplus
+    s_6_o_methylnorprotosinomenium
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +nostocyclamide_m +phosphate +nostocyclamide_m
-    atp
+    <-> . +asphodelin_a
+    coumestrol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    raocyclamide_a
+    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +beta_d_glucose
+    beta_d_galactose
   }
 }

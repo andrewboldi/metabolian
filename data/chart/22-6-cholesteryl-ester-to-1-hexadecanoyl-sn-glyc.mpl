@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc "22:6 Cholesteryl ester to 1-hexadecanoyl-sn-glycero…" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     22_6_cholesteryl_ester
@@ -22,67 +22,61 @@ pathway 22-6-cholesteryl-ester-to-1-hexadecanoyl-sn-glyc "22:6 Cholesteryl ester
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_fructopyranose +phosphate +l_fructopyranose +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +avilamycin_a +phosphate +avilamycin_a +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    l_fructopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    colistin_b
   }
 
   branch from cholesterol side left {
-    cholesterol
-    <-> ec_1_14_13_98 [1.14.13.98] +24s_24_hydroxycholesterol +nadp +h2o +h +nadph
-    o2
-  }
-
-  branch from cholesterol side right {
     cholesterol
     <-> ec_1_14_15_6 [1.14.15.6] +h +o2 +nadph +22r_22_hydroxycholesterol +h2o
     nadp
   }
 
-  branch from 1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen side left {
-    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
-    <-> . +1_palmitoyl_sn_glycerol_3_phosphate +coa
-    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_fructofuranose
+  branch from cholesterol side right {
+    cholesterol
+    <-> ec_1_3_1_22 [1.3.1.22] +h +nadph +nadp
+    5_cholestan_3_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_l_fructofuranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    thiostrepton
   }
 
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +1_palmityl_2_oleoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_o_palmityl_2_oleoyl_sn_glycero_3_phosphoethano
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    pentalenolactone_d
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycerol +cdp_ethanolamine +hplus
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +cmp_n_acetyl_neuraminate +hplus
+    n_neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d
   }
 
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_palmitoyl_2_10e_9_hydroperoxyoctadecenoyl_sn_g +h2o +hplus
-    9_hydroperoxy_10e_octadecenoate
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> . +o_n_acetyl_d_galactosaminyl_l_threonine +cmp_n_acetyl_neuraminate +hplus
+    o3_n_acetyl_neuraminosyl_2_6_n_acetyl_d_galactos
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
-    9_oxononanoate
+    <-> . +24s_24_hydroxycholesterol +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    24s_24_hydroxycholesterol_3_linoleoate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +trilinoleoyl_2_monolysocardiolipin +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    tetralinoleoyl_cardiolipin
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-averantin-to-versicolorin-a",
   "name": "(S)-averantin to versicolorin A",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 8-step route from (S)-averantin(1−) to versicolorin A(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -193,31 +193,32 @@
       }
     },
     {
-      "id": "all_cis_5_8_11_14_17_icosapentaenoate",
-      "name": "all-cis-5,8,11,14,17-icosapentaenoate",
-      "short": "all-cis-5,8,11,14,1…",
-      "formula": "C20H29O2",
-      "charge": -1,
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58562"
+        "chebi": "CHEBI:16113"
       }
     },
     {
-      "id": "17_r_18_s_eetetr",
-      "name": "17(R),18(S)-EETeTr",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "22r_22_hydroxycholesterol",
+      "name": "(22R)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76634"
+        "chebi": "CHEBI:67237"
       }
     },
     {
-      "id": "17_s_18_r_eetetr",
-      "name": "17(S),18(R)-EETeTr",
-      "formula": "C20H29O3",
-      "charge": -1,
+      "id": "24r_24_hydroxycholesterol",
+      "name": "(24R)-24-hydroxycholesterol",
+      "short": "24-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76635"
+        "chebi": "CHEBI:50516"
       }
     },
     {
@@ -709,11 +710,11 @@
     },
     {
       "id": "r9",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (17R,18S)-epoxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + ...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -727,7 +728,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_r_18_s_eetetr",
+          "metabolite": "22r_22_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -746,25 +747,25 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:39779"
+        "rhea": "RHEA:46140"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39779"
+            "id": "RHEA:46140"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (...",
-      "equation": "(5Z,8Z,11Z,14Z,17Z)-eicosapentaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (17S,18R)-epoxy-(5Z,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + ...",
+      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "all_cis_5_8_11_14_17_icosapentaenoate",
+          "metabolite": "cholesterol",
           "stoichiometry": 1
         },
         {
@@ -778,7 +779,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_s_18_r_eetetr",
+          "metabolite": "24r_24_hydroxycholesterol",
           "stoichiometry": 1
         },
         {
@@ -797,14 +798,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:39783"
+        "rhea": "RHEA:46144"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39783"
+            "id": "RHEA:46144"
           }
         ]
       }

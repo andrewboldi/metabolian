@@ -26,14 +26,14 @@ pathway creatinine-to-n5-formyl-5-6-7-8-tetrahy "creatinine to N5-formyl-5,6,7,8
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> ec_1_4_1_2 [1.4.1.2] +glutamate +nad +h2o +nadh +hplus
+    akg
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_20 [3.5.4.20] +pyrithiamine +h2o +hplus
-    1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro
+    <-> ec_4_3_1_13 [4.3.1.13] +h2o +hplus +pyruvate +co2
+    o_carbamoyl_l_serine
   }
 
   branch from sarcosine side left {
@@ -44,14 +44,14 @@ pathway creatinine-to-n5-formyl-5-6-7-8-tetrahy "creatinine to N5-formyl-5,6,7,8
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadh +o2 +hplus +nad +h2o
-    xanthine
+    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadph +o2 +hplus +nadp +h2o
+    3_methyl_7h_xanthine
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +hydrogen_acceptor +h2o +hydrogen_donor
-    n6_methyl_l_lysinium
+    <-> ec_1_14_13_178 [1.14.13.178] +nadh +o2 +hplus +3_methyl_7h_xanthine +nad +h2o
+    theophylline
   }
 
   branch from glycine side right {

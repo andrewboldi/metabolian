@@ -18,13 +18,13 @@ pathway h-to-bacteriopheophytin-a "H to bacteriopheophytin a" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +doxorubicinol +nadph
-    doxorubicin
+    <-> ec_1_1_1_21 [1.1.1.21] +2_methylpentanal +h +nadph
+    2_methylpentanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_49 [1.2.1.49] +glyoxal +h2o +h +nadph
-    glyoxylate
+    <-> ec_1_1_1_21 [1.1.1.21] +4_bromobenzaldehyde +h +nadph
+    4_bromobenzyl_alcohol
   }
 }

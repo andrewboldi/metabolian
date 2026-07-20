@@ -20,13 +20,13 @@ pathway hydroxymalonate-to-decarboxy-3-dehydropresph "hydroxymalonate to decarbo
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +o_s_11z_hexadecenoylpantetheine_4_phosphoryl_ser +malonyl-acp +hplus +co2
-    o_s_13z_3_oxooctadecenoylpantetheine_4_phosphory
+    <-> ec_2_3_1_141 [2.3.1.141] +2_o_acyl_3_o_d_galactosyl_sn_glycerol +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
+    1_2_diacyl_3_d_galactosyl_sn_glycerol
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_141 [2.3.1.141] +2_o_acyl_3_o_d_galactosyl_sn_glycerol +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    1_2_diacyl_3_d_galactosyl_sn_glycerol
+    <-> ec_2_3_1_161 [2.3.1.161] +malonyl-coa +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
+    o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
   }
 }

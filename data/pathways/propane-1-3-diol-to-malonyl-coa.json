@@ -145,12 +145,23 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "anthocyanidin_3_o_d_glucoside",
+      "name": "anthocyanidin 3-O-β-D-glucoside",
+      "short": "anthocyanidin…",
+      "formula": "C21H19O10R2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:16307"
+      }
+    },
+    {
+      "id": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
+      "name": "anthocyanidin 3-O-(6-O-malonyl-β-D-glucoside) betaine",
+      "short": "anthocyanidin…",
+      "formula": "C24H20O13R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84163"
       }
     },
     {
@@ -163,59 +174,22 @@
       }
     },
     {
-      "id": "3_hydroxypropanoyl_coa",
-      "name": "3-hydroxypropanoyl-CoA",
-      "short": "3-hydroxypropanoyl-…",
-      "formula": "C24H36N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:58528"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "pi",
-      "name": "Orthophosphate (Pi)",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:43474"
-      }
-    },
-    {
-      "id": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
-      "name": "3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one",
-      "short": "3,6,7,9-tetrahydrox…",
-      "formula": "C14H11O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:142802"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "3_4_dichloroaniline",
+      "name": "3,4-dichloroaniline",
+      "formula": "C6H5Cl2N",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:16767"
       }
     },
     {
-      "id": "6_methylsalicylate",
-      "name": "6-methylsalicylate",
-      "formula": "C8H7O3",
+      "id": "n_3_4_dichlorophenyl_malonamate",
+      "name": "N-(3,4-dichlorophenyl)malonamate",
+      "short": "N-(3,4-dichlorophen…",
+      "formula": "C9H6Cl2NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36658"
+        "chebi": "CHEBI:17318"
       }
     }
   ],
@@ -242,10 +216,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_165",
-      "name": "6-methylsalicylic acid synthase",
+      "id": "ec_2_3_1_171",
+      "name": "anthocyanin 6''-O-malonyltransferase",
       "ec": [
-        "2.3.1.165"
+        "2.3.1.171"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_114",
+      "name": "3,4-dichloroaniline N-malonyltransferase",
+      "ec": [
+        "2.3.1.114"
       ]
     }
   ],
@@ -489,15 +470,22 @@
     },
     {
       "id": "r6",
-      "name": "3-hydroxypropanoate + ATP + CoA = 3-hydroxypropanoyl-CoA + ADP + phosphate",
-      "equation": "3-hydroxypropanoate + ATP + CoA = 3-hydroxypropanoyl-CoA + ADP + phosphate",
+      "name": "anthocyanin 6''-O-malonyltransferase",
+      "equation": "an anthocyanidin 3-O-beta-D-glucoside + malonyl-CoA = an anthocyanidin 3-O-(6-O-malonyl-beta-D-glucoside) + CoA",
+      "ec": "2.3.1.171",
       "substrates": [
         {
-          "metabolite": "3_hydroxypropionate",
+          "metabolite": "anthocyanidin_3_o_d_glucoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain",
           "stoichiometry": 1
         },
         {
@@ -505,147 +493,67 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "3_hydroxypropanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
+          "enzyme": "ec_2_3_1_171"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:67136"
+        "rhea": "RHEA:16025"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67136"
+            "id": "RHEA:16025"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naph...",
-      "equation": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one + 6 CO2 + 7 CoA + H2O",
+      "name": "3,4-dichloroaniline N-malonyltransferase",
+      "equation": "3,4-dichloroaniline + malonyl-CoA = N-(3,4-dichlorophenyl)malonamate + CoA",
+      "ec": "2.3.1.114",
       "substrates": [
         {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "acetyl_coa",
+          "metabolite": "3_4_dichloroaniline",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 5
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 6
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 7
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:12060"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:12060"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "6-methylsalicylic acid synthase",
-      "equation": "3 malonyl-CoA + acetyl-CoA + NADPH + 3 H(+) = 6-methylsalicylate + 3 CO2 + NADP(+) + 4 CoA + H2O",
-      "ec": "2.3.1.165",
-      "substrates": [
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_methylsalicylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "nadp",
+          "metabolite": "n_3_4_dichlorophenyl_malonamate",
           "stoichiometry": 1
         },
         {
           "metabolite": "coa",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_165"
+          "enzyme": "ec_2_3_1_114"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:12240"
+        "rhea": "RHEA:21060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12240"
+            "id": "RHEA:21060"
           }
         ]
       }

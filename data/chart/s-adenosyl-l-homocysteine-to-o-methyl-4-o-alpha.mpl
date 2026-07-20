@@ -18,13 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-o-methyl-4-o-alpha "S-adenosyl-L-homocystei
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +desoxyhemigossypol_6_methyl_ether +h
-    desoxyhemigossypol
+    <-> ec_2_1_1_212 [2.1.1.212] +s_adenosyl_l_homocysteine +biochanin_a +h
+    genistein
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +7_hydroxy_4_5_dimethoxyisoflavone +s_adenosyl_l_homocysteine
-    calycosin
+    <-> . +s_adenosyl_l_homocysteine +3_demethylstaurosporine
+    o_demethyl_n_demethyl_staurosporine
   }
 }

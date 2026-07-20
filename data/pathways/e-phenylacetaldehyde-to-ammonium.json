@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-phenylacetaldehyde-to-ammonium",
+  "name": "(E)-phenylacetaldehyde… to ammonium",
+  "category": "redox-detox",
+  "summary": "A 3-step route from (E)-phenylacetaldehyde oxime to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR117817"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:47793"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47793"
+      }
+    },
+    {
+      "id": "n_benzylformamide",
+      "name": "N-benzylformamide",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41117"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "benzylaminium",
+      "name": "benzylaminium",
+      "formula": "C7H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:225238"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "benzaldehyde",
+      "name": "benzaldehyde",
+      "formula": "C7H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17169"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "z_phenylacetaldehyde_oxime",
+      "name": "(Z)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108059"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_91",
+      "name": "N-substituted formamide deformylase",
+      "ec": [
+        "3.5.1.91"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR117817",
+      "substrates": [
+        {
+          "metabolite": "e_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_benzylformamide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR117817"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-substituted formamide deformylase",
+      "equation": "N-benzylformamide + H2O = benzylamine + formate",
+      "ec": "3.5.1.91",
+      "substrates": [
+        {
+          "metabolite": "n_benzylformamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "benzylamine + O2 + H2O = benzaldehyde + H2O2 + NH4(+)",
+      "equation": "benzylamine + O2 + H2O = benzaldehyde + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "benzylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR176255",
+      "substrates": [
+        {
+          "metabolite": "z_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_benzylformamide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR176255"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176255"
+          }
+        ]
+      }
+    }
+  ]
+}

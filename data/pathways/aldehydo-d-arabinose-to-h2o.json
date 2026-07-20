@@ -1,0 +1,205 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-arabinose-to-h2o",
+  "name": "aldehydo-D-arabinose to H2O",
+  "category": "other",
+  "summary": "A 3-step route from aldehydo-D-arabinose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR175395"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46983"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_arabinose",
+      "name": "aldehydo-D-arabinose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46983"
+      }
+    },
+    {
+      "id": "alpha_d_ribulose",
+      "name": "alpha-D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371691"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose",
+      "name": "aldehydo-D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47014"
+      }
+    },
+    {
+      "id": "trans_zeatin",
+      "name": "trans-zeatin",
+      "formula": "C10H13N5O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371472"
+      }
+    },
+    {
+      "id": "9_ribosyl_trans_zeatin",
+      "name": "9-ribosyl-trans-zeatin",
+      "short": "9-ribosyl-trans-zea…",
+      "formula": "C15H21N5O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71693"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_3",
+      "name": "D-arabinose isomerase",
+      "ec": [
+        "5.3.1.3"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_20",
+      "name": "ribose isomerase",
+      "ec": [
+        "5.3.1.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-arabinose isomerase",
+      "ec": "5.3.1.3",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_arabinose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR175395"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR175395"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribose isomerase",
+      "ec": "5.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196540"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196540"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR176807",
+      "substrates": [
+        {
+          "metabolite": "trans_zeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_ribosyl_trans_zeatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR176807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176807"
+          }
+        ]
+      }
+    }
+  ]
+}

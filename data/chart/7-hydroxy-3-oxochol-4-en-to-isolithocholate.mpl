@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate "7α-hydroxy-3-oxochol-4-en… to isolithocholate" {
-  spacing 288
+  spacing 276
 
   spine at 0,0 {
     7_hydroxy_3_oxochol_4_en_24_oate
@@ -24,28 +24,16 @@ pathway 7-hydroxy-3-oxochol-4-en-to-isolithocholate "7α-hydroxy-3-oxochol-4-en�
     h2o
   }
 
-  branch from r_4_8s_9s_10r_13r_14s_17r_10_13_dimethyl_3_oxo side right {
-    r_4_8s_9s_10r_13r_14s_17r_10_13_dimethyl_3_oxo
-    <-> . +nadh +h +nad +h2o
-    22_oxocholest_4_en_3_one
-  }
-
-  branch from r_4_8s_9s_10r_13r_14s_17r_10_13_dimethyl_3_oxo side left {
-    r_4_8s_9s_10r_13r_14s_17r_10_13_dimethyl_3_oxo
-    <-> . +3_oxochol_4_en_24_oyl_coa +diphosphate +h +amp +coa
-    atp
-  }
-
   branch from nad side right {
     nad
-    <-> . +nadh +h +benzoate +acetate +h2o
-    e_cinnamate
+    <-> ec_1_1_1_62 [1.1.1.62] +nadh +h +16alpha_hydroxyestrone
+    16alpha_17beta_estriol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_376 [1.1.1.376] +nadh +l_arabinono_1_4_lactone +h
-    l_arabinopyranose
+    <-> ec_1_4_1_12 [1.4.1.12] +nadh +h +2_amino_5_oxohexanoate +nh4 +h2o
+    2r_5s_2_5_diaminohexanoate
   }
 
   branch from 3_oxo_5_cholanate side right {

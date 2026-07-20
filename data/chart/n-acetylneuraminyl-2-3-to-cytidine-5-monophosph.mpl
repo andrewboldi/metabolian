@@ -30,13 +30,13 @@ pathway n-acetylneuraminyl-2-3-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
 
   branch from imp side left {
     imp
-    <-> ec_3_6_1_8 [3.6.1.8] +itp +h2o +hplus
-    ppi
+    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
+    idp
   }
 
   branch from imp side right {
     imp
-    <-> ec_3_6_1_6 [3.6.1.6] +h2o +pi +hplus
-    idp
+    <-> . +2_deoxyinosine_5_phosphate +inosine
+    2_deoxyinosine
   }
 }

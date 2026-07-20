@@ -56,37 +56,37 @@ pathway beta-d-glucose-to-h "beta-D-glucose to H" {
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +am1c_glucuronide_cyclosporine
-    cyclosporin_a_metabolite_m18
+    <-> . +udp +des_isopropyl_dihydro_fluvastatin_tetranor_glucu
+    des_isopropyl_dihydro_fluvastatin_tetranor
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +atorvastatin_acyl_glucuronide_g2
-    atorvastatin_acid
+    <-> . +udp +losartan_n1_glucuronide
+    losartan
   }
 
   branch from udp side left {
     udp
-    <-> . +udp_alpha_d_glucuronate +atorvastatin_acid
-    atorvastatin_ether_glucuronide_g1
+    <-> . +udp_alpha_d_glucuronate +losartan
+    losartan_n2_glucuronide_losartan_m7
   }
 
   branch from udp side right {
     udp
-    <-> . +atorvastatin_lactone_ether_glucuronide_g3 +udp_alpha_d_glucuronate
-    atorvastatin_lactone
+    <-> . +midazolam_glucuronide +udp_alpha_d_glucuronate +h
+    midazolam
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44_closed_lactone_form +succinate +gibberellin_a19
-    co2
+    <-> . +adp +phosphate +atp +h2o
+    chenodeoxycholic_acid_24_o_d_glucuronide
   }
 
   branch from h side right {
     h
-    <-> . +glucose +r_littorine +tropine
-    phenyllactylglucose
+    <-> . +adp +phosphate +atp +h2o
+    chenodeoxycholate_3_o_d_glucuronide
   }
 }

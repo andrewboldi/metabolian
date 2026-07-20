@@ -18,13 +18,13 @@ pathway 1r-2r-3r-prephytoene-to-carotene "(1R,2R,3R)-prephytoene… to γ-carote
 
   branch from ppi side left {
     ppi
-    <-> . +streptomycin +gtp
-    6_o_guanylylstreptomycin
+    <-> . +2e_enoyl_fatty_acid_anion +holo-acp +atp +amp
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +streptidine +atp
-    6_o_adenylylstreptidine
+    <-> . +2e_enoyl_fatty_acid_anion +atp +hplus
+    2e_2_fatty_enoyladenylate
   }
 }

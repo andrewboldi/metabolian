@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-n2-etheno-2-deoxyguano-to-2-phosphonatoglycola "1,N2-etheno-2'-deoxyguano… to 2-phosphonatoglycolate" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     1_n2_etheno_2_deoxyguanosine_5_monophosphate_1
@@ -32,23 +32,17 @@ pathway 1-n2-etheno-2-deoxyguano-to-2-phosphonatoglycola "1,N2-etheno-2'-deoxygu
 
   branch from succinate side left {
     succinate
-    <-> . +n_geranyl_l_glutamate +akg +o2 +co2 +h2o
-    dainate_a
+    <-> . +4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino +akg +o2 +co2
+    4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
   }
 
   branch from succinate side right {
     succinate
-    <-> . +prekainate +akg +o2 +hplus +co2 +h2o
-    kainate_lactone
+    <-> . +okaramine_a +akg +o2 +co2
+    okaramine_e
   }
 
   branch from glycolate side left {
-    glycolate
-    <-> . +n2_1_hydroxy_2_oxoethyl_gmp_1 +h2o +hplus
-    guanosine_5_monophosphate_1
-  }
-
-  branch from glycolate side right {
     glycolate
     <-> . +h2o +gmp +hplus
     n2_1_hydroxy_2_oxoethyl_gmp

@@ -18,26 +18,26 @@ pathway butan-1-ol-to-h2o "butan-1-ol to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +bistratamide_a +phosphate +bistratamide_a +h2o
+    <-> ec_3_6_3_6 [3.6.3.6] +adp +phosphate +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    bistratamide_b
+    <-> . +adp +phosphate +atp +h2o
+    alanine_d7
   }
 
   branch from acetate side left {
     acetate
-    <-> . +4_aminophenol +h +h2o
-    4_acetamidophenol
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3_hydroxytetradecanoyl_n_acetylglucosami +h2o
+    udp_3_o_3r_3_hydroxytetradecanoyl_alpha_d_glucos
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_8 [2.8.3.8] +hexanoyl_coa +hexanoate
-    acetyl_coa
+    <-> . +n_demethyllincomycin_mercapturate +h2o
+    n_demethyllincomycin_s_cysteine_conjugate
   }
 
   branch from butan_1_ol side left {
@@ -48,13 +48,13 @@ pathway butan-1-ol-to-h2o "butan-1-ol to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    bistratamide_e
+    <-> . +alpha_lactose +aldehydo_d_galactose
+    beta_d_glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    dendroamide_a
+    <-> . +s_malate
+    fumarate
   }
 }

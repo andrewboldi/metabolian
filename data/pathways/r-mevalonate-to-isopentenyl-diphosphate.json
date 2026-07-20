@@ -132,22 +132,31 @@
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:33737"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
+      "name": "(2E)-4-hydroxy-3-methylbut-2-enyl diphosphate",
+      "short": "4-hydroxy-3-methylb…",
+      "formula": "C5H9O8P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:128753"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
       }
     }
   ],
@@ -181,17 +190,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_1",
-      "name": "dimethylallyltranstransferase",
-      "ec": [
-        "2.5.1.1"
-      ]
-    },
-    {
       "id": "ec_5_3_3_2",
       "name": "isopentenyl-diphosphate Delta-isomerase",
       "ec": [
         "5.3.3.2"
+      ]
+    },
+    {
+      "id": "ec_1_17_7_4",
+      "name": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+      "ec": [
+        "1.17.7.4"
       ]
     }
   ],
@@ -386,51 +395,6 @@
     },
     {
       "id": "r5",
-      "name": "dimethylallyltranstransferase",
-      "equation": "isopentenyl diphosphate + dimethylallyl diphosphate = (2E)-geranyl diphosphate + diphosphate",
-      "ec": "2.5.1.1",
-      "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:22408"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:22408"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "isopentenyl-diphosphate Delta-isomerase",
       "equation": "isopentenyl diphosphate = dimethylallyl diphosphate",
       "ec": "5.3.3.2",
@@ -452,7 +416,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:23284"
       },
@@ -462,6 +426,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:23284"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-hydroxy-3-methylbut-2-enyl diphosphate reductase",
+      "equation": "isopentenyl diphosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = (2E)-4-hydroxy-3-methylbut-2-enyl diphosphate + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.17.7.4",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4_hydroxy_3_methylbut_2_enyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_7_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24488"
           }
         ]
       }

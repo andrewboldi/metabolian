@@ -18,13 +18,13 @@ pathway 3-hydroxy-3-methylthio-p-to-malonyl-coa "3-hydroxy-3-(methylthio)p… to
 
   branch from malonyl-coa side left {
     malonyl-coa
-    <-> ec_2_3_1_171 [2.3.1.171] +anthocyanidin_3_o_d_glucoside +coa
-    anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain
+    <-> ec_2_3_1_172 [2.3.1.172] +pelargonidin_3_o_6_o_caffeoyl_d_glucoside_5_o_d +coa
+    4_demalonylsalvianin
   }
 
   branch from malonyl-coa side right {
     malonyl-coa
-    <-> ec_2_3_1_151 [2.3.1.151] +3_hydroxybenzoyl_coa +hplus +co2 +coa
-    2_3_4_6_tetrahydroxybenzophenone
+    <-> ec_2_3_1_159 [2.3.1.159] +n_methylanthraniloyl_coa +hplus +co2 +coa +h2o
+    1_3_dihydroxy_n_methylacridone
   }
 }

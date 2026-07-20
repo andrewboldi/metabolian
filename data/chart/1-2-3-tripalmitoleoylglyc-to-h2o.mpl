@@ -40,14 +40,14 @@ pathway 1-2-3-tripalmitoleoylglyc-to-h2o "1,2,3-tripalmitoleoylglyc… to H2O" {
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    19_hepe
+    <-> . +pregnenolone +fmnh2 +o2 +h2o +hplus
+    7_hydroxypregnenolone
   }
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    20_hepe
+    <-> . +5_androstane_3_17_diol +fmnh2 +o2 +h2o +hplus
+    5_androstane_3_6_17_triol
   }
 
   branch from fmnh2 side right {
@@ -64,37 +64,37 @@ pathway 1-2-3-tripalmitoleoylglyc-to-h2o "1,2,3-tripalmitoleoylglyc… to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h2o
-    15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
+    <-> . +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h2o2
+    5_oxo_12_s_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +8_dehydrocholesterol +nad +h2o
-    27alpha_hydroxy_8_dehydrocholesterol
+    <-> . +4_ammoniobutyl_3_oxopropyl_azanium +h2o +nh4 +h2o2
+    spermidine_dialdehyde
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_hydroxykynurenine_o_beta_d_glucoside +h +nh4
-    4_2_amino_3_hydroxyphenyl_4_oxobutanoic_acid_o_g
+    <-> . +nadh +z_3_oxododec_5_enoyl_coa +h
+    3_s_3_hydroxydodecen_5z_oyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
-    26_hydroxycholesterol
+    <-> . +nadh +3alpha_7alpha_12alpha_trihydroxy_24_oxo_5beta_ch +h
+    24_r_25_r_varanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> . +2r_3r_2_2r_2_2r_2_amino_1_hydroxy_3_1h_indol_3 +h +neuromedin_b_1_3
+    neuromedin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> . +beta_casomorphin_1_6 +l_isoleucine
-    casomorphin
+    <-> . +neuromedin_n +neuromedin_n_1_4
+    l_leucine
   }
 }

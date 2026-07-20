@@ -217,42 +217,51 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9β,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9β,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58622"
+        "chebi": "CHEBI:128769"
       }
     },
     {
-      "id": "aphidicolan_16_ol",
-      "name": "aphidicolan-16β-ol",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29519"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "e_e_e_geranylgeraniol",
-      "name": "(E,E,E)-geranylgeraniol",
-      "short": "(E,E,E)-geranylgera…",
-      "formula": "C20H34O",
+      "id": "all_trans_decaprenyl_diphosphate",
+      "name": "all-trans-decaprenyl diphosphate",
+      "short": "all-trans-decapreny…",
+      "formula": "C50H81O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60721"
+      }
+    },
+    {
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57665"
+      }
+    },
+    {
+      "id": "phellandrene",
+      "name": "β-phellandrene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:46762"
+        "chebi": "CHEBI:48741"
       }
     },
     {
@@ -364,17 +373,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_42",
-      "name": "aphidicolan-16beta-ol synthase",
+      "id": "ec_2_5_1_91",
+      "name": "all-trans-decaprenyl-diphosphate synthase",
       "ec": [
-        "4.2.3.42"
+        "2.5.1.91"
       ]
     },
     {
-      "id": "ec_3_1_7_5",
-      "name": "geranylgeranyl diphosphate diphosphatase",
+      "id": "ec_4_2_3_51",
+      "name": "beta-phellandrene synthase (neryl-diphosphate-cyclizing)",
       "ec": [
-        "3.1.7.5"
+        "4.2.3.51"
       ]
     },
     {
@@ -797,67 +806,63 @@
     },
     {
       "id": "r10",
-      "name": "aphidicolan-16beta-ol synthase",
-      "equation": "9alpha-copalyl diphosphate + H2O = aphidicolan-16beta-ol + diphosphate",
-      "ec": "4.2.3.42",
+      "name": "all-trans-decaprenyl-diphosphate synthase",
+      "equation": "7 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-decaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.91",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-          "stoichiometry": 1
+          "metabolite": "ipp",
+          "stoichiometry": 7
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "aphidicolan_16_ol",
+          "metabolite": "all_trans_decaprenyl_diphosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 7
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_42"
+          "enzyme": "ec_2_5_1_91"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:26213"
+        "rhea": "RHEA:27802"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26213"
+            "id": "RHEA:27802"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "geranylgeranyl diphosphate diphosphatase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (2E,6E,10E)-geranylgeraniol + diphosphate",
-      "ec": "3.1.7.5",
+      "name": "beta-phellandrene synthase (neryl-diphosphate-cyclizing)",
+      "equation": "neryl diphosphate = beta-phellandrene + diphosphate",
+      "ec": "4.2.3.51",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "neryl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "e_e_e_geranylgeraniol",
+          "metabolite": "phellandrene",
           "stoichiometry": 1
         },
         {
@@ -867,20 +872,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_7_5"
+          "enzyme": "ec_4_2_3_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:26237"
+        "rhea": "RHEA:27830"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26237"
+            "id": "RHEA:27830"
           }
         ]
       }

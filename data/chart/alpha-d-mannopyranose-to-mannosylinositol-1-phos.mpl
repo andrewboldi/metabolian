@@ -20,26 +20,26 @@ pathway alpha-d-mannopyranose-to-mannosylinositol-1-phos "alpha-D-mannopyranose 
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_arginine +l_phenylalanine
-    arginyl_alanine_phenylalanine
+    <-> . +h +adp +7z_10z_13z_16z_19z_docosapentaenoate +phosphate +7z_10z_13z_16z_19z_docosapentaenoate
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_threonine +l_arginine
-    arginyl_alanyl_threonine
+    <-> . +h +adp +phosphate +atp
+    9z_12z_15z_18z_21z_tetracosapentaenoate
   }
 
   branch from h side left {
     h
-    <-> . +l_histidine +l_threonine +l_arginine +h2o
-    arg_his_thr
+    <-> . +adp +phosphate +atp +h2o
+    tetracosahexaenoic_acid_n_3
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    pmf
+    all_cis_icosa_11_14_17_trienoic_acid
   }
 
   branch from mannosylinositol_1_phosphophytoceramide side left {

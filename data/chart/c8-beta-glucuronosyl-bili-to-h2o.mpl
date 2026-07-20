@@ -20,14 +20,14 @@ pathway c8-beta-glucuronosyl-bili-to-h2o "C8-beta-glucuronosyl-bili… to H2O" {
 
   branch from udp side left {
     udp
-    <-> . +1_oh_midazolam_glucuronide +udp_alpha_d_glucuronate
-    1_hydroxymidazolam
+    <-> . +2_hydroxy_atorvastatin_lactone_glucuronide +udp_alpha_d_glucuronate
+    2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
   }
 
   branch from udp side right {
     udp
-    <-> . +2_hydroxy_atorvastatin_acyl_glucuronide +udp_alpha_d_glucuronate
-    ortho_hydroxyatorvastatin
+    <-> . +4_oh_midazolam_glucuronide +udp_alpha_d_glucuronate
+    4_hydroxymidazolam
   }
 
   branch from bilirubin_ixalpha_bis_beta_d_glucuronoside side left {
@@ -38,37 +38,37 @@ pathway c8-beta-glucuronosyl-bili-to-h2o "C8-beta-glucuronosyl-bili… to H2O" {
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +2_hydroxy_atorvastatin_lactone_glucuronide
-    2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
+    <-> . +udp +6_beta_oh_gliclazide_glucuronide
+    6_beta_oh_gliclazide
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +4_oh_midazolam_glucuronide
-    4_hydroxymidazolam
+    <-> . +udp +7_beta_oh_gliclazide_glucuronide
+    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    ferroxamine
+    6_beta_oh_gliclazide_glucuronide
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    ferroxamine
+    6_exomethylene_lovastatin_acid_form
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_74 [3.2.1.74] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_cellohexaose
-    glucose
+    <-> . +hexanoate +h +o2 +nadph +nadp
+    5_hydroxyhexanoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +cellopentaose
-    beta_d_cellohexaose
+    <-> . +6_beta_oh_gliclazide +nadp +h +o2 +nadph
+    gliclazide
   }
 }

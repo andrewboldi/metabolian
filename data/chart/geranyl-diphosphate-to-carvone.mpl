@@ -30,25 +30,25 @@ pathway geranyl-diphosphate-to-carvone "geranyl diphosphate to (+)-carvone" {
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_107 [2.7.7.107] +2_aminoethyl_phosphonic_acid +ctp
-    cmp_2_aminoethyl_phosphonate
+    <-> . +fpp
+    gurjunene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +spermidine +citrate +atp +amp +hplus
-    n_citryl_spermidine
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    e_bisabolene
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +albendazole +fmnh2 +o2 +h2o +hplus
-    albendazole_s_oxide
+    <-> . +asperaculane_g +fmnh2 +o2 +co2 +h2o
+    aculene_d
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_73 [1.14.14.73] +fenbendazole +fmnh2 +o2 +h2o +hplus
-    oxfendazole
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 }

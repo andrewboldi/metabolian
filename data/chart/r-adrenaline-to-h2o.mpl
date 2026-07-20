@@ -18,14 +18,14 @@ pathway r-adrenaline-to-h2o "(R)-adrenaline to H2O" {
 
   branch from sah side left {
     sah
-    <-> . +diosmetin_7_olate +sam
-    luteolin_4_7_dimethyl_ether
+    <-> . +dopamine +sam +hplus
+    4_methoxytyraminium
   }
 
   branch from sah side right {
     sah
-    <-> . +kaempferol_oxoanion +sam +hplus
-    kaempferol_3_olate_7_methyl_ether
+    <-> . +4_hydroxy_3_5_dimethoxyphenethylaminium +sam +hplus
+    mescalinium
   }
 
   branch from r_adrenaline side left {
@@ -36,25 +36,25 @@ pathway r-adrenaline-to-h2o "(R)-adrenaline to H2O" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    glu_glu
+    <-> . +eicosanal +carbon_monoxide
+    nonadecane
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    beta_homovaline_beta_homoalanine_beta_homoleucin
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_galactose +atp +6_o_phosphonohexopyranose
+    adp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic
+    <-> ec_3_6_1_15 [3.6.1.15] +h +phosphate +atp
+    dgdp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
+    <-> . +h +adp +phosphate +atp
+    beta_nicotinamide_d_riboside
   }
 }

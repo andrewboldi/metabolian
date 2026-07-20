@@ -20,38 +20,38 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
 
   branch from nadp side left {
     nadp
-    <-> . +l_glyceraldehyde_3_phosphate +nadph +h
-    sn_glycerol_3_phosphate
+    <-> ec_1_2_1_47 [1.2.1.47] +h +nadph +4_trimethylamino_butanoate +h2o
+    4_trimethylamino_butanal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +1_2_4_butanetriol +h +nadph
-    3r_3_4_dihydroxybutanal
+    <-> ec_1_14_15_15 [1.14.15.15] +h +o2 +epidihydrocholesterin +nadph +h2o
+    5beta_cholestane_3alpha_26_diol
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +o_s_tetradecanoylpantetheine_4_phosphoryl_serine +coa +o_s_3_oxohexadecanoylpantetheine_4_phosphoryl_se
-    co2
+    <-> ec_1_1_1_188 [1.1.1.188] +nadh +9_10_phenanthroquinone +nad
+    phenanthrene_9_10_diol
   }
 
   branch from h side right {
     h
-    <-> . +3_aminopropyl_dimethylsulfanium +co2
-    s_methyl_l_methionine
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5beta_pregnan_3_20_dione +nad
+    3beta_hydroxy_5beta_pregnane_20_one
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +4_3_acetyl_5_hydroxy_4_oxo_1_4_dihydronapthalen +nadp
-    s_chiral_alcohol
+    <-> ec_1_1_1_2 [1.1.1.2] +4_phenylbutan_2_one +h +nadp
+    s_4_phenyl_2_butanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine +nadp +h
-    o_s_19z_3_oxooctatriacontenoylpantetheine_4_phos
+    <-> ec_1_1_1_2 [1.1.1.2] +s_1_phenyl_2_propanol +nadp +h
+    phenylacetone
   }
 
   branch from stigmasterol side left {
@@ -62,14 +62,14 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
 
   branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_283 [2.1.1.283] +s_adenosyl_l_homocysteine +h +questin
-    emodin
+    <-> ec_2_1_1_300 [2.1.1.300] +s_adenosyl_l_homocysteine +h +argemonine
+    pavine
   }
 
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_300 [2.1.1.300] +s_adenosyl_l_homocysteine +h +argemonine
-    pavine
+    <-> ec_2_1_1_267 [2.1.1.267] +s_adenosyl_l_homocysteine +h +isorhamnetin
+    quercetin
   }
 
   branch from desmosterol side right {
@@ -80,14 +80,14 @@ pathway delta24-25-sitosterol-to-cholesterol "Delta24-25-sitosterol to cholester
 
   branch from fad side left {
     fad
-    <-> ec_1_3_8_1 [1.3.8.1] +fadh2 +acryloyl_coa +h
-    propanoyl_coa
+    <-> ec_1_6_6_9 [1.6.6.9] +trimethylamine +h2o +fadh2 +h
+    trimethylamine_n_oxide
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_3_5_1 [1.3.5.1] +fadh2 +ubiquinone_6 +h
-    ubiquinol_6
+    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +salicylate +atp +coa +nad +h2o
+    3_2_hydroxyphenyl_propanoate
   }
 
   branch from cholesterol side left {

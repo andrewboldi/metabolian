@@ -102,43 +102,43 @@
       }
     },
     {
-      "id": "5_end_phopshomethylribonucleoside_1",
-      "name": "5'-end phopshomethylribonucleoside(1−)",
-      "short": "5'-end phopshomethy…",
-      "formula": "C6H10O7PR",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:142776"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "5_end_bisphopshomethylribonucleoside",
-      "name": "5'-end bisphopshomethylribonucleoside",
-      "short": "5'-end bisphopshome…",
-      "formula": "C7H13O7PR",
-      "charge": 0,
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:142777"
+        "chebi": "CHEBI:74483"
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:61976"
       }
     },
     {
-      "id": "n6_methyladenosine_5_monophosphate_1",
-      "name": "N6-methyladenosine 5'-monophosphate(1−)",
-      "short": "N6-methyladenosine…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:74449"
+        "chebi": "CHEBI:61961"
       }
     },
     {
@@ -353,11 +353,11 @@
     },
     {
       "id": "r4",
-      "name": "a 5'-end (5'-methylphospho)-ribonucleoside-RNA + S-adenosyl-L-methionine = a 5'-end (5'...",
-      "equation": "a 5'-end (5'-methylphospho)-ribonucleoside-RNA + S-adenosyl-L-methionine = a 5'-end (5'-bismethylphospho)-ribonucleoside-RNA + S-adenosyl-L-homocysteine",
+      "name": "cytidine(72) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA + S-adeno...",
+      "equation": "cytidine(72) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(72) in tRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "5_end_phopshomethylribonucleoside_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -367,36 +367,40 @@
       ],
       "products": [
         {
-          "metabolite": "5_end_bisphopshomethylribonucleoside",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:58660"
+        "rhea": "RHEA:61988"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58660"
+            "id": "RHEA:61988"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "adenosine(4220) in 28S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(4220) in 2...",
-      "equation": "adenosine(4220) in 28S rRNA + S-adenosyl-L-methionine = N(6)-methyladenosine(4220) in 28S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "N(6),N(6)-dimethyl-L-lysyl(20)-[histone H4] + S-adenosyl-L-methionine = N(6),N(6),N(6)-...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(20)-[histone H4] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(20)-[histone H4] + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
@@ -406,7 +410,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_methyladenosine_5_monophosphate_1",
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
           "stoichiometry": 1
         },
         {
@@ -421,14 +425,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:58724"
+        "rhea": "RHEA:61992"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58724"
+            "id": "RHEA:61992"
           }
         ]
       }

@@ -20,67 +20,67 @@ pathway farnesol-to-o2 "farnesol to O2" {
 
   branch from 2_cis_6_cis_farnesol side left {
     2_cis_6_cis_farnesol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
     11r_dihydroartemisinic_aldehyde
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +h +coa
-    oxirane
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_4_6_trichlorocatechol
+    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_19 [1.3.1.19] +nadh +h +3_vinylcatechol
-    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
+    <-> . +nadh +h +bisphenol_a +o2 +h2o
+    1_2_bis_4_hydroxyphenyl_propan_2_ol
   }
 
   branch from 2e_6e_farnesal side right {
     2e_6e_farnesal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    2z_6e_farnesol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    presilphiperfolan_8_ol
   }
 
   branch from 2e_6e_farnesal side left {
     2e_6e_farnesal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    presilphiperfolan_8_ol
+    3s_6e_nerolidol
   }
 
   branch from h side right {
     h
-    <-> . +4_hydroxy_1_pyrroline_2_carboxylate +h2o
-    2_oxo_4_hydroxy_5_aminovalerate
+    <-> . +dtdp +3_o_l_olivosyl_oleandolide +oleandolide
+    dtdp_l_olivose
   }
 
   branch from h side left {
     h
-    <-> . +1_ribosylimidazole_4_acetate +phosphate +h2o
-    1_5_phosphoribosyl_imidazole_4_acetate
+    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +nadph +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon +coa +h2o
+    co2
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_146 [1.1.1.146] +h +adrenosterone +nadp
-    11beta_hydroxyandrost_4_ene_3_17_dione
+    <-> ec_1_3_1_45 [1.3.1.45] +h +2_hydroxybiochanin_a +nadp
+    ferreirin
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +cholest_5_ene +o2 +nadp +h2o
-    5_6beta_epoxy_5beta_cholestane
+    <-> ec_1_14_13_22 [1.14.13.22] +2_hydroxycyclohexan_1_one +h +o2 +nadp +h2o
+    2_hydroxyhexano_6_lactone
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +cholest_5_ene +nadph +nadp +h2o
-    5_6alpha_epoxy_5alpha_cholestane
+    <-> . +amyrin
+    soyasapogenol_b
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_18 [1.14.12.18] +h +4_chlorobiphenyl +nadph +nadp
-    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
+    <-> . +dihydrokalafungin +h2o
+    5_deoxodihydrokalafungin
   }
 }

@@ -24,14 +24,14 @@ pathway d-glucopyranose-to-d-xylono-1-5-lactone "D-glucopyranose to D-xylono-1,5
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_threonine +l_tryptophan
-    pro_trp_thr
+    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile
+    dehydro_indole_3_yl_acetonitrile
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_valine +l_glutamine
-    prolyl_valyl_glutamine
+    <-> . +propanoate +gamma_l_glutamyl_l_orornithine_delta_lactam
+    n_propanoyl_gamma_l_glutamyl_l_orornithine_delta
   }
 
   branch from d_xylopyranose side right {

@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "decanoyl-coa-to-trans-dec-3-enoyl-coa",
+  "name": "decanoyl-CoA to trans-dec-3-enoyl-CoA",
+  "category": "redox-detox",
+  "summary": "A 3-step route from decanoyl-CoA(4−) to trans-dec-3-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40179"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61430"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "decanoyl_coa",
+      "name": "decanoyl-CoA",
+      "formula": "C31H50N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61430"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "trans_dec_2_enoyl_coa",
+      "name": "trans-dec-2-enoyl-CoA",
+      "short": "trans-dec-2-enoyl-C…",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61406"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2e_4z_deca_2_4_dienoyl_coa",
+      "name": "(2E,4Z)-deca-2,4-dienoyl-CoA",
+      "short": "(2E,4Z)-deca-2,4-di…",
+      "formula": "C31H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:137593"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_dec_3_enoyl_coa",
+      "name": "trans-dec-3-enoyl-CoA",
+      "short": "trans-dec-3-enoyl-C…",
+      "formula": "C31H48N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:84793"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "decanoyl-CoA + O2 = (2E)-decenoyl-CoA + H2O2",
+      "equation": "decanoyl-CoA + O2 = (2E)-decenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
+      "equation": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_dec_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4z_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E,4Z)-decadienoyl-CoA + NADPH + H(+) = (3E)-decenoyl-CoA + NADP(+)",
+      "equation": "(2E,4Z)-decadienoyl-CoA + NADPH + H(+) = (3E)-decenoyl-CoA + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "2e_4z_deca_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_dec_3_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84571"
+          }
+        ]
+      }
+    }
+  ]
+}

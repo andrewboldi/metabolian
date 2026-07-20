@@ -123,57 +123,21 @@
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
       "id": "nadp",
       "name": "NADP",
       "formula": "C21H25N7O17P3",
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
       }
     },
     {
@@ -192,6 +156,15 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363863"
       }
     },
     {
@@ -252,6 +225,13 @@
       "name": "1,5-anhydro-D-fructose reductase (1,5-anhydro-D-mannitol-forming)",
       "ec": [
         "1.1.1.292"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_15",
+      "name": "D-lyxose ketol-isomerase",
+      "ec": [
+        "5.3.1.15"
       ]
     },
     {
@@ -444,56 +424,6 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR188369",
-      "substrates": [
-        {
-          "metabolite": "d_mannopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_mannopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR188369"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR188369"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "1,5-anhydro-D-fructose reductase (1,5-anhydro-D-mannitol-forming)",
       "ec": "1.1.1.292",
       "substrates": [
@@ -526,7 +456,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR197265"
       },
@@ -536,6 +466,42 @@
           {
             "db": "MetaNetX",
             "id": "MNXR197265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "D-lyxose ketol-isomerase",
+      "ec": "5.3.1.15",
+      "substrates": [
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR197814"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197814"
           }
         ]
       }

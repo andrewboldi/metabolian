@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carboxyspermidine-to-succinate "carboxyspermidine to succinate" {
-  spacing 328
+  spacing 322
 
   spine at 0,0 {
     carboxyspermidine
@@ -32,63 +32,57 @@ pathway carboxyspermidine-to-succinate "carboxyspermidine to succinate" {
     n8_acetylspermidinium
   }
 
-  branch from 4_ammoniobutanal side left {
-    4_ammoniobutanal
-    <-> . +h2o
-    1_pyrrolinium
-  }
-
-  branch from trimethylenediaminium side right {
+  branch from trimethylenediaminium side left {
     trimethylenediaminium
     <-> ec_1_5_1_43 [1.5.1.43] +carboxynorspermidine +nadp +h2o +nadph +hplus
     l_aspartic_acid_4_semialdehyde
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +o2 +hydrogen_acceptor +h2o
-    5z_11z_14z_17z_icosatetraenoyl_coa
-  }
-
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_5_99_4 [1.5.99.4] +r_nicotinium +hydrogen_acceptor +h2o
-    r_6_hydroxynicotinium
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
+    11_r_hepe
   }
 
-  branch from 4_oxobutanoate side left {
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +arachidonate +o2 +hydrogen_acceptor +h2o
+    11_r_hete
+  }
+
+  branch from 4_oxobutanoate side right {
     4_oxobutanoate
     <-> ec_1_1_1_61 [1.1.1.61] +nad +nadh +hplus
     4_hydroxybutyrate
   }
 
-  branch from 4_oxobutanoate side right {
+  branch from 4_oxobutanoate side left {
     4_oxobutanoate
     <-> ec_4_1_2_52 [4.1.2.52] +pyruvate
     4_hydroxy_2_oxoheptanedioate
   }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_6_3_4_24 [6.3.4.24] +tyraminium +atp +adp +pi +hplus
-    glutamyltyramine
-  }
-
   branch from glutamate side right {
     glutamate
-    <-> . +n_l_glutamyl_l_alaninol +h2o
-    s_2_aminopropan_1_ol
+    <-> ec_2_6_1_110 [2.6.1.110] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +akg
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +octanoyl_coa +akg +o2 +co2
-    2_hydroxyoctanoyl_coa
+  branch from glutamate side left {
+    glutamate
+    <-> ec_2_6_1_111 [2.6.1.111] +l_3_aminobutanoyl_coa +akg
+    acetoacetyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +decanoyl_coa +akg +o2 +co2
-    2_hydroxydecanoyl_coa
+    <-> . +hexanoyl_coa +akg +o2 +co2
+    2_hydroxyhexanoyl_coa
+  }
+
+  branch from succinate side left {
+    succinate
+    <-> . +butyryl_coa +akg +o2 +co2
+    2_hydroxybutanoyl_coa
   }
 }

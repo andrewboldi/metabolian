@@ -18,14 +18,14 @@ pathway alpha-d-glucose-to-betalamic-acid "alpha-D-glucose to betalamic acid" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
-    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
+    <-> . +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
+    pelargonidin_3_o_beta_d_sambubioside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella +h
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_brucella
+    <-> ec_2_4_1_295 [2.4.1.295] +udp +delphinidin_5_o_d_glucoside_3_o_d_sambubioside +h
+    delphinidin_3_o_d_sambubioside
   }
 
   branch from betanidin side left {

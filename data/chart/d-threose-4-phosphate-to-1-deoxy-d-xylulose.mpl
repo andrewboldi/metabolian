@@ -24,14 +24,14 @@ pathway d-threose-4-phosphate-to-1-deoxy-d-xylulose "D-threose 4-phosphate to 1-
 
   branch from h side left {
     h
-    <-> ec_3_6_1_59 [3.6.1.59] +n_7_methyl_gmp +phosphate +h2o
-    7_methylguanosine_5_diphosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_galactal
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_62 [2.7.1.62] +a_hexose +phosphoramidate +alpha_d_hexose_1_phosphate
-    nh4
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    6_deoxy_d_sorbose
   }
 
   branch from glyceraldehyde_3_phosphate side left {
@@ -48,50 +48,50 @@ pathway d-threose-4-phosphate-to-1-deoxy-d-xylulose "D-threose 4-phosphate to 1-
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +n_acetyl_l_glutamate +h +ornithine
-    n_2_acetyl_l_ornithine
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
     <-> . +indole_3_acetyl_l_glutamic_acid +h2o +h
     indol_3_yl_acetate
   }
 
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> ec_6_3_2_17 [6.3.2.17] +5_10_methylenetetrahydropteroyl_tetra_l_glutamat +h +adp +phosphate +atp
+    5_10_methylenetetrahydropteroyl_tri_l_glutamate
+  }
+
   branch from phosphate side left {
     phosphate
-    <-> . +carbamoyl_phosphate +9beta_mitosane_core
-    carbamoylated_9beta_mitosane_core
+    <-> ec_2_4_1_8 [2.4.1.8] +alpha_d_glucose +beta_d_glucose_1_phosphate
+    d_maltose
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +carbamoyl_phosphate +9alpha_mitosane_core
-    carbamoylated_9alpha_mitosane_core
+    <-> ec_2_4_1_64 [2.4.1.64] +alpha_d_glucose +beta_d_glucose_1_phosphate
+    alpha_alpha_trehalose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +salinisporamycin_a +2_6_8_trihydroxy_7_methylnaphthalene_1_4_dione
-    2z_4e_6s_7s_8r_9r_10r_10_1s_3s_4r_5s_1_4_dimeth
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_gulopyranose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4r_5r_4_5_dihydroxycyclohex_2_ene_1_carbonyl_co
-    5r_5_hydroxycyclohexa_1_3_diene_1_carbonyl_coa
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_talopyranose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
-    d_arabinopyranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    nerol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o
-    leachianone_g
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
+    palustradienol
   }
 
   branch from 1_deoxy_d_xylulose_5_phosphate side left {
@@ -102,13 +102,13 @@ pathway d-threose-4-phosphate-to-1-deoxy-d-xylulose "D-threose 4-phosphate to 1-
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    cdp_2_3_bis_o_geranylgeranyl_sn_glycerol
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_xylulofuranose
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_erythrose
   }
 }

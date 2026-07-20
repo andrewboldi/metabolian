@@ -20,26 +20,26 @@ pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-
 
   branch from h side left {
     h
-    <-> . +l_leucine +l_lysine +l_arginine +h2o
-    lys_arg_leu
+    <-> ec_3_1_8_1 [3.1.8.1] +ethanol +dipropylsulfanylphosphinate +h2o
+    ethoprophos
   }
 
   branch from h side right {
     h
-    <-> . +l_lysine +l_arginine +l_tryptophan +h2o
-    lys_trp_arg
+    <-> ec_3_1_8_1 [3.1.8.1] +ethanol +bis_sec_butylsulfanyl_phosphinate +h2o
+    cadusafos
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +4_methylamino_antipyrine +formaldehyde +nadp +h2o +h +o2
-    aminophenazone
+    <-> . +caffeoyl_4_hydroxyphenyllactate +nadp +h2o +h +4_coumaroyl_4_hydroxyphenyllactate
+    o2
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +4_aminophenol +nadp +h2o +h +aniline
-    o2
+    <-> . +4_coumaroyl_3_4_dihydroxyphenyllactate +nadp +h2o +h +o2
+    4_coumaroyl_4_hydroxyphenyllactate
   }
 
   branch from 11_hydroxytestosterone side left {
@@ -48,45 +48,39 @@ pathway 11beta-hydroxy-5alpha-and-to-11-hydroxytestoster "11beta-hydroxy-5alpha-
     11_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from 11_hydroxytestosterone side right {
-    11_hydroxytestosterone
-    <-> . +testosterone +di_sulfido_diiron +o2 +hplus +h2o
-    di_sulfido_diiron
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +r_acetoin
+    s_s_butane_2_3_diol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +31_norcycloartanone
-    3beta_9beta_4alpha_demethyl_4alpha_carboxy_9_19
+    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +d_arabinono_1_4_lactone
+    d_arabinofuranose
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +h +lathosterone
-    3beta_hydroxy_5alpha_cholest_7_ene_4alpha_carbox
-  }
-
-  branch from 11_oxotestosterone side left {
+  branch from 11_oxotestosterone side right {
     11_oxotestosterone
     <-> . +nadph +hplus +nadp
     adrenosterone
   }
 
-  branch from 11_oxotestosterone side right {
+  branch from 11_oxotestosterone side left {
     11_oxotestosterone
     <-> ec_1_3_1_22 [1.3.1.22] +nadp +h +nadph
     11_oxo_5_dihydrotestosterone
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_13_144 [1.14.13.144] +9_pimara_7_15_diene +h +o2 +nadph +h2o
-    9_pimara_7_15_dien_19_oate
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_8_1_15 [1.8.1.15] +5_mercapto_2_nitrobenzoate +h +nadph
-    dithionitrobenzoic_acid
+    <-> . +geranylgeranyl_chlorophyll_a +h +nadph
+    dihydrogg_chl_a
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> . +h +dihydrogg_chl_a +nadph
+    tetrahydrogg_chl_a
   }
 }

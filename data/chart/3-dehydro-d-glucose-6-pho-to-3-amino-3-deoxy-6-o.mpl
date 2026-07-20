@@ -24,7 +24,7 @@ pathway 3-dehydro-d-glucose-6-pho-to-3-amino-3-deoxy-6-o "3-dehydro-D-glucose-6-
 
   branch from akg side right {
     akg
-    <-> . +nad +nadh +hplus
-    s_2_hydroxyglutarate
+    <-> . +pseudopaline +nad +h2o +nadh +hplus
+    n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt
   }
 }

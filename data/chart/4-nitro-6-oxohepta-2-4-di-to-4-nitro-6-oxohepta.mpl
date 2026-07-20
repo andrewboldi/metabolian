@@ -20,13 +20,13 @@ pathway 4-nitro-6-oxohepta-2-4-di-to-4-nitro-6-oxohepta "4-nitro-6-oxohepta-2,4-
 
   branch from o2 side left {
     o2
-    <-> . +9z_12z_octadecadienoate +h +nadph +nadp +h2o
-    vernolic_acid
+    <-> ec_1_13_11_66 [1.13.11.66] +2z_4e_4_hydroxy_6_methoxy_6_oxohexa_2_4_dienoat +h
+    2_methoxyhydroquinone
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +9z_12z_octadecadienoate +h +vernolic_acid +h2o
-    nad
+    <-> . +nadh +para_isopropylaniline +h +nh4 +nad
+    4_isopropylcatechol
   }
 }

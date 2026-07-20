@@ -18,14 +18,14 @@ pathway dimp-to-dibekacin-2-phosphate "dIMP to dibekacin 2''-phosphate" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_octanone +nad
-    2r_octan_2_ol
+    <-> ec_4_3_1_24 [4.3.1.24] +3_coumaric_acid +nh4
+    dl_m_tyrosine
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +heptan_2_one +2s_2_heptanol
-    nad
+    <-> ec_1_1_1_2 [1.1.1.2] +methylacetoacetic_acid +nadph +methyl_3_hydroxybutyrate
+    nadp
   }
 
   branch from damp side left {
@@ -42,26 +42,26 @@ pathway dimp-to-dibekacin-2-phosphate "dIMP to dibekacin 2''-phosphate" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +3_nitrophenol
-    m_nitrophenyl_alpha_d_galactoside
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +phenol
+    phenyl_beta_d_glucopyranoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose
-    2_alpha_d_glucosyl_d_glucose
+    <-> ec_3_1_1_3 [3.1.1.3] +2_methylpropanoate +4_nitro_3_trifluoromethyl_phenylamine +h
+    flutamide
   }
 
   branch from gtp side left {
     gtp
-    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_5 +h +phosphate +l_glutamate
-    oxidized_factor_420_4
+    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_6 +h +phosphate +l_glutamate
+    oxidized_factor_420_5
   }
 
   branch from gtp side right {
     gtp
-    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_6 +h +phosphate +l_glutamate
-    oxidized_factor_420_5
+    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_7 +h +phosphate +l_glutamate
+    oxidized_factor_420_6
   }
 
   branch from 2_deoxyadenosine side left {
@@ -78,13 +78,13 @@ pathway dimp-to-dibekacin-2-phosphate "dIMP to dibekacin 2''-phosphate" {
 
   branch from gdp side left {
     gdp
-    <-> ec_2_4_1_32 [2.4.1.32] +h +glucomannan_longer_by_one_mannose_unit +glucomannan
-    gdp_alpha_d_mannose
+    <-> ec_2_4_1_353 [2.4.1.353] +gdp_6_deoxy_d_altrose +sordaricin +h
+    4_o_demethylsordarin
   }
 
   branch from gdp side right {
     gdp
-    <-> ec_2_4_1_361 [2.4.1.361] +h +2_o_beta_d_mannosyl_1_2_beta_d_mannosyl_bis_myo +gdp_alpha_d_mannose
-    bis_myo_inositol_1_3_phosphate
+    <-> ec_6_3_2_34 [6.3.2.34] +oxidized_factor_420_8 +h +phosphate +gtp +l_glutamate
+    oxidized_factor_420_7
   }
 }

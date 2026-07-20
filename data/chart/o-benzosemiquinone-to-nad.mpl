@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-benzosemiquinone-to-nad "o-Benzosemiquinone to NAD" {
-  spacing 232
+  spacing 226
 
   spine at 0,0 {
     o_benzosemiquinone
@@ -18,49 +18,43 @@ pathway o-benzosemiquinone-to-nad "o-Benzosemiquinone to NAD" {
 
   branch from catechol side left {
     catechol
-    <-> ec_1_11_1_16 [1.11.1.16] +h2o2 +h2o
-    1_2_benzoquinone
-  }
-
-  branch from catechol side right {
-    catechol
-    <-> . +nadh +h +o2 +aniline +nad
-    nh4
-  }
-
-  branch from o2 side left {
-    o2
-    <-> . +h +5_oxo_6e_8z_11z_14z_eicosatetraenoate
-    5_oxo_6_trans_leukotriene_b4
+    <-> . +2_oxohex_3_enedioic_acid +h +h2o
+    2_hydroxy_6_2_hydroxyphenoxy_6_oxo_cis_cis_hexa
   }
 
   branch from o2 side right {
     o2
-    <-> . +24s_3_7_12_24_tetrahydroxy_5_cholestan_26_oic_a +nadp +h2o +h +3alpha_7alpha_12alpha_24_tetrahydroxy_5beta_chol
-    nadph
+    <-> . +formaldehyde +co2 +succinate +n_methyl_argininium_1 +h +n_n_dimethyl_l_argininyl
+    2_oxoglutarate
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +octanoyl_coa +fad +coa +nad +h2o +acetyl_coa +fadh2 +h
-    hexanoyl_coa
+  branch from o2 side left {
+    o2
+    <-> . +formaldehyde +co2 +succinate +n_methyl_argininium_1 +2_oxoglutarate +h
+    n_n_dimethyl_l_arginine
   }
 
   branch from nadh side right {
     nadh
-    <-> . +docosanedioate +h +nad +h2o
-    22_hydroxydocosanoate
+    <-> ec_1_1_1_50 [1.1.1.50] +h +2_1_imidazolyl_1_4_methoxyphenyl_2_methyl_1_prop +nad
+    1_4_methoxyphenyl_2_methyl_2_1h_imidazol_1_yl_1
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +h +trans4decenoyl_coenzyme_a +trans2_6dodecadienoyl_coenzyme_a +h2o
-    coa
+  branch from nadh side left {
+    nadh
+    <-> ec_1_1_1_345 [1.1.1.345] +2_oxobutanoate +h +nad
+    r_2_hydroxybutyrate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +11_dehydrothromboxane_b2
-    thromboxane_b2
+    <-> . +nadh +4_methylcyclohexanone +h
+    4_methylcyclohexan_1_ol
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +2_4_dimethyl_3_pentanone +h
+    compound_0286204
   }
 }

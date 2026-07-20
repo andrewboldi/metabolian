@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenylethanol" {
-  spacing 290
+  spacing 278
 
   spine at 0,0 {
     microperfuranone
@@ -30,14 +30,14 @@ pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenyle
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_3 [2.7.1.3] +d_fructofuranose_1_phosphate +h +adp
-    d_fructofuranose
+    <-> . +h +3r_3_isopropenyl_6_oxoheptanoate +coa +3r_3_isopropenyl_6_oxoheptanoyl_coa +phosphate
+    adp
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_11 [2.7.1.11] +d_fructofuranose_1_phosphate +h +adp
-    keto_d_fructose
+    <-> ec_2_7_1_11 [2.7.1.11] +aldehydo_d_ribose_5_phosphate +h +adp
+    alpha_d_ribose_1_5_bisphosphate
   }
 
   branch from 3_phenylpyruvate side left {
@@ -54,91 +54,79 @@ pathway microperfuranone-to-2-phenylethanol "(−)-microperfuranone to 2-phenyle
 
   branch from h2o side left {
     h2o
-    <-> . +propionaldoxime
-    propionitrile
+    <-> . +3_dehydro_6_deoxoteasterone +o2
+    3_dehydroteasterone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_valeraldoxime
-    pentanenitrile
+    <-> . +2_oxospirilloxanthin +o2
+    spirilloxanthin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_19 [1.2.1.19] +r_glycerate +h +nadph +h2o
-    glyceraldehyde
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
+    bacteriopheophytin_a
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +d_fucopyranose +h +nadph
-    l_fucitol
+    <-> ec_1_14_13_8 [1.14.13.8] +h +methimazole +o2 +nadph +h2o
+    methimazole_s_oxide
   }
 
   branch from r_3_phenyllactate side left {
     r_3_phenyllactate
-    <-> . +udp +udp_alpha_d_glucose
-    phenyllactylglucose
+    <-> . +h2o
+    e_cinnamate
   }
 
-  branch from r_3_phenyllactate side right {
-    r_3_phenyllactate
-    <-> . +udp +udp_alpha_d_glucose
-    r_3_phenyllactyl_d_glucose
-  }
-
-  branch from keto_phenylpyruvate side left {
+  branch from keto_phenylpyruvate side right {
     keto_phenylpyruvate
     <-> . +nadp +nadph +hplus
     3_phenyllactate
   }
 
-  branch from keto_phenylpyruvate side right {
+  branch from keto_phenylpyruvate side left {
     keto_phenylpyruvate
     <-> ec_6_4_1_11 [6.4.1.11] +atp +amp +ppi +hplus
     polyporic_acid_anion
   }
 
-  branch from phenylacetaldehyde side left {
-    phenylacetaldehyde
-    <-> . +hydrogen_cyanide
-    2s_2_hydroxy_3_phenylpropanenitrile
-  }
-
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_bromo_1_naphthoate +nad +h2o
-    5_bromo_1_naphthaldehyde
+    <-> . +nadh +cob_ii_yrinate_diamide +nad
+    cob_i_yrinate_diamide
   }
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_methoxyindole_2_carboxylic_acid +nad +h2o
-    5_methoxyindole_3_carbaldehyde
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +menaquinone_2 +nad
+    menaquinol
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_7 [3.1.1.7] +s_propyl_thioacetate +h2o +h
-    propane_1_thiol
+    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h2o +h
+    norajmaline
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_1_1_1_1 [1.1.1.1] +h +4_nitrophenol +h2o
-    4_nitrophenyl_acetate
+    <-> . +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +h2o
+    n_acetyl_s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +picrocrocin
-    hydroxy_cyclocitral
+    <-> . +udp +h +soyasapogenol_e_3_o_beta_d_glucoside
+    soyasapogenol_e
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +gypsogenate_28_beta_d_glucoside
-    gypsogenate
+    <-> . +udp +kaempferol_3_o_gentiobioside_7_o_rhamnoside +h
+    kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra
   }
 }

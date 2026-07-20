@@ -32,26 +32,26 @@ pathway nadh-to-6-methylsulfanyl-hexyl-g "NADH to 6-(methylsulfanyl)hexyl-g…" 
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_327 [1.1.1.327] +nadh +1s_bornane_2_5_dione +h
-    1s_4s_5r_5_hydroxycamphor
+    <-> . +nadh +h +adonixanthin +o2 +h2o
+    2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +thujan_3_one
-    thujan_3_ol
+    <-> . +nadh +3_methyl_pyrroline_5_carboxylate +h
+    4_methyl_proline
   }
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_octyl_thiohydroximate
-    ser_gly
+    <-> . +glucose +7_8_dihydroxycoumarin
+    daphnin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
-    9_methylthio_nonyl_thiohydroximic_acid
+    <-> . +glucose +7_8_dihydroxycoumarin
+    daphnetin_8_glucoside
   }
 
   branch from 3_phosphoadenylyl_sulfate side left {
@@ -80,14 +80,14 @@ pathway nadh-to-6-methylsulfanyl-hexyl-g "NADH to 6-(methylsulfanyl)hexyl-g…" 
 
   branch from h side left {
     h
-    <-> . +dehydroprephenate +3_cyclohexa_1_3_dien_1_yl_2_oxopropanoate +h2o
-    co2
+    <-> . +5_hydroxymethyl_2_methyl_4_1h_pyrimidinone +5_2_hydroxyethyl_4_methylthiazole +h2o
+    oxythiamine
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    dtdp_4_dehydro_2_6_dideoxy_beta_l_glucose
+    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +methanol +h2o
+    epsilon_rhodomycinone
   }
 
   branch from 6_methylsulfanyl_hexyl_glucosinolate side left {

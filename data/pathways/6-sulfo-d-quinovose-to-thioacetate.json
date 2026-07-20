@@ -175,33 +175,6 @@
       }
     },
     {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:4167"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
       "id": "fmnh2",
       "name": "FMNH2",
       "formula": "C17H21N4O9P",
@@ -256,33 +229,57 @@
       }
     },
     {
-      "id": "1_o_oleoyl_sn_glycero_3_phosphocholine",
-      "name": "1-O-oleoyl-sn-glycero-3-phosphocholine",
-      "short": "1-O-oleoyl-sn-glyce…",
-      "formula": "C26H52NO7P",
-      "charge": 0,
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:28610"
+        "metanetx": "MNXM1105762"
       }
     },
     {
-      "id": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
-      "name": "1-O-[(9R,10S)-epoxystearoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-O-[(9R,10S)-epoxy…",
-      "formula": "C26H52NO8P",
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132280"
+        "metanetx": "MNXM1364149"
       }
     },
     {
-      "id": "1_o_9s_10r_epoxystearoyl_sn_glycero_3_phosphocho",
-      "name": "1-O-[(9S,10R)-epoxystearoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-O-[(9S,10R)-epoxy…",
-      "formula": "C26H52NO8P",
-      "charge": 0,
+      "id": "tryptaminium",
+      "name": "tryptaminium",
+      "formula": "C10H13N2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:132278"
+        "chebi": "CHEBI:57887"
+      }
+    },
+    {
+      "id": "serotonin",
+      "name": "serotonin",
+      "formula": "C10H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:350546"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "11_r_hete",
+      "name": "11(R)-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78836"
       }
     }
   ],
@@ -316,10 +313,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_432",
-      "name": "6-dehydroglucose reductase",
+      "id": "ec_1_14_14_186",
+      "name": "tryptamine 5-hydroxylase",
       "ec": [
-        "1.1.1.432"
+        "1.14.14.186"
       ]
     }
   ],
@@ -538,55 +535,6 @@
     },
     {
       "id": "r5",
-      "name": "6-dehydroglucose reductase",
-      "equation": "D-glucose + NADP(+) = 6-dehydro-D-glucose + NADPH + H(+)",
-      "ec": "1.1.1.432",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_dehydro_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_432"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:70779"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:70779"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "sulfoquinovose monooxygenase",
       "ec": "1.14.14.181",
       "substrates": [
@@ -631,7 +579,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR199120"
       },
@@ -646,12 +594,73 @@
       }
     },
     {
-      "id": "r7",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase] + O2 = 1-[(9R,10S)-epoxy-octadecanoyl]-sn-glycero-3-phosphocholine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "id": "r6",
+      "name": "sulfoquinovose monooxygenase",
+      "ec": "1.14.14.181",
       "substrates": [
         {
-          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_sulfo_d_quinovose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_dehydro_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_181"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR199680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "tryptamine 5-hydroxylase",
+      "equation": "tryptamine + reduced [NADPH--hemoprotein reductase] + O2 = serotonin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.186",
+      "substrates": [
+        {
+          "metabolite": "tryptaminium",
           "stoichiometry": 1
         },
         {
@@ -665,7 +674,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho",
+          "metabolite": "serotonin",
           "stoichiometry": 1
         },
         {
@@ -681,28 +690,33 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_186"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:50320"
+        "rhea": "RHEA:52320"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50320"
+            "id": "RHEA:52320"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase...",
-      "equation": "1-(9Z-octadecenoyl)-sn-glycero-3-phosphocholine + reduced [NADPH--hemoprotein reductase] + O2 = 1-[(9S,10R)-epoxy-octadecanoyl]-sn-glycero-3-phosphocholine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R)-hydroxy-(5Z,8Z,12E,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "1_o_oleoyl_sn_glycero_3_phosphocholine",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -716,7 +730,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_o_9s_10r_epoxystearoyl_sn_glycero_3_phosphocho",
+          "metabolite": "11_r_hete",
           "stoichiometry": 1
         },
         {
@@ -735,14 +749,14 @@
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:50324"
+        "rhea": "RHEA:52492"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50324"
+            "id": "RHEA:52492"
           }
         ]
       }

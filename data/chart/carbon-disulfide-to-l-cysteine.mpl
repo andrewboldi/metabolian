@@ -18,13 +18,13 @@ pathway carbon-disulfide-to-l-cysteine "carbon disulfide to L-cysteine" {
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +1_4_benzoquinone
-    2_amino_3_2_5_dihydroxyphenyl_sulfanyl_propanoat
+    <-> . +cmp +h +n_r_4_phosphopantothenoyl_l_cysteine
+    r_4_phosphopantothenoyl_cytidylate
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
-    cys_leu
+    <-> . +nadh +h +7_oxoheptanoic_acid +l_serine +nad
+    7_mercaptoheptanoic_acid
   }
 }

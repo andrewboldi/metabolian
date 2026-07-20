@@ -26,14 +26,14 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +4_hydroxynon_2_enal +nadp +nadph
-    e_4_oxonon_2_enal
+    <-> ec_1_5_1_34 [1.5.1.34] +nadh +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +nad
+    6_7_dimethyltetrahydropterin
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadp +nadph +e_4_oxonon_2_enal
-    4_oxononanal
+    <-> ec_1_1_1_27 [1.1.1.27] +nadh +2_oxopentanoate +nad
+    2_hydroxypentanoate
   }
 
   branch from 3_dehydroquinate side left {
@@ -56,8 +56,8 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
 
   branch from l_quinate side right {
     l_quinate
-    <-> . +e_caffeate +h +chlorogenate +h2o
-    pmf
+    <-> ec_1_1_5_8 [1.1.5.8] +ubiquinone_8 +3_dehydroquinate
+    ubiquinol_8
   }
 
   branch from acetaldehyde side left {
@@ -68,103 +68,91 @@ pathway 5-dehydroshikimate-to-nadph "5-Dehydroshikimate to NADPH" {
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> . +nadh +acetyl_coa +h +coa +nad
-    s_acetoin
+    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_2
+    ubiquinol_2
   }
 
   branch from 17alpha_hydroxyprogesterone side left {
-    17alpha_hydroxyprogesterone
-    <-> ec_1_14_15_4 [1.14.15.4] +h +o2 +nadph +nadp +h2o
-    21_deoxycortisol
-  }
-
-  branch from 17alpha_hydroxyprogesterone side right {
     17alpha_hydroxyprogesterone
     <-> . +h +adp +phosphate +h2o
     atp
   }
 
-  branch from 17alpha_hydroxypregnenolone side left {
+  branch from 17alpha_hydroxypregnenolone side right {
     17alpha_hydroxypregnenolone
     <-> . +adenosine_3_5_bisphosphate +h +17alpha_hydroxypregnenolone_sulfate
     3_phosphoadenylyl_sulfate
   }
 
-  branch from 17alpha_hydroxypregnenolone side right {
-    17alpha_hydroxypregnenolone
-    <-> . +h +sulfate +h2o
-    17alpha_hydroxypregnenolone_sulfate
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +h +behenate +h2o
-    docosanal
+    <-> . +nadh +codeinone
+    hydrocodone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +h +eicosanoate +h2o
-    eicosanal
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +crotonaldehyde +h
+    crotyl_alcohol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_18_1_2 [1.18.1.2] +dibromothymohydroquinone +h +nadph
-    dibromothymoquinone
+    <-> ec_1_1_1_184 [1.1.1.184] +toluquinol +h +nadph
+    2_methyl_1_4_benzoquinone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +4_cyanobenzaldehyde +h +nadph
-    4_cyanobenzyl_alcohol
+    <-> ec_1_1_1_145 [1.1.1.145] +h +cortisol +nadph
+    11beta_17alpha_21_trihydroxypregnenolone
   }
 
   branch from 3beta_hydroxyandrost_5_en_17_one side left {
-    3beta_hydroxyandrost_5_en_17_one
-    <-> ec_1_1_1_145 [1.1.1.145] +h +nadph +nadp
-    androst_5_ene_3_17_dione
-  }
-
-  branch from 3beta_hydroxyandrost_5_en_17_one side right {
     3beta_hydroxyandrost_5_en_17_one
     <-> ec_1_14_13_17 [1.14.13.17] +h +o2 +nadph +nadp +h2o
     7_hydroxydehydroepiandrosterone
   }
 
+  branch from 3beta_hydroxyandrost_5_en_17_one side right {
+    3beta_hydroxyandrost_5_en_17_one
+    <-> . +h +phosphate +atp +h2o
+    adp
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxodecanoyl_l_homoserine
-    n_3_oxo_decanoyl_homoserine_lactone
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +phenol
+    phenyl_beta_d_galactopyranoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_hexanoyl_l_homoserine
-    n_2_oxooxolan_3_yl_hexanamide
+    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_4_dinitrophenol +h
+    3_4_dinitrophenyl_beta_d_galactopyranoside
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_17 [1.1.3.17] +betaine_aldehyde +h2o
-    choline
+    <-> ec_1_13_11_8 [1.13.11.8] +4_carboxy_2_hydroxyhexa_2_4_dienedioate +h
+    3_4_5_trihydroxybenzoate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_8_7 [1.3.8.7] +e_3_indol_3_yl_acryloyl_coa +h +h2o2
-    3_indolepropionyl_coa
+    <-> ec_1_14_13_7 [1.14.13.7] +3_methylcatechol +nadp +h2o +h +nadph
+    4_methylphenol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +4_formylbenzoate +h +nadp
-    4_carboxybenzyl_alcohol
+    <-> ec_1_1_1_246 [1.1.1.246] +h +3r_vestitone +nadp +h2o
+    medicarpin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_2 [1.1.1.2] +1_acenaphthalenol +nadp +h
-    1_ketoacenaphthalene
+    <-> . +3_keto_beta_d_galactose +h +nadp
+    beta_d_galactose
   }
 }

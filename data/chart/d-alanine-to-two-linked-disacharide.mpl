@@ -24,25 +24,25 @@ pathway d-alanine-to-two-linked-disacharide "D-alanine to Two linked disacharide
 
   branch from h2o side right {
     h2o
-    <-> . +o2 +sesamolinol
-    sesamolin
+    <-> ec_1_14_13_52 [1.14.13.52] +biochanin_a +h +o2 +nadph +nadp
+    pratensein
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_28 [3.5.1.28] +glcnac_1_6_anhmurnac +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
-    glcnac_1_6_anhmurnac_l_ala_gamma_d_glu_meso_dap
+    <-> ec_4_2_1_119 [4.2.1.119] +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
+    3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +4_trifluoromethyl_phenylethanolamine +h2o +l_ascorbate +o2
-    4_trifluoromethyl_phenethylamine
+    <-> ec_1_14_13_21 [1.14.13.21] +garbanzol +o2 +nadph +trans_fustin +h2o
+    nadp
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +phenylethanolamine +h2o +l_ascorbate +o2
-    2_phenylethylamine
+    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +e_2_indol_3_yl_1_thioacetohydroximate +nh4 +h2o
+    s_indolylmethylthiohydroximoyl_l_cysteine
   }
 }

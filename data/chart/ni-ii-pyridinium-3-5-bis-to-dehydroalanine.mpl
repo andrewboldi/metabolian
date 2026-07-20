@@ -28,13 +28,13 @@ pathway ni-ii-pyridinium-3-5-bis-to-dehydroalanine "Ni(II)-pyridinium-3,5-bis…
 
   branch from h2o2 side right {
     h2o2
-    <-> . +coa_18_cooh_16e_dinor_lte5 +coa_omega_cooh_dinor_lte4
+    <-> ec_1_1_3_23 [1.1.3.23] +h +thiamine_acetate +thiamine_1_aldehyde +h2o
     o2
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_2_3_1 [1.2.3.1] +methylmalonate +h +o2 +h2o
-    2_methyl_3_oxopropanoate
+    <-> ec_1_1_3_13 [1.1.3.13] +formaldehyde +o2
+    methanol
   }
 }

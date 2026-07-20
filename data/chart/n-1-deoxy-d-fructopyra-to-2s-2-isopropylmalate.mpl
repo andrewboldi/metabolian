@@ -50,14 +50,14 @@ pathway n-1-deoxy-d-fructopyra-to-2s-2-isopropylmalate "N-(1-deoxy-β-D-fructopy
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
-    3_hydroxypyridin_4_1h_one
+    <-> . +1s_2_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
+    2_methylcyclohexanone
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +adp_1_deoxy_o_didehydro_ribofuranosylium +l_argininium +hplus
-    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
+    <-> . +nadp +h2o +2_methylcyclohexanone +nadph +hplus
+    1s_2_methyl_cyclohexylammonium
   }
 
   branch from 2s_2_isopropylmalate side right {

@@ -20,38 +20,38 @@ pathway phaseollin-to-coa "(-)-Phaseollin to CoA" {
 
   branch from h side left {
     h
-    <-> . +gdp_guluronate
-    gdp_d_mannuronate
+    <-> ec_3_5_1_4 [3.5.1.4] +acetamide +hydroxylamine +acetohydroxamic_acid
+    nh4
   }
 
   branch from h side right {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_chloromuconolactone
-    2e_4z_2_chloromuconate
+    <-> ec_2_5_1_18 [2.5.1.18] +s_n_benzylthiocarbamoyl_glutathione +glutathione
+    benzyl_isothiocyanate
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_oxoglutarate +gibberellin_a53 +succinate +gibberellin_a97
-    co2
+    <-> ec_1_1_3_7 [1.1.3.7] +4_methoxybenzyl_alcohol +h2o2
+    4_methoxybenzaldehyde
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
-    17_r_hdohe
+    <-> ec_1_1_3_7 [1.1.3.7] +3_chloro_anisaldehyde +h2o2
+    3_chloroanisylalcohol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa +nadp +h
-    o_s_13z_25z_3_oxotetratetracontadienoylpantethei
+    <-> ec_1_1_1_21 [1.1.1.21] +3_fluorobenzyl_alcohol +nadp +h
+    3_fluorobenzaldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho +nadp +h
-    o_s_9z_3_oxooctacosenoylpantetheine_4_phosphoryl
+    <-> ec_1_1_1_2 [1.1.1.2] +2_chlorobenzaldehyde +h +nadp
+    compound_0041489
   }
 
   branch from dimethylallyl_diphosphate side left {
@@ -74,25 +74,25 @@ pathway phaseollin-to-coa "(-)-Phaseollin to CoA" {
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +alpha_chamigrene
+    <-> . +delta_cuprenene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side left {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    delta_cuprenene
+    alpha_cubebene
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +3_15_diacetoxyscirpenol
-    3_4_15_triacetoxyscirpenol
+    <-> ec_2_3_1_255 [2.3.1.255] +l_cysteinyl_group +acetyl_coa
+    n_acetyl_l_cysteinyl
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +trichodermol
-    trichodermin
+    <-> ec_2_3_1_255 [2.3.1.255] +l_seryl_group +acetyl_coa
+    n_terminal_n_acetyl_l_serine
   }
 }

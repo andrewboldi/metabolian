@@ -26,26 +26,26 @@ pathway cyclotriphosphate-to-nadp "cyclotriphosphate to NADP" {
 
   branch from triphosphate side left {
     triphosphate
-    <-> . +2_deoxyribonucleoside_5_triphosphate +h2o +hplus
-    2_deoxyribonucleoside
-  }
-
-  branch from triphosphate side right {
-    triphosphate
     <-> . +datp +h2o +hplus
     2_deoxyadenosine
   }
 
+  branch from triphosphate side right {
+    triphosphate
+    <-> . +dctp +h2o +hplus
+    2_deoxycytidine
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_6_3_1_7 [6.3.1.7] +4_methylene_l_glutamate +nh3 +atp +amp +hplus
-    4_methylene_l_glutamine
+    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
+    l_tyrosiniumyl_l_arginine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_18 [4.2.3.18] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    abieta_7_13_diene
+    <-> ec_4_6_1_1 [4.6.1.1] +atp
+    camp
   }
 
   branch from quinolinate side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocysteine to 5alpha-cholest-8-en-3beta…" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +cyclosporin_a_metabolite_m1a
-    am1a4n_cyclosporine
+    <-> . +s_adenosyl_l_homocysteine +h +pederin
+    pseudopederin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +am1c9_cyclosporine
-    am1c4n9_cyclosporine
+    <-> . +s_adenosyl_l_homocysteine +h +dim2boa_beta_d_glucoside
+    trimboa_beta_d_glucoside
   }
 
   branch from 26_27_dehydrozymosterol side left {
@@ -42,14 +42,14 @@ pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocyste
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +h2o +h +o2 +nadph
-    5_epi_aristolochene
+    <-> . +trans_3_cis_8_11_14_eicosatetraenoyl_coenzyme_a +h +nadph
+    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +h +o2 +nadph +h2o
-    capsidiol
+    <-> . +h +nadph +2e_4z_7z_10z_hexadecatetraenoyl_coenzyme_a
+    3z_7z_10z_hexadecatrienoyl_coenzyme_a
   }
 
   branch from zymosterol side left {
@@ -58,21 +58,15 @@ pathway s-adenosyl-l-homocysteine-to-5alpha-cholest-8-en "S-adenosyl-L-homocyste
     propene
   }
 
-  branch from zymosterol side right {
-    zymosterol
-    <-> ec_5_3_3_5 [5.3.3.5] +s_adenosyl_l_homocysteine +ergosta_5_7_22_24_28_tetraen_3beta_ol +h +h2o +s_adenosyl_l_methionine
-    o2
+  branch from fad side right {
+    fad
+    <-> . +fadh2 +h +4_hydroxyphenylacetate +o2 +3_4_dihydroxyphenylacetate +h2o
+    pmf
   }
 
   branch from fad side left {
     fad
-    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +fadh2 +h
-    2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
-  }
-
-  branch from fad side right {
-    fad
-    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +11z_octadecenoyl_coa +nad +h2o
-    coa
+    <-> . +fadh2 +h +2_6_dimethyl_trans_2_heptenoyl_coa
+    2s_2_6_dimethylheptanoyl_coa
   }
 }

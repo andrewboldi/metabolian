@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway campesterol-to-fmn "campesterol to FMN" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     campesterol
@@ -20,17 +20,5 @@ pathway campesterol-to-fmn "campesterol to FMN" {
     22s_22_hydroxycampesterol
     <-> . +nadp +h2o +campesterol +o2 +nadph
     h
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +hexadecane +fmnh2 +o2 +h2o +hplus
-    hexadecan_8_ol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
-    1_3_decanediol
   }
 }

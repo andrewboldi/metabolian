@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-d-glucose-1-phospho-to-acetaldehyde "6-(α-D-glucose-1-phospho)… to acetaldehyde" {
-  spacing 314
+  spacing 302
 
   spine at 0,0 {
     6_d_glucose_1_phospho_d_mannoside
@@ -16,18 +16,6 @@ pathway 6-d-glucose-1-phospho-to-acetaldehyde "6-(α-D-glucose-1-phospho)… to 
     uridine_5_aldehyde
     <-> . +threonine -acetaldehyde
     5_s_6_s_c_glycyluridine
-  }
-
-  branch from g1p side left {
-    g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +d_mannose_1_phosphate
-    gdp_d_mannose
-  }
-
-  branch from g1p side right {
-    g1p
-    <-> . +h2o +amp +hplus
-    adp_d_glucoside
   }
 
   branch from uridine_5_aldehyde side left {

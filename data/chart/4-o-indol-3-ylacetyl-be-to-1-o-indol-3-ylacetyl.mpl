@@ -48,13 +48,13 @@ pathway 4-o-indol-3-ylacetyl-be-to-1-o-indol-3-ylacetyl "4-O-(indol-3-ylacetyl)-
 
   branch from myo_inositol side right {
     myo_inositol
-    <-> ec_3_2_1_22 [3.2.1.22] +d_galactose +h2o
-    alpha_d_galactosyl_1_3_1d_myo_inositol
+    <-> ec_1_13_99_1 [1.13.99.1] +o2 +beta_d_glucuronate +h2o
+    h
   }
 
   branch from myo_inositol side left {
     myo_inositol
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactosyl_1_3_1d_myo_inositol +h2o
-    d_galactopyranose
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +h2o
+    alpha_d_galactosyl_1_3_1d_myo_inositol
   }
 }

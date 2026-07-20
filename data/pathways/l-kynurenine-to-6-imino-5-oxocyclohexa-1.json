@@ -121,12 +121,12 @@
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:16452"
       }
     },
     {
@@ -140,21 +140,30 @@
       }
     },
     {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:16452"
-      }
-    },
-    {
       "id": "aspartate",
       "name": "L-Aspartate",
       "formula": "C4H6NO4",
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
       }
     },
     {
@@ -174,6 +183,15 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:58048"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
       }
     },
     {
@@ -416,45 +434,6 @@
     },
     {
       "id": "r4",
-      "name": "3-hydroxy-L-kynurenine + pyruvate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-...",
-      "equation": "3-hydroxy-L-kynurenine + pyruvate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-alanine",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:65912"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65912"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "3-hydroxy-L-kynurenine + oxaloacetate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate ...",
       "equation": "3-hydroxy-L-kynurenine + oxaloacetate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-aspartate",
       "substrates": [
@@ -478,7 +457,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:82427"
       },
@@ -488,6 +467,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:82427"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-hydroxy-L-kynurenine + 3-phenylpyruvate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutano...",
+      "equation": "3-hydroxy-L-kynurenine + 3-phenylpyruvate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-phenylalanine",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:82431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82431"
           }
         ]
       }

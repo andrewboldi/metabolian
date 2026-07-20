@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-2r-3s-catechin "D-glucopyranose to (2R,3S)-catechin" {
-  spacing 330
+  spacing 324
 
   spine at 0,0 {
     glucose
@@ -20,57 +20,51 @@ pathway d-glucopyranose-to-2r-3s-catechin "D-glucopyranose to (2R,3S)-catechin" 
     nadp
   }
 
-  branch from 1_o_malyl_beta_d_glucose side left {
-    1_o_malyl_beta_d_glucose
-    <-> . +glucose +pelargonidin_3_o_6_o_malyl_beta_d_glucoside
-    pelargonidin_3_o_d_glucoside_betaine
+  branch from h side left {
+    h
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +phosphate +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +octanedioyl_coa +glycine +suberylglycine
-    coa
-  }
-
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    taurocholic_acid_3_sulfate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +pelargonidin_3_glucoside
-    pelargonidin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_298 [2.4.1.298] +udp +pelargonidin_3_o_d_glucoside_betaine
-    pelargonin
+    <-> . +udp +gomphrenin_i +h
+    betanidin
   }
 
-  branch from idb_1027 side right {
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +3_5_di_c_glucosyl_2_4_4_6_tetrahydroxydibenzoylm +h
+    6c_glucosyl_2_hydroxynaringenin
+  }
+
+  branch from idb_1027 side left {
     idb_1027
     <-> ec_1_3_1_77 [1.3.1.77] +nadp +h +nadph
     epicatechin
   }
 
-  branch from idb_1027 side left {
+  branch from idb_1027 side right {
     idb_1027
     <-> . +taxifolin +h
     h2o
   }
 
-  branch from nadp side right {
-    nadp
-    <-> . +9r_10r_dihydroxyoctadecanoate +h +o2 +nadph +h2o
-    9_10_18_trihydroxyoctadecanoic_acid
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_126 [1.14.13.126] +calcitriol +h +o2 +nadph +h2o
-    calcitetrol
+    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +h +nadph
+    2e_geranial
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    1s_2s_4r_isodihydrocarveol
   }
 }

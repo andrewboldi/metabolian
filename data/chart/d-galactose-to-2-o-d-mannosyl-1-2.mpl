@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-(1→2)-α…" {
-  spacing 328
+  spacing 322
 
   spine at 0,0 {
     d_galactose
@@ -24,59 +24,53 @@ pathway d-galactose-to-2-o-d-mannosyl-1-2 "α-D-galactose to 2-O-[α-D-mannosyl-
 
   branch from d_galactose_1_phosphate side left {
     d_galactose_1_phosphate
-    <-> ec_2_4_1_247 [2.4.1.247] +d_galactosyl_1_4_l_rhamnose +pi
-    l_rhamnopyranose
+    <-> . +udp_d_glucose +h2o +hplus
+    ump
   }
 
-  branch from d_galactose_1_phosphate side right {
-    d_galactose_1_phosphate
-    <-> ec_3_1_3_94 [3.1.3.94] +h2o +pi
-    d_galactopyranose
-  }
-
-  branch from g1p side left {
+  branch from g1p side right {
     g1p
     <-> ec_2_4_1_20 [2.4.1.20] +cellobiose +pi
     glucose
   }
 
-  branch from g1p side right {
+  branch from g1p side left {
     g1p
-    <-> ec_2_7_7_9 [2.7.7.9] +hplus +udp_d_glucose +ppi
-    utp
+    <-> ec_2_4_1_139 [2.4.1.139] +h2o +pi
+    maltose
   }
 
-  branch from udp_d_galactose side left {
+  branch from udp_d_galactose side right {
     udp_d_galactose
     <-> ec_2_4_1_47 [2.4.1.47] +2_2_hydroxyacyl_sphingosine +udp +hplus
     1_d_galactosyl_2_2_hydroxyacyl_sphingosine
   }
 
-  branch from udp_d_galactose side right {
+  branch from udp_d_galactose side left {
     udp_d_galactose
-    <-> ec_2_4_1_134 [2.4.1.134] +o3_d_galactosyl_1_4_d_xylosyl_l_serine +udp +hplus
-    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_13 [4.2.3.13] +fpp
-    cadinene
+    <-> ec_2_4_1_22 [2.4.1.22] +glucose +udp +hplus
+    lactose
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
-    sabinene_hydrate
+    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
+    endo_fenchol
   }
 
-  branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
+    3_l_lysyl_adenylyl_1_group
+  }
+
+  branch from 2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate side right {
     2_o_d_glucopyranosyl_3_o_phosphonato_d_glycerate
     <-> ec_2_4_1_266 [2.4.1.266] +pg3 +adp +hplus
     adp_d_glucoside
   }
 
-  branch from 2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate side right {
+  branch from 2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate side left {
     2_o_d_mannosyl_1_2_d_glucosyl_d_glycerate
     <-> . +gdp_d_mannose +gdp +hplus
     2_o_d_glucopyranosyl_d_glycerate

@@ -20,13 +20,13 @@ pathway udp-to-inner-core-oligosaccharid "UDP to Inner core oligosaccharid…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +purpurea_glycoside_a
-    digitoxin
+    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +solasodine_3_o_beta_d_glucoside
+    solasodine
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +purpurea_glycoside_b
-    gitoxin
+    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
+    beta_d_fructopyranose
   }
 }

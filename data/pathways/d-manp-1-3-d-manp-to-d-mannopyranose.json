@@ -130,21 +130,30 @@
       }
     },
     {
-      "id": "gdp_d_mannose",
-      "name": "GDP-α-D-mannose",
-      "formula": "C16H23N5O16P2",
-      "charge": -2,
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57527"
+        "chebi": "CHEBI:4139"
       }
     },
     {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
-      "charge": -3,
+      "id": "epimelibiose",
+      "name": "Epimelibiose",
+      "formula": "C12H22O11",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "metanetx": "MNXM728399"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     }
   ],
@@ -168,6 +177,13 @@
       "name": "D-mannitol oxidase",
       "ec": [
         "1.1.3.40"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_22",
+      "name": "alpha-galactosidase",
+      "ec": [
+        "3.2.1.22"
       ]
     }
   ],
@@ -346,11 +362,21 @@
     },
     {
       "id": "r5",
-      "name": "GDP-alpha-D-mannose + H2O = D-mannose + GDP + H(+)",
-      "equation": "GDP-alpha-D-mannose + H2O = D-mannose + GDP + H(+)",
+      "name": "alpha-galactosidase",
+      "ec": "3.2.1.22",
       "substrates": [
         {
-          "metabolite": "gdp_d_mannose",
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epimelibiose",
           "stoichiometry": 1
         },
         {
@@ -358,31 +384,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
+      "catalysts": [
         {
-          "metabolite": "d_mannopyranose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_3_2_1_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:28102"
+        "metanetx": "MNXR153448"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:28102"
+            "db": "MetaNetX",
+            "id": "MNXR153448"
           }
         ]
       }

@@ -18,37 +18,37 @@ pathway papaverine-to-s-laudanine "papaverine to (S)-laudanine" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +h +succinate +2_oxoglutarate
-    gibberellin_a20
+    <-> ec_1_13_11_2 [1.13.11.2] +2_hydroxy_6_oxohexa_2_4_dienoic_acid
+    catechol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_21_1 [1.14.21.1] +s_cheilanthifoline +h +nadph +nadp +h2o
-    s_stylopine
+    <-> . +h +tacrolimus +nadph +12_ht_or_m_vi_12_hydroxy_tacrolimus +h2o
+    nadp
   }
 
   branch from sah side left {
     sah
-    <-> . +s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit +5_hydroxyuridine_5_phosphate_1 +hplus
-    5_carboxymethoxy_uridine_5_phosphate_2
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy
   }
 
   branch from sah side right {
     sah
-    <-> . +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur +sam +hplus
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur
+    <-> . +eburicol +sam +hplus
+    pneumocysterol
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +h +6_methoxy_3_methyl_2_all_trans_polyprenyl_1_4_be
-    2_methoxy_6_all_trans_polyprenyl_1_4_benzoquinol
+    <-> . +s_adenosyl_l_homocysteine +h +cerivastatin_m31 +h2o
+    cerivastatin_m23
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate
-    3_polyprenyl_4_5_dihydroxybenzoate
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +tacrolimus
+    31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
   }
 }

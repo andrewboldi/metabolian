@@ -18,14 +18,14 @@ pathway h-to-h2o-null "H to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadph
-    5_deoxyleucopelargonidin
+    <-> . +dtdp_beta_l_rhamnose +h +nadph
+    dtdp_4_dehydro_6_deoxy_alpha_d_glucose
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph
-    fisetinidol_4beta_ol
+    <-> ec_1_3_1_22 [1.3.1.22] +5_dihydrodeoxycorticosterone +h +nadph
+    21_hydroxyprogesterone
   }
 
   branch from 25_hydroxyvitamin_d2 side left {
@@ -36,13 +36,13 @@ pathway h-to-h2o-null "H to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +4_amino_2_6_dinitrotoluene +nad
-    2_4_diamino_6_nitrotoluene
+    <-> ec_3_1_1_45 [3.1.1.45] +2_chloro_5_methyl_cis_dienelactone
+    2_chloro_5_methylmaleylacetate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +4_amino_2_6_dinitrotoluene +nad
-    4_amino_2_hydroxylamino_6_nitrotoluene
+    <-> . +nadh +h +5_nitro_o_toluidine +nad
+    2_4_diaminotoluene
   }
 }

@@ -18,14 +18,14 @@ pathway n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop "N-(3-carboxylatopropio
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> . +l_aspartate +akg +o2 +co2
+    3s_3_hydroxy_l_aspartate
   }
 
   branch from succinate side right {
     succinate
-    <-> . +trans_3_hydroxy_l_proline +akg +o2 +co2
-    3s_3_4_dihydroxy_l_proline
+    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_aspartate +co2
+    l_aspartate
   }
 
   branch from s_2_3_4_5_tetrahydrodipicolinate side left {
@@ -42,14 +42,14 @@ pathway n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop "N-(3-carboxylatopropio
 
   branch from glutamate side left {
     glutamate
-    <-> ec_4_1_3_27 [4.1.3.27] +chorismate +glutamine +pyruvate +hplus
-    anthranilate
+    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
+    3_deamino_3_oxonicotianaminium
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_80 [2.6.1.80] +s_s_s_nicotianamine_trizwitterion +akg
-    3_deamino_3_oxonicotianaminium
+    <-> ec_2_6_1_9 [2.6.1.9] +l_histidinol_phosphate +akg
+    3_imidazol_4_yl_2_oxopropyl_phosphate
   }
 
   branch from s_2_acetamido_6_oxopimelate side left {

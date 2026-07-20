@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-l-rhamnose-1-4-d-to-h2o "alpha-L-rhamnose-(1->4)-D… to H2O" {
-  spacing 296
+  spacing 290
 
   spine at 0,0 {
     alpha_l_rhamnose_1_4_d_glucuronate
@@ -16,39 +16,33 @@ pathway alpha-l-rhamnose-1-4-d-to-h2o "alpha-L-rhamnose-(1->4)-D… to H2O" {
     atp
   }
 
-  branch from alpha_l_rhamnose side left {
-    alpha_l_rhamnose
-    <-> ec_2_4_1_247 [2.4.1.247] +alpha_d_galactose_1_phosphate +phosphate
-    d_galactosyl_1_4_l_rhamnose
-  }
-
-  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side right {
+  branch from 4_deoxy_l_threo_hex_4_enopyranuronate side left {
     4_deoxy_l_threo_hex_4_enopyranuronate
     <-> ec_5_3_1_17 [5.3.1.17]
     3_deoxy_d_glycero_2_5_hexodiulosonate
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    16_0_t16_1_pg
-  }
-
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    18_0_t16_1_pg
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    neoagarotetraose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_2_1_2_1 [2.1.2.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +glycine +d_serine
-    6s_5_6_7_8_tetrahydrofolate
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    neoagarotriose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +beta_d_glucose
-    d_fructofuranose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neoagarohexaose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neoagaropentaose
   }
 }

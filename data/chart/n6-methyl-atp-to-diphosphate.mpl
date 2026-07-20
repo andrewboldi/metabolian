@@ -26,14 +26,14 @@ pathway n6-methyl-atp-to-diphosphate "N6-methyl-ATP to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> . +5_end_purine_ribonucleotide_5_triphosphate_4 +gdp +hplus
-    5_5_triphosphoguanosine_purine_ribonucleotide_3
+    <-> ec_4_2_3_187 [4.2.3.187] +fpp +h2o
+    2z_6e_hedycaryol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +r_lipoate +gtp +hplus
-    r_lipoyl_gmp
+    <-> ec_4_2_3_175 [4.2.3.175] +fpp +h2o
+    10_epi_cubebol
   }
 
   branch from imp side right {
@@ -44,7 +44,7 @@ pathway n6-methyl-atp-to-diphosphate "N6-methyl-ATP to diphosphate" {
 
   branch from imp side left {
     imp
-    <-> . +2_deoxyinosine_5_phosphate +inosine
-    2_deoxyinosine
+    <-> . +2_deoxyguanosine_5_monophosphate +inosine
+    2_deoxyguanosine
   }
 }

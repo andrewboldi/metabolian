@@ -20,38 +20,38 @@ pathway 6-o-acetyl-d-glucose-to-formyl-phosphate "6-O-acetyl-D-glucose to formyl
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_42 [3.2.1.42] +h2o +gdp +hplus
-    gdp_d_glucose
+    <-> ec_3_2_1_118 [3.2.1.118] +r_prunasin +h2o
+    mandelonitrile
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_7_1_41 [2.7.1.41] +d_glucopyranose_1_phosphate
-    d_glucose_1_6_bisphosphate
+    <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
+    g6p
   }
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetyl_l_aspartate +h2o
-    aspartate
+    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
+    4_hydroxybenzaldehyde
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_136 [3.5.1.136] +n_n_diacetylchitobiose +h2o
-    d_glucosaminyl_1_4_n_acetyl_d_glucosamine
+    <-> . +3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa
+    glucovanillin
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    3s_3_hydroxy_l_lysine
+    <-> . +l_proline +akg +o2 +co2
+    trans_3_hydroxy_l_proline
   }
 
   branch from succinate side right {
     succinate
-    <-> . +ornithine +akg +o2 +co2
-    3s_3_hydroxy_l_ornithine
+    <-> ec_1_14_11_29 [1.14.11.29] +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from succinyl_coa side left {
@@ -68,13 +68,13 @@ pathway 6-o-acetyl-d-glucose-to-formyl-phosphate "6-O-acetyl-D-glucose to formyl
 
   branch from formate side left {
     formate
-    <-> . +24_25_dihydrolanosterol +fmnh2 +o2 +fmn +h2o +hplus
+    <-> . +24_25_dihydrolanosterol +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     4_4_dimethyl_8_14_cholestadien_3_ol
   }
 
   branch from formate side right {
     formate
-    <-> ec_4_1_2_44 [4.1.2.44] +2_3_epoxy_2_3_dihydrobenzoyl_coa +h2o +hplus
-    cis_3_4_didehydroadipoyl_coa_semialdehyde
+    <-> . +intermediate_i +nadph +h2o +nadp
+    16r_deshydroxymethyl_stemmadenine
   }
 }

@@ -20,14 +20,14 @@ pathway butanal-to-acetate "butanal to acetate" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h +hexanal
-    1_nitrohexane
+    <-> . +leukotriene_b4
+    5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_12 [1.13.11.12] +9z_12z_octadecadienoate +h
-    hydroperoxylinoleic_acid
+    <-> . +ubiquinol_2 +ubiquinone_2 +h2o
+    pmf
   }
 
   branch from butan_1_aminium side left {
@@ -38,26 +38,26 @@ pathway butanal-to-acetate "butanal to acetate" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +ac_2_l_lys_d_ala
-    ac_2_l_lys_d_ala_d_ala
+    <-> ec_3_4_11_4 [3.4.11.4] +glycine +gly_phe
+    gly_gly_phe
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +4_ethylthio_2_oxobutanoate +nh4 +nad
-    l_ethionine
+    <-> . +glycine +glycyl_dl_phenylalanine
+    gly_gly_phe
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2s_2_amino_3_methylbutan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxy_3_methylbutan_2_one
+    <-> . +n_methylhistaminium +o2 +h2o +h2o2
+    1_methylimidazole_4_acetaldehyde
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +s_leucinol +nad +h2o +nadh +hplus
-    1_hydroxy_4_methylpentan_2_one
+    <-> . +cordycepin +h2o +hplus
+    3_deoxyinosine
   }
 
   branch from butyryl_coa side right {

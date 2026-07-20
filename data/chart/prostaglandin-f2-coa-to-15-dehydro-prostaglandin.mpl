@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prostaglandin-f2-coa-to-15-dehydro-prostaglandin "prostaglandin F2α-CoA to 15-dehydro-prostaglandin…" {
-  spacing 266
+  spacing 254
 
   spine at 0,0 {
     prostaglandin_f2_coa
@@ -14,18 +14,6 @@ pathway prostaglandin-f2-coa-to-15-dehydro-prostaglandin "prostaglandin F2α-CoA
     prostaglandin_e2
     <-> ec_1_1_1_141 [1.1.1.141] +nad -nadh -hplus
     15_dehydro_prostaglandin_e2
-  }
-
-  branch from prostaglandin_e2 side left {
-    prostaglandin_e2
-    <-> ec_5_3_99_3 [5.3.99.3]
-    prostaglandin_h2
-  }
-
-  branch from prostaglandin_e2 side right {
-    prostaglandin_e2
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    20_hydroxyprostaglandin_e2
   }
 
   branch from 15_dehydro_prostaglandin_e2 side left {

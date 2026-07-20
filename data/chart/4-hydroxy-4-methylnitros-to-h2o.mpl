@@ -18,14 +18,14 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from h side left {
     h
-    <-> . +o_citryl_l_serine +o_citryl_ethanolamine
-    co2
+    <-> ec_2_7_7_67 [2.7.7.67] +ctp +2_3_bis_o_phytanyl_sn_glycerol_1_phosphate +cdp_2_3_bis_o_phytanyl_sn_glycerol
+    diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +ctp +glycerol_2_phosphate +cdp_2_glycerol
-    diphosphate
+    <-> . +2_oxo_4_phenylbutyric_acid +co2
+    2_benzyl_3_oxobutanedioate
   }
 
   branch from 4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one side left {
@@ -36,50 +36,50 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +4_hydroxyamino_benzoate +h2o
-    4_nitrobenzoate
+    <-> . +2_amino_4_hydroxypteridine +h2o2
+    7_8_dihydropterin
   }
 
   branch from o2 side left {
     o2
-    <-> . +8_8a_deoxyoleandolide +h2o
-    oleandolide
+    <-> ec_1_16_3_2 [1.16.3.2] +fe +h2o +h
+    feo_oh_monomer
   }
 
   branch from nadph side right {
     nadph
-    <-> . +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h +nadp
-    dtdp_beta_d_mycarose
+    <-> . +malonyl_coa +s_methylmalonyl_coa +h +nadp +coa +protomycinolide_iv +h2o
+    co2
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +s_nicotine +nadp
-    3_6_dihydronicotine
+    <-> . +tylosin +h +nadp
+    relomycin
   }
 
   branch from 4_methylnitrosamino_1_3_pyridyl_1_butanol side right {
     4_methylnitrosamino_1_3_pyridyl_1_butanol
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +nnal_n_glucuronide
     udp_alpha_d_glucuronate
   }
 
   branch from 4_methylnitrosamino_1_3_pyridyl_1_butanol side left {
     4_methylnitrosamino_1_3_pyridyl_1_butanol
-    <-> ec_2_4_1_17 [2.4.1.17] +nnal_n_glucuronide +udp_alpha_d_glucuronate
-    udp
+    <-> . +o2
+    4_methylnitrosamino_1_3_pyridyl_n_oxide_1_butano
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_325 [1.1.1.325] +6r_6_lactoyl_5_6_7_8_tetrahydropterin +h +nadph
-    6r_l_threo_tetrahydrobiopterin
+    <-> . +h +10e_12z_hexadeca_10_12_dienoate +nadph +h2o
+    bombykol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +dtdp_3_n_n_dimethylamino_4_oxo_2_3_6_trideoxy_l +h +nadph
-    dtdp_l_megosamine
+    <-> . +luteolin +h +o2 +nadph +h2o
+    hypolaetin
   }
 
   branch from 1_methylnitrosoamino_4_3_pyridinyl_1_4_butanedio side right {
@@ -90,13 +90,13 @@ pathway 4-hydroxy-4-methylnitros-to-h2o "4-Hydroxy-4-(methylnitros… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> . +3_4_dihydroxybenzoate +2_4_6_trihydroxybenzoic_acid
+    2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
-    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
+    <-> ec_3_2_1_52 [3.2.1.52] +n_acetyl_d_hexosamine +n_n_diacetylchitobiose
+    n_n_n_triacetylchitotriose
   }
 }

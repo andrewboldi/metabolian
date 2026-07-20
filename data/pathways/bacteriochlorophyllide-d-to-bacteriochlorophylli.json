@@ -125,41 +125,43 @@
       }
     },
     {
-      "id": "tyrosine",
-      "name": "L-Tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58315"
-      }
-    },
-    {
-      "id": "3_methyl_l_tyrosine",
-      "name": "3-methyl-L-tyrosine",
-      "formula": "C10H13NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78239"
-      }
-    },
-    {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65315"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "5_methyluridine_5_monophosphate_1",
-      "name": "5-methyluridine 5'-monophosphate(1−)",
-      "short": "5-methyluridine…",
-      "formula": "C10H12N2O8P",
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74480"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74447"
+        "chebi": "CHEBI:74411"
+      }
+    },
+    {
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74491"
       }
     }
   ],
@@ -172,17 +174,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_304",
-      "name": "L-tyrosine C(3)-methyltransferase",
+      "id": "ec_2_1_1_179",
+      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
       "ec": [
-        "2.1.1.304"
+        "2.1.1.179"
       ]
     },
     {
-      "id": "ec_2_1_1_189",
-      "name": "23S rRNA (uracil(747)-C(5))-methyltransferase",
+      "id": "ec_2_1_1_180",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
       "ec": [
-        "2.1.1.189"
+        "2.1.1.180"
       ]
     }
   ],
@@ -375,12 +377,12 @@
     },
     {
       "id": "r5",
-      "name": "L-tyrosine C(3)-methyltransferase",
-      "equation": "L-tyrosine + S-adenosyl-L-methionine = 3-methyl-L-tyrosine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.304",
+      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
+      "equation": "guanosine(1405) in 16S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(1405) in 16S rRNA + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.179",
       "substrates": [
         {
-          "metabolite": "tyrosine",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -390,46 +392,42 @@
       ],
       "products": [
         {
-          "metabolite": "3_methyl_l_tyrosine",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_304"
+          "enzyme": "ec_2_1_1_179"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:41428"
+        "rhea": "RHEA:42772"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:41428"
+            "id": "RHEA:42772"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "23S rRNA (uracil(747)-C(5))-methyltransferase",
-      "equation": "uridine(747) in 23S rRNA + S-adenosyl-L-methionine = 5-methyluridine(747) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.189",
+      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
+      "equation": "adenosine(1408) in 16S rRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(1408) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.180",
       "substrates": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -439,7 +437,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_methyluridine_5_monophosphate_1",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -453,20 +451,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_189"
+          "enzyme": "ec_2_1_1_180"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42628"
+        "rhea": "RHEA:42776"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42628"
+            "id": "RHEA:42776"
           }
         ]
       }

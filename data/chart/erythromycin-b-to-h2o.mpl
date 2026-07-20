@@ -18,49 +18,49 @@ pathway erythromycin-b-to-h2o "erythromycin B to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_113 [1.3.1.113] +h +nadph +4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate
-    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
+    <-> . +tetracenomycin_c +h +nadph
+    4_dehydro_tetracenomycin_c
   }
 
   branch from nadp side right {
     nadp
-    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyllide +h +nadph
-    dihydrogeranylgeranyl_bacteriochlorophyllide_b
+    <-> . +h +2_4_6_trihydroxybenzophenone +o2 +nadph +h2o
+    2_3_4_6_tetrahydroxybenzophenone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    clarithromycin
+    <-> . +r_3_hydroxypentanoyl_coa
+    2e_pentenoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    e_roxithromycin
+    <-> . +h +adp +phosphate +atp
+    aerobactin
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    mycinamicin_iii
+    <-> ec_3_6_3_33 [3.6.3.33] +adp +phosphate +atp +h2o
+    cbl
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    mycinamicin_iv
+    <-> ec_3_6_1_26 [3.6.1.26] +cmp +1_2_didodecanoyl_sn_glycerol_3_phosphate +h2o
+    cdp_1_2_didodecanoylglycerol
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    mycinamicin_ii
+    <-> . +h +adp +phosphate +h2o
+    s_carnitine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    mycinamicin_vi
+    <-> . +h +adp +phosphate +h2o
+    tetradecanoyl_coa
   }
 }

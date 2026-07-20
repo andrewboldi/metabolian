@@ -1,0 +1,192 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15-oxoprostaglandin-f2-to-nad",
+  "name": "15-oxoprostaglandin F2α to NAD",
+  "category": "other",
+  "summary": "A 3-step route from 15-oxoprostaglandin F2α(1−) to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR206439"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:133409"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15_oxoprostaglandin_f2",
+      "name": "15-oxoprostaglandin F2α",
+      "short": "15-oxoprostaglandin…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133409"
+      }
+    },
+    {
+      "id": "prostaglandin_i2",
+      "name": "prostaglandin I2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560735"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM730289"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "prostaglandin_f2alpha",
+      "name": "prostaglandin F2alpha",
+      "short": "prostaglandin…",
+      "formula": "C20H33O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364070"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR206439",
+      "substrates": [
+        {
+          "metabolite": "15_oxoprostaglandin_f2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_i2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR206439"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206332",
+      "substrates": [
+        {
+          "metabolite": "prostaglandin_i2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR158408",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prostaglandin_f2alpha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR158408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158408"
+          }
+        ]
+      }
+    }
+  ]
+}

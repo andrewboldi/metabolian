@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-2-amino-4-chloropent-4-to-3-carboxy-2-hydroxym "L-2-amino-4-chloropent-4-… to 3-Carboxy-2-hydroxymucona…" {
-  spacing 326
+  spacing 296
 
   spine at 0,0 {
     l_2_amino_4_chloropent_4_enoic_acid
@@ -20,69 +20,39 @@ pathway l-2-amino-4-chloropent-4-to-3-carboxy-2-hydroxym "L-2-amino-4-chloropent
     3_carboxy_2_hydroxymuconate_semialdehyde
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +3_4_dimethoxy_l_phenylalanine
-    3_4_dimethoxy_e_cinnamate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +arginine +adp +pi +hplus +atp
-    citrulline
-  }
-
-  branch from 2_hydroxymuconic_semialdehyde side left {
-    2_hydroxymuconic_semialdehyde
-    <-> . +h +co2
-    2_hydroxy_5_carboxymuconate_6_semialdehyde
-  }
-
-  branch from 2_hydroxymuconic_semialdehyde side right {
-    2_hydroxymuconic_semialdehyde
-    <-> ec_1_13_11_2 [1.13.11.2] +h +o2
-    catechol
-  }
-
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_rhamnose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    neamine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3_acetamido_3_deoxy_alpha_d_fucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +kanamycin_d +phosphate +kanamycin_d
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_oleandrose +phosphate +l_oleandrose +h2o
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    3_deamino_3_hydroxykanamycin_b
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    d_oliose
-  }
-
-  branch from 2_3_dihydroxybenzoate side left {
-    2_3_dihydroxybenzoate
-    <-> ec_1_13_11_14 [1.13.11.14] +h +o2
-    3_carboxy_2_hydroxymuconate_semialdehyde
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4s_limonene +h +nad +h2o
-    1r_4s_limonene_1_2_epoxide
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    neomycin_c
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +9z_12z_octadecadienoate +h +vernolate +h2o
-    nad
+    <-> . +s_autumnaline +h +nadph +isoandrocymbine +h2o
+    nadp
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +coelenterazine_disulfonate_dioxetanone +h +amp +h2o
+    adenylylcoelenterazine_disulfonate
   }
 }

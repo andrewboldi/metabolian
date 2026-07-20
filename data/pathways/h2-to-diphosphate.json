@@ -1,0 +1,341 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h2-to-diphosphate",
+  "name": "H2 to diphosphate",
+  "category": "other",
+  "summary": "A 5-step route from H2 to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR135354"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h2",
+      "name": "H2",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108018"
+      }
+    },
+    {
+      "id": "all_trans_zeta_carotene",
+      "name": "all-trans-zeta-carotene",
+      "short": "all-trans-zeta-caro…",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726184"
+      }
+    },
+    {
+      "id": "all_trans_phytofluene",
+      "name": "all-trans-phytofluene",
+      "short": "all-trans-phytoflue…",
+      "formula": "C40H62",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28129"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "all_trans_carotene",
+      "name": "all-trans-ζ-carotene",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28068"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "neurosporene",
+      "name": "neurosporene",
+      "formula": "C40H58",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16833"
+      }
+    },
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dihydroisopentenyldehydrorhodopin",
+      "name": "dihydroisopentenyldehydrorhodopin",
+      "short": "dihydroisopentenyld…",
+      "formula": "C45H66O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87163"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_150",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
+      "ec": [
+        "2.5.1.150"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR135354",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_zeta_carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_phytofluene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR135354"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR135354"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "all-trans-phytofluene + A = all-trans-zeta-carotene + AH2",
+      "equation": "all-trans-phytofluene + A = all-trans-zeta-carotene + AH2",
+      "substrates": [
+        {
+          "metabolite": "all_trans_phytofluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30607"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30607"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "all-trans-zeta-carotene + A = all-trans-neurosporene + AH2",
+      "equation": "all-trans-zeta-carotene + A = all-trans-neurosporene + AH2",
+      "substrates": [
+        {
+          "metabolite": "all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30611"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30611"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "all-trans-neurosporene + A = all-trans-lycopene + AH2",
+      "equation": "all-trans-neurosporene + A = all-trans-lycopene + AH2",
+      "substrates": [
+        {
+          "metabolite": "neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30623"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30623"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)",
+      "equation": "all-trans-lycopene + dimethylallyl diphosphate + H2O = dihydroisopentenyldehydrorhodopin + diphosphate",
+      "ec": "2.5.1.150",
+      "substrates": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroisopentenyldehydrorhodopin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_150"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:58188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58188"
+          }
+        ]
+      }
+    }
+  ]
+}

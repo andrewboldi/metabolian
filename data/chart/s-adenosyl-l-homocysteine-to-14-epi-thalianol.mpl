@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-14-epi-thalianol "S-adenosyl-L-homocysteine to 14-Epi-Thalianol" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,38 +18,26 @@ pathway s-adenosyl-l-homocysteine-to-14-epi-thalianol "S-adenosyl-L-homocysteine
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_4 [2.1.1.4] +s_adenosyl_l_homocysteine +5_methoxyindole_3_acetic_acid
-    5_hydroxyindol_3_yl_acetate
+    <-> ec_2_1_1_79 [2.1.1.79] +s_adenosyl_l_homocysteine +h +cyclopropane_phosphatidylglycerol_dihexadec_9_10
+    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_142 [2.1.1.142] +s_adenosyl_l_homocysteine +h +24r_24_methylcycloart_25_en_3beta_ol
-    cycloartenol
-  }
-
-  branch from squalene side left {
-    squalene
-    <-> ec_2_5_1_21 [2.5.1.21] +nadh +h +presqualene_diphosphate +nad
-    diphosphate
-  }
-
-  branch from squalene side right {
-    squalene
-    <-> ec_2_5_1_21 [2.5.1.21] +diphosphate +h +nadp +nadph
-    farnesyl_diphosphate
+    <-> ec_2_1_1_133 [2.1.1.133] +s_adenosyl_l_homocysteine +cobalt_precorrin_5 +h
+    cobalt_precorrin_4
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_81 [1.14.13.81] +h +o2 +nadph +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +h2o
-    divinylprotochlorophyllide
+    <-> ec_1_14_21_1 [1.14.21.1] +s_cheilanthifoline +h +o2 +nadph +h2o
+    s_stylopine
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +10_11_dihydro_20_dihydroxy_ltb4 +h2o
-    10_11_dihydro_20_trihydroxy_leukotriene_b4
+    <-> ec_1_14_21_3 [1.14.21.3] +h +r_n_methylcoclaurine +o2 +nadph +s_n_methylcoclaurine +h2o
+    berbamunine
   }
 
   branch from s_2_3_epoxysqualene side left {
@@ -66,13 +54,13 @@ pathway s-adenosyl-l-homocysteine-to-14-epi-thalianol "S-adenosyl-L-homocysteine
 
   branch from h2o side left {
     h2o
-    <-> . +h +n_cyclopropylammeline +nh4
-    n_cyclopropylammelide
+    <-> ec_1_14_13_55 [1.14.13.55] +h +protopine +o2 +nadph +nadp
+    6_hydroxyprotopine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +7_9_12_decaketide_intermediate_2
-    7_9_12_decaketide_intermediate_3
+    <-> ec_1_14_13_37 [1.14.13.37] +s_cis_n_methylstylopine +o2 +nadph +nadp
+    protopine
   }
 }

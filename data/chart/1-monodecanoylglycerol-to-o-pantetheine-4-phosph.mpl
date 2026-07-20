@@ -18,14 +18,14 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
 
   branch from glycerol side left {
     glycerol
-    <-> . +1_arachidonoylglycerol +h2o +hplus
-    arachidonate
+    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
+    sn_glycerol_1_phosphate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +prostaglandin_d2_1_glyceryl_ester +h2o +hplus
-    prostaglandin_d2
+    <-> . +1_icosanoylglycerol +h2o +hplus
+    icosanoate
   }
 
   branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
@@ -42,14 +42,14 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    tuberculosinol
+    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadh +hplus +nad
+    squalene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13r_edaxadiene
+    <-> ec_4_2_3_107 [4.2.3.107] +gpp
+    car_3_ene
   }
 
   branch from holo-acp side left {
@@ -60,7 +60,7 @@ pathway 1-monodecanoylglycerol-to-o-pantetheine-4-phosph "1-monodecanoylglycerol
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +2_3_dihydroxybenzoyl_5_adenylate +amp +hplus
-    o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl
+    <-> ec_1_2_1_80 [1.2.1.80] +long_chain_fatty_aldehyde +nad +nadh +hplus
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
   }
 }

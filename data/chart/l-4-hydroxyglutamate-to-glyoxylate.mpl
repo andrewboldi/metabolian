@@ -18,31 +18,31 @@ pathway l-4-hydroxyglutamate-to-glyoxylate "L-4-hydroxyglutamate… to glyoxylat
 
   branch from erythro_4_hydroxy_l_glutamate side left {
     erythro_4_hydroxy_l_glutamate
-    <-> ec_1_2_1_88 [1.2.1.88] +nadp +h2o +nadph +hplus
+    <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o +nadh +hplus
     3r_5s_1_pyrroline_3_hydroxy_5_carboxylate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
-    3_5_dihydroxyphenylglyoxylate
+    <-> ec_2_6_1_107 [2.6.1.107] +2s_3s_methylphenylalanine +akg
+    3s_3_methyl_2_oxo_3_phenylpropanoate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
-    dtdp_3_dehydro_4_6_dideoxy_d_glucose
+    <-> ec_6_3_2_42 [6.3.2.42] +n_acetyl_l_aspartate +atp +adp +pi +hplus
+    ac_asp_glu_glu
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> . +propionyl_coa +h2o +coa +hplus
-    3_methylmalate
+    <-> . +edta +fmnh2 +o2 +fmn +h2o +hplus
+    ethylenediaminetriacetate
   }
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> . +edta +fmnh2 +o2 +fmn +h2o +hplus
-    ethylenediaminetriacetate
+    <-> . +ethylenediaminetriacetate +fmnh2 +o2 +fmn +h2o +hplus
+    ethylenediaminediacetate
   }
 }

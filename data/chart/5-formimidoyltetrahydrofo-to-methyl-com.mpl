@@ -24,19 +24,13 @@ pathway 5-formimidoyltetrahydrofo-to-methyl-com "5-formimidoyltetrahydrofo… to
     3_5_dihydro_4h_imidazol_4_one
   }
 
-  branch from n_formimidoylglycine side right {
-    n_formimidoylglycine
-    <-> . +4_aminoimidazole +h2o +hplus
-    nh3
-  }
-
-  branch from carbon_monoxide side left {
+  branch from carbon_monoxide side right {
     carbon_monoxide
     <-> ec_1_13_11_24 [1.13.11.24] +quercetin_7_olate +o2
     2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
   }
 
-  branch from carbon_monoxide side right {
+  branch from carbon_monoxide side left {
     carbon_monoxide
     <-> ec_1_13_11_47 [1.13.11.47] +3_hydroxyquinolin_4_1h_one +o2 +hplus
     n_formylanthranilate

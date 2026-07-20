@@ -20,14 +20,14 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from fmn side left {
     fmn
-    <-> . +22_oxodocosanoate +fmnh2 +o2 +h2o +hplus
-    docosanedioate
+    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
+    monacolin_l_carboxylate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +22_hydroxydocosanoate +fmnh2 +o2 +h2o +hplus
-    22_oxodocosanoate
+    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
+    oleanolate
   }
 
   branch from 9_17_dioxo_1_2_3_4_10_19_hexanorandrostan_5_oate side left {
@@ -56,13 +56,13 @@ pathway 3-hydroxy-9-10-secoandros-to-diphosphate "3-hydroxy-9,10-secoandros… t
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
-    all_trans_octaprenyl_diphosphate
+    <-> ec_4_2_3_69 [4.2.3.69] +fpp
+    barbatene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
-    all_trans_decaprenyl_diphosphate
+    <-> ec_4_2_3_70 [4.2.3.70] +fpp +h2o
+    patchouli_alcohol
   }
 }

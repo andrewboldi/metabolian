@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-nadph "diphosphate to NADPH" {
-  spacing 292
+  spacing 286
 
   spine at 0,0 {
     diphosphate
@@ -20,74 +20,74 @@ pathway diphosphate-to-nadph "diphosphate to NADPH" {
 
   branch from h side left {
     h
-    <-> ec_2_7_7_90 [2.7.7.90] +ctp +8_amino_3_8_dideoxy_d_manno_octulosonate +diphosphate
-    cmp_8_amino_3_8_dideoxy_beta_d_manno_octulosonat
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ether_glucuronide +tiratricol
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +nadph +nadp
-    dtdp_4_oxo_2_deoxy_beta_l_xylose
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +5_hydroxytryptophol_glucuronide +udp_alpha_d_glucuronate
+    5_hydroxytryptophol
   }
 
   branch from atp side left {
     atp
-    <-> . +4_aminobenzoyl_coa +adp +phosphate +coa
-    4_aminobenzoate
+    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
+    prodigiosin
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_2_1_2 [6.2.1.2] +diphosphate +7_hydroxylauroyl_coa +amp +coa
-    7_hydroxylaurate
+    <-> . +l_leucine +demethylblasticidin_s +adp +phosphate
+    l_leucyl_demethyl_blasticidin_s
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +h +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
-    co2
+    <-> . +4_sinapoyloxybutylglucosinolate +e_sinapoyl_coa
+    4_hydroxybutylglucosinolate
   }
 
   branch from coa side right {
     coa
-    <-> . +malonyl_coa +h +co2 +h2o
-    6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
+    <-> . +2_sinapoyloxy_3_butenylglucosinolate +e_sinapoyl_coa
+    xi_progoitrin
   }
 
   branch from r_citronellal side left {
     r_citronellal
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    menthol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
+    neomenthol
   }
 
   branch from r_citronellal side right {
     r_citronellal
     <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +nadp
-    neomenthol
+    isomenthol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +o2 +2_4_dichlorotoluene
-    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
+    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +h2o +nadh +h
+    3_oxo_24_ethyl_cholest_4_en_26_oate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +2_5_dichlorotoluene +h +o2
-    1r_2s_3_6_dichloro_4_methylcyclohexa_3_5_diene
+    <-> ec_1_1_1_327 [1.1.1.327] +nadh +1s_bornane_2_5_dione +h
+    1s_4s_5r_5_hydroxycamphor
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_70 [3.5.1.70] +hexadecanoate +depalmitoyl_aculeacin_a
-    aculeacin_a
+    <-> . +lesquerella_oil +h +dodecanoate
+    triglyceride_estolide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_39 [3.1.1.39] +h +actinomyc_d_monolactone
-    actinomycin_d
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
 
   branch from r_citronellol side left {
@@ -96,21 +96,15 @@ pathway diphosphate-to-nadph "diphosphate to NADPH" {
     citronellal
   }
 
-  branch from r_citronellol side right {
-    r_citronellol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    s_citronellal
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_393 [1.1.1.393] +h +3_7_12_trioxo_5_cholan_24_oate +nadp
+    3beta_hydroxy_7_12_dioxo_5beta_cholan_24_oic_aci
   }
 
   branch from nadph side left {
     nadph
-    <-> . +3_keto_beta_d_galactose +h +nadp
-    d_galactopyranose
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> . +glucose +nadp +h
-    3_dehydro_d_glucose
+    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +s_methylmalonyl_coa +h
+    acetyl_coa
   }
 }

@@ -20,14 +20,14 @@ pathway d-ribulose-1-5-bisphospha-to-2-dehydro-3-deoxy-d "D-ribulose 1,5-bisphos
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +h +amp +4_hydroxy_atorvastatin_lactone_para_hydroxy_ator
-    para_hydroxyatorvastatin
+    <-> . +h +adp +phosphate +h2o
+    glycoursodeoxycholate
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    5_6_epoxy_3_alpha_iso_pravastatin
+    sulfochenodeoxycholate
   }
 
   branch from l_ribulose_5_phosphate side left {
@@ -44,26 +44,26 @@ pathway d-ribulose-1-5-bisphospha-to-2-dehydro-3-deoxy-d "D-ribulose 1,5-bisphos
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +am1al_cyclosporine
-    cyclosporin_a_metabolite_m17
+    <-> ec_1_8_1_15 [1.8.1.15] +5_mercapto_2_nitrobenzoate +h +nadph
+    dithionitrobenzoic_acid
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +cyclosporin_a_metabolite_m18 +h2o
-    am1c9_cyclosporine
+    <-> ec_1_6_5_2 [1.6.5.2] +2_6_dimethyl_1_4_benzenediol +h +nadph
+    2_6_dimethyl_1_4_benzoquinone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    5_8_11_14_17_eicosapentenoic_acid
+    <-> . +l_lysine +glycine +l_cysteine
+    glycyl_lysyl_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    5s_hydroperoxy_6e_8z_11z_14z_eicosatetraenoate
+    <-> . +l_lysine +glycine +l_phenylalanine
+    glycyl_lysyl_phenylalanine
   }
 
   branch from 2_dehydro_3_deoxy_d_gluconate side left {

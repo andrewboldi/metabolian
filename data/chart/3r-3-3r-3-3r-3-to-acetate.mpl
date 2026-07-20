@@ -40,14 +40,14 @@ pathway 3r-3-3r-3-3r-3-to-acetate "(3R)-3-{[(3R)-3-{[(3R)-3-… to acetate" {
 
   branch from acetoacetate side left {
     acetoacetate
-    <-> ec_2_8_3_9 [2.8.3.9] +acetoacetyl_coa +3_hydroxypropanoate
-    3_hydroxypropanoyl_coa
+    <-> . +acetyl_coa +2_deoxy_3_dehydro_d_ribonate
+    d_glyceroyl_coa
   }
 
   branch from acetoacetate side right {
     acetoacetate
-    <-> ec_2_6_1_19 [2.6.1.19] +2_oxoglutarate +h +2_methylaspartate +l_glutamate
-    co2
+    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
+    h
   }
 
   branch from acetone side left {

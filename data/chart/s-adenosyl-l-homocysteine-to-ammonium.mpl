@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-ammonium "S-adenosyl-L-homocysteine to ammonium" {
-  spacing 192
+  spacing 180
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -20,25 +20,13 @@ pathway s-adenosyl-l-homocysteine-to-ammonium "S-adenosyl-L-homocysteine to ammo
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +premithramycinone +h
-    4_demethylpremithramycinone
+    <-> . +s_adenosyl_l_homocysteine +pdgt_2 +h
+    bdgt_2
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_4_5_7_tetrahydroxy_3_6_dimethoxyflavone +h
-    patuletin
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle +sam +hplus
-    5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_r
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_r +hplus
-    5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle
+    <-> . +s_adenosyl_l_homocysteine +h +spinosyn_d
+    spinosyn_a
   }
 }

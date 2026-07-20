@@ -30,14 +30,14 @@ pathway 5-campestan-3-one-to-campesterol "5α-campestan-3-one to campesterol" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +r_methylmalonyl_coa +coa
-    s_2_methyl_3_oxopropanoate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +trans_3_chloroallyl_aldehyde
+    trans_3_chloroprop_2_en_1_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_99_2 [1.14.99.2] +nadh +kynurenate +h +o2
-    7_8_dihydro_7_8_dihydroxykynurenate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +cis_3_chloroallyl_aldehyde
+    cis_3_chloroprop_2_en_1_ol
   }
 
   branch from campesterol side left {

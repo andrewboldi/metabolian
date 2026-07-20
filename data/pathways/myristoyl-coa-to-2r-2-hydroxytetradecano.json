@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "myristoyl-coa-to-2r-2-hydroxytetradecano",
+  "name": "myristoyl-CoA to (2R)-2-hydroxytetradecano…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from myristoyl-CoA(4−) to (2R)-2-hydroxytetradecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59752"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57385"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "n6_tetradecanoyl_l_lysine",
+      "name": "N6-tetradecanoyl-L-lysine",
+      "short": "N6-tetradecanoyl-L-…",
+      "formula": "C20H38N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141129"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "tetradecanoate",
+      "name": "tetradecanoate",
+      "formula": "C14H27O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30807"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "2r_2_hydroxytetradecanoate",
+      "name": "(2R)-2-hydroxytetradecanoate",
+      "short": "2-hydroxytetradecan…",
+      "formula": "C14H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85636"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_11_2_4",
+      "name": "fatty-acid peroxygenase",
+      "ec": [
+        "1.11.2.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tetradecanoyl-CoA + L-lysyl-[protein] = N(6)-tetradecanoyl-L-lysyl-[protein] + CoA + H(+)",
+      "equation": "tetradecanoyl-CoA + L-lysyl-[protein] = N(6)-tetradecanoyl-L-lysyl-[protein] + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_tetradecanoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59752"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59752"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6)-tetradecanoyl-L-lysyl-[protein] + H2O = tetradecanoate + L-lysyl-[protein]",
+      "equation": "N(6)-tetradecanoyl-L-lysyl-[protein] + H2O = tetradecanoate + L-lysyl-[protein]",
+      "substrates": [
+        {
+          "metabolite": "n6_tetradecanoyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85135"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "fatty-acid peroxygenase",
+      "equation": "tetradecanoate + H2O2 = (2R)-hydroxytetradecanoate + H2O",
+      "ec": "1.11.2.4",
+      "substrates": [
+        {
+          "metabolite": "tetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_2_hydroxytetradecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46028"
+          }
+        ]
+      }
+    }
+  ]
+}

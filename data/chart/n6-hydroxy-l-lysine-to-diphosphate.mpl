@@ -18,13 +18,13 @@ pathway n6-hydroxy-l-lysine-to-diphosphate "N6-hydroxy-L-lysine to diphosphate" 
 
   branch from ppi side left {
     ppi
-    <-> . +8_oxo_gtp +h2o +hplus
-    8_oxo_gmp
+    <-> . +o_methylsalicylate +atp +nadph +hplus +amp +nadp
+    2_methoxybenzaldehyde
   }
 
   branch from ppi side right {
     ppi
-    <-> . +dadp +h2o
-    2_deoxyadenosine
+    <-> . +3_methoxybenzoate +atp +nadph +hplus +amp +nadp
+    3_methoxybenzaldehyde
   }
 }

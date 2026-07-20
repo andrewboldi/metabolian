@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxoadipate-to-h",
+  "name": "2-oxoadipate to H",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2-oxoadipate to H(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR152976"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxoadipate",
+      "name": "2-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM263"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "2e_4z_2_aminomuconic_acid",
+      "name": "(2E,4Z)-2-aminomuconic acid",
+      "short": "(2E,4Z)-2-aminomuco…",
+      "formula": "C6H7NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189698"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_aminomuconate_6_semialdehyde",
+      "name": "2-aminomuconate 6-semialdehyde",
+      "short": "2-aminomuconate…",
+      "formula": "C6H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371250"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa",
+      "name": "cis,cis-2-amino-3-(3-oxoprop-1-enyl)but-2-enedioate",
+      "short": "cis,cis-2-amino-3-(…",
+      "formula": "C7H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1560578"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_32",
+      "name": "aminomuconate-semialdehyde dehydrogenase",
+      "ec": [
+        "1.2.1.32"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR152976",
+      "substrates": [
+        {
+          "metabolite": "2_oxoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_4z_2_aminomuconic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR152976"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152976"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aminomuconate-semialdehyde dehydrogenase",
+      "ec": "1.2.1.32",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_4z_2_aminomuconic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminomuconate_6_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR151081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206286",
+      "substrates": [
+        {
+          "metabolite": "2_aminomuconate_6_semialdehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cis_2_amino_3_3_oxoprop_1_enyl_but_2_enedioa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206286"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206286"
+          }
+        ]
+      }
+    }
+  ]
+}

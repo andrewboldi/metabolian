@@ -18,50 +18,50 @@ pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigen
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +3_amino_3_deoxygentamicin_a2 +h +l_glutamate
-    3_oxogentamicin_a2
+    <-> . +3_aminopropanesulfonic_acid +l_glutamate
+    3_oxopropane_1_sulfonate
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +antibiotic_ji_20ba +h +l_glutamate
-    6_oxo_g418
+    <-> . +h +antibiotic_ji_20b +h2o2 +o2 +l_glutamate
+    geneticin_cation
   }
 
   branch from 2s_liquiritigenin side left {
-    2s_liquiritigenin
-    <-> . +h +o2 +nadph +nadp +h2o
-    6_7_4_trihydroxyflavanone
-  }
-
-  branch from 2s_liquiritigenin side right {
     2s_liquiritigenin
     <-> ec_1_14_20_5 [1.14.20.5] +2_oxoglutarate +o2 +co2 +succinate +h2o
     4_7_dihydroxyflavone
   }
 
+  branch from 2s_liquiritigenin side right {
+    2s_liquiritigenin
+    <-> ec_1_14_13_21 [1.14.13.21] +h +o2 +nadph +nadp +h2o
+    butin
+  }
+
   branch from o2 side left {
     o2
-    <-> . +lividamine +h2o2
-    6_oxolividamine
+    <-> . +8_methyltetraphene_1_5_6_11_12_pentol +h2o2
+    dehydrorabelomycin
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
-    aldehydo_d_mannose
+    <-> . +h +dehydrorabelomycin
+    3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
-    3_flavanol_trans
+    <-> ec_1_1_1_36 [1.1.1.36] +3_oxopentanoyl_coa +h +nadph
+    r_3_hydroxypentanoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
-    cis_3_flavanol
+    <-> ec_1_1_1_393 [1.1.1.393] +glycyrrhetinate +h +nadph
+    3_oxoglycyrrhetinate
   }
 
   branch from licodione side left {
@@ -78,14 +78,14 @@ pathway garbanzol-to-2-hydroxyliquiritigenin "garbanzol to 2-hydroxyliquiritigen
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +h +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
-    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
+    <-> . +6_2_amino_2_carboxylatoethyl_1_2_3_4_tetrahydroq +h
+    2_amino_4_3_2_amino_2_carboxylatoethyl_6_oxocycl
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_11 [3.4.19.11] +meso_diaminopimeloyl_alanine +n_acetylmuramoyl_l_ala_d_glu
-    n_acetylmuramoyl_l_ala_d_glu_l_meso_diaminopimel
+    <-> . +e_p_coumaroylagmatine +h2o2
+    hordatine_a
   }
 
   branch from 2_hydroxyliquiritigenin side left {

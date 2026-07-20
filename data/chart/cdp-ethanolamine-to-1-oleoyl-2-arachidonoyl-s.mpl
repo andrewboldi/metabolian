@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cdp-ethanolamine-to-1-oleoyl-2-arachidonoyl-s "CDP-ethanolamine to 1-oleoyl-2-arachidonoyl-s…" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     cdp_ethanolamine
@@ -14,18 +14,6 @@ pathway cdp-ethanolamine-to-1-oleoyl-2-arachidonoyl-s "CDP-ethanolamine to 1-ole
     1_oleoyl_sn_glycero_3_phosphoethanolamine
     <-> . +arachidonoyl_coa -coa
     1_oleoyl_2_arachidonoyl_sn_glycerol_3_phosphoeth
-  }
-
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side left {
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +sam +sah +hplus
-    1_2_dioleoyl_sn_glycero_3_phospho_n_methylethano
-  }
-
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side right {
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +n_acylsphingosine +1_2_dioleoyl_sn_glycerol
-    n_acylsphingosine_1_phosphoethanolamine
   }
 
   branch from 1_oleoyl_sn_glycero_3_phosphoethanolamine side left {

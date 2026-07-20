@@ -32,14 +32,14 @@ pathway 1-octadecanoyl-2-15-hydr-to-1-o-oleoyl-n-acetyls "1-octadecanoyl-2-(15-h
 
   branch from 5z_8z_11z_13e_15_hete side left {
     5z_8z_11z_13e_15_hete
-    <-> . +atp +coa +amp +ppi
-    15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_20_dhete
   }
 
   branch from 5z_8z_11z_13e_15_hete side right {
     5z_8z_11z_13e_15_hete
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_20_dhete
+    <-> . +udp_d_glucuronate +udp +hplus
+    15_o_d_glucuronosyl_5z_8z_11z_14z_eicosatetraeno
   }
 
   branch from 1_stearoyl_2_oleoyl_sn_glycero_3_phosphoethanola side left {

@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-diacyl-sn-glycero-3-p-to-hexadecanoate",
+  "name": "1,2-diacyl-sn-glycero-3-p… to hexadecanoate",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 1,2-diacyl-sn-glycero-3-phosphoethanolamine zwitterion to hexadecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:44408"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64612"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphoethanolamine",
+      "name": "2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C6H13NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:65213"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam",
+      "name": "1-palmitoyl-2-acyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1-palmitoyl-2-acyl-…",
+      "formula": "C22H43NO8PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77370"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoetha...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoethanolamine + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:44408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 2-acyl-sn-glycero-3-phosphoethanolamine + hexadecanoyl-CoA = 1-hexadecanoyl-2-acyl-sn...",
+      "equation": "a 2-acyl-sn-glycero-3-phosphoethanolamine + hexadecanoyl-CoA = 1-hexadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + CoA",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70595"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70595"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1-hexadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-ph...",
+      "equation": "1-hexadecanoyl-2-acyl-sn-glycero-3-phosphoethanolamine + H2O = a 2-acyl-sn-glycero-3-phosphoethanolamine + hexadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_palmitoyl_2_acyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40599"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40599"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -20,26 +20,26 @@ pathway 7alpha-24-dihydroxycholes-to-h2o "7Alpha,24-Dihydroxycholes… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_206 [1.1.1.206] +tropinone +nadph
-    tropine
+    <-> ec_1_3_1_72 [1.3.1.72] +h +24_methylenecholesterol +nadph
+    campesterol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_52 [1.14.13.52] +formononetin +h +o2 +nadph +h2o
-    calycosin
+    <-> ec_1_3_1_71 [1.3.1.71] +h +24_methylenecholesterol +nadph
+    24_epicampesterol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_3_3_9 [1.3.3.9] +loganin +h +o2 +nadph +nadp
-    secologanin
+    <-> ec_3_6_1_13 [3.6.1.13] +adp_beta_d_ribose +h +amp
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_74 [1.14.13.74] +loganin +nadp +h +o2 +nadph
-    7_deoxyloganin
+    <-> ec_1_14_13_136 [1.14.13.136] +2s_liquiritigenin +h +o2 +nadph +nadp
+    2_4_7_trihydroxyisoflavanone
   }
 
   branch from 5beta_cholestan_3alpha_7alpha_12alpha_24_s_27_pe side left {

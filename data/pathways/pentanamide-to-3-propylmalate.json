@@ -256,50 +256,60 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "tyrosine",
-      "name": "L-Tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58315"
+        "chebi": "CHEBI:43474"
       }
     },
     {
-      "id": "3_l_tyrosyl_adenylyl_1_group",
-      "name": "3'-(L-tyrosyl)adenylyl(1−) group",
-      "short": "3'-(L-tyrosyl)adeny…",
-      "formula": "C19H21N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78536"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58702"
       }
     },
     {
-      "id": "premnaspirodiene",
-      "name": "premnaspirodiene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:46971"
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57665"
       }
     }
   ],
@@ -333,17 +343,17 @@
       ]
     },
     {
-      "id": "ec_6_1_1_1",
-      "name": "tyrosine--tRNA ligase",
+      "id": "ec_2_7_9_1",
+      "name": "pyruvate, phosphate dikinase",
       "ec": [
-        "6.1.1.1"
+        "2.7.9.1"
       ]
     },
     {
-      "id": "ec_4_2_3_21",
-      "name": "vetispiradiene synthase",
+      "id": "ec_2_5_1_28",
+      "name": "dimethylallylcistransferase",
       "ec": [
-        "4.2.3.21"
+        "2.5.1.28"
       ]
     }
   ],
@@ -765,16 +775,16 @@
     },
     {
       "id": "r10",
-      "name": "tyrosine--tRNA ligase",
-      "equation": "tRNA(Tyr) + L-tyrosine + ATP = L-tyrosyl-tRNA(Tyr) + AMP + diphosphate + H(+)",
-      "ec": "6.1.1.1",
+      "name": "pyruvate, phosphate dikinase",
+      "equation": "pyruvate + phosphate + ATP = phosphoenolpyruvate + AMP + diphosphate + H(+)",
+      "ec": "2.7.9.1",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "tyrosine",
+          "metabolite": "pi",
           "stoichiometry": 1
         },
         {
@@ -784,7 +794,7 @@
       ],
       "products": [
         {
-          "metabolite": "3_l_tyrosyl_adenylyl_1_group",
+          "metabolite": "phosphonatoenolpyruvate",
           "stoichiometry": 1
         },
         {
@@ -802,38 +812,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_1"
+          "enzyme": "ec_2_7_9_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:10220"
+        "rhea": "RHEA:10756"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10220"
+            "id": "RHEA:10756"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "vetispiradiene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-vetispiradiene + diphosphate",
-      "ec": "4.2.3.21",
+      "name": "dimethylallylcistransferase",
+      "equation": "isopentenyl diphosphate + dimethylallyl diphosphate = neryl diphosphate + diphosphate",
+      "ec": "2.5.1.28",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "premnaspirodiene",
+          "metabolite": "neryl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -843,20 +857,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_21"
+          "enzyme": "ec_2_5_1_28"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:10340"
+        "rhea": "RHEA:11328"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:10340"
+            "id": "RHEA:11328"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hexadecanoate-to-1-hexadecanoyl-sn-glycero "hexadecanoate to 1-hexadecanoyl-sn-glycero…" {
-  spacing 304
+  spacing 298
 
   spine at 0,0 {
     hexadecanoate
@@ -20,61 +20,55 @@ pathway hexadecanoate-to-1-hexadecanoyl-sn-glycero "hexadecanoate to 1-hexadecan
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +lividomycin_b +phosphate +lividomycin_b
-    atp
+    <-> . +2_4_dinitrocyclohexan_1_one
+    4_6_dinitrohexanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    paromomycin_ii
+    <-> ec_4_2_1_79 [4.2.1.79] +2r_3s_2_methylcitrate
+    2_methyl_cis_aconitate
   }
 
   branch from 9z_12z_octadecadienoyl_coa side left {
-    9z_12z_octadecadienoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +7_10_hexadecadienoyl_coenzyme_a +h +coa +nad +h2o
-    fad
-  }
-
-  branch from 9z_12z_octadecadienoyl_coa side right {
     9z_12z_octadecadienoyl_coa
     <-> . +nadh +9z_octadecenoyl_coa +h +o2 +h2o
     nad
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    5_phosphoribostamycin
-  }
-
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    5_ribosylparomamine
+    <-> . +cu_pyrimidine_2_6_bis_thiocarboxylate_radical +trichloromethyl
+    trichloromethylthioester_of_cu_pyrimidine_2_6_bi
   }
 
-  branch from coa side left {
-    coa
-    <-> ec_3_1_2_20 [3.1.2.20] +h +firefly_d_luciferin +h2o
-    d_firefly_luciferyl_coa
+  branch from h side left {
+    h
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos
+    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_20 [2.3.3.20] +tetradecanoyl_coa +h2o +h
-    2r_2_dodecyl_3_oxohexadecanoate
+    <-> . +acetyl_coa +alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1
+    alpha_d_galf_1_4_alpha_d_gal_1_3_beta_d_mannac_1
   }
 
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +trilinoleoyl_2_monolysocardiolipin +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    tetralinoleoyl_cardiolipin
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +alpha_d_gal_1_4_alpha_neu5ac_2_3_beta_d_galactos
+    alpha_d_gal_1_4_alpha_neu5_7_9ac3_2_3_beta_d_gal
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
-    1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+    <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +cholesterol
+    cholesteryl_arachidonate
+  }
+
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_icosatrienoyl_sn_glyc +cholesterol
+    cholesteryl_5z_8z_11z_icosatrienoate
   }
 }

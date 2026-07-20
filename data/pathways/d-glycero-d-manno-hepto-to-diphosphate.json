@@ -142,31 +142,41 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
+      "name": "cyclic A(3'-5')pA(3'-5')pA(3'-5')p",
+      "short": "cyclic A(3'-5')pA(3…",
+      "formula": "C30H33N15O18P3",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:192523"
       }
     },
     {
-      "id": "z_bisabolene",
-      "name": "(Z)-α-bisabolene",
-      "formula": "C15H24",
+      "id": "butyrolactone_ii",
+      "name": "butyrolactone II",
+      "formula": "C19H16O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49241"
+        "chebi": "CHEBI:191395"
       }
     },
     {
-      "id": "cedr_8_ene",
-      "name": "cedr-8-ene",
-      "formula": "C15H24",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "butyrolactone_i",
+      "name": "butyrolactone I",
+      "formula": "C24H24O7",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10216"
+        "chebi": "CHEBI:191397"
       }
     }
   ],
@@ -369,52 +379,56 @@
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-alpha-bisabolene + diphosphate",
+      "name": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
+      "equation": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "z_bisabolene",
+          "metabolite": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68532"
+        "rhea": "RHEA:72755"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68532"
+            "id": "RHEA:72755"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-alpha-cedrene + diphosphate",
+      "name": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
+      "equation": "butyrolactone II + dimethylallyl diphosphate = butyrolactone I + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "butyrolactone_ii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cedr_8_ene",
+          "metabolite": "butyrolactone_i",
           "stoichiometry": 1
         },
         {
@@ -425,14 +439,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:68536"
+        "rhea": "RHEA:72903"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68536"
+            "id": "RHEA:72903"
           }
         ]
       }

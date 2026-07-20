@@ -20,26 +20,26 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
 
   branch from h side left {
     h
-    <-> ec_3_5_2_16 [3.5.2.16] +n_carbamoyl_2_oxoglycine +h2o
-    parabanic_acid
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_nitrophenol
+    o_nitrophenyl_alpha_d_glucopyranoside
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_3 [3.1.1.3] +4_ethoxyaniline +acetate +h2o
-    phenacetin
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +4_pyridinecarboxaldehyde +nad
+    4_pyridinemethanol
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_41 [3.1.1.41] +deacetyl_7_aminocephalosporanic_acid +h +h2o
-    7_aminocephalosporanic_acid
+    <-> ec_3_1_1_2 [3.1.1.2] +h +phenol +h2o
+    phenyl_acetate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_7 [3.1.1.7] +thiocholine +h +h2o
-    acetylthiocholine
+    <-> . +puromycin +h2o
+    n_acetylpuromycin
   }
 
   branch from d_cystathionine side left {
@@ -56,20 +56,20 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
 
   branch from cysteine side left {
     cysteine
-    <-> ec_2_5_1_47 [2.5.1.47] +o_acetyl_l_serine +acetate
-    hydrogen_sulfide
+    <-> ec_6_3_2_2 [6.3.2.2] +h +adp +glutathione +phosphate +atp +l_glutamate
+    glycine
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +indol_3_ylmethylisothiocyanate_glutathione
-    indolylmethylisothiocyanate
+    <-> . +r_s_lactoylglutathione +h2o +h
+    lactate
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +h +bromide
-    2_4_dinitrobromobenzene
+    <-> . +3_hydroxykynurenine_o_beta_d_glucoside +h2o
+    glutathionyl_3_hydroxykynurenine_glucoside
   }
 
   branch from l_cystine side right {
@@ -86,25 +86,25 @@ pathway o-acetyl-l-homoserine-to-l-cysteine "O-acetyl-L-homoserine to L-cysteine
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_91 [1.14.14.91] +2_chloro_trans_cinnamate +h +o2 +nadph +h2o
-    2_chloro_4_hydroxycinnamate
+    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyheptan_2_one +h +nadph
+    2_3_heptanedione
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_91 [1.14.14.91] +2_nitro_4_hydroxycinnamate +h2o +h +o2 +nadph
-    2_nitrocinnamate
+    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyhexan_2_one +h +nadph
+    hexane_2_3_dione
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +c15817
-    heme
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    atp
+    <-> . +h +4_methylthiobutanaldoxime +o2 +nadph +nadp +h2o
+    s_4_methylthiobutylthiohydroximoyl_l_cysteine
   }
 }

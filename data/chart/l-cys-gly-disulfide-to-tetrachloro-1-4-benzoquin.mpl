@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide… to tetrachloro-1,4-benzoquin…" {
-  spacing 326
+  spacing 314
 
   spine at 0,0 {
     l_cys_gly_disulfide_dizwitterion
@@ -18,28 +18,16 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
     tetrachloro_1_4_benzoquinone
   }
 
-  branch from l_cystine side left {
-    l_cystine
-    <-> . +2_ammonioprop_2_enoate
-    3_disulfanyl_l_alanine
-  }
-
-  branch from l_cystine side right {
-    l_cystine
-    <-> . +o2 +h2o +h2o2 +nh3
-    2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop
-  }
-
   branch from glycine side left {
     glycine
-    <-> . +palmitoleoyl_coa +coa +hplus
-    n_9z_hexadecenoyl_glycinate
+    <-> . +palmitoyl_coa +coa +hplus
+    n_hexadecanoylglycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +5_10_methylenetetrahydrosulfopterin +h2o +serine
-    tetrahydrosulfopterin
+    <-> ec_6_2_1_66 [6.2.1.66] +holo-acp +atp +amp +ppi
+    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
   }
 
   branch from gssg side left {
@@ -56,14 +44,14 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
 
   branch from cysteine side left {
     cysteine
-    <-> ec_1_21_3_10 [1.21.3.10] +n_n_n_trimethyl_l_histidine +o2 +h2o
-    hercynylcysteine_sulfoxide
+    <-> .
+    d_cysteine
   }
 
   branch from cysteine side right {
     cysteine
-    <-> .
-    d_cysteine
+    <-> . +indole_3_butyrate +atp +amp +ppi +hplus
+    n_4_indol_3_yl_butanoyl_l_cysteinate
   }
 
   branch from 2_3_5_6_tetrachlorobenzene_1_4_bis_olate side left {
@@ -74,14 +62,14 @@ pathway l-cys-gly-disulfide-to-tetrachloro-1-4-benzoquin "L-Cys-Gly disulfide…
 
   branch from gsh side right {
     gsh
-    <-> ec_2_5_1_18 [2.5.1.18] +1_chloro_2_4_dinitrobenzene +chloride +hplus
-    s_2_4_dinitrophenyl_glutathione
+    <-> ec_1_14_14_45 [1.14.14.45] +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
+    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
   }
 
   branch from gsh side left {
     gsh
-    <-> ec_1_14_14_45 [1.14.14.45] +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
-    e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +fmnh2 +o2 +fmn +h2o +hplus
+    z_1_glutathione_s_yl_2_phenylacetohydroximate
   }
 
   branch from tetrachloro_1_4_benzoquinone side right {

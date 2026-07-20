@@ -28,14 +28,14 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from ppi side right {
     ppi
-    <-> . +gpp
-    pinene
+    <-> ec_2_5_1_84 [2.5.1.84] +ipp +gpp
+    all_trans_nonaprenyl_diphosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_pentaprenyl_diphosphate
+    <-> ec_2_5_1_85 [2.5.1.85] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +all_trans_nonaprenyl_diphosphate
+    ipp
   }
 
   branch from 5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam side right {
@@ -46,13 +46,13 @@ pathway 1-5-phospho-d-ribosyl-to-3-imidazol-4-yl-2-oxopr "1-(5-phospho-β-D-ribo
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_9 [2.6.1.9] +akg +3_imidazol_4_yl_2_oxopropyl_phosphate
-    l_histidinol_phosphate
+    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
+    4_ammoniobutanal
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_82 [2.6.1.82] +1_4_butanediammonium +akg
-    4_ammoniobutanal
+    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
+    nag
   }
 }

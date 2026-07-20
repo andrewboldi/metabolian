@@ -48,14 +48,14 @@ pathway delphinidin-to-cyanidin-3-o-6-o-p-couma "delphinidin… to Cyanidin 3-O-
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    deoxycholic_acid_3_glucuronide
+    <-> . +adp +1_8z_11z_14z_17z_icosatetraenoyl_sn_glycero_3_ph +phosphate +1_8z_11z_14z_17z_icosatetraenoyl_sn_glycero_3_ph +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +n_desisopropyl_fluvastatin +phosphate +n_desisopropyl_fluvastatin +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosapentenoylglycerophosphocholine_delta_5_8
   }
 
   branch from e_sinapate side right {
@@ -72,25 +72,25 @@ pathway delphinidin-to-cyanidin-3-o-6-o-p-couma "delphinidin… to Cyanidin 3-O-
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_65 [2.3.1.65] +h +tauroursodeoxycholate +ursodeoxycholoyl_coa
-    taurine
+    <-> . +nonadecanoyl_coa +r_carnitine
+    car_19_0
   }
 
   branch from coa side left {
     coa
-    <-> . +glycoursodeoxycholate +h +ursodeoxycholoyl_coa
-    glycine
+    <-> . +r_carnitine +13z_icosenoyl_coa
+    eicosenoylcarnitine_7
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +aloenin +h
-    6_2_4_dihydroxy_6_methylphenyl_4_methoxypyran_2
+    <-> . +udp +delphinidin_5_o_beta_d_glucoside_3_o_beta_d_samb
+    delphinidin_3_o_beta_d_sambubioside
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +glucosyl_heptosyl_2_kdo2_lipid_a +h
-    alpha_hep_1_3_alpha_hep_1_5_alpha_kdo_2_4_alpha
+    <-> . +udp +aloin_a +h
+    aloe_emodin_anthrone
   }
 }

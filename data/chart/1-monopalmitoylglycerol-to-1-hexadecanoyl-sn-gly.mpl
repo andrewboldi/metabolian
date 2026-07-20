@@ -25,13 +25,13 @@ pathway 1-monopalmitoylglycerol-to-1-hexadecanoyl-sn-gly "1-monopalmitoylglycero
   branch from h2o side right {
     h2o
     <-> . +h +adp +phosphate +atp
-    trans_cis_cis_2_11_14_eicosatrienoic_acid
+    lysope_0_0_15_0
   }
 
   branch from h2o side left {
     h2o
     <-> . +h +adp +phosphate +atp
-    31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
+    1_hexadecenoylglycerophosphoethanolamine_c16_1_p
   }
 
   branch from 1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph side right {
@@ -49,36 +49,36 @@ pathway 1-monopalmitoylglycerol-to-1-hexadecanoyl-sn-gly "1-monopalmitoylglycero
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    17_estradiol_3_o_d_glucuronide
+    1_heptadecanoylglycerophosphoethanolamine_c17_0
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    estrone
+    1_eicosatrienoylglycerophosphoethanolamine_delta
   }
 
   branch from coa side right {
     coa
-    <-> . +h +vaccenic_acid +h2o
-    vaccenyl_coenzyme_a
+    <-> . +erucoyl_coa +r_carnitine
+    erucoylcarnitine
   }
 
   branch from coa side left {
     coa
-    <-> . +diphosphate +h +amp +13z_octadecenoyl_coa +atp
-    7z_octadecenoic_acid
+    <-> . +r_carnitine +11z_14z_17z_icosatrienoyl_coa
+    11z_14z_17z_eicosatrienoylcarnitine
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +n_acetylsphingosine
-    1_o_linoleoyl_n_acetylsphingosine
+    <-> . +1_palmitoyl_2_10e_9_hydroperoxyoctadecenoyl_sn_g +h2o +hplus
+    9_hydroperoxy_10e_octadecenoate
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    linoleate
+    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
+    9_oxononanoate
   }
 }

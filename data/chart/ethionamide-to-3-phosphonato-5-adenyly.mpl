@@ -28,26 +28,26 @@ pathway ethionamide-to-3-phosphonato-5-adenyly "ethionamide to 3'-phosphonato-5'
 
   branch from nadp side left {
     nadp
-    <-> . +6_trans_12_epi_leukotriene_b4 +h +nadph
-    5_oxo_6e_12_epi_leukotriene_b4
+    <-> . +coa_18_cooh_16e_dinor_lte5 +h +nadph
+    coa_18_cooh_15e_dinor_lte4
   }
 
   branch from nadp side right {
     nadp
-    <-> . +5_oxo_6e_12_epi_leukotriene_b4 +h +nadph
-    6_7_dihydro_5_oxo_12_epi_ltb4
+    <-> . +h +12_oxo_20_carboxy_leukotriene_b4 +nadph
+    12_oxo_10_11_dihydro_20_cooh_ltb4
   }
 
   branch from h2o side left {
     h2o
-    <-> . +all_trans_retinol
-    anhydrovitamin_a
+    <-> . +2e_11z_14z_icosatrienoyl_coa
+    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +kinetensin +kinetensin_1_7 +l_phenylalanine
-    l_leucine
+    <-> . +3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa
+    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }
 
   branch from sulfur_dioxide side left {
@@ -58,14 +58,14 @@ pathway ethionamide-to-3-phosphonato-5-adenyly "ethionamide to 3'-phosphonato-5'
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +leukotriene_e4 +coa
-    n_acetyl_leukotriene_e4
+    <-> . +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c +h2o +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoate
+    coa
   }
 
   branch from h side left {
     h
-    <-> . +udp +gama_cehc_glucuronide +cehc
-    udp_alpha_d_glucuronate
+    <-> . +leukotriene_c5 +h2o +l_glutamate
+    leukotriene_d5
   }
 
   branch from glutamate side right {
@@ -82,14 +82,14 @@ pathway ethionamide-to-3-phosphonato-5-adenyly "ethionamide to 3'-phosphonato-5'
 
   branch from gsh side right {
     gsh
-    <-> . +prostaglandin_a2
-    s_pga2_s_glutathione_conjugate
+    <-> . +prostaglandin_j2
+    s_pgj2_s_glutathione_conjugate
   }
 
   branch from gsh side left {
     gsh
-    <-> . +prostaglandin_j2
-    s_pgj2_s_glutathione_conjugate
+    <-> ec_2_5_1_18 [2.5.1.18] +1_chloro_2_4_dinitrobenzene +chloride +hplus
+    s_2_4_dinitrophenyl_glutathione
   }
 
   branch from 3_phosphonato_5_adenylyl_sulfate side right {

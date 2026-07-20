@@ -22,13 +22,13 @@ pathway deamido-nad-to-s-5-carboxy-1-5-o-phosp "deamido-NAD to S-[5-carboxy-1-(5
 
   branch from ppi side left {
     ppi
-    <-> . +utp +gtp
-    c_gmp_ump
+    <-> . +l_tryptophan +atp +nadph +hplus +amp +nadp
+    l_tryptophanal
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_214 [4.2.3.214] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    5r_12r_14s_dolasta_1_15_8_diene
+    <-> . +amikacin +atp
+    4_adenylylamikacin
   }
 }

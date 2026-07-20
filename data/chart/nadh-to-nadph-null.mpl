@@ -18,61 +18,61 @@ pathway nadh-to-nadph-null "NADH to NADPH" {
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_3_trichlorobenzene +h +o2
-    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
+    <-> ec_1_3_1_52 [1.3.1.52] +nadh +2e_2_methylbut_2_enoyl_coa +h
+    2s_2_methylbutanoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
-    3_4_5_trichlorocatechol
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +h +hydrocodone
+    dihydrocodeine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_o_alpha_l_rhamnosylisoorietin +h
-    maysin
+    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
+    7_8_epoxy_17r_hydroxy_docosahexaenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +trichloroacetate +o2
-    2_2_2_trichloroethanol
+    <-> . +h +7_8_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d1
   }
 
   branch from h side left {
     h
-    <-> . +2_hydroxy_2_2_methylidenecyclopropyl_butanedioic +coa +2_oxohexa_4_5_cyclopropyl_5_enoate +h2o
-    acetyl_coa
+    <-> . +7_8_epoxy_17r_hydroxy_docosahexaenoate +h2o
+    aspirin_triggered_resolvin_d2
   }
 
   branch from h side right {
     h
-    <-> . +methylenecyclopropyl_pyruvic_acid +co2
-    2_oxo_3_carboxy_4_5_cyclopropylhex_5_enoate
+    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h2o
+    4_5_epoxy_17r_hydroxy_docosahexaenoate
   }
 
   branch from o2 side left {
     o2
-    <-> . +3_nonaprenyl_4_5_dihydroxybenzoic_acid +nadp +h2o +h +nadph
-    4_hydroxy_3_all_trans_nonaprenylbenzoic_acid
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +nadph +nadp +h2o
+    16alpha_hydroxyprogesterone
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +4_hydroxy_3_all_trans_heptaprenylbenzoic_acid +nadp +h2o
-    3_4_dihydroxy_5_all_trans_heptaprenylbenzoic_aci
+    <-> ec_1_14_14_1 [1.14.14.1] +4_4_dichloroindigo +h2o
+    4_chloroindole
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_48 [1.14.13.48] +4s_limonene +h +o2 +nadp +h2o
-    cis_carveol
+    <-> ec_1_2_1_49 [1.2.1.49] +glyoxal +nadp +h2o +h
+    glyoxylate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +versicolorin_a +h +nadp
-    versicolorin_b
+    <-> ec_1_1_1_218 [1.1.1.218] +ethylmorphinone +h +nadp
+    ethylmorphine
   }
 }

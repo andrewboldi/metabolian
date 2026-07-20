@@ -18,38 +18,38 @@ pathway chenodeoxycholoyl-coa-to-h2o "chenodeoxycholoyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +digitoxin
-    3_o_acetyldigitoxin
+    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +s_carnitine
+    o_acetyl_r_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +purpurea_glycoside_a
-    lanatoside_a
+    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa
+    hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostopeptolide_a2
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    nostopeptolide_a1
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylpentan_1_ol_l_cysteine +h2o
-    s_5_hydroxypentan_3_yl_l_cysteinylglycine
+    <-> ec_3_4_13_23 [3.4.13.23] +3_sulfanylhexan_1_ol_l_cysteine +h2o
+    s_1_hydroxyhexan_3_yl_l_cysteinylglycine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_3_4_13_23 [3.4.13.23] +s_4_hydroxy_2_methylpentan_2_yl_l_cysteine +h2o
-    s_4_hydroxy_2_methylpentan_2_yl_l_cysteinylglyci
+    <-> ec_3_4_17_25 [3.4.17.25] +s_benzyl_gamma_glutamylcysteine +h2o
+    s_benzyl_glutatione
   }
 
   branch from chenodeoxycholate side left {
@@ -66,25 +66,25 @@ pathway chenodeoxycholoyl-coa-to-h2o "chenodeoxycholoyl-CoA to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    nostocyclopeptide_a1
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    nostocyclopeptide_a2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_105 [3.2.1.105] +alpha_d_glucose +strictosidine_aglycone
-    3alpha_s_strictosidine
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    nostocyclopeptide_a3
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +trans_p_coumaryl_alcohol
-    4_hydroxycinnamyl_alcohol_4_d_glucoside
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    barbamide
   }
 }

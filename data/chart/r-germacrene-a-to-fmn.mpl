@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-germacrene-a-to-fmn "(+)-(R)-germacrene A to FMN" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     r_germacrene_a
@@ -22,55 +22,49 @@ pathway r-germacrene-a-to-fmn "(+)-(R)-germacrene A to FMN" {
     3_hydroxyparthenolide
   }
 
-  branch from germacra_1_10_4_11_13_trien_12_ol side left {
-    germacra_1_10_4_11_13_trien_12_ol
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    germacrene_a
+  branch from nadp side left {
+    nadp
+    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +h2o +h +o2 +nadph
+    9z_12z_15z_18z_tetracosatetraenoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_119 [1.14.13.119] +5_epi_aristolochene +h +o2 +nadph +h2o
-    capsidiol
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_317 [1.1.1.317] +h +perakine +nadph
-    raucaffrinoline
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_7_6_1 [1.7.6.1] +nitrite +h +nitric_acid
-    nitric_oxide
+    <-> . +13z_16z_docosadienoyl_coa +h +nadph
+    trans_cis_cis_2_13_16_docasatrienoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_110 [3.5.1.110] +h +z_2_methyl_3_aminoperacrylic_acid +carbamate
-    z_2_methylureidoperacrylic_acid
+    <-> . +l_histidine +l_lysine +l_aspartate
+    aspartyl_lysyl_histidine
   }
 
-  branch from fmn side right {
-    fmn
-    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
-    7_oxo_5_cholestan_3_ol
+  branch from h2o side right {
+    h2o
+    <-> . +l_proline +l_lysine +l_aspartate
+    aspartyl_prolyl_lysine
   }
 
   branch from fmn side left {
     fmn
-    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
-    cholestanol_7_8_epoxide
+    <-> . +11_hydroxycucurbitadienol +fmnh2 +o2 +h2o +hplus
+    11_oxocucurbitadienol
   }
 
-  branch from germacra_1_10_4_11_13_trien_12_oate side right {
+  branch from fmn side right {
+    fmn
+    <-> . +cortisol +fmnh2 +o2 +h2o +hplus
+    6_hydroxycortisol
+  }
+
+  branch from germacra_1_10_4_11_13_trien_12_oate side left {
     germacra_1_10_4_11_13_trien_12_oate
     <-> ec_1_14_14_168 [1.14.14.168] +fmnh2 +o2 +fmn +h2o +hplus
     8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 
-  branch from germacra_1_10_4_11_13_trien_12_oate side left {
+  branch from germacra_1_10_4_11_13_trien_12_oate side right {
     germacra_1_10_4_11_13_trien_12_oate
     <-> ec_1_14_14_170 [1.14.14.170] +fmnh2 +o2 +fmn +h2o
     8_epi_inunolide

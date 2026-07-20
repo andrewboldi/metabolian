@@ -18,14 +18,14 @@ pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_26 [1.14.15.26] +toluene +di_sulfido_diiron +o2 +hplus +h2o
-    benzyl_alcohol
+    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_hydroxy_11_deoxycorticosterone
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +di_sulfido_diiron +o2 +hplus +h2o
-    4_isopropylbenzyl_alcohol
+    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
+    19_oxo_deoxycorticosterone
   }
 
   branch from l_histidine side left {
@@ -36,14 +36,14 @@ pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
 
   branch from arginine side right {
     arginine
-    <-> ec_2_1_1_381 [2.1.1.381] +sam +sah +hplus
-    2s_2_ammonio_5_iminio_methylamino_methyl_amino
+    <-> . +fe2 +hplus +iron +h2o
+    n5_hydroxyamino_imino_methyl_l_ornithinium
   }
 
   branch from arginine side left {
     arginine
-    <-> . +fe2 +hplus +iron +h2o
-    n5_hydroxyamino_imino_methyl_l_ornithinium
+    <-> . +atp +hplus +ppi
+    l_arginyl_amp
   }
 
   branch from trans_urocanate side right {
@@ -54,13 +54,13 @@ pathway met-arg-tyr-leu-his-to-ammonium "Met-Arg-Tyr-Leu-His to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> . +2r_butan_2_aminium +nad +h2o +nadh +hplus
-    butan_2_one
+    <-> . +s_leucinol +nad +h2o +nadh +hplus
+    1_hydroxy_4_methylpentan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +nad +h2o +butan_2_one +nadh +hplus
-    2s_butan_2_aminium
+    <-> . +d_glutamate +nad +h2o +nadh +hplus
+    akg
   }
 }

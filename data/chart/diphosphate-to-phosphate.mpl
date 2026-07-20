@@ -24,61 +24,61 @@ pathway diphosphate-to-phosphate "diphosphate to phosphate" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_8 [3.3.2.8] +1s_2s_4r_limonene_1_2_diol
-    4r_limonene_1alpha_2alpha_epoxide
+    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_s_hydroxydocosahexaenoic_acid +h
+    4_5_epoxy_17s_hydroxy_docosahexaenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glucose +s_4_hydroxymandelonitrile
-    dhurrin
+    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h
+    resolvin_d3
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_ribose_1_phosphate +h +adp
-    d_ribose
+    <-> ec_2_7_1_1 [2.7.1.1] +2_5_anhydro_d_mannitol +h +adp
+    2_5_anhydro_d_mannitol_6_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_76 [2.7.1.76] +2r_3s_4s_5r_2_6_amino_2_fluoro_9_purinyl_5_hydr +h +adp
-    fludarabine_phosphate
+    <-> ec_2_7_1_40 [2.7.1.40] +2_oxobutanoate +h +adp
+    3_methylphosphoenolpyruvate
   }
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> . +l_asparagine +glycine
-    2_oxosuccinamate
+    <-> . +l_lysinium +glycine
+    6_amino_2_oxohexanoic_acid
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> . +l_phenylalanine +glycine
-    keto_phenylpyruvate
+    <-> . +5_7_dibromo_l_tryptophan +o2 +nh3
+    5_7_dibromo_indole_3_carbaldehyde
   }
 
   branch from adenine side left {
     adenine
-    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +o2 +1_methyladenine
-    2_oxoglutarate
+    <-> . +ribosylhopane +h2o
+    adenosylhopane
   }
 
   branch from adenine side right {
     adenine
-    <-> ec_2_4_2_1 [2.4.2.1] +inosine +hypoxanthine
-    adenosine
+    <-> . +adenosylhopane +h2o
+    ribosyl_hopane
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_methoxy_mycolyl_trehalose_6_phosphate +h2o
-    trehalose_trans_methoxy_mono_mycolate
+    <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_phosphate +spermine +h
+    n_carbamoylspermine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_keto_mycolyl_trehalose_6_phosphate +h2o
-    trehalose_cis_keto_mono_mycolate
+    <-> ec_3_6_1_7 [3.6.1.7] +h +butanoate +h2o
+    butanoyl_phosphate
   }
 }

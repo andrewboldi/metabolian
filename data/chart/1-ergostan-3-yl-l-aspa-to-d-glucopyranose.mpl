@@ -18,7 +18,7 @@ pathway 1-ergostan-3-yl-l-aspa-to-d-glucopyranose "1-(ergostan-3β-yl)-L-aspa…
 
   branch from aspartate side left {
     aspartate
-    <-> ec_1_4_3_16 [1.4.3.16] +o2 +h2o2
+    <-> ec_1_4_1_29 [1.4.1.29] +nad +nadh +hplus
     iminoaspartate
   }
 
@@ -30,13 +30,13 @@ pathway 1-ergostan-3-yl-l-aspa-to-d-glucopyranose "1-(ergostan-3β-yl)-L-aspa…
 
   branch from glucose side left {
     glucose
-    <-> . +avenacin_a_2 +benzoyl_d_glucoside
-    des_acyl_avenacin_a
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +avenacin_a_2 +des_acyl_avenacin_a
-    benzoyl_d_glucoside
+    <-> ec_3_2_1_125 [3.2.1.125] +vomilenine +h2o
+    raucaffricine
   }
 }

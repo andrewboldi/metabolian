@@ -24,37 +24,37 @@ pathway gmp-to-l-tyrosine "GMP to L-tyrosine" {
 
   branch from h side right {
     h
-    <-> . +5z_8z_11z_eicosatrienoic_acid +coa +h2o
-    5z_8z_11z_eicosatrienoyl_coenzyme_a
+    <-> . +adp +tacrolimus +phosphate +tacrolimus +h2o
+    atp
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    5z_8z_11z_eicosatrienoic_acid
+    d_tagaturonate
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +pederin
-    pseudopederin
+    <-> . +s_adenosyl_l_homocysteine +h +crotonosine
+    4_r_10_11_dihydroxy_5_azaspiro_cyclohexane_1_2
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +dim2boa_beta_d_glucoside
-    trimboa_beta_d_glucoside
+    <-> . +s_adenosyl_l_homocysteine +mitomycin_b
+    6_demethylmitomycin_b
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> . +l_isoleucine +l_tryptophan +h2o
-    isolecyl_tryptophanyl_tyrosine
+    <-> . +l_glutamine +l_phenylalanine +h2o
+    phenylalanyl_tyrosinyl_glutamine
   }
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> . +l_leucine +h2o
-    leucyl_tyrosyl_tyrosine
+    <-> . +l_lysine +l_phenylalanine +h2o
+    phenylalanyl_tyrosinyl_lysine
   }
 }

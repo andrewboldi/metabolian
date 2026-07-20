@@ -20,14 +20,14 @@ pathway acrylamide-to-acrylate "acrylamide to acrylate" {
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +2_4_dinitrotoluene +nad
-    4_amino_2_nitrotoluene
+    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat +h +diphosphate
+    precursor_z_hydrate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +4_amino_2_nitrotoluene +nad
-    2_4_diaminotoluene
+    <-> . +dtdp_4_oxo_alpha_d_xylose
+    dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene
   }
 
   branch from acrylate side left {
@@ -38,14 +38,14 @@ pathway acrylamide-to-acrylate "acrylamide to acrylate" {
 
   branch from nh4 side right {
     nh4
-    <-> . +2_oxo_4_hydroxy_5_aminovalerate
-    2_5_dioxopentanoate
+    <-> ec_3_5_1_44 [3.5.1.44] +h +l_glutamine +h2o
+    l_glutamic_acid
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +4_aminocatechol +h +h2o
-    benzene_1_2_4_triol
+    <-> . +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h2o
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 
   branch from acryloyl_coa side right {
@@ -56,43 +56,43 @@ pathway acrylamide-to-acrylate "acrylamide to acrylate" {
 
   branch from acryloyl_coa side left {
     acryloyl_coa
-    <-> ec_1_3_8_1 [1.3.8.1] +reduced_2_6_dichlorophenolindophenol +propanoyl_coa
-    2_6_dichloroindophenol
+    <-> ec_1_3_8_1 [1.3.8.1] +fadh2 +h +propanoyl_coa
+    fad
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_6 [3.1.1.6] +13_sophorosyloxydocosanoic_acid +h2o
-    13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos
+    <-> ec_4_99_1_2 [4.99.1.2] +hg +benzene +h
+    phenylmercury_acetate
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_6 [3.1.1.6] +h +13_o_2_beta_d_glucopyranosyl_beta_d_glucopyranos +h2o
-    13_sophorosyloxydocosanoate_6_6_diacetate
+    <-> ec_2_8_3_12 [2.8.3.12] +r_2_hydroxyglutarate +acetyl_coa
+    r_2_hydroxyglutaryl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_213 [1.1.1.213] +5_dihydrodeoxycorticosterone +nadph +5_alpha_thdoc
-    nadp
+    <-> . +3_oxoribostamycin +nadph +nadp
+    xylostasin
   }
 
   branch from h side left {
     h
-    <-> . +o2 +nadph +1_2_3_4_tetrachlorobenzene +nadp
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> . +4_oxolividamine +nadph +nadp
+    lividamine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +d_threo_isocitrate +h
-    2_caffeoylisocitric_acid
+    <-> . +acetyl_coa +malonyl_coa +h +o2 +nadph +nadp +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
+    co2
   }
 
   branch from coa side left {
     coa
-    <-> . +h +e_4_trimethylammonio_but_2_enoate +h2o
-    e_4_trimethylammonio_but_2_enoyl_coa
+    <-> . +acetyl_coa +malonyl_coa +h +o2 +nadph +co2 +nadp +h2o
+    1_8_dihydroxy_3_methylnaphthalene
   }
 }

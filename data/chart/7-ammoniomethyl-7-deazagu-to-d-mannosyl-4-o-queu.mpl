@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deazagu… to α-D-mannosyl-4''-O-queuos…" {
-  spacing 316
+  spacing 310
 
   spine at 0,0 {
     7_ammoniomethyl_7_deazaguanine
@@ -20,37 +20,31 @@ pathway 7-ammoniomethyl-7-deazagu-to-d-mannosyl-4-o-queu "7-ammoniomethyl-7-deaz
 
   branch from adenine side left {
     adenine
-    <-> . +datp +h2o
-    2_deoxyribose_5_triphosphate
-  }
-
-  branch from adenine side right {
-    adenine
     <-> . +hydrogen_donor +hydrogen_acceptor +h2o
     n6_hydroxyadenine
   }
 
-  branch from methionine side left {
-    methionine
-    <-> . +n_fatty_acyl_l_methionine +h2o
-    fatty-acid
-  }
-
   branch from methionine side right {
     methionine
-    <-> . +ctp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_ctp
+    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +sah +hplus
+    5s_c_methyl_l_argininium
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_14_99_47 [1.14.99.47] +larreatricin +hydrogen_donor +o2 +h2o
-    3_hydroxylarreatricin
+  branch from methionine side left {
+    methionine
+    <-> . +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
+    3_deoxy_3_4_didehydro_gtp
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_donor
-    urocanate
+    <-> ec_1_14_19_14 [1.14.19.14] +linoleoyl_containing_glycerolipid +hydrogen_donor +o2 +h2o
+    8e_10e_12z_octadecatrienoyl_containing_glycerol
+  }
+
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +hydrogen_donor +o2 +h2o
+    10e_12z_hexadecadienoyl_coa
   }
 }

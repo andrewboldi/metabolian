@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "anthranilate-to-o-s-2-3-dihydroxybenzoyl",
+  "name": "anthranilate to O-[S-2,3-dihydroxybenzoyl…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from anthranilate to O-[S-2,3-dihydroxybenzoylpantetheine-4'-phosphoryl]-L-serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21236"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16567"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoyl_5_adenylate",
+      "name": "2,3-dihydroxybenzoyl 5'-adenylate",
+      "short": "2,3-dihydroxybenzoy…",
+      "formula": "C17H17N5O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57417"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl",
+      "name": "O-[S-2,3-dihydroxybenzoylpantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-2,3-dihydroxyb…",
+      "formula": "C21H29N3O11PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90610"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_35",
+      "name": "anthranilate 3-monooxygenase (deaminating)",
+      "ec": [
+        "1.14.13.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "anthranilate 3-monooxygenase (deaminating)",
+      "equation": "anthranilate + NADPH + O2 + 2 H(+) = 2,3-dihydroxybenzoate + NH4(+) + NADP(+)",
+      "ec": "1.14.13.35",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21236"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,3-dihydroxybenzoate + ATP + H(+) = 2,3-dihydroxybenzoyl-5'-AMP + diphosphate",
+      "equation": "2,3-dihydroxybenzoate + ATP + H(+) = 2,3-dihydroxybenzoyl-5'-AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoyl_5_adenylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20229"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20229"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,3-dihydroxybenzoyl-5'-AMP + holo-[ACP] = 2,3-dihydroxybenzoyl-[ACP] + AMP + H(+)",
+      "equation": "2,3-dihydroxybenzoyl-5'-AMP + holo-[ACP] = 2,3-dihydroxybenzoyl-[ACP] + AMP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoyl_5_adenylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48604"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -30,13 +30,13 @@ pathway d-glucosamine-to-d-fructofuranose "α-D-glucosamine… to β-D-fructofur
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
-    xanthosine
+    <-> ec_1_4_1_19 [1.4.1.19] +l_tryptophan +nad +h2o +nadh +hplus
+    3_indol_3_yl_pyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_17 [3.5.4.17] +atp +h2o +hplus
-    itp
+    <-> ec_1_4_1_19 [1.4.1.19] +nadp +h2o +3_indol_3_yl_pyruvate +nadph +hplus
+    l_tryptophan
   }
 }

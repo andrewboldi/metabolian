@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propanoate-to-diphosphate "propanoate to diphosphate" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     propanoate
@@ -24,25 +24,19 @@ pathway propanoate-to-diphosphate "propanoate to diphosphate" {
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> ec_2_3_1_29 [2.3.1.29] +glycine +2_amino_4_oxopentanoic_acid
-    coa
-  }
-
-  branch from acetoacetate side left {
-    acetoacetate
-    <-> ec_6_4_1_6 [6.4.1.6] +co2 +acetone +atp +h2o +amp +phosphate
-    h
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_6_2_1_60 [6.2.1.60] +pseudomonate_c +atp +coa +amp
-    pseudomonoyl_coa_c
+    <-> ec_2_3_1_94 [2.3.1.94] +methylmalonyl_coa +h +nadph +6_deoxyerythronolide_b +nadp +coa +h2o
+    co2
   }
 
   branch from ppi side left {
     ppi
-    <-> . +icosanoate +atp +hplus
-    icosanoyl_amp
+    <-> . +siccayne +dmapp
+    pestalodiol
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp
+    dauca_4_7_diene
   }
 }

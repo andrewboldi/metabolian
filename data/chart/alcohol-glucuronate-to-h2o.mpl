@@ -38,25 +38,25 @@ pathway alcohol-glucuronate-to-h2o "alcohol glucuronate… to H2O" {
 
   branch from h side right {
     h
-    <-> . +thiosulfate +h2 +sulfite
-    hydrogen_sulfide
+    <-> ec_3_2_2_8 [3.2.2.8] +pyrimidine +d_ribose +h2o
+    pyrimidine_nucleoside
   }
 
   branch from h side left {
     h
-    <-> . +udp +undecaprenyl_phosphate_4_amino_4_formyl_l_arabin +undecaprenyl_phosphate
-    uridine_5_diphospho_beta_4_deoxy_4_formamido_l_a
+    <-> ec_2_4_2_2 [2.4.2.2] +pyrimidine +alpha_d_ribose_1_phosphate +pyrimidine_nucleoside
+    phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +thiosulfate +hydrogen_sulfide +h
-    sulfate
+    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_mannose +h +amp
+    alpha_d_mannose_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    glycochenodeoxycholate
+    <-> ec_3_1_4_43 [3.1.4.43] +1d_myo_inositol_1_phosphate +h
+    1d_myo_inositol_1_2_cyclic_phosphate
   }
 }

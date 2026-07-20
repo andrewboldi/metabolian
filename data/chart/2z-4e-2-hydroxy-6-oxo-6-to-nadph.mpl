@@ -24,49 +24,49 @@ pathway 2z-4e-2-hydroxy-6-oxo-6-to-nadph "(2Z,4E)-2-hydroxy-6-oxo-6… to NADPH"
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_134 [1.14.13.134] +amyrin +h +nadph +nadp +h2o
-    11_hydroxy_amyrin
+    <-> . +nadh +h +phenazine_1_carboxylate +nad +h2o
+    2_hydroxyphenazine_1_carboxylic_acid
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_134 [1.14.13.134] +nadp +h2o +11_hydroxy_amyrin +h +nadph
-    11_oxo_amyrin
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4r_limonene +h +nad +h2o
+    4r_limonene_1alpha_2alpha_epoxide
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_37 [1.1.1.37] +nadh +h +3_phenylpyruvate
-    s_3_phenyllactate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1s_2s_4s_dihydrocarveol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +s_lipoic_acid +h
-    s_dihydrolipoic_acid
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2s_4s_dihydrocarveol
+    2e_geranial
   }
 
   branch from h side right {
     h
-    <-> . +adp +thiomethyl_sulphoxide_acetaminophen_sulphate +phosphate +thiomethyl_sulphoxide_acetaminophen_sulphate +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri +phosphate +1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri +h2o
     atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    9e_tetradecenoic_acid
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    16_0_18_3_ps
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_134 [1.14.13.134] +amyrin +h +o2 +11_oxo_amyrin +nadp
-    h2o
+    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
+    presilphiperfolan_8_ol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_143 [1.14.13.143] +h +ent_isokaurene +o2 +nadp +h2o
-    2_hydroxy_ent_isokaurene
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    thujan_3_ol
   }
 }

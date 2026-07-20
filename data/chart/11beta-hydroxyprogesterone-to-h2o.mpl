@@ -26,85 +26,85 @@ pathway 11beta-hydroxyprogesterone-to-h2o "11Beta-Hydroxyprogesterone to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2z_6e_farnesol +h +nadph
-    11r_dihydroartemisinic_aldehyde
+    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +2r_2_decyl_3_oxotetradecanoate
+    2r_3s_2_decyl_3_hydroxytetradecanoate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
-    3s_6e_nerolidol
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
+    bacteriophaeophytin_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +pc_20_0_18_3_9z_12z_15z +phosphate +pc_20_0_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +thiostrepton +phosphate +thiostrepton
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pc_20_1_11z_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    l_tyrosyl_l_arginine
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pc_20_2_11z_14z_18_2_9z_12z
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gamma_l_glutamyl_l_cysteinyl_beta_alanine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pc_20_2_11z_14z_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    gly_glu
   }
 
   branch from o2 side left {
     o2
-    <-> . +gibberellin_a4 +nadph +nadp +h2o
-    16alpha_17_epoxy_gibberellin_a4
+    <-> . +nitric_oxide
+    n2
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +16alpha_17_epoxy_gibberellin_a4 +nad +h2o
-    gibberellin_a4
+    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_a +h +nadph +nadp +h2o
+    chlorophyllide_b
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadp
-    drimenol
+    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadp +h2o
+    beta_d_ribopyranose
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadp
-    3r_6e_nerolidol
+    <-> . +h +syringaresinol +nadp
+    5_5_dimethoxylariciresinol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +3r_6e_nerolidol
-    2e_6e_farnesal
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +r_lactate +h +h2o
+    s_lactaldehyde
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    2_trans_6_cis_farnesol
+    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nadh +h
+    ubiquinone_9
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +sotolone +h2o +h
-    2_oxobutanoate
+    <-> .
+    r_acetoin
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
-    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
+    <-> ec_1_1_1_1 [1.1.1.1] +nadp +h +nadph
+    ethanol
   }
 }

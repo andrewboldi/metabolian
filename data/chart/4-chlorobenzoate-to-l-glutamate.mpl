@@ -42,29 +42,159 @@ pathway 4-chlorobenzoate-to-l-glutamate "4-chlorobenzoate to L-glutamate" {
     h
   }
 
+  branch from 4_chlorobenzoyl_coa side left {
+    4_chlorobenzoyl_coa
+    <-> ec_1_21_1_2 [1.21.1.2] +chloride +nadp +nadph
+    2_4_dichlorobenzoyl_coa
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
+    all_trans_heptaprenyl_diphosphate
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_90 [2.5.1.90] +ipp +fpp
+    all_trans_octaprenyl_diphosphate
+  }
 
+  branch from 4_hydroxybenzoate side right {
+    4_hydroxybenzoate
+    <-> . +udp_d_glucose +udp
+    1_o_4_hydroxybenzoyl_d_glucopyranose
+  }
 
+  branch from 4_hydroxy_3_all_trans_nonaprenylbenzoate side left {
+    4_hydroxy_3_all_trans_nonaprenylbenzoate
+    <-> ec_1_14_15_45 [1.14.15.45] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_nonaprenyl_4_5_dihydroxybenzoate
+  }
 
+  branch from 2_all_trans_nonaprenylphenol side right {
+    2_all_trans_nonaprenylphenol
+    <-> . +2_all_trans_nonaprenyl_benzene_1_4_diol +nadp +h2o +h +o2
+    nadph
+  }
 
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_165 [2.1.1.165] +bromide +sam
+    bromomethane
+  }
 
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_n4 [2.1.1.n4] +thiocyanate +sam
+    methyl_thiocyanate
+  }
 
+  branch from 2_methoxy_6_all_trans_nonaprenylhydroquinone side left {
+    2_methoxy_6_all_trans_nonaprenylhydroquinone
+    <-> ec_1_6_5_2 [1.6.5.2] +h +nadph +2_nonaprenyl_6_methoxy_1_4_benzoquinone
+    nadp
+  }
 
+  branch from 2_methoxy_6_all_trans_nonaprenylhydroquinone side right {
+    2_methoxy_6_all_trans_nonaprenylhydroquinone
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +nad
+    2_nonaprenyl_6_methoxy_1_4_benzoquinone
+  }
 
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +carotene +di_sulfido_diiron +o2 +hplus +h2o
+    cryptoxanthin
+  }
 
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_al
+  }
 
+  branch from 2_methoxy_3_methyl_6_all_trans_nonaprenylhydroqu side left {
+    2_methoxy_3_methyl_6_all_trans_nonaprenylhydroqu
+    <-> ec_1_6_5_2 [1.6.5.2] +nadp +h +nadph
+    2_nonaprenyl_3_methyl_6_methoxy_1_4_benzoquinone
+  }
 
+  branch from nad side right {
+    nad
+    <-> . +nadh +h +all_trans_3_4_didehydroretinoate +h2o
+    all_trans_3_4_didehydroretinol
+  }
 
+  branch from nad side left {
+    nad
+    <-> . +nadh +h +8_dehydrocholesterol +o2 +h2o
+    27alpha_hydroxy_8_dehydrocholesterol
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> . +h +phosphatidylglycerol_ditetradecanoyl_n_c14_0 +phosphate
+    phosphatidylglycerophosphate_ditetradecanoyl_n_c
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +phosphate +atp
+    phylloquinone
+  }
 
+  branch from ubiquinol_9 side right {
+    ubiquinol_9
+    <-> ec_1_1_5_3 [1.1.5.3] +dihydroxyacetone_phosphate +ubiquinone_9
+    sn_glycerol_3_phosphate
+  }
 
+  branch from ubiquinol_9 side left {
+    ubiquinol_9
+    <-> . +nad +nadh +ubiquinone_9 +h
+    pmf
+  }
 
+  branch from ubiquinone_9 side right {
+    ubiquinone_9
+    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_9 +fumarate
+    succinate
+  }
 
+  branch from ubiquinone_9 side left {
+    ubiquinone_9
+    <-> ec_1_1_5_8 [1.1.5.8] +ubiquinol_9 +3_dehydroquinate
+    l_quinate
+  }
 
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +h +s_n_methylsalsolinol
+    s_salsolinol
+  }
 
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +o_methylhippuric_acid
+    n_benzoylglycine
+  }
 
+  branch from dtdp_3_n_n_dimethylamino_2_3_6_trideoxy_4_keto_d side right {
+    dtdp_3_n_n_dimethylamino_2_3_6_trideoxy_4_keto_d
+    <-> .
+    dtdp_3_n_n_dimethylamino_4_oxo_2_3_6_trideoxy_l
+  }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +h +s_adenosyl_l_methionine +s_salsolinol
+    r_1_2_dimethyl_5_6_dihydroxy_tetrahydroisoquino
+  }
 
+  branch from s_adenosyl_l_homocysteine side right {
+    s_adenosyl_l_homocysteine
+    <-> . +harman +h +s_adenosyl_l_methionine
+    carboline
+  }
 }

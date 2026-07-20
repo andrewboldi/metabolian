@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-2-acetamido-2-deoxy-to-udp-2-3-diacetamido-2",
   "name": "UDP-2-acetamido-2-deoxy-α… to UDP-2,3-diacetamido-2,3-d…",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from UDP-2-acetamido-2-deoxy-α-D-glucuronate(3−) to UDP-2,3-diacetamido-2,3-dideoxy-α-D-mannuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -160,13 +160,12 @@
       }
     },
     {
-      "id": "n_4_oxoglutaryl_l_cysteinylglycine",
-      "name": "N-(4-oxoglutaryl)-L-cysteinylglycine",
-      "short": "N-(4-oxoglutaryl)-L…",
-      "formula": "C10H12N2O7S",
+      "id": "pseudopaline",
+      "name": "pseudopaline",
+      "formula": "C15H20N4O8",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:138256"
+        "chebi": "CHEBI:143198"
       }
     },
     {
@@ -179,12 +178,13 @@
       }
     },
     {
-      "id": "cysgly",
-      "name": "L-Cysteinylglycine",
-      "formula": "C5H10N2O3S",
+      "id": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
+      "name": "N-[(3S)-3-amino-3-carboxypropyl]-L-histidine dizwitterion",
+      "short": "N-[(3S)-3-amino-3-c…",
+      "formula": "C10H16N4O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61694"
+        "chebi": "CHEBI:143196"
       }
     }
   ],
@@ -215,13 +215,6 @@
       "name": "UDP-2,3-diacetamido-2,3-dideoxyglucuronic acid 2-epimerase",
       "ec": [
         "5.1.3.23"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_128",
-      "name": "deaminated glutathione amidase",
-      "ec": [
-        "3.5.1.128"
       ]
     }
   ],
@@ -451,12 +444,15 @@
     },
     {
       "id": "r6",
-      "name": "deaminated glutathione amidase",
-      "equation": "N-(4-oxoglutaryl)-L-cysteinylglycine + H2O = L-cysteinylglycine + 2-oxoglutarate",
-      "ec": "3.5.1.128",
+      "name": "pseudopaline + NADP(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethy...",
+      "equation": "pseudopaline + NADP(+) + H2O = (2S)-2-amino-4-{[(1S)-1-carboxy-2-(1H-imidazol-4-yl)ethyl]amino}butanoate + 2-oxoglutarate + NADPH + H(+)",
       "substrates": [
         {
-          "metabolite": "n_4_oxoglutaryl_l_cysteinylglycine",
+          "metabolite": "pseudopaline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -466,30 +462,33 @@
       ],
       "products": [
         {
-          "metabolite": "cysgly",
+          "metabolite": "n_3s_3_amino_3_carboxypropyl_l_histidine_dizwitt",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_5_1_128"
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:54532"
+        "rhea": "RHEA:59784"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54532"
+            "id": "RHEA:59784"
           }
         ]
       }

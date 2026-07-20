@@ -18,37 +18,37 @@ pathway nadh-to-nad "NADH to NAD" {
 
   branch from sulfite side left {
     sulfite
-    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +3_n_morpholino_propanesulfonate +o2 +3_n_morpholino_propanal +h +succinate
+    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +1_pentanesulfonate +o2 +h +succinate +pentanal
     co2
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +1_pentanesulfonate +o2 +co2 +h +pentanal
-    succinate
+    <-> ec_2_8_1_2 [2.8.1.2] +thiosulfate +pyruvate +h
+    2_oxo_3_sulfanylpropanoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_221 [1.1.1.221] +nadh +6r_dehydrovomifoliol +h
-    6s_9r_vomifoliol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_heptanone
+    heptan_4_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_2_3_1_119 [2.3.1.119] +nadh +octadecanoyl_coa +malonyl_coa +h +co2 +coa +h2o
-    eicosanoyl_coa
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
+    s_3_methylbutan_2_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +indol_3_ylmethyl_glutathione +indole_3_methanol
-    glutathione
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_lysine
+    lysyl_proline
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +h +butanoate +4_nitrophenol
-    p_nitrophenyl_butyrate
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline
+    pro_pro
   }
 }

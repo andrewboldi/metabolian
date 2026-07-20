@@ -24,33 +24,27 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
     isomenthone
   }
 
-  branch from menthofuran side right {
-    menthofuran
-    <-> ec_1_14_13_104 [1.14.13.104] +h +r_pulegone +o2 +nadph +h2o
-    nadp
+  branch from fmn side right {
+    fmn
+    <-> . +l_tryptophan +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_tryptophanate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_29 [1.14.14.29] +25_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    7_25_dihydroxycholesterol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +l_phenylalanine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_phenylalaninate
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> . +l_tryptophan +o2 +fmn +h2o +hplus
-    n_hydroxy_l_tryptophanate
+    <-> ec_1_14_14_17 [1.14.14.17] +squalene +fmnh2 +o2 +h2o +hplus
+    epoxysqualene
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_17 [1.14.14.17] +squalene +o2 +fmn +h2o +hplus
-    epoxysqualene
+    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +o2 +fmn +h2o +hplus
+    glyceollin_iii
+  }
+
+  branch from fmnh2 side left {
+    fmnh2
+    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +o2 +acetone +fmn +h2o +hplus
+    angelicin
   }
 }

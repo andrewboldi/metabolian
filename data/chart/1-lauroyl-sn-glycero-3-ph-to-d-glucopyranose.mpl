@@ -28,26 +28,26 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose "1-lauroyl-sn-glycero-3-phâ
 
   branch from choline side right {
     choline
-    <-> ec_3_1_4_4 [3.1.4.4] +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_acyl_sn_glycerol_3_phosphate
+    <-> . +1_arachidonoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_arachidonoyl_sn_glycerol_3_phosphate
   }
 
   branch from choline side left {
     choline
-    <-> . +1_linoleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_linoleoyl_sn_glycero_3_phosphate
+    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_z_alk_1_enyl_sn_glycero_3_phosphate
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
-    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
+    oleuropein_aglycone
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_4_2_99_22 [4.2.99.22] +6_tuliposide_a
-    methylene_butyrolactone
+    <-> . +lithocholate_3_o_d_glucoside +h2o
+    lithocholate
   }
 
   branch from trans_sinapate side right {

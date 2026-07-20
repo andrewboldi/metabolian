@@ -149,41 +149,40 @@
       }
     },
     {
-      "id": "l_argininium",
-      "name": "L-argininium",
-      "formula": "C6H13N4O",
+      "id": "s_corytuberine",
+      "name": "(S)-corytuberine",
+      "formula": "C19H21NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81200"
+      }
+    },
+    {
+      "id": "s_magnoflorine",
+      "name": "(S)-magnoflorine",
+      "formula": "C20H24NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29965"
+        "chebi": "CHEBI:6641"
       }
     },
     {
-      "id": "n5_methyl_argininium_1",
-      "name": "N5-methyl-argininium(1+)",
-      "short": "N5-methyl-argininiu…",
-      "formula": "C7H15N4O",
+      "id": "s_glaucine",
+      "name": "(S)-glaucine",
+      "formula": "C21H26NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:88222"
+        "chebi": "CHEBI:134212"
       }
     },
     {
-      "id": "ribonucleotide",
-      "name": "ribonucleotide",
-      "formula": "C5H7O6PR",
-      "charge": -1,
+      "id": "s_1_2_9_10_tetramethoxy_6_methylaporphine",
+      "name": "(S)-1,2,9,10-tetramethoxy-6-methylaporphine",
+      "short": "1,2,9,10-tetrametho…",
+      "formula": "C22H28NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:90675"
-      }
-    },
-    {
-      "id": "2_o_methylribonucleotide_1",
-      "name": "2'-O-methylribonucleotide(1−)",
-      "short": "2'-O-methylribonucl…",
-      "formula": "C6H9O6PR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90676"
+        "chebi": "CHEBI:134213"
       }
     }
   ],
@@ -210,10 +209,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_322",
-      "name": "type IV protein arginine methyltransferase",
+      "id": "ec_2_1_1_337",
+      "name": "reticuline N-methyltransferase",
       "ec": [
-        "2.1.1.322"
+        "2.1.1.337"
       ]
     }
   ],
@@ -457,12 +456,12 @@
     },
     {
       "id": "r6",
-      "name": "type IV protein arginine methyltransferase",
-      "equation": "L-arginyl-[protein] + S-adenosyl-L-methionine = N(5)-methyl-L-arginyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.322",
+      "name": "reticuline N-methyltransferase",
+      "equation": "(S)-corytuberine + S-adenosyl-L-methionine = magnoflorine + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.337",
       "substrates": [
         {
-          "metabolite": "l_argininium",
+          "metabolite": "s_corytuberine",
           "stoichiometry": 1
         },
         {
@@ -472,7 +471,52 @@
       ],
       "products": [
         {
-          "metabolite": "n5_methyl_argininium_1",
+          "metabolite": "s_magnoflorine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_337"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:51524"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51524"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "reticuline N-methyltransferase",
+      "equation": "(S)-glaucine + S-adenosyl-L-methionine = (S)-N-methylglaucine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.337",
+      "substrates": [
+        {
+          "metabolite": "s_glaucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_2_9_10_tetramethoxy_6_methylaporphine",
           "stoichiometry": 1
         },
         {
@@ -486,63 +530,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_322"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:48116"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48116"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRN...",
-      "equation": "a ribonucleotide in rRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "ribonucleotide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_o_methylribonucleotide_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_337"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:48628"
+        "rhea": "RHEA:51556"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48628"
+            "id": "RHEA:51556"
           }
         ]
       }

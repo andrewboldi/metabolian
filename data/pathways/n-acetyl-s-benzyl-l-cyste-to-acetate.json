@@ -149,82 +149,34 @@
       }
     },
     {
-      "id": "3_o_d_glucopyranosyl_isomotiol",
-      "name": "3-O-(β-D-glucopyranosyl)-isomotiol",
-      "short": "3-O-(β-D-glucopyran…",
-      "formula": "C36H60O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:232474"
-      }
-    },
-    {
-      "id": "2_deacetoxyfuscoatroside",
-      "name": "2-deacetoxyfuscoatroside",
-      "short": "2-deacetoxyfuscoatr…",
-      "formula": "C36H59O8",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:232478"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "isomotiol",
-      "name": "isomotiol",
-      "formula": "C30H50O",
-      "charge": 0,
+      "id": "mercaptopyruvate",
+      "name": "3-Mercaptopyruvate",
+      "formula": "C3H3O3S",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:232471"
+        "chebi": "CHEBI:57678"
       }
     },
     {
-      "id": "19_hydroxyisomotiol",
-      "name": "19β-hydroxyisomotiol",
-      "formula": "C30H50O2",
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:232481"
-      }
-    },
-    {
-      "id": "2_oxoethane_1_sulfonamide",
-      "name": "2-oxoethane-1-sulfonamide",
-      "short": "2-oxoethane-1-sulfo…",
-      "formula": "C2H5NO3S",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231960"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "z_2_aminoethene_1_so_thioperoxol",
-      "name": "(Z)-2-aminoethene-1-SO-thioperoxol",
-      "short": "2-aminoethene-1-SO-…",
-      "formula": "C2H5NOS",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:231967"
+        "chebi": "CHEBI:57972"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_13_11_95",
-      "name": "2-oxoethane-1-sulfonamide synthase",
-      "ec": [
-        "1.13.11.95"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -416,194 +368,39 @@
     },
     {
       "id": "r5",
-      "name": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2...",
-      "equation": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 2-deacetoxyfuscoatroside + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 3 H(+)",
+      "name": "L-cysteine + pyruvate = 2-oxo-3-sulfanylpropanoate + L-alanine",
+      "equation": "L-cysteine + pyruvate = 2-oxo-3-sulfanylpropanoate + L-alanine",
       "substrates": [
         {
-          "metabolite": "3_o_d_glucopyranosyl_isomotiol",
+          "metabolite": "cysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_deacetoxyfuscoatroside",
+          "metabolite": "mercaptopyruvate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
+          "metabolite": "alanine",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:82747"
+        "rhea": "RHEA:82415"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:82747"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "isomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 19beta-hydroxyisomotiol + oxi...",
-      "equation": "isomotiol + reduced [NADPH--hemoprotein reductase] + O2 = 19beta-hydroxyisomotiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "isomotiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "19_hydroxyisomotiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:82759"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82759"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "2-oxoethane-1-sulfonamide synthase",
-      "equation": "L-cysteine + 2 O2 = 2-oxoethane-1-sulfonamide + CO2 + H2O",
-      "ec": "1.13.11.95",
-      "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_oxoethane_1_sulfonamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_13_11_95"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:81871"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:81871"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "L-cysteine + O2 = (Z)-2-aminoethene-1-SO-thioperoxol + CO2 + H2O",
-      "equation": "L-cysteine + O2 = (Z)-2-aminoethene-1-SO-thioperoxol + CO2 + H2O",
-      "substrates": [
-        {
-          "metabolite": "cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_2_aminoethene_1_so_thioperoxol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:82007"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82007"
+            "id": "RHEA:82415"
           }
         ]
       }

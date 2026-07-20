@@ -164,41 +164,43 @@
       }
     },
     {
-      "id": "ricinine",
-      "name": "ricinine",
-      "formula": "C8H8N2O2",
+      "id": "r_piperazin_4_ium_2_carboxamide",
+      "name": "(R)-piperazin-4-ium-2-carboxamide",
+      "short": "piperazin-4-ium-2-c…",
+      "formula": "C5H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58916"
+      }
+    },
+    {
+      "id": "r_piperazine_2_carboxylic_acid",
+      "name": "(R)-piperazine-2-carboxylic acid",
+      "short": "piperazine-2-carbox…",
+      "formula": "C5H10N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18043"
+        "chebi": "CHEBI:58917"
       }
     },
     {
-      "id": "4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c",
-      "name": "4-methoxy-1-methyl-2-oxo-1,2-dihydropyridine-3-carboxylate",
-      "short": "4-methoxy-1-methyl-…",
-      "formula": "C8H8NO4",
-      "charge": -1,
+      "id": "s_piperazin_4_ium_2_carboxamide",
+      "name": "(S)-piperazin-4-ium-2-carboxamide",
+      "short": "piperazin-4-ium-2-c…",
+      "formula": "C5H12N3O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58238"
+        "chebi": "CHEBI:58919"
       }
     },
     {
-      "id": "camp",
-      "name": "3',5'-Cyclic AMP (cAMP)",
-      "short": "3',5'-Cyclic AMP…",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "s_piperazine_2_carboxylic_acid",
+      "name": "(S)-piperazine-2-carboxylic acid",
+      "short": "piperazine-2-carbox…",
+      "formula": "C5H10N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58165"
-      }
-    },
-    {
-      "id": "3_5_cyclic_imp",
-      "name": "3',5'-cyclic IMP",
-      "formula": "C10H10N4O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:134197"
+        "chebi": "CHEBI:58920"
       }
     },
     {
@@ -253,17 +255,17 @@
       ]
     },
     {
-      "id": "ec_3_5_5_2",
-      "name": "ricinine nitrilase",
+      "id": "ec_3_5_1_100",
+      "name": "(R)-amidase",
       "ec": [
-        "3.5.5.2"
+        "3.5.1.100"
       ]
     },
     {
-      "id": "ec_3_5_4_46",
-      "name": "cAMP deaminase",
+      "id": "ec_3_5_1_101",
+      "name": "L-proline amide hydrolase",
       "ec": [
-        "3.5.4.46"
+        "3.5.1.101"
       ]
     }
   ],
@@ -534,22 +536,22 @@
     },
     {
       "id": "r7",
-      "name": "ricinine nitrilase",
-      "equation": "ricinine + 2 H2O = 4-methoxy-1-methyl-2-oxo-1,2-dihydropyridine-3-carboxylate + NH4(+)",
-      "ec": "3.5.5.2",
+      "name": "(R)-amidase",
+      "equation": "(R)-piperazine-2-carboxamide + H2O = (R)-piperazine-2-carboxylate + NH4(+)",
+      "ec": "3.5.1.100",
       "substrates": [
         {
-          "metabolite": "ricinine",
+          "metabolite": "r_piperazin_4_ium_2_carboxamide",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c",
+          "metabolite": "r_piperazine_2_carboxylic_acid",
           "stoichiometry": 1
         },
         {
@@ -559,46 +561,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_5_2"
+          "enzyme": "ec_3_5_1_100"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:22704"
+        "rhea": "RHEA:26542"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22704"
+            "id": "RHEA:26542"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "cAMP deaminase",
-      "equation": "3',5'-cyclic AMP + H2O + H(+) = 3',5'-cyclic IMP + NH4(+)",
-      "ec": "3.5.4.46",
+      "name": "L-proline amide hydrolase",
+      "equation": "(S)-piperazine-2-carboxamide + H2O = (S)-piperazine-2-carboxylate + NH4(+)",
+      "ec": "3.5.1.101",
       "substrates": [
         {
-          "metabolite": "camp",
+          "metabolite": "s_piperazin_4_ium_2_carboxamide",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_cyclic_imp",
+          "metabolite": "s_piperazine_2_carboxylic_acid",
           "stoichiometry": 1
         },
         {
@@ -608,20 +606,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_46"
+          "enzyme": "ec_3_5_1_101"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:22908"
+        "rhea": "RHEA:26550"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:22908"
+            "id": "RHEA:26550"
           }
         ]
       }

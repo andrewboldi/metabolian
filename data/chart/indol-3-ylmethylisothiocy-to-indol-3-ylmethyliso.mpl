@@ -18,26 +18,26 @@ pathway indol-3-ylmethylisothiocy-to-indol-3-ylmethyliso "indol-3-ylmethylisothi
 
   branch from h side left {
     h
-    <-> . +adp +2_hydroxyestrone +phosphate +2_hydroxyestrone +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    leukotriene_c4
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    2_methoxy_17beta_estradiol
+    w_carboxy_leukotriene_b4
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_proline +l_aspartate +h2o
-    aspartyl_glutamyl_proline
+    <-> . +l_glutamine +l_isoleucine +h2o
+    isolecyl_glutaminyl_glutamate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_aspartate +l_tryptophan +h2o
-    aspartyl_glutamyl_tryptophan
+    <-> . +l_proline +l_lysine +h2o
+    prolyl_glutamatsyl_lysine
   }
 
   branch from 2_thioxothiazolidine_4_carboxylic_acid side left {

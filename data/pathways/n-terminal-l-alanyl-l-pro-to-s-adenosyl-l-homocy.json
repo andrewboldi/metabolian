@@ -88,23 +88,33 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "2_o_methylcytidine_5_monophosphate_1",
+      "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
+      "short": "2'-O-methylcytidine…",
+      "formula": "C10H13N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:74495"
+      }
+    },
+    {
+      "id": "n4_methylcytidine_5_monophosphate_1",
+      "name": "N4-methylcytidine 5'-monophosphate(1−)",
+      "short": "N4-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74506"
       }
     }
   ],
@@ -117,17 +127,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_173",
-      "name": "23S rRNA (guanine(2445)-N(2))-methyltransferase",
+      "id": "ec_2_1_1_198",
+      "name": "16S rRNA (cytidine(1402)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.173"
+        "2.1.1.198"
       ]
     },
     {
-      "id": "ec_2_1_1_174",
-      "name": "23S rRNA (guanine(1835)-N(2))-methyltransferase",
+      "id": "ec_2_1_1_199",
+      "name": "16S rRNA (cytosine(1402)-N(4))-methyltransferase",
       "ec": [
-        "2.1.1.174"
+        "2.1.1.199"
       ]
     }
   ],
@@ -269,12 +279,12 @@
     },
     {
       "id": "r4",
-      "name": "23S rRNA (guanine(2445)-N(2))-methyltransferase",
-      "equation": "guanosine(2445) in 23S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(2445) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.173",
+      "name": "16S rRNA (cytidine(1402)-2'-O)-methyltransferase",
+      "equation": "cytidine(1402) in 16S rRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(1402) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.198",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -284,7 +294,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "2_o_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -298,32 +308,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_173"
+          "enzyme": "ec_2_1_1_198"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42740"
+        "rhea": "RHEA:42924"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42740"
+            "id": "RHEA:42924"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "23S rRNA (guanine(1835)-N(2))-methyltransferase",
-      "equation": "guanosine(1835) in 23S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(1835) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.174",
+      "name": "16S rRNA (cytosine(1402)-N(4))-methyltransferase",
+      "equation": "cytidine(1402) in 16S rRNA + S-adenosyl-L-methionine = N(4)-methylcytidine(1402) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.199",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -333,7 +343,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "n4_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -347,20 +357,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_174"
+          "enzyme": "ec_2_1_1_199"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:42744"
+        "rhea": "RHEA:42928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42744"
+            "id": "RHEA:42928"
           }
         ]
       }

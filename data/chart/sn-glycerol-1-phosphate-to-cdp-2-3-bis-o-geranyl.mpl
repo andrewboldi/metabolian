@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sn-glycerol-1-phosphate-to-cdp-2-3-bis-o-geranyl "sn-glycerol 1-phosphate to CDP-2,3-bis-O-geranylfarn…" {
-  spacing 328
+  spacing 316
 
   spine at 0,0 {
     sn_glycerol_1_phosphate
@@ -16,27 +16,15 @@ pathway sn-glycerol-1-phosphate-to-cdp-2-3-bis-o-geranyl "sn-glycerol 1-phosphat
     diphosphate
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +17z_hexacosenoate +atp +coa +amp
-    17z_hexacosenoyl_coa
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    gurjunene
-  }
-
   branch from diphosphate side left {
     diphosphate
-    <-> . +adenylylcoelenterazine_disulfonate +watasenia_luciferin
-    atp
+    <-> . +ctp +5_n_acetyl_7_n_d_alanyl_legionaminic_acid +h
+    cmp_5_n_acetyl_7_n_d_alanyl_legionaminic_acid
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +d_firefly_luciferyl_adenylate +h +atp
-    firefly_d_luciferin
+    <-> . +ctp +5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero_d_g +h
+    cmp_5_7_diacetamido_3_5_7_9_tetradeoxy_l_glycero
   }
 }

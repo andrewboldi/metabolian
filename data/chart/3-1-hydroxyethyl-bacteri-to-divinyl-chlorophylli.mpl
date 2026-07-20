@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bacteri… to divinyl chlorophyllide a" {
-  spacing 324
+  spacing 312
 
   spine at 0,0 {
     3_1_hydroxyethyl_bacteriochlorophyllide_a
@@ -16,27 +16,15 @@ pathway 3-1-hydroxyethyl-bacteri-to-divinyl-chlorophylli "3-(1-hydroxyethyl)bact
     divinyl_chlorophyllide_a
   }
 
-  branch from chlorophyllide_a side left {
-    chlorophyllide_a
-    <-> ec_4_99_1_10 [4.99.1.10] +hplus +magnesium
-    pheophorbide_a
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +pheophorbide_a +o2 +hplus +di_sulfido_diiron +h2o
+    epoxypheophorbide_a
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +linoleoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    linolenoyl_containing_glycerolipid
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_14_19_35 [1.14.19.35] +7z_10z_hexadecadienoyl_containing_glycerolipid +o2 +hplus +di_sulfido_diiron +h2o
-    7z_10z_13z_hexadecatrienoyl_containing_glycerol
-  }
-
-  branch from divinyl_chlorophyllide_a side right {
-    divinyl_chlorophyllide_a
-    <-> ec_1_3_7_14 [1.3.7.14] +di_sulfido_diiron +adp +pi +di_sulfido_diiron +atp +h2o +hplus
+    <-> ec_1_3_7_14 [1.3.7.14] +di_sulfido_diiron +adp +pi +divinyl_chlorophyllide_a +atp +h2o +hplus
     bacteriochlorophyllide_g
   }
 }

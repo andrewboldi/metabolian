@@ -20,43 +20,25 @@ pathway diphosphate-to-isopentenyl-diphosphate-null "diphosphate to isopentenyl 
 
   branch from h side left {
     h
-    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +2_methylbutanedioic_acid +acetate
-    methylsuccinyl_coa
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    1_deoxyxylonojirimycin
   }
 
   branch from h side right {
     h
-    <-> ec_2_1_2_11 [2.1.2.11] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +2_oxobutanoate +h2o +akos006378692
-    6s_5_6_7_8_tetrahydrofolate
-  }
-
-  branch from all_trans_nonaprenyl_diphosphate side left {
-    all_trans_nonaprenyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from all_trans_nonaprenyl_diphosphate side right {
-    all_trans_nonaprenyl_diphosphate
-    <-> . +diphosphate +ipp
-    all_trans_decaprenyl_diphosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_glucose
   }
 
   branch from ipp side left {
     ipp
-    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_nonaprenyl_diphosphate
-    2e_6e_farnesyl_diphosphate
+    <-> . +diphosphate +di_trans_octa_cis_undecaprenyl_diphosphate
+    all_trans_decaprenyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_89 [2.5.1.89] +tri_trans_penta_cis_nonaprenyl_diphosphate +diphosphate
-    2e_6e_10e_geranylgeranyl_diphosphate
-  }
-
-  branch from all_trans_octaprenyl_diphosphate side left {
-    all_trans_octaprenyl_diphosphate
-    <-> ec_2_5_1_90 [2.5.1.90] +diphosphate +h +ipp
-    farnesyl_diphosphate
+    <-> ec_1_17_1_2 [1.17.1.2] +1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate +nadph +h2o
+    nadp
   }
 }

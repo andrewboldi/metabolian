@@ -24,13 +24,13 @@ pathway 3-4-5-trihydroxy-3-meth-to-s-adenosyl-l-homocyst "3',4',5-trihydroxy-3-m
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    <-> ec_2_1_1_372 [2.1.1.372] +l_lysinium +sam +hplus
     n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_367 [2.1.1.367] +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> ec_2_1_1_373 [2.1.1.373] +2r_2_hydroxy_4_methylsulfanyl_butanoate +sam
+    2r_4_dimethylsulfaniumyl_2_hydroxybutanoate
   }
 }

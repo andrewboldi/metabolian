@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-canavanine-to-h2o "L-canavanine to H2O" {
-  spacing 336
+  spacing 324
 
   spine at 0,0 {
     l_canavanine
@@ -22,64 +22,52 @@ pathway l-canavanine-to-h2o "L-canavanine to H2O" {
     l_selenocystathionine
   }
 
-  branch from l_canaline side left {
-    l_canaline
-    <-> ec_2_1_3_3 [2.1.3.3] +carbamoyl_phosphate +phosphate
-    o_ureidohomoserine
-  }
-
-  branch from arginine side right {
+  branch from arginine side left {
     arginine
     <-> . +nadh +o2 +hplus +nad +h2o
     n5_hydroxyamino_imino_methyl_l_ornithinium
   }
 
-  branch from arginine side left {
+  branch from arginine side right {
     arginine
-    <-> . +fmnh2 +o2 +n5_hydroxyamino_imino_methyl_l_ornithinium +h2o +hplus
-    fmn
+    <-> ec_2_1_1_381 [2.1.1.381] +sam +sah +hplus
+    2s_2_ammonio_5_iminio_methylamino_methyl_amino
   }
 
-  branch from l_homoserine side right {
+  branch from l_homoserine side left {
     l_homoserine
     <-> . +l_l_cystathionine +h2o
     l_cysteine
   }
 
-  branch from l_homoserine side left {
+  branch from l_homoserine side right {
     l_homoserine
     <-> . +h2o
     z_2_aminobutenoic_acid
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_123 [1.1.1.123] +l_sorbopyranose +h +nadph
-    5_dehydro_d_fructose
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_131 [1.1.1.131] +d_mannonate +nadph
-    d_mannopyranuronic_acid
+    <-> ec_1_1_1_146 [1.1.1.146] +h +adrenosterone +nadph
+    11beta_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from nh4 side right {
-    nh4
-    <-> . +formate +h2o
-    hydrogen_cyanide
+  branch from nadp side right {
+    nadp
+    <-> . +h +cholest_5_ene +o2 +nadph +h2o
+    5_6beta_epoxy_5beta_cholestane
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_2_7_1_59 [2.7.1.59] +h +alpha_aminopropionitrile +h2o +hydrogen_cyanide
-    acetaldehyde
+    <-> ec_3_5_1_3 [3.5.1.3] +monoamide_of_dicarboxylate +h +h2o
+    alpha_omega_dicarboxylic_acid
   }
 
-  branch from o_phospho_l_homoserine side right {
-    o_phospho_l_homoserine
-    <-> ec_2_5_1_48 [2.5.1.48] +h2o +nh4 +phosphate
-    2_oxobutanoate
+  branch from nh4 side right {
+    nh4
+    <-> ec_3_5_4_20 [3.5.4.20] +h +1_4_amino_2_methylpyrimidin_5_ylmethyl_3_2_hydro +h2o
+    1_4_hydroxy_2_methylpyrimidin_5_ylmethyl_3_2_hyd
   }
 
   branch from o_phospho_l_homoserine side left {
@@ -108,14 +96,14 @@ pathway l-canavanine-to-h2o "L-canavanine to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    <-> ec_3_1_3_10 [3.1.3.10] +alpha_d_glucose +h2o
+    alpha_d_glucose_1_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    thca_coa_25r
+    <-> ec_3_6_1_7 [3.6.1.7] +h +benzoate +h2o
+    benzoyl_phosphate
   }
 
   branch from l_selenohomocysteine side left {
@@ -132,13 +120,13 @@ pathway l-canavanine-to-h2o "L-canavanine to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_2_3_2_2 [2.3.2.2] +3_cyano_l_alanine +h +l_glutamate
-    glutamyl_cyanoalanine
+    <-> ec_1_2_5_2 [1.2.5.2] +h +acetate +pyrroloquinoline_quinol +acetaldehyde
+    pyrroloquinoline_quinone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_107 [4.2.1.107] +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +h
-    24r_25r_3alpha_7alpha_12alpha_24_tetrahydroxy_5
+    <-> ec_3_6_1_20 [3.6.1.20] +h +benzoate +amp
+    benzoyl_amp
   }
 }

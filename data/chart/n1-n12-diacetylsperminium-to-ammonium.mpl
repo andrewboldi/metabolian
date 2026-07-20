@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammonium" {
-  spacing 236
+  spacing 212
 
   spine at 0,0 {
     n1_n12_diacetylsperminium
@@ -18,63 +18,39 @@ pathway n1-n12-diacetylsperminium-to-ammonium "N1,N12-diacetylsperminium to ammo
     1_formylpyrrolizidine
   }
 
-  branch from n1_acetylspermidinium side left {
-    n1_acetylspermidinium
-    <-> . +o2 +h2o +3_ammoniopropanal +h2o2
-    n_acetylputrescinium
-  }
-
-  branch from 1_4_butanediammonium side right {
+  branch from 1_4_butanediammonium side left {
     1_4_butanediammonium
     <-> ec_2_1_3_6 [2.1.3.6] +carbamoyl_p +pi +hplus
     n_carbamoylputrescinium
   }
 
-  branch from 1_4_butanediammonium side left {
+  branch from 1_4_butanediammonium side right {
     1_4_butanediammonium
-    <-> ec_2_6_1_113 [2.6.1.113] +pyruvate +alanine
-    4_ammoniobutanal
-  }
-
-  branch from sym_homospermidinium side right {
-    sym_homospermidinium
-    <-> . +o2 +h2o2 +nh3
-    n_4_ammoniobutylpyrrolinium_ion
-  }
-
-  branch from sym_homospermidinium side left {
-    sym_homospermidinium
     <-> . +acetyl_coa +coa +hplus
-    n1_acetyl_sym_homospermidinium
+    n_acetylputrescinium
   }
 
-  branch from trimethylenediaminium side right {
+  branch from trimethylenediaminium side left {
     trimethylenediaminium
     <-> ec_1_5_3_15 [1.5.3.15] +n8_acetylspermidinium +o2 +h2o +h2o2
     4_acetamidobutanal
   }
 
-  branch from trimethylenediaminium side left {
+  branch from trimethylenediaminium side right {
     trimethylenediaminium
     <-> ec_1_5_3_14 [1.5.3.14] +n1_acetylsperminium +o2 +h2o +h2o2
     n_3_acetamidopropyl_4_ammoniobutanal
   }
 
-  branch from 1_formylpyrrolizidine side right {
-    1_formylpyrrolizidine
-    <-> .
-    n_4_oxobutylpyrrolinium_ion
-  }
-
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_100 [3.5.1.100] +r_piperazin_4_ium_2_carboxamide +h2o
-    r_piperazine_2_carboxylic_acid
+    <-> . +pyrazinecarboxamide +h2o
+    pyrazine_2_carboxylate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
-    s_piperazine_2_carboxylic_acid
+    <-> ec_1_4_3_21 [1.4.3.21] +3_nitrotyramine +o2 +h2o +h2o2
+    4_hydroxy_3_nitrophenylacetaldehyde
   }
 }

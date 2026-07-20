@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
-  spacing 232
+  spacing 226
 
   spine at 0,0 {
     atrazine
@@ -42,23 +42,17 @@ pathway atrazine-to-2-deoxy-d-ribose "atrazine to 2-deoxy-D-ribose…" {
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_4_5_trisphosphate +h +atp
-    1d_myo_inositol_4_5_bisphosphate
+    <-> ec_2_7_1_172 [2.7.1.172] +h +n6_3_o_phospho_d_ribulosyl_l_lysinium +atp
+    n6_d_ribulosyl_l_lysinium
   }
 
   branch from adp side right {
     adp
-    <-> . +1d_myo_inositol_3_4_6_trisphosphate +h +atp
-    d_myo_inositol_3_6_bisphosphate
+    <-> . +4_aminobenzoyl_coa +phosphate +atp +coa
+    4_aminobenzoate
   }
 
   branch from 2_deoxy_d_ribose_5_phosphate side left {
-    2_deoxy_d_ribose_5_phosphate
-    <-> ec_4_1_2_4 [4.1.2.4] +h +acetaldehyde
-    d_glyceraldehyde_3_phosphate
-  }
-
-  branch from 2_deoxy_d_ribose_5_phosphate side right {
     2_deoxy_d_ribose_5_phosphate
     <-> ec_2_7_1_106 [2.7.1.106] +2_deoxy_d_ribose_1_5_bisphosphate +h +2r_3_phosphoglycerate
     glyceric_acid_1_3_biphosphate

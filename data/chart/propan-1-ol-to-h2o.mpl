@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
-  spacing 272
+  spacing 266
 
   spine at 0,0 {
     propan_1_ol
@@ -22,26 +22,26 @@ pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    arachidonic_acid_d8
+    <-> ec_6_2_1_23 [6.2.1.23] +diphosphate +amp +omega_carboxyacyl_coa +coa +alpha_omega_dicarboxylic_acid
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    hexadecanoate
+    <-> . +2_methyl_3_oxosuccinic_acid +l_glutamate +2s_3s_3_methyl_l_aspartate
+    2_oxoglutarate
   }
 
   branch from acetate side left {
     acetate
-    <-> . +acetyl_coa +4_hydroxybutanoate
-    4_hydroxybutanoyl_coa
+    <-> . +itaconyl_coa +itaconate
+    acetyl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +h +3_hydroxy_5_oxohexanoate
-    3_hydroxy_5_oxohexanoyl_coa
+    <-> ec_2_8_3_8 [2.8.3.8] +acetyl_coa +2_3_4_saturated_fatty_acid
+    2_3_4_saturated_fatty_acyl_coa
   }
 
   branch from 1_propanol side left {
@@ -64,31 +64,25 @@ pathway propan-1-ol-to-h2o "propan-1-ol to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    9z_octadecenoate
+    <-> ec_4_2_1_11 [4.2.1.11] +3_phospho_d_erythronic_acid
+    2_hydroxy_3_phosphonooxybut_3_enoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +all_cis_octadeca_6_9_12_15_tetraenoic_acid +phosphate +all_cis_octadeca_6_9_12_15_tetraenoic_acid
-    atp
-  }
-
-  branch from n_2_6_diethylphenyl_2_chloroacetamide side right {
-    n_2_6_diethylphenyl_2_chloroacetamide
-    <-> . +alachlor +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    methyl_formate
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_24s_dihydroxyvitamin_d3
+    <-> . +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h
+    formylisoglutamine
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20_s_25_dihydroxyvitamin_d3
+    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
+    n_2_ethyl_6_methylphenyl_2_chloroacetamide
+  }
+
+  branch from di_sulfido_diiron side left {
+    di_sulfido_diiron
+    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
+    25r_26_hydroxycholestanol
   }
 }

@@ -50,14 +50,14 @@ pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_13 [2.7.7.13] +d_mannose_1_phosphate +gtp +hplus
-    gdp_d_mannose
+    <-> ec_2_5_1_42 [2.5.1.42] +sn_3_o_geranylgeranyl_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_2_24 [6.3.2.24] +tyrosine +arginine +atp +amp +hplus
-    l_tyrosiniumyl_l_arginine
+    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
+    p1_p4_bis_5_guanosyl_tetraphosphate
   }
 
   branch from n_acyl_l_homoserine_lactone side left {
@@ -80,14 +80,14 @@ pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_161 [2.3.1.161] +malonyl-coa +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
-    o_s_dihydromonacolin_l_carboxy_pantetheine_4_pho
+    <-> ec_3_1_4_14 [3.1.4.14] +h2o +d_pantetheine_4_phosphate +hplus
+    l_serine
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_3_1_4_14 [3.1.4.14] +h2o +d_pantetheine_4_phosphate +hplus
-    l_serine
+    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
+    acetyl-acp
   }
 
   branch from carboxylic_acid_anion side right {
@@ -116,14 +116,14 @@ pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-
 
   branch from hydroquinones side right {
     hydroquinones
-    <-> ec_1_5_5_2 [1.5.5.2] +l_proline +1_4_benzoquinones +hplus
-    s_1_pyrroline_5_carboxylate
+    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
+    orotate
   }
 
   branch from hydroquinones side left {
     hydroquinones
-    <-> ec_1_3_5_2 [1.3.5.2] +dihydroorotate +1_4_benzoquinones
-    orotate
+    <-> ec_1_1_5_4 [1.1.5.4] +malate +1_4_benzoquinones
+    oxaloacetate
   }
 
   branch from 1_4_benzoquinones side right {
@@ -134,7 +134,7 @@ pathway 3-acyloxy-acyl-group-to-1-4-benzoquinones "3-(acyloxy)acyl group to 1,4-
 
   branch from 1_4_benzoquinones side left {
     1_4_benzoquinones
-    <-> ec_1_1_5_4 [1.1.5.4] +malate +hydroquinones
-    oxaloacetate
+    <-> . +shikimate +hydroquinones
+    3_dehydroshikimate
   }
 }

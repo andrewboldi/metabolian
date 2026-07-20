@@ -42,13 +42,13 @@ pathway n-1-deoxy-d-fructopyra-to-3-n-acetyl-l-valyl-ade "N-(1-deoxy-β-D-fructo
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_181 [4.2.3.181] +fpp
-    selina_4_15_7_11_diene
+    <-> ec_4_2_3_197 [4.2.3.197] +fpp +h2o
+    7_epi_ent_eudesmane_5_11_diol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_180 [4.2.3.180] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    pseudolaratriene
+    <-> ec_4_2_3_199 [4.2.3.199] +fpp
+    5_epi_eremophilene
   }
 }

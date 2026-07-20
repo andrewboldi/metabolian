@@ -30,50 +30,50 @@ pathway luteolin-to-h2o-null "luteolin to H2O" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +n_acetyl_l_lysine +l_glutamate
-    n_acetyl_l_2_aminoadipate_semialdehyde
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
     <-> ec_1_14_11_22 [1.14.11.22] +s_pinocembrin +o2 +co2 +succinate +h2o
     chrysin
   }
 
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +co2 +succinate
+    oxyayanin_b
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_meiqx +nadp +h2o +h +nadph
-    meiqx
+    <-> ec_1_13_11_12 [1.13.11.12] +9z_12z_octadecadienoate +h
+    hydroperoxylinoleic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_iq +nadp +h2o +h +nadph
-    3_methyl_3h_imidazo_4_5_f_quinolin_2_amine
+    <-> ec_1_14_99_1 [1.14.99.1] +prostaglandin_g2
+    prostaglandin_h2
   }
 
   branch from 2r_3s_4s_3_4_leucopelargonidin side left {
-    2r_3s_4s_3_4_leucopelargonidin
-    <-> ec_1_14_20_4 [1.14.20.4] +2_oxoglutarate +o2 +co2 +h +succinate +h2o
-    pelargonidin
-  }
-
-  branch from 2r_3s_4s_3_4_leucopelargonidin side right {
     2r_3s_4s_3_4_leucopelargonidin
     <-> ec_1_14_11_19 [1.14.11.19] +2_oxoglutarate +o2 +co2 +h +succinate +h2o
     pelargonidin
   }
 
+  branch from 2r_3s_4s_3_4_leucopelargonidin side right {
+    2r_3s_4s_3_4_leucopelargonidin
+    <-> . +2_oxoglutarate +o2 +co2 +succinate +h2o
+    4s_2_3_dehydroleucopelargonidin
+  }
+
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_146 [1.1.1.146] +h +cholest_5_en_3_one +nadph
-    cholesterol
+    <-> ec_1_1_1_184 [1.1.1.184] +h +trichloroacetate +nadph
+    chloral_hydrate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_91 [1.14.14.91] +2_fluoro_trans_cinnamate +h +o2 +nadph +h2o
-    2_fluoro_4_hydroxycinnamate
+    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_2_hydroxyisovalerate +h +nadph
+    ethyl_3_methyl_2_oxobutanoate
   }
 
   branch from afzelechin side left {
@@ -84,13 +84,13 @@ pathway luteolin-to-h2o-null "luteolin to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_10 [3.4.11.10] +l_phenylalanine_p_nitroanilide +l_phenylalanine
-    4_nitroaniline
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +4_ethylthio_2_oxobutanoate +nh4 +nad
+    l_ethionine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_2_16 [3.5.2.16] +glutaramic_acid
-    piperidine_2_6_dione
+    <-> ec_4_2_1_84 [4.2.1.84] +methylacrylonitrile
+    methacrylamide
   }
 }

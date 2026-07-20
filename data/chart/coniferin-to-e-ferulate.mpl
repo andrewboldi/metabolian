@@ -22,14 +22,14 @@ pathway coniferin-to-e-ferulate "coniferin to (E)-ferulate" {
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
-    beta_d_galactose
+    <-> . +j_104303 +h2o
+    j_109384
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +coa
-    6_o_acetyl_beta_d_glucose
+    <-> . +be_13793c +h2o
+    ed_110
   }
 
   branch from coniferyl_aldehyde side left {

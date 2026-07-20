@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-sulfo-d-quinovose-to-l-cysteine "6-sulfo-D-quinovose to L-cysteine" {
-  spacing 290
+  spacing 272
 
   spine at 0,0 {
     6_sulfo_d_quinovose
@@ -24,13 +24,51 @@ pathway 6-sulfo-d-quinovose-to-l-cysteine "6-sulfo-D-quinovose to L-cysteine" {
     amp_3_end_1
   }
 
+  branch from thiocyanate side left {
+    thiocyanate
+    <-> . +h2o2 +hplus +h2o
+    hypothiocyanous_acid
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> . +pentan_3_aminium +nad +h2o +nadh +hplus
+    pentan_3_one
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> . +hexan_2_aminium +nad +h2o +nadh +hplus
+    2_oxohexane
+  }
 
+  branch from 3_l_cysteinyl_adenylyl_zwitterionic_group side right {
+    3_l_cysteinyl_adenylyl_zwitterionic_group
+    <-> . +acetyl_coa +coa +hplus
+    3_n_acetyl_l_cysteinyl_adenylyl
+  }
 
+  branch from amp_3_end_1 side left {
+    amp_3_end_1
+    <-> . +l_lysyl_5_amp +amp +hplus
+    3_l_lysyl_adenylyl_1_group
+  }
 
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> . +3_n_acetylglycyl_adenylyl +h2o +hplus
+    n_acetylglycinate
+  }
 
+  branch from cysteine side left {
+    cysteine
+    <-> . +mercaptopyruvate +l_kynurenine
+    4_2_aminophenyl_2_4_dioxobutanoate
+  }
 
-
-
+  branch from cysteine side right {
+    cysteine
+    <-> ec_1_8_3_5 [1.8.3.5] +s_2e_6e_10e_geranylgeranyl_l_cysteine +o2 +h2o +h2o2
+    2e_6e_10e_geranylgeranial
+  }
 }

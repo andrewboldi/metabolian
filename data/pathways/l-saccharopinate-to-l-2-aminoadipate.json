@@ -157,24 +157,6 @@
       }
     },
     {
-      "id": "l_alanyl_l_glutamate",
-      "name": "L-alanyl-L-glutamate",
-      "formula": "C8H13N2O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:61396"
-      }
-    },
-    {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
       "id": "5_6_7_8_tetrahydromethanopterin",
       "name": "5,6,7,8-tetrahydromethanopterin",
       "short": "5,6,7,8-tetrahydrom…",
@@ -222,6 +204,35 @@
       }
     },
     {
+      "id": "dtdp_3_amino_3_6_dideoxy_d_galactopyranose",
+      "name": "dTDP-3-amino-3,6-dideoxy-α-D-galactopyranose",
+      "short": "dTDP-3-amino-3,6-di…",
+      "formula": "C16H26N3O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63305"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "dtdp_3_dehydro_6_deoxy_d_galactose",
+      "name": "dTDP-3-dehydro-6-deoxy-α-D-galactose",
+      "short": "dTDP-3-dehydro-6-de…",
+      "formula": "C16H22N2O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63303"
+      }
+    },
+    {
       "id": "l_pipecolic_acid",
       "name": "L-pipecolic acid",
       "formula": "C6H11NO2",
@@ -262,6 +273,13 @@
       "name": "tetrahydrosarcinapterin synthase",
       "ec": [
         "6.3.2.33"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_90",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose transaminase",
+      "ec": [
+        "2.6.1.90"
       ]
     },
     {
@@ -523,45 +541,6 @@
     },
     {
       "id": "r6",
-      "name": "L-alanyl-L-glutamate + H2O = L-alanine + L-glutamate",
-      "equation": "L-alanyl-L-glutamate + H2O = L-alanine + L-glutamate",
-      "substrates": [
-        {
-          "metabolite": "l_alanyl_l_glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:29335"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:29335"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "tetrahydrosarcinapterin synthase",
       "equation": "5,6,7,8-tetrahydromethanopterin + L-glutamate + ATP = 5,6,7,8-tetrahydrosarcinapterin + ADP + phosphate + H(+)",
       "ec": "6.3.2.33",
@@ -603,7 +582,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:30567"
       },
@@ -613,6 +592,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:30567"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose transaminase",
+      "equation": "dTDP-3-amino-3,6-dideoxy-alpha-D-galactopyranose + 2-oxoglutarate = dTDP-3-dehydro-6-deoxy-alpha-D-galactose + L-glutamate",
+      "ec": "2.6.1.90",
+      "substrates": [
+        {
+          "metabolite": "dtdp_3_amino_3_6_dideoxy_d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp_3_dehydro_6_deoxy_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:31619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31619"
           }
         ]
       }

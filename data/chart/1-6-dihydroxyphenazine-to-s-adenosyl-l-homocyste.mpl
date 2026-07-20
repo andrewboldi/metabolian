@@ -20,13 +20,13 @@ pathway 1-6-dihydroxyphenazine-to-s-adenosyl-l-homocyste "1,6-dihydroxyphenazine
 
   branch from sah side left {
     sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam
-    4_8_dihydroxy_7_methoxyflavone
+    <-> . +11_hydroxystrychnine +sam +hplus
+    colubrine
   }
 
   branch from sah side right {
     sah
-    <-> . +8_hydroxy_7_methoxyflavone +sam +hplus
-    7_8_dimethoxyflavone
+    <-> . +p_methoxyphenol +sam +hplus
+    1_4_dimethoxybenzene
   }
 }

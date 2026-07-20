@@ -24,14 +24,14 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +fe_ii_heme_i +h2o +hydrogen_donor
-    fe_ii_hydroxyheme_i
+    <-> . +5_n_glycyl_dtmp_1 +h2o +glyoxylate +hydrogen_donor
+    5_aminomethyl_dump_zwitterion
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +dihydropyriculol +hydrogen_donor
-    pyriculol
+    <-> . +malate +malonyl-coa +acetyl_coa +hydrogen_donor +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
+    trihazone_a
   }
 
   branch from 2_chlorooxirane side left {
@@ -43,13 +43,13 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
   branch from fmn side right {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11r_12s_eet
+    11_12_eet
   }
 
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    8r_9s_eet
+    12_hete
   }
 
   branch from 1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 side right {
@@ -58,57 +58,39 @@ pathway 1-1-dichloroethene-to-succinate "1,1-dichloroethene to succinate" {
     3h_imidazo_2_1_i_purine
   }
 
-  branch from 2_deoxyadenosine_5_monophosphate_1 side left {
-    2_deoxyadenosine_5_monophosphate_1
-    <-> . +akg +o2 +formaldehyde +succinate +co2 +hplus
-    1_methyldeoxyadenosine_5_monophosphate
-  }
-
-  branch from glyoxal side right {
+  branch from glyoxal side left {
     glyoxal
     <-> . +l_argininium
     n_1_hydroxy_2_oxoethyl_l_argininium
   }
 
-  branch from glyoxal side left {
+  branch from glyoxal side right {
     glyoxal
     <-> . +l_cysteine
     s_1_hydroxy_2_oxoethyl_l_cysteine
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +fumigatonoid_c +akg +o2 +co2 +h2o
-    novofumigatonin
-  }
-
   branch from succinate side left {
     succinate
-    <-> . +jasmonate +akg +o2 +co2
-    12_hydroxyjasmonate
+    <-> . +trihazone_a +akg +o2 +hplus +co2 +h2o
+    trihazone_d
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_217 [2.1.1.217] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+  branch from succinate side right {
+    succinate
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
+    5_hydroxymethylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_218 [2.1.1.218] +sam +n1_methyladenosine_5_monophosphate_1 +hplus
-    adenosine_5_monophosphate_1
+    <-> ec_2_1_1_242 [2.1.1.242] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
-    n_methylproline
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> ec_1_14_15_38 [1.14.15.38] +3_3_4_substituted_phenyl_1_1_dimethylurea +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    a_1_methyl_3_phenylurea
+  branch from sah side right {
+    sah
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc "1-hexadecyl-2-propionyl-s… to 1-hexadecyl-sn-glycero-3-…" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     1_hexadecyl_2_propionyl_sn_glycero_3_phosphochol
@@ -18,25 +18,19 @@ pathway 1-hexadecyl-2-propionyl-s-to-1-hexadecyl-sn-glyc "1-hexadecyl-2-propiony
 
   branch from lysophosphatidylcholine_o_16_0_0_0 side left {
     lysophosphatidylcholine_o_16_0_0_0
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +choline_alfoscerate
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
     1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
-  }
-
-  branch from lysophosphatidylcholine_o_16_0_0_0 side right {
-    lysophosphatidylcholine_o_16_0_0_0
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +1_hexadecyl_2_hexadecanoyl_sn_glycero_3_phosphoc
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_acyl_sn_glycerol
   }
 
   branch from phosphocholine side right {
     phosphocholine
     <-> . +1_2_dihexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
     1_2_dipalmitoyl_sn_glycerol
+  }
+
+  branch from phosphocholine side left {
+    phosphocholine
+    <-> . +o_phosphocholine_l_serine +h2o +hplus
+    l_serine
   }
 }

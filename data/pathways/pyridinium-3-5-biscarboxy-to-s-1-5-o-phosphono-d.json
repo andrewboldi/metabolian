@@ -113,31 +113,41 @@
       }
     },
     {
-      "id": "all_trans_hexaprenyl_diphosphate",
-      "name": "all-trans-hexaprenyl diphosphate",
-      "short": "all-trans-hexapreny…",
-      "formula": "C30H49O7P2",
-      "charge": -3,
+      "id": "framycetin",
+      "name": "framycetin",
+      "formula": "C23H52N6O13",
+      "charge": 6,
       "xrefs": {
-        "chebi": "CHEBI:58179"
+        "chebi": "CHEBI:87835"
       }
     },
     {
-      "id": "macrophomene",
-      "name": "macrophomene",
-      "formula": "C30H48",
-      "charge": 0,
+      "id": "4_adenylylframycetin_b",
+      "name": "4'-adenylylframycetin B",
+      "short": "4'-adenylylframycet…",
+      "formula": "C33H63N11O19P",
+      "charge": 5,
       "xrefs": {
-        "chebi": "CHEBI:192980"
+        "chebi": "CHEBI:233201"
       }
     },
     {
-      "id": "talaropentaene",
-      "name": "talaropentaene",
-      "formula": "C30H48",
-      "charge": 0,
+      "id": "paromomycin",
+      "name": "paromomycin",
+      "formula": "C23H50N5O14",
+      "charge": 5,
       "xrefs": {
-        "chebi": "CHEBI:192978"
+        "chebi": "CHEBI:233202"
+      }
+    },
+    {
+      "id": "4_adenylylparomomycin",
+      "name": "4'-adenylylparomomycin",
+      "short": "4'-adenylylparomomy…",
+      "formula": "C33H61N10O20P",
+      "charge": 4,
+      "xrefs": {
+        "chebi": "CHEBI:233203"
       }
     }
   ],
@@ -147,20 +157,6 @@
       "name": "intrinsic cysteine-dependent pyridinium-3,5-bisthiocarboxylic acid",
       "ec": [
         "4.4.1.37"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_221",
-      "name": "macrophomene synthase",
-      "ec": [
-        "4.2.3.221"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_220",
-      "name": "talaropentaene synthase",
-      "ec": [
-        "4.2.3.220"
       ]
     }
   ],
@@ -314,18 +310,21 @@
     },
     {
       "id": "r4",
-      "name": "macrophomene synthase",
-      "equation": "all-trans-hexaprenyl diphosphate = macrophomene + diphosphate",
-      "ec": "4.2.3.221",
+      "name": "neomycin B + ATP = 4'-adenylylneomycin B + diphosphate",
+      "equation": "neomycin B + ATP = 4'-adenylylneomycin B + diphosphate",
       "substrates": [
         {
-          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "metabolite": "framycetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "macrophomene",
+          "metabolite": "4_adenylylframycetin_b",
           "stoichiometry": 1
         },
         {
@@ -333,40 +332,38 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_221"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:77967"
+        "rhea": "RHEA:83675"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77967"
+            "id": "RHEA:83675"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "talaropentaene synthase",
-      "equation": "all-trans-hexaprenyl diphosphate = talaropentaene + diphosphate",
-      "ec": "4.2.3.220",
+      "name": "paromomycin + ATP = 4'-adenylylparomomycin + diphosphate",
+      "equation": "paromomycin + ATP = 4'-adenylylparomomycin + diphosphate",
       "substrates": [
         {
-          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "metabolite": "paromomycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "talaropentaene",
+          "metabolite": "4_adenylylparomomycin",
           "stoichiometry": 1
         },
         {
@@ -374,22 +371,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_220"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:77971"
+        "rhea": "RHEA:83679"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77971"
+            "id": "RHEA:83679"
           }
         ]
       }

@@ -30,13 +30,13 @@ pathway lithocholyl-coa-to-fmn "lithocholyl-CoA to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    22s_22_hydroxycholesterol
+    <-> . +hancockiamide_b +fmnh2 +o2 +h2o +hplus
+    hancockiamide_c
   }
 
   branch from fmn side right {
     fmn
-    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
-    5_22s_22_hydroxycholestan_3_ol
+    <-> . +hancockiamide_d +fmnh2 +o2 +h2o +hplus
+    hancockiamide_h
   }
 }

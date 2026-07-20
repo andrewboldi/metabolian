@@ -1,0 +1,415 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acryloyl-coa-to-nicotinamide",
+  "name": "acryloyl-CoA to nicotinamide…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from acryloyl-CoA to nicotinamide hypoxanthine dinucleotide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR145414"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acryloyl_coa",
+      "name": "acryloyl-CoA",
+      "formula": "C24H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364005"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "lactoyl_coa",
+      "name": "lactoyl-CoA",
+      "formula": "C24H40N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726793"
+      }
+    },
+    {
+      "id": "propanoate",
+      "name": "propanoate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094052"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "s_lactate",
+      "name": "(S)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371363"
+      }
+    },
+    {
+      "id": "deamido_nad",
+      "name": "deamido-NAD",
+      "formula": "C21H24N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103300"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "nicotinamide_hypoxanthine_dinucleotide",
+      "name": "nicotinamide hypoxanthine dinucleotide",
+      "short": "nicotinamide…",
+      "formula": "C21H26N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM507495"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "chromate",
+      "name": "chromate",
+      "formula": "CrO4",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736620"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_cysteine",
+      "name": "D-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2112"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_54",
+      "name": "lactoyl-CoA dehydratase",
+      "ec": [
+        "4.2.1.54"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_1",
+      "name": "propionate CoA-transferase",
+      "ec": [
+        "2.8.3.1"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_27",
+      "name": "L-lactate dehydrogenase",
+      "ec": [
+        "1.1.1.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lactoyl-CoA dehydratase",
+      "ec": "4.2.1.54",
+      "substrates": [
+        {
+          "metabolite": "acryloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR145414"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145414"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "propionate CoA-transferase",
+      "ec": "2.8.3.1",
+      "substrates": [
+        {
+          "metabolite": "propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR147311"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147311"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-lactate dehydrogenase",
+      "ec": "1.1.1.27",
+      "substrates": [
+        {
+          "metabolite": "deamido_nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide_hypoxanthine_dinucleotide",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR130124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR130124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR96912",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chromate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chromate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR96912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96912"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR96996",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR96996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR96996"
+          }
+        ]
+      }
+    }
+  ]
+}

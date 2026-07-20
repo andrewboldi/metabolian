@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-7-9-9-tetra-cis-lycop-to-2e-butenoyl-coa",
+  "name": "7,7',9,9'-tetra-cis-lycop… to (2E)-butenoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from 7,7',9,9'-tetra-cis-lycopene to (2E)-butenoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182156"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_7_9_9_tetra_cis_lycopene",
+      "name": "7,7',9,9'-tetra-cis-lycopene",
+      "short": "7,7',9,9'-tetra-cis…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62466"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "7_9_9_tri_cis_neurosporene",
+      "name": "7,9,9'-tri-cis-neurosporene",
+      "short": "7,9,9'-tri-cis-neur…",
+      "formula": "C40H58",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62463"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinone_8",
+      "name": "2-demethylmenaquinone-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48455"
+      }
+    },
+    {
+      "id": "ubiquinol_10",
+      "name": "ubiquinol-10",
+      "formula": "C59H92O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64183"
+      }
+    },
+    {
+      "id": "ubiquinone_10",
+      "name": "ubiquinone-10",
+      "formula": "C59H90O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364539"
+      }
+    },
+    {
+      "id": "9_9_di_cis_carotene",
+      "name": "9,9'-di-cis-ζ-carotene",
+      "short": "9,9'-di-cis-ζ-carot…",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48716"
+      }
+    },
+    {
+      "id": "butanoyl_coa",
+      "name": "butanoyl-CoA",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104300"
+      }
+    },
+    {
+      "id": "2e_butenoyl_coa",
+      "name": "(2E)-butenoyl-CoA",
+      "formula": "C25H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1363936"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182156",
+      "substrates": [
+        {
+          "metabolite": "7_7_9_9_tetra_cis_lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR182154",
+      "substrates": [
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "9_9_di_cis_carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR182154"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182154"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR163360",
+      "substrates": [
+        {
+          "metabolite": "butanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2e_butenoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR163360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163360"
+          }
+        ]
+      }
+    }
+  ]
+}

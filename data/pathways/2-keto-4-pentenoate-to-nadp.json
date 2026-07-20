@@ -1,0 +1,249 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-keto-4-pentenoate-to-nadp",
+  "name": "2-keto-4-pentenoate to NADP",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-keto-4-pentenoate to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198329"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_keto_4_pentenoate",
+      "name": "2-keto-4-pentenoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364413"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "benzoate",
+      "name": "benzoate",
+      "formula": "C7H5O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM217"
+      }
+    },
+    {
+      "id": "hpk",
+      "name": "HPK",
+      "formula": "C12H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:228828"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_6_dioxo_6_phenylhexa_3_enoate",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate",
+      "short": "2,6-dioxo-6-phenylh…",
+      "formula": "C12H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64675"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "2_6_dioxo_6_phenylhexanoate",
+      "name": "2,6-dioxo-6-phenylhexanoate",
+      "short": "2,6-dioxo-6-phenylh…",
+      "formula": "C12H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM4272"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_8",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": [
+        "3.7.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_40",
+      "name": "2-hydroxy-6-oxo-6-phenylhexa-2,4-dienoate reductase",
+      "ec": [
+        "1.3.1.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": "3.7.1.8",
+      "substrates": [
+        {
+          "metabolite": "2_keto_4_pentenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hpk",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198329"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR197267",
+      "substrates": [
+        {
+          "metabolite": "hpk",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_6_dioxo_6_phenylhexa_3_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197267"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxy-6-oxo-6-phenylhexa-2,4-dienoate reductase",
+      "ec": "1.3.1.40",
+      "substrates": [
+        {
+          "metabolite": "2_6_dioxo_6_phenylhexa_3_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_6_dioxo_6_phenylhexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR198126"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198126"
+          }
+        ]
+      }
+    }
+  ]
+}

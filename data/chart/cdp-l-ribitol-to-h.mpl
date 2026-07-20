@@ -34,25 +34,25 @@ pathway cdp-l-ribitol-to-h "CDP-L-ribitol to H" {
 
   branch from h side left {
     h
-    <-> . +acetyl_coa +n6_n6_o_tridemethylpuromycin +coa
-    n_acetyl_n6_n6_o_tridemethylpuromycin
+    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +glycerol_dipropionate +h2o
+    tripropionin
   }
 
   branch from h side right {
     h
-    <-> . +2_oxoglutarate +gibberellin_a12 +o2 +succinate +gibberellin_a110
-    co2
+    <-> ec_3_1_1_1 [3.1.1.1] +acetate +glycerol_1_2_diacetate +h2o
+    triacetin
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +gemfibrozil_glucuronide +gemfibrozil
+    <-> ec_2_4_1_17 [2.4.1.17] +5_androstane_3_17_diol_3_glucosiduronate +h +androstane_3_17_diol
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +5_androstane_3_17_diol_3_glucosiduronate +h +udp_alpha_d_glucuronate
-    androstane_3_17_diol
+    <-> . +h +alpha_cehc_glucuronide +udp_alpha_d_glucuronate
+    cehc
   }
 }

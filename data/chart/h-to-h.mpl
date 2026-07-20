@@ -18,37 +18,37 @@ pathway h-to-h "H to H" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_8_1_9 [1.8.1.9] +methylselenol +h2o +h +nadph
-    methylseleninic_acid
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+    3_flavanol_trans
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +aflatoxin_m1 +h2o +h +o2 +nadph
-    lsm_36909
+    <-> ec_1_3_1_112 [1.3.1.112] +3_hydroxy_2_phenylchromenylium +h +nadph
+    cis_3_flavanol
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +h +mycinamicin_viii +protomycinolide_iv
-    dtdp_alpha_d_desosamine
+    <-> . +dtdp_beta_l_rhamnose +k_252c +h
+    k252d
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +holyrine_a +h +dtdp_l_ristosamine
-    k_252c
+    <-> . +2_deoxy_5_keto_dihydrostreptosyl_k252c +k_252c
+    dtdp_2_deoxy_5_keto_dihydrostreptose
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_1 [5.5.1.1] +3_methylmuconolactone
-    3_methyl_cis_cis_muconic_acid
+    <-> . +dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene +nadph +nadp
+    dtdp_4_oxo_2_deoxy_beta_l_xylose
   }
 
   branch from h side right {
     h
-    <-> . +2_oxo_2h_pyran_4_6_dicarboxylate +methanol
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
+    <-> . +2_oxoglutarate +dtdp_4_amino_2_4_dideoxy_beta_l_xylose +dtdp_4_oxo_2_deoxy_beta_l_xylose
+    l_glutamate
   }
 }

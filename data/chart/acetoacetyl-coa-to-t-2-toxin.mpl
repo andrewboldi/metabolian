@@ -30,37 +30,37 @@ pathway acetoacetyl-coa-to-t-2-toxin "acetoacetyl-CoA to T-2 toxin" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +l_seryl_group +acetyl_coa
-    n_terminal_n_acetyl_l_serine
+    <-> ec_3_1_2_20 [3.1.2.20] +4_chlorobenzoate +h +h2o
+    4_chlorobenzoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_threonyl_group
-    n_acetyl_l_threonyl
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
+    11_cis_retinyl_hexadecanoate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +nad
-    r_2_hexanol
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +16_ketoestrone +nad
+    16_hydroxyestrone
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_methylbutanal +nad
-    s_2_methylbutan_1_ol
+    <-> ec_1_1_1_62 [1.1.1.62] +2_acetylpyridine +nadph +nadp
+    1_pyridin_2_yl_ethanol
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_3 [3.1.1.3] +2_aminofluorene +h +h2o
-    2_acetamidofluorene
+    <-> ec_3_1_1_7 [3.1.1.7] +s_propyl_thioacetate +h2o +h
+    propane_1_thiol
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_3_1_190 [2.3.1.190] +acetoin +2_6_dichloroindophenol +h2o +h +acetaldehyde
-    reduced_2_6_dichlorophenolindophenol
+    <-> ec_1_1_1_1 [1.1.1.1] +h +4_nitrophenol +h2o
+    4_nitrophenyl_acetate
   }
 }

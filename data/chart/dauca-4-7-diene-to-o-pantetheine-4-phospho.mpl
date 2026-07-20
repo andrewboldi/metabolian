@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dauca-4-7-diene-to-o-pantetheine-4-phospho "dauca-4,7-diene to O-(pantetheine-4'-phospho…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     dauca_4_7_diene
@@ -18,17 +18,5 @@ pathway dauca-4-7-diene-to-o-pantetheine-4-phospho "dauca-4,7-diene to O-(pantet
     aculene_c
     <-> . +o_s_l_prolylpantetheine_4_phosphoryl_serine_zwit -holo-acp
     aculene_a
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +preaspterpenacid_acid_i +fmnh2 +o2 +h2o +hplus
-    preaspterpenacid_acid_ii
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    16s_22s_dihydroxycholesterol
   }
 }

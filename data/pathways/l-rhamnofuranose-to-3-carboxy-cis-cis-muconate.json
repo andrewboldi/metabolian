@@ -311,31 +311,50 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:32551"
       }
     },
     {
-      "id": "3_indol_3_yl_pyruvate",
-      "name": "3-(indol-3-yl)pyruvate",
-      "short": "3-(indol-3-yl)pyruv…",
-      "formula": "C11H8NO3",
-      "charge": -1,
+      "id": "6_amino_2_oxohexanoic_acid",
+      "name": "6-amino-2-oxohexanoic acid",
+      "short": "6-amino-2-oxohexano…",
+      "formula": "C6H11NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17640"
+        "chebi": "CHEBI:58183"
       }
     },
     {
-      "id": "dserine",
-      "name": "D-Serine",
-      "formula": "C3H7NO3",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35247"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "pyrithiamine",
+      "name": "pyrithiamine",
+      "formula": "C14H19N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:72290"
+      }
+    },
+    {
+      "id": "1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro",
+      "name": "1-(4-hydroxy-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium",
+      "short": "1-(4-hydroxy-2-meth…",
+      "formula": "C14H18N3O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57975"
       }
     },
     {
@@ -345,15 +364,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:36208"
-      }
-    },
-    {
-      "id": "3_hydroxybenzoate",
-      "name": "3-hydroxybenzoate",
-      "formula": "C7H5O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16193"
       }
     },
     {
@@ -489,24 +499,17 @@
       ]
     },
     {
-      "id": "ec_1_4_1_19",
-      "name": "tryptophan dehydrogenase",
+      "id": "ec_1_4_3_14",
+      "name": "L-lysine oxidase",
       "ec": [
-        "1.4.1.19"
+        "1.4.3.14"
       ]
     },
     {
-      "id": "ec_4_3_1_18",
-      "name": "D-serine ammonia-lyase",
+      "id": "ec_3_5_4_20",
+      "name": "pyrithiamine deaminase",
       "ec": [
-        "4.3.1.18"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_23",
-      "name": "3-hydroxybenzoate 4-monooxygenase",
-      "ec": [
-        "1.14.13.23"
+        "3.5.4.20"
       ]
     },
     {
@@ -1203,16 +1206,16 @@
     },
     {
       "id": "r16",
-      "name": "tryptophan dehydrogenase",
-      "equation": "L-tryptophan + NADP(+) + H2O = indole-3-pyruvate + NH4(+) + NADPH + H(+)",
-      "ec": "1.4.1.19",
+      "name": "L-lysine oxidase",
+      "equation": "L-lysine + O2 + H2O = 6-amino-2-oxohexanoate + H2O2 + NH4(+)",
+      "ec": "1.4.3.14",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -1222,15 +1225,50 @@
       ],
       "products": [
         {
-          "metabolite": "3_indol_3_yl_pyruvate",
+          "metabolite": "6_amino_2_oxohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:14437"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14437"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "pyrithiamine deaminase",
+      "equation": "1-(4-amino-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium + H2O + H(+) = 1-(4-hydroxy-2-methylpyrimid-5-ylmethyl)-3-(2-hydroxyethyl)-2-methylpyridinium + NH4(+)",
+      "ec": "3.5.4.20",
+      "substrates": [
+        {
+          "metabolite": "pyrithiamine",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -1238,40 +1276,9 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_1_19"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 16,
-      "xrefs": {
-        "rhea": "RHEA:13477"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:13477"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r17",
-      "name": "D-serine ammonia-lyase",
-      "equation": "D-serine = pyruvate + NH4(+)",
-      "ec": "4.3.1.18",
-      "substrates": [
-        {
-          "metabolite": "dserine",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "pyruvate",
+          "metabolite": "1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro",
           "stoichiometry": 1
         },
         {
@@ -1281,20 +1288,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_18"
+          "enzyme": "ec_3_5_4_20"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 17,
       "xrefs": {
-        "rhea": "RHEA:13977"
+        "rhea": "RHEA:14537"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13977"
+            "id": "RHEA:14537"
           }
         ]
       }
@@ -1350,63 +1357,6 @@
     },
     {
       "id": "r19",
-      "name": "3-hydroxybenzoate 4-monooxygenase",
-      "equation": "3-hydroxybenzoate + NADPH + O2 + H(+) = 3,4-dihydroxybenzoate + NADP(+) + H2O",
-      "ec": "1.14.13.23",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxybenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_4_dihydroxybenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_23"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 19,
-      "xrefs": {
-        "rhea": "RHEA:11480"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:11480"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r20",
       "name": "3,4-dihydroxyphthalate decarboxylase",
       "equation": "3,4-dihydroxyphthalate + H(+) = 3,4-dihydroxybenzoate + CO2",
       "ec": "4.1.1.69",
@@ -1436,7 +1386,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 20,
+      "pathwayStep": 19,
       "xrefs": {
         "rhea": "RHEA:18601"
       },
@@ -1451,7 +1401,7 @@
       }
     },
     {
-      "id": "r21",
+      "id": "r20",
       "name": "carboxy-cis,cis-muconate cyclase",
       "equation": "3-carboxy-2,5-dihydro-5-oxofuran-2-acetate = 3-carboxy-cis,cis-muconate",
       "ec": "5.5.1.5",
@@ -1473,7 +1423,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 21,
+      "pathwayStep": 20,
       "xrefs": {
         "rhea": "RHEA:14977"
       },
@@ -1488,7 +1438,7 @@
       }
     },
     {
-      "id": "r22",
+      "id": "r21",
       "name": "3-carboxy-cis,cis-muconate cycloisomerase",
       "equation": "2-(carboxymethyl)-5-oxo-2,5-dihydro-2-furoate = 3-carboxy-cis,cis-muconate + H(+)",
       "ec": "5.5.1.2",
@@ -1514,7 +1464,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 22,
+      "pathwayStep": 21,
       "xrefs": {
         "rhea": "RHEA:23656"
       },

@@ -48,13 +48,13 @@ pathway long-chain-fatty-acid-to-o-s-2r-4r-6r-8r-2-4-6 "long-chain fatty acid…
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_69 [2.5.1.69] +dmapp
-    r_lavandulyl_diphosphate
+    <-> ec_6_3_5_1 [6.3.5.1] +deamido_nad +glutamine +atp +h2o +amp +nad +hplus
+    glutamate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_28 [6.2.1.28] +25r_3_7_dihydroxy_5_cholestan_26_oate +atp +coa +amp
-    25r_3_7_dihydroxy_5_cholestan_26_oyl_coa
+    <-> ec_6_1_1_3 [6.1.1.3] +amp_3_end_1 +threonine +atp +amp +hplus
+    3_l_threonyl_adenylyl_1_group
   }
 }

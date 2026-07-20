@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
-  spacing 232
+  spacing 220
 
   spine at 0,0 {
     o_methyl_l_tyrosine
@@ -28,38 +28,26 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_298 [2.1.1.298] +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_b +sam
-    mitomycin_b
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_171 [4.2.3.171] +fpp +h2o
-    corvol_ether_a
+    <-> . +ipp +fpp
+    all_trans_nonaprenyl_diphosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_165 [4.2.3.165] +fpp
-    1r_4r_5s_guaia_6_10_14_diene
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +1_methyldeoxyadenosine_5_monophosphate +akg +o2 +formaldehyde +co2 +hplus
-    2_deoxyadenosine_5_monophosphate_1
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 +akg +o2 +h2o +2_deoxyadenosine_5_monophosphate_1 +co2
-    glyoxal
+    <-> . +all_trans_pentaprenyl_diphosphate +ipp
+    tetra_trans_hexa_cis_undecaprenyl_diphosphate
   }
 
   branch from yaequinolone_a2 side right {
@@ -70,25 +58,25 @@ pathway o-methyl-l-tyrosine-to-h2o "O-methyl-L-tyrosine to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +toluene +h2o
-    3_methylphenol
+    <-> ec_1_14_12_10 [1.14.12.10] +h +benzoate +o2 +nadph
+    1r_6s_1_6_dihydroxycyclohexa_2_4_diene_1_carbox
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h2o +h +3_methylphenol +o2 +nadph
-    3_methylcatechol
+    <-> ec_1_2_1_28 [1.2.1.28] +h +o_toluate +nadph +h2o
+    2_methylbenzaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +beta_d_glucosamine +o2 +h2o2
-    2_amino_2_deoxy_d_gluconate
+    <-> . +2_2_bis_4_chlorophenyl_ethanol
+    unsym_bis_4_chlorophenyl_ethylene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +xanthine
-    5_ureidoimidazole_4_carboxylic_acid
+    <-> . +4_hydroxy_9_fluorenone
+    3_4_dihydroxy_3_4_dihydro_9_fluorenone
   }
 }

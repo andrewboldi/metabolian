@@ -20,26 +20,26 @@ pathway n-formyl-l-methionyl-l-ar-to-h2o "N-formyl-L-methionyl-L-ar… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_3_6 [3.5.3.6] +d_arginine +nh4
-    d_citrulline
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    2_o_4_deoxy_l_threo_hex_4_enopyranuronosyl_l_rha
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +keto_d_fructose
-    lactulose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    avilamycin_a
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +s_methyl_l_cysteinyl_adenylate +h
-    l_cysteinyl_amp
+    <-> . +s_adenosyl_l_homocysteine +17_o_acetylajmaline +h
+    17_o_acetylnorajmaline
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +pyrrolomycin_h +h
-    pyrrolomycin_g
+    <-> . +s_adenosyl_l_homocysteine +premithramycinone +h
+    4_demethylpremithramycinone
   }
 
   branch from microcin_c_intermediate_4 side left {
@@ -56,13 +56,13 @@ pathway n-formyl-l-methionyl-l-ar-to-h2o "N-formyl-L-methionyl-L-ar… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_12z_15z_octadecatrienoyl_2_9z_octadecenoyl
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pc_18_3_9z_12z_15z_18_2_9z_12z
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    d_glcp_1_4_l_rhap_1_3_d_glcp
   }
 }

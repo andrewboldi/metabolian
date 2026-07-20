@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "amyrin-to-fmn",
   "name": "β-amyrin to FMN",
-  "category": "energy-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from β-amyrin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,105 +100,42 @@
       }
     },
     {
-      "id": "c21_steroid",
-      "name": "C21-steroid",
-      "formula": "C21H36",
+      "id": "32_hydroxylanosterol",
+      "name": "32-Hydroxylanosterol",
+      "formula": "C30H50O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61313"
+        "chebi": "CHEBI:166806"
       }
     },
     {
-      "id": "17_hydroxy_c21_steroid",
-      "name": "17α-hydroxy-C21-steroid",
-      "short": "17α-hydroxy-C21-ste…",
-      "formula": "C21H36O",
+      "id": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
+      "name": "4,4-Dimethyl-14a-formyl-5alpha-cholesta-8,24-dien-3beta-ol",
+      "short": "4,4-Dimethyl-14a-fo…",
+      "formula": "C30H48O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138141"
+        "chebi": "CHEBI:166681"
       }
     },
     {
-      "id": "lathosterone",
-      "name": "lathosterone",
-      "formula": "C27H44O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71550"
-      }
-    },
-    {
-      "id": "25s_7_dafachronate",
-      "name": "(25S)-Δ7-dafachronate",
-      "short": "Δ7-dafachronate",
-      "formula": "C27H41O3",
+      "id": "methyl_medium_chain_fatty_acid_anion",
+      "name": "ω-methyl-medium-chain fatty acid anion",
+      "short": "ω-methyl-medium-cha…",
+      "formula": "C2H3O2R",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71542"
+        "chebi": "CHEBI:194240"
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "30_hydroxy_11_oxo_amyrin",
-      "name": "30-hydroxy-11-oxo-β-amyrin",
-      "short": "30-hydroxy-11-oxo-β…",
-      "formula": "C30H48O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:71576"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "glycyrrhetinate",
-      "name": "glycyrrhetinate",
-      "formula": "C30H45O4",
+      "id": "hydroxy_medium_chain_fatty_acid_anion",
+      "name": "ω-hydroxy-medium-chain fatty acid anion",
+      "short": "ω-hydroxy-medium-ch…",
+      "formula": "C2H3O3R",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1365666"
+        "chebi": "CHEBI:194241"
       }
     },
     {
@@ -227,20 +164,6 @@
       "name": "11-oxo-beta-amyrin 30-oxidase",
       "ec": [
         "1.14.14.115"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_19",
-      "name": "steroid 17alpha-monooxygenase",
-      "ec": [
-        "1.14.14.19"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_173",
-      "name": "EC 1.14.13.173",
-      "ec": [
-        "1.14.13.173"
       ]
     },
     {
@@ -413,12 +336,11 @@
     },
     {
       "id": "r4",
-      "name": "steroid 17alpha-monooxygenase",
-      "equation": "a C21-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a 17alpha-hydroxy-C21-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.19",
+      "name": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol +...",
+      "equation": "32-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 32-oxolanosterol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "c21_steroid",
+          "metabolite": "32_hydroxylanosterol",
           "stoichiometry": 1
         },
         {
@@ -432,7 +354,7 @@
       ],
       "products": [
         {
-          "metabolite": "17_hydroxy_c21_steroid",
+          "metabolite": "4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die",
           "stoichiometry": 1
         },
         {
@@ -441,192 +363,81 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_19"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:65760"
+        "rhea": "RHEA:75107"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65760"
+            "id": "RHEA:75107"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "5alpha-cholest-7-en-3-one + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = (25S)-Del...",
-      "equation": "5alpha-cholest-7-en-3-one + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = (25S)-Delta7-dafachronate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "name": "an omega-methyl-medium-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 =...",
+      "equation": "an omega-methyl-medium-chain fatty acid + reduced [NADPH--hemoprotein reductase] + O2 = an omega-hydroxy-medium-chain fatty acid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "lathosterone",
+          "metabolite": "methyl_medium_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "25s_7_dafachronate",
+          "metabolite": "hydroxy_medium_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:66620"
+        "rhea": "RHEA:75279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66620"
+            "id": "RHEA:75279"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR183346",
-      "ec": "1.14.13.173",
-      "substrates": [
-        {
-          "metabolite": "11_oxo_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "30_hydroxy_11_oxo_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_173"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR183346"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR183346"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR183349",
-      "substrates": [
-        {
-          "metabolite": "glycyrrhetinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 4
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "11_oxo_amyrin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 3
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR183349"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR183349"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "glycyrrhizinate beta-glucuronidase",
       "equation": "glycyrrhizin + H2O = 2-(beta-D-glucuronosyl)-D-glucuronate + glycyrrhetinate",
       "ec": "3.2.1.128",
@@ -656,7 +467,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:17369"
       },

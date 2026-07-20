@@ -22,14 +22,14 @@ pathway lipid-a-4-e-coli-to-fatty-acyl-monophosphate "lipid A(4−) (E. coli) to
 
   branch from dag side left {
     dag
-    <-> . +dihydroceramide +phosphatidylcholine
-    n_acylsphinganine_1_phosphocholine
+    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
   }
 
   branch from dag side right {
     dag
-    <-> ec_2_7_8_42 [2.7.8.42] +kdo_2_lipid_iva +1_2_diacyl_sn_glycero_3_phosphoethanolamine
-    7_o_2_aminoethyl_phosphoryl_kdo_2_4_kdo_2_6_lipi
+    <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
+    lipid_a_4_2_aminoethyl_diphosphate_oxoanion
   }
 
   branch from 1_2_diacyl_3_d_galactosyl_sn_glycerol side left {
@@ -58,13 +58,13 @@ pathway lipid-a-4-e-coli-to-fatty-acyl-monophosphate "lipid A(4−) (E. coli) to
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    1_acyl_sn_glycero_3_phosphoserine
+    <-> . +n_fatty_acyl_glycine +h2o
+    glycine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_acylphosphatidylethanolamine +h2o +hplus
-    n_acyllysophosphatidylethanolamine
+    <-> . +fatty_acid_ethyl_ester +h2o +hplus
+    ethanol
   }
 }

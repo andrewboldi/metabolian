@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway spirilloxanthin-to-di-sulfido-diiron "spirilloxanthin to di-μ-sulfido-diiron" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     spirilloxanthin
@@ -16,11 +16,5 @@ pathway spirilloxanthin-to-di-sulfido-diiron "spirilloxanthin to di-μ-sulfido-d
     2_oxospirilloxanthin
     <-> ec_1_14_15_9 [1.14.15.9] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     2_2_dioxospirilloxanthin
-  }
-
-  branch from 2_2_dioxospirilloxanthin side left {
-    2_2_dioxospirilloxanthin
-    <-> . +h2o
-    2_2_dihydroxy_2_oxospirilloxanthin
   }
 }

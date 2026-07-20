@@ -1,0 +1,371 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gtp-to-8-oxo-gmp",
+  "name": "GTP to 8-oxo-GMP",
+  "category": "other",
+  "summary": "A 3-step route from GTP to 8-oxo-GMP(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR191473"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103553"
+      }
+    },
+    {
+      "id": "hydroxyl",
+      "name": "hydroxyl",
+      "formula": "HO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108315"
+      }
+    },
+    {
+      "id": "8_oxo_gtp",
+      "name": "8-oxo-GTP",
+      "formula": "C10H12N5O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:143553"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "8_oxo_gdp",
+      "name": "8-oxo-GDP",
+      "formula": "C10H12N5O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:143554"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "8_oxo_gmp",
+      "name": "8-oxo-GMP",
+      "formula": "C10H12N5O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145694"
+      }
+    },
+    {
+      "id": "thromboxane_b3",
+      "name": "thromboxane B3",
+      "formula": "C20H32O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84444"
+      }
+    },
+    {
+      "id": "txa3",
+      "name": "TXA3",
+      "formula": "C20H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165349"
+      }
+    },
+    {
+      "id": "14_15_dihete",
+      "name": "14,15-diHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1559470"
+      }
+    },
+    {
+      "id": "5z_8z_11z_17z_14_15_epoxyicosatetraenoate",
+      "name": "(5Z,8Z,11Z,17Z)-14,15-epoxyicosatetraenoate",
+      "short": "(5Z,8Z,11Z,17Z)-14,…",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136443"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_69",
+      "name": "8-oxo-(d)GTP phosphatase",
+      "ec": [
+        "3.6.1.69"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_58",
+      "name": "8-oxo-dGDP phosphatase",
+      "ec": [
+        "3.6.1.58"
+      ]
+    },
+    {
+      "id": "ec_3_3_2_10",
+      "name": "soluble epoxide hydrolase",
+      "ec": [
+        "3.3.2.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR191473",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroxyl",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR191473"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "8-oxo-(d)GTP phosphatase",
+      "equation": "8-oxo-GTP + H2O = 8-oxo-GDP + phosphate + H(+)",
+      "ec": "3.6.1.69",
+      "substrates": [
+        {
+          "metabolite": "8_oxo_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "8-oxo-dGDP phosphatase",
+      "equation": "8-oxo-GDP + H2O = 8-oxo-GMP + phosphate + H(+)",
+      "ec": "3.6.1.58",
+      "substrates": [
+        {
+          "metabolite": "8_oxo_gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62356"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR200081",
+      "substrates": [
+        {
+          "metabolite": "thromboxane_b3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "txa3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR200081"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200081"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "soluble epoxide hydrolase",
+      "ec": "3.3.2.10",
+      "substrates": [
+        {
+          "metabolite": "14_15_dihete",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5z_8z_11z_17z_14_15_epoxyicosatetraenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR200083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200083"
+          }
+        ]
+      }
+    }
+  ]
+}

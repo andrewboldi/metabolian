@@ -32,38 +32,38 @@ pathway chenodeoxycholoyl-coa-to-nad "chenodeoxycholoyl-CoA to NAD" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_g
-    kaempferol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gl
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3_methylbut_2_enoyl_coa +h
+    5_methyl_3_oxo_4_hexenoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +glycitin +h
-    malonylglycitin
+    <-> ec_2_3_1_5 [2.3.1.5] +acetyl_coa +acetohydrazide
+    n_n_diacetylhydrazine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +1_methylnaphthalene +nad
-    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+    <-> . +h +z_4_2_hydroxy_5_sulfonatophenyl_2_oxobut_3_enoa
+    1_2_dihydroxynaphthalene_6_sulfonate
   }
 
   branch from o2 side right {
     o2
-    <-> . +2_hydroxy_8_methylchromene_2_carboxylate
-    8_methylnaphthalene_1_2_diol
+    <-> . +3_hydroxy_2_naphthoate
+    3_6_carboxymethylene_cyclohexa_2_4_dien_1_yliden
   }
 
   branch from atp side left {
     atp
-    <-> . +l_threonine +tabtoxinine_lactam +h +adp +phosphate
-    tabtoxin
+    <-> . +diphosphate +2_3_4_saturated_fatty_acyl_coa +amp +coa
+    2_3_4_saturated_fatty_acid
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +6_methylsalicylyl_coa +amp +h +coa
-    6_methylsalicylate
+    <-> ec_2_7_1_102 [2.7.1.102] +h +adp +d_hamamelose_2_phosphate
+    d_hamamelose
   }
 
   branch from 25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 side left {
@@ -74,37 +74,37 @@ pathway chenodeoxycholoyl-coa-to-nad "chenodeoxycholoyl-CoA to NAD" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadph +h2o
-    vernolate
+    <-> ec_1_1_1_219 [1.1.1.219] +garbanzol +h +nadph
+    5_deoxyleucopelargonidin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadph +h2o
-    bromobenzene_3_4_oxide
+    <-> ec_1_1_1_219 [1.1.1.219] +h +trans_fustin +nadph
+    fisetinidol_4beta_ol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +1_naphthoate +nad
-    1_naphthaldehyde
+    <-> ec_3_8_1_5 [3.8.1.5] +h +beta_2_3_4_5_6_pentachlorocyclohexanol +chloride
+    beta_hexachlorocyclohexane
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +2_methylnaphthalene +o2 +nad
-    2_naphthyl_methanol
+    <-> ec_3_8_1_5 [3.8.1.5] +h +chloride +beta_2_3_5_6_tetrachloro_1_4_cyclohexanediol
+    beta_2_3_4_5_6_pentachlorocyclohexanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +1_naphthaldehyde
-    1_naphthyl_methanol
+    <-> . +nadh +4_hydroxylamino_2_6_dinitrotoluene +h +h2o
+    4_amino_2_6_dinitrotoluene
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +1_naphthoate +o2
-    cis_1_2_dihydroxy_1_2_dihydro_8_carboxynaphthale
+    <-> . +nadh +h +2_amino_4_6_dinitrotoluene +h2o
+    2_4_diamino_6_nitrotoluene
   }
 }

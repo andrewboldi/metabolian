@@ -18,14 +18,14 @@ pathway 22e-3-oxochola-4-22-die-to-22-hydroxy-3-oxochol "(22E)-3-oxochola-4,22-d
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    nerol
+    <-> . +nadh +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h +h2o
+    1_hydroxy_2_methyl_2_e_butenyl_4_diphosphate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
-    levopimaradienol
+    <-> . +nadh +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h2o
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 
   branch from 22_hydroxy_3_oxochol_4_en_24_oyl_coa side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxyandrost-4-e "3-oxo-23,24-bisnorchol-4-… to 9α-hydroxyandrost-4-en-3,…" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     3_oxo_23_24_bisnorchol_4_en_22_oyl_coa
@@ -25,12 +25,6 @@ pathway 3-oxo-23-24-bisnorchol-4-to-9-hydroxyandrost-4-e "3-oxo-23,24-bisnorchol
   }
 
   branch from propionyl_coa side right {
-    propionyl_coa
-    <-> . +mycophenolyl_coa +coa
-    4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl
-  }
-
-  branch from propionyl_coa side left {
     propionyl_coa
     <-> . +h2o +adenosine_3_5_bismonophosphate +hplus
     s_propionyl_4_phosphopantetheine

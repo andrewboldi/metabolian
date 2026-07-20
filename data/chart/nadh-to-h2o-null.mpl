@@ -26,49 +26,49 @@ pathway nadh-to-h2o-null "NADH to H2O" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +d_ribulose_5_phosphate +h
-    d_arabitinol_5_phosphate
+    <-> . +nadh +2_benzyl_3_oxobutanedioate +h
+    3_benzylmalic_acid
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +4r_perillyl_aldehyde +h +o2 +h2o
-    4r_4_1_methylethenyl_1_cyclohexenecarboxylic_ac
+    <-> . +nadh +acetyl_coa +6_trans_tridecenoyl_coa +h +h2o2 +coa +o2 +h2o
+    10_trans_heptadecenoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +tetrahydroxoborate +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
-    autoinducer_2
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_heptyl_thiohydroximate
+    ser_gly
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +3_oxododecanoate
-    l_homoserine_lactone
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 
   branch from h side right {
     h
-    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin
-    2_2_3_trihydroxydiphenyl_ether
+    <-> ec_3_1_1_1 [3.1.1.1] +tributyrin +h2o +2s_3_hydroxy_1_2_propanediyl_dibutanoate
+    butanoate
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxohexanoyl_l_homoserine_lactone +h2o +l_homoserine_lactone
-    3_oxohexanoic_acid
+    <-> . +neocarratetraose_4_o_disulfate +h2o +sulfate
+    neocarratetraose_4_o_sulfate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +2_chlorophenol +h2o
-    3_chlorocatechol
+    <-> . +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h +nadph
+    dtdp_beta_d_mycarose
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +3_chlorocatechol +h2o
-    3_chlorophenol
+    <-> . +h +s_nicotine +nadph
+    3_6_dihydronicotine
   }
 }

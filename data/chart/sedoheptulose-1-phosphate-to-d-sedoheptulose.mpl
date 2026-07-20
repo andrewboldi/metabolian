@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sedoheptulose-1-phosphate-to-d-sedoheptulose "sedoheptulose 1-phosphate to D-sedoheptulose…" {
-  spacing 224
+  spacing 200
 
   spine at 0,0 {
     sedoheptulose_1_phosphate
@@ -20,62 +20,38 @@ pathway sedoheptulose-1-phosphate-to-d-sedoheptulose "sedoheptulose 1-phosphate 
 
   branch from h side left {
     h
-    <-> . +2_s_glutathionyl_acetyl_chloride +h2o +chloride
-    2_s_glutathionyl_acetate
+    <-> ec_4_1_99_1 [4.1.99.1] +pyruvate +nh4 +chloride +h2o
+    3_chloro_l_alanine
   }
 
   branch from h side right {
     h
-    <-> . +imp +h2o
-    3_5_cyclic_imp
+    <-> ec_1_13_11_41 [1.13.11.41] +4_hydroxybenzoate +formate +o2
+    2_4_dihydroxyacetophenone
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    l_prolinylglycine
+    <-> ec_3_6_3_14 [3.6.3.14] +h +adp +phosphate +h2o
+    pmf
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    puromycin
+    <-> ec_2_7_2_2 [2.7.2.2] +carbamoyl_phosphate +h +adp +nh4
+    co2
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_15 [2.7.1.15] +d_ribose +atp +h
-    aldehydo_d_ribose_5_phosphate
+    <-> . +h +phosphate +atp +h2o
+    coprogen
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
-    d_ribose
-  }
-
-  branch from d_sedoheptulose_7_phosphate side left {
-    d_sedoheptulose_7_phosphate
-    <-> ec_2_7_1_90 [2.7.1.90] +diphosphate +h +d_sedoheptulose_1_7_bisphosphate
-    phosphate
-  }
-
-  branch from d_sedoheptulose_7_phosphate side right {
-    d_sedoheptulose_7_phosphate
-    <-> .
-    d_glycero_d_galacto_heptose_7_phosphate
-  }
-
-  branch from idp side left {
-    idp
-    <-> ec_2_7_1_1 [2.7.1.1] +itp +h +hexopyranose
-    6_o_phosphonohexopyranose
-  }
-
-  branch from idp side right {
-    idp
-    <-> ec_2_7_1_11 [2.7.1.11] +itp +beta_d_fructose_6_phosphate +h
-    beta_d_fructose_1_6_bisphosphate
+    <-> . +h +phosphate +atp +h2o
+    coprogen
   }
 
   branch from ctp side left {
@@ -86,7 +62,7 @@ pathway sedoheptulose-1-phosphate-to-d-sedoheptulose "sedoheptulose 1-phosphate 
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +3_phosphonooxy_1_2_propanediyl_dioctadecanoate +diphosphate +h
-    cdp_1_2_dioctadecanoylglycerol
+    <-> . +cdp_l_ribitol +diphosphate
+    d_ribitol_5_phosphate
   }
 }

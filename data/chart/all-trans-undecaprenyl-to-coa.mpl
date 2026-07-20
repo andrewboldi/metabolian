@@ -24,13 +24,13 @@ pathway all-trans-undecaprenyl-to-coa "all-trans-undecaprenyl… to CoA" {
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +nonanoyl_coa
-    3_oxoundecanoyl_coenzyme_a
+    <-> . +acetyl_coa +purpurea_glycoside_a
+    lanatoside_a
   }
 
   branch from coa side left {
     coa
-    <-> . +11z_eicosenoyl_coa +acetyl_coa
-    13z_3_oxodocosenoyl_coa
+    <-> . +acetyl_coa +deslanoside
+    lanatoside_c
   }
 }

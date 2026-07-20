@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-formate "S-adenosyl-L-homocysteine to formate" {
-  spacing 272
+  spacing 254
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -18,73 +18,55 @@ pathway s-adenosyl-l-homocysteine-to-formate "S-adenosyl-L-homocysteine to forma
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +o2 +h
-    fmn_n5_peroxide
+    <-> . +medermycin +o2 +mederrhodin_a +h +h2o
+    fmn
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_108 [1.14.14.108] +idramantone +o2 +h +1_hydroxy_4_oxahomoadamantan_5_one +h2o
-    fmn
+    <-> . +medermycin +h +o2 +fmn +h2o
+    mederrhodin_a
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +protostreptovaricin_iv
-    protostreptovaricin_iii
+    <-> . +s_adenosyl_l_homocysteine +h +s_2_methylscoulerine
+    s_scoulerine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +chaxamycin_a_rel +s_adenosyl_l_homocysteine +h
-    3_demethylchaxamycin_a
+    <-> . +s_adenosyl_l_homocysteine +h +3_5_dibromo_2_3_5_dibromo_2_methoxyphenoxy_pheno
+    2_4_dibromo_6_2_4_dibromo_6_hydroxyphenoxy_pheno
   }
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +menaquinol_8 +co2 +h +formate
-    pmf
-  }
-
-  branch from menaquinone_8 side right {
-    menaquinone_8
-    <-> . +adenosine_3_5_bisphosphate +h +sulfite +menaquinol_8
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from menaquinol_8 side left {
-    menaquinol_8
-    <-> . +beta_d_glucose +menaquinone_8
-    d_glucono_1_5_lactone
-  }
-
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> . +nitrite +h +menaquinone_8 +h2o
-    nitric_oxide
-  }
-
-  branch from h side left {
-    h
-    <-> . +l_histidine +l_cysteine +l_arginine +h2o
-    his_arg_cys
+    <-> . +hydrogen_sulfide +h2o +menaquinol_8 +h
+    sulfite
   }
 
   branch from h side right {
     h
-    <-> . +l_histidine +l_lysine +h2o
-    his_his_lys
+    <-> . +adp +sm_d18_1_15_0_sphingomyelin +phosphate +sm_d18_1_15_0_sphingomyelin +h2o
+    atp
   }
 
-  branch from formate side left {
-    formate
-    <-> ec_1_1_5_6 [1.1.5.6] +phylloquinone +h +co2
-    phylloquinol
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    sm_d18_1_16_1_sphingomyelin
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_9 +co2 +h
-    ubiquinone_9
+    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_10 +co2 +h
+    ubiquinone_10
+  }
+
+  branch from formate side left {
+    formate
+    <-> . +2_hydroxy_3_oxobutyl_phosphate +h
+    alpha_d_ribofuranose_5_phosphate
   }
 }

@@ -33,36 +33,36 @@ pathway 1-hexadecanoyl-2-9z-12z-to-h2o "1-hexadecanoyl-2-(9Z,12Z-… to H2O" {
   branch from linoleate side left {
     linoleate
     <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
-    1_3_dilinoleoylglycerol
+    2_3_dilinoleoyl_sn_glycerol
   }
 
   branch from linoleate side right {
     linoleate
-    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
-    2_3_dilinoleoyl_sn_glycerol
+    <-> . +h2o +coa +hplus
+    linoleoyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_galactosyl_1_4_l_rhamnose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    thiolactomycin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    isomaltose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    myxothiazol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_f_alpha_d_galactosylraffinose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    polymyxin_b1
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    stellariose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    borrelidin
   }
 }

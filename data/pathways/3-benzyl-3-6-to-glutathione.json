@@ -91,12 +91,39 @@
       }
     },
     {
-      "id": "tert_butyl_formate",
-      "name": "tert-butyl formate",
-      "formula": "C5H10O2",
+      "id": "formate",
+      "name": "formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM39"
+      }
+    },
+    {
+      "id": "l_isoglutamine",
+      "name": "L-isoglutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM165169"
+        "chebi": "CHEBI:192480"
+      }
+    },
+    {
+      "id": "formylisoglutamine",
+      "name": "Formylisoglutamine",
+      "formula": "C6H9N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140737"
+      }
+    },
+    {
+      "id": "2_methylpropanoate",
+      "name": "2-methylpropanoate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1137660"
       }
     },
     {
@@ -109,67 +136,22 @@
       }
     },
     {
-      "id": "tert_butanol",
-      "name": "tert-butanol",
-      "formula": "C4H10O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM22008"
-      }
-    },
-    {
-      "id": "formate",
-      "name": "formate",
-      "formula": "CHO2",
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM39"
+        "metanetx": "MNXM26"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "O2",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "trans_but_2_ene",
-      "name": "trans-but-2-ene",
-      "formula": "C4H8",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:48365"
-      }
-    },
-    {
-      "id": "trans_2r_3r_epoxybutane",
-      "name": "trans-2R,3R-epoxybutane",
-      "short": "trans-2R,3R-epoxybu…",
-      "formula": "C4H8O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM169277"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "4_methyl_3_oxopentanoate",
+      "name": "4-methyl-3-oxopentanoate",
+      "short": "4-methyl-3-oxopenta…",
+      "formula": "C6H9O3",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "metanetx": "MNXM3851"
       }
     },
     {
@@ -240,13 +222,6 @@
       "name": "glutathione transferase",
       "ec": [
         "2.5.1.18"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_69",
-      "name": "alkene monooxygenase",
-      "ec": [
-        "1.14.13.69"
       ]
     }
   ],
@@ -381,53 +356,48 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR121038",
+      "name": "Reaction MNXR121966",
       "substrates": [
         {
-          "metabolite": "tert_butyl_formate",
+          "metabolite": "formate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_isoglutamine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
+          "metabolite": "formylisoglutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "tert_butanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "formate",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR121038"
+        "metanetx": "MNXR121966"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR121038"
+            "id": "MNXR121966"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "alkene monooxygenase",
-      "ec": "1.14.13.69",
+      "name": "Reaction MNXR122002",
       "substrates": [
         {
-          "metabolite": "nadh",
+          "metabolite": "2_methylpropanoate",
           "stoichiometry": 1
         },
         {
@@ -435,21 +405,13 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_but_2_ene",
+          "metabolite": "acetate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_2r_3r_epoxybutane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
+          "metabolite": "4_methyl_3_oxopentanoate",
           "stoichiometry": 1
         },
         {
@@ -457,22 +419,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_69"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR121043"
+        "metanetx": "MNXR122002"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR121043"
+            "id": "MNXR122002"
           }
         ]
       }

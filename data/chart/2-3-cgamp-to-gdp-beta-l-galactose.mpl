@@ -18,49 +18,49 @@ pathway 2-3-cgamp-to-gdp-beta-l-galactose "2',3'-cGAMP to GDP-beta-L-galactose" 
 
   branch from gtp side left {
     gtp
-    <-> ec_2_7_4_8 [2.7.4.8] +gmp
-    gdp
+    <-> ec_2_7_7_4 [2.7.7.4] +adenosine_5_phosphosulfate +gdp +diphosphate +phosphate +atp +h2o
+    sulfate
   }
 
   branch from gtp side right {
     gtp
-    <-> ec_4_1_99_18 [4.1.99.18] +h +h2o +diphosphate
-    precursor_z_hydrate
+    <-> ec_2_7_7_53 [2.7.7.53] +p_1_p_4_bis_5_guanosyl_tetraphosphate +phosphate +h
+    gdp
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_7_63 [2.7.7.63] +lipoyl_amp +diphosphate +h
-    r_lipoate
+    <-> ec_2_7_7_96 [2.7.7.96] +adp_beta_d_ribose +diphosphate +h
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    gly_asp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +beta_muurolene
+    <-> . +beta_bulgarene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    beta_bulgarene
+    alpha_bulgarene
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +indan_1_one +nad
-    r_indan_1_ol
+    <-> ec_3_2_2_10 [3.2.2.10] +pyrimidine +alpha_d_ribofuranose_5_phosphate +h2o
+    pyrimidine_5_nucleotide
   }
 
   branch from h side right {
     h
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_nitrophenol
-    o_nitrophenyl_alpha_d_glucopyranoside
+    <-> ec_3_4_13_7 [3.4.13.7] +l_glutamate +h2o
+    glu_glu
   }
 }

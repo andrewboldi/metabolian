@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methoxytyraminium-to-s-adenosyl-l-homocysteine "3-methoxytyraminium to S-adenosyl-L-homocysteine" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     mtyr
@@ -16,27 +16,15 @@ pathway 3-methoxytyraminium-to-s-adenosyl-l-homocysteine "3-methoxytyraminium to
     n_n_dimethyl_3_4_dihydroxy_5_methoxyphenethylami
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +echinocystate +fmnh2 +o2 +h2o +hplus
-    quillate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +oleanolate +fmnh2 +o2 +h2o +hplus
-    augustate
-  }
-
   branch from sah side left {
     sah
-    <-> . +gdp +sam
-    7_methylguanosine_5_diphosphate
+    <-> . +1s_4s_4_4_methoxyphenyl_methyl_2_5_diazaspiro_b +sam +hplus
+    1s_4s_4_4_methoxyphenyl_methyl_2_methyl_2_5_dia
   }
 
   branch from sah side right {
     sah
-    <-> . +2_2_4_dihydroxy_6_oxidobenzoyl_5_hydroxy_3_methy +sam +hplus
-    griseophenone_d
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    n3_methyluridine_5_monophosphate_1
   }
 }

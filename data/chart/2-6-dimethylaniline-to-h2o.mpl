@@ -18,37 +18,37 @@ pathway 2-6-dimethylaniline-to-h2o "2,6-dimethylaniline to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +phenanthrene +o2 +nad
-    1_phenanthrol
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +nadp
+    chloroacetyl_chloride
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +nad
-    r_1_2_epoxypropane
+    <-> . +2_2_dichloroacetaldehyde
+    2_2_dichloro_1_1_ethanediol
   }
 
   branch from o2 side left {
     o2
-    <-> . +atrazine +acetone
-    deisopropylatrazine
+    <-> ec_1_14_14_1 [1.14.14.1] +trichloroethene +h +nadph +nadp +h2o
+    trichloroacetaldehyde
   }
 
   branch from o2 side right {
     o2
-    <-> . +phenanthrene_3_4_diol
-    2_hydroxy_2h_benzo_h_chromene_2_carboxylate
+    <-> ec_1_14_14_1 [1.14.14.1] +nadp +2_bromoacetaldehyde +bromide +h2o +nadph
+    1_2_dibromoethane
   }
 
   branch from nadp side left {
     nadp
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +h +nadph +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1b_aglycon +coa +h2o
-    co2
+    <-> ec_1_14_99_31 [1.14.99.31] +tetradecanoyl_coa +h +o2 +nadph +h2o
+    trans_tetradec_11_enoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_45 [1.3.1.45] +h +2_hydroxybiochanin_a +nadph
-    ferreirin
+    <-> ec_1_14_99_32 [1.14.99.32] +tetradecanoyl_coa +h +o2 +nadph +h2o
+    cis_tetradec_11_enoyl_coa
   }
 }

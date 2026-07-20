@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl]sp… to N-[(15Z)-tetracosenoyl]sp…" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     n_15z_tetracosenoyl_sphing_4_enine_1_phosphochol
@@ -36,39 +36,27 @@ pathway n-15z-tetracosenoyl-sp-to-n-15z-tetracosenoyl-sp "N-[(15Z)-tetracosenoyl
     nh3
   }
 
-  branch from sphingosine side right {
-    sphingosine
-    <-> . +sam +sah +hplus
-    n_n_dimethylsphingosine
-  }
-
-  branch from sphingosine side left {
-    sphingosine
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    sphinga_4e_14z_dienine
-  }
-
   branch from 15z_tetracosenoyl_coa side right {
-    15z_tetracosenoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    3_oxo_17z_hexacosenoyl_coa
-  }
-
-  branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
     <-> . +nadh +h +coa +nad
     15_tetracosenal
   }
 
+  branch from 15z_tetracosenoyl_coa side left {
+    15z_tetracosenoyl_coa
+    <-> . +o2 +h2o2
+    2e_15z_tetracosadienoyl_coa
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_101 [4.2.3.101] +fpp
-    7_epi_sesquithujene
+    <-> ec_4_2_3_123 [4.2.3.123] +fpp
+    sesquiphellandrene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_100 [4.2.3.100] +fpp
-    bicyclogermacrene
+    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gtp +hplus
+    guanosine_3_diphosphate_5_triphosphate_hexaanion
   }
 }

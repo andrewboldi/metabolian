@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
-  spacing 222
+  spacing 216
 
   spine at 0,0 {
     geranylgeranyl_chlorophyll_a
@@ -22,14 +22,14 @@ pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe +h +nadph
-    o_s_9z_21z_3_oxotetracontadienoylpantetheine_4_p
+    <-> ec_1_1_1_21 [1.1.1.21] +4_methylphenylglyoxal +h +nadph
+    4_methylbenzoyl_methanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4 +h +nadph
-    o_s_13z_3_oxodotriacontenoylpantetheine_4_phosph
+    <-> ec_1_1_1_19 [1.1.1.19] +pr01 +h +nadph
+    4_chlorobenzaldehyde
   }
 
   branch from chlorophyll_a side left {
@@ -40,14 +40,14 @@ pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +bromoacetate +glutathione +bromide
-    2_s_glutathionyl_acetate
+    <-> . +glycidol +chloride
+    3_chloropropane_1_2_diol
   }
 
   branch from h side left {
     h
-    <-> . +mycothiol_bimane_conjugate +bromide +mycothiol
-    monobromobimane
+    <-> ec_3_1_2_6 [3.1.2.6] +r_lactate +glutathione +h2o
+    lactoylglutathione
   }
 
   branch from chlorophyllide_a side right {
@@ -56,21 +56,15 @@ pathway geranylgeranyl-to-h2o "geranylgeranyl… to H2O" {
     pheophorbide_a
   }
 
-  branch from chlorophyllide_a side left {
-    chlorophyllide_a
-    <-> ec_2_5_1_62 [2.5.1.62] +geranylgeranyl_chlorophyll_a +diphosphate +h
-    2e_6e_10e_geranylgeranyl_diphosphate
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +hexanoate +h
+    ethyl_hexanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa
-    o_s_2e_13z_25z_tetratetracontatrienoylpantethein
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +o_s_3r_7z_19z_3_hydroxyoctatriacontadienoylpante
-    o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +pentanoate
+    ethyl_pentanoate
   }
 }

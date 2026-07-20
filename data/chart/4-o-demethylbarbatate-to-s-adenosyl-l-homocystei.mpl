@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-o-demethylbarbatate-to-s-adenosyl-l-homocystei "4-O-demethylbarbatate to S-adenosyl-L-homocysteine" {
-  spacing 182
+  spacing 170
 
   spine at 0,0 {
     4_o_demethylbarbatate
@@ -16,18 +16,6 @@ pathway 4-o-demethylbarbatate-to-s-adenosyl-l-homocystei "4-O-demethylbarbatate 
     atranorin
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_185 [1.14.14.185] +4alpha_5beta_5_20_epoxytax_11_ene_4_ol +fmnh2 +o2 +h2o +hplus
-    4_5_9_5_20_epoxytax_11_ene_4_9_diol
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_187 [1.14.14.187] +19e_geissoschizine +fmnh2 +o2 +h2o +hplus
-    rhazimal
-  }
-
   branch from proatranorin_iii side left {
     proatranorin_iii
     <-> . +h2o
@@ -36,13 +24,13 @@ pathway 4-o-demethylbarbatate-to-s-adenosyl-l-homocystei "4-O-demethylbarbatate 
 
   branch from sah side right {
     sah
-    <-> . +cirsiliol +sam +hplus
-    eupatorin
+    <-> ec_2_1_1_398 [2.1.1.398] +3_4_7_trihydroxyisoflavone_7_olate +sam +hplus
+    7_4_dihydroxy_3_methoxyisoflavone_7_olate
   }
 
   branch from sah side left {
     sah
-    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
-    4_8_dihydroxy_3_methoxyflavone_7_olate
+    <-> ec_2_1_1_399 [2.1.1.399] +trans_resveratrol +sam +hplus
+    4_o_methyl_trans_resveratrol
   }
 }

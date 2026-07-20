@@ -34,13 +34,13 @@ pathway delphinidin-to-coa "delphinidin… to CoA" {
 
   branch from coa side left {
     coa
-    <-> . +h +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
-    7z_10z_13z_hexadecatrienoyl_coa
+    <-> . +11z_eicosenoyl_coa +r_carnitine
+    eicosenoylcarnitine_9
   }
 
   branch from coa side right {
     coa
-    <-> . +9e_myristelaidoyl_coa +h2o
-    9e_tetradecenoic_acid
+    <-> . +r_carnitine +8z_11z_icosadienoyl_coa
+    8z_11z_eicosadienoylcarnitine
   }
 }

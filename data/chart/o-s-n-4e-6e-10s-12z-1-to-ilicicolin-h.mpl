@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-n-4e-6e-10s-12z-1-to-ilicicolin-h "O-(S-{N-[(4E,6E,10S,12Z,1… to ilicicolin H" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     o_s_n_4e_6e_10s_12z_14e_6_10_dimethyl_3_oxohexad
@@ -16,17 +16,5 @@ pathway o-s-n-4e-6e-10s-12z-1-to-ilicicolin-h "O-(S-{N-[(4E,6E,10S,12Z,1… to i
     8_epi_ilicicolin_h
     <-> .
     ilicicolin_h
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +cordypyrone_a +fmnh2 +o2 +h2o +hplus
-    cordypyrone_b
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_183 [1.14.14.183] +taxusin +fmnh2 +o2 +h2o +hplus
-    2_hydroxytaxusin
   }
 }

@@ -38,13 +38,13 @@ pathway 2s-2-ammonio-5-iminio-to-diphosphate "(2S)-2-ammonio-5-{[iminio… to di
 
   branch from ppi side right {
     ppi
-    <-> . +pppa_2_5_pg
-    3_2_cgamp
+    <-> . +fpp +h2o
+    cadinol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +l_tryptophan +fpp
-    2s_3r_3_farnesyl_2_3_dihydro_2_n_cyclo_l_trypto
+    <-> . +streptomycin +gtp
+    6_o_guanylylstreptomycin
   }
 }

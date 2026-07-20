@@ -18,13 +18,13 @@ pathway 2e-6z-9z-12z-15z-18z-te-to-nad "(2E,6Z,9Z,12Z,15Z,18Z)-te… to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +palustradienal
-    neoabietadienol
+    <-> ec_1_1_1_93 [1.1.1.93] +2r_3s_tartrate +nadh +h
+    oxaloglycolate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
-    palustradienol
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +thymine +h
+    r_5_6_dihydrothymine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-phenylpropionate-to-3-4-dimethoxyphenyl-meth "3-phenylpropionate to (3,4-dimethoxyphenyl)meth…" {
-  spacing 244
+  spacing 232
 
   spine at 0,0 {
     3_phenylpropionate
@@ -16,27 +16,15 @@ pathway 3-phenylpropionate-to-3-4-dimethoxyphenyl-meth "3-phenylpropionate to (3
     3_phenylpropanal
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +s_s_drim_8_en_11_yl_diphosphate +d_mannitol
-    sporulositol_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +atp
-    5_triphosphoadenylyl_2_5_adenosine
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    2_trans_6_cis_farnesol
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_6_dimethyl_1_4_benzoquinone +h
+    2_6_dimethyl_1_4_benzenediol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +docosanal +h
-    docosan_1_ol
+    <-> ec_1_1_1_370 [1.1.1.370] +nadh +h +l_glucono_1_5_lactone
+    aldehydo_l_glucose
   }
 }

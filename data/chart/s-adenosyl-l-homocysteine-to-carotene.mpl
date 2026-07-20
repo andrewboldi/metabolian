@@ -20,13 +20,13 @@ pathway s-adenosyl-l-homocysteine-to-carotene "S-adenosyl-L-homocysteine to ε-c
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +a53868 +h
-    desmethyl_dehydrophos
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
+    welwitindolinone_c_isothiocyanate
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +ovothiol_a +h
-    mercaptohistidine
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_b_isothiocyanate +h
+    welwitindolinone_b_isothiocyanate
   }
 }

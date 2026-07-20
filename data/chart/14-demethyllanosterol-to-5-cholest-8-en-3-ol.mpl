@@ -34,32 +34,20 @@ pathway 14-demethyllanosterol-to-5-cholest-8-en-3-ol "14-demethyllanosterol to 5
 
   branch from 4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol side left {
     4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +nadph +h2o
-    nadp
-  }
-
-  branch from 4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol side right {
-    4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol
     <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +h2o
     nad
   }
 
-  branch from 4_formyl_4_methyl_5_8_cholesten_3_ol side left {
-    4_formyl_4_methyl_5_8_cholesten_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +o2 +3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate +nad
+  branch from 4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol side right {
+    4_hydroxymethyl_4_methyl_5_8_cholesten_3_ol
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +4_formyl_4_methyl_5_8_cholesten_3_ol +nad
     h2o
-  }
-
-  branch from 4_formyl_4_methyl_5_8_cholesten_3_ol side right {
-    4_formyl_4_methyl_5_8_cholesten_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +nadp +3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate +h2o +nadph
-    o2
   }
 
   branch from 3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate side left {
     3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate
-    <-> ec_1_14_13_72 [1.14.13.72] +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +nadph +nadp +h2o
-    h
+    <-> ec_1_14_13_72 [1.14.13.72] +h +3beta_4alpha_5alpha_4_4_dimethylcholest_8_en_3 +o2 +nadph +h2o
+    nadp
   }
 
   branch from 3_hydroxy_4_methyl_5_cholest_8_ene_4_carboxylate side right {
@@ -82,7 +70,19 @@ pathway 14-demethyllanosterol-to-5-cholest-8-en-3-ol "14-demethyllanosterol to 5
 
   branch from 4_hydroxymethyl_5_cholest_8_en_3_ol side left {
     4_hydroxymethyl_5_cholest_8_en_3_ol
-    <-> ec_1_14_13_72 [1.14.13.72] +h +o2 +4_methyl_5_cholest_8_en_3_ol +nadp +h2o
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +o2 +4_methyl_5_cholest_8_en_3_ol +nad +h2o
+    h
+  }
+
+  branch from 4_hydroxymethyl_5_cholest_8_en_3_ol side right {
+    4_hydroxymethyl_5_cholest_8_en_3_ol
+    <-> ec_1_14_13_72 [1.14.13.72] +4_formyl_5_cholest_8_en_3_ol +nadp +h2o +h +nadph
+    o2
+  }
+
+  branch from 4_formyl_5_cholest_8_en_3_ol side left {
+    4_formyl_5_cholest_8_en_3_ol
+    <-> ec_1_14_13_72 [1.14.13.72] +o2 +nadp +3_hydroxy_5_cholest_8_ene_4_carboxylate +h2o
     nadph
   }
 }

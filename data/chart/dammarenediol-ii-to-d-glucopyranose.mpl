@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dammarenediol-ii-to-d-glucopyranose "dammarenediol-II to D-glucopyranose" {
-  spacing 270
+  spacing 264
 
   spine at 0,0 {
     dammarenediol_ii
@@ -22,55 +22,49 @@ pathway dammarenediol-ii-to-d-glucopyranose "dammarenediol-II to D-glucopyranose
 
   branch from 20s_protopanaxadiol side left {
     20s_protopanaxadiol
-    <-> . +glucose +h2o
-    20s_ginsenoside_rh2
-  }
-
-  branch from 20s_protopanaxadiol side right {
-    20s_protopanaxadiol
     <-> ec_1_14_13_184 [1.14.13.184] +protopanaxatriol +nadp +h2o +o2 +nadph
     h
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +hydroxy_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    oxo_fatty_acid_anion
-  }
-
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_79 [1.14.14.79] +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19z_22_hydroxydocosahexaenoat
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxytestosterone
   }
 
-  branch from protopanaxatriol side left {
+  branch from fmn side left {
+    fmn
+    <-> . +hydroxycholesterol_7a +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
+  }
+
+  branch from protopanaxatriol side right {
     protopanaxatriol
     <-> ec_2_4_1_367 [2.4.1.367] +udp_d_glucose +udp +hplus
     20s_ginsenoside_rh1
   }
 
-  branch from protopanaxatriol side right {
+  branch from protopanaxatriol side left {
     protopanaxatriol
     <-> . +glucose +20s_ginsenoside_rh1
     h2o
   }
 
-  branch from ginsenoside_f1 side left {
+  branch from ginsenoside_f1 side right {
     ginsenoside_f1
     <-> ec_3_2_1_194 [3.2.1.194] +glucose +d_xylopyranose +h2o
     ginsenoside_r1
   }
 
-  branch from glucose side right {
-    glucose
-    <-> ec_2_4_1_281 [2.4.1.281] +d_manp_1_4_d_glcp +pi
-    d_mannose_1_phosphate
-  }
-
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_182 [3.2.1.182] +diboa_d_glucoside +h2o
-    diboa
+    <-> ec_4_2_99_23 [4.2.99.23] +6_tuliposide_b
+    tulipalin_b
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_3_2_1_188 [3.2.1.188] +avenacoside_b +h2o
+    26_desglucoavenacoside_b
   }
 }

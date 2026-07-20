@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1r-2r-3r-prephytoene-to-carotene",
   "name": "(1R,2R,3R)-prephytoene… to γ-carotene",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from (1R,2R,3R)-prephytoene diphosphate(3−) to γ-carotene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -83,40 +83,23 @@
       }
     },
     {
-      "id": "streptomycin",
-      "name": "streptomycin",
-      "formula": "C21H42N7O12",
-      "charge": 3,
+      "id": "2e_enoyl_fatty_acid_anion",
+      "name": "(2E)-enoyl fatty acid anion",
+      "short": "enoyl fatty acid…",
+      "formula": "C3H2O2R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58007"
+        "chebi": "CHEBI:194103"
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "6_o_guanylylstreptomycin",
-      "name": "6-O-guanylylstreptomycin",
-      "short": "6-O-guanylylstrepto…",
-      "formula": "C31H53N12O19P",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:184374"
-      }
-    },
-    {
-      "id": "streptidine",
-      "name": "streptidine",
-      "formula": "C8H20N6O4",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:184376"
+        "chebi": "CHEBI:64479"
       }
     },
     {
@@ -129,13 +112,41 @@
       }
     },
     {
-      "id": "6_o_adenylylstreptidine",
-      "name": "6-O-adenylylstreptidine",
-      "short": "6-O-adenylylstrepti…",
-      "formula": "C18H31N11O10P",
+      "id": "o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-[S-(2E)-2-enoylpantetheine-4'-phosphoryl]-L-serine(1−)",
+      "short": "O-[S-(2E)-2-enoylpa…",
+      "formula": "C17H26N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78784"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:184375"
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2e_2_fatty_enoyladenylate",
+      "name": "(2E)-2-fatty-enoyladenylate",
+      "short": "2-fatty-enoyladenyl…",
+      "formula": "C13H14N5O8PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:194106"
       }
     }
   ],
@@ -275,21 +286,29 @@
     },
     {
       "id": "r4",
-      "name": "streptomycin + GTP = 6-O-guanylylstreptomycin + diphosphate",
-      "equation": "streptomycin + GTP = 6-O-guanylylstreptomycin + diphosphate",
+      "name": "a (2E)-enoyl fatty acid + holo-[ACP] + ATP = a (2E)-enoyl-[ACP] + AMP + diphosphate",
+      "equation": "a (2E)-enoyl fatty acid + holo-[ACP] + ATP = a (2E)-enoyl-[ACP] + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "streptomycin",
+          "metabolite": "2e_enoyl_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_o_guanylylstreptomycin",
+          "metabolite": "o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -300,35 +319,39 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:69540"
+        "rhea": "RHEA:74911"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69540"
+            "id": "RHEA:74911"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
-      "equation": "streptidine + ATP = 6-O-adenylylstreptidine + diphosphate",
+      "name": "a (2E)-enoyl fatty acid + ATP + H(+) = a (2E)-2-fatty-enoyl-AMP + diphosphate",
+      "equation": "a (2E)-enoyl fatty acid + ATP + H(+) = a (2E)-2-fatty-enoyl-AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "streptidine",
+          "metabolite": "2e_enoyl_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_o_adenylylstreptidine",
+          "metabolite": "2e_2_fatty_enoyladenylate",
           "stoichiometry": 1
         },
         {
@@ -339,14 +362,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:69544"
+        "rhea": "RHEA:74915"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69544"
+            "id": "RHEA:74915"
           }
         ]
       }

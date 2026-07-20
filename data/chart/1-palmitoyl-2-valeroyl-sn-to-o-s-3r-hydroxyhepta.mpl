@@ -22,14 +22,14 @@ pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side left {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +lauroyl_coa +coa
+    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphocholine side right {
     1_hexadecanoyl_sn_glycero_3_phosphocholine
-    <-> . +lauroyl_coa +coa
-    1_palmitoyl_2_lauroyl_sn_glycero_3_phosphocholin
+    <-> . +acetyl_coa +coa
+    1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
   }
 
   branch from pentanal side left {
@@ -46,14 +46,14 @@ pathway 1-palmitoyl-2-valeroyl-sn-to-o-s-3r-hydroxyhepta "1-palmitoyl-2-valeroyl
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_84 [4.2.3.84] +fpp +h2o
-    10_epi_eudesmol
+    <-> ec_4_2_3_102 [4.2.3.102] +fpp
+    sesquithujene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_85 [4.2.3.85] +fpp +h2o
-    eudesmol
+    <-> ec_4_2_3_101 [4.2.3.101] +fpp
+    7_epi_sesquithujene
   }
 
   branch from pentanoyl_coa side left {

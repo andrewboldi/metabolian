@@ -30,13 +30,13 @@ pathway p-xylene-to-p-toluate "p-xylene to p-toluate" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_42 [1.14.19.42] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_7z_hexadec_7_enoyl_glycerolipid
+    <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
+    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
+    <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
+    25_hydroxy_24_oxocalciol
   }
 }

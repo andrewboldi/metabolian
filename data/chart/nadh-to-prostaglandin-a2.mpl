@@ -20,14 +20,14 @@ pathway nadh-to-prostaglandin-a2 "NADH to prostaglandin A2" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +5_hydroxypicolinic_acid +2_5_dihydroxypyridine +h2o
-    co2
+    <-> ec_1_14_13_103 [1.14.13.103] +nadh +h +sophoraflavanone_b +o2 +h2o
+    leachianone_g
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +l_pipecolate +o2 +h2o
-    n_hydroxy_l_pipecolic_acid
+    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o
+    capsidiol
   }
 
   branch from prostaglandin_b2 side left {

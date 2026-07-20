@@ -18,14 +18,14 @@ pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-
 
   branch from h side left {
     h
-    <-> . +l_lysine +l_valine +l_phenylalanine +h2o
-    lys_val_phe
+    <-> . +keto_d_fructose +l_lysine +h2o
+    glucoselysine
   }
 
   branch from h side right {
     h
-    <-> . +adp +acetaminophen_mercapturate_conjugate_n_acetyl_cy +phosphate +acetaminophen_mercapturate_conjugate_n_acetyl_cy +h2o
-    atp
+    <-> ec_3_1_4_61 [3.1.4.61] +2r_2_3_bisphosphoglycerate +h2o
+    cyclic_2_3_bisphosphoglycerate
   }
 
   branch from 5alpha_androstane_3_11_17_trione side left {
@@ -42,14 +42,14 @@ pathway 11beta-hydroxy-5alpha-and-to-11-keto-5-androstan "11beta-hydroxy-5alpha-
 
   branch from nadph side left {
     nadph
-    <-> ec_1_6_5_2 [1.6.5.2] +2_6_dimethyl_1_4_benzenediol +nadp +h
-    2_6_dimethyl_1_4_benzoquinone
+    <-> . +24z_ethylidene_cholest_5_en_3beta_22s_diol +nadp +h2o +h +isofucosterol
+    o2
   }
 
   branch from nadph side right {
     nadph
-    <-> . +tazarotenic_acid +h +o2 +nadp +h2o
-    tazarotenic_acid_sulfoxide
+    <-> . +22s_22_hydroxycholestanol +nadp +h2o +h +o2
+    epidihydrocholesterin
   }
 
   branch from 11_oxo_5_dihydrotestosterone side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-chaconine "UDP to γ-chaconine" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     udp
@@ -20,31 +20,25 @@ pathway udp-to-chaconine "UDP to γ-chaconine" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
-    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +6c_glucosyl_2_hydroxynaringenin +h
+    2_4_4_6_tetrahydroxydibenzoylmethane
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_295 [2.4.1.295] +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
-    pelargonidin_3_o_d_sambubioside
+    <-> . +udp +c_glucosyl_2_hydroxyflavanone +h
+    dibenzoylmethane
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_1_digalactosyldiacylglycerol
-    1_18_3_2_16_1_monogalactosyldiacylglycerol
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_1_digalactosyldiacylglycerol
+    1_18_0_2_18_1_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_2_digalactosyldiacylglycerol
-    1_18_3_2_16_2_monogalactosyldiacylglycerol
-  }
-
-  branch from solanidine side left {
-    solanidine
-    <-> . +nadh +h +solanid_4_en_3_one
-    nad
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_0_2_18_2_digalactosyldiacylglycerol
+    1_18_0_2_18_2_monogalactosyldiacylglycerol
   }
 }

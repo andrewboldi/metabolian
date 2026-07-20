@@ -18,13 +18,13 @@ pathway 14-methyl-steroid-to-fmn "14α-methyl steroid to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    8s_9r_eet
+    <-> ec_1_14_19_51 [1.14.19.51] +s_reticulinium +fmnh2 +o2 +h2o +hplus
+    s_corytuberine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    5_6_eet
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent
   }
 }

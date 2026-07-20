@@ -22,14 +22,14 @@ pathway l-alanyl-d-glutamyl-mes-to-h2o "L-alanyl-γ-D-glutamyl-mes… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_1_1_5 [3.1.1.5] +hexadecanoate +glycerophosphatidylethanolamine +h2o
-    2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_2_8_2_38 [2.8.2.38] +adenosine_3_5_bisphosphate +glucoerucin +4_methylthiobutyl_desulfoglucosinolate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +2_alpha_d_mannosyl_d_glycerate +phosphoenolpyruvate +2_alpha_d_mannosyl_6_phosphate_d_glycerate
-    pyruvate
+    <-> ec_1_14_13_119 [1.14.13.119] +5_epi_aristolochene +o2 +nadph +capsidiol +h2o
+    nadp
   }
 
   branch from 1_6_anhydrous_n_acetylmuramyl_tripeptide side left {
@@ -40,14 +40,14 @@ pathway l-alanyl-d-glutamyl-mes-to-h2o "L-alanyl-γ-D-glutamyl-mes… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_170 [3.2.1.170] +r_glycerate +alpha_d_mannose_6_phosphate +h
-    2_alpha_d_mannosyl_6_phosphate_d_glycerate
+    <-> ec_1_7_6_1 [1.7.6.1] +nitrite +h +nitric_acid
+    nitric_oxide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> ec_3_5_1_110 [3.5.1.110] +co2 +z_3_aminoperacrylic_acid +nh4 +h
+    ureidoperacrylic_acid
   }
 
   branch from two_linked_disacharide_pentapeptide_and_tripepti side right {

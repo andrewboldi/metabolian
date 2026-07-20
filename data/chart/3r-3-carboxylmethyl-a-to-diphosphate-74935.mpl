@@ -16,39 +16,27 @@ pathway 3r-3-carboxylmethyl-a-to-diphosphate-74935 "(3R)-3-[(carboxylmethyl)a…
     2s_2_6_bis_3r_3_isocyanobutanamido_hexan_1_ol
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +formaldehyde +co2
-    adenosine_5_monophosphate_1
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2
-    5_hydroxymethylcytidine_5_monophosphate_1
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_170 [4.2.3.170] +fpp +h2o
-    4_epi_cubebol
+    <-> . +c_terminal_gly_gly_1 +atp +hplus
+    c_terminal_gly_gly_amp_1_group
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_173 [4.2.3.173] +fpp +h2o
-    cadinol
+    <-> ec_2_7_7_100 [2.7.7.100] +atp +hplus +c_terminal_gly_gly_amp_1_group
+    c_terminal_gly_gly_1
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_70 [6.2.1.70] +threonine +atp +amp +ppi
-    o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine
+    <-> . +l_glutamyl_amp +amp +hplus
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +amp
-    l_threonyl_amp
+    <-> ec_6_2_1_63 [6.2.1.63] +arginine +atp +amp +ppi
+    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
   }
 }

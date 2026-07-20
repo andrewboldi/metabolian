@@ -30,13 +30,13 @@ pathway d-galactosyl-1-4-n-ac-to-h2o "β-D-galactosyl-(1→4)-N-ac… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +sucralose +phosphate +sucralose
-    atp
+    <-> . +indole_carboxyl_tetrahydro_thiazole +h
+    s_indole_l_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    1_o_d_glucopyranosyl_d_mannitol
+    <-> . +4_3_pyridyl_3_butenoic_acid
+    gamma_hydroxy_3_pyridinebutanoate
   }
 }

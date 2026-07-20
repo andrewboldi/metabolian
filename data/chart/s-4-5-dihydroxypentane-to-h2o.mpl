@@ -18,25 +18,25 @@ pathway s-4-5-dihydroxypentane-to-h2o "(S)-4,5-dihydroxypentane-… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    trigalacturonate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    7r_3_e_2_4_dinitrostyryl_7_2_thienylacetamido_3
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    udp_2_3_diacetamido_2_3_dideoxy_d_glucuronic_aci
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    clavulanate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    udp_2_3_diacetamido_2_3_dideoxy_d_mannuronic_aci
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    1_carbapenem_3_carboxylic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    alpha_d_aldosyl_beta_d_fructoside
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    2_hydroxyphenazine
   }
 }

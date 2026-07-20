@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero "O-alkylglycerone to 2-acyl-1-alkyl-sn-glycero…" {
-  spacing 308
+  spacing 284
 
   spine at 0,0 {
     o_alkylglycerone
@@ -24,63 +24,39 @@ pathway o-alkylglycerone-to-2-acyl-1-alkyl-sn-glycero "O-alkylglycerone to 2-acy
     2_acyl_1_alkyl_sn_glycero_3_phosphocholine
   }
 
-  branch from 1_alkyl_sn_glycerol_3_phosphate side left {
-    1_alkyl_sn_glycerol_3_phosphate
-    <-> . +h2o +pi
-    1_o_alkyl_sn_glycerol
-  }
-
-  branch from 1_alkyl_2_acyl_sn_glycerol side right {
+  branch from 1_alkyl_2_acyl_sn_glycerol side left {
     1_alkyl_2_acyl_sn_glycerol
     <-> . +h2o +fatty-acid +hplus
     1_alkyl_2_3_diacyl_sn_glycerol
   }
 
-  branch from 1_alkyl_2_acyl_sn_glycerol side left {
+  branch from 1_alkyl_2_acyl_sn_glycerol side right {
     1_alkyl_2_acyl_sn_glycerol
     <-> . +phosphatidylcholine +1_alkyl_2_3_diacyl_sn_glycerol
     2_acyl_sn_glycero_3_phosphocholine
   }
 
-  branch from 2_acyl_1_alkyl_sn_glycero_3_phosphocholine side right {
-    2_acyl_1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +sphingosine +1_alkyl_sn_glycero_3_phosphocholine +hplus
-    n_acylsphingosine
-  }
-
-  branch from 2_acyl_1_alkyl_sn_glycero_3_phosphocholine side left {
-    2_acyl_1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +1_alkyl_sn_glycero_3_phosphocholine
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> . +n_acyl_d_galactosylsphingosine +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosylceramide
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g
-  }
-
-  branch from cytidine_5_monophosphate side left {
-    cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d
-  }
-
-  branch from 1_alkyl_sn_glycero_3_phosphocholine side right {
-    1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +2_acyl_1_alkyl_sn_glycero_3_phosphocholine +1_2_diglyceride
-    triglyceride
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> ec_3_1_1_118 [3.1.1.118] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
-    2_acyl_sn_glycero_3_phospho_1d_myo_inositol
+    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_ester +h2o +hplus
+    cholesterol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_ester +h2o +hplus
-    cholesterol
+    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
+    2_16_1_lysophosphatidate
   }
 }

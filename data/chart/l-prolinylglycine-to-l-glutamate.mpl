@@ -24,8 +24,8 @@ pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
 
   branch from l_proline side right {
     l_proline
-    <-> . +l_tryptophan +atp +nadph +amp +ppi +nadp +h2o +hplus
-    s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo
+    <-> . +akg +o2 +succinate +co2
+    trans_3_hydroxy_l_proline
   }
 
   branch from glycine side left {
@@ -42,13 +42,13 @@ pathway l-prolinylglycine-to-l-glutamate "L-prolinylglycine to L-glutamate" {
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
-    gdp_4_dehydro_6_deoxy_d_mannose
+    <-> ec_2_6_1_103 [2.6.1.103] +s_3_5_dihydroxyphenylglycine +akg
+    3_5_dihydroxyphenylglyoxylate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +d_lysinium +akg
-    6_amino_2_oxohexanoic_acid
+    <-> ec_2_6_1_106 [2.6.1.106] +dtdp_3_azaniumyl_3_4_6_trideoxy_d_glucose +akg
+    dtdp_3_dehydro_4_6_dideoxy_d_glucose
   }
 }

@@ -115,13 +115,51 @@
       }
     },
     {
-      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp",
-      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
-      "short": "α-D-Glcp-(1→4)-α-D-…",
-      "formula": "C18H32O16",
+      "id": "myo_inositol",
+      "name": "myo-inositol",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140999"
+        "metanetx": "MNXM1105941"
+      }
+    },
+    {
+      "id": "1_o_indol_3_ylacetyl_beta_d_glucose",
+      "name": "1-O-(indol-3-ylacetyl)-beta-D-glucose",
+      "short": "1-O-(indol-3-ylacet…",
+      "formula": "C16H19NO7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1879"
+      }
+    },
+    {
+      "id": "indole_3_acetyl_myo_inositol",
+      "name": "Indole-3-acetyl-myo-inositol",
+      "short": "Indole-3-acetyl-myo…",
+      "formula": "C16H19NO7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106759"
+      }
+    },
+    {
+      "id": "dimboa",
+      "name": "DIMBOA",
+      "formula": "C9H8NO5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1108154"
+      }
+    },
+    {
+      "id": "dimboa_beta_d_glucoside",
+      "name": "DIMBOA beta-D-glucoside",
+      "short": "DIMBOA beta-D-gluco…",
+      "formula": "C15H19NO10",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM7309"
       }
     },
     {
@@ -132,30 +170,21 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "d_maltose",
-      "name": "D-maltose",
-      "formula": "C12H22O11",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106000"
-      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_4_1_8",
-      "name": "maltose phosphorylase",
+      "id": "ec_2_3_1_72",
+      "name": "indoleacetylglucose--inositol O-acyltransferase",
       "ec": [
-        "2.4.1.8"
+        "2.3.1.72"
       ]
     },
     {
-      "id": "ec_3_2_1_20",
-      "name": "alpha-glucosidase",
+      "id": "ec_3_2_1_182",
+      "name": "4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl glucoside",
       "ec": [
-        "3.2.1.20"
+        "3.2.1.182"
       ]
     }
   ],
@@ -318,21 +347,21 @@
     },
     {
       "id": "r5",
-      "name": "maltose phosphorylase",
-      "ec": "2.4.1.8",
+      "name": "indoleacetylglucose--inositol O-acyltransferase",
+      "ec": "2.3.1.72",
       "substrates": [
         {
-          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "metabolite": "myo_inositol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "1_o_indol_3_ylacetyl_beta_d_glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_maltose",
+          "metabolite": "indole_3_acetyl_myo_inositol",
           "stoichiometry": 1
         },
         {
@@ -342,31 +371,45 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_4_1_8"
+          "enzyme": "ec_2_3_1_72"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR183534"
+        "metanetx": "MNXR191258"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR183534"
+            "id": "MNXR191258"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "alpha-glucosidase",
-      "ec": "3.2.1.20",
+      "name": "4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl glucoside",
+      "ec": "3.2.1.182",
       "substrates": [
         {
-          "metabolite": "d_maltose",
+          "metabolite": "dimboa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimboa_beta_d_glucoside",
           "stoichiometry": 1
         },
         {
@@ -374,28 +417,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 2
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_20"
+          "enzyme": "ec_3_2_1_182"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR184967"
+        "metanetx": "MNXR191720"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR184967"
+            "id": "MNXR191720"
           }
         ]
       }

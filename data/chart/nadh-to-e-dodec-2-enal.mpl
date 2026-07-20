@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
-  spacing 222
+  spacing 210
 
   spine at 0,0 {
     nadh
@@ -18,45 +18,33 @@ pathway nadh-to-e-dodec-2-enal "NADH to (E)-dodec-2-enal" {
     e_dodec_2_enal
   }
 
-  branch from dodecan_1_ol side left {
-    dodecan_1_ol
-    <-> ec_2_3_1_75 [2.3.1.75] +eicosanoyl_coa +dodecyl_icosanoate
-    coa
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_28 [1.1.1.28] +nadh +h +3_bromopyruvic_acid
+    3_bromolactate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +h
-    2s_butan_2_ol
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +4_methylpentanal
-    4_methylpentan_1_ol
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +d_aspartate +nh4
-    d_asparagine
+    <-> ec_1_14_14_37 [1.14.14.37] +nadh +4_hydroxyphenylacetaldehyde_oxime +h +o2 +h2o
+    4_hydroxymandelonitrile
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +ile_asn +h +nh4
-    isoleucyl_aspartate
+    <-> ec_1_14_13_84 [1.14.13.84] +4_methylacetophenone +h +o2 +nadph +tolylacetate
+    nadp
   }
 
-  branch from dodecanal side right {
-    dodecanal
-    <-> . +nadp +nadph +hplus
-    dodecan_1_ol
+  branch from h2o side right {
+    h2o
+    <-> ec_1_14_13_84 [1.14.13.84] +4_methoxyacetophenone +h +o2 +nadph +nadp
+    4_methoxyphenylacetic_acid
   }
 
   branch from dodecanal side left {
     dodecanal
-    <-> . +nadp +h2o +nadph +hplus
-    dodecanoate
+    <-> . +nadp +nadph +hplus
+    dodecan_1_ol
   }
 }

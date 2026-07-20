@@ -20,61 +20,49 @@ pathway d-glucopyranose-to-nad "D-glucopyranose to NAD" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +carbapenem_biosynthesis_intermediate_4 +h
-    carbapenem_biosynthesis_intermediate_3
+    <-> ec_2_1_1_104 [2.1.1.104] +s_adenosyl_l_homocysteine +avenanthramide_b +h
+    avenanthramide_c
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_99 [2.1.1.99] +s_adenosyl_l_homocysteine +vindolidine
-    3r_3_hydroxy_2_3_dihydrotabersonine
-  }
-
-  branch from 1_caffeoyl_d_glucose side left {
-    1_caffeoyl_d_glucose
-    <-> . +udp_d_glucose +udp
-    trans_caffeate
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
-    keto_d_fructose
+    <-> . +s_adenosyl_l_homocysteine +h +n_methylpseudoephedrine
+    pseudoephedrine
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_188 [2.4.1.188] +udp +beta_d_glucosyl_1_4_n_acetyl_d_glucosaminyldipho +h
-    n_acetyl_d_glucosaminyldiphosphoundecaprenol
+    <-> . +udp +chalcone_2_o_glucoside +h
+    2_4_4_6_tetrahydroxychalcone
   }
 
-  branch from caffeic_acid side right {
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> . +udp +betanin +h
+    betanidin
+  }
+
+  branch from caffeic_acid side left {
     caffeic_acid
     <-> . +3_4_dihydroxystyrene
     co2
   }
 
-  branch from caffeic_acid side left {
+  branch from caffeic_acid side right {
     caffeic_acid
     <-> ec_3_1_1_42 [3.1.1.42] +l_quinate +h2o
     chlorogenate
   }
 
-  branch from cis_3_3_carboxyethenyl_3_5_cyclohexadiene_1_2_di side right {
-    cis_3_3_carboxyethenyl_3_5_cyclohexadiene_1_2_di
-    <-> . +nadh +h +o2 +nad
-    e_cinnamate
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +h +2_1_imidazolyl_1_4_methoxyphenyl_2_methyl_1_prop
-    1_4_methoxyphenyl_2_methyl_2_1h_imidazol_1_yl_1
+    <-> ec_1_3_1_77 [1.3.1.77] +nadh +pelargonidin +h
+    epiafzelechin
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_345 [1.1.1.345] +nadh +2_oxobutanoate +h
-    r_2_hydroxybutyrate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    2z_6e_farnesol
   }
 }

@@ -28,14 +28,14 @@ pathway udp-3-o-3r-3-hydroxyte-to-kdo-2-8-kdo-2-4 "UDP-3-O-[(3R)-3-hydroxyte… 
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
-    o_s_3_2_4_dioxopentyl_3_6_8_9_tetrahydroxy_1_oxo
+    <-> . +long_chain_fatty_acyl_amp +amp +hplus
+    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +malonyl-coa +hplus +co2 +coa +h2o
-    o_3r_atrochrysone_carboxylpantetheine_4_phosphor
+    <-> ec_2_3_1_294 [2.3.1.294] +ultra_long_chain_di_unsaturated_fatty_acyl_pante +malonyl-acp +hplus +co2
+    ultra_long_chain_di_unsaturated_3_oxoacyl_pantet
   }
 
   branch from kdo_lipid_iva side left {
@@ -46,25 +46,25 @@ pathway udp-3-o-3r-3-hydroxyte-to-kdo-2-8-kdo-2-4 "UDP-3-O-[(3R)-3-hydroxyte… 
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +cmp_n_acetyl_9_o_acetylneuraminate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetylneu
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +ganglioside_gd3 +cmp_n_acetyl_9_o_acetylneuraminate +hplus
-    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
+    <-> . +d_galactosyl_1_4_n_acetyl_d_6_sulfooxy_glucosam +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_6_d_galactosyl_1_4_6_o_s
   }
 
   branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side right {
     cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_7_7_38 [2.7.7.38] +ctp +h +3_deoxy_d_manno_octulosonate
-    diphosphate
+    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_h_pylori +h
+    lipid_iva_h_pylori
   }
 
   branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side left {
     cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_4_99_12 [2.4.99.12] +cmp +alpha_kdo_2_6_lipid_iva_h_pylori +h
-    lipid_iva_h_pylori
+    <-> ec_2_4_99_13 [2.4.99.13] +cmp +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_h_pylori +h
+    alpha_kdo_2_6_lipid_iva_h_pylori
   }
 }

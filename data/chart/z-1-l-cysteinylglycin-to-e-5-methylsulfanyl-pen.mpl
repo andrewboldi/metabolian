@@ -24,26 +24,26 @@ pathway z-1-l-cysteinylglycin-to-e-5-methylsulfanyl-pen "(Z)-1-(L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +l_cysteine +l_arginine +h2o
-    arginyl_cystinyl_glycine
+    <-> . +l_isoleucine +l_arginine +h2o
+    isolecyl_glycyl_arginine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_asparagine +l_tyrosine +h2o
-    asparaginyl_tyrosyl_glycine
+    <-> . +l_methionine +l_arginine +h2o
+    methionyl_glycyl_arginine
   }
 
   branch from h side left {
     h
-    <-> . +adp +am1c_glucuronide_cyclosporine +phosphate +am1c_glucuronide_cyclosporine +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    5z_8z_11z_eicosatrienoic_acid
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    am4n9_cyclosporine
+    henicosanoic_acid
   }
 
   branch from e_5_methylsulfanyl_pentanal_oxime side left {
@@ -54,49 +54,49 @@ pathway z-1-l-cysteinylglycin-to-e-5-methylsulfanyl-pen "(Z)-1-(L-cysteinylglyci
 
   branch from o2 side right {
     o2
-    <-> . +9e_myristelaidoyl_coa +nadp +h2o +h +nadph
-    tetradecanoyl_coa
+    <-> . +2_oxoglutarate +dimboa_beta_d_glucoside +co2 +trimboa_beta_d_glucoside
+    succinate
   }
 
   branch from o2 side left {
     o2
-    <-> . +7z_hexadecenoyl_coa +nadp +h2o +h +nadph
-    hexadecanoyl_coa
+    <-> . +2_oxoglutarate +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put +co2 +succinate
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +l_serine +l_arginine +h2o
-    arginyl_cystinyl_serine
+    <-> . +l_histidine +l_lysine +h2o
+    lysyl_cysteinyl_histidine
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +l_valine +l_arginine +h2o
-    arginyl_valyl_cysteine
+    <-> . +l_proline +l_arginine +h2o
+    prolyl_arginyl_cysteine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +nonadecanoyl_coa +nadp +h
-    2e_nonadecenoyl_coenzyme_a
+    <-> . +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +narbonolide +h2o
+    coa
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +3_oxoheneicosanoyl_coenzyme_a +nadp
-    3_hydroxyheneicosanoyl_coenzyme_a
+    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon
   }
 
   branch from fmn side right {
     fmn
-    <-> . +leukotriene_b4 +fmnh2 +o2 +h2o +hplus
-    18_hydroxyleukotriene_b4
+    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyalbendazole
   }
 
   branch from fmn side left {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    11_hydroxytestosterone
+    <-> ec_1_14_14_75 [1.14.14.75] +fenbendazole +fmnh2 +o2 +h2o +hplus
+    hydroxyfenbendazole
   }
 }

@@ -121,34 +121,51 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "dihydro_ferroheme_d1",
+      "name": "dihydro-ferroheme d1",
+      "formula": "C34H28FeN4O10",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:140498"
       }
     },
     {
-      "id": "13_hode",
-      "name": "13-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "ferroheme_d1",
+      "name": "ferroheme d1",
+      "formula": "C34H26FeN4O10",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:133819"
+        "chebi": "CHEBI:60549"
       }
     },
     {
-      "id": "9_hode",
-      "name": "9-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "zeaxanthin",
+      "name": "zeaxanthin",
+      "formula": "C40H56O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133820"
+        "chebi": "CHEBI:27547"
+      }
+    },
+    {
+      "id": "adonixanthin",
+      "name": "adonixanthin",
+      "formula": "C40H54O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80217"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_64",
+      "name": "zeaxanthin 4-ketolase",
+      "ec": [
+        "1.14.99.64"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -297,94 +314,92 @@
     },
     {
       "id": "r4",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 13-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 13-hydroxy-(9Z,11E)-octadecadienoate + A + H2O",
+      "name": "dihydro-heme d1 + A = heme d1 + AH2",
+      "equation": "dihydro-heme d1 + A = heme d1 + AH2",
       "substrates": [
         {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_hode",
+          "metabolite": "dihydro_ferroheme_d1",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferroheme_d1",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "hydrogen_donor",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50860"
+        "rhea": "RHEA:56524"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50860"
+            "id": "RHEA:56524"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 9-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
-      "equation": "(9Z,12Z)-octadecadienoate + AH2 + O2 = 9-hydroxy-(10E,12Z)-octadecadienoate + A + H2O",
+      "name": "zeaxanthin 4-ketolase",
+      "equation": "all-trans-zeaxanthin + 2 AH2 + 2 O2 = all-trans-adonixanthin + 2 A + 3 H2O",
+      "ec": "1.14.99.64",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "zeaxanthin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "9_hode",
+          "metabolite": "adonixanthin",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50864"
+        "rhea": "RHEA:56768"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50864"
+            "id": "RHEA:56768"
           }
         ]
       }

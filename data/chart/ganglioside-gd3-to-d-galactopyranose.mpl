@@ -20,26 +20,26 @@ pathway ganglioside-gd3-to-d-galactopyranose "ganglioside GD3 to D-galactopyrano
 
   branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side left {
     d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
-    <-> ec_2_4_1_206 [2.4.1.206] +udpglcnac +udp +hplus
-    n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g
-  }
-
-  branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side right {
-    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
     <-> . +udp_d_galactose +udp +hplus
     d_galp_1_3_d_galp_1_4_d_glcp_1_1_cer
   }
 
+  branch from d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi side right {
+    d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
+    <-> . +udp_n_acetyl_d_galactosamine +udp +hplus
+    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
+  }
+
   branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer side left {
     d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
-    <-> ec_2_4_1_79 [2.4.1.79] +udp_n_acetyl_d_galactosamine +udp +hplus
-    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
+    <-> . +n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d +h2o
+    n_acetyl_d_galactosamine
   }
 
   branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer side right {
     d_galactosyl_1_4_d_galactosyl_1_4_d_glucosylcer
-    <-> . +n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d +h2o
-    n_acetyl_d_galactosamine
+    <-> . +udp_d_galactose +udp +hplus
+    d_gal_1_3_d_gal_1_4_d_gal_1_4_d_glc_1_1_n_acyls
   }
 
   branch from d_galactopyranose side left {

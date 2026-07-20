@@ -18,13 +18,13 @@ pathway o-s-3r-hydroxyhexadeca-to-di-sulfido-diiron "O-[S-(3R)-hydroxyhexadecaâ€
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    neomycin_c
+    <-> ec_4_2_1_3 [4.2.1.3] +cis_aconitate
+    isocitrate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +neomycin_b +phosphate +neomycin_b
-    atp
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +glutathione
+    8_methylthiooctanonitrile_oxide
   }
 }

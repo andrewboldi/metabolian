@@ -44,61 +44,61 @@ pathway triacontanoate-to-hexatriacontanoyl-coa "triacontanoate to hexatriaconta
 
   branch from ppi side right {
     ppi
-    <-> . +all_trans_pentaprenyl_diphosphate +ipp
-    tetra_trans_hexa_cis_undecaprenyl_diphosphate
+    <-> ec_4_2_3_204 [4.2.3.204] +fpp +h2o
+    valerianol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_142 [2.5.1.142] +ipp +dmapp
-    nerylneryl_diphosphate
+    <-> . +utp +atp
+    3_3_cuamp
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_28 [1.2.1.28] +h +o_toluate +nadph +h2o
-    2_methylbenzaldehyde
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadph +h2o
+    1_nitronaphthalene_5_6_oxide
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_72 [1.14.13.72] +4alpha_carboxy_4beta_methyl_5alpha_cholest_7_ene +h2o +o2 +nadph
-    3beta_hydroxy_4beta_methyl_5alpha_cholest_7_ene
+    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadph +h2o
+    9r_10s_9_10_epome
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +ethene +nad
-    oxirane
+    <-> . +cyclohexylamine +formate
+    n_cyclohexylformamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +o2 +2_6_dichlorophenol +nad
-    2_6_dichloro_4_hydroxyphenolate
+    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +o2 +cyclohexane +nad
+    cyclohexanol
   }
 
   branch from co2 side right {
     co2
-    <-> . +4_4_dichlorodiphenylmethane
-    bis_4_chlorophenyl_acetic_acid
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +trans_caffeoyl_coa +h +coa
+    trans_2_3_4_4_6_pentahydroxychalcone
   }
 
   branch from co2 side left {
     co2
-    <-> . +coa +nh4 +cyclohexane_1_4_dione +h +h2o
-    2_amino_5_oxocyclohex_1_enecarbonyl_coa
+    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +s_pinocembrin +o2 +pinobanksin
+    succinate
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +n_6_n_6_o_tridemethylpuromycin_5_phosphate
-    n_acetyl_n6_n6_o_tridemethylpuromycin_5_phosphat
+    <-> ec_3_1_2_20 [3.1.2.20] +h +7_isojasmonate +h2o
+    7_isojasmonic_acid_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +co2 +nadp +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone
+    <-> ec_2_3_1_5 [2.3.1.5] +4_acetamido_2_amino_6_nitrotoluene +2_4_diamino_6_nitrotoluene
+    acetyl_coa
   }
 }

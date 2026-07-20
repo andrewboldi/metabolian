@@ -20,14 +20,14 @@ pathway isorhamnetin-to-h2o "isorhamnetin… to H2O" {
 
   branch from trans_4_coumaroyl_coa side left {
     trans_4_coumaroyl_coa
-    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
-    avenanthramide_a
+    <-> . +quercetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluco +coa
+    quercetin_3_6_ferulylglucoside
   }
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> . +2r_3s_piscidate +coa
-    cimicifugate_k
+    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +coa +h
+    quercetin_3_o_d_glucopyranoside
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -50,25 +50,25 @@ pathway isorhamnetin-to-h2o "isorhamnetin… to H2O" {
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +kaempferol_3_o_rhamnoside_7_o_glucoside
-    afzelin
+    <-> . +udp +h +picrocrocin
+    hydroxy_cyclocitral
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_7_di_o_d_glucoside
-    quercetin_3_o_d_glucopyranoside
+    <-> . +udp +gypsogenate_28_beta_d_glucoside
+    gypsogenate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_hexadecenoate +h +nad
-    9z_hexadecenal
+    <-> . +nadh +h +2_4_6_trichlorophenolate +o2 +chloride +nad
+    2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_48 [1.2.1.48] +nadh +h +tetracosanoate +nad
-    tetracosanal
+    <-> . +s_5_hydroxyisourate +allantoin
+    co2
   }
 }

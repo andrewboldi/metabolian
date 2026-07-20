@@ -20,13 +20,13 @@ pathway d-glucopyranose-to-d-glucopyranose "D-glucopyranose to D-glucopyranose" 
 
   branch from glucose side left {
     glucose
-    <-> ec_2_4_1_8 [2.4.1.8] +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
-    d_maltose
+    <-> ec_2_3_1_72 [2.3.1.72] +myo_inositol +1_o_indol_3_ylacetyl_beta_d_glucose
+    indole_3_acetyl_myo_inositol
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +d_maltose
-    h2o
+    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +h +h2o
+    dimboa_beta_d_glucoside
   }
 }

@@ -235,59 +235,40 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
+      "id": "phytanate",
+      "name": "phytanate",
+      "formula": "C20H39O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:78442"
+        "chebi": "CHEBI:37257"
       }
     },
     {
-      "id": "aspartate",
-      "name": "L-Aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29991"
-      }
-    },
-    {
-      "id": "3_l_aspartate_adenylyl_1_group",
-      "name": "3'-(L-aspartate)adenylyl(1−) group",
-      "short": "3'-(L-aspartate)ade…",
-      "formula": "C14H17N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78516"
-      }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
-    },
-    {
-      "id": "arachidonoyl_coa",
-      "name": "arachidonoyl-CoA",
-      "formula": "C41H62N7O17P3S",
+      "id": "phytanoyl_coa",
+      "name": "phytanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57368"
+        "chebi": "CHEBI:57391"
       }
     },
     {
-      "id": "d_ribose_5_triphosphate",
-      "name": "D-ribose 5-triphosphate",
-      "short": "D-ribose 5-TP",
-      "formula": "C5H9O14P3",
-      "charge": -4,
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:91013"
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "prenol",
+      "name": "prenol",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16019"
       }
     },
     {
@@ -308,6 +289,25 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:62877"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61404"
+      }
+    },
+    {
+      "id": "2_deoxyribose_5_triphosphate",
+      "name": "2-deoxyribose 5-triphosphate",
+      "short": "2-deoxyribose 5-TP",
+      "formula": "C5H9O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:72943"
       }
     }
   ],
@@ -355,17 +355,17 @@
       ]
     },
     {
-      "id": "ec_6_1_1_12",
-      "name": "aspartate--tRNA ligase",
+      "id": "ec_6_2_1_24",
+      "name": "phytanate--CoA ligase",
       "ec": [
-        "6.1.1.12"
+        "6.2.1.24"
       ]
     },
     {
-      "id": "ec_6_2_1_15",
-      "name": "arachidonate--CoA ligase",
+      "id": "ec_3_1_7_1",
+      "name": "prenyl-diphosphatase",
       "ec": [
-        "6.2.1.15"
+        "3.1.7.1"
       ]
     }
   ],
@@ -748,65 +748,12 @@
     },
     {
       "id": "r9",
-      "name": "aspartate--tRNA ligase",
-      "equation": "tRNA(Asp) + L-aspartate + ATP = L-aspartyl-tRNA(Asp) + AMP + diphosphate",
-      "ec": "6.1.1.12",
+      "name": "phytanate--CoA ligase",
+      "equation": "3,7,11,15-tetramethylhexadecanoate + ATP + CoA = phytanoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.24",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_l_aspartate_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_1_1_12"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:19649"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:19649"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "arachidonate--CoA ligase",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + ATP + CoA = (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.15",
-      "substrates": [
-        {
-          "metabolite": "arachidonate",
+          "metabolite": "phytanate",
           "stoichiometry": 1
         },
         {
@@ -820,7 +767,7 @@
       ],
       "products": [
         {
-          "metabolite": "arachidonoyl_coa",
+          "metabolite": "phytanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -834,31 +781,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_15"
+          "enzyme": "ec_6_2_1_24"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:19713"
+        "rhea": "RHEA:21380"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19713"
+            "id": "RHEA:21380"
           }
         ]
       }
     },
     {
-      "id": "r11",
-      "name": "ATP + H2O = D-ribose 5-triphosphate + adenine",
-      "equation": "ATP + H2O = D-ribose 5-triphosphate + adenine",
+      "id": "r10",
+      "name": "prenyl-diphosphatase",
+      "equation": "dimethylallyl diphosphate + H2O = prenol + diphosphate",
+      "ec": "3.1.7.1",
       "substrates": [
         {
-          "metabolite": "atp",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         },
         {
@@ -868,31 +816,36 @@
       ],
       "products": [
         {
-          "metabolite": "d_ribose_5_triphosphate",
+          "metabolite": "prenol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adenine",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_1"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:44164"
+        "rhea": "RHEA:21496"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44164"
+            "id": "RHEA:21496"
           }
         ]
       }
     },
     {
-      "id": "r12",
+      "id": "r11",
       "name": "dAMP + H2O = 2-deoxy-D-ribose 5-phosphate + adenine",
       "equation": "dAMP + H2O = 2-deoxy-D-ribose 5-phosphate + adenine",
       "substrates": [
@@ -916,7 +869,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
         "rhea": "RHEA:57824"
       },
@@ -926,6 +879,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:57824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "dATP + H2O = 2-deoxyribose 5-triphosphate + adenine",
+      "equation": "dATP + H2O = 2-deoxyribose 5-triphosphate + adenine",
+      "substrates": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyribose_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:77215"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77215"
           }
         ]
       }

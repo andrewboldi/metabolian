@@ -296,6 +296,33 @@
       }
     },
     {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "3_oxoacyl_coa",
+      "name": "3-oxoacyl-CoA",
+      "formula": "C24H33N7O18P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:90726"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
       "id": "glycine",
       "name": "Glycine",
       "formula": "C2H5NO2",
@@ -305,60 +332,33 @@
       }
     },
     {
-      "id": "n_acylglycinate",
-      "name": "N-acylglycinate",
-      "formula": "C3H3NO3R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57670"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
+      "id": "3_glycyladenylyl_zwitterionic_group",
+      "name": "3'-glycyladenylyl zwitterionic group",
+      "short": "3'-glycyladenylyl…",
+      "formula": "C12H16N6O7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57912"
+        "chebi": "CHEBI:78522"
       }
     },
     {
-      "id": "4_3_methylbut_2_enyl_l_tryptophan",
-      "name": "4-(3-methylbut-2-enyl)-L-tryptophan",
-      "short": "4-(3-methylbut-2-en…",
-      "formula": "C16H20N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58209"
-      }
-    },
-    {
-      "id": "guanosine_3_5_bis_diphosphate",
-      "name": "guanosine 3',5'-bis(diphosphate)",
-      "short": "guanosine…",
-      "formula": "C10H12N5O17P4",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:77828"
-      }
-    },
-    {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "3e_7e_dolabella_3_7_dien_18_ol",
+      "name": "(3E,7E)-dolabella-3,7-dien-18-ol",
+      "short": "(3E,7E)-dolabella-3…",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137565"
       }
     },
     {
@@ -521,24 +521,24 @@
       ]
     },
     {
-      "id": "ec_2_3_1_13",
-      "name": "glycine N-acyltransferase",
+      "id": "ec_2_3_1_16",
+      "name": "acetyl-CoA C-acyltransferase",
       "ec": [
-        "2.3.1.13"
+        "2.3.1.16"
       ]
     },
     {
-      "id": "ec_2_5_1_34",
-      "name": "4-dimethylallyltryptophan synthase",
+      "id": "ec_6_1_1_14",
+      "name": "glycine--tRNA ligase",
       "ec": [
-        "2.5.1.34"
+        "6.1.1.14"
       ]
     },
     {
-      "id": "ec_3_1_7_2",
-      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
+      "id": "ec_4_2_3_167",
+      "name": "dolabella-3,7-dien-18-ol synthase",
       "ec": [
-        "3.1.7.2"
+        "4.2.3.167"
       ]
     },
     {
@@ -1102,71 +1102,75 @@
     },
     {
       "id": "r13",
-      "name": "glycine N-acyltransferase",
-      "equation": "an acyl-CoA + glycine = an N-acylglycine + CoA + H(+)",
-      "ec": "2.3.1.13",
+      "name": "acetyl-CoA C-acyltransferase",
+      "equation": "an acyl-CoA + acetyl-CoA = a 3-oxoacyl-CoA + CoA",
+      "ec": "2.3.1.16",
       "substrates": [
         {
           "metabolite": "acyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_acylglycinate",
+          "metabolite": "3_oxoacyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "coa",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_13"
+          "enzyme": "ec_2_3_1_16"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:19869"
+        "rhea": "RHEA:21564"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19869"
+            "id": "RHEA:21564"
           }
         ]
       }
     },
     {
       "id": "r14",
-      "name": "4-dimethylallyltryptophan synthase",
-      "equation": "dimethylallyl diphosphate + L-tryptophan = 4-(3-methylbut-2-enyl)-L-tryptophan + diphosphate",
-      "ec": "2.5.1.34",
+      "name": "glycine--tRNA ligase",
+      "equation": "tRNA(Gly) + glycine + ATP = glycyl-tRNA(Gly) + AMP + diphosphate",
+      "ec": "6.1.1.14",
       "substrates": [
         {
-          "metabolite": "dmapp",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_3_methylbut_2_enyl_l_tryptophan",
+          "metabolite": "3_glycyladenylyl_zwitterionic_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -1176,32 +1180,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_34"
+          "enzyme": "ec_6_1_1_14"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 14,
       "xrefs": {
-        "rhea": "RHEA:14173"
+        "rhea": "RHEA:16013"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14173"
+            "id": "RHEA:16013"
           }
         ]
       }
     },
     {
       "id": "r15",
-      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
-      "equation": "guanosine 3',5'-bis(diphosphate) + H2O = GDP + diphosphate + H(+)",
-      "ec": "3.1.7.2",
+      "name": "dolabella-3,7-dien-18-ol synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (3E,7E)-dolabella-3,7-dien-18-ol + diphosphate",
+      "ec": "4.2.3.167",
       "substrates": [
         {
-          "metabolite": "guanosine_3_5_bis_diphosphate",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         },
         {
@@ -1211,34 +1215,30 @@
       ],
       "products": [
         {
-          "metabolite": "gdp",
+          "metabolite": "3e_7e_dolabella_3_7_dien_18_ol",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_7_2"
+          "enzyme": "ec_4_2_3_167"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 15,
       "xrefs": {
-        "rhea": "RHEA:14253"
+        "rhea": "RHEA:16345"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14253"
+            "id": "RHEA:16345"
           }
         ]
       }

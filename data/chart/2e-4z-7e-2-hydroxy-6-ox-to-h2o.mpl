@@ -48,25 +48,25 @@ pathway 2e-4z-7e-2-hydroxy-6-ox-to-h2o "(2E,4Z,7E)-2-hydroxy-6-ox… to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_oxolaur_6_cis_enoyl_coa +h
-    3s_3_hydroxydodec_cis_6_enoyl_coa
+    <-> . +nadh +3_hydroxykynurenine_o_beta_d_glucoside +h +nh4
+    4_2_amino_3_hydroxyphenyl_4_oxobutanoic_acid_o_g
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +5_hydroxyindol_3_yl_acetaldehyde +nadh +h
-    5_hydroxytryptophol
+    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one
+    26_hydroxycholesterol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g +phosphate +1_11z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_g
-    atp
+    <-> ec_3_6_3_32 [3.6.3.32] +h +adp +phosphate +atp
+    l_proline_betaine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    dilauroyl_phosphatidylglycerol
+    <-> . +h +adp +prostaglandin_e1 +phosphate +prostaglandin_e1
+    atp
   }
 }

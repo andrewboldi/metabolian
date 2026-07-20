@@ -20,25 +20,25 @@ pathway gdp-to-nad "GDP to NAD" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +p_gingivalis_capped_core_i_lipid_a_penta_acylate +h
-    p_gingivalis_uncapped_core_i_lipid_a_penta_acyla
-  }
-
-  branch from gdp_alpha_d_mannose side right {
-    gdp_alpha_d_mannose
     <-> . +alpha_d_man_1_3_alpha_d_man_1_2_alpha_d_man_1_2 +gdp +h
     d_mannosyl_1_3_d_mannosyl_1_3_d_mannosyl_1_3_n
   }
 
+  branch from gdp_alpha_d_mannose side right {
+    gdp_alpha_d_mannose
+    <-> . +gdp +beta_glc_1_4_kdo_2_4_alpha_man_1_5_kdo_2_6_lipid +h
+    beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella
+  }
+
   branch from nad side left {
     nad
-    <-> . +nadh +alpha_pinene +h +o2 +h2o
-    alpha_pinene_oxide
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +all_cis_10_13_16_19_docosatetraenoyl_coa +h2o
+    fad
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +3_2_3_dihydroxyphenyl_propanoate
-    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
+    <-> . +nadh +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h
+    3_s_hydroxy_dihomo_gama_linolenoyl_coenzyme_a
   }
 }

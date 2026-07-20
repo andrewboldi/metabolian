@@ -1,0 +1,258 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "malonyl-coa-to-flavokermesate",
+  "name": "malonyl-CoA to flavokermesate…",
+  "category": "other",
+  "summary": "A 3-step route from malonyl-CoA to flavokermesate 7-C-β-D-glucoside(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR193210"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "flavokermesic_acid_anthrone",
+      "name": "flavokermesic acid anthrone",
+      "short": "flavokermesic acid…",
+      "formula": "C16H11O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1132368"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "laccaic_acid_d",
+      "name": "laccaic acid D",
+      "formula": "C16H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149532"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "flavokermesate_7_c_d_glucoside",
+      "name": "flavokermesate 7-C-β-D-glucoside",
+      "short": "flavokermesate…",
+      "formula": "C22H18O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149533"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR193210",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 7
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "flavokermesic_acid_anthrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR193210"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193210"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR193209",
+      "substrates": [
+        {
+          "metabolite": "flavokermesic_acid_anthrone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "laccaic_acid_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR193209"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR193209"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "flavokermesate + UDP-alpha-D-glucose = flavokermesate 7-C-beta-D-glucoside + UDP + 2 H(+)",
+      "equation": "flavokermesate + UDP-alpha-D-glucose = flavokermesate 7-C-beta-D-glucoside + UDP + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "laccaic_acid_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "flavokermesate_7_c_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:63756"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63756"
+          }
+        ]
+      }
+    }
+  ]
+}

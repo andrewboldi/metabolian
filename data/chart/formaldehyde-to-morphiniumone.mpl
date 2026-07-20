@@ -18,26 +18,26 @@ pathway formaldehyde-to-morphiniumone "formaldehyde to morphiniumone" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +h +aminobacteriohopanetriol +l_glutamate
-    ribosylhopane
-  }
-
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
     <-> ec_2_6_1_94 [2.6.1.94] +kanamycin_a +h +l_glutamate
     6_oxokanamycin_x
   }
 
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +3_amino_3_deoxygentamicin_a2 +h +l_glutamate
+    3_oxogentamicin_a2
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +carbamazepine +nadph +3_hydroxycarbamazepine +h2o
-    nadp
+    <-> . +nadh +phthalate +h +nad
+    phthalate_3_4_cis_dihydrodiol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +nadph +nadp +h2o
-    4_hydroxyvalproic_acid
+    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
+    2_4_5_trihydroxytoluene
   }
 
   branch from oripavine side left {

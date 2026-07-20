@@ -22,25 +22,25 @@ pathway prenyl-diphosphate-to-h2o "prenyl diphosphate to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    dauca_4_7_diene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +8_oxo_datp +h2o +hplus
-    8_oxo_damp
+    <-> . +bisabolene
+    fpp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +daunosamine +phosphate +daunosamine
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +neomycin_b +phosphate +neomycin_b
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_fucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    ribostamycin
   }
 }

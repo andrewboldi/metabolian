@@ -26,13 +26,13 @@ pathway l-threitol-to-3-hydroxy-2-4-dioxopentyl "L-threitol to 3-hydroxy-2,4-dio
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +s_reticulinium +akg +o2 +succinate +co2
+    s_6_o_demethylreticuline
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_69 [1.14.11.69] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +n6_methyl_l_lysinium +co2
-    succinate
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 }

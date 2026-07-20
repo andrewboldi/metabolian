@@ -30,14 +30,14 @@ pathway l-serine-phosphoethanolam-to-h2o "L-serine-phosphoethanolam… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_145 [1.1.1.145] +21_hydroxyprogesterone +nadph +21_hydroxypregnenolone
-    nadp
+    <-> ec_1_6_2_6 [1.6.2.6] +nadp +ferroleghemoglobin +ferrileghemoglobin
+    nadph
   }
 
   branch from h side right {
     h
-    <-> ec_1_17_1_8 [1.17.1.8] +nadph +2_3_dihydrodipicolinate +nadp
-    2_3_4_5_tetrahydrodipicolinate
+    <-> . +nitrite +o2
+    nitric_acid
   }
 
   branch from serine side left {
@@ -54,25 +54,25 @@ pathway l-serine-phosphoethanolam-to-h2o "L-serine-phosphoethanolam… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +5alpha_cholestane_3beta_5_6beta_triol
-    5_6beta_epoxy_5alpha_cholestan_3beta_ol
+    <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
+    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +nadp +h +o2 +nadph
-    20_hydroxycholesterol
+    <-> . +hydroxymethylbilane
+    uroporphyrinogen_i
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
+    <-> ec_3_6_3_14 [3.6.3.14] +h +adp +phosphate +h2o
+    pmf
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    l_prolylglycine
+    butane_1_sulfonate
   }
 }

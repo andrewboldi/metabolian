@@ -24,50 +24,50 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_3_5_trichloro_cis_cis_muconate +2_5_dichloro_carboxymethylenebut_2_en_4_olide
-    chloride
+    <-> ec_2_6_1_29 [2.6.1.29] +alpha_omega_diamine +2_oxoglutarate +l_glutamate
+    omega_aminoaldehyde
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +8_methylnaphthalene_1_2_diol +nad
-    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
+    <-> . +3_5_dibromo_4_hydroxybenzoate +nh4 +h2o
+    3_5_dibromo_4_hydroxybenzamide
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadp +h2o
-    bromobenzene_2_3_oxide
+    <-> ec_1_1_1_183 [1.1.1.183] +neral +h +nadp
+    nerol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadp +h2o
-    benzo_a_pyrene_7_8_oxide
+    <-> ec_1_14_13_8 [1.14.13.8] +h +tamoxifen +o2 +nadp +h2o
+    tamoxifen_n_oxide
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
-    benzo_a_pyrene_4_5_oxide
+    <-> ec_1_14_14_1 [1.14.14.1] +h +tamoxifen +o2 +nadph +h2o
+    afimoxifene
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +benzo_a_pyrene_diol_epoxide_i +h2o +h +o2 +nadph
-    benzo_a_pyrene_7_8_diol
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +h2o
+    4_hydroxy_n_desmethyltamoxifen
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_15_3 [1.14.15.3] +nadh +h +o2 +cyclohexane +nad
-    cyclohexanol
+    <-> . +hydrogencarbonate +benzoate
+    terephthalate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +cyromazine +nh4
-    n_cyclopropylammeline
+    <-> ec_1_21_3_6 [1.21.3.6] +trans_2_3_4_4_6_pentahydroxychalcone +o2
+    bracteatin
   }
 
   branch from all_cis_12_15_18_21_tetracosatetraenoyl_coa side left {
@@ -84,25 +84,25 @@ pathway 3-s-hydroxy-tetracosa-12-to-h2o "3(S)-hydroxy-tetracosa-12… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_12_2 [2.7.12.2] +h +l_threonine +adp
-    o_phospho_l_threonine
+    <-> ec_2_7_1_119 [2.7.1.119] +h +adp +7_o_phosphohygromycin_b
+    hygromycin_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    polar_amino_acid
+    <-> . +h +cyclohexane_1_carbonyl_coa +amp +phosphate +coa +h2o
+    cyclohexane_1_carboxylate
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +daidzein_7_o_beta_d_glucoside +h
-    malonyldaidzin
+    <-> ec_2_3_1_69 [2.3.1.69] +acetyl_coa +1r_2s_4r_borneol
+    bornyl_acetate
   }
 
   branch from coa side right {
     coa
-    <-> ec_3_1_2_20 [3.1.2.20] +h +7_isojasmonate +h2o
-    7_isojasmonic_acid_coa
+    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_6_methylthiohexanoic_acid +h2o
+    2_4_methylthio_butylmalic_acid
   }
 }

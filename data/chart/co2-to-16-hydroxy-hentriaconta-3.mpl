@@ -18,14 +18,14 @@ pathway co2-to-16-hydroxy-hentriaconta-3 "CO2 to 16-hydroxy-hentriaconta-3…" {
 
   branch from h side left {
     h
-    <-> . +l_ascorbate +phosphoenolpyruvate +l_ascorbate_6_phosphate
-    pyruvate
+    <-> . +adenosine_3_5_bisphosphate +cyclosporin_a_sulfate +cyclosporin_a
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +l_ascorbate_6_phosphate +pyruvate +phosphoenolpyruvate
-    l_ascorbate
+    <-> . +adp +phosphate +atp +h2o
+    cyclosporin_a
   }
 
   branch from 6z_9z_12z_15z_3_oxo_2_2z_5z_8z_11z_tetradeca_2 side left {
@@ -42,26 +42,26 @@ pathway co2-to-16-hydroxy-hentriaconta-3 "CO2 to 16-hydroxy-hentriaconta-3…" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_dehydroascorbic_acid +10_hydroxy_e4_neuroprostane +h +l_ascorbate
-    10_hydroperoxy_h4_neuroprostane
+    <-> . +h +adp +cyanate +phosphate +cyanate
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +10_hydroxy_d4_neuroprostane +10_hydroperoxy_h4_neuroprostane +h +l_ascorbate
-    l_dehydroascorbic_acid
+    <-> . +h +adp +phosphate +atp
+    s_5_acetamido_2_hydroxyphenyl_cysteine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +medicarpin +nadph
-    vestitol
+    <-> ec_1_1_1_21 [1.1.1.21] +sapropterin +h +nadph
+    6_1_hydroxy_2_oxopropyl_tetrahydropterin
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_100 [1.1.1.100] +h +o_s_3_oxodecanoylpantetheine_4_phosphoryl_serine +nadph
-    o_s_3r_hydroxydecanoylpantetheine_4_phosphoryl_s
+    <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +nadph +omega_methylthio_alkyl_glucosinolate +h2o
+    omega_methylsulfinyl_alkyl_glucosinolate
   }
 
   branch from 16_hydroxy_hentriaconta_3_6_9_12_19_22_25_28_oct side left {

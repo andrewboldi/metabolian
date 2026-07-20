@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-4-aminobutanoyl-l-ly-to-succinate "N2-(4-aminobutanoyl)-L-ly… to succinate" {
-  spacing 304
+  spacing 298
 
   spine at 0,0 {
     n2_4_aminobutanoyl_l_lysinium
@@ -16,28 +16,28 @@ pathway n2-4-aminobutanoyl-l-ly-to-succinate "N2-(4-aminobutanoyl)-L-ly… to su
     succinate
   }
 
-  branch from gaba side left {
-    gaba
-    <-> . +nadp +h2o +nadph +hplus
-    4_ammoniobutanal
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> ec_1_5_1_16 [1.5.1.16] +nadp +h2o +pyruvate +nadph +hplus
-    d_lysopine_dizwitterion
-  }
-
   branch from l_lysinium side left {
     l_lysinium
     <-> ec_5_4_3_2 [5.4.3.2]
     3s_3_6_diammoniohexanoate
   }
 
-  branch from 4_oxobutanoate side right {
+  branch from l_lysinium side right {
+    l_lysinium
+    <-> ec_3_5_2_11 [3.5.2.11] +h2o
+    l_2_ammoniohexano_6_lactam
+  }
+
+  branch from 4_oxobutanoate side left {
     4_oxobutanoate
     <-> ec_1_1_1_n11 [1.1.1.n11] +nadp +nadph +hplus
     4_hydroxybutyrate
+  }
+
+  branch from alanine side right {
+    alanine
+    <-> . +2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime +pyruvate
+    3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd
   }
 
   branch from alanine side left {
@@ -46,21 +46,15 @@ pathway n2-4-aminobutanoyl-l-ly-to-succinate "N2-(4-aminobutanoyl)-L-ly… to su
     o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
   }
 
-  branch from alanine side right {
-    alanine
-    <-> . +atp +hplus +ppi
-    l_alanyl_amp
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
+    7_epi_cylindrospermopsin
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +akg +o2 +3r_3_hydroxy_l_argininium +co2
-    l_argininium
+    <-> . +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-2-ureidoglycine-to-ammonium "(S)-2-ureidoglycine to ammonium" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     s_2_ureidoglycine
@@ -16,13 +16,7 @@ pathway s-2-ureidoglycine-to-ammonium "(S)-2-ureidoglycine to ammonium" {
     nh3
   }
 
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +l_lysinium +glycine
-    6_amino_2_oxohexanoic_acid
-  }
-
-  branch from carbamate side right {
+  branch from carbamate side left {
     carbamate
     <-> . +isoproturon_didemethyl +h2o +h
     para_isopropylaniline

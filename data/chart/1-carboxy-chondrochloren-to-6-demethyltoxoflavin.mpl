@@ -48,13 +48,13 @@ pathway 1-carboxy-chondrochloren-to-6-demethyltoxoflavin "1'-carboxy-chondrochlo
 
   branch from h side right {
     h
-    <-> ec_2_3_1_14 [2.3.1.14] +4_hydroxyphenylacetyl_coa +l_glutamate +n_4_hydroxyphenylacetylglutamic_acid
-    coa
+    <-> . +dtdp_l_oleandrose +avermectin_a1a_aglycone +avermectin_a1a_monosaccharide
+    dtdp
   }
 
   branch from h side left {
     h
-    <-> ec_4_2_1_148 [4.2.1.148] +2_methylfumaryl_coa +h2o
-    l_erythro_3_methylmalyl_coa
+    <-> . +dtdp_l_oleandrose +avermectin_a1a_monosaccharide +dtdp
+    avermectin_a1a
   }
 }

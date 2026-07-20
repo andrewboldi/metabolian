@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutarate-to-h2o "2-oxoglutarate to H2O" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     2_oxoglutarate
@@ -22,49 +22,37 @@ pathway 2-oxoglutarate-to-h2o "2-oxoglutarate to H2O" {
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_methylmercury_l_cysteinylglycine +h2o
-    methylmercury_s_glutatione
+    <-> ec_2_6_1_59 [2.6.1.59] +dtdp_4_dehydro_6_deoxy_d_galactose +2_oxoglutarate +h
+    dtdp_4_amino_4_6_dideoxy_d_galactose
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_2_1_2_5 [2.1.2.5] +6s_5_6_7_8_tetrahydrofolate +n_formimidoyl_l_glutamate
-    5_formiminotetrahydrofolate
-  }
-
-  branch from 6_deamino_6_oxoparomomycin_ii side left {
-    6_deamino_6_oxoparomomycin_ii
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +octanoyl_coa +coa +nad +h2o +acetyl_coa +h +h2o2
-    nadh
+    <-> ec_2_6_1_42 [2.6.1.42] +3_methyl_2_oxopentanoate +2_oxoglutarate
+    l_isoleucine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_15 [1.14.13.15] +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +nadp +h2o +h +nadph
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+    <-> ec_1_13_11_16 [1.13.11.16] +2_hydroxy_6_oxo_octa_2_4_dienoate
+    3_ethylcatechol
   }
 
-  branch from 6_deamino_6_hydroxyparomomycin_ii side right {
-    6_deamino_6_hydroxyparomomycin_ii
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    adp
+  branch from o2 side right {
+    o2
+    <-> . +h +3_ethylcatechol
+    2_hydroxy_6_oxo_octa_2_4_dienoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    kanamycin_d
+    <-> ec_4_2_1_138 [4.2.1.138] +caryolan_1_ol
+    caryophyllene
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_deamino_3_hydroxykanamycin_b
+    <-> ec_3_4_21_54 [3.4.21.54] +angiotensin_i_dizwitterion +leu_val_tyr_ser_tetrapeptide
+    synthetic_tetradecapeptide_renin_substrate
   }
 }

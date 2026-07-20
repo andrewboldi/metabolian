@@ -79,6 +79,15 @@
       }
     },
     {
+      "id": "sophoraflavanone_b",
+      "name": "sophoraflavanone B",
+      "formula": "C20H20O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50207"
+      }
+    },
+    {
       "id": "o2",
       "name": "O2",
       "formula": "O2",
@@ -88,32 +97,12 @@
       }
     },
     {
-      "id": "5_hydroxypicolinic_acid",
-      "name": "5-hydroxypicolinic acid",
-      "short": "5-hydroxypicolinic…",
-      "formula": "C6H5NO3",
+      "id": "leachianone_g",
+      "name": "leachianone G",
+      "formula": "C20H20O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:233889"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
-      }
-    },
-    {
-      "id": "2_5_dihydroxypyridine",
-      "name": "2,5-dihydroxypyridine",
-      "short": "2,5-dihydroxypyridi…",
-      "formula": "C5H5NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM888"
+        "chebi": "CHEBI:50208"
       }
     },
     {
@@ -126,22 +115,22 @@
       }
     },
     {
-      "id": "l_pipecolate",
-      "name": "L-pipecolate",
-      "formula": "C6H11NO2",
+      "id": "5_epi_aristolochene",
+      "name": "(+)-5-epi-aristolochene",
+      "short": "(+)-5-epi-aristoloc…",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM684"
+        "chebi": "CHEBI:23925"
       }
     },
     {
-      "id": "n_hydroxy_l_pipecolic_acid",
-      "name": "N-hydroxy-L-pipecolic acid",
-      "short": "N-hydroxy-L-pipecol…",
-      "formula": "C6H11NO3",
+      "id": "capsidiol",
+      "name": "capsidiol",
+      "formula": "C15H24O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140874"
+        "metanetx": "MNXM733415"
       }
     },
     {
@@ -160,6 +149,20 @@
       "name": "15-hydroxyprostaglandin dehydrogenase (NAD(+))",
       "ec": [
         "1.1.1.141"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_103",
+      "name": "EC 1.14.13.103",
+      "ec": [
+        "1.14.13.103"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_119",
+      "name": "EC 1.14.13.119",
+      "ec": [
+        "1.14.13.119"
       ]
     }
   ],
@@ -306,7 +309,8 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR165133",
+      "name": "Reaction MNXR180994",
+      "ec": "1.14.13.103",
       "substrates": [
         {
           "metabolite": "nadh",
@@ -317,21 +321,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "sophoraflavanone_b",
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_hydroxypicolinic_acid",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_5_dihydroxypyridine",
+          "metabolite": "leachianone_g",
           "stoichiometry": 1
         },
         {
@@ -343,67 +343,78 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_103"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR165133"
+        "metanetx": "MNXR180994"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165133"
+            "id": "MNXR180994"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR165227",
+      "name": "Reaction MNXR180995",
+      "ec": "1.14.13.119",
       "substrates": [
         {
           "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "5_epi_aristolochene",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_pipecolate",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n_hydroxy_l_pipecolic_acid",
+          "metabolite": "capsidiol",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_119"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR165227"
+        "metanetx": "MNXR180995"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165227"
+            "id": "MNXR180995"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway triacetate-lactone-to-sartorypyrone-g "triacetate lactone to sartorypyrone G" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     triacetate_lactone
@@ -16,17 +16,5 @@ pathway triacetate-lactone-to-sartorypyrone-g "triacetate lactone to sartorypyro
     sartorypyrone_f
     <-> . +acetyl_coa -coa
     sartorypyrone_g
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    dauca_4_11_8_diene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    sterpurene
   }
 }

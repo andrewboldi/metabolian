@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-myristoylglycinate-to-fmn "N-myristoylglycinate to FMN" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     n_myristoylglycinate
@@ -18,27 +18,15 @@ pathway n-myristoylglycinate-to-fmn "N-myristoylglycinate to FMN" {
     14_hydroxymyristate
   }
 
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_tetradecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from tetradecanoate side right {
-    tetradecanoate
-    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_myristoyl_sn_glycero_3_phosphocholine
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +6_deoxo_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
-    28_nortyphasterol
+    <-> ec_1_14_14_194 [1.14.14.194] +s_4_1_methylpyrrolidin_2_yl_3_oxobutanoate +fmnh2 +o2 +h2o +hplus
+    ecgonone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_deoxo_28_nortyphasterol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_28_nortyphasterol
+    <-> ec_1_14_14_197 [1.14.14.197] +progesterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxyprogesterone
   }
 }

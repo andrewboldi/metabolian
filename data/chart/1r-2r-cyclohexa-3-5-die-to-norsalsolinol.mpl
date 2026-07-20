@@ -20,25 +20,25 @@ pathway 1r-2r-cyclohexa-3-5-die-to-norsalsolinol "(1R,2R)-cyclohexa-3,5-die… t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_97 [2.1.1.97] +3_hydroxyanthranilate +sam +hplus
-    3_hydroxy_4_methylanthranilate
+    <-> ec_2_1_1_150 [2.1.1.150] +7_hydroxyisoflavones +sam +hplus
+    7_methoxyisoflavones
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sam +hplus
-    guaiacols
+    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
+    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    15_oxo_bilirubin
+    <-> . +5_5_dehydrodivanillate +nadh +o2 +hplus +nad +h2o
+    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_11_27 [1.14.11.27] +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    l_lysinium
+    <-> . +3_6_dichloro_2_methoxybenzoate +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_6_dichlorosalicylate
   }
 }

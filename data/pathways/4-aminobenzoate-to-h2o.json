@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "4-aminobenzoate-to-h2o",
   "name": "4-aminobenzoate to H2O",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 4-aminobenzoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -119,49 +119,52 @@
       }
     },
     {
-      "id": "gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und",
-      "name": "Gro-P-beta-D-ManNAc-(1->4)-alpha-D-GlcNAc-PP-Und",
-      "short": "Gro-P-beta-D-ManNAc…",
-      "formula": "C74H122N2O22P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM21147"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM9"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM3"
-      }
-    },
-    {
-      "id": "beta_cellobiose",
-      "name": "beta-cellobiose",
-      "formula": "C12H22O11",
+      "id": "l_alanine",
+      "name": "L-alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM726890"
+        "metanetx": "MNXM1105732"
+      }
+    },
+    {
+      "id": "l_2_amino_4_methoxy_trans_but_3_enoic_acid",
+      "name": "L-2-amino-4-methoxy-trans-but-3-enoic acid",
+      "short": "L-2-amino-4-methoxy…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156361"
+      }
+    },
+    {
+      "id": "l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala",
+      "name": "L-alanyl-(2S,3E)-amino-4-methoxy-but-3-enoyl-L-alanine",
+      "short": "L-alanyl-(2S,3E)-am…",
+      "formula": "C11H19N3O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818514"
+      }
+    },
+    {
+      "id": "13s_hydroperoxy_9z_11e_octadecadienoate",
+      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate",
+      "short": "hydroperoxy-(9Z,11E…",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104179"
+      }
+    },
+    {
+      "id": "omega5z_etheroleate",
+      "name": "(omega5Z)-etheroleate",
+      "short": "(omega5Z)-etherolea…",
+      "formula": "C18H29O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM819042"
       }
     }
   ],
@@ -171,20 +174,6 @@
       "name": "carboxylesterase",
       "ec": [
         "3.1.1.1"
-      ]
-    },
-    {
-      "id": "ec_3_6_3_40",
-      "name": "EC 3.6.3.40",
-      "ec": [
-        "3.6.3.40"
-      ]
-    },
-    {
-      "id": "ec_3_6_3_42",
-      "name": "EC 3.6.3.42",
-      "ec": [
-        "3.6.3.42"
       ]
     }
   ],
@@ -316,89 +305,54 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR174994",
-      "ec": "3.6.3.40",
+      "name": "Reaction MNXR185213",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
+          "metabolite": "l_alanine",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "l_2_amino_4_methoxy_trans_but_3_enoic_acid",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_40"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR174994"
+        "metanetx": "MNXR185213"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174994"
+            "id": "MNXR185213"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR174995",
-      "ec": "3.6.3.42",
+      "name": "Reaction MNXR185467",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_cellobiose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "13s_hydroperoxy_9z_11e_octadecadienoate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_cellobiose",
+          "metabolite": "omega5z_etheroleate",
           "stoichiometry": 1
         },
         {
@@ -406,22 +360,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_42"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR174995"
+        "metanetx": "MNXR185467"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174995"
+            "id": "MNXR185467"
           }
         ]
       }

@@ -48,13 +48,13 @@ pathway taurochenodeoxycholate-to-chenodeoxycholate "taurochenodeoxycholate to c
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_154 [2.5.1.154] +cob_ii_inamide +fadh2 +atp +h2o +fad +pi +hplus
-    adenosylcobinamide
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    1e_4e_8e_humulene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    preasperterpenoid_a
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    curcumene
   }
 }

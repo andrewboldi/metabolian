@@ -28,14 +28,14 @@ pathway 1-6-didemethyltoxoflavin-to-2s-3r-4s-5-methoxyca "1,6-didemethyltoxoflav
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_186 [2.1.1.186] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_204 [2.1.1.204] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_297 [2.1.1.297] +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> ec_2_1_1_206 [2.1.1.206] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from toxoflavin side left {
@@ -76,13 +76,13 @@ pathway 1-6-didemethyltoxoflavin-to-2s-3r-4s-5-methoxyca "1,6-didemethyltoxoflav
 
   branch from fmn side left {
     fmn
-    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    7_22r_dihydroxycholesterol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11s_12r_eet
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_139 [1.14.14.139] +c7a_hydroxy_4_cholesten_3_one +fmnh2 +o2 +h2o +hplus
-    dihydroxy_4_cholesten_3_one_7a12a
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11r_12s_eet
   }
 }

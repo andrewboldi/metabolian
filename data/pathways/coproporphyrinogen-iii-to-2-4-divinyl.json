@@ -235,32 +235,31 @@
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "ribonucleotide",
+      "name": "ribonucleotide",
+      "formula": "C5H7O6PR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:90675"
       }
     },
     {
-      "id": "n7_methylguanosine_5_phosphate_zwitterion",
-      "name": "N7-methylguanosine 5'-phosphate zwitterion",
-      "short": "N7-methylguanosine…",
-      "formula": "C11H14N5O7P",
-      "charge": 0,
+      "id": "2_o_methylribonucleotide_1",
+      "name": "2'-O-methylribonucleotide(1−)",
+      "short": "2'-O-methylribonucl…",
+      "formula": "C6H9O6PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74480"
+        "chebi": "CHEBI:90676"
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:29969"
       }
     },
     {
@@ -301,6 +300,13 @@
       "name": "magnesium protoporphyrin IX methyltransferase",
       "ec": [
         "2.1.1.11"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_371",
+      "name": "[histone H3]-lysine(27) N-dimethyltransferase",
+      "ec": [
+        "2.1.1.371"
       ]
     }
   ],
@@ -660,11 +666,11 @@
     },
     {
       "id": "r8",
-      "name": "a guanosine in RNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in RNA + S-adeno...",
-      "equation": "a guanosine in RNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in RNA + S-adenosyl-L-homocysteine",
+      "name": "a ribonucleotide in U6 snRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in...",
+      "equation": "a ribonucleotide in U6 snRNA + S-adenosyl-L-methionine = a 2'-O-methylribonucleotide in U6 snRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "ribonucleotide",
           "stoichiometry": 1
         },
         {
@@ -674,46 +680,7 @@
       ],
       "products": [
         {
-          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:60164"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:60164"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-ly...",
-      "equation": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n6_methyl_l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "2_o_methylribonucleotide_1",
           "stoichiometry": 1
         },
         {
@@ -726,16 +693,65 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:60268"
+        "rhea": "RHEA:63088"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60268"
+            "id": "RHEA:63088"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "[histone H3]-lysine(27) N-dimethyltransferase",
+      "equation": "L-lysyl(27)-[histone H3] + 2 S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + 2 S-adenosyl-L-homocysteine + 2 H(+)",
+      "ec": "2.1.1.371",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_371"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:64452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64452"
           }
         ]
       }

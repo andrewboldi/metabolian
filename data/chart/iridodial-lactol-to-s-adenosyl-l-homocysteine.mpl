@@ -20,25 +20,25 @@ pathway iridodial-lactol-to-s-adenosyl-l-homocysteine "(+)-iridodial lactol to S
 
   branch from fmn side left {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    2_hydroxy_17_estradiol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    8r_9s_eet
   }
 
   branch from fmn side right {
     fmn
-    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_17_estradiol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    8s_9r_eet
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_187 [2.1.1.187] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_207 [2.1.1.207] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_188 [2.1.1.188] +sam +n1_methylguanosine_5_monophosphate_1 +hplus
-    guanosine_5_monophosphate_1
+    <-> ec_2_1_1_207 [2.1.1.207] +5_carboxymethylaminomethyluridine_5_monophosphat +sam +hplus
+    5_carboxymethylaminomethyl_2_o_methyluridine_5_m
   }
 }

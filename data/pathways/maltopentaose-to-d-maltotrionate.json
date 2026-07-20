@@ -1,0 +1,304 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "maltopentaose-to-d-maltotrionate",
+  "name": "maltopentaose to D-maltotrionate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from maltopentaose to D-maltotrionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR132338"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62006"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "maltopentaose",
+      "name": "maltopentaose",
+      "formula": "C30H52O26",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62006"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+      "name": "α-D-Glcp-(1→4)-α-D-Glcp-(1→4)-D-Glcp",
+      "short": "α-D-Glcp-(1→4)-α-D-…",
+      "formula": "C18H32O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140999"
+      }
+    },
+    {
+      "id": "beta_maltose",
+      "name": "beta-maltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106001"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_maltotriono_1_5_lactone",
+      "name": "D-maltotriono-1,5-lactone",
+      "short": "D-maltotriono-1,5-l…",
+      "formula": "C18H30O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:143184"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_maltotrionate",
+      "name": "D-maltotrionate",
+      "formula": "C18H31O17",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "d_glucosyl_1_4_d_mannose",
+      "name": "α-D-glucosyl-(1→4)-α-D-mannose",
+      "short": "α-D-glucosyl-(1→4)-…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47937"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_2",
+      "name": "beta-amylase",
+      "ec": [
+        "3.2.1.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-amylase",
+      "ec": "3.2.1.2",
+      "substrates": [
+        {
+          "metabolite": "maltopentaose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_maltose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR132338"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132338"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-maltotriose + O2 = D-maltotriono-1,5-lactone + H2O2",
+      "equation": "D-maltotriose + O2 = D-maltotriono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_maltotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-maltotriono-1,5-lactone + H2O = D-maltotrionate + H(+)",
+      "equation": "D-maltotriono-1,5-lactone + H2O = D-maltotrionate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "d_maltotriono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_maltotrionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR206087",
+      "substrates": [
+        {
+          "metabolite": "d_glcp_1_4_d_glcp_1_4_d_glcp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucosyl_1_4_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR206087"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206087"
+          }
+        ]
+      }
+    }
+  ]
+}

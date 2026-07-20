@@ -36,14 +36,14 @@ pathway 2-2r-5z-2-carboxy-4-me-to-thiamine-1-diphosphate "2-[(2R,5Z)-2-carboxy-4
 
   branch from ppi side left {
     ppi
-    <-> . +peregrinol_diphosphate +h2o
-    viteagnusin_d
+    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
+    5s_5_2r_2_carboxylato_2_hydroxy_2_methylethyl_2
   }
 
   branch from ppi side right {
     ppi
-    <-> . +peregrinol_diphosphate
-    labd_13_16_14_diene_9_ol
+    <-> . +2_oxo_atp +h2o +hplus
+    2_oxo_amp
   }
 
   branch from thiamine side left {

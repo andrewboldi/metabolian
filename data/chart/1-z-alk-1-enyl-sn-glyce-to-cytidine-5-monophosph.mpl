@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-z-alk-1-enyl-sn-glyce-to-cytidine-5-monophosph "1-(Z)-alk-1-enyl-sn-glyce… to cytidine 5'-monophosphate" {
-  spacing 286
+  spacing 274
 
   spine at 0,0 {
     1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
@@ -18,21 +18,9 @@ pathway 1-z-alk-1-enyl-sn-glyce-to-cytidine-5-monophosph "1-(Z)-alk-1-enyl-sn-gl
     1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphocholin
   }
 
-  branch from 1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate side left {
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate
-    <-> . +n_acyl_1_1z_alkenyl_2_acyl_sn_glycero_3_phosphoe +h2o +hplus
-    n_acylethanolamine
-  }
-
-  branch from cytidine_5_monophosphate side right {
-    cytidine_5_monophosphate
-    <-> . +n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_6_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
-  }
-
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_gal_1_4_d +cmp_n_acetyl_neuraminate +hplus
-    n4_neu5ac_2_3_d_gal_1_4_d_glcnac_1_2_d_man_1_3_n
+    <-> . +lactose +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_4_d_glu
   }
 }

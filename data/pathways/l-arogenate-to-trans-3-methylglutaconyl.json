@@ -241,23 +241,31 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
+      "id": "2_octaprenylphenol",
+      "name": "2-octaprenylphenol",
+      "formula": "C46H70O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:59789"
+        "chebi": "CHEBI:40407"
       }
     },
     {
-      "id": "s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit",
-      "name": "S-adenosyl-S-carboxymethyl-L-homocysteine dizwitterion",
-      "short": "S-adenosyl-S-carbox…",
-      "formula": "C16H22N6O7S",
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134278"
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "3_all_trans_octaprenyl_benzene_1_2_diol",
+      "name": "3-(all-trans-octaprenyl)benzene-1,2-diol",
+      "short": "3-(all-trans-octapr…",
+      "formula": "C46H70O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1233"
       }
     },
     {
@@ -270,12 +278,12 @@
       }
     },
     {
-      "id": "n_acetyl_l_aspartate",
-      "name": "N-acetyl-L-aspartate",
-      "formula": "C6H7NO5",
-      "charge": -2,
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16953"
+        "chebi": "CHEBI:17499"
       }
     },
     {
@@ -285,6 +293,15 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:29990"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "β-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57966"
       }
     },
     {
@@ -445,21 +462,23 @@
       }
     },
     {
-      "id": "tributyrin",
-      "name": "tributyrin",
-      "formula": "C15H26O6",
+      "id": "1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi",
+      "name": "1-palmitoyl-2-butanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-palmitoyl-2-butan…",
+      "formula": "C28H56NO8P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35020"
+        "chebi": "CHEBI:77832"
       }
     },
     {
-      "id": "dibutyrin",
-      "name": "dibutyrin",
-      "formula": "C11H20O5",
+      "id": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
+      "name": "1-hexadecanoyl-sn-glycero-3-phosphocholine",
+      "short": "1-hexadecanoyl-sn-g…",
+      "formula": "C24H50NO7P",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76478"
+        "chebi": "CHEBI:72998"
       }
     },
     {
@@ -598,17 +617,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_17",
-      "name": "aspartate N-acetyltransferase",
-      "ec": [
-        "2.3.1.17"
-      ]
-    },
-    {
       "id": "ec_5_1_1_13",
       "name": "aspartate racemase",
       "ec": [
         "5.1.1.13"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_11",
+      "name": "aspartate 1-decarboxylase",
+      "ec": [
+        "4.1.1.11"
       ]
     },
     {
@@ -1104,69 +1123,19 @@
     },
     {
       "id": "r11",
-      "name": "prephenate + S-adenosyl-L-methionine = carboxy-S-adenosyl-L-methionine + 3-phenylpyruva...",
-      "equation": "prephenate + S-adenosyl-L-methionine = carboxy-S-adenosyl-L-methionine + 3-phenylpyruvate + H2O",
+      "name": "2-all-trans-octaprenylphenol + prephenate + A + H(+) = 3-(all-trans-octaprenyl)benzene-...",
+      "equation": "2-all-trans-octaprenylphenol + prephenate + A + H(+) = 3-(all-trans-octaprenyl)benzene-1,2-diol + 3-phenylpyruvate + AH2 + CO2",
       "substrates": [
+        {
+          "metabolite": "2_octaprenylphenol",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "1s_4s_prephenate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "keto_phenylpyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:51692"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:51692"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "aspartate N-acetyltransferase",
-      "equation": "L-aspartate + acetyl-CoA = N-acetyl-L-aspartate + CoA + H(+)",
-      "ec": "2.3.1.17",
-      "substrates": [
-        {
-          "metabolite": "aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_acetyl_l_aspartate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
@@ -1174,28 +1143,41 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_3_1_17"
+          "metabolite": "3_all_trans_octaprenyl_benzene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:14165"
+        "rhea": "RHEA:81675"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14165"
+            "id": "RHEA:81675"
           }
         ]
       }
     },
     {
-      "id": "r13",
+      "id": "r12",
       "name": "aspartate racemase",
       "equation": "L-aspartate = D-aspartate",
       "ec": "5.1.1.13",
@@ -1217,7 +1199,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 13,
+      "pathwayStep": 12,
       "xrefs": {
         "rhea": "RHEA:14973"
       },
@@ -1227,6 +1209,51 @@
           {
             "db": "Rhea",
             "id": "RHEA:14973"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "aspartate 1-decarboxylase",
+      "equation": "L-aspartate + H(+) = beta-alanine + CO2",
+      "ec": "4.1.1.11",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 13,
+      "xrefs": {
+        "rhea": "RHEA:19497"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19497"
           }
         ]
       }
@@ -1615,11 +1642,11 @@
     },
     {
       "id": "r22",
-      "name": "1,2,3-tributanoylglycerol + H2O = dibutanoylglycerol + butanoate + H(+)",
-      "equation": "1,2,3-tributanoylglycerol + H2O = dibutanoylglycerol + butanoate + H(+)",
+      "name": "1-hexadecanoyl-2-butanoyl-sn-glycero-3-phosphocholine + H2O = butanoate + 1-hexadecanoy...",
+      "equation": "1-hexadecanoyl-2-butanoyl-sn-glycero-3-phosphocholine + H2O = butanoate + 1-hexadecanoyl-sn-glycero-3-phosphocholine + H(+)",
       "substrates": [
         {
-          "metabolite": "tributyrin",
+          "metabolite": "1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi",
           "stoichiometry": 1
         },
         {
@@ -1629,11 +1656,11 @@
       ],
       "products": [
         {
-          "metabolite": "dibutyrin",
+          "metabolite": "butyrate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "butyrate",
+          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
@@ -1644,14 +1671,14 @@
       "reversibility": "reversible",
       "pathwayStep": 22,
       "xrefs": {
-        "rhea": "RHEA:40475"
+        "rhea": "RHEA:41195"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40475"
+            "id": "RHEA:41195"
           }
         ]
       }

@@ -22,50 +22,50 @@ pathway 3-oxo-24-ethyl-26-al-chol-to-nadph "3-oxo-24-ethyl-26-al-chol… to NADP
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_5_xylenol +o2 +h2o
-    3_hydroxymethyl_5_methylphenol
+    <-> . +nadh +3_carboxy_10_methylsulfanyl_2_oxodecanoate +h
+    3_7_methylthio_heptylmalic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_4_methylbenzaldehyde +h
-    5_hydroxymethyl_2_methylphenol
+    <-> . +nadh +3_carboxy_9_methylsulfanyl_2_oxononanoate +h
+    3_6_methylthio_hexylmalic_acid
   }
 
   branch from nadh side left {
     nadh
-    <-> .
-    2_hydro_nad
+    <-> . +3_carboxy_8_methylsulfanyl_2_oxooctanoate +h +nad
+    3_5_methylthio_pentylmalic_acid
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_1_1_90 [1.1.1.90] +h +3_hydroxymethyl_5_methylphenol +nad
-    3_hydroxy_5_methylbenzaldehyde
+    <-> . +3_carboxy_7_methylsulfanyl_2_oxoheptanoate +h +nad
+    3_4_methylthio_butylmalic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +densipoloyl_coa +3_oxoauricoloyl_coa +coa
-    co2
+    <-> . +8_o_methyl_5_10_dihydroxy_fusarubinaldehdye +nadp +h2o +o2 +nadph
+    8_o_methyl_5_hydroxy_fusarubinaldehyde
   }
 
   branch from h side right {
     h
-    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose
-    gdp_4_keto_6_deoxy_d_lyxo_heptose
+    <-> . +8_o_methyl_13_carboxynorjavanicin
+    8_o_methyl_fusarubinlactone
   }
 
   branch from o2 side left {
     o2
-    <-> . +l_tryptophan +h2o
-    ttq_cofactor
+    <-> . +7_hydroxy_pre_bikaverin +nadp +h2o +h +nadph
+    pre_bikaverin
   }
 
   branch from o2 side right {
     o2
-    <-> . +echinocandin_c +nadp +h2o +h +nadph
-    echinocandin_d
+    <-> . +tirandamycin_a +h +nadph +nadp +h2o
+    tirandamycin_b
   }
 
   branch from isofucosterol side left {
@@ -82,13 +82,13 @@ pathway 3-oxo-24-ethyl-26-al-chol-to-nadph "3-oxo-24-ethyl-26-al-chol… to NADP
 
   branch from nadph side left {
     nadph
-    <-> . +gdp_6_deoxy_4_keto_l_xylo_heptose +h +nadp
-    gdp_6_deoxy_l_gluco_heptose
+    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_4_methyl_benzoate +h +nadp +h2o
+    3_hydroxy_4_methylbenzaldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> . +tridecane_3_4_dione +h +nadp
-    cai_1
+    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_5_methyl_benzoate +h +nadp +h2o
+    3_hydroxy_5_methylbenzaldehyde
   }
 }

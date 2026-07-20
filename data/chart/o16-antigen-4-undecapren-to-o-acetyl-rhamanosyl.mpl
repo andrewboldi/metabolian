@@ -24,14 +24,14 @@ pathway o16-antigen-4-undecapren-to-o-acetyl-rhamanosyl "(O16 antigen)4-undecapr
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_103 [2.4.1.103] +udp +1_hydroxy_2_beta_d_glucosyloxy_9_10_anthraquinon +h
-    alizarin
+    <-> . +udp +pelargonin +h
+    pelargonidin_3_glucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_249 [2.4.1.249] +udp +ternatin_c5 +h
-    delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b
+    <-> . +udp +bisdemalonylsalvianin +h
+    pelargonidin_3_o_6_caffeoyl_beta_d_glucoside
   }
 
   branch from o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre side left {

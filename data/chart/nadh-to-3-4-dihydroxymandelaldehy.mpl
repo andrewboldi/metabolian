@@ -32,37 +32,37 @@ pathway nadh-to-3-4-dihydroxymandelaldehy "NADH to 3,4-dihydroxymandelaldehy…"
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +co2 +coa
-    pyruvate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    s_terpineol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_27 [1.1.1.27] +nadh +h +pyruvate
-    lactate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
+    isomenthol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_19_13 [3.4.19.13] +s_indol_3_ylmethylisothiocyanyl_l_cysteinylglyci +l_glutamate
-    indol_3_ylmethylisothiocyanate_glutathione
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +yersiniose_b +phosphate +yersiniose_b
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile
-    dehydro_indole_3_yl_acetonitrile
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_paratopyranose
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_104 [2.1.1.104] +s_adenosyl_l_homocysteine +avenanthramide_b +h
-    avenanthramide_c
+    <-> . +s_adenosyl_l_homocysteine +hemanthamine +h
+    11_hydroxyvittatine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +n_methylpseudoephedrine
-    pseudoephedrine
+    <-> . +s_adenosyl_l_homocysteine +haemanthamine +h
+    11_hydroxyvittatine
   }
 }

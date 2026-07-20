@@ -18,25 +18,25 @@ pathway maltoheptaose-to-d-maltohexaonate "maltoheptaose to D-maltohexaonate" {
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> . +d_maltose +beta_d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o +glucose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> .
+    1_4_alpha_d_glucan
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_2_3_1_92 [2.3.1.92] +1_o_trans_sinapoyl_beta_d_glucose +s_malate +h
-    2_o_sinapoyl_malate
+    <-> .
+    alpha_d_glucose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_107 [3.2.1.107] +5r_5_d_galactosyloxy_l_lysine_1 +h2o
-    5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1
+    <-> . +maltoheptaose +h2o
+    maltononaose
   }
 }

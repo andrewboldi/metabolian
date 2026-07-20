@@ -22,13 +22,13 @@ pathway n-monoacetylchitobiose-6-to-d-glucopyranose "N'-monoacetylchitobiose-6â€
 
   branch from glucose side left {
     glucose
-    <-> ec_5_3_1_5 [5.3.1.5]
-    d_fructofuranose
+    <-> . +ginsenoside_mx +h2o
+    ginsenoside_c_mx1
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +h2o
-    nigerose
+    <-> . +ginsenoside_mx +ginsenoside_c_mx1
+    h2o
   }
 }

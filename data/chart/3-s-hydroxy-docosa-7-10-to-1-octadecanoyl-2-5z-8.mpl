@@ -18,14 +18,14 @@ pathway 3-s-hydroxy-docosa-7-10-to-1-octadecanoyl-2-5z-8 "3(S)-hydroxy-docosa-7,
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexacosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +ciprofloxacin +phosphate +ciprofloxacin +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    jadomycin_b
   }
 
   branch from 7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa side left {
@@ -36,14 +36,14 @@ pathway 3-s-hydroxy-docosa-7-10-to-1-octadecanoyl-2-5z-8 "3(S)-hydroxy-docosa-7,
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    isodihydrocarveol
+    <-> . +h +3r_4r_4_hydroxymethyl_3_6_methylheptanoyl_oxola +nadp
+    scb1
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    neoisodihydrocarveol
+    <-> . +h +2_4_dinitrophenol +nadp
+    2_4_dinitrophenol_hydride_sigma_complex
   }
 
   branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {

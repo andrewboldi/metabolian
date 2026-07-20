@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltoheptaose-to-d-cellotetraonate "maltoheptaose to D-cellotetraonate" {
-  spacing 238
+  spacing 226
 
   spine at 0,0 {
     maltoheptaose
@@ -24,67 +24,55 @@ pathway maltoheptaose-to-d-cellotetraonate "maltoheptaose to D-cellotetraonate" 
 
   branch from alpha_d_glucose_1_phosphate side left {
     alpha_d_glucose_1_phosphate
-    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_glucose +h2o +amp
-    h
-  }
-
-  branch from alpha_d_glucose_1_phosphate side right {
-    alpha_d_glucose_1_phosphate
     <-> ec_3_1_3_10 [3.1.3.10] +phosphate +h2o
     beta_d_glucose
   }
 
-  branch from maltohexaose side left {
-    maltohexaose
-    <-> ec_2_4_1_1 [2.4.1.1] +maltoheptaose +phosphate
-    d_glucopyranose_1_phosphate
+  branch from alpha_d_glucose_1_phosphate side right {
+    alpha_d_glucose_1_phosphate
+    <-> ec_2_4_1_139 [2.4.1.139] +phosphate +h2o
+    alpha_maltose
   }
 
-  branch from alpha_cellobiose side right {
+  branch from alpha_cellobiose side left {
     alpha_cellobiose
-    <-> ec_2_7_1_85 [2.7.1.85] +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +adp +h
-    atp
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_glucopyranose_1_phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> ec_2_7_1_85 [2.7.1.85] +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +adp +atp
+    h
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_glucopyranose_1_phosphate
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> ec_3_6_1_43 [3.6.1.43] +h +c80_dolichol_phosphate +h2o
+    c80_dolichol_diphosphate
   }
 
-  branch from cellotriose side left {
-    cellotriose
-    <-> ec_3_6_3_42 [3.6.3.42] +h +phosphate +atp +h2o
-    adp
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_29 [3.1.3.29] +n_acetyl_d_mannosamine +h2o
+    aldehydo_n_acetyl_d_mannosamine_6_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_nitrophenol
-    m_nitrophenyl_beta_d_galactoside
+    <-> ec_3_5_5_1 [3.5.5.1] +l_alanine +nh4 +h
+    alpha_aminopropionitrile
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +3_methylphenol
-    3_methylphenyl_beta_d_galactopyranoside
+    <-> ec_1_14_13_15 [1.14.13.15] +25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t +nadp +h +o2 +nadph
+    5beta_cholestane_3alpha_7alpha_12alpha_triol
   }
 
   branch from cellotetraose side right {
     cellotetraose
-    <-> ec_3_2_1_74 [3.2.1.74] +glucose +h2o
+    <-> ec_3_2_1_74 [3.2.1.74] +alpha_d_glucose +h2o
     cellopentaose
   }
 
   branch from cellotetraose side left {
     cellotetraose
-    <-> ec_3_2_1_91 [3.2.1.91] +h2o
-    beta_cellobiose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    atp
   }
 }

@@ -130,24 +130,6 @@
       }
     },
     {
-      "id": "tyraminium",
-      "name": "tyraminium",
-      "formula": "C8H12NO",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:327995"
-      }
-    },
-    {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
       "id": "3_phosphonato_5_adenylyl_sulfate",
       "name": "3'-phosphonato-5'-adenylyl sulfate",
       "short": "3'-phosphonato-5'-a…",
@@ -177,57 +159,12 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
+      "id": "dopamine_4_o_sulfate",
+      "name": "dopamine 4-O-sulfate",
+      "formula": "C8H11NO5S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57783"
-      }
-    },
-    {
-      "id": "l_tryptophanal",
-      "name": "L-tryptophanal",
-      "formula": "C11H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:233078"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP+",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58349"
-      }
-    },
-    {
-      "id": "amikacin",
-      "name": "amikacin",
-      "formula": "C22H47N5O13",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:84739"
-      }
-    },
-    {
-      "id": "4_adenylylamikacin",
-      "name": "4'-adenylylamikacin",
-      "formula": "C32H58N10O19P",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:233200"
+        "chebi": "CHEBI:133529"
       }
     }
   ],
@@ -368,41 +305,6 @@
     },
     {
       "id": "r4",
-      "name": "2 tyramine + O2 = 2 dopamine",
-      "equation": "2 tyramine + O2 = 2 dopamine",
-      "substrates": [
-        {
-          "metabolite": "tyraminium",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "dopamine",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:66596"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:66596"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 3-O-sulfate + adenosine 3',5'-bisphosp...",
       "equation": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 3-O-sulfate + adenosine 3',5'-bisphosphate + H(+)",
       "substrates": [
@@ -430,7 +332,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:67880"
       },
@@ -445,20 +347,26 @@
       }
     },
     {
-      "id": "r6",
-      "name": "L-tryptophan + ATP + NADPH + H(+) = L-tryptophanal + AMP + diphosphate + NADP(+)",
-      "equation": "L-tryptophan + ATP + NADPH + H(+) = L-tryptophanal + AMP + diphosphate + NADP(+)",
+      "id": "r5",
+      "name": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 4-O-sulfate + adenosine 3',5'-bisphosp...",
+      "equation": "dopamine + 3'-phosphoadenylyl sulfate = dopamine 4-O-sulfate + adenosine 3',5'-bisphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "dopamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dopamine_4_o_sulfate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "adenosine_3_5_bismonophosphate",
           "stoichiometry": 1
         },
         {
@@ -466,74 +374,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "l_tryptophanal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:83479"
+        "rhea": "RHEA:67884"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:83479"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "amikacin + ATP = 4'-adenylylamikacin + diphosphate",
-      "equation": "amikacin + ATP = 4'-adenylylamikacin + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "amikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_adenylylamikacin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:83667"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:83667"
+            "id": "RHEA:67884"
           }
         ]
       }

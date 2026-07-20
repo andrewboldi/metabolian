@@ -22,61 +22,61 @@ pathway udp-to-e-5-hydroxyconiferyl "UDP to (E)-5-hydroxyconiferyl…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_e_23_o_beta_d_glucoside
-    soyasapogenol_e
+    <-> . +udp +h +dihydroosmaronin
+    s_4_hydroxy_3_methylbutanenitrile
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +eugenyl_o_beta_d_glucopyranoside
-    eugenol
+    <-> . +udp +h +epidermin
+    3_hydroxy_3_methylbutanenitrile
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +methyl_4_chloro_3_hydroxybutanoate +nadp +nadph
-    methyl_4_chloro_3_oxobutanoate
+    <-> . +5_hydroxymethyl_cytosine +alpha_d_ribofuranose_5_phosphate +h2o
+    5_hydroxymethylcytidine_5_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +methyl_2_chloro_3_hydroxybutanoate +nadp +nadph
-    methyl_2_chloro_3_oxobutanoate
+    <-> . +sulfinosuccinate +o2
+    thiomalic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_1 [1.1.1.1] +acetoin +h +nadp
-    butane_2_3_diol
+    <-> ec_1_6_5_2 [1.6.5.2] +h +menaquinone_6 +nadp
+    menaquinol_6
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_86 [1.1.1.86] +h +2_oxopentanoate +nadp
-    2r_hydroxypentanoate
+    <-> . +h +menaquinone_6 +nadp +menaquinol_6
+    pmf
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_5_1_34 [1.5.1.34] +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +h +nadph
-    6_7_dimethyltetrahydropterin
+    <-> ec_1_14_12_17 [1.14.12.17] +nitric_oxide +h +o2 +nadph
+    nitric_acid
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +toluquinol +h +nadph
-    2_methyl_1_4_benzoquinone
+    <-> ec_1_14_13_70 [1.14.13.70] +h +obtusifoliol +o2 +nadph +formate +h2o
+    4alpha_methyl_5alpha_ergosta_8_14_24_28_trien_3b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_11 [3.5.1.11] +d_4_hydroxyphenylglycine_methyl_ester +methanol
-    d_4_hydroxyphenylglycine
+    <-> . +9s_10s_9_10_dihydrophenanthrene_9_10_diol
+    9r_10s_9_10_epoxy_9_10_dihydrophenanthrene
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_valine
-    ala_val
+    <-> . +dtdp_4_dehydro_beta_l_rhamnose +h
+    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
   }
 }

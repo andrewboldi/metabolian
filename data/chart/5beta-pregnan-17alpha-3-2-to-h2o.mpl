@@ -20,50 +20,50 @@ pathway 5beta-pregnan-17alpha-3-2-to-h2o "5beta-pregnan-17alpha-3,2… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_palmitoyl_2_9z_12z_15z_octadecatrienoyl_sn_gly
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +gxgg_xyloglucan_oligosaccharide +phosphate +gxgg_xyloglucan_oligosaccharide +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +phosphate +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +h2o
-    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    agarobiose
   }
 
   branch from nadph side left {
     nadph
-    <-> . +geranylgeranyl_chlorophyll_a +h +nadp
-    dihydrogg_chl_a
+    <-> ec_1_1_1_71 [1.1.1.71] +h +triacontanal +nadp
+    triacontan_1_ol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +dihydrogg_chl_a +nadp
-    tetrahydrogg_chl_a
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    nerol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +artemisinic_alcohol +h +o2 +nadph +h2o
-    artemisinic_aldehyde
+    <-> ec_1_1_1_71 [1.1.1.71] +h +abietal +nadph
+    palustradienol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +amyrin +h +o2 +nadph +h2o
-    sophoradiol
+    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
+    levopimaradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_octa_l_glutamate +tetrahydropteroyl_octa_l_glutamate
-    l_serine
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    agarotriose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_65 [4.2.1.65] +3_phenylpropionitrile
-    3_phenylpropanamide
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    neoagarobiose
   }
 
   branch from cortisol side left {
@@ -74,13 +74,13 @@ pathway 5beta-pregnan-17alpha-3-2-to-h2o "5beta-pregnan-17alpha-3,2… to H2O" {
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +s_malate
-    s_malyl_coa
+    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinone_6 +pyruvate +h2o +ubiquinol_6
+    co2
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_2_5_1_47 [2.5.1.47] +3_cyano_l_alanine +o_acetyl_l_serine
-    cyanide
+    <-> . +4_aminophenol +h +h2o
+    4_acetamidophenol
   }
 }

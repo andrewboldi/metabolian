@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway styrene-oxide-to-2r-dihomocitrate "styrene oxide to (2R)-dihomocitrate" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     styrene_oxide
@@ -24,61 +24,49 @@ pathway styrene-oxide-to-2r-dihomocitrate "styrene oxide to (2R)-dihomocitrate" 
 
   branch from phenylacetaldehyde side left {
     phenylacetaldehyde
-    <-> . +2_phenylethanaminium +hydrogen_acceptor +h2o +nh3
-    hydrogen_donor
-  }
-
-  branch from phenylacetaldehyde side right {
-    phenylacetaldehyde
     <-> ec_4_1_1_109 [4.1.1.109] +l_phenylalanine +o2 +h2o +hplus +h2o2 +co2
     nh3
   }
 
-  branch from phenylacetate side left {
-    phenylacetate
-    <-> ec_1_14_14_54 [1.14.14.54] +fmnh2 +o2 +fmn +h2o +hplus
-    2_hydroxyphenyl_acetate
+  branch from phenylacetaldehyde side right {
+    phenylacetaldehyde
+    <-> . +2_phenylethanaminium +pyruvate
+    alanine
   }
 
-  branch from phenylacetate side right {
+  branch from phenylacetate side left {
     phenylacetate
     <-> ec_4_1_1_119 [4.1.1.119] +hplus +co2
     toluene
   }
 
-  branch from phenylacetyl_coa side left {
-    phenylacetyl_coa
-    <-> ec_2_3_1_14 [2.3.1.14] +glutamine +coa +hplus
-    n2_phenylacetyl_l_glutaminate
-  }
-
   branch from phenylacetyl_coa side right {
     phenylacetyl_coa
-    <-> ec_2_3_1_192 [2.3.1.192] +glycine +coa +hplus
-    phenylacetylglycine
+    <-> ec_1_14_13_149 [1.14.13.149] +nadph +o2 +hplus +nadp +h2o
+    2_1_2_epoxy_1_2_dihydrophenyl_acetyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_4_2_3_40 [4.2.3.40] +fpp
+    z_bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_117 [4.2.3.117] +gpp
-    camphene
+    <-> ec_4_2_3_39 [4.2.3.39] +fpp +h2o
+    epi_cedrol
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_2_6_1_44 [2.6.1.44] +glyoxylate +pyruvate
-    alanine
+    <-> ec_4_1_3_41 [4.1.3.41] +glyoxylate
+    3s_3_hydroxy_d_aspartate
   }
 
   branch from glycine side right {
     glycine
     <-> ec_4_1_3_41 [4.1.3.41] +glyoxylate
-    3s_3_hydroxy_d_aspartate
+    3r_3_hydroxy_d_aspartate
   }
 }

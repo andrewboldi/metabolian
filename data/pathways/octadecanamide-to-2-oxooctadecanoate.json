@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "octadecanamide-to-2-oxooctadecanoate",
   "name": "octadecanamide to 2-oxooctadecanoate",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from octadecanamide to 2-oxooctadecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -128,60 +128,48 @@
       }
     },
     {
-      "id": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-      "name": "1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycerol",
-      "short": "1-stearoyl-2-(4Z,7Z…",
-      "formula": "C43H72O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:77129"
-      }
-    },
-    {
-      "id": "mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0",
-      "name": "MG(0:0/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)",
-      "short": "MG(0:0/22:6(4Z,7Z,1…",
-      "formula": "C25H38O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:186738"
-      }
-    },
-    {
-      "id": "2_phenylacetamide",
-      "name": "2-phenylacetamide",
-      "formula": "C8H9NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16562"
-      }
-    },
-    {
-      "id": "phenylacetate",
-      "name": "phenylacetate",
-      "formula": "C8H7O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:18401"
-      }
-    },
-    {
-      "id": "l_thialysinium",
-      "name": "L-thialysinium",
-      "formula": "C5H13N2O2S",
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:156132"
+        "chebi": "CHEBI:58263"
       }
     },
     {
-      "id": "s_acetaldehyde_l_cysteine",
-      "name": "S-(acetaldehyde)-L-cysteine",
-      "short": "S-(acetaldehyde)-L-…",
-      "formula": "C5H9NO3S",
+      "id": "4_acetamidobutanal",
+      "name": "4-acetamidobutanal",
+      "formula": "C6H11NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156378"
+        "chebi": "CHEBI:7386"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "dserine",
+      "name": "D-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35247"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17180"
       }
     },
     {
@@ -202,15 +190,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:76724"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
       }
     }
   ],
@@ -372,11 +351,15 @@
     },
     {
       "id": "r4",
-      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycerol + H2O = 2-(4Z,7Z,1...",
-      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycerol + H2O = 2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-glycerol + octadecanoate + H(+)",
+      "name": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
+      "equation": "N-acetylputrescine + O2 + H2O = 4-acetamidobutanal + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -386,40 +369,44 @@
       ],
       "products": [
         {
-          "metabolite": "mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0",
+          "metabolite": "4_acetamidobutanal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "octadecanoate",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "nh3",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:77107"
+        "rhea": "RHEA:70283"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:77107"
+            "id": "RHEA:70283"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2-phenylacetamide + H2O = 2-phenylacetate + NH4(+)",
-      "equation": "2-phenylacetamide + H2O = 2-phenylacetate + NH4(+)",
+      "name": "D-serine + O2 + H2O = 3-hydroxypyruvate + H2O2 + NH4(+)",
+      "equation": "D-serine + O2 + H2O = 3-hydroxypyruvate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "2_phenylacetamide",
+          "metabolite": "dserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -429,7 +416,11 @@
       ],
       "products": [
         {
-          "metabolite": "phenylacetate",
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -440,71 +431,20 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:64820"
+        "rhea": "RHEA:70951"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64820"
+            "id": "RHEA:70951"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NAD...",
-      "equation": "S-(2-aminoethyl)-L-cysteine + NAD(+) + H2O = S-(acetaldehyde)-L-cysteine + NH4(+) + NADH + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_thialysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_acetaldehyde_l_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:65196"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65196"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "(S)-2-hydroxy-fatty-acid dehydrogenase",
       "equation": "(S)-2-hydroxyoctadecanoate + NAD(+) = 2-oxooctadecanoate + NADH + H(+)",
       "ec": "1.1.1.99",
@@ -538,7 +478,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:11384"
       },
@@ -553,7 +493,7 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r7",
       "name": "2-hydroxyoctadecanoate + O2 = 2-oxooctadecanoate + H2O2",
       "equation": "2-hydroxyoctadecanoate + O2 = 2-oxooctadecanoate + H2O2",
       "substrates": [
@@ -577,7 +517,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:68964"
       },

@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1s-4s-prephenate-to-s-adenosyl-l-homocysteine",
+  "name": "(1s,4s)-prephenate to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (1s,4s)-prephenate(2−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51692"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29934"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1s_4s_prephenate",
+      "name": "(1s,4s)-prephenate",
+      "formula": "C10H8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29934"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit",
+      "name": "S-adenosyl-S-carboxymethyl-L-homocysteine dizwitterion",
+      "short": "S-adenosyl-S-carbox…",
+      "formula": "C16H22N6O7S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134278"
+      }
+    },
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_hydroxyuridine_5_phosphate_1",
+      "name": "5-hydroxyuridine 5'-phosphate(1−)",
+      "short": "5-hydroxyuridine…",
+      "formula": "C9H10N2O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136877"
+      }
+    },
+    {
+      "id": "5_carboxymethoxy_uridine_5_phosphate_2",
+      "name": "5-(carboxymethoxy)uridine 5'-phosphate(2−)",
+      "short": "5-(carboxymethoxy)u…",
+      "formula": "C11H11N2O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136879"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_methoxycarbonylmethoxyuridine_1",
+      "name": "5-methoxycarbonylmethoxyuridine(1−)",
+      "short": "5-methoxycarbonylme…",
+      "formula": "C12H14N2O11P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138053"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "prephenate + S-adenosyl-L-methionine = carboxy-S-adenosyl-L-methionine + 3-phenylpyruva...",
+      "equation": "prephenate + S-adenosyl-L-methionine = carboxy-S-adenosyl-L-methionine + 3-phenylpyruvate + H2O",
+      "substrates": [
+        {
+          "metabolite": "1s_4s_prephenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51692"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51692"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carboxy-S-adenosyl-L-methionine + 5-hydroxyuridine(34) in tRNA = 5-carboxymethoxyuridin...",
+      "equation": "carboxy-S-adenosyl-L-methionine + 5-hydroxyuridine(34) in tRNA = 5-carboxymethoxyuridine(34) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_hydroxyuridine_5_phosphate_1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_carboxymethoxy_uridine_5_phosphate_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52848"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-carboxymethoxyuridine(34) in tRNA + S-adenosyl-L-methionine = 5-methoxycarbonylmethox...",
+      "equation": "5-carboxymethoxyuridine(34) in tRNA + S-adenosyl-L-methionine = 5-methoxycarbonylmethoxyuridine(34) in tRNA + S-adenosyl-L-homocysteine",
+      "substrates": [
+        {
+          "metabolite": "5_carboxymethoxy_uridine_5_phosphate_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methoxycarbonylmethoxyuridine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54080"
+          }
+        ]
+      }
+    }
+  ]
+}

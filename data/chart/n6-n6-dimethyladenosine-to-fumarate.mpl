@@ -20,13 +20,13 @@ pathway n6-n6-dimethyladenosine-to-fumarate "N6,N6-dimethyladenosine to fumarate
 
   branch from imp side left {
     imp
-    <-> . +2_deoxyguanosine_5_monophosphate +inosine
-    2_deoxyguanosine
+    <-> . +gmp +guanosine
+    inosine
   }
 
   branch from imp side right {
     imp
-    <-> . +gmp +guanosine
-    inosine
+    <-> . +h2o +pi +hplus
+    itp
   }
 }

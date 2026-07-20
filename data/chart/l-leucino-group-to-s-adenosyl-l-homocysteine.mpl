@@ -18,25 +18,25 @@ pathway l-leucino-group-to-s-adenosyl-l-homocysteine "L-leucino group to S-adeno
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2e_5e_dodeca_2_5_dienoyl_coa
-    3r_hydroxy_5_trans_dodecenoyl_coa
+    <-> . +pyrrothine
+    l_cystine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_170 [3.2.1.170] +r_glycerate +alpha_d_mannopyranose
-    2r_2_o_alpha_d_mannosyl_glycerate
+    <-> . +fusaridione_a
+    fusaridione_a_open_ring
   }
 
   branch from sah side left {
     sah
-    <-> . +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +sam +hplus
-    dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos
+    <-> . +glandicoline_b +sam +hplus
+    meleagrine
   }
 
   branch from sah side right {
     sah
-    <-> . +dtdp_4_methylammonio_2_3_4_6_tetradeoxy_d_glucos +sam +hplus
-    dtdp_d_forosamine
+    <-> ec_2_1_1_343 [2.1.1.343] +8_amino_8_demethylriboflavin +sam +hplus
+    roseoflavin
   }
 }

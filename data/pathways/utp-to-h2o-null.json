@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "utp-to-h2o-null",
+  "name": "UTP to H2O",
+  "category": "other",
+  "summary": "A 3-step route from UTP to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR188393"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1101474"
+      }
+    },
+    {
+      "id": "r_mevalonate",
+      "name": "(R)-mevalonate",
+      "formula": "C6H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1105057"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "r_5_phosphomevalonate",
+      "name": "(R)-5-phosphomevalonate",
+      "short": "5-phosphomevalonate",
+      "formula": "C6H10O7P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM738283"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1103285"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103553"
+      }
+    },
+    {
+      "id": "hydrogen_oxide",
+      "name": "Hydrogen oxide",
+      "formula": "HO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108316"
+      }
+    },
+    {
+      "id": "8_oxo_gtp",
+      "name": "8-oxo-GTP",
+      "formula": "C10H12N5O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1371550"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_36",
+      "name": "mevalonate kinase",
+      "ec": [
+        "2.7.1.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mevalonate kinase",
+      "ec": "2.7.1.36",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_mevalonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_5_phosphomevalonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR188393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR188393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "mevalonate kinase",
+      "ec": "2.7.1.36",
+      "substrates": [
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_5_phosphomevalonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_mevalonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR188391"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR188391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR191474",
+      "substrates": [
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_oxide",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR191474"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191474"
+          }
+        ]
+      }
+    }
+  ]
+}

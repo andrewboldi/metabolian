@@ -18,13 +18,13 @@ pathway 2-l-alanin-3-ylcarbamoy-to-diphosphate "2-[(L-alanin-3-ylcarbamoy… to 
 
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    penichrysol
+    <-> . +amikacin +ctp
+    4_cytidylylamikacin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +l_lysinium +atp +hplus
-    l_lysyl_5_amp
+    <-> . +amikacin +utp
+    4_uridylylamikacin
   }
 }

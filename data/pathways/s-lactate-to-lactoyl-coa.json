@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-lactate-to-lactoyl-coa",
+  "name": "(S)-lactate to lactoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from (S)-lactate to lactoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86695"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16651"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lactate",
+      "name": "L-Lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16651"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "s_lactoyl_coa",
+      "name": "(S)-lactoyl-CoA",
+      "formula": "C24H36N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:231528"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "propanoate",
+      "name": "propanoate",
+      "formula": "C3H5O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094052"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "s_lactate",
+      "name": "(S)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371363"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "lactoyl_coa",
+      "name": "lactoyl-CoA",
+      "formula": "C24H40N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726793"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_3_1",
+      "name": "propionate CoA-transferase",
+      "ec": [
+        "2.8.3.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-lactate + ATP + CoA = (S)-lactoyl-CoA + AMP + diphosphate",
+      "equation": "(S)-lactate + ATP + CoA = (S)-lactoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_lactoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86695"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "propionate CoA-transferase",
+      "ec": "2.8.3.1",
+      "substrates": [
+        {
+          "metabolite": "propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR147312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "propionate CoA-transferase",
+      "ec": "2.8.3.1",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR149232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149232"
+          }
+        ]
+      }
+    }
+  ]
+}

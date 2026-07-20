@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trimethylamine-to-diphosphate "trimethylamine to diphosphate" {
-  spacing 222
+  spacing 210
 
   spine at 0,0 {
     trimethylamine
@@ -38,27 +38,15 @@ pathway trimethylamine-to-diphosphate "trimethylamine to diphosphate" {
     s_carnitinyl_coa
   }
 
-  branch from e_4_trimethylammonio_but_2_enoyl_coa side right {
-    e_4_trimethylammonio_but_2_enoyl_coa
-    <-> . +fadh2 +h +butyrobetainyl_coa
-    fad
-  }
-
-  branch from e_4_trimethylammonio_but_2_enoyl_coa side left {
-    e_4_trimethylammonio_but_2_enoyl_coa
-    <-> . +nadh +h +butyrobetainyl_coa
-    nad
-  }
-
   branch from ppi side right {
     ppi
-    <-> . +6_hydroxydeoxybrevianamide_e +dmapp
-    notoamide_s
+    <-> . +n6_methyl_datp +h2o +hplus
+    n6_methyl_damp
   }
 
   branch from ppi side left {
     ppi
-    <-> . +arginine +atp +hplus
-    l_arginyl_amp
+    <-> . +8_oxo_gtp +h2o +hplus
+    8_oxo_gmp
   }
 }

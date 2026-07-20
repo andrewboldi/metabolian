@@ -18,13 +18,13 @@ pathway geranylgeranyl-diphosphate-to-hydrogen-acceptor "geranylgeranyl diphosph
 
   branch from ppi side left {
     ppi
-    <-> . +didemethylasterriquinone_d +dmapp
-    asterriquinone_c1
+    <-> ec_4_2_3_218 [4.2.3.218] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    variediene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +harmol +dmapp
-    6_3_dimethylallyl_harmol
+    <-> ec_4_2_3_219 [4.2.3.219] +all_trans_pentaprenyl_diphosphate
+    r_2e_cericerene
   }
 }

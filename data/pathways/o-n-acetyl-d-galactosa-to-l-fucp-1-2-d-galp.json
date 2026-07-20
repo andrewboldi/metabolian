@@ -200,22 +200,31 @@
       }
     },
     {
-      "id": "o_adenyl_l_threonine_1",
-      "name": "O-adenyl-L-threonine(1−)",
-      "short": "O-adenyl-L-threonin…",
-      "formula": "C14H18N6O8P",
-      "charge": -1,
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138113"
+        "chebi": "CHEBI:57386"
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
+      "id": "o_octanoyl_l_threonine",
+      "name": "O-octanoyl-L-threonine",
+      "short": "O-octanoyl-L-threon…",
+      "formula": "C12H21NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:143547"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -517,43 +526,39 @@
     },
     {
       "id": "r7",
-      "name": "3-O-(5'-adenylyl)-L-threonyl-[protein] + H2O = L-threonyl-[protein] + AMP + H(+)",
-      "equation": "3-O-(5'-adenylyl)-L-threonyl-[protein] + H2O = L-threonyl-[protein] + AMP + H(+)",
+      "name": "L-threonyl-[protein] + octanoyl-CoA = O-octanoyl-L-threonyl-[protein] + CoA",
+      "equation": "L-threonyl-[protein] + octanoyl-CoA = O-octanoyl-L-threonyl-[protein] + CoA",
       "substrates": [
-        {
-          "metabolite": "o_adenyl_l_threonine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_octanoyl_l_threonine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:55932"
+        "rhea": "RHEA:59968"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55932"
+            "id": "RHEA:59968"
           }
         ]
       }

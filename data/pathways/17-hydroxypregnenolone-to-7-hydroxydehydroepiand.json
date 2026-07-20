@@ -141,40 +141,39 @@
       }
     },
     {
-      "id": "androst_5_ene_3_17_diol",
-      "name": "androst-5-ene-3β,17β-diol",
-      "short": "androst-5-ene-3β,17…",
-      "formula": "C19H30O2",
+      "id": "19e_geissoschizine",
+      "name": "(19E)-geissoschizine",
+      "formula": "C21H24N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:2710"
+        "chebi": "CHEBI:17037"
       }
     },
     {
-      "id": "lanosterol",
-      "name": "Lanosterol",
-      "formula": "C30H50O",
+      "id": "rhazimal",
+      "name": "rhazimal",
+      "formula": "C21H22N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16521"
+        "chebi": "CHEBI:230473"
       }
     },
     {
-      "id": "26_hydroxylanosterol",
-      "name": "26-hydroxylanosterol",
-      "formula": "C30H50O2",
+      "id": "variecoladiene",
+      "name": "variecoladiene",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:178023"
+        "chebi": "CHEBI:230481"
       }
     },
     {
-      "id": "26_oxolanosterol",
-      "name": "26-oxolanosterol",
-      "formula": "C30H48O2",
+      "id": "variecolin",
+      "name": "variecolin",
+      "formula": "C25H36O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:178024"
+        "chebi": "CHEBI:66349"
       }
     }
   ],
@@ -191,6 +190,13 @@
       "name": "17alpha-hydroxyprogesterone deacetylase",
       "ec": [
         "1.14.14.32"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_187",
+      "name": "rhazimal synthase",
+      "ec": [
+        "1.14.14.187"
       ]
     }
   ],
@@ -395,54 +401,12 @@
     },
     {
       "id": "r5",
-      "name": "3beta-hydroxyandrost-5-en-17-one + NADPH + H(+) = androst-5-en-3beta,17beta-diol + NADP(+)",
-      "equation": "3beta-hydroxyandrost-5-en-17-one + NADPH + H(+) = androst-5-en-3beta,17beta-diol + NADP(+)",
+      "name": "rhazimal synthase",
+      "equation": "(19E)-geissoschizine + reduced [NADPH--hemoprotein reductase] + O2 = rhazimal + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.187",
       "substrates": [
         {
-          "metabolite": "dehydroepiandrosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "androst_5_ene_3_17_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:46628"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46628"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "lanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxylanosterol + oxidi...",
-      "equation": "lanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-hydroxylanosterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "lanosterol",
+          "metabolite": "19e_geissoschizine",
           "stoichiometry": 1
         },
         {
@@ -456,58 +420,7 @@
       ],
       "products": [
         {
-          "metabolite": "26_hydroxylanosterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:68720"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68720"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "26-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-oxolanosterol +...",
-      "equation": "26-hydroxylanosterol + reduced [NADPH--hemoprotein reductase] + O2 = 26-oxolanosterol + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "26_hydroxylanosterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "26_oxolanosterol",
+          "metabolite": "rhazimal",
           "stoichiometry": 1
         },
         {
@@ -523,17 +436,73 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_187"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68724"
+        "rhea": "RHEA:79619"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68724"
+            "id": "RHEA:79619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "variecoladiene + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = variecolin + 4 oxidi...",
+      "equation": "variecoladiene + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = variecolin + 4 oxidized [NADPH--hemoprotein reductase] + 6 H2O + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "variecoladiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "variecolin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:79691"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79691"
           }
         ]
       }

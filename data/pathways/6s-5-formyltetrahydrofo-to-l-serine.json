@@ -129,96 +129,21 @@
       }
     },
     {
-      "id": "glycocholate",
-      "name": "Glycocholate",
-      "formula": "C26H42NO6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29746"
-      }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
-      }
-    },
-    {
-      "id": "l_arginocholate",
-      "name": "L-arginocholate",
-      "formula": "C30H52N4O6",
+      "id": "restrictinol",
+      "name": "restrictinol",
+      "formula": "C17H28O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:229713"
+        "chebi": "CHEBI:231923"
       }
     },
     {
-      "id": "o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser",
-      "name": "O-[S-(3R)-3-hydroxyacylpantetheine-4'-phosphoryl]serine(1−)",
-      "short": "O-[S-(3R)-3-hydroxy…",
-      "formula": "C17H28N3O10PSR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78827"
-      }
-    },
-    {
-      "id": "n2_3r_3_hydroxyacyl_glycinate",
-      "name": "N2-[(3R)-3-hydroxyacyl]-glycinate",
-      "short": "N2-[(3R)-3-hydroxya…",
-      "formula": "C5H7NO4R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:231742"
-      }
-    },
-    {
-      "id": "holo-acp",
-      "name": "Holo-[acyl-carrier protein]",
-      "short": "Holo-[acyl-carrier…",
-      "formula": "C14H25N3O8PS",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64479"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
-      }
-    },
-    {
-      "id": "ammonioacetaldehyde",
-      "name": "ammonioacetaldehyde",
-      "formula": "C2H6NO",
+      "id": "restricticin",
+      "name": "restricticin",
+      "formula": "C19H32NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58213"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
+        "chebi": "CHEBI:231924"
       }
     },
     {
@@ -247,6 +172,25 @@
       "xrefs": {
         "chebi": "CHEBI:456216"
       }
+    },
+    {
+      "id": "n_arachidonoyl_l_serine",
+      "name": "N-arachidonoyl-L-serine",
+      "short": "N-arachidonoyl-L-se…",
+      "formula": "C23H36NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149697"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
     }
   ],
   "enzymes": [
@@ -269,13 +213,6 @@
       "name": "glycine hydroxymethyltransferase",
       "ec": [
         "2.1.2.1"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_387",
-      "name": "L-serine 3-dehydrogenase (NAD(+))",
-      "ec": [
-        "1.1.1.387"
       ]
     },
     {
@@ -440,64 +377,15 @@
     },
     {
       "id": "r4",
-      "name": "glycocholate + L-arginine = L-arginocholate + glycine",
-      "equation": "glycocholate + L-arginine = L-arginocholate + glycine",
+      "name": "restrictinol + glycine + H(+) = restricticin + H2O",
+      "equation": "restrictinol + glycine + H(+) = restricticin + H2O",
       "substrates": [
         {
-          "metabolite": "glycocholate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_arginocholate",
+          "metabolite": "restrictinol",
           "stoichiometry": 1
         },
         {
           "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:79119"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:79119"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "a (3R)-hydroxyacyl-[ACP] + glycine = a lyso-glycine lipid + holo-[ACP] + H(+)",
-      "equation": "a (3R)-hydroxyacyl-[ACP] + glycine = a lyso-glycine lipid + holo-[ACP] + H(+)",
-      "substrates": [
-        {
-          "metabolite": "o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glycine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_3r_3_hydroxyacyl_glycinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
@@ -505,72 +393,33 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:80947"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:80947"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-serine 3-dehydrogenase (NAD(+))",
-      "equation": "L-serine + NAD(+) = aminoacetaldehyde + CO2 + NADH",
-      "ec": "1.1.1.387",
-      "substrates": [
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "ammonioacetaldehyde",
+          "metabolite": "restricticin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_387"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:43628"
+        "rhea": "RHEA:81535"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43628"
+            "id": "RHEA:81535"
           }
         ]
       }
     },
     {
-      "id": "r7",
+      "id": "r5",
       "name": "L-serine kinase (ATP)",
       "equation": "L-serine + ATP = O-phospho-L-serine + ADP + H(+)",
       "ec": "2.7.1.225",
@@ -604,7 +453,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:59112"
       },
@@ -614,6 +463,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:59112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate +...",
+      "equation": "N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-serine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + L-serine",
+      "substrates": [
+        {
+          "metabolite": "n_arachidonoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:64116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64116"
           }
         ]
       }

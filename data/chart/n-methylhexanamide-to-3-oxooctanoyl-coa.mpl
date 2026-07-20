@@ -30,14 +30,14 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
 
   branch from methylamine side left {
     methylamine
-    <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
-    2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
+    <-> ec_1_4_2_3 [1.4.2.3] +pseudooxynicotinium +iron +h2o +fe2 +hplus
+    4_oxo_4_pyridin_3_yl_butanal
   }
 
   branch from methylamine side right {
     methylamine
-    <-> ec_1_4_2_3 [1.4.2.3] +pseudooxynicotinium +iron +h2o +fe2 +hplus
-    4_oxo_4_pyridin_3_yl_butanal
+    <-> ec_1_5_3_27 [1.5.3.27] +2_methylaminoethyl_phosphonate +o2 +h2o +h2o2
+    phosphonoacetaldehyde
   }
 
   branch from hexanoyl_coa side left {
@@ -54,14 +54,14 @@ pathway n-methylhexanamide-to-3-oxooctanoyl-coa "N-methylhexanamide to 3-oxoocta
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_71 [4.2.3.71] +fpp
-    1e_4e_germacrene_b
+    <-> ec_4_2_3_32 [4.2.3.32] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    abieta_8_14_12_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    guaia_6_9_diene
+    <-> ec_4_2_3_33 [4.2.3.33] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemar_13_ene
   }
 
   branch from 3_oxooctanoyl_coa side left {

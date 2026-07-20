@@ -34,14 +34,14 @@ pathway cdp-n-methyl-l-glucosamine-to-lipid-iib "CDP-N-methyl-L-glucosamine to l
 
   branch from h side left {
     h
-    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_s_hydroxydocosahexaenoic_acid +h2o
-    4_5_epoxy_17s_hydroxy_docosahexaenoate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +nad
+    2s_butan_2_ol
   }
 
   branch from h side right {
     h
-    <-> . +4_5_epoxy_17s_hydroxy_docosahexaenoate +h2o
-    resolvin_d3
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylpentanal +nad
+    4_methylpentan_1_ol
   }
 
   branch from dihydrostreptomycin_6_phosphate side left {
@@ -52,14 +52,14 @@ pathway cdp-n-methyl-l-glucosamine-to-lipid-iib "CDP-N-methyl-L-glucosamine to l
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_octulosonate +cmp_3_deoxy_d_manno_octulosonate
+    <-> ec_2_7_7_41 [2.7.7.41] +dimyristoyl_phosphatidic_acid +h +cdp_1_2_ditetradecanoylglycerol
     diphosphate
   }
 
   branch from ctp side left {
     ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +dimyristoyl_phosphatidic_acid +diphosphate +h
-    cdp_1_2_ditetradecanoylglycerol
+    <-> ec_2_7_7_41 [2.7.7.41] +1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate +diphosphate
+    cdp_1_2_ditetradec_7_enoylglycerol
   }
 
   branch from di_trans_poly_cis_undecaprenyl_phosphate side right {

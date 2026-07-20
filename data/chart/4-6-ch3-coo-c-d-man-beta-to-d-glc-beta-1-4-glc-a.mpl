@@ -20,37 +20,37 @@ pathway 4-6-ch3-coo-c-d-man-beta-to-d-glc-beta-1-4-glc-a "4,6-CH3(COO-)C-D-Man-b
 
   branch from h side left {
     h
-    <-> . +adp +sm_d18_1_20_1_sphingomyelin +phosphate +sm_d18_1_20_1_sphingomyelin +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol +phosphate +1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_20_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
   }
 
   branch from phosphoenolpyruvate side left {
     phosphoenolpyruvate
-    <-> ec_4_2_1_11 [4.2.1.11] +2r_3_phosphoglycerate
-    h2o
+    <-> . +beta_d_fructose_6_phosphate +pyruvate
+    beta_d_fructose
   }
 
   branch from phosphoenolpyruvate side right {
     phosphoenolpyruvate
-    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
-    pyruvate
+    <-> . +alpha_d_glucosamine_6_phosphate +pyruvate +h
+    beta_d_glucosamine
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +h +isourolithin_a_3_o_glucuronide
-    isourolithin_a
+    <-> . +udp +beta_d_glca_1_4_beta_d_glca_1_3_alpha_d_galnac_1 +h
+    beta_d_glca_1_3_alpha_d_galnac_1_6_alpha_d_galna
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +urolithin_b_3_o_glucuronide
-    urolithin_b
+    <-> . +udp +beta_d_glca_1_4_3_o_acetyl_alpha_l_fuc_1_3_beta +h
+    3_o_acetyl_alpha_l_fuc_1_3_beta_d_ribf_1_4_alpha
   }
 }

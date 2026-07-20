@@ -32,13 +32,13 @@ pathway 5-cholest-7-en-3-ol-to-fmn "5α-cholest-7-en-3β-ol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +epiandrosterone +fmnh2 +o2 +h2o +hplus
-    3_5_7_3_7_dihydroxyandrostan_17_one
+    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxyprogesterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    1_hydroxy_fatty_acid_anion
+    <-> . +progesterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxyprogesterone
   }
 }

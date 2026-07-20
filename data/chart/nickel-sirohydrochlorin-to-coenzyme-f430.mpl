@@ -18,14 +18,14 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
 
   branch from glutamate side left {
     glutamate
-    <-> ec_3_4_19_16 [3.4.19.16] +e_1_glutathion_s_yl_2_indol_3_yl_acetohydroxima +h2o
-    s_e_n_hydroxy_2_indol_3_yl_ethanimidoyl_l_cystei
+    <-> . +atp +hplus +ppi
+    l_glutamyl_amp
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_3_4_19_16 [3.4.19.16] +glucys_ian_gly +h2o
-    cys_ian_gly
+    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
+    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
   }
 
   branch from 15_173_seco_f430_173_acid side left {
@@ -42,13 +42,13 @@ pathway nickel-sirohydrochlorin-to-coenzyme-f430 "nickel-sirohydrochlorin to coe
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +2_arachidonoyl_sn_glycero_3_phosphoethanolamine +hydrogen_donor +o2 +h2o
-    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
+    <-> . +betaenone_c +hydrogen_donor
+    betaenone_b
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +2_arachidonoyl_sn_glycero_3_phosphocholine +hydrogen_donor +o2 +h2o
-    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
+    <-> . +protoporphyrinogen9 +hydrogen_donor
+    protoporphyrin9
   }
 }

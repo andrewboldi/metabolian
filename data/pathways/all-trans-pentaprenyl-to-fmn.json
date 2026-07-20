@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "all-trans-pentaprenyl-to-fmn",
+  "name": "all-trans-pentaprenyl… to FMN",
+  "category": "other",
+  "summary": "A 3-step route from all-trans-pentaprenyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:66832"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57907"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57907"
+      }
+    },
+    {
+      "id": "preasperterpenoid_a",
+      "name": "preasperterpenoid A",
+      "formula": "C25H40",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167511"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "asperterpenoid_a",
+      "name": "asperterpenoid A",
+      "formula": "C25H37O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167512"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "asperterpenoid_b",
+      "name": "asperterpenoid B",
+      "formula": "C25H34O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:167513"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = preasperterpenoid A + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = preasperterpenoid A + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "preasperterpenoid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66832"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "preasperterpenoid A + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = asperterpenoid ...",
+      "equation": "preasperterpenoid A + 4 reduced [NADPH--hemoprotein reductase] + 4 O2 = asperterpenoid A + 4 oxidized [NADPH--hemoprotein reductase] + 5 H2O + 5 H(+)",
+      "substrates": [
+        {
+          "metabolite": "preasperterpenoid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "asperterpenoid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:66836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "asperterpenoid A + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = asperterpenoid B +...",
+      "equation": "asperterpenoid A + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = asperterpenoid B + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 3 H(+)",
+      "substrates": [
+        {
+          "metabolite": "asperterpenoid_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "asperterpenoid_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66840"
+          }
+        ]
+      }
+    }
+  ]
+}

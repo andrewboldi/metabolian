@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ecgoninium-methyl-ester-to-diphosphate "ecgoninium methyl ester to diphosphate" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     ecgoninium_methyl_ester
@@ -22,17 +22,5 @@ pathway ecgoninium-methyl-ester-to-diphosphate "ecgoninium methyl ester to dipho
     ecgoninium_methyl_ester
     <-> ec_1_1_1_334 [1.1.1.334] +nadp +nadph +hplus
     ecgononium_methyl_ester
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +gpp +h2o
-    1r_2r_menth_2_en_1_ol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    africanol
   }
 }

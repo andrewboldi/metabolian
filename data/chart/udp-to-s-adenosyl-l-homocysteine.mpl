@@ -22,25 +22,25 @@ pathway udp-to-s-adenosyl-l-homocysteine "UDP to S-adenosyl-L-homocysteine" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +alpha_d_glc_1_6_alpha_d_glc_1_4_alpha_d_gal_1_3 +h
-    alpha_d_glc_1_4_alpha_d_gal_1_3_alpha_d_glcnac_d
+    <-> . +udp +alpha_d_glc_1_2_beta_d_glc_1_3_alpha_d_glcnac_pp +h
+    d_glc_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +beta_d_glc_1_2_beta_d_fuc3nac_1_6_alpha_d_glc_1 +h
-    beta_d_fucnac_1_6_alpha_d_glc_1_4_alpha_d_galnac
+    <-> . +udp +beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella +h
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_brucella
   }
 
   branch from sah side left {
     sah
-    <-> . +4_hydroxy_17_estradiol +sam +hplus
-    4_methoxy_17_estradiol
+    <-> ec_2_1_1_348 [2.1.1.348] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +4_hydroxyestrone +sam +hplus
-    4_methoxyestrone
+    <-> ec_2_1_1_67 [2.1.1.67] +tioguanine +sam +hplus
+    6_methylthioguanine
   }
 }

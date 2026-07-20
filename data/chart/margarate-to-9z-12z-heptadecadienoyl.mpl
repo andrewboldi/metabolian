@@ -18,37 +18,37 @@ pathway margarate-to-9z-12z-heptadecadienoyl "margarate to (9Z,12Z)-heptadecadie
 
   branch from heptadecanoyl_coa side left {
     heptadecanoyl_coa
-    <-> . +1_oleoyl_sn_glycero_3_phosphate +coa
-    1_oleoyl_2_heptadecanoyl_sn_glycero_3_phosphate
+    <-> . +malonyl_coa +h +coa +3_oxononadecanoyl_coenzyme_a
+    co2
   }
 
   branch from heptadecanoyl_coa side right {
     heptadecanoyl_coa
-    <-> . +fad +hplus +fadh2
-    trans_2_heptadecenoyl_coa
+    <-> . +acetyl_coa +h +3_oxononadecanoyl_coenzyme_a
+    coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_55 [3.6.1.55] +8_oxo_dgtp +h2o +hplus
-    8_oxo_dgmp
+    <-> ec_4_2_3_99 [4.2.3.99] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    syn_labda_8_17_12e_14_triene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_6_1_56 [3.6.1.56] +2_hydroxy_datp +h2o +hplus
-    2_hydroxy_damp
+    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadph +hplus +nadp
+    squalene
   }
 
   branch from 9z_heptadecenoyl_coa side left {
     9z_heptadecenoyl_coa
-    <-> . +nadp +h2o +heptadecanoyl_coa +o2 +nadph
-    h
+    <-> . +r_carnitine +coa
+    heptadecenoylcarnitine_8
   }
 
   branch from 9z_heptadecenoyl_coa side right {
     9z_heptadecenoyl_coa
-    <-> . +r_carnitine +heptadecenoylcarnitine_8
-    coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_9z_heptadecenoyl_sn_glycero_3_phosphate_ammoni
   }
 }

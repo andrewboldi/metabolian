@@ -18,26 +18,26 @@ pathway formate-to-5-dihydroepitestosterone "formate to 5β-dihydroepitestostero
 
   branch from o2 side left {
     o2
-    <-> . +h +itatartarate
-    2_hydroxyparaconate
+    <-> . +2e_4z_3_8_8_8_tetrachloro_7_4_chlorophenyl_2_hy +h
+    2_3_dihydroxy_ddt
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +2_2_1_3_dioxan_2_yl_ethyl_thio_5_phenyl_1_3_4_ox +nadp +h2o
-    2_2_1_3_dioxan_2_yl_ethanesulfinyl_5_phenyl_1_3
+    <-> . +h +2_3_dihydroxy_ddt
+    6_oxo_2_hydroxy_7_4_chlorophenyl_3_8_8_8_tetrach
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_octyl_3_oxododecanoate +nadp
-    2r_3s_2_octyl_3_hydroxydodecanoate
+    <-> . +andiconin +h +o2 +nadp +h2o
+    andilesin_d
   }
 
   branch from nadph side right {
     nadph
-    <-> . +coclaurine +nadp +h
-    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
+    <-> . +desmethyl_dehydrogriseofulvin +nadp +h2o +h +o2
+    griseophenone_b
   }
 
   branch from epitestosterone side left {
@@ -48,13 +48,13 @@ pathway formate-to-5-dihydroepitestosterone "formate to 5β-dihydroepitestostero
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +dehydroabietadienal
-    dehydroabietadienol
+    <-> ec_1_3_1_62 [1.3.1.62] +nadh +6_carboxyhex_2_enoyl_coa +h
+    6_carboxyhexanoyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +isopimara_7_15_dienal
-    isopimara_7_15_dienol
+    <-> ec_1_3_1_65 [1.3.1.65] +nadh +5_6_dihydroxy_3_methyl_2_oxo_1_2_dihydroquinolin +h
+    5_6_dihydroxy_3_methyl_5_6_dihydroquinolin_2_1h
   }
 }

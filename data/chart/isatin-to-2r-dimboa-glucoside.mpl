@@ -40,73 +40,67 @@ pathway isatin-to-2r-dimboa-glucoside "isatin to (2R)-DIMBOA glucoside" {
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    17_hete
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19s_20r_19_20_epoxydocosapent
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    16_hete
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    5z_11z_14z_17z_8_9_epoxyicosatetraenoate
   }
 
-  branch from diboa side left {
-    diboa
-    <-> ec_3_2_1_182 [3.2.1.182] +beta_d_glucose +diboa_d_glucoside
-    h2o
-  }
-
-  branch from diboa_d_glucoside side right {
+  branch from diboa_d_glucoside side left {
     diboa_d_glucoside
     <-> . +s_adenosyl_l_homocysteine +4_o_methyl_diboa_glucoside +h
     s_adenosyl_l_methionine
   }
 
-  branch from diboa_d_glucoside side left {
+  branch from diboa_d_glucoside side right {
     diboa_d_glucoside
-    <-> ec_3_2_1_182 [3.2.1.182] +glucose +h +h2o
+    <-> ec_2_4_1_202 [2.4.1.202] +udp +udp_alpha_d_glucose
     diboa
   }
 
-  branch from triboa_d_glucoside side right {
+  branch from triboa_d_glucoside side left {
     triboa_d_glucoside
     <-> ec_2_1_1_241 [2.1.1.241] +s_adenosyl_l_homocysteine +h +dimboa_beta_d_glucoside
     s_s_adenosyl_l_methionine
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +prekainate +akg +o2 +co2 +h2o
-    kainate
-  }
-
   branch from succinate side right {
     succinate
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +formaldehyde +co2
-    l_lysinium
+    <-> . +2_deoxyadenosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyadenosine_5_monophosphate
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+  branch from succinate side left {
+    succinate
+    <-> . +2_deoxyguanosine_5_monophosphate +chloride +akg +o2 +hplus +co2 +h2o
+    2_chloro_deoxyguanosine_5_monophosphate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_221 [2.1.1.221] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
-  branch from glucose side left {
-    glucose
-    <-> . +20s_ginsenoside_rg3 +h2o
-    20s_ginsenoside_rh2
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_266 [2.1.1.266] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_104 [3.2.1.104] +daucosterol +h2o
-    sitosterol
+    <-> . +z_alkenyl_glucosinolate +h2o +hplus
+    z_n_sulfonatooxy_alkenimidothioate
+  }
+
+  branch from glucose side left {
+    glucose
+    <-> . +sinigrin +h2o +hplus
+    z_n_sulfonatooxy_prop_2_enimidothioate
   }
 }

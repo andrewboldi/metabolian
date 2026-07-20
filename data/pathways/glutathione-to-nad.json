@@ -167,26 +167,6 @@
       }
     },
     {
-      "id": "3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o",
-      "name": "3-hydroxy-1-(4-hydroxy-3-methoxyphenyl)propan-1-one",
-      "short": "3-hydroxy-1-(4-hydr…",
-      "formula": "C10H12O4",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13295"
-      }
-    },
-    {
-      "id": "glutathione_disulfide",
-      "name": "glutathione disulfide",
-      "short": "glutathione…",
-      "formula": "C20H30N6O12S2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1371191"
-      }
-    },
-    {
       "id": "urocanate",
       "name": "urocanate",
       "formula": "C6H5N2O2",
@@ -235,32 +215,39 @@
       }
     },
     {
-      "id": "adonixanthin",
-      "name": "adonixanthin",
-      "formula": "C40H54O3",
+      "id": "styrene",
+      "name": "styrene",
+      "formula": "C8H8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:80217"
+        "metanetx": "MNXM732935"
       }
     },
     {
-      "id": "2_hydroxyadonixanthin",
-      "name": "2-hydroxyadonixanthin",
-      "short": "2-hydroxyadonixanth…",
-      "formula": "C40H54O4",
+      "id": "r_styrene_oxide",
+      "name": "(R)-styrene oxide",
+      "formula": "C8H8O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM147726"
+        "chebi": "CHEBI:45389"
       }
     },
     {
-      "id": "2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one",
-      "name": "2,3,2',3'-tetrahydroxy-beta,beta-caroten-4-one",
-      "short": "2,3,2',3'-tetrahydr…",
-      "formula": "C40H54O5",
+      "id": "2_carboxyethyl_com",
+      "name": "2-carboxyethyl-CoM",
+      "formula": "C4H6O5S2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM163651"
+      }
+    },
+    {
+      "id": "2_hydroxyethyl_com",
+      "name": "2-Hydroxyethyl-CoM",
+      "formula": "C4H10O4S2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM37596"
+        "metanetx": "MNXM163655"
       }
     }
   ],
@@ -284,6 +271,13 @@
       "name": "glutathione transferase",
       "ec": [
         "2.5.1.18"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_69",
+      "name": "alkene monooxygenase",
+      "ec": [
+        "1.14.13.69"
       ]
     }
   ],
@@ -496,44 +490,6 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR116583",
-      "substrates": [
-        {
-          "metabolite": "3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutathione_disulfide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glutathione",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2s_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR116583"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR116583"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "Reaction MNXR103989",
       "substrates": [
         {
@@ -552,7 +508,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "metanetx": "MNXR103989"
       },
@@ -567,7 +523,7 @@
       }
     },
     {
-      "id": "r8",
+      "id": "r7",
       "name": "glutathione transferase",
       "ec": "2.5.1.18",
       "substrates": [
@@ -596,7 +552,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "metanetx": "MNXR110802"
       },
@@ -611,8 +567,9 @@
       }
     },
     {
-      "id": "r9",
-      "name": "Reaction MNXR120088",
+      "id": "r8",
+      "name": "alkene monooxygenase",
+      "ec": "1.14.13.69",
       "substrates": [
         {
           "metabolite": "nadh",
@@ -623,7 +580,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adonixanthin",
+          "metabolite": "styrene",
           "stoichiometry": 1
         },
         {
@@ -633,12 +590,63 @@
       ],
       "products": [
         {
-          "metabolite": "2_hydroxyadonixanthin",
+          "metabolite": "r_styrene_oxide",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "metanetx": "MNXR121028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121028"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "Reaction MNXR121030",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_carboxyethyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyethyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
@@ -648,64 +656,14 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR120088"
+        "metanetx": "MNXR121030"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120088"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "Reaction MNXR120089",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2_hydroxyadonixanthin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "metanetx": "MNXR120089"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR120089"
+            "id": "MNXR121030"
           }
         ]
       }

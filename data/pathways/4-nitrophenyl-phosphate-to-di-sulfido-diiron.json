@@ -205,30 +205,31 @@
       }
     },
     {
-      "id": "epi_isozizaene",
-      "name": "(+)-epi-isozizaene",
-      "formula": "C15H24",
-      "charge": 0,
+      "id": "flaviolin_2_olate",
+      "name": "flaviolin-2-olate",
+      "formula": "C10H5O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:51458"
+        "chebi": "CHEBI:58696"
       }
     },
     {
-      "id": "5r_albaflavenol",
-      "name": "(5R)-albaflavenol",
-      "formula": "C15H24O",
-      "charge": 0,
+      "id": "3_8_biflaviolin_2_7_2_triolate",
+      "name": "3,8'-biflaviolin 2,7,2'-triolate",
+      "short": "3,8'-biflaviolin…",
+      "formula": "C20H7O10",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:51479"
+        "chebi": "CHEBI:77840"
       }
     },
     {
-      "id": "albaflavenone",
-      "name": "albaflavenone",
-      "formula": "C15H22O",
+      "id": "h2",
+      "name": "Dihydrogen (H2)",
+      "formula": "H2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:51460"
+        "chebi": "CHEBI:18276"
       }
     }
   ],
@@ -273,6 +274,20 @@
       "name": "nitroarene dioxygenase",
       "ec": [
         "1.14.12.23"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_69",
+      "name": "biflaviolin synthase",
+      "ec": [
+        "1.14.19.69"
+      ]
+    },
+    {
+      "id": "ec_1_12_1_4",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
+      "ec": [
+        "1.12.1.4"
       ]
     }
   ],
@@ -609,12 +624,13 @@
     },
     {
       "id": "r7",
-      "name": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol ...",
-      "equation": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "name": "biflaviolin synthase",
+      "equation": "2 flaviolin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + H(+) = 3,8'-biflaviolin + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.69",
       "substrates": [
         {
-          "metabolite": "epi_isozizaene",
-          "stoichiometry": 1
+          "metabolite": "flaviolin_2_olate",
+          "stoichiometry": 2
         },
         {
           "metabolite": "di_sulfido_diiron",
@@ -626,12 +642,12 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5r_albaflavenol",
+          "metabolite": "3_8_biflaviolin_2_7_2_triolate",
           "stoichiometry": 1
         },
         {
@@ -640,71 +656,78 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_69"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:25984"
+        "rhea": "RHEA:26035"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25984"
+            "id": "RHEA:26035"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "(5R)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 o...",
-      "equation": "(5R)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "name": "hydrogenase (NAD(+), ferredoxin)",
+      "equation": "2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + NADH + 3 H(+)",
+      "ec": "1.12.1.4",
       "substrates": [
         {
-          "metabolite": "5r_albaflavenol",
-          "stoichiometry": 1
+          "metabolite": "h2",
+          "stoichiometry": 2
         },
         {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "albaflavenone",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_1_4"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:25988"
+        "rhea": "RHEA:30279"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25988"
+            "id": "RHEA:30279"
           }
         ]
       }

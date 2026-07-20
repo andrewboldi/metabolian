@@ -36,26 +36,26 @@ pathway petiveriin-to-diiodine "petiveriin to diiodine" {
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +tetracenomycin_e +tetracenomycin_b3
-    s_adenosyl_l_methionine
+    <-> . +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +nadph +nadp
+    2_2_8_dihydroxytridecyl_6_oxopyran_4_olate
   }
 
   branch from h side left {
     h
-    <-> ec_2_1_1_88 [2.1.1.88] +s_adenosyl_l_homocysteine +sexangularetin +s_adenosyl_l_methionine
-    herbacetin
+    <-> . +malonyl_coa +7_hydroxylauroyl_coa +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +coa
+    co2
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +2_6_oxo_1_oxaspiro_2_5_octa_4_glucosyl_6_hydroxy +o2
-    6_hydroxy_2_4_glucosyl_phenoxymethylene_benzofur
+    <-> . +triostin_a_dithiol +o2
+    triostin_a
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +arabidopaldehyde +o2
-    2_hydroxy_4_1e_3_oxoprop_1_en_1_yl_2h_pyran_6_ca
+    <-> . +thiocoraline_dithiol +o2
+    thiocoraline
   }
 
   branch from l_tyrosine side right {

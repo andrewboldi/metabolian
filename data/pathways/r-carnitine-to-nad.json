@@ -1,0 +1,363 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-carnitine-to-nad",
+  "name": "(R)-carnitine to NAD",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (R)-carnitine to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR125784"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_carnitine",
+      "name": "(R)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105737"
+      }
+    },
+    {
+      "id": "e_4_trimethylammonio_but_2_enoate",
+      "name": "(E)-4-(trimethylammonio)but-2-enoate",
+      "short": "4-(trimethylammonio…",
+      "formula": "C7H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17237"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "e_4_trimethylammonio_but_2_enoyl_coa",
+      "name": "(E)-4-(trimethylammonio)but-2-enoyl-CoA",
+      "short": "4-(trimethylammonio…",
+      "formula": "C28H44N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60933"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "butyrobetainyl_coa",
+      "name": "γ-butyrobetainyl-CoA",
+      "formula": "C28H46N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61513"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "tyrosyl_phenylalanyl_tyrosine",
+      "name": "Tyrosyl-Phenylalanyl-Tyrosine",
+      "short": "Tyrosyl-Phenylalany…",
+      "formula": "C27H29N3O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1560795"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM741664"
+      }
+    },
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM76"
+      }
+    },
+    {
+      "id": "tyrosyl_tryptophanyl_phenylalanine",
+      "name": "Tyrosyl-Tryptophanyl-Phenylalanine",
+      "short": "Tyrosyl-Tryptophany…",
+      "formula": "C29H30N4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1560796"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM741553"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_89",
+      "name": "EC 4.2.1.89",
+      "ec": [
+        "4.2.1.89"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR125784",
+      "ec": "4.2.1.89",
+      "substrates": [
+        {
+          "metabolite": "r_carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR125784"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR125784"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR115787",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR115787"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR115787"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204298",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyrobetainyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204298"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204298"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR207056",
+      "substrates": [
+        {
+          "metabolite": "tyrosyl_phenylalanyl_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR207056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR207056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR207058",
+      "substrates": [
+        {
+          "metabolite": "tyrosyl_tryptophanyl_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR207058"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR207058"
+          }
+        ]
+      }
+    }
+  ]
+}

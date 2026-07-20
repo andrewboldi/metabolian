@@ -22,25 +22,25 @@ pathway balenine-to-l-glutamate "balenine to L-glutamate" {
 
   branch from nh3 side left {
     nh3
-    <-> . +nad +h2o +pyruvate +nadh +hplus
-    d_alanine
+    <-> . +3_methyl_butan_2_aminium +nadp +h2o +nadph +hplus
+    3_methylbutan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +d_aspartate +nad +h2o +nadh +hplus
-    oxaloacetate
+    <-> . +2s_2_amino_3_methylbutan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_3_methylbutan_2_one
   }
 
   branch from glutamate side left {
     glutamate
-    <-> . +atp +hplus +ppi
-    l_glutamyl_amp
+    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamate +atp +adp +pi +hplus
+    l_glutamyl_l_glutamate_2
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +s_2e_6e_10e_geranylgeranyl_l_glutathione +h2o
-    s_2e_6e_10e_geranylgeranyl_l_cysteinylglycine
+    <-> ec_6_3_2_62 [6.3.2.62] +atp +l_glutamyl_l_glutamate_2 +adp +pi +hplus
+    l_glutamate
   }
 }

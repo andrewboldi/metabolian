@@ -24,26 +24,26 @@ pathway quinolinone-b-to-penigequinolone-a "Quinolinone B to penigequinolone A" 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_162 [4.2.3.162] +fpp
-    amorphene
+    <-> . +d_alanine +atp +hplus
+    d_alanyl_amp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_163 [4.2.3.163] +fpp +h2o
-    corvol_ether_b
+    <-> ec_4_2_3_195 [4.2.3.195] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    rhizathalene_a
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +sn_3_o_phytanylglycerol_1_phosphate +hydrogen_acceptor
-    sn_3_o_geranylgeranyl_glycerol_1_phosphate
+    <-> . +cyathatriol +hydrogen_acceptor
+    cyathin_a3
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +propionyl_coa +malonyl-coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
-    6_ethyl_2_4_dihydroxy_3_5_dimethylbenzaldehyde
+    <-> . +2r_9s_annullatin_h +hydrogen_acceptor
+    2r_annullatin_f
   }
 
   branch from 1_e_3_hydroxy_3_7_dimethylocta_1_6_dien_1_yl_qu side left {

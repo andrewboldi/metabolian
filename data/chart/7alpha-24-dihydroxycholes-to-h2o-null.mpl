@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7alpha-24-dihydroxycholes-to-h2o-null "7Alpha,24-Dihydroxycholes… to H2O" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     7alpha_24_dihydroxycholest_4_en_3_one
@@ -22,14 +22,14 @@ pathway 7alpha-24-dihydroxycholes-to-h2o-null "7Alpha,24-Dihydroxycholes… to H
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_252 [1.1.1.252] +1_3_8_trihydroxynaphthalene +h +nadph
-    vermelone
+    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +h +nadph
+    d_erythro_7_8_dihydrobiopterin
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +toluene +h2o
-    2_hydroxytoluene
+    <-> ec_1_5_1_3 [1.5.1.3] +h +d_erythro_7_8_dihydrobiopterin +nadph
+    5_6_7_8_tetrahydrobiopterin
   }
 
   branch from 7alpha_24alpha_dihydroxy_5beta_cholestan_3_one side left {
@@ -40,25 +40,19 @@ pathway 7alpha-24-dihydroxycholes-to-h2o-null "7Alpha,24-Dihydroxycholes… to H
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_10 [3.1.1.10] +h +tropate +tropine
-    atropine
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose +methanol
+    methyl_d_glucopyranoside
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +tropate +tropine
-    l_hyoscyamine
+    <-> ec_3_4_11_2 [3.4.11.2] +glycine +l_phenylalanine
+    glycyl_dl_phenylalanine
   }
 
   branch from 3_7_24_trihydroxy_5_cholestan_26_oic_acid side right {
     3_7_24_trihydroxy_5_cholestan_26_oic_acid
-    <-> . +diphosphate +amp +3_7_24thca_coenzyme_a +h +coa
+    <-> . +diphosphate +3_7_24thca_coenzyme_a +amp +h +coa
     atp
-  }
-
-  branch from 3_7_24_trihydroxy_5_cholestan_26_oic_acid side left {
-    3_7_24_trihydroxy_5_cholestan_26_oic_acid
-    <-> . +diphosphate +3_7_24thca_coenzyme_a +amp +h +atp
-    coa
   }
 }

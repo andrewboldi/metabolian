@@ -21,13 +21,13 @@ pathway 1-stearoyl-2-linolenoy-to-15z-12-oxophyto-10-15 "1-stearoyl-2-(α-linole
   branch from linolenate side left {
     linolenate
     <-> . +o2
-    9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
+    9z_11s_12z_15z_11_hydroperoxyoctadecatrienoate
   }
 
   branch from linolenate side right {
     linolenate
     <-> . +o2
-    9z_11r_12z_15z_11_hydroperoxyoctadecatrienoate
+    9z_11e_15z_13_hydroperoxyoctadecatrienoate
   }
 
   branch from 9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t side left {

@@ -30,25 +30,25 @@ pathway 5-s-glutathionyl-aminochr-to-o2 "5-S-glutathionyl-aminochr… to O2" {
 
   branch from h side left {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a1a_monosaccharide +dtdp
-    avermectin_a1a
+    <-> ec_2_5_1_18 [2.5.1.18] +4_5_dihydro_4_hydroxy_5_s_glutathionyl_benzo_a_p +glutathione
+    benzo_a_pyrene_4_5_oxide
   }
 
   branch from h side right {
     h
-    <-> . +dtdp +100_1 +urdamycinone_b
-    dtdp_beta_l_rhodinose
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_2_dichloro_1_hydroxy_ethyl_glutathione +glutathione
+    2_2_dichloroacetaldehyde
   }
 
   branch from o2 side left {
     o2
-    <-> . +1_2_dihydroxy_8_carboxynaphthalene
-    2_carboxy_2_hydroxy_8_carboxychromene
+    <-> . +1_2_anthracenediol
+    4_3_hydroxy_2_naphthyl_2_oxobut_3_enoic_acid
   }
 
   branch from o2 side right {
     o2
-    <-> . +2_hydroxy_7_hydroxymethylchromene_2_carboxylate
-    1_2_dihydroxy_7_hydroxymethylnaphthalene
+    <-> . +1_2_anthracenediol
+    3_2_carboxyvinyl_naphthalene_2_carboxylic_acid
   }
 }

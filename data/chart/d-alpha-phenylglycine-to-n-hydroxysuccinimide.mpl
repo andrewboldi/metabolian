@@ -18,14 +18,14 @@ pathway d-alpha-phenylglycine-to-n-hydroxysuccinimide "D-alpha-phenylglycine to 
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +hexanoate +h
-    ethyl_hexanoate
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +nh4
+    1_2_diaminopropanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +ethanol +h
-    ethyl_propionate
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +d_alanyl_d_alanine
+    d_alanyl_d_alanyl_d_alanine
   }
 
   branch from 2_oxohexanoate side left {
@@ -36,25 +36,25 @@ pathway d-alpha-phenylglycine-to-n-hydroxysuccinimide "D-alpha-phenylglycine to 
 
   branch from o2 side right {
     o2
-    <-> . +6_hydroxychlorzoxazone +nadp +h2o +h +nadph
-    chlorzoxazone
+    <-> ec_1_17_3_2 [1.17.3.2] +oxoformycin_b +h2o2 +h2o
+    formycin_b
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_1 [1.14.18.1] +4_acetamido_o_benzoquinone +h2o
-    4_acetamidophenol
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyhydratropate +nadp +h2o +h +nadph
+    p_hydroxypropiophenone
   }
 
   branch from h side right {
     h
-    <-> . +p_nitrostyrene_oxide +bromide
-    r_p_nitro_2_bromo_1_phenylethanol
+    <-> ec_4_3_1_24 [4.3.1.24] +4_chloro_l_phenylalanine +nh4
+    4_chlorocinnamic_acid
   }
 
   branch from h side left {
     h
-    <-> . +s_2_chloro_1_phenylethanol +chloride
-    s_styrene_oxide
+    <-> ec_2_3_2_2 [2.3.2.2] +l_glutamine_hydroxamate +nh4 +hydroxylamine
+    l_glutamine
   }
 }

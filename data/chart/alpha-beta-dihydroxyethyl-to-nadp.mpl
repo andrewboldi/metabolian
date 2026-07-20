@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alpha-beta-dihydroxyethyl-to-nadp "alpha,beta-Dihydroxyethyl… to NADP" {
-  spacing 254
+  spacing 218
 
   spine at 0,0 {
     alpha_beta_dihydroxyethyl_tpp
@@ -18,50 +18,14 @@ pathway alpha-beta-dihydroxyethyl-to-nadp "alpha,beta-Dihydroxyethyl… to NADP"
 
   branch from h side left {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +2_bromoethanol +bromide +h2o
-    1_2_dibromoethane
+    <-> . +chromopyrrolate +nadh +o2 +k_252c +nad +h2o
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +1_2_dibromopropane +h2o +bromide
-    2_bromopropanol
-  }
-
-  branch from d_sedoheptulose_7_phosphate side left {
-    d_sedoheptulose_7_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +alpha_d_ribofuranose_5_phosphate +d_glyceraldehyde_3_phosphate +h
-    l_xylulose_5_phosphate
-  }
-
-  branch from d_sedoheptulose_7_phosphate side right {
-    d_sedoheptulose_7_phosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +utp +h +d_sedoheptulose_1_7_bisphosphate
-    udp
-  }
-
-  branch from d_erythrose_4_phosphate side left {
-    d_erythrose_4_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +h +glycolate +ferrocyanide +keto_d_fructose_6_phosphate +h2o
-    ferricyanide
-  }
-
-  branch from d_erythrose_4_phosphate side right {
-    d_erythrose_4_phosphate
-    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole
-    dialuric_acid
-  }
-
-  branch from keto_d_fructose_6_phosphate side left {
-    keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_4 [2.7.1.4] +keto_d_fructose +udp +h
-    utp
-  }
-
-  branch from keto_d_fructose_6_phosphate side right {
-    keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_1 [2.7.1.1] +keto_d_fructose +atp +h
-    adp
+    <-> . +nadh +5e_3_oxo_dodec_5_enoyl_coa +nad
+    3r_hydroxy_5_trans_dodecenoyl_coa
   }
 
   branch from d_erythritol_4_phosphate side left {
@@ -72,13 +36,13 @@ pathway alpha-beta-dihydroxyethyl-to-nadp "alpha,beta-Dihydroxyethyl… to NADP"
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +1_4_nitrophenyl_ethanol +h +nadph
-    4_nitroacetophenone
+    <-> . +20_hydroxy_5s_hete +h2o +h +nadph +5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
+    o2
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +cyclohex_2_en_1_ol +h +nadph
-    cyclohex_2_enone
+    <-> . +h +nadph +5_oxo_6e_8z_11z_14z_eicosatetraenoate
+    5s_hydroxy_6e_8z_11z_14z_eicosatetraenoate
   }
 }

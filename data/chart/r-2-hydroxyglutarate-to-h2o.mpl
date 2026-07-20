@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-hydroxyglutarate-to-h2o "(R)-2-hydroxyglutarate to H2O" {
-  spacing 284
+  spacing 278
 
   spine at 0,0 {
     r_2_hydroxyglutarate
@@ -20,14 +20,14 @@ pathway r-2-hydroxyglutarate-to-h2o "(R)-2-hydroxyglutarate to H2O" {
 
   branch from propanoyl_coa side left {
     propanoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
-    10z_heptadecenoyl_coa
+    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +coa +nad
+    2_methyl_3_oxopropanoate
   }
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
-    9z_heptadecenoyl_coa
+    <-> ec_2_3_1_176 [2.3.1.176] +chenodeoxycholoyl_coa +coa
+    3alpha_7alpha_dihydroxy_24_oxo_5beta_cholestanoy
   }
 
   branch from glyoxylate side left {
@@ -44,49 +44,43 @@ pathway r-2-hydroxyglutarate-to-h2o "(R)-2-hydroxyglutarate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_96 [1.14.13.96] +h +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph +5beta_cholestane_3alpha_7alpha_12alpha_triol
-    nadp
+    <-> . +l_arginine +l_phenylalanine
+    arginyl_phenylalanine_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph +nadp
-    3_5_dihydroxyflavanone
+    <-> . +l_proline +l_threonine +l_arginine
+    arginyl_prolyl_threonine
   }
 
   branch from succinate_semialdehyde side left {
     succinate_semialdehyde
-    <-> . +h +isochorismate +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
+    <-> ec_4_1_2_52 [4.1.2.52] +2_4_dihydroxy_2_heptenedioic_acid +h
     pyruvate
-  }
-
-  branch from succinate_semialdehyde side right {
-    succinate_semialdehyde
-    <-> ec_4_1_2_52 [4.1.2.52] +h +pyruvate
-    2_4_dihydroxy_2_heptenedioic_acid
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +h +isonicotinate +h2o
-    isonicotinylglycine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_3_4_11_4 [3.4.11.4] +gly_ala +h2o
-    gly_gly_ala
+    <-> . +l_asparagine +l_tyrosine +h2o
+    asparaginyl_tyrosyl_glycine
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    2_deoxy_d_ribofuranose
+  branch from glycine side left {
+    glycine
+    <-> . +l_histidine +l_asparagine +h2o
+    glycyl_histidyl_asparagine
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    ferric_2_3_dihydroxybenzoylserine
+    lithocholate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    13s_hydroperoxy_9z_11e_octadecadienoate
   }
 }

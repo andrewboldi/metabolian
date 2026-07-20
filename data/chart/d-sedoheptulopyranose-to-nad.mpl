@@ -20,14 +20,14 @@ pathway d-sedoheptulopyranose-to-nad "α-D-sedoheptulopyranose… to NAD" {
 
   branch from h side left {
     h
-    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
-    chitobiose_6_phosphate
+    <-> ec_2_1_1_297 [2.1.1.297] +s_adenosyl_l_homocysteine +n5_methyl_l_glutamine +l_glutamine
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
-    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
+    <-> ec_3_1_1_4 [3.1.1.4] +9z_octadecenoate +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from 2_epi_5_epi_valiolone side left {
@@ -44,25 +44,25 @@ pathway d-sedoheptulopyranose-to-nad "α-D-sedoheptulopyranose… to NAD" {
 
   branch from phosphate side left {
     phosphate
-    <-> . +1_archaetidyl_d_myo_inositol +h2o
-    1_archaetidyl_1d_myo_inositol_3_phosphate
+    <-> ec_2_4_1_320 [2.4.1.320] +n_n_diacetylchitobiose +alpha_d_mannose_1_phosphate
+    d_manp_1_4_d_glcpnac_1_4_d_glcpnac
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +guanosine +h2o
-    guanosine_2_monophosphate
+    <-> ec_3_1_3_4 [3.1.3.4] +h +dg_18_0_16_0_0_0 +h2o
+    2r_2_palmitoyloxy_3_phosphonooxy_propyl_stearat
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
-    4s_4_hydroxy_l_isoleucine
+    <-> . +nadh +co2 +4_4_hydroxyphenyl_2_oxobutanoate
+    3_4_hydroxybenzyl_malate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +5_dehydro_l_gluconate +h
-    l_gluconic_acid
+    <-> . +1_5_anhydro_d_fructose +nadh +h
+    1_5_anhydro_d_glucitol
   }
 }

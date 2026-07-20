@@ -38,62 +38,62 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +neoglucobrassicin
-    1_hydroxyglucobrassicin
+    <-> . +7_hydroxy_4_5_dimethoxyisoflavone +s_adenosyl_l_homocysteine
+    calycosin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +4_methoxyglucobrassicin +h
-    4_hydroxyglucobrassicin
+    <-> . +s_adenosyl_l_homocysteine +chrysosplenol_c
+    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
   }
 
   branch from h side left {
     h
-    <-> . +formaldehyde +acetate
-    hydroxymethylene_acetate
+    <-> . +methylenecyclopropyl_pyruvic_acid +co2
+    2_oxo_3_carboxy_4_5_cyclopropylhex_5_enoate
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_280 [2.3.1.280] +acetyl_coa +3_aminopropyl_phosphonic_acid +coa
-    2_acetamidopropyl_phosphonate
+    <-> . +o2 +nadph +4_hydroxy_3_all_trans_heptaprenylbenzoic_acid +nadp +h2o
+    3_4_dihydroxy_5_all_trans_heptaprenylbenzoic_aci
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_hydroxytetracenomycin_a2 +h2o
-    tetracenomycin_a2_epoxyquinone
+    <-> ec_1_14_13_48 [1.14.13.48] +4s_limonene +h +nadph +nadp +h2o
+    cis_carveol
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +co2 +h +glycine_betaine +nad +h2o
-    trimethylaminoacetone
+    <-> . +h +2_chloro_4_methyl_cis_cis_muconate
+    3_chloro_5_methylcatechol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxydihydrodaidzein +nadp
-    3r_4r_7_2_4_trihydroxyisoflavanol
+    <-> . +versicolorin_a +h +nadp
+    versicolorin_b
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +2r_5r_isomenthone +nadp
-    isomenthol
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyhexadecanoylpantetheine_4_phosphor +nadp +h
+    o_s_3_oxohexadecanoylpantetheine_4_phosphoryl_se
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_ethyl_2_oxosuccinate +h
-    3_ethylmalate
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p +h
+    o_s_19z_31z_pentacontadienoylpantetheine_4_phosp
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2_3_dihydroxy_2_carboxybiphenyl +h2o
-    1_10_dihydro_1_10_dihydroxyfluoren_9_one
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor +h
+    o_s_5z_tetracosenoylpantetheine_4_phosphoryl_l_s
   }
 
   branch from pluviatolide side left {
@@ -104,20 +104,20 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    13_hete
+    <-> . +prostaglandin_i2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_i2
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    10_hete
+    <-> . +thromboxane_a2 +fmnh2 +o2 +h2o +hplus
+    18_hydroxythromboxane_a2
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_256 [2.1.1.256] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> . +5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur +sam +hplus
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyl_pur
   }
 
   branch from sah side left {
@@ -130,11 +130,5 @@ pathway s-adenosyl-l-homocysteine-to-fmn "S-adenosyl-L-homocysteine to FMN" {
     deoxypodophyllotoxin
     <-> . +h +o2 +nadph +nadp +h2o
     peltatin
-  }
-
-  branch from deoxypodophyllotoxin side left {
-    deoxypodophyllotoxin
-    <-> . +h +o2 +nadph +nadp +h2o
-    podophyllotoxin
   }
 }

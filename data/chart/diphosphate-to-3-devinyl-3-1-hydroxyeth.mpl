@@ -18,14 +18,14 @@ pathway diphosphate-to-3-devinyl-3-1-hydroxyeth "diphosphate to 3-devinyl-3-(1-h
 
   branch from h side left {
     h
-    <-> . +adp +17z_hexacosenoate +phosphate +17z_hexacosenoate +h2o
-    atp
+    <-> . +trp_met_arg +h2o +l_arginine +l_tryptophan
+    l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    all_cis_8_11_14_17_icosatetraenoic_acid
+    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_tryptophan +phosphate +l_tryptophan +h2o
+    atp
   }
 
   branch from chlorophyllide_a2 side left {
@@ -42,13 +42,13 @@ pathway diphosphate-to-3-devinyl-3-1-hydroxyeth "diphosphate to 3-devinyl-3-(1-h
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +11r_dihydroartemisinic_aldehyde
-    11r_dihydroartemisinic_alcohol
+    <-> . +n_hydroxy_l_tetrahomomethioninate +h2o +o2 +nadph
+    l_tetrahomomethionine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_270 [1.1.1.270] +h +nadph +31_norcycloartanone
-    31_norcycloartanol
+    <-> . +h +o2 +n_hydroxy_l_hexahomomethioninate +nadph +h2o
+    n_n_dihydroxy_l_hexahomomethioninate
   }
 }

@@ -24,26 +24,26 @@ pathway z-1-l-cysteinylglycin-to-e-6-methylsulfanyl-hex "(Z)-1-(L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +l_histidine +l_lysine +h2o
-    glycyl_histidyl_lysine
+    <-> . +2e_2_methylbut_2_enoyl_coa +tiglylglycine
+    coa
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_lysine +l_cysteine +h2o
-    glycyl_lysyl_cysteine
+    <-> . +l_glutamate +l_tryptophan +h2o
+    tryptophanyl_glutamyl_glycine
   }
 
   branch from h side left {
     h
-    <-> . +adp +2_4r_4_3r_5r_9s_10s_12s_13r_14s_17r_3_12_dihydro +phosphate +2_4r_4_3r_5r_9s_10s_12s_13r_14s_17r_3_12_dihydro +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    leucyl_leucine
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    coproporphyrin_i
+    losartan
   }
 
   branch from e_6_methylsulfanyl_hexanal_oxime side left {
@@ -54,49 +54,49 @@ pathway z-1-l-cysteinylglycin-to-e-6-methylsulfanyl-hex "(Z)-1-(L-cysteinylglyci
 
   branch from o2 side right {
     o2
-    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +nadp +h2o +h +nadph
-    linolenoyl_coa
+    <-> ec_1_13_11_11 [1.13.11.11] +5_methyl_dl_tryptophan
+    5_methyl_n_formylkynurenine
   }
 
   branch from o2 side left {
     o2
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +nadp +h2o +h +nadph
-    7z_10z_13z_16z_19z_docosapentaenoyl_coa
+    <-> ec_1_13_11_16 [1.13.11.16] +h +compound_0054366
+    2_hydroxyhexa_2_4_dienoic_acid_6_carboxymethyles
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +l_histidine +l_aspartate +h2o
-    aspartyl_histidyl_cysteine
+    <-> . +l_serine +l_arginine +h2o
+    seryl_cysteinyl_arginine
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +l_asparagine +l_methionine +h2o
-    cystyl_asparaginyl_methionine
+    <-> . +glycine +l_tyrosine +h2o
+    tyrosyl_cysteinyl_glycine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +trans_3_cis_8_11_14_eicosatetraenoyl_coenzyme_a +nadp +h
-    2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
+    <-> ec_1_1_1_215 [1.1.1.215] +l_idonate +nadp +h
+    2_dehydro_d_galactonate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +2e_4z_7z_10z_hexadecatetraenoyl_coenzyme_a +nadp
-    3z_7z_10z_hexadecatrienoyl_coenzyme_a
+    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +s_columbianetin +acetone +nadp +h2o
+    angelicin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +vernolate +fmnh2 +o2 +h2o +hplus
-    12_13_epoxy_18_hydroxy_9z_octadecenoate
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxynaringenin
   }
 
   branch from fmn side left {
     fmn
-    <-> . +8_9_eet +fmnh2 +o2 +h2o +hplus
-    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
+    <-> . +pinocembrin +fmnh2 +o2 +h2o +hplus
+    2s_2_hydroxypinocembrin
   }
 }

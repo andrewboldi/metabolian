@@ -18,25 +18,25 @@ pathway s-tetrahydrocolumbamine-to-fmn-22536 "(S)-tetrahydrocolumbamine to FMN" 
 
   branch from sah side left {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> ec_2_1_1_374 [2.1.1.374] +3_methyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_propyl +sam +hplus
+    3_5_dimethyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_pro
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from fmn side left {
     fmn
-    <-> . +ajmalicine +fmnh2 +o2 +h2o +hplus
-    dihydroserpentine
+    <-> ec_1_14_14_179 [1.14.14.179] +3_dehydro_6_deoxoteasterone +fmnh2 +o2 +h2o +hplus
+    3_dehydroteasterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol_sulfate +fmnh2 +o2 +h2o +hplus
-    24s_hydroxycholesterol_3_sulfate
+    <-> ec_1_14_14_178 [1.14.14.178] +a_c27_steroid +fmnh2 +o2 +h2o +hplus
+    a_22s_22_hydroxy_c27_steroid
   }
 }

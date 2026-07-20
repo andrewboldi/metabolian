@@ -48,6 +48,4 @@ pathway uracil-5-carboxylate-to-o-s-3-oxohexanoylpanteth "uracil-5-carboxylate t
 
 
 
-
-
 }

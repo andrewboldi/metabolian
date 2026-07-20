@@ -30,31 +30,31 @@ pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)eth
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
+    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
   }
 
   branch from long_chain_fatty_acyl_coa side right {
     long_chain_fatty_acyl_coa
-    <-> ec_1_2_1_50 [1.2.1.50] +nadp +coa +nadph +hplus
-    long_chain_fatty_aldehyde
+    <-> ec_2_3_1_279 [2.3.1.279] +trehalose +coa
+    2_o_long_chain_fatty_acyl_trehalose
   }
 
   branch from long_chain_fatty_acyl_coa side left {
     long_chain_fatty_acyl_coa
-    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
-    long_chain_primary_fatty_alcohol
+    <-> ec_2_3_1_26 [2.3.1.26] +sterol +coa
+    long_chain_3_hydroxysterol_ester
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_1_3_1_96 [1.3.1.96] +presqualene_pp +nadph +hplus +nadp
-    squalene
+    <-> ec_2_7_7_65 [2.7.7.65] +gtp
+    c_di_gmp
   }
 
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    1r_2r_3r_prephytoene_diphosphate
+    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
+    3_hydroxybenzoyl_coa
   }
 }

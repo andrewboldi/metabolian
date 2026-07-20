@@ -18,25 +18,25 @@ pathway c20-phytosphingosine-to-o-phosphonatoethanaminiu "C20 phytosphingosineâ€
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> ec_4_1_2_27 [4.1.2.27] +sphinganine_1_phosphate
-    hexadecanal
-  }
-
-  branch from phosphoethanolamine side right {
-    phosphoethanolamine
     <-> . +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
     1_z_alk_1_enyl_sn_glycerol
   }
 
+  branch from phosphoethanolamine side right {
+    phosphoethanolamine
+    <-> . +phytosphingosine_1_phosphate
+    r_2_hydroxyhexadecanal
+  }
+
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_hexadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah +serine
+    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex +serine
-    1_octadecanoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet +serine
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose
   }
 }

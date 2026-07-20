@@ -24,8 +24,8 @@ pathway 1-5-dihydroriboflavin-to-hydrogen-donor "1,5-dihydroriboflavin to hydrog
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
-    9_pimara_7_15_dien_19_oate
+    <-> ec_1_14_14_114 [1.14.14.114] +amorpha_4_11_diene +fmnh2 +o2 +h2o +hplus
+    artemisinate
   }
 
   branch from 8_amino_8_demethylriboflavin_5_phosphate side left {
@@ -48,13 +48,13 @@ pathway 1-5-dihydroriboflavin-to-hydrogen-donor "1,5-dihydroriboflavin to hydrog
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +15_cis_phytoene +hydrogen_acceptor
-    all_trans_phytofluene
+    <-> . +oleoyl_coa +o2 +hydrogen_acceptor +h2o
+    linoleoyl_coa
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +all_trans_phytofluene +hydrogen_acceptor
-    all_trans_carotene
+    <-> . +palmitoleoyl_coa +o2 +hydrogen_acceptor +h2o
+    9z_12z_hexadecadienoyl_coa
   }
 }

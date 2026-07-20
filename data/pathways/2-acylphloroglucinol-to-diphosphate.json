@@ -76,12 +76,40 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:58553"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ent_manool",
+      "name": "ent-manool",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76948"
+      }
+    },
+    {
+      "id": "hexadecanedioate",
+      "name": "hexadecanedioate",
+      "formula": "C16H28O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76276"
       }
     },
     {
@@ -103,12 +131,12 @@
       }
     },
     {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
+      "id": "hexadecanedioyl_coa",
+      "name": "hexadecanedioyl-CoA",
+      "formula": "C37H59N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:57383"
+        "chebi": "CHEBI:77085"
       }
     },
     {
@@ -118,45 +146,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "2_o_3_dimethylflaviolin_7_olate",
-      "name": "2-O,3-dimethylflaviolin-7-olate",
-      "short": "2-O,3-dimethylflavi…",
-      "formula": "C12H9O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78589"
-      }
-    },
-    {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "7_o_geranyl_2_o_3_dimethylflaviolin",
-      "name": "7-O-geranyl-2-O,3-dimethylflaviolin",
-      "short": "7-O-geranyl-2-O,3-d…",
-      "formula": "C22H26O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:78590"
       }
     }
   ],
@@ -173,13 +162,6 @@
       "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
       "ec": [
         "2.5.1.137"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_125",
-      "name": "7-geranyloxy-5-hydroxy-2-methoxy-3-methylnaphthalene-1,4-dione synthase",
-      "ec": [
-        "2.5.1.125"
       ]
     }
   ],
@@ -321,11 +303,50 @@
     },
     {
       "id": "r4",
-      "name": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
-      "equation": "(9Z,12Z)-octadecadienoate + ATP + CoA = (9Z,12Z)-octadecadienoyl-CoA + AMP + diphosphate",
+      "name": "ent-copalyl diphosphate + H2O = ent-manool + diphosphate",
+      "equation": "ent-copalyl diphosphate + H2O = ent-manool + diphosphate",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ent_manool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:40031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "hexadecanedioate + ATP + CoA = hexadecanedioyl-CoA + AMP + diphosphate",
+      "equation": "hexadecanedioate + ATP + CoA = hexadecanedioyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "hexadecanedioate",
           "stoichiometry": 1
         },
         {
@@ -339,7 +360,7 @@
       ],
       "products": [
         {
-          "metabolite": "linoleoyl_coa",
+          "metabolite": "hexadecanedioyl_coa",
           "stoichiometry": 1
         },
         {
@@ -352,65 +373,16 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:33651"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33651"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "7-geranyloxy-5-hydroxy-2-methoxy-3-methylnaphthalene-1,4-dione synthase",
-      "equation": "2-O,3-dimethylflaviolin + (2E)-geranyl diphosphate + H(+) = 7-O-geranyl-2-O,3-dimethylflaviolin + diphosphate",
-      "ec": "2.5.1.125",
-      "substrates": [
-        {
-          "metabolite": "2_o_3_dimethylflaviolin_7_olate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7_o_geranyl_2_o_3_dimethylflaviolin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_125"
-        }
-      ],
-      "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33839"
+        "rhea": "RHEA:40295"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33839"
+            "id": "RHEA:40295"
           }
         ]
       }

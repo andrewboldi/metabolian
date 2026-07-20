@@ -18,50 +18,50 @@ pathway z-1-glutathion-s-yl-n-to-n-n-dihydroxyhomomethi "(Z)-1-(glutathion-S-yl)
 
   branch from glutathione side left {
     glutathione
-    <-> ec_1_8_5_7 [1.8.5.7] +glutathione_disulfide +h +2_6_dichloro_4_hydroxyphenolate
-    2_6_dichloro_3_glutathion_s_yl_hydroquinone
-  }
-
-  branch from glutathione side right {
-    glutathione
     <-> . +arsenous_acid +h2o
     arsenic_triglutathione
   }
 
+  branch from glutathione side right {
+    glutathione
+    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +prostaglandin_e2 +h2o
+    15s_15_hydroperoxy_prostaglandin_e2
+  }
+
   branch from nadp side left {
     nadp
-    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o +h +o2 +nadph
-    gliclazide
+    <-> ec_1_14_13_133 [1.14.13.133] +h +pentalen_13_ol +o2 +nadph +h2o
+    pentalen_13_al
   }
 
   branch from nadp side right {
     nadp
-    <-> . +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol +h +o2 +nadph +h2o
-    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+    <-> ec_1_14_13_133 [1.14.13.133] +h +o2 +nadph +pentalen_13_al +h2o
+    pentalenene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +carboxy_gliclazide +phosphate +carboxy_gliclazide
-    atp
+    <-> . +l_lysine +l_glutamine +l_phenylalanine
+    lysyl_glutaminyl_phenylalanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    cerivastatin
+    <-> . +l_lysine
+    lysyl_lysyl_lysine
   }
 
   branch from h side left {
     h
-    <-> . +cerivastatin +phosphate +atp +cerivastatin +h2o
-    adp
+    <-> . +adp +1_pentadecanoyl_sn_glycero_3_phosphocholine +phosphate +1_pentadecanoyl_sn_glycero_3_phosphocholine +h2o
+    atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    cerivastatin_m1
+    1_octadeca_trienoylglycerophosphocholine_sn1_lpc
   }
 
   branch from n_n_dihydroxyhomomethionine side left {

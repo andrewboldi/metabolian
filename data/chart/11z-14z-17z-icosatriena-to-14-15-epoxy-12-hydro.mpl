@@ -18,14 +18,14 @@ pathway 11z-14z-17z-icosatriena-to-14-15-epoxy-12-hydro "(11Z,14Z,17Z)-icosatrie
 
   branch from nh3 side left {
     nh3
-    <-> . +s_1_hydroxy_3_methylhexan_3_yl_l_cysteine +h2o +pyruvate
-    3_methyl_3_sulfanylhexan_1_ol
+    <-> . +spermine +o2 +h2o +h2o2
+    spermine_dialdehyde
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +3_sulfanylhexan_1_ol_l_cysteine +h2o +pyruvate
-    3_mercaptohexanol
+    <-> . +agmatinium +o2 +h2o +h2o2
+    4_guanidiniumylbutanal
   }
 
   branch from 12_hpetre side left {

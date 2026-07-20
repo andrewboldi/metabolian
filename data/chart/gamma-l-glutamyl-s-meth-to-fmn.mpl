@@ -30,25 +30,25 @@ pathway gamma-l-glutamyl-s-meth-to-fmn "gamma-L-glutamyl-(S)-meth… to FMN" {
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_6_1_16 [2.6.1.16] +alpha_d_glucosamine_6_phosphate +keto_d_fructose_6_phosphate
-    l_glutamine
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +h2o
+    acetate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_6_3_4_2 [6.3.4.2] +l_glutamine_hydroxamate +h2o +hydroxylamine
-    h
+    <-> . +h +atp +d_alpha_glutamyl_phosphate
+    adp
   }
 
   branch from fmn side left {
     fmn
-    <-> . +e_indol_3_ylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
-    1_aci_nitro_2_1h_indol_3_yl_ethane
+    <-> . +8_9_eet +fmnh2 +o2 +h2o +hplus
+    8_9_epoxy_20_hydroxy_5z_11z_14z_icosatrienoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +e_phenylacetaldehyde_oxime +fmnh2 +o2 +h2o +hplus
-    1_aci_nitro_2_phenyl_ethane
+    <-> . +11_12_eet +fmnh2 +o2 +h2o +hplus
+    11_12_epoxy_20_hydroxy_5z_8z_14z_icosatrienoate
   }
 }

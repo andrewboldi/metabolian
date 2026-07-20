@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-s-hydroxy-all-cis-8-11-to-3-s-hydroxy-docosa-1 "3(S)-hydroxy-all-cis-8,11… to 3(S)-hydroxy-docosa-10,13…" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     3_s_hydroxy_all_cis_8_11_14_17_eicosatetraenoyl
@@ -24,43 +24,37 @@ pathway 3-s-hydroxy-all-cis-8-11-to-3-s-hydroxy-docosa-1 "3(S)-hydroxy-all-cis-8
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +streptothricin_d +phosphate +streptothricin_d +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexacosanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    streptothricin_d_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    1s_2s_4r_isodihydrocarveol
+    <-> . +pseudomonate_c +nadp +h
+    deoxymupirocin_f
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    neodihydrocarveol
-  }
-
-  branch from 10z_13z_16z_19z_3_oxodocosatetraenoyl_coa side left {
-    10z_13z_16z_19z_3_oxodocosatetraenoyl_coa
-    <-> . +h +nadph +nadp
-    3_s_hydroxy_docosa_10_13_16_19_all_cis_tetraenoy
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    1s_2r_4r_neoisodihydrocarveol
+    <-> ec_1_3_1_113 [1.3.1.113] +h +4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate +nadp
+    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    isodihydrocarveol
+    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyllide +h +nadph
+    dihydrogeranylgeranyl_bacteriochlorophyllide_b
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_1_1_413 [1.1.1.413] +h +nadph +6_dehydro_virginiae_butanolide_a
+    virginiae_butanolide_a
   }
 }

@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "keto-d-fructose-to-5-dehydro-d-fructose",
+  "name": "keto-D-fructose to 5-dehydro-D-fructose",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from keto-D-fructose to 5-dehydro-D-fructose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197809"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "keto_d_fructose",
+      "name": "keto-D-fructose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363863"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "5_dehydro_d_fructose",
+      "name": "5-dehydro-D-fructose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM855"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "l_sorbopyranose",
+      "name": "α-L-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10295"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_124",
+      "name": "fructose 5-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.124"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_14",
+      "name": "L-iditol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.14"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_10",
+      "name": "pyranose oxidase",
+      "ec": [
+        "1.1.3.10"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_11",
+      "name": "L-sorbose oxidase",
+      "ec": [
+        "1.1.3.11"
+      ]
+    },
+    {
+      "id": "ec_1_1_3_4",
+      "name": "glucose oxidase",
+      "ec": [
+        "1.1.3.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "fructose 5-dehydrogenase (NADP(+))",
+      "ec": "1.1.1.124",
+      "substrates": [
+        {
+          "metabolite": "keto_d_fructose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197809"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197809"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-iditol 2-dehydrogenase",
+      "ec": "1.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172725"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pyranose oxidase",
+      "ec": "1.1.3.10",
+      "substrates": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dehydro_d_fructose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_3_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR107126"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107126"
+          }
+        ]
+      }
+    }
+  ]
+}

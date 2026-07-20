@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylp-1-6-d-glcp-to-h2o "α-D-Xylp-(1→6)-D-Glcp to H2O" {
-  spacing 228
+  spacing 222
 
   spine at 0,0 {
     d_xylp_1_6_d_glcp
@@ -18,37 +18,31 @@ pathway d-xylp-1-6-d-glcp-to-h2o "α-D-Xylp-(1→6)-D-Glcp to H2O" {
 
   branch from xxxg_xyloglucan_oligosaccharide side left {
     xxxg_xyloglucan_oligosaccharide
-    <-> ec_3_2_1_23 [3.2.1.23] +xxlg_xyloglucan_oligosaccharide +h2o
-    beta_d_galactose
-  }
-
-  branch from xxxg_xyloglucan_oligosaccharide side right {
-    xxxg_xyloglucan_oligosaccharide
     <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +h2o
     xlxg_xyloglucan_oligosaccharide
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +agarotriose +3_6_anhydro_l_galactopyranose
-    neoagarotetraose
-  }
-
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +agaropentaose +3_6_anhydro_l_galactopyranose
-    neoagarohexaose
+    <-> ec_3_2_1_194 [3.2.1.194] +glucose +protopanaxatriol
+    ginsenoside_rf
   }
 
-  branch from atp side left {
-    atp
-    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
-    prodigiosin
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_186 [3.2.1.186] +glucose +26_degluco_protogracillin
+    protogracillin
   }
 
   branch from atp side right {
     atp
-    <-> . +2_undecylpyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
-    undecylprodigiosin
+    <-> . +diphosphate +c27_mycolipanoyl_coa +amp +coa
+    c27_mycolipanoate
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +diphosphate +l_4_hydroxyphenylglycine_l_arginyl_d_4_hydroxyph +h +amp +l_serine +l_arginine +h2o
+    l_4_hydroxymethyl_glycine
   }
 }

@@ -18,13 +18,13 @@ pathway 3-hydroxy-4-5-dimethoxyph-to-s-adenosyl-l-homocy "3-hydroxy-4,5-dimethox
 
   branch from sah side left {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysinium
+    <-> ec_2_1_1_403 [2.1.1.403] +ecgonone +sam
+    ecgononium_methyl_ester
   }
 
   branch from sah side right {
     sah
-    <-> . +3_4_5_trihydroxy_3_methoxyflavon_7_olate +sam +hplus
-    3_3_o_dimethylquercetin
+    <-> ec_2_1_1_401 [2.1.1.401] +nicotinate +sam
+    methyl_nicotinate
   }
 }

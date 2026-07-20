@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-indol-3-yl-n-sulfo-to-h2o "(Z)-(indol-3-yl)-N-(sulfo… to H2O" {
-  spacing 250
+  spacing 244
 
   spine at 0,0 {
     z_indol_3_yl_n_sulfonatooxy_methanimidothioate
@@ -36,51 +36,45 @@ pathway z-indol-3-yl-n-sulfo-to-h2o "(Z)-(indol-3-yl)-N-(sulfo… to H2O" {
     thiosulfate
   }
 
-  branch from indole_3_acetate side right {
-    indole_3_acetate
-    <-> . +akg +o2 +succinate +co2
-    2_oxindole_3_acetate
+  branch from nh3 side right {
+    nh3
+    <-> . +2_aminopentan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxy_2_pentanone
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +agmatinium +o2 +h2o +h2o2
-    2r_2_hydroxypyrrolidine_1_carboximidamide
+    <-> . +s_isoleucinol +nad +h2o +nadh +hplus
+    3s_1_hydroxy_3_methylpentan_2_one
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_2_6_1_123 [2.6.1.123] +chorismate +glutamine +h2o +glutamate
-    4_amino_4_deoxychorismate
-  }
-
-  branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side left {
+  branch from 1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2 side right {
     1h_indole_3_acetic_acid_2_3_dihydro_3_hydroxy_2
     <-> . +h +o2
     indol_3_yl_acetate
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_306 [1.1.1.306] +nadh +s_formylmycothiol +h +mycothiol
-    formaldehyde
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_14_99_31 [1.14.99.31] +nadh +tetradecanoyl_coa +h +o2 +h2o
-    trans_tetradec_11_enoyl_coa
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
+    r_1_2_epoxypropane
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_4_43 [3.1.4.43] +1d_myo_inositol_1_phosphate +h
-    1d_myo_inositol_1_2_cyclic_phosphate
+  branch from nad side right {
+    nad
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +propene +o2 +h2o
+    s_1_2_epoxypropane
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
-    trans_2_carboxybenzylidenepyruvic_acid
+    <-> ec_3_5_5_1 [3.5.5.1] +benzoate +nh4
+    benzonitrile
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +benzonitrile
+    benzamide
   }
 }

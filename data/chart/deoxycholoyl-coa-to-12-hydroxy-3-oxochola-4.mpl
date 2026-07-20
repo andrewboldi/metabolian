@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4 "deoxycholoyl-CoA to 12α-hydroxy-3-oxochola-4,…" {
-  spacing 254
+  spacing 242
 
   spine at 0,0 {
     deoxycholoyl_coa
@@ -18,21 +18,9 @@ pathway deoxycholoyl-coa-to-12-hydroxy-3-oxochola-4 "deoxycholoyl-CoA to 12α-hy
     12_hydroxy_3_oxochola_4_6_dien_24_oate
   }
 
-  branch from 12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa side left {
-    12_hydroxy_3_oxochola_4_6_dien_24_oyl_coa
-    <-> ec_4_2_1_106 [4.2.1.106] +h2o
-    7_12_dihydroxy_3_oxochol_4_en_24_oyl_coa
-  }
-
-  branch from 12_hydroxy_3_oxochola_4_6_dien_24_oate side right {
+  branch from 12_hydroxy_3_oxochola_4_6_dien_24_oate side left {
     12_hydroxy_3_oxochola_4_6_dien_24_oate
     <-> . +h2o
     7_12_dihydroxy_3_oxochol_4_en_24_oate
-  }
-
-  branch from 12_hydroxy_3_oxochola_4_6_dien_24_oate side left {
-    12_hydroxy_3_oxochola_4_6_dien_24_oate
-    <-> . +nad +nadh +hplus
-    12_hydroxy_3_oxochola_4_en_24_oate
   }
 }

@@ -1,0 +1,286 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "decanoyl-coa-to-coa-null",
+  "name": "decanoyl-CoA to CoA",
+  "category": "other",
+  "summary": "A 3-step route from decanoyl-CoA to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR99273"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "decanoyl_coa",
+      "name": "decanoyl-CoA",
+      "formula": "C31H50N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1092836"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "dodecanoyl_coa",
+      "name": "dodecanoyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1092909"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3s_3_hydroxydodecanoyl_coa",
+      "name": "(3S)-3-hydroxydodecanoyl-CoA",
+      "short": "3-hydroxydodecanoyl…",
+      "formula": "C33H54N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104711"
+      }
+    },
+    {
+      "id": "s_carnitine",
+      "name": "(S)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:11060"
+      }
+    },
+    {
+      "id": "3_hydroxydodecanoylcarnitine",
+      "name": "3-hydroxydodecanoylcarnitine",
+      "short": "3-hydroxydodecanoyl…",
+      "formula": "C19H37NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73056"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR99273",
+      "substrates": [
+        {
+          "metabolite": "decanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR99273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR99273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR157331",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxydodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR157331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR157331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR204343",
+      "substrates": [
+        {
+          "metabolite": "3s_3_hydroxydodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxydodecanoylcarnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR204343"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204343"
+          }
+        ]
+      }
+    }
+  ]
+}

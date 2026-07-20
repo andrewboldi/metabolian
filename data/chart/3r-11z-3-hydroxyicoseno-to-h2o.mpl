@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-11z-3-hydroxyicoseno-to-h2o "(3R,11Z)-3-hydroxyicoseno… to H2O" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     3r_11z_3_hydroxyicosenoyl_coa
@@ -20,69 +20,63 @@ pathway 3r-11z-3-hydroxyicoseno-to-h2o "(3R,11Z)-3-hydroxyicoseno… to H2O" {
     8_11_eicosadienoic_acid
   }
 
-  branch from 2e_11z_icosadienoyl_coa side left {
-    2e_11z_icosadienoyl_coa
-    <-> . +h +h2o
-    3_hydroxyicos_11_enoyl_coa
-  }
-
-  branch from 11z_eicosenoyl_coa side right {
+  branch from 11z_eicosenoyl_coa side left {
     11z_eicosenoyl_coa
     <-> . +sn_glycerol_3_phosphate +coa
     1_11z_eicosenoyl_glycero_3_phosphate
   }
 
-  branch from 11z_eicosenoyl_coa side left {
+  branch from 11z_eicosenoyl_coa side right {
     11z_eicosenoyl_coa
     <-> . +s_carnitine +coa
     9z_icos_9_enoylcarnitine
   }
 
-  branch from 8z_11z_icosadienoyl_coa side right {
+  branch from 8z_11z_icosadienoyl_coa side left {
     8z_11z_icosadienoyl_coa
     <-> . +h +o2 +nadph +nadp +h2o
     5z_8z_11z_icosatrienoyl_coa
   }
 
-  branch from 8z_11z_icosadienoyl_coa side left {
+  branch from 8z_11z_icosadienoyl_coa side right {
     8z_11z_icosadienoyl_coa
     <-> . +s_carnitine +coa
     8z_11z_icosa_8_11_dienoylcarnitine
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    2_o_4_deoxy_l_threo_hex_4_enopyranuronosyl_l_rha
-  }
-
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    avilamycin_a
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    indolmycin
   }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano
-    2_acetyl_3_dodecanoyl_3_2_methylbutanoyl_4_3_met
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    dihydrokalafungin
   }
 
   branch from coa side left {
     coa
-    <-> . +3_methylbutanoyl_coa +3_2_methylbutanoyl_3_4_di_3_methylbutanoyl_sucro
-    3_2_methylbutanoyl_3_4_6_tri_3_methylbutanoyl_su
+    <-> ec_2_3_1_16 [2.3.1.16] +3_oxopentanoyl_coa +propanoyl_coa
+    acetyl_coa
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_4_glcpa_1_4_d_glcp_1_4_l_rhap_1_3_d_glcp
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_37 [2.3.1.37] +succinyl_coa +h +glycine
+    2_amino_3_oxoadipic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_glcp_1_4_l_rhap_1_3_d_glcp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    actinorhodin_intermediate
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    deacetoxycephalosporin_c
   }
 }

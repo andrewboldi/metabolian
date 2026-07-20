@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-2-3-di-o-phytanyl-sn-gl-to-sulfate "a 2,3-di-O-phytanyl-sn-gl… to sulfate" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     a_2_3_di_o_phytanyl_sn_glycerophospholipid
@@ -22,49 +22,37 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-sulfate "a 2,3-di-O-phytanyl-sn-gl… to su
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +hplus +co2 +coa +h2o
-    2_4_dihydroxy_6_methylbenzaldehyde
+    <-> . +coniferin +hydrogen_donor
+    coniferaldehyde_d_glucoside
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +o_s_2e_4e_6e_octa_2_4_6_trienyl_pantetheine_4_ph +malonyl-coa +hydrogen_donor +hplus +holo-acp +co2 +coa +h2o
-    2_4_dihydroxy_6_3e_5e_7e_2_oxonona_3_5_7_trienyl
+    <-> . +urobilinogen +hydrogen_donor
+    bilirubin
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +agmatinium +o2 +h2o +h2o2
-    4_guanidiniumylbutanal
+    <-> . +2_deoxyguanosine +h2o +hplus
+    2_deoxyxanthosine
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +spermine +o2 +h2o +h2o2
-    spermine_monoaldehyde_3
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +s_nicotinium +fmnh2 +o2 +fmn +h2o +hplus
-    s_nornicotine
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +s_scoulerine +akg +o2 +succinate +co2
-    s_3_o_demethylscoulerine
+    <-> . +2s_2_aminobutan_1_ol +nad +h2o +nadh +hplus
+    1_hydroxybutan_2_one
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
-    20s_23_24_trihydroxyvitamin_d3
+    <-> . +1_acyl_2_linoleoyl_3_d_galactosyl_1_6_d_galactos +o2 +hplus +di_sulfido_diiron +h2o
+    1_acyl_2_linolenoyl_3_d_galactosyl_1_6_d_galacto
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +20s_23_dihydroxyvitamin_d3 +o2 +hplus +di_sulfido_diiron +h2o
-    20s_23_25_trihydroxyvitamin_d3
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_1_6_d_galactos +o2 +hplus +di_sulfido_diiron +h2o
+    1_linolenoyl_2_acyl_3_d_galactosyl_1_6_d_galacto
   }
 }

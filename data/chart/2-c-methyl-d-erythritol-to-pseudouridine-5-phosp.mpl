@@ -34,14 +34,14 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_10 [2.5.1.10] +ipp +gpp
-    fpp
+    <-> ec_2_7_7_47 [2.7.7.47] +streptomycin +atp
+    3_adenylylstreptomycin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_20 [6.1.1.20] +amp_3_end_1 +l_phenylalanine +atp +amp +hplus
-    3_l_phenylalanyl_adenylyl_1_group
+    <-> ec_6_1_1_19 [6.1.1.19] +amp_3_end_1 +arginine +atp +amp
+    3_l_arginyl_adenylyl_1_group
   }
 
   branch from 2_c_methyl_d_erythritol_2_4_cyclic_diphosphate side right {
@@ -68,25 +68,19 @@ pathway 2-c-methyl-d-erythritol-to-pseudouridine-5-phosp "2-C-methyl-D-erythrito
     acetate
   }
 
-  branch from d_ribofuranose_5_phosphate side right {
-    d_ribofuranose_5_phosphate
-    <-> . +ctp +hplus +ppi
-    cdp_d_ribose
+  branch from nh3 side right {
+    nh3
+    <-> ec_1_4_2_1 [1.4.2.1] +iron +glycine +h2o +fe2 +hplus
+    glyoxylate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_2 [3.5.1.2] +glutamine +h2o
-    glutamate
+    <-> ec_3_5_2_18 [3.5.2.18] +1_4_5_6_tetrahydro_6_oxonicotinate +h2o
+    2_formylglutarate
   }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_3_21 [3.5.3.21] +methylenediurea +h2o +hplus +co2
-    n_hydroxymethyl_urea
-  }
-
-  branch from pseudouridine_5_phosphate side left {
+  branch from pseudouridine_5_phosphate side right {
     pseudouridine_5_phosphate
     <-> . +h2o +ppi +hplus
     pseudo_utp

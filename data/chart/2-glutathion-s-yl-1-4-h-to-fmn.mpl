@@ -42,25 +42,25 @@ pathway 2-glutathion-s-yl-1-4-h-to-fmn "2-(glutathion-S-yl)-1,4-h… to FMN" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_131 [4.2.3.131] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    miltiradiene
+    <-> ec_2_5_1_124 [2.5.1.124] +2_o_3_dimethylflaviolin_7_olate +gpp
+    6_linalyl_2_o_3_dimethylflaviolin_7_olate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_132 [4.2.3.132] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    neoabietadiene
+    <-> ec_2_5_1_122 [2.5.1.122] +tyrosine +dmapp
+    4_o_dimethylallyl_l_tyrosine
   }
 
   branch from fmn side left {
     fmn
-    <-> . +androst_5_ene_3_17_diol +fmnh2 +o2 +h2o +hplus
-    androst_5_ene_3_7_17_triol
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    18_r_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxytestosterone
+    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
+    19_hydroxyprostaglandin_h2
   }
 }

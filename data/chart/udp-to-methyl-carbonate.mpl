@@ -36,14 +36,14 @@ pathway udp-to-methyl-carbonate "UDP to methyl carbonate" {
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +co2 +2_4_dihydroxy_3_6_dimethylbenzaldehyde +nadp +coa +h2o +malonyl_coa +h +nadph
-    acetyl_coa
+    <-> . +s_adenosyl_l_homocysteine +c34_phthiocerol_a +h
+    c33_phthiotriol_a
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +fusarubinaldehyde +h
-    6_o_demethylfusarubinaldehyde
+    <-> . +s_adenosyl_l_homocysteine +c35_phenolphthiocerol_a +h
+    c34_phenolphthiotriol_a
   }
 
   branch from patuletin side right {
@@ -60,13 +60,13 @@ pathway udp-to-methyl-carbonate "UDP to methyl carbonate" {
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +8_o_methylfusarubinaldehyde +h +s_adenosyl_l_methionine
-    fusarubinaldehyde
+    <-> . +p_hbad_i +h +s_adenosyl_l_methionine
+    4_o_alpha_l_rhamnopyranosyl_hydroxybenzoate_meth
   }
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +5_methoxybenzimidazole +h +s_adenosyl_l_methionine
-    5_hydroxybenzimidazole
+    <-> . +methylparaben +s_adenosyl_l_methionine
+    4_hydroxybenzoate
   }
 }

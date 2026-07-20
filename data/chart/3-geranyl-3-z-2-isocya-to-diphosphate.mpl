@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-geranyl-3-z-2-isocya-to-diphosphate "3-geranyl-3-[(Z)-2-isocya… to diphosphate" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     3_geranyl_3_z_2_isocyanovinyl_3h_indole
@@ -14,17 +14,5 @@ pathway 3-geranyl-3-z-2-isocya-to-diphosphate "3-geranyl-3-[(Z)-2-isocya… to d
     hapalindole_g
     <-> ec_2_5_1_159 [2.5.1.159] +dmapp -ppi
     ambiguine_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +amikacin +ctp
-    4_cytidylylamikacin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +amikacin +utp
-    4_uridylylamikacin
   }
 }

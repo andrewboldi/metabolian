@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2r-hydroxyhexanoate-to-l-glutamate",
   "name": "(2R)-hydroxyhexanoate to L-glutamate",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (2R)-hydroxyhexanoate to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -120,32 +120,50 @@
       }
     },
     {
-      "id": "3_hydroxy_l_kynurenine",
-      "name": "3-hydroxy-L-kynurenine",
-      "short": "3-hydroxy-L-kynuren…",
-      "formula": "C10H12N2O4",
-      "charge": 0,
+      "id": "l_glutamyl_l_glutamate_2",
+      "name": "γ-L-glutamyl-L-glutamate(2−)",
+      "short": "γ-L-glutamyl-L-glut…",
+      "formula": "C10H12N2O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:58125"
+        "chebi": "CHEBI:143622"
       }
     },
     {
-      "id": "xanthurenate",
-      "name": "xanthurenate",
-      "formula": "C10H6NO4",
-      "charge": -1,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:71201"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
-      "name": "4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate",
-      "short": "4-(2-amino-3-hydrox…",
-      "formula": "C10H8NO5",
-      "charge": -1,
+      "id": "l_glutamyl_l_glutamyl_l_glutamate_3",
+      "name": "L-glutamyl-γ-L-glutamyl-L-glutamate(3−)",
+      "short": "L-glutamyl-γ-L-glut…",
+      "formula": "C15H18N3O9",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:157756"
+        "chebi": "CHEBI:183054"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
       }
     }
   ],
@@ -158,10 +176,17 @@
       ]
     },
     {
-      "id": "ec_2_6_1_7",
-      "name": "kynurenine--oxoglutarate transaminase",
+      "id": "ec_6_3_2_61",
+      "name": "tubulin-glutamate ligase",
       "ec": [
-        "2.6.1.7"
+        "6.3.2.61"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_62",
+      "name": "beta-tubulin-glutamate ligase",
+      "ec": [
+        "6.3.2.62"
       ]
     }
   ],
@@ -299,22 +324,12 @@
     },
     {
       "id": "r4",
-      "name": "kynurenine--oxoglutarate transaminase",
-      "equation": "3-hydroxy-L-kynurenine + 2-oxoglutarate = xanthurenate + L-glutamate + H2O",
-      "ec": "2.6.1.7",
+      "name": "tubulin-glutamate ligase",
+      "equation": "gamma-L-glutamyl-L-glutamyl-[tubulin] + L-glutamate + ATP = L-glutamyl-gamma-L-glutamyl-L-glutamyl-[tubulin] + ADP + phosphate + H(+)",
+      "ec": "6.3.2.61",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "xanthurenate",
+          "metabolite": "l_glutamyl_l_glutamate_2",
           "stoichiometry": 1
         },
         {
@@ -322,65 +337,101 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamyl_l_glutamyl_l_glutamate_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_6_1_7"
+          "enzyme": "ec_6_3_2_61"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:65884"
+        "rhea": "RHEA:69200"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65884"
+            "id": "RHEA:69200"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoat...",
-      "equation": "3-hydroxy-L-kynurenine + 2-oxoglutarate = 4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate + L-glutamate",
+      "name": "beta-tubulin-glutamate ligase",
+      "equation": "gamma-L-glutamyl-L-glutamyl-[beta-tubulin] + L-glutamate + ATP = L-glutamyl-gamma-L-glutamyl-L-glutamyl-[beta-tubulin] + ADP + phosphate + H(+)",
+      "ec": "6.3.2.62",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_l_kynurenine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate",
+          "metabolite": "l_glutamyl_l_glutamate_2",
           "stoichiometry": 1
         },
         {
           "metabolite": "glutamate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamyl_l_glutamyl_l_glutamate_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_62"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:65888"
+        "rhea": "RHEA:69204"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65888"
+            "id": "RHEA:69204"
           }
         ]
       }

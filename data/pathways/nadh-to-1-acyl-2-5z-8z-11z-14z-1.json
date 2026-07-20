@@ -184,41 +184,51 @@
       }
     },
     {
-      "id": "1r_4s_fenchone",
-      "name": "(1R,4S)-fenchone",
-      "formula": "C10H16O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:36612"
-      }
-    },
-    {
-      "id": "1s_2s_4r_endo_fenchol",
-      "name": "(1S,2S,4R)-endo-fenchol",
-      "short": "(1S,2S,4R)-endo-fen…",
-      "formula": "C10H18O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371317"
-      }
-    },
-    {
-      "id": "s_malate",
-      "name": "(S)-malate",
-      "formula": "C4H4O5",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1107192"
-      }
-    },
-    {
-      "id": "3r_3_hydroxy_4_oxobutanoate",
-      "name": "(3R)-3-hydroxy-4-oxobutanoate",
-      "short": "3-hydroxy-4-oxobuta…",
-      "formula": "C4H5O4",
+      "id": "didemethylasterriquinone_d",
+      "name": "didemethylasterriquinone D",
+      "short": "didemethylasterriqu…",
+      "formula": "C22H13N2O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138809"
+        "chebi": "CHEBI:192553"
+      }
+    },
+    {
+      "id": "hydrodidemethylasterriquinone_d",
+      "name": "hydrodidemethylasterriquinone D",
+      "short": "hydrodidemethylaste…",
+      "formula": "C22H18N2O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363713"
+      }
+    },
+    {
+      "id": "imidazole_4_acetate",
+      "name": "imidazole-4-acetate",
+      "formula": "C5H5N2O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM728089"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "4_oxo_4_5_dihydroimidazole_5_acetic_acid",
+      "name": "4-oxo-4,5-dihydroimidazole-5-acetic acid",
+      "short": "4-oxo-4,5-dihydroim…",
+      "formula": "C5H6N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371169"
       }
     },
     {
@@ -266,10 +276,10 @@
       ]
     },
     {
-      "id": "ec_1_2_1_5",
-      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "id": "ec_1_14_13_5",
+      "name": "imidazoleacetate 4-monooxygenase",
       "ec": [
-        "1.2.1.5"
+        "1.14.13.5"
       ]
     }
   ],
@@ -509,67 +519,71 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR182222",
+      "name": "Reaction MNXR197490",
       "substrates": [
         {
           "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "didemethylasterriquinone_d",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1r_4s_fenchone",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "1s_2s_4r_endo_fenchol",
+          "metabolite": "hydrodidemethylasterriquinone_d",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR182222"
+        "metanetx": "MNXR197490"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR182222"
+            "id": "MNXR197490"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
-      "ec": "1.2.1.5",
+      "name": "imidazoleacetate 4-monooxygenase",
+      "ec": "1.14.13.5",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_malate",
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "imidazole_4_acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 2
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3r_3_hydroxy_4_oxobutanoate",
+          "metabolite": "4_oxo_4_5_dihydroimidazole_5_acetic_acid",
           "stoichiometry": 1
         },
         {
@@ -583,20 +597,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_5"
+          "enzyme": "ec_1_14_13_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR182249"
+        "metanetx": "MNXR197572"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR182249"
+            "id": "MNXR197572"
           }
         ]
       }

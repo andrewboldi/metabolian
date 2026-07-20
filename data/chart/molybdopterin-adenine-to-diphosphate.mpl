@@ -20,13 +20,13 @@ pathway molybdopterin-adenine-to-diphosphate "molybdopterin adenine… to diphos
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_n6 [2.7.7.n6] +l_tyrosine +gtp
-    o_guanylyl_l_tyrosine_1
+    <-> . +atp
+    cyclic_hexaadenylate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_182 [4.2.3.182] +fpp +h2o
-    2s_3r_9r_pristinol
+    <-> . +atp
+    cyclic_tetraadenylate
   }
 }

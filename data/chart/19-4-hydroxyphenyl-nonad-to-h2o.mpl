@@ -18,99 +18,18 @@ pathway 19-4-hydroxyphenyl-nonad-to-h2o "19-(4-hydroxyphenyl)nonad… to H2O" {
     co2
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_136 [4.2.3.136] +fpp
-    isocomene
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_137 [4.2.3.137] +fpp
-    e_2_epi_caryophyllene
-  }
 
-  branch from malonyl_coa side left {
-    malonyl_coa
-    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +h +nadph
-    methylmalonyl_coa
-  }
 
-  branch from malonyl_coa side right {
-    malonyl_coa
-    <-> . +methylmalonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +co2 +nadp +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon
-  }
 
-  branch from h side left {
-    h
-    <-> . +s_9_deoxy_delta12_pgd2_glutathione +glutathione
-    9_deoxy_delta12_pgd2
-  }
 
-  branch from h side right {
-    h
-    <-> . +s_11_hydroxy_9_deoxy_delta12_pgd2_glutathione +nadp +nadph
-    s_9_deoxy_delta12_pgd2_glutathione
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +coa_18_cooh_16e_dinor_lte5 +h +nadp
-    coa_18_cooh_15e_dinor_lte4
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h +12_oxo_20_carboxy_leukotriene_b4 +nadp
-    12_oxo_10_11_dihydro_20_cooh_ltb4
-  }
 
-  branch from co2 side left {
-    co2
-    <-> . +3_hydroxy_3_methyloxindole +h +o2
-    indol_3_yl_acetate
-  }
 
-  branch from co2 side right {
-    co2
-    <-> ec_1_14_11_12 [1.14.11.12] +gibberellin_a20 +succinate +h2o +h +gibberellin_a19 +o2
-    2_oxoglutarate
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +w_carboxy_leukotriene_b4 +nadph
-    20_cooh_10_11_dihydro_ltb4
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +o2 +nadph +7_12_dimethyltetraphene +h2o
-    1a_11b_dihydro_4_9_dimethylbenz_a_anthra_3_4_b_o
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +h +18_coa_18_oxo_dinorleukotriene_b4 +h2o
-    omega_carboxy_trinor_leukotriene_b4
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +h
-    n_acetyl_s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +leukotriene_a5
-    5_12_dihydroxy_6e_ltb5
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_s_6_s_epoxy_15_r_hepe
-    15_epi_lipoxin_a5
-  }
 }

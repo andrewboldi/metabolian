@@ -18,49 +18,49 @@ pathway 3-5-dihydroxy-1-4-naphtho-to-nadph "3,5-Dihydroxy-1,4-naphtho… to NADP
 
   branch from o2 side left {
     o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +acetone +h2o2 +h2o
-    2_nitropropane
+    <-> . +chlorophyllide_a +h2o
+    chlorophyllide_b
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +2_hydroxy_pentan_3_one +h2o
-    3_nitro_2_pentanol
+    <-> ec_1_14_13_92 [1.14.13.92] +nadh +h +phenylacetone +nad +h2o
+    benzyl_acetate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_387 [1.1.1.387] +nadh +h +methyl_2_2_dimethyl_3_oxopropanoate
-    methyl_2_2_dimethyl_3_hydroxypropionate
+    <-> ec_1_14_13_96 [1.14.13.96] +nadh +h +5beta_cholestane_3alpha_7alpha_diol +o2 +h2o
+    5beta_cholestane_3alpha_7alpha_12alpha_triol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +3_keto_fusidic_acid
-    fusidate
+    <-> ec_1_14_99_33 [1.14.99.33] +nadh +9z_12z_octadecadienoate +h +o2 +h2o
+    crepenynate
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    siroheme
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    18_0_t16_1_pg
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    staphyloferrin_a
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +phosphate +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o
+    atp
   }
 
   branch from nadph side left {
     nadph
-    <-> . +malonyl_coa +h +r_methylmalonyl_coa +nadp +coa +narbonolide +h2o
-    co2
+    <-> ec_1_1_1_117 [1.1.1.117] +d_arabinofuranose +nadp +h
+    d_arabinono_1_4_lactone
   }
 
   branch from nadph side right {
     nadph
-    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon
+    <-> ec_1_1_1_117 [1.1.1.117] +h +d_arabinono_1_4_lactone +nadp
+    d_arabinofuranose
   }
 }

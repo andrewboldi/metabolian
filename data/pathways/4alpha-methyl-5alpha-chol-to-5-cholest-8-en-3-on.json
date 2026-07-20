@@ -164,40 +164,12 @@
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
       "id": "o2",
       "name": "O2",
       "formula": "O2",
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM735438"
-      }
-    },
-    {
-      "id": "4_hydroxymethyl_5_cholest_8_en_3_ol",
-      "name": "4α-hydroxymethyl-5α-cholest-8-en-3β-ol",
-      "short": "4α-hydroxymethyl-5α…",
-      "formula": "C28H48O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87053"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
       }
     },
     {
@@ -210,13 +182,21 @@
       }
     },
     {
-      "id": "4_formyl_5_cholest_8_en_3_ol",
-      "name": "4α-formyl-5α-cholest-8-en-3β-ol",
-      "short": "4α-formyl-5α-choles…",
-      "formula": "C28H46O2",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:87054"
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
       }
     }
   ],
@@ -424,38 +404,38 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR182375",
+      "name": "Reaction MNXR182457",
       "ec": "1.14.13.72",
       "substrates": [
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "4_methyl_5_cholest_8_en_3_ol",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "4_hydroxymethyl_5_cholest_8_en_3_ol",
-          "stoichiometry": 1
+          "metabolite": "nadp",
+          "stoichiometry": 3
         },
         {
-          "metabolite": "nad",
+          "metabolite": "3_hydroxy_5_cholest_8_ene_4_carboxylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "catalysts": [
@@ -466,33 +446,37 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR182375"
+        "metanetx": "MNXR182457"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR182375"
+            "id": "MNXR182457"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR179591",
+      "name": "Reaction MNXR182458",
       "ec": "1.14.13.72",
       "substrates": [
         {
           "metabolite": "nadh",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
-          "metabolite": "4_formyl_5_cholest_8_en_3_ol",
-          "stoichiometry": 1
+          "metabolite": "h",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "4_methyl_5_cholest_8_en_3_ol",
           "stoichiometry": 1
         }
       ],
@@ -503,11 +487,11 @@
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
         }
       ],
       "catalysts": [
@@ -518,66 +502,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR179591"
+        "metanetx": "MNXR182458"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR179591"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR179592",
-      "ec": "1.14.13.72",
-      "substrates": [
-        {
-          "metabolite": "4_formyl_5_cholest_8_en_3_ol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "3_hydroxy_5_cholest_8_ene_4_carboxylate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_72"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR179592"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR179592"
+            "id": "MNXR182458"
           }
         ]
       }

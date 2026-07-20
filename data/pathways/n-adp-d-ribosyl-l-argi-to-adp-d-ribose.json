@@ -121,71 +121,42 @@
       }
     },
     {
-      "id": "udpglcnac",
-      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
-      "short": "UDP-N-acetyl-α-D-gl…",
-      "formula": "C17H25N3O17P2",
+      "id": "2_deoxyguanosine_5_monophosphate",
+      "name": "2'-deoxyguanosine 5'-monophosphate",
+      "short": "2'-deoxyguanosine…",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:57705"
+        "chebi": "CHEBI:57673"
       }
     },
     {
-      "id": "n_n_acetyl_d_glucosaminyl_l_arginyl_1",
-      "name": "Nω-(N-acetyl-β-D-glucosaminyl)-L-arginyl(1+)",
-      "short": "Nω-(N-acetyl-β-D-gl…",
-      "formula": "C14H26N5O6",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:167322"
-      }
-    },
-    {
-      "id": "udp",
-      "name": "UDP",
-      "formula": "C9H11N2O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58223"
-      }
-    },
-    {
-      "id": "2_deoxyguanosine",
-      "name": "2'-deoxyguanosine",
-      "formula": "C10H13N5O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17172"
-      }
-    },
-    {
-      "id": "n2_adp_d_ribosyl_2_deoxyguanosine",
-      "name": "N2-(ADP-D-ribosyl)-2'-deoxyguanosine",
+      "id": "n2_adp_d_ribosyl_dgmp",
+      "name": "N2-(ADP-D-ribosyl)-dGMP",
       "short": "N2-(ADP-D-ribosyl)-…",
-      "formula": "C25H32N10O17P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:142715"
-      }
-    },
-    {
-      "id": "gmp",
-      "name": "Guanosine 5'-monophosphate (GMP)",
-      "short": "Guanosine 5'-MP…",
-      "formula": "C10H12N5O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58115"
-      }
-    },
-    {
-      "id": "n2_adp_d_ribosyl_gmp",
-      "name": "N2-(ADP-D-ribosyl)-GMP",
-      "short": "N2-(ADP-D-ribosyl)-…",
-      "formula": "C25H31N10O21P3",
+      "formula": "C25H31N10O20P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:142717"
+        "chebi": "CHEBI:142718"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61429"
+      }
+    },
+    {
+      "id": "n2_adp_d_ribosyl_dgtp",
+      "name": "N2-(ADP-D-ribosyl)-dGTP",
+      "short": "N2-(ADP-D-ribosyl)-…",
+      "formula": "C25H31N10O26P5",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:142720"
       }
     }
   ],
@@ -410,25 +381,25 @@
     },
     {
       "id": "r5",
-      "name": "L-arginyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = N(omega)-(N-acetyl-beta-D-gluc...",
-      "equation": "L-arginyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = N(omega)-(N-acetyl-beta-D-glucosaminyl)-L-arginyl-[protein] + UDP + H(+)",
+      "name": "dGMP + NAD(+) = N(2)-(ADP-D-ribosyl)-dGMP + nicotinamide + H(+)",
+      "equation": "dGMP + NAD(+) = N(2)-(ADP-D-ribosyl)-dGMP + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "l_argininium",
+          "metabolite": "2_deoxyguanosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udpglcnac",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n_n_acetyl_d_glucosaminyl_l_arginyl_1",
+          "metabolite": "n2_adp_d_ribosyl_dgmp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "udp",
+          "metabolite": "nicotinamide",
           "stoichiometry": 1
         },
         {
@@ -439,25 +410,25 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:66632"
+        "rhea": "RHEA:71891"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66632"
+            "id": "RHEA:71891"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2'-deoxyguanosine + NAD(+) = N(2)-(ADP-D-ribosyl)-2'-deoxyguanosine + nicotinamide + H(+)",
-      "equation": "2'-deoxyguanosine + NAD(+) = N(2)-(ADP-D-ribosyl)-2'-deoxyguanosine + nicotinamide + H(+)",
+      "name": "dGTP + NAD(+) = N(2)-(ADP-D-ribosyl)-dGTP + nicotinamide + H(+)",
+      "equation": "dGTP + NAD(+) = N(2)-(ADP-D-ribosyl)-dGTP + nicotinamide + H(+)",
       "substrates": [
         {
-          "metabolite": "2_deoxyguanosine",
+          "metabolite": "dgtp",
           "stoichiometry": 1
         },
         {
@@ -467,7 +438,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_adp_d_ribosyl_2_deoxyguanosine",
+          "metabolite": "n2_adp_d_ribosyl_dgtp",
           "stoichiometry": 1
         },
         {
@@ -482,57 +453,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:71879"
+        "rhea": "RHEA:71895"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:71879"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "GMP + NAD(+) = N(2)-(ADP-D-ribosyl)-GMP + nicotinamide + H(+)",
-      "equation": "GMP + NAD(+) = N(2)-(ADP-D-ribosyl)-GMP + nicotinamide + H(+)",
-      "substrates": [
-        {
-          "metabolite": "gmp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_adp_d_ribosyl_gmp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:71883"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:71883"
+            "id": "RHEA:71895"
           }
         ]
       }

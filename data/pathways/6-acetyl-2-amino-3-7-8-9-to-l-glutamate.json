@@ -428,50 +428,40 @@
       }
     },
     {
-      "id": "amp_3_end_1",
-      "name": "AMP 3'-end(1−)",
-      "formula": "C10H12N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78442"
-      }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
-    },
-    {
-      "id": "3_l_seryl_adenylyl_1_group",
-      "name": "3'-(L-seryl)adenylyl(1−) group",
-      "short": "3'-(L-seryl)adenyly…",
-      "formula": "C13H17N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78533"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "germacrene_a",
-      "name": "(+)-germacrene A",
-      "formula": "C15H24",
+      "id": "isoprene",
+      "name": "isoprene",
+      "formula": "C5H8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:41595"
+        "chebi": "CHEBI:35194"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "3_5_cyclic_gmp",
+      "name": "3',5'-cyclic GMP",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57746"
       }
     },
     {
@@ -494,22 +484,12 @@
       }
     },
     {
-      "id": "2_deoxyguanosine",
-      "name": "2'-deoxyguanosine",
-      "formula": "C10H13N5O4",
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17172"
-      }
-    },
-    {
-      "id": "2_deoxy_d_ribose_1_phosphate",
-      "name": "2-deoxy-α-D-ribose 1-phosphate",
-      "short": "2-deoxy-α-D-ribose…",
-      "formula": "C5H9O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57259"
+        "chebi": "CHEBI:47013"
       }
     },
     {
@@ -667,17 +647,17 @@
       ]
     },
     {
-      "id": "ec_6_1_1_11",
-      "name": "serine--tRNA ligase",
+      "id": "ec_4_2_3_27",
+      "name": "isoprene synthase",
       "ec": [
-        "6.1.1.11"
+        "4.2.3.27"
       ]
     },
     {
-      "id": "ec_4_2_3_23",
-      "name": "germacrene-A synthase",
+      "id": "ec_4_6_1_2",
+      "name": "guanylate cyclase",
       "ec": [
-        "4.2.3.23"
+        "4.6.1.2"
       ]
     },
     {
@@ -1541,75 +1521,59 @@
     },
     {
       "id": "r18",
-      "name": "serine--tRNA ligase",
-      "equation": "tRNA(Ser) + L-serine + ATP = L-seryl-tRNA(Ser) + AMP + diphosphate + H(+)",
-      "ec": "6.1.1.11",
+      "name": "isoprene synthase",
+      "equation": "dimethylallyl diphosphate = isoprene + diphosphate",
+      "ec": "4.2.3.27",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "isoprene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_1_1_11"
+          "enzyme": "ec_4_2_3_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 18,
       "xrefs": {
-        "rhea": "RHEA:12292"
+        "rhea": "RHEA:13369"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12292"
+            "id": "RHEA:13369"
           }
         ]
       }
     },
     {
       "id": "r19",
-      "name": "germacrene-A synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-(R)-germacrene A + diphosphate",
-      "ec": "4.2.3.23",
+      "name": "guanylate cyclase",
+      "equation": "GTP = 3',5'-cyclic GMP + diphosphate",
+      "ec": "4.6.1.2",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "gtp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_a",
+          "metabolite": "3_5_cyclic_gmp",
           "stoichiometry": 1
         },
         {
@@ -1619,20 +1583,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_23"
+          "enzyme": "ec_4_6_1_2"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 19,
       "xrefs": {
-        "rhea": "RHEA:12516"
+        "rhea": "RHEA:13665"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12516"
+            "id": "RHEA:13665"
           }
         ]
       }
@@ -1684,45 +1648,39 @@
     },
     {
       "id": "r21",
-      "name": "purine-nucleoside phosphorylase",
-      "equation": "2'-deoxyguanosine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + guanine",
-      "ec": "2.4.2.1",
+      "name": "guanosine + H2O = guanine + D-ribose",
+      "equation": "guanosine + H2O = guanine + D-ribose",
       "substrates": [
         {
-          "metabolite": "2_deoxyguanosine",
+          "metabolite": "guanosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pi",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "metabolite": "guanine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "guanine",
+          "metabolite": "d_ribofuranose",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_2_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 21,
       "xrefs": {
-        "rhea": "RHEA:27738"
+        "rhea": "RHEA:30771"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27738"
+            "id": "RHEA:30771"
           }
         ]
       }

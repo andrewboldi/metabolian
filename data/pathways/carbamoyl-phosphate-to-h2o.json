@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "carbamoyl-phosphate-to-h2o",
+  "name": "carbamoyl phosphate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from carbamoyl phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR140691"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carbamoyl_phosphate",
+      "name": "carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM138"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "cyanate",
+      "name": "cyanate",
+      "formula": "CNO",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM727224"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "carbamate",
+      "name": "carbamate",
+      "formula": "CH2NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:13941"
+      }
+    },
+    {
+      "id": "z_2_methyl_3_aminoperacrylic_acid",
+      "name": "(Z)-2-methyl-3-aminoperacrylic acid",
+      "short": "2-methyl-3-aminoper…",
+      "formula": "C4H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63250"
+      }
+    },
+    {
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63249"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_104",
+      "name": "cyanase",
+      "ec": [
+        "4.2.1.104"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_110",
+      "name": "ureidoacrylate amidohydrolase",
+      "ec": [
+        "3.5.1.110"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR140691",
+      "substrates": [
+        {
+          "metabolite": "carbamoyl_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR140691"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR140691"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cyanase",
+      "ec": "4.2.1.104",
+      "substrates": [
+        {
+          "metabolite": "cyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR142126"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR142126"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ureidoacrylate amidohydrolase",
+      "ec": "3.5.1.110",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methyl_3_aminoperacrylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carbamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_110"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150704"
+          }
+        ]
+      }
+    }
+  ]
+}

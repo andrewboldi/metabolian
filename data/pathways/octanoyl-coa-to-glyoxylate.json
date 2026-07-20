@@ -1,0 +1,261 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "octanoyl-coa-to-glyoxylate",
+  "name": "octanoyl-CoA to glyoxylate",
+  "category": "other",
+  "summary": "A 3-step route from octanoyl-CoA(4−) to glyoxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64240"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57386"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "octanoyl_coa",
+      "name": "octanoyl-CoA",
+      "formula": "C29H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57386"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n_octanoylglycinate",
+      "name": "N-octanoylglycinate",
+      "formula": "C10H18NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142681"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ascorbate",
+      "name": "L-Ascorbate (vitamin C)",
+      "short": "L-Ascorbate…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:38290"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_octanoyl_2s_hydroxyglycinate",
+      "name": "N-octanoyl-(2S)-hydroxyglycinate",
+      "short": "N-octanoyl-(2S)-hyd…",
+      "formula": "C10H18NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142691"
+      }
+    },
+    {
+      "id": "mdha",
+      "name": "Monodehydroascorbate (ascorbate radical)",
+      "short": "Monodehydroascorbat…",
+      "formula": "C6H6O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59513"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "octanamide",
+      "name": "octanamide",
+      "formula": "C8H17NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142682"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "octanoyl-CoA + glycine = N-octanoylglycine + CoA + H(+)",
+      "equation": "octanoyl-CoA + glycine = N-octanoylglycine + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "octanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_octanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64240"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64240"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-octanoylglycine + 2 L-ascorbate + O2 = N-octanoyl-(2S)-hydroxyglycine + 2 monodehydro...",
+      "equation": "N-octanoylglycine + 2 L-ascorbate + O2 = N-octanoyl-(2S)-hydroxyglycine + 2 monodehydro-L-ascorbate radical + H2O",
+      "substrates": [
+        {
+          "metabolite": "n_octanoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ascorbate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_octanoyl_2s_hydroxyglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "mdha",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:58612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-octanoyl-(2S)-hydroxyglycine = octanamide + glyoxylate",
+      "equation": "N-octanoyl-(2S)-hydroxyglycine = octanamide + glyoxylate",
+      "substrates": [
+        {
+          "metabolite": "n_octanoyl_2s_hydroxyglycinate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58616"
+          }
+        ]
+      }
+    }
+  ]
+}

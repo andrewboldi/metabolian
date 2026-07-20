@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9z-hexadecenoate-to-h2o-null "(9Z)-hexadecenoate to H2O" {
-  spacing 240
+  spacing 234
 
   spine at 0,0 {
     9z_hexadecenoate
@@ -20,49 +20,43 @@ pathway 9z-hexadecenoate-to-h2o-null "(9Z)-hexadecenoate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    vancomycin
+    <-> ec_3_4_13_23 [3.4.13.23] +glycine +s_4_hydroxy_3_methylbutan_2_yl_l_cysteine
+    s_4_hydroxy_3_methylbutan_2_yl_l_cysteinylglycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    teicoplanin
+    <-> . +4_hydroxymethyl_3_5_methylhexanoyl_5h_furan_2_on
+    3_hydroxy_2_oxopropyl_7_methyl_3_oxooctanoate
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    ceftriaxone
+    <-> . +2r_3_1_5_6_dihydropyridin_2_yl_2_hydroxy_2_3_1e
+    n_3r_6_5_6_dihydropyridin_2_yl_7_hydroxy_8_2e_1
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    nisin
+    <-> . +e_caffeate +pyruvate +h2o
+    ground_state_fungal_oxyluciferin
   }
 
   branch from phosphatidylserine_dihexadec_9_enoyl_n_c16_1 side left {
-    phosphatidylserine_dihexadec_9_enoyl_n_c16_1
-    <-> . +co2 +h
-    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
-  }
-
-  branch from phosphatidylserine_dihexadec_9_enoyl_n_c16_1 side right {
     phosphatidylserine_dihexadec_9_enoyl_n_c16_1
     <-> . +cmp +h +l_serine
     cdp_1_2_di_9z_hexadecenoyl_sn_glycerol
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    enterocin
-  }
-
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    streptothricin_f_acid
+    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +adp
+    1d_myo_inositol_1_3_4_5_tetrakisphosphate
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    octadecanoyl_coa
   }
 }

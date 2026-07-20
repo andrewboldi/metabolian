@@ -1,0 +1,310 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-malate-to-diphosphate",
+  "name": "(S)-malate to diphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-malate to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182013"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_malate",
+      "name": "(S)-malate",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107192"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_naphthoquinone",
+      "name": "2-phytyl-1,4-naphthoquinone",
+      "short": "2-phytyl-1,4-naphth…",
+      "formula": "C30H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31087"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_dihydroxynaphthalene",
+      "name": "2-phytyl-1,4-dihydroxynaphthalene",
+      "short": "2-phytyl-1,4-dihydr…",
+      "formula": "C30H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87844"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11173"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "all_trans_heptaprenyl_diphosphate",
+      "name": "all-trans-heptaprenyl diphosphate",
+      "short": "all-trans-heptapren…",
+      "formula": "C35H57O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58206"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_7",
+      "name": "2-demethylmenaquinol-7",
+      "short": "2-demethylmenaquino…",
+      "formula": "C45H64O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64806"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_4",
+      "name": "malate dehydrogenase (quinone)",
+      "ec": [
+        "1.1.5.4"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": [
+        "2.5.1.74"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "malate dehydrogenase (quinone)",
+      "ec": "1.1.5.4",
+      "substrates": [
+        {
+          "metabolite": "s_malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_phytyl_1_4_naphthoquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182013"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182013"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR176961",
+      "substrates": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR176961"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "equation": "all-trans-heptaprenyl diphosphate + 1,4-dihydroxy-2-naphthoate + H(+) = 2-demethylmenaquinol-7 + CO2 + diphosphate",
+      "ec": "2.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "all_trans_heptaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_demethylmenaquinol_7",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33211"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33211"
+          }
+        ]
+      }
+    }
+  ]
+}

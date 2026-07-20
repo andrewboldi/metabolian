@@ -1,0 +1,259 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "co2-to-n-4-hydroxyphenylacetylgl",
+  "name": "CO2 to N-4-hydroxyphenylacetylgl…",
+  "category": "other",
+  "summary": "A 3-step route from CO2 to N-4-hydroxyphenylacetylglutamic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR110984"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "4_methylphenol",
+      "name": "4-methylphenol",
+      "formula": "C7H8O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM828"
+      }
+    },
+    {
+      "id": "4_hydroxyphenyl_acetate",
+      "name": "4-hydroxyphenyl acetate",
+      "short": "4-hydroxyphenyl…",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31128"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "4_hydroxyphenylacetyl_coa",
+      "name": "4-hydroxyphenylacetyl-CoA",
+      "short": "4-hydroxyphenylacet…",
+      "formula": "C29H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM735077"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "n_4_hydroxyphenylacetylglutamic_acid",
+      "name": "N-4-hydroxyphenylacetylglutamic acid",
+      "short": "N-4-hydroxyphenylac…",
+      "formula": "C13H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727405"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_83",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "ec": [
+        "4.1.1.83"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_20",
+      "name": "acyl-CoA hydrolase",
+      "ec": [
+        "3.1.2.20"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_14",
+      "name": "glutamine N-phenylacetyltransferase",
+      "ec": [
+        "2.3.1.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-hydroxyphenylacetate decarboxylase",
+      "ec": "4.1.1.83",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_methylphenol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR110984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR110984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acyl-CoA hydrolase",
+      "ec": "3.1.2.20",
+      "substrates": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxyphenyl_acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR152702"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glutamine N-phenylacetyltransferase",
+      "ec": "2.3.1.14",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxyphenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_4_hydroxyphenylacetylglutamic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR109109"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109109"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -28,19 +28,19 @@ pathway phorbol-12-13-dibutanoate-to-o-s-3r-hydroxybutan "phorbol 12,13-dibutano
 
   branch from butyrate side right {
     butyrate
-    <-> . +1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +monobutyrin +h2o +hplus
+    glycerol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    germacrene_a
+    <-> ec_4_2_3_34 [4.2.3.34] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    stemod_13_17_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    humulene
+    <-> ec_4_2_3_35 [4.2.3.35] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    9_pimara_7_15_diene
   }
 }

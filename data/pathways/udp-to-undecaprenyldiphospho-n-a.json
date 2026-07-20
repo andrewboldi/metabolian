@@ -120,6 +120,16 @@
       }
     },
     {
+      "id": "6_methylsulfanyl_hexyl_desulfoglucosinolate",
+      "name": "6-(methylsulfanyl)hexyl-desulfoglucosinolate",
+      "short": "6-(methylsulfanyl)h…",
+      "formula": "C14H27NO6S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM10374"
+      }
+    },
+    {
       "id": "h",
       "name": "H",
       "formula": "H",
@@ -129,42 +139,33 @@
       }
     },
     {
-      "id": "soyasapogenol_e_3_o_beta_d_glucoside",
-      "name": "soyasapogenol-E-3-O-beta-D-glucoside",
-      "short": "soyasapogenol-E-3-O…",
-      "formula": "C36H58O8",
+      "id": "z_omega_methylsulfanyl_heptyl_thiohydroximate",
+      "name": "(Z)-omega-(methylsulfanyl)heptyl-thiohydroximate",
+      "short": "omega-(methylsulfan…",
+      "formula": "C8H17NOS2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM82517"
+        "metanetx": "MNXM8211"
       }
     },
     {
-      "id": "soyasapogenol_e",
-      "name": "soyasapogenol E",
-      "formula": "C30H48O3",
+      "id": "7_methylthioheptyl_desulfoglucosinolate",
+      "name": "7-Methylthioheptyl-desulfoglucosinolate",
+      "short": "7-Methylthioheptyl-…",
+      "formula": "C15H29NO6S2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62444"
+        "metanetx": "MNXM10427"
       }
     },
     {
-      "id": "kaempferol_3_o_gentiobioside_7_o_rhamnoside",
-      "name": "kaempferol 3-O-gentiobioside-7-O-rhamnoside",
-      "short": "kaempferol…",
-      "formula": "C33H40O20",
+      "id": "z_omega_methylsulfanyl_octyl_thiohydroximate",
+      "name": "(Z)-omega-(methylsulfanyl)octyl-thiohydroximate",
+      "short": "omega-(methylsulfan…",
+      "formula": "C9H19NOS2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133218"
-      }
-    },
-    {
-      "id": "kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra",
-      "name": "kaempferol 3-O-β-D-glucopyranosyl-7-O-α-L-rhamnopyranoside",
-      "short": "kaempferol…",
-      "formula": "C27H30O15",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:68882"
+        "metanetx": "MNXM8222"
       }
     }
   ],
@@ -188,6 +189,13 @@
       "name": "undecaprenyldiphospho-muramoylpentapeptide beta-N-",
       "ec": [
         "2.4.1.227"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_195",
+      "name": "N-hydroxythioamide S-beta-glucosyltransferase",
+      "ec": [
+        "2.4.1.195"
       ]
     }
   ],
@@ -332,18 +340,19 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR144107",
+      "name": "N-hydroxythioamide S-beta-glucosyltransferase",
+      "ec": "2.4.1.195",
       "substrates": [
+        {
+          "metabolite": "6_methylsulfanyl_hexyl_desulfoglucosinolate",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "soyasapogenol_e_3_o_beta_d_glucoside",
           "stoichiometry": 1
         }
       ],
@@ -353,35 +362,41 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "soyasapogenol_e",
+          "metabolite": "z_omega_methylsulfanyl_heptyl_thiohydroximate",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_195"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR144107"
+        "metanetx": "MNXR144163"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR144107"
+            "id": "MNXR144163"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR144146",
+      "name": "N-hydroxythioamide S-beta-glucosyltransferase",
+      "ec": "2.4.1.195",
       "substrates": [
         {
-          "metabolite": "udp",
+          "metabolite": "7_methylthioheptyl_desulfoglucosinolate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "kaempferol_3_o_gentiobioside_7_o_rhamnoside",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
@@ -395,21 +410,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra",
+          "metabolite": "z_omega_methylsulfanyl_octyl_thiohydroximate",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_195"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR144146"
+        "metanetx": "MNXR144164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR144146"
+            "id": "MNXR144164"
           }
         ]
       }

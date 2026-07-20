@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion "1,3-diacyl-2-linoleoylgly… to fatty acid anion" {
-  spacing 182
+  spacing 158
 
   spine at 0,0 {
     1_3_diacyl_2_linoleoylglycerol
@@ -22,29 +22,5 @@ pathway 1-3-diacyl-2-linoleoylgly-to-fatty-acid-anion "1,3-diacyl-2-linoleoylgly
     n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
     <-> ec_2_3_1_296 [2.3.1.296] +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
     diglyceride
-  }
-
-  branch from n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin side right {
-    n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
-    <-> . +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin +1_2_diglyceride
-    1_2_diacyl_3_linoleoylglycerol
-  }
-
-  branch from 1_3_diglyceride side left {
-    1_3_diglyceride
-    <-> . +triglyceride +coa
-    acyl_coa
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +d_glucosylceramide +h2o
-    d_glucosylsphingoid_base
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +2_2_lysobisphosphatidate +h2o +hplus
-    a_3_acyl_sn_glycero_1_phospho_1_sn_glycerol
   }
 }

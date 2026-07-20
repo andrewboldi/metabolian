@@ -32,14 +32,14 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_135 [1.14.14.135] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +fmnh2 +o2 +h2o +hplus
-    glyceollin_iii
+    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
+    capsidiol
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_144 [1.14.14.144] +abieta_7_13_diene +fmnh2 +o2 +h2o +hplus
-    abietol
+    <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
+    5_hydroxypseudobaptigenin
   }
 
   branch from di_sulfido_diiron side right {
@@ -68,14 +68,14 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_10 [4.2.3.10] +gpp +h2o
-    endo_fenchol
+    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
+    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_6 [6.1.1.6] +amp_3_end_1 +l_lysinium +atp +amp
-    3_l_lysyl_adenylyl_1_group
+    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
+    2_cis_6_trans_farnesyl_diphosphate
   }
 
   branch from thca_24oh_coa side right {
@@ -86,13 +86,13 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
-    tetrachloroethene
+    <-> ec_1_14_99_38 [1.14.99.38] +cholesterol +o2 +hydrogen_acceptor +h2o
+    25_hydroxycholesterol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
-    2_dehydropantolactone
+    <-> ec_1_7_99_1 [1.7.99.1] +hydrogen_acceptor +nh3 +h2o +hplus
+    hydroxylamine
   }
 }

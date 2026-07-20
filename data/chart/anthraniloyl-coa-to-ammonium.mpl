@@ -22,38 +22,38 @@ pathway anthraniloyl-coa-to-ammonium "anthraniloyl-CoA to ammonium" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_56 [4.1.1.56] +tridecan_2_one
-    3_oxotetradecanoic_acid
+    <-> . +malonyl_coa +anthraniloyl_coa +h +coa
+    2_methyl_4_quinolinol
   }
 
   branch from co2 side right {
     co2
-    <-> . +5_hydroxy_4_oxopentanoate +2_hydroxy_3_oxoadipate
-    h
+    <-> ec_4_1_1_56 [4.1.1.56] +3_oxopalmitic_acid
+    2_pentadecanone
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +n5_hydroxy_l_ornithine
-    n5_acetyl_n5_hydroxy_l_ornithine
+    <-> . +malonyl_coa +2_naphthyl_d_glucoside
+    2_naphthol_6_o_malonylglucoside
   }
 
   branch from coa side right {
     coa
-    <-> . +4_sinapoyloxybutylglucosinolate +e_sinapoyl_coa
-    4_hydroxybutylglucosinolate
+    <-> . +malonyl_coa +1_naphthyl_d_glucoside
+    1_naphthol_6_o_malonylglucoside
   }
 
   branch from h2o side left {
     h2o
-    <-> . +4_chloro_3_hydroxybutyryl_coa
-    4_chloro_crotonyl_coa
+    <-> ec_3_4_11_2 [3.4.11.2] +glycine +s_4_hydroxy_nonenal_3_yl_l_cysteine
+    s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +vincaleukoblastine
-    3_4_anhydrovinblastine
+    <-> ec_3_2_1_149 [3.2.1.149] +linalool +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
+    linalyl_beta_primeveroside
   }
 
   branch from 2_heptyl_3_hydroxy_4_quinolone side left {
@@ -76,13 +76,13 @@ pathway anthraniloyl-coa-to-ammonium "anthraniloyl-CoA to ammonium" {
 
   branch from nh3 side right {
     nh3
-    <-> . +1s_2_methyl_cyclohexylammonium +nadp +h2o +nadph +hplus
-    2_methylcyclohexanone
+    <-> . +1_cyclohexylethanaminium +nadp +h2o +nadph +hplus
+    1_cyclohexylethanone
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +1s_3_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
-    3_methylcyclohexanone
+    <-> . +d_argininium +o2 +h2o +h2o2
+    5_guanidino_2_oxopentanoic_acid
   }
 }

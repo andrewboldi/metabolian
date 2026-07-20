@@ -26,13 +26,13 @@ pathway 13-deoxycarminomycin-to-13-dihydrodaunorubicin "13-deoxycarminomycin to 
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_180 [2.1.1.180] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_184 [2.1.1.184] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_n6_dimethyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

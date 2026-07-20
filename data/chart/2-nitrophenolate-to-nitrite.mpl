@@ -30,14 +30,14 @@ pathway 2-nitrophenolate-to-nitrite "2-nitrophenolate to nitrite" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +all_trans_carotene +hydrogen_acceptor
-    neurosporene
+    <-> . +9z_12z_15z_18z_tetracosatetraenoyl_coa +o2 +hydrogen_acceptor +h2o
+    6z_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_29 [1.3.99.29] +15_cis_phytoene +hydrogen_acceptor
-    all_trans_carotene
+    <-> . +dodecanedioyl_coa +hydrogen_acceptor
+    trans_2_dodecenedioyl_coa
   }
 
   branch from 1_4_benzoquinones side left {

@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-icariside-d2",
+  "name": "H to Icariside D2",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H(+) to Icariside D2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95016"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "4_hydroxyphenylacetate",
+      "name": "4-hydroxyphenylacetate",
+      "short": "4-hydroxyphenylacet…",
+      "formula": "C8H7O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM735208"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "4_hydroxyphenyl_acetaldehyde",
+      "name": "(4-hydroxyphenyl)acetaldehyde",
+      "short": "(4-hydroxyphenyl)ac…",
+      "formula": "C8H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM479"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_4_hydroxyphenyl_ethanol",
+      "name": "2-(4-hydroxyphenyl)ethanol",
+      "short": "2-(4-hydroxyphenyl)…",
+      "formula": "C8H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1879"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "icariside_d2",
+      "name": "Icariside D2",
+      "formula": "C14H20O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:182721"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "4_hydroxyphenylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": "1.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxyphenyl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_hydroxyphenyl_ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR133034"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133034"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-tyrosol + UDP-alpha-D-glucose = icariside D2 + UDP + H(+)",
+      "equation": "4-tyrosol + UDP-alpha-D-glucose = icariside D2 + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_4_hydroxyphenyl_ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "icariside_d2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84719"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84719"
+          }
+        ]
+      }
+    }
+  ]
+}

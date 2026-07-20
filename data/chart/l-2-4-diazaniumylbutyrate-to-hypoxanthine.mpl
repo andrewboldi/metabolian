@@ -20,13 +20,13 @@ pathway l-2-4-diazaniumylbutyrate-to-hypoxanthine "L-2,4-diazaniumylbutyrate to 
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_152 [2.5.1.152] +d_histidine +sam +hplus
-    n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt
+    <-> . +n1_methylpseudouridine_5_monophosphate_1 +sam +hplus
+    n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour
   }
 
   branch from 5_s_methyl_5_thioadenosine side right {
     5_s_methyl_5_thioadenosine
-    <-> ec_2_5_1_25 [2.5.1.25] +uridine_5_monophosphate_1 +sam +hplus
-    3_3_amino_3_carboxypropyl_uridine_5_phosphate_1
+    <-> ec_2_5_1_157 [2.5.1.157] +sam +n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 }

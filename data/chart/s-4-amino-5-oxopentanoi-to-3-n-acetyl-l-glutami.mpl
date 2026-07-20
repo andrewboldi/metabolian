@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentanoi… to 3'-(N-acetyl-L-glutaminyl…" {
-  spacing 286
+  spacing 274
 
   spine at 0,0 {
     s_4_amino_5_oxopentanoic_acid
@@ -18,20 +18,8 @@ pathway s-4-amino-5-oxopentanoi-to-3-n-acetyl-l-glutami "(S)-4-amino-5-oxopentan
 
   branch from 3_l_glutamate_adenylyl_1_group side left {
     3_l_glutamate_adenylyl_1_group
-    <-> ec_6_1_1_24 [6.1.1.24] +amp_3_end_1 +glutamate +atp +amp
+    <-> ec_6_1_1_17 [6.1.1.17] +amp_3_end_1 +glutamate +atp +amp
     ppi
-  }
-
-  branch from 3_l_glutamate_adenylyl_1_group side right {
-    3_l_glutamate_adenylyl_1_group
-    <-> . +atp +adp
-    3_5_phosphooxy_l_glutamate_adenylyl_2_group
-  }
-
-  branch from 3_l_glutaminyl_adenylyl_zwitterionic_group side left {
-    3_l_glutaminyl_adenylyl_zwitterionic_group
-    <-> . +3_5_phosphooxy_l_glutamate_adenylyl_2_group +pi +hplus
-    nh3
   }
 
   branch from glutamate side right {

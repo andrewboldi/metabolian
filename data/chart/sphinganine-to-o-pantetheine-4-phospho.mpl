@@ -22,37 +22,37 @@ pathway sphinganine-to-o-pantetheine-4-phospho "sphinganine to O-(pantetheine-4'
 
   branch from sphinganine side left {
     sphinganine
-    <-> . +h2o +pi
-    sphinganine_1_phosphate
-  }
-
-  branch from sphinganine side right {
-    sphinganine
     <-> . +oleoyl_coa +coa +hplus
     n_9z_octadecenoyl_sphinganine
   }
 
+  branch from sphinganine side right {
+    sphinganine
+    <-> . +2_hydroxystearoyl_coa +coa +hplus
+    n_2_hydroxyoctadecanoyl_sphinganine
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +trans_caffeate +atp +hplus
-    trans_caffeoyl_amp
+    <-> ec_4_2_3_213 [4.2.3.213] +all_trans_hexaprenyl_diphosphate +h2o
+    colleterpenol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +trans_sinapate +atp +coa +amp
-    sinapoyl_coa
+    <-> . +utp
+    2_3_cyclic_di_ump
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_293 [2.3.1.293] +ultra_long_chain_mono_unsaturated_fatty_acyl_pan +malonyl-acp +hplus +co2
-    ultra_long_chain_mono_unsaturated_3_oxoacyl_pant
+    <-> ec_6_2_1_77 [6.2.1.77] +l_lysinium +atp +amp +ppi
+    o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_2_3_1_129 [2.3.1.129] +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +udpglcnac
-    udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine
+    <-> . +o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1 +amp +hplus
+    l_lysyl_5_amp
   }
 }

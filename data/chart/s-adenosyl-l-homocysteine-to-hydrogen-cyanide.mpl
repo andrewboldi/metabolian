@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-hydrogen-cyanide "S-adenosyl-L-homocysteine
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_2_aminoethyl_sulfanyl_6_methyl_7_oxo_1_azabicy +h
-    5s_3_2_aminoethylsulfanyl_7_oxo_1_azabicyclo_3
+    <-> . +s_adenosyl_l_homocysteine +1s_1_2s_2_amino_4_methylpentanamido_ethyl_metho
+    hydrogen_1s_1_2s_2_amino_4_methylpentanamido_eth
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_2_aminoethyl_sulfanyl_6_ethyl_7_oxo_1_azabicyc +h
-    3_2_aminoethyl_sulfanyl_6_methyl_7_oxo_1_azabicy
+    <-> . +s_adenosyl_l_homocysteine +2s_4_prop_1_en_1_yl_2_3_dihydro_1h_pyrrole_2_ca +h
+    2s_4_ethenyl_2_3_dihydro_1h_pyrrole_2_carboxyla
   }
 
   branch from e_2_methylpropanal_oxime side left {
@@ -36,14 +36,14 @@ pathway s-adenosyl-l-homocysteine-to-hydrogen-cyanide "S-adenosyl-L-homocysteine
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_63 [1.14.14.63] +amyrin +fmnh2 +o2 +h2o +hplus
-    maniladiol
+    <-> . +tetrahydroalstonine +fmnh2 +o2 +h2o +hplus
+    dihydroalstonine
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_81 [1.14.14.81] +3_5_unsubstituted_flavanone +fmnh2 +o2 +h2o +hplus
-    3_5_dihydroxyflavanone
+    <-> . +ajmalicine +fmnh2 +o2 +h2o +hplus
+    dihydroserpentine
   }
 
   branch from hydrogen_cyanide side right {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S-adenosyl-L-homocysteine" {
-  spacing 270
+  spacing 264
 
   spine at 0,0 {
     cobalt_precorrin_2
@@ -22,14 +22,14 @@ pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
-    rs_coclaurinium
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_34 [2.1.1.34] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_70 [2.1.1.70] +8_hydroxyfurocoumarin +sam +hplus
+    8_methoxyfurocoumarin
   }
 
   branch from cobalt_precorrin_4 side left {
@@ -38,13 +38,7 @@ pathway cobalt-precorrin-2-to-s-adenosyl-l-homocysteine "cobalt-precorrin-2 to S
     hydrogen_acceptor
   }
 
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> . +prefumagillin +nadph +o2 +nadp +h2o
-    fumagillin
-  }
-
-  branch from cobalt_precorrin_6a side left {
+  branch from cobalt_precorrin_6a side right {
     cobalt_precorrin_6a
     <-> ec_1_3_1_106 [1.3.1.106] +nad +nadh +hplus
     cobalt_precorrin_6b

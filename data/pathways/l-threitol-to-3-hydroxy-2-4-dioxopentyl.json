@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "l-threitol-to-3-hydroxy-2-4-dioxopentyl",
   "name": "L-threitol to 3-hydroxy-2,4-dioxopentyl…",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from L-threitol to 3-hydroxy-2,4-dioxopentyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -158,13 +158,12 @@
       }
     },
     {
-      "id": "n6_n6_dimethyl_l_lysine_1",
-      "name": "N6,N6-dimethyl-L-lysine(1+)",
-      "short": "N6,N6-dimethyl-L-ly…",
-      "formula": "C8H17N2O",
+      "id": "s_reticulinium",
+      "name": "(S)-reticulinium",
+      "formula": "C19H24NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61976"
+        "chebi": "CHEBI:57873"
       }
     },
     {
@@ -186,12 +185,13 @@
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
+      "id": "s_6_o_demethylreticuline",
+      "name": "(S)-6-O-demethylreticuline",
+      "short": "6-O-demethylreticul…",
+      "formula": "C18H22NO4",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:194502"
       }
     },
     {
@@ -204,13 +204,23 @@
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
+      "id": "n1_methyladenosine_5_monophosphate_1",
+      "name": "N1-methyladenosine 5'-monophosphate(1−)",
+      "short": "N1-methyladenosine…",
+      "formula": "C11H13N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61961"
+        "chebi": "CHEBI:74491"
+      }
+    },
+    {
+      "id": "adenosine_5_monophosphate_1",
+      "name": "adenosine 5'-monophosphate(1−)",
+      "short": "adenosine 5'-MP(1−)",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74411"
       }
     }
   ],
@@ -241,13 +251,6 @@
       "name": "3-oxoisoapionate-4-phosphate decarboxylase",
       "ec": [
         "4.1.1.121"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_69",
-      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
-      "ec": [
-        "1.14.11.69"
       ]
     }
   ],
@@ -477,11 +480,11 @@
     },
     {
       "id": "r6",
-      "name": "N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl...",
-      "equation": "N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl(27)-[histone H3] + formaldehyde + succinate + CO2",
+      "name": "(S)-reticuline + 2-oxoglutarate + O2 = (S)-6-O-demethylreticuline + formaldehyde + succ...",
+      "equation": "(S)-reticuline + 2-oxoglutarate + O2 = (S)-6-O-demethylreticuline + formaldehyde + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "s_reticulinium",
           "stoichiometry": 1
         },
         {
@@ -495,7 +498,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "s_6_o_demethylreticuline",
           "stoichiometry": 1
         },
         {
@@ -514,71 +517,65 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:60232"
+        "rhea": "RHEA:76027"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60232"
+            "id": "RHEA:76027"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "[histone H3]-trimethyl-L-lysine(36) demethylase",
-      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2 2-oxoglutarate + 2 O2 = N(6)-methyl-L-lysyl(36)-[histone H3] + 2 formaldehyde + 2 succinate + 2 CO2",
-      "ec": "1.14.11.69",
+      "name": "N(1)-methyladenosine(58) in tRNA + 2-oxoglutarate + O2 = adenosine(58) in tRNA + formal...",
+      "equation": "N(1)-methyladenosine(58) in tRNA + 2-oxoglutarate + O2 = adenosine(58) in tRNA + formaldehyde + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "n1_methyladenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "akg",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "adenosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "formaldehyde",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_69"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:60236"
+        "rhea": "RHEA:79019"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60236"
+            "id": "RHEA:79019"
           }
         ]
       }

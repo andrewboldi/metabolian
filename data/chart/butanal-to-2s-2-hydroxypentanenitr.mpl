@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway butanal-to-2s-2-hydroxypentanenitr "butanal to (2S)-2-hydroxypentanenitr…" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     butanal
@@ -16,51 +16,39 @@ pathway butanal-to-2s-2-hydroxypentanenitr "butanal to (2S)-2-hydroxypentanenitr
     2s_2_hydroxypentanenitrile
   }
 
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_17_7_4 [1.17.7.4] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +fmn +h2o
-    ipp
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> . +iminoaspartate +h +fmn
-    l_aspartate
-  }
-
   branch from h side left {
     h
-    <-> . +25s_3_7_12_trihydroxy_5_cholestanoyl_coa +fad +24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
-    fadh2
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_lyxopyranose
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_62 [2.7.1.62] +alpha_d_glucose +phosphoramidate +nh4
-    alpha_d_glucose_1_phosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +2_deoxy_d_galactopyranose +phosphate +2_deoxy_d_galactopyranose +h2o
+    atp
   }
 
   branch from o2 side left {
     o2
-    <-> . +2z_4e_5_amino_2_formylhexa_2_4_dienedioate +h
-    4_amino_3_hydroxybenzoate
+    <-> ec_1_14_13_8 [1.14.13.8] +h +nadph +n_methyl_n_2s_1_phenylpropan_2_yl_hydroxylamine +z_methyl_oxido_1_phenylpropan_2_ylidene_azanium +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_81 [1.14.13.81] +h +nadph +mg_protoporphyrin_ix_13_monomethyl_ester +divinylprotochlorophyllide +h2o
-    nadp
+    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen +nadp +h2o
+    5_methyl_n_4_nitrophenyl_1_1_dioxo_1lambda6_thio
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_69 [1.14.14.69] +ent_cassa_12_15_diene +fmnh2 +o2 +h2o +hplus
-    ent_3_hydroxycassa_12_15_dien_2_one
+    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    1_hydroxy_long_chain_fatty_acid_anion
   }
 
   branch from fmn side right {
     fmn
-    <-> . +ent_cassa_12_15_dien_2_ol +fmnh2 +o2 +h2o +hplus
-    ent_cassa_12_15_dien_2_3_diol
+    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
+    eriodictyol
   }
 }

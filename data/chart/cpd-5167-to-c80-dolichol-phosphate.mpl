@@ -22,13 +22,13 @@ pathway cpd-5167-to-c80-dolichol-phosphate "CPD-5167 to C80 dolichol phosphate" 
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    25r_5beta_cholestane_3alpha_7alpha_26_triol
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    18_2_18_3_ps
   }
 
   branch from h side right {
     h
-    <-> . +9z_12z_octadecadienoate +cholesterol +h2o
-    1_linoleoyl_cholesterol_cholesterol_ester_18_2_d
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
   }
 }

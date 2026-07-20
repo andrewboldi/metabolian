@@ -273,34 +273,6 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "2e_11z_icosadienoyl_coa",
-      "name": "(2E,11Z)-icosadienoyl-CoA",
-      "short": "(2E,11Z)-icosadieno…",
-      "formula": "C41H66N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:76388"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
       "id": "nadh",
       "name": "NADH",
       "formula": "C21H27N7O14P2",
@@ -393,30 +365,21 @@
       }
     },
     {
-      "id": "muurolol",
-      "name": "(+)-Τ-muurolol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:63704"
-      }
-    },
-    {
-      "id": "cadinene",
-      "name": "(−)-δ-cadinene",
+      "id": "copaene",
+      "name": "β-copaene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:63703"
+        "chebi": "CHEBI:64799"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
+      "id": "sativene",
+      "name": "(+)-sativene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM738702"
+        "chebi": "CHEBI:231783"
       }
     },
     {
@@ -427,15 +390,6 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM163173"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
       }
     },
     {
@@ -495,21 +449,38 @@
       "xrefs": {
         "metanetx": "MNXM744569"
       }
+    },
+    {
+      "id": "15z_tetracosenoyl_cholesterol",
+      "name": "(15Z-tetracosenoyl)-cholesterol",
+      "short": "(15Z-tetracosenoyl)…",
+      "formula": "C51H90O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232414"
+      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_4_2_3_98",
-      "name": "(+)-T-muurolol synthase",
+      "id": "ec_4_2_3_127",
+      "name": "beta-copaene synthase",
       "ec": [
-        "4.2.3.98"
+        "4.2.3.127"
       ]
     },
     {
-      "id": "ec_4_2_3_97",
-      "name": "(-)-delta-cadinene synthase",
+      "id": "ec_4_2_3_129",
+      "name": "(+)-sativene synthase",
       "ec": [
-        "4.2.3.97"
+        "4.2.3.129"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_26",
+      "name": "sterol O-acyltransferase",
+      "ec": [
+        "2.3.1.26"
       ]
     }
   ],
@@ -1059,45 +1030,6 @@
     },
     {
       "id": "r14",
-      "name": "(11Z)-eicosenoyl-CoA + O2 = (2E,11Z)-eicosadienoyl-CoA + H2O2",
-      "equation": "(11Z)-eicosenoyl-CoA + O2 = (2E,11Z)-eicosadienoyl-CoA + H2O2",
-      "substrates": [
-        {
-          "metabolite": "11z_eicosenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_11z_icosadienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 14,
-      "xrefs": {
-        "rhea": "RHEA:86155"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:86155"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r15",
       "name": "Reaction MNXR157381",
       "substrates": [
         {
@@ -1144,7 +1076,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 15,
+      "pathwayStep": 14,
       "xrefs": {
         "metanetx": "MNXR157381"
       },
@@ -1159,97 +1091,19 @@
       }
     },
     {
-      "id": "r16",
-      "name": "(+)-T-muurolol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-T-muurolol + diphosphate",
-      "ec": "4.2.3.98",
+      "id": "r15",
+      "name": "Reaction MNXR157386",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "muurolol",
+          "metabolite": "11z_eicosenoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_98"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 16,
-      "xrefs": {
-        "rhea": "RHEA:32011"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32011"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r17",
-      "name": "(-)-delta-cadinene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (-)-delta-cadinene + diphosphate",
-      "ec": "4.2.3.97",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cadinene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_97"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 17,
-      "xrefs": {
-        "rhea": "RHEA:32015"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32015"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r18",
-      "name": "Reaction MNXR103836",
-      "substrates": [
-        {
-          "metabolite": "13z_3_oxodocosenoyl_coa",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -1257,37 +1111,131 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_s_hydroxy_13cis_docosenoyl_coa",
+          "metabolite": "erucoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 18,
+      "pathwayStep": 15,
       "xrefs": {
-        "metanetx": "MNXR103836"
+        "metanetx": "MNXR157386"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103836"
+            "id": "MNXR157386"
           }
         ]
       }
     },
     {
-      "id": "r19",
+      "id": "r16",
+      "name": "beta-copaene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-copaene + diphosphate",
+      "ec": "4.2.3.127",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "copaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 16,
+      "xrefs": {
+        "rhea": "RHEA:33111"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33111"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r17",
+      "name": "(+)-sativene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-sativene + diphosphate",
+      "ec": "4.2.3.129",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sativene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_129"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 17,
+      "xrefs": {
+        "rhea": "RHEA:33119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r18",
       "name": "Reaction MNXR158653",
       "substrates": [
         {
@@ -1314,7 +1262,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 19,
+      "pathwayStep": 18,
       "xrefs": {
         "metanetx": "MNXR158653"
       },
@@ -1324,6 +1272,44 @@
           {
             "db": "MetaNetX",
             "id": "MNXR158653"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r19",
+      "name": "Reaction MNXR158654",
+      "substrates": [
+        {
+          "metabolite": "11z_eicosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13z_3_oxodocosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 19,
+      "xrefs": {
+        "metanetx": "MNXR158654"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158654"
           }
         ]
       }
@@ -1485,48 +1471,6 @@
     },
     {
       "id": "r24",
-      "name": "Reaction MNXR103840",
-      "substrates": [
-        {
-          "metabolite": "15z_3_oxotetracosenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_s_hydroxy_cis_15_tetracosaenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 24,
-      "xrefs": {
-        "metanetx": "MNXR103840"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR103840"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r25",
       "name": "Reaction MNXR158675",
       "substrates": [
         {
@@ -1553,7 +1497,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 25,
+      "pathwayStep": 24,
       "xrefs": {
         "metanetx": "MNXR158675"
       },
@@ -1568,107 +1512,7 @@
       }
     },
     {
-      "id": "r26",
-      "name": "Reaction MNXR158674",
-      "substrates": [
-        {
-          "metabolite": "15z_tetracosenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_15z_tetracosadienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 26,
-      "xrefs": {
-        "metanetx": "MNXR158674"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR158674"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r27",
-      "name": "Reaction MNXR157398",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "erucoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "15z_tetracosenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 27,
-      "xrefs": {
-        "metanetx": "MNXR157398"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR157398"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r28",
+      "id": "r25",
       "name": "Reaction MNXR158747",
       "substrates": [
         {
@@ -1691,7 +1535,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 28,
+      "pathwayStep": 25,
       "xrefs": {
         "metanetx": "MNXR158747"
       },
@@ -1701,6 +1545,50 @@
           {
             "db": "MetaNetX",
             "id": "MNXR158747"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r26",
+      "name": "sterol O-acyltransferase",
+      "ec": "2.3.1.26",
+      "substrates": [
+        {
+          "metabolite": "15z_tetracosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15z_tetracosenoyl_cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 26,
+      "xrefs": {
+        "metanetx": "MNXR164663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR164663"
           }
         ]
       }

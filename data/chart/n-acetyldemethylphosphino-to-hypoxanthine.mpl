@@ -24,37 +24,37 @@ pathway n-acetyldemethylphosphino-to-hypoxanthine "N-Acetyldemethylphosphino… 
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_1_99_41 [1.1.99.41] +3_hydroxy_16_methoxy_2_3_dihydrotabersoninium +hydrogen_donor
-    3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd
+    <-> . +dopamine +hydrogen_donor +h2o
+    m_tyraminium
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +2_sulfenohercynine +hydrogen_donor +hplus +h2o
-    ergothioneine
+    <-> . +dehydroprobetaenone_i +hydrogen_donor
+    probetaenone_i
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
-    r_laudanine
+    <-> ec_2_1_1_177 [2.1.1.177] +pseudouridine_5_phosphate_1 +sam +hplus
+    n3_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_300 [2.1.1.300] +pavine +sam +hplus
-    argemonine
+    <-> ec_2_1_1_178 [2.1.1.178] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +hplus
-    chromopyrrolate
+    <-> . +glutamine +o2 +h2o +h2o2
+    2_oxoglutaramate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +co2
-    protodeoxyviolaceinate
+    <-> . +o2 +h2o +pyruvate +h2o2
+    alanine
   }
 }

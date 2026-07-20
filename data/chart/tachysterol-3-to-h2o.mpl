@@ -30,25 +30,25 @@ pathway tachysterol-3-to-h2o "tachysterol 3 to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +4_hydroxylamino_2_6_dinitrotoluene +h +h2o
-    4_amino_2_6_dinitrotoluene
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +h +2_oxo_7_methylthioheptanoic_acid
+    3_4_methylthio_butylmalic_acid
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2_amino_4_6_dinitrotoluene +h2o
-    2_4_diamino_6_nitrotoluene
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +h +2_oxo_8_methylthiooctanoic_acid
+    3_5_methylthio_pentylmalic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp +h +o2 +nadph
-    theophylline
+    <-> . +pyrene_4_5_oxide
+    trans_4_5_dihydroxy_4_5_dihydropyrene
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_21_3_6 [1.21.3.6] +trans_2_3_4_4_6_pentahydroxychalcone +o2
-    bracteatin
+    <-> . +benzo_a_pyrene_11_12_epoxide
+    benzo_a_pyrene_trans_11_12_dihydrodiol
   }
 }

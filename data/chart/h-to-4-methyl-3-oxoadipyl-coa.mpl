@@ -18,25 +18,25 @@ pathway h-to-4-methyl-3-oxoadipyl-coa "H to 4-methyl-3-oxoadipyl-CoA" {
 
   branch from h side left {
     h
-    <-> . +adenosine_3_5_bisphosphate +24_epicathasterone_3_o_sulfate +24_epicathasterone
-    3_phosphoadenylyl_sulfate
+    <-> . +quercetin_4_o_d_glucopyranoside +glucose +h2o
+    quercetin_3_4_di_o_d_glucoside
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +n_hydroxycadaverine +coa
-    n_hydroxy_n_acetylcadaverine
+    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +coa +kaempferol_3_o_beta_d_glucoside
+    e_feruloyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +l_threonine +o2 +threo_2_amino_3_4_dihydroxybutanoic_acid
+    <-> . +2_oxoglutarate +3_4_5_trihydroxy_3_7_dimethoxyflavone +o2 +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
     co2
   }
 
   branch from succinate side right {
     succinate
-    <-> . +2_oxoglutarate +3_4_5_trihydroxy_3_7_dimethoxyflavone +o2 +co2
-    3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone
+    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +r_naringenin +o2 +co2
+    2s_3s_3_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_di
   }
 }

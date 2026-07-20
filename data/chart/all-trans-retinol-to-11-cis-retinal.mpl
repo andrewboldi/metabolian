@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-retinol-to-11-cis-retinal "all-trans-retinol to 11-cis-retinal" {
-  spacing 244
+  spacing 226
 
   spine at 0,0 {
     all_trans_retinol
@@ -20,42 +20,18 @@ pathway all-trans-retinol-to-11-cis-retinal "all-trans-retinol to 11-cis-retinal
 
   branch from nadp side left {
     nadp
-    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o
-    thiobenzamide_s_s_dioxide
+    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h +nadph
+    cdp_ascarylose
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +nadph +xanthine +h2o
-    formaldehyde
+    <-> . +h +dihydrogeranylgeranyl_diphosphate +nadph
+    tetrahydrogeranylgeranyl_diphosphate
   }
 
   branch from all_trans_retinol side left {
     all_trans_retinol
-    <-> ec_1_1_1_300 [1.1.1.300] +nadp +nadph +hplus
-    all_trans_retinal
-  }
-
-  branch from all_trans_retinol side right {
-    all_trans_retinol
-    <-> . +myristoyl_coa +coa
-    all_trans_retinyl_tetradecanoate
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_iodothyronamine +iodide +hydrogen_acceptor +hplus
-    3_3_diiodothyronamine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +thyronamine +iodide +hydrogen_acceptor +hplus
-    3_iodothyronamine
-  }
-
-  branch from 11_cis_retinol side left {
-    11_cis_retinol
     <-> .
     13_cis_retinol
   }
@@ -64,5 +40,11 @@ pathway all-trans-retinol-to-11-cis-retinal "all-trans-retinol to 11-cis-retinal
     11_cis_retinol
     <-> .
     9_cis_retinol
+  }
+
+  branch from 11_cis_retinol side left {
+    11_cis_retinol
+    <-> . +fatty_acyl_coa +coa
+    11_cis_retinyl_ester
   }
 }

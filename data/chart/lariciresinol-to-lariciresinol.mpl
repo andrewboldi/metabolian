@@ -20,13 +20,13 @@ pathway lariciresinol-to-lariciresinol "(+)-lariciresinol to (+)-lariciresinol" 
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +s_citronellal +nadph
-    isomenthol
+    <-> ec_1_1_1_49 [1.1.1.49] +6_phospho_d_glucono_1_5_lactone +h +nadph
+    alpha_d_glucose_6_phosphate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoisomenthol +h +nadph
-    s_citronellal
+    <-> ec_1_16_1_5 [1.16.1.5] +vitamin_b12r +h +h2o +nadph
+    aquacobalamin
   }
 }

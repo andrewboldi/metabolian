@@ -28,14 +28,14 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_84 [2.1.1.84] +3_4_5_6_tetrahydroxy_3_7_dimethoxyflavone +sam
-    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
+    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sam +hplus
+    n_methylhistaminium
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_69 [2.1.1.69] +5_hydroxyfurocoumarin +sam +hplus
-    5_methoxyfurocoumarin
+    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
+    rs_coclaurinium
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -88,14 +88,14 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
 
   branch from arsenite side left {
     arsenite
-    <-> . +methylarsonous_acid +hydrogen_donor +o2 +hydrogen_acceptor +hplus
-    methanol
+    <-> . +arsenate +h +glutathione +h2o
+    glutathione_disulfide
   }
 
   branch from arsenite side right {
     arsenite
-    <-> . +arsenate +h +glutathione +h2o
-    glutathione_disulfide
+    <-> . +r_dihydrolipoate +h +ribose_1_arsenate +beta_d_ribofuranose
+    r_lipoate
   }
 
   branch from h side left {
@@ -106,8 +106,8 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_11_1_8 [1.11.1.8] +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate +h2o
-    l_thyroxine
+    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_isoleucine +phosphate +l_isoleucine +h2o
+    atp
   }
 
   branch from dimethylselenide side left {
@@ -124,14 +124,14 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +2_oxoglutarate +nh4
-    4_oxoglutaramate
+    <-> . +h +adp +phosphate +atp
+    myo_inositol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_4_1_20 [1.4.1.20] +nadh +h +nh4 +r_3_methyl_2_oxopentanoate +nad
-    l_isoleucine
+    <-> . +h +adp +phosphate +atp
+    isethionic_acid
   }
 
   branch from l_selenomethionine side left {
@@ -142,13 +142,13 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_2_7_1_23 [2.7.1.23] +dtdp +h +nad
-    dttp
+    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadph +h2o
+    21_hydroxyprogesterone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nadph +h2o
-    ammonium_hydroxide
+    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph +h2o
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 }

@@ -20,73 +20,73 @@ pathway 18-hydroxyoleoyl-coa-to-h2o "18-hydroxyoleoyl-CoA to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    oleandomycin
+    <-> . +cmp +alpha_8eleg5rhb7ac_2_3_alpha_l_fucnam_1_3_alpha +cmp_beta_7_acetamido_3_5_7_9_tetradeoxy_5_r_3_hy
+    alpha_l_fucnam_1_3_alpha_d_glcnac_pp_undecapreno
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    rifamycin_b
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +beta_d_man_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +alpha_d_galnac_1_3_beta_d_man_1_4_beta_d_glc_1_3
+    udp
   }
 
   branch from nadph side left {
     nadph
-    <-> . +n_n_diethylethanamine_oxide +nadp +h2o +h +triethylamine
-    o2
+    <-> . +pelargonidin +h +nadp
+    afzelechin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +3_4_dichloroaniline +o2 +nadp +4_5_dichlorobenzene_1_2_diol
-    nh4
+    <-> ec_1_3_1_112 [1.3.1.112] +pelargonidin +h +nadp
+    epiafzelechin
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    streptomycin
+    <-> . +h +adp +phosphate +h2o
+    sphingomyelin_33_1
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    tuberactinomycin_a
+    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate +h2o
+    arsenic_trypanothione
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_176 [2.3.1.176] +chenodeoxycholoyl_coa +propanoyl_coa
-    3alpha_7alpha_dihydroxy_24_oxo_5beta_cholestanoy
+    <-> . +ethyl_decanoate +ethanol
+    decanoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> . +13z_16z_docosadienoyl_coa +h2o
-    13z_16z_docosadienoic_acid
+    <-> ec_2_3_1_87 [2.3.1.87] +coa_s_acetyl_tryptamine +bromide +h
+    2_bromo_n_2_1h_indol_3_yl_ethyl_acetamide
   }
 
   branch from nadp side left {
     nadp
-    <-> . +o4_o5_dimethylthujaplicatin +h +o2 +nadph +h2o
-    dihydroanhydropodorhizol
+    <-> . +h +nadph +epiafzelechin
+    pelargonidin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +previridicatumtoxin +o2 +nadph +h2o
-    viridicatumtoxin
+    <-> . +2_ethyl_4_hydroxy_2_methyl_3_2h_furanone +h +nadph
+    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    tuberactinomycin_o
+    <-> ec_3_1_1_1 [3.1.1.1] +methyl_l_phenylalaninate +l_phenylalanine
+    methanol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    tylosin
+    <-> ec_4_2_1_17 [4.2.1.17] +homoplatensic_4_enyl_coa
+    3s_3_hydroxy_homoplatensic_coa
   }
 }

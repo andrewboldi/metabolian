@@ -82,39 +82,12 @@
       }
     },
     {
-      "id": "pmf",
-      "name": "PMF",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM01"
-      }
-    },
-    {
-      "id": "menaquinone_6",
-      "name": "menaquinone-6",
-      "formula": "C41H56O2",
+      "id": "10_deoxymethymycin",
+      "name": "10-deoxymethymycin",
+      "formula": "C25H43NO6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM727389"
-      }
-    },
-    {
-      "id": "menaquinol_6",
-      "name": "menaquinol-6",
-      "formula": "C41H58O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:84536"
-      }
-    },
-    {
-      "id": "nitric_oxide",
-      "name": "nitric oxide",
-      "formula": "NO",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1107902"
+        "chebi": "CHEBI:29706"
       }
     },
     {
@@ -127,24 +100,43 @@
       }
     },
     {
-      "id": "nitric_acid",
-      "name": "nitric acid",
-      "formula": "HNO3",
+      "id": "methymycin",
+      "name": "methymycin",
+      "formula": "C25H43NO7",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM732399"
+        "chebi": "CHEBI:29630"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "pikromycin",
+      "name": "pikromycin",
+      "formula": "C28H47NO8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29665"
+      }
+    },
+    {
+      "id": "narbomycin",
+      "name": "narbomycin",
+      "formula": "C28H47NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29649"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_12_17",
-      "name": "nitric oxide dioxygenase",
-      "ec": [
-        "1.14.12.17"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -274,62 +266,11 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR145770",
+      "name": "Reaction MNXR149591",
       "substrates": [
         {
-          "metabolite": "pmf",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h",
+          "metabolite": "10_deoxymethymycin",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "menaquinone_6",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pmf",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "menaquinol_6",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR145770"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR145770"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "nitric oxide dioxygenase",
-      "ec": "1.14.12.17",
-      "substrates": [
-        {
-          "metabolite": "nitric_oxide",
-          "stoichiometry": 2
         },
         {
           "metabolite": "h",
@@ -337,7 +278,7 @@
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "nadph",
@@ -346,30 +287,79 @@
       ],
       "products": [
         {
+          "metabolite": "methymycin",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nitric_acid",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_12_17"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR145793"
+        "metanetx": "MNXR149591"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR145793"
+            "id": "MNXR149591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR149593",
+      "substrates": [
+        {
+          "metabolite": "pikromycin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "narbomycin",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR149593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR149593"
           }
         ]
       }

@@ -18,13 +18,13 @@ pathway 2-2-methylbutanoyl-phlor-to-diphosphate "2-(2-methylbutanoyl)phlor… to
 
   branch from ppi side left {
     ppi
-    <-> . +geranylgeranyl_diphosphate +h2o
-    s_nephthenol
+    <-> . +fpp +h2o
+    palustrol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    elemene
+    <-> . +fpp +h2o
+    selina_6_en_4_ol
   }
 }

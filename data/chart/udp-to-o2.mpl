@@ -18,61 +18,61 @@ pathway udp-to-o2 "UDP to O2" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +udp +4_methylthiobutyl_desulfoglucosinolate +h
-    z_omega_methylsulfanyl_pentyl_thiohydroximate
+    <-> ec_2_4_1_195 [2.4.1.195] +deoxydesulfoglucohirsutin +udp +h
+    9_methylthio_nonyl_thiohydroximic_acid
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_195 [2.4.1.195] +5_methylsulfanyl_pentyl_desulfoglucosinolate +udp +h
-    z_omega_methylsulfanyl_hexyl_thiohydroximate
+    <-> . +udp +h +brassinolide_23_o_glucoside
+    brassinolide
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_glucono_1_5_lactone +h
-    d_allose
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +h +pyridine_3_carbaldehyde
+    3_pyridinemethanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_glucono_1_5_lactone +h
-    aldehydo_d_altrose
+    <-> . +nadh +h +phenanthrene +o2 +h2o
+    1s_2r_1_2_epoxy_1_2_dihydrophenanthrene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_alanine +d_serine
-    d_alanyl_d_serine
+    <-> . +7_9_12_decaketide_intermediate_5
+    7_9_12_decaketide_intermediate_6
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +4_hydroxynon_2_enoic_acid +h +nad
-    4_hydroxynon_2_enal
+    <-> . +22e_3_oxochola_4_22_dien_24_oyl_coa
+    22_hydroxy_3_oxochol_4_en_24_oyl_coa
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_fucono_1_4_lactone +nad
-    d_fucopyranose
+    <-> . +alpha_d_ribofuranose_5_phosphate
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_11_1_1 [1.11.1.1] +nadh +ferricyanide +nad
-    ferrocyanide
+    <-> . +nitrite +o_5_oxidonitroso_4_oxocyclohex_2_en_1_ylidenenit
+    o_5_hydroxynitroso_3_oxidonitroso_2_oxocyclohexy
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_94 [1.14.14.94] +leukotriene_b4 +h +nadph +nadp +h2o
-    19_hydroxyleukotriene_b4
+    <-> . +holothin +h2o2
+    dithioholothin
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_12_16 [1.13.12.16] +butanal +nitrite +h
-    1_nitrobutane
+    <-> ec_1_1_3_10 [1.1.3.10] +d_glucono_1_5_lactone +h2o2
+    2_dehydro_d_glucono_1_5_lactone
   }
 }

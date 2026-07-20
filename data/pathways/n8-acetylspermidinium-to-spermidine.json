@@ -176,6 +176,25 @@
       "xrefs": {
         "chebi": "CHEBI:146234"
       }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino",
+      "name": "(4aR,7S)-2-(adenosyl(5')diphospho(5)ribosyl)-7-amino-4-carbamoyl-4a,5,6,7-tetrahydro-2H-cyclopenta[c]pyridine-7-carboxylate",
+      "short": "(4aR,7S)-2-(adenosy…",
+      "formula": "C25H32N8O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:232290"
+      }
     }
   ],
   "enzymes": [
@@ -222,10 +241,10 @@
       ]
     },
     {
-      "id": "ec_2_5_1_157",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
+      "id": "ec_2_5_1_161",
+      "name": "S-adenosyl-L-methionine:NAD(+) aminocarboxypropyltransferase",
       "ec": [
-        "2.5.1.157"
+        "2.5.1.161"
       ]
     }
   ],
@@ -428,8 +447,8 @@
     },
     {
       "id": "r5",
-      "name": "N(1)-methylpseudouridine(1248) in human 18S rRNA + S-adenosyl-L-methionine = N(1)-methy...",
-      "equation": "N(1)-methylpseudouridine(1248) in human 18S rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine(1248) in human 18S rRNA + S-methyl-5'-thioadenosine + H(+)",
+      "name": "N(1)-methylpseudouridine(1191) in yeast 18S rRNA + S-adenosyl-L-methionine = N(1)-methy...",
+      "equation": "N(1)-methylpseudouridine(1191) in yeast 18S rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine(1191) in yeast 18S rRNA + S-methyl-5'-thioadenosine + H(+)",
       "substrates": [
         {
           "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
@@ -457,36 +476,36 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:63292"
+        "rhea": "RHEA:63300"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63292"
+            "id": "RHEA:63300"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "rRNA small subunit aminocarboxypropyltransferase",
-      "equation": "an N(1)-methylpseudouridine in rRNA + S-adenosyl-L-methionine = N(1)-methyl-N(3)-[(3S)-3-amino-3-carboxypropyl]pseudouridine in rRNA + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "2.5.1.157",
+      "name": "S-adenosyl-L-methionine:NAD(+) aminocarboxypropyltransferase",
+      "equation": "S-adenosyl-L-methionine + NAD(+) = (4aR,7S)-2-(adenosyl(5')diphospho(5)ribosyl)-7-amino-4-carbamoyl-4a,5,6,7-tetrahydro-2H-cyclopenta[c]pyridine-7-carboxylate + S-methyl-5'-thioadenosine + 2 H(+)",
+      "ec": "2.5.1.161",
       "substrates": [
         {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
+          "metabolite": "sam",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n1_methyl_n3_3s_3_amino_3_carboxypropyl_pseudour",
+          "metabolite": "4ar_7s_2_adenosyl_5_diphospho_5_ribosyl_7_amino",
           "stoichiometry": 1
         },
         {
@@ -495,25 +514,25 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_157"
+          "enzyme": "ec_2_5_1_161"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:63296"
+        "rhea": "RHEA:82307"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63296"
+            "id": "RHEA:82307"
           }
         ]
       }

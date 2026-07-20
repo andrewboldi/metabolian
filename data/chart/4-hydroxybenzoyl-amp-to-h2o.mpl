@@ -18,49 +18,49 @@ pathway 4-hydroxybenzoyl-amp-to-h2o "4-hydroxybenzoyl-AMP to H2O" {
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_1_11z_18_3_9z_12z_15z
-    ps_20_1_11z_18_3_9z_12z_15z
+    <-> ec_4_1_1_114 [4.1.1.114] +3z_6z_9z_12z_15z_19z_22z_25z_28z_hentriaconta_3
+    3_3z_6z_9z_12z_pentadeca_3_6_9_12_tetraen_1_yl_4
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_2_9z_12z
-    ps_20_2_11z_14z_18_2_9z_12z
+    <-> . +coelenterazine_disulfonate_dioxetanone
+    oxidized_watasenia_luciferin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +h +nadph +h2o
-    15_tetracosenal
+    <-> ec_1_2_1_80 [1.2.1.80] +9z_octadecenoyl_coa +h +nadph +coa
+    cis_9_octadecenal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +docosanal +h2o +h +nadph
-    behenate
+    <-> ec_1_3_1_74 [1.3.1.74] +4_hydroxydihydrocinnamaldehyde +h +nadph
+    e_4_coumaraldehyde
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +s_carnitine
-    o_acetyl_r_carnitine
+    <-> ec_2_3_1_51 [2.3.1.51] +pa_16_0_18_1_11z +h +1_hexadecanoyl_sn_glycero_3_phosphate
+    11z_octadecenoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa
-    hentriaconta_3_6_9_12_19_22_25_28_octaene_16_one
+    <-> . +acetyl_coa +heptaprenylglycerol
+    diacetylheptaprenylglycerol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +l_tyrosine +phosphate +l_tyrosine
-    atp
+    <-> . +h +adp +phosphate +atp
+    d_arabinitol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
-    4_fluoro_l_tryptophan
+    <-> . +h +adp +2_amino_2_deoxy_d_mannopyranose +phosphate +2_amino_2_deoxy_d_mannopyranose
+    atp
   }
 }

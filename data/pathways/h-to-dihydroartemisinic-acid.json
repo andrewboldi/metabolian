@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-dihydroartemisinic-acid",
+  "name": "H to dihydroartemisinic acid…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H(+) to dihydroartemisinic acid hydroperoxide, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181761"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2e_6e_farnesoate",
+      "name": "(2E,6E)-farnesoate",
+      "formula": "C15H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83276"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "11r_dihydroartemisinic_aldehyde",
+      "name": "(11R)-dihydroartemisinic aldehyde",
+      "short": "dihydroartemisinic…",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64691"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dihydroartemisinate",
+      "name": "dihydroartemisinate",
+      "formula": "C15H23O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143905"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "dihydroartemisinic_acid_hydroperoxide",
+      "name": "dihydroartemisinic acid hydroperoxide",
+      "short": "dihydroartemisinic…",
+      "formula": "C15H23O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM11369"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2e_6e_farnesoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "11r_dihydroartemisinic_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181761"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181761"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(11R)-dihydroartemisinic aldehyde + NADP(+) + H2O = (11R)-dihydroartemisinate + NADPH +...",
+      "equation": "(11R)-dihydroartemisinic aldehyde + NADP(+) + H2O = (11R)-dihydroartemisinate + NADPH + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "11r_dihydroartemisinic_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroartemisinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:60684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR122119",
+      "substrates": [
+        {
+          "metabolite": "dihydroartemisinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroartemisinic_acid_hydroperoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR122119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122119"
+          }
+        ]
+      }
+    }
+  ]
+}

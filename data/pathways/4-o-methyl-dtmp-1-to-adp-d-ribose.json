@@ -131,16 +131,6 @@
       }
     },
     {
-      "id": "s_adp_d_ribosyl_l_cysteine_2",
-      "name": "S-(ADP-D-ribosyl)-L-cysteine(2−)",
-      "short": "S-(ADP-D-ribosyl)-L…",
-      "formula": "C18H24N6O14P2S",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:140607"
-      }
-    },
-    {
       "id": "l_lysinium",
       "name": "L-lysinium",
       "formula": "C6H13N2O",
@@ -160,6 +150,15 @@
       }
     },
     {
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H6N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50347"
+      }
+    },
+    {
       "id": "n4_adp_d_ribosyl_l_asparagine_2",
       "name": "N4-(ADP-D-ribosyl)-L-asparagine(2−)",
       "short": "N4-(ADP-D-ribosyl)-…",
@@ -167,15 +166,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:142555"
-      }
-    },
-    {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H6N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50347"
       }
     }
   ],
@@ -361,49 +351,6 @@
     },
     {
       "id": "r5",
-      "name": "L-cysteinyl-[protein] + NAD(+) = S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + nicotinamide...",
-      "equation": "L-cysteinyl-[protein] + NAD(+) = S-(ADP-D-ribosyl)-L-cysteinyl-[protein] + nicotinamide + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_cysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_adp_d_ribosyl_l_cysteine_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:56612"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:56612"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "L-lysyl-[protein] + NAD(+) = N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + nicotinamide + H(+)",
       "equation": "L-lysyl-[protein] + NAD(+) = N(6)-(ADP-D-ribosyl)-L-lysyl-[protein] + nicotinamide + H(+)",
       "substrates": [
@@ -431,7 +378,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:58220"
       },
@@ -441,6 +388,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:58220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicot...",
+      "equation": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicotinamide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_adp_d_ribosyl_l_asparagine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:58228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58228"
           }
         ]
       }

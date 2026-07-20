@@ -30,14 +30,14 @@ pathway 4-nitroso-2-6-dinitrotolu-to-4-amino-2-6-dinitro "4-nitroso-2,6-dinitrot
 
   branch from nadp side left {
     nadp
-    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +h +nadph
-    2_2_dithiodiethanol
+    <-> ec_1_1_1_184 [1.1.1.184] +4_pyridinecarboxaldehyde +h +nadph
+    4_pyridinemethanol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_188 [1.1.1.188] +duroquinol +h +nadph
-    duroquinone
+    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +1_2_naphthoquinone
+    naphthalene_1_2_diol
   }
 
   branch from 4_amino_2_6_dinitrotoluene side left {

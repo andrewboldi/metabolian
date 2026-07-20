@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-kaur-16-ene-to-diphosphate "ent-kaur-16-ene to diphosphate" {
-  spacing 250
+  spacing 244
 
   spine at 0,0 {
     ent_kaur_16_ene
@@ -24,37 +24,31 @@ pathway ent-kaur-16-ene-to-diphosphate "ent-kaur-16-ene to diphosphate" {
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_4_2_3_146 [4.2.3.146] +diphosphate +h2o
-    cyclooctat_9_en_7_ol
+    <-> ec_4_2_3_148 [4.2.3.148] +diphosphate
+    cembrene_c
   }
 
   branch from nadp side left {
     nadp
-    <-> . +lambertine +nadph
-    berberine
+    <-> . +h +8e_10e_dodecadienoic_acid +nadph +h2o
+    8e_10e_dodeca_8_10_dienol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +5_10_methylene_tetrahydromethanopterin_iminium_f +h +nadph
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
-  }
-
-  branch from phytyl_diphosphate side left {
-    phytyl_diphosphate
-    <-> ec_2_5_1_62 [2.5.1.62] +chlorophyllide_b2 +h +diphosphate
-    chlorophyll_b2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +ttp +h2o +hplus
-    tmp
+    <-> . +dechloro_dehydrogriseofulvin +h +nadph
+    dechlorogriseofulvin
   }
 
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadh +hplus +nad
-    lycopaoctaene
+    <-> . +n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine +spermidine +atp +amp +hplus
+    n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +l_tryptophan +atp +h2o +amp +hplus
+    d_tryptophan
   }
 }

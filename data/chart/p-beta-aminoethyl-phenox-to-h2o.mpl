@@ -18,37 +18,37 @@ pathway p-beta-aminoethyl-phenox-to-h2o "p-(beta-aminoethyl)phenox… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +tacrolimus +nadph +h2o
-    12_ht_or_m_vi_12_hydroxy_tacrolimus
+    <-> . +h +nadph +anaerobilin
+    beta_anaerubin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +s_lactaldehyde +nadph
-    propane_1_3_diol
+    <-> . +r_coclaurine +h +nadph
+    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_3_1_85 [2.3.1.85] +o_s_3r_hydroxytetradecanoylpantetheine_4_phospho
-    o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser
+    <-> . +h +adp +phosphate +atp
+    3beta_16alpha_dihydroxy_androst_5_en_17_one
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_3_1_85 [2.3.1.85] +trans_hex_2_enoyl_acp
-    r_3_hydroxyhexanoyl_acp
+    <-> . +h +adp +trans_cis_cis_2_11_14_eicosatrienoic_acid +phosphate +trans_cis_cis_2_11_14_eicosatrienoic_acid
+    atp
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +octadecanoyl_coa +h +o2 +h2o
-    11z_octadecenoyl_coa
+    <-> . +nadh +h +o2 +2s_hydroxy_all_trans_beta_carotene +h2o
+    2s_2_s_dihydroxy_all_trans_beta_carotene
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +diphosphate +co2 +h +2_demethylmenaquinone_8 +1_4_dihydroxy_2_naphthoate
-    octaprenyl_diphosphate
+    <-> ec_1_1_1_418 [1.1.1.418] +nadh +co2 +31_norcycloartanone
+    3beta_9beta_4alpha_demethyl_4alpha_carboxy_9_19
   }
 }

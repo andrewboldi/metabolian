@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-gypsogenate "UDP to gypsogenate…" {
-  spacing 194
+  spacing 182
 
   spine at 0,0 {
     udp
@@ -18,26 +18,14 @@ pathway udp-to-gypsogenate "UDP to gypsogenate…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +4_o_beta_d_glucosyl_indol_3_yl_formamide +udp +h
-    n_4_hydroxy_1h_indol_3_yl_formamide
+    <-> . +udp +h +soyasapogenol_e_23_o_beta_d_glucoside
+    soyasapogenol_e
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +medicagenate_28_o_beta_d_glucoside
-    medicagenic_acid
-  }
-
-  branch from gypsogenin side left {
-    gypsogenin
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    hederagenin
-  }
-
-  branch from gypsogenin side right {
-    gypsogenin
-    <-> . +udp_d_glucose +udp
-    gypsogenin_28_d_glucoside
+    <-> . +udp +h +eugenyl_o_beta_d_glucopyranoside
+    eugenol
   }
 
   branch from gypsogenate side left {
@@ -48,13 +36,13 @@ pathway udp-to-gypsogenate "UDP to gypsogenate…" {
 
   branch from fmn side right {
     fmn
-    <-> . +17_hydroxy_5_androstan_3_one +fmnh2 +o2 +h2o +hplus
-    18_hydroxy_5_dihydrotestosterone
+    <-> . +ent_cassa_12_15_dien_2_3_diol +fmnh2 +o2 +h2o +hplus
+    ent_3_hydroxycassa_12_15_dien_2_one
   }
 
   branch from fmn side left {
     fmn
-    <-> . +algestone +fmnh2 +o2 +h2o +hplus
-    6_16_17_trihydroxyprogesterone
+    <-> ec_1_14_14_72 [1.14.14.72] +drimenol +fmnh2 +o2 +h2o +hplus
+    drimendiol
   }
 }

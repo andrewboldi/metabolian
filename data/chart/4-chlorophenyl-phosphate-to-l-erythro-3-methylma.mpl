@@ -20,50 +20,50 @@ pathway 4-chlorophenyl-phosphate-to-l-erythro-3-methylma "4-Chlorophenyl phospha
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
-    1_naphthol
+    <-> . +d_glyceraldehyde_3_phosphate
+    enolaldehyde
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +3_azido_3_deoxythymidine_5_phosphate +h2o
-    zidovudine
+    <-> ec_3_1_3_91 [3.1.3.91] +n_7_methyl_gmp +h2o +h
+    n2_methylguanosine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_24 [1.14.13.24] +3_hydroxybenzoate +h +nadph +2_5_dihydroxybenzoate +h2o
-    nadp
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +ethane +h +nad +h2o
+    ethanol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +methyl_p_tolyl_sulfide +h +nadph +nadp +h2o
-    methyl_4_tolyl_sulfoxide
+    <-> ec_1_4_3_21 [1.4.3.21] +h +2_pyridinemethanamine +h2o +nh4 +h2o2
+    2_formylpyridine
   }
 
   branch from co2 side left {
     co2
-    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +3_aminoisobutanoic_acid
-    nh4
+    <-> ec_4_1_1_74 [4.1.1.74] +compound_0066905
+    4_fluorobenzoylformate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_74 [4.1.1.74] +4_bromobenzaldehyde
-    4_bromobenzoylformate
+    <-> ec_4_1_1_74 [4.1.1.74] +4_methoxybenzaldehyde
+    4_methoxybenzoylformic_acid
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +pentane_2_3_dione +nad
-    2_3_pentanediol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +cl_75947_quinoline_3_carboxylic_acid +nad +h2o
+    quinoline_3_carboxaldehyde
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +diacetyl +nad
-    butane_2_3_diol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +quinoline_4_carboxylate +nad +h2o
+    quinoline_4_carboxaldehyde
   }
 
   branch from succinate side left {

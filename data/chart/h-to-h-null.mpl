@@ -24,37 +24,37 @@ pathway h-to-h-null "H to H" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +h2o +h +o2 +nadph
-    4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
+    <-> ec_1_14_13_7 [1.14.13.7] +h +o2 +nadph +2_chlorophenol +h2o
+    3_chlorocatechol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +h2o +h +o2 +nadph
-    4_methylnitrosamino_1_3_pyridyl_1_butanol
+    <-> ec_1_14_13_7 [1.14.13.7] +h +3_chlorophenol +o2 +nadph +3_chlorocatechol
+    h2o
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +calicheamicin_alpha1_i +h +dtdp_4_ethylamino_3_o_methyl_2_4_dideoxy_l_threo
-    calicheamicin_psag
+    <-> . +dtdp_beta_l_4_epi_vancosamine +chloroorienticin_b +h
+    chloroeremomycin
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +calicheamicin_gamma_1_i +h +calicheamicin_alpha1_i
-    dtdp_3_o_methyl_beta_l_rhamnose
+    <-> . +20_deoxo_20_dihydro_12_13_deepoxyrosamicin +h +tylactone
+    dtdp_alpha_d_desosamine
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +7_hydroxymethyl_12_methylbenz_a_anthracene +nadp +h2o +nadph +7_12_dimethyltetraphene
-    o2
+    <-> . +adenosine_5_phosphosulfate +glutathione +amp
+    s_sulfoglutathione
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +7_12_dimethylbenz_a_anthracene_5_6_oxide +nadp +h2o +o2 +nadph
-    7_12_dimethyltetraphene
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin
+    2_2_3_trihydroxydiphenyl_ether
   }
 }

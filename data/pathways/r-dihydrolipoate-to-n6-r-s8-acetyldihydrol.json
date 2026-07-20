@@ -148,31 +148,51 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "eremophilene",
-      "name": "(+)-eremophilene",
-      "formula": "C15H24",
+      "id": "cycloaraneosene",
+      "name": "cycloaraneosene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:137562"
+        "chebi": "CHEBI:138247"
       }
     },
     {
-      "id": "isoafricanol",
-      "name": "(+)-isoafricanol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "very_long_chain_fatty_acid_anion",
+      "name": "very long-chain fatty acid anion",
+      "short": "very long-chain…",
+      "formula": "CO2R",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:137522"
+        "chebi": "CHEBI:58950"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "very_long_chain_fatty_acyl_coa",
+      "name": "very long-chain fatty acyl-CoA",
+      "short": "very long-chain…",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:138261"
       }
     },
     {
@@ -221,17 +241,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_164",
-      "name": "(+)-eremophilene synthase",
+      "id": "ec_4_2_3_191",
+      "name": "cycloaraneosene synthase",
       "ec": [
-        "4.2.3.164"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_157",
-      "name": "(+)-isoafricanol synthase",
-      "ec": [
-        "4.2.3.157"
+        "4.2.3.191"
       ]
     },
     {
@@ -394,18 +407,18 @@
     },
     {
       "id": "r4",
-      "name": "(+)-eremophilene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (+)-eremophilene + diphosphate",
-      "ec": "4.2.3.164",
+      "name": "cycloaraneosene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = cycloaraneosene + diphosphate",
+      "ec": "4.2.3.191",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "eremophilene",
+          "metabolite": "cycloaraneosene",
           "stoichiometry": 1
         },
         {
@@ -415,42 +428,49 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_164"
+          "enzyme": "ec_4_2_3_191"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52804"
+        "rhea": "RHEA:54520"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52804"
+            "id": "RHEA:54520"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(+)-isoafricanol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-isoafricanol + diphosphate",
-      "ec": "4.2.3.157",
+      "name": "a very long-chain fatty acid + ATP + CoA = a very long-chain fatty acyl-CoA + AMP + dip...",
+      "equation": "a very long-chain fatty acid + ATP + CoA = a very long-chain fatty acyl-CoA + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "very_long_chain_fatty_acid_anion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "isoafricanol",
+          "metabolite": "very_long_chain_fatty_acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
@@ -458,22 +478,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_157"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53616"
+        "rhea": "RHEA:54536"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53616"
+            "id": "RHEA:54536"
           }
         ]
       }

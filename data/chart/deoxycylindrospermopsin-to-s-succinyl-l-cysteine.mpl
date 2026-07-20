@@ -24,13 +24,13 @@ pathway deoxycylindrospermopsin-to-s-succinyl-l-cysteine "deoxycylindrospermopsi
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_47 [1.14.11.47] +l_argininium +akg +o2 +co2
-    3r_3_hydroxy_l_argininium
+    <-> . +5_methylcytidine_5_monophosphate_1 +akg +o2 +co2 +h2o
+    5_formyl_cmp_1
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_lysinium +akg +o2 +co2
-    4r_4_hydroxy_l_lysine
+    <-> . +l_proline +akg +o2 +co2
+    trans_3_hydroxy_l_proline
   }
 }

@@ -22,14 +22,14 @@ pathway allocholate-to-7-oxolithocholate "allocholate to 7-oxolithocholate" {
 
   branch from lithocholate side left {
     lithocholate
-    <-> ec_6_2_1_7 [6.2.1.7] +atp +coa +lithocholyl_coa +amp
-    ppi
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    lithocholate_sulfate
   }
 
   branch from lithocholate side right {
     lithocholate
-    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
-    lithocholate_sulfate
+    <-> . +udp_d_glucuronate +udp
+    lithocholic_acid_24_o_d_glucuronide
   }
 
   branch from chenodeoxycholate side left {

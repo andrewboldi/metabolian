@@ -26,14 +26,14 @@ pathway cyanidin-3-o-6-o-p-coum-to-4-5-secobiotin "cyanidin 3-O-[6-O-(p-coum… 
 
   branch from glucose side left {
     glucose
-    <-> . +nigerose +h2o
-    d_glucose
+    <-> ec_3_2_1_218 [3.2.1.218] +3_keto_trehalose +h2o
+    3_dehydro_d_glucose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +h2o +d_glucose
-    d_glcp_1_2_d_glcp
+    <-> ec_3_2_1_218 [3.2.1.218] +h2o +3_dehydro_d_glucose
+    3_dehydromaltose
   }
 
   branch from cyanidin_3_o_6_o_p_coumaroyl_2_o_2_o_sinapoyl_d side left {
@@ -50,14 +50,14 @@ pathway cyanidin-3-o-6-o-p-coum-to-4-5-secobiotin "cyanidin 3-O-[6-O-(p-coum… 
 
   branch from h side left {
     h
-    <-> . +adp +9z_12z_octadecadienoyl_coa +phosphate +9z_12z_octadecadienoyl_coa +h2o
-    atp
+    <-> ec_4_2_1_148 [4.2.1.148] +2_methylfumaryl_coa +h2o
+    l_erythro_3_methylmalyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    5z_8z_11z_14z_eicosatetraenoyl_coa
+    <-> ec_1_13_11_3 [1.13.11.3] +3_4_dihydroxybenzenesulfonate +o2
+    3_sulfomuconate
   }
 
   branch from e_sinapate side left {
@@ -74,26 +74,26 @@ pathway cyanidin-3-o-6-o-p-coum-to-4-5-secobiotin "cyanidin 3-O-[6-O-(p-coum… 
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +h +4_isopropylbenzaldehyde
-    4_isopropylbenzyl_alcohol
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +o2 +h2o
+    9h_fluoren_9_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +trans_3_chloroallyl_aldehyde
-    trans_3_chloroprop_2_en_1_ol
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +o2
+    3s_4r_3_4_dihydroxy_3_4_dihydrofluorene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    taurolithocholate_3_sulfate
+    <-> ec_4_2_1_98 [4.2.1.98] +16_17_didehydropregnenolone
+    16alpha_hydroxypregnenolone
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    <-> . +leukotriene_e4 +l_glutamate
+    leukotriene_f4
   }
 
   branch from s_adenosyl_l_methionine side left {
@@ -116,25 +116,25 @@ pathway cyanidin-3-o-6-o-p-coum-to-4-5-secobiotin "cyanidin 3-O-[6-O-(p-coum… 
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +h +l_methionine +3_8_divinyl_protochlorophyllide_a +s_adenosyl_l_methionine
-    mg_13_1_oxoprotoporphyrin_13_monomethyl_ester
+    <-> . +h +l_methionine +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +s_adenosyl_l_methionine
+    13_1_hydroxy_mg_protoporphyrin_ix_13_monomethyl
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +h2o +5_deoxyribose
-    adenine
+    <-> ec_1_17_98_2 [1.17.98.2] +12_ethyl_8_isobutylbacteriochlorophyllide_e +h +l_methionine +s_adenosyl_l_methionine +h2o
+    12_ethyl_8_isobutylbacteriochlorophyllide_c
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> . +met_phe +h2o
-    l_phenylalanine
+    <-> ec_1_14_13_8 [1.14.13.8] +l_methionine_s_oxide +nadp +h2o +h +nadph
+    o2
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> ec_3_4_11_4 [3.4.11.4] +met_gly_gly +h2o
-    glycylglycine
+    <-> ec_3_4_11_1 [3.4.11.1] +glycine +h2o
+    methionyl_glycine
   }
 }

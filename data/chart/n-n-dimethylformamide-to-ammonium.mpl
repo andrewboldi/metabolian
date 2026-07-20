@@ -20,26 +20,14 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
 
   branch from formate side left {
     formate
-    <-> . +19_oxo_5_dihydrotestosterone +fmnh2 +o2 +fmn +h2o +hplus
-    17_hydroxy_5_estr_1_10_en_3_one
+    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
+    16r_deshydroxymethyl_stemmadenine
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_14_14_154 [1.14.14.154] +14_methyl_steroid +fmnh2 +o2 +fmn +h2o +hplus
-    14_steroid
-  }
-
-  branch from methyl_co side left {
-    methyl_co
-    <-> ec_2_1_1_382 [2.1.1.382] +syringate +cobalt +hplus
-    3_o_methylgallate
-  }
-
-  branch from methylamine side right {
-    methylamine
-    <-> ec_4_2_1_88 [4.2.1.88] +d_synephrine
-    4_hydroxyphenyl_acetaldehyde
+    <-> . +methyl_1s_2s_16e_16_ethylidene_2_formyl_4_14_dia +h2o
+    16s_deshydroxymethyl_stemmadenine
   }
 
   branch from methylamine side left {
@@ -48,27 +36,33 @@ pathway n-n-dimethylformamide-to-ammonium "N,N-dimethylformamide to ammonium" {
     1_naphthol
   }
 
-  branch from cobalt side right {
+  branch from methylamine side right {
+    methylamine
+    <-> ec_3_5_1_137 [3.5.1.137] +carbofuran +h2o +hplus +co2
+    2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol
+  }
+
+  branch from cobalt side left {
     cobalt
     <-> ec_1_16_99_1 [1.16.99.1] +cobalt +hydrogen_donor +atp +h2o +adp +pi +hplus
     hydrogen_acceptor
   }
 
-  branch from cobalt side left {
+  branch from cobalt side right {
     cobalt
-    <-> ec_1_16_99_1 [1.16.99.1] +hydrogen_donor +atp +h2o +hydrogen_acceptor +adp +pi +hplus
-    cobalt
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_4_3_1_24 [4.3.1.24] +l_phenylalanine
-    trans_cinnamate
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_20 [1.4.1.20] +l_phenylalanine +nad +h2o +nadh +hplus
-    keto_phenylpyruvate
+    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
+    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
+    3_5_cyclic_imp
   }
 }

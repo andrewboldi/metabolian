@@ -18,26 +18,26 @@ pathway s-adenosyl-l-homocysteine-to-h "S-adenosyl-L-homocysteine to H" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +trans_methylbixin +h
-    beta_bixin
+    <-> . +s_adenosyl_l_homocysteine +h +n_5_methyl_l_glutamine
+    l_glutamine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +beta_peltatin_a_methyl_ether +h
-    peltatin
+    <-> . +s_adenosyl_l_homocysteine +h +2_nonaprenyl_3_methyl_6_methoxy_1_4_benzoquinone
+    2_nonaprenyl_6_methoxy_1_4_benzoquinone
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +glucuronosyletoposide
-    etoposide
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +cyproheptadine_beta_d_glucuronide +h
+    cyproheptadine
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +cyproheptadine_beta_d_glucuronide +h
-    cyproheptadine
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +diethylstilbestrol_glucuronide
+    diethylstilbestrol
   }
 
   branch from alpha_d_galacturonosyl_1_4_beta_d_glucuronosyl_1 side left {
@@ -48,25 +48,25 @@ pathway s-adenosyl-l-homocysteine-to-h "S-adenosyl-L-homocysteine to H" {
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +diethylstilbestrol_glucuronide +udp_alpha_d_glucuronate
-    diethylstilbestrol
+    <-> ec_2_4_1_38 [2.4.1.38] +h +n_acetyllactosamine +n_acetyl_beta_d_glucosamine
+    udp_alpha_d_galactose
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_7_1_11 [2.7.1.11] +utp +keto_d_fructose_6_phosphate +h
-    beta_d_fructose_1_6_bisphosphate
+    <-> ec_2_4_1_22 [2.4.1.22] +alpha_lactose +h +udp_alpha_d_galactose
+    glucose
   }
 
   branch from h side right {
     h
-    <-> . +2_2_methylsulfanyl_heptyl_maleate +h2o
-    3_7_methylthio_heptylmalic_acid
+    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate
+    5_chloromuconolactone
   }
 
   branch from h side left {
     h
-    <-> . +co2 +2_oxo_10_methylthiodecanoic_acid
-    3_carboxy_10_methylsulfanyl_2_oxodecanoate
+    <-> . +3_4_6_trichlorocatechol +chloride
+    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
   }
 }

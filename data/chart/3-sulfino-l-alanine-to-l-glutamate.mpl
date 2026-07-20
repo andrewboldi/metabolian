@@ -18,13 +18,13 @@ pathway 3-sulfino-l-alanine-to-l-glutamate "3-sulfino-L-alanine to L-glutamate" 
 
   branch from taurine side left {
     taurine
-    <-> . +n_tetracosanoyltaurine +h2o
-    tetracosanoate
+    <-> . +n_nervonoyltaurine +h2o
+    15z_tetracosenoate
   }
 
   branch from taurine side right {
     taurine
-    <-> . +n_nervonoyltaurine +h2o
-    15z_tetracosenoate
+    <-> . +n_tricosanoyltaurine +h2o
+    tricosanoate
   }
 }

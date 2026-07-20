@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fe-iii-di-c-5-deoxy-d-to-n-c-5-deoxy-d-glucosy "Fe(III)-di(C-5-deoxy-β-D-… to N-(C-5-[deoxy-β-D-glucosy…" {
-  spacing 202
+  spacing 196
 
   spine at 0,0 {
     fe_iii_di_c_5_deoxy_d_glucosyl_enterobactin
@@ -22,13 +22,7 @@ pathway fe-iii-di-c-5-deoxy-d-to-n-c-5-deoxy-d-glucosy "Fe(III)-di(C-5-deoxy-β-
     fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
   }
 
-  branch from fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox side right {
-    fe_iii_n_2_3_dihydroxybenzoyl_l_seryl_n_c_5_deox
-    <-> ec_3_1_1_109 [3.1.1.109] +h +h2o +iron_iii_diglucosyl_2_3_dihydroxybenzoylserine_2
-    n_2_3_dihydroxybenzoyl_l_serine
-  }
-
-  branch from n_2_3_dihydroxybenzoyl_l_serinate side left {
+  branch from n_2_3_dihydroxybenzoyl_l_serinate side right {
     n_2_3_dihydroxybenzoyl_l_serinate
     <-> ec_3_1_1_108 [3.1.1.108] +ferrienterobactin +h2o +hplus
     fe_iii_n_2_3_dihydroxybenzoyl_l_serine

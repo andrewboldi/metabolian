@@ -38,26 +38,26 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from palmitate side left {
     palmitate
-    <-> . +9z_12z_octadecadien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_9z_12z_octadecadienylglycerone_3_phosphate
+    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
+    2_linoleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +9z_12z_15z_octadecatrien_1_ol +1_palmitoylglycerone_3_phosphate +hplus
-    1_9z_12z_15z_octadecatrienylglycerone_3_phosphat
+    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
+    2_oleoyl_3_stearoyl_sn_glycerol
   }
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +hplus +co2
-    pser
+    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    dag
   }
 
   branch from phosphoethanolamine side right {
     phosphoethanolamine
-    <-> ec_3_1_4_62 [3.1.4.62] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    dag
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_2_dioleoyl_sn_glycerol
   }
 
   branch from trans_hexadecenoyl_coa side left {
@@ -68,14 +68,14 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
-    13e_labda_7_13_dien_15_ol
+    <-> ec_4_2_3_131 [4.2.3.131] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    miltiradiene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_99 [4.2.3.99] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    syn_labda_8_17_12e_14_triene
+    <-> ec_4_2_3_132 [4.2.3.132] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    neoabietadiene
   }
 
   branch from palmitoyl_coa side right {
@@ -86,7 +86,7 @@ pathway n-hexadecanoylsphingosine-to-palmitoyl-coa "N-hexadecanoylsphingosine…
 
   branch from palmitoyl_coa side left {
     palmitoyl_coa
-    <-> ec_1_2_1_42 [1.2.1.42] +nad +coa +nadh +hplus
-    hexadecanal
+    <-> . +1_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer +coa
+    2_hexadecanoyl_1_tetradecanoyl_sn_glycero_3_phos
   }
 }

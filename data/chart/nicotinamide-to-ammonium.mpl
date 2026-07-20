@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nicotinamide-to-ammonium "nicotinamide to ammonium" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     nicotinamide
@@ -24,14 +24,14 @@ pathway nicotinamide-to-ammonium "nicotinamide to ammonium" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxopentadecanoyl_coenzyme_a
-    3_hydroxypentadecanoyl_coenzyme_a
+    <-> ec_1_1_1_4 [1.1.1.4] +acetoin +nadh +h
+    butane_2_3_diol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_oxotridecanoyl_coenzyme_a
-    3_hydroxytridecanoyl_coenzyme_a
+    <-> ec_1_1_1_286 [1.1.1.286] +nadh +2_oxoglutarate +co2
+    d_erythro_isocitrate
   }
 
   branch from acetamide side right {
@@ -50,17 +50,5 @@ pathway nicotinamide-to-ammonium "nicotinamide to ammonium" {
     l_allysine
     <-> . +co2 +nad +h2o +7r_8s_8_ammonio_7_carboxylatoamino_nonanoate +nadh +hplus
     n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +d_argininium +o2 +h2o +h2o2
-    5_guanidino_2_oxopentanoic_acid
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +d_histidine +o2 +h2o +h2o2
-    3_imidazol_5_yl_pyruvate
   }
 }

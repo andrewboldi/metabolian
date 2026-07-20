@@ -25,36 +25,36 @@ pathway 6-o-d-glucopyranosyl-d-to-h2o "6-O-α-D-glucopyranosyl-D-… to H2O" {
   branch from d_fructofuranose side left {
     d_fructofuranose
     <-> ec_5_3_1_7 [5.3.1.7]
-    alpha_d_mannopyranose
+    beta_d_mannose
   }
 
   branch from d_fructofuranose side right {
     d_fructofuranose
-    <-> ec_5_3_1_7 [5.3.1.7]
-    beta_d_mannose
+    <-> ec_2_7_1_1 [2.7.1.1] +h +atp +adp
+    6_o_phosphonohexopyranose
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    tenuecyclamide_c
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    beta_d_fructopyranose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ulongamide_f
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    alpha_d_mannopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    westiellamide
+    <-> ec_3_1_3_27 [3.1.3.27] +h +1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly +phosphate
+    pg_18_0_18_0
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    symplostatin_1
+    <-> ec_3_1_3_27 [3.1.3.27] +pgp_16_1_9z_16_1_9z +h +phosphate
+    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
   }
 }

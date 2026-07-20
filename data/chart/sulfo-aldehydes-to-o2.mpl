@@ -30,37 +30,37 @@ pathway sulfo-aldehydes-to-o2 "Sulfo-Aldehydes to O2" {
 
   branch from sulfite side left {
     sulfite
-    <-> . +adenosine_3_5_bisphosphate +h +nadp +nadph
-    3_phosphoadenylyl_sulfate
+    <-> . +2_oxohex_3_enedioic_acid +h +o2 +h2o
+    2_3_dihydroxybenzenesulfonate
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_8_3_1 [1.8.3.1] +o2
-    sulfate
+    <-> . +fmnh2 +sulfoacetate +h +o2 +glyoxylate +h2o
+    fmn
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_glutamate +l_tryptophan
-    tryptophanyl_glutamyl_proline
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +beta_d_glucose
+    d_fructofuranose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_glutamate +l_tryptophan +l_tyrosine
-    tryptophanyl_glutamyl_tyrosine
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +d_fructofuranose
+    alpha_d_glucose
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +linalool +h +nad +h2o
-    6e_8_oxolinalool
+    <-> . +ubiquinol_10 +ubiquinone_10 +h2o
+    pmf
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +r_linalool +h +6e_8_oxolinalool +h2o
-    nad
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +nad +h2o
+    4_hydroxymethyl_4_methylzymosterol
   }
 }

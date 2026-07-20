@@ -178,35 +178,6 @@
       }
     },
     {
-      "id": "r_2_benzylsuccinate",
-      "name": "(R)-2-benzylsuccinate",
-      "short": "2-benzylsuccinate",
-      "formula": "C11H10O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:58692"
-      }
-    },
-    {
-      "id": "succinyl_coa",
-      "name": "Succinyl-CoA",
-      "formula": "C25H35N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57292"
-      }
-    },
-    {
-      "id": "r_2_benzylsuccinyl_coa",
-      "name": "(R)-2-benzylsuccinyl-CoA",
-      "short": "2-benzylsuccinyl-CoA",
-      "formula": "C32H41N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57253"
-      }
-    },
-    {
       "id": "l_lysinium",
       "name": "L-lysinium",
       "formula": "C6H13N2O",
@@ -223,6 +194,25 @@
       "charge": 1,
       "xrefs": {
         "chebi": "CHEBI:133442"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50342"
+      }
+    },
+    {
+      "id": "trans_4_hydroxy_l_proline",
+      "name": "trans-4-hydroxy-L-proline",
+      "short": "trans-4-hydroxy-L-p…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61965"
       }
     }
   ],
@@ -263,24 +253,17 @@
       ]
     },
     {
-      "id": "ec_2_8_3_15",
-      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
-      "ec": [
-        "2.8.3.15"
-      ]
-    },
-    {
-      "id": "ec_2_8_3_28",
-      "name": "phenylsuccinyl-CoA transferase",
-      "ec": [
-        "2.8.3.28"
-      ]
-    },
-    {
       "id": "ec_1_14_11_4",
       "name": "procollagen-lysine 5-dioxygenase",
       "ec": [
         "1.14.11.4"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_2",
+      "name": "procollagen-proline 4-dioxygenase",
+      "ec": [
+        "1.14.11.2"
       ]
     }
   ],
@@ -532,51 +515,6 @@
     },
     {
       "id": "r6",
-      "name": "succinyl-CoA:(R)-benzylsuccinate CoA-transferase",
-      "equation": "(R)-2-benzylsuccinate + succinyl-CoA = (R)-2-benzylsuccinyl-CoA + succinate",
-      "ec": "2.8.3.15",
-      "substrates": [
-        {
-          "metabolite": "r_2_benzylsuccinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_2_benzylsuccinyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:16469"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:16469"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "procollagen-lysine 5-dioxygenase",
       "equation": "L-lysyl-[collagen] + 2-oxoglutarate + O2 = (5R)-5-hydroxy-L-lysyl-[collagen] + succinate + CO2",
       "ec": "1.14.11.4",
@@ -614,7 +552,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:16569"
       },
@@ -624,6 +562,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:16569"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "procollagen-proline 4-dioxygenase",
+      "equation": "L-prolyl-[collagen] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[collagen] + succinate + CO2",
+      "ec": "1.14.11.2",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:18945"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18945"
           }
         ]
       }

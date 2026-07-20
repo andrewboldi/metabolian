@@ -20,13 +20,13 @@ pathway tomatid-5-en-3-one-to-tomatidine-3-o-d-glucop "tomatid-5-en-3-one to tom
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_201 [1.1.1.201] +h +nadph +7_oxolithocholate_methyl_ester
-    ursodeoxycholic_acid_methyl_ester
+    <-> . +n_hydroxy_l_dihomomethioninate +h2o +o2 +nadph
+    l_dihomomethionine
   }
 
   branch from nadp side right {
     nadp
-    <-> . +hexyl_butyrate +h2o +h +o2 +nadph
-    decan_4_one
+    <-> . +h +o2 +n_hydroxy_l_dihomomethioninate +nadph +h2o
+    n_n_dihydroxy_l_dihomomethioninate
   }
 }

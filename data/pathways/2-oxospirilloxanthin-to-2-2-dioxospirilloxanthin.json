@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxospirilloxanthin-to-2-2-dioxospirilloxanthin",
+  "name": "2-oxospirilloxanthin to 2,2'-dioxospirilloxanthin",
+  "category": "other",
+  "summary": "A 3-step route from 2-oxospirilloxanthin to 2,2'-dioxospirilloxanthin, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49352"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64792"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxospirilloxanthin",
+      "name": "2-oxospirilloxanthin",
+      "formula": "C42H58O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64792"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_hydroxy_2_oxospirilloxanthin",
+      "name": "2'-hydroxy-2-oxospirilloxanthin",
+      "short": "2'-hydroxy-2-oxospi…",
+      "formula": "C42H58O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91229"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_2_dihydroxy_2_oxospirilloxanthin",
+      "name": "2',2'-dihydroxy-2-oxospirilloxanthin",
+      "short": "2',2'-dihydroxy-2-o…",
+      "formula": "C42H58O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:91230"
+      }
+    },
+    {
+      "id": "2_2_dioxospirilloxanthin",
+      "name": "2,2'-dioxospirilloxanthin",
+      "short": "2,2'-dioxospirillox…",
+      "formula": "C42H56O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64793"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-oxospirilloxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2'-hydroxy-2-oxo...",
+      "equation": "2-oxospirilloxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2'-hydroxy-2-oxospirilloxanthin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2'-hydroxy-2-oxospirilloxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2',2'...",
+      "equation": "2'-hydroxy-2-oxospirilloxanthin + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = 2',2'-dihydroxy-2-oxospirilloxanthin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_dihydroxy_2_oxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49356"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2',2'-dihydroxy-2-oxospirilloxanthin = 2,2'-dioxospirilloxanthin + H2O",
+      "equation": "2',2'-dihydroxy-2-oxospirilloxanthin = 2,2'-dioxospirilloxanthin + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_2_dihydroxy_2_oxospirilloxanthin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_2_dioxospirilloxanthin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49360"
+          }
+        ]
+      }
+    }
+  ]
+}

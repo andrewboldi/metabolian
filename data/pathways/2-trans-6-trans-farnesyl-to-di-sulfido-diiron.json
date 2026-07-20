@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-farnesyl-to-di-sulfido-diiron",
+  "name": "2-trans,6-trans-farnesyl… to di-μ-sulfido-diiron",
+  "category": "other",
+  "summary": "A 3-step route from 2-trans,6-trans-farnesyl diphosphate(3−) to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25992"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:175763"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "epi_isozizaene",
+      "name": "(+)-epi-isozizaene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51458"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5r_albaflavenol",
+      "name": "(5R)-albaflavenol",
+      "formula": "C15H24O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51479"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "albaflavenone",
+      "name": "albaflavenone",
+      "formula": "C15H22O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:51460"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_37",
+      "name": "epi-isozizaene synthase",
+      "ec": [
+        "4.2.3.37"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "epi-isozizaene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-epi-isozizaene + diphosphate",
+      "ec": "4.2.3.37",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol ...",
+      "equation": "(+)-epi-isozizaene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (5R)-albaflavenol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "epi_isozizaene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5r_albaflavenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(5R)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 o...",
+      "equation": "(5R)-albaflavenol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = albaflavenone + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "5r_albaflavenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "albaflavenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25988"
+          }
+        ]
+      }
+    }
+  ]
+}

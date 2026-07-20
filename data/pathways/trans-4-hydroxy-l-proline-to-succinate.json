@@ -177,31 +177,41 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "s_s_drim_8_en_11_yl_diphosphate",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate",
+      "short": "(S,S)-drim-8-en-11-…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:231796"
       }
     },
     {
-      "id": "r_axinyssene",
-      "name": "(R)-axinyssene",
-      "formula": "C20H32",
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194194"
+        "chebi": "CHEBI:16899"
       }
     },
     {
-      "id": "lydicene",
-      "name": "lydicene",
-      "formula": "C20H32",
+      "id": "sporulositol_a",
+      "name": "Sporulositol A",
+      "formula": "C21H38O6",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194193"
+        "chebi": "CHEBI:206556"
+      }
+    },
+    {
+      "id": "5_triphosphoadenylyl_2_5_adenosine",
+      "name": "5'-triphosphoadenylyl-(2'→5')-adenosine",
+      "short": "5'-triphosphoadenyl…",
+      "formula": "C20H23N10O19P4",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:140294"
       }
     }
   ],
@@ -232,20 +242,6 @@
       "name": "(5R)-carbapenem-3-carboxylate synthase",
       "ec": [
         "1.14.20.3"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_209",
-      "name": "(R)-axinyssene synthase",
-      "ec": [
-        "4.2.3.209"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_210",
-      "name": "lydicene synthase",
-      "ec": [
-        "4.2.3.210"
       ]
     }
   ],
@@ -494,18 +490,21 @@
     },
     {
       "id": "r6",
-      "name": "(R)-axinyssene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (R)-axinyssene + diphosphate",
-      "ec": "4.2.3.209",
+      "name": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
+      "equation": "(S,S)-drim-8-en-11-yl diphosphate + D-mannitol = sporulositol A + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "s_s_drim_8_en_11_yl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannitol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_axinyssene",
+          "metabolite": "sporulositol_a",
           "stoichiometry": 1
         },
         {
@@ -513,40 +512,34 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_209"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:75179"
+        "rhea": "RHEA:82587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75179"
+            "id": "RHEA:82587"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "lydicene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = lydicene + diphosphate",
-      "ec": "4.2.3.210",
+      "name": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
+      "equation": "2 ATP = 5'-triphosphoadenylyl-(2'->5')-adenosine + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "lydicene",
+          "metabolite": "5_triphosphoadenylyl_2_5_adenosine",
           "stoichiometry": 1
         },
         {
@@ -554,22 +547,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_210"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:75183"
+        "rhea": "RHEA:82599"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75183"
+            "id": "RHEA:82599"
           }
         ]
       }

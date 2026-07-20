@@ -32,28 +32,16 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d "N4-(α-D-Glc-(1→2)-α-D-Glc�
     n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
   }
 
-  branch from n_glc_1_3_glc_1_3_man_1_2_man_1_2_man_1_3_man_1 side left {
-    n_glc_1_3_glc_1_3_man_1_2_man_1_2_man_1_3_man_1
-    <-> . +glucose +n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1
-    h2o
-  }
-
-  branch from d_glucose side right {
-    d_glucose
-    <-> ec_3_2_1_28 [3.2.1.28] +trehalose +h2o
-    d_glucose
-  }
-
   branch from d_glucose side left {
     d_glucose
     <-> . +3_ketolactose +h2o
     3_keto_d_galactose
   }
 
-  branch from n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1 side right {
-    n_glc_1_3_man_1_2_man_1_2_man_1_3_man_1_2_man_1
-    <-> . +udp_d_glucose +udp +hplus
-    n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_3_2_1_216 [3.2.1.216] +d_glcp_1_2_d_glcp +h2o
+    glucose
   }
 
   branch from n4_d_man_1_2_d_man_1_3_d_man_1_2_d_man_1_3_d_man side left {
@@ -64,44 +52,20 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d "N4-(α-D-Glc-(1→2)-α-D-Glc�
 
   branch from d_mannose side right {
     d_mannose
-    <-> . +n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d +h2o
-    n4_d_man_1_2_d_man_1_3_d_man_1_3_d_man_1_2_d_man
-  }
-
-  branch from d_mannose side left {
-    d_mannose
     <-> ec_3_2_1_210 [3.2.1.210] +n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d +h2o
     n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_3_d_man
   }
 
-  branch from n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_6_d_man side right {
+  branch from n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_6_d_man side left {
     n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_6_d_man
     <-> ec_3_2_1_113 [3.2.1.113] +h2o +beta_d_mannose
     n4_d_man_1_3_d_man_1_2_d_man_1_3_d_man_1_2_d_man
   }
 
-  branch from n_man_1_3_man_1_3_man_1_6_man_1_6_man_1_4_glcnac side left {
+  branch from n_man_1_3_man_1_3_man_1_6_man_1_6_man_1_4_glcnac side right {
     n_man_1_3_man_1_3_man_1_6_man_1_6_man_1_4_glcnac
     <-> ec_2_4_1_101 [2.4.1.101] +udp +h +n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
     udp_n_acetyl_alpha_d_glucosamine
-  }
-
-  branch from n_man_1_3_man_1_3_man_1_6_man_1_6_man_1_4_glcnac side right {
-    n_man_1_3_man_1_3_man_1_6_man_1_6_man_1_4_glcnac
-    <-> ec_3_2_1_113 [3.2.1.113] +h2o +beta_d_mannose
-    n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d
-  }
-
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d side left {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
-    <-> . +udp_d_galactose +udp +hplus
-    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d
-  }
-
-  branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d side right {
-    n4_d_glcnac_1_2_d_man_1_3_d_man_1_3_d_man_1_6_d
-    <-> ec_3_2_1_114 [3.2.1.114] +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
-    alpha_d_mannopyranose
   }
 
   branch from n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d side left {
@@ -118,14 +82,14 @@ pathway n4-d-glc-1-2-d-glc-to-n4-d-glcnac-1-2-d "N4-(α-D-Glc-(1→2)-α-D-Glc�
 
   branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> ec_2_4_1_144 [2.4.1.144] +udpglcnac +udp +hplus
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_4_d_glcnac
+    <-> ec_2_4_1_214 [2.4.1.214] +gdp_l_fucose +gdp +hplus
+    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
   }
 
   branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side right {
     n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
-    <-> ec_2_4_1_145 [2.4.1.145] +udpglcnac +udp +hplus
-    n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
+    <-> . +udp_d_galactose +udp +hplus
+    n4_d_gal_1_4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2
   }
 
   branch from n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6 side left {

@@ -32,13 +32,13 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine-415 "dTDP-β-L-mycarose to 
 
   branch from sah side left {
     sah
-    <-> ec_6_3_2_40 [6.3.2.40] +anthranilate +l_phenylalanine +sam +atp +amp +ppi +hplus
-    cyclopeptine
+    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
+    trans_anethole
   }
 
   branch from sah side right {
     sah
-    <-> . +precorrin_6y +sam +co2 +hplus
-    precorrin_7
+    <-> ec_2_1_1_288 [2.1.1.288] +aklanonate +sam
+    methyl_aklanonate
   }
 }

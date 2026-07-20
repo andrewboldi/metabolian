@@ -36,14 +36,14 @@ pathway hesperidin-to-3-o-beta-glucosyl-2-ox "hesperidin to 3-(O-beta-glucosyl)-
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1 +phosphate +phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
+    <-> . +h +adp +phosphatidylserine_ditetradecanoyl_n_c14_0 +phosphate +phosphatidylserine_ditetradecanoyl_n_c14_0
     atp
   }
 
   branch from h2o side right {
     h2o
     <-> . +h +adp +phosphate +atp
-    phosphatidylglycerophosphate_didodecanoyl_n_c12
+    phosphatidylserine_dioctadecanoyl_n_c18_0
   }
 
   branch from udp_beta_l_rhamnose side left {
@@ -72,26 +72,26 @@ pathway hesperidin-to-3-o-beta-glucosyl-2-ox "hesperidin to 3-(O-beta-glucosyl)-
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    phosphatidylglycerophosphate_ditetradecanoyl_n_c
+    <-> . +fadh2 +protoporphyrin_ix +protoporphyrinogen_ix
+    fad
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    phosphatidylglycerophosphate_ditetradec_7_enoyl
+    <-> . +co2 +phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+    phosphatidylserine_ditetradecanoyl_n_c14_0
   }
 
   branch from nadph side left {
     nadph
-    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +nadp +h2o +h +o2
-    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
+    <-> . +7alpha_hydroxy_3_oxo_4_cholestenoic_acid_anion +h +nadp
+    3beta_7alpha_dihydroxy_5_cholestenoate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nadp
-    5beta_cholestane_3alpha_7alpha_diol
+    <-> . +9_cis_retinal +h +o2 +nadp +h2o
+    4_oh_retinal
   }
 
   branch from udp side left {

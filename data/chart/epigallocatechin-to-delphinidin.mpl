@@ -28,73 +28,73 @@ pathway epigallocatechin-to-delphinidin "(+)-epigallocatechin to delphinidin…"
 
   branch from h side right {
     h
-    <-> ec_2_3_1_298 [2.3.1.298] +sphing_4_enine +30_hydroxytriacontanoyl_coa +n_hydroxytriacontanoyl_sphingosine
-    coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_20_2_11z_14z_18_2_9z_12z
   }
 
   branch from h side left {
     h
-    <-> ec_2_3_1_298 [2.3.1.298] +coa +n_30_hydroxytriacontanoyl_6r_6_hydroxysphingosin +6_hydroxysphingosine
-    30_hydroxytriacontanoyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_20_2_11z_14z_18_3_9z_12z_15z
   }
 
   branch from nadph side right {
     nadph
-    <-> . +alpha_d_glucose +nadp +h
-    3_dehydro_d_glucose
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    2e_geraniol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +5_hydroxymethylfurfural +h +nadp
-    2_5_furandimethanol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
+    3s_6e_nerolidol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_307 [1.1.1.307] +nadh +h +beta_d_xylose
-    xylitol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    thujan_3_ol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujan_3_one
-    thujan_3_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    r_terpineol
   }
 
   branch from co2 side right {
     co2
-    <-> . +3z_5_chloro_2_oxopent_3_enoate +h
-    3z_2_chloro_5_oxohex_3_enedioate
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_16_1_9z_18_3_9z_12z_15z +h
+    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from co2 side left {
     co2
-    <-> . +2_keto_4_pentenoate +h
-    3z_2_oxohex_3_enedioate
+    <-> ec_4_1_1_65 [4.1.1.65] +1_stearoyl_2_linoleoyl_sn_glycero_3_phosphoethan +h
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_10 +fumarate
-    ubiquinone_10
+    <-> . +6as_9s_10r_10as_9_ethenyl_10_isocyano_6_6_9_tri +2_oxoglutarate +h +o2 +chloride +co2 +h2o
+    6ar_8r_9s_10r_10as_8_chloro_9_ethenyl_10_isocya
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_7 +fumarate
-    ubiquinone_7
+    <-> . +ambiguine_b +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_c
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_methionine +l_tryptophan
-    tryptophanyl_histidyl_methionine
+    <-> ec_4_2_1_3 [4.2.1.3] +cis_aconitate
+    d_erythro_isocitrate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_lysine +l_isoleucine +l_tryptophan
-    tryptophanyl_isoleucyl_lysine
+    <-> ec_3_2_1_125 [3.2.1.125] +beta_d_glucose +vomilenine
+    raucaffricine
   }
 }

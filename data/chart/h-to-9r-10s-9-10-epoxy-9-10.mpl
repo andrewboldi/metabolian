@@ -18,26 +18,26 @@ pathway h-to-9r-10s-9-10-epoxy-9-10 "H to (9R,10S)-9,10-epoxy-9,10-…" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +2_chlorobenzaldehyde +h +nadph
-    compound_0041489
+    <-> ec_1_1_1_62 [1.1.1.62] +2_3_pentanediol +h +nadph
+    pentane_2_3_dione
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_methylphenylglyoxal +h +nadph
-    4_methylbenzoyl_methanol
+    <-> ec_1_1_1_21 [1.1.1.21] +diacetyl +h +nadph
+    butane_2_3_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline
-    pro_pro
+    <-> ec_1_14_13_84 [1.14.13.84] +phenyl_butyrate +nadp +h +o2 +nadph
+    butyrophenone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_2_6 [3.2.2.6] +adp_beta_d_ribose +3_acetylpyridine +h
-    3_acetylpyridine_adenine_dinucleotide
+    <-> ec_1_14_13_84 [1.14.13.84] +isobutyrophenone +h +o2 +nadph +nadp
+    phenyl_isobutyrate
   }
 
   branch from 9r_10s_9_10_epoxy_9_10_dihydrophenanthrene side left {

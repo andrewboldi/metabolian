@@ -18,26 +18,26 @@ pathway luteolin-to-octadecanal "luteolin to octadecanal" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +2_benzoylpyridine +h +nadph
-    phenyl_pyridin_2_yl_methanol
+    <-> ec_1_1_1_10 [1.1.1.10] +d_threitol +h +nadph
+    d_threose
   }
 
   branch from nadp side right {
     nadp
-    <-> . +n_nitrosomethanamine +formaldehyde +h2o +h +o2 +nadph
-    n_nitrosodimethylamine
+    <-> ec_1_1_1_10 [1.1.1.10] +h +pentane_2_3_dione +nadph
+    3_hydroxy_2_pentanone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_88 [3.5.1.88] +2_2_2_amino_4_methylthio_1_oxobutyl_amino_4_meth +formate
-    n_formyl_l_methionyl_l_leucyl_l_phenylalaninate
+    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phenylalanyl_lysine +h
+    lys_phe_lys
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_19_5 [3.4.19.5] +l_aspartate +l_arginine
-    asp_arg
+    <-> ec_3_4_11_2 [3.4.11.2] +phe_ser +l_lysine +h
+    lys_phe_ser
   }
 
   branch from carbon_monoxide side left {
@@ -54,14 +54,14 @@ pathway luteolin-to-octadecanal "luteolin to octadecanal" {
 
   branch from h side left {
     h
-    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +n_benzyloxycarbonylglycine +h2o
-    benzyloxycarbonyl_gly_leu_ala
+    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_3s_4_chloro_3_hydroxybutanoate +nadp +nadph
+    ethyl_4_chloroacetoacetate
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_23 [3.5.1.23] +sphing_4_enine +eicosanoate +h2o
-    n_eicosanoyl_d_sphingosine
+    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_2_hydroxybutanoate +nadp +nadph
+    ethyl_2_oxobutanoate
   }
 
   branch from octadecanal side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dioleoylglycerol-to-cytidine-5-monophosphate "1,2-dioleoylglycerol to cytidine 5'-monophosphate" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     1_2_dioleoylglycerol
@@ -22,25 +22,19 @@ pathway 1-2-dioleoylglycerol-to-cytidine-5-monophosphate "1,2-dioleoylglycerol t
 
   branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side left {
     1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_oleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from 1_2_dioleoyl_sn_glycero_3_phosphoethanolamine side right {
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
     <-> . +1_palmitoyl_2_arachidonoyl_sn_glycero_3_phosphoc +1_hexadecanoyl_sn_glycero_3_phosphocholine +hplus
     n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +preechinulin +dmapp
-    tardioxopiperazine_a
-  }
-
   branch from ppi side right {
     ppi
-    <-> . +tardioxopiperazine_a +dmapp
-    echinulin
+    <-> ec_4_2_3_223 [4.2.3.223] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    bonnadiene
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_224 [4.2.3.224] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    allokutznerene
   }
 }

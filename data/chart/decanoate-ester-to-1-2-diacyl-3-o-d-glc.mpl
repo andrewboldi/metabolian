@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3-O-(β-D-Glc-(…" {
-  spacing 340
+  spacing 322
 
   spine at 0,0 {
     decanoate_ester
@@ -36,34 +36,22 @@ pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3
     1_2_diacyl_3_o_d_glc_1_6_d_glc_1_6_d_glc_sn_glyc
   }
 
-  branch from aliphatic_alcohol side left {
-    aliphatic_alcohol
-    <-> . +fatty_acid_ester +h2o +hplus
-    fatty-acid
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_133 [4.2.3.133] +fpp
+    copaene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_21 [2.5.1.21] +fpp +nadph +hplus +nadp
-    squalene
+    <-> ec_2_5_1_100 [2.5.1.100] +fumigaclavine_a +dmapp
+    fumigaclavine_c
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_21 [2.5.1.21] +nadh +hplus +squalene +nad
-    fpp
-  }
-
-  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side right {
+  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
     o_s_decanoylpantetheine_4_phosphoryl_serine_1
     <-> ec_1_3_3_6 [1.3.3.6] +o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1 +h2o2
     o2
-  }
-
-  branch from o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri side left {
-    o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
-    <-> . +malonyl-acp +hplus +co2 +coa
-    decanoyl_coa
   }
 
   branch from o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri side right {
@@ -74,26 +62,14 @@ pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_47 [6.2.1.47] +medium_chain_fatty_acid_anion +atp +amp +ppi
-    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
+    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +1_palmitoyl_sn_glycerol_3_phosphate
+    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_39 [6.2.1.39] +glutamate +atp +adp +pi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
-  }
-
-  branch from o_s_3r_hydroxydodecanoylpantetheine_4_phosphoryl side left {
-    o_s_3r_hydroxydodecanoylpantetheine_4_phosphoryl
-    <-> ec_2_3_1_85 [2.3.1.85] +o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine
-    h2o
-  }
-
-  branch from o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine side right {
-    o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +dodecanoyl_pantetheine_4_phosphorylserine_1
-    nad
+    <-> ec_6_2_1_54 [6.2.1.54] +d_alanine +atp +amp +ppi
+    o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z
   }
 
   branch from o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine side left {
@@ -117,12 +93,12 @@ pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3
   branch from dag side right {
     dag
     <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
-    lipid_a_4_2_aminoethyl_diphosphate_oxoanion
+    lipid_a_1_2_aminoethyl_diphosphate_oxoanion
   }
 
   branch from dag side left {
     dag
-    <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
-    lipid_a_1_2_aminoethyl_diphosphate_oxoanion
+    <-> . +mannosylinositol_phosphorylceramide +1_phosphatidyl_1d_myo_inositol
+    mannosyl_diphosphorylinositol_ceramide
   }
 }

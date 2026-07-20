@@ -18,14 +18,14 @@ pathway linoleoyl-ethanolamide-to-acetate "linoleoyl ethanolamide to acetate" {
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 +serine
-    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +1_2_diacyl_sn_glycero_3_phosphoethanolamine
+    cardiolipin
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
-    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
+    <-> . +hplus +co2
+    serine
   }
 
   branch from linoleate side left {
@@ -36,19 +36,19 @@ pathway linoleoyl-ethanolamide-to-acetate "linoleoyl ethanolamide to acetate" {
 
   branch from linoleate side right {
     linoleate
-    <-> ec_1_13_11_45 [1.13.11.45] +o2
-    11s_11_hydroperoxylinoleate
+    <-> ec_1_13_11_12 [1.13.11.12] +o2
+    13_s_hpode
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_2_3_2_1 [2.3.2.1] +d_glutamine +d_glutamate
-    d_glutamyl_d_glutamate
+    <-> ec_3_5_1_121 [3.5.1.121] +l_asparaginyl_group +h2o +hplus
+    l_aspartyl_zwitterionic_group
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_11 [3.5.4.11] +2_amino_4_hydroxypteridine +h2o +hplus
-    2_4_dihydroxypteridine
+    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
+    l_glutamyl_zwitterionic_group
   }
 }

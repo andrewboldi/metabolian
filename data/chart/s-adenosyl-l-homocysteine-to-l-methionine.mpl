@@ -24,8 +24,8 @@ pathway s-adenosyl-l-homocysteine-to-l-methionine "S-adenosyl-L-homocysteine to 
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +2_3s_3_carboxylato_3_methylammonio_propyl_l_hist
-    2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter
+    <-> . +s_adenosyl_l_homocysteine +diphthine
+    2_3s_3_carboxylato_3_dimethylammonio_propyl_l_hi
   }
 
   branch from 12_ethyl_8_isobutylbacteriochlorophyllide_c side left {
@@ -36,49 +36,49 @@ pathway s-adenosyl-l-homocysteine-to-l-methionine "S-adenosyl-L-homocysteine to 
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +diphthine +s_adenosyl_l_methionine
-    2_3s_3_carboxylato_3_dimethylammonio_propyl_l_hi
-  }
-
-  branch from s_adenosyl_l_homocysteine side left {
-    s_adenosyl_l_homocysteine
     <-> . +h +2_3s_3_carboxylato_3_dimethylammonio_propyl_l_hi +s_adenosyl_l_methionine
     2_3s_3_carboxylato_3_methylammonio_propyl_l_hist
   }
 
+  branch from s_adenosyl_l_homocysteine side left {
+    s_adenosyl_l_homocysteine
+    <-> . +h +1d_5_o_methyl_myo_inositol +s_adenosyl_l_methionine
+    myo_inositol
+  }
+
   branch from h side right {
     h
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer
-    cdp_4_dehydro_3_6_dideoxy_d_glucose
+    <-> ec_1_1_1_363 [1.1.1.363] +nadh +6_phospho_d_glucono_1_5_lactone +nad
+    beta_d_glucose_6_phosphate
   }
 
   branch from h side left {
     h
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +nadph +cdp_ascarylose
-    nadp
+    <-> . +dtdp_4_oxo_2_6_dideoxy_d_allose +nadp +nadph
+    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +l_methionine +divinylprotochlorophyllide +s_adenosyl_l_methionine
-    13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este
+    <-> ec_1_21_98_3 [1.21.98.3] +h +l_methionine +divinylprotochlorophyllide +s_adenosyl_l_methionine +h2o
+    mg_protoporphyrin_ix_13_monomethyl_ester
   }
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +31r_8_12_diethyl_71_hydroxybacteriochlorophylli +h +l_methionine +s_adenosyl_l_methionine +h2o
-    31r_8_12_diethylbacteriochlorophyllide_c
+    <-> . +clorobiocin +cob_iii_alamin +l_methionine +s_adenosyl_l_methionine +methylcobalamin
+    novclobiocin_109
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> ec_3_3_2_6 [3.3.2.6] +l_methionine_p_nitroanilide +h2o
-    4_nitroaniline
+    <-> ec_1_4_1_2 [1.4.1.2] +nadh +h +4_methylsulfanyl_2_oxobutanoate +nh4 +h2o
+    nad
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> ec_3_4_11_18 [3.4.11.18] +gly_met_met +h2o
-    met_gly_met_met
+    <-> . +l_leucine +h2o
+    leu_met
   }
 }

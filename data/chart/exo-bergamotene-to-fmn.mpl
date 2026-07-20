@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway exo-bergamotene-to-fmn "(+)-exo-β-bergamotene to FMN" {
-  spacing 170
+  spacing 158
 
   spine at 0,0 {
     exo_bergamotene
@@ -20,17 +20,5 @@ pathway exo-bergamotene-to-fmn "(+)-exo-β-bergamotene to FMN" {
     5r_hydroxy_trans_bergamotene
     <-> ec_1_14_14_184 [1.14.14.184] +o2 +h2o
     3s_3_2_methyl_3_3_methylbut_2_en_1_yl_oxiran_2
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
-    ldopa
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +hancockiamide_b +fmnh2 +o2 +h2o +hplus
-    hancockiamide_c
   }
 }

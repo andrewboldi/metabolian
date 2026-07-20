@@ -18,14 +18,14 @@ pathway aci-nitroethane-to-s-adenosyl-l-homocysteine "aci-nitroethane to S-adeno
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_7_methylsulfanyl_heptanal_oxime
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_s_18_r_eetetr
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_40 [1.14.14.40] +l_phenylalanine +fmnh2 +o2 +co2 +h2o +hplus
-    e_phenylacetaldehyde_oxime
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    19_hepe
   }
 
   branch from nitrite side left {
@@ -42,13 +42,13 @@ pathway aci-nitroethane-to-s-adenosyl-l-homocysteine "aci-nitroethane to S-adeno
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
-    mycinamicin_iv
+    <-> . +phosphoethanolamine +sam +hplus
+    phosphocholine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
-    mycinamicin_iii
+    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
+    3_5_di_o_methyltricetin
   }
 }

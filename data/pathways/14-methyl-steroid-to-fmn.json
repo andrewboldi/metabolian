@@ -110,34 +110,53 @@
       }
     },
     {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
+      "id": "s_reticulinium",
+      "name": "(S)-reticulinium",
+      "formula": "C19H24NO4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32395"
+        "chebi": "CHEBI:57873"
       }
     },
     {
-      "id": "8s_9r_eet",
-      "name": "(8S,9R)-EET",
-      "formula": "C20H31O3",
-      "charge": -1,
+      "id": "s_corytuberine",
+      "name": "(S)-corytuberine",
+      "formula": "C19H21NO4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:131974"
+        "chebi": "CHEBI:81200"
       }
     },
     {
-      "id": "5_6_eet",
-      "name": "5,6-EET",
-      "formula": "C20H31O3",
+      "id": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:131992"
+        "chebi": "CHEBI:77016"
+      }
+    },
+    {
+      "id": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19R,20S)-19,20-epoxydocosapentaenoate",
+      "short": "(4Z,7Z,10Z,13Z,16Z,…",
+      "formula": "C22H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136410"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_51",
+      "name": "(S)-corytuberine synthase",
+      "ec": [
+        "1.14.19.51"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -298,11 +317,12 @@
     },
     {
       "id": "r4",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (8S,9...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (8S,9R)-epoxy-(5Z,11Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(S)-corytuberine synthase",
+      "equation": "(S)-reticuline + reduced [NADPH--hemoprotein reductase] + O2 = (S)-corytuberine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + 2 H(+)",
+      "ec": "1.14.19.51",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "s_reticulinium",
           "stoichiometry": 1
         },
         {
@@ -316,7 +336,7 @@
       ],
       "products": [
         {
-          "metabolite": "8s_9r_eet",
+          "metabolite": "s_corytuberine",
           "stoichiometry": 1
         },
         {
@@ -325,35 +345,40 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:49928"
+        "rhea": "RHEA:51540"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49928"
+            "id": "RHEA:51540"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,6-e...",
-      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,6-epoxy-(8Z,11Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 ...",
+      "equation": "(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoate + reduced [NADPH--hemoprotein reductase] + O2 = (19R,20S)-epoxy-(4Z,7Z,10Z,13Z,16Z)-docosapentaenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "4z_7z_10z_13z_16z_19z_docosahexaenoate",
           "stoichiometry": 1
         },
         {
@@ -367,7 +392,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_6_eet",
+          "metabolite": "4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent",
           "stoichiometry": 1
         },
         {
@@ -386,14 +411,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49936"
+        "rhea": "RHEA:52120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49936"
+            "id": "RHEA:52120"
           }
         ]
       }

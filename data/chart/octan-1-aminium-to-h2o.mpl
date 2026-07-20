@@ -30,13 +30,13 @@ pathway octan-1-aminium-to-h2o "octan-1-aminium to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    gly_asn
+    <-> ec_4_2_1_119 [4.2.1.119] +2e_7_carboxy_4_methyl_5_oxohept_2_enoyl_coa
+    3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    ala_thr
+    <-> . +4_4_diaponeurosporenal
+    4_4_diaponeurosporen_1_1_diol
   }
 }

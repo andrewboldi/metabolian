@@ -24,13 +24,13 @@ pathway short-chain-fatty-aldehyde-to-short-chain-fatty "short-chain fatty aldeh
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_93 [2.7.7.93] +phosphonoformate +ctp
-    cmp_5_phosphonoformate
+    <-> ec_2_7_7_108 [2.7.7.108] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
-    precursor_z
+    <-> ec_2_7_7_108 [2.7.7.108] +l_threonine +atp
+    o_adenyl_l_threonine_1
   }
 }

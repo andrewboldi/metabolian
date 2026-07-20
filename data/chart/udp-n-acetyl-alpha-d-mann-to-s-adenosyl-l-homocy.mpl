@@ -24,91 +24,79 @@ pathway udp-n-acetyl-alpha-d-mann-to-s-adenosyl-l-homocy "UDP-N-acetyl-alpha-D-m
 
   branch from udp side left {
     udp
-    <-> ec_2_7_7_37 [2.7.7.37] +beta_l_arabinose_1_phosphate +h +phosphate
-    udp_beta_l_arabinopyranose
-  }
-
-  branch from udp side right {
-    udp
     <-> ec_5_1_3_14 [5.1.3.14] +udp_n_acetyl_alpha_d_mannosamine +h2o +h
     n_acetyl_d_mannosamine
   }
 
-  branch from aldehydo_n_acetyl_d_mannosamine side left {
-    aldehydo_n_acetyl_d_mannosamine
-    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphate +h2o
-    phosphoenolpyruvate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_1_2_3 [1.1.2.3] +ferrocyanide +3_phenylpyruvate +ferricyanide
-    s_3_phenyllactate
+  branch from udp side right {
+    udp
+    <-> . +2_hydroxy_atorvastatin_acyl_glucuronide +ortho_hydroxyatorvastatin
+    udp_alpha_d_glucuronate
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_99_39 [1.14.99.39] +ubiquinol_2 +nh4 +o2 +hydroxylamine +h2o
-    ubiquinone_2
+    <-> . +cinchoninone +nadph +cinchonine
+    nadp
   }
 
-  branch from aldehydo_n_acetyl_d_glucosamine side right {
-    aldehydo_n_acetyl_d_glucosamine
-    <-> ec_3_5_1_26 [3.5.1.26] +l_asparagine +h2o
-    n_4_beta_n_acetyl_d_glucosaminyl_l_asparagine
+  branch from h side right {
+    h
+    <-> . +cinchonine +nadp +nadph
+    cinchoninone
   }
 
   branch from aldehydo_n_acetyl_d_glucosamine side left {
     aldehydo_n_acetyl_d_glucosamine
-    <-> ec_2_7_1_1 [2.7.1.1] +n_acetyl_beta_d_glucosamine_6_phosphate +h +adp
-    atp
+    <-> . +h +acetate +h2o
+    beta_d_glucosamine
   }
 
   branch from n_n_diacetylchitobiose side right {
     n_n_diacetylchitobiose
-    <-> ec_2_4_1_280 [2.4.1.280] +n_acetyl_alpha_d_glucosamine_1_phosphate +phosphate
-    n_acetyl_beta_d_glucosamine
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from n_n_diacetylchitobiose side left {
     n_n_diacetylchitobiose
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    adp
+    <-> . +phosphoenolpyruvate +diacetylchitobiose_6_phosphate
+    pyruvate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +atp +alanyl_poly_glycerolphosphate +h +adp
-    d_alanyl_l_alanyl_poly_glycerol_phosphate
+    <-> . +h +adp +atp +h2o
+    21_hydroxyprogesterone
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_6_3_2_16 [6.3.2.16] +d_alanine +atp +alanyl_poly_glycerolphosphate +h +adp
-    d_alanyl_alanyl_poly_glycerolphosphate
+    <-> . +h +adp +atp +h2o
+    12_s_hete
   }
 
   branch from l_histidine side right {
-    l_histidine
-    <-> ec_2_7_1_203 [2.7.1.203] +2_amino_2_deoxy_d_gluconic_acid +n_phosphonato_l_histidine
-    d_glucosaminic_acid_6_phosphate
-  }
-
-  branch from l_histidine side left {
     l_histidine
     <-> . +sam +sah +hplus
     n_methyl_l_histidine
   }
 
+  branch from l_histidine side left {
+    l_histidine
+    <-> . +gtp +ppi
+    n_5_guanosyl_phosphono_l_histidine_1
+  }
+
   branch from sah side right {
     sah
-    <-> . +lanosterol +sam +hplus
-    eburicol
+    <-> ec_2_1_1_244 [2.1.1.244] +n_terminal_l_seryl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_seryl_l_prolyl_l_ly
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_346 [2.1.1.346] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> . +n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
+    n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy
   }
 }

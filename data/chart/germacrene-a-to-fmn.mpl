@@ -20,13 +20,13 @@ pathway germacrene-a-to-fmn "(+)-germacrene A to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +asperaculane_g +fmnh2 +o2 +co2 +h2o
-    aculene_d
+    <-> . +cordypyrone_a +fmnh2 +o2 +h2o +hplus
+    cordypyrone_b
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
+    <-> ec_1_14_14_183 [1.14.14.183] +taxusin +fmnh2 +o2 +h2o +hplus
+    2_hydroxytaxusin
   }
 }

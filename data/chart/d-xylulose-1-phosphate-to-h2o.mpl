@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-xylulose-1-phosphate-to-h2o "D-Xylulose 1-phosphate to H2O" {
-  spacing 224
+  spacing 218
 
   spine at 0,0 {
     d_xylulose_1_phosphate
@@ -18,56 +18,44 @@ pathway d-xylulose-1-phosphate-to-h2o "D-Xylulose 1-phosphate to H2O" {
 
   branch from d_xylulose side left {
     d_xylulose
-    <-> ec_5_3_1_15 [5.3.1.15]
-    alpha_d_lyxopyranose
-  }
-
-  branch from d_xylulose side right {
-    d_xylulose
     <-> ec_5_3_1_5 [5.3.1.5]
-    d_xylopyranose
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_fluorobenzaldehyde +nad
-    3_fluorobenzyl_alcohol
+    alpha_d_xylose
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_bromobenzaldehyde +nad
-    3_bromobenzyl_alcohol
+    <-> ec_3_4_11_10 [3.4.11.10] +l_aspartate +4_nitroaniline +h2o
+    aspartic_acid_beta_4_nitroanilide
   }
 
-  branch from atp side left {
-    atp
-    <-> . +diphosphate +h +coumermic_acid +amp +coumeroic_acid
-    3_amino_4_7_dihydroxy_8_methylcoumarin
+  branch from h side left {
+    h
+    <-> ec_3_4_11_21 [3.4.11.21] +l_aspartate +angiotensin_iii +h2o
+    angiotensin_ii
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    d_aspartate
+    n_alpha_formyl_l_methionine
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +3_cyanobenzaldehyde +h +nadph
-    3_cyanobenzyl_alcohol
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    d_mannitol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +nadph +3_bromobenzyl_alcohol
-    3_bromobenzaldehyde
+    <-> ec_1_14_13_24 [1.14.13.24] +3_hydroxy_4_methyl_benzoate +h +o2 +nadph +h2o
+    4_methylgentisate
   }
 
-  branch from xylitol side left {
-    xylitol
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +aldehydo_d_xylose
-    nad
+  branch from nadp side left {
+    nadp
+    <-> . +4_hydroxybenzoate +h +o2 +nadph +h2o
+    2_5_dihydroxybenzoate
   }
 
   branch from xylitol side right {
@@ -76,15 +64,21 @@ pathway d-xylulose-1-phosphate-to-h2o "D-Xylulose 1-phosphate to H2O" {
     aldehydo_d_xylose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +nh4
-    1_2_diaminopropanoate
+  branch from xylitol side left {
+    xylitol
+    <-> ec_1_1_3_41 [1.1.3.41] +alpha_d_xylose +h2o2
+    o2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +d_alanyl_d_alanine
-    d_alanyl_d_alanyl_d_alanine
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +n_acetyllactosamine
+    alpha_d_galactosyl_1_3_beta_d_galactosyl_1_4_n_a
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +d_tyrosinamide +h +nh4
+    d_tyrosine
   }
 }

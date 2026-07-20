@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cpd-5167-to-c80-dolichol-phosphate",
   "name": "CPD-5167 to C80 dolichol phosphate",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 5-step route from CPD-5167 to C80 dolichol phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,13 +109,12 @@
       }
     },
     {
-      "id": "25r_5beta_cholestane_3alpha_7alpha_26_triol",
-      "name": "(25R)-5beta-cholestane-3alpha,7alpha,26-triol",
-      "short": "5beta-cholestane-3a…",
-      "formula": "C27H48O3",
-      "charge": 0,
+      "id": "18_2_18_3_ps",
+      "name": "18:2-18:3-PS",
+      "formula": "C42H71NO10P",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1103845"
+        "chebi": "CHEBI:191333"
       }
     },
     {
@@ -155,32 +154,13 @@
       }
     },
     {
-      "id": "9z_12z_octadecadienoate",
-      "name": "(9Z,12Z)-octadecadienoate",
-      "short": "(9Z,12Z)-octadecadi…",
-      "formula": "C18H31O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1108069"
-      }
-    },
-    {
-      "id": "cholesterol",
-      "name": "cholesterol",
-      "formula": "C27H46O",
+      "id": "ps_18_3_9z_12z_15z_18_3_9z_12z_15z",
+      "name": "PS(18:3(9Z,12Z,15Z)/18:3(9Z,12Z,15Z))",
+      "short": "PS(18:3(9Z,12Z,15Z)…",
+      "formula": "C42H70NO10P",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM726122"
-      }
-    },
-    {
-      "id": "1_linoleoyl_cholesterol_cholesterol_ester_18_2_d",
-      "name": "1-Linoleoyl-Cholesterol, Cholesterol-Ester (18:2, Delta 9, 12)",
-      "short": "1-Linoleoyl-Cholest…",
-      "formula": "C45H76O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM744983"
+        "chebi": "CHEBI:185459"
       }
     }
   ],
@@ -218,6 +198,13 @@
       "name": "dolichyl-P-Glc:Glc2Man9GlcNAc2-PP-dolichol alpha-1,2-glucosyltransferase",
       "ec": [
         "2.4.1.256"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_1",
+      "name": "EC 3.6.3.1",
+      "ec": [
+        "3.6.3.1"
       ]
     }
   ],
@@ -464,14 +451,15 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR163279",
+      "name": "Reaction MNXR174605",
+      "ec": "3.6.3.1",
       "substrates": [
         {
-          "metabolite": "25r_5beta_cholestane_3alpha_7alpha_26_triol",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "18_2_18_3_ps",
           "stoichiometry": 1
         },
         {
@@ -485,7 +473,7 @@
       ],
       "products": [
         {
-          "metabolite": "25r_5beta_cholestane_3alpha_7alpha_26_triol",
+          "metabolite": "18_2_18_3_ps",
           "stoichiometry": 1
         },
         {
@@ -497,41 +485,55 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_1"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR163279"
+        "metanetx": "MNXR174605"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR163279"
+            "id": "MNXR174605"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR163282",
+      "name": "Reaction MNXR174606",
+      "ec": "3.6.3.1",
       "substrates": [
-        {
-          "metabolite": "9z_12z_octadecadienoate",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cholesterol",
+          "metabolite": "ps_18_3_9z_12z_15z_18_3_9z_12z_15z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_linoleoyl_cholesterol_cholesterol_ester_18_2_d",
+          "metabolite": "ps_18_3_9z_12z_15z_18_3_9z_12z_15z",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -539,17 +541,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_1"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR163282"
+        "metanetx": "MNXR174606"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR163282"
+            "id": "MNXR174606"
           }
         ]
       }

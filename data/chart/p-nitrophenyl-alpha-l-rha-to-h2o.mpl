@@ -24,14 +24,14 @@ pathway p-nitrophenyl-alpha-l-rha-to-h2o "p-nitrophenyl-alpha-L-rha… to H2O" {
 
   branch from h side left {
     h
-    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_c +31r_8_ethyl_12_methylbacteriochlorophyllide_c
-    2e_6e_farnesyl_diphosphate
+    <-> ec_1_13_11_74 [1.13.11.74] +2_amino_5_methylphenol +o2
+    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
-    31r_8_12_diethylbacteriochlorophyllide_c
+    <-> . +s_adenosyl_l_homocysteine +7_hydroxy_2_4_5_trimethoxyisoflavone +2_7_dihydroxy_4_5_dimethoxyisoflavone
+    s_adenosyl_l_methionine
   }
 
   branch from beta_l_rhamnose side left {
@@ -48,14 +48,14 @@ pathway p-nitrophenyl-alpha-l-rha-to-h2o "p-nitrophenyl-alpha-L-rha… to H2O" {
 
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_1_8_1 [3.1.8.1] +dimethylthiophosphate +h +h2o
-    parathion_methyl
+    <-> ec_3_1_3_5 [3.1.3.5] +bis_4_nitrophenyl_phosphate +h2o +h
+    4_nitrophenyl_phosphate
   }
 
   branch from 4_nitrophenol side right {
     4_nitrophenol
-    <-> ec_3_1_3_5 [3.1.3.5] +bis_4_nitrophenyl_phosphate +h2o +h
-    4_nitrophenyl_phosphate
+    <-> ec_3_1_1_1 [3.1.1.1] +h +butanoate +h2o
+    p_nitrophenyl_butyrate
   }
 
   branch from d_glcp_1_3_l_rhap side left {
@@ -66,25 +66,25 @@ pathway p-nitrophenyl-alpha-l-rha-to-h2o "p-nitrophenyl-alpha-L-rha… to H2O" {
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o
-    1d_myo_inositol_2_4_bisphosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_keto_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_cis_keto_mono_mycolate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +l_threonine +h2o
-    o_phospho_l_threonine
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_keto_mycolyl_trehalose_6_phosphate +h2o
+    trehalose_trans_keto_mono_mycolate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nocardicin_g +o2
-    nocardicin_f
+    <-> . +desoxyhemigossypol_6_methyl_ether +o2 +2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
+    h2o2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_n_n_dihydroxynocardicin_c +h
-    nocardicin_b
+    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_aspartate +n_beta_d_glucosyl_indol_3_yl_acetate
+    l_aspartate
   }
 }

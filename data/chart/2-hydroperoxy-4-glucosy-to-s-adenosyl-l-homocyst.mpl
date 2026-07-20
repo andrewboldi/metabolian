@@ -22,14 +22,14 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_21_98_2 [1.21.98.2] +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +h2o
-    2_iminio_3_indol_3_yl_propanoate
+    <-> . +s_ethyl_l_cysteine +o2 +h2o
+    ethiin
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +heme_b
-    cis_heme_d
+    <-> . +hemigossypol +desoxyhemigossypol +h2o
+    o2
   }
 
   branch from isoliquiritigenin side left {
@@ -40,37 +40,37 @@ pathway 2-hydroperoxy-4-glucosy-to-s-adenosyl-l-homocyst "2-[hydroperoxy-(4-gluc
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +3_7_4_trimethylquercetagetin_3_o_beta_d_glucosid
-    oxyayanin_b
+    <-> . +udp +quercetagitrin +h
+    quercetagetin
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +3_7_3_4_tetramethylquercetin_2_o_beta_d_glucosid +h
-    2_hydroxy_3_7_3_4_tetramethylquercetin
+    <-> . +udp +esculin +h
+    esculetin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
-    9z_12z_11_hydroxyoctadecadienoate
+    <-> . +14_15_eet +fmnh2 +o2 +h2o +hplus
+    14_15_epoxy_20_hydroxy_5z_8z_11z_icosatrienoate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    7_hete
+    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
+    24s_hydroxycholestanol
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_268 [2.1.1.268] +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
+    <-> . +3_methylaminomethyl_indole +sam +hplus
+    gramine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_268 [2.1.1.268] +sam +n3_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> ec_2_1_1_346 [2.1.1.346] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 }

@@ -24,8 +24,8 @@ pathway cholest-5-en-3-yl-to-h2o "cholest-5-en-3β-yl… to H2O" {
 
   branch from 13z_16z_docosadienoyl_coa side right {
     13z_16z_docosadienoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    fad
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_13z_16z_docosadienoyl_glycero_3_phosphate
   }
 
   branch from cholesterol side left {
@@ -43,36 +43,36 @@ pathway cholest-5-en-3-yl-to-h2o "cholest-5-en-3β-yl… to H2O" {
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    5alpha_androstane_3alpha_17beta_diol
+    nitrite
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    3alpha_hydroxy_5alpha_pregnan_20_one
+    r_noradrenaline
   }
 
   branch from coa side left {
     coa
-    <-> . +r_carnitine +malonyl_coa +h
-    o_malonyl_d_carnitine
+    <-> . +r_carnitine +13z_octadecenoyl_coa
+    octadecenoyl_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +3_hydroxyisovaleryl_coa +r_carnitine
-    3_hydroxyisovalerylcarnitine
+    <-> . +r_carnitine +trans_9_octadecenoyl_coa
+    9e_octadec_9_enoylcarnitine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    6_trans_leukotriene_b4
+    <-> . +l_leucine +l_proline +l_arginine
+    leucyl_prolyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    11z_icos_11_enoic_acid
+    <-> . +l_leucine +l_serine +l_tryptophan
+    leu_ser_trp
   }
 }

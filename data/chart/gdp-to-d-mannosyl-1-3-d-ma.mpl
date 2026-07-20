@@ -20,14 +20,14 @@ pathway gdp-to-d-mannosyl-1-3-d-ma "GDP to α-D-mannosyl-(1→3)-α-D-ma…" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +beta_glc_1_4_kdo_2_4_alpha_man_1_5_kdo_2_6_lipid +h
-    beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella
+    <-> ec_2_4_1_393 [2.4.1.393] +gdp +alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl +h
+    3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet
   }
 
   branch from gdp_alpha_d_mannose side right {
     gdp_alpha_d_mannose
-    <-> ec_2_4_1_393 [2.4.1.393] +gdp +alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl +h
-    3_o_methyl_alpha_d_mannosyl_1_4_3_1_o_3_o_dimet
+    <-> . +gmp +d_mannose_1_phosphate +h
+    h2o
   }
 
   branch from d_mannosyl_1_3_n_acetyl_d_glucosaminyl_1_diphos side left {

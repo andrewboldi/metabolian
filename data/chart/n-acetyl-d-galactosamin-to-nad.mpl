@@ -22,14 +22,14 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_49 [3.2.1.49] +n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga +h2o
-    l_fucosyl_1_2_d_galactoside
+    <-> . +o2 +h2o2
+    n_acetyl_d_galactosamino_1_5_lactone
   }
 
   branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
-    <-> ec_1_1_3_29 [1.1.3.29] +o2 +h2o +h2o2 +hplus
-    n_acetyl_d_galactosaminate
+    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
+    l_serine
   }
 
   branch from d_tagatopyranose_1_phosphate side left {
@@ -40,14 +40,14 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
 
   branch from nh3 side right {
     nh3
-    <-> . +l_glutamine +dopamine
-    n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine
+    <-> . +n_carbamoyl_l_alaninate +h2o +hplus +co2
+    alanine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +l_glutamine +norepinephrine
-    n_2r_2_3_4_dihydroxyphenyl_2_hydroxyethyl_l_glut
+    <-> ec_1_4_1_28 [1.4.1.28] +two_alkyl_ammonium_ion +nad +h2o +nadh +hplus
+    ketone
   }
 
   branch from galactitol_1_phosphate side right {
@@ -58,13 +58,13 @@ pathway n-acetyl-d-galactosamin-to-nad "N-acetyl-β-D-galactosamin… to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_53 [1.1.1.53] +nadh +3_hydroxy_5_pregnan_20_one +h
-    pregnanediol
+    <-> . +nadh +h +styrene +o2
+    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +11_deoxycortisol
-    17alpha_21_dihydroxypregnenolone
+    <-> . +nadh +h +2_4_5_trichlorophenoxy_acetate +o2 +2_4_5_trichlorophenol +h2o
+    glyoxylate
   }
 }

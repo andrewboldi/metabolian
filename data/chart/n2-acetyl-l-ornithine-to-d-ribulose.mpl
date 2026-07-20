@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     n2_acetyl_l_ornithine
@@ -32,38 +32,38 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from citrulline side left {
     citrulline
-    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadph +o2 +nadp +h2o +hplus
+    <-> . +n5_hydroxyamino_imino_methyl_l_ornithinium +nadh +o2 +nad +h2o +hplus
     no
   }
 
   branch from citrulline side right {
     citrulline
-    <-> . +nadh +o2 +no +nad +h2o +hplus
-    n5_hydroxyamino_imino_methyl_l_ornithinium
+    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +arginine +o2 +no +h2o +hplus
+    fmn
   }
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetylserotonin +h2o
-    serotonin
+    <-> . +3_hydroxy_3_4_hydroxyphenyl_propanoate
+    4_hydroxybenzaldehyde
   }
 
   branch from acetate side right {
     acetate
-    <-> . +n_acetyltryptamine +h2o
-    tryptaminium
+    <-> . +ac_o_9_sialylglycoconjugate_anion +h2o +hplus
+    sialylglycoconjugate_anion
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
-    2_cis_6_trans_farnesyl_diphosphate
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    humulene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_41 [2.5.1.41] +sn_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    sn_3_o_geranylgeranyl_glycerol_1_phosphate
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    sibirene
   }
 
   branch from arginine side left {
@@ -86,35 +86,29 @@ pathway n2-acetyl-l-ornithine-to-d-ribulose "N2-acetyl-L-ornithine to D-ribulose
 
   branch from phosphonatoenolpyruvate side right {
     phosphonatoenolpyruvate
-    <-> ec_2_5_1_7 [2.5.1.7] +udpglcnac +pi
-    udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin
-  }
-
-  branch from phosphonatoenolpyruvate side left {
-    phosphonatoenolpyruvate
     <-> ec_2_5_1_56 [2.5.1.56] +n_acetyl_d_mannosamine +h2o +pi
     n_acetylneuraminate
   }
 
-  branch from 3_deoxy_d_manno_oct_2_ulosonate side right {
-    3_deoxy_d_manno_oct_2_ulosonate
-    <-> ec_2_7_7_38 [2.7.7.38] +ctp +ppi
-    cmp_3_deoxy_d_manno_octulosonate
+  branch from phosphonatoenolpyruvate side left {
+    phosphonatoenolpyruvate
+    <-> ec_2_7_7_105 [2.7.7.105] +gtp +hplus +ppi
+    enolpyruvoyl_2_diphospho_5_guanosine
   }
 
-  branch from 3_deoxy_d_manno_oct_2_ulosonate side left {
+  branch from 3_deoxy_d_manno_oct_2_ulosonate side right {
     3_deoxy_d_manno_oct_2_ulosonate
     <-> ec_1_1_3_48 [1.1.3.48] +o2 +h2o2
     7r_6_deoxy_d_manno_oct_7_ulosuronate
   }
 
-  branch from d_arabinopyranose side right {
+  branch from d_arabinopyranose side left {
     d_arabinopyranose
     <-> ec_1_1_1_435 [1.1.1.435] +nadp +nadph +hplus
     d_arabinono_1_5_lactone
   }
 
-  branch from d_arabinopyranose side left {
+  branch from d_arabinopyranose side right {
     d_arabinopyranose
     <-> ec_4_1_2_23 [4.1.2.23] +pyruvate
     3_deoxy_d_manno_octulosonate

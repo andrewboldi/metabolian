@@ -18,14 +18,14 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from h side left {
     h
-    <-> . +3e_phytochromobilin
-    3z_phytochromobilin
+    <-> . +s_adenosyl_l_homocysteine +l_leucyl_arginomycin +l_leucyl_demethylarginomycin
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +2e_3_2_4_dihydroxy_5_methoxyphenyl_prop_2_enoic
-    z_6_hydroxyferulate
+    <-> . +s_adenosyl_l_homocysteine +l_leucyl_blasticidin_s +s_adenosyl_l_methionine
+    l_leucyl_demethyl_blasticidin_s
   }
 
   branch from n_7_isojasmonyl_l_isoleucinate side left {
@@ -48,13 +48,13 @@ pathway jasmonoyl-l-isoleucine-to-diphosphate "(-)-Jasmonoyl-L-isoleucine to dip
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_197 [4.2.3.197] +fpp +h2o
-    7_epi_ent_eudesmane_5_11_diol
+    <-> . +o_orsellinate +fpp
+    ilicicolinate_b
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_199 [4.2.3.199] +fpp
-    5_epi_eremophilene
+    <-> . +5_methylorsellinate +atp +nadph +hplus +amp +nadp
+    2_4_dihydroxy_5_6_dimethylbenzaldehyde
   }
 }

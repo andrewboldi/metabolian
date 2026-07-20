@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-palmitoyl-sn-glycerol-to-h2o "3-palmitoyl-sn-glycerol to H2O" {
-  spacing 194
+  spacing 182
 
   spine at 0,0 {
     3_palmitoyl_sn_glycerol
@@ -18,43 +18,31 @@ pathway 3-palmitoyl-sn-glycerol-to-h2o "3-palmitoyl-sn-glycerol to H2O" {
 
   branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side left {
     1_o_oleoyl_sn_glycero_3_phosphocholine
-    <-> . +2_oleoylglycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
-    1_2_dioleoylglycerol
-  }
-
-  branch from 1_o_oleoyl_sn_glycero_3_phosphocholine side right {
-    1_o_oleoyl_sn_glycero_3_phosphocholine
     <-> . +linolenoyl_coa +coa
     1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
-  branch from 1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine side left {
-    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphocholine
-    <-> . +1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp +1_o_oleoyl_sn_glycero_3_phosphocholine
-    1_linoleoyl_sn_glycero_3_phosphocholine
-  }
-
   branch from atp side right {
     atp
-    <-> ec_6_2_1_23 [6.2.1.23] +diphosphate +amp +omega_carboxyacyl_coa +h +alpha_omega_dicarboxylic_acid
-    coa
+    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylspermine +adp +phosphate
+    bis_glutathionyl_spermine
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +2_4_dichlorobenzoyl_coa +amp +coa
-    2_4_dichlorobenzoate
+    <-> ec_6_3_1_9 [6.3.1.9] +h +adp +glutathionylaminopropylcadaverine +phosphate +aminopropylcadaverine
+    glutathione
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threo_3_methylmalic_acid +h
-    mesaconate
+    <-> . +h +pyruvate +1_hydroxy_2_naphthaldehyde
+    cis_4_1_hydroxynaphth_2_yl_2_oxobut_3_enoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +mesaconate +h +coa
-    2_methylfumaryl_coa
+    <-> . +r_allantoin +co2
+    s_5_hydroxyisourate
   }
 }

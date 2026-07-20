@@ -38,26 +38,26 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_82 [3.1.1.82] +pheophorbide_a +h2o +hplus +co2
-    pyropheophorbide_a_anion
+    <-> ec_3_1_1_85 [3.1.1.85] +o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos +h2o +hplus
+    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_97 [3.1.1.97] +diphthine_methyl_ester +h2o +hplus
-    diphthine_betaine
+    <-> ec_3_1_1_59 [3.1.1.59] +juvenile_hormone_i +h2o +hplus
+    juvenile_hormone_i_carboxylate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_106 [1.14.14.106] +taxa_4_20_11_dien_5_ol +fmnh2 +o2 +h2o +hplus
-    taxa_4_20_11_dien_5_13_diol
+    <-> . +tyrosine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_tyrosinate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_cheilanthifoline
+    <-> ec_1_14_14_25 [1.14.14.25] +cholesterol +fmnh2 +o2 +h2o +hplus
+    24s_24_hydroxycholesterol
   }
 
   branch from 4_hydroxylamino_n_n_dimethylaniline side left {
@@ -74,14 +74,14 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +succinate +co2
-    morphine
+    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
+    l_tryptophan
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n_methyl_l_tryptophan +o2 +h2o +h2o2
-    l_tryptophan
+    <-> ec_1_14_14_34 [1.14.14.34] +methanesulfonate +fmnh2 +o2 +fmn +h2o +hplus
+    sulfite
   }
 
   branch from n_n_dimethyl_4_nitrosoaniline side left {
@@ -110,8 +110,8 @@ pathway 6-demethylsterigmatocystin-to-acetylene "6-demethylsterigmatocystin to a
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +ethanesulfonate +fmnh2 +o2 +fmn +h2o +hplus
-    sulfite
+    <-> . +fmnh2 +o2 +fmn +sulfite +h2o +hplus
+    ethanesulfonate
   }
 
   branch from acetaldehyde side right {

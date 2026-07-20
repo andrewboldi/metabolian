@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-stearoyl-2-10-hydroxyo-to-l-serine "1-stearoyl,2-(10-hydroxyo… to L-serine" {
-  spacing 274
+  spacing 268
 
   spine at 0,0 {
     1_stearoyl_2_10_hydroxyoctadecanoyl_sn_glycero_3
@@ -28,28 +28,16 @@ pathway 1-stearoyl-2-10-hydroxyo-to-l-serine "1-stearoyl,2-(10-hydroxyo… to L-
     9_10_epoxyoctadecanoate
   }
 
-  branch from sn_glycero_3_phosphoserine side left {
-    sn_glycero_3_phosphoserine
-    <-> . +1_palmitoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    palmitate
-  }
-
-  branch from octadecanoate side right {
-    octadecanoate
-    <-> . +n_stearoyl_l_phenylalanine +h2o
-    l_phenylalanine
-  }
-
   branch from octadecanoate side left {
     octadecanoate
     <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +h2o +hplus
     2_arachidonoyl_sn_glycero_3_phosphate
   }
 
-  branch from sn_glycerol_3_phosphate side right {
-    sn_glycerol_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_linoleoyl_sn_glycero_3_phosphate
+  branch from octadecanoate side right {
+    octadecanoate
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +h2o +hplus
+    mg_0_0_22_6_4z_7z_10z_13z_16z_19z_0_0
   }
 
   branch from sn_glycerol_3_phosphate side left {
@@ -58,13 +46,19 @@ pathway 1-stearoyl-2-10-hydroxyo-to-l-serine "1-stearoyl,2-(10-hydroxyo… to L-
     1_arachidonoyl_sn_glycerol_3_phosphate
   }
 
-  branch from serine side right {
+  branch from sn_glycerol_3_phosphate side right {
+    sn_glycerol_3_phosphate
+    <-> . +palmitoleoyl_coa +coa
+    1_palmitoleoyl_sn_glycerol_3_phosphate
+  }
+
+  branch from serine side left {
     serine
     <-> ec_2_3_1_30 [2.3.1.30] +acetyl_coa +coa
     o_acetyl_l_serine
   }
 
-  branch from serine side left {
+  branch from serine side right {
     serine
     <-> . +myristoyl_coa +hplus +co2 +coa
     3_dehydrohexadecasphinganine

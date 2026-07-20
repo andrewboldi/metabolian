@@ -128,32 +128,32 @@
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:60374"
+        "chebi": "CHEBI:57907"
       }
     },
     {
-      "id": "acoradiene",
-      "name": "β-acoradiene",
-      "formula": "C15H24",
+      "id": "astellatene",
+      "name": "(−)-astellatene",
+      "formula": "C25H40",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:172925"
+        "chebi": "CHEBI:191388"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "preaspterpenacid_acid_i",
+      "name": "preaspterpenacid acid I",
+      "short": "preaspterpenacid…",
+      "formula": "C25H42O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:191389"
       }
     }
   ],
@@ -304,17 +304,17 @@
     },
     {
       "id": "r4",
-      "name": "(2Z,6Z)-farnesyl diphosphate = beta-acoradiene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = beta-acoradiene + diphosphate",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = (-)-astellatene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acoradiene",
+          "metabolite": "astellatene",
           "stoichiometry": 1
         },
         {
@@ -325,31 +325,35 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:68516"
+        "rhea": "RHEA:71991"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68516"
+            "id": "RHEA:71991"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = beta-acoradiene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-acoradiene + diphosphate",
+      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate + H2O = preaspterpenacid acid I + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "acoradiene",
+          "metabolite": "preaspterpenacid_acid_i",
           "stoichiometry": 1
         },
         {
@@ -360,14 +364,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68520"
+        "rhea": "RHEA:71995"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68520"
+            "id": "RHEA:71995"
           }
         ]
       }

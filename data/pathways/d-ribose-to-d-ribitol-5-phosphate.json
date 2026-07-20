@@ -1,0 +1,252 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-ribose-to-d-ribitol-5-phosphate",
+  "name": "D-ribose to D-ribitol 5-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from D-ribose to D-ribitol 5-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197815"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_ribose",
+      "name": "D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108051"
+      }
+    },
+    {
+      "id": "alpha_d_ribulose",
+      "name": "alpha-D-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371691"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_ribulose_5_phosphate",
+      "name": "D-ribulose 5-phosphate",
+      "short": "D-ribulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM145"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "d_ribitol_5_phosphate",
+      "name": "D-ribitol 5-phosphate",
+      "short": "D-ribitol 5-P",
+      "formula": "C5H12O8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM744872"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_20",
+      "name": "ribose isomerase",
+      "ec": [
+        "5.3.1.20"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_16",
+      "name": "ribulokinase",
+      "ec": [
+        "2.7.1.16"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_47",
+      "name": "D-ribulokinase",
+      "ec": [
+        "2.7.1.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ribose isomerase",
+      "ec": "5.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197815"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197815"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribulokinase",
+      "ec": "2.7.1.16",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_ribulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197754"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197754"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR162448",
+      "substrates": [
+        {
+          "metabolite": "d_ribulose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_ribitol_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR162448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR162448"
+          }
+        ]
+      }
+    }
+  ]
+}

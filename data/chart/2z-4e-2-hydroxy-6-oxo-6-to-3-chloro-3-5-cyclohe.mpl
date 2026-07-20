@@ -32,38 +32,38 @@ pathway 2z-4e-2-hydroxy-6-oxo-6-to-3-chloro-3-5-cyclohe "(2Z,4E)-2-hydroxy-6-oxo
 
   branch from h side left {
     h
-    <-> ec_5_4_99_67 [5.4.99.67] +4_amino_4_deoxychorismate
-    4_amino_4_deoxyprephenate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_20_2_11z_14z_18_3_9z_12z_15z +phosphate +pc_20_2_11z_14z_18_3_9z_12z_15z +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +2_3_5_7_tetrabromobenzofuro_3_2_b_pyrrole +bromide
-    pentabromopseudilin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade
   }
 
   branch from sulfite side left {
     sulfite
-    <-> ec_4_4_1_24 [4.4.1.24] +h +pyruvate
-    2s_3_sulfolactate
+    <-> . +thiosulfate +mk_8 +h +trithionate
+    menaquinol_8
   }
 
   branch from sulfite side right {
     sulfite
-    <-> . +sulfo_aldehydes +h2o +h
-    2e_4z_2_hydroxymuconate
+    <-> ec_3_1_1_92 [3.1.1.92] +maleylacetate +h +h2o
+    4_sulfomuconolactone
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +l_glutamate +l_tryptophan
-    tryptophanyl_glutamyl_glycine
+    <-> ec_4_2_1_65 [4.2.1.65] +3_phenylpropionitrile
+    3_phenylpropanamide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_glutamate +l_tryptophan
-    tryptophanyl_glutamyl_leucine
+    <-> ec_2_1_2_1 [2.1.2.1] +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +glycine +d_serine
+    6s_5_6_7_8_tetrahydrofolate
   }
 
   branch from 3_chlorocatechol side left {
@@ -80,25 +80,25 @@ pathway 2z-4e-2-hydroxy-6-oxo-6-to-3-chloro-3-5-cyclohe "(2Z,4E)-2-hydroxy-6-oxo
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_144 [1.14.13.144] +h +stemod_13_17_ene +nadph +nadp +h2o
-    syn_stemoden_19_oate
+    <-> . +nadh +9z_12z_octadecadienoate +h +nad +h2o
+    vernolate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +s_linalool +h +nad +h2o
-    6e_8_hydroxylinalool
+    <-> . +ubiquinol_9 +ubiquinone_9 +h2o
+    pmf
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
-    alpha_l_arabinofuranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    isodihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +alpha_l_arabinofuranose
-    l_arabinitol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    neoisodihydrocarveol
   }
 }

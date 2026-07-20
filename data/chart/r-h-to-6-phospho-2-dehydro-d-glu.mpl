@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-h-to-6-phospho-2-dehydro-d-glu "R-H to 6-phospho-2-dehydro-D-glu…" {
-  spacing 292
+  spacing 280
 
   spine at 0,0 {
     r_h
@@ -36,14 +36,14 @@ pathway r-h-to-6-phospho-2-dehydro-d-glu "R-H to 6-phospho-2-dehydro-D-glu…" {
 
   branch from fmn side left {
     fmn
-    <-> . +valine +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_l_valinate
+    <-> ec_1_14_14_157 [1.14.14.157] +indolin_2_one +fmnh2 +o2 +h2o +hplus
+    3_hydroxyindolin_2_one
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_134 [1.14.14.134] +sophoradiol +fmnh2 +o2 +h2o +hplus
-    soyasapogenol_b
+    <-> ec_1_14_14_111 [1.14.14.111] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
+    9_pimara_7_15_dien_19_oate
   }
 
   branch from d_glucose side left {
@@ -66,8 +66,8 @@ pathway r-h-to-6-phospho-2-dehydro-d-glu "R-H to 6-phospho-2-dehydro-D-glu…" {
 
   branch from d_glucono_1_5_lactone side right {
     d_glucono_1_5_lactone
-    <-> ec_1_1_1_47 [1.1.1.47] +nadp +nadph +hplus
-    glucose
+    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +glucose
+    d_glucitol
   }
 
   branch from d_gluconate side left {
@@ -82,27 +82,15 @@ pathway r-h-to-6-phospho-2-dehydro-d-glu "R-H to 6-phospho-2-dehydro-D-glu…" {
     5_dehydro_d_gluconate
   }
 
-  branch from 2_dehydro_d_gluconate side left {
-    2_dehydro_d_gluconate
-    <-> ec_1_1_1_274 [1.1.1.274] +nadp +nadph +hplus
-    2_5_didehydro_d_gluconate
-  }
-
-  branch from 2_dehydro_d_gluconate side right {
-    2_dehydro_d_gluconate
-    <-> . +3_hydroxypyruvate
-    d_glyceraldehyde
-  }
-
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_1_99_32 [1.1.99.32] +l_sorbopyranose +hydrogen_acceptor
-    l_xylo_hexos_2_ulose
+    <-> . +n_acylphytosphingosine +o2 +hydrogen_acceptor +h2o
+    n_acyl_8_phytosphingenine
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +stearoyl_coa +o2 +hydrogen_acceptor +h2o
-    oleoyl_coa
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_5_ol +hydrogen_acceptor +h2o
+    5_hydroxyquinolin_2_1h_one
   }
 }

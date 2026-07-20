@@ -24,20 +24,8 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
 
   branch from 1s_4s_prephenate side left {
     1s_4s_prephenate
-    <-> . +2_octaprenylphenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
-    3_all_trans_octaprenyl_benzene_1_2_diol
-  }
-
-  branch from 1s_4s_prephenate side right {
-    1s_4s_prephenate
     <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
     6_methoxy_2_octaprenylhydroquinone
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_3_1_1 [2.3.1.1] +acetyl_coa +coa +hplus
-    nag
   }
 
   branch from glutamate side right {
@@ -46,57 +34,63 @@ pathway l-arogenate-to-s-adenosyl-l-homocysteine "L-arogenate to S-adenosyl-L-ho
     keto_phenylpyruvate
   }
 
-  branch from 3_4_hydroxyphenyl_pyruvate side left {
+  branch from glutamate side left {
+    glutamate
+    <-> ec_6_3_4_2 [6.3.4.2] +utp +glutamine +atp +h2o +adp +pi +hplus
+    ctp
+  }
+
+  branch from 3_4_hydroxyphenyl_pyruvate side right {
     3_4_hydroxyphenyl_pyruvate
     <-> ec_6_4_1_10 [6.4.1.10] +atp +amp +ppi +hplus
     atromentin
   }
 
-  branch from 3_4_hydroxyphenyl_pyruvate side right {
+  branch from 3_4_hydroxyphenyl_pyruvate side left {
     3_4_hydroxyphenyl_pyruvate
     <-> . +l_kynurenine +tyrosine +h2o
     kynurenate
   }
 
-  branch from 4_hydroxyphenylacetate side left {
+  branch from 4_hydroxyphenylacetate side right {
     4_hydroxyphenylacetate
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     dopac
   }
 
-  branch from r_r_2_methyl_6_phytylhydroquinone side right {
+  branch from r_r_2_methyl_6_phytylhydroquinone side left {
     r_r_2_methyl_6_phytylhydroquinone
     <-> ec_5_5_1_24 [5.5.1.24]
     tocopherol
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_37 [4.2.3.37] +fpp
-    epi_isozizaene
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_40 [4.2.3.40] +fpp
-    z_bisabolene
+    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
+    ditrans_polycis_tetradecaprenyl_diphosphate
   }
 
-  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
+    tri_trans_poly_cis_undecaprenyl_diphosphate
+  }
+
+  branch from r_r_2_3_dimethyl_6_phytylhydroquinone side right {
     r_r_2_3_dimethyl_6_phytylhydroquinone
     <-> ec_5_5_1_24 [5.5.1.24]
     tocopherol
   }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_62 [2.1.1.62] +5_n7_methyl_5_triphosphoguanosine_2_o_methyladen +sam +hplus
-    5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o
-  }
-
   branch from sah side left {
     sah
-    <-> ec_2_1_1_49 [2.1.1.49] +primary_ammonium_ion +sam +hplus
-    methylated_primary_amine
+    <-> ec_2_1_1_328 [2.1.1.328] +n_demethylindolmycin +sam +hplus
+    indolmycin
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_103 [2.1.1.103] +n_methylethanolaminium_phosphate +sam +hplus
+    n_n_dimethylethanolamine_phosphate
   }
 }

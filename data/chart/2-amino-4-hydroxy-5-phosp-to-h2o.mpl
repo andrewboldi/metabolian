@@ -18,49 +18,49 @@ pathway 2-amino-4-hydroxy-5-phosp-to-h2o "2-amino-4-hydroxy-5-phosp… to H2O" {
 
   branch from h side left {
     h
-    <-> . +cis_2_methyl_4_carboxylatomethylenebut_2_en_1_4 +chloride
-    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    <-> . +l_alanine +indol_3_yl_acetate +h2o
+    n_indole_3_acetyl_l_alanine
   }
 
   branch from h side right {
     h
-    <-> . +5_chloro_trans_dienelactone +chloride
-    2_chloro_2_2_chloro_5_oxofuran_2_yl_acetate
+    <-> . +l_leucine +indol_3_yl_acetate +h2o
+    n_indole_3_acetyl_l_leucine
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    methyl_beta_d_galactoside
+    <-> ec_6_3_2_2 [6.3.2.2] +3_cyano_l_alanine +atp +l_glutamate +phosphate
+    glutamyl_cyanoalanine
   }
 
   branch from adp side right {
     adp
-    <-> ec_7_6_2_10 [7.6.2.10] +h +phosphate +atp +h2o
-    sn_glycerophosphodiester
+    <-> ec_6_3_2_2 [6.3.2.2] +l_valine +atp +l_glutamate +phosphate
+    gamma_l_glutamyl_l_valine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +1d_myo_inositol_1_phosphate +h2o
-    1d_myo_inositol_1_2_bisphosphate
+    <-> . +l_glyceraldehyde_3_phosphate +h2o +h
+    l_glyceraldehyde
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_4_5_pentakisphosphate +h2o
-    d_myo_inositol_1_2_3_4_tetrakisphosphate
+    <-> ec_3_1_3_12 [3.1.3.12] +6_o_mycolyltrehalose_6_phosphate +h2o +h
+    alpha_alpha_trehalose_6_alpha_mycolate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +c32_mycoketide +coa
-    c32_mycoketide_coa
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
+    glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +o_s_c40_phthioceranylpantetheine_4_phosphoryl_l +nadp +coa
-    co2
+    <-> . +betaine_aldehyde
+    betaine_aldehyde_hydrate
   }
 }

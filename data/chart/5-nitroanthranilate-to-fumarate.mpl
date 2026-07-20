@@ -28,14 +28,14 @@ pathway 5-nitroanthranilate-to-fumarate "5-nitroanthranilate to fumarate" {
 
   branch from nh3 side right {
     nh3
-    <-> . +1_4_butanediammonium +o2 +h2o2
-    1_pyrrolinium
+    <-> ec_4_3_1_31 [4.3.1.31] +l_tryptophan
+    e_3_indol_3_yl_acrylate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_28 [4.3.1.28] +l_lysinium
-    l_pipecolic_acid
+    <-> . +o_carbamoyl_l_serine +hplus +co2
+    2_ammonioprop_2_enoate
   }
 
   branch from 2_oxo_3_5_oxofuran_2_ylidene_propanoate side right {

@@ -22,25 +22,25 @@ pathway 1d-myo-inositol-to-cytidine-5-monophosphate "1D-myo-inositol… to cytid
 
   branch from ppi side left {
     ppi
-    <-> . +o_5_adenyl_5_3_adenyl_l_tyrosine_2 +atp
-    o_5_adenyl_5_3_adenyl_5_3_adenyl_l_tyrosine_3
+    <-> . +gpp
+    limonene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp +h2o
-    acorenol
+    <-> . +gpp
+    thujene
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+    <-> . +ganglioside_gd3 +cmp_n_acetyl_9_o_acetylneuraminate +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_8_n_acetyl_ne
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
-    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
+    <-> . +cmp_n_acetyl_9_o_acetylneuraminate +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +hplus
+    n_acetyl_9_o_acetylneuraminosyl_2_3_d_galactosy
   }
 }

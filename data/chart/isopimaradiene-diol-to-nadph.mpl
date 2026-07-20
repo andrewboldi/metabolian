@@ -30,37 +30,37 @@ pathway isopimaradiene-diol-to-nadph "isopimaradiene-diol to NADPH" {
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +2e_phytenoic_acid +nad
-    phytenal
+    <-> . +glycylglycine +l_phenylalanine
+    phe_gly_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro
-    15_epi_lipoxin_a4
+    <-> . +ala_gly +glycine
+    gly_ala_gly
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_fluorobenzyl_alcohol +h2o2
-    3_fluorobenzaldehyde
+    <-> ec_1_14_18_1 [1.14.18.1] +2_3_4_dioxocyclohexa_1_5_dien_1_yl_acetic_acid +h2o +3_4_dihydroxyphenylacetate
+    h
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +4_methoxybenzyl_alcohol +h2o2
-    4_methoxybenzaldehyde
+    <-> ec_1_14_18_1 [1.14.18.1] +1_1_hydroxy_2_propan_2_ylamino_ethyl_3_4_dioxocy +h2o
+    l_isoprenaline
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth +nadp +h
-    o_s_19z_31z_3_oxopentacontadienoylpantetheine_4
+    <-> ec_1_1_1_21 [1.1.1.21] +formaldehyde +h +nadp
+    methanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_38 [1.3.1.38] +phytanoyl_coa +nadp +h
-    phytenoyl_coa
+    <-> ec_1_1_1_21 [1.1.1.21] +2_4_6_trimethylbenzoyl_methanol +nadp +h
+    2_4_6_trimethylphenylglyoxal
   }
 }

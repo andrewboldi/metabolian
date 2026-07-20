@@ -1,0 +1,257 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phytyl-phosphate-to-h2o",
+  "name": "phytyl phosphate to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from phytyl phosphate(2−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182660"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75483"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "lipid_x_h_pylori",
+      "name": "lipid X (H. pylori)",
+      "formula": "C40H76NO12P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560166"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox",
+      "name": "UDP-2-N-[(3R)-3-hydroxyoctadecanoyl]-3-O-[(3R)-3-hydroxyhexadecanoyl]-alpha-D-glucosamine",
+      "short": "UDP-2-N-[(3R)-3-hyd…",
+      "formula": "C49H87N3O20P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1559536"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_54",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": [
+        "3.6.1.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182660",
+      "substrates": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR105124",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR105124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-2,3-diacylglucosamine diphosphatase",
+      "ec": "3.6.1.54",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lipid_x_h_pylori",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_2_n_3r_3_hydroxyoctadecanoyl_3_o_3r_3_hydrox",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR200609"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200609"
+          }
+        ]
+      }
+    }
+  ]
+}

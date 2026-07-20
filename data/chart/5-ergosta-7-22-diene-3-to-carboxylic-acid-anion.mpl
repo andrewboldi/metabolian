@@ -18,13 +18,13 @@ pathway 5-ergosta-7-22-diene-3-to-carboxylic-acid-anion "5α-ergosta-7,22-diene-
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
-    aromatic_l_amino_acid
+    <-> . +h2o +h2o2 +hplus
+    a_peroxy_acid
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
-    glutamine
+    <-> ec_1_97_1_13 [1.97.1.13] +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +sulfite +hplus
+    tetra_3_sulfido_tetrairon
   }
 }

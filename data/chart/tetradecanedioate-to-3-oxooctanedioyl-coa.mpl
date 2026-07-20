@@ -50,14 +50,14 @@ pathway tetradecanedioate-to-3-oxooctanedioyl-coa "tetradecanedioate to 3-oxooct
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_72 [4.2.3.72] +fpp
-    gurjunene
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    tuberculosinol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_73 [4.2.3.73] +fpp
-    valencene
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13r_edaxadiene
   }
 
   branch from dodecanedioyl_coa side right {

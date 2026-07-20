@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-cellotrionate" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     1_5_anhydro_d_fructose
@@ -22,61 +22,49 @@ pathway 1-5-anhydro-d-fructose-to-d-cellotrionate "1,5-anhydro-D-fructose to D-c
 
   branch from h side left {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +1_2_dihydro_1_2_acenaphthylenediol +nadp +nadph
-    acenaphthene_1_2_dione
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_nitrophenol +h2o
+    4_nitrophenyl_d_galactoside
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_20 [1.3.1.20] +ethyl_2_hydroxypropanoate +nadp +nadph
-    ethyl_pyruvate
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +2_nitrophenol +h2o
+    2_nitrophenyl_d_galactoside
   }
 
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_2_1_177 [3.2.1.177] +alpha_d_xylose +h +h2o
-    4_nitrophenyl_d_xyloside
+    <-> ec_1_2_1_3 [1.2.1.3] +propanoate +h +h2o
+    4_nitrophenyl_propanoate
   }
 
   branch from 4_nitrophenol side right {
     4_nitrophenol
-    <-> ec_3_2_1_31 [3.2.1.31] +h +4_nitrophenyl_d_xyloside +h2o
-    aldehydo_d_xylose
+    <-> ec_3_2_1_52 [3.2.1.52] +p_nitrophenyl_n_acetyl_beta_d_glucosaminide +h2o +h
+    n_acetyl_beta_d_galactosamine
   }
 
   branch from beta_cellobiose side left {
-    beta_cellobiose
-    <-> ec_2_7_1_85 [2.7.1.85] +6_phospho_beta_d_glucosyl_1_4_beta_d_glucose +adp +h
-    atp
-  }
-
-  branch from beta_cellobiose side right {
     beta_cellobiose
     <-> ec_2_4_1_20 [2.4.1.20] +glucose +d_glucopyranose_1_phosphate
     phosphate
   }
 
-  branch from cellotriose side left {
-    cellotriose
-    <-> ec_3_2_1_74 [3.2.1.74] +alpha_d_glucose +h2o
-    cellotetraose
-  }
-
-  branch from cellotriose side right {
-    cellotriose
-    <-> ec_3_2_1_74 [3.2.1.74] +beta_d_glucose +h2o
-    d_cellobiose
+  branch from beta_cellobiose side right {
+    beta_cellobiose
+    <-> ec_1_1_99_18 [1.1.99.18] +d_cellobiono_1_5_lactone +h2o2
+    o2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_3 [3.1.1.3] +2_methylpropanoate +4_nitro_3_trifluoromethyl_phenylamine +h
-    flutamide
+    <-> . +acetylpyruvate
+    2_oxo_3_pentynoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_2_20 [3.1.2.20] +2_methylbut_2_enoyl_coenzyme_a +h +2_methylbut_2_enoic_acid
-    coa
+    <-> ec_3_3_2_9 [3.3.2.9] +1_chloroethenyl_oxirane
+    3_chloro_3_butene_1_2_diol
   }
 }

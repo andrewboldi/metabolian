@@ -112,48 +112,56 @@
       }
     },
     {
-      "id": "palustradienal",
-      "name": "Palustradienal",
-      "formula": "C20H30O",
-      "charge": 0,
+      "id": "2r_3s_tartrate",
+      "name": "(2R,3S)-tartrate",
+      "formula": "C4H4O6",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:81595"
+        "metanetx": "MNXM1031"
       }
     },
     {
-      "id": "neoabietadienol",
-      "name": "neoabietadienol",
-      "formula": "C20H32O",
-      "charge": 0,
+      "id": "oxaloglycolate",
+      "name": "Oxaloglycolate",
+      "formula": "C4H2O6",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM165011"
+        "metanetx": "MNXM1369025"
       }
     },
     {
-      "id": "neoabietadienal",
-      "name": "neoabietadienal",
-      "formula": "C20H30O",
+      "id": "thymine",
+      "name": "thymine",
+      "formula": "C5H6N2O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM165010"
+        "metanetx": "MNXM1369302"
       }
     },
     {
-      "id": "palustradienol",
-      "name": "Palustradienol",
-      "formula": "C20H32O",
+      "id": "r_5_6_dihydrothymine",
+      "name": "(R)-5,6-Dihydrothymine",
+      "short": "5,6-Dihydrothymine",
+      "formula": "C5H8N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:81594"
+        "chebi": "CHEBI:176874"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_71",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "id": "ec_1_1_1_93",
+      "name": "tartrate dehydrogenase",
       "ec": [
-        "1.1.1.71"
+        "1.1.1.93"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_1",
+      "name": "dihydrouracil dehydrogenase (NAD(+))",
+      "ec": [
+        "1.3.1.1"
       ]
     }
   ],
@@ -280,25 +288,11 @@
     },
     {
       "id": "r4",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "tartrate dehydrogenase",
+      "ec": "1.1.1.93",
       "substrates": [
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "palustradienal",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "neoabietadienol",
+          "metabolite": "2r_3s_tartrate",
           "stoichiometry": 1
         },
         {
@@ -306,37 +300,51 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloglycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_1_1_93"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR181593"
+        "metanetx": "MNXR195588"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181593"
+            "id": "MNXR195588"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
+      "name": "dihydrouracil dehydrogenase (NAD(+))",
+      "ec": "1.3.1.1",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "neoabietadienal",
+          "metabolite": "thymine",
           "stoichiometry": 1
         },
         {
@@ -346,7 +354,7 @@
       ],
       "products": [
         {
-          "metabolite": "palustradienol",
+          "metabolite": "r_5_6_dihydrothymine",
           "stoichiometry": 1
         },
         {
@@ -356,20 +364,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_71"
+          "enzyme": "ec_1_3_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR181599"
+        "metanetx": "MNXR195607"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR181599"
+            "id": "MNXR195607"
           }
         ]
       }

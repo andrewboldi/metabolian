@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl "D-cellobiono-1,5-lactone to β-D-glucosyl-(1→4)-β-D-gl…" {
-  spacing 252
+  spacing 234
 
   spine at 0,0 {
     d_cellobiono_1_5_lactone
@@ -24,43 +24,25 @@ pathway d-cellobiono-1-5-lactone-to-d-glucosyl-1-4-d-gl "D-cellobiono-1,5-lacton
 
   branch from d_cellobiose side right {
     d_cellobiose
-    <-> ec_2_4_1_20 [2.4.1.20] +alpha_d_glucose_1_phosphate +phosphate
-    beta_d_glucose
+    <-> ec_3_2_1_74 [3.2.1.74] +h2o
+    alpha_d_glucose
   }
 
   branch from 1_4_benzoquinone side left {
-    1_4_benzoquinone
-    <-> . +nitrite +nad +h2o +h +4_nitrophenol +o2
-    nadh
-  }
-
-  branch from 1_4_benzoquinone side right {
     1_4_benzoquinone
     <-> ec_1_11_1_16 [1.11.1.16] +hydroquinone +h2o
     h2o2
   }
 
-  branch from cellotriose side left {
-    cellotriose
-    <-> ec_3_2_1_74 [3.2.1.74] +d_cellobiose +h2o
-    alpha_d_glucose
-  }
-
-  branch from cellotriose side right {
-    cellotriose
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    atp
+  branch from h2o side right {
+    h2o
+    <-> . +l_alanine
+    ala_ala
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +alpha_d_galactose
-    galabiose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_14_14_37 [1.14.14.37] +nadh +4_hydroxyphenylacetaldehyde_oxime +h +o2 +4_hydroxymandelonitrile
-    nad
+    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +ac_2_l_lys_d_ala
+    ac_2_l_lys_d_ala_d_ala
   }
 }

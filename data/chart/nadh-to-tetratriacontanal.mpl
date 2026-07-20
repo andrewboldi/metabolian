@@ -18,49 +18,49 @@ pathway nadh-to-tetratriacontanal "NADH to tetratriacontanal" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h +2_7_10_13_16_19_docosahexenoyl_coenzyme_a +h2o
-    coa
+    <-> ec_1_1_1_387 [1.1.1.387] +nadh +h +methyl_2_2_dimethyl_3_oxopropanoate
+    methyl_2_2_dimethyl_3_hydroxypropionate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +z_hex_3_enoyl_coa +h +coa +5z_octenoyl_coa +h2o
-    fad
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +3_keto_fusidic_acid
+    fusidate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    acetaminophen_glutathione_conjugate
+    <-> . +l_alanine +l_histidine +l_lysine
+    histidyl_lysyl_alanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +acetaminophen_o_d_glucosiduronate +phosphate +acetaminophen_o_d_glucosiduronate
-    atp
+    <-> . +l_histidine +l_lysine +l_glutamate
+    histidyl_lysyl_glutamate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +2_4_7_10_13_16_19_docosaheptenoyl_coenzyme_a
-    3_7_10_13_16_19_docosahexenoyl_coenzyme_a
+    <-> . +flucloxacillin +h +o2 +nadph +h2o
+    5_hydroxymethylflucloxacillin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +docosanedioate +h2o +h +o2 +nadph
-    behenate
+    <-> ec_1_1_1_42 [1.1.1.42] +2_oxoglutarate +co2 +nadph
+    d_erythro_isocitrate
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +octanoyl_coa +coa +o2 +nad +h2o +nadh +acetyl_coa +h
-    hexanoyl_coa
+    <-> ec_1_2_3_1 [1.2.3.1] +famciclovir +o2 +h2o
+    6_oxo_famciclovir
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +glutathione_disulfide +o2 +h2o
-    glutathione
+    <-> ec_1_2_3_1 [1.2.3.1] +h +3_hydroxy_4_methoxybenzoate +o2 +h2o
+    isovanillin
   }
 }

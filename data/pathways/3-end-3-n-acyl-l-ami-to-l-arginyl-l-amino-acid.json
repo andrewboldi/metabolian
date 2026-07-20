@@ -131,95 +131,22 @@
       }
     },
     {
-      "id": "glutamate",
-      "name": "L-Glutamate",
-      "formula": "C5H8NO4",
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29985"
+        "chebi": "CHEBI:78533"
       }
     },
     {
-      "id": "3_l_glutamate_adenylyl_1_group",
-      "name": "3'-(L-glutamate)adenylyl(1−) group",
-      "short": "3'-(L-glutamate)ade…",
-      "formula": "C15H19N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78520"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "3_d_aspartyl_adenylyl_1_group",
-      "name": "3'-(D-aspartyl)adenylyl(1−) group",
-      "short": "3'-(D-aspartyl)aden…",
-      "formula": "C14H17N6O9P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:188449"
-      }
-    },
-    {
-      "id": "d_aspartate",
-      "name": "D-aspartate",
-      "formula": "C4H6NO4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29990"
-      }
-    },
-    {
-      "id": "thioester",
-      "name": "thioester",
-      "formula": "COSR2",
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:51277"
-      }
-    },
-    {
-      "id": "thiol",
-      "name": "thiol",
-      "formula": "HSR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:29256"
-      }
-    },
-    {
-      "id": "n6_acyl_l_lysine",
-      "name": "N6-acyl-L-lysine",
-      "formula": "C7H11N2O2R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:137967"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:33384"
       }
     }
   ],
@@ -243,13 +170,6 @@
       "name": "L-arginine-specific L-amino acid ligase",
       "ec": [
         "6.3.2.48"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_96",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "ec": [
-        "3.1.1.96"
       ]
     }
   ],
@@ -407,59 +327,50 @@
     },
     {
       "id": "r4",
-      "name": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
-      "equation": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
+      "name": "L-seryl-tRNA(Lys) + H2O = tRNA(Lys) + L-serine",
+      "equation": "L-seryl-tRNA(Lys) + H2O = tRNA(Lys) + L-serine",
       "substrates": [
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_l_glutamate_adenylyl_1_group",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
+          "metabolite": "serine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64612"
+        "rhea": "RHEA:74215"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64612"
+            "id": "RHEA:74215"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "D-aminoacyl-tRNA deacylase",
-      "equation": "D-aspartyl-tRNA(Asp) + H2O = tRNA(Asp) + D-aspartate + H(+)",
-      "ec": "3.1.1.96",
+      "name": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
+      "equation": "L-seryl-tRNA(Thr) + H2O = tRNA(Thr) + L-serine",
       "substrates": [
         {
-          "metabolite": "3_d_aspartyl_adenylyl_1_group",
+          "metabolite": "3_l_seryl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
@@ -473,112 +384,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_aspartate",
+          "metabolite": "serine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_96"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:69795"
+        "rhea": "RHEA:74219"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69795"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "a thioester + H2O = a thiol + a carboxylate + H(+)",
-      "equation": "a thioester + H2O = a thiol + a carboxylate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "thioester",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "thiol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carboxylic_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:82919"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:82919"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "N(6)-acyl-L-lysyl-[protein] + H2O = a carboxylate + L-lysyl-[protein]",
-      "equation": "N(6)-acyl-L-lysyl-[protein] + H2O = a carboxylate + L-lysyl-[protein]",
-      "substrates": [
-        {
-          "metabolite": "n6_acyl_l_lysine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "carboxylic_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:85139"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:85139"
+            "id": "RHEA:74219"
           }
         ]
       }

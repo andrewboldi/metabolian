@@ -18,13 +18,13 @@ pathway 1-octadecanoyl-2-dodecano-to-acetate "1-octadecanoyl-2-dodecano… to ac
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl +h2o +hplus
-    1_d_galactosyl_monododecanoyl_sn_glycerol
+    <-> . +nadp +h2o +nadph +hplus
+    dodecanal
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +1_2_didodecanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    3_d_galactosyl_monododecanoyl_sn_glycerol
+    <-> ec_1_13_11_92 [1.13.11.92] +o2
+    2r_2_hydroperoxydodecanoate
   }
 }

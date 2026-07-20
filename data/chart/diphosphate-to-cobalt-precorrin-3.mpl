@@ -26,73 +26,73 @@ pathway diphosphate-to-cobalt-precorrin-3 "diphosphate to cobalt-precorrin 3" {
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> . +indol_3_yl_acetate +h2o
-    indol_3_yl_acetyl_l_glutamine
+    <-> . +gly_gln +h +adp +phosphate +atp
+    glycine
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> . +udp_3_acetamido_2_seryl_amino_2_3_dideoxy_alpha +atp +h2o +h +adp +l_glutamate +phosphate
-    udp_3_acetamido_2_3_dideoxy_2_seryl_amino_alpha
+    <-> ec_6_3_2_49 [6.3.2.49] +l_alanine +atp +h +adp +phosphate
+    ala_gln
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_9z_octadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    microginin_690
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_2_dilinoleoyl_sn_glycero_3_phospho_1d_myo_inos
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    aeruginopeptin_95b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_74 [3.2.1.74] +beta_d_glucose +cellopentaose
-    beta_d_cellohexaose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_95a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_74 [3.2.1.74] +cellopentaose +beta_d_cellohexaose
-    alpha_d_glucose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_228b
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_145 [2.1.1.145] +s_adenosyl_l_homocysteine +2s_3r_3_hydroxy_2_isopropyl_4_methoxy_4_oxobuta
-    2r_3s_3_isopropylmalate
+    <-> . +s_adenosyl_l_homocysteine +equisetin +h
+    n_desmethylequisetin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_140 [2.1.1.140] +s_adenosyl_l_homocysteine +h +s_n_methylcoclaurine
-    coclaurine
+    <-> . +s_adenosyl_l_homocysteine +premithramycinone +h
+    4_demethylpremithracinone
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginopeptin_228a
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_12z_octadecadienoyl_2_9z_12z_15z_octadecatr
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginopeptin_917s_b
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +r_columbianetin +acetone +nadp +h2o
-    angelicin
+    <-> ec_1_2_1_5 [1.2.1.5] +15z_tetracosenoate +h +nadp +h2o
+    15_tetracosenal
   }
 
   branch from nadph side right {
     nadph
-    <-> . +gibberellin_a1 +nadp +h2o +h +o2
-    gibberellin_a4
+    <-> . +3_oxocholoyl_coa +h +nadp
+    choloyl_coa
   }
 }

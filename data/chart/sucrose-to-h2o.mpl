@@ -30,37 +30,37 @@ pathway sucrose-to-h2o "sucrose to H2O" {
 
   branch from glucose side left {
     glucose
-    <-> ec_4_2_99_23 [4.2.99.23] +tulipalin_b
-    6_tuliposide_b
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose
+    6_kestotriose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +epicatechin_3_o_gallate +1_o_galloyl_beta_d_glucose
-    epicatechin
+    <-> . +6_o_indol_3_ylacetyl_beta_d_glucose +h2o +h
+    indol_3_yl_acetate
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    selenite
+    <-> ec_2_7_1_76 [2.7.1.76] +2r_3s_4s_5r_2_6_amino_2_fluoro_9_purinyl_5_hydr +h +adp
+    fludarabine_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_galactofuranose
+    <-> ec_2_7_1_20 [2.7.1.20] +2_methyladenosine_5_monophosphate +adp +h
+    2_methyladenosine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +isotrichodiol
-    12_13_epoxytrichothec_9_ene
+    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
+    3_7_methylthio_heptylmalic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +h +3_hydroxy_4_methylanthranilate
-    3_hydroxy_4_methyl_d_kynurenine
+    <-> . +10_formyl_tetrahydromethanopterin +h
+    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
   }
 }

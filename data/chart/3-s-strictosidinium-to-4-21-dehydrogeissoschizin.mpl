@@ -18,14 +18,14 @@ pathway 3-s-strictosidinium-to-4-21-dehydrogeissoschizin "3α(S)-strictosidinium
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_107 [3.2.1.107] +5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1 +h2o
-    5r_5_d_galactosyloxy_l_lysine_1
+    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
+    g6p
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_230 [2.4.1.230] +d_glcp_1_2_d_glcp +pi
-    d_glucose_1_phosphate
+    <-> ec_3_2_1_104 [3.2.1.104] +cholesteryl_d_glucoside +h2o
+    cholesterol
   }
 
   branch from cathenamine side left {

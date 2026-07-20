@@ -18,14 +18,14 @@ pathway 3-benzyl-3-6-to-glutathione "3-benzyl-3,6… to glutathione" {
 
   branch from h2o side left {
     h2o
-    <-> . +tert_butyl_formate +tert_butanol +formate
-    h
+    <-> . +formate +l_isoglutamine
+    formylisoglutamine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +trans_but_2_ene +nad
-    trans_2r_3r_epoxybutane
+    <-> . +2_methylpropanoate +h +acetate
+    4_methyl_3_oxopentanoate
   }
 
   branch from glutathione side left {

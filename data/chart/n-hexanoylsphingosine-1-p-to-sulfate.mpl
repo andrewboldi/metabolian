@@ -30,13 +30,13 @@ pathway n-hexanoylsphingosine-1-p-to-sulfate "N-hexanoylsphingosine-1-p… to su
 
   branch from sulfate side left {
     sulfate
-    <-> ec_4_8_1_8 [4.8.1.8] +z_n_sulfonatooxy_prop_2_enimidothioate
-    allyl_thiocyanate
+    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +hplus
+    erucin
   }
 
   branch from sulfate side right {
     sulfate
-    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +hplus
-    erucin
+    <-> . +z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim +sulfur_atom +hplus
+    5_methylsulfanyl_pentanenitrile
   }
 }

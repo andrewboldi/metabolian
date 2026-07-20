@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acylsphingosine-to-choline",
+  "name": "N-acylsphingosine to choline",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-acylsphingosine to choline, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20856"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:52639"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acylsphingosine",
+      "name": "N-acylsphingosine",
+      "formula": "C19H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52639"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sphingosine",
+      "name": "Sphingosine",
+      "formula": "C18H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57756"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-1-alkyl-sn-g…",
+      "formula": "C9H18NO7PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36702"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycero_3_phosphocholine",
+      "name": "1-alkyl-sn-glycero-3-phosphocholine",
+      "short": "1-alkyl-sn-glycero-…",
+      "formula": "C8H19NO6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30909"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_alkyl_sn_glycerol_3_phosphate",
+      "name": "1-alkyl-sn-glycerol 3-phosphate",
+      "short": "1-alkyl-sn-glycerol…",
+      "formula": "C3H6O6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58014"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    },
+    {
+      "id": "xylosyl_d_ceramide_d18_1_4e",
+      "name": "xylosyl-β-D-ceramide(d18:1(4E))",
+      "short": "xylosyl-β-D-ceramid…",
+      "formula": "C24H44NO7R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189068"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "cholesteryl_d_xyloside",
+      "name": "cholesteryl β-D-xyloside",
+      "short": "cholesteryl…",
+      "formula": "C32H54O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:189067"
+      }
+    },
+    {
+      "id": "udp_d_xylose",
+      "name": "UDP-α-D-xylose",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57632"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_23",
+      "name": "ceramidase",
+      "ec": [
+        "3.5.1.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ceramidase",
+      "equation": "an N-acylsphing-4-enine + H2O = sphing-4-enine + a fatty acid",
+      "ec": "3.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + sphing-4-enine = a 1-O-alkyl-sn-glycer...",
+      "equation": "a 1-O-alkyl-2-acyl-sn-glycero-3-phosphocholine + sphing-4-enine = a 1-O-alkyl-sn-glycero-3-phosphocholine + an N-acylsphing-4-enine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44660"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + ch...",
+      "equation": "a 1-O-alkyl-sn-glycero-3-phosphocholine + H2O = a 1-O-alkyl-sn-glycero-3-phosphate + choline + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_alkyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_alkyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:39927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-xyl...",
+      "equation": "a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + cholesterol = cholesteryl 3-beta-D-xyloside + an N-acylsphing-4-enine",
+      "substrates": [
+        {
+          "metabolite": "xylosyl_d_ceramide_d18_1_4e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_d_xyloside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:70239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "UDP-alpha-D-xylose + an N-acylsphing-4-enine = a beta-D-xylosyl-(1<->1')-N-acylsphing-4...",
+      "equation": "UDP-alpha-D-xylose + an N-acylsphing-4-enine = a beta-D-xylosyl-(1<->1')-N-acylsphing-4-enine + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xylosyl_d_ceramide_d18_1_4e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:70243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70243"
+          }
+        ]
+      }
+    }
+  ]
+}

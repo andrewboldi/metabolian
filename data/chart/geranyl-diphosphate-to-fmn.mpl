@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-fmn "geranyl diphosphate to FMN" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     gpp
@@ -14,29 +14,5 @@ pathway geranyl-diphosphate-to-fmn "geranyl diphosphate to FMN" {
     2e_2_6_dimethylocta_2_7_diene_1_6_diol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     6e_8_oxolinalool
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    isosativene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    z_e_farnesene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +9_cis_4_hydroxyretinoate +fmnh2 +o2 +h2o +hplus
-    9_cis_4_oxoretinoate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_97 [1.14.14.97] +s_cis_n_methyltetrahydrothalifendine +fmnh2 +o2 +h2o +hplus
-    7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza
   }
 }

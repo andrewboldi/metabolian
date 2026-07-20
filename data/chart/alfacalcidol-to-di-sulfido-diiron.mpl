@@ -32,14 +32,14 @@ pathway alfacalcidol-to-di-sulfido-diiron "alfacalcidol to di-μ-sulfido-diiron"
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +25r_cholest_5_ene_3_26_diol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_hydroxycholest_5_en_26_al
+    <-> ec_1_3_1_109 [1.3.1.109] +butyryl_coa +di_sulfido_diiron +nad +nadh
+    crotonoyl_coa
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    corticosterone
+    <-> . +epothilone_c +di_sulfido_diiron +o2 +hplus +h2o
+    epothilone_a
   }
 
   branch from 1s_1_25_dihydroxy_24_oxocalciol side left {

@@ -18,13 +18,13 @@ pathway dtdp-5-5-di-c-methyl-l-to-novobiocin "dTDP-5,5-di-C-methyl-β-L-… to n
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
-    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
+    <-> . +precorrin_6y +sam +co2 +hplus
+    precorrin_7
   }
 
   branch from sah side right {
     sah
-    <-> . +c30_botryococcene +sam +hplus
-    3_methyl_1_2_didehydro_2_3_dihydrobotryococcene
+    <-> . +lathosterone +sam +hplus
+    4_methyllathosterone
   }
 }

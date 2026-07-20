@@ -114,12 +114,12 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:46911"
       }
     },
     {
@@ -132,13 +132,13 @@
       }
     },
     {
-      "id": "5_guanidino_2_oxopentanoic_acid",
-      "name": "5-guanidino-2-oxopentanoic acid",
-      "short": "5-guanidino-2-oxope…",
-      "formula": "C6H11N3O3",
+      "id": "5_amino_2_oxopentanoic_acid",
+      "name": "5-amino-2-oxopentanoic acid",
+      "short": "5-amino-2-oxopentan…",
+      "formula": "C5H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58489"
+        "chebi": "CHEBI:58802"
       }
     },
     {
@@ -151,21 +151,22 @@
       }
     },
     {
-      "id": "3_amino_d_alanine",
-      "name": "3-amino-D-alanine",
-      "formula": "C3H8N2O2",
+      "id": "l_cystine",
+      "name": "L-cystine",
+      "formula": "C6H12N2O4S2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136599"
+        "chebi": "CHEBI:35491"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
+      "name": "(2R)-2-ammonio-2-carboxylatoethyl-disulfanyl-oxopropanoate",
+      "short": "2-ammonio-2-carboxy…",
+      "formula": "C6H8NO5S2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:144484"
       }
     },
     {
@@ -185,20 +186,6 @@
       "name": "2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase",
       "ec": [
         "1.1.1.127"
-      ]
-    },
-    {
-      "id": "ec_1_4_3_25",
-      "name": "L-arginine oxidase",
-      "ec": [
-        "1.4.3.25"
-      ]
-    },
-    {
-      "id": "ec_4_3_1_15",
-      "name": "diaminopropionate ammonia-lyase",
-      "ec": [
-        "4.3.1.15"
       ]
     },
     {
@@ -366,12 +353,11 @@
     },
     {
       "id": "r5",
-      "name": "L-arginine oxidase",
-      "equation": "L-arginine + O2 + H2O = 5-guanidino-2-oxopentanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.25",
+      "name": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
+      "equation": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "ornithine",
           "stoichiometry": 1
         },
         {
@@ -385,7 +371,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "metabolite": "5_amino_2_oxopentanoic_acid",
           "stoichiometry": 1
         },
         {
@@ -397,71 +383,64 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_4_3_25"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51404"
+        "rhea": "RHEA:61276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51404"
+            "id": "RHEA:61276"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "diaminopropionate ammonia-lyase",
-      "equation": "(R)-2,3-diaminopropanoate + H2O + H(+) = pyruvate + 2 NH4(+)",
-      "ec": "4.3.1.15",
+      "name": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 ...",
+      "equation": "L-cystine + O2 + H2O = (2R)-2-amino-2-carboxylatoethyl-disulfanyl-oxopropanoate + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "3_amino_d_alanine",
+          "metabolite": "l_cystine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pyruvate",
+          "metabolite": "2r_2_ammonio_2_carboxylatoethyl_disulfanyl_oxop",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_3_1_15"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:52432"
+        "rhea": "RHEA:61284"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52432"
+            "id": "RHEA:61284"
           }
         ]
       }

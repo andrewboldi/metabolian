@@ -20,61 +20,61 @@ pathway fmnh2-to-o2-null "FMNH2 to O2" {
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +h +5_deoxy_dihydrokalafungin +o2 +h2o
-    dihydrokalafungin_dihydroquinone_form
+    <-> ec_2_7_7_2 [2.7.7.2] +diphosphate +fad +h
+    atp
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_16_8_1 [1.16.8.1] +fmnh2 +cob_ii_yrinate_diamide
-    cob_i_yrinate_diamide
+    <-> ec_1_14_13_7 [1.14.13.7] +nadh +fmnh2 +h
+    nad
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6s_5_6_7_8_tetrahydrofolate +l_glutamate
-    heptaglutamyl_folate_thf
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    3_6_anhydro_l_galactopyranose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_dephosphorylated_1_petn_kdo_lipid_a +r_3_tetradecanoyloxy_hexadecanoic_acid
-    h_pylori_kdo_lipid_a
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    n_acetyl_d_mannosamine
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_33 [1.14.14.33] +ethylenediaminetriacetate +h +o2 +fmn +glyoxylate +h2o
-    ethylenediaminediacetate
+    <-> . +dihydrokalafungin_dihydroquinone_form +o2 +fmn +h +h2o
+    dhk_oh
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_33 [1.14.14.33] +edta +h +o2 +fmn +ethylenediaminediacetate +h2o
-    glyoxylate
+    <-> ec_1_17_7_4 [1.17.7.4] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +fmn +h2o
+    dimethylallyl_diphosphate
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_2_5 [3.5.2.5] +r_allantoin +h2o
-    allantoate
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_mannopyranose
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_2_4 [3.1.2.4] +r_3_hydroxyisobutyrate +coa +h2o
-    3_hydroxy_2_methylpropanoyl_coa
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    4_o_methyl_d_glucuronate
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +n_hydroxy_l_tetrahomomethioninate +nadph +n_n_dihydroxy_l_tetrahomomethioninate +h2o
+    <-> ec_1_14_13_8 [1.14.13.8] +1_phenylpropan_2_amine +h +nadph +n_1_phenylpropan_2_yl_hydroxylamine +h2o
     nadp
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadp +n_hydroxy_l_hexahomomethioninate +h2o +nadph
-    l_hexahomomethionine
+    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_thiophene_2_carboxamide +nadp +h2o
+    5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen
   }
 }

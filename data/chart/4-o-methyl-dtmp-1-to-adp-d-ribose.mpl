@@ -24,14 +24,14 @@ pathway 4-o-methyl-dtmp-1-to-adp-d-ribose "4-O-methyl-dTMP(1−) to ADP-D-ribose
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +l_cysteine +nad +hplus
-    s_adp_d_ribosyl_l_cysteine_2
+    <-> . +l_lysinium +nad +hplus
+    6_n_adp_d_ribosyl_l_lysinium_1
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +l_lysinium +nad +hplus
-    6_n_adp_d_ribosyl_l_lysinium_1
+    <-> . +l_asparagine +nad +hplus
+    n4_adp_d_ribosyl_l_asparagine_2
   }
 
   branch from adp_d_ribose side right {

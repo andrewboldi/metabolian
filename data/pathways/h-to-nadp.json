@@ -82,6 +82,15 @@
       }
     },
     {
+      "id": "3_decanone",
+      "name": "3-decanone",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87309"
+      }
+    },
+    {
       "id": "o2",
       "name": "O2",
       "formula": "O2",
@@ -91,22 +100,12 @@
       }
     },
     {
-      "id": "atorvastatin_lactone",
-      "name": "atorvastatin lactone",
-      "formula": "C33H33FN2O4",
+      "id": "heptyl_propanoate",
+      "name": "heptyl propanoate",
+      "formula": "C10H20O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:233896"
-      }
-    },
-    {
-      "id": "4_hydroxy_atorvastatin_lactone_para_hydroxy_ator",
-      "name": "4-hydroxy-atorvastatin-lactone / para-hydroxy-atorvastatin lactone",
-      "short": "4-hydroxy-atorvasta…",
-      "formula": "C33H33FN2O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM744449"
+        "metanetx": "MNXM819594"
       }
     },
     {
@@ -119,21 +118,12 @@
       }
     },
     {
-      "id": "4_hydroxymidazolam",
-      "name": "4-hydroxymidazolam",
-      "formula": "C18H13ClFN3O",
+      "id": "ethyl_octanoate",
+      "name": "ethyl octanoate",
+      "formula": "C10H20O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:145331"
-      }
-    },
-    {
-      "id": "midazolam",
-      "name": "midazolam",
-      "formula": "C18H13ClFN3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:6931"
+        "metanetx": "MNXM52785"
       }
     }
   ],
@@ -267,8 +257,12 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR154012",
+      "name": "Reaction MNXR165210",
       "substrates": [
+        {
+          "metabolite": "3_decanone",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -280,10 +274,6 @@
         {
           "metabolite": "nadph",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "atorvastatin_lactone",
-          "stoichiometry": 1
         }
       ],
       "products": [
@@ -292,7 +282,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "4_hydroxy_atorvastatin_lactone_para_hydroxy_ator",
+          "metabolite": "heptyl_propanoate",
           "stoichiometry": 1
         },
         {
@@ -303,42 +293,28 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR154012"
+        "metanetx": "MNXR165210"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154012"
+            "id": "MNXR165210"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR154036",
+      "name": "Reaction MNXR165211",
       "substrates": [
         {
-          "metabolite": "4_hydroxymidazolam",
+          "metabolite": "3_decanone",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "midazolam",
           "stoichiometry": 1
         },
         {
@@ -350,17 +326,31 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "ethyl_octanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR154036"
+        "metanetx": "MNXR165211"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154036"
+            "id": "MNXR165211"
           }
         ]
       }

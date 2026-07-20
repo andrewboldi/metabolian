@@ -24,26 +24,26 @@ pathway d-alpha-phenylglycine-to-o2 "D-alpha-phenylglycine to O2" {
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_3_1 [1.2.3.1] +n_2_dimethylaminoethyl_9_oxo_10h_acridine_4_carb +h2o2 +o2
-    n_2_dimethylaminoethyl_acridine_4_carboxamide
+    <-> ec_3_5_1_1 [3.5.1.1] +ile_asn +h +nh4
+    isoleucyl_aspartate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +2_naphthol
-    2_naphthyl_beta_d_galactopyranoside
+    <-> ec_3_5_1_1 [3.5.1.1] +l_valyl_l_aspartate +nh4 +h
+    val_asn
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_1_1_170 [1.1.1.170] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +nad +h2o
-    4alpha_methyl_5alpha_cholest_7_en_3_one
+    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +3_aminoisobutanoic_acid
+    nh4
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_64 [4.1.1.64] +l_alanine +acetone +h +2_aminoisobutanoic_acid
-    pyruvate
+    <-> ec_4_1_1_74 [4.1.1.74] +4_bromobenzaldehyde
+    4_bromobenzoylformate
   }
 
   branch from succinate side right {
@@ -66,25 +66,25 @@ pathway d-alpha-phenylglycine-to-o2 "D-alpha-phenylglycine to O2" {
 
   branch from 4_methyl_2_oxopentanoate side left {
     4_methyl_2_oxopentanoate
-    <-> . +l_leucine +3_4_hydroxyphenyl_pyruvate
-    l_tyrosine
-  }
-
-  branch from 4_methyl_2_oxopentanoate side right {
-    4_methyl_2_oxopentanoate
     <-> . +l_leucine +3_phenylpyruvate
     l_phenylalanine
   }
 
+  branch from 4_methyl_2_oxopentanoate side right {
+    4_methyl_2_oxopentanoate
+    <-> . +nadh +3_methylbutanoate +co2 +h +h2o
+    nad
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +compound_0066905 +h2o2
-    p_fluorobenzyl_alcohol
+    <-> ec_1_17_3_2 [1.17.3.2] +6_methyl_7_9_dihydropurin_8_one +h2o2 +h2o
+    6_methylpurine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_methoxybenzaldehyde +h2o2
-    3_methoxybenzyl_alcohol
+    <-> ec_1_17_3_2 [1.17.3.2] +6_methyladenine +h2o +h2o2
+    6_methylamino_7_9_dihydropurin_8_one
   }
 }

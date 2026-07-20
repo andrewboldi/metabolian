@@ -18,14 +18,14 @@ pathway 5-chloro-trans-dienelacto-to-nad "5-chloro-trans-dienelacto… to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_2_1_23 [1.2.1.23] +nadh +3_hydroxypyruvate +nad +h2o
-    hydroxypyruvaldehyde
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_fluorobenzaldehyde +nad
+    3_fluorobenzyl_alcohol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_218 [1.1.1.218] +nadh +hydrocodone +nad
-    dihydrocodeine
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_bromobenzaldehyde +nad
+    3_bromobenzyl_alcohol
   }
 
   branch from 5_chloromaleylacetate side left {
@@ -42,37 +42,37 @@ pathway 5-chloro-trans-dienelacto-to-nad "5-chloro-trans-dienelacto… to NAD" {
 
   branch from maleylacetate side left {
     maleylacetate
-    <-> ec_1_3_1_32 [1.3.1.32] +h +nadph +3_oxoadipate
-    nadp
-  }
-
-  branch from maleylacetate side right {
-    maleylacetate
     <-> ec_1_13_11_37 [1.13.11.37] +h +o2
     benzene_1_2_4_triol
   }
 
+  branch from maleylacetate side right {
+    maleylacetate
+    <-> ec_1_2_1_61 [1.2.1.61] +nadh +h +nad +h2o
+    4_hydroxymuconic_semialdehyde
+  }
+
   branch from chloride side left {
     chloride
-    <-> . +co2 +protoanemonin
+    <-> . +trans_4_carboxymethylenebut_2_en_4_olide
     r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
   }
 
   branch from chloride side right {
     chloride
-    <-> . +r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
-    trans_4_carboxymethylenebut_2_en_4_olide
+    <-> ec_3_5_4_43 [3.5.4.43] +n_isopropylammelide +h +h2o
+    compound_0054382
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_218 [1.1.1.218] +nadh +h +codeinone
-    codeine
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_cyanobenzaldehyde +h
+    3_cyanobenzyl_alcohol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5_dihydrotestosterone +h
-    5_androstane_3_17_diol
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +4_chlorobenzaldehyde
+    pr01
   }
 }

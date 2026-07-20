@@ -24,25 +24,25 @@ pathway 1d-myo-inositol-to-s-adenosyl-l-homocysteine "1D-myo-inositol… to S-ad
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    para_hydroxyatorvastatin
+    <-> . +h +adp +ursodeoxycholate +ursodeoxycholate +h2o
+    atp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +4_hydroxy_atorvastatin_lactone_para_hydroxy_ator +4_hydroxy_atorvastatin_lactone_para_hydroxy_ator +h2o
-    atp
+    <-> . +h +adp +atp +h2o
+    tauroursodeoxycholate
   }
 
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +n_terminal_glycyl_l_lysyl_l_glutamate_1 +sam +hplus
+    n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl
   }
 
   branch from sah side right {
     sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> . +5_end_phopshomethylribonucleoside_1 +sam
+    5_end_bisphopshomethylribonucleoside
   }
 }

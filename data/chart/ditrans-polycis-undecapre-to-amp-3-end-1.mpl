@@ -36,45 +36,39 @@ pathway ditrans-polycis-undecapre-to-amp-3-end-1 "ditrans,polycis-undecapre… t
     alpha_d_man_1_2_alpha_d_man_1_2_beta_d_man_1_3_a
   }
 
-  branch from ump side left {
-    ump
-    <-> . +udp
-    utp
-  }
-
-  branch from lipid_ii side right {
+  branch from lipid_ii side left {
     lipid_ii
     <-> . +atp +adp
     undecaprenyldiphosphonato_n_acetyl_n_acetylgluco
   }
 
-  branch from undecaprenyldiphospho_n_acetyl_n_acetylglucosami side left {
+  branch from undecaprenyldiphospho_n_acetyl_n_acetylglucosami side right {
     undecaprenyldiphospho_n_acetyl_n_acetylglucosami
     <-> . +undecaprenyldiphosphonato_n_acetyl_n_acetylgluco +pi +hplus
     nh3
   }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_5_4_3_9 [5.4.3.9]
-    isoglutamate
-  }
-
   branch from glutamate side left {
     glutamate
-    <-> . +cob_ii_yrinate +glutamine +atp +h2o +adp +pi +hplus
-    cob_ii_yrinate_c_monoamide
+    <-> . +n_4_aminobenzoyl_l_glutamate +h2o
+    4_aminobenzoate
   }
 
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tyrosyl_adenylyl_1_group +h2o
-    d_tyrosine
+  branch from glutamate side right {
+    glutamate
+    <-> . +gly_glu +h2o
+    glycine
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_3_6_1_n2 [3.6.1.n2] +3_l_cysteinyl_adenylyl_zwitterionic_group +h2o +hplus
-    cysteine
+    <-> ec_6_1_1_11 [6.1.1.11] +serine +atp +amp +ppi +hplus
+    3_l_seryl_adenylyl_1_group
+  }
+
+  branch from amp_3_end_1 side right {
+    amp_3_end_1
+    <-> ec_2_3_2_22 [2.3.2.22] +3_l_leucyl_adenylyl_zwitterionic_group +hplus
+    cyclo_l_leucyl_l_leucyl
   }
 }

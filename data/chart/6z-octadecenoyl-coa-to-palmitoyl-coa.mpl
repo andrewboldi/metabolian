@@ -28,13 +28,13 @@ pathway 6z-octadecenoyl-coa-to-palmitoyl-coa "(6Z)-octadecenoyl-CoA to palmitoyl
 
   branch from palmitoyl_coa side left {
     palmitoyl_coa
-    <-> . +1_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer +coa
-    2_hexadecanoyl_1_tetradecanoyl_sn_glycero_3_phos
+    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
+    hexadecan_1_ol
   }
 
   branch from palmitoyl_coa side right {
     palmitoyl_coa
-    <-> ec_1_2_1_84 [1.2.1.84] +nadph +hplus +nadp +coa
-    hexadecan_1_ol
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +coa
+    1_oleoyl_2_palmitoyl_sn_glycero_3_phospho_l_seri
   }
 }

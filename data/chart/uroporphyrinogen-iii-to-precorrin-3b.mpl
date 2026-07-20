@@ -18,13 +18,13 @@ pathway uroporphyrinogen-iii-to-precorrin-3b "uroporphyrinogen III to precorrin-
 
   branch from sah side left {
     sah
-    <-> . +l_methionine +sam
-    s_methyl_l_methionine_1
+    <-> ec_2_1_1_77 [2.1.1.77] +d_aspartate +sam
+    d_aspartate_methyl_ester
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
+    <-> . +esculetin +sam +hplus
+    isoscopoletin
   }
 }

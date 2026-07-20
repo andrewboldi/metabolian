@@ -24,19 +24,19 @@ pathway 2r-2-hydroxy-4-methyls-to-diphosphate "(2R)-2-hydroxy-4-(methyls… to d
 
   branch from sam side right {
     sam
-    <-> ec_2_1_1_310 [2.1.1.310] +cytidine_5_monophosphate_1 +sah +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_287 [2.1.1.287] +adenosine_5_monophosphate_1 +sah +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_138 [2.5.1.138] +esculetin +gpp
-    8_geranylesculetin
+    <-> ec_4_2_3_183 [4.2.3.183] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    nezukol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_139 [2.5.1.139] +umbelliferone +dmapp
-    osthenol
+    <-> ec_4_2_3_184 [4.2.3.184] +fpp +h2o
+    5_hydroxy_gurjunene
   }
 }

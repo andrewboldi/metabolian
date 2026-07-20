@@ -20,38 +20,38 @@ pathway acetyl-coa-to-o2-null "acetyl-CoA to O2" {
 
   branch from coa side left {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +4_3_methylbutanoyl_sucrose
-    3_2_methylbutanoyl_4_3_methylbutanoyl_sucrose
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +propane_1_3_diamine +h
+    n_3_aminopropyl_acetamide
   }
 
   branch from coa side right {
     coa
-    <-> . +decanoyl_coa +4_3_methylbutanoyl_sucrose
-    3_decanoyl_4_3_methylbutanoyl_sucrose
+    <-> . +acetyl_coa +mesalaminate +h
+    n_acetyl_5_aminosalicylic_acid
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4r_isodihydrocarveol
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +plastoquinone_9
+    plastoquinol_9
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2s_4r_isodihydrocarveol
-    2e_geranial
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +ubiquinone_1 +h
+    2_3_dimethoxy_5_methyl_6_3_methyl_2_buten_1_yl_1
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    2_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +gaudimycin_b +phosphate +gaudimycin_b
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    2_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    oviedomycin
   }
 
   branch from 5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co side left {
@@ -62,13 +62,13 @@ pathway acetyl-coa-to-o2-null "acetyl-CoA to O2" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +nadph +all_trans_violaxanthin +h2o
-    nadp
+    <-> ec_1_14_13_190 [1.14.13.190] +abietatriene +h +nadph +nadp +h2o
+    ferruginol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +nad +h2o
-    all_trans_violaxanthin
+    <-> . +alliin +nadp +h2o +h +s_allylcysteine
+    nadph
   }
 }

@@ -18,14 +18,14 @@ pathway acetyl-coa-to-acetate "acetyl-CoA to acetate" {
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +4e_decenoyl_coa
-    3_oxolaur_6_cis_enoyl_coa
+    <-> . +2_methylpropanoyl_coa +4_3_methylbutanoyl_sucrose
+    2_isobutanoyl_4_3_methylbutanoyl_sucrose
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +cis_6_dodecenoyl_coenzyme_a
-    3_oxo_cis_8_tetradecenoyl_coenzyme_a
+    <-> . +dodecanoyl_coa +3_2_methylbutanoyl_4_3_methylbutanoyl_sucrose
+    3_dodecanoyl_3_2_methylbutanoyl_4_3_methylbutano
   }
 
   branch from 4_15_diacetylnivalenol side left {
@@ -36,26 +36,26 @@ pathway acetyl-coa-to-acetate "acetyl-CoA to acetate" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_tryptophan +phosphate +l_tryptophan +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    thiomethyl_sulphoxide_acetaminophen_glucuronide
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_o_hexadecanoyl_2_o_z_octadec_9_enoyl_sn_glyce +phosphate +1_o_hexadecanoyl_2_o_z_octadec_9_enoyl_sn_glyce +h2o
+    atp
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxydecanoyl_alpha_d_glucosamine +h2o
-    udp_3_o_3r_3_hydroxydecanoyl_n_acetyl_alpha_d_gl
+    <-> ec_2_5_1_47 [2.5.1.47] +3_cyano_l_alanine +o_acetyl_l_serine
+    cyanide
   }
 
   branch from acetate side left {
     acetate
-    <-> . +digitoxin +h +h2o
-    3_o_acetyldigitoxin
+    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_9 +co2 +pyruvate +h2o
+    ubiquinone_9
   }
 
   branch from 4_acetylnivalenol side right {

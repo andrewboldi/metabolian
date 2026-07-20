@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "short-chain-fatty-aldehyde-to-short-chain-fatty",
   "name": "short-chain fatty aldehyde to short-chain fatty acid…",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from short-chain fatty aldehyde to short-chain fatty acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -140,51 +140,41 @@
       }
     },
     {
-      "id": "phosphonoformate",
-      "name": "phosphonoformate",
-      "formula": "CHO5P",
-      "charge": -2,
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:91254"
+        "chebi": "CHEBI:46858"
       }
     },
     {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "cmp_5_phosphonoformate",
-      "name": "CMP-5'-phosphonoformate",
-      "short": "CMP-5'-phosphonofor…",
-      "formula": "C10H12N3O12P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:91255"
-      }
-    },
-    {
-      "id": "8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat",
-      "name": "(8S)-3',8-cyclo-7,8-dihydroguanosine 5'-triphosphate",
-      "short": "3',8-cyclo-7,8-dihy…",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:131766"
-      }
-    },
-    {
-      "id": "precursor_z",
-      "name": "precursor Z",
-      "formula": "C10H11N5O7P",
+      "id": "o_adenyl_l_tyrosine_1",
+      "name": "O-adenyl-L-tyrosine(1−)",
+      "short": "O-adenyl-L-tyrosine…",
+      "formula": "C19H20N6O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:59648"
+        "chebi": "CHEBI:83624"
+      }
+    },
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30013"
+      }
+    },
+    {
+      "id": "o_adenyl_l_threonine_1",
+      "name": "O-adenyl-L-threonine(1−)",
+      "short": "O-adenyl-L-threonin…",
+      "formula": "C14H18N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138113"
       }
     }
   ],
@@ -197,17 +187,10 @@
       ]
     },
     {
-      "id": "ec_2_7_7_93",
-      "name": "phosphonoformate cytidylyltransferase",
+      "id": "ec_2_7_7_108",
+      "name": "protein adenylyltransferase",
       "ec": [
-        "2.7.7.93"
-      ]
-    },
-    {
-      "id": "ec_4_6_1_17",
-      "name": "cyclic pyranopterin monophosphate synthase",
-      "ec": [
-        "4.6.1.17"
+        "2.7.7.108"
       ]
     }
   ],
@@ -396,22 +379,22 @@
     },
     {
       "id": "r5",
-      "name": "phosphonoformate cytidylyltransferase",
-      "equation": "phosphonoformate + CTP = CMP-5'-phosphonoformate + diphosphate",
-      "ec": "2.7.7.93",
+      "name": "protein adenylyltransferase",
+      "equation": "L-tyrosyl-[protein] + ATP = O-(5'-adenylyl)-L-tyrosyl-[protein] + diphosphate",
+      "ec": "2.7.7.108",
       "substrates": [
         {
-          "metabolite": "phosphonoformate",
+          "metabolite": "l_tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ctp",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cmp_5_phosphonoformate",
+          "metabolite": "o_adenyl_l_tyrosine_1",
           "stoichiometry": 1
         },
         {
@@ -421,38 +404,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_93"
+          "enzyme": "ec_2_7_7_108"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:49428"
+        "rhea": "RHEA:54288"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49428"
+            "id": "RHEA:54288"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "cyclic pyranopterin monophosphate synthase",
-      "equation": "(8S)-3',8-cyclo-7,8-dihydroguanosine 5'-triphosphate = cyclic pyranopterin phosphate + diphosphate",
-      "ec": "4.6.1.17",
+      "name": "protein adenylyltransferase",
+      "equation": "L-threonyl-[protein] + ATP = 3-O-(5'-adenylyl)-L-threonyl-[protein] + diphosphate",
+      "ec": "2.7.7.108",
       "substrates": [
         {
-          "metabolite": "8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat",
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "precursor_z",
+          "metabolite": "o_adenyl_l_threonine_1",
           "stoichiometry": 1
         },
         {
@@ -462,20 +449,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_6_1_17"
+          "enzyme": "ec_2_7_7_108"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:49580"
+        "rhea": "RHEA:54292"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:49580"
+            "id": "RHEA:54292"
           }
         ]
       }

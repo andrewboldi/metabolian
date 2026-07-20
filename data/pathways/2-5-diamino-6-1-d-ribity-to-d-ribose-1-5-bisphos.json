@@ -141,40 +141,51 @@
       }
     },
     {
-      "id": "r_nipecotamide",
-      "name": "(R)-nipecotamide",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:60118"
-      }
-    },
-    {
-      "id": "r_nipecotic_acid",
-      "name": "(R)-nipecotic acid",
-      "formula": "C6H11NO2",
+      "id": "d_glutamine",
+      "name": "D-glutamine",
+      "formula": "C5H10N2O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60120"
+        "chebi": "CHEBI:58000"
       }
     },
     {
-      "id": "3r_3_hydroxy_d_aspartate",
-      "name": "(3R)-3-hydroxy-D-aspartate",
-      "short": "3-hydroxy-D-asparta…",
-      "formula": "C4H6NO5",
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:60898"
+        "chebi": "CHEBI:29986"
       }
     },
     {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
+      "id": "d_glutamyl_d_glutamate",
+      "name": "D-γ-glutamyl-D-glutamate",
+      "short": "D-γ-glutamyl-D-glut…",
+      "formula": "C10H14N2O7",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16452"
+        "chebi": "CHEBI:71681"
+      }
+    },
+    {
+      "id": "2_amino_4_hydroxypteridine",
+      "name": "2-amino-4-hydroxypteridine",
+      "short": "2-amino-4-hydroxypt…",
+      "formula": "C6H3N5OR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73184"
+      }
+    },
+    {
+      "id": "2_4_dihydroxypteridine",
+      "name": "2,4-dihydroxypteridine",
+      "short": "2,4-dihydroxypterid…",
+      "formula": "C6H2N4O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73186"
       }
     }
   ],
@@ -194,17 +205,17 @@
       ]
     },
     {
-      "id": "ec_3_5_1_100",
-      "name": "(R)-amidase",
+      "id": "ec_2_3_2_1",
+      "name": "D-glutamyltransferase",
       "ec": [
-        "3.5.1.100"
+        "2.3.2.1"
       ]
     },
     {
-      "id": "ec_4_3_1_27",
-      "name": "threo-3-hydroxy-D-aspartate ammonia-lyase",
+      "id": "ec_3_5_4_11",
+      "name": "pterin deaminase",
       "ec": [
-        "4.3.1.27"
+        "3.5.4.11"
       ]
     }
   ],
@@ -391,22 +402,22 @@
     },
     {
       "id": "r5",
-      "name": "(R)-amidase",
-      "equation": "(3R)-piperidine-3-carboxamide + H2O = (3R)-piperidine-3-carboxylate + NH4(+)",
-      "ec": "3.5.1.100",
+      "name": "D-glutamyltransferase",
+      "equation": "D-glutamine + D-glutamate = gamma-D-glutamyl-D-glutamate + NH4(+)",
+      "ec": "2.3.2.1",
       "substrates": [
         {
-          "metabolite": "r_nipecotamide",
+          "metabolite": "d_glutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "d_glutamate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_nipecotic_acid",
+          "metabolite": "d_glutamyl_d_glutamate",
           "stoichiometry": 1
         },
         {
@@ -416,38 +427,46 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_1_100"
+          "enzyme": "ec_2_3_2_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:27574"
+        "rhea": "RHEA:35623"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27574"
+            "id": "RHEA:35623"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "threo-3-hydroxy-D-aspartate ammonia-lyase",
-      "equation": "(3R)-3-hydroxy-D-aspartate = oxaloacetate + NH4(+)",
-      "ec": "4.3.1.27",
+      "name": "pterin deaminase",
+      "equation": "a 2-amino-4-hydroxypteridine + H2O + H(+) = a 2,4-dihydroxypteridine + NH4(+)",
+      "ec": "3.5.4.11",
       "substrates": [
         {
-          "metabolite": "3r_3_hydroxy_d_aspartate",
+          "metabolite": "2_amino_4_hydroxypteridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "oxaloacetate",
+          "metabolite": "2_4_dihydroxypteridine",
           "stoichiometry": 1
         },
         {
@@ -457,20 +476,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_27"
+          "enzyme": "ec_3_5_4_11"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:27942"
+        "rhea": "RHEA:36055"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27942"
+            "id": "RHEA:36055"
           }
         ]
       }

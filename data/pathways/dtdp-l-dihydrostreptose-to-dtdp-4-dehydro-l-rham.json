@@ -189,26 +189,6 @@
       }
     },
     {
-      "id": "2_deoxynucleoside_5_monophosphate",
-      "name": "2'-deoxynucleoside 5'-monophosphate",
-      "short": "2'-deoxynucleoside…",
-      "formula": "C5H8O6PR",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:65317"
-      }
-    },
-    {
-      "id": "2_deoxyribonucleoside_5_diphosphate",
-      "name": "2'-deoxyribonucleoside 5'-diphosphate",
-      "short": "2'-deoxyribonucleos…",
-      "formula": "C5H8O9P2R",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:73316"
-      }
-    },
-    {
       "id": "2_deoxyguanosine_5_monophosphate",
       "name": "2'-deoxyguanosine 5'-monophosphate",
       "short": "2'-deoxyguanosine…",
@@ -228,32 +208,50 @@
       }
     },
     {
-      "id": "geranylgeranyl_diphosphate",
-      "name": "geranylgeranyl diphosphate",
-      "short": "geranylgeranyl PP",
-      "formula": "C20H33O7P2",
+      "id": "dtmp",
+      "name": "dTMP",
+      "formula": "C10H13N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63528"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57533"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "elisabethatriene",
-      "name": "elisabethatriene",
-      "formula": "C20H32",
+      "id": "presilphiperfolan_8_ol",
+      "name": "presilphiperfolan-8β-ol",
+      "short": "presilphiperfolan-8…",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52461"
+        "chebi": "CHEBI:60968"
       }
     },
     {
-      "id": "fusicocca_2_10_14_diene",
-      "name": "fusicocca-2,10(14)-diene",
-      "short": "fusicocca-2,10(14)-…",
-      "formula": "C20H32",
+      "id": "drimenol",
+      "name": "drimenol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:52463"
+        "chebi": "CHEBI:61148"
       }
     },
     {
@@ -358,17 +356,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_41",
-      "name": "elisabethatriene synthase",
+      "id": "ec_4_2_3_74",
+      "name": "presilphiperfolanol synthase",
       "ec": [
-        "4.2.3.41"
+        "4.2.3.74"
       ]
     },
     {
-      "id": "ec_4_2_3_43",
-      "name": "fusicocca-2,10(14)-diene synthase",
+      "id": "ec_4_2_3_194",
+      "name": "(-)-drimenol synthase",
       "ec": [
-        "4.2.3.43"
+        "4.2.3.194"
       ]
     },
     {
@@ -729,45 +727,6 @@
     },
     {
       "id": "r8",
-      "name": "a 2'-deoxyribonucleoside 5'-phosphate + dTTP = a 2'-deoxyribonucleoside 5'-diphosphate ...",
-      "equation": "a 2'-deoxyribonucleoside 5'-phosphate + dTTP = a 2'-deoxyribonucleoside 5'-diphosphate + dTDP",
-      "substrates": [
-        {
-          "metabolite": "2_deoxynucleoside_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dttp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_deoxyribonucleoside_5_diphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dtdp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:62132"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62132"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "dTTP + dGMP = dGDP + dTDP",
       "equation": "dTTP + dGMP = dGDP + dTDP",
       "substrates": [
@@ -791,7 +750,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:62152"
       },
@@ -806,19 +765,66 @@
       }
     },
     {
-      "id": "r10",
-      "name": "elisabethatriene synthase",
-      "equation": "geranylgeranyl diphosphate = elisabethatriene + diphosphate",
-      "ec": "4.2.3.41",
+      "id": "r9",
+      "name": "dTTP + 2 H2O = dTMP + 2 phosphate + 2 H(+)",
+      "equation": "dTTP + 2 H2O = dTMP + 2 phosphate + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "geranylgeranyl_diphosphate",
+          "metabolite": "dttp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:64956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "presilphiperfolanol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = presilphiperfolan-8beta-ol + diphosphate",
+      "ec": "4.2.3.74",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "elisabethatriene",
+          "metabolite": "presilphiperfolan_8_ol",
           "stoichiometry": 1
         },
         {
@@ -828,38 +834,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_41"
+          "enzyme": "ec_4_2_3_74"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:26241"
+        "rhea": "RHEA:27954"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26241"
+            "id": "RHEA:27954"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "fusicocca-2,10(14)-diene synthase",
-      "equation": "geranylgeranyl diphosphate = fusicocca-2,10(14)-diene + diphosphate",
-      "ec": "4.2.3.43",
+      "name": "(-)-drimenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (5S,9S,10S)-drim-7-en-11-ol + diphosphate",
+      "ec": "4.2.3.194",
       "substrates": [
         {
-          "metabolite": "geranylgeranyl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fusicocca_2_10_14_diene",
+          "metabolite": "drimenol",
           "stoichiometry": 1
         },
         {
@@ -869,20 +879,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_43"
+          "enzyme": "ec_4_2_3_194"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:26245"
+        "rhea": "RHEA:28290"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26245"
+            "id": "RHEA:28290"
           }
         ]
       }

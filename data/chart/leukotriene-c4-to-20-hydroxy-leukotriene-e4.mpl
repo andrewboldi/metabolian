@@ -18,14 +18,14 @@ pathway leukotriene-c4-to-20-hydroxy-leukotriene-e4 "leukotriene C4 to 20-hydrox
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_107 [2.6.1.107] +2s_3s_methylphenylalanine +akg
-    3s_3_methyl_2_oxo_3_phenylpropanoate
+    <-> ec_6_3_1_17 [6.3.1.17] +citrate +atp +adp +pi +hplus
+    citrylglutamate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_3_2_41 [6.3.2.41] +n_acetyl_l_aspartate +atp +adp +pi +hplus
-    ac_asp_glu
+    <-> ec_2_6_1_118 [2.6.1.118] +c_terminal_l_glutamyl_l_lysine_1_group +akg
+    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
   }
 
   branch from glycine side left {

@@ -24,7 +24,7 @@ pathway o-adp-d-ribosyl-l-tyros-to-l-tyrosine "O-(ADP-D-ribosyl)-L-tyros… to L
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> ec_2_7_7_89 [2.7.7.89] +pi +adp
-    o_adenyl_l_tyrosine_1
+    <-> . +udpglcnac +udp +hplus
+    n_acetyl_d_glucosaminyl_l_tyrosyl
   }
 }

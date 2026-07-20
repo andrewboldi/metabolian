@@ -20,13 +20,13 @@ pathway aldehydo-d-ribose-to-l-lysinium "aldehydo-D-ribose… to L-lysinium" {
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_356 [2.1.1.356] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +l_methionine +h2o2 +h2o +hplus
+    s_l_lysyl_l_methionine_sulfilimine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_369 [2.1.1.369] +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> . +hypobromite +s_l_lysyl_l_methionine_sulfilimine +bromide +h2o +hplus
+    l_methionine
   }
 }

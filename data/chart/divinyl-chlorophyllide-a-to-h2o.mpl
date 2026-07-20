@@ -22,26 +22,26 @@ pathway divinyl-chlorophyllide-a-to-h2o "divinyl chlorophyllide a to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_2_2_10 [3.2.2.10] +pyrimidine +alpha_d_ribofuranose_5_phosphate +h2o
-    pyrimidine_5_nucleotide
+    <-> ec_1_14_13_53 [1.14.13.53] +formononetin +o2 +nadph +nadp +h2o
+    2_hydroxyformononetin
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_7_99 [2.7.7.99] +utp +n_acetyl_d_muramate_1_phosphate +diphosphate
-    udp_n_acetyl_alpha_d_muramate
+    <-> ec_1_14_13_89 [1.14.13.89] +biochanin_a +o2 +nadph +nadp +h2o
+    2_hydroxybiochanin_a
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_70 [1.14.13.70] +h +obtusifoliol +o2 +formate +nadp +h2o
-    4alpha_methyl_5alpha_ergosta_8_14_24_28_trien_3b
+    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_4_coumaroylshikimate +o2 +nadp +h2o
+    5_o_e_caffeoyl_shikimate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_15 [1.14.13.15] +25r_5beta_cholestane_3alpha_7alpha_26_triol +nadp +h2o +h +o2
-    5beta_cholestane_3alpha_7alpha_diol
+    <-> . +rifamycin_b +h +nadp
+    rifamycin_o
   }
 
   branch from divinylprotochlorophyllide side left {
@@ -52,49 +52,49 @@ pathway divinyl-chlorophyllide-a-to-h2o "divinyl chlorophyllide a to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +nadh +h
-    d_lyxose
+    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2e_4z_2_hydroxymuconate +h2o
+    2_hydroxymuconic_semialdehyde
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +l_fructofuranose +h
-    l_mannitol
+    <-> ec_1_14_13_3 [1.14.13.3] +nadh +h +4_hydroxyphenylacetate +o2 +h2o
+    3_4_dihydroxyphenylacetate
   }
 
   branch from o2 side right {
     o2
-    <-> . +sulfinosuccinate +h
-    thiomalic_acid
+    <-> ec_1_14_11_15 [1.14.11.15] +gibberellin_a4 +co2 +succinate +2_oxoglutarate
+    gibberellin_a9
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_1s_3ar_4s_6ar_4_1_3_benzodioxol_5_yl_tetrahydr
-    sesamolinol
+    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a4 +2_oxoglutarate +co2 +succinate
+    gibberellin_a34
   }
 
   branch from h2o side right {
     h2o
-    <-> . +lysyl_proline +n_acetyl_seryl_aspartate
-    n_acetyl_seryl_aspartyl_lysyl_proline
+    <-> ec_3_1_1_83 [3.1.1.83] +3s_6s_6_isopropenyl_3_methyloxepan_2_one
+    5r_6_hydroxy_5_isopropenyl_2_methylhexanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +9s_10s_9_10_dihydrophenanthrene_9_10_diol
-    9r_10s_9_10_epoxy_9_10_dihydrophenanthrene
+    <-> ec_1_14_13_89 [1.14.13.89] +daidzein +h +o2 +nadph +nadp
+    2_hydroxydaidzein
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +h2o +h +o2 +nadph
-    cholesterol
+    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nadph +h2o
+    4_hydroxyphenylacetate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_95 [1.14.13.95] +h +7alpha_hydroxycholest_4_en_3_one +o2 +nadph +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
+    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
+    glyceollin_ii
   }
 }

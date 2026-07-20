@@ -50,14 +50,14 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide "(3β,24R,24'R)-fucosterol… to cob
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_82 [1.14.14.82] +3_unsubstituted_flavone +fmnh2 +o2 +h2o +hplus
-    3_hydroxyflavonoid
+    <-> ec_1_14_14_51 [1.14.14.51] +4s_limonene +fmnh2 +o2 +h2o +hplus
+    trans_carveol
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_19_67 [1.14.19.67] +r_reticulinium +fmnh2 +o2 +h2o +hplus
-    salutaridinium
+    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
+    2_hydroxyisoflavones
   }
 
   branch from cob_ii_yrinic_acid_a_c_diamide side right {
@@ -68,14 +68,14 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide "(3β,24R,24'R)-fucosterol… to cob
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_51 [1.14.14.51] +4s_limonene +o2 +fmn +h2o +hplus
-    trans_carveol
+    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +o2 +fmn +h2o +hplus
+    s_cheilanthifoline
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +o2 +fmn +h2o +hplus
-    2_hydroxyisoflavones
+    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +o2 +fmn +h2o +hplus
+    hydroxycholesterol_7a
   }
 
   branch from triphosphate side left {
@@ -90,49 +90,43 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide "(3β,24R,24'R)-fucosterol… to cob
     2_deoxyguanosine
   }
 
-  branch from adenosylcobyrate side left {
-    adenosylcobyrate
-    <-> ec_6_3_1_10 [6.3.1.10] +atp +adenosylcobinamide_phosphate +adp +pi +hplus
-    r_1_ammoniopropan_2_yl_phosphate
-  }
-
-  branch from glutamate side right {
+  branch from glutamate side left {
     glutamate
     <-> ec_5_1_1_3 [5.1.1.3]
     d_glutamate
   }
 
-  branch from glutamate side left {
+  branch from glutamate side right {
     glutamate
     <-> ec_5_4_99_1 [5.4.99.1]
     threo_3_methyl_l_aspartate
   }
 
-  branch from adenosylcobinamide side right {
+  branch from adenosylcobinamide side left {
     adenosylcobinamide
     <-> . +diphosphate +phosphate +atp +cobinamide +h2o
     h
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_6_1_1_7 [6.1.1.7] +amp_3_end_1 +alanine +atp +amp
-    3_l_alanyl_adenylyl_zwitterionic_group
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_58 [2.5.1.58] +l_cysteine +fpp
-    s_2e_6e_farnesyl_l_cysteine
+    <-> ec_6_3_1_7 [6.3.1.7] +4_methylene_l_glutamate +nh3 +atp +amp +hplus
+    4_methylene_l_glutamine
   }
 
-  branch from cobamamide side left {
+  branch from ppi side left {
+    ppi
+    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
+    4_3_methylbut_2_enyl_l_tryptophan
+  }
+
+  branch from cobamamide side right {
     cobamamide
     <-> . +cob_ii_alamin +hydrogen_donor +atp +triphosphate +hplus
     hydrogen_acceptor
   }
 
-  branch from cobamamide side right {
+  branch from cobamamide side left {
     cobamamide
     <-> ec_2_5_1_154 [2.5.1.154] +fadh2 +atp +h2o +fad +pi +ppi +hplus
     cob_ii_alamin

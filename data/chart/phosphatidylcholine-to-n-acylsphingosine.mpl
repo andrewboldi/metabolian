@@ -18,25 +18,25 @@ pathway phosphatidylcholine-to-n-acylsphingosine "phosphatidylcholine to N-acyls
 
   branch from 1_2_diglyceride side left {
     1_2_diglyceride
-    <-> ec_2_3_1_158 [2.3.1.158] +1_2_diacyl_sn_glycero_3_phospholipid +triglyceride
-    1_acyl_sn_glycero_3_phospholipid
+    <-> . +1_2_diacyl_3_linoleoylglycerol +n_hydroxy_ultra_long_chain_fatty_acyl_sphingosin
+    n_linoleoyloxy_ultra_long_chain_fatty_acyl_sphin
   }
 
   branch from 1_2_diglyceride side right {
     1_2_diglyceride
-    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
-    triglyceride
+    <-> . +h2o +fatty-acid +hplus
+    2_monoglyceride
   }
 
   branch from n_acylsphingosine side left {
     n_acylsphingosine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +1_palmitoyl_2_oleoyl_sn_glycerol
-    n_acylsphingosine_1_phosphoethanolamine
+    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
+    1_o_acyl_n_acylsphingosine
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> . +phosphatidylcholine +1_o_acyl_sn_glycero_3_phosphocholine
-    1_o_acyl_n_acylsphingosine
+    <-> ec_1_14_19_18 [1.14.19.18] +fe2 +o2 +hplus +iron +h2o
+    n_acyl_4e_8e_sphinga_4_8_dienine
   }
 }

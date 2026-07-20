@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 8-10-diapocarotene-8-10-to-8-apo-caroten-8-al "8',10-diapocarotene-8',10… to 8'-apo-β,ψ-caroten-8'-al" {
-  spacing 286
+  spacing 280
 
   spine at 0,0 {
     8_10_diapocarotene_8_10_dial
@@ -18,14 +18,14 @@ pathway 8-10-diapocarotene-8-10-to-8-apo-caroten-8-al "8',10-diapocarotene-8',10
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_42 [1.14.13.42] +h +4_hydroxyphenylacetonitrile +nadph +4_hydroxymandelonitrile +h2o
-    nadp
+    <-> ec_1_1_3_7 [1.1.3.7] +pr01 +h2o2
+    4_chlorobenzaldehyde
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +nadph +nadp +h2o
-    6_hydroxyprogesterone
+    <-> ec_1_14_13_41 [1.14.13.41] +nadp +n_hydroxy_l_tyrosine +h2o +l_tyrosine
+    nadph
   }
 
   branch from 8_apo_caroten_8_al side left {
@@ -38,11 +38,5 @@ pathway 8-10-diapocarotene-8-10-to-8-apo-caroten-8-al "8',10-diapocarotene-8',10
     2_6_dimethylocta_2_4_6_trienedial
     <-> . +3r_3_hydroxy_8_apo_carotenal +o2
     3r_all_trans_3_hydroxyretinal
-  }
-
-  branch from all_trans_retinal side left {
-    all_trans_retinal
-    <-> ec_1_2_1_36 [1.2.1.36] +nad +h2o +nadh +hplus
-    all_trans_retinoate
   }
 }

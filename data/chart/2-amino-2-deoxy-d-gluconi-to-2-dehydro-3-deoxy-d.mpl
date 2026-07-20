@@ -42,23 +42,123 @@ pathway 2-amino-2-deoxy-d-gluconi-to-2-dehydro-3-deoxy-d "2-amino-2-deoxy-D-gluc
     2_dehydro_3_deoxy_d_arabinonate
   }
 
+  branch from 2_dehydro_3_deoxy_d_gluconate side left {
+    2_dehydro_3_deoxy_d_gluconate
+    <-> ec_4_2_1_7 [4.2.1.7] +h2o
+    d_altronate
+  }
 
+  branch from 2_dehydro_3_deoxy_d_gluconate side right {
+    2_dehydro_3_deoxy_d_gluconate
+    <-> ec_4_2_1_8 [4.2.1.8] +h2o
+    d_mannonate
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> ec_4_3_1_18 [4.3.1.18] +pyruvate
+    dserine
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h2o +hplus
+    s_xanthopterin_b2
+  }
 
+  branch from 2_dehydro_3_deoxy_6_phosphonato_d_gluconate side left {
+    2_dehydro_3_deoxy_6_phosphonato_d_gluconate
+    <-> ec_4_2_1_12 [4.2.1.12] +h2o
+    6pgc
+  }
 
+  branch from 2_dehydro_3_deoxy_6_phosphonato_d_gluconate side right {
+    2_dehydro_3_deoxy_6_phosphonato_d_gluconate
+    <-> ec_4_3_1_29 [4.3.1.29] +nh3
+    d_glucosaminic_acid_6_phosphate
+  }
 
+  branch from bpg13 side left {
+    bpg13
+    <-> ec_2_7_2_10 [2.7.2.10] +gtp +gdp
+    pg3
+  }
 
+  branch from bpg13 side right {
+    bpg13
+    <-> ec_2_7_1_106 [2.7.1.106] +d_glucose_6_phosphate +pg3 +hplus
+    d_glucose_1_6_bisphosphate
+  }
 
+  branch from pg2 side left {
+    pg2
+    <-> ec_3_1_3_20 [3.1.3.20] +h2o +pi
+    d_glycerate
+  }
 
+  branch from phosphonatoenolpyruvate side right {
+    phosphonatoenolpyruvate
+    <-> ec_4_1_1_49 [4.1.1.49] +atp +adp +co2
+    oxaloacetate
+  }
 
+  branch from phosphonatoenolpyruvate side left {
+    phosphonatoenolpyruvate
+    <-> ec_2_5_1_7 [2.5.1.7] +udpglcnac +pi
+    udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> ec_2_5_1_10 [2.5.1.10] +ipp +gpp
+    fpp
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_6_1_1_20 [6.1.1.20] +amp_3_end_1 +l_phenylalanine +atp +amp +hplus
+    3_l_phenylalanyl_adenylyl_1_group
+  }
 
+  branch from cytidine_5_monophosphate side right {
+    cytidine_5_monophosphate
+    <-> ec_2_4_3_4 [2.4.3.4] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
+  }
 
+  branch from cytidine_5_monophosphate side left {
+    cytidine_5_monophosphate
+    <-> ec_3_6_1_16 [3.6.1.16] +2r_cdp_glycerol +h2o +hplus
+    sn_glycerol_3_phosphate
+  }
 
+  branch from uridine side right {
+    uridine
+    <-> . +3_terminal_pupu_2
+    ump_2_3_cyclic_phosphate_2
+  }
 
+  branch from d_ribofuranose side left {
+    d_ribofuranose
+    <-> ec_3_2_2_1 [3.2.2.1] +purines_d_ribonucleoside +h2o
+    purine_nucleobase
+  }
 
+  branch from d_ribofuranose side right {
+    d_ribofuranose
+    <-> . +n_ribosylnicotinamide +h2o +hplus
+    nicotinamide
+  }
 
+  branch from uracil side left {
+    uracil
+    <-> ec_1_3_1_1 [1.3.1.1] +nad +nadh +hplus
+    5_6_dihydrouracil
+  }
 
+  branch from 2_dehydro_3_deoxy_d_arabinonate side right {
+    2_dehydro_3_deoxy_d_arabinonate
+    <-> ec_1_1_1_434 [1.1.1.434] +nad +nadh +hplus
+    5_hydroxy_2_4_dioxopentanoate
+  }
 }

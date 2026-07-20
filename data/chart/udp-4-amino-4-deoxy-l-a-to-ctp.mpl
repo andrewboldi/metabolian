@@ -60,8 +60,8 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp "UDP-4-amino-4-deoxy-β-L-a… to CTP" {
 
   branch from ump side right {
     ump
-    <-> . +uridylyl_l_tyrosine_1 +h2o +hplus
-    l_tyrosine
+    <-> . +h2o +pi +hplus
+    utp
   }
 
   branch from l_rhamnopyranosyl_1_3_d_galactopyranosyl_diphos side left {
@@ -78,14 +78,14 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp "UDP-4-amino-4-deoxy-β-L-a… to CTP" {
 
   branch from dtdp side left {
     dtdp
-    <-> . +datp +dtmp
-    dadp
+    <-> . +ctp +cdp
+    dtmp
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +ctp +cdp
-    dtmp
+    <-> . +dctp +dtmp
+    dcdp
   }
 
   branch from cdp side left {
@@ -102,13 +102,13 @@ pathway udp-4-amino-4-deoxy-l-a-to-ctp "UDP-4-amino-4-deoxy-β-L-a… to CTP" {
 
   branch from ctp side left {
     ctp
-    <-> . +h2o +hplus +nh3
-    utp
+    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +hplus +ppi
+    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
   }
 
   branch from ctp side right {
     ctp
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphate +hplus +ppi
-    cdp_1_stearoyl_2_arachidonoyl_sn_glycerol
+    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +hplus +ppi
+    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
   }
 }

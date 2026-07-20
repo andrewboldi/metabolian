@@ -1,0 +1,266 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nucleoside-5-triphoshate-to-nucleoside-5-triphos",
+  "name": "nucleoside 5'-triphoshate to nucleoside 5'-triphoshate",
+  "category": "other",
+  "summary": "A 3-step route from nucleoside 5'-triphoshate(4−) to nucleoside 5'-triphoshate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23996"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61557"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "nucleoside_5_diphosphate",
+      "name": "nucleoside 5'-diphosphate",
+      "short": "nucleoside 5'-PP",
+      "formula": "C5H8O10P2R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57930"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37565"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_4",
+      "name": "nucleoside-phosphate kinase",
+      "ec": [
+        "2.7.4.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleotide diphosphatase",
+      "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-phosphate + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nucleoside-phosphate kinase",
+      "equation": "a ribonucleoside 5'-phosphate + ATP = a ribonucleoside 5'-diphosphate + ADP",
+      "ec": "2.7.4.4",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a ribonucleoside 5'-diphosphate + GTP = a ribonucleoside 5'-triphosphate + GDP",
+      "equation": "a ribonucleoside 5'-diphosphate + GTP = a ribonucleoside 5'-triphosphate + GDP",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:79879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:79879"
+          }
+        ]
+      }
+    }
+  ]
+}

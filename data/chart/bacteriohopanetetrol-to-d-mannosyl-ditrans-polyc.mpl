@@ -22,37 +22,37 @@ pathway bacteriohopanetetrol-to-d-mannosyl-ditrans-polyc "bacteriohopanetetrolâ€
 
   branch from h2o side left {
     h2o
-    <-> . +sangivamycin
-    toyocamycin
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose +scopoletin
+    scopolin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +gdp_2_acetamido_2_6_dideoxy_alpha_d_xylo_hexos_4
-    gdp_n_acetyl_d_glucosamine
+    <-> . +20s_ginsenoside_rg1 +d_xylopyranose
+    ginsenoside_r1
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +udp +h
-    n_acetyl_tunicaminyl_uracil
+    <-> ec_2_4_1_143 [2.4.1.143] +udp +h +n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_3_2_1_183 [3.2.1.183] +udp +h +h2o
-    n_acetyl_d_mannosamine
+    <-> ec_2_4_1_39 [2.4.1.39] +udp +17alpha_n_acetyl_d_glucosaminyl_estradiol_3_d_gl
+    17alpha_estradiol_3_o_beta_d_glucuronate
   }
 
   branch from ump side left {
     ump
-    <-> ec_3_5_4_12 [3.5.4.12] +cmp +h +h2o
-    nh4
+    <-> ec_2_7_1_48 [2.7.1.48] +uridine +datp +h
+    dadp
   }
 
   branch from ump side right {
     ump
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +datp +h
-    dadp
+    <-> ec_2_4_2_9 [2.4.2.9] +5_phospho_alpha_d_ribose_1_diphosphate +uracil
+    diphosphate
   }
 }

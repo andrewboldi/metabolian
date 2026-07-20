@@ -26,14 +26,14 @@ pathway taxusin-to-indigoidine "taxusin to indigoidine" {
 
   branch from fmn side right {
     fmn
-    <-> . +tetracosanoate +fmnh2 +o2 +h2o +hplus
-    hydroxytetracosanoate
+    <-> . +epiandrosterone +fmnh2 +o2 +h2o +hplus
+    3_5_7_3_7_dihydroxyandrostan_17_one
   }
 
   branch from fmn side left {
     fmn
-    <-> . +3_hydroxypalmitate +fmnh2 +o2 +h2o +hplus
-    3_16_dihydroxyhexadecanoate
+    <-> . +1_ethyl_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
+    1_hydroxy_fatty_acid_anion
   }
 
   branch from 2_7_dihydroxytaxusin side right {
@@ -44,25 +44,25 @@ pathway taxusin-to-indigoidine "taxusin to indigoidine" {
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +3_hydroxyoctadecanoate +o2 +fmn +h2o +hplus
-    3_18_dihydroxyoctadecanoate
+    <-> ec_1_14_14_129 [1.14.14.129] +linoleoyl_coa +o2 +fmn +h2o +hplus
+    9z_12z_18_hydroxyoctadecadienoyl_coa
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> . +arachidonate +o2 +fmn +h2o +hplus
-    20_hete
+    <-> ec_1_14_14_130 [1.14.14.130] +dodecanoate +o2 +fmn +h2o +hplus
+    7_hydroxylaurate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
-    phellandrene
+    <-> ec_4_2_3_72 [4.2.3.72] +fpp
+    gurjunene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
-    presilphiperfolan_8_ol
+    <-> ec_4_2_3_73 [4.2.3.73] +fpp
+    valencene
   }
 }

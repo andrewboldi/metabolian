@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-to-fmn-null",
+  "name": "UDP to FMN",
+  "category": "other",
+  "summary": "A 3-step route from UDP to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR152363"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102128"
+      }
+    },
+    {
+      "id": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
+      "name": "4-Hydroxycinnamyl alcohol 4-D-glucoside",
+      "short": "4-Hydroxycinnamyl…",
+      "formula": "C15H20O7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370794"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "udp_alpha_d_glucose",
+      "name": "UDP-alpha-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364019"
+      }
+    },
+    {
+      "id": "trans_p_coumaryl_alcohol",
+      "name": "trans-p-coumaryl alcohol",
+      "short": "trans-p-coumaryl…",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64555"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "4_hydroxycinnamaldehyde",
+      "name": "4-hydroxycinnamaldehyde",
+      "short": "4-hydroxycinnamalde…",
+      "formula": "C9H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28353"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3_4_dihydroxycinnamaldehyde",
+      "name": "3,4-dihydroxycinnamaldehyde",
+      "short": "3,4-dihydroxycinnam…",
+      "formula": "C9H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28323"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_111",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "ec": [
+        "2.4.1.111"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "coniferyl-alcohol glucosyltransferase",
+      "ec": "2.4.1.111",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_p_coumaryl_alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR152363"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152363"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-4-coumaroyl alcohol + A = (E)-4-coumaraldehyde + AH2",
+      "equation": "(E)-4-coumaroyl alcohol + A = (E)-4-coumaraldehyde + AH2",
+      "substrates": [
+        {
+          "metabolite": "trans_p_coumaryl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxycinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:76451"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76451"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(E)-4-coumaraldehyde + reduced [NADPH--hemoprotein reductase] + O2 = (E)-caffeyl aldehy...",
+      "equation": "(E)-4-coumaraldehyde + reduced [NADPH--hemoprotein reductase] + O2 = (E)-caffeyl aldehyde + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxycinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxycinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82263"
+          }
+        ]
+      }
+    }
+  ]
+}

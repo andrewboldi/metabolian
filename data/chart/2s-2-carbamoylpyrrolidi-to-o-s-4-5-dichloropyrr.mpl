@@ -26,32 +26,32 @@ pathway 2s-2-carbamoylpyrrolidi-to-o-s-4-5-dichloropyrr "(2S)-2-carbamoylpyrroli
 
   branch from l_proline side right {
     l_proline
-    <-> . +atp +ppi
-    3_l_prolyl_amp
+    <-> . +e_sinapaldehyde +h2o
+    e_nesocodin_alcohol_form
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_4 [3.5.4.4] +2_deoxyadenosine +h2o +hplus
-    2_deoxyinosine
+    <-> . +l_alaninamide +h2o
+    alanine
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +tyraminium +o2 +h2o +h2o2
-    4_hydroxyphenyl_acetaldehyde
+    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_48 [4.2.3.48] +fpp +h2o
-    3s_6e_nerolidol
+    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
+    xmp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_49 [4.2.3.49] +fpp +h2o
-    3r_6e_nerolidol
+    <-> ec_4_2_3_61 [4.2.3.61] +fpp
+    5_epi_aristolochene
   }
 
   branch from o_s_pyrrole_2_carbonyl_pantetheine_4_phosphoryl side left {

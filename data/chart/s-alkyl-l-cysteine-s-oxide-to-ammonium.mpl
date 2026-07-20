@@ -30,13 +30,13 @@ pathway s-alkyl-l-cysteine-s-oxide-to-ammonium "S-alkyl-L-cysteine S-oxide to am
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_3_1_15 [4.3.1.15] +h2o +hplus +pyruvate
-    3_amino_l_alanine
+    <-> ec_2_3_2_5 [2.3.2.5] +l_glutaminiumyl_group
+    n_terminal_5_oxo_l_proline
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_5_6 [3.5.5.6] +3_5_dibromo_4_oxidobenzonitrile +h2o
-    3_5_dibromo_4_oxidobenzoate
+    <-> ec_1_4_1_12 [1.4.1.12] +2r_4s_2_4_diazaniumylpentanoate +nad +h2o +nadh +hplus
+    r_2_amino_4_oxopentanoic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ€¦ to hydrogen acceptor" {
-  spacing 258
+  spacing 252
 
   spine at 0,0 {
     20s_17_20_dihydroxypregn_4_en_3_one
@@ -16,45 +16,39 @@ pathway 20s-17-20-dihydroxypreg-to-hydrogen-acceptor "(20S)-17,20-dihydroxypregâ
     testololactone
   }
 
-  branch from 17_hydroxyprogesterone side left {
-    17_hydroxyprogesterone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    algestone
-  }
-
-  branch from androst_4_ene_3_17_dione side right {
+  branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> . +nadph +hplus +nadp
     5_androstane_3_17_dione
   }
 
-  branch from androst_4_ene_3_17_dione side left {
+  branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
     <-> ec_1_3_99_4 [1.3.99.4] +hydrogen_acceptor +hydrogen_donor
     androsta_1_4_diene_3_17_dione
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphoethanolamine
-  }
-
   branch from acetate side left {
     acetate
-    <-> . +2_hydroxyglutarate +acetyl_coa
-    2_hydroxyglutaryl_coa
+    <-> ec_3_1_1_113 [3.1.1.113] +ethyl_acetate +h2o +hplus
+    ethanol
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_14_99_38 [1.14.99.38] +cholesterol +hydrogen_donor +o2 +h2o
-    25_hydroxycholesterol
+  branch from acetate side right {
+    acetate
+    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_7_99_1 [1.7.99.1] +nh3 +h2o +hydrogen_donor +hplus
-    hydroxylamine
+    <-> ec_1_3_99_39 [1.3.99.39] +carotenoid_end_derivative +hydrogen_donor
+    carotenoid_end_group
+  }
+
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +hydrogen_donor +o2 +h2o
+    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
   }
 }

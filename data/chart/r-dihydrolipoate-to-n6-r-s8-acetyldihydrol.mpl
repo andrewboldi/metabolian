@@ -18,14 +18,14 @@ pathway r-dihydrolipoate-to-n6-r-s8-acetyldihydrol "(R)-dihydrolipoate to N6-[(R
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_164 [4.2.3.164] +fpp
-    eremophilene
+    <-> ec_4_2_3_191 [4.2.3.191] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    cycloaraneosene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_157 [4.2.3.157] +fpp +h2o
-    isoafricanol
+    <-> . +very_long_chain_fatty_acid_anion +atp +coa +amp
+    very_long_chain_fatty_acyl_coa
   }
 
   branch from n6_r_lipoyl_l_lysine side left {

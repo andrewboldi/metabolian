@@ -54,14 +54,14 @@ pathway s-5-oxo-2-5-dihydro-2-f-to-nitrite "(S)-5-oxo-2,5-dihydro-2-f… to nitr
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_28 [1.14.11.28] +l_proline +akg +o2 +co2
-    cis_3_hydroxy_l_proline
+    <-> ec_1_14_11_7 [1.14.11.7] +l_proline +akg +o2 +co2
+    trans_3_hydroxy_l_proline
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_7 [1.14.11.7] +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> ec_2_8_3_2 [2.8.3.2] +oxalate +succinyl_coa
+    oxalyl_coa
   }
 
   branch from fumarate side left {
@@ -78,26 +78,26 @@ pathway s-5-oxo-2-5-dihydro-2-f-to-nitrite "(S)-5-oxo-2,5-dihydro-2-f… to nitr
 
   branch from menaquinone_8 side left {
     menaquinone_8
-    <-> . +sn_glycerol_3_phosphate +menaquinol_8
-    dhap
-  }
-
-  branch from menaquinone_8 side right {
-    menaquinone_8
     <-> . +selenite +h2o +menaquinol_8
     selenate
   }
 
+  branch from menaquinone_8 side right {
+    menaquinone_8
+    <-> ec_1_18_99_1 [1.18.99.1] +h2 +menaquinol_8
+    pmf
+  }
+
   branch from menaquinol_8 side left {
     menaquinol_8
-    <-> . +nitrite +menaquinone_8 +h2o +nitrate
-    pmf
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +nadh +menaquinone_8 +h +pmf
+    nad
   }
 
   branch from menaquinol_8 side right {
     menaquinol_8
-    <-> . +thiosulfate +menaquinone_8 +h +sulfite
-    hydrogen_sulfide
+    <-> ec_1_6_5_3 [1.6.5.3] +pmf +menaquinone_8 +h +pmf +nad
+    nadh
   }
 
   branch from nitrite side left {

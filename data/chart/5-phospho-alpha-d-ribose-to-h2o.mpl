@@ -42,37 +42,37 @@ pathway 5-phospho-alpha-d-ribose-to-h2o "5-phospho-alpha-D-ribose-… to H2O" {
 
   branch from h side left {
     h
-    <-> . +3e_3_nonen_2_one +pyruvate +s_3_pentanylhexane_2_5_dione
-    co2
+    <-> . +dtdp_beta_l_digitoxose +nadp +nadph
+    dtdp_4_dehydro_2_6_dideoxy_beta_l_glucose
   }
 
   branch from h side right {
     h
-    <-> . +e_dec_3_en_2_one +pyruvate +co2
-    s_3_hexanylhexane_2_5_dione
+    <-> . +tryptoquialanol +nadp +nadph
+    tryptoquialanone
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +indole_3_acetyl_l_valine +amp +indol_3_yl_acetate
-    l_valine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_galactofuranose
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +indole_3_acetyl_l_phenylalanine +amp +l_phenylalanine
-    indol_3_yl_acetate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_galactofuranose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +propionamide
-    propionitrile
+    <-> ec_3_2_1_180 [3.2.1.180] +4_deoxy_beta_d_gluc_4_enuronosyl_1_3_n_acetyl_d +n_acetyl_d_glucosamine_6_sulfate
+    4_deoxy_l_threo_hex_4_enopyranuronate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +butanamide
-    butyronitrile
+    <-> . +9z_12z_octadecadienoate +echinocandin_b_nucleus
+    echinocandin_b
   }
 }

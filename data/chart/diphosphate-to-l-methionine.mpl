@@ -18,50 +18,50 @@ pathway diphosphate-to-l-methionine "diphosphate to L-methionine" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    1_o_d_glucopyranosyl_d_mannitol
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_hexadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    ciceritol
   }
 
   branch from l_homoserine side left {
-    l_homoserine
-    <-> ec_4_4_1_43 [4.4.1.43] +h2o
-    2e_2_aminobut_2_enoic_acid
-  }
-
-  branch from l_homoserine side right {
     l_homoserine
     <-> . +h2o +h
     l_homoserine_lactone
   }
 
+  branch from l_homoserine side right {
+    l_homoserine
+    <-> . +diphosphate +l_homoserine_lactone +atp
+    amp
+  }
+
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    pe_16_1_9z_18_3_9z_12z_15z
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    ajugose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphoethan
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    fagopyritol_b2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_mannopyranose +alpha_d_galactose
-    epimelibiose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    fagopyritol_b3
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_104 [3.2.1.104] +beta_d_glucose +cholesterol
-    cholesteryl_3_beta_d_glucoside
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    fagopyritol_a2
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -72,13 +72,13 @@ pathway diphosphate-to-l-methionine "diphosphate to L-methionine" {
 
   branch from l_methionine side right {
     l_methionine
-    <-> ec_2_6_1_88 [2.6.1.88] +l_alanine +4_methylsulfanyl_2_oxobutanoate
-    pyruvate
+    <-> . +l_methionine_s_oxide +h2o
+    h2o2
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> . +l_methionine_s_s_oxide +h2o
-    h2o2
+    <-> . +l_homocysteine +co_methyl_co_5_hydroxybenzimidazolylcob_i_amide +h
+    5_hydroxybenzimidazolylcobamide
   }
 }

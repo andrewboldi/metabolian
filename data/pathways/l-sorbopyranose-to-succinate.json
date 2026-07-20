@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-sorbopyranose-to-succinate",
+  "name": "α-L-sorbopyranose to succinate",
+  "category": "other",
+  "summary": "A 3-step route from α-L-sorbopyranose to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR118949"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:10295"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_sorbopyranose",
+      "name": "α-L-sorbopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10295"
+      }
+    },
+    {
+      "id": "keto_l_sorbose",
+      "name": "keto-L-sorbose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13172"
+      }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "l_sorbose_1_phosphate",
+      "name": "L-sorbose 1-phosphate",
+      "short": "L-sorbose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137409"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "3s_3_hydroxy_l_histidine",
+      "name": "(3S)-3-hydroxy-L-histidine",
+      "short": "3-hydroxy-L-histidi…",
+      "formula": "C6H7N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138021"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_206",
+      "name": "protein-N(pi)-phosphohistidine--L-sorbose phosphotransferase",
+      "ec": [
+        "2.7.1.206"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR118949",
+      "substrates": [
+        {
+          "metabolite": "l_sorbopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR118949"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118949"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-N(pi)-phosphohistidine--L-sorbose phosphotransferase",
+      "equation": "keto-L-sorbose(out) + N(pros)-phospho-L-histidyl-[protein] = L-sorbose 1-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.206",
+      "substrates": [
+        {
+          "metabolite": "keto_l_sorbose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_sorbose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_206"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49296"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49296"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-histidyl-[ribosomal protein uL15] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-histidyl-[...",
+      "equation": "L-histidyl-[ribosomal protein uL15] + 2-oxoglutarate + O2 = (3S)-3-hydroxy-L-histidyl-[ribosomal protein uL15] + succinate + CO2",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_3_hydroxy_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54024"
+          }
+        ]
+      }
+    }
+  ]
+}

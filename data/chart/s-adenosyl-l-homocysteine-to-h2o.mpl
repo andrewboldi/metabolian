@@ -20,14 +20,14 @@ pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +echinomycin
-    triostin_a
+    <-> . +s_adenosyl_l_homocysteine +c37_phenolphthiocerol_a +h
+    c36_phenolphthiotriol_a
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +thiocoraline_dithiol +h
-    s_demethyl_thiocoraline_dithiol
+    <-> . +s_adenosyl_l_homocysteine +h +neoglucobrassicin
+    1_hydroxyglucobrassicin
   }
 
   branch from myricetin side left {
@@ -38,14 +38,14 @@ pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
 
   branch from h side right {
     h
-    <-> . +malonyl_coa +7_hydroxylauroyl_coa +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +coa
-    co2
+    <-> . +c31_phthiodiolenone_a +nadph +nadp
+    c31_phthiodiolone_a
   }
 
   branch from h side left {
     h
-    <-> ec_2_7_7_77 [2.7.7.77] +bis_guanylyl_molybdopterin_cofactor +diphosphate +gtp
-    bis_molybdenum_cofactor
+    <-> . +c33_phthiodiolenone_a +nadph +nadp
+    c33_phthiodiolone_a
   }
 
   branch from quercetin side right {
@@ -56,32 +56,32 @@ pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
 
   branch from quercetin side left {
     quercetin
-    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +taxifolin +o2 +co2 +h +h2o
-    succinate
+    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +taxifolin +o2 +h +succinate +h2o
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> . +l_2_amino_8_hydroxydecanoate +nadp +h2o +h +nadph
-    2_aminodecanoic_acid
+    <-> . +s_beta_hydroxy_l_tryptophan
+    r_n_formyl_beta_hydroxy_l_kynurenine
   }
 
   branch from o2 side left {
     o2
-    <-> . +20_hydroxy_prefusarin +nadp +h2o +h +nadph
-    prefusarin
+    <-> . +h +bisphenol_a +nadph +nadp +h2o
+    1_2_bis_4_hydroxyphenyl_propan_2_ol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +dechloro_dehydrogriseofulvin +h +nadp
-    dechlorogriseofulvin
+    <-> . +c34_phenolphthiodiolone_a +h +nadp
+    c34_phenolphthiotriol_a
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_11e_tetradec_9_11_dienoyl_coa +h +nadp +coa
-    9z_11e_tetradecadien_1_ol
+    <-> . +c34_phenolphthiodiolenone_a +h +nadp
+    c34_phenolphthiodiolone_a
   }
 
   branch from 3_3_4_5_7_8_hexahydroxyflavone side right {
@@ -92,25 +92,25 @@ pathway s-adenosyl-l-homocysteine-to-h2o "S-adenosyl-L-homocysteine to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_tetradecenol +coa +nadph
-    cis_tetradec_11_enoyl_coa
+    <-> . +c36_phenolphthiodiolenone_a +h +nadph
+    c36_phenolphthiodiolone_a
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_2_1_84 [1.2.1.84] +9z_myristoleoyl_coa +h +nadph +coa
-    9z_tetradecen_1_ol
+    <-> ec_2_3_1_287 [2.3.1.287] +s_methylmalonyl_coa +h +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +nadph +co2 +coa +h2o
+    o_s_c40_phthioceranylpantetheine_4_phosphoryl_l
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_hydroxy_2_4_glucosyl_hydroxyphenyl_methyl_1_be
-    hispidol_4_o_beta_d_glucoside
+    <-> . +c32_mycoketide +coa
+    c32_mycoketide_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nitroxyl
-    nitrous_oxide
+    <-> . +4_hydroxybenzoate +h +4_1_hydroxyethyl_phenol +o2
+    4_4_dihydroxy_alpha_methylstilbene
   }
 }

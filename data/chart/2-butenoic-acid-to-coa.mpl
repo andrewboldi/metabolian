@@ -24,14 +24,14 @@ pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_6 [3.3.2.6] +l_lysine +h +4_nitroaniline
-    l_lysine_p_nitroanilide
+    <-> ec_3_3_1_1 [3.3.1.1] +l_homocysteine +3_deazaadenosine
+    3_deazaadenosylhomocysteine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +nafamostat +4_guanidinobenzoic_acid
-    6_amidino_2_naphthol
+    <-> ec_3_5_1_14 [3.5.1.14] +h +acetate +l_serine
+    n_acetyl_dl_serine
   }
 
   branch from 3r_3_hydroxybutanoyl_coa side right {
@@ -48,14 +48,14 @@ pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
 
   branch from h side right {
     h
-    <-> . +4_hydroxybenzoate +o2 +nadph +2_5_dihydroxybenzoate +h2o
-    nadp
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_4_dinitrophenol
+    2_4_dinitrophenyl_alpha_d_glucopyranoside
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_324 [1.1.1.324] +6e_8_hydroxygeraniol +nadp +6e_8_oxogeraniol +nadph
-    6e_8_hydroxygeranial
+    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +nadph +2s_butan_2_ol
+    nadp
   }
 
   branch from r_3_hydroxybutyrylcarnitine side right {
@@ -66,13 +66,13 @@ pathway 2-butenoic-acid-to-coa "2-butenoic acid to CoA" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
-    11_cis_retinyl_hexadecanoate
+    <-> . +nadh +acetyl_coa +h +h2o2 +o2 +nad +h2o
+    9z_octadecenoyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +11_cis_retinol
-    all_trans_retinyl_hexadecanoate
+    <-> . +nadh +acetyl_coa +h +nadp +h2o2 +9z_octadecenoyl_coa +nadph +nad +h2o
+    o2
   }
 }

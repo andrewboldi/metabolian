@@ -20,37 +20,25 @@ pathway dtdp-3-azaniumyl-3-6-dide-to-dtdp "dTDP-3-azaniumyl-3,6-dide… to dTDP"
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
-    e_2_methylgeranyl_diphosphate
+    <-> . +3_methyl_1_2_didehydro_2_3_dihydrosqualene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_254 [2.1.1.254] +erythromycin_d +sam +hplus
-    erythromycin_b
+    <-> ec_2_1_1_263 [2.1.1.263] +c30_botryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from dtdp side left {
-    dtdp
-    <-> . +dctp +dtmp
-    dcdp
-  }
-
-  branch from dtdp side right {
     dtdp
     <-> . +ddtmp +dttp
     ddtdp
   }
 
-  branch from dtmp side left {
+  branch from dtmp side right {
     dtmp
     <-> ec_2_7_1_21 [2.7.1.21] +atp +adp +hplus
     thymidine
-  }
-
-  branch from dtmp side right {
-    dtmp
-    <-> . +h2o +pi +hplus
-    dttp
   }
 }

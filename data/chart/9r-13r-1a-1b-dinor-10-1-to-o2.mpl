@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9r-13r-1a-1b-dinor-10-1-to-o2 "(9R,13R)-1a,1b-dinor-10,1… to O2" {
-  spacing 310
+  spacing 292
 
   spine at 0,0 {
     9r_13r_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
@@ -20,81 +20,63 @@ pathway 9r-13r-1a-1b-dinor-10-1-to-o2 "(9R,13R)-1a,1b-dinor-10,1… to O2" {
     opc8_coa
   }
 
-  branch from 9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt side left {
-    9s_13s_1a_1b_dinor_10_11_dihydro_12_oxo_15_phyt
-    <-> ec_1_3_3_6 [1.3.3.6] +fadh2 +trans_2_enoyl_opc6_coa +h
-    fad
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_150 [4.2.3.150] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    r_cembrene_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_138 [4.2.3.138] +fpp +h2o
-    epi_bisabolol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_135 [4.2.3.135] +fpp
-    6_protoilludene
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
-    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
+    <-> ec_4_2_3_151 [4.2.3.151] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    1s_4e_8e_12e_2_2_5_9_13_pentamethylcyclopentade
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +18_coa_18_oxo_dinorleukotriene_b4
-    18_20_dioxo_20_coa_leukotriene_b4
+    <-> . +acetyl_coa +histamine +h
+    n_acetylhistamine
   }
 
-  branch from 3_oxo_opc8_coa side right {
-    3_oxo_opc8_coa
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +nad
-    3_oxo_2_cis_2_pentenyl_cyclopentane_1_3r_hydroxy
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +aniline
+    n_phenylacetamide
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_62 [1.1.1.62] +nadh +h +16alpha_hydroxyestrone
-    16alpha_17beta_estriol
+    <-> ec_1_14_12_18 [1.14.12.18] +nadh +h +4_chlorobiphenyl +o2
+    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_4_1_12 [1.4.1.12] +nadh +h +2_amino_5_oxohexanoate +nh4 +h2o
-    2r_5s_2_5_diaminohexanoate
-  }
-
-  branch from trans_2_enoyl_opc8_coa side left {
-    trans_2_enoyl_opc8_coa
-    <-> ec_1_3_3_6 [1.3.3.6] +h +fad +opc8_coa
-    fadh2
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
-    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
+    <-> ec_1_1_1_306 [1.1.1.306] +nadh +s_formylmycothiol +h +mycothiol
+    formaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_hydroperoxy_epa
-    leukotriene_a5
+    <-> ec_2_3_2_2 [2.3.2.2] +3_cyano_l_alanine +h +l_glutamate
+    glutamyl_cyanoalanine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +5_oxo_12_s_hydroxy_eicosa_6e_8z_10e_14z_tetraeno
-    5_oxo_6e_8z_11z_14z_eicosatetraenoate
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_107 [4.2.1.107] +3alpha_7alpha_12alpha_trihydroxy_5beta_cholest_2 +h
+    24r_25r_3alpha_7alpha_12alpha_24_tetrahydroxy_5
   }
 
   branch from o2 side left {
     o2
-    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
-    benzo_a_pyrene
+    <-> . +h +cholesterol +nadph +nadp +h2o
+    5_6_epoxy_5_cholestan_3_ol
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +h +cholesterol +nadph +nadp +h2o
+    5_6beta_epoxy_5beta_cholestan_3beta_ol
   }
 }

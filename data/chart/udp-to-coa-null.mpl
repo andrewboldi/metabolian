@@ -18,37 +18,37 @@ pathway udp-to-coa-null "UDP to CoA" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +solasodine_3_o_beta_d_glucoside
-    solasodine
+    <-> ec_2_4_1_202 [2.4.1.202] +udp +dimboa_beta_d_glucoside
+    dimboa
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
-    beta_d_fructopyranose
+    <-> . +udp +beta_d_glc_1_3_6_o_succinoyl_beta_d_glc_1_3_beta +h
+    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
   }
 
   branch from pelargonidin_3_o_d_glucoside_betaine side left {
     pelargonidin_3_o_d_glucoside_betaine
-    <-> ec_2_4_1_115 [2.4.1.115] +udp_d_glucose +udp
-    pelargonidin
+    <-> . +glucose +pelargonidin_3_o_6_o_malyl_beta_d_glucoside
+    1_o_malyl_beta_d_glucose
   }
 
   branch from pelargonidin_3_o_d_glucoside_betaine side right {
     pelargonidin_3_o_d_glucoside_betaine
-    <-> ec_2_3_1_215 [2.3.1.215] +trans_4_coumaroyl_coa +h +coa
-    pelargonidin_3_6_p_coumaroyl_glucoside
+    <-> ec_2_4_1_298 [2.4.1.298] +udp +udp_alpha_d_glucose
+    pelargonin
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_185 [2.3.1.185] +acetyl_coa +tropine
-    acetylpseudotropine
+    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +taurine
+    taurochenodeoxycholate
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_186 [2.3.1.186] +pseudotropine +h +acetylpseudotropine
-    acetyl_coa
+    <-> ec_2_3_1_7 [2.3.1.7] +acetyl_coa +carnitine
+    o_acetyl_r_carnitine
   }
 }

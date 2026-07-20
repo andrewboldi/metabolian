@@ -229,84 +229,39 @@
       }
     },
     {
-      "id": "anthranilate",
-      "name": "anthranilate",
-      "formula": "C7H6NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:16567"
-      }
-    },
-    {
-      "id": "l_phenylalanine",
-      "name": "L-phenylalanine",
-      "formula": "C9H11NO2",
+      "id": "trans_anol",
+      "name": "trans-anol",
+      "formula": "C9H10O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58095"
+        "chebi": "CHEBI:73343"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "cyclopeptine",
-      "name": "cyclopeptine",
-      "formula": "C17H16N2O2",
+      "id": "trans_anethole",
+      "name": "trans-anethole",
+      "formula": "C10H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:71320"
+        "chebi": "CHEBI:35616"
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
+      "id": "aklanonate",
+      "name": "aklanonate",
+      "formula": "C21H14O8",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:456215"
+        "chebi": "CHEBI:77987"
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
+      "id": "methyl_aklanonate",
+      "name": "methyl aklanonate",
+      "formula": "C22H17O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "precorrin_6y",
-      "name": "precorrin-6Y",
-      "formula": "C44H50N4O16",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:58532"
-      }
-    },
-    {
-      "id": "precorrin_7",
-      "name": "precorrin-7",
-      "formula": "C44H52N4O14",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:71490"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:77988"
       }
     }
   ],
@@ -347,10 +302,17 @@
       ]
     },
     {
-      "id": "ec_6_3_2_40",
-      "name": "cyclopeptine synthase",
+      "id": "ec_2_1_1_279",
+      "name": "trans-anol O-methyltransferase",
       "ec": [
-        "6.3.2.40"
+        "2.1.1.279"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_288",
+      "name": "aklanonic acid methyltransferase",
+      "ec": [
+        "2.1.1.288"
       ]
     }
   ],
@@ -659,76 +621,61 @@
     },
     {
       "id": "r7",
-      "name": "cyclopeptine synthase",
-      "equation": "anthranilate + L-phenylalanine + S-adenosyl-L-methionine + 2 ATP = cyclopeptine + 2 AMP + S-adenosyl-L-homocysteine + 2 diphosphate + 2 H(+)",
-      "ec": "6.3.2.40",
+      "name": "trans-anol O-methyltransferase",
+      "equation": "(E)-anol + S-adenosyl-L-methionine = (E)-anethole + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.279",
       "substrates": [
         {
-          "metabolite": "anthranilate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_phenylalanine",
+          "metabolite": "trans_anol",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "cyclopeptine",
+          "metabolite": "trans_anethole",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 2
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
-          "stoichiometry": 2
-        },
-        {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_2_40"
+          "enzyme": "ec_2_1_1_279"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:35091"
+        "rhea": "RHEA:36247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35091"
+            "id": "RHEA:36247"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "precorrin-6B + S-adenosyl-L-methionine = precorrin-7 + S-adenosyl-L-homocysteine + CO2 ...",
-      "equation": "precorrin-6B + S-adenosyl-L-methionine = precorrin-7 + S-adenosyl-L-homocysteine + CO2 + H(+)",
+      "name": "aklanonic acid methyltransferase",
+      "equation": "aklanonate + S-adenosyl-L-methionine = methyl aklanonate + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.288",
       "substrates": [
         {
-          "metabolite": "precorrin_6y",
+          "metabolite": "aklanonate",
           "stoichiometry": 1
         },
         {
@@ -738,33 +685,30 @@
       ],
       "products": [
         {
-          "metabolite": "precorrin_7",
+          "metabolite": "methyl_aklanonate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_288"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:35383"
+        "rhea": "RHEA:37875"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35383"
+            "id": "RHEA:37875"
           }
         ]
       }

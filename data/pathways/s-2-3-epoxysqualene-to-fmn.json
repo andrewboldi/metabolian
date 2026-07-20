@@ -1,0 +1,252 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-2-3-epoxysqualene-to-fmn",
+  "name": "(S)-2,3-epoxysqualene to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (S)-2,3-epoxysqualene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:82723"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15441"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "epoxysqualene",
+      "name": "(S)-2,3-Epoxysqualene (2,3-oxidosqualene)",
+      "short": "2,3-Epoxysqualene…",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15441"
+      }
+    },
+    {
+      "id": "isomotiol",
+      "name": "isomotiol",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232471"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "3_o_d_glucopyranosyl_isomotiol",
+      "name": "3-O-(β-D-glucopyranosyl)-isomotiol",
+      "short": "3-O-(β-D-glucopyran…",
+      "formula": "C36H60O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232474"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_deacetoxyfuscoatroside",
+      "name": "2-deacetoxyfuscoatroside",
+      "short": "2-deacetoxyfuscoatr…",
+      "formula": "C36H59O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232478"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-2,3-epoxysqualene = isomotiol",
+      "equation": "(S)-2,3-epoxysqualene = isomotiol",
+      "substrates": [
+        {
+          "metabolite": "epoxysqualene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isomotiol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:82723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isomotiol + UDP-alpha-D-glucose = 3-O-(beta-D-glucopyranosyl)-isomotiol + UDP + H(+)",
+      "equation": "isomotiol + UDP-alpha-D-glucose = 3-O-(beta-D-glucopyranosyl)-isomotiol + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_d_glucopyranosyl_isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:82735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2...",
+      "equation": "3-O-(beta-D-glucopyranosyl)-isomotiol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 2-deacetoxyfuscoatroside + 2 oxidized [NADPH--hemoprotein reductase] + 2 H2O + 3 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_o_d_glucopyranosyl_isomotiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deacetoxyfuscoatroside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82747"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82747"
+          }
+        ]
+      }
+    }
+  ]
+}

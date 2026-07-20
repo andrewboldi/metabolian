@@ -18,37 +18,37 @@ pathway lupanine-to-h2o "Lupanine to H2O" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_2_7_1_59 [2.7.1.59] +n_acetyl_d_mannosamine
-    n_acetylneuraminate
+    <-> . +phosphate +phosphoenolpyruvate +h2o
+    udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_3_1_15 [4.3.1.15] +h +3_aminoalanine +h2o
-    nh4
+    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
+    n_acetyl_alpha_neuraminate
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +h +amp +2_hydroxy_atorvastatin_lactone_ortho_hydroxy_ato
-    ortho_hydroxyatorvastatin
+    <-> . +dimp +adp
+    didp
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    3_5_dihydrodiol_simvastatin_lactone_form
+    estrone_3_sulfate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_2_9 [3.2.2.9] +s_adenosyl_l_homocysteine +s_ribosyl_l_homocysteine
-    adenine
+    <-> . +h +adp +phosphate +atp
+    eicosanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +d_alanine +1_6_anhydrous_n_acetylmuramyl_tripeptide
-    1_6_anhydrous_n_acetylmuramyl_tetrapeptide
+    <-> . +h +adp +phosphate +atp
+    epa_d5
   }
 }

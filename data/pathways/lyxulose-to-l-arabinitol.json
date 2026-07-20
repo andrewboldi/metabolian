@@ -1,0 +1,204 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "lyxulose-to-l-arabinitol",
+  "name": "Lyxulose to L-arabinitol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from Lyxulose to L-arabinitol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197553"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:165240"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "lyxulose",
+      "name": "Lyxulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:165240"
+      }
+    },
+    {
+      "id": "l_lyxopyranose",
+      "name": "β-L-lyxopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:147210"
+      }
+    },
+    {
+      "id": "l_lyxose",
+      "name": "L-lyxose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6309"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740330"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR197553",
+      "substrates": [
+        {
+          "metabolite": "lyxulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lyxopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR119042",
+      "substrates": [
+        {
+          "metabolite": "l_lyxopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lyxose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR119042"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR119042"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lyxose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR133486"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133486"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -36,26 +36,26 @@ pathway hydrogencarbonate-to-o2 "hydrogencarbonate to O2" {
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +3_nitrophenol +h +nad
-    3_hydroxyaminophenol
+    <-> ec_3_5_1_70 [3.5.1.70] +hexadecanoate +depalmitoyl_aculeacin_a
+    aculeacin_a
   }
 
   branch from h2o side right {
     h2o
-    <-> . +s_dnpa
-    s_hemiketal
+    <-> ec_3_1_1_39 [3.1.1.39] +h +actinomyc_d_monolactone
+    actinomycin_d
   }
 
   branch from h side left {
     h
-    <-> . +10_oxabenzo_def_chrysen_9_one +formate
-    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
+    <-> . +2_oxoglutarate +antibiotic_ji_20ba +l_glutamate
+    6_oxo_g418
   }
 
   branch from h side right {
     h
-    <-> . +benzo_a_pyrene_cis_4_5_dihydrodiol +nad +benzo_a_pyrene +o2
-    nadh
+    <-> ec_2_7_7_90 [2.7.7.90] +ctp +8_amino_3_8_dideoxy_d_manno_octulosonate +cmp_8_amino_3_8_dideoxy_beta_d_manno_octulosonat
+    diphosphate
   }
 
   branch from acetaldehyde side left {
@@ -78,13 +78,13 @@ pathway hydrogencarbonate-to-o2 "hydrogencarbonate to O2" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_1 [1.13.11.1] +tetrachloro_cis_cis_muconic_acid
-    tetrachlorocatechol
+    <-> . +lividamine +h2o2
+    6_oxolividamine
   }
 
   branch from o2 side left {
     o2
-    <-> . +4_5_dihydroxypyrene
-    phenanthrene_4_5_dicarboxylate
+    <-> ec_1_13_11_67 [1.13.11.67] +14_apo_beta_carotenal +e_e_2_methyl_6_oxohepta_2_4_dienol
+    8_apo_beta_carotenol
   }
 }

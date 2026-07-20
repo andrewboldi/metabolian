@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-acyl-sn-glycerol-to-1-2-diacyl-sn-glycerol",
+  "name": "3-acyl-sn-glycerol to 1,2-diacyl-sn-glycerol",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 3-acyl-sn-glycerol to 1,2-diacyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78135"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64760"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_acyl_sn_glycerol",
+      "name": "3-acyl-sn-glycerol",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64760"
+      }
+    },
+    {
+      "id": "phosphatidylcholine",
+      "name": "Phosphatidylcholine",
+      "formula": "C10H18NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57643"
+      }
+    },
+    {
+      "id": "1_3_diglyceride",
+      "name": "1,3-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47777"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphocholine",
+      "name": "2-acyl-sn-glycero-3-phosphocholine",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C9H19NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57875"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycerol",
+      "name": "1-acyl-sn-glycerol",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64683"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 3-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,3-diacylglycerol ...",
+      "equation": "a 3-acyl-sn-glycerol + a 1,2-diacyl-sn-glycero-3-phosphocholine = a 1,3-diacylglycerol + a 2-acyl-sn-glycero-3-phosphocholine",
+      "substrates": [
+        {
+          "metabolite": "3_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78135"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78135"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1,3-diacylglycerol + H2O = a 1-acyl-sn-glycerol + a fatty acid + H(+)",
+      "equation": "a 1,3-diacylglycerol + H2O = a 1-acyl-sn-glycerol + a fatty acid + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78147"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78147"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,2-diacyl-sn-glycerol + CoA",
+      "equation": "a 1-acyl-sn-glycerol + an acyl-CoA = a 1,2-diacyl-sn-glycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38463"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38463"
+          }
+        ]
+      }
+    }
+  ]
+}

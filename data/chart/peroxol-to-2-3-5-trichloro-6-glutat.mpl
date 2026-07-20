@@ -24,14 +24,14 @@ pathway peroxol-to-2-3-5-trichloro-6-glutat "peroxol to 2,3,5-trichloro-6-(gluta
 
   branch from gsh side right {
     gsh
-    <-> . +1_aci_nitro_2_phenyl_ethane +h2o
-    z_1_glutathione_s_yl_2_phenylacetohydroximate
+    <-> . +15_deoxy_12_14_prostaglandin_j2
+    15_deoxy_12_14_prostaglandin_j2_s_glutathione_co
   }
 
   branch from gsh side left {
     gsh
-    <-> . +15_deoxy_12_14_prostaglandin_j2
-    15_deoxy_12_14_prostaglandin_j2_s_glutathione_co
+    <-> . +2_4_6_trinitrotoluene +hydrogen_donor +hydrogen_acceptor +h2o
+    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
   }
 
   branch from glutathione side right {

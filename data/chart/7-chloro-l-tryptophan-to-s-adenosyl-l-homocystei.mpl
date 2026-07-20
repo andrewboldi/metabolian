@@ -28,25 +28,25 @@ pathway 7-chloro-l-tryptophan-to-s-adenosyl-l-homocystei "7-chloro-L-tryptophan 
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_l_fucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii +phosphate +2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +beta_d_ribopyranose +phosphate +beta_d_ribopyranose
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    6_deamino_6_hydroxyparomomycin_ii
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_359 [2.1.1.359] +l_lysinium +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
+    soppiline_a
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_360 [2.1.1.360] +sam +n6_n6_n6_trimethyl_l_lysine +hplus
-    l_lysinium
+    <-> . +avenanthramide_c +sam +hplus
+    avenanthramide_b
   }
 }

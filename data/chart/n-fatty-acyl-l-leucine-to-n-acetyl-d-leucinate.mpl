@@ -18,13 +18,13 @@ pathway n-fatty-acyl-l-leucine-to-n-acetyl-d-leucinate "N-(fatty acyl)-L-leucine
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
+    <-> . +2_o_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
+    3_o_d_galactopyranosyl_sn_glycerol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +h2o +3_o_d_galactopyranosyl_sn_glycerol +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 }

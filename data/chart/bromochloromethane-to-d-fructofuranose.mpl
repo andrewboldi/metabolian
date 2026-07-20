@@ -22,25 +22,25 @@ pathway bromochloromethane-to-d-fructofuranose "bromochloromethane to β-D-fruct
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_5_3_19 [1.5.3.19] +4_methylamino_butyric_acid +o2 +h2o +h2o2
-    gaba
+    <-> ec_1_14_13_179 [1.14.13.179] +3_methyl_7h_xanthine +nadph +o2 +hplus +nadp +h2o
+    xanthine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +caffeine +nadph +o2 +hplus +nadp +h2o
-    theobromine
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    5_oxo_bilirubin
   }
 
   branch from d_fructofuranose_6_phosphate side left {
     d_fructofuranose_6_phosphate
-    <-> ec_1_1_1_140 [1.1.1.140] +nad +nadh +hplus
-    d_glucitol_6_phosphate
+    <-> ec_2_4_1_329 [2.4.1.329] +sucrose_6f_phosphate +pi
+    g1p
   }
 
   branch from d_fructofuranose_6_phosphate side right {
     d_fructofuranose_6_phosphate
-    <-> ec_2_4_1_329 [2.4.1.329] +sucrose_6f_phosphate +pi
-    g1p
+    <-> ec_5_3_1_9 [5.3.1.9]
+    d_fructofuranose_6_phosphate
   }
 }

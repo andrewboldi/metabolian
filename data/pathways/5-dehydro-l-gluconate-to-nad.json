@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-dehydro-l-gluconate-to-nad",
+  "name": "5-dehydro-L-gluconate to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 5-dehydro-L-gluconate to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196770"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137108"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_dehydro_l_gluconate",
+      "name": "5-dehydro-L-gluconate",
+      "short": "5-dehydro-L-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137108"
+      }
+    },
+    {
+      "id": "2_4_didehydro_inositol",
+      "name": "2,4-didehydro-inositol",
+      "short": "2,4-didehydro-inosi…",
+      "formula": "C6H7O6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368217"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "scyllo_inosose",
+      "name": "scyllo-inosose",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102164"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "inositol",
+      "name": "inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24848"
+      }
+    },
+    {
+      "id": "carbamazepine_n_glucuronide",
+      "name": "carbamazepine N-glucuronide",
+      "short": "carbamazepine…",
+      "formula": "C21H20N2O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232973"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "12s_hhtre",
+      "name": "12S-HHTrE",
+      "formula": "C17H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63977"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_18",
+      "name": "inositol 2-dehydrogenase",
+      "ec": [
+        "1.1.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196770",
+      "substrates": [
+        {
+          "metabolite": "5_dehydro_l_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_4_didehydro_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196770"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196770"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196768",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_4_didehydro_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "inositol 2-dehydrogenase",
+      "ec": "1.1.1.18",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR145301"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145301"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR204390",
+      "substrates": [
+        {
+          "metabolite": "carbamazepine_n_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamazepine_n_glucuronide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR204390"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204390"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR204404",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "12s_hhtre",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "12s_hhtre",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR204404"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204404"
+          }
+        ]
+      }
+    }
+  ]
+}

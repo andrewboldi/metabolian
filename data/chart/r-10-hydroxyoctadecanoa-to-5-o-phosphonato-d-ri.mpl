@@ -24,8 +24,8 @@ pathway r-10-hydroxyoctadecanoa-to-5-o-phosphonato-d-ri "(R)-10-hydroxyoctadecan
 
   branch from oleate side right {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    monooleoylglycerol
+    <-> . +1_oleoyl_2_o_arachidonyl_sn_glycerol +h2o +hplus
+    2_arachidonyl_glyceryl_ether
   }
 
   branch from oleoyl_coa side left {
@@ -42,13 +42,13 @@ pathway r-10-hydroxyoctadecanoa-to-5-o-phosphonato-d-ri "(R)-10-hydroxyoctadecan
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_113 [4.2.3.113] +gpp
-    terpinolene
+    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    e_e_e_geranylgeraniol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gpp
-    phellandrene
+    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
+    elisabethatriene
   }
 }

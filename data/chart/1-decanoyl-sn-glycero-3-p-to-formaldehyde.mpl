@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-decanoyl-sn-glycero-3-p-to-formaldehyde "1-decanoyl-sn-glycero-3-p… to formaldehyde" {
-  spacing 232
+  spacing 220
 
   spine at 0,0 {
     1_decanoyl_sn_glycero_3_phosphocholine
@@ -22,49 +22,37 @@ pathway 1-decanoyl-sn-glycero-3-p-to-formaldehyde "1-decanoyl-sn-glycero-3-p… 
 
   branch from choline side left {
     choline
-    <-> . +phosphatidylcholine +serine
-    3_sn_phosphatidyl_l_serine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine
+    1_palmitoyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from choline side right {
     choline
-    <-> . +1_myristoyl_sn_glycero_3_phosphocholine
-    1_myristoyl_sn_glycero_2_3_cyclic_phosphate
-  }
-
-  branch from trimethylammonium side left {
-    trimethylammonium
-    <-> ec_1_14_13_239 [1.14.13.239] +carnitine +nadph +o2 +hplus +nadp +h2o
-    3r_3_hydroxy_4_oxobutanoate
-  }
-
-  branch from trimethylammonium side right {
-    trimethylammonium
-    <-> ec_1_14_13_239 [1.14.13.239] +nadh +o2 +hplus +3r_3_hydroxy_4_oxobutanoate +nad +h2o
-    carnitine
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine
+    1_acyl_sn_glycero_2_3_cyclic_phosphate
   }
 
   branch from glyoxylate side left {
-    glyoxylate
-    <-> . +ethylenediaminetriacetate +fmnh2 +o2 +fmn +h2o +hplus
-    ethylenediaminediacetate
-  }
-
-  branch from glyoxylate side right {
     glyoxylate
     <-> . +glyphosate +o2 +h2o +h2o2 +hplus
     aminomethyl_phosphonate
   }
 
+  branch from glyoxylate side right {
+    glyoxylate
+    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
+    8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
+  }
+
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_11_68 [1.14.11.68] +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +s_nicotinium +fmnh2 +o2 +fmn +h2o +hplus
+    s_nornicotine
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +s_scoulerine +akg +o2 +succinate +co2
+    s_3_o_demethylscoulerine
   }
 }

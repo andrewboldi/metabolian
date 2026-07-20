@@ -24,13 +24,13 @@ pathway iodide-to-l-glutamate "iodide to L-glutamate" {
 
   branch from glutamate side right {
     glutamate
-    <-> . +atp +nadph +hplus +adp +pi +nadp
-    l_glutamic_5_semialdehyde
+    <-> ec_5_4_3_9 [5.4.3.9]
+    isoglutamate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
-    6_oxoparomamine
+    <-> . +cob_ii_yrinate +glutamine +atp +h2o +adp +pi +hplus
+    cob_ii_yrinate_c_monoamide
   }
 }

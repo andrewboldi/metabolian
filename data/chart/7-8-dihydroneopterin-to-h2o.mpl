@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 7-8-dihydroneopterin-to-h2o "7,8-dihydroneopterin… to H2O" {
-  spacing 262
+  spacing 256
 
   spine at 0,0 {
     7_8_dihydroneopterin_3_triphosphate
@@ -18,33 +18,27 @@ pathway 7-8-dihydroneopterin-to-h2o "7,8-dihydroneopterin… to H2O" {
     atp
   }
 
-  branch from 6_hydroxymethyl_7_8_dihydropterin side left {
-    6_hydroxymethyl_7_8_dihydropterin
-    <-> . +6_hydroxymethyl_5_6_7_8_tetrahydropterin +nadp +h
-    nadph
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    gentamicin_c1a
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_erythrose
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    2_ammonio_2_deoxy_d_galactopyranose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_d_galactose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    gentamicin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_d_glucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gentamicin_b1
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    fortimicin_kl1
   }
 }

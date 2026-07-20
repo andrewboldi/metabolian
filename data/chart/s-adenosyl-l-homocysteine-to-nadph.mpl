@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +methylparaben
-    4_hydroxybenzoate
+    <-> . +s_adenosyl_l_homocysteine +beta_peltatin_a_methyl_ether +h
+    peltatin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +c37_phenolphthiocerol_a +h
-    c36_phenolphthiotriol_a
+    <-> . +s_adenosyl_l_homocysteine +desoxyhemigossypol_6_methyl_ether +h
+    desoxyhemigossypol
   }
 
   branch from 4_hydroxy_2_2_bipyrrole_5_carbaldehyde side left {
@@ -42,37 +42,37 @@ pathway s-adenosyl-l-homocysteine-to-nadph "S-adenosyl-L-homocysteine to NADPH" 
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_230 [1.14.13.230] +nadh +h +pentane +o2 +h2o
-    pentan_1_ol
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_4_5_tetrachlorobenzene +h +o2
+    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
   }
 
   branch from nad side right {
     nad
-    <-> . +butanal +nadh +o2 +h2o
-    butanoate
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_dichlorobenzene +h +o2
+    1r_2s_3_4_dichlorocyclohexa_3_5_diene_1_2_diol
   }
 
   branch from h side left {
     h
-    <-> . +c34_phenolphthiodiolenone_a +nadph +nadp
-    c34_phenolphthiodiolone_a
+    <-> ec_2_5_1_1 [2.5.1.1] +2_hydroxygenistein +dimethylallyl_diphosphate +licoisoflavone_a
+    diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +co2 +c34_phenolphthiodiolenone_a
-    c35_phenolcarboxyphthiodiolenone
+    <-> ec_2_5_1_1 [2.5.1.1] +isowighteone +diphosphate +genistein
+    dimethylallyl_diphosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +c36_phenolphthiodiolenone_a +h +nadp
-    c36_phenolphthiodiolone_a
+    <-> . +h +o2 +cyclohexane +nadp +h2o
+    cyclohexanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriochlorophyllide_b +nadp
-    bacteriochlorophyll_b
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadp +h
+    geranylgeranyl_bacteriochlorophyllide_a
   }
 }

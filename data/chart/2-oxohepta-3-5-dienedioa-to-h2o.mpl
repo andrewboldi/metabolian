@@ -32,26 +32,26 @@ pathway 2-oxohepta-3-5-dienedioa-to-h2o "2-oxohepta--3,5-dienedioa… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflavan +h +nadph +nadp +h2o
-    10_2_dihydroxy_4_5_methylenedioxy_isoflav_8_ene
+    <-> . +deoxynortryptoquialanone +h +nadph +nadp +h2o
+    tryptoquialanone
   }
 
   branch from o2 side right {
     o2
-    <-> . +h2o
-    h2
+    <-> . +l_2_amino_8_hydroxydecanoate +nadp +h2o +h +nadph
+    2_aminodecanoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +notoginsenoside_fe +glucose
-    ginsenoside_rc
+    <-> . +nitroxyl
+    nitrous_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ginsenoside_mc +glucose
-    notoginsenoside_fe
+    <-> . +7_2_dihydroxy_4_5_methylenedioxyisoflav_3_ene
+    3r_4r_2_hydroxy_4_5_methylenedioxyisoflavan_4_7
   }
 
   branch from 2_hydroxy_3_carboxybenzylidenepyruvic_acid side left {

@@ -34,14 +34,14 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +all_trans_hexaprenyl_diphosphate +4_aminobenzoate
-    4_amino_3_all_trans_hexaprenylbenzoate
+    <-> . +spermidine +citrate +atp +amp +hplus
+    n_citryl_spermidine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_methyl_ctp +h2o +hplus
-    5_methyl_cmp
+    <-> . +n_citryl_spermidine +spermidine +atp +amp +hplus
+    n8_n_8_citryl_bis_spermidine_3
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
@@ -52,20 +52,20 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
     2e_6e_10e_geranylgeranyl_diphosphate
-    <-> ec_2_5_1_32 [2.5.1.32] +diphosphate
-    all_trans_phytoene
+    <-> ec_4_2_3_146 [4.2.3.146] +diphosphate +h2o
+    cyclooctat_9_en_7_ol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glucose +ginsenoside_c_mx1
-    ginsenoside_rb3
+    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_hexosamine +4_deoxy_l_threo_hex_4_enopyranuronate
+    beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_194 [3.2.1.194] +glucose +protopanaxatriol
-    ginsenoside_rf
+    <-> . +4_deoxy_l_threo_hex_4_enopyranosiduronate_alpha +4_deoxy_l_threo_hex_4_enopyranuronate
+    alpha_l_rhamnopyranose_3_sulfate
   }
 
   branch from dimethylallyl_diphosphate side left {
@@ -82,14 +82,14 @@ pathway diphosphate-to-diphosphate-null "diphosphate to diphosphate" {
 
   branch from ipp side left {
     ipp
-    <-> ec_3_6_1_76 [3.6.1.76] +h2o +pi +hplus
-    isopentenyl_phosphate
+    <-> ec_2_5_1_88 [2.5.1.88] +diphosphate +omega_mono_trans_deca_cis_dodecaprenyl_diphospha
+    2_cis_6_trans_farnesyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_88 [2.5.1.88] +diphosphate +omega_mono_trans_deca_cis_dodecaprenyl_diphospha
-    2_cis_6_trans_farnesyl_diphosphate
+    <-> ec_2_5_1_87 [2.5.1.87] +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side left {

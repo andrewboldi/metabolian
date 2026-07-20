@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dichloro-5-oxo-2,5…" {
-  spacing 276
+  spacing 270
 
   spine at 0,0 {
     r_dichlorprop
@@ -20,39 +20,33 @@ pathway r-dichlorprop-to-2-2-4-dichloro-5-oxo-2-5 "(R)-dichlorprop to 2-(2,4-dic
     2_2_4_dichloro_5_oxo_2_5_dihydrofuryl_acetate
   }
 
-  branch from 2_4_dichlorophenol side left {
-    2_4_dichlorophenol
-    <-> . +hydrogen_donor +chloride +hydrogen_acceptor +hplus
-    4_chlorophenol
+  branch from succinate side left {
+    succinate
+    <-> . +l_lysinium +akg +o2 +co2
+    4_hydroxy_l_lysine_1
   }
 
   branch from succinate side right {
     succinate
-    <-> . +3_methylnonanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methylnonanoyl_coa
+    <-> . +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
-  branch from succinate side left {
-    succinate
-    <-> . +3_methylundecanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methylundecanoyl_coa
-  }
-
-  branch from cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid side right {
+  branch from cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid side left {
     cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid
     <-> . +h +chloride
     2_chloro_2_4_chloro_5_oxo_2h_furan_2_yl_acetate
-  }
-
-  branch from chloride side left {
-    chloride
-    <-> . +h +2_5_dichlorophenol
-    1s_4r_2_4_5_trichloro_2_5_cyclohexadiene_1_diol
   }
 
   branch from chloride side right {
     chloride
     <-> . +h +chlorobenzene
     5_6_dichloro_1_3_cyclohexadiene
+  }
+
+  branch from chloride side left {
+    chloride
+    <-> ec_5_5_1_7 [5.5.1.7] +h +2_3_5_trichloro_cis_cis_muconate
+    2_5_dichloro_carboxymethylenebut_2_en_4_olide
   }
 }

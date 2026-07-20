@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to coniferyl acetate" {
-  spacing 216
+  spacing 210
 
   spine at 0,0 {
     lathosterol
@@ -26,47 +26,41 @@ pathway 5-cholest-7-en-3-ol-to-coniferyl-acetate "5α-cholest-7-en-3β-ol to con
 
   branch from ergosta_5_7_24_28_trien_3_ol side left {
     ergosta_5_7_24_28_trien_3_ol
-    <-> ec_1_14_19_20 [1.14.19.20] +fe2 +o2 +hplus +iron +h2o
-    episterol
-  }
-
-  branch from ergosta_5_7_24_28_trien_3_ol side right {
-    ergosta_5_7_24_28_trien_3_ol
-    <-> ec_1_3_1_21 [1.3.1.21] +h +nadph +24_methylenecholesterol
-    nadp
-  }
-
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
-    6_methoxymellein
+    <-> ec_1_14_21_6 [1.14.21.6] +episterol +nadp +nadph
+    h
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
-    palmatine
+    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +h2o +hplus
-    1_o_hexadecyl_sn_glycerol
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
+    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
-    3_5_oxoisoxazolin_4_yl_l_alanine
+    <-> . +1_palmityl_2_acetyl_sn_glycero_3_phosphate +h2o +hplus
+    1_hexadecyl_sn_glycero_3_phosphate
   }
 
-  branch from coniferyl_acetate side left {
+  branch from acetate side left {
+    acetate
+    <-> . +1_hexadecyl_2_acetyl_sn_glycero_3_phosphoethanol +h2o +hplus
+    1_hexadecyl_sn_glycero_3_phosphoethanolamine
+  }
+
+  branch from coniferyl_acetate side right {
     coniferyl_acetate
     <-> . +acetyl_coa +coa
     coniferol
   }
 
-  branch from coniferyl_acetate side right {
+  branch from coniferyl_acetate side left {
     coniferyl_acetate
     <-> . +isoeugenol +acetate +nadp
     nadph

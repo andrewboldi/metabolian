@@ -34,25 +34,25 @@ pathway 4s-limonene-to-3s-3-isopropenyl-6-oxoh "(4S)-limonene to (3S)-3-isoprope
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_hydroxymethyl_5_cholest_8_en_3_ol +nad +h2o
-    4_formyl_5_cholest_8_en_3_ol
+    <-> . +2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate +h +h2o
+    6_7_dihydroxy_3_isocyanochromen_2_one
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholesta_8_24_dien_3beta_ol +nad +h2o
-    4_hydroxymethyl_4_methylzymosterol
+    <-> ec_1_14_20_9 [1.14.20.9] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +2_oxoglutarate +co2 +succinate +h2o
+    2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +r_citronellal +nadp
-    isomenthol
+    <-> . +z_but_2_enol +nadp +h
+    z_but_2_enal
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +neoisomenthol +nadp +r_citronellal
-    h
+    <-> . +emodin +h +nadp +h2o
+    chrysophanol
   }
 }

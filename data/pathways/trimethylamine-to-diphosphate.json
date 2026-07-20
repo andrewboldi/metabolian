@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "trimethylamine-to-diphosphate",
   "name": "trimethylamine to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 5-step route from trimethylamine to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -208,86 +208,21 @@
       }
     },
     {
-      "id": "fadh2",
-      "name": "FADH2",
-      "formula": "C27H33N9O15P2",
+      "id": "n6_methyl_datp",
+      "name": "N6-methyl-dATP",
+      "formula": "C11H14N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:172872"
+      }
+    },
+    {
+      "id": "n6_methyl_damp",
+      "name": "N6-methyl-dAMP",
+      "formula": "C11H14N5O6P",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1105762"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "fad",
-      "name": "FAD",
-      "formula": "C27H33N9O15P2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364149"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
-      }
-    },
-    {
-      "id": "6_hydroxydeoxybrevianamide_e",
-      "name": "6-hydroxydeoxybrevianamide E",
-      "short": "6-hydroxydeoxybrevi…",
-      "formula": "C21H25N3O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145682"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "notoamide_s",
-      "name": "notoamide S",
-      "formula": "C26H33N3O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:145683"
-      }
-    },
-    {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:169976"
       }
     },
     {
@@ -300,12 +235,21 @@
       }
     },
     {
-      "id": "l_arginyl_amp",
-      "name": "L-arginyl-AMP",
-      "formula": "C16H27N9O8P",
-      "charge": 1,
+      "id": "8_oxo_gtp",
+      "name": "8-oxo-GTP",
+      "formula": "C10H12N5O15P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:144944"
+        "chebi": "CHEBI:143553"
+      }
+    },
+    {
+      "id": "8_oxo_gmp",
+      "name": "8-oxo-GMP",
+      "formula": "C10H12N5O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:145694"
       }
     }
   ],
@@ -668,138 +612,25 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR199617",
+      "name": "N(6)-methyl-dATP + H2O = N(6)-methyl-dAMP + diphosphate + H(+)",
+      "equation": "N(6)-methyl-dATP + H2O = N(6)-methyl-dAMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "fadh2",
+          "metabolite": "n6_methyl_datp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "fad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "butyrobetainyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR199617"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR199617"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "Reaction MNXR204298",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "butyrobetainyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "metanetx": "MNXR204298"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR204298"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "6-hydroxydeoxybrevianamide E + dimethylallyl diphosphate = notoamide S + diphosphate",
-      "equation": "6-hydroxydeoxybrevianamide E + dimethylallyl diphosphate = notoamide S + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "6_hydroxydeoxybrevianamide_e",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "notoamide_s",
+          "metabolite": "n6_methyl_damp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:62344"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62344"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
-      "equation": "L-arginine + ATP + H(+) = L-arginyl-AMP + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "arginine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -807,27 +638,60 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "l_arginyl_amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:62496"
+        "rhea": "RHEA:67604"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:62496"
+            "id": "RHEA:67604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "8-oxo-GTP + H2O = 8-oxo-GMP + diphosphate + H(+)",
+      "equation": "8-oxo-GTP + H2O = 8-oxo-GMP + diphosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "8_oxo_gtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_oxo_gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:67616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67616"
           }
         ]
       }

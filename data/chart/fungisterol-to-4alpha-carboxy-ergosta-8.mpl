@@ -18,25 +18,25 @@ pathway fungisterol-to-4alpha-carboxy-ergosta-8 "fungisterol to 4alpha-carboxy-e
 
   branch from h side left {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxystearoyl_coa +nadph +nadp +coa
-    1_18_octadecane_diol
+    <-> . +n_acetylphosphinothricyl_l_alanyl_l_leucine +h2o +phosalacine
+    acetate
   }
 
   branch from h side right {
     h
-    <-> . +2_8_hydroxy_2_oxotridecyl_6_oxopyran_4_olate +nadph +nadp
-    2_2_8_dihydroxytridecyl_6_oxopyran_4_olate
+    <-> . +s_adenosyl_l_homocysteine +c32_phthiocerol_a +c31_phthiotriol
+    s_adenosyl_l_methionine
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_84 [1.2.1.84] +7_hydroxylauroyl_coa +h +nadp +coa
-    1_7_dodecanediol
+    <-> . +c31_phthiodiolone_a +h +nadp
+    c31_phthiotriol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +8e_10e_dodecadienoic_acid +nadp +h2o
-    8e_10e_dodeca_8_10_dienol
+    <-> . +c33_phthiodiolone_a +h +nadp
+    c33_phthiotriol_a
   }
 }

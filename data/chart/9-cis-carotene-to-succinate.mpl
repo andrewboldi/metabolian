@@ -32,25 +32,25 @@ pathway 9-cis-carotene-to-succinate "9-cis-β-carotene to succinate" {
 
   branch from fmn side right {
     fmn
-    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
-    9_hydroxylaurate
+    <-> . +tetradecane +fmnh2 +o2 +h2o +hplus
+    tetradecan_7_ol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    12_hydroxymyristate
+    <-> . +hexadecane +fmnh2 +o2 +h2o +hplus
+    hexadecan_8_ol
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
+    <-> . +scopoletin +sam +hplus
+    scoparone
   }
 
   branch from sah side left {
     sah
-    <-> . +eriodictyol +sam +hplus
-    homoeriodictyol
+    <-> . +7_8_dihydroxycoumarin +sam +hplus
+    7_hydroxy_8_methoxycoumarin
   }
 }

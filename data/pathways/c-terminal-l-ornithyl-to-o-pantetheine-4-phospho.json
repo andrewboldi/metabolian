@@ -152,40 +152,40 @@
       }
     },
     {
-      "id": "5_amino_2_oxopentanoic_acid",
-      "name": "5-amino-2-oxopentanoic acid",
-      "short": "5-amino-2-oxopentan…",
-      "formula": "C5H9NO3",
-      "charge": 0,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:58802"
+        "chebi": "CHEBI:57292"
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "n2_succinyl_l_ornithinate",
+      "name": "N2-succinyl-L-ornithinate",
+      "short": "N2-succinyl-L-ornit…",
+      "formula": "C9H15N2O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:58514"
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:57287"
       }
     },
     {
-      "id": "d_alanine",
-      "name": "D-alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
+      "id": "behenate",
+      "name": "behenate",
+      "formula": "C22H43O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57416"
+        "chebi": "CHEBI:23858"
       }
     },
     {
@@ -198,13 +198,13 @@
       }
     },
     {
-      "id": "o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z",
-      "name": "O-[S-(D-alanyl)pantetheine-4'-phosphoryl]-L-serine zwitterionic",
-      "short": "O-[S-(D-alanyl)pant…",
-      "formula": "C17H31N4O9PS",
-      "charge": 0,
+      "id": "o_s_docosanoylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-docosanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-docosanoylpant…",
+      "formula": "C36H67N3O9PS",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:138620"
+        "chebi": "CHEBI:142238"
       }
     },
     {
@@ -226,23 +226,23 @@
       }
     },
     {
-      "id": "o_s_3r_hydroxydecanoylpantetheine_4_phosphoryl_s",
-      "name": "O-[S-(3R)-hydroxydecanoylpantetheine-4-phosphoryl]serine(1−)",
-      "short": "O-[S-(3R)-hydroxyde…",
-      "formula": "C24H43N3O10PS",
-      "charge": -1,
+      "id": "4_amino_l_phenylalanine",
+      "name": "4-amino-L-phenylalanine",
+      "short": "4-amino-L-phenylala…",
+      "formula": "C9H12N2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78466"
+        "chebi": "CHEBI:143072"
       }
     },
     {
-      "id": "r_r_3_3_hydroxydecanoyloxy_decanoate",
-      "name": "(R,R)-3-(3-hydroxydecanoyloxy)decanoate",
-      "short": "(R,R)-3-(3-hydroxyd…",
-      "formula": "C20H37O5",
-      "charge": -1,
+      "id": "o_s_4_amino_l_phenylalanylpantetheine_4_phosphor",
+      "name": "O-(S-4-amino-L-phenylalanylpantetheine-4'-phosphoryl)serine",
+      "short": "O-(S-4-amino-L-phen…",
+      "formula": "C23H36N5O9PS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:139104"
+        "chebi": "CHEBI:142855"
       }
     }
   ],
@@ -276,10 +276,17 @@
       ]
     },
     {
-      "id": "ec_6_2_1_54",
-      "name": "D-alanine--[D-alanyl-carrier protein] ligase",
+      "id": "ec_2_3_1_109",
+      "name": "arginine N-succinyltransferase",
       "ec": [
-        "6.2.1.54"
+        "2.3.1.109"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "ec": [
+        "6.2.1.59"
       ]
     }
   ],
@@ -478,63 +485,65 @@
     },
     {
       "id": "r5",
-      "name": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
-      "equation": "L-ornithine + O2 + H2O = 5-amino-2-oxopentanoate + H2O2 + NH4(+)",
+      "name": "arginine N-succinyltransferase",
+      "equation": "succinyl-CoA + L-ornithine = N(2)-succinyl-L-ornithine + CoA + H(+)",
+      "ec": "2.3.1.109",
       "substrates": [
         {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "ornithine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_amino_2_oxopentanoic_acid",
+          "metabolite": "n2_succinyl_l_ornithinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "hplus",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_109"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:61276"
+        "rhea": "RHEA:65020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61276"
+            "id": "RHEA:65020"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "D-alanine--[D-alanyl-carrier protein] ligase",
-      "equation": "holo-[D-alanyl-carrier protein] + D-alanine + ATP = D-alanyl-[D-alanyl-carrier protein] + AMP + diphosphate",
-      "ec": "6.2.1.54",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "holo-[(phenol)carboxyphthiodiolenone synthase] + docosanoate + ATP = docosanoyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
       "substrates": [
         {
           "metabolite": "holo-acp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_alanine",
+          "metabolite": "behenate",
           "stoichiometry": 1
         },
         {
@@ -544,7 +553,7 @@
       ],
       "products": [
         {
-          "metabolite": "o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z",
+          "metabolite": "o_s_docosanoylpantetheine_4_phosphoryl_l_serine",
           "stoichiometry": 1
         },
         {
@@ -558,63 +567,67 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_54"
+          "enzyme": "ec_6_2_1_59"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:55132"
+        "rhea": "RHEA:59160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55132"
+            "id": "RHEA:59160"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "2 (3R)-hydroxydecanoyl-[ACP] + H2O = (3R)-3-[(3R)-3-hydroxydecanoyloxy]decanoate + 2 ho...",
-      "equation": "2 (3R)-hydroxydecanoyl-[ACP] + H2O = (3R)-3-[(3R)-3-hydroxydecanoyloxy]decanoate + 2 holo-[ACP] + H(+)",
+      "name": "4-amino-L-phenylalanine + holo-[peptidyl-carrier protein] + ATP = 4-amino-L-phenylalany...",
+      "equation": "4-amino-L-phenylalanine + holo-[peptidyl-carrier protein] + ATP = 4-amino-L-phenylalanyl-[peptidyl-carrier protein] + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "o_s_3r_hydroxydecanoylpantetheine_4_phosphoryl_s",
-          "stoichiometry": 2
+          "metabolite": "4_amino_l_phenylalanine",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_r_3_3_hydroxydecanoyloxy_decanoate",
+          "metabolite": "o_s_4_amino_l_phenylalanylpantetheine_4_phosphor",
           "stoichiometry": 1
         },
         {
-          "metabolite": "holo-acp",
-          "stoichiometry": 2
+          "metabolite": "amp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:55592"
+        "rhea": "RHEA:59436"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55592"
+            "id": "RHEA:59436"
           }
         ]
       }

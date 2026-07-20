@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-3r-hydroxyhexanoyl-to-di-sulfido-diiron "O-[S-(3R)-hydroxyhexanoyl… to di-μ-sulfido-diiron" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     o_s_3r_hydroxyhexanoylpantetheine_4_phosphoryl_s
@@ -36,43 +36,37 @@ pathway o-s-3r-hydroxyhexanoyl-to-di-sulfido-diiron "O-[S-(3R)-hydroxyhexanoyl�
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_61 [3.1.1.61] +glutamic_acid +methanol
-    methyl_l_glutamate
+    <-> . +udp_3_acetamido_2_amino_2_3_dideoxy_alpha_d_gluc +glycine
+    udp_3_acetamido_2_glycyl_amino_2_3_dideoxy_alpha
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +esculin +esculetin
-    beta_d_glucose
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxy_13_methyltetradecanoyl_alph +acetate
+    udp_3_o_3r_3_hydroxy_13_methyltetradecanoyl_n_ac
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +cathinone
-    cathine
+    <-> ec_1_3_1_1 [1.3.1.1] +nadh +uracil +h
+    5_6_dihydrouracil
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
-    2z_6e_farnesol
-  }
-
-  branch from o_s_3_oxodecanoylpantetheine_4_phosphoryl_serine side left {
-    o_s_3_oxodecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_2_3_1_207 [2.3.1.207] +malonyl-acp +hplus +co2 +coa
-    octanoyl_coa
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +emodin +h +nadph +h2o
-    chrysophanol
+    <-> ec_1_3_1_48 [1.3.1.48] +nadh +15_oxoprostaglandin_e1 +h
+    13_14_dihydro_15_oxoprostaglandin_e1
   }
 
   branch from nadp side left {
     nadp
-    <-> . +alliin +h2o +h +nadph +s_allylcysteine
-    o2
+    <-> ec_1_3_1_36 [1.3.1.36] +4_21_dehydrogeissoschizine +nadph
+    geissoschizine
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_36 [1.3.1.36] +nadph +geissoschizine
+    4_21_dehydrogeissoschizine
   }
 }

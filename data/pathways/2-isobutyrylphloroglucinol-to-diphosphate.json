@@ -85,31 +85,50 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "eudesmol",
+      "name": "γ-eudesmol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62513"
+      }
+    },
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
       "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "alpha_springene",
-      "name": "alpha-springene",
+      "id": "ent_trachylobane",
+      "name": "ent-trachylobane",
       "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192746"
-      }
-    },
-    {
-      "id": "talarodiene",
-      "name": "talarodiene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193158"
+        "chebi": "CHEBI:231826"
       }
     }
   ],
@@ -271,17 +290,21 @@
     },
     {
       "id": "r4",
-      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = (E,E,E)-alpha-springene + diphosphate",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (E,E,E)-alpha-springene + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = gamma-eudesmol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = gamma-eudesmol + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "alpha_springene",
+          "metabolite": "eudesmol",
           "stoichiometry": 1
         },
         {
@@ -292,31 +315,31 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:74543"
+        "rhea": "RHEA:80407"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74543"
+            "id": "RHEA:80407"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = talarodiene + diphosphate",
+      "name": "ent-copalyl diphosphate = ent-trachylobane + diphosphate",
+      "equation": "ent-copalyl diphosphate = ent-trachylobane + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "talarodiene",
+          "metabolite": "ent_trachylobane",
           "stoichiometry": 1
         },
         {
@@ -327,14 +350,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:74547"
+        "rhea": "RHEA:81219"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74547"
+            "id": "RHEA:81219"
           }
         ]
       }

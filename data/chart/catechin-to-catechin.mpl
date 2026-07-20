@@ -32,14 +32,14 @@ pathway catechin-to-catechin "(+)-catechin to (−)-catechin" {
 
   branch from succinate side left {
     succinate
-    <-> ec_3_1_2_3 [3.1.2.3] +h2o +coa +hplus
-    succinyl_coa
+    <-> ec_4_1_3_1 [4.1.3.1] +d_threo_isocitrate
+    glyoxylate
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_4_1_3_1 [4.1.3.1] +d_threo_isocitrate
-    glyoxylate
+    <-> ec_2_8_3_15 [2.8.3.15] +r_2_benzylsuccinate +succinyl_coa
+    r_2_benzylsuccinyl_coa
   }
 
   branch from cyanidin side left {
@@ -56,14 +56,14 @@ pathway catechin-to-catechin "(+)-catechin to (−)-catechin" {
 
   branch from h2o side left {
     h2o
-    <-> . +hexaglutamyl_folate_thf +l_glutamate
-    pentaglutamyl_folate_thf
+    <-> . +haxglutamyl_folate_dhf +l_glutamate
+    heptaglutamyl_folate_dhf
   }
 
   branch from h2o side right {
     h2o
-    <-> . +haxglutamyl_folate_dhf +l_glutamate
-    heptaglutamyl_folate_dhf
+    <-> . +hexaglutamyl_folate_thf +l_glutamate
+    heptaglutamyl_folate_thf
   }
 
   branch from nadp side left {

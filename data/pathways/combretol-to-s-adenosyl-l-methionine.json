@@ -87,45 +87,53 @@
       }
     },
     {
-      "id": "3_hydroxy_5_methoxybiphenyl",
-      "name": "3-hydroxy-5-methoxybiphenyl",
-      "short": "3-hydroxy-5-methoxy…",
-      "formula": "C13H12O2",
-      "charge": 0,
+      "id": "4_methoxyglucobrassicin",
+      "name": "4-methoxyglucobrassicin",
+      "short": "4-methoxyglucobrass…",
+      "formula": "C17H21N2O10S2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:70633"
+        "metanetx": "MNXM1104978"
       }
     },
     {
-      "id": "3_5_dihydroxybiphenyl",
-      "name": "3,5-dihydroxybiphenyl",
-      "short": "3,5-dihydroxybiphen…",
-      "formula": "C12H10O2",
-      "charge": 0,
+      "id": "4_hydroxyglucobrassicin",
+      "name": "4-hydroxyglucobrassicin",
+      "short": "4-hydroxyglucobrass…",
+      "formula": "C16H19N2O10S2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:52069"
+        "metanetx": "MNXM1370919"
       }
     },
     {
-      "id": "aucuparin",
-      "name": "Aucuparin",
-      "formula": "C14H14O3",
+      "id": "r_coclaurine",
+      "name": "(R)-coclaurine",
+      "formula": "C17H19NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:2920"
+        "metanetx": "MNXM114577"
       }
     },
     {
-      "id": "noraucuparin",
-      "name": "noraucuparin",
-      "formula": "C13H12O3",
+      "id": "r_norcoclaurine",
+      "name": "(R)-norcoclaurine",
+      "formula": "C16H17NO3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM165022"
+        "metanetx": "MNXM114578"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_128",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": [
+        "2.1.1.128"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -255,14 +263,14 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR120721",
+      "name": "Reaction MNXR121621",
       "substrates": [
         {
-          "metabolite": "3_hydroxy_5_methoxybiphenyl",
+          "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_adenosyl_l_homocysteine",
+          "metabolite": "4_methoxyglucobrassicin",
           "stoichiometry": 1
         },
         {
@@ -276,63 +284,69 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_5_dihydroxybiphenyl",
+          "metabolite": "4_hydroxyglucobrassicin",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR120721"
+        "metanetx": "MNXR121621"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120721"
+            "id": "MNXR121621"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR120723",
+      "name": "(RS)-norcoclaurine 6-O-methyltransferase",
+      "ec": "2.1.1.128",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "r_coclaurine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "aucuparin",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_adenosyl_l_methionine",
+          "metabolite": "r_norcoclaurine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "noraucuparin",
+          "metabolite": "s_adenosyl_l_methionine",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_128"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR120723"
+        "metanetx": "MNXR121785"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR120723"
+            "id": "MNXR121785"
           }
         ]
       }

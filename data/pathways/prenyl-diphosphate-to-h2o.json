@@ -147,6 +147,25 @@
       }
     },
     {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "bisabolene",
+      "name": "β-bisabolene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49249"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -154,33 +173,6 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "dauca_4_7_diene",
-      "name": "dauca-4,7-diene",
-      "formula": "C15H24",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:155906"
-      }
-    },
-    {
-      "id": "8_oxo_datp",
-      "name": "8-oxo-dATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:172871"
-      }
-    },
-    {
-      "id": "8_oxo_damp",
-      "name": "8-oxo-dAMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:71361"
       }
     },
     {
@@ -193,12 +185,12 @@
       }
     },
     {
-      "id": "daunosamine",
-      "name": "daunosamine",
-      "formula": "C6H14NO3",
-      "charge": 1,
+      "id": "neomycin_b",
+      "name": "neomycin B",
+      "formula": "C23H52N6O13",
+      "charge": 6,
       "xrefs": {
-        "metanetx": "MNXM737102"
+        "metanetx": "MNXM95425"
       }
     },
     {
@@ -220,12 +212,12 @@
       }
     },
     {
-      "id": "d_fucose",
-      "name": "α-D-fucose",
-      "formula": "C6H12O5",
+      "id": "ribostamycin",
+      "name": "ribostamycin",
+      "formula": "C17H34N4O10",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:42564"
+        "chebi": "CHEBI:45257"
       }
     }
   ],
@@ -238,10 +230,10 @@
       ]
     },
     {
-      "id": "ec_3_6_3_17",
-      "name": "EC 3.6.3.17",
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
       "ec": [
-        "3.6.3.17"
+        "3.6.3.44"
       ]
     }
   ],
@@ -460,17 +452,17 @@
     },
     {
       "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = dauca-4,7-diene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = dauca-4,7-diene + diphosphate",
+      "name": "(2Z,6Z)-farnesyl diphosphate = beta-bisabolene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = beta-bisabolene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dauca_4_7_diene",
+          "metabolite": "bisabolene",
           "stoichiometry": 1
         },
         {
@@ -481,65 +473,57 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:65072"
+        "rhea": "RHEA:68524"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65072"
+            "id": "RHEA:68524"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "8-oxo-dATP + H2O = 8-oxo-dAMP + diphosphate + H(+)",
-      "equation": "8-oxo-dATP + H2O = 8-oxo-dAMP + diphosphate + H(+)",
+      "name": "(2E,6E)-farnesyl diphosphate = beta-bisabolene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = beta-bisabolene + diphosphate",
       "substrates": [
         {
-          "metabolite": "8_oxo_datp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "8_oxo_damp",
+          "metabolite": "bisabolene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:65396"
+        "rhea": "RHEA:68528"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65396"
+            "id": "RHEA:68528"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR174738",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175098",
+      "ec": "3.6.3.44",
       "substrates": [
         {
           "metabolite": "h",
@@ -550,7 +534,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "daunosamine",
+          "metabolite": "neomycin_b",
           "stoichiometry": 1
         },
         {
@@ -564,7 +548,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "daunosamine",
+          "metabolite": "neomycin_b",
           "stoichiometry": 1
         },
         {
@@ -574,33 +558,29 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR174738"
+        "metanetx": "MNXR175098"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174738"
+            "id": "MNXR175098"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR174739",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175099",
+      "ec": "3.6.3.44",
       "substrates": [
-        {
-          "metabolite": "d_fucose",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -610,17 +590,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "ribostamycin",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_fucose",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "ribostamycin",
           "stoichiometry": 1
         },
         {
@@ -630,20 +614,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR174739"
+        "metanetx": "MNXR175099"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174739"
+            "id": "MNXR175099"
           }
         ]
       }

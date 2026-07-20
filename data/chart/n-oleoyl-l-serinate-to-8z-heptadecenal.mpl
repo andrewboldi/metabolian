@@ -30,13 +30,13 @@ pathway n-oleoyl-l-serinate-to-8z-heptadecenal "N-oleoyl-L-serinate to (8Z)-hept
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
+    <-> . +1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito +h2o +hplus
+    2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_2_acyl_sn_glycero_3_phosphoglycerol +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoglycerol
+    <-> . +1_oleoyl_2_8z_11z_14z_icosatrienoyl_sn_glycero_3 +h2o +hplus
+    2_8z_11z_14z_icosatrienoyl_sn_glycero_3_phospho
   }
 }

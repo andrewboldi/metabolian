@@ -154,12 +154,12 @@
       }
     },
     {
-      "id": "itp",
-      "name": "ITP",
-      "formula": "C10H11N4O14P3",
-      "charge": -4,
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:61402"
+        "chebi": "CHEBI:58280"
       }
     },
     {
@@ -172,30 +172,31 @@
       }
     },
     {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "idp",
-      "name": "IDP",
-      "formula": "C10H11N4O11P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58280"
-      }
-    },
-    {
       "id": "pi",
       "name": "Orthophosphate (Pi)",
       "formula": "HO4P",
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "2_deoxyinosine_5_phosphate",
+      "name": "2'-deoxyinosine 5'-phosphate",
+      "short": "2'-deoxyinosine 5'-P",
+      "formula": "C10H11N4O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61194"
+      }
+    },
+    {
+      "id": "2_deoxyinosine",
+      "name": "2'-deoxyinosine",
+      "formula": "C10H12N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28997"
       }
     }
   ],
@@ -219,27 +220,6 @@
       "name": "cytidine kinase",
       "ec": [
         "2.7.1.213"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_8",
-      "name": "ATP diphosphatase",
-      "ec": [
-        "3.6.1.8"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_9",
-      "name": "nucleotide diphosphatase",
-      "ec": [
-        "3.6.1.9"
-      ]
-    },
-    {
-      "id": "ec_3_6_1_66",
-      "name": "XTP/dITP diphosphatase",
-      "ec": [
-        "3.6.1.66"
       ]
     },
     {
@@ -483,55 +463,6 @@
     },
     {
       "id": "r6",
-      "name": "ATP diphosphatase",
-      "equation": "ITP + H2O = IMP + diphosphate + H(+)",
-      "ec": "3.6.1.8",
-      "substrates": [
-        {
-          "metabolite": "itp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "imp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_1_8"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:29399"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:29399"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "nucleoside diphosphate phosphatase",
       "equation": "IDP + H2O = IMP + phosphate + H(+)",
       "ec": "3.6.1.6",
@@ -565,7 +496,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:35207"
       },
@@ -575,6 +506,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:35207"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "dIMP + inosine = 2'-deoxyinosine + IMP",
+      "equation": "dIMP + inosine = 2'-deoxyinosine + IMP",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyinosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "inosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "imp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:69572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69572"
           }
         ]
       }

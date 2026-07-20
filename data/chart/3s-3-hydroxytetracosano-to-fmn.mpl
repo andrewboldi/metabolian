@@ -36,14 +36,14 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from tetracosanoyl_coa side left {
     tetracosanoyl_coa
-    <-> . +taurine +coa +hplus
-    n_tetracosanoyltaurine
+    <-> . +sphinga_4e_8z_dienine +coa +hplus
+    4e_8z_n_tetracosanoylsphinga_4_8_dienine
   }
 
   branch from tetracosanoyl_coa side right {
     tetracosanoyl_coa
-    <-> . +sphinga_4e_8z_dienine +coa +hplus
-    4e_8z_n_tetracosanoylsphinga_4_8_dienine
+    <-> . +sphingoid_base +coa +hplus
+    n_tetracosanoyl_sphingoid_base
   }
 
   branch from hexacosanoyl_coa side left {
@@ -54,8 +54,8 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from hexacosanoyl_coa side right {
     hexacosanoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    3_oxo_octacosanoyl_coa
+    <-> . +hco3 +atp +adp +pi +hplus
+    2_carboxyhexacosanoyl_coa
   }
 
   branch from n_hexacosanoylsphinganine side left {
@@ -84,13 +84,13 @@ pathway 3s-3-hydroxytetracosano-to-fmn "(3S)-3-hydroxytetracosano… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxytestosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
+    <-> . +17_hydroxy_5_androstan_3_one +fmnh2 +o2 +h2o +hplus
+    18_hydroxy_5_dihydrotestosterone
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dehydrosecodine-to-s-adenosyl-l-homocysteine "dehydrosecodine to S-adenosyl-L-homocysteine" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     dehydrosecodine
@@ -22,27 +22,15 @@ pathway dehydrosecodine-to-s-adenosyl-l-homocysteine "dehydrosecodine to S-adeno
     ibogaine
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_194 [1.14.14.194] +s_4_1_methylpyrrolidin_2_yl_3_oxobutanoate +fmnh2 +o2 +h2o +hplus
-    ecgonone
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +r_littorine +fmnh2 +o2 +h2o +hplus
-    2r_3r_3_hydroxylittorine
-  }
-
   branch from sah side left {
     sah
-    <-> . +myricetin +sam +hplus
-    7_o_methylmyricetin_5_olate
+    <-> . +n6_methyl_l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysine_1
   }
 
   branch from sah side right {
     sah
-    <-> . +rhamnetin_3_olate +sam +hplus
-    7_4_o_dimethylquercetin_3_olate
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 }

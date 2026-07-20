@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cmp-2-trimethylaminoethyl-to-glycine-betaine",
   "name": "CMP-2-trimethylaminoethyl… to glycine betaine",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from CMP-2-trimethylaminoethylphosphonate to glycine betaine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -139,41 +139,52 @@
       }
     },
     {
-      "id": "cdp_l_ribitol",
-      "name": "CDP-L-ribitol",
-      "formula": "C14H23N3O15P2",
+      "id": "1_2_dioctadecanoyl_sn_glycerol_3_phosphate",
+      "name": "1,2-dioctadecanoyl-sn-glycerol-3-phosphate",
+      "short": "1,2-dioctadecanoyl-…",
+      "formula": "C39H75O8P",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1092685"
+        "chebi": "CHEBI:82921"
       }
     },
     {
-      "id": "d_ribitol_5_phosphate",
-      "name": "D-ribitol 5-phosphate",
-      "short": "D-ribitol 5-P",
-      "formula": "C5H12O8P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM744872"
-      }
-    },
-    {
-      "id": "pmf",
-      "name": "PMF",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM01"
-      }
-    },
-    {
-      "id": "11z_14z_icosadienoic_acid",
-      "name": "(11Z,14Z)-icosadienoic acid",
-      "short": "(11Z,14Z)-icosadien…",
-      "formula": "C20H36O2",
+      "id": "1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho",
+      "name": "1,2-dioctadecanoyl-sn-glycero-3-cytidine 5'-diphosphate",
+      "short": "1,2-dioctadecanoyl-…",
+      "formula": "C48H89N3O15P2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73731"
+        "chebi": "CHEBI:104121"
+      }
+    },
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1102191"
+      }
+    },
+    {
+      "id": "4_amino_2_methyl_5_phosphooxymethyl_pyrimidine",
+      "name": "4-amino-2-methyl-5-(phosphooxymethyl)pyrimidine",
+      "short": "4-amino-2-methyl-5-…",
+      "formula": "C6H8N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104391"
+      }
+    },
+    {
+      "id": "4_amino_5_hydroxymethyl_2_methylpyrimidine",
+      "name": "4-amino-5-hydroxymethyl-2-methylpyrimidine",
+      "short": "4-amino-5-hydroxyme…",
+      "formula": "C6H9N3O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104899"
       }
     },
     {
@@ -183,6 +194,16 @@
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "1_docosahexenoylglycerophosphocholine_delta_4_7",
+      "name": "1-Docosahexenoylglycerophosphocholine (Delta 4, 7, 10, 13, 16, 19), Sn1-Lpc (22:6)",
+      "short": "1-Docosahexenoylgly…",
+      "formula": "C30H51NO7P",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM744818"
       }
     },
     {
@@ -213,13 +234,13 @@
       }
     },
     {
-      "id": "15_deoxy_12_14_prostaglandin_j2",
-      "name": "15-deoxy-Δ12,14-prostaglandin J2",
-      "short": "15-deoxy-Δ12,14-pro…",
-      "formula": "C20H28O3",
-      "charge": 0,
+      "id": "2_linoleoylglycerophosphocholine",
+      "name": "2-Linoleoylglycerophosphocholine",
+      "short": "2-Linoleoylglycerop…",
+      "formula": "C27H53NO7P",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:34159"
+        "metanetx": "MNXM744807"
       }
     }
   ],
@@ -246,10 +267,10 @@
       ]
     },
     {
-      "id": "ec_2_7_7_40",
-      "name": "D-ribitol-5-phosphate cytidylyltransferase",
+      "id": "ec_2_7_7_41",
+      "name": "phosphatidate cytidylyltransferase",
       "ec": [
-        "2.7.7.40"
+        "2.7.7.41"
       ]
     }
   ],
@@ -406,102 +427,98 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR162449",
+      "name": "phosphatidate cytidylyltransferase",
+      "ec": "2.7.7.41",
       "substrates": [
-        {
-          "metabolite": "cdp_l_ribitol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "ctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_ribitol_5_phosphate",
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "1_2_dioctadecanoyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_41"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR162449"
+        "metanetx": "MNXR181964"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162449"
+            "id": "MNXR181964"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "D-ribitol-5-phosphate cytidylyltransferase",
-      "ec": "2.7.7.40",
+      "name": "Reaction MNXR189584",
       "substrates": [
         {
-          "metabolite": "pmf",
+          "metabolite": "cdp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "cdp_l_ribitol",
+          "metabolite": "4_amino_2_methyl_5_phosphooxymethyl_pyrimidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "diphosphate",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pmf",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "ctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_ribitol_5_phosphate",
+          "metabolite": "4_amino_5_hydroxymethyl_2_methylpyrimidine",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_40"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR162587"
+        "metanetx": "MNXR189584"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162587"
+            "id": "MNXR189584"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR155166",
+      "name": "Reaction MNXR160373",
       "substrates": [
-        {
-          "metabolite": "11z_14z_icosadienoic_acid",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -511,17 +528,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "1_docosahexenoylglycerophosphocholine_delta_4_7",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11z_14z_icosadienoic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "1_docosahexenoylglycerophosphocholine_delta_4_7",
           "stoichiometry": 1
         },
         {
@@ -532,32 +553,32 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR155166"
+        "metanetx": "MNXR160373"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR155166"
+            "id": "MNXR160373"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR155168",
+      "name": "Reaction MNXR160374",
       "substrates": [
         {
           "metabolite": "h",
           "stoichiometry": 1
         },
         {
-          "metabolite": "15_deoxy_12_14_prostaglandin_j2",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "2_linoleoylglycerophosphocholine",
           "stoichiometry": 1
         },
         {
@@ -567,11 +588,11 @@
       ],
       "products": [
         {
-          "metabolite": "15_deoxy_12_14_prostaglandin_j2",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "2_linoleoylglycerophosphocholine",
           "stoichiometry": 1
         },
         {
@@ -582,14 +603,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR155168"
+        "metanetx": "MNXR160374"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR155168"
+            "id": "MNXR160374"
           }
         ]
       }

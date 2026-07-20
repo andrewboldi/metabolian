@@ -22,14 +22,14 @@ pathway s-3-indol-3-ylmethyl-to-malbrancheamide "(S)-3-(indol-3-ylmethyl)-… to
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_223 [4.2.3.223] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    bonnadiene
+    <-> . +n6_hydroxy_datp +h2o +hplus
+    n6_hydroxy_damp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_224 [4.2.3.224] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    allokutznerene
+    <-> . +fpp
+    sterpurene
   }
 
   branch from premalbrancheamide side left {

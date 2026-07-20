@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-homocysteine-to-isopentenyl-diphosp",
+  "name": "S-adenosyl-L-homocysteine to isopentenyl diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-homocysteine to isopentenyl diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR198604"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "menaquinol_8",
+      "name": "Menaquinol 8",
+      "formula": "C51H74O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368769"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_methionine",
+      "name": "S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1363767"
+      }
+    },
+    {
+      "id": "2_demethylmenaquinol_8",
+      "name": "2-demethylmenaquinol-8",
+      "short": "2-demethylmenaquino…",
+      "formula": "C50H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61873"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "octaprenyl_diphosphate",
+      "name": "octaprenyl diphosphate",
+      "short": "octaprenyl PP",
+      "formula": "C40H68O7P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53045"
+      }
+    },
+    {
+      "id": "1_4_dihydroxy_2_naphthoate",
+      "name": "1,4-dihydroxy-2-naphthoate",
+      "short": "1,4-dihydroxy-2-nap…",
+      "formula": "C11H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11173"
+      }
+    },
+    {
+      "id": "2e_6e_farnesyl_diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate",
+      "short": "(2E,6E)-farnesyl PP",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1363833"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_163",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": [
+        "2.1.1.163"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_74",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": [
+        "2.5.1.74"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "demethylmenaquinone methyltransferase",
+      "ec": "2.1.1.163",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "menaquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR198604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,4-dihydroxy-2-naphthoate polyprenyltransferase",
+      "ec": "2.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_demethylmenaquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "octaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_dihydroxy_2_naphthoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206170",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "octaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_farnesyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 5
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206170"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206170"
+          }
+        ]
+      }
+    }
+  ]
+}

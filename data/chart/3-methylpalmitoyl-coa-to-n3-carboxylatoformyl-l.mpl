@@ -20,14 +20,14 @@ pathway 3-methylpalmitoyl-coa-to-n3-carboxylatoformyl-l "3-methylpalmitoyl-CoA t
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
-    12_epi_fischerindole_g
+    <-> . +l_lysinium +chloride +akg +o2 +hplus +co2 +h2o
+    4_chloro_l_lysinium
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_15 [1.14.20.15] +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +chloride +akg +o2 +hplus +co2 +h2o
-    o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl
+    <-> . +gibberellin_a53 +akg +o2 +co2 +h2o +hplus
+    gibberellin_a17
   }
 
   branch from formyl_coa side left {

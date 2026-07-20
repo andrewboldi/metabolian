@@ -36,37 +36,37 @@ pathway gdp-3-dehydro-6-deoxy-alp-to-nadph "GDP-3-dehydro-6-deoxy-alp… to NADP
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_carboxy_10_methylsulfanyl_2_oxodecanoate +h
-    3_7_methylthio_heptylmalic_acid
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +3_4_5_trichlorocatechol +h
+    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_carboxy_9_methylsulfanyl_2_oxononanoate +h
-    3_6_methylthio_hexylmalic_acid
+    <-> ec_1_14_12_26 [1.14.12.26] +1r_2s_5_chloro_3_methylcyclohexa_3_5_diene_1_2 +nadh +h +3_chlorotoluene
+    o2
   }
 
   branch from h side right {
     h
-    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_d +12_ethyl_8_propylbacteriochlorophyllide_d
-    2e_6e_farnesyl_diphosphate
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +nadph +nadp
+    tetrahydrogeranylgeranyl_bacteriochlorophyll_a
   }
 
   branch from h side left {
     h
-    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
-    12_ethyl_8_isobutylbacteriochlorophyllide_d
+    <-> . +4_hydroxylaminotoluene +nadp +h2o +nadph
+    4_nitrotoluene
   }
 
   branch from nadph side right {
     nadph
-    <-> . +lycorine +nadp +h2o +h +o2
-    caranine
+    <-> . +tetrahydrogeranylgeranyl_bacteriochlorophyll_a +nadp
+    bacteriochlorophyll_a
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_237 [1.14.13.237] +glucoiberverin +h +o2 +nadp +h2o
-    glucoiberin
+    <-> . +h +1_chloro_4_nitrosobenzene +nadp
+    1_chloro_4_hydroxylaminobenzene
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-cyanamide "CO2 to cyanamide" {
-  spacing 202
+  spacing 184
 
   spine at 0,0 {
     co2
@@ -28,37 +28,19 @@ pathway co2-to-cyanamide "CO2 to cyanamide" {
 
   branch from o2 side right {
     o2
-    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile +indole_3_carbonyl_nitrile
-    h2o2
+    <-> . +co2 +9z_tricosene +nadp +h2o +15_tetracosenal +nadph
+    h
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +4beta_hydroxymethyl_4alpha_methyl_5alpha_cholest +h +nad +h2o
-    3beta_hydroxy_4alpha_methyl_5alpha_cholest_7_ene
+    <-> ec_1_14_13_121 [1.14.13.121] +h +vetispiradiene +nadph +solavetivone +h2o
+    nadp
   }
 
-  branch from guanidinium side right {
-    guanidinium
-    <-> . +5_hydroxy_l_arginine
-    l_glutamic_5_semialdehyde
-  }
-
-  branch from l_allysine side left {
+  branch from l_allysine side right {
     l_allysine
     <-> . +n6_1_deoxy_d_fructopyranos_1_yl_l_lysinium +o2 +h2o +h2o2
     1_deoxy_d_fructos_1_yl_amine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +d_isoleucine +o2 +h2o +h2o2
-    r_3_methyl_2_oxovalerate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +d_allothreonine +o2 +h2o +h2o2
-    r_3_hydroxy_2_oxobutanoate
   }
 }

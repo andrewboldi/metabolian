@@ -18,13 +18,13 @@ pathway icas-1-to-ic-asc-c7-coa "icas#1 to IC-asc-ΔC7-CoA" {
 
   branch from ppi side left {
     ppi
-    <-> . +1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl +ctp +hplus
-    cdp_1_palmitoyl_2_arachidonoyl_sn_glycerol
+    <-> ec_4_2_3_165 [4.2.3.165] +fpp
+    1r_4r_5s_guaia_6_10_14_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +1_2_diarachidonoyl_sn_glycero_3_phosphate +ctp +hplus
-    cdp_1_2_diarachidonoyl_sn_glycerol
+    <-> ec_4_2_3_168 [4.2.3.168] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    3e_7e_dolathalia_3_7_11_triene
   }
 }

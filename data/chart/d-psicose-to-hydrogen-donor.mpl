@@ -20,14 +20,14 @@ pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
 
   branch from d_glucitol side left {
     d_glucitol
-    <-> ec_2_7_1_198 [2.7.1.198] +n_phosphonato_l_histidine +l_histidine
-    d_glucitol_6_phosphate
+    <-> ec_1_1_3_40 [1.1.3.40] +o2 +h2o2
+    d_sorbopyranose
   }
 
   branch from d_glucitol side right {
     d_glucitol
-    <-> . +nadp +nadph +hplus
-    l_xylo_3_hexulose
+    <-> . +o2 +h2o2
+    glucose
   }
 
   branch from keto_l_sorbose side left {
@@ -38,8 +38,8 @@ pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
 
   branch from keto_l_sorbose side right {
     keto_l_sorbose
-    <-> ec_2_7_1_206 [2.7.1.206] +n_phosphonato_l_histidine +l_histidine
-    l_sorbose_1_phosphate
+    <-> ec_1_1_1_67 [1.1.1.67] +nadh +h +nad
+    d_sorbitol
   }
 
   branch from 5_dehydro_d_fructose side left {
@@ -50,13 +50,13 @@ pathway d-psicose-to-hydrogen-donor "D-psicose to hydrogen donor" {
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i +hydrogen_acceptor +h2o
-    resolvin_e2
+    <-> . +dihydroalstonine +hydrogen_acceptor
+    alstonine
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +5s_hydroperoxy_18s_hydroxy_6e_8z_11z_14z_16e_ic +hydrogen_acceptor +h2o
-    18s_resolvin_e2
+    <-> . +dihydroserpentine +hydrogen_acceptor
+    serpentine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway inosine-to-o2 "inosine to O2" {
-  spacing 260
+  spacing 254
 
   spine at 0,0 {
     inosine
@@ -24,55 +24,49 @@ pathway inosine-to-o2 "inosine to O2" {
 
   branch from aldehydo_d_ribose side right {
     aldehydo_d_ribose
-    <-> ec_3_2_2_25 [3.2.2.25] +h +7_methylxanthine +h2o
-    7_methylxanthosine
-  }
-
-  branch from aldehydo_d_ribose side left {
-    aldehydo_d_ribose
     <-> . +beta_nicotinamide_d_riboside +h2o +nicotinamide
     h
   }
 
-  branch from cytosine side right {
+  branch from cytosine side left {
     cytosine
     <-> ec_2_1_1_37 [2.1.1.37] +s_adenosyl_l_homocysteine +h +5_methylcytosine
     s_adenosyl_l_methionine
   }
 
-  branch from cytosine side left {
+  branch from cytosine side right {
     cytosine
     <-> ec_3_5_4_1 [3.5.4.1] +nh4 +h +h2o
     uracil
   }
 
-  branch from 2_oxoglutarate side right {
-    2_oxoglutarate
-    <-> ec_2_2_1_9 [2.2.1.9] +h +isochorismate +co2 +2_succinyl_6_hydroxycyclohexa_2_4_diene_1_carbox
-    pyruvate
-  }
-
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +h +co2
-    s_8_succinyldihydrolipoamide
+    <-> ec_1_14_20_4 [1.14.20.4] +o2 +2r_3s_4s_leucoanthocyanidin +co2 +succinate +h2o
+    4s_2_3_dehydroflavan_3_4_diol
   }
 
-  branch from 3_methylcytosine side right {
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> ec_1_14_20_4 [1.14.20.4] +h +o2 +2r_3s_4s_leucoanthocyanidin +co2 +succinate +h2o
+    3_hydroxy_2_phenylchromenylium
+  }
+
+  branch from 3_methylcytosine side left {
     3_methylcytosine
     <-> . +3_methyldeoxycytidine_5_monophosphate_zwitterion +h2o +hplus
     2_deoxyribose_5_monophosphate_1
   }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_16 [1.13.11.16] +caffeic_acid
-    2_hydroxy_6_oxonona_2_4_7_trienedioic_acid
-  }
-
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_81 [1.14.13.81] +h +nadph +magnesium_protoporphyrin_ix_13_monomethyl_ester +3_8_divinyl_protochlorophyllide_a +h2o
-    nadp
+    <-> . +erucoyl_coa +h2o2
+    2e_13z_docosadienoyl_coa
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +11z_eicosenoyl_coa +h2o2
+    2e_11z_icosadienoyl_coa
   }
 }

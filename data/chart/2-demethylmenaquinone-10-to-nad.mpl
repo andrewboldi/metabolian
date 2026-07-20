@@ -20,61 +20,61 @@ pathway 2-demethylmenaquinone-10-to-nad "2-demethylmenaquinone-10 to NAD" {
 
   branch from nadp side left {
     nadp
-    <-> . +25r_5beta_cholestane_3alpha_7alpha_26_triol +h +nadph
-    7alpha_26_dihydroxy_5beta_cholestan_3_one
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_d_xylose +nadph
+    xylitol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +20r_22r_20_22_dihydroxycholesterol +h2o +h +nadph +cholest_5_en_3beta_22r_diol
-    o2
+    <-> ec_1_1_1_21 [1.1.1.21] +h +beta_l_arabinofuranose +nadph
+    l_arabinitol
   }
 
   branch from sah side left {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_313 [2.1.1.313] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_41 [2.1.1.41] +cycloartenol +sam +hplus
+    24_methylenecycloartanol
   }
 
   branch from h side left {
     h
-    <-> . +adp +am19_cyclosporine +phosphate +am19_cyclosporine +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    stearic_acid_d3
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    am1a4n_cyclosporine
+    <-> . +adp +13z_octadecenoic_acid +phosphate +13z_octadecenoic_acid +h2o
+    atp
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +pregnenolone +o2 +nadp +h2o
-    21_hydroxypregnenolone
+    <-> ec_1_1_1_21 [1.1.1.21] +h +nadp +l_arabinitol
+    alpha_l_arabinofuranose
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +21_deoxycortisol +o2 +nadp +h2o
-    cortisol
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadp
+    d_erythro_isocitrate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_oxoicosanoyl_coa +h
-    3_hydroxyicosanoyl_coa
+    <-> ec_1_2_1_27 [1.2.1.27] +nadh +co2 +h +acetate +h2o
+    3_oxopropanoate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxoheneicosanoyl_coenzyme_a
-    3_hydroxyheneicosanoyl_coenzyme_a
+    <-> ec_1_1_1_37 [1.1.1.37] +nadh +h +3_phenylpyruvate
+    s_3_phenyllactate
   }
 }

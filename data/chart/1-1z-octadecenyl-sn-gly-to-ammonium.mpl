@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-1z-octadecenyl-sn-gly-to-ammonium "1-(1Z-octadecenyl)-sn-gly… to ammonium" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     1_1z_octadecenyl_sn_glycero_3_phospho_n_oleoyl_e
@@ -18,37 +18,25 @@ pathway 1-1z-octadecenyl-sn-gly-to-ammonium "1-(1Z-octadecenyl)-sn-gly… to amm
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +n_lauroyl_heptadecasphingosine_1_phosphoethanola
-    n_lauroyl_heptadecasphingosine_1_3_cyclophosphat
+    <-> . +n_docosanoyl_ethanolamine +h2o
+    behenate
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +n_acyl_sphingosylphosphoethanolamine
-    n_acyl_sphingosyl_1_3_cyclicphosphate
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +1_oleoyl_2_7z_10z_13z_16z_19z_docosapentaenoyl_s +h2o +hplus
-    2_7z_10z_13z_16z_19z_docosapentaenoyl_sn_glycero
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +1_2_dioleoyl_sn_glycero_3_phospho_1d_myo_inosito +h2o +hplus
-    2_oleoyl_sn_glycero_3_phospho_1d_myo_inositol
+    <-> . +n_15z_tetracosenoyl_ethanolamine +h2o
+    15z_tetracosenoate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_1_1_107 [4.1.1.107] +ldopa +o2 +h2o +hplus +h2o2 +co2
-    dopal
+    <-> . +arachidonoyl_amine +h2o
+    arachidonate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_1_1_108 [4.1.1.108] +tyrosine +o2 +h2o +hplus +h2o2 +co2
-    4_hydroxyphenyl_acetaldehyde
+    <-> . +linoleamide +h2o
+    linoleate
   }
 }

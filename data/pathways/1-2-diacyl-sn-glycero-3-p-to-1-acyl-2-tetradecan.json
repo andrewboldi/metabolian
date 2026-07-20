@@ -1,0 +1,269 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-2-diacyl-sn-glycero-3-p-to-1-acyl-2-tetradecan",
+  "name": "1,2-diacyl-sn-glycero-3-p… to 1-acyl-2-tetradecanoyl-sn…",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 1,2-diacyl-sn-glycero-3-phosphoethanolamine zwitterion to 1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45192"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64612"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+      "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C7H12NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64612"
+      }
+    },
+    {
+      "id": "phosphatidylcholine",
+      "name": "Phosphatidylcholine",
+      "formula": "C10H18NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57643"
+      }
+    },
+    {
+      "id": "n_acylphosphatidylethanolamine",
+      "name": "N-acylphosphatidylethanolamine",
+      "short": "N-acylphosphatidyle…",
+      "formula": "C8H10NO9PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62537"
+      }
+    },
+    {
+      "id": "1_o_acyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-acyl-sn-glycero…",
+      "formula": "C9H19NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58168"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_acyl_sn_glycerol_3_phosphate",
+      "name": "1-acyl-sn-glycerol 3-phosphate",
+      "short": "1-acyl-sn-glycerol…",
+      "formula": "C4H6O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57970"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    },
+    {
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57385"
+      }
+    },
+    {
+      "id": "1_acyl_2_tetradecanoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-tetradecan…",
+      "formula": "C18H32O8PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64863"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_4",
+      "name": "phospholipase D",
+      "ec": [
+        "3.1.4.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phosphocholin...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + a 1,2-diacyl-sn-glycero-3-phosphocholine = an N-acyl-1,2-diacyl-sn-glycero-3-phosphoethanolamine + a 1-acyl-sn-glycero-3-phosphocholine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylphosphatidylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45192"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45192"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phospholipase D",
+      "equation": "a 1-acyl-sn-glycero-3-phosphocholine + H2O = a 1-acyl-sn-glycero-3-phosphate + choline + H(+)",
+      "ec": "3.1.4.4",
+      "substrates": [
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:38995"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38995"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "a 1-acyl-sn-glycero-3-phosphate + tetradecanoyl-CoA = a 1-acyl-2-tetradecanoyl-sn-glyce...",
+      "equation": "a 1-acyl-sn-glycero-3-phosphate + tetradecanoyl-CoA = a 1-acyl-2-tetradecanoyl-sn-glycero-3-phosphate + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "myristoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_acyl_2_tetradecanoyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33323"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33323"
+          }
+        ]
+      }
+    }
+  ]
+}

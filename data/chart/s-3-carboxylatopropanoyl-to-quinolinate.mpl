@@ -32,14 +32,14 @@ pathway s-3-carboxylatopropanoyl-to-quinolinate "S-(3-carboxylatopropanoyl… to
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
-    3s_3_hydroxy_l_arginine
+    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +malate
+    3s_3_carboxy_3_hydroxypropanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_43 [1.14.11.43] +s_dichlorprop +akg +o2 +pyruvate +co2
-    2_4_dichlorophenol
+    <-> ec_2_8_3_22 [2.8.3.22] +l_citramalate +succinyl_coa
+    3s_citramalyl_coa
   }
 
   branch from iminoaspartate side left {

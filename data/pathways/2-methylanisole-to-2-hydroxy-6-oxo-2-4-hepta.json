@@ -183,16 +183,6 @@
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
-    },
-    {
       "id": "n6_n6_dimethyl_l_lysine_1",
       "name": "N6,N6-dimethyl-L-lysine(1+)",
       "short": "N6,N6-dimethyl-L-ly…",
@@ -203,30 +193,12 @@
       }
     },
     {
-      "id": "hydrogen_acceptor",
-      "name": "hydrogen acceptor",
-      "formula": "A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:13193"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29969"
-      }
-    },
-    {
-      "id": "hydrogen_donor",
-      "name": "hydrogen donor",
-      "formula": "H2A",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17499"
+        "chebi": "CHEBI:61929"
       }
     },
     {
@@ -255,13 +227,6 @@
       "name": "toluene 2-monooxygenase",
       "ec": [
         "1.14.13.243"
-      ]
-    },
-    {
-      "id": "ec_1_14_99_66",
-      "name": "[histone-H3]-N(6),N(6)-dimethyl-L-lysine(4) FAD-dependent demethylase",
-      "ec": [
-        "1.14.99.66"
       ]
     },
     {
@@ -534,11 +499,11 @@
     },
     {
       "id": "r6",
-      "name": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2-oxoglutarate + O2 = N(6),N(6)-dim...",
-      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 2-oxoglutarate + O2 = N(6),N(6)-dimethyl-L-lysyl(36)-[histone H3] + formaldehyde + succinate + CO2",
+      "name": "N(6),N(6)-dimethyl-L-lysyl(20)-[histone H4] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(20)-[histone H4] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl(20)-[histone H4] + formaldehyde + succinate + CO2",
       "substrates": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
@@ -552,7 +517,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
@@ -571,67 +536,65 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:60240"
+        "rhea": "RHEA:85907"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60240"
+            "id": "RHEA:85907"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "[histone-H3]-N(6),N(6)-dimethyl-L-lysine(4) FAD-dependent demethylase",
-      "equation": "N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + 2 A + 2 H2O = L-lysyl(4)-[histone H3] + 2 formaldehyde + 2 AH2",
-      "ec": "1.14.99.66",
+      "name": "N(6),N(6)-dimethyl-L-lysyl(56)-[histone H3] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl(56)-[histone H3] + 2-oxoglutarate + O2 = N(6)-methyl-L-lysyl(56)-[histone H3] + formaldehyde + succinate + CO2",
       "substrates": [
         {
           "metabolite": "n6_n6_dimethyl_l_lysine_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
+          "metabolite": "akg",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "n6_methyl_l_lysinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "formaldehyde",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
         {
-          "enzyme": "ec_1_14_99_66"
+          "metabolite": "co2",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:60244"
+        "rhea": "RHEA:85931"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60244"
+            "id": "RHEA:85931"
           }
         ]
       }

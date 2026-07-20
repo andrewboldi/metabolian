@@ -36,44 +36,44 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from 4_hydroxybenzoate side right {
     4_hydroxybenzoate
-    <-> . +diphosphate +n_4_hydroxybenzoyl_l_glutamate +h +amp +l_glutamate
-    atp
+    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o +h
+    acetophenone_hydrazone
   }
 
   branch from trans_4_coumarate side left {
     trans_4_coumarate
-    <-> . +h2o
-    3_hydroxy_3_4_hydroxyphenyl_propanoate
+    <-> ec_1_14_18_1 [1.14.18.1] +h +o2 +h2o
+    caffeic_acid_quinone
   }
 
   branch from trans_4_coumarate side right {
     trans_4_coumarate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    trans_caffeate
+    <-> . +h +o2 +nadph +nadp +h2o
+    e_caffeate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o
-    1_methyl_7h_xanthine
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +5_phenyl_1_3_oxazinane_2_4_dione
+    4_hydroxy_5_phenyltetrahydro_1_3_oxazin_2_one
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_178 [1.14.13.178] +nadh +1_methyl_7h_xanthine +h +o2 +xanthine +h2o
-    formaldehyde
+    <-> ec_1_1_1_272 [1.1.1.272] +nadh +h +3_sulfopyruvate
+    3_sulfolactic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_105 [4.2.1.105] +formononetin +h
-    2_7_dihydroxy_4_methoxyisoflavanone
+    <-> ec_3_1_1_45 [3.1.1.45] +2_3_5_trichlorodienelactone
+    2_3_5_trichloromaleylacetic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +h +3_5_dibromo_4_hydroxybenzonitrile
-    3_5_dibromo_4_hydroxybenzamide
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +trichloroethene +h +o2 +nad
+    trichloroepoxyethane
   }
 
   branch from trans_4_coumaroyl_coa side left {
@@ -90,13 +90,13 @@ pathway 4-hydroxybenzoyl-coa-to-diphosphate "4-hydroxybenzoyl-CoA to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +5_end_ntp_ribonucleotide_5 +h2o +hplus
-    5_end_nmp_ribonucleotide_3
+    <-> . +peregrinol_diphosphate
+    labd_13_16_14_diene_9_ol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +mutildienyl_diphosphate +h2o
-    premutilin
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    syn_isopimara_7_15_diene
   }
 }

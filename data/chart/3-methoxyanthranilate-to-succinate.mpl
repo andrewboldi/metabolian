@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methoxyanthranilate-to-succinate "3-methoxyanthranilate to succinate" {
-  spacing 306
+  spacing 300
 
   spine at 0,0 {
     3_methoxyanthranilate
@@ -62,26 +62,26 @@ pathway 3-methoxyanthranilate-to-succinate "3-methoxyanthranilate to succinate" 
 
   branch from anthranilate side left {
     anthranilate
-    <-> ec_1_7_1_6 [1.7.1.6] +methyl_red +h +nadph +nadp
-    n_n_dimethyl_1_4_phenylenediamine
-  }
-
-  branch from anthranilate side right {
-    anthranilate
     <-> . +udp +beta_glucopyranosyl_anthranilate
     udp_alpha_d_glucose
   }
 
+  branch from anthranilate side right {
+    anthranilate
+    <-> ec_1_7_1_6 [1.7.1.6] +nadh +methyl_red +h +nad
+    n_n_dimethyl_1_4_phenylenediamine
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +s_pinocembrin +succinate +pinobanksin
-    co2
+    <-> ec_1_13_11_1 [1.13.11.1] +tetrachloro_cis_cis_muconic_acid
+    tetrachlorocatechol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_11_9 [1.14.11.9] +2_oxoglutarate +butin +co2 +trans_fustin
-    succinate
+    <-> . +4_5_dihydroxypyrene
+    phenanthrene_4_5_dicarboxylate
   }
 
   branch from 5_hydroxy_l_tryptophan side left {
@@ -90,39 +90,33 @@ pathway 3-methoxyanthranilate-to-succinate "3-methoxyanthranilate to succinate" 
     l_dehydroascorbate
   }
 
-  branch from 4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin side right {
-    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
-    <-> ec_1_14_16_7 [1.14.16.7] +sapropterin +l_phenylalanine +o2
-    l_m_tyrosine
-  }
-
-  branch from serotonin side left {
+  branch from serotonin side right {
     serotonin
     <-> . +palmitoyl_coa +coa +hplus
     n_palmitoylserotonin
   }
 
-  branch from serotonin side right {
+  branch from serotonin side left {
     serotonin
     <-> . +oleoyl_coa +coa +hplus
     n_oleoylserotonin
   }
 
-  branch from melatonin side left {
+  branch from melatonin side right {
     melatonin
     <-> . +acetyl_coa +coa +hplus
     5_methoxytryptamine
   }
 
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
-  }
-
   branch from sah side left {
     sah
-    <-> ec_2_1_1_324 [2.1.1.324] +dtdp_4_ammonio_2_3_4_6_tetradeoxy_d_glucose +sam +hplus
-    dtdp_d_forosamine
+    <-> ec_2_1_1_337 [2.1.1.337] +bulbocapnine +sam +hplus
+    n_methylbulbocapnine
+  }
+
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_338 [2.1.1.338] +xanthogalenol +sam +hplus
+    4_o_methylxanthohumol
   }
 }

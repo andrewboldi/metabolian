@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threonate-to-r-3-hydroxy-2-oxo-4-ph "L-threonate to (R)-3-hydroxy-2-oxo-4-(ph…" {
-  spacing 262
+  spacing 244
 
   spine at 0,0 {
     l_threonate
@@ -26,33 +26,15 @@ pathway l-threonate-to-r-3-hydroxy-2-oxo-4-ph "L-threonate to (R)-3-hydroxy-2-ox
     r_3_hydroxy_2_oxo_4_phosphonatoooxy_butanoate
   }
 
-  branch from r_2_4_dihydroxy_3_oxobutanoate side left {
-    r_2_4_dihydroxy_3_oxobutanoate
-    <-> ec_5_3_1_35 [5.3.1.35]
-    r_3_4_dihydroxy_2_oxobutanoate
-  }
-
-  branch from s7p side right {
+  branch from s7p side left {
     s7p
     <-> ec_4_2_3_152 [4.2.3.152] +pi
     2_epi_5_epi_valiolone
   }
 
-  branch from s7p side left {
+  branch from s7p side right {
     s7p
     <-> ec_4_2_3_154 [4.2.3.154] +pi +h2o +hplus
     r_demethyl_4_deoxygadusol
-  }
-
-  branch from e4p side right {
-    e4p
-    <-> ec_2_2_1_14 [2.2.1.14] +6_deoxy_6_sulfo_d_fructofuranose +s7p
-    l_3_sulfolactaldehyde
-  }
-
-  branch from 4_o_phosphonato_d_erythronate side left {
-    4_o_phosphonato_d_erythronate
-    <-> . +h2o +pi
-    d_erythronate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway myo-inositol-to-h2o-null "myo-inositol to H2O" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     myo_inositol
@@ -28,39 +28,27 @@ pathway myo-inositol-to-h2o-null "myo-inositol to H2O" {
     verbascose
   }
 
-  branch from inositol side left {
-    inositol
-    <-> ec_1_1_1_370 [1.1.1.370] +nadh +l_epi_2_inosose +h
-    nad
-  }
-
-  branch from stachyose side right {
-    stachyose
-    <-> ec_3_2_1_22 [3.2.1.22] +raffinose +h2o
-    alpha_d_galactose
-  }
-
   branch from atp side left {
     atp
-    <-> . +diphosphate +amp +3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbon +coa
-    3r_4r_3_4_dihydroxycyclohexa_1_5_diene_1_carbox
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pg_18_2_9z_12z_0_0
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_130 [2.7.1.130] +h +adp +lipid_iva_p_putida
-    lipid_a_disaccharide_p_putida
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pg_18_3_9z_12z_15z_0_0
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_asparagine +l_threonine +l_tyrosine
-    threonyl_asparaginyl_tyrosine
+    <-> ec_4_2_1_80 [4.2.1.80] +s_4_hydroxy_2_oxohexanoate
+    2z_2_hydroxyhexa_2_5_dienoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_threonine
-    threonyl_histidinyl_histidine
+    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_d_p_put
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put
   }
 }

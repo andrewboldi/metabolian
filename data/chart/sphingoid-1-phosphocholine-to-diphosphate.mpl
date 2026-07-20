@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphingoid-1-phosphocholine-to-diphosphate "sphingoid-1-phosphocholine to diphosphate" {
-  spacing 218
+  spacing 206
 
   spine at 0,0 {
     sphingoid_1_phosphocholine
@@ -32,18 +32,6 @@ pathway sphingoid-1-phosphocholine-to-diphosphate "sphingoid-1-phosphocholine to
     n_stearoyl_sphingoid_base
   }
 
-  branch from phosphocholine side left {
-    phosphocholine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_palmitoyl_2_oleoyl_sn_glycerol
-  }
-
-  branch from phosphocholine side right {
-    phosphocholine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
-  }
-
   branch from fatty_aldehyde side left {
     fatty_aldehyde
     <-> . +hplus +co2 +h2o
@@ -52,37 +40,37 @@ pathway sphingoid-1-phosphocholine-to-diphosphate "sphingoid-1-phosphocholine to
 
   branch from phosphoethanolamine side right {
     phosphoethanolamine
-    <-> . +phytosphingosine_1_phosphate
-    r_2_hydroxyhexadecanal
-  }
-
-  branch from phosphoethanolamine side left {
-    phosphoethanolamine
     <-> . +sphinga_4e_14z_dienine_1_phosphate
     2e_12z_hexadecadienal
   }
 
+  branch from phosphoethanolamine side left {
+    phosphoethanolamine
+    <-> . +hplus +co2
+    pser
+  }
+
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +2_3_diacyl_sn_glycerol +h2o +hplus
-    3_acyl_sn_glycerol
+    <-> . +phosphatidylcholine +h2o +hplus
+    acyl_sn_glycero_3_phosphocholine
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
+    1_acyl_sn_glycero_3_phosphoserine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_104 [4.2.3.104] +fpp
-    1e_4e_8e_humulene
+    <-> ec_4_2_3_106 [4.2.3.106] +gpp
+    e_ocimene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_102 [4.2.3.102] +fpp
-    sesquithujene
+    <-> . +gpp
+    car_3_ene
   }
 }

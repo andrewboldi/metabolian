@@ -18,25 +18,25 @@ pathway h-to-7-25-dihydroxy-4-cholest "H to 7α,25-dihydroxy-4-cholest…" {
 
   branch from nadp side left {
     nadp
-    <-> . +geranylgeranyl_bacteriochlorophyllide_b +h +nadph
-    dihydrogeranylgeranyl_bacteriochlorophyllide_b
+    <-> . +tirandamycin_f +h2o +h +o2 +nadph
+    tirandamycin_c
   }
 
   branch from nadp side right {
     nadp
-    <-> . +pseudomonate_c +h +nadph
-    deoxymupirocin_f
+    <-> . +h2o +tirandamycin_c +o2 +nadph
+    tirandamycin_f
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +thiostrepton +phosphate +thiostrepton
-    atp
+    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade +phosphate
+    coalpha_alpha_5_hydroxybenzimidazolyl_cobeta_ade
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    pentalenolactone_d
+    <-> . +6_dehydro_scb3 +phosphate
+    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
   }
 }

@@ -18,14 +18,14 @@ pathway 2-hydroxy-4-isopropenylcy-to-2-hydroxy-4-isoprop "2-hydroxy-4-isopropeny
 
   branch from h side left {
     h
-    <-> . +2r_3s_tartrate +1_o_4_coumaroyl_d_glucose +glucose
-    2r_3s_trans_coutaric_acid
+    <-> . +s_adenosyl_l_homocysteine +isoarctigenin +matairesinol
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +2r_3s_trans_coutaric_acid +coa
-    2_o_acetyl_3_o_trans_coutarate
+    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxystearoyl_coa +nadph +nadp +coa
+    1_18_octadecane_diol
   }
 
   branch from perillate side left {
@@ -42,38 +42,38 @@ pathway 2-hydroxy-4-isopropenylcy-to-2-hydroxy-4-isoprop "2-hydroxy-4-isopropeny
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +5_dehydro_4_deoxy_2_o_sulfo_d_glucuronic_acid
-    4_deoxy_4_d_glcpa2s_1_3_d_galpnac
+    <-> ec_3_1_3_4 [3.1.3.4] +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc +phosphate
+    1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
-    isoorientin
+    <-> ec_4_2_1_134 [4.2.1.134] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy
+    3r_hydroxy_auricoloyl_coa
   }
 
   branch from adp side left {
     adp
-    <-> . +1d_myo_inositol_3_4_bisphosphate +h +atp
-    1d_myo_inositol_3_phosphate
+    <-> . +h +phosphate +atp +h2o
+    alpha_alpha_trehalose_6_alpha_mycolate
   }
 
   branch from adp side right {
     adp
-    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h +atp
-    1d_myo_inositol_3_4_6_trisphosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
+    glucosyl_oleandomycin
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +n_acetyl_7_o_acetylneuraminate +phosphoenolpyruvate +h2o
-    4_o_acetyl_n_acetylmannosamine
+    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3 +h2o
+    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_320 [2.4.1.320] +n_n_diacetylchitobiose +alpha_d_mannose_1_phosphate
-    d_manp_1_4_d_glcpnac_1_4_d_glcpnac
+    <-> . +diphosphate +pyruvate +h
+    phosphoenolpyruvate
   }
 
   branch from 2_hydroxy_4_isopropenylcyclohexane_1_carbonyl_co side left {

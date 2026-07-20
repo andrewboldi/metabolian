@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n6-methyl-l-lysinium-to-succinate",
+  "name": "N6-methyl-L-lysinium to succinate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N6-methyl-L-lysinium residue to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:60268"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61929"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61929"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n6_n6_dimethyl_l_lysine_1",
+      "name": "N6,N6-dimethyl-L-lysine(1+)",
+      "short": "N6,N6-dimethyl-L-ly…",
+      "formula": "C8H17N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61976"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:61961"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H13N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29969"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_67",
+      "name": "[histone H3]-trimethyl-L-lysine(4) demethylase",
+      "ec": [
+        "1.14.11.67"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-ly...",
+      "equation": "N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_methyl_l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:60268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(6),N(6)-dimethyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimeth...",
+      "equation": "N(6),N(6)-dimethyl-L-lysyl-[protein] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl-[protein] + S-adenosyl-L-homocysteine + H(+)",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "[histone H3]-trimethyl-L-lysine(4) demethylase",
+      "equation": "N(6),N(6),N(6)-trimethyl-L-lysyl(4)-[histone H3] + 3 2-oxoglutarate + 3 O2 = L-lysyl(4)-[histone H3] + 3 formaldehyde + 3 succinate + 3 CO2",
+      "ec": "1.14.11.67",
+      "substrates": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_67"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:60208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60208"
+          }
+        ]
+      }
+    }
+  ]
+}

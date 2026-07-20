@@ -18,49 +18,49 @@ pathway 1-hydroxy-1-phenylpropan-to-norephedrine "1-hydroxy-1-phenylpropan-… t
 
   branch from h side left {
     h
-    <-> . +24r_25r_3alpha_7alpha_12alpha_24_tetrahydroxy_5
-    25_r_tetrahca_coenzyme_a
+    <-> . +9z_12z_octadecadienoate +cholesterol +h2o
+    1_linoleoyl_cholesterol_cholesterol_ester_18_2_d
   }
 
   branch from h side right {
     h
-    <-> . +24r_25r_3alpha_7alpha_24_trihydroxy_5beta_chole
-    3_7_24thca_coenzyme_a
+    <-> . +5_dehydro_l_gluconate
+    d_tagaturonate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_methionine
-    his_met
+    <-> . +l_proline
+    prolyl_prolyl_proline
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_arginine +l_phenylalanine
-    histidyl_phenylalanyl_arginine
+    <-> . +l_proline +l_lysine +l_tryptophan
+    prolyl_tryptophanyl_lysine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_170 [1.1.1.170] +nadh +co2 +h +3_oxosteroid
-    3beta_hydroxysteroid_4alpha_carboxylate
+    <-> ec_1_14_13_129 [1.14.13.129] +nadh +h +cryptoxanthin +o2 +h2o
+    all_trans_zeaxanthin
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +isonicotinoylradical +h
-    isonicotinoyl_nad_adduct
+    <-> . +nadh +3_keto_beta_d_galactose +h
+    beta_d_galactose
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +h +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone
-    2_polyprenyl_6_methoxy_1_4_benzoquinone
+    <-> ec_2_1_1_43 [2.1.1.43] +s_adenosyl_l_homocysteine +protein_n6_n6_n6_trimethyl_l_lysine
+    protein_n6_n6_dimethyl_l_lysine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +ubiquinone_2
-    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +h +hva
+    3_4_dihydroxyphenylacetate
   }
 }

@@ -112,49 +112,39 @@
       }
     },
     {
-      "id": "asperaculane_g",
-      "name": "asperaculane G",
-      "formula": "C15H21O4",
-      "charge": -1,
+      "id": "cordypyrone_a",
+      "name": "cordypyrone A",
+      "formula": "C22H28O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:155911"
+        "chebi": "CHEBI:190187"
       }
     },
     {
-      "id": "aculene_d",
-      "name": "aculene D",
-      "formula": "C14H20O2",
+      "id": "cordypyrone_b",
+      "name": "cordypyrone B",
+      "formula": "C22H28O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:155910"
+        "chebi": "CHEBI:190188"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "taxusin",
+      "name": "taxusin",
+      "formula": "C28H40O8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16526"
+        "chebi": "CHEBI:63664"
       }
     },
     {
-      "id": "testosterone",
-      "name": "testosterone",
-      "formula": "C19H28O2",
+      "id": "2_hydroxytaxusin",
+      "name": "2α-hydroxytaxusin",
+      "formula": "C28H40O9",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17347"
-      }
-    },
-    {
-      "id": "2_hydroxytestosterone",
-      "name": "2α-hydroxytestosterone",
-      "short": "2α-hydroxytestoster…",
-      "formula": "C19H28O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:83025"
+        "chebi": "CHEBI:190505"
       }
     }
   ],
@@ -164,6 +154,13 @@
       "name": "germacrene A hydroxylase",
       "ec": [
         "1.14.14.95"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_183",
+      "name": "taxoid 2alpha-hydroxylase",
+      "ec": [
+        "1.14.14.183"
       ]
     }
   ],
@@ -368,11 +365,11 @@
     },
     {
       "id": "r5",
-      "name": "asperaculane G + reduced [NADPH--hemoprotein reductase] + O2 = aculene D + oxidized [NA...",
-      "equation": "asperaculane G + reduced [NADPH--hemoprotein reductase] + O2 = aculene D + oxidized [NADPH--hemoprotein reductase] + CO2 + 2 H2O",
+      "name": "cordypyrone A + reduced [NADPH--hemoprotein reductase] + O2 = cordypyrone B + oxidized ...",
+      "equation": "cordypyrone A + reduced [NADPH--hemoprotein reductase] + O2 = cordypyrone B + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "asperaculane_g",
+          "metabolite": "cordypyrone_a",
           "stoichiometry": 1
         },
         {
@@ -386,58 +383,7 @@
       ],
       "products": [
         {
-          "metabolite": "aculene_d",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:65092"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:65092"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha,17beta-dihydroxyand...",
-      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha,17beta-dihydroxyandrost-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "testosterone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_hydroxytestosterone",
+          "metabolite": "cordypyrone_b",
           "stoichiometry": 1
         },
         {
@@ -454,16 +400,73 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:65276"
+        "rhea": "RHEA:71079"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65276"
+            "id": "RHEA:71079"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "taxoid 2alpha-hydroxylase",
+      "equation": "taxusin + reduced [NADPH--hemoprotein reductase] + O2 = 2alpha-hydroxytaxusin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.183",
+      "substrates": [
+        {
+          "metabolite": "taxusin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxytaxusin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_183"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:71399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71399"
           }
         ]
       }

@@ -192,22 +192,21 @@
       }
     },
     {
-      "id": "9_pimara_7_15_diene",
-      "name": "9β-pimara-7,15-diene",
-      "formula": "C20H32",
+      "id": "amorpha_4_11_diene",
+      "name": "amorpha-4,11-diene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:50067"
+        "chebi": "CHEBI:52026"
       }
     },
     {
-      "id": "9_pimara_7_15_dien_19_oate",
-      "name": "9β-pimara-7,15-dien-19-oate",
-      "short": "9β-pimara-7,15-dien…",
-      "formula": "C20H29O2",
+      "id": "artemisinate",
+      "name": "(+)-artemisinate",
+      "formula": "C15H21O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:63659"
+        "chebi": "CHEBI:64782"
       }
     },
     {
@@ -277,31 +276,40 @@
       }
     },
     {
-      "id": "15_cis_phytoene",
-      "name": "15-cis-phytoene",
-      "formula": "C40H64",
-      "charge": 0,
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:27787"
+        "chebi": "CHEBI:57387"
       }
     },
     {
-      "id": "all_trans_phytofluene",
-      "name": "all-trans-phytofluene",
-      "short": "all-trans-phytoflue…",
-      "formula": "C40H62",
-      "charge": 0,
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:28129"
+        "chebi": "CHEBI:57383"
       }
     },
     {
-      "id": "all_trans_carotene",
-      "name": "all-trans-ζ-carotene",
-      "formula": "C40H60",
-      "charge": 0,
+      "id": "palmitoleoyl_coa",
+      "name": "palmitoleoyl-CoA",
+      "formula": "C37H60N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:28068"
+        "chebi": "CHEBI:61540"
+      }
+    },
+    {
+      "id": "9z_12z_hexadecadienoyl_coa",
+      "name": "(9Z,12Z)-hexadecadienoyl-CoA",
+      "short": "(9Z,12Z)-hexadecadi…",
+      "formula": "C37H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76552"
       }
     }
   ],
@@ -349,10 +357,10 @@
       ]
     },
     {
-      "id": "ec_1_14_14_111",
-      "name": "9beta-pimara-7,15-diene oxidase",
+      "id": "ec_1_14_14_114",
+      "name": "amorpha-4,11-diene 12 monooxygenase",
       "ec": [
-        "1.14.14.111"
+        "1.14.14.114"
       ]
     },
     {
@@ -582,12 +590,12 @@
     },
     {
       "id": "r5",
-      "name": "9beta-pimara-7,15-diene oxidase",
-      "equation": "9beta-pimara-7,15-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 9beta-pimara-7,15-dien-19-oate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
-      "ec": "1.14.14.111",
+      "name": "amorpha-4,11-diene 12 monooxygenase",
+      "equation": "(+)-amorpha-4,11-diene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = (+)-artemisinate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.114",
       "substrates": [
         {
-          "metabolite": "9_pimara_7_15_diene",
+          "metabolite": "amorpha_4_11_diene",
           "stoichiometry": 1
         },
         {
@@ -601,7 +609,7 @@
       ],
       "products": [
         {
-          "metabolite": "9_pimara_7_15_dien_19_oate",
+          "metabolite": "artemisinate",
           "stoichiometry": 1
         },
         {
@@ -619,20 +627,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_14_111"
+          "enzyme": "ec_1_14_14_114"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:31951"
+        "rhea": "RHEA:32999"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31951"
+            "id": "RHEA:32999"
           }
         ]
       }
@@ -773,78 +781,94 @@
     },
     {
       "id": "r9",
-      "name": "15-cis-phytoene + A = all-trans-phytofluene + AH2",
-      "equation": "15-cis-phytoene + A = all-trans-phytofluene + AH2",
+      "name": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
+      "equation": "(9Z)-octadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-octadecadienoyl-CoA + A + 2 H2O",
       "substrates": [
         {
-          "metabolite": "15_cis_phytoene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "all_trans_phytofluene",
+          "metabolite": "oleoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:30603"
+        "rhea": "RHEA:36863"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30603"
+            "id": "RHEA:36863"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "all-trans-phytofluene + A = all-trans-zeta-carotene + AH2",
-      "equation": "all-trans-phytofluene + A = all-trans-zeta-carotene + AH2",
+      "name": "(9Z)-hexadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-hexadecadienoyl-CoA + A + 2 H2O",
+      "equation": "(9Z)-hexadecenoyl-CoA + AH2 + O2 = (9Z,12Z)-hexadecadienoyl-CoA + A + 2 H2O",
       "substrates": [
         {
-          "metabolite": "all_trans_phytofluene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "all_trans_carotene",
+          "metabolite": "palmitoleoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12z_hexadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:30607"
+        "rhea": "RHEA:39671"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30607"
+            "id": "RHEA:39671"
           }
         ]
       }

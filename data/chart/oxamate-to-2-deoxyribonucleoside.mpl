@@ -24,14 +24,14 @@ pathway oxamate-to-2-deoxyribonucleoside "oxamate to 2'-deoxyribonucleoside…" 
 
   branch from nh3 side left {
     nh3
-    <-> . +hercynylcysteine_sulfoxide +h2o +pyruvate
-    2_sulfenohercynine
+    <-> . +serine +o2 +h2o +h2o2
+    3_hydroxypyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10 +h2o +hplus
-    pyridinestrone_3_carboxylate
+    <-> . +palmitoleamide +h2o
+    palmitoleate
   }
 
   branch from 2_deoxyribonucleoside_5_triphosphate side left {
@@ -48,13 +48,13 @@ pathway oxamate-to-2-deoxyribonucleoside "oxamate to 2'-deoxyribonucleoside…" 
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_n9 [2.5.1.n9] +sn_glycerol_1_phosphate +all_trans_heptaprenyl_diphosphate
-    3_heptaprenyl_sn_glycero_1_phosphate
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    syn_copalol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +myristoleate +atp +coa +amp
-    9z_myristoleoyl_coa
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    13s_vitexifolin_a
   }
 }

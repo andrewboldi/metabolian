@@ -20,37 +20,37 @@ pathway udp-to-d-mannosyl-1-3-n-acet "UDP to α-D-mannosyl-(1→3)-N-acet…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_238 [2.4.1.238] +udp +albireodelphin +h
-    delphinidin_3_glucoside_5_caffoyl_glucoside
+    <-> ec_2_4_1_13 [2.4.1.13] +udp +sucrose +h
+    keto_d_fructose
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
-    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
+    <-> ec_2_4_1_188 [2.4.1.188] +udp +beta_d_glucosyl_1_4_n_acetyl_d_glucosaminyldipho +h
+    n_acetyl_d_glucosaminyldiphosphoundecaprenol
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +c8_beta_glucuronosyl_bilirubin_ix_alpha +udp
-    4z_15z_bilirubin_ixalpha
+    <-> . +udp +h +isourolithin_a_3_o_glucuronide
+    isourolithin_a
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +p_nitrophenyl_beta_d_glucuronide +h
-    4_nitrophenol
+    <-> . +udp +urolithin_b_3_o_glucuronide
+    urolithin_b
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
-    1_18_1_2_16_2_monogalactosyldiacylglycerol
+    <-> . +udp +beta_d_qui3nac_1_3_beta_d_ribf_1_4_alpha_d_gal_1 +h
+    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_1_2_16_2_monogalactosyldiacylglycerol
-    1_16_0_2_18_3_digalactosyldiacylglycerol
+    <-> . +udp +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +h
+    alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna
   }
 }

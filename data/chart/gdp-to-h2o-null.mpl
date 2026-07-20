@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-h2o-null "GDP to H2O" {
-  spacing 328
+  spacing 322
 
   spine at 0,0 {
     gdp
@@ -20,14 +20,14 @@ pathway gdp-to-h2o-null "GDP to H2O" {
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +h +h2o
-    beta_d_mannose
+    <-> ec_2_4_1_83 [2.4.1.83] +gdp +dolichyl_phosphate_d_mannose +h
+    dolichol_phosphate_human_uterine_homolog
   }
 
   branch from gdp_alpha_d_mannose side right {
     gdp_alpha_d_mannose
-    <-> . +gdp +h +dolichyl_beta_d_mannosyl_phosphate
-    dolichyl_phosphate
+    <-> ec_2_4_1_32 [2.4.1.32] +gdp +h +glucomannan_longer_by_one_mannose_unit
+    glucomannan
   }
 
   branch from gdp_alpha_d_glucose side left {
@@ -38,67 +38,61 @@ pathway gdp-to-h2o-null "GDP to H2O" {
 
   branch from gdp_alpha_d_glucose side right {
     gdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
-    keto_d_fructose
+    <-> . +gdp +h +glucose_1_p
+    phosphate
   }
 
   branch from d_glucopyranose_1_phosphate side left {
     d_glucopyranose_1_phosphate
-    <-> ec_2_7_1_2 [2.7.1.2] +glucose +atp +h
-    adp
+    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from d_glucopyranose_1_phosphate side right {
     d_glucopyranose_1_phosphate
-    <-> ec_2_7_1_106 [2.7.1.106] +glyceric_acid_1_3_biphosphate +h +2r_3_phosphoglycerate
-    d_glucose_1_6_bisphosphate
+    <-> ec_2_4_1_1 [2.4.1.1] +phosphate +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    maltopentaose
   }
 
   branch from h side left {
     h
-    <-> . +co2 +2_oxo_8_methylthiooctanoic_acid
-    3_carboxy_8_methylsulfanyl_2_oxooctanoate
+    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
+    2_3_5_trichloro_cis_cis_muconate
   }
 
   branch from h side right {
     h
-    <-> . +co2 +2_oxo_7_methylthioheptanoic_acid
-    3_carboxy_7_methylsulfanyl_2_oxoheptanoate
+    <-> ec_5_5_1_7 [5.5.1.7] +2_chloro_4_methyl_cis_dienelactone
+    2_chloro_4_methyl_cis_cis_muconate
   }
 
   branch from gdp_beta_l_galactose side left {
-    gdp_beta_l_galactose
-    <-> ec_2_7_7_69 [2.7.7.69] +gdp +l_galactose_1_phosphate +h
-    phosphate
-  }
-
-  branch from gdp_beta_l_galactose side right {
     gdp_beta_l_galactose
     <-> . +h +l_galactose +phosphate +h2o
     gmp
   }
 
-  branch from cdp_alpha_d_glucose side left {
+  branch from cdp_alpha_d_glucose side right {
     cdp_alpha_d_glucose
     <-> ec_2_7_7_33 [2.7.7.33] +ctp +d_glucopyranose_1_phosphate +h
     diphosphate
   }
 
-  branch from cdp_alpha_d_glucose side right {
+  branch from cdp_alpha_d_glucose side left {
     cdp_alpha_d_glucose
     <-> ec_2_4_1_13 [2.4.1.13] +cdp +sucrose +h
     beta_d_fructose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +10_formyl_tetrahydromethanopterin +h
-    5_10_methenyl_5_6_7_8_tetrahydromethanopterin
-  }
-
   branch from h2o side right {
     h2o
-    <-> ec_3_1_2_23 [3.1.2.23] +benzoyl_coa +h +coa
-    benzoate
+    <-> . +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
+    di_trans_poly_cis_polyprenol_c80
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h
+    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
   }
 }

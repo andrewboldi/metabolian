@@ -18,37 +18,37 @@ pathway nh4-to-2-oxoglutarate-pyoverdine "NH4 to 2-oxoglutarate-pyoverdine…" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +co2 +16_epivellosimine
-    methanol
+    <-> . +l_alanine +l_leucine +l_asparagine
+    alanyl_asparaginyl_leucine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_91 [1.14.13.91] +h +10_deoxysarpagine +o2 +nadph +sarpagine
-    nadp
+    <-> . +l_alanine +l_lysine +glycine +ala_gly_lys
+    h
   }
 
   branch from o2 side left {
     o2
-    <-> . +1_1_dichloro_2_2_bis_4_chlorophenyl_ethylene
-    1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
+    <-> . +2s_2_acetolactate +h +co2 +h2o
+    diacetyl
   }
 
   branch from o2 side right {
     o2
-    <-> . +dimethylarsinous_acid +dimethylarsinate
-    h
+    <-> . +ubiquinone_6 +h2o
+    ubiquinol_6
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_17_11 [3.4.17.11] +4_2_amino_4_hydroxypteridin_6_yl_methyl_amino_be +h2o
-    folate
+    <-> . +l_asparagine +l_aspartate +h2o
+    aspartyl_asparaginyl_glutamate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_arginine +h2o
-    arginyl_glutamyl_glutamate
+    <-> . +l_proline +l_aspartate +h2o
+    aspartyl_glutamyl_proline
   }
 }

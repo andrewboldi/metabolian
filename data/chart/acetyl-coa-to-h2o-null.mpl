@@ -18,37 +18,37 @@ pathway acetyl-coa-to-h2o-null "acetyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_7_methylthioheptanoic_acid +h2o
-    2_5_methylthio_pentylmalic_acid
+    <-> . +acetyl_coa +thienamycin
+    n_acetylthienamycin
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_8_methylthiooctanoic_acid +h2o
-    2_6_methylthio_hexylmalic_acid
+    <-> . +acetyl_coa +tabtoxinine_lactam
+    n1_acetyl_tabtoxinine_beta_lactam
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_methylphenol +o2 +h2o
-    3_hydroxybenzyl_alcohol
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
+    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_28 [1.2.1.28] +3_hydroxybenzoate +nadh +h +h2o
-    3_hydroxybenzaldehyde
+    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
+    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
   }
 
   branch from h2o side left {
     h2o
-    <-> . +trichloroacetaldehyde
-    chloral_hydrate
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +4_hydroxyvalproic_acid
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +h +5_6_eet
-    5_6_dhet
+    <-> ec_1_14_14_1 [1.14.14.1] +h +valproic_acid +o2 +nadph +nadp
+    5_hydroxyvalproic_acid
   }
 }

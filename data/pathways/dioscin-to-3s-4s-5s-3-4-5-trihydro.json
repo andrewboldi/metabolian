@@ -187,12 +187,39 @@
       }
     },
     {
+      "id": "ginsenoside_rg2",
+      "name": "ginsenoside Rg2",
+      "formula": "C42H72O13",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77151"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
       "id": "glucose",
       "name": "D-Glucose",
       "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "protopanaxatriol",
+      "name": "protopanaxatriol",
+      "formula": "C30H52O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75951"
       }
     }
   ],
@@ -233,10 +260,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_189",
-      "name": "dioscin glycosidase (diosgenin-forming)",
+      "id": "ec_3_2_1_194",
+      "name": "ginsenosidase type IV",
       "ec": [
-        "3.2.1.189"
+        "3.2.1.194"
       ]
     }
   ],
@@ -538,49 +565,48 @@
     },
     {
       "id": "r8",
-      "name": "dioscin glycosidase (diosgenin-forming)",
-      "equation": "dioscin + 3 H2O = diosgenin + 2 L-rhamnopyranose + D-glucose",
-      "ec": "3.2.1.189",
+      "name": "ginsenosidase type IV",
+      "ec": "3.2.1.194",
       "substrates": [
         {
-          "metabolite": "dioscin",
+          "metabolite": "ginsenoside_rg2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "diosgenin",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
           "metabolite": "l_rhamnopyranose",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "protopanaxatriol",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_189"
+          "enzyme": "ec_3_2_1_194"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:36827"
+        "metanetx": "MNXR118812"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:36827"
+            "db": "MetaNetX",
+            "id": "MNXR118812"
           }
         ]
       }

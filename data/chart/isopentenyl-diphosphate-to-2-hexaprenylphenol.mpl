@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopentenyl-diphosphate-to-2-hexaprenylphenol "isopentenyl diphosphate to 2-hexaprenylphenol" {
-  spacing 326
+  spacing 308
 
   spine at 0,0 {
     ipp
@@ -14,23 +14,5 @@ pathway isopentenyl-diphosphate-to-2-hexaprenylphenol "isopentenyl diphosphate t
     4_hydroxy_3_all_trans_hexaprenylbenzoate
     <-> ec_4_1_1_98 [4.1.1.98] +hplus -co2
     2_hexaprenylphenol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +utp
-    4_uridylylkanamycin_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +datp
-    4_2_deoxyadenylyl_kanamycin_a
-  }
-
-  branch from 2_hexaprenylphenol side left {
-    2_hexaprenylphenol
-    <-> . +2_hexaprenyl_6_hydroxyphenol +nadp +h2o +o2 +nadph
-    h
   }
 }

@@ -20,26 +20,26 @@ pathway adenosine-to-phosphate "adenosine to phosphate" {
 
   branch from fad side left {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +salicylate +atp +coa +nad +h2o
-    3_2_hydroxyphenyl_propanoate
+    <-> . +fadh2 +iminoaspartate +h
+    l_aspartate
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_3_3_6 [1.3.3.6] +6z_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa +fadh2 +h
-    2e_6z_9z_12z_15z_18z_21z_tetracosaheptaenoyl_co
+    <-> ec_1_1_99_1 [1.1.99.1] +fadh2 +h +betaine_aldehyde
+    choline
   }
 
   branch from h2o side left {
     h2o
-    <-> . +s_formylmycothiol +h +mycothiol
-    formate
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +beta_d_glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_trans_keto_mycolyl_trehalose_6_phosphate +phosphate
-    trehalose_trans_keto_mono_mycolate
+    <-> ec_3_2_1_20 [3.2.1.20] +beta_d_glucose +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from aldehydo_d_ribose side left {
@@ -56,25 +56,25 @@ pathway adenosine-to-phosphate "adenosine to phosphate" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +isobazzanene
+    <-> . +beta_acoradiene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    beta_acoradiene
+    alpha_chamigrene
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +beta_l_gulose_1_phosphate +h2o
-    l_gulopyranose
+    <-> ec_2_4_2_28 [2.4.2.28] +3_deazaadenine +5_methylsulfanyl_alpha_d_ribose_1_phosphate +h
+    5_deoxy_5_methylthio_3_deazaadenosine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +n_acetylglucosamine_6_phosphate +h2o +h
-    n_acetyl_beta_d_glucosamine
+    <-> ec_3_1_3_48 [3.1.3.48] +l_phosphotyrosine +h2o +h
+    l_tyrosine
   }
 }

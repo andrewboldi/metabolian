@@ -18,38 +18,38 @@ pathway luteolin-to-apiforol "luteolin to apiforol" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +nadph +nadp +h2o
-    all_trans_violaxanthin
+    <-> . +2_trans_6_cis_dodeca_2_6_dienoyl_coa +h2o2 +h
+    cis_6_dodecenoyl_coenzyme_a
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +co2 +succinate +4_trimethylamino_butanoate
-    2_oxoglutarate
+    <-> . +hydroxy_torasemide +h2o
+    torasemide_carboxylic_acid
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +h +o_s_3_oxotetradecanoylpantetheine_4_phosphoryl_s +nadp
-    o_s_3r_hydroxytetradecanoylpantetheine_4_phospho
+    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxyisoflavanone +nadp
+    4r_4_2_dihydroxyisoflavan
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +h +o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine +nadp
-    o_s_3r_hydroxyoctanoylpantetheine_4_phosphoryl_s
+    <-> ec_1_1_1_270 [1.1.1.270] +h +3_oxosteroid +nadp
+    3beta_hydroxysteroid
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_1_13 [3.6.1.13] +adp_beta_d_ribose +h2o +amp
-    aldehydo_d_ribose_5_phosphate
+    <-> . +adp +phosphate +atp +h2o
+    deoxycholic_acid_3_glucuronide
   }
 
   branch from h side right {
     h
-    <-> . +two_linked_disacharide_tripeptide_murein_units_u +h2o
-    two_disacharide_linked_murein_units_tripeptide_c
+    <-> . +adp +n_desisopropyl_fluvastatin +phosphate +n_desisopropyl_fluvastatin +h2o
+    atp
   }
 
   branch from 2s_naringenin side left {
@@ -60,20 +60,20 @@ pathway luteolin-to-apiforol "luteolin to apiforol" {
 
   branch from nadp side right {
     nadp
-    <-> . +2_oxoadipate +nh4 +nadph +h2o
-    2e_4z_2_aminomuconic_acid
+    <-> ec_1_1_1_170 [1.1.1.170] +co2 +h +3_oxosteroid +nadph
+    3beta_hydroxysteroid_4alpha_carboxylate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_54 [1.3.1.54] +h +cobalt_precorrin_6a +nadph
-    cobalt_precorrin_6b
+    <-> . +delta_anaerubin +h +nadph
+    anaerobilin
   }
 
   branch from apiforol side right {
     apiforol
-    <-> . +co2 +succinate +h2o +2_oxoglutarate +h +o2
-    apigeninidin
+    <-> . +apigeninidin +co2 +succinate +h2o +h +o2
+    2_oxoglutarate
   }
 
   branch from apiforol side left {

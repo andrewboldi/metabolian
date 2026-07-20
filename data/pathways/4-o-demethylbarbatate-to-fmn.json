@@ -121,82 +121,42 @@
       }
     },
     {
-      "id": "4_8_dihydroxyflavone_7_olate",
-      "name": "4',8-dihydroxyflavone-7-olate",
-      "short": "4',8-dihydroxyflavo…",
-      "formula": "C15H9O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192709"
-      }
-    },
-    {
-      "id": "4_hydroxy_8_methoxyflavone_7_olate",
-      "name": "4'-hydroxy-8-methoxyflavone-7-olate",
-      "short": "4'-hydroxy-8-methox…",
-      "formula": "C16H11O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192765"
-      }
-    },
-    {
-      "id": "scutellarein",
-      "name": "scutellarein",
-      "formula": "C15H9O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78328"
-      }
-    },
-    {
-      "id": "scutellarein_7_olate_4_methyl_ether",
-      "name": "scutellarein-7-olate 4'-methyl ether",
-      "short": "scutellarein-7-olat…",
-      "formula": "C16H11O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192755"
-      }
-    },
-    {
-      "id": "2_hexyl_5_heptylresorcinol",
-      "name": "2-hexyl-5-heptylresorcinol",
-      "short": "2-hexyl-5-heptylres…",
-      "formula": "C19H32O2",
+      "id": "desmethylrestrictinol",
+      "name": "desmethylrestrictinol",
+      "short": "desmethylrestrictin…",
+      "formula": "C16H26O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195468"
+        "chebi": "CHEBI:231922"
       }
     },
     {
-      "id": "2_hexyl_5_7_hydroxyheptyl_resorcinol",
-      "name": "2-hexyl-5-(7-hydroxyheptyl)resorcinol",
-      "short": "2-hexyl-5-(7-hydrox…",
-      "formula": "C19H32O3",
+      "id": "restrictinol",
+      "name": "restrictinol",
+      "formula": "C17H28O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195469"
+        "chebi": "CHEBI:231923"
       }
     },
     {
-      "id": "1r_4r_5s_acoradiene",
-      "name": "(1R,4R,5S)-acoradiene",
-      "short": "(1R,4R,5S)-acoradie…",
-      "formula": "C15H24",
+      "id": "3_hydroxyisoflavones",
+      "name": "3'-hydroxyisoflavones",
+      "short": "3'-hydroxyisoflavon…",
+      "formula": "C15HO3R9",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:194028"
+        "chebi": "CHEBI:232082"
       }
     },
     {
-      "id": "2_6_9_trimethyl_13_oxatetracyclo_6_3_1_16_9_01_5",
-      "name": "2,6,9-trimethyl-13-oxatetracyclo[6.3.1.16,9.01,5]tridecane carbocation",
-      "short": "2,6,9-trimethyl-13-…",
-      "formula": "C15H23O",
-      "charge": 1,
+      "id": "3_methoxyisoflavones",
+      "name": "3'-methoxyisoflavones",
+      "short": "3'-methoxyisoflavon…",
+      "formula": "C16H3O3R9",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:195527"
+        "chebi": "CHEBI:232083"
       }
     },
     {
@@ -218,7 +178,15 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_398",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "ec": [
+        "2.1.1.398"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -363,11 +331,11 @@
     },
     {
       "id": "r4",
-      "name": "4',7,8-trihydroxyflavone + S-adenosyl-L-methionine = 4',7-dihydroxy-8-methoxyflavone + ...",
-      "equation": "4',7,8-trihydroxyflavone + S-adenosyl-L-methionine = 4',7-dihydroxy-8-methoxyflavone + S-adenosyl-L-homocysteine + H(+)",
+      "name": "desmethylrestrictinol + S-adenosyl-L-methionine = restrictinol + S-adenosyl-L-homocyste...",
+      "equation": "desmethylrestrictinol + S-adenosyl-L-methionine = restrictinol + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "4_8_dihydroxyflavone_7_olate",
+          "metabolite": "desmethylrestrictinol",
           "stoichiometry": 1
         },
         {
@@ -377,7 +345,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_hydroxy_8_methoxyflavone_7_olate",
+          "metabolite": "restrictinol",
           "stoichiometry": 1
         },
         {
@@ -392,25 +360,26 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:73135"
+        "rhea": "RHEA:81531"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73135"
+            "id": "RHEA:81531"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "scutellarein + S-adenosyl-L-methionine = scutellarein 4'-methyl ether + S-adenosyl-L-ho...",
-      "equation": "scutellarein + S-adenosyl-L-methionine = scutellarein 4'-methyl ether + S-adenosyl-L-homocysteine + H(+)",
+      "name": "isoflavone 3'-O-methyltransferase",
+      "equation": "a 3'-hydroxyisoflavone + S-adenosyl-L-methionine = a 3'-methoxyisoflavone + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.398",
       "substrates": [
         {
-          "metabolite": "scutellarein",
+          "metabolite": "3_hydroxyisoflavones",
           "stoichiometry": 1
         },
         {
@@ -420,7 +389,7 @@
       ],
       "products": [
         {
-          "metabolite": "scutellarein_7_olate_4_methyl_ether",
+          "metabolite": "3_methoxyisoflavones",
           "stoichiometry": 1
         },
         {
@@ -432,125 +401,28 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_398"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:73179"
+        "rhea": "RHEA:82175"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73179"
+            "id": "RHEA:82175"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2-hexyl-5-heptylresorcinol + reduced [NADPH--hemoprotein reductase] + O2 = 2-hexyl-5-(7...",
-      "equation": "2-hexyl-5-heptylresorcinol + reduced [NADPH--hemoprotein reductase] + O2 = 2-hexyl-5-(7-hydroxyheptyl)resorcinol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_hexyl_5_heptylresorcinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_hexyl_5_7_hydroxyheptyl_resorcinol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:76963"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:76963"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(1R,4R,5S)-acoradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 2,6,9-trimeth...",
-      "equation": "(1R,4R,5S)-acoradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 2,6,9-trimethyl-13-oxatetracyclo[6.3.1.1(6,9).0(1,5)]tridecane carbocation + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1r_4r_5s_acoradiene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmnh2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_6_9_trimethyl_13_oxatetracyclo_6_3_1_16_9_01_5",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fmn",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:77075"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:77075"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "Reaction MNXR199512",
       "substrates": [
         {
@@ -569,7 +441,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 6,
       "xrefs": {
         "metanetx": "MNXR199512"
       },

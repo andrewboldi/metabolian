@@ -18,26 +18,26 @@ pathway 5-hydroxy-2-oxopentanoate-to-2z-2-hydroxypenta-2 "5-hydroxy-2-oxopentano
 
   branch from 2_keto_4_pentenoate side left {
     2_keto_4_pentenoate
-    <-> . +2_methylpropanoate +h +h2o
-    7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate
-  }
-
-  branch from 2_keto_4_pentenoate side right {
-    2_keto_4_pentenoate
     <-> ec_4_5_1_4 [4.5.1.4] +h +nh4 +chloride +h2o
     l_2_amino_4_chloropent_4_enoate
   }
 
+  branch from 2_keto_4_pentenoate side right {
+    2_keto_4_pentenoate
+    <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
+    2_hydroxymuconic_semialdehyde
+  }
+
   branch from h2o side left {
     h2o
-    <-> . +l_tryptophan +l_phenylalanine
-    tryptophanyl_phenylalanine
+    <-> ec_3_2_1_74 [3.2.1.74] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_cellohexaose
+    beta_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_prolylglycine +l_tryptophan
-    trp_pro_gly
+    <-> ec_3_2_1_74 [3.2.1.74] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_cellohexaose
+    alpha_d_glucose
   }
 
   branch from s_4_hydroxy_2_oxopentanoate side left {

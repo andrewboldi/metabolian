@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-haloalkane-to-carboxylic-acid-anion",
   "name": "1-haloalkane to carboxylic acid anion",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 1-haloalkane to carboxylic acid anion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -157,24 +157,6 @@
       }
     },
     {
-      "id": "phosphatidylcholine",
-      "name": "Phosphatidylcholine",
-      "formula": "C10H18NO8PR2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57643"
-      }
-    },
-    {
-      "id": "choline_alfoscerate",
-      "name": "choline alfoscerate",
-      "formula": "C8H20NO6P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16870"
-      }
-    },
-    {
       "id": "1_2_diacyl_sn_glycero_3_phosphoethanolamine",
       "name": "1,2-diacyl-sn-glycero-3-phosphoethanolamine",
       "short": "1,2-diacyl-sn-glyce…",
@@ -192,6 +174,26 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:143890"
+      }
+    },
+    {
+      "id": "3_sn_phosphatidyl_l_serine",
+      "name": "3-sn-phosphatidyl-L-serine",
+      "short": "3-sn-phosphatidyl-L…",
+      "formula": "C8H11NO10PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57262"
+      }
+    },
+    {
+      "id": "sn_glycero_3_phosphoserine",
+      "name": "sn-glycero-3-phosphoserine",
+      "short": "sn-glycero-3-phosph…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64765"
       }
     }
   ],
@@ -494,49 +496,6 @@
     },
     {
       "id": "r6",
-      "name": "a 1,2-diacyl-sn-glycero-3-phosphocholine + 2 H2O = sn-glycerol 3-phosphocholine + 2 a c...",
-      "equation": "a 1,2-diacyl-sn-glycero-3-phosphocholine + 2 H2O = sn-glycerol 3-phosphocholine + 2 a carboxylate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "phosphatidylcholine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "choline_alfoscerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carboxylic_acid_anion",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:32907"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32907"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + 2 H2O = sn-glycero-3-phosphoethanolamin...",
       "equation": "a 1,2-diacyl-sn-glycero-3-phosphoethanolamine + 2 H2O = sn-glycero-3-phosphoethanolamine + 2 a carboxylate + 2 H(+)",
       "substrates": [
@@ -564,7 +523,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:32971"
       },
@@ -574,6 +533,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:32971"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + 2 H2O = sn-glycero-3-phospho-L-serine + 2 ...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + 2 H2O = sn-glycero-3-phospho-L-serine + 2 a carboxylate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_sn_phosphatidyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycero_3_phosphoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:32975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32975"
           }
         ]
       }

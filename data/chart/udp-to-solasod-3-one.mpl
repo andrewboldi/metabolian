@@ -24,50 +24,50 @@ pathway udp-to-solasod-3-one "UDP to solasod-3-one" {
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_85 [2.4.1.85] +udp +h +s_prunasin
-    mandelonitrile
+    <-> ec_2_7_7_23 [2.7.7.23] +utp +d_glucopyranose_1_phosphate +h
+    diphosphate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_171 [2.4.1.171] +udp +h +cycasin
-    methylazoxymethanol
+    <-> ec_2_4_1_117 [2.4.1.117] +udp +dolichyl_beta_d_glucosyl_phosphate_human_uterine +h
+    dolichol_phosphate_human_uterine_homolog
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_nitrobenzaldehyde +nad
-    3_nitrobenzyl_alcohol
+    <-> . +l_lathyrine +co2 +h2o +l_serine
+    2_amino_4_carboxypyrimidine
   }
 
   branch from h side left {
     h
-    <-> ec_3_2_1_37 [3.2.1.37] +2_nitrophenyl_beta_d_xylopyranoside +h2o +aldehydo_d_xylose
-    2_nitrophenol
+    <-> . +m_chloro_hippuric_acid +h2o +3_chlorobenzoate
+    glycine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_184 [1.1.1.184] +h +trichloroacetate +nadp
-    chloral_hydrate
+    <-> . +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +o2 +nadp +h2o
+    20_oh_hepoxilin_a3
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_10 [1.1.1.10] +d_ribulose +h +nadp
-    ribitol
+    <-> ec_1_1_1_104 [1.1.1.104] +4_oxo_l_proline +h +nadp
+    trans_4_hydroxy_l_proline
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +ethyl_2_hydroxyisovalerate +h +nadph
-    ethyl_3_methyl_2_oxobutanoate
+    <-> ec_1_14_13_86 [1.14.13.86] +h +4_7_dihydroxyflavone +o2 +nadph +h2o
+    2_4_7_trihydroxyisoflavanone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyheptan_2_one +h +nadph
-    2_3_heptanedione
+    <-> . +10_2_dihydroxy_4_methoxy_isoflav_8_ene_7_one +h2o +h +nadph +vestitol
+    o2
   }
 
   branch from solasod_3_one side right {

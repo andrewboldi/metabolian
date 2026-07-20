@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-o-cis-keto-mycolyl-treh-to-atp "6-O-cis-keto-mycolyl-treh… to ATP" {
-  spacing 328
+  spacing 322
 
   spine at 0,0 {
     6_o_cis_keto_mycolyl_trehalose_6_phosphate
@@ -24,43 +24,37 @@ pathway 6-o-cis-keto-mycolyl-treh-to-atp "6-O-cis-keto-mycolyl-treh… to ATP" {
 
   branch from beta_d_glucose_6_phosphate side right {
     beta_d_glucose_6_phosphate
-    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose +h +h2o
-    6_phospho_beta_d_glucosyl_1_4_beta_d_glucose
+    <-> . +phosphate
+    2_deoxy_scyllo_inosose
   }
 
   branch from gdp_alpha_d_glucose side left {
-    gdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
-    beta_d_fructopyranose
-  }
-
-  branch from gdp_alpha_d_glucose side right {
     gdp_alpha_d_glucose
     <-> ec_3_2_1_42 [3.2.1.42] +gdp +alpha_d_glucose +h
     h2o
   }
 
-  branch from beta_d_glucose side left {
-    beta_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-  }
-
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +h2o
-    maltohexaose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o
+    beta_d_glucosyl_1_3_d_glucose
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_isoleucine +l_glutamate +adp +phosphate
-    l_gamma_glutamyl_l_isoleucine
+  branch from beta_d_glucose side left {
+    beta_d_glucose
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o +beta_d_glucosyl_1_3_d_glucose
+    laminaritriose
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyl_adenylate +h
-    r_pantoate
+    <-> . +h +adp +phosphate +h2o
+    w
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    butyro_betaine
   }
 }

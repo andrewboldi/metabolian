@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-5s-carbapenam-3-carb-to-s-adenosyl-l-homocys "(3S,5S)-carbapenam-3-carb… to S-adenosyl-L-homocysteine" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     3s_5s_carbapenam_3_carboxylate
@@ -14,17 +14,5 @@ pathway 3s-5s-carbapenam-3-carb-to-s-adenosyl-l-homocys "(3S,5S)-carbapenam-3-ca
     2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
     <-> ec_2_1_1_394 [2.1.1.394] +hydrogen_donor +sam -5_deoxyadenosine -methionine -hydrogen_acceptor -sah -hplus
     2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +serotonin +sam +hplus
-    5_methoxytryptamine
-  }
-
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_300 [2.1.1.300] +s_scoulerine +sam
-    cyclanoline
   }
 }

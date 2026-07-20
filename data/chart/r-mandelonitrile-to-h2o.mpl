@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-mandelonitrile-to-h2o "(R)-mandelonitrile to H2O" {
-  spacing 192
+  spacing 186
 
   spine at 0,0 {
     r_mandelonitrile
@@ -16,25 +16,19 @@ pathway r-mandelonitrile-to-h2o "(R)-mandelonitrile to H2O" {
     r_amygdalin
   }
 
-  branch from r_amygdalin side left {
-    r_amygdalin
-    <-> ec_3_2_1_117 [3.2.1.117] +r_prunasin +h2o
-    alpha_d_glucose
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_126 [3.2.1.126] +alpha_d_glucose +trans_p_coumaryl_alcohol
+    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +gentamycin_c2_5 +phosphate +gentamycin_c2_5
-    atp
+    <-> ec_4_99_1_6 [4.99.1.6] +z_indol_3_ylacetaldehyde_oxime
+    indol_3_yl_acetonitrile
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gentamicin_c1
-  }
-
-  branch from r_prunasin side right {
+  branch from r_prunasin side left {
     r_prunasin
     <-> ec_3_2_1_118 [3.2.1.118] +beta_d_glucose +h2o
     mandelonitrile

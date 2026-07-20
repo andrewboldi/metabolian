@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetylsalicylate-to-maleate "acetylsalicylate to maleate" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     acetylsalicylate
@@ -22,11 +22,5 @@ pathway acetylsalicylate-to-maleate "acetylsalicylate to maleate" {
     2_5_dihydroxybenzoate
     <-> ec_1_14_13_24 [1.14.13.24] +nadh +o2 +hplus +nad +h2o
     3_hydroxybenzoate
-  }
-
-  branch from 2_5_dihydroxybenzoate side right {
-    2_5_dihydroxybenzoate
-    <-> . +h2o +coa +hplus
-    2_5_dihydroxybenzoyl_coa
   }
 }

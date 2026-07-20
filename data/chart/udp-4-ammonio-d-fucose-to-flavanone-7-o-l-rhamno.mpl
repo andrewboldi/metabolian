@@ -20,14 +20,14 @@ pathway udp-4-ammonio-d-fucose-to-flavanone-7-o-l-rhamno "UDP-4-ammonio-α-D-fuc
 
   branch from glutamate side left {
     glutamate
-    <-> . +l_m_tyrosine +akg
-    3_hydroxyphenylpyruvate
+    <-> ec_2_6_1_122 [2.6.1.122] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +akg
+    udp_2_acetamido_2_deoxy_3_dehydro_d_glucopyranos
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +dmapp +ppi
-    prekainate
+    <-> . +spermidine +atp +adp +pi +hplus
+    l_glutamylspermidine
   }
 
   branch from udp_l_rhamnose side left {

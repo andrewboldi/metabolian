@@ -233,6 +233,16 @@
       }
     },
     {
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74483"
+      }
+    },
+    {
       "id": "2_o_methylcytidine_5_monophosphate_1",
       "name": "2'-O-methylcytidine 5'-monophosphate(1−)",
       "short": "2'-O-methylcytidine…",
@@ -240,25 +250,6 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:74495"
-      }
-    },
-    {
-      "id": "l_glutamine",
-      "name": "L-glutamine",
-      "formula": "C5H8N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30011"
-      }
-    },
-    {
-      "id": "n5_methyl_l_glutamine",
-      "name": "N5-methyl-L-glutamine",
-      "short": "N5-methyl-L-glutami…",
-      "formula": "C6H10N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61891"
       }
     },
     {
@@ -420,43 +411,30 @@
       }
     },
     {
-      "id": "22r_22_hydroxycholesterol",
-      "name": "(22R)-22-hydroxycholesterol",
-      "short": "22-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:67237"
+        "chebi": "CHEBI:32395"
       }
     },
     {
-      "id": "7_22r_dihydroxycholesterol",
-      "name": "(7α,22R)-dihydroxycholesterol",
-      "short": "(7α,22R)-dihydroxyc…",
-      "formula": "C27H46O3",
-      "charge": 0,
+      "id": "11s_12r_eet",
+      "name": "(11S,12R)-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:86145"
+        "chebi": "CHEBI:131969"
       }
     },
     {
-      "id": "c7a_hydroxy_4_cholesten_3_one",
-      "name": "7alpha-Hydroxycholest-4-en-3-one",
-      "short": "7alpha-Hydroxychole…",
-      "formula": "C27H44O2",
-      "charge": 0,
+      "id": "11r_12s_eet",
+      "name": "(11R,12S)-EET",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:17899"
-      }
-    },
-    {
-      "id": "dihydroxy_4_cholesten_3_one_7a12a",
-      "name": "7alpha,12alpha-Dihydroxy-4-cholesten-3-one",
-      "short": "7alpha,12alpha-Dihy…",
-      "formula": "C27H44O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:28477"
+        "chebi": "CHEBI:131970"
       }
     }
   ],
@@ -490,17 +468,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_186",
-      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
+      "id": "ec_2_1_1_204",
+      "name": "tRNA (cytosine(38)-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.186"
+        "2.1.1.204"
       ]
     },
     {
-      "id": "ec_2_1_1_297",
-      "name": "peptide chain release factor N(5)-glutamine methyltransferase",
+      "id": "ec_2_1_1_206",
+      "name": "tRNA (cytidine(56)-2'-O)-methyltransferase",
       "ec": [
-        "2.1.1.297"
+        "2.1.1.206"
       ]
     },
     {
@@ -515,13 +493,6 @@
       "name": "(RS)-1-benzyl-1,2,3,4-tetrahydroisoquinoline N-methyltransferase",
       "ec": [
         "2.1.1.115"
-      ]
-    },
-    {
-      "id": "ec_1_14_14_139",
-      "name": "5beta-cholestane-3alpha,7alpha-diol 12alpha-hydroxylase",
-      "ec": [
-        "1.14.14.139"
       ]
     }
   ],
@@ -904,9 +875,58 @@
     },
     {
       "id": "r9",
-      "name": "23S rRNA (cytidine(2498)-2'-O)-methyltransferase",
-      "equation": "cytidine(2498) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(2498) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.186",
+      "name": "tRNA (cytosine(38)-C(5))-methyltransferase",
+      "equation": "cytidine(38) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(38) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.204",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_204"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:42956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "tRNA (cytidine(56)-2'-O)-methyltransferase",
+      "equation": "cytidine(56) in tRNA + S-adenosyl-L-methionine = 2'-O-methylcytidine(56) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.206",
       "substrates": [
         {
           "metabolite": "cytidine_5_monophosphate_1",
@@ -933,69 +953,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_186"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:42788"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:42788"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "peptide chain release factor N(5)-glutamine methyltransferase",
-      "equation": "L-glutaminyl-[peptide chain release factor] + S-adenosyl-L-methionine = N(5)-methyl-L-glutaminyl-[peptide chain release factor] + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.297",
-      "substrates": [
-        {
-          "metabolite": "l_glutamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n5_methyl_l_glutamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_297"
+          "enzyme": "ec_2_1_1_206"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:42896"
+        "rhea": "RHEA:42968"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42896"
+            "id": "RHEA:42968"
           }
         ]
       }
@@ -1266,11 +1237,11 @@
     },
     {
       "id": "r17",
-      "name": "(22R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,7alpha)-d...",
-      "equation": "(22R)-hydroxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R,7alpha)-dihydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11S,12R)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "22r_22_hydroxycholesterol",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -1284,7 +1255,7 @@
       ],
       "products": [
         {
-          "metabolite": "7_22r_dihydroxycholesterol",
+          "metabolite": "11s_12r_eet",
           "stoichiometry": 1
         },
         {
@@ -1303,26 +1274,25 @@
       "reversibility": "reversible",
       "pathwayStep": 17,
       "xrefs": {
-        "rhea": "RHEA:46460"
+        "rhea": "RHEA:49876"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46460"
+            "id": "RHEA:49876"
           }
         ]
       }
     },
     {
       "id": "r18",
-      "name": "5beta-cholestane-3alpha,7alpha-diol 12alpha-hydroxylase",
-      "equation": "7alpha-hydroxycholest-4-en-3-one + reduced [NADPH--hemoprotein reductase] + O2 = 7alpha,12alpha-dihydroxycholest-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.139",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = (11R,12S)-epoxy-(5Z,8Z,14Z)-eicosatrienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "c7a_hydroxy_4_cholesten_3_one",
+          "metabolite": "arachidonate",
           "stoichiometry": 1
         },
         {
@@ -1336,7 +1306,7 @@
       ],
       "products": [
         {
-          "metabolite": "dihydroxy_4_cholesten_3_one_7a12a",
+          "metabolite": "11r_12s_eet",
           "stoichiometry": 1
         },
         {
@@ -1352,22 +1322,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_139"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 18,
       "xrefs": {
-        "rhea": "RHEA:46752"
+        "rhea": "RHEA:49880"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46752"
+            "id": "RHEA:49880"
           }
         ]
       }

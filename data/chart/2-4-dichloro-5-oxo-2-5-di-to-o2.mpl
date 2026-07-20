@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-dichloro-5-oxo-2-5-di-to-o2 "2,4-dichloro-5-oxo-2,5-di… to O2" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     2_4_dichloro_5_oxo_2_5_dihydro_2_furylacetate
@@ -30,33 +30,27 @@ pathway 2-4-dichloro-5-oxo-2-5-di-to-o2 "2,4-dichloro-5-oxo-2,5-di… to O2" {
     z_1_3_dichloropropene
   }
 
-  branch from 2_chloromaleylacetic_acid side left {
-    2_chloromaleylacetic_acid
-    <-> . +o2 +h2o +chloride
+  branch from 6_chlorobenzene_1_2_4_triol side left {
+    6_chlorobenzene_1_2_4_triol
+    <-> . +h2o +chloride
     2_6_dichloro_4_hydroxyphenolate
   }
 
-  branch from 2_chloromaleylacetic_acid side right {
-    2_chloromaleylacetic_acid
-    <-> ec_3_1_1_45 [3.1.1.45] +h +h2o
-    cis_2_chloro_4_carboxymethylenebut_2_en_1_4_olid
-  }
-
-  branch from 6_chlorobenzene_1_2_4_triol side left {
+  branch from 6_chlorobenzene_1_2_4_triol side right {
     6_chlorobenzene_1_2_4_triol
     <-> . +fadh2 +h +2_6_dichloro_4_hydroxyphenolate +o2 +chloride +h2o
     fad
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +21_hydroxyprogesterone +nadph +aldosterone +h2o
-    nadp
-  }
-
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +nadph +nadp +h2o
-    21_hydroxyprogesterone
+    <-> . +antipyrine +h +nadph +nadp +methanol
+    edaravone
+  }
+
+  branch from o2 side right {
+    o2
+    <-> . +5_hydroxyomeprazole +nadp +h2o +h +nadph
+    5_methoxy_2_4_methoxy_3_5_dimethylpyridin_2_yl_m
   }
 }

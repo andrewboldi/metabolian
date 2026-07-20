@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2r-2-hydroxy-2-indol-3-to-indol-3-yl-glycol",
+  "name": "(2R)-2-hydroxy-2-(indol-3… to (indol-3-yl)glycol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2R)-2-hydroxy-2-(indol-3-yl)acetaldehyde to (indol-3-yl)glycol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR191712"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2r_2_hydroxy_2_indol_3_yl_acetaldehyde",
+      "name": "(2R)-2-hydroxy-2-(indol-3-yl)acetaldehyde",
+      "short": "2-hydroxy-2-(indol-…",
+      "formula": "C10H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2936"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "indole_3_glyoxal",
+      "name": "indole-3-glyoxal",
+      "formula": "C10H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133418"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "hydroxymethyl_indol_3_yl_ketone",
+      "name": "Hydroxymethyl indol-3-yl ketone",
+      "short": "Hydroxymethyl…",
+      "formula": "C10H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:173472"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "indol_3_yl_glycol",
+      "name": "(indol-3-yl)glycol",
+      "formula": "C10H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM8732"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_1",
+      "name": "alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR191712",
+      "substrates": [
+        {
+          "metabolite": "2r_2_hydroxy_2_indol_3_yl_acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "indole_3_glyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR191712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase",
+      "ec": "1.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "indole_3_glyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxymethyl_indol_3_yl_ketone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR121806"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121806"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR191718",
+      "substrates": [
+        {
+          "metabolite": "hydroxymethyl_indol_3_yl_ketone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "indol_3_yl_glycol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR191718"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR191718"
+          }
+        ]
+      }
+    }
+  ]
+}

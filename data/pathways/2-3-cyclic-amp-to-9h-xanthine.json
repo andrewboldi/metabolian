@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-3-cyclic-amp-to-9h-xanthine",
   "name": "2',3'-cyclic AMP to 9H-xanthine",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 5-step route from 2',3'-cyclic AMP(1−) to 9H-xanthine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -137,40 +137,42 @@
       }
     },
     {
-      "id": "l_alaninamide",
-      "name": "L-alaninamide",
-      "formula": "C3H9N2O",
-      "charge": 1,
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74169"
+        "chebi": "CHEBI:85452"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H10N2O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:133902"
       }
     },
     {
-      "id": "d_lysinium",
-      "name": "D-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:32557"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "6_amino_2_oxohexanoic_acid",
-      "name": "6-amino-2-oxohexanoic acid",
-      "short": "6-amino-2-oxohexano…",
-      "formula": "C6H11NO3",
-      "charge": 0,
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58183"
+        "chebi": "CHEBI:65315"
       }
     }
   ],
@@ -204,10 +206,17 @@
       ]
     },
     {
-      "id": "ec_1_4_3_3",
-      "name": "D-amino-acid oxidase",
+      "id": "ec_3_5_4_38",
+      "name": "single-stranded DNA cytosine deaminase",
       "ec": [
-        "1.4.3.3"
+        "3.5.4.38"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_35",
+      "name": "tRNA(cytosine(8)) deaminase",
+      "ec": [
+        "3.5.4.35"
       ]
     }
   ],
@@ -441,69 +450,26 @@
     },
     {
       "id": "r6",
-      "name": "L-alaninamide + H2O = L-alanine + NH4(+)",
-      "equation": "L-alaninamide + H2O = L-alanine + NH4(+)",
+      "name": "single-stranded DNA cytosine deaminase",
+      "equation": "a 2'-deoxycytidine in single-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in single-stranded DNA + NH4(+)",
+      "ec": "3.5.4.38",
       "substrates": [
         {
-          "metabolite": "l_alaninamide",
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alanine",
-          "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:37231"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:37231"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "D-amino-acid oxidase",
-      "equation": "D-lysine + O2 + H2O = 6-amino-2-oxohexanoate + H2O2 + NH4(+)",
-      "ec": "1.4.3.3",
-      "substrates": [
-        {
-          "metabolite": "d_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_amino_2_oxohexanoic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "dump",
           "stoichiometry": 1
         },
         {
@@ -513,20 +479,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_3"
+          "enzyme": "ec_3_5_4_38"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:37583"
+        "rhea": "RHEA:50948"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37583"
+            "id": "RHEA:50948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "tRNA(cytosine(8)) deaminase",
+      "equation": "cytidine(8) in tRNA + H2O + H(+) = uridine(8) in tRNA + NH4(+)",
+      "ec": "3.5.4.35",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:50964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50964"
           }
         ]
       }

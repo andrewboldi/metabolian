@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "e-3-diazocoumarate-to-trans-4-coumaroyl-coa",
   "name": "(E)-3-diazocoumarate to trans-4-coumaroyl-CoA",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (E)-3-diazocoumarate to trans-4-coumaroyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -129,86 +129,22 @@
       }
     },
     {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
-      "charge": 0,
+      "id": "agmatine",
+      "name": "agmatine",
+      "formula": "C5H16N4",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:46858"
+        "metanetx": "MNXM328"
       }
     },
     {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
+      "id": "e_p_coumaroylagmatine",
+      "name": "(E)-p-coumaroylagmatine",
+      "short": "p-coumaroylagmatine",
+      "formula": "C14H21N4O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "uridylyl_l_tyrosine_1",
-      "name": "uridylyl-L-tyrosine(1−)",
-      "short": "uridylyl-L-tyrosine…",
-      "formula": "C18H19N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90602"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15377"
-      }
-    },
-    {
-      "id": "longiborneol",
-      "name": "(−)-longiborneol",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:233473"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "acetyl_coa",
-      "name": "acetyl-CoA",
-      "formula": "C23H34N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104266"
-      }
-    },
-    {
-      "id": "4_hydroxybenzoyl_coa",
-      "name": "4-hydroxybenzoyl-CoA",
-      "formula": "C28H36N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104715"
+        "chebi": "CHEBI:86078"
       }
     },
     {
@@ -230,52 +166,41 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "l_quinate",
+      "name": "L-quinate",
+      "formula": "C7H11O6",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "metanetx": "MNXM736788"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
-      }
-    },
-    {
-      "id": "feruloyl_diketide",
-      "name": "feruloyl diketide",
-      "formula": "C12H11O5",
+      "id": "trans_5_o_4_coumaroyl_d_quinate",
+      "name": "trans-5-O-(4-coumaroyl)-D-quinate",
+      "short": "trans-5-O-(4-coumar…",
+      "formula": "C16H17O8",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1132197"
-      }
-    },
-    {
-      "id": "demethoxycurcumin",
-      "name": "Demethoxycurcumin",
-      "formula": "C20H18O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1371660"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM13"
+        "metanetx": "MNXM733481"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_64",
+      "name": "agmatine N(4)-coumaroyltransferase",
+      "ec": [
+        "2.3.1.64"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_133",
+      "name": "shikimate O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.133"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -408,178 +333,92 @@
     },
     {
       "id": "r4",
-      "name": "L-tyrosyl-[protein] + UTP = O-(5'-uridylyl)-L-tyrosyl-[protein] + diphosphate",
-      "equation": "L-tyrosyl-[protein] + UTP = O-(5'-uridylyl)-L-tyrosyl-[protein] + diphosphate",
+      "name": "agmatine N(4)-coumaroyltransferase",
+      "ec": "2.3.1.64",
       "substrates": [
         {
-          "metabolite": "l_tyrosine",
+          "metabolite": "trans_4_coumaroyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "utp",
+          "metabolite": "agmatine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "uridylyl_l_tyrosine_1",
+          "metabolite": "e_p_coumaroylagmatine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "h",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:83887"
+        "metanetx": "MNXR195648"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:83887"
+            "db": "MetaNetX",
+            "id": "MNXR195648"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate + H2O = (-)-longiborneol + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (-)-longiborneol + diphosphate",
+      "name": "shikimate O-hydroxycinnamoyltransferase",
+      "ec": "2.3.1.133",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "trans_4_coumaroyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_quinate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "longiborneol",
+          "metabolite": "coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "trans_5_o_4_coumaroyl_d_quinate",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_133"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:83907"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:83907"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR190094",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_hydroxybenzoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "metanetx": "MNXR190094"
+        "metanetx": "MNXR196003"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR190094"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "Reaction MNXR192911",
-      "substrates": [
-        {
-          "metabolite": "feruloyl_diketide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "demethoxycurcumin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR192911"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR192911"
+            "id": "MNXR196003"
           }
         ]
       }

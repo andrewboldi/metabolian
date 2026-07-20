@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-3-carboxylatopropanoyl-to-quinolinate",
   "name": "S-(3-carboxylatopropanoyl… to quinolinate",
-  "category": "amino-acid-metabolism",
+  "category": "redox-detox",
   "summary": "A 4-step route from S-(3-carboxylatopropanoyl)glutathionate(2−) to quinolinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -185,76 +185,50 @@
       }
     },
     {
-      "id": "arginine",
-      "name": "L-Arginine",
-      "formula": "C6H15N4O2",
-      "charge": 1,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:32682"
+        "chebi": "CHEBI:57292"
       }
     },
     {
-      "id": "akg",
-      "name": "2-Oxoglutarate",
-      "formula": "C5H4O5",
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16810"
+        "chebi": "CHEBI:15589"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "3s_3_carboxy_3_hydroxypropanoyl_coa",
+      "name": "(3S)-3-carboxy-3-hydroxypropanoyl-CoA",
+      "short": "3-carboxy-3-hydroxy…",
+      "formula": "C25H35N7O20P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:57317"
       }
     },
     {
-      "id": "3s_3_hydroxy_l_arginine",
-      "name": "(3S)-3-hydroxy-L-arginine",
-      "short": "3-hydroxy-L-arginine",
-      "formula": "C6H15N4O3",
-      "charge": 1,
+      "id": "l_citramalate",
+      "name": "L-citramalate",
+      "formula": "C5H6O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:73938"
+        "chebi": "CHEBI:30936"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "3s_citramalyl_coa",
+      "name": "(3S)-citramalyl-CoA",
+      "formula": "C26H37N7O20P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
-      "id": "s_dichlorprop",
-      "name": "(S)-dichlorprop",
-      "formula": "C9H7Cl2O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:75287"
-      }
-    },
-    {
-      "id": "2_4_dichlorophenol",
-      "name": "2,4-dichlorophenol",
-      "formula": "C6H4Cl2O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16738"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:58668"
       }
     },
     {
@@ -298,17 +272,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_41",
-      "name": "L-arginine hydroxylase",
+      "id": "ec_2_8_3_22",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
       "ec": [
-        "1.14.11.41"
-      ]
-    },
-    {
-      "id": "ec_1_14_11_43",
-      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
-      "ec": [
-        "1.14.11.43"
+        "2.8.3.22"
       ]
     },
     {
@@ -608,110 +575,90 @@
     },
     {
       "id": "r7",
-      "name": "L-arginine hydroxylase",
-      "equation": "L-arginine + 2-oxoglutarate + O2 = (2S,3S)-hydroxyarginine + succinate + CO2",
-      "ec": "1.14.11.41",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "equation": "succinyl-CoA + (S)-malate = (S)-malyl-CoA + succinate",
+      "ec": "2.8.3.22",
       "substrates": [
         {
-          "metabolite": "arginine",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "malate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxy_l_arginine",
+          "metabolite": "3s_3_carboxy_3_hydroxypropanoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_41"
+          "enzyme": "ec_2_8_3_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:36607"
+        "rhea": "RHEA:38255"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36607"
+            "id": "RHEA:38255"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "(S)-dichlorprop dioxygenase (2-oxoglutarate)",
-      "equation": "(S)-(2,4-dichlorophenoxy)propanoate + 2-oxoglutarate + O2 = 2,4-dichlorophenol + pyruvate + succinate + CO2",
-      "ec": "1.14.11.43",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "equation": "(3S)-citramalate + succinyl-CoA = (3S)-citramalyl-CoA + succinate",
+      "ec": "2.8.3.22",
       "substrates": [
         {
-          "metabolite": "s_dichlorprop",
+          "metabolite": "l_citramalate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_4_dichlorophenol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
+          "metabolite": "3s_citramalyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "succinate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_43"
+          "enzyme": "ec_2_8_3_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:37827"
+        "rhea": "RHEA:38287"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37827"
+            "id": "RHEA:38287"
           }
         ]
       }

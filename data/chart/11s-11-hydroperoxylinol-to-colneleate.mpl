@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 11s-11-hydroperoxylinol-to-colneleate "(11S)-11-hydroperoxylinol… to colneleate" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     11s_11_hydroperoxylinoleate
@@ -29,12 +29,6 @@ pathway 11s-11-hydroperoxylinol-to-colneleate "(11S)-11-hydroperoxylinol… to c
   }
 
   branch from 9_s_hpode side left {
-    9_s_hpode
-    <-> .
-    10r_11r_epoxy_9s_hydroxy_12z_octadecenoate
-  }
-
-  branch from 9_s_hpode side right {
     9_s_hpode
     <-> .
     9s_10s_11s_12z_9_10_epoxy_11_hydroxy_12_octadec

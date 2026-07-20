@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
-  spacing 240
+  spacing 234
 
   spine at 0,0 {
     n_acetyldemethylphosphinothricinate
@@ -34,49 +34,43 @@ pathway n-acetyldemethylphosphino-to-h2o "N-Acetyldemethylphosphino… to H2O" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
-    clavatol
+    <-> . +2_amino_6_hydroxyaminopurine +hydrogen_donor +h2o
+    9h_purine_2_6_diamine
   }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +nadph +hplus +co2 +nadp +coa +h2o
-    cordypyrone_a
-  }
-
-  branch from triphosphate side left {
+  branch from triphosphate side right {
     triphosphate
     <-> ec_4_2_3_12 [4.2.3.12] +7_8_dihydroneopterin_3_triphosphate +h
     6_pyruvoyl_5_6_7_8_tetrahydropterin
   }
 
-  branch from triphosphate side right {
+  branch from triphosphate side left {
     triphosphate
     <-> ec_4_1_2_50 [4.1.2.50] +7_8_dihydroneopterin_3_triphosphate +h2o +h +acetaldehyde
     5_6_7_8_tetrahydropterin_6_carboxylate
   }
 
-  branch from atp side left {
-    atp
-    <-> . +nadh +3_dehydro_atp +h
-    nad
-  }
-
   branch from atp side right {
     atp
-    <-> . +diphosphate +cis_2_methyl_5_isopropylhexa_2_5_dienoyl_coa +amp +h +coa
-    cis_2_6_dimethyl_5_methylenehept_2_enoic_acid
+    <-> ec_6_3_1_9 [6.3.1.9] +glutathione +glutathionylaminopropylcadaverine +homotrypanothione +phosphate
+    adp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +5_6beta_epoxy_5beta_cholestane
-    5alpha_cholestan_5alpha_6beta_diol
+  branch from atp side left {
+    atp
+    <-> ec_6_2_1_39 [6.2.1.39] +l_glutamate +4_aminobutyryl_acp +adp +phosphate
+    gamma_l_glutamyl_4_aminobutyryl_acp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5alpha_cholestan_5alpha_6beta_diol
-    5_6alpha_epoxy_5alpha_cholestane
+    <-> ec_3_1_1_45 [3.1.1.45] +2e_2_5_dichloro_4_oxo_2_hexenedioic_acid
+    2_5_dichloro_carboxymethylenebut_2_en_4_olide
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +1_2_bis_4_hydroxyphenyl_propan_2_ol
+    4_4_dihydroxy_alpha_methylstilbene
   }
 }

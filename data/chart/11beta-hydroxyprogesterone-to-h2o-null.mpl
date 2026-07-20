@@ -22,61 +22,61 @@ pathway 11beta-hydroxyprogesterone-to-h2o-null "11Beta-Hydroxyprogesterone to H2
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    anserine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_13z_docosenoyl_2_9z_octadecenoyl_sn_glycero_3
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
   }
 
   branch from o2 side left {
     o2
-    <-> . +gibberellin_a9 +nadph +nadp +h2o
-    16alpha_17_epoxy_gibberellin_a9
+    <-> ec_1_14_13_190 [1.14.13.190] +h +nadph +miltiradiene +nadp +h2o
+    ferruginol
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +gibberellin_a9 +16alpha_17_epoxy_gibberellin_a9 +h2o
-    nad
+    <-> . +dehydroascorbide
+    cyclic_2_3_o_oxalyl_l_threonate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadp
-    2_trans_6_cis_farnesol
+    <-> ec_1_1_1_412 [1.1.1.412] +h +2r_2_octyl_3_oxododecanoate +nadp
+    2r_3s_2_octyl_3_hydroxydodecanoate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +e_hex_2_en_1_ol +nadp +h
-    cis_3_hexenal
+    <-> . +coclaurine +nadp +h
+    4_r_11_hydroxy_10_methoxy_5_azaspiro_cyclohexan
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +3z_hex_3_en_1_ol +h +nadph
-    e_hex_2_enal
+    <-> . +h +nadph +6_dehydro_scb2
+    scb2
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    1s_2s_4s_dihydrocarveol
+    <-> ec_1_3_1_113 [1.3.1.113] +h +nadph +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p
+    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +phosphate +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero
+    <-> ec_3_6_3_23 [3.6.3.23] +h +l_alanyl_l_glutamate +adp +phosphate +l_alanyl_l_glutamate
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    pc_22_0_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    glycylglycine
   }
 }

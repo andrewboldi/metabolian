@@ -50,26 +50,26 @@ pathway n-n-dimethyl-l-arginini-to-hydrogen-donor "Nω,Nω-dimethyl-L-arginini�
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
+    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
+    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +5_5_dehydrodivanillate +nadh +o2 +hplus +nad +h2o
-    5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
+    <-> . +n_n_dimethyl_l_arginine_1 +akg +o2 +succinate +co2
+    l_argininium
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_3_12 [3.5.3.12] +agmatinium +h2o
-    n_carbamoylputrescinium
+    <-> ec_4_1_99_1 [4.1.99.1] +l_tryptophan +h2o +pyruvate
+    1h_indole
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_3_10 [1.4.3.10] +1_4_butanediammonium +o2 +h2o +h2o2
-    4_ammoniobutanal
+    <-> ec_4_3_1_20 [4.3.1.20] +3r_3_hydroxy_l_aspartate
+    oxaloacetate
   }
 
   branch from glutamate side right {
@@ -86,13 +86,13 @@ pathway n-n-dimethyl-l-arginini-to-hydrogen-donor "Nω,Nω-dimethyl-L-arginini�
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_n1 [1.3.99.n1] +3_hydroxybenzoyl_coa +atp +h2o +hydrogen_acceptor +adp +pi +hplus
-    3_hydroxycyclohexa_1_5_diene_1_carbonyl_coa
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_6_ol +hydrogen_acceptor +h2o
+    6_hydroxyquinolin_2_1h_one
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +n_acylphytosphingosine +o2 +hydrogen_acceptor +h2o
-    n_acyl_8_phytosphingenine
+    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_7_ol +hydrogen_acceptor +h2o
+    7_hydroxyquinolin_2_1h_one
   }
 }

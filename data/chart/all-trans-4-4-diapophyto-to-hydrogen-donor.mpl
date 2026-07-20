@@ -22,14 +22,14 @@ pathway all-trans-4-4-diapophyto-to-hydrogen-donor "all-trans-4,4'-diapophyto…
 
   branch from 4_4_diaponeurosporene side left {
     4_4_diaponeurosporene
-    <-> ec_1_3_8_2 [1.3.8.2] +fad +hplus +fadh2
-    15_cis_4_4_diapophytoene
-  }
-
-  branch from 4_4_diaponeurosporene side right {
-    4_4_diaponeurosporene
     <-> ec_1_3_8_2 [1.3.8.2] +fadh2 +h +fad
     4_4_diapo_carotene
+  }
+
+  branch from 4_4_diapolycopene side right {
+    4_4_diapolycopene
+    <-> ec_1_3_8_2 [1.3.8.2] +fad +hplus +fadh2
+    15_cis_4_4_diapophytoene
   }
 
   branch from 4_4_diapolycopenedial side left {

@@ -24,67 +24,67 @@ pathway fmnh2-to-o2 "FMNH2 to O2" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_68 [1.14.14.68] +9_pimara_7_15_diene +fmnh2 +o2 +h2o +hplus
-    9_pimara_7_15_diene_3_ol
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    9z_12z_17_hydroxyoctadeca_9_12_dienoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_threonine +l_isoleucine +l_tryptophan
-    tryptophanyl_threonyl_isoleucine
+    <-> ec_3_3_2_9 [3.3.2.9] +1s_2s_1_2_dihydronaphthalene_1_2_diol
+    1s_2r_naphthalene_1_2_oxide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threonine +l_tryptophan +l_tyrosine
-    tryptophanyl_threonyl_tyrosine
+    <-> . +alpha_d_glucose +4_hydroxybenzoate
+    4_d_glucosyloxy_benzoate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +h +3_n_morpholino_propanesulfonate +o2 +sulfite +h2o
-    3_n_morpholino_propanal
+    <-> ec_1_16_8_1 [1.16.8.1] +fmnh2 +cob_ii_yrinate_diamide
+    cob_i_yrinate_diamide
   }
 
   branch from fmn side right {
     fmn
-    <-> . +fmnh2 +medermycin +h +o2 +h2o
-    mederrhodin_a
+    <-> ec_1_14_14_33 [1.14.14.33] +fmnh2 +ethylenediaminetriacetate +h +o2 +glyoxylate +h2o
+    ethylenediaminediacetate
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +o2 +fmn +mederrhodin_a +h +h2o
-    medermycin
+    <-> ec_1_14_14_33 [1.14.14.33] +edta +h +o2 +fmn +ethylenediaminediacetate +h2o
+    glyoxylate
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_108 [1.14.14.108] +1r_4r_bornane_2_5_dione +h +o2 +fmn +h2o
-    1r_4r_5_oxo_1_2_campholide
+    <-> ec_1_19_1_1 [1.19.1.1] +h +nadp +fmn
+    nadph
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_8_1 [3.1.8.1] +ethanol +bis_sec_butylsulfanyl_phosphinate +h2o
-    cadusafos
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_1_18_3_ps
   }
 
   branch from h side right {
     h
-    <-> . +keto_d_fructose +l_lysine +h2o
-    glucoselysine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_tetracosanoyl_2_9z_octadecenoyl_sn_glycero_3_p
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +dodecanoate +nad +h2o
-    12_hydroxydodecanoate
+    <-> . +nadh +h +6_r_beta_epsilon_carotene +nad +h2o
+    zeinoxanthin
   }
 
   branch from o2 side right {
     o2
-    <-> . +elymoclavine +h2o
-    paspalic_acid
+    <-> ec_1_14_13_156 [1.14.13.156] +h +1_8_cineole +nadph +6_endo_hydroxycineole +h2o
+    nadp
   }
 }

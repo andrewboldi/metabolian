@@ -20,26 +20,26 @@ pathway diphosphate-to-chlorophyll-a "diphosphate to chlorophyll a" {
 
   branch from h side left {
     h
-    <-> ec_3_2_2_14 [3.2.2.14] +aldehydo_d_ribose_5_phosphate +nicotinamide +h2o
-    beta_nicotinamide_d_ribonucleotide
+    <-> ec_1_1_1_317 [1.1.1.317] +perakine +nadph +raucaffrinoline
+    nadp
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_12_17 [1.14.12.17] +nadh +nitric_oxide +o2 +nad
-    nitric_acid
+    <-> . +dehydroxypaxilline +o2 +nadph +nadp +h2o
+    paxilline
   }
 
   branch from chlorophyll_a side left {
     chlorophyll_a
-    <-> . +nadp +h +nadph
-    tetrahydrogg_chl_a
+    <-> . +o2 +h2o
+    chlorophyll_b
   }
 
   branch from chlorophyll_a side right {
     chlorophyll_a
-    <-> . +o2 +h2o
-    chlorophyll_b
+    <-> . +h +nadph +nadp
+    geranylgeranyl_chlorophyll_a
   }
 
   branch from diphosphate side left {
@@ -50,8 +50,8 @@ pathway diphosphate-to-chlorophyll-a "diphosphate to chlorophyll a" {
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_2_5_1_30 [2.5.1.30] +all_trans_heptaprenyl_diphosphate +ipp
-    all_trans_hexaprenyl_diphosphate
+    <-> ec_2_5_1_32 [2.5.1.32] +all_trans_phytoene
+    prephytoene_diphosphate
   }
 
   branch from mg side left {

@@ -82,39 +82,49 @@
       }
     },
     {
-      "id": "evatromonoside",
-      "name": "evatromonoside",
-      "formula": "C29H44O7",
+      "id": "alpha_lactose",
+      "name": "alpha-lactose",
+      "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM819584"
+        "metanetx": "MNXM1104434"
       }
     },
     {
-      "id": "glucoevatromonoside",
-      "name": "glucoevatromonoside",
-      "formula": "C35H54O12",
+      "id": "beta_d_galactose",
+      "name": "beta-D-galactose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM819585"
+        "metanetx": "MNXM112"
       }
     },
     {
-      "id": "digitoxin",
-      "name": "digitoxin",
-      "formula": "C41H64O13",
-      "charge": 0,
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1105847"
+        "metanetx": "MNXM1104266"
       }
     },
     {
-      "id": "purpurea_glycoside_a",
-      "name": "purpurea glycoside A",
-      "formula": "C47H74O18",
+      "id": "6_o_acetyl_beta_d_glucose",
+      "name": "6-O-acetyl-beta-D-glucose",
+      "short": "6-O-acetyl-beta-D-g…",
+      "formula": "C8H14O7",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM819581"
+        "metanetx": "MNXM722855"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
       }
     },
     {
@@ -155,45 +165,49 @@
       }
     },
     {
-      "id": "pitavastatin",
-      "name": "Pitavastatin",
-      "formula": "C50H46CaF2N2O8",
+      "id": "3_hydroxypropanal",
+      "name": "3-hydroxypropanal",
+      "formula": "C3H6O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744865"
+        "metanetx": "MNXM1526"
       }
     },
     {
-      "id": "pitavastatin_lactone",
-      "name": "Pitavastatin-lactone",
-      "formula": "C50H42CaF2N2O6",
+      "id": "acrolein",
+      "name": "acrolein",
+      "formula": "C3H4O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744867"
+        "metanetx": "MNXM2345"
       }
     },
     {
-      "id": "2e_9z_12z_octadecatrienoyl_coa",
-      "name": "(2E,9Z,12Z)-octadecatrienoyl-CoA",
-      "short": "(2E,9Z,12Z)-octadec…",
-      "formula": "C39H60N7O17P3S",
-      "charge": -4,
+      "id": "3_hydroxypropanal_hydrate",
+      "name": "3-hydroxypropanal hydrate",
+      "short": "3-hydroxypropanal…",
+      "formula": "C3H8O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77558"
-      }
-    },
-    {
-      "id": "3s_3_hydroxylinoleoyl_coa",
-      "name": "(3S)-3-hydroxylinoleoyl-CoA",
-      "short": "3-hydroxylinoleoyl-…",
-      "formula": "C39H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM733854"
+        "metanetx": "MNXM819203"
       }
     }
   ],
   "enzymes": [
+    {
+      "id": "ec_3_2_1_108",
+      "name": "lactase",
+      "ec": [
+        "3.2.1.108"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_79",
+      "name": "maltose O-acetyltransferase",
+      "ec": [
+        "2.3.1.79"
+      ]
+    },
     {
       "id": "ec_3_2_1_193",
       "name": "ginsenosidase type I",
@@ -319,20 +333,11 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR165190",
+      "name": "lactase",
+      "ec": "3.2.1.108",
       "substrates": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "evatromonoside",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "glucoevatromonoside",
+          "metabolite": "alpha_lactose",
           "stoichiometry": 1
         },
         {
@@ -340,27 +345,43 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "beta_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_108"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR165190"
+        "metanetx": "MNXR189268"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165190"
+            "id": "MNXR189268"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR165191",
+      "name": "maltose O-acetyltransferase",
+      "ec": "2.3.1.79",
       "substrates": [
         {
-          "metabolite": "digitoxin",
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
@@ -370,25 +391,30 @@
       ],
       "products": [
         {
-          "metabolite": "purpurea_glycoside_a",
+          "metabolite": "6_o_acetyl_beta_d_glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "coa",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_79"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR165191"
+        "metanetx": "MNXR189582"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR165191"
+            "id": "MNXR189582"
           }
         ]
       }
@@ -481,44 +507,44 @@
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR162412",
+      "name": "Reaction MNXR164580",
       "substrates": [
         {
-          "metabolite": "pitavastatin",
+          "metabolite": "3_hydroxypropanal",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pitavastatin_lactone",
+          "metabolite": "acrolein",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR162412"
+        "metanetx": "MNXR164580"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162412"
+            "id": "MNXR164580"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR162461",
+      "name": "Reaction MNXR164581",
       "substrates": [
         {
-          "metabolite": "2e_9z_12z_octadecatrienoyl_coa",
+          "metabolite": "3_hydroxypropanal",
           "stoichiometry": 1
         },
         {
@@ -528,21 +554,21 @@
       ],
       "products": [
         {
-          "metabolite": "3s_3_hydroxylinoleoyl_coa",
+          "metabolite": "3_hydroxypropanal_hydrate",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR162461"
+        "metanetx": "MNXR164581"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162461"
+            "id": "MNXR164581"
           }
         ]
       }

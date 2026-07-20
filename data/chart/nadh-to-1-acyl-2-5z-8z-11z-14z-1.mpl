@@ -26,14 +26,14 @@ pathway nadh-to-1-acyl-2-5z-8z-11z-14z-1 "NADH to 1-acyl-2-(5Z,8Z,11Z,14Z,1…" 
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +1r_4s_fenchone
-    1s_2s_4r_endo_fenchol
+    <-> . +nadh +didemethylasterriquinone_d +h
+    hydrodidemethylasterriquinone_d
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +s_malate +h +h2o
-    3r_3_hydroxy_4_oxobutanoate
+    <-> ec_1_14_13_5 [1.14.13.5] +nadh +h +imidazole_4_acetate +o2 +h2o
+    4_oxo_4_5_dihydroimidazole_5_acetic_acid
   }
 
   branch from 5z_8z_11z_14z_17z_icosapentaenoyl_coa side right {

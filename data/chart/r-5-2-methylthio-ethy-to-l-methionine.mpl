@@ -22,14 +22,14 @@ pathway r-5-2-methylthio-ethy-to-l-methionine "(R)-5-[2-(methylthio)ethy… to L
 
   branch from nh3 side left {
     nh3
-    <-> . +5_hydroxypentan_2_aminium +nad +h2o +nadh +hplus
-    5_hydroxypentan_2_one
+    <-> . +4_phenylbutan_2_aminium +nad +h2o +nadh +hplus
+    4_phenylbutan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2_hydroxy_1_phenylethan_1_aminium +nad +h2o +nadh +hplus
-    2_hydroxyacetophenone
+    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
+    3_5_dimethylcyclohexanone
   }
 
   branch from 4_2_aminophenyl_2_4_dioxobutanoate side left {

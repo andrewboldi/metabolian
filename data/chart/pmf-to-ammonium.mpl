@@ -26,43 +26,43 @@ pathway pmf-to-ammonium "PMF to ammonium" {
 
   branch from pmf side right {
     pmf
-    <-> . +d_glucono_1_5_lactone +h2o +d_gluconate
-    h
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_1_99_1 [4.1.99.1] +h +pyruvate +chloride +h2o
-    3_chloro_l_alanine
+    <-> ec_3_5_99_11 [3.5.99.11] +h +2e_4z_2_hydroxymuconate +h2o
+    2e_4z_2_aminomuconic_acid
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +h +hydroxylamine
-    n_hydroxy_l_aspartic_1_amide
+    <-> ec_4_4_1_1 [4.4.1.1] +l_homocysteine +pyruvate +h2o
+    cystathionine
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +h +o2 +nadph +6_exomethylene_simvastatin_lactone_form +6_beta_carboxy_simvastatin_lactone_form
-    nadp
+    <-> . +nadh +octanedioyl_coa +acetyl_coa +h +coa +o2 +nad +h2o
+    decanedioyl_coa
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +h +o2 +nadph +6_exomethylene_simvastatin_lactone_form +h2o +nadp
-    6_beta_hydroxy_methyl_simvastatin_lactone_form
+    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +o2
+    2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +d_glutamate +nad +h2o +nadh +hplus
-    akg
+    <-> . +3_4_dimethoxy_l_phenylalanine
+    3_4_dimethoxy_e_cinnamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2r_heptan_2_aminium +nad +h2o +nadh +hplus
-    heptan_2_one
+    <-> . +arginine +adp +pi +hplus +atp
+    citrulline
   }
 }

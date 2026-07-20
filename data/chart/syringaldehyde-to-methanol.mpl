@@ -18,25 +18,25 @@ pathway syringaldehyde-to-methanol "syringaldehyde to methanol" {
 
   branch from nadh side left {
     nadh
-    <-> ec_1_1_1_35 [1.1.1.35] +z_3_oxotetradec_7_enoyl_coa +h +nad
-    3s_7z_3_hydroxytetradec_7_enoyl_coa
+    <-> ec_1_3_1_119 [1.3.1.119] +h +4_5_dichlorobenzene_1_2_diol +nad
+    1r_2s_3_4_dichlorocyclohexa_3_5_diene_1_2_diol
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_1_1_35 [1.1.1.35] +z_3_oxododec_5_enoyl_coa +h +nad
-    s_z_3_hydroxydodec_5_enoyl_coa
+    <-> ec_1_14_12_26 [1.14.12.26] +1_2_3_trichlorobenzene +h +o2 +nad
+    1r_2s_3_4_5_trichlorocyclohexa_3_5_diene_1_2_di
   }
 
   branch from h side left {
     h
-    <-> . +co2 +c36_phenolphthiodiolenone_a
-    c37_phenolcarboxyphthiodiolenone
+    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate +lupiwighteone +genistein
+    dimethylallyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +co2 +c33_phthiodiolenone_a
-    c34_carboxyphthiodiolenone
+    <-> . +co2 +cannabichromene
+    cannabichromenate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-aminoethyl-phosphonic-to-coniferyl-acetate "(2-aminoethyl)phosphonicâ€¦ to coniferyl acetate" {
-  spacing 296
+  spacing 290
 
   spine at 0,0 {
     2_aminoethyl_phosphonic_acid
@@ -44,25 +44,19 @@ pathway 2-aminoethyl-phosphonic-to-coniferyl-acetate "(2-aminoethyl)phosphonicâ€
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +iron +fe2 +hplus
-    ethanol
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
     <-> . +n1_ethyl_2_deoxyadenosine_5_monophosphate +akg +o2 +succinate +co2 +hplus
     2_deoxyadenosine_5_monophosphate_1
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_3_1_1_113 [3.1.1.113] +h2o +ethanol +hplus
-    ethyl_acetate
-  }
-
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_98 [3.5.1.98] +n6_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> . +melatonin +h2o
+    5_methoxytryptamine
+  }
+
+  branch from acetate side left {
+    acetate
+    <-> . +n_acetyl_l_glutaminate +h2o
+    glutamine
   }
 }

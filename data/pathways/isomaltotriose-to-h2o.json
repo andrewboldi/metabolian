@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "isomaltotriose-to-h2o",
   "name": "Isomaltotriose to H2O",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from Isomaltotriose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -78,48 +78,76 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H9NO2",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM114"
+        "metanetx": "MNXM10"
       }
     },
     {
-      "id": "l_valine",
-      "name": "L-valine",
-      "formula": "C5H11NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM199"
-      }
-    },
-    {
-      "id": "valyl_proline",
-      "name": "Valyl-Proline",
-      "formula": "C10H18N2O3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:173611"
-      }
-    },
-    {
-      "id": "l_lysine",
-      "name": "L-lysine",
-      "formula": "C6H15N2O2",
+      "id": "h",
+      "name": "H",
+      "formula": "H",
       "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1364268"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "lysyl_proline",
-      "name": "Lysyl-proline",
-      "formula": "C11H22N3O3",
-      "charge": 1,
+      "id": "tert_butyl_hydroperoxide",
+      "name": "tert-butyl hydroperoxide",
+      "short": "tert-butyl…",
+      "formula": "C4H10O2",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1371379"
+        "chebi": "CHEBI:64090"
+      }
+    },
+    {
+      "id": "tert_butanol",
+      "name": "tert-butanol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM22008"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "naphthalene",
+      "name": "naphthalene",
+      "formula": "C10H8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363334"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "1_naphthol",
+      "name": "1-naphthol",
+      "formula": "C10H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10319"
       }
     }
   ],
@@ -132,10 +160,24 @@
       ]
     },
     {
-      "id": "ec_3_4_13_9",
-      "name": "Xaa-Pro dipeptidase",
+      "id": "ec_1_11_1_21",
+      "name": "catalase peroxidase",
       "ec": [
-        "3.4.13.9"
+        "1.11.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_14_12_17",
+      "name": "nitric oxide dioxygenase",
+      "ec": [
+        "1.14.12.17"
+      ]
+    },
+    {
+      "id": "ec_1_11_2_1",
+      "name": "unspecific peroxygenase",
+      "ec": [
+        "1.11.2.1"
       ]
     }
   ],
@@ -318,21 +360,29 @@
     },
     {
       "id": "r5",
-      "name": "Xaa-Pro dipeptidase",
-      "ec": "3.4.13.9",
+      "name": "catalase peroxidase",
+      "ec": "1.11.1.21",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_valine",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tert_butyl_hydroperoxide",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "valyl_proline",
+          "metabolite": "tert_butanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
           "stoichiometry": 1
         },
         {
@@ -342,41 +392,41 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_4_13_9"
+          "enzyme": "ec_1_11_1_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR130375"
+        "metanetx": "MNXR131125"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR130375"
+            "id": "MNXR131125"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Xaa-Pro dipeptidase",
-      "ec": "3.4.13.9",
+      "name": "unspecific peroxygenase",
+      "ec": "1.11.2.1",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "naphthalene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_lysine",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "lysyl_proline",
+          "metabolite": "1_naphthol",
           "stoichiometry": 1
         },
         {
@@ -386,20 +436,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_4_13_9"
+          "enzyme": "ec_1_11_2_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR130376"
+        "metanetx": "MNXR131130"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR130376"
+            "id": "MNXR131130"
           }
         ]
       }

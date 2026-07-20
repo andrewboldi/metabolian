@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone "(S)-4-hydroxymandelate to 2-hydroxyacetophenone" {
-  spacing 280
+  spacing 274
 
   spine at 0,0 {
     s_4_hydroxymandelate
@@ -26,67 +26,61 @@ pathway s-4-hydroxymandelate-to-2-hydroxyacetophenone "(S)-4-hydroxymandelate to
 
   branch from o2 side right {
     o2
-    <-> . +ubiquinol_2 +ubiquinone_2 +h2o
-    pmf
+    <-> ec_1_14_14_45 [1.14.14.45] +1_aci_nitro_2_1h_indol_3_yl_ethane +nadp +h2o +h +nadph
+    e_indol_3_yl_acetaldehyde_oxime
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_9 [1.1.3.9] +d_galactopyranose +h2o +h +h2o2
-    d_galactonate
+    <-> . +s_reticuline +nadph +nadp +h2o
+    s_corytuberine
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_2_3_1 [1.2.3.1] +5_hydroxyindol_3_yl_acetaldehyde +o2 +h2o +h
-    5_hydroxyindol_3_yl_acetate
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +cerivastatin_m23 +nadp +cerivastatin_m24
+    s_adenosyl_l_methionine
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_41 [1.1.3.41] +alpha_d_xylose +o2
-    xylitol
-  }
-
-  branch from phenylglyoxylate side right {
-    phenylglyoxylate
-    <-> . +nadh +h +nad
-    mandelate
-  }
-
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +m_xylene +o2 +h2o
-    3_methylbenzyl_alcohol
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +cerivastatin +s_adenosyl_l_methionine +nadp
+    cerivastatin_m1
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_99_3 [1.6.99.3] +nadh +ubiquinone_6 +h
-    ubiquinol_6
+    <-> . +nadh +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h +h2o
+    2_hydroxy_5_carboxymethylmuconate_semialdehyde
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +ubiquinol_2 +co2 +acetate +ubiquinone_2
-    pyruvate
+  branch from nad side left {
+    nad
+    <-> ec_1_3_99_3 [1.3.99.3] +nadh +2e_tetradecenoyl_coa +h
+    tetradecanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_7_3_4 [1.7.3.4] +nitrite +ubiquinol_2 +h +hydroxylamine
-    ubiquinone_2
+    <-> . +glutathionylspermidine +glutathione
+    trypanothione
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +13_cis_retinoate +o2 +nadph +h2o
-    5_8_epoxy_13_cis_retinoate
+  branch from h2o side left {
+    h2o
+    <-> . +diphosphate +1r_2s_4r_borneol
+    bornyl_diphosphate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +17beta_estradiol +o2 +nadph +h2o
-    2_hydroxy_17beta_estradiol
+    <-> ec_1_14_13_103 [1.14.13.103] +h +sophoraflavanone_b +o2 +nadph +h2o
+    leachianone_g
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +h +o2 +nadph +h2o
+    4r_limonene_1_2_epoxide
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydrogen donor" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     3_iodo_l_thyronine
@@ -28,18 +28,6 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydro
     nadp
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +urobilinogen +hydrogen_acceptor
-    4z_15z_mesobilirubin_ix
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_acceptor +h2o
-    s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione
-  }
-
   branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +decanoyl_coa +h2o +hplus
@@ -60,7 +48,7 @@ pathway 3-iodo-l-thyronine-to-hydrogen-donor-83779 "3'-iodo-L-thyronine to hydro
 
   branch from 3_3_5_triiodo_l_thyronine_sulfate side right {
     3_3_5_triiodo_l_thyronine_sulfate
-    <-> . +3_3_5_triiodo_l_thyronine +3_phosphoadenylyl_sulfate +h
-    adenosine_3_5_bisphosphate
+    <-> . +3_3_5_triiodo_l_thyronine +h +sulfate
+    h2o
   }
 }

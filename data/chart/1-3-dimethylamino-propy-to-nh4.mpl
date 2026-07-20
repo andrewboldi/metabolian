@@ -18,26 +18,26 @@ pathway 1-3-dimethylamino-propy-to-nh4 "1-[3-(dimethylamino)propy… to NH4" {
 
   branch from h side left {
     h
-    <-> . +adp +6_exomethylene_lovastatin_acid_form +phosphate +6_exomethylene_lovastatin_acid_form +h2o
-    atp
+    <-> . +adenosine_3_5_bisphosphate +sulfochenodeoxycholate +chenodeoxycholate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    6_hydroxy_fluvastatin
+    <-> . +adp +z_z_z_7_10_13_hexadecatrienoic_acid +phosphate +z_z_z_7_10_13_hexadecatrienoic_acid +h2o
+    atp
   }
 
   branch from formate side left {
     formate
-    <-> . +h2o +h +o2
-    co2
+    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +formyl_coa
+    acetate
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_2_1_4 [1.2.1.4] +formaldehyde +nadp +h2o +h
-    nadph
+    <-> ec_1_13_11_54 [1.13.11.54] +h +2_oxopentanoate +o2
+    1_2_dihydroxyhex_1_en_3_one
   }
 
   branch from demethylcitalopram side left {
@@ -54,25 +54,25 @@ pathway 1-3-dimethylamino-propy-to-nh4 "1-[3-(dimethylamino)propy… to NH4" {
 
   branch from h2o2 side left {
     h2o2
-    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +o2
-    2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
+    <-> . +isonicotinoylradical +diazenium +h2o +h
+    isoniazide
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +o2
-    2_5_8_11_14_eicosapentaenoyl_coenzyme_a
+    <-> . +2_hydroxy_2_1h_indol_3_yl_acetonitrile +o2
+    indole_3_carbonyl_nitrile
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +l_histidine +h2o +l_glutamate
-    formamide
+    <-> ec_3_5_1_131 [3.5.1.131] +3_oxo_3_ureidopropanoate +h2o
+    1_carboxymalonamate
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +5_phospho_beta_d_ribosylamine
-    diphosphate
+    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxynitrourea +h2o
+    1_nitrobiuret
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     3_keto_beta_d_galactose
@@ -22,28 +22,16 @@ pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
     n_oleoyl_d_sphingosine
   }
 
-  branch from 3_ketolactose side left {
-    3_ketolactose
-    <-> . +nadh +h +nad
-    alpha_lactose
+  branch from h2o side left {
+    h2o
+    <-> ec_1_14_14_1 [1.14.14.1] +h +17beta_estradiol +o2 +nadph +2_hydroxy_17beta_estradiol
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_30 [4.2.1.30] +lactaldehyde
-    glycerol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +formate +nadp +estrone +o2 +nadph
-    3_17_dioxoandrost_4_en_19_al
-  }
-
-  branch from lactose side right {
-    lactose
-    <-> ec_3_2_1_108 [3.2.1.108] +h2o +d_galactose
-    alpha_d_glucose
+    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
+    s_ribosyl_l_homocysteine
   }
 
   branch from lactose side left {
@@ -52,67 +40,73 @@ pathway 3-keto-beta-d-galactose-to-h2o "3-keto-beta-D-galactose to H2O" {
     atp
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_146 [1.1.1.146] +nadh +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
-    tetrahydrocorticosterone
+  branch from lactose side right {
+    lactose
+    <-> ec_3_2_1_23 [3.2.1.23] +phosphate +h2o
+    lactose_6_phosphate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_5_dichlorohydroquinone +o2 +chloride +h2o
-    5_chloro_1_2_4_trihydroxybenzene
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_ribose +h
+    ribitol
   }
 
-  branch from glucose side right {
-    glucose
-    <-> . +biochanin_a +h2o
-    biochanin_a_7_o_beta_d_glucoside
+  branch from nad side right {
+    nad
+    <-> ec_1_6_2_6 [1.6.2.6] +nadh +ferrileghemoglobin +h
+    ferroleghemoglobin
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_2 +d_glucono_1_5_lactone
-    ubiquinone_2
+    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +h2o
+    d_fructofuranose
   }
 
-  branch from d_galactose side right {
-    d_galactose
-    <-> . +h2o +alpha_d_glucose
-    polydextrose
+  branch from glucose side right {
+    glucose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
+    keto_d_fructose
   }
 
   branch from d_galactose side left {
     d_galactose
-    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +h2o
-    beta_d_glucose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o +glucose
+    melibiose
   }
 
-  branch from beta_d_galactosyl_11_sphing_4_enine side right {
+  branch from d_galactose side right {
+    d_galactose
+    <-> ec_3_2_1_22 [3.2.1.22] +h2o +glucose
+    polydextrose
+  }
+
+  branch from beta_d_galactosyl_11_sphing_4_enine side left {
     beta_d_galactosyl_11_sphing_4_enine
     <-> . +alpha_d_galactose +h2o
     sphing_4_enine
   }
 
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_1_2_16_0_digalactosyldiacylglycerol +h
-    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
-  }
-
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_2_digalactosyldiacylglycerol
-    2s_1_o_7z_10z_hexadecadienoyl_2_o_linoleoyl_3_o
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_3_digalactosyldiacylglycerol
+    1_9z_12z_15z_octadecatrienoyl_2_7z_10z_13z_hexad
   }
 
-  branch from sphing_4_enine side left {
+  branch from udp_alpha_d_galactose side left {
+    udp_alpha_d_galactose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_0_digalactosyldiacylglycerol
+    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
+  }
+
+  branch from sphing_4_enine side right {
     sphing_4_enine
     <-> ec_3_1_3_4 [3.1.3.4] +sphing_4_enine_1_phosphate +h2o +h
     phosphate
   }
 
-  branch from sphing_4_enine side right {
+  branch from sphing_4_enine side left {
     sphing_4_enine
     <-> ec_3_1_4_38 [3.1.4.38] +sphing_4_enine_phosphocholine +h2o +h
     phosphocholine

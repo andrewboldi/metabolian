@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-diphosphate "H to diphosphate" {
-  spacing 296
+  spacing 284
 
   spine at 0,0 {
     h
@@ -20,14 +20,14 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from dgtp side left {
     dgtp
-    <-> ec_4_1_1_32 [4.1.1.32] +co2 +dgdp +phosphoenolpyruvate
-    oxaloacetate
+    <-> ec_3_6_1_19 [3.6.1.19] +diphosphate +h +amp
+    h2o
   }
 
   branch from dgtp side right {
     dgtp
-    <-> . +h +2_deoxyguanosine +phosphate
-    h2o
+    <-> ec_3_6_1_15 [3.6.1.15] +h +phosphate +h2o
+    adp
   }
 
   branch from 2_deoxyuridine side left {
@@ -44,26 +44,14 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from dgdp side left {
     dgdp
-    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dgtp
-    2_deoxycytidine
-  }
-
-  branch from dgdp side right {
-    dgdp
     <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +2_deoxycytidine
     atp
   }
 
-  branch from phytyl_diphosphate side left {
-    phytyl_diphosphate
-    <-> . +itp +phytyl_phosphate
-    idp
-  }
-
-  branch from phytyl_diphosphate side right {
-    phytyl_diphosphate
-    <-> . +utp +phytyl_phosphate
-    udp
+  branch from dgdp side right {
+    dgdp
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dgtp
+    cytidine
   }
 
   branch from geranylgeranyl_diphosphate side left {
@@ -80,13 +68,13 @@ pathway h-to-diphosphate "H to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +neryl_diphosphate +h2o
-    1_8_cineole
+    <-> . +l_tryptophan +atp
+    l_tryptophyl_amp
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp +h2o
-    6e_nerolidol
+    <-> . +peregrinol_diphosphate +h2o
+    viteagnusin_d
   }
 }

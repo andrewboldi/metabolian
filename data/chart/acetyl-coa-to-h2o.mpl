@@ -18,37 +18,37 @@ pathway acetyl-coa-to-h2o "acetyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_69 [2.3.1.69] +acetyl_coa +1r_2s_4r_borneol
-    bornyl_acetate
+    <-> . +subaphyllin +h +e_feruloyl_coa
+    putrescine
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_17 [2.3.3.17] +acetyl_coa +2_oxo_6_methylthiohexanoic_acid +h2o
-    2_4_methylthio_butylmalic_acid
+    <-> . +2_methylpropanoyl_coa +n_demethyl_desepoxymaytansinol
+    n_demethyl_desepoxyansamitocin_p_3
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +l_sorbopyranose +h
-    l_iditol
+    <-> . +nadh +h +o2 +monofluorobenzene
+    4_fluorocyclohexadiene_cis_cis_1_2_diol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_77 [1.3.1.77] +nadh +3_hydroxy_2_phenylchromenylium +h
-    2r_3r_flavan_3_ol
+    <-> . +nadh +h +o2 +monofluorobenzene
+    1_fluorocyclohexadiene_cis_cis_1_2_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h +glutathione
-    benzo_a_pyrene_7_8_diol
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +carboxyphosphamide +nad
+    aldophosphamide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_dichloroacetaldehyde
-    2_2_dichloro_1_1_ethanediol
+    <-> . +carbamazepine_10_11_epoxide
+    dihydroxycarbazepine
   }
 }

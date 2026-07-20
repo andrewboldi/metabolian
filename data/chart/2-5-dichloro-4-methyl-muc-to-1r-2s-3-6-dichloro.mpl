@@ -18,37 +18,37 @@ pathway 2-5-dichloro-4-methyl-muc-to-1r-2s-3-6-dichloro "2,5-dichloro-4-methyl-m
 
   branch from h side left {
     h
-    <-> . +quercetin_4_o_d_glucopyranoside +glucose +h2o
-    quercetin_3_4_di_o_d_glucoside
+    <-> ec_2_2_1_12 [2.2.1.12] +co2 +r_1_3_diphenyl_pentane_1_4_dione +trans_chalcone
+    pyruvate
   }
 
   branch from h side right {
     h
-    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +coa +kaempferol_3_o_beta_d_glucoside
-    e_feruloyl_coa
+    <-> . +gdp_d_erythro_alpha_d_gluco_octose +diphosphate +d_erythro_alpha_d_gluco_octopyranose1_phosphate
+    gtp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_16_3_2 [1.16.3.2] +fe +h2o +h
-    feo_oh_monomer
+    <-> . +h2
+    h2o
   }
 
   branch from o2 side right {
     o2
-    <-> . +4_sulfanylbutanoate +h2o
-    4_oxo_4_sulfanylbutanoate
+    <-> . +l_tryptophan +h2o
+    ttq_cofactor
   }
 
   branch from nad side left {
     nad
-    <-> . +nitrite +4_nitrophenol +nadh
-    2_4_dinitrophenol
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +2_methylprop_1_ene +h +o2 +h2o
+    2_2_dimethyloxirane
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +all_trans_3s_3_s_astaxanthin +o2 +h2o
-    2r_2_r_3s_3_s_2_2_3_3_tetrahydroxy_beta_beta_ca
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +isoprene +o2 +h2o
+    3r_3_4_epoxy_3_methylbut_1_ene
   }
 }

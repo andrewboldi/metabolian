@@ -36,14 +36,14 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +h2o2 +h2o
-    2_hydroxydodecanoate
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    9_hydroxylaurate
   }
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +o2 +h2o +h2o2 +hplus
-    dodecanal
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    8_hydroxylaurate
   }
 
   branch from 11_hydroxylaurate side right {
@@ -54,13 +54,13 @@ pathway d-galactosyl-n-dodecan-to-fmn "β-D-galactosyl-N-(dodecan… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +n_arachidonoylserotonin +fmnh2 +o2 +h2o +hplus
-    n_arachidonoyl_2_oxoserotonin
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    10_hete
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_16 [1.14.14.16] +progesterone +fmnh2 +o2 +h2o +hplus
-    11_deoxycorticosterone
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    12_r_hete
   }
 }

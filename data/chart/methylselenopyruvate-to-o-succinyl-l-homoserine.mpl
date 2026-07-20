@@ -20,26 +20,26 @@ pathway methylselenopyruvate-to-o-succinyl-l-homoserine "Methylselenopyruvate to
 
   branch from h side left {
     h
-    <-> . +spermidine +trans_caffeoyl_coa +coa
-    n1_n5_n10_tris_e_caffeoyl_spermidine
+    <-> . +3e_phytochromobilin
+    3z_phytochromobilin
   }
 
   branch from h side right {
     h
-    <-> . +spermidine +e_feruloyl_coa +coa
-    n1_n5_n10_tris_e_feruloyl_spermidine
+    <-> . +2e_3_2_4_dihydroxy_5_methoxyphenyl_prop_2_enoic
+    z_6_hydroxyferulate
   }
 
   branch from 4_methylsulfanyl_2_oxobutanoate side left {
     4_methylsulfanyl_2_oxobutanoate
-    <-> ec_2_6_1_15 [2.6.1.15] +l_phenylalanine +l_methionine
-    3_phenylpyruvate
+    <-> . +fadh2 +h +nh4 +fad +h2o
+    d_methionine
   }
 
   branch from 4_methylsulfanyl_2_oxobutanoate side right {
     4_methylsulfanyl_2_oxobutanoate
-    <-> ec_2_6_1_27 [2.6.1.27] +l_tryptophan +l_methionine
-    indole_3_pyruvate
+    <-> . +s_methyl_propanethioate +h
+    co2
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -56,19 +56,19 @@ pathway methylselenopyruvate-to-o-succinyl-l-homoserine "Methylselenopyruvate to
 
   branch from acetate side left {
     acetate
-    <-> ec_2_8_3_12 [2.8.3.12] +r_2_hydroxyglutarate +acetyl_coa
-    r_2_hydroxyglutaryl_coa
+    <-> . +s_4_hydroxy_nonenal_3_yl_l_cysteine +h2o
+    4_hydroxy_2_nonenal_n_acetyl_l_cysteine
   }
 
   branch from acetate side right {
     acetate
-    <-> . +d_glucosaminyl_1_4_d_glucosamine +h +h2o
-    n_acetyl_d_glucosaminyl_1_4_d_glucosaminium
+    <-> . +3_aminobutan_2_ol +h2o
+    n_3_hydroxybutan_2_yl_acetamide
   }
 
   branch from o_succinyl_l_homoserine side left {
     o_succinyl_l_homoserine
-    <-> . +h +succinate
-    z_2_aminobutenoic_acid
+    <-> ec_2_5_1_48 [2.5.1.48] +h +succinate +cystathionine
+    l_cysteine
   }
 }

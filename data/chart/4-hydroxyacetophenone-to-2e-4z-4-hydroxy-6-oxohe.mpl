@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxyacetophenone-to-2e-4z-4-hydroxy-6-oxohe "4'-hydroxyacetophenone to (2E,4Z)-4-hydroxy-6-oxohe…" {
-  spacing 228
+  spacing 204
 
   spine at 0,0 {
     4_hydroxyacetophenone
@@ -14,29 +14,5 @@ pathway 4-hydroxyacetophenone-to-2e-4z-4-hydroxy-6-oxohe "4'-hydroxyacetophenone
     quinol
     <-> ec_1_13_11_66 [1.13.11.66] +o2 -hplus
     2e_4z_4_hydroxy_6_oxohexa_2_4_dienoate
-  }
-
-  branch from 4_hydroxyphenyl_acetate side left {
-    4_hydroxyphenyl_acetate
-    <-> ec_4_1_1_83 [4.1.1.83] +4_methylphenol
-    co2
-  }
-
-  branch from 4_hydroxyphenyl_acetate side right {
-    4_hydroxyphenyl_acetate
-    <-> ec_3_1_2_20 [3.1.2.20] +coa +h2o
-    4_hydroxyphenylacetyl_coa
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +n_acetyl_s_benzyl_l_cysteine +h2o
-    s_benzyl_l_cysteine
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_tryptophanate +h2o
-    l_tryptophan
   }
 }

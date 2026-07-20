@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-threo-3-phenylserine-to-s-adenosyl-l-homocyste "L-threo-3-phenylserine to S-adenosyl-L-homocysteine" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     l_threo_3_phenylserine
@@ -18,20 +18,8 @@ pathway l-threo-3-phenylserine-to-s-adenosyl-l-homocyste "L-threo-3-phenylserine
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> . +benzylaminium +nad +h2o +nadh +hplus
-    nh3
-  }
-
-  branch from benzaldehyde side right {
-    benzaldehyde
     <-> . +o2 +h2o2
     benzyl_alcohol
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> ec_4_1_3_41 [4.1.3.41] +3r_3_hydroxy_d_aspartate
-    glyoxylate
   }
 
   branch from glycine side right {
@@ -40,15 +28,21 @@ pathway l-threo-3-phenylserine-to-s-adenosyl-l-homocyste "L-threo-3-phenylserine
     cysteine
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_145 [2.1.1.145] +trans_aconitate +sam
-    2e_2_methoxycarbonylmethyl_but_2_enedioate
+  branch from glycine side left {
+    glycine
+    <-> ec_2_1_1_156 [2.1.1.156] +sam +sah +hplus
+    dmglycine
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_38 [2.1.1.38] +o_demethylpuromycin +sam +hplus
-    puromycin
+    <-> ec_2_1_1_78 [2.1.1.78] +isoorientin +sam +hplus
+    isoscoparin_7_olate
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_185 [2.1.1.185] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

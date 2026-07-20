@@ -34,14 +34,14 @@ pathway alpha-d-glucose-to-keto-d-fructose "alpha-D-glucose… to keto-D-fructos
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_36 [3.1.3.36] +1d_myo_inositol_4_phosphate +h2o
-    1d_myo_inositol_4_5_bisphosphate
+    <-> ec_4_2_3_27 [4.2.3.27] +prenyl_phosphate
+    isoprene
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +thymophthalein +h +h2o
-    thymolphthalein_monophosphate
+    <-> . +s_4_deoxygadusol +glycine +atp +h +adp
+    mycosporine_glycine
   }
 
   branch from sucrose_6_f_phosphate side left {
@@ -58,73 +58,67 @@ pathway alpha-d-glucose-to-keto-d-fructose "alpha-D-glucose… to keto-D-fructos
 
   branch from h2o side left {
     h2o
-    <-> ec_1_2_1_72 [1.2.1.72] +nadh +d_erythronate +h +nad
-    d_erythrose
+    <-> ec_3_4_16_5 [3.4.16.5] +ethanol +n_benzoyl_l_tyrosine
+    ethyl_n_benzoyl_l_tyrosinate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +4_methylumbelliferone
-    beta_d_glucose
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxodecanoyl_l_homoserine
+    n_3_oxo_decanoyl_homoserine_lactone
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +trans_zeatin_7_n_glucoside
-    trans_zeatin
+    <-> . +udp +h +sulfurein
+    sulfuretin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +trans_zeatin
-    9_d_glucosyl_trans_zeatin
+    <-> . +udp +quercetin_3_5_o_diglucoside
+    quercetin_3_o_d_glucopyranoside
   }
 
   branch from keto_d_fructose_6_phosphate side left {
     keto_d_fructose_6_phosphate
-    <-> . +aldehydo_d_ribose_5_phosphate +h +octulose_8_phosphate
-    d_glyceraldehyde_3_phosphate
+    <-> .
+    d_fructose_6_phosphate
   }
 
   branch from keto_d_fructose_6_phosphate side right {
     keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_4 [2.7.1.4] +beta_d_fructose +udp +h
-    utp
+    <-> . +beta_d_fructose +pyruvate
+    phosphoenolpyruvate
   }
 
   branch from beta_d_fructose_1_6_bisphosphate side left {
     beta_d_fructose_1_6_bisphosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +cdp +h +beta_d_fructose_6_phosphate
-    ctp
-  }
-
-  branch from beta_d_fructose_1_6_bisphosphate side right {
-    beta_d_fructose_1_6_bisphosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +utp +udp +h
-    beta_d_fructose_6_phosphate
-  }
-
-  branch from h side left {
-    h
-    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +nadph +nadp
-    2r_butan_2_ol
+    <-> . +alpha_d_glucose_1_6_bisphosphate +beta_d_fructose_6_phosphate
+    alpha_d_glucose_1_phosphate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_179 [1.1.1.179] +d_ribose +nadp +nadph
-    d_ribono_1_4_lactone
+    <-> ec_3_2_1_161 [3.2.1.161] +beta_d_glucose +4_nitrophenol +h2o
+    4_nitrophenyl_d_glucoside
   }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    actn
+  branch from h side left {
+    h
+    <-> ec_3_2_1_3 [3.2.1.3] +beta_d_glucose +2_4_dinitrophenol +h2o
+    2_4_dinitrophenyl_alpha_d_glucopyranoside
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_17 [6.3.2.17] +h +adp +10_formyl_tetrahydrofolate_tri_l_glutamate +phosphate +l_glutamate
-    6r_10_formyltetrahydropteroyldiglutamate
+    <-> . +diphosphate +amp +4_hydroxyphenylacetyl_coa +4_hydroxyphenylacetate
+    coa
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +amp
+    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
   }
 }

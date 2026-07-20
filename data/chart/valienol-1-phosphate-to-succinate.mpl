@@ -22,14 +22,14 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_47 [4.2.3.47] +fpp
-    trans_farnesene
+    <-> ec_6_2_1_48 [6.2.1.48] +carnitine +atp +coa +amp
+    r_carnitinyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_6 [3.1.7.6] +fpp +h2o
-    2_trans_6_trans_farnesol
+    <-> . +serine +atp
+    l_seryl_amp
   }
 
   branch from validoxylamine_a side left {
@@ -40,13 +40,13 @@ pathway valienol-1-phosphate-to-succinate "valienol 1-phosphate to succinate" {
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_n4 [1.14.11.n4] +l_aspartate +akg +o2 +co2
-    3s_3_hydroxy_l_aspartate
+    <-> . +icosanoyl_coa +akg +o2 +co2
+    2_hydroxyicosanoyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_4 [1.14.20.4] +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o
-    4_unsubstituted_3_hydroxyanthocyanidin_betaine
+    <-> . +stearoyl_coa +akg +o2 +co2
+    2_hydroxystearoyl_coa
   }
 }

@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-levopimaradienol-null",
+  "name": "NADH to levopimaradienol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from NADH to levopimaradienol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181565"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "abietal",
+      "name": "abietal",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29509"
+      }
+    },
+    {
+      "id": "neoabietadienol",
+      "name": "neoabietadienol",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM165011"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "palustradienal",
+      "name": "Palustradienal",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81595"
+      }
+    },
+    {
+      "id": "levopimaradienol",
+      "name": "levopimaradienol",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734877"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "abietal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neoabietadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181565"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "neoabietadienol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palustradienal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181592"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palustradienal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "levopimaradienol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR181576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181576"
+          }
+        ]
+      }
+    }
+  ]
+}

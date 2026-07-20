@@ -26,14 +26,14 @@ pathway 4-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "4-hydroxyphenylacetyl-
 
   branch from ppi side right {
     ppi
-    <-> . +14_15_eet +atp +coa +amp
-    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_hexaprenyl_diphosphate
+    hexaprene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_6_eet +atp +coa +amp
-    5_6_epoxy_8z_11z_14z_icosatrienoyl_coa
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_heptaprenyl_diphosphate
+    heptaprene
   }
 
   branch from 2_3_dimethyl_6_geranylgeranyl_1_4_benzoquinol side right {
@@ -44,13 +44,13 @@ pathway 4-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "4-hydroxyphenylacetyl-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_313 [2.1.1.313] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_a +sam
+    mitomycin_a
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> . +cobalt_ii_factor_iii +sam +hplus
+    cobalt_ii_factor_iv
   }
 }

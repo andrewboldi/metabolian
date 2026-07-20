@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o3-d-galactosyl-1-3-to-o3-d-glucuronosyl-1-3 "O3-(β-D-galactosyl-(1→3)-… to O3-(β-D-glucuronosyl-(1→3…" {
-  spacing 336
+  spacing 330
 
   spine at 0,0 {
     o3_d_galactosyl_1_3_d_galactosyl_1_4_d_2_o_phosp
@@ -19,12 +19,6 @@ pathway o3-d-galactosyl-1-3-to-o3-d-glucuronosyl-1-3 "O3-(β-D-galactosyl-(1→3
   }
 
   branch from o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto side left {
-    o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
-    <-> ec_2_4_1_174 [2.4.1.174] +udp_n_acetyl_d_galactosamine +udp +hplus
-    o3_n_acetyl_d_galactosaminyl_1_4_d_glucuronosyl
-  }
-
-  branch from o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto side right {
     o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
     <-> ec_2_4_1_135 [2.4.1.135] +udp_d_glucuronate +udp +hplus
     o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l

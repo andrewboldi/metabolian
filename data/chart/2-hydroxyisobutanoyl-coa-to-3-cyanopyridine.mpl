@@ -24,26 +24,26 @@ pathway 2-hydroxyisobutanoyl-coa-to-3-cyanopyridine "2-hydroxyisobutanoyl-CoA to
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_acyl_l_lysine +nad +h2o +l_lysinium
-    o_acyl_adp_d_ribose
-  }
-
-  branch from nicotinamide side left {
-    nicotinamide
     <-> . +l_aspartate +nad
     4_adp_d_ribosyl_l_aspartyl_2
   }
 
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nadp +hplus
+    n_2_phospho_adp_d_ribosyl_l_arginine_3
+  }
+
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_259 [2.1.1.259] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +butyryl_coa +coa +hplus
+    n6_butyryl_l_lysine
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> . +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> . +acyl_coa +coa +hplus
+    n6_acyl_l_lysine
   }
 
   branch from 3_cyanopyridine side right {

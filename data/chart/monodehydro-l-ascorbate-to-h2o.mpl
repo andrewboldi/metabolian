@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway monodehydro-l-ascorbate-to-h2o "monodehydro-L-ascorbate… to H2O" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     monodehydro_l_ascorbate_radical
@@ -24,14 +24,14 @@ pathway monodehydro-l-ascorbate-to-h2o "monodehydro-L-ascorbate… to H2O" {
 
   branch from fe side left {
     fe
-    <-> . +triglucosyl_enterobactin +h
-    iron_iii_triglucosyl_enterobactin_complex
+    <-> . +superoxide +fe
+    o2
   }
 
   branch from fe side right {
     fe
-    <-> . +diglucosyl_enterobactin +h
-    fe_iii_di_c_5_deoxy_d_glucosyl_enterobactin
+    <-> . +gdp +h +phosphate +h2o
+    gtp
   }
 
   branch from l_ascorbate side left {
@@ -48,26 +48,26 @@ pathway monodehydro-l-ascorbate-to-h2o "monodehydro-L-ascorbate… to H2O" {
 
   branch from h side left {
     h
-    <-> . +cmp +phosphatidylethanolamine_ditetradecanoyl_n_c14_0 +1_2_ditetradecanoylglycerol
-    cdp_ethanolamine
+    <-> . +adp +phosphate +atp +h2o
+    1_linoleoylglycerophosphoethanolamine_delta_9_12
   }
 
   branch from h side right {
     h
-    <-> . +cmp +1_2_distearoylphosphatidylethanolamine +cdp_ethanolamine
-    1_2_dioctadecanoylglycerol
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_palmitoyl_2_hydroxy_sn_glycero_3_pe
   }
 
   branch from fad side left {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    11z_14z_icosadienoyl_coa
+    <-> ec_1_5_99_3 [1.5.99.3] +fadh2 +h +l_1_piperideine_6_carboxylate
+    l_pipecolate
   }
 
   branch from fad side right {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    cis_cis_cis_10_13_16_docosatrienoyl_coa
+    <-> . +fadh2 +2e_5_methylhexa_2_4_dienoyl_coa +h
+    5_methylhex_4_enoyl_coa
   }
 
   branch from fe side left {
@@ -78,67 +78,43 @@ pathway monodehydro-l-ascorbate-to-h2o "monodehydro-L-ascorbate… to H2O" {
 
   branch from fe side right {
     fe
-    <-> . +gdp +h +phosphate +h2o
-    gtp
-  }
-
-  branch from 4a_5_dihydroriboflavin side left {
-    4a_5_dihydroriboflavin
-    <-> . +h +riboflavin +h2o
-    o2
-  }
-
-  branch from 4a_5_dihydroriboflavin side right {
-    4a_5_dihydroriboflavin
-    <-> . +nadh +h +riboflavin
-    nad
-  }
-
-  branch from riboflavin side left {
-    riboflavin
-    <-> ec_2_7_1_26 [2.7.1.26] +adp +h +atp
-    fmn
-  }
-
-  branch from riboflavin side right {
-    riboflavin
-    <-> . +nicotinate_beta_d_ribonucleotide +5_6_dimethylbenzimidazole +nh4 +o2 +h2o +h +phosphate
-    formate
+    <-> ec_1_16_3_2 [1.16.3.2] +o2 +h2o +h
+    iron_iii_oxide_hydroxide
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_1_11_1_9 [1.11.1.9] +glutathione_disulfide +prostaglandin_e2 +h2o
-    15s_15_hydroperoxy_prostaglandin_e2
+    <-> ec_2_5_1_18 [2.5.1.18] +h +bromide +2_glutathion_s_yl_3_4_nitrophenyl_propanoate
+    2_bromo_3_4_nitrophenyl_propanoate
   }
 
   branch from glutathione side right {
     glutathione
-    <-> ec_6_3_2_2 [6.3.2.2] +h +adp +phosphate +atp +cysteine +l_glutamate
+    <-> ec_3_4_17_25 [3.4.17.25] +gamma_l_glutamyl_l_cysteine +h2o
     glycine
   }
 
   branch from atp side left {
     atp
-    <-> . +dimp +adp
-    didp
+    <-> . +h +adp +phosphate +h2o
+    1_oleoylglycerophosphoethanolamine_delta_9
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    eicosanoate
+    protoporphyrin_ix
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    epa_d5
+    <-> . +l_asparagine +l_methionine +l_phenylalanine
+    phenylalanyl_asparaginyl_methionine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6r_10_formyltetrahydrofolate +atp +l_glutamate +h +adp +phosphate
-    10_formyltetrahydrofolate_glu_5
+    <-> . +l_aspartate +l_phenylalanine
+    phenylalanyl_aspartate
   }
 }

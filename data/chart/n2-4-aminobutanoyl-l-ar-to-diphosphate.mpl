@@ -44,13 +44,13 @@ pathway n2-4-aminobutanoyl-l-ar-to-diphosphate "N2-(4-aminobutanoyl)-L-ar… to 
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_147 [4.2.3.147] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    pimara_8_14_15_diene
+    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ctp
+    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_148 [4.2.3.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cembrene_c
+    <-> ec_2_7_7_93 [2.7.7.93] +phosphonoformate +ctp
+    cmp_5_phosphonoformate
   }
 }

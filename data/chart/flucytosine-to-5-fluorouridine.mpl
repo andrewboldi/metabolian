@@ -22,26 +22,26 @@ pathway flucytosine-to-5-fluorouridine "flucytosine to 5-Fluorouridine…" {
 
   branch from 5_fluorouracil side left {
     5_fluorouracil
-    <-> ec_2_4_2_3 [2.4.2.3] +2_deoxy_alpha_d_ribose_1_phosphate +phosphate
-    floxuridine
-  }
-
-  branch from 5_fluorouracil side right {
-    5_fluorouracil
     <-> ec_2_4_2_10 [2.4.2.10] +5_phospho_alpha_d_ribose_1_diphosphate +5_fluorouridine_5_monophosphate
     diphosphate
   }
 
+  branch from 5_fluorouracil side right {
+    5_fluorouracil
+    <-> ec_1_3_1_2 [1.3.1.2] +h +nadph +5_6_dihydro_5_fluorouracil
+    nadp
+  }
+
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +biolumazine +h +h2o
-    d_erythro_7_8_dihydrobiopterin
+    <-> ec_3_5_3_6 [3.5.3.6] +d_arginine +h2o
+    d_citrulline
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_3_15 [3.5.3.15] +h +benzoyl_l_arginine_amide +h2o
-    benzoyl_l_citrulline_amide
+    <-> ec_3_5_1_3 [3.5.1.3] +s_malate +h2o
+    2_hydroxysuccinamate
   }
 
   branch from 5_fluorouridine side left {
@@ -52,14 +52,14 @@ pathway flucytosine-to-5-fluorouridine "flucytosine to 5-Fluorouridine…" {
 
   branch from phosphate side right {
     phosphate
-    <-> . +sucrose +d_glucopyranose_1_phosphate
-    beta_d_fructose
+    <-> ec_2_4_1_329 [2.4.1.329] +sucrose +d_glucopyranose_1_phosphate
+    keto_d_fructose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    paracetamol_sulfate
+    <-> ec_4_2_1_122 [4.2.1.122] +o_phospho_l_serine +indole
+    l_tryptophan
   }
 
   branch from 5_fluorouridine_5_monophosphate side right {
@@ -70,13 +70,13 @@ pathway flucytosine-to-5-fluorouridine "flucytosine to 5-Fluorouridine…" {
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    tacrolimus
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    pe_18_3_9z_12z_15z_18_3_9z_12z_15z
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    d_tagaturonate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
   }
 }

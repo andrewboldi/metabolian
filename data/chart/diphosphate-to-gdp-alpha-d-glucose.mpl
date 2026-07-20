@@ -27,48 +27,48 @@ pathway diphosphate-to-gdp-alpha-d-glucose "diphosphate to GDP-alpha-D-glucose" 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    13z_octadecenoic_acid
+    sm_d18_0_24_0_sphingomyelin
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    vaccenic_acid
+    sm_d18_0_25_0_sphingomyelin
   }
 
   branch from gtp side right {
     gtp
-    <-> ec_2_7_7_4 [2.7.7.4] +adenosine_5_phosphosulfate +gdp +diphosphate +phosphate +atp +h2o
-    sulfate
+    <-> ec_3_5_4_39 [3.5.4.39] +h2o +diphosphate +h +formate
+    7_8_dihydroneopterin_2_3_cyclic_phosphate
   }
 
   branch from gtp side left {
     gtp
-    <-> ec_2_7_7_53 [2.7.7.53] +phosphate +gdp +h
-    p_1_p_4_bis_5_guanosyl_tetraphosphate
+    <-> ec_3_5_4_16 [3.5.4.16] +h2o +formate
+    7_8_dihydroneopterin_3_triphosphate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_lysine +l_threonine +h2o
-    glutamyl_threonyl_lysine
+    <-> . +l_threonine +l_glutamine +h2o
+    threonyl_glutaminyl_glutamate
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_threonine +h2o
-    glutamyl_threonine
+    <-> . +l_leucine +l_tryptophan +h2o
+    tryptophanyl_glutamyl_leucine
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +erucoyl_coa +amp +atp +coa
-    13z_docosenoate
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h2o
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +tricosanoyl_coa +amp +atp +tricosanoate
-    coa
+    <-> . +amp +30_hydroxytriacontanoyl_coa +atp +coa
+    hydroxytriacontanoate
   }
 }

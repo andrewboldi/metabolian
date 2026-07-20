@@ -165,40 +165,22 @@
       }
     },
     {
-      "id": "n_arachidonoylglycinate",
-      "name": "N-arachidonoylglycinate",
-      "short": "N-arachidonoylglyci…",
-      "formula": "C22H34NO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:59002"
-      }
-    },
-    {
-      "id": "arachidonate",
-      "name": "arachidonate",
-      "formula": "C20H31O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:32395"
-      }
-    },
-    {
-      "id": "octanoyl_coa",
-      "name": "octanoyl-CoA",
-      "formula": "C29H46N7O17P3S",
+      "id": "myristoyl_coa",
+      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
+      "short": "Myristoyl-CoA…",
+      "formula": "C35H58N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57386"
+        "chebi": "CHEBI:57385"
       }
     },
     {
-      "id": "n_octanoylglycinate",
-      "name": "N-octanoylglycinate",
-      "formula": "C10H18NO3",
+      "id": "n_myristoylglycinate",
+      "name": "N-myristoylglycinate",
+      "formula": "C16H30NO3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:142681"
+        "chebi": "CHEBI:86500"
       }
     },
     {
@@ -208,6 +190,25 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57375"
+      }
+    },
+    {
+      "id": "n_dodecanoylglycinate",
+      "name": "N-dodecanoylglycinate",
+      "short": "N-dodecanoylglycina…",
+      "formula": "C14H26NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142678"
       }
     }
   ],
@@ -449,50 +450,54 @@
     },
     {
       "id": "r6",
-      "name": "N-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-glycine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + ...",
-      "equation": "N-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-glycine + H2O = (5Z,8Z,11Z,14Z)-eicosatetraenoate + glycine",
+      "name": "tetradecanoyl-CoA + glycine = N-tetradecanoylglycine + CoA + H(+)",
+      "equation": "tetradecanoyl-CoA + glycine = N-tetradecanoylglycine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "n_arachidonoylglycinate",
+          "metabolite": "myristoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "glycine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "arachidonate",
+          "metabolite": "n_myristoylglycinate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64108"
+        "rhea": "RHEA:64252"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64108"
+            "id": "RHEA:64252"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "octanoyl-CoA + glycine = N-octanoylglycine + CoA + H(+)",
-      "equation": "octanoyl-CoA + glycine = N-octanoylglycine + CoA + H(+)",
+      "name": "dodecanoyl-CoA + glycine = N-dodecanoylglycine + CoA + H(+)",
+      "equation": "dodecanoyl-CoA + glycine = N-dodecanoylglycine + CoA + H(+)",
       "substrates": [
         {
-          "metabolite": "octanoyl_coa",
+          "metabolite": "lauroyl_coa",
           "stoichiometry": 1
         },
         {
@@ -502,7 +507,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_octanoylglycinate",
+          "metabolite": "n_dodecanoylglycinate",
           "stoichiometry": 1
         },
         {
@@ -517,14 +522,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:64240"
+        "rhea": "RHEA:64256"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64240"
+            "id": "RHEA:64256"
           }
         ]
       }

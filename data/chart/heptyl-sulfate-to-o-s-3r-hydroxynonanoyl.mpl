@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hydroxynonanoyl…" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     heptyl_sulfate
@@ -32,28 +32,16 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hy
     2_6_dichloroindophenol
   }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +sulfosungeidine_e +hplus
-    sungeidine_b
-  }
-
-  branch from sulfate side right {
-    sulfate
-    <-> . +o2 +hplus
-    h2s
-  }
-
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> . +2_aminophenyl_succinate +succinyl_coa
+    3_2_aminophenyl_succinyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_75 [1.14.11.75] +31_hydroxy_l_isoleucine +akg +o2 +co2
-    4s_31_4_dihydroxy_l_isoleucine
+    <-> . +1_n6_etheno_2_deoxyadenosine_5_monophosphate_1 +akg +o2 +h2o +glyoxal +co2
+    2_deoxyadenosine_5_monophosphate_1
   }
 
   branch from heptanoyl_coa side left {
@@ -70,13 +58,13 @@ pathway heptyl-sulfate-to-o-s-3r-hydroxynonanoyl "heptyl sulfate to O-[S-(3R)-hy
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_74 [2.5.1.74] +1_4_dihydroxy_2_naphthoate +all_trans_hexaprenyl_diphosphate +hplus +co2
-    2_demethylmenaquinol_6
+    <-> ec_4_2_3_161 [4.2.3.161] +fpp
+    3s_asterisca_2_9_6_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_74 [2.5.1.74] +all_trans_nonaprenyl_diphosphate +1_4_dihydroxy_2_naphthoate +hplus +co2
-    2_demethylmenaquinol_9
+    <-> ec_4_2_3_162 [4.2.3.162] +fpp
+    amorphene
   }
 }

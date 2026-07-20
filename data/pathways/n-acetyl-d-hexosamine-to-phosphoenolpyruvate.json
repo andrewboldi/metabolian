@@ -1,0 +1,242 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetyl-d-hexosamine-to-phosphoenolpyruvate",
+  "name": "N-acetyl-D-hexosamine to phosphoenolpyruvate",
+  "category": "other",
+  "summary": "A 3-step route from N-acetyl-D-hexosamine to phosphoenolpyruvate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR190529"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:21601"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetyl_d_hexosamine",
+      "name": "N-acetyl-D-hexosamine",
+      "short": "N-acetyl-D-hexosami…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:21601"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "n_acetyl_beta_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-beta-D-glucosamine 6-phosphate",
+      "short": "N-acetyl-beta-D-glu…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364174"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "r_lactate",
+      "name": "(R)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371362"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "n_acetylmuramate_6_phosphate",
+      "name": "N-acetylmuramate 6-phosphate",
+      "short": "N-acetylmuramate 6-P",
+      "formula": "C11H18NO11P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM729216"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "n_acetylmuramic_acid",
+      "name": "(+)-N-Acetylmuramic acid",
+      "short": "(+)-N-Acetylmuramic…",
+      "formula": "C11H19NO8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:181907"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_126",
+      "name": "N-acetylmuramic acid 6-phosphate etherase",
+      "ec": [
+        "4.2.1.126"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR190529",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_hexosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_beta_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR190529"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190529"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetylmuramic acid 6-phosphate etherase",
+      "ec": "4.2.1.126",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_beta_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylmuramate_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR151353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR152777",
+      "substrates": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetylmuramate_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylmuramic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR152777"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152777"
+          }
+        ]
+      }
+    }
+  ]
+}

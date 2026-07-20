@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glutamine-to-udp-n-acetyl-d-muramoyl "D-glutamine to UDP-N-acetyl-α-D-muramoyl…" {
-  spacing 308
+  spacing 302
 
   spine at 0,0 {
     d_glutamine
@@ -16,13 +16,7 @@ pathway d-glutamine-to-udp-n-acetyl-d-muramoyl "D-glutamine to UDP-N-acetyl-α-D
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_l_ly
   }
 
-  branch from d_glutamate side left {
-    d_glutamate
-    <-> ec_2_3_1_312 [2.3.1.312] +acetyl_coa +coa +hplus
-    n_acetyl_d_glutamate
-  }
-
-  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate side right {
+  branch from udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate side left {
     udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamate
     <-> ec_6_3_2_37 [6.3.2.37] +d_lysinium +atp +adp +pi +hplus
     n6_udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_d

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-cytidine-5-monophosph "N-acetyl-β-D-galactosamin… to cytidine 5'-monophosphate" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
@@ -20,11 +20,5 @@ pathway n-acetyl-d-galactosamin-to-cytidine-5-monophosph "N-acetyl-β-D-galactos
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
     <-> . +cmp_n_acetyl_neuraminate -cytidine_5_monophosphate -hplus
     n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
-  branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> .
-    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
 }

@@ -18,25 +18,25 @@ pathway d-xylp-1-6-d-glcp-to-h2o-null "α-D-Xylp-(1→6)-D-Glcp to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +dehydroxypaxilline +h +o2 +nadph +nadp
-    paspalicine
+    <-> . +l_asparagine +l_aspartate +l_valine
+    aspartyl_valyl_asparagine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +paspalicine +h +o2 +nadph +nadp
-    paspalinine
+    <-> . +h +adp +phosphate +atp
+    11z_icos_11_enoic_acid
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
+    15z_tetracosenoate
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    18_hete
+    15_s_hetre
   }
 }

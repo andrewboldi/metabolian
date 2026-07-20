@@ -48,37 +48,25 @@ pathway d-manp-1-2-d-manp-to-2-amino-2-deoxy-6-o-phosp "β-D-Manp-(1→2)-β-D-M
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> ec_3_2_1_170 [3.2.1.170] +2_d_mannosyl_d_glycerate +h2o
-    d_glycerate
+    <-> ec_1_1_3_4 [1.1.3.4] +d_mannono_1_5_lactone +h2o2
+    o2
   }
 
-  branch from d_mannopyranose_6_phosphate side right {
-    d_mannopyranose_6_phosphate
-    <-> .
-    g6p
-  }
-
-  branch from d_fructofuranose_6_phosphate side left {
+  branch from d_fructofuranose_6_phosphate side right {
     d_fructofuranose_6_phosphate
     <-> ec_2_7_1_1 [2.7.1.1] +atp +adp +hplus
     d_fructofuranose
   }
 
-  branch from glucosamine6p side right {
-    glucosamine6p
-    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
-    2_ammonio_2_deoxy_d_glucopyranose
-  }
-
   branch from glutamate side left {
     glutamate
-    <-> . +amp_3_end_1 +atp +amp +ppi
-    3_l_glutamate_adenylyl_1_group
+    <-> . +akg +plp
+    pyridoxamine_5_phosphate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_124 [2.6.1.124] +c_terminal_l_ornithyl_l_glutamyl_1_group +akg
-    c_terminal_l_glutamyl_5_semialdehyde_l_glutamyl
+    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
+    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
   }
 }

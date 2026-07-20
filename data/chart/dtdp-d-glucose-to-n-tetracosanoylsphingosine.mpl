@@ -20,13 +20,13 @@ pathway dtdp-d-glucose-to-n-tetracosanoylsphingosine "dTDP-α-D-glucose to N-tet
 
   branch from glucose side left {
     glucose
-    <-> . +j_104303 +h2o
-    j_109384
+    <-> ec_3_2_1_147 [3.2.1.147] +z_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +h2o
+    2r_2_hydroxybut_3_enylglucosinolate
   }
 
   branch from glucose side right {
     glucose
-    <-> . +be_13793c +h2o
-    ed_110
+    <-> . +e_3s_2_3_hydroxybutenyl_thiohydroximate_o_sulfa +h +2r_2_hydroxybut_3_enylglucosinolate
+    h2o
   }
 }

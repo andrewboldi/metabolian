@@ -18,37 +18,37 @@ pathway s-2-chloropropanoate-to-chloride "(S)-2-chloropropanoate to chloride" {
 
   branch from h side left {
     h
-    <-> . +fadh2 +protoporphyrin_ix +protoporphyrinogen_ix
-    fad
+    <-> . +cmp +phosphatidylserine_ditetradec_7_enoyl_n_c14_1 +l_serine
+    cdp_1_2_ditetradec_7_enoylglycerol
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphatidylserine_dioctadecanoyl_n_c18_0 +phosphate +phosphatidylserine_dioctadecanoyl_n_c18_0 +h2o
-    atp
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dioctadec_11_enoyl_n_c18_1 +l_serine
+    cdp_1_2_dioctadec_11_enoylglycerol
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +galactitol +phosphoenolpyruvate
-    galactitol_1_phosphate
+    <-> . +salicin_6_phosphate +phosphoenolpyruvate
+    salicin
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +co2 +r_acetoin +h
-    acetaldehyde
+    <-> . +d_tagatose_1_phosphate +h +phosphoenolpyruvate
+    keto_d_tagatose
   }
 
   branch from chloride side left {
     chloride
-    <-> . +2_6_dichloro_4_hydroxyphenolate +h2o
-    6_chlorobenzene_1_2_4_triol
+    <-> . +h +2_2_bis_4_chlorophenyl_ethanol +h2o
+    1_chloro_2_2_bis_4_chlorophenyl_ethane
   }
 
   branch from chloride side right {
     chloride
-    <-> . +h +2_2_bis_4_chlorophenyl_ethanol +h2o
-    1_chloro_2_2_bis_4_chlorophenyl_ethane
+    <-> . +h +2_5_dichlorophenol
+    1s_4r_2_4_5_trichloro_2_5_cyclohexadiene_1_diol
   }
 }

@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "testosterone-to-androst-5-ene-3-17-diol",
+  "name": "testosterone to androst-5-ene-3β,17β-diol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from testosterone to androst-5-ene-3β,17β-diol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR134318"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363892"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "androst_5_ene_3_17_diol",
+      "name": "androst-5-ene-3β,17β-diol",
+      "short": "androst-5-ene-3β,17…",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2710"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "dehydroepiandrosterone",
+      "name": "dehydroepiandrosterone",
+      "short": "dehydroepiandroster…",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28689"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_145",
+      "name": "3beta-hydroxy-Delta(5)-steroid dehydrogenase",
+      "ec": [
+        "1.1.1.145"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_1",
+      "name": "steroid Delta-isomerase",
+      "ec": [
+        "5.3.3.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3beta-hydroxy-Delta(5)-steroid dehydrogenase",
+      "ec": "1.1.1.145",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "androst_5_ene_3_17_diol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_145"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR134318"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134318"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "androst-5-en-3beta,17beta-diol + NAD(+) = 3beta-hydroxyandrost-5-en-17-one + NADH + H(+)",
+      "equation": "androst-5-en-3beta,17beta-diol + NAD(+) = 3beta-hydroxyandrost-5-en-17-one + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "androst_5_ene_3_17_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dehydroepiandrosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46220"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3beta-hydroxyandrost-5-en-17-one + NADPH + H(+) = androst-5-en-3beta,17beta-diol + NADP(+)",
+      "equation": "3beta-hydroxyandrost-5-en-17-one + NADPH + H(+) = androst-5-en-3beta,17beta-diol + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "dehydroepiandrosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "androst_5_ene_3_17_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46628"
+          }
+        ]
+      }
+    }
+  ]
+}

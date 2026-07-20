@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-hydroxytestosterone-to-h2o "6β-hydroxytestosterone to H2O" {
-  spacing 256
+  spacing 250
 
   spine at 0,0 {
     6_hydroxytestosterone
@@ -20,97 +20,91 @@ pathway 6-hydroxytestosterone-to-h2o "6β-hydroxytestosterone to H2O" {
 
   branch from testosterone side left {
     testosterone
-    <-> ec_1_14_14_1 [1.14.14.1] +nadp +h2o +h +o2 +nadph
-    19_hydroxytestosterone
-  }
-
-  branch from testosterone side right {
-    testosterone
     <-> ec_2_8_2_15 [2.8.2.15] +adenosine_3_5_bisphosphate +testosterone_sulfate +h
     3_phosphoadenylyl_sulfate
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    dehydrorabelomycin
-  }
-
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    rabelomycin
+    <-> . +5_chloro_3_methyl_cis_dienelactone +chloride
+    3_methyl_cis_dienelactone
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +h +diatoxanthin +nadph +nadp +h2o
-    diadinoxanthin
+  branch from h side left {
+    h
+    <-> . +pravastatin_lactone +h2o
+    pravastatin_acid
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_19_55 [1.14.19.55] +h +2_4_dibromophenol +nadph +bromide +nadp +h2o
-    2_4_6_tribromophenol
+    <-> ec_1_13_11_2 [1.13.11.2] +2_hydroxy_6_oxoocta_2_4_7_trienoate
+    3_vinylcatechol
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +h +6_dehydro_scb2 +nadp
-    scb2
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_2 [1.13.11.2] +h +3_vinylcatechol
+    2_hydroxy_6_oxoocta_2_4_7_trienoate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_3_1_113 [1.3.1.113] +h +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p +nadp
-    3s_4r_4_6_methyloctanoyl_5_oxooxolan_3_yl_methy
+    <-> . +12a_deshydroxy_desmethylanthrotainin +h +o2 +nadp +h2o
+    desmethylanthrotainin
   }
 
-  branch from formate side left {
-    formate
-    <-> . +2_4_6_trioxohexanoate +h2o +h
-    acetylpyruvate
+  branch from nadph side left {
+    nadph
+    <-> . +h +o2 +desmethylanthrotainin +nadp +h2o
+    12a_deshydroxy_desmethylanthrotainin
   }
 
   branch from formate side right {
     formate
-    <-> . +2_4_6_trioxohexanoate +h2o +h
-    acetylpyruvate
+    <-> ec_1_13_11_54 [1.13.11.54] +1_2_dihydroxy_3_keto_5_methylthiopentene +o2 +h
+    4_methylsulfanyl_2_oxobutanoate
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_85 [1.3.1.85] +acryloyl_coa +co2 +nadph
-    r_methylmalonyl_coa
+  branch from formate side left {
+    formate
+    <-> . +diphosphate +amp +formyl_coa +atp
+    coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +2r_2_hexyl_3_oxodecanoate
-    2r_3s_2_hexyl_3_hydroxydecanoate
+    <-> . +h2o +desmethylanthrotainin +h +o2 +nadph
+    5_hydroxy_desmethylanthrotainin
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3r_12betas_3_7_8_trihydroxy_3_methyl_4_12beta_d
+  branch from nadp side left {
+    nadp
+    <-> . +h2o +desmethylanthrotainin +h +o2 +nadph
+    5_hydroxy_desmethylanthrotainin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_2_formyl_6_hydroxy_4_methylphenyl_8_hydroxy_1
+    <-> ec_3_4_13_23 [3.4.13.23] +glycine +s_4_oxo_2_methylpentan_2_yl_l_cysteine
+    s_4_oxo_2_methylpentan_2_yl_l_cysteinylglycine
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    aclacinomycin_a
+  branch from h2o side left {
+    h2o
+    <-> . +4_6_methyloctanoyl_5_oxo_2h_furan_3_yl_methyl_p
+    2_oxo_3_phosphooxy_propyl_8_methyl_3_oxodecanoat
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    megalomicin_a
+    <-> . +h +adp +phosphate +h2o
+    polydextrose
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    melibiose
   }
 }

@@ -20,14 +20,14 @@ pathway benzoin-to-4-d-glucosyloxy-benzoa "benzoin to 4-(β-D-glucosyloxy)benzoa
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> . +benzylaminium +pyruvate
-    alanine
+    <-> . +nad +nadh +hplus
+    benzyl_alcohol
   }
 
   branch from benzaldehyde side right {
     benzaldehyde
-    <-> . +nad +nadh +hplus
-    benzyl_alcohol
+    <-> . +benzylaminium +nad +h2o +nadh +hplus
+    nh3
   }
 
   branch from 4_hydroxybenzoate side left {
@@ -44,14 +44,14 @@ pathway benzoin-to-4-d-glucosyloxy-benzoa "benzoin to 4-(β-D-glucosyloxy)benzoa
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
-    solavetivone
+    <-> ec_1_14_14_156 [1.14.14.156] +l_tryptophan +fmnh2 +o2 +co2 +h2o +hplus
+    e_indol_3_ylacetaldehyde_oxime
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_113 [1.14.14.113] +1e_4e_8e_humulene +fmnh2 +o2 +h2o +hplus
-    8_hydroxy_humulene
+    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_8_methylsulfanyl_octanal_oxime
   }
 
   branch from 4_d_glucosyloxy_benzoate side left {

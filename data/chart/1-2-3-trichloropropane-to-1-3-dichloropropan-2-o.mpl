@@ -18,25 +18,25 @@ pathway 1-2-3-trichloropropane-to-1-3-dichloropropan-2-o "1,2,3-Trichloropropane
 
   branch from h side left {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5beta_pregnan_3_20_dione +nad
-    5_pregnan_20_ol_3_one
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_methoxybenzoate +nad +h2o
+    3_methoxybenzaldehyde
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5_pregnan_20_ol_3_one +nad
-    pregnanediol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +o_toluate +nad +h2o
+    2_methylbenzaldehyde
   }
 
   branch from chloride side left {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +h +cyclohexanol +h2o
-    monochlorocyclohexane
+    <-> ec_3_8_1_5 [3.8.1.5] +compound_0047511 +h2o +h
+    butan_1_ol
   }
 
   branch from chloride side right {
     chloride
-    <-> ec_3_8_1_5 [3.8.1.5] +1_3_dichloropropane +h2o +h
-    compound_0040745
+    <-> . +nadh +h +o2 +2_4_5_trichlorophenol +nad +h2o
+    2_5_dichlorohydroquinone
   }
 }

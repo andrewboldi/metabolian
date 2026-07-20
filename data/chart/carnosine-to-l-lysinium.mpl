@@ -18,13 +18,13 @@ pathway carnosine-to-l-lysinium "carnosine to L-lysinium" {
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_3_5_2_11 [3.5.2.11] +h2o
-    l_2_ammoniohexano_6_lactam
+    <-> ec_4_1_1_18 [4.1.1.18] +hplus +co2
+    cadaverine
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_4_1_1_18 [4.1.1.18] +hplus +co2
-    cadaverine
+    <-> ec_5_1_1_5 [5.1.1.5]
+    d_lysinium
   }
 }

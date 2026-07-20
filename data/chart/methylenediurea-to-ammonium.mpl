@@ -18,13 +18,13 @@ pathway methylenediurea-to-ammonium "methylenediurea to ammonium" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_4_4_1_1 [4.4.1.1] +l_homoserine
-    oxobut
+    <-> . +di_sulfido_diiron +glutamate +h2o +akg +hplus
+    di_sulfido_diiron
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_4_1_35 [4.4.1.35] +l_cystine +h2o +pyruvate
-    3_disulfanyl_l_alanine
+    <-> . +1_4_butanediammonium +o2 +h2o2
+    1_pyrrolinium
   }
 }

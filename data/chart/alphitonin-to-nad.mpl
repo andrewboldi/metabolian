@@ -22,79 +22,73 @@ pathway alphitonin-to-nad "alphitonin to NAD" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +n_hydroxy_l_valine +o2 +nadph +h2o
-    n_n_dihydroxy_l_valine
+    <-> ec_1_1_1_71 [1.1.1.71] +neoisomenthol +h +nadph
+    s_citronellal
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +2_methylpropanenitrile +h2o
-    2_hydroxy_2_methylpropanenitrile
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +11r_dihydroartemisinic_aldehyde
+    3r_6e_nerolidol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_hydroxypropanal
-    3_hydroxypropanal_hydrate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    beta_l_fucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +7r_7_hydroxyluteothin
-    dehydrodeoxyaureothin
-  }
-
-  branch from ephdine side left {
-    ephdine
-    <-> ec_1_3_1_77 [1.3.1.77] +nadp +h +nadph
-    gallocatechin
-  }
-
-  branch from co2 side right {
-    co2
-    <-> . +hexanoyl_coa +malonyl_coa +h +olivetolate
-    coa
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    n_acetyl_alpha_neuraminate
   }
 
   branch from co2 side left {
     co2
-    <-> ec_2_5_1_64 [2.5.1.64] +2_oxoglutarate +h +isochorismate +pyruvate
-    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_0_18_2_9z_12z +h
+    20_0_18_2_ps
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_2_1_167 [3.2.1.167] +baicalein +beta_d_glucuronate +h2o
-    baicalin
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_1_11z_18_2_9z_12z +h
+    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
   }
 
   branch from h side left {
     h
-    <-> ec_3_2_1_175 [3.2.1.175] +alpha_d_glucose +2_cis_abscisate +h2o
-    abscisic_acid_d_glucopyranosyl_ester
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    n_acetyl_neuraminic_acid
   }
 
-  branch from succinate side right {
-    succinate
-    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_hapalindole_c +2_oxoglutarate +h +o2 +chloride +co2 +h2o
-    12_epi_hapalindole_e
+  branch from h side right {
+    h
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +isopropyl_d_galactopyranoside +phosphate +isopropyl_d_galactopyranoside +h2o
+    atp
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_20 [1.14.11.20] +2_oxoglutarate +o2 +vindolidine +co2
-    deacetylvindorosine
+    <-> . +ambiguine_h +2_oxoglutarate +h +o2 +chloride +co2 +h2o
+    ambiguine_a
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +1_3_dimethylamino_propyl_1_4_fluorophenyl_1_3_di +h +o2 +h2o
-    citalopram_n_oxide
+  branch from succinate side right {
+    succinate
+    <-> . +ambiguine_i +2_oxoglutarate +h +o2 +chloride +co2 +h2o
+    ambiguine_e
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +r_acetoin
-    s_s_butane_2_3_diol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +3r_6e_nerolidol
+    11r_dihydroartemisinic_aldehyde
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    2_trans_6_cis_farnesol
   }
 }

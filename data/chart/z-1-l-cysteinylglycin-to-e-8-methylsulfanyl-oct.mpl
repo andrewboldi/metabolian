@@ -24,26 +24,26 @@ pathway z-1-l-cysteinylglycin-to-e-8-methylsulfanyl-oct "(Z)-1-(L-cysteinylglyci
 
   branch from glycine side left {
     glycine
-    <-> . +l_histidine +l_valine +h2o
-    glycyl_valyl_histidine
+    <-> . +l_valine +l_arginine +h2o
+    valyl_arginyl_glycine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_4_17_25 [3.4.17.25] +indol_3_ylmethylisothiocyanate_gamma_glu_cys +h2o
+    indol_3_ylmethylisothiocyanate_glutathione
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    11s_12r_eet
+    <-> . +l_leucine +l_lysine +l_arginine +h2o
+    lys_arg_leu
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    14_15_eet
+    <-> . +l_lysine +l_arginine +l_tryptophan +h2o
+    lys_trp_arg
   }
 
   branch from e_8_methylsulfanyl_octanal_oxime side left {
@@ -54,38 +54,38 @@ pathway z-1-l-cysteinylglycin-to-e-8-methylsulfanyl-oct "(Z)-1-(L-cysteinylglyci
 
   branch from o2 side right {
     o2
-    <-> . +11z_eicosenoyl_coa +h2o2
-    2e_11z_icosadienoyl_coa
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
+    alpha_d_glucose
   }
 
   branch from o2 side left {
     o2
-    <-> . +7z_hexadecenoyl_coa +h2o2
-    2e_7z_hexadecadienoyl_coa
+    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o +h +h2o2
+    d_galactonate
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +l_histidine +l_glutamate +h2o
-    cystyl_glutamyl_histidine
+    <-> . +cyclopropene
+    s_allylcysteine
   }
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +l_glutamate +l_tryptophan +h2o
-    cystyl_glutamyl_tryptophan
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
+    cys_leu
   }
 
   branch from nadph side right {
     nadph
-    <-> . +losartan +h +o2 +nadp +h2o
-    losartan_m5
+    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +nadp +h2o +h +o2
+    vetispiradiene
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +o2 +nadp +h2o
-    6_beta_hydroxy_lovastatin_acid_form
+    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +h +o2 +nadp +h2o
+    solavetivone
   }
 
   branch from l_pentahomomethionine side right {
@@ -96,13 +96,13 @@ pathway z-1-l-cysteinylglycin-to-e-8-methylsulfanyl-oct "(Z)-1-(L-cysteinylglyci
 
   branch from fmn side left {
     fmn
-    <-> . +5_cholestan_3_ol +fmnh2 +o2 +h2o +hplus
-    24s_hydroxycholestanol
+    <-> . +valencene +fmnh2 +o2 +h2o +hplus
+    nootkatol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +prostaglandin_i2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxyprostaglandin_i2
+    <-> . +nootkatol +fmnh2 +o2 +h2o +hplus
+    nootkatone
   }
 }

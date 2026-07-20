@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-1-2-saturated-to-cytidine-5-monophosphate "N-(1,2-saturated… to cytidine 5'-monophosphate" {
-  spacing 334
+  spacing 322
 
   spine at 0,0 {
     n_1_2_saturated_very_long_chain_fatty_acyl_r_4_h
@@ -26,27 +26,15 @@ pathway n-1-2-saturated-to-cytidine-5-monophosphate "N-(1,2-saturated… to cyti
     d_glucuronosyl_1_6_1d_myo_inositol_1_phospho_n
   }
 
-  branch from phosphatidylcholine side right {
-    phosphatidylcholine
-    <-> . +all_trans_retinol +2_acyl_sn_glycero_3_phosphocholine
-    all_trans_retinyl_ester
-  }
-
-  branch from phosphatidylcholine side left {
-    phosphatidylcholine
-    <-> . +2_monoglyceride +1_o_acyl_sn_glycero_3_phosphocholine
-    1_2_diglyceride
-  }
-
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> . +neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 }

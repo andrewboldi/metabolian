@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-cis-neurosporene-to-hydroquinones "9'-cis-neurosporene to hydroquinones" {
-  spacing 188
+  spacing 152
 
   spine at 0,0 {
     9_cis_neurosporene
@@ -16,41 +16,5 @@ pathway 9-cis-neurosporene-to-hydroquinones "9'-cis-neurosporene to hydroquinone
     9_9_di_cis_carotene
     <-> . +1_4_benzoquinones -hydroquinones
     7_9_9_tri_cis_neurosporene
-  }
-
-  branch from 7_9_9_tri_cis_neurosporene side left {
-    7_9_9_tri_cis_neurosporene
-    <-> . +2_demethylmenaquinol_8 +9_9_di_cis_carotene
-    2_demethylmenaquinone_8
-  }
-
-  branch from 7_9_9_tri_cis_neurosporene side right {
-    7_9_9_tri_cis_neurosporene
-    <-> ec_1_3_5_6 [1.3.5.6] +ubiquinone_8 +9_9_di_cis_carotene
-    ubiquinol_8
-  }
-
-  branch from 7_7_9_9_tetra_cis_lycopene side left {
-    7_7_9_9_tetra_cis_lycopene
-    <-> ec_1_3_5_6 [1.3.5.6] +ubiquinol_8 +7_9_9_tri_cis_neurosporene
-    ubiquinone_8
-  }
-
-  branch from 7_7_9_9_tetra_cis_lycopene side right {
-    7_7_9_9_tetra_cis_lycopene
-    <-> . +ubiquinol_9 +7_9_9_tri_cis_neurosporene
-    ubiquinone_9
-  }
-
-  branch from 9_9_di_cis_carotene side left {
-    9_9_di_cis_carotene
-    <-> . +7_9_9_tri_cis_neurosporene +ubiquinone_9
-    ubiquinol_9
-  }
-
-  branch from 9_9_di_cis_carotene side right {
-    9_9_di_cis_carotene
-    <-> . +ubiquinol_10 +7_9_9_tri_cis_neurosporene
-    ubiquinone_10
   }
 }

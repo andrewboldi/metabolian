@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ubiquinone-8-to-methylmercury-s-glutatione",
+  "name": "ubiquinone-8 to methylmercury-S-glutatione",
+  "category": "redox-detox",
+  "summary": "A 3-step route from ubiquinone-8 to methylmercury-S-glutatione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182198"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61683"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ubiquinone_8",
+      "name": "ubiquinone-8",
+      "formula": "C49H74O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61683"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729799"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ubiquinol_8",
+      "name": "ubiquinol-8",
+      "formula": "C49H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61682"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "methane",
+      "name": "methane",
+      "formula": "CH4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM739586"
+      }
+    },
+    {
+      "id": "hg",
+      "name": "Hg",
+      "formula": "Hg",
+      "charge": 2,
+      "xrefs": {
+        "metanetx": "MNXM1562"
+      }
+    },
+    {
+      "id": "methylmercury",
+      "name": "methylmercury",
+      "formula": "CH3Hg",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM19345"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "glutathione",
+      "name": "glutathione",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM490899"
+      }
+    },
+    {
+      "id": "methylmercury_s_glutatione",
+      "name": "methylmercury-S-glutatione",
+      "short": "methylmercury-S-glu…",
+      "formula": "C11H18HgN3O6S",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM818991"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_18_3",
+      "name": "methane monooxygenase (particulate)",
+      "ec": [
+        "1.14.18.3"
+      ]
+    },
+    {
+      "id": "ec_4_99_1_2",
+      "name": "alkylmercury lyase",
+      "ec": [
+        "4.99.1.2"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_18",
+      "name": "glutathione transferase",
+      "ec": [
+        "2.5.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methane monooxygenase (particulate)",
+      "ec": "1.14.18.3",
+      "substrates": [
+        {
+          "metabolite": "ubiquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methane",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_18_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182198"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182198"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alkylmercury lyase",
+      "ec": "4.99.1.2",
+      "substrates": [
+        {
+          "metabolite": "hg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methane",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylmercury",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_99_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR112769"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR112769"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glutathione transferase",
+      "ec": "2.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "methylmercury",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutathione",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylmercury_s_glutatione",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR185472"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185472"
+          }
+        ]
+      }
+    }
+  ]
+}

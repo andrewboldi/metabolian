@@ -1,0 +1,231 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-caffeoyl-coa-to-coa",
+  "name": "trans-caffeoyl-CoA to CoA",
+  "category": "other",
+  "summary": "A 3-step route from trans-caffeoyl-CoA(4−) to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196038"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87136"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "pelargonin",
+      "name": "Pelargonin",
+      "formula": "C27H30O15",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371951"
+      }
+    },
+    {
+      "id": "bisdemalonylsalvianin",
+      "name": "Bisdemalonylsalvianin",
+      "short": "Bisdemalonylsalvian…",
+      "formula": "C36H36O18",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371429"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "monodemalonylsalvianin",
+      "name": "Monodemalonylsalvianin",
+      "short": "Monodemalonylsalvia…",
+      "formula": "C39H37O21",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371540"
+      }
+    },
+    {
+      "id": "salvianin",
+      "name": "Salvianin",
+      "formula": "C42H38O24",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1372545"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_172",
+      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
+      "ec": [
+        "2.3.1.172"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_214",
+      "name": "pelargonidin 3-O-(6-caffeoylglucoside) 5-O-(6-O-malonylglucoside)",
+      "ec": [
+        "2.3.1.214"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196038",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pelargonin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bisdemalonylsalvianin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196038"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196038"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "anthocyanin 5-O-glucoside 6'''-O-malonyltransferase",
+      "ec": "2.3.1.172",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bisdemalonylsalvianin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "monodemalonylsalvianin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195978"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195978"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "pelargonidin 3-O-(6-caffeoylglucoside) 5-O-(6-O-malonylglucoside)",
+      "ec": "2.3.1.214",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "monodemalonylsalvianin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "salvianin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_214"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195980"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195980"
+          }
+        ]
+      }
+    }
+  ]
+}

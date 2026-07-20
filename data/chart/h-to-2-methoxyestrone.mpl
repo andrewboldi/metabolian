@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-2-methoxyestrone "H to 2-methoxyestrone…" {
-  spacing 196
+  spacing 184
 
   spine at 0,0 {
     h
@@ -18,37 +18,25 @@ pathway h-to-2-methoxyestrone "H to 2-methoxyestrone…" {
 
   branch from nadp side left {
     nadp
-    <-> . +geranylgeranyl_chlorophyll_a +h +nadph
-    chlorophyll_a
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +nadph +homo_uwm6 +h2o
+    co2
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +6_dehydro_scb3
-    scb3
+    <-> . +3_5_7_9_11_13_15_17_19_nonaoxohenicosanoate +h +o2 +nadph +co2 +h2o
+    homo_uwm6
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    bleomycin_a2
+    <-> . +adonixanthin
+    4_4_dihydroxyzeaxanthin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +bleomycin_b2 +phosphate +bleomycin_b2
-    atp
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +norreticuline +sam +hplus
-    reticuline
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +heliamine +sam +hplus
-    n_methylheliamine
+    <-> . +fucoxanthinol
+    8_8_dihydroxy_trans_neoxanthin
   }
 }

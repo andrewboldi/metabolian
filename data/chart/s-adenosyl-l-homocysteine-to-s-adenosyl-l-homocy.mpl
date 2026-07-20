@@ -36,13 +36,13 @@ pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-homocy "S-adenosyl-L-homocyste
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_337 [2.1.1.337] +r_reticulinium +sam +hplus
-    r_tembetarine
+    <-> ec_2_1_1_49 [2.1.1.49] +secondary_ammonium_ion +sam +hplus
+    methylated_secondary_ammonium_ion
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_337 [2.1.1.337] +s_corytuberine +sam
-    s_magnoflorine
+    <-> ec_2_1_1_49 [2.1.1.49] +tertiary_ammonium_ion +sam +hplus
+    methylated_tertiary_amine
   }
 }

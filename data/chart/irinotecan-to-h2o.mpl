@@ -24,25 +24,25 @@ pathway irinotecan-to-h2o "irinotecan to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +3_oxo_24_ethyl_cholest_4_en_26_oate +coa +diphosphate +amp
-    3_oxo_24_ethyl_cholest_4_en_26_oyl_coa
+    <-> ec_6_3_2_47 [6.3.2.47] +3_2r_3r_3_carbamoyloxiran_2_yl_carbonyl_amino_l +l_valine +h +adp +phosphate
+    dapdiamide_e
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_59 [6.3.2.59] +d_ornithine +l_lysine +h +adp +phosphate
-    n6_d_ornithyl_l_lysine
+    <-> . +9z_12z_octadecadienoate +h +linoleyl_amp
+    diphosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +phosphate
-    1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_pentyl_thiohydroximate
+    ser_gly
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
-    2s_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
+    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
+    z_omega_methylsulfanyl_hexyl_thiohydroximate
   }
 }

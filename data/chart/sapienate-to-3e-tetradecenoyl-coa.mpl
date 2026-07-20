@@ -32,13 +32,13 @@ pathway sapienate-to-3e-tetradecenoyl-coa "sapienate to (3E)-tetradecenoyl-CoA" 
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_12 [3.1.7.12] +kolavenyl_diphosphate +h2o
-    kolavelool
+    <-> . +4_2_4_dichlorophenoxy_butanoate +glutamine +atp +amp +hplus
+    n2_4_2_4_dichlorophenoxy_butanoyl_l_glutamine
   }
 
   branch from ppi side left {
     ppi
-    <-> . +8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct +atp +coa +amp
-    opc8_coa
+    <-> . +trna_3_terminal_nucleotidyl_cytidyl_cytidine_3 +atp
+    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
   }
 }

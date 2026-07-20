@@ -290,30 +290,30 @@
       }
     },
     {
-      "id": "h2",
-      "name": "Dihydrogen (H2)",
-      "formula": "H2",
+      "id": "pentalenene",
+      "name": "pentalenene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:18276"
+        "chebi": "CHEBI:17251"
       }
     },
     {
-      "id": "carotene",
-      "name": "β-carotene",
-      "formula": "C40H56",
+      "id": "pentalen_13_ol",
+      "name": "pentalen-13-ol",
+      "formula": "C15H24O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17579"
+        "chebi": "CHEBI:63243"
       }
     },
     {
-      "id": "cryptoxanthin",
-      "name": "β-cryptoxanthin",
-      "formula": "C40H56O",
+      "id": "pentalen_13_al",
+      "name": "pentalen-13-al",
+      "formula": "C15H22O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10362"
+        "chebi": "CHEBI:63244"
       }
     }
   ],
@@ -351,13 +351,6 @@
       "name": "protein deglycase",
       "ec": [
         "3.5.1.124"
-      ]
-    },
-    {
-      "id": "ec_1_12_1_4",
-      "name": "hydrogenase (NAD(+), ferredoxin)",
-      "ec": [
-        "1.12.1.4"
       ]
     }
   ],
@@ -828,64 +821,11 @@
     },
     {
       "id": "r11",
-      "name": "hydrogenase (NAD(+), ferredoxin)",
-      "equation": "2 H2 + 2 oxidized [2Fe-2S]-[ferredoxin] + NAD(+) = 2 reduced [2Fe-2S]-[ferredoxin] + NADH + 3 H(+)",
-      "ec": "1.12.1.4",
+      "name": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidiz...",
+      "equation": "pentalenene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-ol + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "h2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_12_1_4"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 11,
-      "xrefs": {
-        "rhea": "RHEA:30279"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30279"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r12",
-      "name": "all-trans-beta-carotene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = beta-cryptoxa...",
-      "equation": "all-trans-beta-carotene + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = beta-cryptoxanthin + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "carotene",
+          "metabolite": "pentalenene",
           "stoichiometry": 1
         },
         {
@@ -903,7 +843,7 @@
       ],
       "products": [
         {
-          "metabolite": "cryptoxanthin",
+          "metabolite": "pentalen_13_ol",
           "stoichiometry": 1
         },
         {
@@ -916,16 +856,67 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:30323"
+        "rhea": "RHEA:31703"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30323"
+            "id": "RHEA:31703"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r12",
+      "name": "pentalen-13-ol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-al + 2 oxi...",
+      "equation": "pentalen-13-ol + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = pentalen-13-al + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "pentalen_13_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pentalen_13_al",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:31707"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31707"
           }
         ]
       }

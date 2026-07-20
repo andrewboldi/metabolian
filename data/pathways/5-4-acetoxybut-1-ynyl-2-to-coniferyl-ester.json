@@ -130,39 +130,41 @@
       }
     },
     {
-      "id": "citramalate",
-      "name": "citramalate",
-      "formula": "C5H6O5",
-      "charge": -2,
+      "id": "17_o_acetylajmalinium",
+      "name": "17-O-acetylajmalinium",
+      "short": "17-O-acetylajmalini…",
+      "formula": "C22H29N2O3",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:13997"
+        "chebi": "CHEBI:58679"
       }
     },
     {
-      "id": "3s_citramalyl_coa",
-      "name": "(3S)-citramalyl-CoA",
-      "formula": "C26H37N7O20P3S",
-      "charge": -5,
+      "id": "ajmalinium",
+      "name": "ajmalinium",
+      "formula": "C20H27N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58668"
+        "chebi": "CHEBI:58567"
       }
     },
     {
-      "id": "citrate",
-      "name": "Citrate",
-      "formula": "C6H5O7",
+      "id": "4_acetamidobutanoyl_coa",
+      "name": "4-acetamidobutanoyl-CoA",
+      "short": "4-acetamidobutanoyl…",
+      "formula": "C27H41N8O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58583"
+      }
+    },
+    {
+      "id": "4_aminobutanoyl_coa",
+      "name": "4-aminobutanoyl-CoA",
+      "formula": "C25H40N8O17P3S",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:16947"
-      }
-    },
-    {
-      "id": "3s_citryl_coa",
-      "name": "(3S)-citryl-CoA",
-      "formula": "C27H36N7O22P3S",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:57321"
+        "chebi": "CHEBI:57352"
       }
     },
     {
@@ -226,17 +228,17 @@
       ]
     },
     {
-      "id": "ec_2_8_3_11",
-      "name": "citramalate CoA-transferase",
+      "id": "ec_3_1_1_80",
+      "name": "acetylajmaline esterase",
       "ec": [
-        "2.8.3.11"
+        "3.1.1.80"
       ]
     },
     {
-      "id": "ec_2_8_3_10",
-      "name": "citrate CoA-transferase",
+      "id": "ec_3_5_1_51",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
       "ec": [
-        "2.8.3.10"
+        "3.5.1.51"
       ]
     },
     {
@@ -400,67 +402,71 @@
     },
     {
       "id": "r4",
-      "name": "citramalate CoA-transferase",
-      "equation": "citramalate + acetyl-CoA = (3S)-citramalyl-CoA + acetate",
-      "ec": "2.8.3.11",
+      "name": "acetylajmaline esterase",
+      "equation": "17-O-acetylajmaline + H2O = ajmaline + acetate + H(+)",
+      "ec": "3.1.1.80",
       "substrates": [
         {
-          "metabolite": "citramalate",
+          "metabolite": "17_o_acetylajmalinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_citramalyl_coa",
+          "metabolite": "ajmalinium",
           "stoichiometry": 1
         },
         {
           "metabolite": "acetate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_3_11"
+          "enzyme": "ec_3_1_1_80"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:17621"
+        "rhea": "RHEA:22124"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17621"
+            "id": "RHEA:22124"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "citrate CoA-transferase",
-      "equation": "citrate + acetyl-CoA = (3S)-citryl-CoA + acetate",
-      "ec": "2.8.3.10",
+      "name": "4-acetamidobutyryl-CoA deacetylase",
+      "equation": "4-acetamidobutanoyl-CoA + H2O = 4-aminobutanoyl-CoA + acetate",
+      "ec": "3.5.1.51",
       "substrates": [
         {
-          "metabolite": "citrate",
+          "metabolite": "4_acetamidobutanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "acetyl_coa",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_citryl_coa",
+          "metabolite": "4_aminobutanoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -470,20 +476,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_8_3_10"
+          "enzyme": "ec_3_5_1_51"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:19405"
+        "rhea": "RHEA:22928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19405"
+            "id": "RHEA:22928"
           }
         ]
       }

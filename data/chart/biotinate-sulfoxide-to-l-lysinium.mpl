@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway biotinate-sulfoxide-to-l-lysinium "biotinate sulfoxide to L-lysinium" {
-  spacing 292
+  spacing 298
 
   spine at 0,0 {
     biotinate_sulfoxide
@@ -16,39 +16,45 @@ pathway biotinate-sulfoxide-to-l-lysinium "biotinate sulfoxide to L-lysinium" {
     2_o_biotinyl_adp_d_ribose
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_85 [2.5.1.85] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_nonaprenyl_diphosphate
+  branch from biotinyl_l_lysine side left {
+    biotinyl_l_lysine
+    <-> . +l_lysinium +amp +hplus
+    biotinyl_5_amp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_88 [2.5.1.88] +2_cis_6_trans_farnesyl_diphosphate +ipp
-    ditrans_polycis_tetradecaprenyl_diphosphate
+    <-> ec_4_2_3_66 [4.2.3.66] +fpp
+    selinene
   }
 
-  branch from nicotinamide side left {
-    nicotinamide
-    <-> ec_2_4_2_31 [2.4.2.31] +l_argininium +nadp +hplus
-    n_2_phospho_adp_d_ribosyl_l_arginine_3
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_67 [4.2.3.67] +fpp
+    cis_muurola_3_5_diene
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> ec_2_4_2_59 [2.4.2.59] +h2s +glycine +nad +h2o +hplus
-    adp_5_ethyl_4_methylthiazole_2_carboxylate
+    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +adp_5_ethyl_4_methylthiazole_2_carboxylate +h2o +hplus
+    dehydroalanine
   }
 
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +butyryl_coa +coa +hplus
-    n6_butyryl_l_lysine
+  branch from nicotinamide side left {
+    nicotinamide
+    <-> . +l_cysteine +nad +hplus
+    s_adp_d_ribosyl_l_cysteine_2
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> . +acyl_coa +coa +hplus
-    n6_acyl_l_lysine
+    <-> . +propionyl_coa +coa +hplus
+    n6_propanoyl_l_lysine
+  }
+
+  branch from l_lysinium side left {
+    l_lysinium
+    <-> . +sam +sah +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 }

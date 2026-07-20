@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "methylenediurea-to-ammonium",
   "name": "methylenediurea to ammonium",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from methylenediurea to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -94,68 +94,79 @@
       }
     },
     {
-      "id": "l_homoserine",
-      "name": "L-homoserine",
-      "formula": "C4H9NO3",
-      "charge": 0,
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:57476"
+        "chebi": "CHEBI:33737"
       }
     },
     {
-      "id": "oxobut",
-      "name": "2-Oxobutanoate",
-      "formula": "C4H5O3",
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16763"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "l_cystine",
-      "name": "L-cystine",
-      "formula": "C6H12N2O4S2",
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:35491"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "3_disulfanyl_l_alanine",
-      "name": "3-disulfanyl-L-alanine",
-      "short": "3-disulfanyl-L-alan…",
-      "formula": "C3H7NO2S2",
+      "id": "1_pyrrolinium",
+      "name": "1-pyrrolinium",
+      "formula": "C4H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:36781"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58591"
-      }
-    },
-    {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:16240"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_4_1_1",
-      "name": "cystathionine gamma-lyase",
-      "ec": [
-        "4.4.1.1"
-      ]
-    },
-    {
-      "id": "ec_4_4_1_35",
-      "name": "L-cystine beta-lyase",
-      "ec": [
-        "4.4.1.35"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -276,53 +287,15 @@
     },
     {
       "id": "r4",
-      "name": "cystathionine gamma-lyase",
-      "equation": "L-homoserine = 2-oxobutanoate + NH4(+)",
-      "ec": "4.4.1.1",
+      "name": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] ...",
+      "equation": "2 oxidized [2Fe-2S]-[ferredoxin] + L-glutamate + H2O = 2 reduced [2Fe-2S]-[ferredoxin] + 2-oxoglutarate + NH4(+) + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "l_homoserine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxobut",
-          "stoichiometry": 1
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_4_1_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:24923"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:24923"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "L-cystine beta-lyase",
-      "equation": "L-cystine + H2O = S-sulfanyl-L-cysteine + pyruvate + NH4(+)",
-      "ec": "4.4.1.35",
-      "substrates": [
-        {
-          "metabolite": "l_cystine",
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
@@ -332,11 +305,58 @@
       ],
       "products": [
         {
-          "metabolite": "3_disulfanyl_l_alanine",
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "akg",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32191"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32191"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
+      "equation": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_pyrrolinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -344,22 +364,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_4_1_35"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:24927"
+        "rhea": "RHEA:33247"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:24927"
+            "id": "RHEA:33247"
           }
         ]
       }

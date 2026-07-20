@@ -1,0 +1,302 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oxaloacetate-to-formyl-coa",
+  "name": "oxaloacetate to formyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from oxaloacetate(2−) to formyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24432"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16452"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "oxalate",
+      "name": "oxalate",
+      "formula": "C2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30623"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "oxalyl_coa",
+      "name": "oxalyl-CoA",
+      "formula": "C23H31N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57388"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "formyl_coa",
+      "name": "formyl-CoA",
+      "formula": "C22H32N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57376"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_1",
+      "name": "oxaloacetase",
+      "ec": [
+        "3.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_8",
+      "name": "oxalate--CoA ligase",
+      "ec": [
+        "6.2.1.8"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_8",
+      "name": "oxalyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "oxaloacetase",
+      "equation": "oxaloacetate + H2O = oxalate + acetate + H(+)",
+      "ec": "3.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "oxalate--CoA ligase",
+      "equation": "oxalate + ATP + CoA = oxalyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.8",
+      "substrates": [
+        {
+          "metabolite": "oxalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "oxalyl-CoA decarboxylase",
+      "equation": "oxalyl-CoA + H(+) = formyl-CoA + CO2",
+      "ec": "4.1.1.8",
+      "substrates": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19333"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19333"
+          }
+        ]
+      }
+    }
+  ]
+}

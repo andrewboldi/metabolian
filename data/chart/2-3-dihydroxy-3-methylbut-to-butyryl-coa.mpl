@@ -30,26 +30,26 @@ pathway 2-3-dihydroxy-3-methylbut-to-butyryl-coa "2,3-dihydroxy-3-methylbut… t
 
   branch from isobutyryl_coa side left {
     isobutyryl_coa
-    <-> ec_1_3_8_5 [1.3.8.5] +fad +hplus +fadh2
-    methacrylyl_coa
-  }
-
-  branch from isobutyryl_coa side right {
-    isobutyryl_coa
     <-> . +carnitine +coa
     o_isobutyryl_l_carnitine
   }
 
+  branch from isobutyryl_coa side right {
+    isobutyryl_coa
+    <-> ec_2_3_1_156 [2.3.1.156] +malonyl-coa +hplus +co2 +coa
+    2_isobutyrylphloroglucinol
+  }
+
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_23_dihydroxy_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
-    1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol
+    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
+    calcitroate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_16 [1.14.15.16] +1s_1_hydroxy_23_oxo_24_25_26_27_tetranorcalciol +o2 +hplus +di_sulfido_diiron +h2o
-    calcitroate
+    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_biflaviolin
   }
 
   branch from butyryl_coa side left {

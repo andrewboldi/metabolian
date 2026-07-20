@@ -22,26 +22,26 @@ pathway nadh-to-3-4-dimethoxyphenyl-meth "NADH to (3,4-dimethoxyphenyl)meth…" 
 
   branch from nad side left {
     nad
-    <-> . +nadh +phenanthrene_4_carboxylate +h +o2
-    cis_3_4_phenanthrenedihydrodiol_4_carboxylate
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +4_methylphenol +h2o
+    4_methylcatechol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +o2 +2_4_dichlorotoluene
-    4_6_dichloro_3_methyl_cis_1_2_dihydroxycyclohexa
+    <-> . +s_oxalatosuccinate +nadh +h
+    d_threo_isocitrate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +2_4_dinitrotoluene +nadph +4_amino_2_nitrotoluene
-    nadp
+    <-> ec_2_1_1_90 [2.1.1.90] +h +5_hydroxybenzimidazolylcobamide +methanol
+    co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +4_amino_2_nitrotoluene +nadph +nadp
-    2_4_diaminotoluene
+    <-> ec_3_1_4_42 [3.1.4.42] +h +sn_glycerol_3_phosphate
+    glycerol_1_2_cyclic_phosphate
   }
 
   branch from acetophenone side left {

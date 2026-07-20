@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl "cis-beta-D-glucosyl-2-hyd… to 3,6,7,4'-tetramethylquerc…" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     cis_beta_d_glucosyl_2_hydroxycinnamate
@@ -18,43 +18,37 @@ pathway cis-beta-d-glucosyl-2-hyd-to-3-6-7-4-tetramethyl "cis-beta-D-glucosyl-2-
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_63 [2.4.1.63] +udp +h +lotaustralin
-    2r_2_hydroxy_2_methylbutanenitrile
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
     <-> ec_2_4_1_245 [2.4.1.245] +udp +alpha_alpha_trehalose +h
     glucose
   }
 
-  branch from 2_coumarate side left {
-    2_coumarate
-    <-> ec_1_14_14_91 [1.14.14.91] +nadp +h2o +h +o2 +nadph
-    e_cinnamate
-  }
-
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_225 [2.4.1.225] +beta_d_glucuronosyl_1_4_n_acetyl_alpha_d_glucosa +n_acetyl_alpha_d_glucosaminyl_1_4_beta_d_glucuro
-    udp_alpha_d_glucuronate
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_158 [2.4.1.158] +udp +13_sophorosyloxydocosanoic_acid
+    13_beta_d_glucosyloxy_docosanoate
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_226 [2.4.1.226] +beta_d_glucuronosyl_1_3_n_acetyl_beta_d_galactos +udp_alpha_d_glucuronate
-    n_acetyl_beta_d_galactosaminyl_1_4_beta_d_glucur
+    <-> ec_2_4_1_226 [2.4.1.226] +beta_d_glucuronosyl_1_3_n_acetyl_beta_d_galactos +n_acetyl_beta_d_galactosaminyl_1_4_beta_d_glucur
+    udp_alpha_d_glucuronate
   }
 
-  branch from h side right {
-    h
-    <-> ec_1_11_1_8 [1.11.1.8] +iodide +thyroglobulin_3_5_diiodotyrosine +diiodine
-    thyroglobulin_3_iodotyrosine
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_17 [2.4.1.17] +4_methylnitrosamino_1_3_pyridyl_1_butanol_glucur +udp_alpha_d_glucuronate
+    4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
 
   branch from h side left {
     h
-    <-> . +cinchonidine +nadp +nadph
-    cinchoninone
+    <-> ec_1_1_1_213 [1.1.1.213] +3_oxosteroid +nadph +3alpha_hydroxysteroid
+    nadp
+  }
+
+  branch from h side right {
+    h
+    <-> . +nadh +d_galactopyranuronic_acid +nad
+    l_galactonic_acid
   }
 }

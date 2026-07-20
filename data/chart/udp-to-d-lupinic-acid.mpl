@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-d-lupinic-acid "UDP to D-lupinic acid" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     udp
@@ -18,73 +18,61 @@ pathway udp-to-d-lupinic-acid "UDP to D-lupinic acid" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_118 [2.4.1.118] +udp +h +trans_zeatin
-    trans_zeatin_7_beta_d_glucoside
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +h +3_beta_d_glucopyranosyl_2_hydroxy_beta_oxodihydr
+    1_2_hydroxyphenyl_3_phenylpropane_1_3_dione
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +dihydrozeatin
-    dihydrozeatin_o_glucoside
+    <-> ec_2_4_1_360 [2.4.1.360] +udp +h +nothofagin
+    phloretin
   }
 
   branch from dihydrozeatin side left {
-    dihydrozeatin
-    <-> . +udp +h +udp_alpha_d_glucose
-    dihydrozeatin_o_glucoside
-  }
-
-  branch from dihydrozeatin side right {
     dihydrozeatin
     <-> . +beta_d_ribofuranose +h2o
     dihydrozeatin_riboside
   }
 
-  branch from trans_zeatin side left {
-    trans_zeatin
-    <-> . +aldehydo_d_ribose +h2o
-    9_ribosyl_trans_zeatin
-  }
-
   branch from trans_zeatin side right {
     trans_zeatin
-    <-> . +beta_d_ribopyranose +9_ribosyl_trans_zeatin
-    h2o
+    <-> ec_2_5_1_50 [2.5.1.50] +o_acetyl_l_serine +h +acetate
+    l_lupinate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +4_pyridinecarboxaldehyde +nad
-    4_pyridinemethanol
+    <-> . +adenosine_3_5_bisphosphate +brassinolide_22_o_sulfate +brassinolide
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_10 [1.1.1.10] +3_hydroxyhexan_2_one +nadp +nadph
-    hexane_2_3_dione
+    <-> ec_1_11_2_3 [1.11.2.3] +9z_12z_octadecadienoate +9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t +9_s_hotre
+    9_10_epome
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_10 [1.1.1.10] +l_threose +h +nadp
-    d_threitol
+    <-> ec_1_1_1_405 [1.1.1.405] +d_ribitol_5_phosphate +nadp +h
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_10 [1.1.1.10] +h +3_4_hexanedione +nadp
-    4_hydroxyhexan_3_one
+    <-> ec_1_2_1_5 [1.2.1.5] +2e_hexenoic_acid +h +nadp +h2o
+    2_hexenal
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_5_1_14 [3.5.1.14] +h +l_serine +h2o
-    n_acetyl_dl_serine
+    <-> . +h +hydrazine +h2o
+    acetohydrazide
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_14 [3.5.1.14] +l_proline +h +h2o
-    n_acetyl_l_proline
+    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxydecanoyl_alpha_d_glucosamine +h2o
+    udp_3_o_3r_3_hydroxydecanoyl_n_acetyl_alpha_d_gl
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2r-2-o-phosphonato-3-su-to-3-dehydroquinate",
   "name": "(2R)-2-O-phosphonato-3-su… to 3-dehydroquinate",
-  "category": "nucleotide-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (2R)-2-O-phosphonato-3-sulfonatolactate(4−) to 3-dehydroquinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,60 +122,96 @@
       }
     },
     {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:37565"
+        "chebi": "CHEBI:61404"
       }
     },
     {
-      "id": "enolpyruvoyl_2_diphospho_5_guanosine",
-      "name": "enolpyruvoyl-2-diphospho-5'-guanosine",
-      "short": "enolpyruvoyl-2-diph…",
-      "formula": "C13H14N5O13P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:143701"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
-      "id": "l_cysteate",
-      "name": "L-cysteate",
-      "formula": "C3H6NO5S",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58090"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "2_ammonioprop_2_enoate",
-      "name": "2-ammonioprop-2-enoate",
-      "short": "2-ammonioprop-2-eno…",
-      "formula": "C3H5NO2",
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57667"
+      }
+    },
+    {
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33722"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76565"
+        "chebi": "CHEBI:507393"
       }
     },
     {
-      "id": "h2s",
-      "name": "Hydrogen sulfide (H2S)",
-      "short": "Hydrogen sulfide…",
-      "formula": "HS",
+      "id": "ammonioacetaldehyde",
+      "name": "ammonioacetaldehyde",
+      "formula": "C2H6NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58213"
+      }
+    },
+    {
+      "id": "tetra_3_sulfido_tetrairon",
+      "name": "tetra-μ3-sulfido-tetrairon",
+      "short": "tetra-μ3-sulfido-te…",
+      "formula": "H4Fe4S4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33723"
+      }
+    },
+    {
+      "id": "aliphatic_sulfonate_oxoanion",
+      "name": "aliphatic sulfonate oxoanion",
+      "short": "aliphatic…",
+      "formula": "CH2O3SR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29919"
+        "chebi": "CHEBI:231625"
+      }
+    },
+    {
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17478"
+      }
+    },
+    {
+      "id": "quinate",
+      "name": "(−)-quinate",
+      "formula": "C7H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29751"
       }
     },
     {
@@ -194,15 +230,6 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "quinate",
-      "name": "(−)-quinate",
-      "formula": "C7H11O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:29751"
       }
     },
     {
@@ -246,10 +273,10 @@
       ]
     },
     {
-      "id": "ec_2_7_7_105",
-      "name": "phosphoenolpyruvate guanylyltransferase",
+      "id": "ec_2_7_1_40",
+      "name": "pyruvate kinase",
       "ec": [
-        "2.7.7.105"
+        "2.7.1.40"
       ]
     },
     {
@@ -450,16 +477,26 @@
     },
     {
       "id": "r5",
-      "name": "phosphoenolpyruvate guanylyltransferase",
-      "equation": "phosphoenolpyruvate + GTP + H(+) = enolpyruvoyl-2-diphospho-5'-guanosine + diphosphate",
-      "ec": "2.7.7.105",
+      "name": "pyruvate kinase",
+      "equation": "dATP + pyruvate = dADP + phosphoenolpyruvate + H(+)",
+      "ec": "2.7.1.40",
       "substrates": [
         {
-          "metabolite": "phosphonatoenolpyruvate",
+          "metabolite": "datp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
           "stoichiometry": 1
         },
         {
@@ -467,50 +504,52 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "enolpyruvoyl_2_diphospho_5_guanosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_2_7_7_105"
+          "enzyme": "ec_2_7_1_40"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:30519"
+        "rhea": "RHEA:30727"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:30519"
+            "id": "RHEA:30727"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
-      "equation": "L-cysteate = 2-aminoprop-2-enoate + sulfite + H(+)",
+      "name": "2 oxidized [4Fe-4S]-[ferredoxin] + taurine + H2O = aminoacetaldehyde + 2 reduced [4Fe-4...",
+      "equation": "2 oxidized [4Fe-4S]-[ferredoxin] + taurine + H2O = aminoacetaldehyde + 2 reduced [4Fe-4S]-[ferredoxin] + sulfite + 3 H(+)",
       "substrates": [
         {
-          "metabolite": "l_cysteate",
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_ammonioprop_2_enoate",
+          "metabolite": "ammonioacetaldehyde",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 2
         },
         {
           "metabolite": "sulfite",
@@ -518,67 +557,71 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:43028"
+        "rhea": "RHEA:80635"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43028"
+            "id": "RHEA:80635"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
-      "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
+      "name": "an aliphatic sulfonate + 2 oxidized [4Fe-4S]-[ferredoxin] + H2O = 2 reduced [4Fe-4S]-[f...",
+      "equation": "an aliphatic sulfonate + 2 oxidized [4Fe-4S]-[ferredoxin] + H2O = 2 reduced [4Fe-4S]-[ferredoxin] + an aldehyde + sulfite + 3 H(+)",
       "substrates": [
         {
-          "metabolite": "h2s",
+          "metabolite": "aliphatic_sulfonate_oxoanion",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
-          "stoichiometry": 3
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
+        {
+          "metabolite": "tetra_3_sulfido_tetrairon",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "aldehyde",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "sulfite",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
-          "stoichiometry": 3
-        },
-        {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:55316"
+        "rhea": "RHEA:80647"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55316"
+            "id": "RHEA:80647"
           }
         ]
       }

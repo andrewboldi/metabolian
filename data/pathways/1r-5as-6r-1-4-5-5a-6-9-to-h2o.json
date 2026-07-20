@@ -198,71 +198,78 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "muurolene",
-      "name": "γ-muurolene",
-      "formula": "C15H24",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64798"
+        "chebi": "CHEBI:15377"
       }
     },
     {
-      "id": "copaene",
-      "name": "β-copaene",
-      "formula": "C15H24",
+      "id": "geranyllinalool",
+      "name": "geranyllinalool",
+      "formula": "C20H34O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64799"
+        "chebi": "CHEBI:74299"
       }
     },
     {
-      "id": "w_carboxy_leukotriene_b4",
-      "name": "W-carboxy leukotriene B4",
-      "short": "W-carboxy…",
-      "formula": "C20H28O6",
-      "charge": -2,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM22450"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "20_trihydroxy_leukotriene_b4",
-      "name": "20-trihydroxy-leukotriene-B4",
-      "short": "20-trihydroxy-leuko…",
-      "formula": "C20H31O7",
+      "id": "z_biformene",
+      "name": "(Z)-biformene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64282"
+      }
+    },
+    {
+      "id": "5_hydroperoxy_epa",
+      "name": "5-hydroperoxy-EPA",
+      "formula": "C20H29O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM734723"
+        "metanetx": "MNXM1368530"
       }
     },
     {
-      "id": "20_dihydroxyleukotriene_b4",
-      "name": "20-dihydroxyleukotriene B4",
-      "short": "20-dihydroxyleukotr…",
-      "formula": "C20H31O6",
+      "id": "leukotriene_a5",
+      "name": "Leukotriene A5",
+      "formula": "C20H27O3",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM734699"
+        "metanetx": "MNXM163421"
       }
     },
     {
-      "id": "20_oxo_leukotriene_b4",
-      "name": "20-oxo-leukotriene B4",
-      "short": "20-oxo-leukotriene…",
-      "formula": "C20H29O5",
+      "id": "5_12_dihydroxy_6e_ltb5",
+      "name": "5,12-dihydroxy-6E-LTB5",
+      "short": "5,12-dihydroxy-6E-L…",
+      "formula": "C20H29O4",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM734719"
+        "metanetx": "MNXM166518"
       }
     }
   ],
@@ -282,17 +289,10 @@
       ]
     },
     {
-      "id": "ec_4_2_3_126",
-      "name": "gamma-muurolene synthase",
+      "id": "ec_4_2_3_144",
+      "name": "geranyllinalool synthase",
       "ec": [
-        "4.2.3.126"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_127",
-      "name": "beta-copaene synthase",
-      "ec": [
-        "4.2.3.127"
+        "4.2.3.144"
       ]
     }
   ],
@@ -589,18 +589,22 @@
     },
     {
       "id": "r8",
-      "name": "gamma-muurolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = gamma-muurolene + diphosphate",
-      "ec": "4.2.3.126",
+      "name": "geranyllinalool synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (6E,10E)-geranyllinalool + diphosphate",
+      "ec": "4.2.3.144",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "muurolene",
+          "metabolite": "geranyllinalool",
           "stoichiometry": 1
         },
         {
@@ -610,38 +614,37 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_126"
+          "enzyme": "ec_4_2_3_144"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:33107"
+        "rhea": "RHEA:38155"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33107"
+            "id": "RHEA:38155"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "beta-copaene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = beta-copaene + diphosphate",
-      "ec": "4.2.3.127",
+      "name": "ent-copalyl diphosphate = (Z)-biformene + diphosphate",
+      "equation": "ent-copalyl diphosphate = (Z)-biformene + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "copaene",
+          "metabolite": "z_biformene",
           "stoichiometry": 1
         },
         {
@@ -649,76 +652,61 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_127"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:33111"
+        "rhea": "RHEA:40003"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33111"
+            "id": "RHEA:40003"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR103770",
+      "name": "Reaction MNXR103922",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "w_carboxy_leukotriene_b4",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "5_hydroperoxy_epa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "20_trihydroxy_leukotriene_b4",
+          "metabolite": "leukotriene_a5",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR103770"
+        "metanetx": "MNXR103922"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103770"
+            "id": "MNXR103922"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "Reaction MNXR103771",
+      "name": "Reaction MNXR103926",
       "substrates": [
         {
-          "metabolite": "20_dihydroxyleukotriene_b4",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "20_oxo_leukotriene_b4",
+          "metabolite": "leukotriene_a5",
           "stoichiometry": 1
         },
         {
@@ -726,17 +714,23 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "5_12_dihydroxy_6e_ltb5",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "metanetx": "MNXR103771"
+        "metanetx": "MNXR103926"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103771"
+            "id": "MNXR103926"
           }
         ]
       }

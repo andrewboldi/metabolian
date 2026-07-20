@@ -20,13 +20,13 @@ pathway geranyl-diphosphate-to-6-exo-hydroxycamphor "geranyl diphosphate to (+)-
 
   branch from ppi side left {
     ppi
-    <-> . +2s_4r_4_hydroxy_4_methylglutamate +malonyl-coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
-    5s_5_2r_2_carboxylato_2_hydroxy_2_methylethyl_2
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    z_bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +serine +malonyl-coa +acetyl_coa +sam +atp +nadph +hplus +amp +sah +co2 +nadp +coa +h2o
-    5s_3_2e_6r_8e_10e_12e_2_6_dimethyltetradeca_2_8
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    cadinene
   }
 }

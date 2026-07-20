@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-phenylpropionate-to-adenosine-3-5-bismonoph "3-phenylpropionate to adenosine 3',5'-bismonoph…" {
-  spacing 242
+  spacing 224
 
   spine at 0,0 {
     3_phenylpropionate
@@ -20,55 +20,37 @@ pathway 3-phenylpropionate-to-adenosine-3-5-bismonoph "3-phenylpropionate to ade
     4_ethylphenyl_sulfate
   }
 
-  branch from trans_cinnamate side left {
-    trans_cinnamate
-    <-> ec_4_1_1_102 [4.1.1.102] +hplus +co2
-    styrene
-  }
-
-  branch from trans_cinnamate side right {
-    trans_cinnamate
-    <-> . +sam +sah
-    methyl_trans_cinnamate
-  }
-
-  branch from trans_4_coumarate side left {
-    trans_4_coumarate
-    <-> . +diphosphate +4_coumaroyl_coa +amp +coa
-    atp
+  branch from fmn side left {
+    fmn
+    <-> . +tyraminium +fmnh2 +o2 +h2o +hplus
+    dopamine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +ganoderate_tr +fmnh2 +o2 +h2o +hplus
-    ganoderate_jc
+    <-> . +n_acetyltyramine +fmnh2 +o2 +h2o +hplus
+    n_acetyldopamine
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +22s_22_hydroxycampest_4_en_3_one +fmnh2 +o2 +h2o +hplus
-    22r_23r_22_23_dihydroxycampest_4_en_3_one
-  }
-
-  branch from 4_hydroxystyrene side right {
+  branch from 4_hydroxystyrene side left {
     4_hydroxystyrene
     <-> . +sam +sah +hplus
     4_vinylanisole
   }
 
-  branch from 4_hydroxystyrene side left {
+  branch from 4_hydroxystyrene side right {
     4_hydroxystyrene
     <-> . +4_coumarate +h
     co2
   }
 
-  branch from adenosine_3_5_bismonophosphate side right {
+  branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +cholesterol +3_phosphonato_5_adenylyl_sulfate +hplus
     cholesterol_sulfate
   }
 
-  branch from adenosine_3_5_bismonophosphate side left {
+  branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
     <-> ec_2_8_2_39 [2.8.2.39] +12_hydroxyjasmonates +3_phosphonato_5_adenylyl_sulfate +hplus
     12_sulfojasmonate

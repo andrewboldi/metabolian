@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "phenylglyoxylyl-coa-to-cis-cis-muconate",
   "name": "phenylglyoxylyl-CoA to cis,cis-muconate",
-  "category": "redox-detox",
+  "category": "energy-metabolism",
   "summary": "A 6-step route from phenylglyoxylyl-CoA(4−) to cis,cis-muconate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -146,33 +146,6 @@
       }
     },
     {
-      "id": "benzylaminium",
-      "name": "benzylaminium",
-      "formula": "C7H10N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:225238"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16240"
-      }
-    },
-    {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:28938"
-      }
-    },
-    {
       "id": "benzyl_alcohol",
       "name": "benzyl alcohol",
       "formula": "C7H8O",
@@ -200,23 +173,30 @@
       }
     },
     {
-      "id": "7_14_16_trihydroxyconfertifolin",
-      "name": "7β,14,16-trihydroxyconfertifolin",
-      "short": "7β,14,16-trihydroxy…",
-      "formula": "C15H22O5",
-      "charge": 0,
+      "id": "benzylaminium",
+      "name": "benzylaminium",
+      "formula": "C7H10N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:231784"
+        "chebi": "CHEBI:225238"
       }
     },
     {
-      "id": "dideacetyl_astellolide_a",
-      "name": "dideacetyl astellolide A",
-      "short": "dideacetyl…",
-      "formula": "C22H26O6",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:231786"
+        "chebi": "CHEBI:57972"
       }
     },
     {
@@ -578,53 +558,6 @@
     },
     {
       "id": "r7",
-      "name": "benzylamine + O2 + H2O = benzaldehyde + H2O2 + NH4(+)",
-      "equation": "benzylamine + O2 + H2O = benzaldehyde + H2O2 + NH4(+)",
-      "substrates": [
-        {
-          "metabolite": "benzylaminium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "benzaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:59424"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:59424"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "benzyl alcohol + NADP(+) = benzaldehyde + NADPH + H(+)",
       "equation": "benzyl alcohol + NADP(+) = benzaldehyde + NADPH + H(+)",
       "substrates": [
@@ -652,7 +585,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:59944"
       },
@@ -667,50 +600,46 @@
       }
     },
     {
-      "id": "r9",
-      "name": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
-      "equation": "7beta,14,16-trihydroxyconfertifolin + benzoate + H(+) = dideacetyl astellolide A + H2O",
+      "id": "r8",
+      "name": "benzylamine + pyruvate = benzaldehyde + L-alanine",
+      "equation": "benzylamine + pyruvate = benzaldehyde + L-alanine",
       "substrates": [
         {
-          "metabolite": "7_14_16_trihydroxyconfertifolin",
+          "metabolite": "benzylaminium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "benzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dideacetyl_astellolide_a",
+          "metabolite": "benzaldehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "alanine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:81067"
+        "rhea": "RHEA:64272"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81067"
+            "id": "RHEA:64272"
           }
         ]
       }
     },
     {
-      "id": "r10",
+      "id": "r9",
       "name": "muconate cycloisomerase",
       "equation": "(S)-muconolactone = cis,cis-muconate + H(+)",
       "ec": "5.5.1.1",
@@ -736,7 +665,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:30031"
       },

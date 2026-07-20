@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyanate" {
-  spacing 184
+  spacing 172
 
   spine at 0,0 {
     s_cyclopeptine
@@ -14,18 +14,6 @@ pathway s-cyclopeptine-to-methyl-isocyanate "(S)-cyclopeptine to methyl isocyana
     cyclopenine
     <-> ec_4_1_99_27 [4.1.99.27] -methyl_isocyanate -hplus
     viridicatin
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> . +2_aminophenyl_succinate +succinyl_coa
-    2_2_aminophenyl_succinyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +2_aminophenyl_succinate +succinyl_coa
-    3_2_aminophenyl_succinyl_coa
   }
 
   branch from cyclopenine side left {

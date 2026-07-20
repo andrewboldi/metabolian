@@ -106,41 +106,21 @@
       "xrefs": {
         "chebi": "CHEBI:74483"
       }
-    },
-    {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74269"
-      }
-    },
-    {
-      "id": "n7_methylguanosine_5_phosphate_zwitterion",
-      "name": "N7-methylguanosine 5'-phosphate zwitterion",
-      "short": "N7-methylguanosine…",
-      "formula": "C11H14N5O7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:74480"
-      }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_2_1_1_178",
-      "name": "16S rRNA (cytosine(1407)-C(5))-methyltransferase",
+      "id": "ec_2_1_1_202",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.178"
+        "2.1.1.202"
       ]
     },
     {
-      "id": "ec_2_1_1_179",
-      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
+      "id": "ec_2_1_1_203",
+      "name": "tRNA (cytosine(34)-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.179"
+        "2.1.1.203"
       ]
     }
   ],
@@ -276,9 +256,9 @@
     },
     {
       "id": "r4",
-      "name": "16S rRNA (cytosine(1407)-C(5))-methyltransferase",
-      "equation": "cytidine(1407) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1407) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.178",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
+      "equation": "cytidine(34) in tRNA precursor + S-adenosyl-L-methionine = 5-methylcytidine(34) in tRNA precursor + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.202",
       "substrates": [
         {
           "metabolite": "cytidine_5_monophosphate_1",
@@ -305,32 +285,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_178"
+          "enzyme": "ec_2_1_1_202"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42756"
+        "rhea": "RHEA:42940"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42756"
+            "id": "RHEA:42940"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "16S rRNA (guanine(1405)-N(7))-methyltransferase",
-      "equation": "guanosine(1405) in 16S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(1405) in 16S rRNA + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.179",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
+      "equation": "cytidine(40) in tRNA precursor + S-adenosyl-L-methionine = 5-methylcytidine(40) in tRNA precursor + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.202",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -340,30 +320,34 @@
       ],
       "products": [
         {
-          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_179"
+          "enzyme": "ec_2_1_1_202"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:42772"
+        "rhea": "RHEA:42944"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42772"
+            "id": "RHEA:42944"
           }
         ]
       }

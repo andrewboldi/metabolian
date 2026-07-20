@@ -20,25 +20,25 @@ pathway coronaridine-to-ibogaine "(−)-coronaridine to ibogaine" {
 
   branch from fmn side left {
     fmn
-    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_28_norcastasterone
+    <-> . +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_11_deoxycorticosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_hydroxy_28_norcastasterone +fmnh2 +o2 +h2o +hplus
-    28_norcastasterone
+    <-> . +luteolin_7_olate +fmnh2 +o2 +h2o +hplus
+    tricetin
   }
 
   branch from sah side left {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> ec_2_1_1_300 [2.1.1.300] +s_scoulerine +sam
+    cyclanoline
   }
 
   branch from sah side right {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> . +norreticuline +sam +hplus
+    reticuline
   }
 }

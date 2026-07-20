@@ -20,26 +20,26 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph "(1S,2R,5S,7S,8R,9R,11S,12… to NADPH
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_104 [1.1.1.104] +4_oxo_l_proline +h +nadph
-    trans_4_hydroxy_l_proline
+    <-> ec_1_3_1_10 [1.3.1.10] +h +o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser +nadph
+    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_86 [1.14.13.86] +h +4_7_dihydroxyflavone +o2 +nadph +h2o
-    2_4_7_trihydroxyisoflavanone
+    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2 +nadph +h2o
+    3_demethylubiquinone_6
   }
 
   branch from h2o side left {
     h2o
-    <-> . +7_9_12_decaketide_intermediate_5
-    7_9_12_decaketide_intermediate_6
+    <-> . +dihydrosanguinarine
+    6_hydroxyprotopine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +22e_3_oxochola_4_22_dien_24_oyl_coa
-    22_hydroxy_3_oxochol_4_en_24_oyl_coa
+    <-> . +4_3_methylbut_2_enyl_l_tryptophan
+    elymoclavine
   }
 
   branch from lolitrem_e side left {
@@ -62,37 +62,37 @@ pathway 1s-2r-5s-7s-8r-9r-11s-12-to-nadph "(1S,2R,5S,7S,8R,9R,11S,12… to NADPH
 
   branch from h side right {
     h
-    <-> . +m_chloro_hippuric_acid +h2o +3_chlorobenzoate
-    glycine
+    <-> ec_1_1_1_213 [1.1.1.213] +nadh +5beta_pregnan_3_20_dione +nad
+    3_hydroxy_5_pregnan_20_one
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_8_1 [3.1.8.1] +o_s_dimethyl_hydrogen_phosphorothioate +acetamide +h2o
-    acephate
+    <-> ec_1_14_21_3 [1.14.21.3] +s_coclaurine +r_n_methylcoclaurine +o2 +nadph +nadp +h2o
+    2_norberbamunine
   }
 
   branch from o2 side right {
     o2
-    <-> . +holothin +h2o2
-    dithioholothin
+    <-> ec_1_14_21_3 [1.14.21.3] +h +nadp +guattegaumerine +h2o +nadph
+    r_n_methylcoclaurine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +indigo +h2o
-    indole
+    <-> . +nadh +h +p_cymene +nad +h2o
+    4_isopropylbenzyl_alcohol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +10_2_dihydroxy_4_methoxy_isoflav_8_ene_7_one +nadp +h2o +h +o2
-    vestitol
+    <-> ec_1_8_1_15 [1.8.1.15] +h +mycothione +nadp
+    mycothiol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_405 [1.1.1.405] +d_ribitol_5_phosphate +nadp +h
-    aldehydo_d_ribose_5_phosphate
+    <-> ec_1_14_13_71 [1.14.13.71] +s_3_hydroxy_n_methylcoclaurine +nadp +h2o +h +o2
+    s_n_methylcoclaurine
   }
 }

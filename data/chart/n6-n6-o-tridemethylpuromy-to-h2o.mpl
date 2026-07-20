@@ -18,14 +18,14 @@ pathway n6-n6-o-tridemethylpuromy-to-h2o "N6,N6,O-tridemethylpuromy… to H2O" {
 
   branch from l_tyrosine side left {
     l_tyrosine
-    <-> ec_1_14_13_41 [1.14.13.41] +nadp +n_hydroxy_l_tyrosine +h2o +nadph
-    o2
+    <-> ec_1_14_16_1 [1.14.16.1] +6_7_dimethyl_tetrahydropteridine +o2 +l_phenylalanine +h2o
+    6_7_dimethyl_dihydropteridine
   }
 
   branch from l_tyrosine side right {
     l_tyrosine
-    <-> ec_3_4_14_5 [3.4.14.5] +his_pro +h2o
-    his_pro_tyr
+    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +nadp +h2o +h +nadph
+    o2
   }
 
   branch from 3_amino_3_deoxy_amp side left {
@@ -36,13 +36,13 @@ pathway n6-n6-o-tridemethylpuromy-to-h2o "N6,N6,O-tridemethylpuromy… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +4_5_epoxy_17r_hydroxy_docosahexaenoate
-    aspirin_triggered_resolvin_d3
+    <-> ec_4_2_1_11 [4.2.1.11] +2_phosphonomethyl_3_hydroxypropanoate
+    alpha_dihydroxyphosphinylmethyl_acrylate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +aspirin_triggered_resolvin_d4 +h
-    4_5_epoxy_17r_hydroxy_docosahexaenoate
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_arginine +h
+    arg_pro
   }
 }

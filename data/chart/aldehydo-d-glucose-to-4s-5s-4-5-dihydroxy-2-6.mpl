@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6 "aldehydo-D-glucose to (4S,5S)-4,5-dihydroxy-2,6…" {
-  spacing 280
+  spacing 274
 
   spine at 0,0 {
     aldehydo_d_glucose
@@ -44,13 +44,7 @@ pathway aldehydo-d-glucose-to-4s-5s-4-5-dihydroxy-2-6 "aldehydo-D-glucose to (4S
     3_o_propanoyl_adp_d_ribose
   }
 
-  branch from 2_dehydro_3_deoxy_d_gluconate side left {
-    2_dehydro_3_deoxy_d_gluconate
-    <-> ec_4_2_1_39 [4.2.1.39] +h2o
-    d_gluconate
-  }
-
-  branch from 4s_5s_4_5_dihydroxy_2_6_dioxohexanoate side right {
+  branch from 4s_5s_4_5_dihydroxy_2_6_dioxohexanoate side left {
     4s_5s_4_5_dihydroxy_2_6_dioxohexanoate
     <-> ec_4_2_99_25 [4.2.99.25]
     4_deoxy_l_erythro_hex_4_enopyranuronate

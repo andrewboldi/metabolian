@@ -20,14 +20,14 @@ pathway 2-oxoglutaramate-to-nicotine-blue "2-oxoglutaramate to nicotine blue" {
 
   branch from h2o side left {
     h2o
-    <-> . +glycyl_dl_phenylalanine +l_tryptophan
-    tryptophanyl_glycyl_phenylalanine
+    <-> ec_3_2_1_104 [3.2.1.104] +alpha_d_glucose +cholesterol
+    cholesteryl_3_beta_d_glucoside
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_valine +glycine +l_tryptophan
-    tryptophanyl_glycyl_valine
+    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose +beta_d_glucose
+    isomaltose
   }
 
   branch from blue_pigment side left {
@@ -38,26 +38,26 @@ pathway 2-oxoglutaramate-to-nicotine-blue "2-oxoglutaramate to nicotine blue" {
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +2_methoxy_1_4_benzoquinone +h2o
-    2_methoxyhydroquinone
+    <-> . +triacontanal +o2
+    triacontan_1_ol
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_11_1_16 [1.11.1.16] +2_6_dimethoxybenzoquinone +h2o
-    1_4_dihydroxy_2_6_dimethoxybenzene
+    <-> ec_1_11_1_7 [1.11.1.7] +hispidin +h2o
+    3_14_bihispidinyl
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_227 [1.1.1.227] +nadh +h +1r_4r_camphor
-    borneol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    neoisodihydrocarveol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_255 [1.1.1.255] +nadh +h +beta_d_mannose
-    d_mannitol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    neodihydrocarveol
   }
 
   branch from nicotine_blue side right {

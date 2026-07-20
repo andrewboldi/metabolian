@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10,13… to (3R,15Z,18Z,21Z,24Z)-3-hy…" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     1_all_cis_docosa_7_10_13_16_tetraenoyl_glycerol
@@ -42,8 +42,27 @@ pathway 1-all-cis-docosa-7-10-13-to-3r-15z-18z-21z-24z-3 "1-(all-cis-docosa-7,10
     3r_15z_18z_21z_24z_3_hydroxytriacontatetraenoyl
   }
 
+  branch from ppi side left {
+    ppi
+    <-> . +1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno +ctp +hplus
+    cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphate +ctp +hplus
+    cdp_1_2_dilinoleoyl_sn_glycerol
+  }
 
+  branch from 2e_9z_12z_15z_18z_tetracosapentaenoyl_coa side left {
+    2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
+    <-> . +h2o
+    3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
+  }
 
-
+  branch from 3r_15z_18z_21z_24z_3_hydroxytriacontatetraenoyl side right {
+    3r_15z_18z_21z_24z_3_hydroxytriacontatetraenoyl
+    <-> . +h2o
+    2e_15z_18z_21z_24z_triacontapentaenoyl_coa
+  }
 }

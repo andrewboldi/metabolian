@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-tyrosine-to-3-5-diiodo-l-tyrosine "L-tyrosine to 3,5-diiodo-L-tyrosine" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     l_tyrosine
@@ -30,21 +30,15 @@ pathway l-tyrosine-to-3-5-diiodo-l-tyrosine "L-tyrosine to 3,5-diiodo-L-tyrosine
     pyridinium_3_5_bisthiocarboxylate_mononucleotide
   }
 
-  branch from dehydroalanine side left {
-    dehydroalanine
-    <-> ec_2_4_2_60 [2.4.2.60] +l_cysteine +glycine +nad +nicotinamide +h2o +hplus
-    adp_5_ethyl_4_methylthiazole_2_carboxylate
+  branch from h2o2 side left {
+    h2o2
+    <-> ec_1_2_3_1 [1.2.3.1] +methylmalonate +h +o2 +h2o
+    2_methyl_3_oxopropanoate
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +5_6_epoxy_alpha_tocopheryl_quinone +h2o
-    7_8_epoxy_8alpha_hydroperoxytocopherone
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> . +2_3_epoxy_alpha_tocopheryl_quinone +h2o
-    4alpha_5_epoxy_8alpha_hydroperoxytocopherone
+    <-> ec_1_1_3_23 [1.1.3.23] +thiamine +o2
+    thiamine_1_aldehyde
   }
 }

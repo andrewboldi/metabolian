@@ -20,62 +20,62 @@ pathway h-to-cdp-d-arabinitol "H to CDP-D-arabinitol" {
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyltaurine +amp +r_pantoate
-    taurine
+    <-> . +h +adp +phosphate +h2o
+    actn
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoylglycine +amp +r_pantoate
-    glycine
+    <-> . +actn +h +adp +phosphate +actn
+    h2o
   }
 
   branch from keto_d_fructose_6_phosphate side left {
     keto_d_fructose_6_phosphate
-    <-> . +l_lysine +h +h2o
-    glucoselysine_6_phosphate
+    <-> ec_3_1_3_2 [3.1.3.2] +phosphate +h2o
+    beta_d_fructose
   }
 
   branch from keto_d_fructose_6_phosphate side right {
     keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +itp +beta_d_fructose_1_6_bisphosphate +h
-    idp
+    <-> ec_2_7_1_4 [2.7.1.4] +utp +beta_d_fructose +h
+    udp
   }
 
   branch from d_xylulose_5_phosphate side left {
     d_xylulose_5_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +aldehydo_d_ribose_5_phosphate +h +d_sedoheptulose_7_phosphate
-    glyceraldehyde_3_phosphate
+    <-> ec_2_7_1_17 [2.7.1.17] +atp +h +adp
+    d_xylulofuranose
   }
 
   branch from d_xylulose_5_phosphate side right {
     d_xylulose_5_phosphate
-    <-> . +d_xylopyranose +phosphoenolpyruvate
-    pyruvate
+    <-> . +d_glyceraldehyde_3_phosphate +d_sedoheptulose_7_phosphate
+    alpha_d_ribose_5_phosphate
   }
 
   branch from d_erythrose_4_phosphate side left {
     d_erythrose_4_phosphate
-    <-> ec_2_2_1_1 [2.2.1.1] +beta_d_fructose_6_phosphate +d_glyceraldehyde_3_phosphate
-    l_xylulose_5_phosphate
+    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole
+    dialuric_acid
   }
 
   branch from d_erythrose_4_phosphate side right {
     d_erythrose_4_phosphate
-    <-> . +alpha_d_ribofuranose_5_phosphate +d_sedoheptulose_7_phosphate
-    octulose_8_phosphate
+    <-> ec_1_13_11_79 [1.13.11.79] +fmnh2 +o2 +5_6_dimethylbenzimidazole +h
+    dialurate
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +3_7_11_eudesmadiene
+    <-> . +longicyclene
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    longicyclene
+    longipinene
   }
 
   branch from cdp_d_xylulose side left {
@@ -86,13 +86,13 @@ pathway h-to-cdp-d-arabinitol "H to CDP-D-arabinitol" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +s_1_phenyl_2_propanol +h +nadph
-    phenylacetone
+    <-> ec_1_1_1_184 [1.1.1.184] +5_dihydrotestosterone +h +nadph
+    5beta_androstane_3_17_dione
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_149 [1.1.1.149] +acetylacetone +h +nadph
-    compound_0000420
+    <-> ec_1_1_1_209 [1.1.1.209] +4_5beta_dihydrocortisone +h +nadph
+    urocortisone
   }
 }

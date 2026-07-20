@@ -142,57 +142,39 @@
       }
     },
     {
-      "id": "5_dehydro_d_fructose",
-      "name": "5-dehydro-D-fructose",
-      "formula": "C6H10O6",
+      "id": "cis_3_hexenal",
+      "name": "cis-3-hexenal",
+      "formula": "C6H10O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM855"
+        "chebi": "CHEBI:23292"
       }
     },
     {
-      "id": "l_sorbopyranose",
-      "name": "α-L-sorbopyranose",
-      "formula": "C6H12O6",
+      "id": "e_hex_2_en_1_ol",
+      "name": "(E)-hex-2-en-1-ol",
+      "formula": "C6H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10295"
+        "chebi": "CHEBI:141205"
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
+      "id": "e_hex_2_enal",
+      "name": "(E)-hex-2-enal",
+      "formula": "C6H10O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM13"
+        "metanetx": "MNXM1369480"
       }
     },
     {
-      "id": "acetate",
-      "name": "acetate",
-      "formula": "C2H3O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM26"
-      }
-    },
-    {
-      "id": "3_oxopropanoate",
-      "name": "3-oxopropanoate",
-      "formula": "C3H3O3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1368841"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "3z_hex_3_en_1_ol",
+      "name": "(3Z)-hex-3-en-1-ol",
+      "formula": "C6H12O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM1108072"
       }
     },
     {
@@ -237,17 +219,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_14",
-      "name": "L-iditol 2-dehydrogenase",
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
       "ec": [
-        "1.1.1.14"
-      ]
-    },
-    {
-      "id": "ec_1_2_1_27",
-      "name": "methylmalonate-semialdehyde dehydrogenase (CoA acylating)",
-      "ec": [
-        "1.2.1.27"
+        "1.1.1.71"
       ]
     },
     {
@@ -510,8 +485,8 @@
     },
     {
       "id": "r6",
-      "name": "L-iditol 2-dehydrogenase",
-      "ec": "1.1.1.14",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
           "metabolite": "nadh",
@@ -522,13 +497,13 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_dehydro_d_fructose",
+          "metabolite": "cis_3_hexenal",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_sorbopyranose",
+          "metabolite": "e_hex_2_en_1_ol",
           "stoichiometry": 1
         },
         {
@@ -538,76 +513,68 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_14"
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR172725"
+        "metanetx": "MNXR181083"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR172725"
+            "id": "MNXR181083"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "methylmalonate-semialdehyde dehydrogenase (CoA acylating)",
-      "ec": "1.2.1.27",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "e_hex_2_enal",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetate",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_oxopropanoate",
+          "metabolite": "3z_hex_3_en_1_ol",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_27"
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR172774"
+        "metanetx": "MNXR181087"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR172774"
+            "id": "MNXR181087"
           }
         ]
       }

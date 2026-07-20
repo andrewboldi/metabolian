@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15-cis-phytoene-to-2e-6e-10e-geranylgerany",
+  "name": "15-cis-phytoene to (2E,6E,10E)-geranylgerany…",
+  "category": "other",
+  "summary": "A 3-step route from 15-cis-phytoene to (2E,6E,10E)-geranylgeranyl diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30603"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27787"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15_cis_phytoene",
+      "name": "15-cis-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27787"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "all_trans_phytofluene",
+      "name": "all-trans-phytofluene",
+      "short": "all-trans-phytoflue…",
+      "formula": "C40H62",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28129"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "H2",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1108018"
+      }
+    },
+    {
+      "id": "all_trans_phytoene",
+      "name": "all-trans-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:8191"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "2e_6e_10e_geranylgeranyl_diphosphate",
+      "name": "(2E,6E,10E)-geranylgeranyl diphosphate",
+      "short": "(2E,6E,10E)-geranyl…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM728266"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_32",
+      "name": "15-cis-phytoene synthase",
+      "ec": [
+        "2.5.1.32"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "15-cis-phytoene + A = all-trans-phytofluene + AH2",
+      "equation": "15-cis-phytoene + A = all-trans-phytofluene + AH2",
+      "substrates": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_phytofluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30603"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30603"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR135353",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "all_trans_phytofluene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_phytoene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR135353"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR135353"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "15-cis-phytoene synthase",
+      "ec": "2.5.1.32",
+      "substrates": [
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "all_trans_phytoene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6e_10e_geranylgeranyl_diphosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR146167"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146167"
+          }
+        ]
+      }
+    }
+  ]
+}

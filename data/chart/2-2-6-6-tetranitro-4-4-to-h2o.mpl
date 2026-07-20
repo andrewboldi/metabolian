@@ -30,14 +30,14 @@ pathway 2-2-6-6-tetranitro-4-4-to-h2o "2,2',6,6'-Tetranitro-4,4'… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o2
-    d_galacto_hexodialdose
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +nad +h2o
+    4alpha_carboxy_4beta_methyl_5alpha_cholest_7_ene
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_9 [1.1.3.9] +alpha_d_galactose +d_galacto_hexodialdose
-    h2o2
+    <-> ec_1_14_13_90 [1.14.13.90] +all_trans_zeaxanthin +h +nadph +nadp +h2o
+    all_trans_violaxanthin
   }
 
   branch from 2_4_dihydroxylamino_6_nitrotoluene side left {
@@ -48,25 +48,25 @@ pathway 2-2-6-6-tetranitro-4-4-to-h2o "2,2',6,6'-Tetranitro-4,4'… to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone +nadph +h2o
-    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+    <-> ec_1_1_1_71 [1.1.1.71] +3z_hex_3_en_1_ol +h +nadph
+    e_hex_2_enal
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_274 [1.1.1.274] +h +nadph +2_5_didehydro_d_gluconate
-    2_dehydro_d_galactonate
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    1s_2s_4s_dihydrocarveol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_proline
-    prolyl_histidine
+    <-> ec_4_2_1_139 [4.2.1.139] +pterocarpan
+    4r_4_2_dihydroxyisoflavan
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_proline +l_arginine
-    prolyl_leucyl_arginine
+    <-> . +l_glutamate +l_ethynylserine
+    l_glutamyl_3r_l_ethynylserine
   }
 }

@@ -42,25 +42,25 @@ pathway epi-isozizaene-to-h2o "(+)-epi-isozizaene to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    yersiniose_b
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    lividomycin_b
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_paratopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    paromomycin_ii
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_sorbopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    5_phosphoribostamycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    keto_d_sorbose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    5_ribosylparomamine
   }
 }

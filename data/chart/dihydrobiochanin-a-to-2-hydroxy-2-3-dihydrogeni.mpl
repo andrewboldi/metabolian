@@ -24,37 +24,37 @@ pathway dihydrobiochanin-a-to-2-hydroxy-2-3-dihydrogeni "dihydrobiochanin-A to 2
 
   branch from h side right {
     h
-    <-> ec_3_1_1_88 [3.1.1.88] +cyanide +3_phenoxybenzaldehyde +2_4_chlorophenyl_3_methylbutyric_acid +h2o
-    fenvalerate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_distearoyl_sn_glycero_3_phosphocholine +phosphate +1_2_distearoyl_sn_glycero_3_phosphocholine +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +beta_d_glucosamine +acetate +h2o
-    aldehydo_n_acetyl_d_glucosamine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    duvoglustat
   }
 
   branch from nadph side right {
     nadph
-    <-> . +2_phenylacetonitrile_oxide +h +nadp +h2o
-    z_phenylacetaldehyde_oxime
+    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
+    drimenol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_2_3_1_119 [2.3.1.119] +malonyl_coa +h +9z_12z_octadecadienoyl_coa +co2 +nadp +coa +h2o
-    11z_14z_icosadienoyl_coa
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
+    thujan_3_ol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_43 [2.1.1.43] +s_adenosyl_l_homocysteine +protein_n6_n6_n6_trimethyl_l_lysine
-    protein_n6_n6_dimethyl_l_lysine
+    <-> . +s_adenosyl_l_homocysteine +1_dehydro_6_gingerdione +h
+    1_3_4_dihydroxyphenyl_1_decene_3_5_dione
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +h +hva
-    3_4_dihydroxyphenylacetate
+    <-> . +s_adenosyl_l_homocysteine +6_dehydrogingerdione +h
+    1e_3z_1_3_4_dihydroxyphenyl_3_hydroxydeca_1_3_d
   }
 }

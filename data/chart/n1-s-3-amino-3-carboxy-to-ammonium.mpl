@@ -32,25 +32,25 @@ pathway n1-s-3-amino-3-carboxy-to-ammonium "N1-[(S)-3-amino-3-carboxy… to ammo
 
   branch from spermidine side left {
     spermidine
-    <-> ec_1_5_3_14 [1.5.3.14] +o2 +h2o +trimethylenediaminium +h2o2
-    4_ammoniobutanal
-  }
-
-  branch from spermidine side right {
-    spermidine
     <-> . +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
     n4_aminopropylspermidine
   }
 
+  branch from spermidine side right {
+    spermidine
+    <-> ec_2_5_1_128 [2.5.1.128] +s_adenosylmethioninaminium +5_s_methyl_5_thioadenosine +hplus
+    n4_bis_aminopropyl_spermidine
+  }
+
   branch from nh3 side left {
     nh3
-    <-> . +s_isoleucinol +nad +h2o +nadh +hplus
-    3s_1_hydroxy_3_methylpentan_2_one
+    <-> . +pentan_3_aminium +nadp +h2o +nadph +hplus
+    pentan_3_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +s_methioninol +nad +h2o +nadh +hplus
-    1_hydroxy_4_methythio_butan_2_one
+    <-> . +hexan_3_aminium +nadp +h2o +nadph +hplus
+    3_hexanone
   }
 }

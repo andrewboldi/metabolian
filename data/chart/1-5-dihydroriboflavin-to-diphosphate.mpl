@@ -18,49 +18,49 @@ pathway 1-5-dihydroriboflavin-to-diphosphate "1,5-dihydroriboflavin to diphospha
 
   branch from fmn side left {
     fmn
-    <-> . +glycyrrhetaldehyde +fmnh2 +o2 +h2o +hplus
-    glycyrrhetinate
+    <-> ec_1_14_14_123 [1.14.14.123] +3_hydroxy_ent_sandaracopimaradiene +fmnh2 +o2 +h2o +hplus
+    oryzalexin_d
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
-    1_s_5_r_5_hydroxyaverantin
+    <-> ec_1_14_14_78 [1.14.14.78] +phylloquinone +fmnh2 +o2 +h2o +hplus
+    hydroxyphylloquinone
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_2_3_1_103 [2.3.1.103] +1_o_sinapoyl_d_glucose
-    1_2_di_o_sinapoyl_d_glucose
+    <-> ec_3_2_1_189 [3.2.1.189] +dioscin +h2o +l_rhamnopyranose
+    diosgenin
   }
 
   branch from glucose side right {
     glucose
-    <-> . +melibiose +h2o
-    d_galactopyranose
+    <-> ec_3_2_1_186 [3.2.1.186] +protodioscin +h2o
+    26_desglucoprotodioscin
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_2_5_1_129 [2.5.1.129] +prenyl_phosphate +pi
-    prenyl_fmnh2
+    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +o2 +fmn +h2o +hplus
+    hydroxymenaquinone_4
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> . +testosterone +o2 +fmn +h2o +hplus
-    19_hydroxytestosterone
+    <-> . +all_trans_retinol +o2 +fmn +h2o +hplus
+    all_trans_retinal
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_89 [2.5.1.89] +geranylgeranyl_diphosphate +ipp
-    tri_trans_poly_cis_undecaprenyl_diphosphate
+    <-> ec_4_2_3_67 [4.2.3.67] +fpp
+    cis_muurola_4_14_5_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_30 [2.5.1.30] +ipp +fpp
-    all_trans_heptaprenyl_diphosphate
+    <-> ec_4_2_3_68 [4.2.3.68] +fpp +h2o
+    eudesmol
   }
 }

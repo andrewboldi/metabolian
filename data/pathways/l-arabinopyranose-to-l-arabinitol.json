@@ -1,0 +1,262 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-arabinopyranose-to-l-arabinitol",
+  "name": "L-arabinopyranose to L-arabinitol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-arabinopyranose to L-arabinitol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR114103"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17535"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_arabinopyranose",
+      "name": "L-arabinopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17535"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_arabinono_1_4_lactone",
+      "name": "L-arabinono-1,4-lactone",
+      "short": "L-arabinono-1,4-lac…",
+      "formula": "C5H8O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1674"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "aldehydo_l_arabinose",
+      "name": "aldehydo-L-arabinose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6182"
+      }
+    },
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740330"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_376",
+      "name": "L-arabinose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.376"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_179",
+      "name": "D-xylose 1-dehydrogenase (NADP(+), D-xylono-1,5-lactone-forming)",
+      "ec": [
+        "1.1.1.179"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_2",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-arabinose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.376",
+      "substrates": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_376"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR114103"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR114103"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-xylose 1-dehydrogenase (NADP(+), D-xylono-1,5-lactone-forming)",
+      "ec": "1.1.1.179",
+      "substrates": [
+        {
+          "metabolite": "l_arabinono_1_4_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_l_arabinose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172670"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172670"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alcohol dehydrogenase (NADP(+))",
+      "ec": "1.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_l_arabinose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195658"
+          }
+        ]
+      }
+    }
+  ]
+}

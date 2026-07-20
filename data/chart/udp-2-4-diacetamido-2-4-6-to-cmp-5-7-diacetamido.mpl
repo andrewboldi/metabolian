@@ -20,14 +20,14 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
 
   branch from udp side left {
     udp
-    <-> ec_4_1_1_49 [4.1.1.49] +utp +oxaloacetate +phosphoenolpyruvate
-    co2
+    <-> ec_2_4_1_17 [2.4.1.17] +ketoprofen_glucuronide +ketoprofen
+    udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +ketoprofen_glucuronide +ketoprofen
-    udp_alpha_d_glucuronate
+    <-> ec_2_4_1_17 [2.4.1.17] +gemfibrozil_glucuronide +udp_alpha_d_glucuronate
+    gemfibrozil
   }
 
   branch from 2_4_diacetamido_2_4_6_trideoxy_beta_l_gulose side left {
@@ -38,26 +38,26 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
 
   branch from h side right {
     h
-    <-> . +1_5_diazabicyclo_4_3_0_nonane
-    1_3_aminopropyl_pyrrolinium
+    <-> ec_1_1_1_2 [1.1.1.2] +1_2_4_butanetriol +nadp +nadph
+    3r_3_4_dihydroxybutanal
   }
 
   branch from h side left {
     h
-    <-> . +acetyl_coa +n_3_aminopropyl_hydroxylamine +coa
-    n_3_aminopropyl_n_hydroxyacetamide
+    <-> . +4_3_acetyl_5_hydroxy_4_oxo_1_4_dihydronapthalen +nadph +s_chiral_alcohol
+    nadp
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_mycolyltrehalose_6_phosphate +h2o +h
-    alpha_alpha_trehalose_6_alpha_mycolate
+    <-> ec_3_1_3_29 [3.1.3.29] +d_arabinose_5_phosphate +h2o
+    2_3_4_5_tetrahydroxypentanal
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_12 [3.1.3.12] +6_o_cis_methoxy_mycolyl_trehalose_6_phosphate +h2o
-    trehalose_cis_methoxy_mono_mycolate
+    <-> ec_3_1_3_1 [3.1.3.1] +2_4_dinitrophenyl_phosphate +h2o +h
+    2_4_dinitrophenol
   }
 
   branch from diphosphate side right {
@@ -68,7 +68,7 @@ pathway udp-2-4-diacetamido-2-4-6-to-cmp-5-7-diacetamido "UDP-2,4-diacetamido-2,
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +ctp +n_acetyl_7_o_acetylneuraminate
-    cmp_n_acetyl_7_o_acetylneuraminate
+    <-> . +2e_geranyl_diphosphate +indolactam_v
+    lyngbyatoxin_a
   }
 }

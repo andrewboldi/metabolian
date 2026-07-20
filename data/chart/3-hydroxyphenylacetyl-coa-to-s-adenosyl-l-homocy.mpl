@@ -26,25 +26,25 @@ pathway 3-hydroxyphenylacetyl-coa-to-s-adenosyl-l-homocy "3-hydroxyphenylacetyl-
 
   branch from ppi side right {
     ppi
-    <-> . +8_9_eet +atp +coa +amp
-    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
+    <-> ec_4_2_3_185 [4.2.3.185] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    ent_atiserene
   }
 
   branch from ppi side left {
     ppi
-    <-> . +11_12_eet +atp +coa +amp
-    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
+    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_pentaprenyl_diphosphate
+    geranylfarnesene
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_311 [2.1.1.311] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_298 [2.1.1.298] +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_312 [2.1.1.312] +uridine_5_monophosphate_1 +sam +hplus
-    n3_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_b +sam
+    mitomycin_b
   }
 }

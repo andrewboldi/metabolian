@@ -30,25 +30,25 @@ pathway 17-18-epoxy-17-hydroxycur-to-s-adenosyl-l-homocy "17,18-epoxy-17-hydroxy
 
   branch from fmn side right {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_10z_16z_19z_13_14_epoxydocosatetraenoate
+    <-> . +dehydrocholesterol_7 +fmnh2 +o2 +h2o +hplus
+    7_ketocholesterol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
-    7z_13z_16z_19z_10_11_epoxydocosatetraenoate
+    <-> . +lathosterol +fmnh2 +o2 +h2o +hplus
+    7_oxo_5_cholestan_3_ol
   }
 
   branch from sah side right {
     sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 
   branch from sah side left {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_268 [2.1.1.268] +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
   }
 }

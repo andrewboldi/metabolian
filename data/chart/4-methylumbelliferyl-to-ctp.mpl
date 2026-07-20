@@ -60,5 +60,4 @@ pathway 4-methylumbelliferyl-to-ctp "4-methylumbelliferyl… to CTP" {
 
 
 
-
 }

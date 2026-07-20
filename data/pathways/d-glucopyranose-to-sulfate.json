@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucopyranose-to-sulfate",
   "name": "D-glucopyranose to sulfate",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from D-glucopyranose to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -148,48 +148,42 @@
       }
     },
     {
-      "id": "3_bromo_1_propanol",
-      "name": "3-Bromo-1-propanol",
-      "formula": "C3H7BrO",
+      "id": "aminodhq",
+      "name": "AminoDHQ",
+      "formula": "C7H11NO5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144333"
+        "chebi": "CHEBI:29513"
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "bromide",
-      "name": "bromide",
-      "formula": "Br",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM740736"
-      }
-    },
-    {
-      "id": "1_3_dibromopropane",
-      "name": "1,3-Dibromopropane",
-      "formula": "C3H6Br2",
+      "id": "5_amino_5_deoxy_3_dehydroshikimic_acid",
+      "name": "5-amino-5-deoxy-3-dehydroshikimic acid",
+      "short": "5-amino-5-deoxy-3-d…",
+      "formula": "C7H9NO4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM165424"
+        "chebi": "CHEBI:29514"
       }
     },
     {
-      "id": "propane_1_3_diol",
-      "name": "propane-1,3-diol",
-      "formula": "C3H8O2",
+      "id": "7_9_12_decaketide_intermediate_2",
+      "name": "7,9,12-Decaketide intermediate 2",
+      "short": "7,9,12-Decaketide…",
+      "formula": "C20H23O10S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM2861"
+        "chebi": "CHEBI:81677"
+      }
+    },
+    {
+      "id": "7_9_12_decaketide_intermediate_3",
+      "name": "7,9,12-Decaketide intermediate 3",
+      "short": "7,9,12-Decaketide…",
+      "formula": "C20H19O8S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81678"
       }
     },
     {
@@ -203,50 +197,39 @@
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM5"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "d_glucono_1_5_lactone",
-      "name": "D-glucono-1,5-lactone",
-      "short": "D-glucono-1,5-lacto…",
-      "formula": "C6H10O6",
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1369177"
+        "chebi": "CHEBI:4139"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "4_nitrophenol",
-      "name": "4-nitrophenol",
-      "formula": "C6H4NO3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM526"
-      }
-    },
-    {
-      "id": "4_nitrophenyl_d_glucoside",
-      "name": "4-nitrophenyl β-D-glucoside",
-      "short": "4-nitrophenyl…",
-      "formula": "C12H15NO8",
+      "id": "beta_lactose",
+      "name": "beta-lactose",
+      "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90259"
+        "metanetx": "MNXM734837"
+      }
+    },
+    {
+      "id": "isomaltose",
+      "name": "isomaltose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107787"
       }
     }
   ],
@@ -259,10 +242,17 @@
       ]
     },
     {
-      "id": "ec_3_8_1_5",
-      "name": "haloalkane dehalogenase",
+      "id": "ec_3_2_1_23",
+      "name": "beta-galactosidase",
       "ec": [
-        "3.8.1.5"
+        "3.2.1.23"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_10",
+      "name": "oligo-1,6-glucosidase",
+      "ec": [
+        "3.2.1.10"
       ]
     }
   ],
@@ -482,25 +472,16 @@
     },
     {
       "id": "r6",
-      "name": "haloalkane dehalogenase",
-      "ec": "3.8.1.5",
+      "name": "Reaction MNXR139456",
       "substrates": [
         {
-          "metabolite": "3_bromo_1_propanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "bromide",
+          "metabolite": "aminodhq",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_3_dibromopropane",
+          "metabolite": "5_amino_5_deoxy_3_dehydroshikimic_acid",
           "stoichiometry": 1
         },
         {
@@ -508,70 +489,51 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_8_1_5"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR133319"
+        "metanetx": "MNXR139456"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR133319"
+            "id": "MNXR139456"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "haloalkane dehalogenase",
-      "ec": "3.8.1.5",
+      "name": "Reaction MNXR139682",
       "substrates": [
         {
-          "metabolite": "3_bromo_1_propanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "7_9_12_decaketide_intermediate_2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "h",
+          "metabolite": "7_9_12_decaketide_intermediate_3",
           "stoichiometry": 1
         },
         {
-          "metabolite": "propane_1_3_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "bromide",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_8_1_5"
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR133330"
+        "metanetx": "MNXR139682"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR133330"
+            "id": "MNXR139682"
           }
         ]
       }
@@ -620,66 +582,21 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR137752",
+      "name": "beta-galactosidase",
+      "ec": "3.2.1.23",
       "substrates": [
         {
-          "metabolite": "glucose",
+          "metabolite": "d_galactopyranose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "glucose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "d_glucono_1_5_lactone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR137752"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR137752"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "Reaction MNXR143929",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_nitrophenol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "4_nitrophenyl_d_glucoside",
+          "metabolite": "beta_lactose",
           "stoichiometry": 1
         },
         {
@@ -687,17 +604,62 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_23"
+        }
+      ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR143929"
+        "metanetx": "MNXR145406"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR143929"
+            "id": "MNXR145406"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "oligo-1,6-glucosidase",
+      "ec": "3.2.1.10",
+      "substrates": [
+        {
+          "metabolite": "isomaltose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "metanetx": "MNXR145630"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145630"
           }
         ]
       }

@@ -36,13 +36,13 @@ pathway 1-2-3-trilinolenoylglycer-to-hydrogen-acceptor "1,2,3-trilinolenoylglyce
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    15_s_hepe
+    <-> . +2_arachidonoyl_sn_glycero_3_phosphoethanolamine +hydrogen_donor +o2 +h2o
+    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
-    18_s_hepe
+    <-> . +2_arachidonoyl_sn_glycero_3_phosphocholine +hydrogen_donor +o2 +h2o
+    2_11r_hydroxy_5z_8z_12e_14z_icosatetraenoyl_sn_g
   }
 }

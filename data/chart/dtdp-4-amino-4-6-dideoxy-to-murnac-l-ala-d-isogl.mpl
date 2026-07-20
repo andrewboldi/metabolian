@@ -50,13 +50,13 @@ pathway dtdp-4-amino-4-6-dideoxy-to-murnac-l-ala-d-isogl "dTDP-4-amino-4,6-dideo
 
   branch from h side right {
     h
-    <-> . +hexadecanoate +1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero +h2o
-    dipalmitoyl_phosphatidylglycerol
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_didodecanoyl_n_c12_0 +l_serine
+    cdp_1_2_didodecanoylglycerol
   }
 
   branch from h side left {
     h
-    <-> . +9z_octadecenoate +1_acyl_sn_glycero_3_phosphoglycerol_n_c18_1 +h2o
-    phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
+    <-> . +cmp +phosphatidylserine_ditetradecanoyl_n_c14_0 +l_serine
+    cdp_1_2_ditetradecanoylglycerol
   }
 }

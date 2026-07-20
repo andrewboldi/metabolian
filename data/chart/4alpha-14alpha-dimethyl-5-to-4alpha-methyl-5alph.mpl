@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4alpha-14alpha-dimethyl-5-to-4alpha-methyl-5alph "4alpha,14alpha-dimethyl-5… to 4alpha-methyl-5alpha-chol…" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     4alpha_14alpha_dimethyl_5alpha_cholesta_8_24_die
@@ -18,43 +18,37 @@ pathway 4alpha-14alpha-dimethyl-5-to-4alpha-methyl-5alph "4alpha,14alpha-dimethy
 
   branch from formate side left {
     formate
-    <-> ec_1_2_2_1 [1.2.2.1] +ubiquinone_6 +h +ubiquinol_6
-    co2
-  }
-
-  branch from formate side right {
-    formate
     <-> ec_3_7_1_25 [3.7.1.25] +2z_4e_2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate +h2o +h
     2z_2_hydroxyhexa_2_5_dienoate
   }
 
+  branch from formate side right {
+    formate
+    <-> ec_1_2_1_4 [1.2.1.4] +nadp +h2o +h +nadph
+    formaldehyde
+  }
+
   branch from nadp side left {
     nadp
-    <-> ec_1_14_21_7 [1.14.21.7] +3_8_biflaviolin +h2o +h +o2 +nadph
-    flaviolin
+    <-> . +protoporphyrin_ix +h +nadph
+    protoporphyrinogen_ix
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_72 [1.3.1.72] +h +24_methylenecholesterol +nadph
-    campesterol
+    <-> . +h +o2 +nadph +thiomethyl_conjugate_acetaminophen +h2o
+    thiomethyl_sulphoxide_conjugate_acetaminophen
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_4_1_1 [4.4.1.1] +l_homocysteine +pyruvate +nh4
-    cystathionine
+    <-> . +h +adp +cerivastatin +phosphate +cerivastatin
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +2_methylpropenoyl_coa
-    r_3_hydroxy_isobutanoyl_coa
-  }
-
-  branch from 3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth side left {
-    3s_4s_5s_10s_13r_4_10_13_trimethyl_17_2r_6_meth
-    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +o2 +nad +h2o
-    4_hydroxymethylzymosterol
+    <-> . +h +adp +phosphate +atp
+    cerivastatin_m1
   }
 }

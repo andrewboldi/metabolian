@@ -18,73 +18,73 @@ pathway triboa-to-h2o "TRIBOA to H2O" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +glutarate +2_oxoglutaryl_coa +h
-    glutaryl_coa
+    <-> ec_1_14_20_15 [1.14.20.15] +h +o2 +chloride +o_s_l_threonyl_pantetheine_4_phosphoryl_l_serine +co2 +succinate +h2o
+    o_s_4_chloro_l_threonyl_pantetheine_4_phosphoryl
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +12_epi_hapalindole_c_isonitrile +co2 +succinate +h2o
-    12_epi_hapalindole_e
+    <-> ec_1_14_11_70 [1.14.11.70] +o2 +deoxycylindrospermopsin +co2 +succinate
+    cylindrospermopsin
   }
 
   branch from o2 side left {
     o2
-    <-> . +2s_2_acetolactate +h +co2 +h2o
-    diacetyl
+    <-> ec_1_14_17_1 [1.14.17.1] +monodehydro_l_ascorbate_radical +4_hydroxynorephedrine +h2o +h +l_ascorbate
+    4_2_aminopropyl_phenol
   }
 
   branch from o2 side right {
     o2
-    <-> . +ubiquinone_6 +h2o
-    ubiquinol_6
+    <-> . +dihydrotoxoflavin +co2
+    1_6e_5_hydroxy_1_methyl_1_6_dihydro_1_2_4_triazi
   }
 
   branch from h side left {
     h
-    <-> ec_4_1_2_14 [4.1.2.14] +glyceraldehyde_3_phosphate +pyruvate
-    2_dehydro_3_deoxy_6_phospho_d_gluconate
+    <-> . +sn_glycerol_3_phosphocholine +h2o +choline
+    glycerol_2_phosphate
   }
 
   branch from h side right {
     h
-    <-> . +adp +3_hydroxy_simvastatin_acid_form +phosphate +3_hydroxy_simvastatin_acid_form +h2o
+    <-> . +adp +guanidinoacetate +phosphate +guanidinoacetate +h2o
     atp
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +o2 +cyclosporin_a_metabolite_m1 +nadp +h2o
-    am19_cyclosporine
+    <-> ec_1_14_14_1 [1.14.14.1] +4_aminophenol +nadp +h2o +h +o2
+    aniline
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +o2 +am1al_cyclosporine +nadp +h2o
-    cyclosporin_a_metabolite_m1a
+    <-> ec_1_14_13_144 [1.14.13.144] +9_pimara_7_15_diene +h +o2 +nadp +h2o
+    9_pimara_7_15_dien_19_oate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +h +5_8_11_tetradecatrienoyl_coenzyme_a +2e_7z_10z_13z_hexadecatetraenoyl_coa +h2o
-    coa
+    <-> . +nadh +o2 +6_hydroxypicolinic_acid +h2o
+    3_6_dihydroxypicolinate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +h +4_7_10_hexadecatrienoyl_coenzyme_a +coa +h2o
-    2e_6z_9z_12z_octadecatetraenoyl_coa
+    <-> . +nadh +h +o2 +5_hydroxypicolinic_acid +co2 +h2o
+    2_5_dihydroxypyridine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    4_s_glutathionyl_5_6_dihydroxyindoline
+    <-> . +l_threonine +l_glutamate
+    glutamyl_threonine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +para_hydroxyatorvastatin
-    4_hydroxy_atorvastatin_lactone_para_hydroxy_ator
+    <-> . +l_histidine +l_lysine +glycine
+    glycyl_histidyl_lysine
   }
 }

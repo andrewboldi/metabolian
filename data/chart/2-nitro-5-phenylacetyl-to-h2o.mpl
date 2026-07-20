@@ -18,14 +18,14 @@ pathway 2-nitro-5-phenylacetyl-to-h2o "2-Nitro-5-[(Phenylacetyl)… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_3_1_20 [1.3.1.20] +methyl_2_hydroxypropionate +nadp +nadph
-    methyl_pyruvate
+    <-> ec_3_8_1_5 [3.8.1.5] +2_3_dibromo_1_propanol +bromide +h2o
+    1_2_3_tribromopropane
   }
 
   branch from h side right {
     h
-    <-> ec_4_3_1_24 [4.3.1.24] +3_coumaric_acid +nh4
-    dl_m_tyrosine
+    <-> ec_3_8_1_5 [3.8.1.5] +2_bromoethanol +bromide +h2o
+    1_2_dibromoethane
   }
 
   branch from 2_phenylacetate side left {
@@ -48,37 +48,37 @@ pathway 2-nitro-5-phenylacetyl-to-h2o "2-Nitro-5-[(Phenylacetyl)… to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +epitestosterone +h +nadph
-    androst_4_ene_3_17_dione
+    <-> ec_1_2_1_5 [1.2.1.5] +4_hydroxynon_2_enal +h2o +h +nadph
+    4_hydroxynon_2_enoic_acid
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +h +methylacetoacetic_acid +nadph
-    methyl_3_hydroxybutyrate
+    <-> ec_1_2_1_5 [1.2.1.5] +decanoate +h +nadph +h2o
+    decanal
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_2_20 [3.1.2.20] +4_chlorobenzoate +h +coa
-    4_chlorobenzoyl_coa
+    <-> ec_3_8_1_5 [3.8.1.5] +1_2_dibromopropane +h +bromide
+    2_bromopropanol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_21 [3.4.11.21] +l_aspartate +h +angiotensin_iii
-    angiotensin_ii
+    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h +bromide
+    1_3_dibromopropane
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    pb
+    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose_6_phosphate +h +adp
+    beta_d_fructose
   }
 
   branch from atp side left {
     atp
-    <-> . +3_methylbut_2_enoyl_coa +co2 +h2o +h +adp +phosphate
-    3_methyl_2e_glutaconyl_coa
+    <-> ec_2_7_1_3 [2.7.1.3] +d_fructofuranose_1_phosphate +h +adp
+    d_fructofuranose
   }
 }

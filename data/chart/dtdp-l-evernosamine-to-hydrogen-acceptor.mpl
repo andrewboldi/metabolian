@@ -18,13 +18,13 @@ pathway dtdp-l-evernosamine-to-hydrogen-acceptor "dTDP-β-L-evernosamine to hydr
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    13_hode
+    <-> . +dihydro_ferroheme_d1 +hydrogen_donor
+    ferroheme_d1
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    9_hode
+    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
+    adonixanthin
   }
 }

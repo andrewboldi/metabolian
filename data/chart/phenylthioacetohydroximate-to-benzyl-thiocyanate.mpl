@@ -40,14 +40,14 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from glucose side right {
     glucose
-    <-> ec_2_7_1_147 [2.7.1.147] +adp +amp +hplus
-    g6p
+    <-> . +avenacoside_a +h2o
+    26_desglucoavenacoside_a
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_104 [3.2.1.104] +cholesteryl_d_glucoside +h2o
-    cholesterol
+    <-> ec_3_2_1_117 [3.2.1.117] +r_amygdalin +h2o
+    r_prunasin
   }
 
   branch from sulfate side right {
@@ -58,7 +58,7 @@ pathway phenylthioacetohydroximate-to-benzyl-thiocyanate "phenylthioacetohydroxi
 
   branch from sulfate side left {
     sulfate
-    <-> ec_3_1_6_20 [3.1.6.20] +s_2_sulfodisulfanyl_l_cysteine_1 +h2o +hplus
-    3_trisulfanyl_l_alanine
+    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
+    aldehyde
   }
 }

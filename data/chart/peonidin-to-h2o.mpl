@@ -42,37 +42,37 @@ pathway peonidin-to-h2o "peonidin to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +h2o
-    thiosulfate
+    <-> . +h +adp +phosphate +h2o
+    8z_11z_14z_eicosatrienoate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_25 [3.6.3.25] +thiosulfate +adp +phosphate +thiosulfate +h2o
-    h
+    <-> . +h +adp +phosphate +h2o
+    decanoate
   }
 
   branch from l_methionine side left {
-    l_methionine
-    <-> . +5_deoxyadenosine +cob_iii_alamin +2_methyldiplopterol +methylcobalamin +hopan_22_ol
-    s_adenosyl_l_methionine
-  }
-
-  branch from l_methionine side right {
     l_methionine
     <-> . +l_methionine_s_oxide +co2 +succinate +o2
     2_oxoglutarate
   }
 
+  branch from l_methionine side right {
+    l_methionine
+    <-> . +n_methyl_l_valyl_l_tryptophanol +l_homocysteine +nadp +h2o +h +nadph +l_tryptophan
+    l_valine
+  }
+
   branch from h2o side left {
     h2o
-    <-> . +trans_4_coumarate
-    r_3_4_hydroxyphenyl_lactate
+    <-> . +h +adp +phosphate +atp
+    tetradecanoic_d27_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2s_homocitric_acid
-    trans_homoaconitate
+    <-> . +h +adp +phosphate +atp
+    s_glutathionyl_ethacrynic_acid
   }
 }

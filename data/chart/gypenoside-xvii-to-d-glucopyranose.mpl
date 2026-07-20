@@ -46,25 +46,25 @@ pathway gypenoside-xvii-to-d-glucopyranose "gypenoside XVII to D-glucopyranose" 
 
   branch from h2o side left {
     h2o
-    <-> . +adenine +ribosylhopane
-    adenosylhopane
+    <-> . +h +adp +15_r_hepe +phosphate +15_r_hepe
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ribosyl_hopane +adenosylhopane
-    adenine
+    <-> . +h +adp +phosphate +atp
+    15_s_hepe
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_62 [3.2.1.62] +daidzein_7_o_beta_d_glucoside +h2o +h
-    daidzein
+    <-> ec_3_2_1_206 [3.2.1.206] +3_4_dhpea_ea +h2o
+    oleuropein
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o
-    d_cellobiose
+    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose
+    d_maltose
   }
 }

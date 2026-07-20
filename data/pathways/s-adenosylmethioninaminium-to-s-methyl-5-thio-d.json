@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-adenosylmethioninaminium-to-s-methyl-5-thio-d",
   "name": "S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribos…",
-  "category": "other",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from S-adenosylmethioninaminium to S-methyl-5-thio-α-D-ribose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -122,32 +122,52 @@
       }
     },
     {
-      "id": "spermine",
-      "name": "spermine",
-      "formula": "C10H30N4",
-      "charge": 4,
+      "id": "d_histidine",
+      "name": "D-histidine",
+      "formula": "C6H9N3O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:45725"
+        "chebi": "CHEBI:142967"
       }
     },
     {
-      "id": "n4_aminopropylspermine",
-      "name": "N4-aminopropylspermine",
-      "short": "N4-aminopropylsperm…",
-      "formula": "C13H38N5",
-      "charge": 5,
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:82772"
+        "chebi": "CHEBI:59789"
       }
     },
     {
-      "id": "n4_bis_aminopropyl_spermidine",
-      "name": "N4-bis(aminopropyl)spermidine",
-      "short": "N4-bis(aminopropyl)…",
-      "formula": "C13H38N5",
-      "charge": 5,
+      "id": "n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt",
+      "name": "N-[(3S)-3-amino-3-carboxypropyl]-D-histidine dizwitterion",
+      "short": "N-[(3S)-3-amino-3-c…",
+      "formula": "C10H16N4O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82771"
+        "chebi": "CHEBI:141808"
+      }
+    },
+    {
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65315"
+      }
+    },
+    {
+      "id": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
+      "name": "3-(3-amino-3-carboxypropyl)uridine 5'-phosphate(1−)",
+      "short": "3-(3-amino-3-carbox…",
+      "formula": "C13H17N3O10P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82930"
       }
     },
     {
@@ -176,43 +196,6 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "n_citryl_spermidine",
-      "name": "N-citryl-spermidine",
-      "formula": "C13H25N3O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:149586"
-      }
-    },
-    {
-      "id": "n8_n_8_citryl_bis_spermidine_3",
-      "name": "N8,N'8-citryl-bis(spermidine) (+3)",
-      "short": "N8,N'8-citryl-bis(s…",
-      "formula": "C20H45N6O5",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:149592"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -246,10 +229,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_128",
-      "name": "N(4)-bis(aminopropyl)spermidine synthase",
+      "id": "ec_2_5_1_152",
+      "name": "D-histidine 2-aminobutanoyltransferase",
       "ec": [
-        "2.5.1.128"
+        "2.5.1.152"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_25",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "ec": [
+        "2.5.1.25"
       ]
     },
     {
@@ -406,21 +396,22 @@
     },
     {
       "id": "r4",
-      "name": "spermine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-aminopropylspermine + S-meth...",
-      "equation": "spermine + S-adenosyl 3-(methylsulfanyl)propylamine = N(4)-aminopropylspermine + S-methyl-5'-thioadenosine + H(+)",
+      "name": "D-histidine 2-aminobutanoyltransferase",
+      "equation": "D-histidine + S-adenosyl-L-methionine = (2S)-2-amino-4-{[(1R)-1-carboxy-2-(1H-imidazol-4-yl)ethyl]amino}butanoate + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.152",
       "substrates": [
         {
-          "metabolite": "spermine",
+          "metabolite": "d_histidine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_adenosylmethioninaminium",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n4_aminopropylspermine",
+          "metabolite": "n_3s_3_amino_3_carboxypropyl_d_histidine_dizwitt",
           "stoichiometry": 1
         },
         {
@@ -432,66 +423,71 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_152"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42880"
+        "rhea": "RHEA:59088"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42880"
+            "id": "RHEA:59088"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "N(4)-bis(aminopropyl)spermidine synthase",
-      "equation": "2 S-adenosyl 3-(methylsulfanyl)propylamine + spermidine = N(4)-bis(aminopropyl)spermidine + 2 S-methyl-5'-thioadenosine + 2 H(+)",
-      "ec": "2.5.1.128",
+      "name": "tRNA-uridine aminocarboxypropyltransferase",
+      "equation": "a uridine in tRNA + S-adenosyl-L-methionine = a 3-[(3S)-3-amino-3-carboxypropyl]uridine in tRNA + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "2.5.1.25",
       "substrates": [
         {
-          "metabolite": "s_adenosylmethioninaminium",
-          "stoichiometry": 2
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "spermidine",
+          "metabolite": "sam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n4_bis_aminopropyl_spermidine",
+          "metabolite": "3_3_amino_3_carboxypropyl_uridine_5_phosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "5_s_methyl_5_thioadenosine",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_128"
+          "enzyme": "ec_2_5_1_25"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:44132"
+        "rhea": "RHEA:62432"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:44132"
+            "id": "RHEA:62432"
           }
         ]
       }
@@ -541,57 +537,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:45168"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "N(8)-citryl-spermidine + spermidine + ATP = N(8),N'(8)-citryl-bis(spermidine) + AMP + d...",
-      "equation": "N(8)-citryl-spermidine + spermidine + ATP = N(8),N'(8)-citryl-bis(spermidine) + AMP + diphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "n_citryl_spermidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "spermidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n8_n_8_citryl_bis_spermidine_3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:63812"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:63812"
           }
         ]
       }

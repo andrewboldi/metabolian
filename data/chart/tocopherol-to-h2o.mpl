@@ -18,14 +18,14 @@ pathway tocopherol-to-h2o "γ-tocopherol to H2O" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +chloride +sam
-    chloromethane
+    <-> ec_2_1_1_238 [2.1.1.238] +mycinamicin_vi +sam +hplus
+    mycinamicin_iii
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +bromide +sam
-    bromomethane
+    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sam +hplus
+    4_methoxyisoflavones
   }
 
   branch from 13_hydroxy_tocopherol side left {
@@ -36,37 +36,37 @@ pathway tocopherol-to-h2o "γ-tocopherol to H2O" {
 
   branch from fmn side right {
     fmn
-    <-> . +artemisinic_alcohol +fmnh2 +o2 +h2o +hplus
-    artemisinic_aldehyde
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_18_eetetr
   }
 
   branch from fmn side left {
     fmn
-    <-> . +artemisinic_aldehyde +fmnh2 +o2 +h2o +hplus
-    artemisinate
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    17_r_18_s_eetetr
   }
 
   branch from nadp side right {
     nadp
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +nadph
-    5_hydroxytryptophol
+    <-> . +h +12_oxo_c_ltb3 +nadph
+    11_12_dihydro_12r_hydroxyleukotriene_c4
   }
 
   branch from nadp side left {
     nadp
-    <-> . +cholestane_3_7_12_24_25_pentol +h2o +h +o2 +nadph
-    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
+    <-> . +26_hydroxycholesterol +h +nadph
+    3beta_hydroxy_5_cholestenal
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +1_2_dioctadecanoylglycerol +phosphate
-    3_phosphonooxy_1_2_propanediyl_dioctadecanoate
+    <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphatidylethanolamine_ditetradecanoyl_n_c14_0 +phosphate +phosphatidylethanolamine_ditetradecanoyl_n_c14_0
-    atp
+    <-> . +hexadecanoate +h +2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
+    dipalmitoyl_phosphatidylglycerol
   }
 }

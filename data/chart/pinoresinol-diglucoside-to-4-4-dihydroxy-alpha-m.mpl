@@ -22,14 +22,14 @@ pathway pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m "Pinoresinol diglucosid
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +3_4_dhpea_ea +h2o
-    oleuropein
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    d_maltose
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose
-    d_maltose
+    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein_aglycone +h2o
+    oleuropein
   }
 
   branch from cu side left {
@@ -46,43 +46,43 @@ pathway pinoresinol-diglucoside-to-4-4-dihydroxy-alpha-m "Pinoresinol diglucosid
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_tryptophan
-    leucyl_tryptophan
+    <-> . +glycyl_dl_phenylalanine +l_tryptophan
+    tryptophanyl_glycyl_phenylalanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_valine
-    leucyl_valine
+    <-> . +l_histidine +l_methionine +l_tryptophan
+    tryptophanyl_histidyl_methionine
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_docosapentenoylglycerophosphocholine_delta_4_7
+    <-> ec_2_4_1_245 [2.4.1.245] +adp_alpha_d_glucose +beta_d_glucose +adp
+    alpha_alpha_trehalose
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_docosapentenoylglycerophosphocholine_delta_7_1
+    <-> ec_2_4_1_245 [2.4.1.245] +alpha_d_glucose +adp_alpha_d_glucose +alpha_alpha_trehalose
+    adp
   }
 
   branch from cu side left {
     cu
-    <-> ec_3_6_3_54 [3.6.3.54] +h +phosphate +atp +h2o
-    adp
+    <-> ec_3_6_3_54 [3.6.3.54] +h +adp +atp +h2o
+    phosphate
   }
 
   branch from o2 side right {
     o2
-    <-> . +fadh2 +h +chloride +naphthomycin_e +naphthomycin_a +h2o
-    fad
+    <-> . +8_hydroxy_delta_cadinene +nadp +h2o +h +nadph
+    1s_8ar_delta_cadinene
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_2_3_1 [1.2.3.1] +phenanthridone +h2o2 +h2o
-    phenanthridine
+    <-> ec_1_14_13_174 [1.14.13.174] +h +nadph +s_averantin +1_s_5_s_5_hydroxyaverantin +h2o
+    nadp
   }
 }

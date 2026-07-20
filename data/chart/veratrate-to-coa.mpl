@@ -22,18 +22,6 @@ pathway veratrate-to-coa "veratrate to CoA" {
     cyanidin_3_o_3_6_o_dimalonylglucoside
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +2r_9s_annullatin_h +hydrogen_donor
-    2r_annullatin_f
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +2s_9s_annullatin_h +hydrogen_donor
-    2s_9s_annullatin_d
-  }
-
   branch from 1_o_vanilloyl_d_glucose side left {
     1_o_vanilloyl_d_glucose
     <-> ec_2_4_1_299 [2.4.1.299] +pelargonidin_3_o_d_glucoside_betaine +vanillate
@@ -72,13 +60,13 @@ pathway veratrate-to-coa "veratrate to CoA" {
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +primary_diamine
-    n_acetyldiamine
+    <-> . +acetyl_coa +n_6_n_6_o_tridemethylpuromycin_5_phosphate
+    n_acetyl_n6_n6_o_tridemethylpuromycin_5_phosphat
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +n_phenylhydroxylamine
-    n_acetyloxy_benzenamine
+    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_g
+    kaempferol_3_o_6_4_coumaroyl_d_glucosyl_1_2_d_gl
   }
 }

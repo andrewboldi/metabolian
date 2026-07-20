@@ -30,25 +30,25 @@ pathway 3-aminopropoxy-guanidine-to-o-ureidohomoserine "(3-Aminopropoxy)guanidin
 
   branch from l_aspartate side left {
     l_aspartate
-    <-> ec_3_5_1_1 [3.5.1.1] +coumarin_120 +h +h2o
-    l_aspartic_acid_beta_7_amido_4_methylcoumarin
+    <-> ec_3_5_1_18 [3.5.1.18] +l_leucine +h +h2o
+    asp_leu
   }
 
   branch from l_aspartate side right {
     l_aspartate
-    <-> ec_3_4_11_10 [3.4.11.10] +h +4_nitroaniline +h2o
-    aspartic_acid_beta_4_nitroanilide
+    <-> ec_3_4_19_5 [3.4.19.5] +l_arginine +h2o
+    asp_arg
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    w
+    <-> . +h +adp +phospho_heptosyl_phospho_heptosyl_heptosyl_kdo2
+    inner_core_oligosaccharide_lipid_a
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    butyro_betaine
+    l_methionine_r_s_oxide
   }
 }

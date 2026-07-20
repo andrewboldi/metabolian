@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway urdamycin-f-to-h2o "Urdamycin F to H2O" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     urdamycin_f
@@ -16,57 +16,51 @@ pathway urdamycin-f-to-h2o "Urdamycin F to H2O" {
     atp
   }
 
-  branch from premithramycin_b side left {
-    premithramycin_b
-    <-> . +h +o2 +nadph +nadp +h2o
-    premithramycin_b_lactone
+  branch from dtdp side left {
+    dtdp
+    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dttp +h
+    ump
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +methylparaben +h
-    4_o_alpha_l_rhamnopyranosyl_hydroxybenzoate_meth
-  }
-
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_beta_l_rhamnose +p_hbad_i +h
-    o_methyl_4_o_alpha_l_rhamnopyranosyl_1_3_2_o_met
-  }
-
-  branch from h side right {
-    h
-    <-> . +3_deoxo_4b_deoxypaxilline +o2 +nadph +nadp +h2o
-    beta_pc_m6
+    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +beta_d_ribf_1_4_beta_d_gal_1_3_alpha_d_galnac_di +h
+    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
   }
 
   branch from h side left {
     h
-    <-> . +13_desoxyterpendole_i +o2 +nadph +nadp +h2o
-    terpendole_i
+    <-> ec_5_5_1_7 [5.5.1.7] +2_5_dichloro_3_methyl_muconate
+    2_5_dichloro_3_methyl_muconolactone
   }
 
-  branch from atp side right {
-    atp
-    <-> . +h +glycerol_2_phosphate +adp
-    glycerol
+  branch from h side right {
+    h
+    <-> . +5_chloro_2_methyl_maleylacetate +h2o
+    5_chloro_2_methyl_dienelactone
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_172 [2.7.1.172] +h +n6_3_o_phospho_d_ribulosyl_l_lysinium +adp
-    n6_d_ribulosyl_l_lysinium
+    <-> ec_2_7_6_3 [2.7.6.3] +1_2_amino_7_methyl_4_oxo_7_8_dihydro_3h_pteridi +h +amp
+    6_1_hydroxyethyl_7_methyl_7_8_dihydropterin
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
-    beta_d_glucose
+  branch from atp side right {
+    atp
+    <-> . +l_alanine +fumiquinazoline_f_indoline_2_3_diol +h +fumiquinazoline_a +amp +h2o
+    diphosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_deoxo_4b_deoxypaxilline +formate +nadp +o2 +nadph
-    paspaline_b
+    <-> ec_3_5_1_97 [3.5.1.97] +l_homoserine_lactone +butanoate
+    a_s_butyr_amido_r_butyrolactone
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxooctanoyl_l_homoserine
+    3_oxo_n_3s_2_oxotetrahydrofuran_3_yl_octanamide
   }
 }

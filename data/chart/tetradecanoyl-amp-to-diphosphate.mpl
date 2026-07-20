@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway tetradecanoyl-amp-to-diphosphate "tetradecanoyl-AMP to diphosphate" {
-  spacing 250
+  spacing 226
 
   spine at 0,0 {
     tetradecanoyl_amp
@@ -16,33 +16,9 @@ pathway tetradecanoyl-amp-to-diphosphate "tetradecanoyl-AMP to diphosphate" {
     tetradecanoyl_amp
   }
 
-  branch from o_s_tetradecanoylpantetheine_4_phosphoryl_serine side left {
-    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
-    <-> . +nadph +hplus +nadp
-    o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser
-  }
-
-  branch from tetradecanoate side right {
-    tetradecanoate
-    <-> ec_1_13_11_92 [1.13.11.92] +o2
-    2r_2_hydroperoxytetradecanoate
-  }
-
-  branch from tetradecanoate side left {
-    tetradecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    7_hydroxymyristate
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +pre_putrebactin +atp +amp +hplus
-    putrebactin
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    sobralene
+    <-> . +n_methyl_l_alanine +l_kynurenine +atp +amp +hplus
+    aspkyncin
   }
 }

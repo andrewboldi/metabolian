@@ -24,26 +24,26 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
 
   branch from nadp side left {
     nadp
-    <-> . +8_8a_deoxyoleandolide +h +o2 +nadph +h2o
-    oleandolide
+    <-> ec_1_14_14_1 [1.14.14.1] +h +benzo_a_pyrene +o2 +nadph +h2o
+    benzo_a_pyrene_4_5_oxide
   }
 
   branch from nadp side right {
     nadp
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +h +nadph +6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone +coa +h2o
-    co2
+    <-> ec_1_14_14_1 [1.14.14.1] +benzo_a_pyrene_diol_epoxide_i +h2o +h +o2 +nadph
+    benzo_a_pyrene_7_8_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +4_hydroxy_9_fluorenone
-    3_4_dihydroxy_3_4_dihydro_9_fluorenone
+    <-> ec_3_3_2_9 [3.3.2.9] +1_nitronaphthalene_5_6_oxide
+    1_nitro_5_6_dihydroxy_dihydronaphthalene
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_8_1_8 [3.8.1.8] +h +6_chloro_1_3_5_triazine_2_4_diamine +nh4
-    4_amino_6_chloro_1_3_5_triazin_2_ol
+    <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_3_4_oxide
+    bromobenzene_3_4_dihydrodiol
   }
 
   branch from 9z_icos_9_enoyl_coa side left {
@@ -54,13 +54,13 @@ pathway 3r-9z-hydroxyicos-9-eno-to-diphosphate "(3R,9Z)-hydroxyicos-9-eno… to 
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_100 [2.7.7.100] +c_terminal_gly_gly_1 +atp +hplus
-    c_terminal_gly_gly_amp_1_group
+    <-> . +utp +ctp
+    3_3_cyclic_cmp_ump
   }
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    cadinene
+    <-> . +r_lavandulyl_diphosphate +h2o
+    r_lavandulol
   }
 }

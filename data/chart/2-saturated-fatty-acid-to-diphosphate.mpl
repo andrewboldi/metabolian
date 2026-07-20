@@ -18,14 +18,14 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_acyl_2_hexadecenoyl_sn_glycero_3_phosphate +h2o +hplus
-    2_16_1_lysophosphatidate
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> ec_3_1_1_111 [3.1.1.111] +3_sn_phosphatidyl_l_serine +h2o +hplus
-    2_acyl_sn_glycero_3_phosphoserine
+    <-> . +2_monolysocardiolipin +h2o +hplus
+    2_2_dilysocardiolipin
   }
 
   branch from fatty_acyl_coa side left {
@@ -42,13 +42,13 @@ pathway 2-saturated-fatty-acid-to-diphosphate "2-saturated fatty acid… to diph
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_67 [4.2.3.67] +fpp
-    cis_muurola_4_14_5_diene
+    <-> ec_4_2_3_80 [4.2.3.80] +fpp
+    longipinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_68 [4.2.3.68] +fpp +h2o
-    eudesmol
+    <-> ec_2_5_1_96 [2.5.1.96] +fpp
+    15_cis_4_4_diapophytoene
   }
 }

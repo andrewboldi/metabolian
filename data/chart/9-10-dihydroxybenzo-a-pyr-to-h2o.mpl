@@ -18,62 +18,62 @@ pathway 9-10-dihydroxybenzo-a-pyr-to-h2o "9,10-Dihydroxybenzo[a]pyr… to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +4_chloro_crotonyl_coa +nadh +co2
-    chloroethylmalonyl_coa
+    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +2_oxopentanoate
+    3_ethylmalate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +h +l_xylo_3_hexulose
-    galactitol
+    <-> . +nadh +h +cortisol
+    20alpha_hydroxycortisol
   }
 
   branch from nadh side left {
     nadh
-    <-> . +collinusin +h +nad
-    7_8_7_8_tetrahydrojusticidin_b
+    <-> . +dehydrodiconiferyl_alcohol +nad +h
+    dehydrodiconiferyl_aldehyde
   }
 
   branch from nadh side right {
     nadh
-    <-> . +collinusin +nad +h
-    justicidin_b
+    <-> ec_1_2_1_29 [1.2.1.29] +h +dehydrodiconiferyl_aldehyde +nad +h2o
+    glycosmisate
   }
 
   branch from h side left {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ester_glucuronide +tiratricol
-    udp_alpha_d_glucuronate
+    <-> . +cocaine +h2o +ecgonine_benzoate
+    methanol
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ether_glucuronide +udp_alpha_d_glucuronate
-    tiratricol
+    <-> . +2_oxoglutarate +35_aminobacteriohopane_32_33_34_triol +formyl_hopane
+    l_glutamate
   }
 
   branch from o2 side left {
     o2
-    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +alpha_fenchocamphorone +h2o
-    co2
+    <-> . +2_aminophenoxazin_3_one +h2o
+    6_iminocyclohexa_2_4_dienone
   }
 
   branch from o2 side right {
     o2
-    <-> . +beta_fenchene +co2 +h2o
-    beta_fenchocamphorone
+    <-> ec_1_13_11_65 [1.13.11.65] +all_trans_beta_carotene +all_trans_retinal
+    11_cis_retinal
   }
 
   branch from nadp side left {
     nadp
-    <-> . +22_carboxy_docosanoyl_coa +h +nadph +h2o
-    22_oxo_docosanoyl_coa
+    <-> . +porifersta_7_25_27_dienol +h +nadph
+    poriferast_7_en_3beta_ol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +4_o_methyl_d_myo_inosose
-    5d_5_o_methyl_chiro_inositol
+    <-> ec_1_3_1_93 [1.3.1.93] +lesqueroloyl_coa +h +nadph
+    trans_lesqueroloyl_coa
   }
 
   branch from benzo_a_pyrene_9_10_oxide side left {
@@ -84,13 +84,13 @@ pathway 9-10-dihydroxybenzo-a-pyr-to-h2o "9,10-Dihydroxybenzo[a]pyr… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +6_hydroxy_2_6_oxo_1_oxaspiro_2_5_octa_4_7_dien_2
-    2_hydroperoxy_4_hydroxyphenyl_methyl_6_hydroxy_1
+    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +alpha_d_xylose
+    glucose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +6_hydroxy_2_hydroxy_4_hydroxyphenyl_methyl_1_ben
-    hispidol
+    <-> ec_3_2_1_158 [3.2.1.158] +agarotriose +neoagarotriose
+    agarohexaose
   }
 }

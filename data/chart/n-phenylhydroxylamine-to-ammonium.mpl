@@ -36,25 +36,25 @@ pathway n-phenylhydroxylamine-to-ammonium "N-phenylhydroxylamine to ammonium" {
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> . +thiosulfate +h +sulfite +ubiquinol_8
-    trithionate
-  }
-
-  branch from ubiquinone_8 side left {
-    ubiquinone_8
     <-> ec_1_6_5_3 [1.6.5.3] +nadh +h +ubiquinol_8 +nad
     pmf
   }
 
+  branch from ubiquinone_8 side left {
+    ubiquinone_8
+    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +h2o +ubiquinol_8
+    nitrate
+  }
+
   branch from nh3 side right {
     nh3
-    <-> ec_2_3_2_13 [2.3.2.13] +l_glutamine +l_lysinium
-    n6_glutamyl_lysine
+    <-> . +hexadecanamide +h2o
+    palmitate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +7_cyano_7_carbaguanine_5_phosphate_1
-    archaeosine_5_phosphate_zwitterionic
+    <-> . +8z_11z_14z_icosatrienamide +h2o
+    all_cis_icosa_8_11_14_trienoate
   }
 }

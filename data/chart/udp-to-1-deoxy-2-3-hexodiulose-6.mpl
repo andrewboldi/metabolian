@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-1-deoxy-2-3-hexodiulose-6 "UDP to 1-deoxy-2,3-hexodiulose-6…" {
-  spacing 226
+  spacing 220
 
   spine at 0,0 {
     udp
@@ -18,14 +18,14 @@ pathway udp-to-1-deoxy-2-3-hexodiulose-6 "UDP to 1-deoxy-2,3-hexodiulose-6…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +epiheterodendrin
-    r_2_hydroxy_3_methybutanenitrile
+    <-> . +udp +h +sutherlandin
+    1_cyano_2_hydroxymethylprop_1_ene_3_ol
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +osmaronin
-    z_4_hydroxy_3_methylbut_2_enenitrile
+    <-> . +udp +h +glucodigitoxigenin_3_o_beta_d_quinovoside
+    digitoxigenin_3beta_yl_beta_d_quinovoside
   }
 
   branch from 4_hydroxy_5_methyl_2_methylenefuran_3_one side left {
@@ -38,11 +38,5 @@ pathway udp-to-1-deoxy-2-3-hexodiulose-6 "UDP to 1-deoxy-2,3-hexodiulose-6…" {
     4_hydroxy_5_methyl_2_methylenefuran_3_one
     <-> . +formaldehyde +h2o
     4_hydroxy_5_methyl_3_2h_furanone
-  }
-
-  branch from 1_deoxy_2_3_hexodiulose_6_phosphate side left {
-    1_deoxy_2_3_hexodiulose_6_phosphate
-    <-> . +phosphate
-    beta_d_fructose_1_6_bisphosphate
   }
 }

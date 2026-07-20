@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-cysteine-to-diphosphate "D-cysteine to diphosphate" {
-  spacing 222
+  spacing 204
 
   spine at 0,0 {
     d_cysteine
@@ -16,33 +16,15 @@ pathway d-cysteine-to-diphosphate "D-cysteine to diphosphate" {
     2_thiouridine_5_phosphate_1
   }
 
-  branch from mercaptopyruvate side left {
-    mercaptopyruvate
-    <-> . +cysteine +pyruvate
-    alanine
-  }
-
-  branch from l_cysteine side right {
+  branch from l_cysteine side left {
     l_cysteine
     <-> ec_4_4_1_30 [4.4.1.30] +s_3_2r_phycocyanobilin_l_cysteine_2
     3e_phycocyanobilin
   }
 
-  branch from l_cysteine side left {
+  branch from l_cysteine side right {
     l_cysteine
     <-> ec_4_4_1_31 [4.4.1.31] +3e_phycocyanobilin
     s_3_2r_phycoviolobilin_l_cysteine_2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +dctp
-    4_2_deoxycytidylyl_kanamycin_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +dgtp
-    4_2_deoxyguanylyl_kanamycin_a
   }
 }

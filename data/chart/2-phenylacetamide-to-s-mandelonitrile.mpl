@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-phenylacetamide-to-s-mandelonitrile "2-phenylacetamide to (S)-mandelonitrile" {
-  spacing 276
+  spacing 270
 
   spine at 0,0 {
     2_phenylacetamide
@@ -20,59 +20,53 @@ pathway 2-phenylacetamide-to-s-mandelonitrile "2-phenylacetamide to (S)-mandelon
 
   branch from phenylacetonitrile side left {
     phenylacetonitrile
-    <-> ec_4_8_1_4 [4.8.1.4] +h2o
-    z_phenylacetaldehyde_oxime
-  }
-
-  branch from phenylacetonitrile side right {
-    phenylacetonitrile
-    <-> ec_3_5_5_1 [3.5.5.1] +h2o +2_phenylacetate
+    <-> ec_3_5_5_1 [3.5.5.1] +h +h2o +phenyl_acetate
     nh4
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_2_1_1_90 [2.1.1.90] +h +5_hydroxybenzimidazolylcobamide +methanol
-    co_methyl_co_5_hydroxybenzimidazolylcob_i_amide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_4_42 [3.1.4.42] +h +sn_glycerol_3_phosphate
-    glycerol_1_2_cyclic_phosphate
+    <-> . +6_hydroxy_2_hydroxy_4_hydroxyphenyl_methyl_1_ben
+    hispidol
   }
 
-  branch from r_mandelonitrile side left {
+  branch from h2o side left {
+    h2o
+    <-> . +gypenoside_xvii +gypenoside_lxxv
+    glucose
+  }
+
+  branch from r_mandelonitrile side right {
     r_mandelonitrile
     <-> ec_2_4_1_354 [2.4.1.354] +udp_d_glucose +udp +hplus
     r_prunasin
   }
 
-  branch from r_mandelonitrile side right {
+  branch from r_mandelonitrile side left {
     r_mandelonitrile
     <-> ec_3_2_1_119 [3.2.1.119] +vicianose +h2o
     vicianin
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19s_20r_19_20_epoxydocosapent
-  }
-
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_11z_14z_17z_8_9_epoxyicosatetraenoate
+    <-> . +9r_10s_9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
+    9r_10s_9_10_epoxy_18_hydroxyoctadecanoate
   }
 
-  branch from hydrogen_cyanide side left {
+  branch from fmn side left {
+    fmn
+    <-> . +9_10_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
+    9_10_epoxy_18_hydroxyoctadecanoate
+  }
+
+  branch from hydrogen_cyanide side right {
     hydrogen_cyanide
     <-> ec_4_1_2_47 [4.1.2.47] +disubstituted_aliphatic_s_cyanohydrin
     ketone
   }
 
-  branch from hydrogen_cyanide side right {
+  branch from hydrogen_cyanide side left {
     hydrogen_cyanide
     <-> . +2_2_dimethylpropanal
     2s_2_hydroxy_3_3_dimethylbutanenitrile

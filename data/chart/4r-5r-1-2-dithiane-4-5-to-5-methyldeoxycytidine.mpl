@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4r-5r-1-2-dithiane-4-5-to-5-methyldeoxycytidine "(4R,5R)-1,2-dithiane-4,5-… to 5-methyldeoxycytidine…" {
-  spacing 340
+  spacing 282
 
   spine at 0,0 {
     4r_5r_1_2_dithiane_4_5_diol
@@ -28,121 +28,55 @@ pathway 4r-5r-1-2-dithiane-4-5-to-5-methyldeoxycytidine "(4R,5R)-1,2-dithiane-4,
 
   branch from l_1_4_dithiothreitol side left {
     l_1_4_dithiothreitol
-    <-> ec_1_17_4_2 [1.17.4.2] +4r_5r_1_2_dithiane_4_5_diol +h2o +atp
-    datp
-  }
-
-  branch from l_1_4_dithiothreitol side right {
-    l_1_4_dithiothreitol
     <-> ec_1_1_4_1 [1.1.4.1] +4r_5r_1_2_dithiane_4_5_diol +menaquinone_2 +h2o
     2_3_epoxymenaquinone
   }
 
-  branch from dctp side left {
-    dctp
-    <-> ec_1_17_4_2 [1.17.4.2] +ctp +dihydrolipoic_acid +h +h2o
-    r_lipoate
-  }
-
   branch from dctp side right {
     dctp
-    <-> ec_2_7_2_3 [2.7.2.3] +glyceric_acid_1_3_biphosphate +dcdp +h
-    2r_3_phosphoglycerate
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dcdp
+    cytidine
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadph +4_hydroxy_n_desmethyltamoxifen
-    nadp
+  branch from dctp side left {
+    dctp
+    <-> . +cdp +dcdp
+    cmp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +nadp +h +o2 +nadph
-    tamoxifen
+    <-> . +s_dnpa
+    s_hemiketal
   }
 
-  branch from l_glutamine side left {
+  branch from h2o side left {
+    h2o
+    <-> ec_3_1_1_95 [3.1.1.95] +epsilon_rhodomycin_t +15_demethoxy_epsilon_rhodomycin
+    methanol
+  }
+
+  branch from l_glutamine side right {
     l_glutamine
     <-> . +acetyl_coa +h +n_acetyl_l_glutaminyl_l_glutamine +h2o
     coa
   }
 
-  branch from l_glutamine side right {
+  branch from l_glutamine side left {
     l_glutamine
     <-> . +n_acetyl_l_glutaminyl_l_glutamine +l_glutamate
     n2_acetyl_l_glutaminyl_l_glutamamide
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_102 [2.7.1.102] +h +adp +d_hamamelose_2_phosphate
-    d_hamamelose
-  }
-
   branch from atp side right {
     atp
-    <-> ec_2_7_1_119 [2.7.1.119] +h +adp +7_o_phosphohygromycin_b
-    hygromycin_b
+    <-> ec_2_7_1_151 [2.7.1.151] +1d_myo_inositol_1_4_5_trisphosphate +h +adp
+    1d_myo_inositol_4_5_bisphosphate
   }
 
-  branch from dutp side left {
-    dutp
-    <-> . +utp +fmnh2 +h +h2o
-    fmn
-  }
-
-  branch from dutp side right {
-    dutp
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dudp
-    cytidine
-  }
-
-  branch from dudp side left {
-    dudp
-    <-> ec_2_7_1_48 [2.7.1.48] +uridine +dutp +h
-    ump
-  }
-
-  branch from dudp side right {
-    dudp
-    <-> . +adp +dutp
-    amp
-  }
-
-  branch from phytyl_diphosphate side left {
-    phytyl_diphosphate
-    <-> . +phytyl_phosphate +adp
-    dgtp
-  }
-
-  branch from phytyl_diphosphate side right {
-    phytyl_diphosphate
-    <-> . +phytyl_phosphate +atp
-    dgdp
-  }
-
-  branch from 2_deoxycytidine side left {
-    2_deoxycytidine
-    <-> ec_2_7_1_74 [2.7.1.74] +gdp +h +dcmp
-    gtp
-  }
-
-  branch from 2_deoxycytidine side right {
-    2_deoxycytidine
-    <-> ec_2_4_2_6 [2.4.2.6] +adenine +cytosine
-    2_deoxyadenosine
-  }
-
-  branch from 2_deoxycytosine_5_monophosphate side left {
-    2_deoxycytosine_5_monophosphate
-    <-> ec_2_7_4_14 [2.7.4.14] +atp +adp
-    dcdp
-  }
-
-  branch from 2_deoxycytosine_5_monophosphate side right {
-    2_deoxycytosine_5_monophosphate
-    <-> . +h2o +pi +hplus
-    dctp
+  branch from atp side left {
+    atp
+    <-> . +1d_myo_inositol_3_4_6_trisphosphate +h +adp
+    d_myo_inositol_3_6_bisphosphate
   }
 }

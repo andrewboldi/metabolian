@@ -38,14 +38,14 @@ pathway ump-to-cdp "UMP to CDP" {
 
   branch from h side left {
     h
-    <-> . +3_hydroxy_2_methyl_4_pyrone +dtdp
-    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_hydroxy_8_glutathionyl_7_8_dihydronaph +1_nitronaphthalene_7_8_oxide
+    glutathione
   }
 
   branch from h side right {
     h
-    <-> . +dtdp +3_o_l_olivosyl_oleandolide +oleandolide
-    dtdp_l_olivose
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_7_glutathionyl_8_hydroxy_7_8_dihydronaph +glutathione
+    1_nitronaphthalene_7_8_oxide
   }
 
   branch from ump side left {
@@ -56,8 +56,8 @@ pathway ump-to-cdp "UMP to CDP" {
 
   branch from ump side right {
     ump
-    <-> . +udp +dcdp
-    dctp
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und +h
+    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
   }
 
   branch from d_mannopyranosyl_1_3_d_galactopyranosyl_diphosp side left {

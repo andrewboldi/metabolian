@@ -24,13 +24,13 @@ pathway aldehydo-d-allose-to-l-lysinium "aldehydo-D-allose to L-lysinium" {
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_59 [2.1.1.59] +sam +sah +hplus
-    n6_methyl_l_lysinium
+    <-> ec_1_4_3_13 [1.4.3.13] +o2 +h2o +h2o2 +nh3
+    l_allysine
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_1_4_3_13 [1.4.3.13] +o2 +h2o +h2o2 +nh3
-    l_allysine
+    <-> ec_2_5_1_46 [2.5.1.46] +spermidine +trimethylenediaminium
+    deoxyhypusine_2
   }
 }

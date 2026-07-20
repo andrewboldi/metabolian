@@ -34,14 +34,14 @@ pathway 7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst "(7R)-7-(4-carboxylatobu
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_succinyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_succinyl_adp_d_ribose
+    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +l_lysinium
+    2_o_malonyl_adp_d_ribose
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_malonyl_l_lysine_1 +nad +h2o +l_lysinium
-    2_o_malonyl_adp_d_ribose
+    <-> . +n6_acyl_l_lysine +nad +h2o +l_lysinium
+    o_acyl_adp_d_ribose
   }
 
   branch from l_lysinium side left {
@@ -52,19 +52,19 @@ pathway 7r-7-4-carboxylatobuta-to-s-adenosyl-l-homocyst "(7R)-7-(4-carboxylatobu
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_127 [2.1.1.127] +sam +sah +hplus
+    <-> ec_2_1_1_259 [2.1.1.259] +sam +sah +hplus
     n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_103 [2.1.1.103] +n_n_dimethylethanolamine_phosphate +sam +hplus
-    phosphocholine
+    <-> ec_2_1_1_212 [2.1.1.212] +2r_3s_2_4_7_trihydroxyisoflavanone +sam +hplus
+    2r_3s_2_7_dihydroxy_4_methoxyisoflavanone
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_n7 [2.1.1.n7] +5_pentadeca_8_11_14_trien_1_yl_resorcinol +sam +hplus
-    5_pentadeca_8_11_14_trien_1_yl_resorcinol_monome
+    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
+    dtdp_d_ravidosamine
   }
 }

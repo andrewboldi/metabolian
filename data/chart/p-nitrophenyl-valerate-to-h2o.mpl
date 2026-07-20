@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway p-nitrophenyl-valerate-to-h2o "p-Nitrophenyl valerate to H2O" {
-  spacing 270
+  spacing 258
 
   spine at 0,0 {
     p_nitrophenyl_valerate
@@ -22,74 +22,62 @@ pathway p-nitrophenyl-valerate-to-h2o "p-Nitrophenyl valerate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_chloromethyl_glutathione +chloride +glutathione
-    dichloromethane
+    <-> ec_1_1_1_239 [1.1.1.239] +nadh +estrone_3_sulfate +nad
+    17_estradiol_3_sulfate
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_3_1 [3.1.3.1] +2_4_dinitrophenyl_phosphate +h2o +phosphate
-    2_4_dinitrophenol
+    <-> ec_1_1_1_150 [1.1.1.150] +nadh +21_dehydrocorticosterone +nad
+    corticosterone
   }
 
   branch from pentanoate side left {
-    pentanoate
-    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +h2o
-    ethyl_pentanoate
-  }
-
-  branch from pentanoate side right {
     pentanoate
     <-> ec_1_2_98_1 [1.2.98.1] +pentan_1_ol +h +h2o
     pentanal
   }
 
+  branch from pentanoate side right {
+    pentanoate
+    <-> ec_2_7_2_14 [2.7.2.14] +pentanoyl_phosphate +adp
+    atp
+  }
+
   branch from 4_nitrophenol side left {
     4_nitrophenol
-    <-> ec_3_2_1_21 [3.2.1.21] +p_nitrophenyl_beta_d_fucopyranoside +h2o +h
-    beta_d_fucose
+    <-> ec_3_1_1_13 [3.1.1.13] +hexadecanoate +h +h2o
+    p_nitrophenyl_palmitate
   }
 
   branch from 4_nitrophenol side right {
     4_nitrophenol
-    <-> ec_3_2_1_21 [3.2.1.21] +4_nitrophenyl_l_arabinoside +h2o +h
-    alpha_l_arabinopyanose
-  }
-
-  branch from pentanoyl_coa side left {
-    pentanoyl_coa
-    <-> . +nadh +acetyl_coa +fadh2 +propanoyl_coa +h +coa +nad +h2o
-    fad
-  }
-
-  branch from pentanoyl_coa side right {
-    pentanoyl_coa
-    <-> . +fadh2 +h +fad
-    2e_pentenoyl_coa
+    <-> ec_3_2_1_1 [3.2.1.1] +maltoheptaose +h +h2o
+    p_nitrophenylmaltoheptaoside
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_2_6 [3.1.2.6] +h +glutathione +h2o
-    s_acetylglutathione
+    <-> ec_3_1_1_3 [3.1.1.3] +2_aminofluorene +h +h2o
+    2_acetamidofluorene
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_1_1_13 [3.1.1.13] +cholesteryl_acetate +h2o +h
-    cholesterol
+    <-> ec_3_1_1_3 [3.1.1.3] +h +4_ethoxyaniline +h2o
+    phenacetin
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_valyl_group
-    n_acetyl_l_valyl
+    <-> ec_2_3_1_29 [2.3.1.29] +propanoyl_coa +glycine
+    2_amino_4_oxopentanoic_acid
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_255 [2.3.1.255] +l_cysteinyl_group +acetyl_coa
-    n_acetyl_l_cysteinyl
+    <-> ec_3_1_2_20 [3.1.2.20] +2_methylbut_2_enoyl_coenzyme_a +h2o +h
+    2_methylbut_2_enoic_acid
   }
 
   branch from 3_oxoheptanoyl_coenzyme_a side left {
@@ -100,37 +88,37 @@ pathway p-nitrophenyl-valerate-to-h2o "p-Nitrophenyl valerate to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_284 [1.1.1.284] +nadh +ethanol +h +s_formylglutathione +glutathione_ethyl_ester +h2o
-    formaldehyde
+    <-> ec_1_1_1_8 [1.1.1.8] +nadh +4_hydroxy_3_oxobutylphosphonate
+    3_4_dihydroxybutylphosphonate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +5_dihydrotestosterone +h
-    androstane_3_17_diol
+    <-> ec_1_1_1_213 [1.1.1.213] +nadh +4_5beta_dihydrocortisone +h
+    urocortisone
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +isovanillyl_alcohol +h2o2
-    isovanillin
+    <-> ec_1_17_3_2 [1.17.3.2] +guanosine +h2o +h2o2
+    8_hydroxyguanosine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_7 [1.1.3.7] +pr01 +h2o2
-    4_chlorobenzaldehyde
+    <-> ec_1_17_3_2 [1.17.3.2] +alloxanthine +h2o2 +h2o
+    allopurinol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_11_1_13 [1.11.1.13] +h +ferrocyanide +h2o2
-    ferricyanide
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +3_nitrophenol
+    m_nitrophenyl_alpha_d_galactoside
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_2_6 [3.1.2.6] +r_lactate +h +glutathione
-    lactoylglutathione
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose
+    2_alpha_d_glucosyl_d_glucose
   }
 }

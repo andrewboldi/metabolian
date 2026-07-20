@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coproporphyrinogen-iii-to-ammonium "coproporphyrinogen III to ammonium" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     coproporphyrinogen3
@@ -20,40 +20,28 @@ pathway coproporphyrinogen-iii-to-ammonium "coproporphyrinogen III to ammonium" 
     oxaloacetate
   }
 
-  branch from menaquinol_8 side left {
-    menaquinol_8
-    <-> . +nitrite +menaquinone_8 +h2o +nitrate
-    pmf
-  }
-
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> . +selenite +menaquinone_8 +h2o
-    selenate
-  }
-
   branch from nh4 side left {
     nh4
-    <-> . +2_hydroxy_5_carboxymuconate_6_semialdehyde +h +h2o
-    2z_4e_5_amino_2_formylhexa_2_4_dienedioate
+    <-> . +indolmycin_b +h
+    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +2_hydroxy_5_chloromuconate +h +h2o
-    2e_4e_2_amino_5_chlorohexa_2_4_dienedioate
+    <-> ec_4_4_1_13 [4.4.1.13] +4_mercapto_4_methyl_2_pentanol +pyruvate +h2o
+    s_4_hydroxy_2_methylpentan_2_yl_l_cysteine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    abequopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    arbekacin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    tyvelopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    6_hydroxyneomycin_c
   }
 
   branch from oxaloacetate side left {

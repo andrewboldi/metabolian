@@ -32,25 +32,25 @@ pathway n-1-deoxy-d-fructopyra-to-carboxylic-acid-anion "N-(1-deoxy-β-D-fructop
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_17_99_10 [1.17.99.10] +calciol +hydrogen_acceptor +h2o
-    calcidiol
+    <-> . +3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one +hydrogen_acceptor
+    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_ol
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +1_hydroxy_3_oxo_steroid +hydrogen_acceptor
-    steroid_1_3_dione
+    <-> . +l_thyronine +iodide +hydrogen_acceptor +hplus
+    3_iodo_l_thyronine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +cytidine_5_monophosphate_1 +h2o +hplus
-    uridine_5_monophosphate_1
+    <-> . +2_hydroxy_1_phenylethan_1_aminium +nad +h2o +nadh +hplus
+    2_hydroxyacetophenone
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +triuret +h2o
-    1_carboxybiuret
+    <-> . +cyclohexylammonium +nadp +h2o +nadph +hplus
+    cyclohexanone
   }
 }

@@ -18,25 +18,25 @@ pathway 2-oxoethyl-com-to-h2o "2-oxoethyl-CoM to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    polymyxin_b1
+    <-> . +n6_tuberculosinyladenosine
+    1_tuberculosinyladenosine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +borrelidin +phosphate +borrelidin +h2o
-    atp
+    <-> ec_3_4_11_7 [3.4.11.7] +l_aspartate +methyl_l_phenylalaninate +h2o
+    aspartame
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    amiclenomycin
+    <-> . +4_bromo_3_chloroaniline +co2 +n_o_dimethylhydroxylamine
+    chlorbromuron
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    penem_cgp31608
+    <-> . +co2 +n_o_dimethylhydroxylamine +4_bromoaniline
+    metobromuron
   }
 }

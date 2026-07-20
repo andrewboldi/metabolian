@@ -34,8 +34,8 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
 
   branch from mithramycin_dk side left {
     mithramycin_dk
-    <-> . +co2 +nadp +h +o2 +nadph
-    premithramycin_b
+    <-> . +co2 +h2o
+    premithramycin_b_lactone
   }
 
   branch from mithramycin side right {
@@ -46,25 +46,25 @@ pathway premithramycin-b-to-nadph "premithramycin B to NADPH" {
 
   branch from h side left {
     h
-    <-> . +4_sulfomuconolactone
-    3_sulfomuconate
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +1_2_dihydroxy_7_hydroxymethylnaphthalene +nad
+    cis_1_2_dihydroxy_1_2_dihydro_7_hydroxymethylnap
   }
 
   branch from h side right {
     h
-    <-> . +nadh +o_toluate +o2 +nad
-    1_6_dihydroxy_2_methylcyclohexa_2_4_dienecarboxy
+    <-> ec_1_14_12_12 [1.14.12.12] +nadh +2_methylnaphthalene +o2 +nad
+    1r_2s_7_methyl_1_2_dihydronaphthalene_1_2_diol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +19_epi_cathenamine +nadp
-    19_epi_ajmalicine
+    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadp +h2o
+    vernolate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadp +h2o
-    4s_7r_4_isopropenyl_7_methyloxepan_2_one
+    <-> ec_1_14_14_1 [1.14.14.1] +h +bromobenzene +o2 +nadp +h2o
+    bromobenzene_3_4_oxide
   }
 }

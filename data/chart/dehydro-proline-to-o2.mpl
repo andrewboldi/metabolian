@@ -24,37 +24,37 @@ pathway dehydro-proline-to-o2 "Dehydro-proline to O2" {
 
   branch from h side right {
     h
-    <-> ec_2_3_1_60 [2.3.1.60] +acetyl_coa +tobramycin +coa
-    n3_acetyltobramycin
+    <-> ec_1_18_1_2 [1.18.1.2] +dibromothymohydroquinone +nadp +nadph
+    dibromothymoquinone
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_239 [1.1.1.239] +nadh +3alpha_hydroxy_5beta_androstan_17_one +nad
-    5_androstane_3_17_diol
+    <-> . +fluoride +alpha_d_xylose +h2o
+    alpha_d_xylopyranosyl_fluoride
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_11_2_1 [1.11.2.1] +naphthalene +h2o
-    1_naphthol
+    <-> ec_1_11_1_7 [1.11.1.7] +4_methylphenol +h2o
+    4_methylcatechol
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_4_3_21 [1.4.3.21] +mafenide +h +o2 +h2o +nh4
-    4_formylbenzenesulfonamide
+    <-> ec_1_14_18_1 [1.14.18.1] +methyl_3_4_dihydroxybenzoate +h2o
+    methylparaben
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +isobutyrophenone +h +nadph +nadp +h2o
-    phenyl_isobutyrate
+    <-> ec_1_3_8_7 [1.3.8.7] +e_3_indol_3_yl_acryloyl_coa +h +h2o2
+    3_indolepropionyl_coa
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +1h_pyrrol_2_yl_acetate +nadp +h2o +h +nadph
-    2_acetylpyrrole
+    <-> ec_1_14_11_1 [1.14.11.1] +r_carnitine +co2 +bromosuccinate +4_trimethylamino_butanoate
+    3_bromo_2_ketoglutarate
   }
 }

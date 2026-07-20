@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-erythronate-to-o-pantetheine-4-phospho "D-erythronate to O-(pantetheine-4'-phospho…" {
-  spacing 238
+  spacing 226
 
   spine at 0,0 {
     d_erythronate
@@ -20,17 +20,5 @@ pathway d-erythronate-to-o-pantetheine-4-phospho "D-erythronate to O-(pantethein
     4_o_phosphonato_d_erythronate
     <-> . +nad +nadh +hplus
     r_2_hydroxy_3_oxo_4_phosphonatooxy_butanoate
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res +tryptaminium +hplus
-    alanyl_tryptaminium
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_3_1_242 [2.3.1.242] +a_kdo_2_lipid_iva +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
-    an_acyl_kdo_2_4_kdo_2_6_lipid_iva
   }
 }

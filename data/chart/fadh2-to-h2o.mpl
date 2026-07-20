@@ -18,14 +18,14 @@ pathway fadh2-to-h2o "FADH2 to H2O" {
 
   branch from fad side left {
     fad
-    <-> ec_1_3_99_12 [1.3.99.12] +2_methylpropanoyl_coa +fadh2 +h
-    2_methylpropenoyl_coa
+    <-> ec_1_4_99_1 [1.4.99.1] +d_alanine +h2o +fadh2 +h +nh4
+    pyruvate
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +co2 +h +succinate +h2o
-    2_oxoglutarate
+    <-> ec_1_5_99_2 [1.5.99.2] +fadh2 +formaldehyde +h +sarcosine +h2o
+    n_n_dimethylglycine
   }
 
   branch from cis_zeatin side left {
@@ -42,14 +42,14 @@ pathway fadh2-to-h2o "FADH2 to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_11z_3_hydroxytriacontenoylpantetheine_4_p
-    o_s_2e_11z_triacontadienoylpantetheine_4_phospho
+    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
+    beta_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho
-    o_s_2e_9z_octacosadienoylpantetheine_4_phosphory
+    <-> ec_3_5_1_3 [3.5.1.3] +glutarate +h +nh4
+    glutaramic_acid
   }
 
   branch from 9_ribosyl_cis_zeatin side left {

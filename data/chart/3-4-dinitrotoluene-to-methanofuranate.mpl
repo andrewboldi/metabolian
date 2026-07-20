@@ -32,50 +32,50 @@ pathway 3-4-dinitrotoluene-to-methanofuranate "3,4-dinitrotoluene to methanofura
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_112 [2.5.1.112] +dmapp +atp
-    n6_dimethylallyl_adenosine_5_triphosphate
+    <-> . +3_hydroxytetradecanoate +atp +coa +amp
+    3_hydroxytetradecanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> . +carbamoyl_p +atp +h2o +pi
-    carbamoyl_adenylate
+    <-> . +15_hydroxypentadecanoate +atp +coa +amp
+    15_hydroxypentadecanoyl_coa
   }
 
   branch from trans_4_coumarate side right {
     trans_4_coumarate
-    <-> ec_2_8_3_17 [2.8.3.17] +r_3_4_hydroxyphenyl_lactate +trans_4_coumaroyl_coa
-    r_3_4_hydroxyphenyl_lactoyl_coa
+    <-> . +h2o
+    3_hydroxy_3_4_hydroxyphenyl_propanoate
   }
 
   branch from trans_4_coumarate side left {
     trans_4_coumarate
-    <-> . +sam +sah
-    e_4_coumaric_acid_methyl_ester
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    trans_caffeate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_17 [1.14.15.17] +pheophorbide_a +di_sulfido_diiron +o2 +hplus
-    red_chlorophyll_catabolite
+    <-> ec_1_14_15_19 [1.14.15.19] +testosterone +di_sulfido_diiron +o2 +hplus +h2o
+    1_hydroxytestosterone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +pheophorbide_a +di_sulfido_diiron +o2 +hplus +h2o
-    epoxypheophorbide_a
+    <-> ec_1_14_15_22 [1.14.15.22] +calciol +di_sulfido_diiron +o2 +hplus +h2o
+    calcidiol
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +5_methoxytryptamine +o2 +h2o +h2o2
-    5_methoxyindoleacetaldehyde
+    <-> . +l_thialysinium +nad +h2o +nadh +hplus
+    s_acetaldehyde_l_cysteine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +spermidine +o2 +h2o +h2o2
-    4_ammoniobutyl_3_oxopropyl_azanium
+    <-> ec_1_4_3_26 [1.4.3.26] +3_amino_5_4_hydroxyphenyl_methyl_4_4_dimethylpyr +o2 +h2o +h2o2
+    premycofactocin
   }
 
   branch from 5_6_7_8_tetrahydromethanopterin side right {

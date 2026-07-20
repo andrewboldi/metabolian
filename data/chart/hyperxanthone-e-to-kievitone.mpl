@@ -18,25 +18,25 @@ pathway hyperxanthone-e-to-kievitone "hyperxanthone E to kievitone" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +phosphate +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o
-    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    alpha_l_galactopyranose_6_sulfate_1_3_beta_d_gal
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_3_16_3_pa
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +neoagarooctaose +phosphate +neoagarooctaose +h2o
+    atp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +biochanin_a_7_o_beta_d_glucoside +atp +h2o +h +coa +amp
-    biochanin_a_7_o_beta_d_glucoside_6_o_malonate
+    <-> ec_6_2_1_2 [6.2.1.2] +4_hydroxy_valeric_acid +atp +coa +h +4_hydroxypentanoyl_coa
+    amp
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +alpha_selinene
-    2e_6e_farnesyl_diphosphate
+    <-> . +amp +acinetoferrin +atp +n3_oct_2_enoyl_n3_hydroxy_1_3_diaminopropane
+    n1_citryl_n3_oct_2_enoyl_n3_hydroxy_1_3_diaminop
   }
 }

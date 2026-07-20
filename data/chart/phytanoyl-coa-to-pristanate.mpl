@@ -22,13 +22,13 @@ pathway phytanoyl-coa-to-pristanate "phytanoyl-CoA to pristanate" {
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    african_3_ene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    germacrene_c
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    african_1_ene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    germacrene_a
   }
 }

@@ -38,13 +38,13 @@ pathway 4-hydroxy-n-n-n-trimethyl-to-psilocybin "4-hydroxy-N,N,N-trimethyl… to
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_2_2 [2.4.2.2] +pyrimidine +alpha_d_ribose_1_phosphate +h
-    pyrimidine_nucleoside
+    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
+    iminoerythrose_4_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_7_1_143 [2.7.1.143] +diphosphate +h +nebularine
-    6_deoxyinosine_5_phosphate
+    <-> . +aminodhq
+    4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph
   }
 }

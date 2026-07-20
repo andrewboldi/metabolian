@@ -20,14 +20,14 @@ pathway s-adenosyl-l-homocysteine-to-nicotinamide "S-adenosyl-L-homocysteine to 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +c32_phthiocerol_a +h
-    c31_phthiotriol
+    <-> . +s_adenosyl_l_homocysteine +hmdboa_glucoside +h
+    dimboa_beta_d_glucoside
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +c34_phthiocerol_a +h
-    c33_phthiotriol_a
+    <-> . +s_adenosyl_l_homocysteine +pinostrobin +h
+    s_pinocembrin
   }
 
   branch from 2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter side left {
@@ -38,37 +38,37 @@ pathway s-adenosyl-l-homocysteine-to-nicotinamide "S-adenosyl-L-homocysteine to 
 
   branch from sah side right {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +co2 +coa
-    3_5_dimethylorsellinate
+    <-> ec_2_1_1_340 [2.1.1.340] +indol_3_ylmethylamine +sam +hplus
+    gramine
   }
 
   branch from sah side left {
     sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> . +indol_3_ylmethylamine +sam +hplus
+    3_methylaminomethyl_indole
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_2_57 [6.3.2.57] +n5_s_citryl_d_ornithine +citrate +atp +amp +hplus
-    staphyloferrin_a
+    <-> ec_4_2_3_222 [4.2.3.222] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    phomopsene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_60 [6.2.1.60] +marinolate_c +atp +coa +amp
-    marinoloyl_coa_c
+    <-> . +tetradecanoate +holo-acp +atp +amp
+    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +n6_lauroyl_l_lysine +nad +h2o +l_lysinium
-    2_o_dodecanoyl_adp_d_ribose
+    <-> . +guanosine +nad +hplus
+    n2_adp_d_ribosyl_guanosine
   }
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_capryl_l_lysine +nad +h2o +l_lysinium
-    2_o_decanoyl_adp_d_ribose
+    <-> . +2_deoxyguanosine +nad +hplus
+    n2_adp_d_ribosyl_2_deoxyguanosine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-mannosyl-1-3-n-acet "GDP to α-D-mannosyl-(1→3)-N-acet…" {
-  spacing 220
+  spacing 214
 
   spine at 0,0 {
     gdp
@@ -28,29 +28,23 @@ pathway gdp-to-d-mannosyl-1-3-n-acet "GDP to α-D-mannosyl-(1→3)-N-acet…" {
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_0_digalactosyldiacylglycerol
-    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_3_2_16_2_digalactosyldiacylglycerol
+    1_18_3_2_16_2_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_3_2_16_0_digalactosyldiacylglycerol +h
-    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_3_digalactosyldiacylglycerol
+    1_9z_12z_octadecadienoyl_2_7z_10z_13z_hexadecatr
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1 +h
-    beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1
+    <-> . +udp +n_n_diacetylchitobiosyldiphosphodolichol_human_u +h
+    n_acetyl_d_glucosaminyldiphosphodolichol_human_u
   }
 
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +beta_d_glcnac_1_3_beta_d_gal_1_4_alpha_l_fuc_1_3 +h
-    beta_d_gal_1_4_alpha_l_fuc_1_3_alpha_d_glcnac_1
-  }
-
-  branch from alpha_d_gal_1_3_alpha_d_galnac_pp_und side right {
+  branch from alpha_d_gal_1_3_alpha_d_galnac_pp_und side left {
     alpha_d_gal_1_3_alpha_d_galnac_pp_und
     <-> . +udp_n_acetyl_alpha_d_galactosamine +udp +h
     beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac

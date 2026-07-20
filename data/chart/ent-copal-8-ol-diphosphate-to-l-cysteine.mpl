@@ -18,14 +18,14 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to 
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_7 [6.2.1.7] +cholate +atp +coa +amp
-    choloyl_coa
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    longifolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gtp +atp
-    pppgp_2_5_a
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 
   branch from pser side left {
@@ -36,8 +36,8 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to 
 
   branch from pser side right {
     pser
-    <-> ec_2_5_1_140 [2.5.1.140] +glutamate +pi +hplus
-    n_2s_2_amino_2_carboxyethyl_l_glutamate
+    <-> ec_2_8_5_1 [2.8.5.1] +trioxidosulfanidosulfate +pi
+    s_sulfo_l_cysteinate
   }
 
   branch from cysteine side left {
@@ -48,7 +48,7 @@ pathway ent-copal-8-ol-diphosphate-to-l-cysteine "ent-copal-8-ol diphosphate to 
 
   branch from cysteine side right {
     cysteine
-    <-> ec_1_8_1_6 [1.8.1.6] +nad +nadh +hplus
-    l_cystine
+    <-> ec_4_4_1_1 [4.4.1.1] +h2o +h2s +pyruvate +hplus
+    nh3
   }
 }

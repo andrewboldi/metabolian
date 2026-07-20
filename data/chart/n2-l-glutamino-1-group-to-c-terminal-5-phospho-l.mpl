@@ -18,14 +18,14 @@ pathway n2-l-glutamino-1-group-to-c-terminal-5-phospho-l "N2-L-glutamino(1−) g
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_34 [3.5.4.34] +adenosine_5_monophosphate_1 +h2o +hplus
-    inosine_5_phosphate_1
+    <-> . +l_phenylalanine +o2 +h2o +h2o2
+    keto_phenylpyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +hplus
-    dichlorochromopyrrolate
+    <-> . +cysteine +o2 +h2o +h2o2
+    mercaptopyruvate
   }
 
   branch from c_terminal_l_glutamyl_l_glutamyl_3_group side left {

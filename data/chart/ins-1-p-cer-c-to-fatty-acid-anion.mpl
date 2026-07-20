@@ -18,25 +18,25 @@ pathway ins-1-p-cer-c-to-fatty-acid-anion "Ins-1-P-Cer-C to fatty acid anion" {
 
   branch from dag side left {
     dag
-    <-> . +mannosylinositol_phosphorylceramide +1_phosphatidyl_1d_myo_inositol
-    mannosyl_diphosphorylinositol_ceramide
-  }
-
-  branch from dag side right {
-    dag
     <-> . +man_1_6_ins_1_p_cer +1_phosphatidyl_1d_myo_inositol
     ins_1_p_man_1_6_ins_1_p_cer
   }
 
+  branch from dag side right {
+    dag
+    <-> . +1_phosphatidyl_1d_myo_inositol +n_acylsphingosine
+    n_acylsphingosine_1d_myo_inositol
+  }
+
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +fatty_acid_ethyl_ester +h2o +hplus
-    ethanol
+    <-> . +n_fatty_acyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
-    monoacyl_3_o_d_galactosyl_sn_glycerol
+    <-> . +n_fatty_acyl_l_serine +h2o
+    serine
   }
 }

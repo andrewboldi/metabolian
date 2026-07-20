@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway galactitol-to-5-dehydro-d-fructose "galactitol to 5-dehydro-D-fructose" {
-  spacing 270
+  spacing 258
 
   spine at 0,0 {
     galactitol
@@ -20,17 +20,5 @@ pathway galactitol-to-5-dehydro-d-fructose "galactitol to 5-dehydro-D-fructose" 
     keto_l_tagatose
     <-> ec_1_1_1_12 [1.1.1.12] +nadh +h +nad
     l_altritol
-  }
-
-  branch from keto_l_sorbose side right {
-    keto_l_sorbose
-    <-> .
-    l_sorbopyranose
-  }
-
-  branch from keto_l_sorbose side left {
-    keto_l_sorbose
-    <-> ec_1_1_1_67 [1.1.1.67] +nadh +h +nad
-    d_sorbitol
   }
 }

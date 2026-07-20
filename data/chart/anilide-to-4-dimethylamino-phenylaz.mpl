@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway anilide-to-4-dimethylamino-phenylaz "anilide to 4-(dimethylamino)phenylaz…" {
-  spacing 268
+  spacing 262
 
   spine at 0,0 {
     anilide
@@ -19,24 +19,18 @@ pathway anilide-to-4-dimethylamino-phenylaz "anilide to 4-(dimethylamino)phenyla
   branch from aniline side left {
     aniline
     <-> ec_4_1_1_24 [4.1.1.24] +hplus +co2
-    4_aminobenzoate
-  }
-
-  branch from aniline side right {
-    aniline
-    <-> ec_4_1_1_24 [4.1.1.24] +hplus +co2
     anthranilate
-  }
-
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> . +3_sn_phosphatidyl_l_serine +h2o +hplus
-    sn_glycero_3_phosphoserine
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
     <-> . +1_phosphatidyl_1d_myo_inositol +h2o +hplus
     1_sn_glycero_3_o_phosphonato_1d_myo_inositol
+  }
+
+  branch from carboxylic_acid_anion side left {
+    carboxylic_acid_anion
+    <-> . +n_acyl_15_methylhexadecasphinganine +h2o
+    15_methylhexadecasphinganine
   }
 }

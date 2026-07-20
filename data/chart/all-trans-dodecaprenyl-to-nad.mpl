@@ -26,61 +26,61 @@ pathway all-trans-dodecaprenyl-to-nad "all-trans-dodecaprenyl… to NAD" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_88 [4.2.3.88] +fpp
-    viridiflorene
+    <-> ec_4_2_3_115 [4.2.3.115] +gpp
+    terpinene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_89 [4.2.3.89] +fpp
-    caryophyllene
+    <-> ec_4_2_3_116 [4.2.3.116] +gpp
+    camphene
   }
 
   branch from sah side right {
     sah
-    <-> . +2_3s_3_amino_3_carboxypropyl_l_histidine_zwitter +sam +hplus
-    2_3s_3_carboxylato_3_methylammonio_propyl_l_hist
+    <-> ec_2_1_1_33 [2.1.1.33] +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 
   branch from sah side left {
     sah
-    <-> . +2_3s_3_carboxylato_3_methylammonio_propyl_l_hist +sam +hplus
-    2_3s_3_carboxylato_3_dimethylammonio_propyl_l_hi
+    <-> ec_2_1_1_35 [2.1.1.35] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from h side right {
     h
-    <-> . +udp +3_5_diiodothyroacetate_beta_d_glucuronoside +3_5_diiodothyroacetate
-    udp_alpha_d_glucuronate
+    <-> . +glutathione +estrone_2_3_quinone
+    2_hydroxyestrone_4_s_glutathione
   }
 
   branch from h side left {
     h
-    <-> . +17_estradiol_3_4_quinone +glutathione
-    4_hydroxy_17beta_estradiol_2_s_glutathione
+    <-> . +acetyl_coa +leukotriene_e4 +coa
+    n_acetyl_leukotriene_e4
   }
 
   branch from nadph side right {
     nadph
-    <-> . +8z_11z_14z_17z_3_oxoicosatetraenoyl_coa +h +nadp
-    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +nadp +h
+    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa +nadp
-    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
+    <-> . +13z_3_oxodocosenoyl_coa +h +nadp
+    3_s_hydroxy_13cis_docosenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_1_2 [1.6.1.2] +nadh +nadp +nadph
-    pmf
+    <-> . +nadh +h +l_cysteate +h2o
+    3_sulfino_l_alanine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_18_2 [1.14.18.2] +nadh +n_glycoloylneuraminic_acid +h +o2 +h2o
-    n_acetyl_neuraminic_acid
+    <-> ec_1_1_1_147 [1.1.1.147] +nadh +h +16_oxosteroid
+    16alpha_hydroxysteroid
   }
 }

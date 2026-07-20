@@ -32,14 +32,14 @@ pathway urethane-to-acetaldehyde "urethane to acetaldehyde" {
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_5_2 [3.5.5.2] +ricinine +h2o
-    4_methoxy_1_methyl_2_oxo_1_2_dihydropyridine_3_c
+    <-> ec_3_5_1_100 [3.5.1.100] +r_piperazin_4_ium_2_carboxamide +h2o
+    r_piperazine_2_carboxylic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_4_46 [3.5.4.46] +camp +h2o +hplus
-    3_5_cyclic_imp
+    <-> ec_3_5_1_101 [3.5.1.101] +s_piperazin_4_ium_2_carboxamide +h2o
+    s_piperazine_2_carboxylic_acid
   }
 
   branch from acetoin side left {

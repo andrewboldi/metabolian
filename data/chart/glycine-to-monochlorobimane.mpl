@@ -18,20 +18,20 @@ pathway glycine-to-monochlorobimane "glycine to monochlorobimane" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +androst_4_ene_3_17_dione +phosphate +androst_4_ene_3_17_dione
+    <-> . +h +adp +tricosanoate +phosphate +tricosanoate
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +atp +1_6_anhydrous_n_acetylmuramate +n_acetylmuramate_6_phosphate
-    adp
+    <-> . +h +adp +phosphate +atp
+    cerotic_acid_d3
   }
 
   branch from glutathion_s_yl_bimane side left {
     glutathion_s_yl_bimane
-    <-> . +h +adp +atp +h2o
-    phosphate
+    <-> . +h +phosphate +atp +h2o
+    adp
   }
 
   branch from glutathion_s_yl_bimane side right {
@@ -48,7 +48,7 @@ pathway glycine-to-monochlorobimane "glycine to monochlorobimane" {
 
   branch from glutathione side right {
     glutathione
-    <-> . +r_s_lactoylglutathione +h2o +h
-    s_lactate
+    <-> ec_1_8_5_7 [1.8.5.7] +glutathione_disulfide +h +2_6_dichloro_4_hydroxyphenolate
+    2_6_dichloro_3_glutathion_s_yl_hydroquinone
   }
 }

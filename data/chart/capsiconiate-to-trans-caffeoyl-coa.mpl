@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway capsiconiate-to-trans-caffeoyl-coa "capsiconiate to trans-caffeoyl-CoA" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     capsiconiate
@@ -32,29 +32,23 @@ pathway capsiconiate-to-trans-caffeoyl-coa "capsiconiate to trans-caffeoyl-CoA" 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +n_5_methyl_l_glutamine
-    l_glutamine
+    <-> . +s_adenosyl_l_homocysteine +h +sativan
+    vestitol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +2_nonaprenyl_3_methyl_6_methoxy_1_4_benzoquinone
-    2_nonaprenyl_6_methoxy_1_4_benzoquinone
+    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +h +mg_protoporphyrin_ix_13_monomethyl_ester
+    magnesium_protoporphyrin
   }
 
-  branch from 3_4_dihydroxycinnamaldehyde side left {
-    3_4_dihydroxycinnamaldehyde
-    <-> . +4_hydroxycinnamaldehyde +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from trans_caffeoyl_coa side right {
+  branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
     <-> ec_2_3_1_126 [2.3.1.126] +d_threo_isocitrate +coa
     2_e_caffeoyl_d_threo_isocitrate
   }
 
-  branch from trans_caffeoyl_coa side left {
+  branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
     <-> ec_2_3_1_140 [2.3.1.140] +2r_3_3_4_dihydroxyphenyl_lactate +coa
     r_rosmarinate

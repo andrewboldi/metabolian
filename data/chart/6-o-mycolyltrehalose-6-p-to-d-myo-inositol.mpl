@@ -20,14 +20,14 @@ pathway 6-o-mycolyltrehalose-6-p-to-d-myo-inositol "6'-O-mycolyltrehalose-6'p…
 
   branch from h side left {
     h
-    <-> ec_1_1_1_188 [1.1.1.188] +nadh +prostaglandin_d2 +nad
-    11beta_prostaglandin_f2
+    <-> ec_1_1_1_179 [1.1.1.179] +d_ribose +nadp +nadph
+    d_ribono_1_4_lactone
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +acetamide +hydroxylamine +acetohydroxamic_acid
-    nh4
+    <-> . +3beta_hydroxytibolone +nadp +nadph
+    tibolone
   }
 
   branch from alpha_alpha_trehalose_6_phosphate side left {
@@ -56,14 +56,14 @@ pathway 6-o-mycolyltrehalose-6-p-to-d-myo-inositol "6'-O-mycolyltrehalose-6'p…
 
   branch from gdp_alpha_d_glucose side left {
     gdp_alpha_d_glucose
-    <-> . +gdp +h +glucose_1_p
-    phosphate
+    <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
+    beta_d_fructose
   }
 
   branch from gdp_alpha_d_glucose side right {
     gdp_alpha_d_glucose
     <-> ec_2_4_1_13 [2.4.1.13] +gdp +sucrose +h
-    beta_d_fructose
+    beta_d_fructopyranose
   }
 
   branch from 1d_myo_inositol_3_phosphate side left {
@@ -80,13 +80,13 @@ pathway 6-o-mycolyltrehalose-6-p-to-d-myo-inositol "6'-O-mycolyltrehalose-6'p…
 
   branch from adp side left {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_valine +atp +l_glutamate +phosphate
-    gamma_l_glutamyl_l_valine
+    <-> ec_2_7_1_64 [2.7.1.64] +myo_inositol +atp +h
+    1d_myo_inositol_1_phosphate
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_threonine +atp +l_glutamate +h +phosphate
-    l_glu_l_thr
+    <-> . +h +phosphate +atp +h2o
+    d_aspartate
   }
 }

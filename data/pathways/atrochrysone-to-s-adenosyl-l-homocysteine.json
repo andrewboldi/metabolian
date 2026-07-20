@@ -129,12 +129,21 @@
       }
     },
     {
-      "id": "l_histidine",
-      "name": "L-histidine",
-      "formula": "C6H9N3O2",
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1107769"
+        "metanetx": "MNXM114"
+      }
+    },
+    {
+      "id": "l_threonine",
+      "name": "L-threonine",
+      "formula": "C4H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM142"
       }
     },
     {
@@ -147,42 +156,40 @@
       }
     },
     {
-      "id": "histidyl_tryptophanyl_histidine",
-      "name": "Histidyl-Tryptophanyl-Histidine",
-      "short": "Histidyl-Tryptophan…",
-      "formula": "C23H26N8O4",
+      "id": "pro_trp_thr",
+      "name": "Pro-Trp-Thr",
+      "formula": "C20H26N4O5",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744751"
+        "chebi": "CHEBI:162729"
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "2e_nonadecenoyl_coenzyme_a",
-      "name": "(2E)-Nonadecenoyl Coenzyme A",
-      "short": "Nonadecenoyl…",
-      "formula": "C40H66N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM744516"
-      }
-    },
-    {
-      "id": "3_hydroxynonadecanoyl_coenzyme_a",
-      "name": "3-Hydroxynonadecanoyl Coenzyme A",
-      "short": "3-Hydroxynonadecano…",
-      "formula": "C40H72N7O18P3S",
+      "id": "l_valine",
+      "name": "L-valine",
+      "formula": "C5H11NO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM744543"
+        "metanetx": "MNXM199"
+      }
+    },
+    {
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM37"
+      }
+    },
+    {
+      "id": "prolyl_valyl_glutamine",
+      "name": "Prolyl-Valyl-Glutamine",
+      "short": "Prolyl-Valyl-Glutam…",
+      "formula": "C15H26N4O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM744864"
       }
     },
     {
@@ -222,41 +229,23 @@
       }
     },
     {
-      "id": "eburicol",
-      "name": "eburicol",
-      "formula": "C31H52O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:70315"
-      }
-    },
-    {
-      "id": "pneumocysterol",
-      "name": "pneumocysterol",
-      "formula": "C32H54O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138589"
-      }
-    },
-    {
-      "id": "pseudouridine_5_phosphate_1",
-      "name": "pseudouridine 5'-phosphate(1−)",
-      "short": "pseudouridine…",
-      "formula": "C9H10N2O8P",
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65314"
+        "chebi": "CHEBI:74269"
       }
     },
     {
-      "id": "n1_methylpseudouridine_5_monophosphate_1",
-      "name": "N1-methylpseudouridine 5'-monophosphate(1−)",
-      "short": "N1-methylpseudourid…",
-      "formula": "C10H12N2O8P",
-      "charge": -1,
+      "id": "n7_methylguanosine_5_phosphate_zwitterion",
+      "name": "N7-methylguanosine 5'-phosphate zwitterion",
+      "short": "N7-methylguanosine…",
+      "formula": "C11H14N5O7P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:74890"
+        "chebi": "CHEBI:74480"
       }
     }
   ],
@@ -273,13 +262,6 @@
       "name": "questin reductase",
       "ec": [
         "1.1.1.443"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_257",
-      "name": "tRNA (pseudouridine(54)-N(1))-methyltransferase",
-      "ec": [
-        "2.1.1.257"
       ]
     }
   ],
@@ -450,11 +432,15 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR158230",
+      "name": "Reaction MNXR162364",
       "substrates": [
         {
-          "metabolite": "l_histidine",
-          "stoichiometry": 2
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_threonine",
+          "stoichiometry": 1
         },
         {
           "metabolite": "l_tryptophan",
@@ -463,7 +449,7 @@
       ],
       "products": [
         {
-          "metabolite": "histidyl_tryptophanyl_histidine",
+          "metabolite": "pro_trp_thr",
           "stoichiometry": 1
         },
         {
@@ -474,52 +460,56 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR158230"
+        "metanetx": "MNXR162364"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158230"
+            "id": "MNXR162364"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR158477",
+      "name": "Reaction MNXR162369",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 4
-        },
-        {
-          "metabolite": "2e_nonadecenoyl_coenzyme_a",
+          "metabolite": "l_proline",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_valine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_hydroxynonadecanoyl_coenzyme_a",
+          "metabolite": "prolyl_valyl_glutamine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR158477"
+        "metanetx": "MNXR162369"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158477"
+            "id": "MNXR162369"
           }
         ]
       }
@@ -614,11 +604,11 @@
     },
     {
       "id": "r9",
-      "name": "eburicol + S-adenosyl-L-methionine = (24Z)-ethylidenelanosterol + S-adenosyl-L-homocyst...",
-      "equation": "eburicol + S-adenosyl-L-methionine = (24Z)-ethylidenelanosterol + S-adenosyl-L-homocysteine + H(+)",
+      "name": "a guanosine in mRNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in mRNA + S-ade...",
+      "equation": "a guanosine in mRNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in mRNA + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "eburicol",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -628,41 +618,36 @@
       ],
       "products": [
         {
-          "metabolite": "pneumocysterol",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:55088"
+        "rhea": "RHEA:60508"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55088"
+            "id": "RHEA:60508"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "tRNA (pseudouridine(54)-N(1))-methyltransferase",
-      "equation": "pseudouridine(54) in tRNA + S-adenosyl-L-methionine = N(1)-methylpseudouridine(54) in tRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.257",
+      "name": "a guanosine in miRNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in miRNA + S-a...",
+      "equation": "a guanosine in miRNA + S-adenosyl-L-methionine = an N(7)-methylguanosine in miRNA + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "pseudouridine_5_phosphate_1",
+          "metabolite": "guanosine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -672,34 +657,25 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methylpseudouridine_5_monophosphate_1",
+          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_257"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:55292"
+        "rhea": "RHEA:60512"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:55292"
+            "id": "RHEA:60512"
           }
         ]
       }

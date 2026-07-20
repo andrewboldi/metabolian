@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-arachidyl-palmitate",
+  "name": "H to arachidyl palmitate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from H(+) to arachidyl palmitate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181680"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "eicosanoate",
+      "name": "eicosanoate",
+      "formula": "C20H39O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2976"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "eicosanal",
+      "name": "Eicosanal",
+      "formula": "C20H40O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:196292"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "icosan_1_ol",
+      "name": "icosan-1-ol",
+      "formula": "C20H42O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75627"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "arachidyl_palmitate",
+      "name": "arachidyl palmitate",
+      "formula": "C36H72O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84065"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_5",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde dehydrogenase [NAD(P)(+)]",
+      "ec": "1.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "eicosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eicosanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "eicosanal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "icosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181433"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181433"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "eicosan-1-ol + hexadecanoyl-CoA = eicosyl hexadecanoate + CoA",
+      "equation": "eicosan-1-ol + hexadecanoyl-CoA = eicosyl hexadecanoate + CoA",
+      "substrates": [
+        {
+          "metabolite": "icosan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arachidyl_palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44116"
+          }
+        ]
+      }
+    }
+  ]
+}

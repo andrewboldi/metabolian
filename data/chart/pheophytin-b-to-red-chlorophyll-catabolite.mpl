@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chlorophyll catabolite" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     pheophytin_b
@@ -20,26 +20,26 @@ pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chloroph
 
   branch from phytol side left {
     phytol
-    <-> . +phylloquinone +h2o
-    menadione
-  }
-
-  branch from phytol side right {
-    phytol
     <-> ec_3_1_1_14 [3.1.1.14] +chlorophyllide_a +h2o
     chlorophyll_a
   }
 
+  branch from phytol side right {
+    phytol
+    <-> . +pheophytin_b +h2o
+    pheide_b
+  }
+
   branch from h2o side left {
     h2o
-    <-> . +l_proline
-    prolyl_prolyl_proline
+    <-> ec_3_4_19_13 [3.4.19.13] +indol_3_ylmethylisothiocyanate_gamma_glu_cys +indol_3_ylmethylisothiocyanate_l_cysteine
+    l_glutamate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_lysine +l_tryptophan
-    prolyl_tryptophanyl_lysine
+    <-> ec_3_4_19_13 [3.4.19.13] +s_indol_3_ylmethylisothiocyanyl_l_cysteinylglyci +l_glutamate
+    indol_3_ylmethylisothiocyanate_glutathione
   }
 
   branch from pheophorbide_a side left {
@@ -50,35 +50,29 @@ pathway pheophytin-b-to-red-chlorophyll-catabolite "pheophytin b to Red chloroph
 
   branch from h side right {
     h
-    <-> . +adp +sphingomyelin_homo_sapiens +phosphate +sphingomyelin_homo_sapiens +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pe_18_1_9z_18_3_9z_12z_15z
   }
 
   branch from h side left {
     h
-    <-> ec_7_6_2_11 [7.6.2.11] +adp +phosphate +atp +h2o
-    spermine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    18_2_18_3_pe
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_215 [1.1.1.215] +l_idonate +h +nadph
-    2_dehydro_d_galactonate
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    1s_2s_4s_dihydrocarveol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +s_columbianetin +nadph +acetone +h2o
-    angelicin
+    <-> ec_1_1_1_71 [1.1.1.71] +dihydrocarveol +h +nadph
+    phellandral
   }
 
   branch from red_chlorophyll_catabolite side right {
-    red_chlorophyll_catabolite
-    <-> ec_1_3_1_80 [1.3.1.80] +nadp +nadph
-    primary_fluorescent_chlorophyll_catabolite
-  }
-
-  branch from red_chlorophyll_catabolite side left {
     red_chlorophyll_catabolite
     <-> . +h2o
     epoxypheophorbide_a

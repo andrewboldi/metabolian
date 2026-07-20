@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-cytosine "FMNH2 to cytosine" {
-  spacing 306
+  spacing 294
 
   spine at 0,0 {
     fmnh2
@@ -20,86 +20,74 @@ pathway fmnh2-to-cytosine "FMNH2 to cytosine" {
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +sulfoacetate +h +o2 +sulfite +h2o
-    glyoxylate
+    <-> ec_1_17_7_4 [1.17.7.4] +fmnh2 +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
+    ipp
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_2_6_1_114 [2.6.1.114] +o2 +h2o
-    8_formyl_8_demethylriboflavin_5_phosphate
+    <-> . +fmnh2 +iminoaspartate +h
+    l_aspartate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_139 [4.2.1.139] +pterocarpan
-    4r_4_2_dihydroxyisoflavan
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_rhamnose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_glutamate +l_ethynylserine
-    l_glutamyl_3r_l_ethynylserine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    3_acetamido_3_deoxy_alpha_d_fucose
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +diphosphate +h +amp +atp +dodecanoate +coa +h2o
-    fad
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    thujan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +s_2_methyl_3_oxopropanoate +h
-    3_hydroxyisobutyrate
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> . +dihydrokalafungin_dihydroquinone_form +o2 +fmn +h +h2o
-    dhk_oh
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_19_1_1 [1.19.1.1] +h +nadp +fmn
-    nadph
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1r_2s_4r_borneol
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_methionyl_adenylate +diphosphate +h
-    atp
+    <-> . +s_adenosyl_l_homocysteine +ovothiol +h
+    mercaptohistidine
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +1s_1_2s_2_amino_4_methylpentanamido_ethyl_metho
-    hydrogen_1s_1_2s_2_amino_4_methylpentanamido_eth
+    <-> . +s_adenosyl_l_homocysteine +meleagrin +h
+    glandicoline_b
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_5_1 [3.5.5.1] +d_alanine +nh4 +h2o
-    alpha_aminopropionitrile
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +l_oleandrose +phosphate +l_oleandrose +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +thca_coa_25r +fad +24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
-    fadh2
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    d_oliose
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +urolithin_a_3_o_glucuronide
-    urolithin_a
+    <-> . +udp +amaranthin
+    betanin
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> . +udp +h +beta_d_glucuronosyl_2_methyl_4_3_methyl_1_4_diox
-    5c_aglycone
+    <-> . +udp +alpha_d_glca_1_6_alpha_d_glc_1_2_alpha_l_rha_1_3 +h
+    alpha_d_glc_1_2_alpha_l_rha_1_3_alpha_l_rha_1_3
   }
 
   branch from cytosine side left {

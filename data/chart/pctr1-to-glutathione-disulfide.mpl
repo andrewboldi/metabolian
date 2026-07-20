@@ -24,26 +24,26 @@ pathway pctr1-to-glutathione-disulfide "PCTR1 to glutathione disulfide" {
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +dichloroacetate +s_alpha_chlorocarboxymethyl_glutathione
-    chloride
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_4_aci_nitrobutane
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +h +chloride +4_glutathion_s_yl_fenclorim
-    fenclorim
+    <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
+    1_methylsulfanyl_5_aci_nitropentane
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +r_1_2_distearoylphosphatidylethanolamine +phosphate +r_1_2_distearoylphosphatidylethanolamine +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_threose +phosphate +d_threose +h2o
     atp
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_dioctadecanoyl_sn_glycero_3_phospho_1_sn_gly
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_d_xylose
   }
 
   branch from 4z_7z_10z_13z_15e_17s_19z_17_hydroperoxydocosah side right {

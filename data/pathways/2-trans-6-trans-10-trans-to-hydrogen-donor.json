@@ -1,0 +1,242 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-10-trans-to-hydrogen-donor",
+  "name": "2-trans,6-trans,10-trans-… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-trans,6-trans,10-trans-geranylgeranyl diphosphate(3−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34475"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58756"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "15_cis_phytoene",
+      "name": "15-cis-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27787"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "all_trans_carotene",
+      "name": "all-trans-ζ-carotene",
+      "formula": "C40H60",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28068"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_32",
+      "name": "15-cis-phytoene synthase",
+      "ec": [
+        "2.5.1.32"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_29",
+      "name": "phytoene desaturase (zeta-carotene-forming)",
+      "ec": [
+        "1.3.99.29"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_26",
+      "name": "all-trans-zeta-carotene desaturase",
+      "ec": [
+        "1.3.99.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "15-cis-phytoene synthase",
+      "equation": "2 (2E,6E,10E)-geranylgeranyl diphosphate = 15-cis-phytoene + 2 diphosphate",
+      "ec": "2.5.1.32",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34475"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34475"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phytoene desaturase (zeta-carotene-forming)",
+      "equation": "15-cis-phytoene + 2 A = all-trans-zeta-carotene + 2 AH2",
+      "ec": "1.3.99.29",
+      "substrates": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30615"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30615"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "all-trans-zeta-carotene desaturase",
+      "equation": "all-trans-zeta-carotene + 2 A = all-trans-lycopene + 2 AH2",
+      "ec": "1.3.99.26",
+      "substrates": [
+        {
+          "metabolite": "all_trans_carotene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30619"
+          }
+        ]
+      }
+    }
+  ]
+}

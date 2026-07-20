@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-glucosaminyl-to-ammonium "N-acetyl-β-D-glucosaminyl… to ammonium" {
-  spacing 254
+  spacing 248
 
   spine at 0,0 {
     n_acetyl_d_glucosaminyl_n_acetyl_d_muramoyl_l_al
@@ -18,45 +18,39 @@ pathway n-acetyl-d-glucosaminyl-to-ammonium "N-acetyl-β-D-glucosaminyl… to am
     akg
   }
 
-  branch from d_alanine side left {
-    d_alanine
-    <-> . +atp +hplus +ppi
-    d_alanyl_amp
-  }
-
-  branch from d_glutamate side right {
+  branch from d_glutamate side left {
     d_glutamate
     <-> ec_4_2_1_48 [4.2.1.48] +h2o
     5_oxo_d_prolinate
   }
 
-  branch from d_glutamate side left {
+  branch from d_glutamate side right {
     d_glutamate
     <-> . +d_lysinium +akg
     6_amino_2_oxohexanoic_acid
   }
 
-  branch from akg side right {
+  branch from akg side left {
     akg
     <-> . +fad +hplus +fadh2
     2_hydroxyglutarate
   }
 
-  branch from akg side left {
+  branch from akg side right {
     akg
-    <-> ec_2_2_1_9 [2.2.1.9] +isochorismate +hplus +co2
-    1r_2s_5s_6s_2_3_carboxylatopropanoyl_5_1_carbox
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +pentan_2_aminium +nad +h2o +nadh +hplus
-    pentan_2_one
+    <-> . +fad +hplus +fadh2
+    s_2_hydroxyglutarate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +pentan_3_aminium +nad +h2o +nadh +hplus
-    pentan_3_one
+    <-> . +dserine +nad +h2o +nadh +hplus
+    3_hydroxypyruvate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +2r_heptan_2_aminium +nad +h2o +nadh +hplus
+    heptan_2_one
   }
 }

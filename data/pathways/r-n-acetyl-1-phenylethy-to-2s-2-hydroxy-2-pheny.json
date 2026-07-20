@@ -121,49 +121,51 @@
       }
     },
     {
-      "id": "4_hydroxyestrone",
-      "name": "4-hydroxyestrone",
-      "formula": "C18H22O3",
+      "id": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine",
+      "short": "S-(4-hydroxy-3-meth…",
+      "formula": "C8H17NO3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87602"
+        "chebi": "CHEBI:156146"
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
+      "id": "2_methyl_3_sulfanylbutan_1_ol",
+      "name": "2-methyl-3-sulfanylbutan-1-ol",
+      "short": "2-methyl-3-sulfanyl…",
+      "formula": "C5H12OS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:156147"
       }
     },
     {
-      "id": "pyridinestrone_3_carboxylate",
-      "name": "pyridinestrone-3-carboxylate",
-      "short": "pyridinestrone-3-ca…",
-      "formula": "C18H20NO3",
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:137549"
+        "chebi": "CHEBI:15361"
       }
     },
     {
-      "id": "hco3",
-      "name": "Bicarbonate (HCO3-)",
-      "formula": "CHO3",
-      "charge": -1,
+      "id": "3_sulfanylpentan_1_ol_l_cysteine",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine",
+      "short": "3-sulfanylpentan-1-…",
+      "formula": "C8H17NO3S",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17544"
+        "chebi": "CHEBI:156143"
       }
     },
     {
-      "id": "carbamate",
-      "name": "carbamate",
-      "formula": "CH2NO2",
-      "charge": -1,
+      "id": "3_mercaptopentanol",
+      "name": "3-mercaptopentanol",
+      "formula": "C5H12OS",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:13941"
+        "chebi": "CHEBI:156144"
       }
     }
   ],
@@ -296,58 +298,68 @@
     },
     {
       "id": "r4",
-      "name": "4-hydroxyestrone + NH4(+) + O2 = pyridinestrone carboxylate + 2 H2O + 2 H(+)",
-      "equation": "4-hydroxyestrone + NH4(+) + O2 = pyridinestrone carboxylate + 2 H2O + 2 H(+)",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyr...",
+      "equation": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyruvate + NH4(+)",
       "substrates": [
         {
-          "metabolite": "4_hydroxyestrone",
+          "metabolite": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pyridinestrone_3_carboxylate",
+          "metabolite": "2_methyl_3_sulfanylbutan_1_ol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
+          "metabolite": "nh3",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:57684"
+        "rhea": "RHEA:64748"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57684"
+            "id": "RHEA:64748"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
-      "equation": "hydrogencarbonate + NH4(+) = carbamate + H2O + H(+)",
+      "name": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
+      "equation": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
       "substrates": [
         {
-          "metabolite": "hco3",
+          "metabolite": "3_sulfanylpentan_1_ol_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_mercaptopentanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
           "stoichiometry": 1
         },
         {
@@ -355,31 +367,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "carbamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57716"
+        "rhea": "RHEA:64752"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57716"
+            "id": "RHEA:64752"
           }
         ]
       }

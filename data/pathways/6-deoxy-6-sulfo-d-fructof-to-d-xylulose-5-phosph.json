@@ -1,0 +1,227 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-deoxy-6-sulfo-d-fructof-to-d-xylulose-5-phosph",
+  "name": "6-deoxy-6-sulfo-D-fructof… to D-xylulose 5-phosphate",
+  "category": "other",
+  "summary": "A 3-step route from 6-deoxy-6-sulfo-D-fructofuranose(1−) to D-xylulose 5-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:70803"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77133"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_deoxy_6_sulfo_d_fructofuranose",
+      "name": "6-deoxy-6-sulfo-D-fructofuranose",
+      "short": "6-deoxy-6-sulfo-D-f…",
+      "formula": "C6H11O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77133"
+      }
+    },
+    {
+      "id": "g3p",
+      "name": "D-Glyceraldehyde 3-phosphate",
+      "short": "D-Glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59776"
+      }
+    },
+    {
+      "id": "4_deoxy_4_sulfo_d_erythrose",
+      "name": "4-deoxy-4-sulfo-D-erythrose",
+      "short": "4-deoxy-4-sulfo-D-e…",
+      "formula": "C4H7O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:189857"
+      }
+    },
+    {
+      "id": "x5p",
+      "name": "D-Xylulose 5-phosphate",
+      "short": "D-Xylulose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57737"
+      }
+    },
+    {
+      "id": "4_deoxy_4_sulfo_d_erythrulose",
+      "name": "4-deoxy-4-sulfo-D-erythrulose",
+      "short": "4-deoxy-4-sulfo-D-e…",
+      "formula": "C4H7O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:190015"
+      }
+    },
+    {
+      "id": "sulfonatoacetaldehyde",
+      "name": "sulfonatoacetaldehyde",
+      "short": "sulfonatoacetaldehy…",
+      "formula": "C2H3O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58246"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_2_1_15",
+      "name": "6-deoxy-6-sulfo-D-fructose transketolase",
+      "ec": [
+        "2.2.1.15"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_37",
+      "name": "4-deoxy-4-sulfo-D-erythrose isomerase",
+      "ec": [
+        "5.3.1.37"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-deoxy-6-sulfo-D-fructose transketolase",
+      "equation": "6-deoxy-6-sulfo-D-fructose + D-glyceraldehyde 3-phosphate = 4-deoxy-4-sulfo-D-erythrose + D-xylulose 5-phosphate",
+      "ec": "2.2.1.15",
+      "substrates": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_fructofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_deoxy_4_sulfo_d_erythrose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "x5p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:70803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-deoxy-4-sulfo-D-erythrose isomerase",
+      "equation": "4-deoxy-4-sulfo-D-erythrose = 4-deoxy-4-sulfo-D-erythrulose",
+      "ec": "5.3.1.37",
+      "substrates": [
+        {
+          "metabolite": "4_deoxy_4_sulfo_d_erythrose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_deoxy_4_sulfo_d_erythrulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70807"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-deoxy-6-sulfo-D-fructose transketolase",
+      "equation": "4-deoxy-4-sulfo-D-erythrulose + D-glyceraldehyde 3-phosphate = sulfoacetaldehyde + D-xylulose 5-phosphate",
+      "ec": "2.2.1.15",
+      "substrates": [
+        {
+          "metabolite": "4_deoxy_4_sulfo_d_erythrulose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "x5p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_2_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70811"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70811"
+          }
+        ]
+      }
+    }
+  ]
+}

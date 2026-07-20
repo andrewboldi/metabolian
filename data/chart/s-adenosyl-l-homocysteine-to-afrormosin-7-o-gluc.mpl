@@ -18,61 +18,61 @@ pathway s-adenosyl-l-homocysteine-to-afrormosin-7-o-gluc "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +limocitrin
-    3_3_4_5_7_pentahydroxy_8_methoxyflavone
+    <-> . +s_adenosyl_l_homocysteine +fusarin_c
+    carboxy_fusarin_c
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +isoarctigenin +h
-    matairesinol
+    <-> . +s_adenosyl_l_homocysteine +h +echinomycin
+    triostin_a
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_35 [2.4.1.35] +udp +h +1_naphthyl_d_glucoside
-    1_naphthol
+    <-> ec_2_4_1_91 [2.4.1.91] +udp +h +3_o_beta_d_glucosyl_daphnetin
+    7_8_dihydroxycoumarin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +glucosyl_oleandomycin
-    oleandomycin
+    <-> . +udp +19_o_beta_glucopyranosyl_steviol
+    steviol
   }
 
   branch from udp side left {
-    udp
-    <-> . +h +fagopyritol_a1 +1d_chiro_inositol
-    udp_alpha_d_galactose
-  }
-
-  branch from udp side right {
     udp
     <-> . +h +digitoxigenin_3beta_yl_beta_d_quinovoside +digitoxigenin
     udp_alpha_d_quinovose
   }
 
+  branch from udp side right {
+    udp
+    <-> . +octyl_6_o_d_galactofuranosyl_d_glucopyranoside +h +octyl_d_glucopyranoside
+    udp_d_galactofuranose
+  }
+
   branch from h side left {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +16_hydroxyhexadecanoyl_coa +nadph +nadp +coa
-    1_16_hexadecanediol
+    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
+    4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_84 [1.2.1.84] +18_hydroxyoleoyl_coa +nadph +nadp +coa
-    9z_octadec_9_ene_1_18_diol
+    <-> . +s_adenosyl_l_homocysteine +thiocoraline_dithiol +s_adenosyl_l_methionine
+    s_demethyl_thiocoraline_dithiol
   }
 
   branch from afrormosin_7_o_glucoside side left {
     afrormosin_7_o_glucoside
-    <-> . +6_o_malonylwistin +h2o +h
-    malonate
+    <-> . +afrormosin +glucose
+    h2o
   }
 
   branch from afrormosin_7_o_glucoside side right {
     afrormosin_7_o_glucoside
-    <-> . +afrormosin +glucose
-    h2o
+    <-> . +afrormosin +h2o
+    beta_d_glucose
   }
 }

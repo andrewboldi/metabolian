@@ -24,25 +24,25 @@ pathway 3-hydroxy-simvastatin-la-to-h2o "3'-hydroxy-simvastatin-la… to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_11 [2.7.1.11] +aldehydo_d_ribose_5_phosphate +h +adp
-    alpha_d_ribose_1_5_bisphosphate
+    <-> . +h +adp +phosphate +h2o
+    2_hydroxy_atorvastatin_acyl_glucuronide
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose +h +adp
-    keto_d_fructose_6_phosphate
+    <-> . +h +adp +phosphate +h2o
+    ortho_hydroxyatorvastatin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_4_1_21 [4.4.1.21] +d_ribose +l_homocysteine
-    s_5_deoxy_d_ribos_5_yl_l_homocysteine
+    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +nadp +h +o2 +nadph
+    5_epi_aristolochene
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +sucrose +glucose
-    d_fructofuranose
+    <-> ec_1_14_14_149 [1.14.14.149] +3_deoxycapsidiol +h +o2 +nadph +nadp
+    capsidiol
   }
 }

@@ -108,16 +108,6 @@
       }
     },
     {
-      "id": "1r_2s_naphthalene_1_2_oxide",
-      "name": "(1R,2S)-naphthalene 1,2-oxide",
-      "short": "(1R,2S)-naphthalene…",
-      "formula": "C10H8O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33998"
-      }
-    },
-    {
       "id": "1s_2r_naphthalene_1_2_oxide",
       "name": "(1S,2R)-naphthalene 1,2-oxide",
       "short": "(1S,2R)-naphthalene…",
@@ -125,6 +115,51 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:34001"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "naphthalene",
+      "name": "naphthalene",
+      "formula": "C10H8",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1363334"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
       }
     },
     {
@@ -148,31 +183,12 @@
       }
     },
     {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "4_nitrophenol",
-      "name": "4-nitrophenol",
-      "formula": "C6H4NO3",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM526"
-      }
-    },
-    {
-      "id": "4_nitrophenyl_d_xyloside",
-      "name": "4-nitrophenyl β-D-xyloside",
-      "short": "4-nitrophenyl…",
-      "formula": "C11H13NO7",
+      "id": "d_xylopyranose",
+      "name": "D-xylopyranose",
+      "formula": "C5H10O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90148"
+        "chebi": "CHEBI:53455"
       }
     },
     {
@@ -233,6 +249,13 @@
       ]
     },
     {
+      "id": "ec_1_14_13_236",
+      "name": "toluene 4-monooxygenase",
+      "ec": [
+        "1.14.13.236"
+      ]
+    },
+    {
       "id": "ec_3_2_1_21",
       "name": "beta-glucosidase",
       "ec": [
@@ -244,13 +267,6 @@
       "name": "endo-1,4-beta-xylanase",
       "ec": [
         "3.2.1.8"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_55",
-      "name": "non-reducing end alpha-L-arabinofuranosidase",
-      "ec": [
-        "3.2.1.55"
       ]
     }
   ],
@@ -383,36 +399,6 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR110724",
-      "substrates": [
-        {
-          "metabolite": "1r_2s_naphthalene_1_2_oxide",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_naphthol",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "metanetx": "MNXR110724"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR110724"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "Reaction MNXR110725",
       "substrates": [
         {
@@ -427,7 +413,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "metanetx": "MNXR110725"
       },
@@ -437,6 +423,62 @@
           {
             "db": "MetaNetX",
             "id": "MNXR110725"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "toluene 4-monooxygenase",
+      "ec": "1.14.13.236",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "naphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_naphthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_236"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR199971"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199971"
           }
         ]
       }
@@ -487,48 +529,30 @@
     },
     {
       "id": "r7",
-      "name": "beta-glucosidase",
-      "ec": "3.2.1.21",
+      "name": "Reaction MNXR136589",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_d_xylose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "4_nitrophenol",
+          "metabolite": "d_xylopyranose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_nitrophenyl_d_xyloside",
+          "metabolite": "beta_d_xylose",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR133106"
+        "metanetx": "MNXR136589"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR133106"
+            "id": "MNXR136589"
           }
         ]
       }

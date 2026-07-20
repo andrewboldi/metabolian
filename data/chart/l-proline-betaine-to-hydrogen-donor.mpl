@@ -32,14 +32,14 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
-    adenosine_5_monophosphate_1
+    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
+    l_lysinium
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
   }
 
   branch from l_proline side left {
@@ -50,8 +50,8 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from l_proline side right {
     l_proline
-    <-> ec_1_14_11_57 [1.14.11.57] +akg +o2 +succinate +co2
-    trans_4_hydroxy_l_proline
+    <-> . +atp +ppi
+    3_l_prolyl_amp
   }
 
   branch from d_proline side left {
@@ -74,13 +74,13 @@ pathway l-proline-betaine-to-hydrogen-donor "L-proline betaine to hydrogen donor
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_39 [1.14.99.39] +nh3 +o2 +hydrogen_acceptor +h2o +hplus
-    hydroxylamine
+    <-> ec_1_14_99_47 [1.14.99.47] +larreatricin +o2 +hydrogen_acceptor +h2o
+    3_hydroxylarreatricin
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_28 [1.3.99.28] +15_cis_phytoene +hydrogen_acceptor
-    neurosporene
+    <-> ec_1_3_99_33 [1.3.99.33] +dihydrourocanate +hydrogen_acceptor
+    urocanate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "lutein-to-o2-68432",
   "name": "lutein to O2",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 4-step route from lutein to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -124,31 +124,12 @@
       }
     },
     {
-      "id": "strictosamide",
-      "name": "Strictosamide",
-      "formula": "C26H30N2O8",
-      "charge": 0,
+      "id": "methylroxarsone_v",
+      "name": "methylroxarsone (V)",
+      "formula": "C7H7AsNO5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:80684"
-      }
-    },
-    {
-      "id": "strictosamide_ketolactam",
-      "name": "strictosamide ketolactam",
-      "short": "strictosamide…",
-      "formula": "C26H30N2O10",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM819024"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
+        "metanetx": "MNXM1132873"
       }
     },
     {
@@ -161,39 +142,33 @@
       }
     },
     {
-      "id": "4_fluorophenol",
-      "name": "4-fluorophenol",
-      "formula": "C6H5FO",
+      "id": "methylroxarsone_iii",
+      "name": "methylroxarsone (III)",
+      "short": "methylroxarsone…",
+      "formula": "C7H8AsNO4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:42533"
+        "metanetx": "MNXM1132876"
       }
     },
     {
-      "id": "4_fluorocatechol",
-      "name": "4-Fluorocatechol",
-      "formula": "C6H5FO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:80515"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
+      "id": "3_amino_4_hydroxyphenyl_methyl_arsinate",
+      "name": "(3-amino-4-hydroxyphenyl)(methyl)arsinate",
+      "short": "(3-amino-4-hydroxyp…",
+      "formula": "C7H9AsNO3",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM8"
+        "metanetx": "MNXM1132874"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "3_amino_4_hydroxyphenyl_methyl_arsinous_acid",
+      "name": "(3-amino-4-hydroxyphenyl)(methyl)arsinous acid",
+      "short": "(3-amino-4-hydroxyp…",
+      "formula": "C7H10AsNO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM1132877"
       }
     }
   ],
@@ -203,13 +178,6 @@
       "name": "carotenoid-9',10'-cleaving dioxygenase",
       "ec": [
         "1.13.11.71"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_236",
-      "name": "toluene 4-monooxygenase",
-      "ec": [
-        "1.14.13.236"
       ]
     }
   ],
@@ -382,90 +350,76 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR184673",
+      "name": "Reaction MNXR193849",
       "substrates": [
         {
-          "metabolite": "strictosamide",
-          "stoichiometry": 1
+          "metabolite": "methylroxarsone_v",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "metabolite": "h",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "strictosamide_ketolactam",
+          "metabolite": "methylroxarsone_iii",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR184673"
+        "metanetx": "MNXR193849"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR184673"
+            "id": "MNXR193849"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "toluene 4-monooxygenase",
-      "ec": "1.14.13.236",
+      "name": "Reaction MNXR193850",
       "substrates": [
         {
-          "metabolite": "nadh",
-          "stoichiometry": 1
+          "metabolite": "3_amino_4_hydroxyphenyl_methyl_arsinate",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
         {
-          "metabolite": "4_fluorophenol",
-          "stoichiometry": 1
+          "metabolite": "3_amino_4_hydroxyphenyl_methyl_arsinous_acid",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "4_fluorocatechol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_236"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR184926"
+        "metanetx": "MNXR193850"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR184926"
+            "id": "MNXR193850"
           }
         ]
       }

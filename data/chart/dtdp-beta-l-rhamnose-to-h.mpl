@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-beta-l-rhamnose-to-h "dTDP-beta-L-rhamnose to H" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     dtdp_beta_l_rhamnose
@@ -16,39 +16,27 @@ pathway dtdp-beta-l-rhamnose-to-h "dTDP-beta-L-rhamnose to H" {
     alpha_dqui4nbus3oh_1_4_beta_d_galnac_1_4_alpha_l
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> ec_2_4_1_331 [2.4.1.331] +dtdp_beta_l_rhamnose +8_demethyltetracenomycin_c +h
-    8_demethyl_8_alpha_l_rhamnosyl_tetracenomycin_c
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +h +sibiromycin +dtdp_sibirosamine
-    sibiromycin_aglycon
-  }
-
   branch from h side left {
     h
-    <-> . +adp +1_hexadecenoylglycerophosphoethanolamine_c16_1_p +phosphate +1_hexadecenoylglycerophosphoethanolamine_c16_1_p +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +2_o_geranylgeranyl_3_o_geranylfarnesyl_sn_glycer +phosphate +2_o_geranylgeranyl_3_o_geranylfarnesyl_sn_glycer +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_heptadecanoylglycerophosphoethanolamine_c17_0
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    2_3_bis_o_geranylfarnesyl_sn_glycero_1_phospho_1
   }
 
   branch from udp side left {
     udp
-    <-> . +digitoxin +h +digitoxigenin_didigitoxoside
-    udp_alpha_d_digitoxose
+    <-> . +h +beta_d_glucuronosyl_4e_4_methyl_6_3_methyl_1_4_d +2_methyl_3_2e_5_carboxy_3_methylpent_2_enyl_1_4
+    udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> . +h +digitoxigenin_didigitoxoside +udp_alpha_d_digitoxose
-    evatromonoside
+    <-> . +urolithin_a_3_o_glucuronide +udp_alpha_d_glucuronate
+    urolithin_a
   }
 }

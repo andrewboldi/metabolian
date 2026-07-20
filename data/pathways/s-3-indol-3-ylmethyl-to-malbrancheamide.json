@@ -187,31 +187,40 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "n6_hydroxy_datp",
+      "name": "N6-hydroxy-dATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233529"
+      }
+    },
+    {
+      "id": "n6_hydroxy_damp",
+      "name": "N6-hydroxy-dAMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:233530"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "bonnadiene",
-      "name": "bonnadiene",
-      "formula": "C20H32",
+      "id": "sterpurene",
+      "name": "sterpurene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:219774"
-      }
-    },
-    {
-      "id": "allokutznerene",
-      "name": "allokutznerene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:219780"
+        "chebi": "CHEBI:234481"
       }
     },
     {
@@ -289,22 +298,7 @@
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_223",
-      "name": "bonnadiene synthase",
-      "ec": [
-        "4.2.3.223"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_224",
-      "name": "allokutznerene synthase",
-      "ec": [
-        "4.2.3.224"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -515,59 +509,60 @@
     },
     {
       "id": "r6",
-      "name": "bonnadiene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = bonnadiene + diphosphate",
-      "ec": "4.2.3.223",
+      "name": "N(6)-hydroxy-dATP + H2O = N(6)-hydroxy-dAMP + diphosphate + H(+)",
+      "equation": "N(6)-hydroxy-dATP + H2O = N(6)-hydroxy-dAMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "n6_hydroxy_datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "bonnadiene",
+          "metabolite": "n6_hydroxy_damp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_4_2_3_223"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78979"
+        "rhea": "RHEA:83971"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78979"
+            "id": "RHEA:83971"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "allokutznerene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = allokutznerene + diphosphate",
-      "ec": "4.2.3.224",
+      "name": "(2E,6E)-farnesyl diphosphate = sterpurene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = sterpurene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "allokutznerene",
+          "metabolite": "sterpurene",
           "stoichiometry": 1
         },
         {
@@ -575,22 +570,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_224"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:78983"
+        "rhea": "RHEA:85615"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78983"
+            "id": "RHEA:85615"
           }
         ]
       }

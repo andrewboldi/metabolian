@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-4-methoxybenzoa-to-3-5-dibromocatechol "3-hydroxy-4-methoxybenzoa… to 3,5-dibromocatechol" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_hydroxy_4_methoxybenzoate
@@ -14,17 +14,5 @@ pathway 3-hydroxy-4-methoxybenzoa-to-3-5-dibromocatechol "3-hydroxy-4-methoxyben
     3_bromo_4_5_dihydroxybenzoate
     <-> . +bromide +nadph +o2 +hplus -co2 -nadp -h2o
     3_5_dibromocatechol
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +trans_p_coumaryl_alcohol +hydrogen_donor
-    4_hydroxycinnamaldehyde
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +trans_sinapyl_alcohol +hydrogen_donor
-    e_sinapaldehyde
   }
 }

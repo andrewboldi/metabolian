@@ -1,0 +1,347 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-propane-1-2-diol-to-enolaldehyde",
+  "name": "(S)-propane-1,2-diol to enolaldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-propane-1,2-diol to enolaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR95789"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_propane_1_2_diol",
+      "name": "(S)-propane-1,2-diol",
+      "formula": "C3H8O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1255"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "hydroxyacetone",
+      "name": "hydroxyacetone",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "3_4_dimethoxybenzaldehyde",
+      "name": "3,4-dimethoxybenzaldehyde",
+      "short": "3,4-dimethoxybenzal…",
+      "formula": "C9H10O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM2607"
+      }
+    },
+    {
+      "id": "methylglyoxal",
+      "name": "methylglyoxal",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM310"
+      }
+    },
+    {
+      "id": "3_4_dimethoxyphenyl_methanol",
+      "name": "(3,4-dimethoxyphenyl)methanol",
+      "short": "(3,4-dimethoxypheny…",
+      "formula": "C9H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62150"
+      }
+    },
+    {
+      "id": "enolaldehyde",
+      "name": "enolaldehyde",
+      "formula": "C3H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM722979"
+      }
+    },
+    {
+      "id": "alpha_d_glucosamine_6_phosphate",
+      "name": "alpha-D-glucosamine 6-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1104065"
+      }
+    },
+    {
+      "id": "glucosamine_1p",
+      "name": "Glucosamine-1P",
+      "formula": "C6H14NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:174383"
+      }
+    },
+    {
+      "id": "5_trans_prostaglandin_d2",
+      "name": "5-trans Prostaglandin D2",
+      "short": "5-trans Prostagland…",
+      "formula": "C20H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156156"
+      }
+    },
+    {
+      "id": "prostaglandin_h2",
+      "name": "prostaglandin H2",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM730289"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_36",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": [
+        "1.1.99.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "s_propane_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR95789"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR95789"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alcohol dehydrogenase (nicotinoprotein)",
+      "ec": "1.1.99.36",
+      "substrates": [
+        {
+          "metabolite": "hydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_dimethoxybenzaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylglyoxal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_4_dimethoxyphenyl_methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR140159",
+      "substrates": [
+        {
+          "metabolite": "methylglyoxal",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "enolaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR140159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR140159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR206330",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glucosamine_1p",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR206330"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206330"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR206331",
+      "substrates": [
+        {
+          "metabolite": "5_trans_prostaglandin_d2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prostaglandin_h2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR206331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206331"
+          }
+        ]
+      }
+    }
+  ]
+}

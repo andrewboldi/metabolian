@@ -36,13 +36,13 @@ pathway udp-to-naringin-chalcone "UDP to naringin chalcone" {
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe
-    o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph
+    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +ethanol +h
+    ethyl_propionate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_hydroxydocosanoylpantetheine_4_phosphoryl
-    o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +h +butanoate
+    ethyl_butyrate
   }
 }

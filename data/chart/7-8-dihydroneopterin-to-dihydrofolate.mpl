@@ -54,25 +54,19 @@ pathway 7-8-dihydroneopterin-to-dihydrofolate "7,8-dihydroneopterin to dihydrofo
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_28 [2.5.1.28] +ipp +dmapp
-    neryl_diphosphate
+    <-> ec_4_2_3_6 [4.2.3.6] +fpp
+    trichodiene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_3_1_1 [6.3.1.1] +aspartate +nh3 +atp +amp +hplus
-    l_asparagine
+    <-> ec_4_2_3_166 [4.2.3.166] +fpp +h2o
+    1_10_e_4e_6s_7r_germacradien_6_ol
   }
 
   branch from dhf side right {
     dhf
     <-> . +uridine_5_monophosphate_1 +5_10_methylenetetrahydrofolate +taurine +gtp +hydrogen_acceptor +h2o +gdp +hydrogen_donor +pi +hplus
     5_taurinomethyluridine_5_phosphate_1
-  }
-
-  branch from faicar side left {
-    faicar
-    <-> ec_3_5_4_10 [3.5.4.10] +h2o
-    imp
   }
 }

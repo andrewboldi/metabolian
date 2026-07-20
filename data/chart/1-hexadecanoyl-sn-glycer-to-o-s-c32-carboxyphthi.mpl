@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hexadecanoyl-sn-glycer-to-o-s-c32-carboxyphthi "1-hexadecanoyl-sn--glycer… to O-(S-C32-carboxyphthiodio…" {
-  spacing 328
+  spacing 304
 
   spine at 0,0 {
     1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
@@ -34,75 +34,51 @@ pathway 1-hexadecanoyl-sn-glycer-to-o-s-c32-carboxyphthi "1-hexadecanoyl-sn--gly
     o_s_c32_carboxyphthiodiolenoneylpantetheine_4_ph
   }
 
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in side left {
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_d_myo_in
-    <-> . +h2o +pi
-    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
-  }
-
-  branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side right {
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> . +n2_3r_3_hydroxyhexadecanoyl_glycinate +holo-acp
-    n2_3r_3_hexadecanoyloxy_hexadecanoyl_glycinate
-  }
-
-  branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side left {
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
-    <-> ec_2_3_1_86 [2.3.1.86] +malonyl_coa +h +o_s_3_oxooctadecanoylpantetheine_4_phosphoryl_se +coa
-    co2
+  branch from ppi side left {
+    ppi
+    <-> . +8s_annullatin_e +dmapp
+    8s_annullatin_j
   }
 
   branch from ppi side right {
     ppi
-    <-> . +trans_caffeate +malonyl-coa +atp +hplus +amp +co2 +coa
-    hispidin
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    fusoxypene_a
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +long_chain_fatty_acyl_amp +amp +hplus
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
+    <-> . +fpp
+    1r_4r_5s_acoradiene
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_294 [2.3.1.294] +ultra_long_chain_di_unsaturated_fatty_acyl_pante +malonyl-acp +hplus +co2
-    ultra_long_chain_di_unsaturated_3_oxoacyl_pantet
+    <-> . +2e_2_fatty_enoyladenylate +amp +hplus
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +loliose +phosphate +loliose
-    atp
+  branch from holo-acp side right {
+    holo-acp
+    <-> . +n2_3r_3_hydroxyacyl_glycinate +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine
+    n2_3r_3_acyloxy_acyl_glycinate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_fructofuranosyl_d_mannopyranoside_6f_phosphat
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    1r_2s_epoxypropylphosphonate
   }
 
-  branch from o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1 side right {
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
-    <-> . +malonyl_coa +h +co2 +coa
-    o_s_3_oxodocosanoylpantetheine_4_phosphoryl_l_se
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +piericidin_a +phosphate +piericidin_a
+    atp
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
-    drimenol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    2z_6e_farnesol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +r_citronellal
-    neomenthol
+    <-> ec_1_1_1_118 [1.1.1.118] +nadh +d_glucono_1_5_lactone +h
+    alpha_d_glucose
   }
 }

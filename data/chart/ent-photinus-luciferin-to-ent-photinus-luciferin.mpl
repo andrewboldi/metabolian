@@ -24,50 +24,50 @@ pathway ent-photinus-luciferin-to-ent-photinus-luciferin "ent-Photinus luciferin
 
   branch from ppi side right {
     ppi
-    <-> . +8s_annullatin_e +dmapp
-    8s_annullatin_j
+    <-> . +17z_hexacosenoate +atp +coa +amp
+    17z_hexacosenoyl_coa
   }
 
   branch from ppi side left {
     ppi
     <-> . +fpp
-    1r_4r_5s_acoradiene
+    gurjunene
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +trans_homoaconitate +h2o
-    pentane_1_2_3_5_tetracarboxylic_acid
+    <-> ec_2_3_2_35 [2.3.2.35] +9_methyldecanoyl_coa +vanillylamine +h
+    homodihydrocapsaicin
   }
 
   branch from coa side left {
     coa
-    <-> . +h +perillate +atp +perillyl_coenzyme_a +phosphate +h2o
-    adp
+    <-> ec_2_3_2_35 [2.3.2.35] +7_methyloct_6_enoyl_coa +vanillylamine +h
+    norcapsaicin
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    n_acetyl_d_muramoyl_l_alanyl_d_isoglutamine
+    <-> . +adp +phosphate +atp +h2o
+    l_iditol
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    gramicidin_s
+    <-> . +adp +phosphate +atp +h2o
+    beta_cyclodextrin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nodularin
+    <-> . +h +adp +phosphate +h2o
+    alpha_cyclodextrin
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    anabaenopeptilide_90b
+    <-> . +h +adp +phosphate +h2o
+    cyclodextrin
   }
 
   branch from ent_photinus_luciferin side right {

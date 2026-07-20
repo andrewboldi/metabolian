@@ -34,26 +34,26 @@ pathway dtdp-l-dihydrostreptose-to-dtdp-4-dehydro-l-rham "dTDP-L-dihydrostreptos
 
   branch from dttp side left {
     dttp
-    <-> . +2_deoxynucleoside_5_monophosphate +dtdp
-    2_deoxyribonucleoside_5_diphosphate
-  }
-
-  branch from dttp side right {
-    dttp
     <-> . +2_deoxyguanosine_5_monophosphate +dtdp
     dgdp
   }
 
+  branch from dttp side right {
+    dttp
+    <-> . +h2o +pi +hplus
+    dtmp
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_41 [4.2.3.41] +geranylgeranyl_diphosphate
-    elisabethatriene
+    <-> ec_4_2_3_74 [4.2.3.74] +fpp +h2o
+    presilphiperfolan_8_ol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_43 [4.2.3.43] +geranylgeranyl_diphosphate
-    fusicocca_2_10_14_diene
+    <-> ec_4_2_3_194 [4.2.3.194] +fpp +h2o
+    drimenol
   }
 
   branch from dtdp_4_dehydro_6_deoxy_d_glucose side left {

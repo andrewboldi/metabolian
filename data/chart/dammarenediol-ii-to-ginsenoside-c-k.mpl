@@ -34,14 +34,14 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
 
   branch from fmn side right {
     fmn
-    <-> . +12_hete +fmnh2 +o2 +h2o +hplus
-    12_20_dihete
+    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
+    s_nandinine
   }
 
   branch from fmn side left {
     fmn
-    <-> . +6_trans_leukotriene_b4 +fmnh2 +o2 +h2o +hplus
-    20_hydroxy_6_trans_leukotriene_b4
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_19_20_epoxydocosapentaenoate
   }
 
   branch from ginsenoside_f2 side right {
@@ -56,18 +56,6 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
     ginsenoside_rb3
   }
 
-  branch from ginsenoside_rd side right {
-    ginsenoside_rd
-    <-> . +20s_ginsenoside_rg3 +h2o
-    beta_d_glucose
-  }
-
-  branch from ginsenoside_rd side left {
-    ginsenoside_rd
-    <-> ec_3_2_1_191 [3.2.1.191] +glucose +h2o
-    3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
-  }
-
   branch from ginsenoside_rb1 side right {
     ginsenoside_rb1
     <-> . +beta_d_glucose +h2o
@@ -77,30 +65,18 @@ pathway dammarenediol-ii-to-ginsenoside-c-k "dammarenediol-II to ginsenoside C-K
   branch from ginsenoside_rb1 side left {
     ginsenoside_rb1
     <-> . +glucose +h2o
-    ginsenoside_f2
-  }
-
-  branch from 20s_ginsenoside_rg3 side right {
-    20s_ginsenoside_rg3
-    <-> ec_2_4_1_365 [2.4.1.365] +udp_d_glucose +udp +hplus
-    20s_ginsenoside_rh2
-  }
-
-  branch from glucose side left {
-    glucose
-    <-> . +lithocholate_3_o_d_glucoside +h2o
-    lithocholate
+    3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b
   }
 
   branch from glucose side right {
     glucose
-    <-> . +nadp +nadph +hplus
-    d_glucitol
+    <-> . +nigerose +h2o
+    d_glucose
   }
 
-  branch from 20s_protopanaxadiol side left {
-    20s_protopanaxadiol
-    <-> . +udp +3beta_12beta_3_12_dihydroxydammar_24_en_20_yl_b +h
-    udp_alpha_d_glucose
+  branch from glucose side left {
+    glucose
+    <-> . +h2o +d_glucose
+    d_glcp_1_2_d_glcp
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "d-glucopyranose-to-d-xylono-1-5-lactone",
   "name": "D-glucopyranose to D-xylono-1,5-lactone",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 3-step route from D-glucopyranose to D-xylono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -118,67 +118,52 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H9NO2",
+      "id": "2_hydroxy_2_1h_indol_3_yl_acetonitrile",
+      "name": "2-hydroxy-2-(1H-indol-3-yl)acetonitrile",
+      "short": "2-hydroxy-2-(1H-ind…",
+      "formula": "C10H8N2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM114"
+        "metanetx": "MNXM1100702"
       }
     },
     {
-      "id": "l_threonine",
-      "name": "L-threonine",
-      "formula": "C4H9NO3",
+      "id": "dehydro_indole_3_yl_acetonitrile",
+      "name": "dehydro(indole-3-yl)acetonitrile",
+      "short": "dehydro(indole-3-yl…",
+      "formula": "C10H6N2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM142"
+        "metanetx": "MNXM819105"
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
+      "id": "propanoate",
+      "name": "propanoate",
+      "formula": "C3H5O2",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM741553"
+        "metanetx": "MNXM1094052"
       }
     },
     {
-      "id": "pro_trp_thr",
-      "name": "Pro-Trp-Thr",
-      "formula": "C20H26N4O5",
+      "id": "gamma_l_glutamyl_l_orornithine_delta_lactam",
+      "name": "gamma-L-glutamyl-L-orornithine-delta-lactam",
+      "short": "gamma-L-glutamyl-L-…",
+      "formula": "C10H17N3O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:162729"
+        "metanetx": "MNXM819190"
       }
     },
     {
-      "id": "l_valine",
-      "name": "L-valine",
-      "formula": "C5H11NO2",
-      "charge": 0,
+      "id": "n_propanoyl_gamma_l_glutamyl_l_orornithine_delta",
+      "name": "N-propanoyl-gamma-L-glutamyl-L-orornithine-delta-lactam",
+      "short": "N-propanoyl-gamma-L…",
+      "formula": "C13H20N3O5",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM199"
-      }
-    },
-    {
-      "id": "l_glutamine",
-      "name": "L-glutamine",
-      "formula": "C5H10N2O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM37"
-      }
-    },
-    {
-      "id": "prolyl_valyl_glutamine",
-      "name": "Prolyl-Valyl-Glutamine",
-      "short": "Prolyl-Valyl-Glutam…",
-      "formula": "C15H26N4O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM744864"
+        "metanetx": "MNXM819189"
       }
     },
     {
@@ -440,84 +425,72 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR162364",
+      "name": "Reaction MNXR164472",
       "substrates": [
         {
-          "metabolite": "l_proline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_threonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_tryptophan",
+          "metabolite": "2_hydroxy_2_1h_indol_3_yl_acetonitrile",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pro_trp_thr",
+          "metabolite": "dehydro_indole_3_yl_acetonitrile",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR162364"
+        "metanetx": "MNXR164472"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162364"
+            "id": "MNXR164472"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR162369",
+      "name": "Reaction MNXR164560",
       "substrates": [
         {
-          "metabolite": "l_proline",
+          "metabolite": "propanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "l_valine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_glutamine",
+          "metabolite": "gamma_l_glutamyl_l_orornithine_delta_lactam",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "prolyl_valyl_glutamine",
+          "metabolite": "n_propanoyl_gamma_l_glutamyl_l_orornithine_delta",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR162369"
+        "metanetx": "MNXR164560"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR162369"
+            "id": "MNXR164560"
           }
         ]
       }

@@ -146,24 +146,6 @@
       }
     },
     {
-      "id": "oxalate",
-      "name": "oxalate",
-      "formula": "C2O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:30623"
-      }
-    },
-    {
-      "id": "oxalyl_coa",
-      "name": "oxalyl-CoA",
-      "formula": "C23H31N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57388"
-      }
-    },
-    {
       "id": "3_oxo_monocarboxylic_acid_anion",
       "name": "3-oxo monocarboxylic acid anion",
       "short": "3-oxo monocarboxyli…",
@@ -180,6 +162,26 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:90726"
+      }
+    },
+    {
+      "id": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
+      "name": "3-hydroxy-16-methoxy-2,3-dihydrotabersoninium",
+      "short": "3-hydroxy-16-methox…",
+      "formula": "C22H29N2O4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58485"
+      }
+    },
+    {
+      "id": "11_o_demethyl_17_o_deacetylvindolinium",
+      "name": "11-O-demethyl-17-O-deacetylvindolinium",
+      "short": "11-O-demethyl-17-O-…",
+      "formula": "C22H29N2O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57657"
       }
     },
     {
@@ -244,17 +246,17 @@
       ]
     },
     {
-      "id": "ec_2_8_3_2",
-      "name": "oxalate CoA-transferase",
-      "ec": [
-        "2.8.3.2"
-      ]
-    },
-    {
       "id": "ec_2_8_3_5",
       "name": "3-oxoacid CoA-transferase",
       "ec": [
         "2.8.3.5"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_20",
+      "name": "deacetoxyvindoline 4-hydroxylase",
+      "ec": [
+        "1.14.11.20"
       ]
     },
     {
@@ -442,51 +444,6 @@
     },
     {
       "id": "r4",
-      "name": "oxalate CoA-transferase",
-      "equation": "oxalate + succinyl-CoA = oxalyl-CoA + succinate",
-      "ec": "2.8.3.2",
-      "substrates": [
-        {
-          "metabolite": "oxalate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "oxalyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:23588"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:23588"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "3-oxoacid CoA-transferase",
       "equation": "a 3-oxo acid + succinyl-CoA = a 3-oxoacyl-CoA + succinate",
       "ec": "2.8.3.5",
@@ -516,7 +473,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:24564"
       },
@@ -526,6 +483,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:24564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "deacetoxyvindoline 4-hydroxylase",
+      "equation": "(3R)-3-hydroxy-16-methoxy-2,3-dihydrotabersonine + 2-oxoglutarate + O2 = 4-O-deacetyl-16-O-demethylvindoline + succinate + CO2",
+      "ec": "1.14.11.20",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_16_methoxy_2_3_dihydrotabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_o_demethyl_17_o_deacetylvindolinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24865"
           }
         ]
       }

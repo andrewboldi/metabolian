@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway beta-d-glucose-to-h2o "beta-D-glucose to H2O" {
-  spacing 194
+  spacing 176
 
   spine at 0,0 {
     beta_d_glucose
@@ -20,45 +20,27 @@ pathway beta-d-glucose-to-h2o "beta-D-glucose to H2O" {
     gamma_tomatine
   }
 
-  branch from tomatine side left {
-    tomatine
-    <-> . +h +h2o +tomatidine
-    lycotetraose
-  }
-
-  branch from tomatine side right {
-    tomatine
-    <-> . +beta1_tomatine +h2o
-    alpha_d_xylose
-  }
-
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_80 [3.1.1.80] +17_o_acetylnorajmaline +h +norajmaline
-    acetate
+    <-> . +h +adp +cyclosporin_a_metabolite_m21 +phosphate +cyclosporin_a_metabolite_m21
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +protoemetine +tryptamine +h
-    deoxytubulosine
+    <-> . +cyclosporin_a +h +o2 +nadph +cyclosporin_a_metabolite_m1
+    nadp
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +curcumin_diglucoside +h
-    curcumin_monoglucoside
+    <-> . +udp +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
+    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +beta_d_glc_1_3_6_o_succinoyl_beta_d_glc_1_3_beta +h
-    6_o_succinoyl_beta_d_glc_1_3_beta_d_glc_1_6_beta
-  }
-
-  branch from tomatidine_galactoside side left {
-    tomatidine_galactoside
-    <-> . +tomatidine +h +h2o
-    d_galactopyranose
+    <-> . +udp +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
+    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3_a
   }
 }

@@ -26,49 +26,49 @@ pathway 4-nitrobenzoyl-coa-to-h2o "4-nitrobenzoyl-CoA to H2O" {
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_199 [2.1.1.199] +cytidine_5_monophosphate_1 +sam +hplus
-    n4_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_214 [2.1.1.214] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_200 [2.1.1.200] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_216 [2.1.1.216] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_n2_dimethylguanosine_5_monophosphate_1
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_7_15 [1.3.7.15] +bacteriochlorophyllide_a +adp +pi +di_sulfido_diiron +atp +h2o +hplus
-    3_acetylchlorophyllide_a
+    <-> ec_1_14_15_26 [1.14.15.26] +toluene +di_sulfido_diiron +o2 +hplus +h2o
+    benzyl_alcohol
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_4_2_1_164 [4.2.1.164] +dtdp_4_dehydro_2_6_dideoxy_d_glucose +di_sulfido_diiron +hplus +h2o
-    dtdp_4_dehydro_2_3_6_trideoxy_d_glucose
+    <-> ec_1_14_15_25 [1.14.15.25] +p_cymene +di_sulfido_diiron +o2 +hplus +h2o
+    4_isopropylbenzyl_alcohol
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_threonine
+    <-> . +h +adp +phosphate +h2o
+    hexadecanoate
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    testosterone_17_o_d_glucuronide
+    9z_octadecenoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2s_homocitric_acid +h
-    cis_homoaconitate
+    <-> . +h +adp +phosphate +atp
+    all_cis_octadeca_6_9_12_15_tetraenoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_6_2 [3.1.6.2] +h +sulfate +pregnenolone
-    pregnenolone_sulfate
+    <-> . +h +adp +phosphate +atp
+    9z_12z_octadecadienoate
   }
 }

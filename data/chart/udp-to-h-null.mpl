@@ -46,14 +46,14 @@ pathway udp-to-h-null "UDP to H" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_158 [3.2.1.158] +agarotriose +neoagarotriose
-    agarohexaose
+    <-> . +ginsenoside_mc +glucose
+    notoginsenoside_fe
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_159 [3.2.1.159] +d_galactopyranose +3_6_anhydro_l_galactopyranose
-    neoagarobiose
+    <-> . +glucose +ginsenoside_c_mx1
+    ginsenoside_rb3
   }
 
   branch from udp_alpha_d_galactose side left {
@@ -70,14 +70,14 @@ pathway udp-to-h-null "UDP to H" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +tuberonic_acid_glucoside
-    12_hydroxyjasmonate
+    <-> . +udp +benzoyl_d_glucoside
+    benzoate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_4_o_d_glucopyranoside +h
-    quercetin
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +h +2_naphthyl_d_glucoside
+    2_naphthol
   }
 
   branch from alpha_d_galactose_1_phosphate side left {
@@ -94,25 +94,25 @@ pathway udp-to-h-null "UDP to H" {
 
   branch from udp side left {
     udp
-    <-> . +4_o_acetyl_udp_n_acetylglucosamine +h2o +h
-    4_o_acetyl_n_acetylmannosamine
-  }
-
-  branch from udp side right {
-    udp
     <-> . +beta_d_glucuronosyl_1_4_beta_d_glucuronosyl_1_4 +h +beta_d_glucuronosyl_1_4_alpha_d_glucosyl_c55_ome
     udp_alpha_d_glucuronate
   }
 
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_356 [2.4.1.356] +beta_d_glucuronosyl_1_4_alpha_d_glucosyl_c55_ome +h +udp_alpha_d_glucuronate
+    alpha_d_glucosyl_c55_omega_saturated_dolichyl_ph
+  }
+
   branch from h side left {
     h
-    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o
-    isocinchomeronic_acid
+    <-> . +s_adenosyl_l_homocysteine +gliotoxin +n_desmethyl_gliotoxin
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +hexadecanoate +h2o2 +1_pentadecene +h2o
-    co2
+    <-> . +dihydromonacolin_l_carboxylate +h2o
+    dihydromonacolin_l
   }
 }

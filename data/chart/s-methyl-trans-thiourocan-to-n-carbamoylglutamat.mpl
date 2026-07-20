@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-methyl-trans-thiourocan-to-n-carbamoylglutamat "S-methyl-trans-thiourocan… to N-carbamoylglutamate" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     s_methyl_trans_thiourocanate
@@ -17,12 +17,6 @@ pathway s-methyl-trans-thiourocan-to-n-carbamoylglutamat "S-methyl-trans-thiouro
   }
 
   branch from hydantoin_5_propionate side left {
-    hydantoin_5_propionate
-    <-> . +h +n_carbamoyl_l_glutamate
-    h2o
-  }
-
-  branch from hydantoin_5_propionate side right {
     hydantoin_5_propionate
     <-> . +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +o2
     h

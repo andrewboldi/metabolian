@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-4-hydroxyglutamate-to-h2o "L-4-hydroxyglutamate… to H2O" {
-  spacing 212
+  spacing 194
 
   spine at 0,0 {
     l_4_hydroxyglutamate_semialdehyde
@@ -16,28 +16,16 @@ pathway l-4-hydroxyglutamate-to-h2o "L-4-hydroxyglutamate… to H2O" {
     atp
   }
 
-  branch from 3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid side left {
-    3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid
-    <-> . +h +nadph +trans_4_hydroxy_l_proline
-    nadp
-  }
-
-  branch from 3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid side right {
-    3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid
-    <-> . +nadh +h +nad +h2o
-    4s_4_hydroxy_l_glutamate
-  }
-
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_d_glucopyranoside
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    22_0_18_2_pe
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_6_o_d_galactofuranosyl_d_glucopyranoside
   }
 
   branch from trans_4_hydroxy_l_proline side left {
@@ -46,33 +34,27 @@ pathway l-4-hydroxyglutamate-to-h2o "L-4-hydroxyglutamate… to H2O" {
     4_oxo_l_proline
   }
 
-  branch from trans_4_hydroxy_l_proline side right {
-    trans_4_hydroxy_l_proline
-    <-> . +fadh2 +h +3s_5r_1_pyrroline_3_hydroxy_5_carboxylic_acid
-    fad
+  branch from nad side right {
+    nad
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_10 +h
+    2_demethylmenaquinol_10
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4s_dihydrocarveol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2s_4s_dihydrocarveol
-    2e_geranial
-  }
-
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    22_0_18_3_pe
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_11 +h
+    2_demethylmenaquinol_11
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    24_0_18_2_pe
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
+    octyl_alpha_d_mannopyranoside
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
+    octyl_alpha_d_galactopyranoside
   }
 }

@@ -41,7 +41,16 @@
            reversed, so N-term → C-term runs olive → green → blue → violet →
            red. The stops below are that function evaluated at eight points.
          · stick/sphere (:43668) → `spectrum` is explicitly ignored, so atoms
-           keep their element colors (RasMol defaults, :37206).
+           keep their element colors — 3Dmol's `defaultColors`, which is
+           RasMol (:37469 assigns it from the `rasmol` map at :37206).
+
+       These are deliberately NOT tokens.css's --atom-* set. Those hold Jmol
+       values (C #909090, N #3050f8, O #ff0d0d, S #ffff30, P #ff8000); 3Dmol
+       ships Jmol as an opt-in `colorscheme` and protein.ts never selects it,
+       so only H would match what is actually on screen. Either correct the
+       tokens to RasMol or have protein.ts pass `colorscheme: 'Jmol'` — until
+       one of those happens, the measured values belong here.
+
        If protein.ts changes its style map this key must move with it. A legend
        that lies is worse than no legend. */
     .ramp {

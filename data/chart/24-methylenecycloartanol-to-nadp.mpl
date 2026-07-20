@@ -18,13 +18,13 @@ pathway 24-methylenecycloartanol-to-nadp "24-methylenecycloartanol to NADP" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_138 [1.1.1.138] +d_mannitol +h +nadph
-    beta_d_fructose
+    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_6_5_2 [1.6.5.2] +phylloquinone +h +nadph
-    phylloquinol
+    <-> ec_1_13_11_30 [1.13.11.30] +stizolobinic_acid +nadph
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 }

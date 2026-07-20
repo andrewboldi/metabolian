@@ -159,50 +159,49 @@
       }
     },
     {
-      "id": "3_3_5_triiodo_l_thyronine",
-      "name": "3,3',5-triiodo-L-thyronine",
-      "short": "3,3',5-triiodo-L-th…",
-      "formula": "C15H12I3NO4",
+      "id": "trichloroethene",
+      "name": "trichloroethene",
+      "formula": "C2HCl3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:533015"
+        "chebi": "CHEBI:16602"
       }
     },
     {
-      "id": "iodide",
-      "name": "iodide",
-      "formula": "I",
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16382"
+        "chebi": "CHEBI:17996"
       }
     },
     {
-      "id": "l_thyroxine",
-      "name": "L-thyroxine",
-      "formula": "C15H11I4NO4",
+      "id": "tetrachloroethene",
+      "name": "tetrachloroethene",
+      "formula": "C2Cl4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58448"
+        "chebi": "CHEBI:17300"
       }
     },
     {
-      "id": "l_pipecolic_acid",
-      "name": "L-pipecolic acid",
-      "formula": "C6H11NO2",
+      "id": "r_pantolactone",
+      "name": "(R)-pantolactone",
+      "formula": "C6H10O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61185"
+        "chebi": "CHEBI:16719"
       }
     },
     {
-      "id": "s_1_piperideine_6_carboxylate",
-      "name": "(S)-1-piperideine-6-carboxylate",
-      "short": "1-piperideine-6-car…",
-      "formula": "C6H8NO2",
-      "charge": -1,
+      "id": "2_dehydropantolactone",
+      "name": "2-dehydropantolactone",
+      "short": "2-dehydropantolacto…",
+      "formula": "C6H8O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58769"
+        "chebi": "CHEBI:18395"
       }
     },
     {
@@ -271,17 +270,17 @@
       ]
     },
     {
-      "id": "ec_1_21_99_4",
-      "name": "thyroxine 5'-deiodinase",
+      "id": "ec_1_21_99_5",
+      "name": "tetrachloroethene reductive dehalogenase",
       "ec": [
-        "1.21.99.4"
+        "1.21.99.5"
       ]
     },
     {
-      "id": "ec_1_5_99_3",
-      "name": "L-pipecolate dehydrogenase",
+      "id": "ec_1_1_99_27",
+      "name": "(R)-pantolactone dehydrogenase (flavin)",
       "ec": [
-        "1.5.99.3"
+        "1.1.99.27"
       ]
     },
     {
@@ -555,16 +554,16 @@
     },
     {
       "id": "r6",
-      "name": "thyroxine 5'-deiodinase",
-      "equation": "3,3',5-triiodo-L-thyronine + iodide + A + H(+) = L-thyroxine + AH2",
-      "ec": "1.21.99.4",
+      "name": "tetrachloroethene reductive dehalogenase",
+      "equation": "trichloroethene + chloride + A + H(+) = tetrachloroethene + AH2",
+      "ec": "1.21.99.5",
       "substrates": [
         {
-          "metabolite": "3_3_5_triiodo_l_thyronine",
+          "metabolite": "trichloroethene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "iodide",
+          "metabolite": "chloride",
           "stoichiometry": 1
         },
         {
@@ -578,7 +577,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_thyroxine",
+          "metabolite": "tetrachloroethene",
           "stoichiometry": 1
         },
         {
@@ -588,32 +587,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_21_99_4"
+          "enzyme": "ec_1_21_99_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:19745"
+        "rhea": "RHEA:20353"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19745"
+            "id": "RHEA:20353"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "L-pipecolate dehydrogenase",
-      "equation": "L-pipecolate + A = L-1-piperideine-6-carboxylate + AH2 + H(+)",
-      "ec": "1.5.99.3",
+      "name": "(R)-pantolactone dehydrogenase (flavin)",
+      "equation": "(R)-pantolactone + A = 2-dehydropantolactone + AH2",
+      "ec": "1.1.99.27",
       "substrates": [
         {
-          "metabolite": "l_pipecolic_acid",
+          "metabolite": "r_pantolactone",
           "stoichiometry": 1
         },
         {
@@ -623,34 +622,30 @@
       ],
       "products": [
         {
-          "metabolite": "s_1_piperideine_6_carboxylate",
+          "metabolite": "2_dehydropantolactone",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_5_99_3"
+          "enzyme": "ec_1_1_99_27"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:19777"
+        "rhea": "RHEA:21004"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19777"
+            "id": "RHEA:21004"
           }
         ]
       }

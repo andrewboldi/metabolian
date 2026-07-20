@@ -30,49 +30,49 @@ pathway n-1-deoxy-d-fructopyra-to-h2o2 "N-(1-deoxy-β-D-fructopyra… to H2O2" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_10 [1.1.3.10] +l_sorbopyranose +h2o2
-    5_dehydro_d_fructose
+    <-> . +atrazine +acetone
+    deisopropylatrazine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_99_9 [1.1.99.9] +isopyridoxal +h2o2
-    pyridoxine
+    <-> . +phenanthrene_3_4_diol
+    2_hydroxy_2h_benzo_h_chromene_2_carboxylate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_3 [3.5.1.3] +monoamide_of_dicarboxylate +h +alpha_omega_dicarboxylic_acid
-    nh4
+    <-> . +s_5_hydroxyisourate +s_allantoin
+    co2
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_3_1 [1.2.3.1] +s_2_methyl_3_oxopropanoate +o2 +h +h2o2
-    methylmalonate
+    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadph +nadp
+    3s_6s_6_isopropenyl_3_methyloxepan_2_one
   }
 
   branch from h side left {
     h
-    <-> ec_1_13_11_38 [1.13.11.38] +1_hydroxy_2_naphthoate +o2
-    trans_2_carboxybenzylidenepyruvic_acid
+    <-> . +nadh +phenanthrene +o2 +nad
+    3s_4r_3_4_dihydrophenanthrene_3_4_diol
   }
 
   branch from h side right {
     h
-    <-> . +3_phosphonopyruvate +l_glutamate +2_amino_3_phosphonopropanoic_acid
-    2_oxoglutarate
+    <-> . +2_oxoglutarate +gibberellin_a24 +o2 +co2 +gibberellin_a36
+    succinate
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_2_3_1 [1.2.3.1] +h +n_methyl_4_pyridone_3_carboxamide +o2 +h2o
-    1_methylnicotinamide
+    <-> ec_1_4_3_3 [1.4.3.3] +cephalosporin_c +o2 +h2o +nh4
+    7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_4_3_3 [1.4.3.3] +cephalosporin_c +o2 +h2o +nh4
-    7r_7_5_carboxy_5_oxopentanamido_deacetylcephalo
+    <-> ec_1_17_3_2 [1.17.3.2] +purine_6_thiol +o2 +h2o
+    6_thiourate
   }
 }

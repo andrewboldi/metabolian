@@ -105,80 +105,59 @@
       }
     },
     {
-      "id": "2e_enoyl_fatty_acid_anion",
-      "name": "(2E)-enoyl fatty acid anion",
-      "short": "enoyl fatty acid…",
-      "formula": "C3H2O2R",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194103"
-      }
-    },
-    {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "2e_2_fatty_enoyladenylate",
-      "name": "(2E)-2-fatty-enoyladenylate",
-      "short": "2-fatty-enoyladenyl…",
-      "formula": "C13H14N5O8PR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:194106"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "cyatha_3_12_diene",
-      "name": "(-)-cyatha-3,12-diene",
-      "short": "(-)-cyatha-3,12-die…",
-      "formula": "C20H32",
+      "id": "barbatene",
+      "name": "(+)-β-barbatene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193155"
+        "chebi": "CHEBI:193086"
       }
     },
     {
-      "id": "g5_ppp5_aaca_mrna",
-      "name": "G5'ppp5'AACA-mRNA",
-      "formula": "C50H57N22O36P6",
-      "charge": -6,
+      "id": "sativene",
+      "name": "(−)-sativene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156484"
+        "chebi": "CHEBI:64800"
       }
     },
     {
-      "id": "g5_ppp5_m2_aaca_mrna",
-      "name": "G5'ppp5'm2'AACA-mRNA",
-      "formula": "C51H59N22O36P6",
-      "charge": -6,
+      "id": "taxifolin",
+      "name": "taxifolin",
+      "formula": "C15H12O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156482"
+        "chebi": "CHEBI:38747"
       }
     },
     {
-      "id": "m7g5_ppp5_m2_aaca_mrna",
-      "name": "m7G5'ppp5'm2'AACA-mRNA",
-      "short": "m7G5'ppp5'm2'AACA-m…",
-      "formula": "C52H62N22O36P6",
-      "charge": -5,
+      "id": "taxifolin_4_methyl_ether",
+      "name": "taxifolin 4'-methyl ether",
+      "short": "taxifolin…",
+      "formula": "C16H14O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156483"
+        "chebi": "CHEBI:193113"
+      }
+    },
+    {
+      "id": "dihydroisorhamnetin",
+      "name": "dihydroisorhamnetin",
+      "formula": "C16H14O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:175075"
       }
     }
   ],
@@ -202,13 +181,6 @@
       "name": "xanthohumol 4-O-methyltransferase",
       "ec": [
         "2.1.1.339"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_206",
-      "name": "(-)-cyatha-3,12-diene synthase",
-      "ec": [
-        "4.2.3.206"
       ]
     }
   ],
@@ -358,25 +330,17 @@
     },
     {
       "id": "r4",
-      "name": "a (2E)-enoyl fatty acid + ATP + H(+) = a (2E)-2-fatty-enoyl-AMP + diphosphate",
-      "equation": "a (2E)-enoyl fatty acid + ATP + H(+) = a (2E)-2-fatty-enoyl-AMP + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (+)-beta-barbatene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-barbatene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2e_enoyl_fatty_acid_anion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2e_2_fatty_enoyladenylate",
+          "metabolite": "barbatene",
           "stoichiometry": 1
         },
         {
@@ -387,32 +351,31 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:74915"
+        "rhea": "RHEA:81463"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74915"
+            "id": "RHEA:81463"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(-)-cyatha-3,12-diene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (-)-cyatha-3,12-diene + diphosphate",
-      "ec": "4.2.3.206",
+      "name": "(2E,6E)-farnesyl diphosphate = (-)-sativene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-sativene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyatha_3_12_diene",
+          "metabolite": "sativene",
           "stoichiometry": 1
         },
         {
@@ -420,33 +383,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_206"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:75147"
+        "rhea": "RHEA:81539"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75147"
+            "id": "RHEA:81539"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-ade...",
-      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-methionine = a 5'-end (5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "taxifolin + S-adenosyl-L-methionine = taxifolin 4'-methyl ether + S-adenosyl-L-homocyst...",
+      "equation": "taxifolin + S-adenosyl-L-methionine = taxifolin 4'-methyl ether + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "g5_ppp5_aaca_mrna",
+          "metabolite": "taxifolin",
           "stoichiometry": 1
         },
         {
@@ -456,7 +414,7 @@
       ],
       "products": [
         {
-          "metabolite": "g5_ppp5_m2_aaca_mrna",
+          "metabolite": "taxifolin_4_methyl_ether",
           "stoichiometry": 1
         },
         {
@@ -471,25 +429,25 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:65380"
+        "rhea": "RHEA:74183"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65380"
+            "id": "RHEA:74183"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "a 5'-end (5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in...",
-      "equation": "a 5'-end (5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-homocysteine",
+      "name": "taxifolin + S-adenosyl-L-methionine = taxifolin 3'-methyl ether + S-adenosyl-L-homocyst...",
+      "equation": "taxifolin + S-adenosyl-L-methionine = taxifolin 3'-methyl ether + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "g5_ppp5_m2_aaca_mrna",
+          "metabolite": "taxifolin",
           "stoichiometry": 1
         },
         {
@@ -499,25 +457,29 @@
       ],
       "products": [
         {
-          "metabolite": "m7g5_ppp5_m2_aaca_mrna",
+          "metabolite": "dihydroisorhamnetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:65440"
+        "rhea": "RHEA:74187"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:65440"
+            "id": "RHEA:74187"
           }
         ]
       }

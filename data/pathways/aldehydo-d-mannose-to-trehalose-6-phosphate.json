@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "aldehydo-d-mannose-to-trehalose-6-phosphate",
   "name": "aldehydo-D-mannose to α,α-trehalose 6-phosphate",
-  "category": "carbohydrate-metabolism",
+  "category": "other",
   "summary": "A 6-step route from aldehydo-D-mannose to α,α-trehalose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -159,15 +159,6 @@
       }
     },
     {
-      "id": "keto_d_fructose",
-      "name": "keto-D-fructose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1363863"
-      }
-    },
-    {
       "id": "s_cerevisiae_mannan_fragment",
       "name": "S. cerevisiae mannan fragment",
       "short": "S. cerevisiae…",
@@ -197,39 +188,52 @@
       }
     },
     {
-      "id": "sucrose",
-      "name": "sucrose",
+      "id": "d_manp_1_2_d_manp",
+      "name": "α-D-Manp-(1→2)-D-Manp",
+      "short": "α-D-Manp-(1→2)-D-Ma…",
       "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1104180"
+        "chebi": "CHEBI:59584"
       }
     },
     {
-      "id": "6_kestotriose",
-      "name": "6-kestotriose",
-      "formula": "C18H32O16",
+      "id": "trans_sinapyl_alcohol",
+      "name": "trans-sinapyl alcohol",
+      "short": "trans-sinapyl…",
+      "formula": "C11H14O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64833"
+        "chebi": "CHEBI:64557"
       }
     },
     {
-      "id": "6_6_kestotetraose",
-      "name": "6,6-kestotetraose",
-      "formula": "C24H42O21",
+      "id": "syringin",
+      "name": "syringin",
+      "formula": "C17H24O9",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64836"
+        "chebi": "CHEBI:9380"
       }
     },
     {
-      "id": "6_6_kestotetraose",
-      "name": "6,6-kestotetraose",
-      "formula": "C24H42O21",
+      "id": "trans_p_coumaryl_alcohol",
+      "name": "trans-p-coumaryl alcohol",
+      "short": "trans-p-coumaryl…",
+      "formula": "C9H10O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1363484"
+        "chebi": "CHEBI:64555"
+      }
+    },
+    {
+      "id": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
+      "name": "4-Hydroxycinnamyl alcohol 4-D-glucoside",
+      "short": "4-Hydroxycinnamyl…",
+      "formula": "C15H20O7",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370794"
       }
     }
   ],
@@ -270,13 +274,6 @@
       ]
     },
     {
-      "id": "ec_5_3_1_15",
-      "name": "D-lyxose ketol-isomerase",
-      "ec": [
-        "5.3.1.15"
-      ]
-    },
-    {
       "id": "ec_3_2_1_137",
       "name": "mannan exo-1,2-1,6-alpha-mannosidase",
       "ec": [
@@ -284,10 +281,10 @@
       ]
     },
     {
-      "id": "ec_2_4_1_10",
-      "name": "levansucrase",
+      "id": "ec_3_2_1_126",
+      "name": "coniferin beta-glucosidase",
       "ec": [
-        "2.4.1.10"
+        "3.2.1.126"
       ]
     }
   ],
@@ -553,42 +550,6 @@
     },
     {
       "id": "r7",
-      "name": "D-lyxose ketol-isomerase",
-      "ec": "5.3.1.15",
-      "substrates": [
-        {
-          "metabolite": "keto_d_fructose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "d_mannopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_5_3_1_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR197814"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR197814"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "mannan exo-1,2-1,6-alpha-mannosidase",
       "ec": "3.2.1.137",
       "substrates": [
@@ -617,7 +578,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "metanetx": "MNXR199306"
       },
@@ -632,83 +593,123 @@
       }
     },
     {
-      "id": "r9",
-      "name": "levansucrase",
-      "ec": "2.4.1.10",
+      "id": "r8",
+      "name": "Reaction MNXR199310",
       "substrates": [
         {
-          "metabolite": "sucrose",
+          "metabolite": "d_manp_1_2_d_manp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "6_kestotriose",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_6_kestotetraose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_10"
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR197154"
+        "metanetx": "MNXR199310"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR197154"
+            "id": "MNXR199310"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "coniferin beta-glucosidase",
+      "ec": "3.2.1.126",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_sinapyl_alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "syringin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "metanetx": "MNXR198714"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198714"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR197155",
+      "name": "coniferin beta-glucosidase",
+      "ec": "3.2.1.126",
       "substrates": [
         {
-          "metabolite": "sucrose",
+          "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "6_kestotriose",
+          "metabolite": "trans_p_coumaryl_alcohol",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6_6_kestotetraose",
+          "metabolite": "4_hydroxycinnamyl_alcohol_4_d_glucoside",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glucose",
+          "metabolite": "h2o",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_126"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR197155"
+        "metanetx": "MNXR198716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR197155"
+            "id": "MNXR198716"
           }
         ]
       }

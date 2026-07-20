@@ -30,25 +30,25 @@ pathway kaempferol-3-o-d-glucos-to-s-adenosyl-l-homocyst "kaempferol 3-O-β-D-gl
 
   branch from d_glucose side left {
     d_glucose
-    <-> ec_3_2_1_85 [3.2.1.85] +lactose_6_phosphate +h2o
-    d_galactopyranose_6_phosphate
+    <-> . +phlorizin +h2o
+    phloretin
   }
 
   branch from d_glucose side right {
     d_glucose
-    <-> ec_5_1_3_44 [5.1.3.44]
-    d_mannose
+    <-> . +h2o +quercetin_7_olate
+    quercetin_3_o_d_glucopyranoside
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_223 [2.1.1.223] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> ec_2_1_1_264 [2.1.1.264] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_309 [2.1.1.309] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> ec_2_1_1_286 [2.1.1.286] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 }

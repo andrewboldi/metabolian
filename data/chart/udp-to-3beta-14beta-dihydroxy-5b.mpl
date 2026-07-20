@@ -32,14 +32,14 @@ pathway udp-to-3beta-14beta-dihydroxy-5b "UDP to 3beta,14beta-dihydroxy-5b…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +dihydroosmaronin
-    s_4_hydroxy_3_methylbutanenitrile
+    <-> . +udp +h +purpurea_glycoside_a
+    digitoxin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +epidermin
-    3_hydroxy_3_methylbutanenitrile
+    <-> . +udp +h +purpurea_glycoside_b
+    gitoxin
   }
 
   branch from udp_alpha_d_fucopyranose side left {
@@ -56,26 +56,26 @@ pathway udp-to-3beta-14beta-dihydroxy-5b "UDP to 3beta,14beta-dihydroxy-5b…" {
 
   branch from digitoxigenin side left {
     digitoxigenin
-    <-> . +udp +h +evatromonoside
-    udp_alpha_d_digitoxose
-  }
-
-  branch from digitoxigenin side right {
-    digitoxigenin
     <-> ec_2_4_1_173 [2.4.1.173] +udp +h +udp_alpha_d_glucose
     digitoxigenin_3beta_yl_beta_d_glucoside
   }
 
+  branch from digitoxigenin side right {
+    digitoxigenin
+    <-> . +udp +h +udp_alpha_d_glucose
+    3_o_beta_d_glucoside_digitoxigenin
+  }
+
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylcyclohexanone +nad
-    3_methylcyclohexanol
+    <-> . +dtdp_3_amino_4_dehydro_2_3_6_trideoxy_beta_l_glu +2_oxoglutarate +l_glutamate
+    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylbutan_2_one +nad
-    3_methyl_2_butanol
+    <-> . +2_oxoglutarate +o2 +gibberellin_a15_2_diacid_form +co2 +1r_2s_3s_4s_5s_8r_9r_12r_5_hydroxy_8_hydroxymet
+    succinate
   }
 
   branch from 3beta_14beta_dihydroxy_5beta_pregnane_20_one_21 side left {

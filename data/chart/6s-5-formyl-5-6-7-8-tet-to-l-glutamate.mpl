@@ -28,73 +28,73 @@ pathway 6s-5-formyl-5-6-7-8-tet-to-l-glutamate "(6S)-5-formyl-5,6,7,8-tet… to 
 
   branch from h side right {
     h
-    <-> ec_3_6_1_31 [3.6.1.31] +diphosphate +1_5_phosphoribosyl_amp +h2o
-    1_5_phosphoribosyl_atp
+    <-> ec_1_3_1_111 [1.3.1.111] +geranylgeranyl_bacteriochlorophyllide_a +nadph +bacteriochlorophyll_a
+    nadp
   }
 
   branch from h side left {
     h
-    <-> ec_4_1_1_65 [4.1.1.65] +co2 +1_2_distearoylphosphatidylethanolamine
-    phosphatidylserine_dioctadecanoyl_n_c18_0
+    <-> ec_3_1_1_81 [3.1.1.81] +n_butyryl_l_homoserine +h2o
+    a_s_butyr_amido_r_butyrolactone
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_4_1_13 [2.4.1.13] +sucrose +h +keto_d_fructose
-    adp_alpha_d_glucose
+    <-> . +h +phosphate +atp +h2o
+    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_175 [2.7.1.175] +alpha_maltose +atp +h
-    maltose_1_phosphate
+    <-> . +h +phosphate +atp +h2o
+    12_ht_or_m_vi_12_hydroxy_tacrolimus
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_1_20_1_1 [1.20.1.1] +nadh +h +nad +h2o
-    phosphite
+    <-> . +h +adp +atp +h2o
+    15_31_o_didesmethyl_tacrolimus
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_93 [3.1.3.93] +l_galactose_1_phosphate +h2o +h
-    alpha_l_galactose
+    <-> . +h +adp +atp +h2o
+    15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_26 [3.2.1.26] +melibiose +d_fructofuranose
-    raffinose
+    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +h +4_nitrophenol
+    4_nitrophenyl_d_galactoside
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_26 [3.2.1.26] +keto_d_fructose +raffinose
-    melibiose
+    <-> ec_3_2_1_62 [3.2.1.62] +daidzein_7_o_beta_d_glucoside +glucose +h
+    daidzein
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +h +d_allopyranose +adp
-    6_o_phosphonohexopyranose
+    <-> . +h +adp +phosphate +h2o
+    15s_hydroperoxy_5z_8z_11z_13e_eicosatetraenoate
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_55 [2.7.1.55] +h +adp +aldehydo_d_allose_6_phosphate
-    d_allopyranose
+    <-> . +h +adp +phosphate +h2o
+    18_hete
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_2_6_1_13 [2.6.1.13] +s_1_pyrroline_5_carboxylate +h +h2o +l_ornithine
-    2_oxoglutarate
+    <-> . +l_arginine +h2o
+    arginyl_glutamyl_glutamate
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_6_1_8 [2.6.1.8] +2_oxoglutarate +l_ornithine
-    5_amino_2_oxopentanoate
+    <-> . +l_proline +l_arginine +h2o
+    arginyl_glutamyl_proline
   }
 }

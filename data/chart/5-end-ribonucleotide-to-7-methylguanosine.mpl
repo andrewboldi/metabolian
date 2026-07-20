@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-ribonucleotide-to-7-methylguanosine "5'-end ribonucleotide… to 7-methylguanosine" {
-  spacing 340
+  spacing 334
 
   spine at 0,0 {
     5_end_ribonucleotide_5_triphosphate_4
@@ -20,49 +20,31 @@ pathway 5-end-ribonucleotide-to-7-methylguanosine "5'-end ribonucleotide… to 7
     7_methylguanosine
   }
 
-  branch from 5_end_ribonucleoside_5_diphosphate_3 side left {
-    5_end_ribonucleoside_5_diphosphate_3
-    <-> ec_3_6_1_59 [3.6.1.59] +5_end_n2_n2_n7_trimethyl_5_triphosphoguanosine_r +h2o +hplus
-    n2_n2_n7_trimethylguanosine_5_phosphate
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_173 [4.2.3.173] +fpp +h2o
+    cadinol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +1_2_dilinoleoyl_sn_glycero_3_phosphate +ctp +hplus
-    cdp_1_2_dilinoleoyl_sn_glycerol
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +icosanoate +atp +coa +amp
-    icosanoyl_coa
-  }
-
-  branch from 5_n7_methyl_5_triphosphoguanosine_ribonucleoside side right {
-    5_n7_methyl_5_triphosphoguanosine_ribonucleoside
-    <-> ec_3_6_1_62 [3.6.1.62] +h2o +5_end_ribonucleotide_2 +hplus
-    7_methylguanosine_5_diphosphate
-  }
-
-  branch from 5_n7_methyl_5_triphosphoguanosine_ribonucleoside side left {
-    5_n7_methyl_5_triphosphoguanosine_ribonucleoside
-    <-> . +sam +sah +hplus
-    5_n2_n7_dimethyl_5_triphosphoguanosine_ribonucle
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +n2_methylguanosine_5_monophosphate_1 +sam +hplus
-    n2_n2_dimethylguanosine_5_monophosphate_1
+    <-> ec_4_2_3_174 [4.2.3.174] +fpp +h2o
+    2e_6e_hedycaryol
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_216 [2.1.1.216] +sam +n2_n2_dimethylguanosine_5_monophosphate_1 +hplus
-    guanosine_5_monophosphate_1
+    <-> ec_2_1_1_229 [2.1.1.229] +5_carboxymethyl_uridine_5_monophosphate_2 +sam
+    5_2_methoxy_2_oxoethyl_uridine_5_monophosphate
   }
 
-  branch from 7_methylguanosine_5_phosphate side right {
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_230 [2.1.1.230] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
+  }
+
+  branch from 7_methylguanosine_5_phosphate side left {
     7_methylguanosine_5_phosphate
     <-> . +h2o +ppi +hplus
     7_methyl_gtp

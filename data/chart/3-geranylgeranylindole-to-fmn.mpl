@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-geranylgeranylindole-to-fmn "3-Geranylgeranylindole to FMN" {
-  spacing 262
+  spacing 250
 
   spine at 0,0 {
     3_geranylgeranylindole
@@ -30,28 +30,16 @@ pathway 3-geranylgeranylindole-to-fmn "3-Geranylgeranylindole to FMN" {
     sn_glycerol_3_phosphate
   }
 
-  branch from 1s_2r_1_c_indol_3_yl_glycerol_3_phosphate side left {
-    1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
-    <-> ec_4_2_1_20 [4.2.1.20] +glyceraldehyde_3_phosphate +l_tryptophan +h2o +l_serine
-    h
-  }
-
-  branch from 1s_2r_1_c_indol_3_yl_glycerol_3_phosphate side right {
-    1s_2r_1_c_indol_3_yl_glycerol_3_phosphate
-    <-> ec_4_1_2_8 [4.1.2.8] +indole +h
-    glyceraldehyde_3_phosphate
-  }
-
   branch from ctp side left {
     ctp
-    <-> . +beta_d_fructose_6_phosphate +h +diphosphate
-    cdp_d_fructose
+    <-> . +n_acetyl_7_o_acetylneuraminate +diphosphate
+    cmp_n_acetyl_7_o_acetylneuraminate
   }
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_67 [2.7.7.67] +2_3_bis_o_phytanyl_sn_glycerol_1_phosphate +h +diphosphate
-    cdp_2_3_bis_o_phytanyl_sn_glycerol
+    <-> . +hydroxyl +h +h2o
+    5_hydroxy_ctp
   }
 
   branch from 2e_6e_10e_geranylgeranyl_phosphate side left {
@@ -86,13 +74,13 @@ pathway 3-geranylgeranylindole-to-fmn "3-Geranylgeranylindole to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_8z_14z_17z_11_12_epoxyicosatetraenoate
+    <-> . +9_10_epome +fmnh2 +o2 +h2o +hplus
+    9_10_epoxy_18_hydroxy_12z_octadecenoate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    5z_8z_11z_17z_14_15_epoxyicosatetraenoate
+    <-> . +vernolate +fmnh2 +o2 +h2o +hplus
+    12_13_epoxy_18_hydroxy_9z_octadecenoate
   }
 }

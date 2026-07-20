@@ -83,39 +83,50 @@
       }
     },
     {
-      "id": "ga34_methyl_ester",
-      "name": "GA34 methyl ester",
-      "formula": "C20H26O6",
+      "id": "adenosine",
+      "name": "adenosine",
+      "formula": "C10H13N5O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368643"
+        "metanetx": "MNXM1105760"
       }
     },
     {
-      "id": "gibberellin_a34",
-      "name": "Gibberellin A34",
-      "formula": "C19H24O6",
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H11NO2S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364237"
+        "metanetx": "MNXM738804"
       }
     },
     {
-      "id": "dehydrophos",
-      "name": "dehydrophos",
-      "formula": "C11H22N3O5P",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368671"
+        "metanetx": "WATER"
       }
     },
     {
-      "id": "demethyldehydrophos",
-      "name": "demethyldehydrophos",
-      "formula": "C10H20N3O5P",
+      "id": "n_methylwelwitindolinone_c_isothiocyanate",
+      "name": "N-methylwelwitindolinone C isothiocyanate",
+      "short": "N-methylwelwitindol…",
+      "formula": "C22H21ClN2O2S",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364667"
+        "chebi": "CHEBI:224268"
+      }
+    },
+    {
+      "id": "welwitindolinone_c_isothiocyanate",
+      "name": "Welwitindolinone C isothiocyanate",
+      "short": "Welwitindolinone C…",
+      "formula": "C21H19ClN2O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:227279"
       }
     }
   ],
@@ -125,6 +136,13 @@
       "name": "O-demethylpuromycin O-methyltransferase",
       "ec": [
         "2.1.1.38"
+      ]
+    },
+    {
+      "id": "ec_3_13_1_8",
+      "name": "EC 3.13.1.8",
+      "ec": [
+        "3.13.1.8"
       ]
     }
   ],
@@ -263,18 +281,19 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR196606",
+      "name": "Reaction MNXR198374",
+      "ec": "3.13.1.8",
       "substrates": [
         {
-          "metabolite": "s_adenosyl_l_homocysteine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ga34_methyl_ester",
+          "metabolite": "adenosine",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_methionine",
           "stoichiometry": 1
         }
       ],
@@ -284,35 +303,40 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "gibberellin_a34",
+          "metabolite": "h2o",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_13_1_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR196606"
+        "metanetx": "MNXR198374"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196606"
+            "id": "MNXR198374"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR196647",
+      "name": "Reaction MNXR198579",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dehydrophos",
+          "metabolite": "n_methylwelwitindolinone_c_isothiocyanate",
           "stoichiometry": 1
         },
         {
@@ -326,21 +350,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "demethyldehydrophos",
+          "metabolite": "welwitindolinone_c_isothiocyanate",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR196647"
+        "metanetx": "MNXR198579"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196647"
+            "id": "MNXR198579"
           }
         ]
       }

@@ -22,26 +22,26 @@ pathway 12-epi-leukotriene-b4-to-11-12-15-theta "12-epi-leukotriene B4 to 11,12,
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +pe_16_1_9z_0_0 +phosphate +pe_16_1_9z_0_0 +h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +gly_pro +phosphate +gly_pro +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    angiotensin_ii
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_linoleoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    ile5_angiotensin_ii_1_7
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    lysope_18_3_9z_12z_15z_0_0
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    balenine
   }
 
   branch from 5_6_ep_15s_hete side left {
@@ -52,25 +52,25 @@ pathway 12-epi-leukotriene-b4-to-11-12-15-theta "12-epi-leukotriene B4 to 11,12,
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_70 [1.14.13.70] +h +o2 +nadph +lanost_8_ene_3_30_diol +h2o
-    3_hydroxylanost_8_en_32_al
+    <-> ec_1_1_1_124 [1.1.1.124] +beta_d_fructose +h +nadph
+    5_dehydro_d_fructose
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_70 [1.14.13.70] +h +o2 +lanosterol +nadph +h2o
-    32_hydroxylanosterol
+    <-> ec_1_1_1_138 [1.1.1.138] +d_mannitol +h +nadph
+    beta_d_fructose
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_70 [1.14.13.70] +h +32_hydroxylanosterol +nadph +nadp +h2o
-    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
+    <-> ec_1_14_13_169 [1.14.13.169] +4r_hydroxysphinganine +nadp +h2o +h +nadph
+    sphinganine
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +h +nadph +nadp +4_methylpentanal +h2o
-    pregnenolone
+    <-> ec_1_14_13_99 [1.14.13.99] +24s_24_hydroxycholesterol +h +nadph +nadp +h2o
+    24s_7_24_dihydroxycholesterol
   }
 }

@@ -20,50 +20,50 @@ pathway methyl-sulfate-to-s-formylmycothiol "methyl sulfate to S-formylmycothiol
 
   branch from methanol side left {
     methanol
-    <-> ec_3_1_1_n2 [3.1.1.n2] +s_2e_6e_farnesyl_l_cysteine_methyl_ester +h2o +hplus
-    s_2e_6e_farnesyl_l_cysteinate
+    <-> . +methyl_jasmonate +h2o +hplus
+    jasmonate
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_100 [3.1.1.100] +chlorophyllide_a +h2o +hplus +co2
-    3_vinylbacteriochlorophyllide_d
+    <-> . +methyl_arachidonate +h2o +hplus
+    arachidonate
   }
 
   branch from sulfate side left {
-    sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +primary_linear_alkyl_sulfate_ester +akg +o2 +succinate +co2 +hplus
-    aldehyde
-  }
-
-  branch from sulfate side right {
     sulfate
     <-> ec_1_14_11_77 [1.14.11.77] +pentyl_sulfate +akg +o2 +succinate +co2 +hplus
     pentanal
   }
 
+  branch from sulfate side right {
+    sulfate
+    <-> ec_1_14_11_77 [1.14.11.77] +hexyl_sulfate +akg +o2 +succinate +co2 +hplus
+    hexanal
+  }
+
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +theophylline +nadph +o2 +hplus +nadp +h2o
-    3_methyl_7h_xanthine
+    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
+    15_oxo_bilirubin
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_13_178 [1.14.13.178] +nadh +o2 +hplus +3_methyl_7h_xanthine +nad +h2o
-    theophylline
+    <-> ec_1_14_11_54 [1.14.11.54] +n1_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +8z_11z_14z_heptadecatrienal +hydrogen_acceptor +h2o +hplus
-    8z_11z_14z_heptadecatrienoate
+    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hydrogen_acceptor +hplus
+    l_thyroxine
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_99_24 [1.14.99.24] +pregna_4_9_11_diene_3_20_dione +o2 +hydrogen_acceptor +h2o
-    9_11_epoxypregn_4_ene_3_20_dione
+    <-> ec_1_5_99_3 [1.5.99.3] +l_pipecolic_acid +hydrogen_acceptor +hplus
+    s_1_piperideine_6_carboxylate
   }
 
   branch from s_hydroxymethyl_mycothiol side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acylcholine-to-n5-methyl-l-glutamine "acylcholine to N5-methyl-L-glutamine" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     acylcholine
@@ -24,14 +24,14 @@ pathway acylcholine-to-n5-methyl-l-glutamine "acylcholine to N5-methyl-L-glutami
 
   branch from carboxylic_acid_anion side left {
     carboxylic_acid_anion
-    <-> . +lanosteryl_ester +h2o +hplus
-    lanosterol
+    <-> ec_3_5_1_114 [3.5.1.114] +n_acyl_aromatic_l_amino_acid_anion +h2o
+    aromatic_l_amino_acid
   }
 
   branch from carboxylic_acid_anion side right {
     carboxylic_acid_anion
-    <-> . +n_acyl_15_methylhexadecasphinganine +h2o
-    15_methylhexadecasphinganine
+    <-> ec_3_5_1_133 [3.5.1.133] +n2_acyl_l_glutaminate +h2o
+    glutamine
   }
 
   branch from choline side left {
@@ -52,34 +52,22 @@ pathway acylcholine-to-n5-methyl-l-glutamine "acylcholine to N5-methyl-L-glutami
     sah
   }
 
-  branch from dmglycine side right {
-    dmglycine
-    <-> ec_2_1_1_156 [2.1.1.156] +sam +sah +hplus
-    glycine
+  branch from formaldehyde side right {
+    formaldehyde
+    <-> . +fluometuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    3_3_trifluoromethyl_phenyl_1_methylurea
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
-    l_lysinium
-  }
-
-  branch from methylamine side left {
-    methylamine
-    <-> ec_1_5_3_27 [1.5.3.27] +2_methylaminoethyl_phosphonate +o2 +h2o +h2o2
-    phosphonoacetaldehyde
+    <-> . +fenuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
+    1_methyl_3_phenylurea
   }
 
   branch from methylamine side right {
     methylamine
-    <-> ec_1_5_99_16 [1.5.99.16] +2_methylaminoethyl_phosphonate +hydrogen_acceptor +h2o +phosphonoacetaldehyde
-    hydrogen_donor
+    <-> ec_1_5_99_16 [1.5.99.16] +2_methylaminoethyl_phosphonate +hydrogen_acceptor +h2o +hydrogen_donor
+    phosphonoacetaldehyde
   }
 
   branch from glyoxylate side left {

@@ -1,0 +1,237 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "octadecanoyl-coa-to-h2o-null",
+  "name": "octadecanoyl-CoA to H2O",
+  "category": "other",
+  "summary": "A 3-step route from octadecanoyl-CoA to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR206853"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "octadecanoyl_coa",
+      "name": "octadecanoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104352"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "lysopa_18_0_0_0",
+      "name": "LysoPA(18:0/0:0)",
+      "formula": "C21H43O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:170124"
+      }
+    },
+    {
+      "id": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+      "name": "3-(Phosphonooxy)-1,2-propanediyl dioctadecanoate",
+      "short": "3-(Phosphonooxy)-1,…",
+      "formula": "C39H77O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:176709"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "cdp_1_2_dioctadecanoylglycerol",
+      "name": "CDP-1,2-dioctadecanoylglycerol",
+      "short": "CDP-1,2-dioctadecan…",
+      "formula": "C48H87N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM736453"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_26",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": [
+        "3.6.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR206853",
+      "substrates": [
+        {
+          "metabolite": "octadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lysopa_18_0_0_0",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR206853"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206853"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204122",
+      "substrates": [
+        {
+          "metabolite": "octadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lysopa_18_0_0_0",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204122"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204122"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": "3.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonooxy_1_2_propanediyl_dioctadecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_1_2_dioctadecanoylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153154"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153154"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,7 +24,7 @@ pathway o-n-acetyl-d-glucosami-to-n-acetyl-d-glucosamine "O-(N-acetyl-β-D-gluco
 
   branch from l_serine side right {
     l_serine
-    <-> ec_3_2_1_97 [3.2.1.97] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +h2o
-    d_galp_1_3_d_galpnac
+    <-> ec_2_3_1_250 [2.3.1.250] +palmitoleoyl_coa +coa
+    o_9z_hexadecenoyl_l_serine
   }
 }

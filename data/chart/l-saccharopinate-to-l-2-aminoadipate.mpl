@@ -30,14 +30,14 @@ pathway l-saccharopinate-to-l-2-aminoadipate "L-saccharopinate to L-2-aminoadipa
 
   branch from glutamate side left {
     glutamate
-    <-> . +l_alanyl_l_glutamate +h2o
-    alanine
+    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
+    5_6_7_8_tetrahydrosarcinapterin
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_3_2_33 [6.3.2.33] +5_6_7_8_tetrahydromethanopterin +atp +adp +pi +hplus
-    5_6_7_8_tetrahydrosarcinapterin
+    <-> ec_2_6_1_90 [2.6.1.90] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +akg
+    dtdp_3_dehydro_6_deoxy_d_galactose
   }
 
   branch from s_1_piperideine_6_carboxylate side left {

@@ -24,14 +24,14 @@ pathway campestanol-to-fmn "campestanol to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +5z_8z_11z_icosatrienoate +fmnh2 +o2 +h2o +hplus
-    19_hetre
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    5z_8z_14z_17z_11_12_epoxyicosatetraenoate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    21_hdohe
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    5z_8z_11z_17z_14_15_epoxyicosatetraenoate
   }
 
   branch from 6_deoxoteasterone side right {

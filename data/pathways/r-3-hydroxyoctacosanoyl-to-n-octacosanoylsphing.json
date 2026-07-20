@@ -112,40 +112,48 @@
       }
     },
     {
-      "id": "malonyl-coa",
-      "name": "Malonyl-CoA",
-      "formula": "C24H33N7O19P3S",
-      "charge": -5,
-      "xrefs": {
-        "chebi": "CHEBI:57384"
-      }
-    },
-    {
-      "id": "3_oxotriacontanoyl_coa",
-      "name": "3-oxotriacontanoyl-CoA",
-      "short": "3-oxotriacontanoyl-…",
-      "formula": "C51H88N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:74228"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
       "id": "octacosan_1_ol",
       "name": "octacosan-1-ol",
       "formula": "C28H58O",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:28243"
+      }
+    },
+    {
+      "id": "octacosanoate",
+      "name": "octacosanoate",
+      "formula": "C28H55O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31002"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
       }
     }
   ],
@@ -274,53 +282,6 @@
     },
     {
       "id": "r4",
-      "name": "octacosanoyl-CoA + malonyl-CoA + H(+) = 3-oxo-triacontanoyl-CoA + CO2 + CoA",
-      "equation": "octacosanoyl-CoA + malonyl-CoA + H(+) = 3-oxo-triacontanoyl-CoA + CO2 + CoA",
-      "substrates": [
-        {
-          "metabolite": "montanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_oxotriacontanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:36807"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:36807"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "octacosanoyl-CoA + 2 NADPH + 2 H(+) = octacosan-1-ol + 2 NADP(+) + CoA",
       "equation": "octacosanoyl-CoA + 2 NADPH + 2 H(+) = octacosan-1-ol + 2 NADP(+) + CoA",
       "substrates": [
@@ -352,7 +313,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:81743"
       },
@@ -362,6 +323,53 @@
           {
             "db": "Rhea",
             "id": "RHEA:81743"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "octacosanoate + ATP + CoA = octacosanoyl-CoA + AMP + diphosphate",
+      "equation": "octacosanoate + ATP + CoA = octacosanoyl-CoA + AMP + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "octacosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "montanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:85315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85315"
           }
         ]
       }

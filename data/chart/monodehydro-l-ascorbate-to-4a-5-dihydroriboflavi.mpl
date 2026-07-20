@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway monodehydro-l-ascorbate-to-4a-5-dihydroriboflavi "monodehydro-L-ascorbate… to 4a,5-dihydroriboflavin" {
-  spacing 290
+  spacing 284
 
   spine at 0,0 {
     monodehydro_l_ascorbate_radical
@@ -20,67 +20,61 @@ pathway monodehydro-l-ascorbate-to-4a-5-dihydroriboflavi "monodehydro-L-ascorbat
 
   branch from fe side left {
     fe
-    <-> . +hydroxyl +h2o +fe +h
-    h2o2
+    <-> ec_3_6_3_30 [3.6.3.30] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from fe side right {
     fe
-    <-> . +h2o +fe +h +h2o2
-    hydrogen_oxide
+    <-> ec_3_6_3_30 [3.6.3.30] +h +adp +phosphate +atp
+    h2o
   }
 
   branch from l_ascorbate side left {
-    l_ascorbate
-    <-> ec_1_14_17_1 [1.14.17.1] +monodehydro_l_ascorbate_radical +4_hydroxynorephedrine +h2o +h +o2
-    4_2_aminopropyl_phenol
-  }
-
-  branch from l_ascorbate side right {
     l_ascorbate
     <-> . +h +indole_3_methanol +h2o
     ascorbigen
   }
 
+  branch from l_ascorbate side right {
+    l_ascorbate
+    <-> ec_1_11_1_11 [1.11.1.11] +l_dehydroascorbic_acid +h2o +h
+    h2o2
+  }
+
   branch from h side left {
     h
-    <-> . +adp +fluvastatin +phosphate +fluvastatin +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    pregnenolone
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    4_aminobutanoate
+    pristanic_acid
   }
 
   branch from fad side left {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
+    <-> . +fadh2 +2e_5_methylhexa_2_4_dienoyl_coa +h
+    5_methylhex_4_enoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
-    11z_14z_17z_icosatrienoyl_coa
+    <-> ec_1_8_99_2 [1.8.99.2] +adenosine_5_phosphosulfate +fadh2 +amp
+    sulfite
   }
 
   branch from fe side left {
     fe
-    <-> . +superoxide +fe
-    o2
+    <-> ec_1_16_3_2 [1.16.3.2] +o2 +h2o +h +h2o2
+    iron_iii_oxide_hydroxide
   }
 
   branch from fe side right {
     fe
-    <-> ec_1_16_3_2 [1.16.3.2] +o2 +h2o +h
-    iron_iii_oxide_hydroxide
-  }
-
-  branch from 4a_5_dihydroriboflavin side left {
-    4a_5_dihydroriboflavin
-    <-> . +fe +riboflavin +enterobactin +h
-    fe_enterobactin
+    <-> . +h +sirohydrochlorin
+    siroheme
   }
 }

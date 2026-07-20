@@ -20,61 +20,61 @@ pathway dihydrodemethylsterigmato-to-8-o-methyldihydrost "dihydrodemethylsterigm
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_316 [2.1.1.316] +7_demethylmitomycin_a +sam
-    mitomycin_a
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +cobalt_ii_factor_iii +sam +hplus
-    cobalt_ii_factor_iv
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
-    hydroxytriacontanoate
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    9_r_hode
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_73 [1.14.19.73] +s_scoulerine +fmnh2 +o2 +h2o +hplus
-    s_nandinine
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    13_s_hete
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_1_21 [3.6.1.21] +adp_alpha_d_mannose +h2o +amp
-    alpha_d_mannose_1_phosphate
+    <-> ec_3_8_1_8 [3.8.1.8] +6_chloro_1_3_5_triazine_2_4_diamine +h2o +nh4
+    4_amino_6_chloro_1_3_5_triazin_2_ol
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_31 [1.2.1.31] +diphosphate +l_2_aminoadipate_adenylate +atp
-    l_2_aminoadipate
+    <-> . +cyclohex_1_ene_1_carbonyl_coa +h2o
+    2_hydroxycyclohexane_1_carbonyl_coa
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_13 [1.1.3.13] +h2o2 +methanol
-    formaldehyde
+    <-> . +fluorene
+    3_4_dihydroxyfluorene
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_6 [1.1.3.6] +cholesterol +cholest_4_en_3_one
-    h2o2
+    <-> . +fluorene
+    1_2_dihydroxyfluorene
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_10_1_1 [1.10.1.1] +trans_acenaphthene_1_2_diol +nadp +h
-    acenaphthene_1_2_dione
+    <-> . +h +19_epi_cathenamine +nadp
+    19_epi_ajmalicine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_8 [1.14.13.8] +h +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +o2 +nadp +h2o
-    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
+    <-> ec_1_14_13_105 [1.14.13.105] +isodihydrocarvone +h +o2 +nadp +h2o
+    4s_7r_4_isopropenyl_7_methyloxepan_2_one
   }
 }

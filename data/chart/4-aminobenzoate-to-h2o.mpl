@@ -18,13 +18,13 @@ pathway 4-aminobenzoate-to-h2o "4-aminobenzoate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_40 [3.6.3.40] +h +adp +phosphate +atp
-    gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
+    <-> . +l_alanine +l_2_amino_4_methoxy_trans_but_3_enoic_acid
+    l_alanyl_2s_3e_amino_4_methoxy_but_3_enoyl_l_ala
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +beta_cellobiose +phosphate +beta_cellobiose
-    atp
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate
+    omega5z_etheroleate
   }
 }

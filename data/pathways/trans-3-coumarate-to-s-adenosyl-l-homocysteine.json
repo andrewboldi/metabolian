@@ -218,41 +218,42 @@
       }
     },
     {
-      "id": "4_hydroxyisoflavones",
-      "name": "4'-hydroxyisoflavones",
-      "short": "4'-hydroxyisoflavon…",
-      "formula": "C15HO3R9",
-      "charge": 0,
+      "id": "tricetin",
+      "name": "tricetin",
+      "formula": "C15H9O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:63328"
+        "chebi": "CHEBI:60045"
       }
     },
     {
-      "id": "4_methoxyisoflavones",
-      "name": "4'-methoxyisoflavones",
-      "short": "4'-methoxyisoflavon…",
-      "formula": "C16H3O3R9",
-      "charge": 0,
+      "id": "3_4_5_o_trimethyltricetin",
+      "name": "3',4',5'-O-trimethyltricetin",
+      "short": "3',4',5'-O-trimethy…",
+      "formula": "C18H15O7",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133959"
+        "chebi": "CHEBI:60020"
       }
     },
     {
-      "id": "4_hydroxyflavanones",
-      "name": "4'-hydroxyflavanones",
-      "formula": "C15H3O3R9",
-      "charge": 0,
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:140331"
+        "chebi": "CHEBI:58057"
       }
     },
     {
-      "id": "4_methoxyflavanones",
-      "name": "4'-methoxyflavanones",
-      "formula": "C16H5O3R9",
-      "charge": 0,
+      "id": "e_2_methylgeranyl_diphosphate",
+      "name": "(E)-2-methylgeranyl diphosphate",
+      "short": "2-methylgeranyl PP",
+      "formula": "C11H19O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:140332"
+        "chebi": "CHEBI:61984"
       }
     }
   ],
@@ -286,17 +287,17 @@
       ]
     },
     {
-      "id": "ec_2_1_1_46",
-      "name": "isoflavone 4'-O-methyltransferase",
+      "id": "ec_2_1_1_169",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
       "ec": [
-        "2.1.1.46"
+        "2.1.1.169"
       ]
     },
     {
-      "id": "ec_2_1_1_231",
-      "name": "flavonoid 4'-O-methyltransferase",
+      "id": "ec_2_1_1_255",
+      "name": "geranyl diphosphate 2-C-methyltransferase",
       "ec": [
-        "2.1.1.231"
+        "2.1.1.255"
       ]
     }
   ],
@@ -702,61 +703,61 @@
     },
     {
       "id": "r10",
-      "name": "isoflavone 4'-O-methyltransferase",
-      "equation": "a 4'-hydroxyisoflavone + S-adenosyl-L-methionine = a 4'-methoxyisoflavone + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.46",
+      "name": "tricetin 3',4',5'-O-trimethyltransferase",
+      "equation": "tricetin + 3 S-adenosyl-L-methionine = 3',4',5'-O-trimethyltricetin + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.169",
       "substrates": [
         {
-          "metabolite": "4_hydroxyisoflavones",
+          "metabolite": "tricetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "4_methoxyisoflavones",
+          "metabolite": "3_4_5_o_trimethyltricetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_46"
+          "enzyme": "ec_2_1_1_169"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:31739"
+        "rhea": "RHEA:32351"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31739"
+            "id": "RHEA:32351"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "flavonoid 4'-O-methyltransferase",
-      "equation": "a 4'-hydroxyflavanone + S-adenosyl-L-methionine = a 4'-methoxyflavanone + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.231",
+      "name": "geranyl diphosphate 2-C-methyltransferase",
+      "equation": "(2E)-geranyl diphosphate + S-adenosyl-L-methionine = (E)-2-methylgeranyl diphosphate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.255",
       "substrates": [
         {
-          "metabolite": "4_hydroxyflavanones",
+          "metabolite": "gpp",
           "stoichiometry": 1
         },
         {
@@ -766,7 +767,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_methoxyflavanones",
+          "metabolite": "e_2_methylgeranyl_diphosphate",
           "stoichiometry": 1
         },
         {
@@ -780,20 +781,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_231"
+          "enzyme": "ec_2_1_1_255"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:31743"
+        "rhea": "RHEA:32519"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:31743"
+            "id": "RHEA:32519"
           }
         ]
       }

@@ -30,13 +30,13 @@ pathway gly-his-to-n-l-glutamylhistamine "Gly-His to Nα-γ-L-glutamylhistamine"
 
   branch from glycine side left {
     glycine
-    <-> . +n_arachidonoylglycinate +h2o
-    arachidonate
+    <-> . +myristoyl_coa +coa +hplus
+    n_myristoylglycinate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +octanoyl_coa +coa +hplus
-    n_octanoylglycinate
+    <-> . +lauroyl_coa +coa +hplus
+    n_dodecanoylglycinate
   }
 }

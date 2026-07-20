@@ -206,39 +206,43 @@
       }
     },
     {
-      "id": "r_reticulinium",
-      "name": "(R)-reticulinium",
-      "formula": "C19H24NO4",
+      "id": "secondary_ammonium_ion",
+      "name": "secondary ammonium ion",
+      "short": "secondary ammonium…",
+      "formula": "H2NR2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58144"
+        "chebi": "CHEBI:137419"
       }
     },
     {
-      "id": "r_tembetarine",
-      "name": "(R)-tembetarine",
-      "formula": "C20H26NO4",
+      "id": "methylated_secondary_ammonium_ion",
+      "name": "methylated secondary ammonium ion",
+      "short": "methylated…",
+      "formula": "CH4NR2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:134198"
+        "chebi": "CHEBI:137984"
       }
     },
     {
-      "id": "s_corytuberine",
-      "name": "(S)-corytuberine",
-      "formula": "C19H21NO4",
-      "charge": 0,
+      "id": "tertiary_ammonium_ion",
+      "name": "tertiary ammonium ion",
+      "short": "tertiary ammonium…",
+      "formula": "HNR3",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:81200"
+        "chebi": "CHEBI:137982"
       }
     },
     {
-      "id": "s_magnoflorine",
-      "name": "(S)-magnoflorine",
-      "formula": "C20H24NO4",
+      "id": "methylated_tertiary_amine",
+      "name": "methylated tertiary amine",
+      "short": "methylated…",
+      "formula": "CH3NR3",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:6641"
+        "chebi": "CHEBI:137983"
       }
     }
   ],
@@ -251,10 +255,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_337",
-      "name": "reticuline N-methyltransferase",
+      "id": "ec_2_1_1_49",
+      "name": "amine N-methyltransferase",
       "ec": [
-        "2.1.1.337"
+        "2.1.1.49"
       ]
     }
   ],
@@ -538,12 +542,12 @@
     },
     {
       "id": "r7",
-      "name": "reticuline N-methyltransferase",
-      "equation": "(R)-reticuline + S-adenosyl-L-methionine = (R)-tembetarine + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.337",
+      "name": "amine N-methyltransferase",
+      "equation": "a secondary amine + S-adenosyl-L-methionine = a methylated secondary amine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.49",
       "substrates": [
         {
-          "metabolite": "r_reticulinium",
+          "metabolite": "secondary_ammonium_ion",
           "stoichiometry": 1
         },
         {
@@ -553,7 +557,7 @@
       ],
       "products": [
         {
-          "metabolite": "r_tembetarine",
+          "metabolite": "methylated_secondary_ammonium_ion",
           "stoichiometry": 1
         },
         {
@@ -567,32 +571,32 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_337"
+          "enzyme": "ec_2_1_1_49"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:51516"
+        "rhea": "RHEA:53924"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51516"
+            "id": "RHEA:53924"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "reticuline N-methyltransferase",
-      "equation": "(S)-corytuberine + S-adenosyl-L-methionine = magnoflorine + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.337",
+      "name": "amine N-methyltransferase",
+      "equation": "a tertiary amine + S-adenosyl-L-methionine = a methylated tertiary amine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.49",
       "substrates": [
         {
-          "metabolite": "s_corytuberine",
+          "metabolite": "tertiary_ammonium_ion",
           "stoichiometry": 1
         },
         {
@@ -602,30 +606,34 @@
       ],
       "products": [
         {
-          "metabolite": "s_magnoflorine",
+          "metabolite": "methylated_tertiary_amine",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_337"
+          "enzyme": "ec_2_1_1_49"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:51524"
+        "rhea": "RHEA:53928"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51524"
+            "id": "RHEA:53928"
           }
         ]
       }

@@ -20,25 +20,25 @@ pathway c2-c8-saturated-to-fatty-acid-anion "C2-C8-saturated… to fatty acid an
 
   branch from fmn side left {
     fmn
-    <-> . +hydroxycholesterol_7a +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
+    <-> . +5_hepe +fmnh2 +o2 +h2o +hplus
+    5_20_dihepe
   }
 
   branch from fmn side right {
     fmn
-    <-> . +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_25_dihydroxycholesterol
+    <-> ec_1_14_14_30 [1.14.14.30] +2_methylpropanaminium +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_2_methylpropanamine
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_bis_long_cha +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_2_mono_long_chai
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    monoacyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +3_d_galactosyl_1_2_bis_long_chain_acyl_sn_glycer +h2o +hplus
-    3_d_galactosyl_2_mono_long_chain_acyl_sn_glycero
+    <-> . +1_2_diacyl_sn_glycero_3_phosphoglycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoglycerol
   }
 }

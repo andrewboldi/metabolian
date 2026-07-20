@@ -1,0 +1,284 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "chorismate-to-adenine",
+  "name": "chorismate to adenine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from chorismate(2−) to adenine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40051"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29748"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "chorismate",
+      "name": "chorismate",
+      "formula": "C10H8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29748"
+      }
+    },
+    {
+      "id": "3_1_carboxylatovinyl_oxy_benzoate",
+      "name": "3-[(1-carboxylatovinyl)oxy]benzoate",
+      "short": "3-[(1-carboxylatovi…",
+      "formula": "C10H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76981"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "aminodeoxyfutalosinate",
+      "name": "aminodeoxyfutalosinate",
+      "short": "aminodeoxyfutalosin…",
+      "formula": "C19H18N5O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64286"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dehypoxanthine_futalosinate",
+      "name": "dehypoxanthine futalosinate",
+      "short": "dehypoxanthine…",
+      "formula": "C14H15O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58864"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "Adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16708"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_151",
+      "name": "chorismate dehydratase",
+      "ec": [
+        "4.2.1.151"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_120",
+      "name": "aminodeoxyfutalosine synthase",
+      "ec": [
+        "2.5.1.120"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_30",
+      "name": "aminodeoxyfutalosine nucleosidase",
+      "ec": [
+        "3.2.2.30"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "chorismate dehydratase",
+      "equation": "chorismate = 3-[(1-carboxyvinyl)-oxy]benzoate + H2O",
+      "ec": "4.2.1.151",
+      "substrates": [
+        {
+          "metabolite": "chorismate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_1_carboxylatovinyl_oxy_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_151"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40051"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40051"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aminodeoxyfutalosine synthase",
+      "equation": "3-[(1-carboxyvinyl)-oxy]benzoate + S-adenosyl-L-methionine + H2O = 6-amino-6-deoxyfutalosine + hydrogencarbonate + L-methionine + H(+)",
+      "ec": "2.5.1.120",
+      "substrates": [
+        {
+          "metabolite": "3_1_carboxylatovinyl_oxy_benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aminodeoxyfutalosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_120"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33075"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aminodeoxyfutalosine nucleosidase",
+      "equation": "6-amino-6-deoxyfutalosine + H2O = dehypoxanthine futalosine + adenine",
+      "ec": "3.2.2.30",
+      "substrates": [
+        {
+          "metabolite": "aminodeoxyfutalosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dehypoxanthine_futalosinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33079"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33079"
+          }
+        ]
+      }
+    }
+  ]
+}

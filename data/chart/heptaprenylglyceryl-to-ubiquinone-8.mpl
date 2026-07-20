@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway heptaprenylglyceryl-to-ubiquinone-8 "Heptaprenylglyceryl… to ubiquinone-8" {
-  spacing 274
+  spacing 268
 
   spine at 0,0 {
     heptaprenylglyceryl_phosphate
@@ -19,78 +19,72 @@ pathway heptaprenylglyceryl-to-ubiquinone-8 "Heptaprenylglyceryl… to ubiquinon
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    henicosanoic_acid
+    taurocholic_acid_3_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +adp +behenate +phosphate +behenate +h2o
-    atp
-  }
-
-  branch from sn_glycerol_1_phosphate side left {
-    sn_glycerol_1_phosphate
-    <-> ec_2_7_7_39 [2.7.7.39] +ctp +h +diphosphate
-    2s_cdp_glycerol
-  }
-
-  branch from all_trans_heptaprenyl_diphosphate side right {
-    all_trans_heptaprenyl_diphosphate
-    <-> . +diphosphate +octaprenyl_diphosphate +h
-    ipp
+    <-> . +adenosine_3_5_bisphosphate +taurocholic_acid_3_sulfate +3_phosphoadenylyl_sulfate
+    taurocholate
   }
 
   branch from all_trans_heptaprenyl_diphosphate side left {
     all_trans_heptaprenyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    atp
   }
 
-  branch from ubiquinol_8 side right {
-    ubiquinol_8
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinone_8 +methanol +h2o +methane
-    o2
+  branch from all_trans_heptaprenyl_diphosphate side right {
+    all_trans_heptaprenyl_diphosphate
+    <-> ec_2_5_1_30 [2.5.1.30] +diphosphate +h +ipp
+    farnesyl_diphosphate
   }
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +ubiquinone_8
-    9_9_di_cis_carotene
+    <-> . +ubiquinone_8 +h2o +o2
+    pmf
   }
 
-  branch from dihydroxyacetone_phosphate side right {
-    dihydroxyacetone_phosphate
-    <-> . +alpha_d_ribofuranose_5_phosphate +l_glutamine +h +l_glutamate +phosphate +h2o
-    pyridoxal_5_phosphate
+  branch from ubiquinol_8 side right {
+    ubiquinol_8
+    <-> . +pmf +ubiquinone_8 +h2o +pmf
+    o2
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_10 +sn_glycerol_3_phosphate
-    ubiquinone_10
+    <-> ec_1_1_5_3 [1.1.5.3] +phylloquinone +sn_glycerol_3_phosphate
+    phylloquinol
   }
 
-  branch from l_proline side right {
-    l_proline
-    <-> . +l_histidine +l_lysine +h2o
-    histidyl_prolyl_lysine
+  branch from dihydroxyacetone_phosphate side right {
+    dihydroxyacetone_phosphate
+    <-> ec_1_1_99_5 [1.1.99.5] +ubiquinol_7 +sn_glycerol_3_phosphate
+    ubiquinone_7
   }
 
   branch from l_proline side left {
     l_proline
-    <-> . +l_lysine +l_isoleucine +h2o
-    isolecyl_prolyl_lysine
+    <-> . +l_aspartate +l_arginine +h2o
+    prolyl_arginyl_aspartate
   }
 
-  branch from ubiquinone_8 side right {
-    ubiquinone_8
-    <-> . +l_aspartate +ubiquinol_8 +h
-    iminoaspartate
+  branch from l_proline side right {
+    l_proline
+    <-> . +l_glutamine +h2o
+    prolyl_glutaminyl_proline
   }
 
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> . +l_aspartate +ubiquinol_8
-    iminoaspartate
+    <-> . +h +adp +phosphate +atp
+    h2o
+  }
+
+  branch from ubiquinone_8 side right {
+    ubiquinone_8
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +h +formate +pmf +ubiquinol_8
+    co2
   }
 }

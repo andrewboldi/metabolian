@@ -18,13 +18,13 @@ pathway o-s-3r-hydroxyhexadeca-to-o-pantetheine-4-phosph "O-[S-(3R)-hydroxyhexad
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_2_3_1_305 [2.3.1.305] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +hplus
-    udp_2_acetamido_3_3r_3_hydroxyacyl_amino_2_3_did
+    <-> . +2s_3r_methylphenylalanine +atp +amp +ppi
+    o_s_3r_3_methyl_l_phenylalanylpantetheine_4_phos
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +o_s_tetradecanoylpantetheine_4_phosphoryl_serine +l_lysinium +hplus
-    n6_tetradecanoyl_l_lysine
+    <-> ec_2_3_1_327 [2.3.1.327] +o_s_11_methyldodecanoylpantetheine_4_phosphoryl +l_phenylalanine +hplus
+    n_11_methyldodecanoyl_l_phenylalanine
   }
 }

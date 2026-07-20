@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphingos… to N-(15Z)-tetracosenoylsphi…" {
-  spacing 254
+  spacing 242
 
   spine at 0,0 {
     n_11z_icosenoylsphingosine
@@ -46,38 +46,38 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from 11z_eicosenoyl_coa side left {
     11z_eicosenoyl_coa
-    <-> . +o2 +h2o2
-    2e_11z_icosadienoyl_coa
-  }
-
-  branch from 11z_eicosenoyl_coa side right {
-    11z_eicosenoyl_coa
     <-> . +nadh +acetyl_coa +9z_octadecenoyl_coa +h +h2o2 +o2 +nad +h2o
     coa
   }
 
+  branch from 11z_eicosenoyl_coa side right {
+    11z_eicosenoyl_coa
+    <-> . +nadh +acetyl_coa +h +h2o2 +erucoyl_coa +coa +nad +h2o
+    o2
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_98 [4.2.3.98] +fpp +h2o
-    muurolol
+    <-> ec_4_2_3_127 [4.2.3.127] +fpp
+    copaene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_97 [4.2.3.97] +fpp
-    cadinene
+    <-> ec_4_2_3_129 [4.2.3.129] +fpp
+    sativene
   }
 
   branch from 13z_3_oxodocosenoyl_coa side left {
     13z_3_oxodocosenoyl_coa
-    <-> . +h +nadph +nadp
+    <-> . +nadh +h +nad
     3_s_hydroxy_13cis_docosenoyl_coa
   }
 
   branch from 13z_3_oxodocosenoyl_coa side right {
     13z_3_oxodocosenoyl_coa
-    <-> . +nadh +h +3_s_hydroxy_13cis_docosenoyl_coa
-    nad
+    <-> . +11z_eicosenoyl_coa +coa
+    acetyl_coa
   }
 
   branch from 2e_13z_docosadienoyl_coa side left {
@@ -106,31 +106,19 @@ pathway n-11z-icosenoylsphingos-to-n-15z-tetracosenoylsp "N-(11Z)-icosenoylsphin
 
   branch from 15z_3_oxotetracosenoyl_coa side left {
     15z_3_oxotetracosenoyl_coa
-    <-> . +h +nadph +nadp
+    <-> . +nadh +h +nad
     3_s_hydroxy_cis_15_tetracosaenoyl_coa
-  }
-
-  branch from 15z_3_oxotetracosenoyl_coa side right {
-    15z_3_oxotetracosenoyl_coa
-    <-> . +h +3_s_hydroxy_cis_15_tetracosaenoyl_coa +nad
-    nadh
-  }
-
-  branch from 2e_15z_tetracosadienoyl_coa side left {
-    2e_15z_tetracosadienoyl_coa
-    <-> . +15z_tetracosenoyl_coa +o2
-    h2o2
   }
 
   branch from 15z_tetracosenoyl_coa side right {
     15z_tetracosenoyl_coa
-    <-> . +nadh +erucoyl_coa +acetyl_coa +h +h2o2 +coa +nad +h2o
-    o2
+    <-> . +cholesterol +coa
+    cholest_5_en_3beta_yl_15z_tetracosenoate
   }
 
   branch from 15z_tetracosenoyl_coa side left {
     15z_tetracosenoyl_coa
-    <-> . +cholesterol +coa
-    cholest_5_en_3beta_yl_15z_tetracosenoate
+    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
+    15z_tetracosenoyl_cholesterol
   }
 }

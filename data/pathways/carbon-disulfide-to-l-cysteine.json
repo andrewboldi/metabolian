@@ -110,49 +110,87 @@
       }
     },
     {
-      "id": "1_4_benzoquinone",
-      "name": "1,4-benzoquinone",
-      "formula": "C6H4O2",
-      "charge": 0,
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM740100"
+        "metanetx": "MNXM1103302"
       }
     },
     {
-      "id": "2_amino_3_2_5_dihydroxyphenyl_sulfanyl_propanoat",
-      "name": "2-amino-3-[(2,5-dihydroxyphenyl)sulfanyl]propanoate",
-      "short": "2-amino-3-[(2,5-dih…",
-      "formula": "C9H11NO4S",
-      "charge": 0,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM818569"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "l_leucine",
-      "name": "L-leucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
+      "id": "n_r_4_phosphopantothenoyl_l_cysteine",
+      "name": "N-[(R)-4-phosphopantothenoyl]-L-cysteine",
+      "short": "N-[(R)-4-phosphopan…",
+      "formula": "C12H20N2O9PS",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM1106761"
+        "metanetx": "MNXM730898"
       }
     },
     {
-      "id": "cys_leu",
-      "name": "Cys-Leu",
-      "formula": "C9H18N2O3S",
-      "charge": 0,
+      "id": "r_4_phosphopantothenoyl_cytidylate",
+      "name": "(R)-4'-phosphopantothenoyl-cytidylate",
+      "short": "4'-phosphopantothen…",
+      "formula": "C18H27N4O15P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "MNXM16978"
+        "metanetx": "MNXM1559643"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "7_oxoheptanoic_acid",
+      "name": "7-oxoheptanoic acid",
+      "formula": "C7H12O3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "chebi": "CHEBI:80588"
+      }
+    },
+    {
+      "id": "7_mercaptoheptanoic_acid",
+      "name": "7-Mercaptoheptanoic acid",
+      "short": "7-Mercaptoheptanoic…",
+      "formula": "C7H14O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:80591"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM737787"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
       }
     }
   ],
@@ -162,13 +200,6 @@
       "name": "NAD(P)H sulfur oxidoreductase (CoA-dependent)",
       "ec": [
         "1.8.1.18"
-      ]
-    },
-    {
-      "id": "ec_3_4_11_1",
-      "name": "leucyl aminopeptidase",
-      "ec": [
-        "3.4.11.1"
       ]
     }
   ],
@@ -297,45 +328,60 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR188044",
+      "name": "Reaction MNXR199642",
       "substrates": [
         {
-          "metabolite": "l_cysteine",
+          "metabolite": "cmp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_4_benzoquinone",
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "n_r_4_phosphopantothenoyl_l_cysteine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_amino_3_2_5_dihydroxyphenyl_sulfanyl_propanoat",
+          "metabolite": "r_4_phosphopantothenoyl_cytidylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR188044"
+        "metanetx": "MNXR199642"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR188044"
+            "id": "MNXR199642"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "leucyl aminopeptidase",
-      "ec": "3.4.11.1",
+      "name": "Reaction MNXR95110",
       "substrates": [
         {
-          "metabolite": "l_leucine",
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_oxoheptanoic_acid",
           "stoichiometry": 1
         },
         {
@@ -345,30 +391,29 @@
       ],
       "products": [
         {
-          "metabolite": "cys_leu",
+          "metabolite": "7_mercaptoheptanoic_acid",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_serine",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_4_11_1"
+          "metabolite": "nad",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR194845"
+        "metanetx": "MNXR95110"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR194845"
+            "id": "MNXR95110"
           }
         ]
       }

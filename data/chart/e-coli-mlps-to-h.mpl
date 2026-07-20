@@ -46,26 +46,26 @@ pathway e-coli-mlps-to-h "E. coli MLPS to H" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +h +alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac_alpha_l
-    alpha_l_fuc_1_4_2_3_o_ac_alpha_l_fuc_1_3_alpha_d
+    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
+    beta_d_glucose
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +solasodine_3_o_beta_d_galactoside +h
-    solasodine
+    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
+    alpha_d_glucose
   }
 
   branch from udp_alpha_d_glucuronate side left {
     udp_alpha_d_glucuronate
-    <-> . +udp +h +alpha_cehc_glucuronide
-    cehc
+    <-> ec_2_4_1_135 [2.4.1.135] +udp +h +o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
+    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
   }
 
   branch from udp_alpha_d_glucuronate side right {
     udp_alpha_d_glucuronate
-    <-> ec_2_4_1_135 [2.4.1.135] +udp +h +o3_d_glucuronosyl_1_3_d_galactosyl_1_3_d_galacto
-    o3_d_galactosyl_1_3_d_galactosyl_1_4_d_xylosyl_l
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +h +morphine_3_glucuronide
+    morphine
   }
 
   branch from 2_o_ac_alpha_d_gal_1_3_alpha_l_fuc_1_4_2_3_o_ac side left {
@@ -76,25 +76,25 @@ pathway e-coli-mlps-to-h "E. coli MLPS to H" {
 
   branch from udp side right {
     udp
-    <-> . +loganin +h +loganetin
+    <-> . +6_methoxypodophyllotoxin_7_glucoside +h +5_methoxypodophyllotoxin
     udp_alpha_d_glucose
   }
 
   branch from udp side left {
     udp
-    <-> . +n_methylanthraniloyl_beta_d_glucopyranose +udp_alpha_d_glucose
-    n_methylanthranilate
+    <-> . +5_demethoxy_6_methoxypodophyllotoxin_7_glucoside +h +udp_alpha_d_glucose
+    5_demethoxy_6_methoxypodophyllotoxin
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +butanamide +hydroxylamine +nh4
-    butyrylhydroxamic_acid
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +4_bromobenzaldehyde +nad
+    4_bromobenzyl_alcohol
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_1_4 [3.5.1.4] +benzamide +hydroxylamine +nh4
-    benzhydroxamic_acid
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_methoxybenzaldehyde +nad
+    3_methoxybenzyl_alcohol
   }
 }

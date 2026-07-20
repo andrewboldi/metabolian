@@ -1,0 +1,239 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexanoyl-coa-to-olivetolate",
+  "name": "hexanoyl-CoA to olivetolate",
+  "category": "other",
+  "summary": "A 3-step route from hexanoyl-CoA to olivetolate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196732"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexanoyl_coa",
+      "name": "hexanoyl-CoA",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103616"
+      }
+    },
+    {
+      "id": "malonyl_coa",
+      "name": "malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1106093"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3_5_dioxodecanoyl_coa",
+      "name": "3,5-dioxodecanoyl-CoA",
+      "short": "3,5-dioxodecanoyl-C…",
+      "formula": "C31H46N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372598"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "3_5_7_trioxododecanoyl_coa",
+      "name": "3,5,7-Trioxododecanoyl-CoA",
+      "short": "3,5,7-Trioxododecan…",
+      "formula": "C33H48N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1372581"
+      }
+    },
+    {
+      "id": "olivetolate",
+      "name": "olivetolate",
+      "formula": "C12H15O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66950"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_26",
+      "name": "olivetolic acid cyclase",
+      "ec": [
+        "4.4.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196732",
+      "substrates": [
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dioxodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196734",
+      "substrates": [
+        {
+          "metabolite": "malonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_5_dioxodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196734"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196734"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "olivetolic acid cyclase",
+      "ec": "4.4.1.26",
+      "substrates": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "olivetolate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196334"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196334"
+          }
+        ]
+      }
+    }
+  ]
+}

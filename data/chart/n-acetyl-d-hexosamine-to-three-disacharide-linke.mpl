@@ -18,14 +18,14 @@ pathway n-acetyl-d-hexosamine-to-three-disacharide-linke "N-acetyl-D-hexosamine 
 
   branch from h2o side left {
     h2o
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +glucose
-    keto_d_fructose
+    <-> ec_1_14_14_149 [1.14.14.149] +h +o2 +nadph +1_deoxycapsidiol +capsidiol
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +formate +undecaprenyl_phosphate_4_amino_4_deoxy_l_arabino
-    undecaprenyl_phosphate_4_amino_4_formyl_l_arabin
+    <-> . +h +n_carbamoyl_d_phenylglycine
+    phenylhydantoin
   }
 
   branch from three_disacharide_linked_murein_units_tetrapepti side left {

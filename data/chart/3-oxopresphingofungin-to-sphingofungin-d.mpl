@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxopresphingofungin-to-sphingofungin-d "3-oxopresphingofungin… to Sphingofungin D" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_oxopresphingofungin_anion
@@ -18,17 +18,5 @@ pathway 3-oxopresphingofungin-to-sphingofungin-d "3-oxopresphingofungin… to Sp
     sphingofungin_c
     <-> .
     sphingofungin_d
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +augustate +fmnh2 +o2 +h2o +hplus
-    medicagenate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +taxusin +fmnh2 +o2 +h2o +hplus
-    1_hydroxytaxusin
   }
 }

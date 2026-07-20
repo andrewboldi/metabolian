@@ -18,13 +18,13 @@ pathway udp-to-galactosyl-1-6-glucosy "UDP to galactosyl-(1->6)-glucosy…" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +galacamine +h
-    2_deoxystreptamine
+    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_beta_d_glcnac_1_3_beta_d_gal_1_4 +h
+    beta_d_glcnac_1_3_beta_d_gal_1_4_alpha_l_fuc_1_3
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_275 [2.4.1.275] +udp +d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d +h
-    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1
+    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_10 +h
+    keratan_sulfate_ii_biosynthesis_precursor_9
   }
 }

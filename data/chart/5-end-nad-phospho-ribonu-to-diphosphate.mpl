@@ -26,7 +26,7 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
 
   branch from nmn side right {
     nmn
-    <-> ec_2_7_1_22 [2.7.1.22] +atp +adp +hplus
+    <-> . +h2o +pi
     n_ribosylnicotinamide
   }
 
@@ -44,14 +44,14 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
 
   branch from nh3 side left {
     nh3
-    <-> . +serine +o2 +h2o +h2o2
-    3_hydroxypyruvate
+    <-> . +l_glutamine +norepinephrine
+    n_2r_2_3_4_dihydroxyphenyl_2_hydroxyethyl_l_glut
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +palmitoleamide +h2o
-    palmitoleate
+    <-> . +l_glutamine +histaminium
+    n_2_1h_imidazol_4_yl_ethyl_l_glutamine
   }
 
   branch from deamido_nad side left {
@@ -62,13 +62,13 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate "5'-end NAD-phospho-ribonu… to
 
   branch from ppi side right {
     ppi
-    <-> . +cerotate +atp +coa +amp
-    hexacosanoyl_coa
+    <-> . +8_9_eet +atp +coa +amp
+    8_9_epoxy_5z_11z_14z_icosatrienoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> . +3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3 +atp +coa +amp
-    3_hydroxy_9_oxo_9_10_seco_23_24_bisnorchola_1_3
+    <-> . +11_12_eet +atp +coa +amp
+    11_12_epoxy_5z_8z_14z_icosatrienoyl_coa
   }
 }

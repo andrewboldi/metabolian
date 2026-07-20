@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy-3-oxosuccinate" {
-  spacing 286
+  spacing 262
 
   spine at 0,0 {
     ndp_d_glucose
@@ -18,34 +18,10 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
     2_hydroxy_3_oxosuccinate
   }
 
-  branch from nucleoside_5_diphosphate side left {
-    nucleoside_5_diphosphate
-    <-> ec_3_6_1_15 [3.6.1.15] +h2o +pi +hplus
-    nucleoside_5_triphoshate
-  }
-
-  branch from nucleoside_5_diphosphate side right {
-    nucleoside_5_diphosphate
-    <-> . +gtp +gdp
-    nucleoside_5_monophosphate
-  }
-
   branch from 2_o_d_glucopyranosyl_d_glycerate side left {
-    2_o_d_glucopyranosyl_d_glycerate
-    <-> ec_2_4_1_352 [2.4.1.352] +pi +d_glycerate
-    g1p
-  }
-
-  branch from 2_o_d_glucopyranosyl_d_glycerate side right {
     2_o_d_glucopyranosyl_d_glycerate
     <-> . +d_glycerate +gdp +hplus
     gdp_d_glucose
-  }
-
-  branch from d_glycerate side left {
-    d_glycerate
-    <-> ec_1_1_1_60 [1.1.1.60] +nad +nadh +hplus
-    2_hydroxy_3_oxopropanoate
   }
 
   branch from d_glycerate side right {
@@ -56,14 +32,14 @@ pathway ndp-d-glucose-to-2-hydroxy-3-oxosuccinate "NDP-α-D-glucose to 2-hydroxy
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_188 [3.2.1.188] +avenacoside_b +h2o
-    26_desglucoavenacoside_b
+    <-> ec_3_2_1_104 [3.2.1.104] +daucosterol +h2o
+    sitosterol
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_206 [3.2.1.206] +oleuropein +h2o
-    oleuropein_aglycone
+    <-> . +campesterol_3_d_glucoside +h2o
+    campesterol
   }
 
   branch from 2_hydroxy_3_oxosuccinate side left {

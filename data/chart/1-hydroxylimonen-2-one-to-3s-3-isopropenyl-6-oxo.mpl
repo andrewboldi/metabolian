@@ -22,37 +22,37 @@ pathway 1-hydroxylimonen-2-one-to-3s-3-isopropenyl-6-oxo "1-hydroxylimonen-2-one
 
   branch from o2 side left {
     o2
-    <-> . +glycyrrhetinate +nadp +h2o +nadph
-    glycyrrhetaldehyde
+    <-> . +fadh2 +h +2_2_dimethyl_2_3_dihydro_1_benzofuran_7_ol +4_hydroxycarbofuran_phenol +h2o
+    fad
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_21_9 [1.14.21.9] +cyclo_l_tyrosyl_l_tyrosyl +h +nadph +nadp +h2o
-    mycocyclosin
+    <-> . +2z_4e_2_8_dihydroxy_8_methyl_6_oxonona_2_4_dien +h
+    3_2_hydroxy_2_methylpropyl_benzene_1_2_diol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +h +tetracosanoate +nadp +h2o
-    tetracosanal
+    <-> ec_1_1_1_92 [1.1.1.92] +r_glycerate +co2 +nadp +h
+    oxaloglycolate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_5 [1.2.1.5] +r_lactate +h +nadp +h2o
-    s_lactaldehyde
+    <-> ec_1_1_1_183 [1.1.1.183] +e_cinnamaldehyde +h +nadp
+    cinnamyl_alcohol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    borneol
+    <-> ec_1_1_1_62 [1.1.1.62] +nadh +h +5alpha_androstane_3_11_17_trione
+    11_oxo_5_dihydrotestosterone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
-    isomenthol
+    <-> . +nadh +h +3_oxopropane_1_sulfonate
+    3_hydroxypropane_1_sulfonate
   }
 }

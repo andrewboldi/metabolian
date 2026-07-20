@@ -22,85 +22,85 @@ pathway diphosphate-to-3-hydroxypropanal-dimer "diphosphate to 3-hydroxypropanal
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    7r_3_e_2_4_dinitrostyryl_7_2_thienylacetamido_3
+    <-> ec_3_4_22_40 [3.4.22.40] +bleomycin_a2 +h2o +nh4
+    deamido_bleomycin_a2
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    clavulanate
+    <-> . +2s_2_carboxyamino_3_methylamino_propanoate +l_bmaa
+    co2
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    1_carbapenem_3_carboxylic_acid
+    <-> . +h +adp +phosphate +h2o
+    alpha_d_glucosyl_1_3_n_n_diacetyl_alpha_d_bacill
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    2_hydroxyphenazine
+    <-> . +n_glycylclavaminate +h +adp +phosphate +glycine
+    clavaminate
   }
 
   branch from coa side left {
     coa
-    <-> ec_6_2_1_5 [6.2.1.5] +itaconyl_coa +adp +phosphate +atp
-    itaconate
+    <-> . +acetyl_coa +3_amino_4_hydroxyphenyl_methyl_arsinate
+    3_acetamido_4_hydroxyphenyl_methyl_arsinate
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +glutaryl_coa
-    3_oxo_6_carboxyhexanoyl_coa
+    <-> . +octanoyl_coa +ethanol
+    ethyl_octanoate
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +dtdp_3_dehydro_4_6_dideoxy_alpha_d_glucose
-    dtdp_4_amino_4_6_dideoxy_alpha_d_glucose
+    <-> . +4_iminobutan_1_amine +h2o
+    4_aminobutanal
   }
 
   branch from nh4 side right {
     nh4
-    <-> . +indolmycin_b +h
-    2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl
+    <-> ec_4_4_1_11 [4.4.1.11] +trifluoromethanethiol +2_oxobutanoate +h2o
+    trifluoro_l_methionine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_306 [1.1.1.306] +nadh +h +s_formylbacillithiol
-    s_hydroxymethyl_bacillithiol
+    <-> ec_1_14_13_72 [1.14.13.72] +nadh +h +4_4_dimethyl_5alpha_cholest_7_en_3beta_ol +o2 +h2o
+    4_hydroxymethyl_4_methyl_5_cholest_7_en_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +amarouciaxanthin_a
-    fucoxanthinol
+    <-> . +nadh +5_2_carboxyethyl_4_6_dihydroxypicolinate +h2o
+    5_2_formylethyl_4_6_dihydroxypicolinate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    1r_2s_epoxypropylphosphonate
+    <-> . +colibactin
+    colibactin_with_hydrolyzed_cyclopropane_groups
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    piericidin_a
+    <-> . +chlorophyllide_b2
+    71_dihydroxychlorophyllide_a2
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_13_12_14 [1.13.12.14] +71_hydroxychlorophyllide_a +h2o +h +o2 +nadph
-    chlorophyllide_a
+    <-> . +4_bromophenol_2_3_epoxide +h2o +h +o2 +nadph
+    4_bromophenol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +benzoate +o2 +nadph +h2o
-    salicylate
+    <-> ec_1_14_14_1 [1.14.14.1] +4_bromophenol_2_3_epoxide +h2o +h +4_bromophenol +nadph
+    o2
   }
 }

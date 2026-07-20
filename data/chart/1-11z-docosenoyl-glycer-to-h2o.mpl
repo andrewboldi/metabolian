@@ -18,49 +18,49 @@ pathway 1-11z-docosenoyl-glycer-to-h2o "1-(11Z-Docosenoyl)-Glycer… to H2O" {
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> ec_2_7_8_5 [2.7.8.5] +cmp +phosphatidylglycerophosphate_didodecanoyl_n_c12
-    cdp_1_2_didodecanoylglycerol
+    <-> . +heptadecanoyl_coa +coa
+    1_heptadecanoyl_glycero_3_phosphate
   }
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> . +menaquinol_8 +dihydroxyacetone_phosphate
-    mk_8
+    <-> . +10z_heptadecenoyl_coa +coa
+    1_acylglycerol_3p_10_heptade
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    18_2_18_3_ps
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    symplostatin_1
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    scyptolin_a
   }
 
   branch from coa side left {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_su
-    2_4_di_2_methyl_butanoyl_3_6_methyl_heptanoyl_6
+    <-> . +acetyl_coa +malonyl_coa +h +1_4_5_10_13_pentahydroxy_delta2_3_protoilludene +melledonol +h2o
+    co2
   }
 
   branch from coa side right {
     coa
-    <-> . +sucrose +2_methylpropanoyl_coa
-    4_isobutanoyl_sucrose
+    <-> . +acetyl_coa +z_octadec_11_enol
+    z_octadec_11_enyl_acetate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_113 [3.2.1.113] +aldehydo_d_mannose +d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_6_d_man_1
-    man_a1_2_man_a1_2_man_a1_3_man_a1_2_man_a1_3_man
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    schizopeptin_791
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    gramicidin_b
   }
 }

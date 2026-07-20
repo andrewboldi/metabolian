@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gmp-to-udp-n-n-diacetylbacillos "GMP to UDP-N,N'-diacetylbacillos…" {
-  spacing 340
+  spacing 320
 
   spine at 0,0 {
     gmp
@@ -18,37 +18,13 @@ pathway gmp-to-udp-n-n-diacetylbacillos "GMP to UDP-N,N'-diacetylbacillos…" {
 
   branch from gdp side left {
     gdp
-    <-> ec_2_7_1_21 [2.7.1.21] +h +dtmp +thymidine
-    gtp
+    <-> . +gdp_n_acetyl_d_perosamine +alpha_l_fuc_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h
+    alpha_d_rha4nac_1_3_alpha_l_fuc_1_4_beta_d_glc_1
   }
 
   branch from gdp side right {
     gdp
-    <-> . +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h +gtp
-    4_amino_5_hydroxymethyl_2_methylpyrimidine
-  }
-
-  branch from dadp side left {
-    dadp
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +datp
-    cytidine
-  }
-
-  branch from dadp side right {
-    dadp
-    <-> . +beta_d_fructose +datp +keto_d_fructose_6_phosphate
-    h
-  }
-
-  branch from datp side left {
-    datp
-    <-> ec_1_14_11_33 [1.14.11.33] +formaldehyde +co2 +succinate +o2 +1_methyl_datp
-    2_oxoglutarate
-  }
-
-  branch from datp side right {
-    datp
-    <-> . +dcmp +dadp
-    dcdp
+    <-> ec_6_3_2_31 [6.3.2.31] +coenzyme_f420_1 +phosphate +f420_0 +h +l_glutamate
+    gtp
   }
 }

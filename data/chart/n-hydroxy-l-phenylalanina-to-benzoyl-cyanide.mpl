@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hydroxy-l-phenylalanina-to-benzoyl-cyanide "N-hydroxy-L-phenylalaninaâ€¦ to benzoyl cyanide" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     n_hydroxy_l_phenylalaninate
@@ -20,37 +20,25 @@ pathway n-hydroxy-l-phenylalanina-to-benzoyl-cyanide "N-hydroxy-L-phenylalaninaâ
 
   branch from fmn side left {
     fmn
-    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
-    eriodictyol
+    <-> . +6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    28_norteasterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +eriodictyol +fmnh2 +o2 +h2o +hplus
-    2s_dihydrotricetin
-  }
-
-  branch from e_phenylacetaldehyde_oxime side left {
-    e_phenylacetaldehyde_oxime
-    <-> .
-    z_phenylacetaldehyde_oxime
-  }
-
-  branch from e_phenylacetaldehyde_oxime side right {
-    e_phenylacetaldehyde_oxime
-    <-> .
-    n_benzylformamide
+    <-> . +3_dehydro_6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
+    6_dehydro_28_norteasterone
   }
 
   branch from r_mandelonitrile side left {
     r_mandelonitrile
-    <-> ec_3_2_1_118 [3.2.1.118] +glucose +h2o
+    <-> ec_3_2_1_118 [3.2.1.118] +alpha_d_glucose +h2o
     r_prunasin
   }
 
   branch from r_mandelonitrile side right {
     r_mandelonitrile
-    <-> ec_3_2_1_118 [3.2.1.118] +alpha_d_glucose +r_prunasin
+    <-> ec_3_2_1_118 [3.2.1.118] +beta_d_glucose +r_prunasin
     h2o
   }
 }

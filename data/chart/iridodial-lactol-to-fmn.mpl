@@ -18,13 +18,13 @@ pathway iridodial-lactol-to-fmn "(+)-iridodial lactol to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +dehydroepiandrosterone +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    5_6_eet
   }
 
   branch from fmn side right {
     fmn
-    <-> . +dehydroepiandrosterone_sulfate +fmnh2 +o2 +h2o +hplus
-    16_hydroxydehydroepiandrosterone_3_sulfate
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    17_hete
   }
 }

@@ -18,13 +18,13 @@ pathway 1-acyl-sn-glycero-3-phosp-to-s-adenosyl-l-homocy "1-acyl-sn-glycero-3-ph
 
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n3_methylcytidine_5_monophosphate_1
+    <-> . +esculetin +sam +hplus
+    scopoletin
   }
 
   branch from sah side right {
     sah
-    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> . +isoscopoletin +sam +hplus
+    scoparone
   }
 }

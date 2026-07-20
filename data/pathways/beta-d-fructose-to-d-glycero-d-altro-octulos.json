@@ -1,0 +1,235 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-fructose-to-d-glycero-d-altro-octulos",
+  "name": "beta-D-fructose… to D-glycero-D-altro-octulos…",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-fructose 1,6-bisphosphate to D-glycero-D-altro-octulose-1,8-bisphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204822"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_fructose_1_6_bisphosphate",
+      "name": "beta-D-fructose 1,6-bisphosphate",
+      "short": "beta-D-fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364229"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "d_fructose_1_phosphate",
+      "name": "D-Fructose 1-phosphate",
+      "short": "D-Fructose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560609"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde",
+      "name": "D-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM435"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose_5_phosphate",
+      "name": "aldehydo-D-ribose 5-phosphate",
+      "short": "aldehydo-D-ribose…",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1363911"
+      }
+    },
+    {
+      "id": "d_glycero_d_altro_octulose_1_8_bisphosphate",
+      "name": "D-glycero-D-altro-octulose-1,8-bisphosphate",
+      "short": "D-glycero-D-altro-o…",
+      "formula": "C8H18O14P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77854"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_13",
+      "name": "fructose-bisphosphate aldolase",
+      "ec": [
+        "4.1.2.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204822",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204822"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204822"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204805",
+      "substrates": [
+        {
+          "metabolite": "d_fructose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204805"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "fructose-bisphosphate aldolase",
+      "ec": "4.1.2.13",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glycero_d_altro_octulose_1_8_bisphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR144324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR144324"
+          }
+        ]
+      }
+    }
+  ]
+}

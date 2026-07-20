@@ -20,14 +20,14 @@ pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_7 [2.4.3.7] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +l_serine +cdp_choline +hplus
+    o_phosphocholine_l_serine
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +1_2_di_palmitoleoyl_2_sn_glycerol +cdp_ethanolamine +hplus
-    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphoethan
+    <-> . +monosialyl_gb5 +cmp_n_acetyl_neuraminate +hplus
+    disialosyl_gb5
   }
 
   branch from d_galactopyranose side left {
@@ -44,13 +44,13 @@ pathway d-galactosyl-1-3-n-ac-to-cytidine-5-monophospha "β-D-galactosyl-(1→3)
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
-    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
+    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +h2o
+    neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac
   }
 
   branch from n_acetylneuraminate side right {
     n_acetylneuraminate
-    <-> . +n_acetylneuraminyl_2_3_d_galactosyl_1_4_d_gluco +h2o
-    d_galactosyl_1_4_d_glucosyl_1_1_ceramide
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
+    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_8_neu5ac
   }
 }

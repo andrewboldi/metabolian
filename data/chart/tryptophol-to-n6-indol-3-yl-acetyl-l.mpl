@@ -30,13 +30,13 @@ pathway tryptophol-to-n6-indol-3-yl-acetyl-l "tryptophol to N6-[(indol-3-yl)acet
 
   branch from indole_3_acetate side left {
     indole_3_acetate
-    <-> ec_3_5_1_4 [3.5.1.4] +h2o +nh3
-    indole_3_acetamide
+    <-> ec_6_2_1_75 [6.2.1.75] +atp +coa +amp +ppi
+    indol_3_ylacetyl_coa
   }
 
   branch from indole_3_acetate side right {
     indole_3_acetate
-    <-> ec_4_1_1_115 [4.1.1.115] +hplus +co2
-    skatole
+    <-> . +atp +hplus +ppi
+    indole_3_acetyl_amp
   }
 }

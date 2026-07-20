@@ -18,53 +18,47 @@ pathway r-lipoamide-to-s-8-2-methylbutanoyl-di "(R)-lipoamide to S(8)-(2-methylb
 
   branch from h side left {
     h
-    <-> ec_1_4_3_21 [1.4.3.21] +2_pyridinemethanamine +o2 +h2o +nh4 +h2o2
-    2_formylpyridine
+    <-> . +2_dehydro_d_gluconate +h2o
+    2_dehydro_d_glucono_1_5_lactone
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_nitrophenol +h2o
-    4_nitrophenyl_d_galactoside
+    <-> ec_3_5_4_43 [3.5.4.43] +ammelide +chloride +h2o
+    4_amino_6_chloro_1_3_5_triazin_2_ol
   }
 
   branch from thiamine_diphosphate side left {
-    thiamine_diphosphate
-    <-> . +co2 +4_carboxy_1_hydroxybutyryl_thpp +h
-    2_oxoadipate
-  }
-
-  branch from thiamine_diphosphate side right {
     thiamine_diphosphate
     <-> . +r_lipoamide +2_methyl_1_hydroxypropylthiamine_diphosphate +h
     s_8_2_methylpropanoyl_dihydrolipoamide
   }
 
-  branch from s_2_methylpropanoyl_dihydrolipoamide side left {
+  branch from s_2_methylpropanoyl_dihydrolipoamide side right {
     s_2_methylpropanoyl_dihydrolipoamide
     <-> ec_2_3_1_168 [2.3.1.168] +2_methylpropanoyl_coa +r_dihydrolipoamide
     coa
   }
 
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_74 [4.1.1.74] +compound_0066905
-    4_fluorobenzoylformate
-  }
-
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_74 [4.1.1.74] +4_methoxybenzaldehyde
-    4_methoxybenzoylformic_acid
+    <-> . +2_aminoethyl_phosphonate
+    2_amino_3_phosphonopropanoic_acid
   }
 
-  branch from s_8_2_methylbutanoyl_dihydrolipoamide side right {
+  branch from co2 side right {
+    co2
+    <-> . +styrene
+    3_isochromanone
+  }
+
+  branch from s_8_2_methylbutanoyl_dihydrolipoamide side left {
     s_8_2_methylbutanoyl_dihydrolipoamide
     <-> ec_2_3_1_168 [2.3.1.168] +2s_2_methylbutanoyl_coa +coa
     r_dihydrolipoamide
   }
 
-  branch from s_8_2_methylbutanoyl_dihydrolipoamide side left {
+  branch from s_8_2_methylbutanoyl_dihydrolipoamide side right {
     s_8_2_methylbutanoyl_dihydrolipoamide
     <-> ec_1_2_4_4 [1.2.4.4] +r_lipoamide +h +co2
     3_methyl_2_oxopentanoate

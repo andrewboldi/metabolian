@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-dehydroascorbic-acid-to-4z-7z-10z-13z-15e-17r "L-dehydroascorbic acid to (4Z,7Z,10Z,13Z,15E,17R,19…" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     l_dehydroascorbic_acid
@@ -18,43 +18,37 @@ pathway l-dehydroascorbic-acid-to-4z-7z-10z-13z-15e-17r "L-dehydroascorbic acid 
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_0_18_2_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    vancomycin
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    22_0_18_3_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +teicoplanin +phosphate +teicoplanin +h2o
+    atp
   }
 
   branch from l_ascorbate side left {
-    l_ascorbate
-    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
-    all_trans_violaxanthin
-  }
-
-  branch from l_ascorbate side right {
     l_ascorbate
     <-> ec_1_11_1_11 [1.11.1.11] +h +l_dehydroascorbic_acid
     monodehydro_l_ascorbate_radical
   }
 
+  branch from l_ascorbate side right {
+    l_ascorbate
+    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
+    all_trans_antheraxanthin
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_9 +methane +methanol +h2o
-    ubiquinone_9
+    <-> . +nadh +h +3_4_dichloroaniline +4_5_dichlorobenzene_1_2_diol +nad
+    nh4
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o
-    ubiquinone_10
-  }
-
-  branch from 4z_7z_10z_13z_15e_17r_19z_17_hydroperoxydocosah side left {
-    4z_7z_10z_13z_15e_17r_19z_17_hydroperoxydocosah
-    <-> . +17_r_hdohe +nadp +h2o
-    nadph
+    <-> . +h +3_4_dichloroaniline +nadph +nh4 +4_5_dichlorobenzene_1_2_diol
+    nadp
   }
 }

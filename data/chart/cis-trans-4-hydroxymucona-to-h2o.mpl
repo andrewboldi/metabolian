@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-trans-4-hydroxymucona-to-h2o "cis,trans-4-hydroxymucona… to H2O" {
-  spacing 260
+  spacing 254
 
   spine at 0,0 {
     cis_trans_4_hydroxymuconate_semialdehyde
@@ -30,32 +30,32 @@ pathway cis-trans-4-hydroxymucona-to-h2o "cis,trans-4-hydroxymucona… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +cyclohexanone +h2o
-    nitrocyclohexane
+    <-> . +gibberellin_a4 +nadph +nadp +h2o
+    16alpha_17_epoxy_gibberellin_a4
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_11 [1.13.11.11] +5_methyl_dl_tryptophan
-    5_methyl_n_formylkynurenine
+    <-> . +nadh +gibberellin_a4 +16alpha_17_epoxy_gibberellin_a4 +h2o
+    nad
   }
 
   branch from nadp side left {
     nadp
-    <-> . +1r_2s_1_2_dihydronaphthalene_1_2_diol +h +o2 +nadph +h2o
-    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
+    drimenol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +o2 +nadph +1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth +h2o
-    1s_2s_1_2_dihydronaphthalene_1_2_diol
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
+    3r_6e_nerolidol
   }
 
   branch from benzene_1_2_4_triol side left {
     benzene_1_2_4_triol
-    <-> ec_1_6_5_7 [1.6.5.7] +nadh +hydroxybenzoquinone +h
-    nad
+    <-> ec_1_6_5_7 [1.6.5.7] +hydroxybenzoquinone +h +nad
+    nadh
   }
 
   branch from benzene_1_2_4_triol side right {
@@ -66,25 +66,19 @@ pathway cis-trans-4-hydroxymucona-to-h2o "cis,trans-4-hydroxymucona… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_tryptophan +l_phenylalanine
-    phenylalanyl_tryptophanyl_leucine
+    <-> . +l_histidine +l_asparagine +l_valine
+    valyl_histidyl_asparagine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_glutamine +l_phenylalanine +l_tyrosine
-    phenylalanyl_tyrosinyl_glutamine
+    <-> . +l_leucine +l_valine +l_phenylalanine
+    valyl_leucyl_phenylalanine
   }
 
   branch from 4_nitrocatechol side left {
     4_nitrocatechol
     <-> . +nitrite +nadp +h2o +o2 +nadph
     hydroxybenzoquinone
-  }
-
-  branch from 4_nitrocatechol side right {
-    4_nitrocatechol
-    <-> . +nitrite +hydroxybenzoquinone +nad +h2o +o2
-    nadh
   }
 }

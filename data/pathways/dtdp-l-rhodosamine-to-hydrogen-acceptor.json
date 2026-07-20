@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dtdp-l-rhodosamine-to-hydrogen-acceptor",
   "name": "dTDP-β-L-rhodosamine to hydrogen acceptor",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 3-step route from dTDP-β-L-rhodosamine(1−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,41 +138,89 @@
       }
     },
     {
-      "id": "7_chloro_l_tryptophan",
-      "name": "7-chloro-L-tryptophan",
-      "short": "7-chloro-L-tryptoph…",
-      "formula": "C11H11ClN2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:58713"
-      }
-    },
-    {
-      "id": "monodechloroaminopyrrolnitrin",
-      "name": "monodechloroaminopyrrolnitrin",
-      "short": "monodechloroaminopy…",
-      "formula": "C10H9ClN2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:85785"
-      }
-    },
-    {
-      "id": "8_s_15_s_dihpete",
-      "name": "8(S),15(S)-DiHPETE",
-      "formula": "C20H31O6",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133899"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "8_s_15_s_dihete",
-      "name": "8(S),15(S)-DiHETE",
-      "formula": "C20H31O4",
+      "id": "3_disulfanyl_l_alanine",
+      "name": "3-disulfanyl-L-alanine",
+      "short": "3-disulfanyl-L-alan…",
+      "formula": "C3H5NOS2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61963"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "2_thiocytidine_5_monophosphate_1",
+      "name": "2-thiocytidine 5'-monophosphate(1−)",
+      "short": "2-thiocytidine…",
+      "formula": "C9H11N3O6PS",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133903"
+        "chebi": "CHEBI:141453"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "all_trans_3_4_didehydro_13_14_dihydroretinol",
+      "name": "all-trans-3,4-didehydro-13,14-dihydroretinol",
+      "short": "all-trans-3,4-dideh…",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142226"
+      }
+    },
+    {
+      "id": "all_trans_3_4_didehydroretinol",
+      "name": "all-trans-3,4-didehydroretinol",
+      "short": "all-trans-3,4-dideh…",
+      "formula": "C20H28O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132246"
       }
     }
   ],
@@ -340,11 +388,15 @@
     },
     {
       "id": "r4",
-      "name": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
-      "equation": "7-chloro-L-tryptophan + AH2 + O2 = monodechloroaminopyrrolnitrin + A + CO2 + 2 H2O",
+      "name": "cytidine(32) in tRNA + S-sulfanyl-L-cysteinyl-[cysteine desulfurase] + AH2 + ATP = 2-th...",
+      "equation": "cytidine(32) in tRNA + S-sulfanyl-L-cysteinyl-[cysteine desulfurase] + AH2 + ATP = 2-thiocytidine(32) in tRNA + L-cysteinyl-[cysteine desulfurase] + A + AMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "7_chloro_l_tryptophan",
+          "metabolite": "cytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_disulfanyl_l_alanine",
           "stoichiometry": 1
         },
         {
@@ -352,13 +404,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "monodechloroaminopyrrolnitrin",
+          "metabolite": "2_thiocytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_cysteine",
           "stoichiometry": 1
         },
         {
@@ -366,68 +422,68 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "co2",
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50952"
+        "rhea": "RHEA:57048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50952"
+            "id": "RHEA:57048"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(...",
-      "equation": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 A + 2 H2O",
+      "name": "all-trans-3,4-didehydro-13,14-dihydroretinol + A = all-trans-3,4-didehydroretinol + AH2",
+      "equation": "all-trans-3,4-didehydro-13,14-dihydroretinol + A = all-trans-3,4-didehydroretinol + AH2",
       "substrates": [
         {
-          "metabolite": "8_s_15_s_dihpete",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "8_s_15_s_dihete",
+          "metabolite": "all_trans_3_4_didehydro_13_14_dihydroretinol",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_3_4_didehydroretinol",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
-          "stoichiometry": 2
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:51120"
+        "rhea": "RHEA:57736"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:51120"
+            "id": "RHEA:57736"
           }
         ]
       }

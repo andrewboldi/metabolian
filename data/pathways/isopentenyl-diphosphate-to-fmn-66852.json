@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isopentenyl-diphosphate-to-fmn-66852",
+  "name": "isopentenyl diphosphate to FMN",
+  "category": "other",
+  "summary": "A 3-step route from isopentenyl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:66852"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:128769"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_pentaprenyl_diphosphate",
+      "name": "all-trans-pentaprenyl diphosphate",
+      "short": "all-trans-pentapren…",
+      "formula": "C25H41O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57907"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "stellata_2_6_19_triene",
+      "name": "stellata-2,6,19-triene",
+      "short": "stellata-2,6,19-tri…",
+      "formula": "C25H40",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138048"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "stellatate",
+      "name": "stellatate",
+      "formula": "C25H37O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167454"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_178",
+      "name": "stellata-2,6,19-triene synthase",
+      "ec": [
+        "4.2.3.178"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2E,6E,10E,14E)-geranylfarne...",
+      "equation": "2 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2E,6E,10E,14E)-geranylfarnesyl diphosphate + 2 diphosphate",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:66852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "stellata-2,6,19-triene synthase",
+      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = stellata-2,6,19-triene + diphosphate",
+      "ec": "4.2.3.178",
+      "substrates": [
+        {
+          "metabolite": "all_trans_pentaprenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stellata_2_6_19_triene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_178"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate +...",
+      "equation": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "stellata_2_6_19_triene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "stellatate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66712"
+          }
+        ]
+      }
+    }
+  ]
+}

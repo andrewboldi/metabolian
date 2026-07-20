@@ -1,0 +1,355 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-oxaloacetyl-coa",
+  "name": "H to Oxaloacetyl-CoA",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from H(+) to Oxaloacetyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR137381"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_deoxyguanosine",
+      "name": "2'-deoxyguanosine",
+      "formula": "C10H13N5O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM647"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "dgtp",
+      "name": "dGTP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM344"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103104"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "dgdp",
+      "name": "dGDP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM436"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM46"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "oxaloacetyl_coa",
+      "name": "Oxaloacetyl-CoA",
+      "formula": "C25H38N7O20P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM819706"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_32",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "ec": [
+        "4.1.1.32"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_18",
+      "name": "succinyl-CoA:acetate CoA-transferase",
+      "ec": [
+        "2.8.3.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR137381",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "2_deoxyguanosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR137381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "uridine/cytidine kinase",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR190906"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190906"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "ec": "4.1.1.32",
+      "substrates": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dgdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dgtp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR129496"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR129496"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "succinyl-CoA:acetate CoA-transferase",
+      "ec": "2.8.3.18",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR172267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172267"
+          }
+        ]
+      }
+    }
+  ]
+}

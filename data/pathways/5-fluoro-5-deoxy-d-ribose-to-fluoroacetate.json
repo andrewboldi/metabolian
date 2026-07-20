@@ -144,52 +144,50 @@
       }
     },
     {
-      "id": "9z_octadecenoyl_coa",
-      "name": "(9Z)-octadecenoyl-CoA",
-      "short": "octadecenoyl-CoA",
-      "formula": "C39H64N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1364155"
-      }
-    },
-    {
-      "id": "1_9z_octadecenoylglycerone_3_phosphate",
-      "name": "1-(9Z)-octadecenoylglycerone 3-phosphate",
-      "short": "1-(9Z)-octadecenoyl…",
-      "formula": "C21H37O7P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM32961"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "CoA",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM727276"
-      }
-    },
-    {
-      "id": "d_arabinose_5_phosphate",
-      "name": "D-arabinose 5-phosphate",
-      "short": "D-arabinose 5-P",
-      "formula": "C5H9O8P",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1137677"
-      }
-    },
-    {
-      "id": "d_glycero_d_ido_octulose_1_8_bisphosphate",
-      "name": "D-Glycero-D-ido-octulose 1,8-bisphosphate",
-      "short": "D-Glycero-D-ido-oct…",
-      "formula": "C8H18O14P2",
+      "id": "ubiquinol_2",
+      "name": "ubiquinol-2",
+      "formula": "C19H28O4",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM167560"
+        "chebi": "CHEBI:167578"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "ubiquinone_2",
+      "name": "ubiquinone-2",
+      "formula": "C19H26O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46372"
+      }
+    },
+    {
+      "id": "l_fucose_1_phosphate",
+      "name": "α-L-fucose 1-phosphate",
+      "short": "α-L-fucose 1-P",
+      "formula": "C6H13O8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6220"
+      }
+    },
+    {
+      "id": "s_lactaldehyde",
+      "name": "(S)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732880"
       }
     }
   ],
@@ -209,17 +207,17 @@
       ]
     },
     {
-      "id": "ec_2_3_1_42",
-      "name": "glycerone-phosphate O-acyltransferase",
+      "id": "ec_1_1_5_3",
+      "name": "glycerol-3-phosphate dehydrogenase",
       "ec": [
-        "2.3.1.42"
+        "1.1.5.3"
       ]
     },
     {
-      "id": "ec_4_1_2_13",
-      "name": "fructose-bisphosphate aldolase",
+      "id": "ec_4_1_2_17",
+      "name": "L-fuculose-phosphate aldolase",
       "ec": [
-        "4.1.2.13"
+        "4.1.2.17"
       ]
     }
   ],
@@ -395,11 +393,11 @@
     },
     {
       "id": "r5",
-      "name": "glycerone-phosphate O-acyltransferase",
-      "ec": "2.3.1.42",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "ec": "1.1.5.3",
       "substrates": [
         {
-          "metabolite": "9z_octadecenoyl_coa",
+          "metabolite": "ubiquinol_2",
           "stoichiometry": 1
         },
         {
@@ -409,74 +407,74 @@
       ],
       "products": [
         {
-          "metabolite": "1_9z_octadecenoylglycerone_3_phosphate",
+          "metabolite": "sn_glycerol_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "ubiquinone_2",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_1_42"
+          "enzyme": "ec_1_1_5_3"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR119102"
+        "metanetx": "MNXR144907"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR119102"
+            "id": "MNXR144907"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "fructose-bisphosphate aldolase",
-      "ec": "4.1.2.13",
+      "name": "L-fuculose-phosphate aldolase",
+      "ec": "4.1.2.17",
       "substrates": [
         {
-          "metabolite": "d_arabinose_5_phosphate",
+          "metabolite": "l_fucose_1_phosphate",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "products": [
         {
           "metabolite": "h",
-          "stoichiometry": 4
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "s_lactaldehyde",
+          "stoichiometry": 1
         },
         {
           "metabolite": "dihydroxyacetone_phosphate",
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "d_glycero_d_ido_octulose_1_8_bisphosphate",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_2_13"
+          "enzyme": "ec_4_1_2_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR129802"
+        "metanetx": "MNXR153529"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR129802"
+            "id": "MNXR153529"
           }
         ]
       }

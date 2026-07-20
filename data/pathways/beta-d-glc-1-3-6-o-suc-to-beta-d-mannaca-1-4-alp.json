@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "beta-d-glc-1-3-6-o-suc-to-beta-d-mannaca-1-4-alp",
   "name": "beta-D-Glc-(1->3)-6-O-suc… to beta-D-ManNAcA-(1->4)-alp…",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from beta-D-Glc-(1->3)-6-O-succinoyl-beta-D-Glc-(1->3)-beta-D-Glc-(1->6)-beta-D-Glc-(1->6)-beta-D-Glc-(1->4)-6-O-acetyl-beta-D-Glc-(1->4)-beta-D-Glc-(1->3)-alpha-D-Gal-PP-Und to beta-D-ManNAcA-(1->4)-alpha-D-GlcNAc-PP-Und, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -130,22 +130,21 @@
       }
     },
     {
+      "id": "ursocholate",
+      "name": "ursocholate",
+      "formula": "C24H39O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137880"
+      }
+    },
+    {
       "id": "adp",
       "name": "ADP",
       "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM40333"
-      }
-    },
-    {
-      "id": "13_16_19_docosatrienoic_acid",
-      "name": "13,16,19-Docosatrienoic acid",
-      "short": "13,16,19-Docosatrie…",
-      "formula": "C22H38O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:80549"
       }
     },
     {
@@ -167,13 +166,13 @@
       }
     },
     {
-      "id": "all_cis_docosa_7_10_13_16_tetraenoic_acid",
-      "name": "all-cis-docosa-7,10,13,16-tetraenoic acid",
-      "short": "all-cis-docosa-7,10…",
-      "formula": "C22H36O2",
+      "id": "ursodeoxycholic_acid_3_sulfate",
+      "name": "Ursodeoxycholic acid 3-sulfate",
+      "short": "Ursodeoxycholic…",
+      "formula": "C24H40O7S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:53487"
+        "chebi": "CHEBI:89499"
       }
     },
     {
@@ -197,23 +196,41 @@
       }
     },
     {
-      "id": "tetracosatetraenoic_acid_n_6",
-      "name": "tetracosatetraenoic acid n-6",
-      "short": "tetracosatetraenoic…",
-      "formula": "C24H40O2",
-      "charge": 0,
+      "id": "adenosine_3_5_bisphosphate",
+      "name": "adenosine 3',5'-bisphosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:187924"
+        "metanetx": "MNXM1103458"
       }
     },
     {
-      "id": "6z_9z_12z_15z_18z_tetracosapentaenoate",
-      "name": "(6Z,9Z,12Z,15Z,18Z)-tetracosapentaenoate",
-      "short": "(6Z,9Z,12Z,15Z,18Z)…",
-      "formula": "C24H37O2",
+      "id": "3_phosphoadenylyl_sulfate",
+      "name": "3'-phosphoadenylyl sulfate",
+      "short": "3'-phosphoadenylyl…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104555"
+      }
+    },
+    {
+      "id": "ursodeoxycholate",
+      "name": "ursodeoxycholate",
+      "formula": "C24H39O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77228"
+        "chebi": "CHEBI:78604"
+      }
+    },
+    {
+      "id": "20_hete_d6",
+      "name": "20-HETE-d6",
+      "formula": "C20H26D6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:180941"
       }
     }
   ],
@@ -405,8 +422,12 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR158336",
+      "name": "Reaction MNXR163170",
       "substrates": [
+        {
+          "metabolite": "ursocholate",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -416,21 +437,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "13_16_19_docosatrienoic_acid",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "ursocholate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "13_16_19_docosatrienoic_acid",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -441,24 +458,24 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR158336"
+        "metanetx": "MNXR163170"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158336"
+            "id": "MNXR163170"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR158343",
+      "name": "Reaction MNXR163173",
       "substrates": [
         {
-          "metabolite": "all_cis_docosa_7_10_13_16_tetraenoic_acid",
+          "metabolite": "ursodeoxycholic_acid_3_sulfate",
           "stoichiometry": 1
         },
         {
@@ -476,7 +493,7 @@
       ],
       "products": [
         {
-          "metabolite": "all_cis_docosa_7_10_13_16_tetraenoic_acid",
+          "metabolite": "ursodeoxycholic_acid_3_sulfate",
           "stoichiometry": 1
         },
         {
@@ -491,14 +508,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR158343"
+        "metanetx": "MNXR163173"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158343"
+            "id": "MNXR163173"
           }
         ]
       }
@@ -605,10 +622,20 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR158345",
+      "name": "Reaction MNXR163175",
       "substrates": [
         {
-          "metabolite": "tetracosatetraenoic_acid_n_6",
+          "metabolite": "adenosine_3_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ursodeoxycholic_acid_3_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_phosphoadenylyl_sulfate",
           "stoichiometry": 1
         },
         {
@@ -616,51 +643,29 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "tetracosatetraenoic_acid_n_6",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "ursodeoxycholate",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR158345"
+        "metanetx": "MNXR163175"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158345"
+            "id": "MNXR163175"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR158347",
+      "name": "Reaction MNXR163264",
       "substrates": [
-        {
-          "metabolite": "6z_9z_12z_15z_18z_tetracosapentaenoate",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -670,17 +675,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "20_hete_d6",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "6z_9z_12z_15z_18z_tetracosapentaenoate",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "20_hete_d6",
           "stoichiometry": 1
         },
         {
@@ -691,14 +700,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR158347"
+        "metanetx": "MNXR163264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR158347"
+            "id": "MNXR163264"
           }
         ]
       }

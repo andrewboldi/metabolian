@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-erythro-biopterin-to-nad "L-erythro-biopterin to NAD" {
-  spacing 274
+  spacing 250
 
   spine at 0,0 {
     l_erythro_biopterin
@@ -24,38 +24,26 @@ pathway l-erythro-biopterin-to-nad "L-erythro-biopterin to NAD" {
 
   branch from 5_6_7_8_tetrahydrobiopterin side left {
     5_6_7_8_tetrahydrobiopterin
-    <-> ec_1_1_1_153 [1.1.1.153] +nadp +h +nadph
-    6_pyruvoyl_5_6_7_8_tetrahydropterin
+    <-> ec_1_14_16_1 [1.14.16.1] +o2 +l_phenylalanine +tetrahydrobiopterin_4a_carbinolamine +h2o
+    l_tyrosine
   }
 
   branch from 5_6_7_8_tetrahydrobiopterin side right {
     5_6_7_8_tetrahydrobiopterin
-    <-> ec_1_1_1_153 [1.1.1.153] +nadp +h +nadph
-    6r_6_lactoyl_5_6_7_8_tetrahydropterin
+    <-> ec_1_14_16_1 [1.14.16.1] +o2 +4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob +l_tyrosine
+    l_phenylalanine
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_iii
+    <-> . +20r_22r_20_22_dihydroxycholesterol +h2o +h +o2 +nadph
+    cholest_5_en_3beta_22r_diol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +h +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +o2 +nadph +h2o
-    glyceollin_i
-  }
-
-  branch from 4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob side left {
-    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
-    <-> ec_1_14_16_1 [1.14.16.1] +5_6_7_8_tetrahydrobiopterin +o2 +l_tryptophan
-    5_hydroxy_l_tryptophan
-  }
-
-  branch from 4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob side right {
-    4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
-    <-> ec_1_14_16_1 [1.14.16.1] +5_6_7_8_tetrahydrobiopterin +o2 +l_phenylalanine
-    l_tyrosine
+    <-> . +h +o2 +nadph +11beta_hydroxyprogesterone +h2o
+    corticosterone
   }
 
   branch from 5_hydroxytryptophan side left {
@@ -66,14 +54,14 @@ pathway l-erythro-biopterin-to-nad "L-erythro-biopterin to NAD" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_2 [3.1.1.2] +acetate +hydroquinone
-    4_hydroxyphenylacetate
+    <-> . +l_leucine +l_arginine +l_phenylalanine
+    arginyl_leucyl_phenylalanine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +10r_hydroxy_11s_12s_epoxy_5z_8z_14z_eicosatrien +h
-    5z_8z_14z_11r_12r_10_11_12_trihydroxyicosa_5_8
+    <-> . +l_lysine +l_aspartate +l_arginine
+    arginyl_lysyl_aspartate
   }
 
   branch from l_erythro_7_8_dihydrobiopterin side right {
@@ -88,27 +76,15 @@ pathway l-erythro-biopterin-to-nad "L-erythro-biopterin to NAD" {
     6r_5_6_7_8_tetrahydrobiopterin
   }
 
-  branch from tetrahydrobiopterin_4a_carbinolamine side right {
-    tetrahydrobiopterin_4a_carbinolamine
-    <-> ec_1_14_16_1 [1.14.16.1] +5_6_7_8_tetrahydrobiopterin +o2 +l_tyrosine +h2o
-    l_phenylalanine
-  }
-
-  branch from tetrahydrobiopterin_4a_carbinolamine side left {
-    tetrahydrobiopterin_4a_carbinolamine
-    <-> . +6r_5_10_methylene_5_6_7_8_tetrahydrofolate +sapropterin +h
-    5_methyltetrahydrofolic_acid
-  }
-
   branch from nad side right {
     nad
-    <-> ec_1_1_1_158 [1.1.1.158] +nadh +h +udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
-    udp_n_acetyl_alpha_d_muramate
+    <-> . +nadh +co2 +udp_ribose +h +h2o
+    udp_alpha_d_glucuronate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_312 [1.1.1.312] +nadh +h +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h2o
-    2_hydroxy_5_carboxymethylmuconate_semialdehyde
+    <-> ec_1_1_1_415 [1.1.1.415] +nadh +h +narcotoline
+    narcotoline_hemiacetal
   }
 }

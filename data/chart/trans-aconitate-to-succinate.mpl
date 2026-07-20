@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trans-aconitate-to-succinate "trans-aconitate to succinate" {
-  spacing 252
+  spacing 246
 
   spine at 0,0 {
     trans_aconitate
@@ -32,25 +32,19 @@ pathway trans-aconitate-to-succinate "trans-aconitate to succinate" {
     s_methylbutanedioate_l_cysteinyl_2
   }
 
-  branch from itaconyl_coa side left {
-    itaconyl_coa
-    <-> ec_4_2_1_56 [4.2.1.56] +h2o
-    3s_citramalyl_coa
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_47 [1.14.11.47] +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +3s_citramalyl_coa
-    l_citramalate
+    <-> . +l_lysinium +akg +o2 +co2
+    4r_4_hydroxy_l_lysine
   }
 
-  branch from succinate side left {
-    succinate
-    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
-    3r_3_carboxy_3_hydroxypropanoyl_coa
-  }
-
-  branch from com_s_s_cob side right {
+  branch from com_s_s_cob side left {
     com_s_s_cob
     <-> ec_1_8_98_5 [1.8.98.5] +coenzyme_b +coenzyme_m +di_sulfido_diiron +hplus +di_sulfido_diiron
     h2

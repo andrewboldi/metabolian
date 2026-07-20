@@ -1,0 +1,270 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cortisol-to-nad",
+  "name": "cortisol to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from cortisol to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46644"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17650"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cortisol",
+      "name": "Cortisol (hydrocortisone)",
+      "short": "Cortisol (hydrocort…",
+      "formula": "C21H30O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17650"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_dihydrocortisol",
+      "name": "5β-dihydrocortisol",
+      "formula": "C21H32O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:732"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "tetrahydrocortisol",
+      "name": "tetrahydrocortisol",
+      "formula": "C21H34O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735651"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "cortol",
+      "name": "Cortol",
+      "formula": "C21H36O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:3898"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_50",
+      "name": "3alpha-hydroxysteroid 3-dehydrogenase (Si-specific)",
+      "ec": [
+        "1.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_53",
+      "name": "3alpha(or 20beta)-hydroxysteroid dehydrogenase",
+      "ec": [
+        "1.1.1.53"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cortisol + NADPH + H(+) = 5beta-dihydrocortisol + NADP(+)",
+      "equation": "cortisol + NADPH + H(+) = 5beta-dihydrocortisol + NADP(+)",
+      "substrates": [
+        {
+          "metabolite": "cortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_dihydrocortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3alpha-hydroxysteroid 3-dehydrogenase (Si-specific)",
+      "ec": "1.1.1.50",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_dihydrocortisol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tetrahydrocortisol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR109149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3alpha(or 20beta)-hydroxysteroid dehydrogenase",
+      "ec": "1.1.1.53",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetrahydrocortisol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cortol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR109151"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109151"
+          }
+        ]
+      }
+    }
+  ]
+}

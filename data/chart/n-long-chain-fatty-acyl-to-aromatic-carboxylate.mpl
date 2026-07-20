@@ -18,25 +18,25 @@ pathway n-long-chain-fatty-acyl-to-aromatic-carboxylate "N-(long-chain-fatty-acy
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_33 [2.6.1.33] +dtdp_4_amino_4_6_dideoxy_d_glucose +akg
-    dtdp_4_dehydro_6_deoxy_d_glucose
-  }
-
-  branch from glutamate side right {
-    glutamate
     <-> ec_2_6_1_2 [2.6.1.2] +akg +pyruvate
     alanine
   }
 
+  branch from glutamate side right {
+    glutamate
+    <-> ec_1_4_3_11 [1.4.3.11] +o2 +h2o +h2o2 +nh3
+    akg
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_22 [4.2.3.22] +fpp +h2o
-    1e_4s_5e_7r_germacra_1_10_5_dien_11_ol
+    <-> ec_3_6_1_67 [3.6.1.67] +7_8_dihydroneopterin_3_triphosphate +h2o +hplus
+    7_8_dihydroneopterin_3_phosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +dctp +h2o +hplus
-    2_deoxycytosine_5_monophosphate
+    <-> ec_4_2_3_38 [4.2.3.38] +fpp
+    e_r_bisabolene
   }
 }

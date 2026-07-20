@@ -20,38 +20,38 @@ pathway 6-r-hydroxy-tetradeca-2e-to-h2o "6(R)-hydroxy-tetradeca-2E… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
-    s_carnitine
+    <-> ec_1_10_3_2 [1.10.3.2] +gossypol +h2o
+    hemigossypol
   }
 
   branch from o2 side right {
     o2
-    <-> . +3r_3_hydroxy_4_oxobutanoate +nad +h2o +nadh +s_carnitine +h
-    trimethylamine
+    <-> ec_1_10_3_2 [1.10.3.2] +gossypol_6_6_dimethyl_ether +h2o
+    2_8_dihydroxy_4_isopropyl_3_methoxy_6_methyl_1_n
   }
 
   branch from coa side left {
     coa
-    <-> . +3_methylbutanoyl_coa +3_dodecanoyl_4_3_methylbutanoyl_sucrose
-    3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose
+    <-> ec_3_1_2_20 [3.1.2.20] +h +firefly_d_luciferin +h2o
+    d_firefly_luciferyl_coa
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +3_2_methylbutanoyl_3_4_di_3_methylbutanoyl_sucro
-    2_acetyl_3_2_methylbutanoyl_3_4_di_3_methylbutan
+    <-> ec_2_3_3_20 [2.3.3.20] +tetradecanoyl_coa +h2o +h
+    2r_2_dodecyl_3_oxohexadecanoate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2r_4r_neoisodihydrocarveol
+    <-> . +nadh +h +1r_4s_fenchone
+    1s_2s_4r_endo_fenchol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +1s_2r_4r_neoisodihydrocarveol
-    2e_geranial
+    <-> ec_1_2_1_5 [1.2.1.5] +nadh +s_malate +h +h2o
+    3r_3_hydroxy_4_oxobutanoate
   }
 
   branch from 8_s_hydroxy_hexadeca_2e_6e_10z_trienoate side left {
@@ -62,13 +62,13 @@ pathway 6-r-hydroxy-tetradeca-2e-to-h2o "6(R)-hydroxy-tetradeca-2E… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +dipalmitoyl_l_1_phosphatidyl_inositol +phosphate +dipalmitoyl_l_1_phosphatidyl_inositol
-    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    8_methyltetraphene_1_5_6_11_12_pentol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    dipalmitoyl_1_phosphatidyl_1d_myo_inositol_4_pho
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +dehydrorabelomycin +phosphate +dehydrorabelomycin
+    atp
   }
 }

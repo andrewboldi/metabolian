@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor "(3R,11Z,14Z)-3-hydroxyicoâ€¦ to hydrogen acceptor" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     3r_11z_14z_3_hydroxyicosadienoyl_coa
@@ -14,11 +14,5 @@ pathway 3r-11z-14z-3-hydroxyico-to-hydrogen-acceptor "(3R,11Z,14Z)-3-hydroxyicoâ
     11z_14z_icosadienoyl_coa
     <-> ec_1_14_19_37 [1.14.19.37] +hydrogen_donor +o2 -hydrogen_acceptor -h2o
     5z_11z_14z_icosatrienoyl_coa
-  }
-
-  branch from 11z_14z_icosadienoyl_coa side left {
-    11z_14z_icosadienoyl_coa
-    <-> . +diphosphate +h +amp +atp +coa
-    11_z_14_z_eicosadienoic_acid
   }
 }

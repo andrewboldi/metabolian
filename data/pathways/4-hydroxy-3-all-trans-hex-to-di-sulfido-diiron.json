@@ -143,32 +143,31 @@
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
+      "id": "g5_ppp5_aaca_mrna",
+      "name": "G5'ppp5'AACA-mRNA",
+      "formula": "C50H57N22O36P6",
+      "charge": -6,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:156484"
       }
     },
     {
-      "id": "n6_n6_dimethyl_l_lysine_1",
-      "name": "N6,N6-dimethyl-L-lysine(1+)",
-      "short": "N6,N6-dimethyl-L-ly…",
-      "formula": "C8H17N2O",
-      "charge": 1,
+      "id": "m7g5_ppp5_m2_aaca_mrna",
+      "name": "m7G5'ppp5'm2'AACA-mRNA",
+      "short": "m7G5'ppp5'm2'AACA-m…",
+      "formula": "C52H62N22O36P6",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:61976"
+        "chebi": "CHEBI:156483"
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
+      "id": "g5_ppp5_m2_aaca_mrna",
+      "name": "G5'ppp5'm2'AACA-mRNA",
+      "formula": "C51H59N22O36P6",
+      "charge": -6,
       "xrefs": {
-        "chebi": "CHEBI:61961"
+        "chebi": "CHEBI:156482"
       }
     }
   ],
@@ -199,6 +198,13 @@
       "name": "2-methoxy-6-polyprenylphenol 4-hydroxylase",
       "ec": [
         "1.14.15.46"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_375",
+      "name": "NNS virus cap methyltransferase",
+      "ec": [
+        "2.1.1.375"
       ]
     }
   ],
@@ -413,54 +419,60 @@
     },
     {
       "id": "r5",
-      "name": "N(6)-methyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-l...",
-      "equation": "N(6)-methyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "NNS virus cap methyltransferase",
+      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + 2 S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.375",
       "substrates": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "g5_ppp5_aaca_mrna",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "m7g5_ppp5_m2_aaca_mrna",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_375"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60300"
+        "rhea": "RHEA:65376"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60300"
+            "id": "RHEA:65376"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-...",
-      "equation": "N(6),N(6)-dimethyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-ade...",
+      "equation": "a 5'-end (5'-triphosphoguanosine)-adenylyl-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-methionine = a 5'-end (5'-triphosphoguanosine)-(2'-O-methyladenylyl)-adenylyl-cytidylyl-adenosine in mRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "n6_n6_dimethyl_l_lysine_1",
+          "metabolite": "g5_ppp5_aaca_mrna",
           "stoichiometry": 1
         },
         {
@@ -470,7 +482,7 @@
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "g5_ppp5_m2_aaca_mrna",
           "stoichiometry": 1
         },
         {
@@ -485,14 +497,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:60304"
+        "rhea": "RHEA:65380"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60304"
+            "id": "RHEA:65380"
           }
         ]
       }

@@ -19,13 +19,13 @@ pathway rctr1-to-7-oxoresolvin-d2 "RCTR1 to 7-oxoresolvin D2" {
   branch from glutathione side left {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_4_aci_nitrobutane
+    5_methylthiopentanonitrile_oxide
   }
 
   branch from glutathione side right {
     glutathione
     <-> . +z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa +h2o
-    1_methylsulfanyl_5_aci_nitropentane
+    1_methylsulfanyl_6_aci_nitrohexane
   }
 
   branch from resolvin_d2 side left {

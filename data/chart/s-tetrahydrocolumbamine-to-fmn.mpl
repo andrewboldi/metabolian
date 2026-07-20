@@ -24,25 +24,25 @@ pathway s-tetrahydrocolumbamine-to-fmn "(S)-tetrahydrocolumbamine to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_164 [1.14.14.164] +fraxetin +fmnh2 +o2 +h2o +hplus
-    sideretin_reduced_form
+    <-> . +ganoderate_tr +fmnh2 +o2 +h2o +hplus
+    ganoderate_jc
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_165 [1.14.14.165] +indole_3_carbonyl_nitrile +fmnh2 +o2 +h2o +hplus
-    4_hydroxy_indole_3_carbonyl_nitrile
+    <-> . +22s_22_hydroxycampest_4_en_3_one +fmnh2 +o2 +h2o +hplus
+    22r_23r_22_23_dihydroxycampest_4_en_3_one
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_357 [2.1.1.357] +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +g5_ppp5_m2_aaca_mrna +sam
+    m7g5_ppp5_m2_aaca_mrna
   }
 
   branch from sah side left {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> ec_2_1_1_374 [2.1.1.374] +3_bromo_2_heptyl_1_hydroxy_4_1h_quinolinone +sam +hplus
+    3_bromo_2_heptyl_1_methoxy_4_1h_quinolinone
   }
 }

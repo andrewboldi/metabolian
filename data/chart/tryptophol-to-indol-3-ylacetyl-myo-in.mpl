@@ -28,7 +28,7 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
 
   branch from indole_3_acetate side right {
     indole_3_acetate
-    <-> ec_6_2_1_75 [6.2.1.75] +atp +coa +amp +ppi
+    <-> ec_2_8_3_28 [2.8.3.28] +succinyl_coa +succinate
     indol_3_ylacetyl_coa
   }
 
@@ -40,13 +40,13 @@ pathway tryptophol-to-indol-3-ylacetyl-myo-in "tryptophol to (indol-3-ylacetyl)-
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_117 [3.2.1.117] +r_amygdalin +h2o
-    r_prunasin
+    <-> ec_1_1_1_47 [1.1.1.47] +nadp +nadph +hplus
+    d_glucono_1_5_lactone
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_1_47 [1.1.1.47] +nad +nadh +hplus
-    d_glucono_1_5_lactone
+    <-> ec_2_7_1_41 [2.7.1.41] +d_glucopyranose_1_phosphate
+    d_glucose_1_6_bisphosphate
   }
 }

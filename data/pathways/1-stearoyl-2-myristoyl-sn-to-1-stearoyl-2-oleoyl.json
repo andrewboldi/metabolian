@@ -150,12 +150,23 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
+      "id": "1_2_di_o_myristoyl_sn_glycero_3_phosphocholine",
+      "name": "1,2-di-O-myristoyl-sn-glycero-3-phosphocholine",
+      "short": "1,2-di-O-myristoyl-…",
+      "formula": "C36H72NO8P",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57618"
+        "chebi": "CHEBI:45240"
+      }
+    },
+    {
+      "id": "1_myristoyl_sn_glycero_3_phosphocholine",
+      "name": "1-myristoyl-sn-glycero-3-phosphocholine",
+      "short": "1-myristoyl-sn-glyc…",
+      "formula": "C22H46NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64489"
       }
     },
     {
@@ -168,42 +179,13 @@
       }
     },
     {
-      "id": "13_hydroxytetradecanoate",
-      "name": "13-hydroxytetradecanoate",
-      "short": "13-hydroxytetradeca…",
-      "formula": "C14H27O3",
+      "id": "2r_2_hydroperoxytetradecanoate",
+      "name": "(2R)-2-hydroperoxytetradecanoate",
+      "short": "2-hydroperoxytetrad…",
+      "formula": "C14H27O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:132031"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
-      "name": "1-tetradecanoyl-2-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-tetradecanoyl-2-[…",
-      "formula": "C40H76NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:86094"
-      }
-    },
-    {
-      "id": "2_linoleoyl_sn_glycero_3_phosphocholine",
-      "name": "2-linoleoyl-sn-glycero-3-phosphocholine",
-      "short": "2-linoleoyl-sn-glyc…",
-      "formula": "C26H50NO7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:76084"
+        "chebi": "CHEBI:149617"
       }
     },
     {
@@ -217,22 +199,48 @@
       }
     },
     {
-      "id": "linoleoyl_coa",
-      "name": "linoleoyl-CoA",
-      "formula": "C39H62N7O17P3S",
-      "charge": -4,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57383"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
-      "name": "1-stearoyl-2-linoleoyl-sn-glycero-3-phosphate",
-      "short": "1-stearoyl-2-linole…",
-      "formula": "C39H71O8P",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:77098"
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     },
     {
@@ -265,7 +273,22 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_92",
+      "name": "fatty acid alpha-dioxygenase",
+      "ec": [
+        "1.13.11.92"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_1",
+      "name": "EC 3.6.3.1",
+      "ec": [
+        "3.6.3.1"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -476,33 +499,25 @@
     },
     {
       "id": "r6",
-      "name": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate...",
-      "equation": "tetradecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 13-hydroxytetradecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "1,2-ditetradecanoyl-sn-glycero-3-phosphocholine + H2O = 1-tetradecanoyl-sn-glycero-3-ph...",
+      "equation": "1,2-ditetradecanoyl-sn-glycero-3-phosphocholine + H2O = 1-tetradecanoyl-sn-glycero-3-phosphocholine + tetradecanoate + H(+)",
       "substrates": [
         {
-          "metabolite": "tetradecanoate",
+          "metabolite": "1_2_di_o_myristoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "13_hydroxytetradecanoate",
+          "metabolite": "1_myristoyl_sn_glycero_3_phosphocholine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "tetradecanoate",
           "stoichiometry": 1
         },
         {
@@ -513,57 +528,55 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:50096"
+        "rhea": "RHEA:54456"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50096"
+            "id": "RHEA:54456"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 2-(9Z,12...",
-      "equation": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + tetradecanoate + H(+)",
+      "name": "fatty acid alpha-dioxygenase",
+      "equation": "tetradecanoate + O2 = (2R)-2-hydroperoxytetradecanoate",
+      "ec": "1.13.11.92",
       "substrates": [
-        {
-          "metabolite": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_linoleoyl_sn_glycero_3_phosphocholine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "tetradecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "o2",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_2_hydroperoxytetradecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_92"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:54388"
+        "rhea": "RHEA:63856"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54388"
+            "id": "RHEA:63856"
           }
         ]
       }
@@ -609,39 +622,56 @@
     },
     {
       "id": "r9",
-      "name": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2...",
-      "equation": "1-octadecanoyl-sn-glycero-3-phosphate + (9Z,12Z)-octadecadienoyl-CoA = 1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + CoA",
+      "name": "Reaction MNXR174671",
+      "ec": "3.6.3.1",
       "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "1_stearoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "linoleoyl_coa",
+          "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "coa",
+          "metabolite": "1_stearoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:55304"
+        "metanetx": "MNXR174671"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
-            "db": "Rhea",
-            "id": "RHEA:55304"
+            "db": "MetaNetX",
+            "id": "MNXR174671"
           }
         ]
       }

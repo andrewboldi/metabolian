@@ -18,25 +18,25 @@ pathway desferrioxamine-e-to-diphosphate "desferrioxamine E to diphosphate" {
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +n_3_fumaramoyl_s_2_3_diaminopropanoyl_adenylate +h
-    n3_fumaramoyl_s_2_3_diaminopropanoic_acid
+    <-> . +diphosphate +indole_3_acetyl_l_valine +amp +indol_3_yl_acetate
+    l_valine
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +quinoxaline_2_carboxyl_adenylate
-    quinoxaline_2_carboxylic_acid
+    <-> . +diphosphate +indole_3_acetyl_l_phenylalanine +amp +l_phenylalanine
+    indol_3_yl_acetate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_200 [4.2.3.200] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    beta_pinacene
+    <-> . +spectinomycin +atp
+    9_o_adenylylspectinomycin
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_148 [2.5.1.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadph +hplus +nadp
-    lycopaoctaene
+    <-> . +streptomycin +atp
+    6_o_adenylylstreptomycin
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sucrose-to-h2o-null "sucrose to H2O" {
-  spacing 284
+  spacing 278
 
   spine at 0,0 {
     sucrose
@@ -20,37 +20,31 @@ pathway sucrose-to-h2o-null "sucrose to H2O" {
 
   branch from 1_f_beta_d_fructosylsucrose side left {
     1_f_beta_d_fructosylsucrose
-    <-> ec_3_2_1_80 [3.2.1.80] +sucrose +h2o
-    beta_d_fructose
-  }
-
-  branch from 1_f_beta_d_fructosylsucrose side right {
-    1_f_beta_d_fructosylsucrose
     <-> ec_3_2_1_26 [3.2.1.26] +sucrose +h2o
     keto_d_fructose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    actinorhodin_intermediate
-  }
-
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    deacetoxycephalosporin_c
+    <-> . +1_17_dioxo_2_3_seco_androsta_4_en_3_oyl_coa
+    4_hydroxy_1_17_dioxo_2_3_seco_androstan_3_oyl_co
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    enviomycin
+  branch from h2o side left {
+    h2o
+    <-> . +tricholomic_acid
+    3r_3_n5_dihydroxy_l_glutamine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    bambermycin
+    <-> ec_7_6_2_3 [7.6.2.3] +h +adp +phosphate +h2o
+    arsenic_phytochelatin_3
+  }
+
+  branch from atp side left {
+    atp
+    <-> ec_7_3_2_7 [7.3.2.7] +h +adp +phosphate +h2o
+    antimonous_acid
   }
 }

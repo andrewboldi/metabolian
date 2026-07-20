@@ -24,38 +24,38 @@ pathway 3-s-hydroxy-10-13-16-all-to-h2o "3(S)-hydroxy-10,13,16-all… to H2O" {
 
   branch from h side right {
     h
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +1_2_dihydroxy_7_hydroxymethylnaphthalene +nad
-    cis_1_2_dihydroxy_1_2_dihydro_7_hydroxymethylnap
+    <-> . +nadh +4_amino_2_6_dinitrotoluene +nad +h2o
+    2_4_diamino_6_nitrotoluene
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +2_methylnaphthalene +o2 +nad
-    1r_2s_7_methyl_1_2_dihydronaphthalene_1_2_diol
+    <-> . +nadh +4_amino_2_6_dinitrotoluene +nad +h2o
+    4_amino_2_hydroxylamino_6_nitrotoluene
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +9_hydroxybenzo_a_pyrene_4_5_oxide +nadp +h2o +h +o2
-    9_hydroxybenzo_a_pyrene
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +nadp +h2o +h +o2
+    tamoxifen
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadp +h2o
-    2_2_dichloroacetaldehyde
+    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadp +h2o
+    alpha_hydroxy_n_desmethyltamoxifen
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +h2o
-    1_1_dichloroethylene_epoxide
+    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2 +nadph +h2o
+    4_hydroxycyclophosphamide
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_1_dichloroethene +o2 +nadph +h2o
-    chloroacetyl_chloride
+    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadph +h2o
+    aldophosphamide
   }
 
   branch from trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co side right {
@@ -66,13 +66,13 @@ pathway 3-s-hydroxy-10-13-16-all-to-h2o "3(S)-hydroxy-10,13,16-all… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
-    1r_2s_naphthalene_1_2_oxide
+    <-> . +nadh +h +citronellic_acid +nad
+    s_citronellal
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_2_dihydronaphthalene_1_2_diol
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_3_5_4_5 [3.5.4.5] +h +5_deoxy_5_fluorocytidine +nh4
+    doxifluridine
   }
 }

@@ -24,19 +24,19 @@ pathway butan-1-ol-to-diphosphate "butan-1-ol to diphosphate" {
 
   branch from butyryl_coa side right {
     butyryl_coa
-    <-> . +hco3 +atp +adp +pi +hplus
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
     r_ethylmalonyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2s_3r_11s_aszonalenin
+    <-> . +fpp
+    silphinene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +preechinulin +dmapp
-    tardioxopiperazine_b
+    <-> . +5_end_ribonucleotide_5_triphosphate_4 +h2o +hplus
+    5_end_ribonucleotide_2
   }
 }

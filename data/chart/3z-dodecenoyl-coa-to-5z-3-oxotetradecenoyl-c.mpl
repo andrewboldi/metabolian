@@ -18,26 +18,26 @@ pathway 3z-dodecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(3Z)-dodecenoyl-CoA to (5Z
 
   branch from coa side left {
     coa
-    <-> . +9z_12z_18_hydroxyoctadecadienoyl_coa +tri_acyl_estolide
-    tetra_acyl_estolide
+    <-> . +acetyl_coa +tryptoquialanol
+    tryptoquialanine_a
   }
 
   branch from coa side right {
     coa
-    <-> . +malonyl_coa +2_5_dimethyl_4_oxo_4_5_dihydro_3_furanyl_beta_d
-    malonyl_furaneol_glucopyranoside
+    <-> . +benzoyl_coa +pyrrothine
+    benzoyl_pyrrothine
   }
 
   branch from o2 side left {
     o2
-    <-> . +8_o_methyl_5_10_dihydroxy_fusarubinaldehdye +nadp +h2o +h +nadph
-    8_o_methyl_5_hydroxy_fusarubinaldehyde
+    <-> ec_1_21_3_6 [1.21.3.6] +coreopsin +h2o
+    aureusidin_6_o_glucoside
   }
 
   branch from o2 side right {
     o2
-    <-> . +7_hydroxy_pre_bikaverin +nadp +h2o +h +nadph
-    pre_bikaverin
+    <-> . +all_trans_beta_carotene +ionone
+    4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
   }
 
   branch from 2e_5z_tetradecadienoyl_coa side left {
@@ -48,13 +48,13 @@ pathway 3z-dodecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(3Z)-dodecenoyl-CoA to (5Z
 
   branch from h2o side right {
     h2o
-    <-> . +2r_3_9s_9ar_9_hydroxy_2_2_dimethyl_3_oxo_1h_2h
-    deoxynortryptoquialanone
+    <-> . +2_n_n_dihydroxynocardicin_c +h
+    nocardicin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_57 [3.2.1.57] +isomaltose +glucose
-    2r_3s_4s_5r_6s_2_hydroxymethyl_6_2r_3s_4s_5r_6r
+    <-> ec_3_6_1_63 [3.6.1.63] +diphosphate +alpha_d_ribose_1_2_n_acetamidomethylphosphonate +h
+    alpha_d_ribose_1_acetamidomethylphosphonate_5_tr
   }
 }

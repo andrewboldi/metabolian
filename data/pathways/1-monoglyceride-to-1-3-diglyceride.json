@@ -1,0 +1,206 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-monoglyceride-to-1-3-diglyceride",
+  "name": "1-monoglyceride to 1,3-diglyceride",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 1-monoglyceride to 1,3-diglyceride, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:77571"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35759"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_monoglyceride",
+      "name": "1-monoglyceride",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35759"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "1_3_diglyceride",
+      "name": "1,3-diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47777"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17855"
+      }
+    },
+    {
+      "id": "9_hydroxyoctadecanoate",
+      "name": "9-hydroxyoctadecanoate",
+      "short": "9-hydroxyoctadecano…",
+      "formula": "C18H35O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136286"
+      }
+    },
+    {
+      "id": "9_acyloxy_stearate",
+      "name": "9-(acyloxy)-stearate",
+      "formula": "C19H34O4R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:228230"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "a 1-acylglycerol + an acyl-CoA = a 1,3-diacylglycerol + CoA",
+      "equation": "a 1-acylglycerol + an acyl-CoA = a 1,3-diacylglycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_monoglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:77571"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77571"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "a 1,3-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "equation": "a 1,3-diacylglycerol + an acyl-CoA = a triacylglycerol + CoA",
+      "substrates": [
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:78179"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78179"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 1,3-diacylg...",
+      "equation": "9-hydroxy-octadecanoate + a triacylglycerol = 9-(acyloxy)-octadecanoate + a 1,3-diacylglycerol",
+      "substrates": [
+        {
+          "metabolite": "9_hydroxyoctadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_acyloxy_stearate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77987"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77987"
+          }
+        ]
+      }
+    }
+  ]
+}

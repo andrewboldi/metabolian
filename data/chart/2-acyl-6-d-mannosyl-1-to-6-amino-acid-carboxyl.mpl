@@ -28,25 +28,25 @@ pathway 2-acyl-6-d-mannosyl-1-to-6-amino-acid-carboxyl "2-acyl-6-[α-D-mannosyl-
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +n_fatty_acyl_l_serine +h2o
-    serine
+    <-> . +n_fatty_acyl_l_glutamine +h2o
+    glutamine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_fatty_acyl_l_asparagine +h2o
-    l_asparagine
+    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
+    1_acyl_sn_glycero_3_phospholipid
   }
 
   branch from phosphoethanolamine side left {
     phosphoethanolamine
-    <-> . +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    1_2_dioleoyl_sn_glycerol
+    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
+    1_palmitoyl_2_oleoyl_sn_glycerol
   }
 
   branch from phosphoethanolamine side right {
     phosphoethanolamine
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_palmitoyl_2_oleoyl_sn_glycerol
+    <-> ec_3_6_1_53 [3.6.1.53] +cdp_ethanolamine +h2o +hplus
+    cytidine_5_monophosphate
   }
 }

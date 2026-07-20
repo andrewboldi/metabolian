@@ -101,41 +101,50 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "kanamycin_a",
+      "name": "kanamycin A",
+      "formula": "C18H40N4O11",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:58214"
       }
     },
     {
-      "id": "cadinol",
-      "name": "(+)-δ-cadinol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:184119"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "4_guanylylkanamycin_a",
+      "name": "4'-guanylylkanamycin A",
+      "short": "4'-guanylylkanamyci…",
+      "formula": "C28H51N9O18P",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:233207"
       }
     },
     {
-      "id": "araneosene",
-      "name": "δ-araneosene",
-      "formula": "C20H32",
-      "charge": 0,
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:192991"
+        "chebi": "CHEBI:61402"
+      }
+    },
+    {
+      "id": "4_inosinylylkanamycin_a",
+      "name": "4'-inosinylylkanamycin A",
+      "short": "4'-inosinylylkanamy…",
+      "formula": "C28H50N8O18P",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:233208"
       }
     },
     {
@@ -163,20 +172,6 @@
       "name": "lycopene elongase/hydratase (flavuxanthin-forming)",
       "ec": [
         "2.5.1.149"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_212",
-      "name": "(+)-delta-cadinol synthase",
-      "ec": [
-        "4.2.3.212"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_215",
-      "name": "delta-araneosene synthase",
-      "ec": [
-        "4.2.3.215"
       ]
     }
   ],
@@ -327,22 +322,21 @@
     },
     {
       "id": "r4",
-      "name": "(+)-delta-cadinol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-delta-cadinol + diphosphate",
-      "ec": "4.2.3.212",
+      "name": "kanamycin A + GTP = 4'-guanylylkanamycin A + diphosphate",
+      "equation": "kanamycin A + GTP = 4'-guanylylkanamycin A + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "kanamycin_a",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "gtp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cadinol",
+          "metabolite": "4_guanylylkanamycin_a",
           "stoichiometry": 1
         },
         {
@@ -350,40 +344,38 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_212"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:78271"
+        "rhea": "RHEA:83695"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78271"
+            "id": "RHEA:83695"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "delta-araneosene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = delta-araneosene + diphosphate",
-      "ec": "4.2.3.215",
+      "name": "kanamycin A + ITP = 4'-inosinylylkanamycin A + diphosphate",
+      "equation": "kanamycin A + ITP = 4'-inosinylylkanamycin A + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "kanamycin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "itp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "araneosene",
+          "metabolite": "4_inosinylylkanamycin_a",
           "stoichiometry": 1
         },
         {
@@ -391,22 +383,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_215"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78275"
+        "rhea": "RHEA:83699"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78275"
+            "id": "RHEA:83699"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-hydroxylamino-n-n-dim-to-4-hydroxyphenylglyoxy "4-(hydroxylamino)-N,N-dim… to 4-hydroxyphenylglyoxylate" {
-  spacing 238
+  spacing 232
 
   spine at 0,0 {
     4_hydroxylamino_n_n_dimethylaniline
@@ -16,21 +16,15 @@ pathway 4-hydroxylamino-n-n-dim-to-4-hydroxyphenylglyoxy "4-(hydroxylamino)-N,N-
     h
   }
 
-  branch from 4_hydroxybenzaldehyde side left {
-    4_hydroxybenzaldehyde
-    <-> ec_4_1_2_47 [4.1.2.47] +cyanide +h
-    4_hydroxymandelonitrile
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    pmf
   }
 
   branch from h side right {
     h
-    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +s_lactate +lactoyl_coa
-    acetate
-  }
-
-  branch from h side left {
-    h
-    <-> . +dtdp_beta_l_rhamnose
-    dtdp_l_dihydrostreptose
+    <-> . +pmf +adp +phosphate +pmf +h2o
+    atp
   }
 }

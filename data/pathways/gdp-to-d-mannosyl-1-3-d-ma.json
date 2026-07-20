@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "gdp-to-d-mannosyl-1-3-d-ma",
   "name": "GDP to α-D-mannosyl-(1→3)-α-D-ma…",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 4-step route from GDP to α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-α-D-mannosyl-(1→3)-N-acetyl-α-D-glucosaminyl-1-diphospho-ditrans,polycis-undecaprenol(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -109,26 +109,6 @@
       }
     },
     {
-      "id": "beta_glc_1_4_kdo_2_4_alpha_man_1_5_kdo_2_6_lipid",
-      "name": "beta-Glc-(1->4)-Kdo-(2->4)-[alpha-Man-(1->5)]-Kdo-(2->6)-[lipid A] (Brucella)",
-      "short": "beta-Glc-(1->4)-Kdo…",
-      "formula": "C144H260N4O48P2",
-      "charge": -6,
-      "xrefs": {
-        "metanetx": "MNXM1132963"
-      }
-    },
-    {
-      "id": "beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella",
-      "name": "beta-Glc-(1->4)-Kdo-(2->4)-Kdo-(2->6)-[lipid A] (Brucella)",
-      "short": "beta-Glc-(1->4)-Kdo…",
-      "formula": "C138H250N4O43P2",
-      "charge": -6,
-      "xrefs": {
-        "metanetx": "MNXM1132964"
-      }
-    },
-    {
       "id": "alpha_d_mannosyl_1_4_3_o_methyl_alpha_d_mannosyl",
       "name": "alpha-D-mannosyl-(1->4)-[3-O-methyl-alpha-D-mannosyl)-(1->4)-]3-1-O,3-O-dimethyl-alpha-D-mannose",
       "short": "alpha-D-mannosyl-(1…",
@@ -146,6 +126,34 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM1560064"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "GMP",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1101285"
+      }
+    },
+    {
+      "id": "d_mannose_1_phosphate",
+      "name": "D-Mannose 1-phosphate",
+      "short": "D-Mannose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560677"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
       }
     },
     {
@@ -385,48 +393,6 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR193974",
-      "substrates": [
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_glc_1_4_kdo_2_4_alpha_man_1_5_kdo_2_6_lipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gdp_alpha_d_mannose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "beta_glc_1_4_kdo_2_4_kdo_2_6_lipid_a_brucella",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR193974"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR193974"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "MMP alpha-(1->4)-mannosyltransferase",
       "ec": "2.4.1.393",
       "substrates": [
@@ -459,7 +425,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR200350"
       },
@@ -469,6 +435,48 @@
           {
             "db": "MetaNetX",
             "id": "MNXR200350"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR204927",
+      "substrates": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_alpha_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR204927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204927"
           }
         ]
       }

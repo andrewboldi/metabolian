@@ -20,25 +20,25 @@ pathway d-glucopyranose-to-1-o-galloyl-beta-d-glucose "D-glucopyranose to 1-O-ga
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +h2o
-    d_maltose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o
+    2_o_beta_d_glucopyranosyl_beta_d_glucopyranose
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> ec_3_2_1_21 [3.2.1.21] +h2o
+    beta_d_glcp_1_6_beta_d_glcp
   }
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_15z_tetratriacontadienoylpantetheine_4_ph +nad
-    o_s_15z_tetratriacontenoylpantetheine_4_phosphor
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +nad
+    r_2_hexanol
   }
 
   branch from h side right {
     h
-    <-> . +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +nad +o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri
-    nadh
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +s_2_methylbutanal +nad
+    s_2_methylbutan_1_ol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion "1-palmitoyl-2-azelaoyl-sn… to fatty acid anion" {
-  spacing 236
+  spacing 212
 
   spine at 0,0 {
     1_palmitoyl_2_azelaoyl_sn_glycero_3_phosphocholi
@@ -26,14 +26,14 @@ pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion "1-palmitoyl-2-azelaoyl-sn
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_palmitoyl_sn_glycerol_3_phosphate +h2o +hplus
-    sn_glycerol_3_phosphate
+    <-> . +n_palmitoyl_l_phenylalanine +h2o
+    l_phenylalanine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_hexadecanoyl_2_octadecanoyl_sn_glycero_3_phosp +h2o +hplus
-    2_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phospho_1_sn_g +h2o +hplus
+    2_oleoyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from n_hexadecanoylsphinganine side left {
@@ -50,50 +50,26 @@ pathway 1-palmitoyl-2-azelaoyl-sn-to-fatty-acid-anion "1-palmitoyl-2-azelaoyl-sn
 
   branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
     1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
-    1_acyl_sn_glycero_3_phosphoethanolamine
     <-> . +palmitoyl_coa +coa
     1_acyl_2_palmitoyl_sn_glycero_3_phosphoethanolam
   }
 
-  branch from 1_2_diglyceride side left {
-    1_2_diglyceride
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +triglyceride
-    2_o_acyl_3_o_d_galactosyl_sn_glycerol
-  }
-
-  branch from 1_2_diglyceride side right {
-    1_2_diglyceride
-    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +triglyceride
-    1_acyl_3_o_d_galactosyl_sn_glycerol
+  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
+    1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +stearoyl_coa +coa
+    1_acyl_2_stearoyl_sn_glycero_3_phosphoethanolami
   }
 
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
-    1_acyl_sn_glycero_3_phospholipid
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    2_o_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
-    a_2_acyl_sn_glycero_3_phospholipid
-  }
-
-  branch from triglyceride side left {
-    triglyceride
-    <-> . +9_hydroxyoctadecanoate +2_3_diacyl_sn_glycerol
-    9_acyloxy_stearate
-  }
-
-  branch from triglyceride side right {
-    triglyceride
-    <-> . +9_hydroxyoctadecanoate +9_acyloxy_stearate
-    1_3_diglyceride
+    <-> . +1_2_diacyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    1_acyl_3_o_d_galactosyl_sn_glycerol
   }
 
   branch from diglyceride side left {

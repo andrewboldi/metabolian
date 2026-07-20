@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopenicillin-n-to-adp "isopenicillin N to ADP" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     isopenicillin_n
@@ -30,31 +30,25 @@ pathway isopenicillin-n-to-adp "isopenicillin N to ADP" {
 
   branch from coa side left {
     coa
-    <-> . +benzoyl_holothin +benzoyl_coa
-    holothin
+    <-> . +2_aminobenzoylacetyl_coa
+    4_hydroxy_2_quinolone
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +15_o_deacetylcalonectrin
-    calonectrin
-  }
-
-  branch from n_acetyl_l_2_aminoadipic_acid_6_phosphate side left {
-    n_acetyl_l_2_aminoadipic_acid_6_phosphate
-    <-> . +h +n_acetyl_l_2_aminoadipate_semialdehyde +nadp +phosphate
-    nadph
-  }
-
-  branch from adp side right {
-    adp
-    <-> ec_3_1_3_5 [3.1.3.5] +diphosphate +h2o
-    adenosine
+    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_valyl_group
+    n_acetyl_l_valyl
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_1_20 [2.7.1.20] +vidarabine_phosphate_usan +h +atp
-    adenine_arabinoside
+    <-> ec_2_7_1_21 [2.7.1.21] +acyclovir +h +atp
+    acyclovir_monophosphate
+  }
+
+  branch from adp side right {
+    adp
+    <-> ec_2_7_1_21 [2.7.1.21] +h +3_azido_3_deoxythymidine_5_phosphate +atp
+    zidovudine
   }
 }

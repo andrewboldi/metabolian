@@ -18,25 +18,25 @@ pathway 20-deoxo-20-dihydro-12-13-to-h2o "20-deoxo-20-dihydro-12,13… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_51 [1.3.1.51] +2_hydroxygenistein +h +nadph
-    dalbergioidin
+    <-> ec_1_3_1_94 [1.3.1.94] +h +di_trans_poly_cis_polyprenol_c80 +nadph
+    c80_dolichol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +coumarin +nadph
-    3_4_dihydrocoumarin
+    <-> ec_1_1_1_274 [1.1.1.274] +ethyl_2r_methyl_3s_hydroxybutanoate +h +nadph
+    ethyl_2_methylacetoacetate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3s_hydroxyadipyl_coa +h
-    5_oxo_furan_2_acetyl_coa
+    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose_6_phosphate +methanol
+    methyl_beta_d_glucoside_6_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +h +indol_3_yl_acetate
-    n_indole_3_acetyl_l_alanine
+    <-> . +o_s_3r_19z_31z_3_hydroxypentacontadienoylpanteth
+    o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p
   }
 }

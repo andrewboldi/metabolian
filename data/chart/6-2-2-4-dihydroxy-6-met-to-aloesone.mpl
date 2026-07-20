@@ -20,26 +20,26 @@ pathway 6-2-2-4-dihydroxy-6-met-to-aloesone "6-[2-(2,4-dihydroxy-6-met… to alo
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +nebramycin_5 +phosphate +nebramycin_5 +h2o
-    atp
+    <-> . +5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem +h2o
+    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    nebramycin_iv
+    <-> . +dehydroascorbide +h2o
+    dehydroascorbate_bicyclic_form
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +22_0_18_3_pe +h
-    22_0_18_3_ps
+    <-> ec_4_1_1_114 [4.1.1.114] +7z_pentadec_7_ene
+    3_hexyl_4_septyloxetan_2_one
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +24_0_18_2_pe +h
-    24_0_18_2_ps
+    <-> . +firefly_oxyluciferin
+    firefly_oxyluciferin_dioxetanone
   }
 
   branch from aloesone side left {
@@ -56,13 +56,13 @@ pathway 6-2-2-4-dihydroxy-6-met-to-aloesone "6-[2-(2,4-dihydroxy-6-met… to alo
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_deoxycarbamoylkanamycin_c
+    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    dibekacin
+    <-> . +2_4_dinitrocyclohexan_1_one +h
+    4_6_dinitrohexanoate
   }
 }

@@ -1,0 +1,385 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "di-sulfido-diiron-to-nadph",
+  "name": "di-μ-sulfido-diiron to NADPH",
+  "category": "lipid-metabolism",
+  "summary": "A 4-step route from di-μ-sulfido-diiron(1+) to NADPH, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34335"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:33738"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "22r_22_hydroxycholesterol",
+      "name": "(22R)-22-hydroxycholesterol",
+      "short": "22-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:67237"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "20r_22r_20_22_dihydroxycholesterol",
+      "name": "(20R,22R)-20,22-dihydroxycholesterol",
+      "short": "(20R,22R)-20,22-dih…",
+      "formula": "C27H46O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1294"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "20_hydroxycholesterol",
+      "name": "20-hydroxycholesterol",
+      "short": "20-hydroxycholester…",
+      "formula": "C27H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:1296"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726122"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_15_6",
+      "name": "cholesterol monooxygenase (side-chain-cleaving)",
+      "ec": [
+        "1.14.15.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxid...",
+      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (22R)-hydroxycholesterol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "22r_22_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(22R)-hydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (20R,22R)-20,22-dihy...",
+      "equation": "(22R)-hydroxycholesterol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (20R,22R)-20,22-dihydroxycholesterol + 2 oxidized [adrenodoxin] + H2O",
+      "substrates": [
+        {
+          "metabolite": "22r_22_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20r_22r_20_22_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cholesterol monooxygenase (side-chain-cleaving)",
+      "ec": "1.14.15.6",
+      "substrates": [
+        {
+          "metabolite": "20r_22r_20_22_dihydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR134483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cholesterol monooxygenase (side-chain-cleaving)",
+      "ec": "1.14.15.6",
+      "substrates": [
+        {
+          "metabolite": "20_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR102300"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR102300"
+          }
+        ]
+      }
+    }
+  ]
+}

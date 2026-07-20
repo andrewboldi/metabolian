@@ -18,14 +18,14 @@ pathway udp-to-udp-2-acetamido-2-6-dideo "UDP to UDP-2-acetamido-2,6-dideo…" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_145 [2.4.1.145] +udp +h +n4_d_glcnac_1_2_d_glcnac_1_4_d_man_1_3_d_glcnac
-    n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6
+    <-> ec_5_1_3_14 [5.1.3.14] +udp +h +h2o
+    n_acetyl_d_mannosamine
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +utp +n_acetyl_beta_d_glucosamine_6_phosphate +h
-    diphosphate
+    <-> ec_3_2_1_183 [3.2.1.183] +udp +h +h2o
+    n_acetyl_d_mannosamine
   }
 
   branch from udp_2_acetamido_4_dehydro_2_6_dideoxy_beta_d_glu side left {
@@ -36,26 +36,26 @@ pathway udp-to-udp-2-acetamido-2-6-dideo "UDP to UDP-2-acetamido-2,6-dideo…" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +2_phenylethanol +a_6_o_beta_d_xylopyranosyl_beta_d_glucopyranose
-    2_phenylethyl_primeveroside
+    <-> . +l_leucine +arginomycin
+    l_leucyl_arginomycin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_149 [3.2.1.149] +linalyl_beta_vicianoside +vicianose
-    linalool
+    <-> . +l_leucine +blasticidin_s
+    l_leucyl_blasticidin_s
   }
 
   branch from h side right {
     h
-    <-> . +malonyl_coa +anthraniloyl_coa +2_methyl_4_quinolinol +coa
-    co2
+    <-> . +s_adenosyl_l_homocysteine +mono_methylsulfanyl_gliotoxin +dithiolgliotoxin
+    s_adenosyl_l_methionine
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_4 [3.1.1.4] +9z_octadecenoate +1_oleoyl_sn_glycero_3_phosphoethanolamine +h2o
-    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +s_adenosyl_l_homocysteine +bisdethiobis_methylthio_gliotoxin +s_adenosyl_l_methionine
+    mono_methylsulfanyl_gliotoxin
   }
 
   branch from udp_2_acetamido_2_6_dideoxy_d_xylo_hex_4_ulose side right {

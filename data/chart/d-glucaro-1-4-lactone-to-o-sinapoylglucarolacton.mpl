@@ -30,14 +30,14 @@ pathway d-glucaro-1-4-lactone-to-o-sinapoylglucarolacton "D-glucaro-1,4-lactone 
 
   branch from h side left {
     h
-    <-> . +co2 +c31_phthiodiolenone_a
-    c32_carboxyphthiodiolenone
+    <-> . +chloride +thiophosgene
+    trichloromethanethiol
   }
 
   branch from h side right {
     h
-    <-> . +c36_phenolphthiodiolone_a +nadph +nadp
-    c36_phenolphthiotriol_a
+    <-> . +9_10_epoxy_10_12z_octadecadienoate +h2o
+    9_hydroxy_10_oxo_12_z_octadecenoic_acid
   }
 
   branch from d_glucaro_1_5_lactone side left {
@@ -48,25 +48,25 @@ pathway d-glucaro-1-4-lactone-to-o-sinapoylglucarolacton "D-glucaro-1,4-lactone 
 
   branch from h2o side right {
     h2o
-    <-> . +2_aminobenzoylacetate +h +o2 +nadph +nadp
-    2_hydroxylamino_benzoylacetate
+    <-> . +vindoline +h2o2 +catharanthine
+    alpha_3_4_anhydrovinblastine_radical
   }
 
   branch from h2o side left {
     h2o
-    <-> . +beta_d_galactose +d_fructofuranose
-    lactulose
+    <-> . +neoabietadiene_diol
+    neoabietadienal
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +tryptoquialanol
-    tryptoquialanine_a
+    <-> . +trichodermol +2_4_6_octatrienedioyl_coa
+    harzianum_a
   }
 
   branch from coa side left {
     coa
-    <-> . +benzoyl_coa +pyrrothine
-    benzoyl_pyrrothine
+    <-> . +udp_2_4_diacetamido_2_4_6_trideoxy_beta_l_idose +acetyl_coa
+    udp_4_amino_4_6_dideoxy_n_acetyl_beta_l_idosamin
   }
 }

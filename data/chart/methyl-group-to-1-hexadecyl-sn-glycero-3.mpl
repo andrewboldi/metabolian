@@ -30,26 +30,26 @@ pathway methyl-group-to-1-hexadecyl-sn-glycero-3 "methyl group to 1-hexadecyl-sn
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
-    n6_methyl_l_lysinium
+    <-> . +1_methyldeoxyadenosine_5_monophosphate +akg +o2 +succinate +co2 +hplus
+    2_deoxyadenosine_5_monophosphate_1
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n6_methyl_l_lysinium +akg +o2 +succinate +co2
-    l_lysinium
+    <-> . +akg +o2 +2_deoxyadenosine_5_monophosphate_1 +succinate +co2 +hplus
+    1_methyldeoxyadenosine_5_monophosphate
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2r_3s_4s_leucoanthocyanidin +akg +o2 +co2 +h2o +hplus
-    4s_2_3_dehydroflavan_3_4_diol
+    <-> . +lauroyl_coa +akg +o2 +co2
+    2_hydroxydodecanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +palmitoyl_coa +akg +o2 +co2
-    2_hydroxypalmitoyl_coa
+    <-> . +myristoyl_coa +akg +o2 +co2
+    2_hydroxytetradecanoyl_coa
   }
 
   branch from alanine side left {
@@ -66,50 +66,50 @@ pathway methyl-group-to-1-hexadecyl-sn-glycero-3 "methyl group to 1-hexadecyl-sn
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> ec_2_1_1_379 [2.1.1.379] +l_argininium +hydrogen_donor +sam +methionine +hydrogen_acceptor +sah +hplus
-    5s_c_methyl_l_argininium
+    <-> . +utp +hydrogen_donor +sam +methionine +hydrogen_acceptor +h2o +hplus
+    3_deoxy_3_4_didehydro_utp
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> . +gtp +hydrogen_donor +sam +methionine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_gtp
+    <-> ec_1_21_98_5 [1.21.98.5] +2_3_di_o_phytanyl_sn_glycero_1_phospho_3_sn_glyc +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
+    glycerol_dibiphytanyl_glycerol_tetraether_glycer
   }
 
   branch from methionine side left {
     methionine
-    <-> . +utp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +h2o +hplus
-    3_deoxy_3_4_didehydro_utp
+    <-> . +2_3_di_o_phytanyl_sn_glycerol +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
+    glycerol_dibiphytanyl_glycerol_tetraether
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_1_21_98_5 [1.21.98.5] +2_3_di_o_phytanyl_sn_glycero_1_phospho_3_sn_glyc +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
-    glycerol_dibiphytanyl_glycerol_tetraether_glycer
+    <-> . +3_l_methionyl_adenylyl_zwitterionic_group +h2o +hplus
+    amp_3_end_1
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_19_13 [1.14.19.13] +9z_12z_hexadecadienoyl_coa +hydrogen_donor +o2 +h2o
-    9z_12z_hexadeca_9_12_15_trienoyl_coa
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +hydrogen_donor +o2 +h2o
+    4z_7z_10z_14e_16z_19z_13_hydroxydocosahexaenoat
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +7z_10z_13z_16z_19z_docosapentaenoyl_coa +hydrogen_donor +o2 +h2o
-    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +hydrogen_donor +o2 +h2o
+    18_r_hepe
   }
 
   branch from sah side left {
     sah
-    <-> . +trans_resveratrol +sam +hplus
-    3_methoxy_4_5_dihydroxy_trans_stilbene
+    <-> ec_2_1_1_261 [2.1.1.261] +4_3_methylbut_2_enyl_l_tryptophan +sam +hplus
+    4_3_methylbut_2_enyl_l_abrine
   }
 
   branch from sah side right {
     sah
-    <-> . +phosphoethanolamine +sam +hplus
-    phosphocholine
+    <-> ec_2_1_1_265 [2.1.1.265] +tellurite +sam
+    methanetelluronate
   }
 
   branch from 1_palmitoylglycerone_3_phosphate side left {
@@ -132,13 +132,13 @@ pathway methyl-group-to-1-hexadecyl-sn-glycero-3 "methyl group to 1-hexadecyl-sn
 
   branch from palmitate side right {
     palmitate
-    <-> . +all_trans_retinyl_palmitate +h2o +hplus
-    all_trans_retinol
+    <-> ec_3_1_1_63 [3.1.1.63] +11_cis_retinyl_palmitate +h2o +hplus
+    11_cis_retinol
   }
 
   branch from palmitate side left {
     palmitate
-    <-> ec_3_1_1_63 [3.1.1.63] +11_cis_retinyl_palmitate +h2o +hplus
-    11_cis_retinol
+    <-> ec_3_1_1_64 [3.1.1.64] +h2o +11_cis_retinol +hplus
+    all_trans_retinyl_palmitate
   }
 }

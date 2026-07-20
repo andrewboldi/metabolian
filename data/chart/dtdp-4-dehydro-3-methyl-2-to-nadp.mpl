@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-dehydro-3-methyl-2-to-nadp "dTDP-4-dehydro-3-methyl-2… to NADP" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco
@@ -18,39 +18,33 @@ pathway dtdp-4-dehydro-3-methyl-2-to-nadp "dTDP-4-dehydro-3-methyl-2… to NADP"
     dtdp_l_olivose
   }
 
-  branch from dtdp_4_oxo_2_6_dideoxy_d_allose side left {
-    dtdp_4_oxo_2_6_dideoxy_d_allose
-    <-> . +nadh +dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose +h
-    nad
+  branch from s_adenosyl_l_methionine side left {
+    s_adenosyl_l_methionine
+    <-> . +s_adenosyl_l_homocysteine +ajmaline
+    norajmaline
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +casticin +s_adenosyl_l_homocysteine +h
-    oxyayanin_b
+    <-> . +s_adenosyl_l_homocysteine +h +ajmaline
+    norajmaline
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_4_deoxygadusol +s_adenosyl_l_homocysteine
-    s_demethyl_4_deoxygadusol
-  }
-
-  branch from dtdp_4_oxo_2_6_dideoxy_l_mannose side right {
+  branch from dtdp_4_oxo_2_6_dideoxy_l_mannose side left {
     dtdp_4_oxo_2_6_dideoxy_l_mannose
     <-> .
     dtdp_1_ester_with_2_6_dideoxy_l_erythro_hexopyra
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +o_nitrobenzyl_alcohol +h +nadph
-    2_nitrobenzaldehyde
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +3_chlorobenzaldehyde
-    3_chlorophenyl_methanol
+    <-> ec_1_1_1_133 [1.1.1.133] +gdp_4_dehydro_6_deoxy_l_mannose +h +nadph
+    gdp_6_deoxy_l_mannose
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_145 [1.1.1.145] +h +11_deoxycortisol +nadph
+    17alpha_21_dihydroxypregnenolone
   }
 }

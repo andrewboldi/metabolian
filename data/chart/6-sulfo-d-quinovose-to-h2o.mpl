@@ -18,25 +18,25 @@ pathway 6-sulfo-d-quinovose-to-h2o "6-sulfo-D-quinovose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +3_s_hydroxy_4_methyl_pentanoyl_coa
-    4_methyl_trans_2_pentenoyl_coa
+    <-> . +naphthomycin_e
+    pronaphthomycin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_serine +l_arginine
-    seryl_arginyl_alanine
+    <-> . +salinisporamycin_a +2_6_8_trihydroxy_7_methylnaphthalene_1_4_dione
+    2z_4e_6s_7s_8r_9r_10r_10_1s_3s_4r_5s_1_4_dimeth
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    thromboxane_b2
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    ursocholate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_l_se
   }
 }

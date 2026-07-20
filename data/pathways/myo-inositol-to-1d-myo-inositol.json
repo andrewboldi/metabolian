@@ -1,0 +1,233 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "myo-inositol-to-1d-myo-inositol",
+  "name": "myo-inositol… to 1D-myo-inositol…",
+  "category": "other",
+  "summary": "A 3-step route from myo-inositol hexakisphosphate(12−) to 1D-myo-inositol 1,2,6-trisphosphate(6−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16989"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58130"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "myo_inositol_hexakisphosphate",
+      "name": "myo-inositol hexakisphosphate",
+      "short": "myo-inositol…",
+      "formula": "C6H6O24P6",
+      "charge": -12,
+      "xrefs": {
+        "chebi": "CHEBI:58130"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_2_4_5_6_pentakisphosphate",
+      "name": "1D-myo-inositol 1,2,4,5,6-pentakisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H7O21P5",
+      "charge": -10,
+      "xrefs": {
+        "chebi": "CHEBI:57798"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_2_5_6_tetrakisphosphate",
+      "name": "1D-myo-inositol 1,2,5,6-tetrakisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H8O18P4",
+      "charge": -8,
+      "xrefs": {
+        "chebi": "CHEBI:195535"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_2_6_trisphosphate",
+      "name": "1D-myo-inositol 1,2,6-trisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H9O15P3",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:195537"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_8",
+      "name": "3-phytase",
+      "ec": [
+        "3.1.3.8"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_62",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "ec": [
+        "3.1.3.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-phytase",
+      "equation": "1D-myo-inositol hexakisphosphate + H2O = 1D-myo-inositol 1,2,4,5,6-pentakisphosphate + phosphate",
+      "ec": "3.1.3.8",
+      "substrates": [
+        {
+          "metabolite": "myo_inositol_hexakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_4_5_6_pentakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16989"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16989"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "equation": "1D-myo-inositol 1,2,4,5,6-pentakisphosphate + H2O = 1D-myo-inositol 1,2,5,6-tetrakisphosphate + phosphate",
+      "ec": "3.1.3.62",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_4_5_6_pentakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_5_6_tetrakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:77115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77115"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "equation": "1D-myo-inositol 1,2,5,6-tetrakisphosphate + H2O = 1D-myo-inositol 1,2,6-trisphosphate + phosphate",
+      "ec": "3.1.3.62",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_5_6_tetrakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_6_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:77119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77119"
+          }
+        ]
+      }
+    }
+  ]
+}

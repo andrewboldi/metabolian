@@ -34,14 +34,14 @@ pathway arseno-mycothiol-to-h2o "Arseno-mycothiol to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_eicosatrienoylglycerophosphoethanolamine_delta
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_palmitoyl_2_vernoloyl_phosphatidylcholine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_arachidonoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_2_distearoyl_sn_glycero_3_phosphoserine
   }
 
   branch from cu side left {
@@ -58,37 +58,37 @@ pathway arseno-mycothiol-to-h2o "Arseno-mycothiol to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +pyruvate +phosphate +phosphoenolpyruvate
-    2_alpha_d_mannosyl_6_phosphate_d_glycerate
+    <-> . +l_prolylglycine +l_tryptophan
+    trp_pro_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_methionine +l_arginine
-    methionyl_arginyl_leucine
+    <-> . +l_leucine +l_proline +l_tryptophan
+    tryptophanyl_prolyl_leucine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +solanid_4_en_3_one
-    solanid_3_one
+    <-> ec_1_14_13_84 [1.14.13.84] +nadh +4_hydroxyacetophenone +o2 +h2o
+    4_hydroxyphenylacetate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +solanid_3_one
-    demissidine
+    <-> ec_1_14_13_91 [1.14.13.91] +nadh +h +10_deoxysarpagine +o2 +h2o
+    sarpagine
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadph
-    beta_d_xylose
+    <-> ec_1_14_13_70 [1.14.13.70] +h +32_hydroxylanosterol +o2 +nadph +h2o
+    4_4_dimethyl_14a_formyl_5alpha_cholesta_8_24_die
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +alpha_d_xylose +h +nadph
-    xylitol
+    <-> ec_1_14_15_6 [1.14.15.6] +20r_22r_20_22_dihydroxycholesterol +h +o2 +nadph +4_methylpentanal +h2o
+    pregnenolone
   }
 }

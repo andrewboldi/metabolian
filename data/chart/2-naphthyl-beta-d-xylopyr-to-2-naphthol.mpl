@@ -19,13 +19,13 @@ pathway 2-naphthyl-beta-d-xylopyr-to-2-naphthol "2-Naphthyl-beta-D-xylopyr… to
   branch from 2_naphthol side left {
     2_naphthol
     <-> .
-    1r_2s_naphthalene_1_2_oxide
+    1s_2r_naphthalene_1_2_oxide
   }
 
   branch from 2_naphthol side right {
     2_naphthol
-    <-> .
-    1s_2r_naphthalene_1_2_oxide
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +naphthalene +h +o2 +h2o
+    nad
   }
 
   branch from beta_d_xylose side left {
@@ -36,8 +36,8 @@ pathway 2-naphthyl-beta-d-xylopyr-to-2-naphthol "2-Naphthyl-beta-D-xylopyr… to
 
   branch from beta_d_xylose side right {
     beta_d_xylose
-    <-> ec_3_2_1_21 [3.2.1.21] +h +4_nitrophenol +h2o
-    4_nitrophenyl_d_xyloside
+    <-> .
+    d_xylopyranose
   }
 
   branch from adenosine_3_5_bismonophosphate side left {

@@ -30,14 +30,14 @@ pathway 2s-flavan-4-one-to-flavonol-3-o-6-4-coumar "(2S)-flavan-4-one to flavono
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_46 [1.14.11.46] +2_aminoethyl_phosphonic_acid +akg +o2 +co2
-    1r_2_amino_1_hydroxyethyl_phosphonate
+    <-> . +l_proline +akg +o2 +co2
+    trans_4_hydroxy_l_proline
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_45 [1.14.11.45] +isoleucine +akg +o2 +co2
-    4s_4_hydroxy_l_isoleucine
+    <-> . +2_4_dichlorophenoxy_acetate +akg +o2 +glyoxylate +co2
+    2_4_dichlorophenol
   }
 
   branch from flavonols side right {

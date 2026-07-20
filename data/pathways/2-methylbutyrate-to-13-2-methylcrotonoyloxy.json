@@ -166,49 +166,41 @@
       }
     },
     {
-      "id": "tardioxopiperazine_a",
-      "name": "tardioxopiperazine A",
-      "formula": "C24H31N3O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:193007"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:58756"
       }
     },
     {
-      "id": "variecolorin_l",
-      "name": "variecolorin L",
-      "formula": "C29H39N3O2",
+      "id": "cattleyene",
+      "name": "Cattleyene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193008"
+        "chebi": "CHEBI:226390"
       }
     },
     {
-      "id": "neoechinulin_a",
-      "name": "neoechinulin A",
-      "formula": "C19H21N3O2",
-      "charge": 0,
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:193004"
+        "chebi": "CHEBI:58553"
       }
     },
     {
-      "id": "isoechinulin_a",
-      "name": "isoechinulin A",
-      "formula": "C24H29N3O2",
+      "id": "ent_beyerene",
+      "name": "ent-beyerene",
+      "formula": "C20H32",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:193010"
+        "chebi": "CHEBI:229601"
       }
     },
     {
@@ -254,6 +246,20 @@
       "name": "13-hydroxylupanine O-tigloyltransferase",
       "ec": [
         "2.3.1.93"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_225",
+      "name": "cattleyene synthase",
+      "ec": [
+        "4.2.3.225"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_229",
+      "name": "ent-beyerene synthase",
+      "ec": [
+        "4.2.3.229"
       ]
     }
   ],
@@ -479,21 +485,18 @@
     },
     {
       "id": "r6",
-      "name": "tardioxopiperazine A + dimethylallyl diphosphate = variecolorin L + diphosphate",
-      "equation": "tardioxopiperazine A + dimethylallyl diphosphate = variecolorin L + diphosphate",
+      "name": "cattleyene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = cattleyene + diphosphate",
+      "ec": "4.2.3.225",
       "substrates": [
         {
-          "metabolite": "tardioxopiperazine_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "variecolorin_l",
+          "metabolite": "cattleyene",
           "stoichiometry": 1
         },
         {
@@ -501,38 +504,40 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_225"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:73787"
+        "rhea": "RHEA:78987"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73787"
+            "id": "RHEA:78987"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "neoechinulin A + dimethylallyl diphosphate = isoechinulin A + diphosphate",
-      "equation": "neoechinulin A + dimethylallyl diphosphate = isoechinulin A + diphosphate",
+      "name": "ent-beyerene synthase",
+      "equation": "ent-copalyl diphosphate = ent-beyerene + diphosphate",
+      "ec": "4.2.3.229",
       "substrates": [
         {
-          "metabolite": "neoechinulin_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "isoechinulin_a",
+          "metabolite": "ent_beyerene",
           "stoichiometry": 1
         },
         {
@@ -540,17 +545,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_229"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:73795"
+        "rhea": "RHEA:79011"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73795"
+            "id": "RHEA:79011"
           }
         ]
       }

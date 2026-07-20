@@ -18,26 +18,26 @@ pathway glyceric-acid-to-phosphate "Glyceric acid… to phosphate" {
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +propanoate +4_nitrophenol +h2o
-    4_nitrophenyl_propanoate
+    <-> ec_2_7_2_3 [2.7.2.3] +glyceric_acid_1_3_biphosphate +l_ddcdp +2r_3_phosphoglycerate
+    l_ddctp
   }
 
   branch from h side right {
     h
-    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phenylalanyl_lysine +h2o
-    lys_phe_lys
+    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +nad +d_lyxose
+    nadh
   }
 
   branch from 2r_3_phosphoglycerate side left {
     2r_3_phosphoglycerate
-    <-> ec_2_7_2_3 [2.7.2.3] +glyceric_acid_1_3_biphosphate +l_ddcdp +h
-    l_ddctp
+    <-> ec_2_7_2_10 [2.7.2.10] +itp +h +glyceric_acid_1_3_biphosphate
+    idp
   }
 
   branch from 2r_3_phosphoglycerate side right {
     2r_3_phosphoglycerate
-    <-> ec_2_7_2_3 [2.7.2.3] +utp +h +glyceric_acid_1_3_biphosphate
-    udp
+    <-> . +d_glucopyranose_1_phosphate +2r_3_phospho_glyceroyl_phosphate
+    alpha_d_glucose_1_6_bisphosphate
   }
 
   branch from 2r_2_3_bisphosphoglycerate side left {
@@ -48,37 +48,37 @@ pathway glyceric-acid-to-phosphate "Glyceric acid… to phosphate" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +phe_ser +l_lysine +h
-    lys_phe_ser
+    <-> ec_1_14_99_39 [1.14.99.39] +ubiquinol_2 +nh4 +o2 +h +hydroxylamine
+    ubiquinone_2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phe_gly +h
-    lys_phe_gly
+    <-> ec_1_7_3_4 [1.7.3.4] +nitrite +ubiquinol_2 +h +ubiquinone_2
+    hydroxylamine
   }
 
   branch from adp side right {
     adp
-    <-> ec_2_4_1_56 [2.4.1.56] +adp_l_glycero_d_manno_heptose +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +h
-    core_oligosaccharide_lipid_a
+    <-> ec_2_7_7_35 [2.7.7.35] +adp_beta_d_ribose +phosphate +h
+    aldehydo_d_ribose_5_phosphate
   }
 
   branch from adp side left {
     adp
-    <-> . +h +glucosyl_glucosyl_galactosyl_glucosyl_inner_core +core_oligosaccharide_lipid_a
-    adp_l_glycero_d_manno_heptose
+    <-> . +udp_n_acetyl_alpha_d_muramate +atp +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h +phosphate
+    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +1d_myo_inositol_1_phosphate +h2o
-    inositol
+    <-> . +o4_phosphonatotyrosine +h2o
+    l_tyrosine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_25 [3.1.3.25] +h2o +inositol
-    1d_myo_inositol_4_phosphate
+    <-> ec_3_1_3_51 [3.1.3.51] +c80_dolichol_phosphate +h2o
+    c80_dolichol
   }
 }

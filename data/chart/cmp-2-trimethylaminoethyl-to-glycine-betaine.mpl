@@ -18,25 +18,25 @@ pathway cmp-2-trimethylaminoethyl-to-glycine-betaine "CMP-2-trimethylaminoethylâ
 
   branch from ctp side left {
     ctp
-    <-> . +cdp_l_ribitol +diphosphate
-    d_ribitol_5_phosphate
+    <-> ec_2_7_7_41 [2.7.7.41] +h +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +diphosphate
+    1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho
   }
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_40 [2.7.7.40] +cdp_l_ribitol +diphosphate +d_ribitol_5_phosphate
-    pmf
+    <-> . +cdp +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h
+    4_amino_5_hydroxymethyl_2_methylpyrimidine
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    11z_14z_icosadienoic_acid
+    <-> . +adp +1_docosahexenoylglycerophosphocholine_delta_4_7 +phosphate +1_docosahexenoylglycerophosphocholine_delta_4_7 +h2o
+    atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    15_deoxy_12_14_prostaglandin_j2
+    2_linoleoylglycerophosphocholine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-end-3-n-acyl-l-ami-to-l-arginyl-l-amino-acid "3'-end 3'-(N-acyl-L-α-ami… to L-arginyl-L-α-amino acid" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     3_end_3_n_acyl_l_aminoacyl_adenylyl_1
@@ -18,25 +18,13 @@ pathway 3-end-3-n-acyl-l-ami-to-l-arginyl-l-amino-acid "3'-end 3'-(N-acyl-L-α-a
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> . +glutamate +atp +amp +ppi
-    3_l_glutamate_adenylyl_1_group
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_d_aspartyl_adenylyl_1_group +h2o +hplus
-    d_aspartate
-  }
-
-  branch from carboxylic_acid_anion side left {
-    carboxylic_acid_anion
-    <-> . +thioester +h2o +hplus
-    thiol
-  }
-
-  branch from carboxylic_acid_anion side right {
-    carboxylic_acid_anion
-    <-> . +n6_acyl_l_lysine +h2o
-    l_lysinium
+    <-> . +h2o +serine
+    3_l_seryl_adenylyl_1_group
   }
 }

@@ -26,37 +26,25 @@ pathway udp-to-n-acetyl-alpha-d-glucosam "UDP to N-acetyl-alpha-D-glucosam…" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_227 [2.4.1.227] +udp +undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl +h
-    undecaprenyl_diphospho_n_acetylmuramoyl_l_alanyl
+    <-> ec_2_4_1_150 [2.4.1.150] +udp +beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1 +h
+    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_gal_1_4
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_2_4_1_56 [2.4.1.56] +udp +lipid_a_core +h
-    core_oligosaccharide_lipid_a_e_coli_k_12_core_ty
-  }
-
-  branch from c80_dolichol_phosphate side left {
-    c80_dolichol_phosphate
-    <-> ec_3_1_4_48 [3.1.4.48] +glucose +h +h2o
-    a_dolichyl_beta_d_glucosyl_phosphate
-  }
-
-  branch from c80_dolichol_phosphate side right {
-    c80_dolichol_phosphate
-    <-> ec_3_1_4_48 [3.1.4.48] +beta_d_glucose +h +a_dolichyl_beta_d_glucosyl_phosphate
-    h2o
+    <-> . +udp +alpha_d_glcnac_1_2_alpha_d_d_hep_1_3_3_alpha_d_g +h
+    alpha_d_d_hep_1_3_3_alpha_d_glu_1_3_alpha_d_glu
   }
 
   branch from gdp_alpha_d_mannose side left {
     gdp_alpha_d_mannose
-    <-> . +gdp +beta_d_man_1_4_alpha_d_man_1_3_beta_d_glcnac_1_4 +h
-    alpha_d_man_1_3_beta_d_glcnac_1_4_alpha_d_glcnac
+    <-> . +gdp +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
+    alpha_l_fuc_1_3_alpha_d_galnac_pp_und
   }
 
   branch from gdp_alpha_d_mannose side right {
     gdp_alpha_d_mannose
-    <-> . +gdp +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
-    alpha_l_fuc_1_3_alpha_d_galnac_pp_und
+    <-> . +gdp +alpha_d_man_1_4_beta_d_gal_1_3_alpha_d_glcnac_pp +h
+    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 }

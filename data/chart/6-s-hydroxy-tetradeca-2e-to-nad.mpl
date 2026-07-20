@@ -18,37 +18,37 @@ pathway 6-s-hydroxy-tetradeca-2e-to-nad "6(S)-hydroxy-tetradeca-2E… to NAD" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_138 [1.14.13.138] +indolin_2_one +nadh +h +nad +h2o
-    3_hydroxyindolin_2_one
+    <-> ec_1_14_13_124 [1.14.13.124] +z_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +l_phenylalanine
+    nadph
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +nadph +tryptamine +nadp +h2o
-    serotonin
+    <-> ec_1_14_13_124 [1.14.13.124] +e_phenylacetaldehyde_oxime +co2 +nadp +h2o +h +nadph
+    l_phenylalanine
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +3_dodecanoyl_3_4_di_3_methylbutanoyl_sucrose
-    2_acetyl_3_dodecanoyl_3_4_di_3_methylbutanoyl_su
+    <-> . +glycine +3_hydroxyhexadecanoyl_coa
+    n_3_hydroxy_1_oxohexadecyl_glycine
   }
 
   branch from coa side right {
     coa
-    <-> . +3_methylbutanoyl_coa +3_isobutanoyl_4_3_methylbutanoyl_sucrose
-    3_isobutanoyl_3_4_di_3_methylbutanoyl_sucrose
+    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +deacetylvindorosine
+    vindorosine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    isodihydrocarveol
+    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
+    l_arabinopyranose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +isodihydrocarveol
-    2e_geranial
+    <-> . +nadh +l_alanine +h +h2o
+    s_2_aminopropanal
   }
 }

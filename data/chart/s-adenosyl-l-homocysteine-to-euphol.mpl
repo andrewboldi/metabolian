@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-euphol "S-adenosyl-L-homocysteine to Euphol" {
-  spacing 212
+  spacing 206
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -20,61 +20,55 @@ pathway s-adenosyl-l-homocysteine-to-euphol "S-adenosyl-L-homocysteine to Euphol
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_129 [2.1.1.129] +s_adenosyl_l_homocysteine +h +1d_6_o_methyl_myo_inositol
-    myo_inositol
+    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +menaquinol
+    demethylmenaquinol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_65 [2.1.1.65] +s_adenosyl_l_homocysteine +h +2_o_methyllicodione
-    licodione
+    <-> ec_2_1_1_144 [2.1.1.144] +s_adenosyl_l_homocysteine +e_3_carboxy_2_pentenedioate_6_methyl_ester
+    trans_aconitate
   }
 
   branch from squalene side left {
     squalene
-    <-> ec_1_3_1_96 [1.3.1.96] +diphosphate +h +nadp +nadph
-    presqualene_diphosphate
-  }
-
-  branch from squalene side right {
-    squalene
-    <-> ec_1_3_1_96 [1.3.1.96] +diphosphate +nadp +h +nadph
-    presqualene_diphosphate
-  }
-
-  branch from s_2_3_epoxysqualene side left {
-    s_2_3_epoxysqualene
-    <-> .
-    multiflorenol
+    <-> ec_2_5_1_21 [2.5.1.21] +diphosphate +h +nadp +nadph
+    farnesyl_diphosphate
   }
 
   branch from s_2_3_epoxysqualene side right {
     s_2_3_epoxysqualene
     <-> .
-    isoarborinol
+    multiflorenol
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +h +dihydrokalafungin
-    dihydrokalafungin_dihydroquinone_form
+  branch from s_2_3_epoxysqualene side left {
+    s_2_3_epoxysqualene
+    <-> .
+    isoarborinol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3e_3_1r_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hept
-    3_1r_2s_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hepta
+    <-> ec_1_1_1_144 [1.1.1.144] +nadh +h +4s_perillyl_aldehyde
+    s_perillyl_alcohol
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +aminodhq
-    5_amino_5_deoxy_3_dehydroshikimic_acid
+  branch from nad side left {
+    nad
+    <-> ec_1_1_1_221 [1.1.1.221] +nadh +h +dehydrovomifoliol
+    vomifoliol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_4_43 [3.5.4.43] +h +ammelide +chloride
-    4_amino_6_chloro_1_3_5_triazin_2_ol
+    <-> ec_1_1_1_312 [1.1.1.312] +2_hydroxy_5_carboxymethylmuconate_semialdehyde +nadp +h +nadph
+    2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_107 [3.2.1.107] +5r_5_d_galactosyloxy_l_lysine_1 +glucose
+    5r_5_d_glucosyl_1_2_d_galactosyl_oxy_l_lysine_1
   }
 }

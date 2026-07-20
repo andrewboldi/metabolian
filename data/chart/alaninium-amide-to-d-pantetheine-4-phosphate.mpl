@@ -26,14 +26,14 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate "β-alaninium amide to D-pa
 
   branch from nh3 side left {
     nh3
-    <-> . +5_methylcytosine +h2o +hplus
-    thymine
+    <-> ec_3_5_4_40 [3.5.4.40] +aminodeoxyfutalosinate +h2o +hplus
+    futalosinate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +pyridoxaminium +o2 +h2o +h2o2
-    pyridoxal
+    <-> . +2_amino_2_phenylacetonitrile +h2o +hplus
+    d_phenylglycine
   }
 
   branch from r_4_phosphonatopantothenate side left {
@@ -50,25 +50,25 @@ pathway alaninium-amide-to-d-pantetheine-4-phosphate "β-alaninium amide to D-pa
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_g +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_glcnac_1_3_d
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_8_neu5ac_2_3_d_gal_1_3_d_galnac_1_4_ne
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
-    ditrans_polycis_undecaprenyl_diphosphate
+    <-> ec_4_2_3_62 [4.2.3.62] +2_cis_6_trans_farnesyl_diphosphate
+    cadinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_82 [2.5.1.82] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_hexaprenyl_diphosphate
+    <-> ec_4_2_3_65 [4.2.3.65] +fpp
+    zingiberene
   }
 }

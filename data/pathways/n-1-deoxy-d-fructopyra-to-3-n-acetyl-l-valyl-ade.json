@@ -262,32 +262,23 @@
       }
     },
     {
-      "id": "selina_4_15_7_11_diene",
-      "name": "selina-4(15),7(11)-diene",
-      "short": "selina-4(15),7(11)-…",
+      "id": "7_epi_ent_eudesmane_5_11_diol",
+      "name": "7-epi-ent-eudesmane-5,11-diol",
+      "short": "7-epi-ent-eudesmane…",
+      "formula": "C15H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142536"
+      }
+    },
+    {
+      "id": "5_epi_eremophilene",
+      "name": "(−)-5-epi-eremophilene",
+      "short": "(−)-5-epi-eremophil…",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138051"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58756"
-      }
-    },
-    {
-      "id": "pseudolaratriene",
-      "name": "pseudolaratriene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138050"
+        "chebi": "CHEBI:142537"
       }
     }
   ],
@@ -307,17 +298,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_181",
-      "name": "selina-4(15),7(11)-diene synthase",
+      "id": "ec_4_2_3_197",
+      "name": "eudesmane-5,11-diol synthase",
       "ec": [
-        "4.2.3.181"
+        "4.2.3.197"
       ]
     },
     {
-      "id": "ec_4_2_3_180",
-      "name": "pseudolaratriene synthase",
+      "id": "ec_4_2_3_199",
+      "name": "(-)-5-epieremophilene synthase",
       "ec": [
-        "4.2.3.180"
+        "4.2.3.199"
       ]
     }
   ],
@@ -671,9 +662,54 @@
     },
     {
       "id": "r8",
-      "name": "selina-4(15),7(11)-diene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = selina-4(15),7(11)-diene + diphosphate",
-      "ec": "4.2.3.181",
+      "name": "eudesmane-5,11-diol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + 2 H2O = 7-epi-ent-eudesmane-5,11-diol + diphosphate",
+      "ec": "4.2.3.197",
+      "substrates": [
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_epi_ent_eudesmane_5_11_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_197"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:58164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r9",
+      "name": "(-)-5-epieremophilene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (-)-5-epi-eremophilene + diphosphate",
+      "ec": "4.2.3.199",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -682,7 +718,7 @@
       ],
       "products": [
         {
-          "metabolite": "selina_4_15_7_11_diene",
+          "metabolite": "5_epi_eremophilene",
           "stoichiometry": 1
         },
         {
@@ -692,61 +728,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_181"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:54112"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54112"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "pseudolaratriene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = pseudolaratriene + diphosphate",
-      "ec": "4.2.3.180",
-      "substrates": [
-        {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "pseudolaratriene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_180"
+          "enzyme": "ec_4_2_3_199"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:54116"
+        "rhea": "RHEA:58168"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54116"
+            "id": "RHEA:58168"
           }
         ]
       }

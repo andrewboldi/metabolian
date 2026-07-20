@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-nadph-null "diphosphate to NADPH" {
-  spacing 248
+  spacing 236
 
   spine at 0,0 {
     diphosphate
@@ -20,97 +20,85 @@ pathway diphosphate-to-nadph-null "diphosphate to NADPH" {
 
   branch from h side left {
     h
-    <-> ec_1_14_18_1 [1.14.18.1] +trans_4_coumarate +o2 +h2o
-    caffeic_acid_quinone
+    <-> . +co2 +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
+    3_carboxy_2_hydroxymuconate_semialdehyde
   }
 
   branch from h side right {
     h
-    <-> . +h2 +cinchoninone +nadph +cinchonine +nadp
-    cinchonidine
+    <-> ec_1_14_13_52 [1.14.13.52] +formononetin +o2 +nadph +nadp +h2o
+    calycosin
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_7 [6.3.2.7] +l_lysine +h +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_d_glutama +udp_n_acetylmuramoyl_l_alanyl_alpha_d_glutamyl_l +phosphate
-    adp
+    <-> . +h +adp +phosphate +h2o
+    ferric_2_3_dihydroxybenzoylserine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_3_10 [2.7.3.10] +h +adp +phosphoagmatine
-    agmatine
+    <-> . +h +adp +phosphate +h2o
+    fe_iii_hydroxamate
   }
 
   branch from coa side left {
     coa
-    <-> . +h +13e_tetranor_16_carboxy_lte4 +h2o
-    13e_tetranor_16_oxo_16_coa_lte4
+    <-> ec_2_3_1_185 [2.3.1.185] +acetyl_coa +tropine
+    acetylpseudotropine
   }
 
   branch from coa side right {
     coa
-    <-> . +e_feruloyl_coa +h +quercetin_3_o_d_glucopyranoside
-    quercetin_3_6_ferulylglucoside
+    <-> ec_2_3_1_186 [2.3.1.186] +pseudotropine +h +acetylpseudotropine
+    acetyl_coa
   }
 
   branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side left {
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-    <-> ec_6_2_1_7 [6.2.1.7] +diphosphate +amp +atp +coa
-    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
-  }
-
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side right {
     25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
     <-> . +nadh +h +nad +h2o
     3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
   }
 
-  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side left {
+  branch from 25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol side right {
     25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
     <-> . +h2o
     5beta_cholestane_3alpha_7alpha_12alpha_27_27_pen
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_99_1 [1.14.99.1] +prostaglandin_g2
-    prostaglandin_h2
-  }
-
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine +methane +methanol
-    1_methyl_4_phenyl_1_2_3_6_tetrahydropyridine_n_o
+    <-> ec_1_13_11_52 [1.13.11.52] +melatonin
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
-  branch from nadph side right {
-    nadph
-    <-> . +h2 +h +quinidinone +quinine +nadp
-    quinidine
+  branch from o2 side right {
+    o2
+    <-> . +nitrite
+    nitrate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_41 [1.14.13.41] +z_4_hydroxyphenyl_acetaldehyde_oxime +co2 +nadp +h2o +h +o2
-    l_tyrosine
+    <-> ec_1_1_1_252 [1.1.1.252] +1_3_8_trihydroxynaphthalene +h +nadp
+    vermelone
   }
 
-  branch from 25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t side right {
-    25r_5beta_cholestane_3alpha_7alpha_12alpha_26_t
-    <-> ec_1_14_13_15 [1.14.13.15] +nadp +h2o +h +o2 +nadph
-    5beta_cholestane_3alpha_7alpha_12alpha_triol
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_3_9 [1.3.3.9] +loganin +h +o2 +nadp +h2o
+    secologanin
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +tetrahydropteroyltri_l_glutamate +h +l_serine +5_methyltetrahydropteroyltri_l_glutamate +h2o
-    glycine
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +3_oxo_delta5_steroid
+    3beta_hydroxy_delta5_steroid
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +octane +o2 +h2o
-    octan_1_ol
+    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
+    cyclohexane_1_2_diol
   }
 }

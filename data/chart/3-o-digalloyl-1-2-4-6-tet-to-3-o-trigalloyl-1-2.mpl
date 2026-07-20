@@ -24,25 +24,25 @@ pathway 3-o-digalloyl-1-2-4-6-tet-to-3-o-trigalloyl-1-2 "3-O-digalloyl-1,2,4,6-t
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4 +nad
-    o_s_7z_19z_octatriacontadienoylpantetheine_4_pho
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_6_6_trimethylbicyclo_3_1_1_hept_3_en_2_one +nad
+    r_cis_verbenol
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_hexacosadienoylpantetheine_4_phosphory +nad
-    o_s_7z_hexacosenoylpantetheine_4_phosphoryl_l_se
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +hexan_2_ol
+    nad
   }
 
   branch from beta_d_glucose side left {
     beta_d_glucose
-    <-> ec_3_2_1_3 [3.2.1.3] +d_glcp_1_4_d_glcp_1_4_d_glcp +h2o
-    d_maltose
+    <-> ec_3_2_1_3 [3.2.1.3] +h2o
+    isomaltose
   }
 
   branch from beta_d_glucose side right {
     beta_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +h2o
-    maltohexaose
+    <-> ec_3_2_1_3 [3.2.1.3] +panose +h2o
+    d_maltose
   }
 }

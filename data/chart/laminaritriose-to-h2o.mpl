@@ -20,13 +20,13 @@ pathway laminaritriose-to-h2o "laminaritriose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose
-    beta_d_glucosyl_1_3_d_glucose
+    <-> ec_3_1_1_1 [3.1.1.1] +nafamostat +4_guanidinobenzoic_acid
+    6_amidino_2_naphthol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +octan_1_ol
-    octyl_beta_d_glucose
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +4_methylumbelliferone
+    4_methylumbelliferyl_d_galactoside
   }
 }

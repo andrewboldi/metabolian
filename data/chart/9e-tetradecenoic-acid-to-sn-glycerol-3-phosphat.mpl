@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9e-tetradecenoic-acid-to-sn-glycerol-3-phosphat "(9E)-tetradecenoic acid to sn-glycerol 3-phosphate" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     9e_tetradecenoic_acid
@@ -24,49 +24,37 @@ pathway 9e-tetradecenoic-acid-to-sn-glycerol-3-phosphat "(9E)-tetradecenoic acid
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_tetracosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
+    octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    1_15z_tetracosenoyl_2_9z_12z_octadecadienoyl_sn
+    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +lipid_a_e_coli +phosphate +lipid_a_e_coli
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    24_1_18_3_pe
+    <-> ec_3_6_3_40 [3.6.3.40] +adp +phosphate +atp +h2o
+    gro_p_beta_d_mannac_1_4_alpha_d_glcnac_pp_und
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    ps_20_0_18_1_9z
-  }
-
-  branch from cdp_1_2_di_7z_tetradecenoyl_sn_glycerol side right {
-    cdp_1_2_di_7z_tetradecenoyl_sn_glycerol
-    <-> . +cmp +h +h2o
-    1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate
-  }
-
-  branch from cdp_1_2_di_7z_tetradecenoyl_sn_glycerol side left {
-    cdp_1_2_di_7z_tetradecenoyl_sn_glycerol
-    <-> . +ctp +1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate +h
-    diphosphate
+    <-> ec_3_6_3_42 [3.6.3.42] +adp +phosphate +atp +h2o
+    cellotetraose
   }
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> . +7z_hexadecenoyl_coa +coa
-    1_acylglycerol_3p_7_hexade
+    <-> . +1_acylglycerol_3p_6_9_octa +coa
+    linoelaidyl_coenzyme_a
   }
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> . +heptadecanoyl_coa +coa
-    1_heptadecanoyl_glycero_3_phosphate
+    <-> . +nonadecanoyl_coa +h +coa
+    lysopa_19_0_0_0
   }
 }

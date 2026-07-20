@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway eburicol-to-fmn "eburicol to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     eburicol
@@ -14,17 +14,5 @@ pathway eburicol-to-fmn "eburicol to FMN" {
     32_ketoeburicol
     <-> . +fmnh2 +o2 -formate -fmn -h2o -hplus
     4_4_24_trimethyl_5alpha_cholesta_8_14_24_28_trie
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +epoxysqualene +fmnh2 +o2 +h2o +hplus
-    3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +12_deshydroxyl_okaramine_e +fmnh2 +o2 +h2o +hplus
-    3_desmethyl_okaramine_b
   }
 }

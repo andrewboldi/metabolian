@@ -32,37 +32,37 @@ pathway 4-hydroxylamino-n-n-dim-to-flavin-cytidine "4-(hydroxylamino)-N,N-dim…
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_47 [1.14.14.47] +fmnh2 +h +o2 +l_arginine +l_citrulline +h2o
-    nitric_oxide
+    <-> ec_1_14_99_46 [1.14.99.46] +fmnh2 +thymine +h +o2
+    z_2_methylureidoperacrylic_acid
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_99_46 [1.14.99.46] +fmnh2 +uracil +h +o2
-    ureidoperacrylic_acid
+    <-> ec_1_17_7_3 [1.17.7.3] +fmnh2 +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h +h2o
+    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_77 [1.14.13.77] +taxa_4_20_11_dien_5alpha_ol +h +o2 +nadph +nadp
-    taxa_4_20_11_dien_5alpha_13alpha_diol
+    <-> . +l_alanine +l_arginine +l_phenylalanine
+    arginyl_alanine_phenylalanine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_76 [1.14.13.76] +10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetat +nadp +h +o2 +nadph
-    taxa_4_20_11_dien_5alpha_yl_acetate
+    <-> . +l_alanine +l_threonine +l_arginine
+    arginyl_alanyl_threonine
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_2_5_1_32 [2.5.1.32] +15_cis_phytoene
-    prephytoene_diphosphate
+    <-> ec_4_2_3_140 [4.2.3.140] +cis_abienol
+    copal_8_ol_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_2_5_1_32 [2.5.1.32] +prephytoene_diphosphate +h
-    all_trans_phytoene
+    <-> ec_4_2_3_133 [4.2.3.133] +alpha_copaene
+    2e_6e_farnesyl_diphosphate
   }
 }

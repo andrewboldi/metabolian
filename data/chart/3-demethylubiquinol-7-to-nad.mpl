@@ -24,49 +24,49 @@ pathway 3-demethylubiquinol-7-to-nad "3-demethylubiquinol-7 to NAD" {
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n4_methylcytidine_5_monophosphate_1
+    <-> . +kaempferol_oxoanion +sam +hplus
+    kaempferol_3_olate_7_methyl_ether
   }
 
   branch from sah side left {
     sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> . +4_8_dihydroxyflavone_7_olate +sam
+    4_8_dihydroxy_7_methoxyflavone
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    neoagarotriose
+    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
+    beta_d_glucosaminyl_1_4_beta_d_glucosamine_6_pho
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +neoagarohexaose +phosphate +neoagarohexaose +h2o
-    atp
+    <-> . +2z_4e_5_amino_2_formylhexa_2_4_dienedioate +h2o
+    isocinchomeronic_acid
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +docosan_1_ol +nadp +h
-    docosanal
+    <-> . +acetyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
+    7_methylmellein
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +eicosanal +nadp
-    icosan_1_ol
+    <-> . +cdp_4_dehydro_6_deoxy_alpha_d_gulose +h +nadp
+    cdp_6_deoxy_alpha_d_gulose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +r_citronellal
-    s_citronellol
+    <-> . +nadh +3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a +h +h2o
+    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +e_2_pentenal
-    e_2_penten_1_ol
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_galactono_1_5_lactone
+    alpha_d_galactose
   }
 }

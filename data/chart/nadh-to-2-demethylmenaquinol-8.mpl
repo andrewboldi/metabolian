@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-2-demethylmenaquinol-8 "NADH to 2-demethylmenaquinol-8" {
-  spacing 272
+  spacing 260
 
   spine at 0,0 {
     nadh
@@ -24,44 +24,32 @@ pathway nadh-to-2-demethylmenaquinol-8 "NADH to 2-demethylmenaquinol-8" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +prostaglandin_h2
-    prostaglandin_f2alpha
+    <-> ec_1_1_1_376 [1.1.1.376] +nadh +h +d_talono_1_4_lactone
+    d_talopyranose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_oxodocosanoyl_coa +h
-    3_hydroxydocosanoyl_coa
+    <-> ec_1_2_1_27 [1.2.1.27] +propanoate +nadh +co2 +h +h2o
+    2_methyl_3_oxopropanoate
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    4_acetamidophenol
+    pentadecylic_acid_d3
   }
 
   branch from h side right {
     h
-    <-> . +adp +3alpha_hydroxy_5beta_androstan_17_one +phosphate +3alpha_hydroxy_5beta_androstan_17_one +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    7_palmitoleic_acid
   }
 
   branch from 1_4_dihydroxy_6_naphthoate side left {
     1_4_dihydroxy_6_naphthoate
-    <-> . +diphosphate +6_carboxy_2_demethylmenaquinol_8
-    all_trans_octaprenyl_diphosphate
-  }
-
-  branch from 1_4_dihydroxy_6_naphthoate side right {
-    1_4_dihydroxy_6_naphthoate
     <-> . +diphosphate +co2 +h +2_demethylmenaquinol_8
     octaprenyl_diphosphate
-  }
-
-  branch from all_trans_hexaprenyl_diphosphate side left {
-    all_trans_hexaprenyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    h2o
   }
 
   branch from all_trans_hexaprenyl_diphosphate side right {
@@ -72,37 +60,37 @@ pathway nadh-to-2-demethylmenaquinol-8 "NADH to 2-demethylmenaquinol-8" {
 
   branch from 2_demethylmenaquinol_8 side left {
     2_demethylmenaquinol_8
-    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +2_demethylmenaquinone_8
-    oxaloacetate
-  }
-
-  branch from 2_demethylmenaquinol_8 side right {
-    2_demethylmenaquinol_8
     <-> ec_1_7_5_1 [1.7.5.1] +nitrite +2_demethylmenaquinone_8 +h2o
     nitrate
   }
 
+  branch from 2_demethylmenaquinol_8 side right {
+    2_demethylmenaquinol_8
+    <-> ec_1_14_18_3 [1.14.18.3] +2_demethylmenaquinone_8 +methanol +h2o +methane
+    o2
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +utp +atp
-    3_3_cuamp
+    <-> . +fpp
+    african_1_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gtp +atp
-    cyclic_amp_amp_gmp
+    <-> ec_2_5_1_154 [2.5.1.154] +cob_ii_inamide +fadh2 +atp +h2o +fad +pi +hplus
+    adenosylcobinamide
   }
 
   branch from 2_demethylmenaquinone_8 side left {
     2_demethylmenaquinone_8
-    <-> ec_1_1_5_6 [1.1.5.6] +co2 +2_demethylmenaquinol_8 +h
-    formate
+    <-> ec_1_3_99_1 [1.3.99.1] +succinate +2_demethylmenaquinol_8
+    fumarate
   }
 
   branch from 2_demethylmenaquinone_8 side right {
     2_demethylmenaquinone_8
-    <-> ec_1_14_18_3 [1.14.18.3] +methanol +h2o +2_demethylmenaquinol_8 +methane
-    o2
+    <-> ec_1_1_5_3 [1.1.5.3] +sn_glycerol_3_phosphate +2_demethylmenaquinol_8
+    dihydroxyacetone_phosphate
   }
 }

@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ubiquinone-8-to-2-amino-3-2-5-dihydroxy",
+  "name": "ubiquinone-8 to 2-amino-3-[(2,5-dihydroxy…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from ubiquinone-8 to 2-amino-3-[(2,5-dihydroxyphenyl)sulfanyl]propanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:29083"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61683"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ubiquinone_8",
+      "name": "ubiquinone-8",
+      "formula": "C49H74O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61683"
+      }
+    },
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "ubiquinol_8",
+      "name": "ubiquinol-8",
+      "formula": "C49H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61682"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nitric_oxide",
+      "name": "nitric oxide",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107902"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "hydroquinone",
+      "name": "hydroquinone",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM376"
+      }
+    },
+    {
+      "id": "nitrous_oxide",
+      "name": "nitrous oxide",
+      "formula": "N2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738430"
+      }
+    },
+    {
+      "id": "1_4_benzoquinone",
+      "name": "1,4-benzoquinone",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740100"
+      }
+    },
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM738068"
+      }
+    },
+    {
+      "id": "2_amino_3_2_5_dihydroxyphenyl_sulfanyl_propanoat",
+      "name": "2-amino-3-[(2,5-dihydroxyphenyl)sulfanyl]propanoate",
+      "short": "2-amino-3-[(2,5-dih…",
+      "formula": "C9H11NO4S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM818569"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_99_7",
+      "name": "EC 1.7.99.7",
+      "ec": [
+        "1.7.99.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ubiquinone-8 + (S)-malate = ubiquinol-8 + oxaloacetate",
+      "equation": "ubiquinone-8 + (S)-malate = ubiquinol-8 + oxaloacetate",
+      "substrates": [
+        {
+          "metabolite": "ubiquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:29083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206139",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "ubiquinone_8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206139"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR136759",
+      "ec": "1.7.99.7",
+      "substrates": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hydroquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrous_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_99_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR136759"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR136759"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR188044",
+      "substrates": [
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_amino_3_2_5_dihydroxyphenyl_sulfanyl_propanoat",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR188044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR188044"
+          }
+        ]
+      }
+    }
+  ]
+}

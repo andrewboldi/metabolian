@@ -18,14 +18,14 @@ pathway aldehydo-2-deoxy-d-ribose-to-h2o-null "aldehydo-2-deoxy-D-ribose to H2O"
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_71 [1.14.13.71] +s_3_hydroxy_n_methylcoclaurine +nadp +h +nadph +s_n_methylcoclaurine
-    o2
+    <-> . +l_alanine +l_cysteine +l_arginine
+    alanyl_arginyl_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +methanol +16_epivellosimine
-    co2
+    <-> . +l_alanine +glycine +l_arginine
+    alanyl_arginyl_glycine
   }
 
   branch from guanine side left {

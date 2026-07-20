@@ -220,6 +220,16 @@
       }
     },
     {
+      "id": "d_tagatose_1_phosphate",
+      "name": "D-Tagatose 1-phosphate",
+      "short": "D-Tagatose 1-P",
+      "formula": "C6H13O9P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:170862"
+      }
+    },
+    {
       "id": "adp",
       "name": "ADP",
       "formula": "C10H12N5O10P2",
@@ -229,21 +239,30 @@
       }
     },
     {
-      "id": "l_isoleucine",
-      "name": "L-isoleucine",
-      "formula": "C6H13NO2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM728337"
-      }
-    },
-    {
-      "id": "myo_inositol",
-      "name": "myo-inositol",
+      "id": "keto_d_tagatose",
+      "name": "keto-D-tagatose",
       "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1105941"
+        "chebi": "CHEBI:47693"
+      }
+    },
+    {
+      "id": "l_alanine",
+      "name": "L-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105732"
+      }
+    },
+    {
+      "id": "d_alanyl_d_alanine",
+      "name": "D-alanyl-D-alanine",
+      "formula": "C6H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364010"
       }
     },
     {
@@ -292,32 +311,22 @@
       }
     },
     {
-      "id": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate",
-      "name": "biochanin A 7-O-beta-D-glucoside 6''-O-malonate",
-      "short": "biochanin A…",
-      "formula": "C25H22O13",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM1369210"
-      }
-    },
-    {
-      "id": "biochanin_a_7_o_beta_d_glucoside",
-      "name": "biochanin A 7-O-beta-D-glucoside",
-      "short": "biochanin A…",
-      "formula": "C22H21O10",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1371469"
-      }
-    },
-    {
-      "id": "isethionic_acid",
-      "name": "isethionic acid",
-      "formula": "C2H6O4S",
+      "id": "6_o_malonylwistin",
+      "name": "6''-O-Malonylwistin",
+      "formula": "C26H26O13",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:1157"
+        "chebi": "CHEBI:191448"
+      }
+    },
+    {
+      "id": "afrormosin_7_o_glucoside",
+      "name": "afrormosin-7-O-glucoside",
+      "short": "afrormosin-7-O-gluc…",
+      "formula": "C23H24O10",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740626"
       }
     },
     {
@@ -338,6 +347,42 @@
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM9850"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "r_lactate",
+      "name": "(R)-lactate",
+      "formula": "C3H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371362"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "r_lactaldehyde",
+      "name": "(R)-lactaldehyde",
+      "formula": "C3H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM909"
       }
     }
   ],
@@ -364,24 +409,24 @@
       ]
     },
     {
-      "id": "ec_3_6_3_22",
-      "name": "EC 3.6.3.22",
-      "ec": [
-        "3.6.3.22"
-      ]
-    },
-    {
-      "id": "ec_7_4_2_2",
-      "name": "ABC-type nonpolar-amino-acid transporter",
-      "ec": [
-        "7.4.2.2"
-      ]
-    },
-    {
       "id": "ec_1_8_1_5",
       "name": "2-oxopropyl-CoM reductase (carboxylating)",
       "ec": [
         "1.8.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_23",
+      "name": "2-oxoaldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.23"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_3",
+      "name": "aldehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.3"
       ]
     }
   ],
@@ -749,66 +794,62 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR100821",
-      "ec": "3.6.3.22",
+      "name": "Reaction MNXR100938",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "d_tagatose_1_phosphate",
           "stoichiometry": 1
         },
         {
           "metabolite": "adp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_isoleucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_isoleucine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_22"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR100821"
+        "metanetx": "MNXR100938"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR100821"
+            "id": "MNXR100938"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR100846",
+      "name": "Reaction MNXR100993",
       "substrates": [
         {
-          "metabolite": "myo_inositol",
+          "metabolite": "l_alanine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_alanyl_d_alanine",
           "stoichiometry": 1
         },
         {
@@ -824,31 +865,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "myo_inositol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR100846"
+        "metanetx": "MNXR100993"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR100846"
+            "id": "MNXR100993"
           }
         ]
       }
@@ -907,10 +934,10 @@
     },
     {
       "id": "r12",
-      "name": "Reaction MNXR121739",
+      "name": "Reaction MNXR122815",
       "substrates": [
         {
-          "metabolite": "biochanin_a_7_o_beta_d_glucoside_6_o_malonate",
+          "metabolite": "6_o_malonylwistin",
           "stoichiometry": 1
         },
         {
@@ -920,29 +947,29 @@
       ],
       "products": [
         {
-          "metabolite": "biochanin_a_7_o_beta_d_glucoside",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "malonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "afrormosin_7_o_glucoside",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "metanetx": "MNXR121739"
+        "metanetx": "MNXR122815"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR121739"
+            "id": "MNXR122815"
           }
         ]
       }
@@ -1009,56 +1036,6 @@
     },
     {
       "id": "r14",
-      "name": "Reaction MNXR100880",
-      "substrates": [
-        {
-          "metabolite": "isethionic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "isethionic_acid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 14,
-      "xrefs": {
-        "metanetx": "MNXR100880"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR100880"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r15",
       "name": "Reaction MNXR100931",
       "substrates": [
         {
@@ -1081,7 +1058,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 15,
+      "pathwayStep": 14,
       "xrefs": {
         "metanetx": "MNXR100931"
       },
@@ -1091,6 +1068,58 @@
           {
             "db": "MetaNetX",
             "id": "MNXR100931"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "2-oxoaldehyde dehydrogenase (NAD(+))",
+      "ec": "1.2.1.23",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_lactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "metanetx": "MNXR101019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR101019"
           }
         ]
       }

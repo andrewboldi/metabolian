@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-isopentenyl-diphosphate "diphosphate to isopentenyl diphosphate" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     diphosphate
@@ -24,19 +24,13 @@ pathway diphosphate-to-isopentenyl-diphosphate "diphosphate to isopentenyl dipho
 
   branch from ipp side left {
     ipp
-    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate
-    2e_geranyl_diphosphate
+    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_nonaprenyl_diphosphate
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_89 [2.5.1.89] +tri_trans_hexa_cis_decaprenyl_diphosphate +diphosphate
+    <-> ec_2_5_1_89 [2.5.1.89] +tri_trans_penta_cis_nonaprenyl_diphosphate +diphosphate
     2e_6e_10e_geranylgeranyl_diphosphate
-  }
-
-  branch from ditrans_polycis_pentaprenyl_diphosphate side left {
-    ditrans_polycis_pentaprenyl_diphosphate
-    <-> ec_2_5_1_31 [2.5.1.31] +diphosphate +h +ipp
-    di_trans_poly_cis_hexaprenyl_diphosphate
   }
 }

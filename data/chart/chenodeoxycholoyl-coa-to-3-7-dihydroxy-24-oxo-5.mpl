@@ -18,49 +18,49 @@ pathway chenodeoxycholoyl-coa-to-3-7-dihydroxy-24-oxo-5 "chenodeoxycholoyl-CoA t
 
   branch from 24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa side left {
     24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
-    <-> . +nadp +h2o +h +o2 +nadph
-    24r_25r_3alpha_7alpha_24_trihydroxy_5beta_chole
+    <-> . +h2o2 +o2
+    25s_3alpha_7alpha_dihydroxy_5beta_cholestanoyl
   }
 
   branch from 24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa side right {
     24e_3_7_dihydroxy_5_cholest_24_en_26_oyl_coa
-    <-> . +25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26 +fad +h
-    fadh2
+    <-> . +h +h2o
+    3alpha_7alpha_24_trihydroxy_5beta_cholestanoyl_c
   }
 
   branch from co2 side left {
     co2
-    <-> . +tetracenomycin_b1
-    tetracenomycin_b3
+    <-> . +nyasol
+    4_coumaryl_4_coumarate
   }
 
   branch from co2 side right {
     co2
-    <-> . +tetralin
-    5_6_7_8_tetrahydro_2_naphthoic_acid
+    <-> . +4_aminoimidazole
+    5_aminoimidazole_4_carboxylic_acid
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +s_5_acetamido_2_hydroxyphenyl_cysteine
-    acetaminophen_mercapturate_conjugate_n_acetyl_cy
+    <-> . +henicosanoic_acid +atp +h +amp +heneicosanoyl_coenzyme_a
+    diphosphate
   }
 
   branch from coa side right {
     coa
-    <-> . +erucoyl_coa +diphosphate +amp +atp
-    13z_docosenoate
+    <-> . +henicosanoic_acid +h2o
+    heneicosanoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +trans_5_o_4_coumaroyl_d_quinate +o2 +nadph +5_o_e_caffeoyl_d_quinate
-    nadp
+    <-> ec_4_3_1_15 [4.3.1.15] +h +3_aminoalanine +nh4
+    pyruvate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_36 [1.14.13.36] +h +trans_5_o_4_coumaroyl_d_quinate +o2 +nadph +nadp
-    chlorogenate
+    <-> ec_3_2_1_26 [3.2.1.26] +d_fructofuranose +d_glucose_6_phosphate
+    sucrose_6g_phosphate
   }
 }

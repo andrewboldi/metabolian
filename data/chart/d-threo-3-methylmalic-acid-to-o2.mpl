@@ -24,26 +24,26 @@ pathway d-threo-3-methylmalic-acid-to-o2 "D-threo-3-methylmalic acid to O2" {
 
   branch from h side right {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +valproic_acid +o2 +nadph +5_hydroxyvalproic_acid +h2o
-    nadp
+    <-> . +nadh +3_4_dihydroxyphthalate +nad
+    phthalate_3_4_cis_dihydrodiol
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +valproic_acid +o2 +nadph +nadp +h2o
-    3_hydroxyvalproic_acid
+    <-> ec_5_5_1_1 [5.5.1.1] +3_methylmuconolactone
+    3_methyl_cis_cis_muconic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +carbamazepine_10_11_epoxide
-    dihydroxycarbazepine
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxymethyl_nitrosoamino_1_3_pyridinyl_1_but +nadp +h +o2 +nadph
+    4_n_nitrosomethylamino_1_3_pyridyl_butan_1_one
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +glutathione +glutathionylaminopropylcadaverine
-    homotrypanothione
+    <-> ec_1_14_14_1 [1.14.14.1] +alpha_3_hydroxymethyl_nitrosoamino_propyl_3_pyri +nadp +h +o2 +nadph
+    4_methylnitrosamino_1_3_pyridyl_1_butanol
   }
 
   branch from 3_methylgentisate side right {
@@ -60,13 +60,13 @@ pathway d-threo-3-methylmalic-acid-to-o2 "D-threo-3-methylmalic acid to O2" {
 
   branch from o2 side right {
     o2
-    <-> . +n_hydroxyl_tryptamine +nadp +h2o +tryptamine
+    <-> ec_1_14_14_1 [1.14.14.1] +7_hydroxymethyl_12_methylbenz_a_anthracene +nadp +h2o +h +7_12_dimethyltetraphene
     nadph
   }
 
   branch from o2 side left {
     o2
-    <-> . +z_phenylacetaldehyde_oxime +h +l_cysteine +nadph +nadp +h2o
-    s_phenylacetothiohydroximoyl_l_cysteine
+    <-> ec_1_14_14_1 [1.14.14.1] +7_12_dimethylbenz_a_anthracene_5_6_oxide +nadp +h2o +h +nadph
+    7_12_dimethyltetraphene
   }
 }

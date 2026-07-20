@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-alanine-to-undecaprenyl-diphospho-n "D-alanine to Undecaprenyl-diphospho-N-…" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     d_alanine
@@ -16,39 +16,27 @@ pathway d-alanine-to-undecaprenyl-diphospho-n "D-alanine to Undecaprenyl-diphosp
     undecaprenyl_diphospho_n_acetylmuramoyl_n_acetyl
   }
 
-  branch from two_disacharide_linked_murein_units_pentapeptide side left {
-    two_disacharide_linked_murein_units_pentapeptide
-    <-> . +h +h2o
-    two_linked_disacharide_pentapeptide_and_tetrapep
+  branch from h2o side left {
+    h2o
+    <-> ec_1_14_13_88 [1.14.13.88] +h +o2 +3_hydroxyflavanone +nadph +3_5_dihydroxyflavanone
+    nadp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_163 [3.2.1.163] +d_mannopyranose
-    d_manp_1_6_d_manp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +ethanol +12r_hydroxy_9z_octadecenoate
-    lesquerolate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_2 +methyl_s_orotate +ubiquinone_2
-    methyl_s_dihydroorotate
+    <-> ec_1_14_13_137 [1.14.13.137] +indolin_2_one +nadp +h +o2 +nadph
+    indole
   }
 
   branch from h side left {
     h
-    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_tryptophanate +methanol +h2o
-    n_acetyl_l_tryptophan_methyl_ester
+    <-> ec_1_14_13_138 [1.14.13.138] +indolin_2_one +o2 +nadph +nadp +h2o
+    3_hydroxyindolin_2_one
   }
 
-  branch from two_linked_disacharide_pentapeptide_murein_units side right {
-    two_linked_disacharide_pentapeptide_murein_units
-    <-> . +two_disacharide_linked_murein_units_pentapeptide
-    d_alanyl_d_alanine
+  branch from h side right {
+    h
+    <-> ec_1_1_1_2 [1.1.1.2] +d_galactopyranuronic_acid +nadph +nadp
+    l_galactonic_acid
   }
 }

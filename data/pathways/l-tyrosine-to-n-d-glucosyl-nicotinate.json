@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tyrosine-to-n-d-glucosyl-nicotinate",
+  "name": "L-tyrosine to N-(β-D-glucosyl)nicotinate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-tyrosine zwitterion to N-(β-D-glucosyl)nicotinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21704"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58315"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phenol",
+      "name": "phenol",
+      "formula": "C6H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15882"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "nicotinate_d_ribonucleotide",
+      "name": "nicotinate D-ribonucleotide",
+      "short": "nicotinate…",
+      "formula": "C11H12NO9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57502"
+      }
+    },
+    {
+      "id": "phenyl_5_phosphonato_d_ribofuranoside",
+      "name": "phenyl 5-phosphonato-α-D-ribofuranoside",
+      "short": "phenyl 5-phosphonat…",
+      "formula": "C11H13O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75992"
+      }
+    },
+    {
+      "id": "nicotinate",
+      "name": "nicotinate",
+      "formula": "C6H4NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32544"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "n_d_glucosyl_nicotinate",
+      "name": "N-(β-D-glucosyl)nicotinate",
+      "short": "N-(β-D-glucosyl)nic…",
+      "formula": "C12H15NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:49125"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_99_2",
+      "name": "tyrosine phenol-lyase",
+      "ec": [
+        "4.1.99.2"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_55",
+      "name": "nicotinate D-ribonucleotide:phenol phospho-D-ribosyltransferase",
+      "ec": [
+        "2.4.2.55"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_196",
+      "name": "nicotinate glucosyltransferase",
+      "ec": [
+        "2.4.1.196"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tyrosine phenol-lyase",
+      "equation": "L-tyrosine + H2O = phenol + pyruvate + NH4(+)",
+      "ec": "4.1.99.2",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21704"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21704"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nicotinate D-ribonucleotide:phenol phospho-D-ribosyltransferase",
+      "equation": "nicotinate beta-D-ribonucleotide + phenol = phenyl 5-phospho-alpha-D-ribofuranoside + nicotinate + H(+)",
+      "ec": "2.4.2.55",
+      "substrates": [
+        {
+          "metabolite": "nicotinate_d_ribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenyl_5_phosphonato_d_ribofuranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:38619"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38619"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nicotinate glucosyltransferase",
+      "equation": "nicotinate + UDP-alpha-D-glucose = N-(beta-D-glucosyl)nicotinate + UDP",
+      "ec": "2.4.1.196",
+      "substrates": [
+        {
+          "metabolite": "nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_d_glucosyl_nicotinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_196"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19437"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19437"
+          }
+        ]
+      }
+    }
+  ]
+}

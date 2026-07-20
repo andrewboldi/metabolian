@@ -34,25 +34,25 @@ pathway 1r-5as-6r-1-4-5-5a-6-9-to-h2o "(1R,5aS,6R)-1,4,5,5a,6,9-… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_126 [4.2.3.126] +fpp
-    muurolene
+    <-> ec_4_2_3_144 [4.2.3.144] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    geranyllinalool
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_127 [4.2.3.127] +fpp
-    copaene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    z_biformene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +w_carboxy_leukotriene_b4
-    20_trihydroxy_leukotriene_b4
+    <-> . +5_hydroperoxy_epa
+    leukotriene_a5
   }
 
   branch from h2o side right {
     h2o
-    <-> . +20_dihydroxyleukotriene_b4
-    20_oxo_leukotriene_b4
+    <-> . +leukotriene_a5
+    5_12_dihydroxy_6e_ltb5
   }
 }

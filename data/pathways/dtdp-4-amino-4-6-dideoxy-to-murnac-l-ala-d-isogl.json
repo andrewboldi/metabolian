@@ -242,70 +242,61 @@
       }
     },
     {
-      "id": "hexadecanoate",
-      "name": "hexadecanoate",
-      "formula": "C16H31O2",
-      "charge": -1,
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM108"
+        "metanetx": "MNXM1103302"
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
-      "name": "1-hexadecanoyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C22H44O9P",
-      "charge": -1,
+      "id": "phosphatidylserine_didodecanoyl_n_c12_0",
+      "name": "Phosphatidylserine (didodecanoyl, n-C12:0)",
+      "short": "Phosphatidylserine…",
+      "formula": "C30H56NO10P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM6605"
+        "metanetx": "MNXM7659"
       }
     },
     {
-      "id": "dipalmitoyl_phosphatidylglycerol",
-      "name": "dipalmitoyl phosphatidylglycerol",
-      "short": "dipalmitoyl…",
-      "formula": "C38H75O10P",
+      "id": "cdp_1_2_didodecanoylglycerol",
+      "name": "CDP-1,2-didodecanoylglycerol",
+      "short": "CDP-1,2-didodecanoy…",
+      "formula": "C36H63N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM4507"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60724"
+        "metanetx": "MNXM737787"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "phosphatidylserine_ditetradecanoyl_n_c14_0",
+      "name": "Phosphatidylserine (ditetradecanoyl, n-C14:0)",
+      "short": "Phosphatidylserine…",
+      "formula": "C34H64NO10P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM7665"
       }
     },
     {
-      "id": "9z_octadecenoate",
-      "name": "(9Z)-octadecenoate",
-      "formula": "C18H33O2",
-      "charge": -1,
+      "id": "cdp_1_2_ditetradecanoylglycerol",
+      "name": "CDP-1,2-ditetradecanoylglycerol",
+      "short": "CDP-1,2-ditetradeca…",
+      "formula": "C40H71N3O15P2",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM1364393"
-      }
-    },
-    {
-      "id": "1_acyl_sn_glycero_3_phosphoglycerol_n_c18_1",
-      "name": "1-Acyl-sn-glycero-3-phosphoglycerol (n-C18:1)",
-      "short": "1-Acyl-sn-glycero-3…",
-      "formula": "C24H46O9P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM739929"
-      }
-    },
-    {
-      "id": "phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1",
-      "name": "Phosphatidylglycerol (dioctadec-11-enoyl, n-C18:1)",
-      "short": "Phosphatidylglycero…",
-      "formula": "C42H78O10P",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM731815"
+        "metanetx": "MNXM736328"
       }
     }
   ],
@@ -329,6 +320,13 @@
       "name": "EC 2.4.1.129",
       "ec": [
         "2.4.1.129"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_8",
+      "name": "CDP-diacylglycerol--serine O-phosphatidyltransferase",
+      "ec": [
+        "2.7.8.8"
       ]
     }
   ],
@@ -739,10 +737,11 @@
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR103006",
+      "name": "CDP-diacylglycerol--serine O-phosphatidyltransferase",
+      "ec": "2.7.8.8",
       "substrates": [
         {
-          "metabolite": "hexadecanoate",
+          "metabolite": "cmp",
           "stoichiometry": 1
         },
         {
@@ -750,73 +749,78 @@
           "stoichiometry": 2
         },
         {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero",
+          "metabolite": "phosphatidylserine_didodecanoyl_n_c12_0",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dipalmitoyl_phosphatidylglycerol",
+          "metabolite": "cdp_1_2_didodecanoylglycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_serine",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_8"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR103006"
+        "metanetx": "MNXR103266"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103006"
+            "id": "MNXR103266"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "Reaction MNXR103009",
+      "name": "Reaction MNXR103267",
       "substrates": [
         {
-          "metabolite": "9z_octadecenoate",
+          "metabolite": "cmp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "1_acyl_sn_glycero_3_phosphoglycerol_n_c18_1",
+          "metabolite": "phosphatidylserine_ditetradecanoyl_n_c14_0",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1",
+          "metabolite": "cdp_1_2_ditetradecanoylglycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "l_serine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "metanetx": "MNXR103009"
+        "metanetx": "MNXR103267"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103009"
+            "id": "MNXR103267"
           }
         ]
       }

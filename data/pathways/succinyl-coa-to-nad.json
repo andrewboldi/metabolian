@@ -1,0 +1,259 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "succinyl-coa-to-nad",
+  "name": "succinyl-CoA to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from succinyl-CoA to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR187375"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "succinyl_coa",
+      "name": "succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1104774"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "5_carboxy_2_methyl_3_oxopentanoyl_coa",
+      "name": "5-carboxy-2-methyl-3-oxopentanoyl-CoA",
+      "short": "5-carboxy-2-methyl-…",
+      "formula": "C28H39N7O20P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM819099"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "7_carboxy_4_methyl_3_5_dioxoheptanoyl_coa",
+      "name": "7-carboxy-4-methyl-3,5-dioxoheptanoyl-CoA",
+      "short": "7-carboxy-4-methyl-…",
+      "formula": "C30H41N7O21P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM819098"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl",
+      "name": "(3R)-7-carboxy-3-hydroxy-4-methyl-5-oxoheptanoyl-CoA",
+      "short": "7-carboxy-3-hydroxy…",
+      "formula": "C30H43N7O21P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM819097"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_16",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": [
+        "2.3.1.16"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_35",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": [
+        "1.1.1.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR187375",
+      "substrates": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_carboxy_2_methyl_3_oxopentanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR187375"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR187375"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetyl-CoA C-acyltransferase",
+      "ec": "2.3.1.16",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_carboxy_2_methyl_3_oxopentanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_carboxy_4_methyl_3_5_dioxoheptanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR186376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR186376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": "1.1.1.35",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_carboxy_4_methyl_3_5_dioxoheptanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR184746"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR184746"
+          }
+        ]
+      }
+    }
+  ]
+}

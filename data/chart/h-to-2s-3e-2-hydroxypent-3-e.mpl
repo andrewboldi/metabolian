@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     h
@@ -24,26 +24,26 @@ pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
 
   branch from nadp side left {
     nadp
-    <-> ec_2_3_1_86 [2.3.1.86] +decanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
-    dodecanoyl_coa
+    <-> . +pseudoisoeugenol +h2o +h +o2 +nadph
+    trans_anethole
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_2_3_1_86 [2.3.1.86] +dodecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
-    tetradecanoyl_coa
+    <-> ec_1_3_1_105 [1.3.1.105] +2_butyl_4_hydroxy_5_methyl_3_2h_furanone +h +nadph
+    2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    8_8a_deoxyoleandolide
+    <-> ec_3_2_1_119 [3.2.1.119] +mandelonitrile +vicianose
+    vicianin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +carbomycin +phosphate +carbomycin
-    atp
+    <-> . +glycodeoxycholic_acid +h +deoxycholate
+    glycine
   }
 
   branch from hydrogen_cyanide side left {
@@ -60,43 +60,37 @@ pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_11 +h
-    2_demethylmenaquinol_11
+    <-> . +nadh +flaviolin +h +o2 +h2o
+    2_5_7_8_tetrahydroxynaphthalene_1_4_dione
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +demethylmenaquinone_12 +h
-    2_demethylmenaquinol_12
-  }
-
-  branch from crotonaldehyde side left {
-    crotonaldehyde
-    <-> . +nadp +h +nadph
-    butanal
-  }
-
-  branch from h side right {
-    h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    daunorubicin
+    <-> . +nadh +4_5_dehydro_l_arginine +h
+    l_arginine
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    premithramycinone
+    <-> ec_5_4_2_4 [5.4.2.4] +glyceric_acid_1_3_biphosphate
+    2r_2_3_bisphosphoglycerate
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_2_3_1_86 [2.3.1.86] +tetradecanoyl_coa +malonyl_coa +h +co2 +nadp +coa +h2o
-    hexadecanoyl_coa
+  branch from h side right {
+    h
+    <-> ec_2_8_2_24 [2.8.2.24] +adenosine_3_5_bisphosphate +sinalbin +p_hydroxybenzyldesulphoglucosinolate
+    3_phosphoadenylyl_sulfate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_2_3_1_86 [2.3.1.86] +octadecanoyl_coa +co2 +nadp +coa +h2o +hexadecanoyl_coa +h
-    malonyl_coa
+    <-> ec_1_3_1_105 [1.3.1.105] +nadp +h +2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
+    2_butyl_4_hydroxy_5_methyl_3_2h_furanone
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_3_1_105 [1.3.1.105] +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +nadp +h
+    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
   }
 }

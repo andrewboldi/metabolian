@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-9z-12z-15z-octadecatr-to-9r-10e-12z-15z-9-hydr "N-(9Z,12Z,15Z)-octadecatr… to (9R,10E,12Z,15Z)-9-hydrop…" {
-  spacing 216
+  spacing 204
 
   spine at 0,0 {
     n_9z_12z_15z_octadecatrienoylglycinate
@@ -18,51 +18,39 @@ pathway n-9z-12z-15z-octadecatr-to-9r-10e-12z-15z-9-hydr "N-(9Z,12Z,15Z)-octadec
     9r_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
   }
 
-  branch from mdha side left {
-    mdha
-    <-> . +n_decanoylglycinate +ascorbate +o2 +h2o
-    n_decanoyl_2s_hydroxyglycinate
-  }
-
-  branch from mdha side right {
-    mdha
-    <-> . +n_octanoylglycinate +ascorbate +o2 +h2o
-    n_octanoyl_2s_hydroxyglycinate
-  }
-
   branch from glyoxylate side left {
     glyoxylate
-    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
-    8s_9s_5_glyceryldeoxycytidine_5_monophosphate_1
+    <-> . +3_hydroxy_l_kynurenine +glycine
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
-    8s_9r_5_glyceryldeoxycytidine_5_monophosphate_1
+    <-> . +l_asparagine +glycine
+    2_oxosuccinamate
   }
 
   branch from linolenate side left {
-    linolenate
-    <-> . +atp +coa +amp +ppi
-    linolenoyl_coa
-  }
-
-  branch from linolenate side right {
     linolenate
     <-> . +o2
     9z_11e_13r_15z_13_hydroperoxyoctadecatrienoate
   }
 
+  branch from linolenate side right {
+    linolenate
+    <-> . +o2
+    9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t
+  }
+
   branch from nh3 side left {
     nh3
-    <-> . +l_phenylalanine +o2 +h2o +h2o2
-    keto_phenylpyruvate
+    <-> . +5_4_hydroxyphenyl_methyl_3_imino_4_4_dimethylpyr +h2o +hplus
+    premycofactocin
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +cysteine +o2 +h2o +h2o2
-    mercaptopyruvate
+    <-> . +2_deoxyadenosine_5_monophosphate_1 +acetyl_coa +hydrogen_donor +o2 +hydrogen_acceptor +coa +h2o +hplus
+    n6_methylcarbamoyl_2_deoxyadenosine_5_monophosph
   }
 }

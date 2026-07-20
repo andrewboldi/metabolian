@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoin-to-nad "acetoin to NAD" {
-  spacing 294
+  spacing 288
 
   spine at 0,0 {
     acetoin
@@ -18,38 +18,26 @@ pathway acetoin-to-nad "acetoin to NAD" {
 
   branch from h side left {
     h
-    <-> . +dtdp_4_dehydro_beta_l_rhamnose +h2o
-    dtdp_3_4_dioxo_2_6_dideoxy_l_glucose
+    <-> ec_1_14_13_96 [1.14.13.96] +5beta_cholestane_3alpha_7alpha_diol +o2 +nadph +5beta_cholestane_3alpha_7alpha_12alpha_triol +h2o
+    nadp
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_11 [3.5.1.11] +phenylacetylglycine +h2o +phenyl_acetate
-    glycine
-  }
-
-  branch from 1_deoxy_d_altro_heptulose_7_phosphate side left {
-    1_deoxy_d_altro_heptulose_7_phosphate
-    <-> ec_2_2_1_4 [2.2.1.4] +alpha_d_ribofuranose_5_phosphate +h +acetaldehyde
-    r_acetoin
-  }
-
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_1_13_12_16 [1.13.12.16] +nitrite +h +o2
-    nitroethane
+    <-> ec_2_5_1_32 [2.5.1.32] +prephytoene_diphosphate +all_trans_phytoene
+    diphosphate
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_2
-    ubiquinol_2
+    <-> ec_4_1_2_30 [4.1.2.30] +h +17alpha_hydroxypregnenolone +o2 +nadph +nadp +h2o
+    3beta_hydroxyandrost_5_en_17_one
   }
 
-  branch from actn side right {
-    actn
-    <-> ec_5_1_2_4 [5.1.2.4]
-    s_acetoin
+  branch from acetaldehyde side right {
+    acetaldehyde
+    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_10
+    ubiquinol_10
   }
 
   branch from actn side left {
@@ -58,27 +46,33 @@ pathway acetoin-to-nad "acetoin to NAD" {
     diacetyl
   }
 
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +h +deacetylvindoline
-    vindoline
+  branch from actn side right {
+    actn
+    <-> ec_1_1_1_4 [1.1.1.4] +nadh +h +nad
+    meso_butane_2_3_diol
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_3_13 [2.3.3.13] +acetyl_coa +h +2_oxopentanoate +h2o
-    2_propylmalate
+    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
+    tetracenomycin_f2
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +nadh +h
-    d_erythro_7_8_dihydrobiopterin
+  branch from coa side right {
+    coa
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +6_hydroxymellein +nadp +h2o
+    co2
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +progesterone
-    pregnenolone
+    <-> ec_1_1_1_158 [1.1.1.158] +nadh +h +udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
+    udp_n_acetyl_alpha_d_muramate
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_312 [1.1.1.312] +nadh +h +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h2o
+    2_hydroxy_5_carboxymethylmuconate_semialdehyde
   }
 }

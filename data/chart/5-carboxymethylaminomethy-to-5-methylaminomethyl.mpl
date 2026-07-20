@@ -22,49 +22,49 @@ pathway 5-carboxymethylaminomethy-to-5-methylaminomethyl "5-carboxymethylaminome
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
-    xanthurenate
+    <-> . +l_phenylalanine +glycine
+    keto_phenylpyruvate
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> . +3_hydroxy_l_kynurenine +glycine
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+    <-> . +l_tryptophan +glycine
+    3_indol_3_yl_pyruvate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +uridine_5_monophosphate_1 +o2 +hydrogen_acceptor +h2o
-    5_hydroxyuridine_5_phosphate_1
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    13_r_hode
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +2_3_bis_o_phytanyl_sn_glycerol_1_phospholipid_an +hydrogen_acceptor
-    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phospholi
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    9_s_hode
   }
 
   branch from sah side left {
     sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_hete +atp +coa +amp
-    5_hydroxy_6e_8z_11z_14z_icosatetraenoyl_coa
+    <-> ec_4_2_3_189 [4.2.3.189] +peregrinol_diphosphate
+    9_13_r_epoxylabd_14_ene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +12_hete +atp +coa +amp
-    12_hydroxy_5z_8z_10e_14z_icosatetraenoyl_coa
+    <-> ec_4_2_3_190 [4.2.3.190] +copal_8_ol_diphosphate
+    13r_manoyl_oxide
   }
 }

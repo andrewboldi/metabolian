@@ -32,13 +32,13 @@ pathway 4-nitrophenyl-phosphate-to-di-sulfido-diiron "4-nitrophenyl phosphate to
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +epi_isozizaene +o2 +hplus +di_sulfido_diiron +h2o
-    5r_albaflavenol
+    <-> ec_1_14_19_69 [1.14.19.69] +flaviolin_2_olate +o2 +hplus +di_sulfido_diiron +h2o
+    3_8_biflaviolin_2_7_2_triolate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +5r_albaflavenol +o2 +hplus +di_sulfido_diiron +h2o
-    albaflavenone
+    <-> ec_1_12_1_4 [1.12.1.4] +di_sulfido_diiron +nad +nadh +hplus
+    h2
   }
 }

@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cmp-to-hexadecanoate",
+  "name": "CMP to hexadecanoate",
+  "category": "other",
+  "summary": "A 3-step route from CMP to hexadecanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR190408"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
+      "name": "1,2-dihexadecanoyl-sn-glycero-3-phosphoethanolamine",
+      "short": "1,2-dihexadecanoyl-…",
+      "formula": "C37H74NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73005"
+      }
+    },
+    {
+      "id": "cdp_ethanolamine",
+      "name": "CDP-ethanolamine",
+      "formula": "C11H19N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1103456"
+      }
+    },
+    {
+      "id": "1_2_dipalmitoylglycerol",
+      "name": "1,2-dipalmitoylglycerol",
+      "short": "1,2-dipalmitoylglyc…",
+      "formula": "C35H68O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78090"
+      }
+    },
+    {
+      "id": "hexadecanoyl_coa",
+      "name": "hexadecanoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1106160"
+      }
+    },
+    {
+      "id": "tripalmitin",
+      "name": "tripalmitin",
+      "formula": "C51H98O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77393"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_3_dipalmitoyl_sn_glycerol",
+      "name": "2,3-dipalmitoyl-sn-glycerol",
+      "short": "2,3-dipalmitoyl-sn-…",
+      "formula": "C35H68O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77394"
+      }
+    },
+    {
+      "id": "palmitate",
+      "name": "Palmitate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:7896"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_1",
+      "name": "ethanolaminephosphotransferase",
+      "ec": [
+        "2.7.8.1"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_20",
+      "name": "diacylglycerol O-acyltransferase",
+      "ec": [
+        "2.3.1.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ethanolaminephosphotransferase",
+      "ec": "2.7.8.1",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_ethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dipalmitoylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR190408"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190408"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "diacylglycerol O-acyltransferase",
+      "ec": "2.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "hexadecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dipalmitoylglycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tripalmitin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR181979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "trihexadecanoylglycerol + H2O = 2,3-dihexadecanoyl-sn-glycerol + hexadecanoate + H(+)",
+      "equation": "trihexadecanoylglycerol + H2O = 2,3-dihexadecanoyl-sn-glycerol + hexadecanoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tripalmitin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dipalmitoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40627"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40627"
+          }
+        ]
+      }
+    }
+  ]
+}

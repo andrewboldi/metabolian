@@ -150,12 +150,12 @@
       }
     },
     {
-      "id": "cyclosporin_a",
-      "name": "cyclosporin A",
-      "formula": "C62H111N11O12",
+      "id": "tazarotenic_acid",
+      "name": "tazarotenic acid",
+      "formula": "C19H17NO2S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4031"
+        "chebi": "CHEBI:73129"
       }
     },
     {
@@ -168,13 +168,13 @@
       }
     },
     {
-      "id": "cyclosporin_a_metabolite_m18",
-      "name": "cyclosporin A metabolite M18",
-      "short": "cyclosporin A…",
-      "formula": "C62H111N11O13",
+      "id": "tazarotenic_acid_sulfoxide",
+      "name": "Tazarotenic acid sulfoxide",
+      "short": "Tazarotenic acid…",
+      "formula": "C19H17NO3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140175"
+        "metanetx": "MNXM819723"
       }
     },
     {
@@ -187,13 +187,22 @@
       }
     },
     {
-      "id": "cyclosporin_a_metabolite_m17",
-      "name": "cyclosporin A metabolite M17",
-      "short": "cyclosporin A…",
-      "formula": "C62H111N11O13",
+      "id": "3_methylcyclohexanone",
+      "name": "3-methylcyclohexanone",
+      "short": "3-methylcyclohexano…",
+      "formula": "C7H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:140154"
+        "chebi": "CHEBI:195391"
+      }
+    },
+    {
+      "id": "3_methylcyclohexanol",
+      "name": "3-Methylcyclohexanol",
+      "formula": "C7H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:195740"
       }
     },
     {
@@ -237,6 +246,13 @@
       "name": "acetone carboxylase",
       "ec": [
         "6.4.1.6"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_206",
+      "name": "tropinone reductase I",
+      "ec": [
+        "1.1.1.206"
       ]
     }
   ],
@@ -395,10 +411,10 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR154619",
+      "name": "Reaction MNXR172553",
       "substrates": [
         {
-          "metabolite": "cyclosporin_a",
+          "metabolite": "tazarotenic_acid",
           "stoichiometry": 1
         },
         {
@@ -420,7 +436,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "cyclosporin_a_metabolite_m18",
+          "metabolite": "tazarotenic_acid_sulfoxide",
           "stoichiometry": 1
         },
         {
@@ -431,32 +447,29 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR154619"
+        "metanetx": "MNXR172553"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154619"
+            "id": "MNXR172553"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR154625",
+      "name": "tropinone reductase I",
+      "ec": "1.1.1.206",
       "substrates": [
         {
-          "metabolite": "cyclosporin_a",
+          "metabolite": "3_methylcyclohexanone",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -466,29 +479,30 @@
       ],
       "products": [
         {
+          "metabolite": "3_methylcyclohexanol",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "nadp",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "cyclosporin_a_metabolite_m17",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_1_1_1_206"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR154625"
+        "metanetx": "MNXR172562"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR154625"
+            "id": "MNXR172562"
           }
         ]
       }

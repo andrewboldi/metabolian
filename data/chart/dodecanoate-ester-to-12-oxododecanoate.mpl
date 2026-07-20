@@ -18,25 +18,25 @@ pathway dodecanoate-ester-to-12-oxododecanoate "dodecanoate ester to 12-oxododec
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +n_dodecanoylsphinganine +h2o
-    sphinganine
+    <-> . +1_2_didodecanoyl_3_d_galactosyl_sn_glycerol +h2o +hplus
+    3_d_galactosyl_monododecanoyl_sn_glycerol
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +3_d_galactosyl_1_6_d_galactosyl_1_2_didodecanoyl +h2o +hplus
-    3_d_galactosyl_1_6_d_galactosyl_monododecanoyl_s
+    <-> . +h2o2 +h2o
+    2_hydroxydodecanoate
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_129 [1.14.14.129] +oleoyl_coa +fmnh2 +o2 +h2o +hplus
-    18_hydroxyoleoyl_coa
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    15_hydroxyestradiol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_129 [1.14.14.129] +linoleoyl_coa +fmnh2 +o2 +h2o +hplus
-    9z_12z_18_hydroxyoctadecadienoyl_coa
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    4_hydroxy_17_estradiol
   }
 }

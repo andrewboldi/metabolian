@@ -139,6 +139,33 @@
       }
     },
     {
+      "id": "isoglutamate",
+      "name": "isoglutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66948"
+      }
+    },
+    {
+      "id": "cob_ii_yrinate",
+      "name": "cob(II)yrinate",
+      "formula": "C45H52CoN4O14",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:58894"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
       "id": "atp",
       "name": "ATP",
       "formula": "C10H12N5O13P3",
@@ -148,13 +175,22 @@
       }
     },
     {
-      "id": "l_glutamic_5_semialdehyde",
-      "name": "L-glutamic 5-semialdehyde",
-      "short": "L-glutamic…",
-      "formula": "C5H9NO3",
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58066"
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cob_ii_yrinate_c_monoamide",
+      "name": "cob(II)yrinate c monoamide",
+      "short": "cob(II)yrinate c…",
+      "formula": "C45H54CoN5O13",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:70793"
       }
     },
     {
@@ -174,24 +210,6 @@
       "xrefs": {
         "chebi": "CHEBI:43474"
       }
-    },
-    {
-      "id": "neamine",
-      "name": "neamine",
-      "formula": "C12H30N4O6",
-      "charge": 4,
-      "xrefs": {
-        "chebi": "CHEBI:65076"
-      }
-    },
-    {
-      "id": "6_oxoparomamine",
-      "name": "6'-oxoparomamine",
-      "formula": "C12H26N3O7",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:65016"
-      }
     }
   ],
   "enzymes": [
@@ -203,10 +221,10 @@
       ]
     },
     {
-      "id": "ec_2_6_1_93",
-      "name": "neamine transaminase",
+      "id": "ec_5_4_3_9",
+      "name": "glutamate 2,3-aminomutase",
       "ec": [
-        "2.6.1.93"
+        "5.4.3.9"
       ]
     }
   ],
@@ -391,11 +409,52 @@
     },
     {
       "id": "r5",
-      "name": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
-      "equation": "L-glutamate + ATP + NADPH + H(+) = L-glutamate 5-semialdehyde + ADP + phosphate + NADP(+)",
+      "name": "glutamate 2,3-aminomutase",
+      "equation": "L-glutamate = 3-aminopentanedioate",
+      "ec": "5.4.3.9",
       "substrates": [
         {
           "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoglutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_3_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:34239"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34239"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "cob(II)yrinate + L-glutamine + ATP + H2O = cob(II)yrinate c monoamide + L-glutamate + A...",
+      "equation": "cob(II)yrinate + L-glutamine + ATP + H2O = cob(II)yrinate c monoamide + L-glutamate + ADP + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "cob_ii_yrinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -403,17 +462,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_glutamic_5_semialdehyde",
+          "metabolite": "cob_ii_yrinate_c_monoamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
           "stoichiometry": 1
         },
         {
@@ -425,66 +484,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "hplus",
           "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:33207"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33207"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "neamine transaminase",
-      "equation": "neamine + 2-oxoglutarate = 6'-oxoparomamine + L-glutamate",
-      "ec": "2.6.1.93",
-      "substrates": [
-        {
-          "metabolite": "neamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "6_oxoparomamine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_6_1_93"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:34039"
+        "rhea": "RHEA:34547"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34039"
+            "id": "RHEA:34547"
           }
         ]
       }

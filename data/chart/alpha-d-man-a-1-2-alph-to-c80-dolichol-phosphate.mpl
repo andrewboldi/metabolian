@@ -26,13 +26,13 @@ pathway alpha-d-man-a-1-2-alph-to-c80-dolichol-phosphate "alpha-D-Man-a-(1->2)-a
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    ursodeoxycholic_acid_3_sulfate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +18_0_18_3_ps +phosphate +18_0_18_3_ps +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +adp +20_hete_d6 +phosphate +20_hete_d6 +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    18_2_18_2_ps
   }
 }

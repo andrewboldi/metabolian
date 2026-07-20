@@ -18,13 +18,13 @@ pathway prenyl-diphosphate-to-hydrogen-donor "prenyl diphosphate to hydrogen don
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_88 [2.7.7.88] +ppp5_aaca_mrna +gdp +hplus
-    g5_ppp5_aaca_mrna
+    <-> . +fpp
+    z_bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +atp
-    cyclic_a_2_5_pa_3_5_pa_3_5_p
+    <-> . +fpp
+    cedr_8_ene
   }
 }

@@ -20,26 +20,26 @@ pathway udp-to-atp-null "UDP to ATP" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +cucurbitacin_c_3_o_beta_d_glucopyranoside +h
-    cucurbitacin_c
+    <-> . +udp +alpha_d_glc_1_2_alpha_l_rha_1_3_alpha_l_rha_1_3 +h
+    alpha_l_rha_1_3_alpha_l_rha_1_3_beta_l_rha_1_4_a
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +cucurbitacin_e_2_o_d_glucopyranoside +h
-    cucurbitacin_e
+    <-> . +udp +h_pylori_core_oligosaccharide_lipid_a +h
+    beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_309 [2.4.1.309] +udp +alpha_d_gal_1_3_alpha_l_fuc_1_2_beta_d_gal_1_3_a +h
-    alpha_l_fuc_1_2_beta_d_gal_1_3_alpha_d_galnac_1
+    <-> ec_2_4_1_275 [2.4.1.275] +udp +d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_6_d +h
+    beta_d_gal_1_3_beta_d_glcnac_1_3_beta_d_glcnac_1
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
-    chikusetsusaponin_iva
+    <-> . +udp +beta_d_gal_1_7_alpha_d_d_hep_1_2_alpha_l_d_hep_1 +h
+    alpha_d_d_hep_1_2_alpha_l_d_hep_1_3_alpha_l_d_he
   }
 
   branch from glucosyl_heptosyl_3_kdo2_lipid_a_phosphate side left {
@@ -56,13 +56,13 @@ pathway udp-to-atp-null "UDP to ATP" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_59 [2.7.1.59] +n_acetyl_beta_d_glucosamine_6_phosphate +h +adp
-    n_acetyl_beta_d_glucosamine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    20_3_18_3_ps
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannopyranose +h +adp
-    alpha_d_mannose_6_phosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    22_0_18_1_ps
   }
 }

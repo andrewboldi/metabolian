@@ -120,50 +120,41 @@
       }
     },
     {
-      "id": "l_threonine",
-      "name": "L-threonine",
-      "formula": "C4H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30013"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:46398"
-      }
-    },
-    {
-      "id": "uridylyl_l_threonine_1",
-      "name": "uridylyl-L-threonine(1−)",
-      "short": "uridylyl-L-threonin…",
-      "formula": "C13H17N3O10P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:156052"
-      }
-    },
-    {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "phomopsene",
-      "name": "phomopsene",
-      "formula": "C20H32",
+      "id": "cis_farnesene",
+      "name": "cis-β-farnesene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156237"
+        "chebi": "CHEBI:39242"
+      }
+    },
+    {
+      "id": "2_cis_6_cis_farnesyl_diphosphate",
+      "name": "2-cis,6-cis-farnesyl diphosphate",
+      "short": "2-cis,6-cis-farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60374"
+      }
+    },
+    {
+      "id": "acoradiene",
+      "name": "α-acoradiene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:172926"
       }
     }
   ],
@@ -173,13 +164,6 @@
       "name": "glycine dehydrogenase (aminomethyl-transferring)",
       "ec": [
         "1.4.4.2"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_222",
-      "name": "phomopsene synthase",
-      "ec": [
-        "4.2.3.222"
       ]
     }
   ],
@@ -321,21 +305,17 @@
     },
     {
       "id": "r4",
-      "name": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
-      "equation": "L-threonyl-[protein] + UTP = uridylyl-L-threonyl-[protein] + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = (Z)-beta-farnesene + diphosphate",
       "substrates": [
         {
-          "metabolite": "l_threonine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "utp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "uridylyl_l_threonine_1",
+          "metabolite": "cis_farnesene",
           "stoichiometry": 1
         },
         {
@@ -346,32 +326,31 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64608"
+        "rhea": "RHEA:68508"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64608"
+            "id": "RHEA:68508"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "phomopsene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = phomopsene + diphosphate",
-      "ec": "4.2.3.222",
+      "name": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
+      "equation": "(2Z,6Z)-farnesyl diphosphate = alpha-acoradiene + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "phomopsene",
+          "metabolite": "acoradiene",
           "stoichiometry": 1
         },
         {
@@ -379,22 +358,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_222"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:64856"
+        "rhea": "RHEA:68512"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64856"
+            "id": "RHEA:68512"
           }
         ]
       }

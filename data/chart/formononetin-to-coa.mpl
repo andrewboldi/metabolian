@@ -28,14 +28,14 @@ pathway formononetin-to-coa "formononetin to CoA" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_trihomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_6_methylsulfanyl_hexanal_oxime
+    <-> ec_1_14_14_116 [1.14.14.116] +s_averantin +fmnh2 +o2 +h2o
+    1_s_5_r_5_hydroxyaverantin
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_133 [1.14.14.133] +1_8_cineole +fmnh2 +o2 +h2o +hplus
-    2_endo_hydroxy_1_8_cineole
+    <-> . +3_hydroxypalmitate +fmnh2 +o2 +h2o +hplus
+    3_16_dihydroxyhexadecanoate
   }
 
   branch from pseudobaptigenin side left {
@@ -46,14 +46,14 @@ pathway formononetin-to-coa "formononetin to CoA" {
 
   branch from nadp side right {
     nadp
-    <-> . +13_cis_retinal +h2o +h +nadph
-    13_cis_retinoate
+    <-> . +h +7alpha_hydroxycholest_4_en_3_one +nadph
+    5beta_cholestane_3alpha_7alpha_diol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +estrone +o2 +nadph +h2o
-    4_hydroxyestrone
+    <-> . +5b_cholestane_3a_7a_12a_25_26_pentol +h2o +h +o2 +nadph
+    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
   }
 
   branch from 2_7_dihydroxy_4_5_methylenedioxyisoflavone side right {
@@ -64,14 +64,14 @@ pathway formononetin-to-coa "formononetin to CoA" {
 
   branch from h2o side left {
     h2o
-    <-> . +2_methylfumaryl_coa
-    3s_citramalyl_coa
+    <-> . +h +adp +normetanephrine +phosphate +normetanephrine
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +1d_myo_inositol_1_4_bisphosphate +phosphate
-    1d_myo_inositol_1_phosphate
+    <-> . +h +adp +phosphate +atp
+    15z_tetracosenoyl_coa
   }
 
   branch from maackiain side left {

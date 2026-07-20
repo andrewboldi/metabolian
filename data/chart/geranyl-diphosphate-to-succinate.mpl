@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-succinate "geranyl diphosphate to succinate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     gpp
@@ -18,29 +18,5 @@ pathway geranyl-diphosphate-to-succinate "geranyl diphosphate to succinate" {
     n_7_carboxy_7_demethylgeranyl_l_glutamate
     <-> . +akg +o2 -succinate -co2 -h2o
     isodomoate_a
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    barbatene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    sativene
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +9_cis_retinoate +fmnh2 +o2 +h2o +hplus
-    9_cis_4_hydroxyretinoate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +all_trans_4_hydroxyretinoate +fmnh2 +o2 +h2o +hplus
-    all_trans_4_oxoretinoate
   }
 }

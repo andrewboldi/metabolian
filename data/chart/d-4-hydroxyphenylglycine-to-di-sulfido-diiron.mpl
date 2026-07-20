@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-4-hydroxyphenylglycine-to-di-sulfido-diiron "D-4-hydroxyphenylglycine-… to di-μ-sulfido-diiron" {
-  spacing 214
+  spacing 190
 
   spine at 0,0 {
     d_4_hydroxyphenylglycine_l_seryl_l_4_hydroxyphen
@@ -20,55 +20,31 @@ pathway d-4-hydroxyphenylglycine-to-di-sulfido-diiron "D-4-hydroxyphenylglycine-
 
   branch from h2o side left {
     h2o
-    <-> . +dalcochinin +glucose
-    dalcochinin_8_o_beta_glucoside
+    <-> . +h +4_5_epoxy_17r_hydroxy_docosahexaenoate
+    aspirin_triggered_resolvin_d3
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_83 [3.1.1.83] +6_isopropenyl_3_methyloxepan_2_one +a_6_hydroxy_5_isopropenyl_2_methylhexanoate
+    <-> . +aspirin_triggered_resolvin_d4 +4_5_epoxy_17r_hydroxy_docosahexaenoate
     h
   }
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> . +cadaverine +s_adenosylmethioninaminium +hplus
-    aminopropylcadaverine
-  }
-
-  branch from 5_s_methyl_5_thioadenosine side right {
-    5_s_methyl_5_thioadenosine
     <-> . +n4_aminopropylspermidine +s_adenosylmethioninaminium +hplus
     n4_bis_aminopropyl_spermidine
   }
 
-  branch from nocardicin_c_dizwitterion side left {
-    nocardicin_c_dizwitterion
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    2_n_hydroxynocardicin_c
-  }
-
-  branch from nocardicin_a side right {
-    nocardicin_a
-    <-> ec_5_1_1_14 [5.1.1.14]
-    isonocardicin_a
+  branch from 5_s_methyl_5_thioadenosine side right {
+    5_s_methyl_5_thioadenosine
+    <-> . +spermine +s_adenosylmethioninaminium +hplus
+    n4_aminopropylspermine
   }
 
   branch from nocardicin_a side left {
     nocardicin_a
-    <-> . +h2o +hplus
-    2_n_n_dihydroxynocardicin_c
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
-    oleoyl_coa
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_3_hydroxyretinol
+    <-> ec_5_1_1_14 [5.1.1.14]
+    isonocardicin_a
   }
 }

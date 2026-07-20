@@ -30,14 +30,14 @@ pathway h-to-heptanal "H to heptanal" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +arginomycin
-    l_leucyl_arginomycin
+    <-> . +isotrichotriol
+    trichotriol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +blasticidin_s
-    l_leucyl_blasticidin_s
+    <-> . +trichotriol
+    3_hydroxytrichothecene
   }
 
   branch from heptan_1_ol side left {
@@ -48,13 +48,13 @@ pathway h-to-heptanal "H to heptanal" {
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_18 [1.14.12.18] +nadh +4_bromodiphenyl_ether +h +o2
-    4_bromo_2_3_dihydrodiol_diphenyl_ether
+    <-> . +nadh +3_ethyl_2_oxosuccinate +h
+    3_ethylmalate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_56 [1.3.1.56] +nadh +h +4_bromo_2_3_dihydrodiol_diphenyl_ether
-    4_bromo_2_3_dihydroxydiphenyl_ether
+    <-> . +nadh +h +2_3_dihydroxy_2_carboxybiphenyl +h2o
+    1_10_dihydro_1_10_dihydroxyfluoren_9_one
   }
 }

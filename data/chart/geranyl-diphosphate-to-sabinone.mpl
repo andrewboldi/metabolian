@@ -18,13 +18,13 @@ pathway geranyl-diphosphate-to-sabinone "geranyl diphosphate to (+)-sabinone" {
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    z_bisabolene
+    <-> . +fpp
+    maaliene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    cadinene
+    <-> . +fpp
+    aristolene
   }
 }

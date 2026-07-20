@@ -22,14 +22,14 @@ pathway lupanine-to-h2o-null "lupanine to H2O" {
 
   branch from h side left {
     h
-    <-> . +benzoyl_coa +tryptamine +n_benzoyltryptamine
-    coa
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    alpha_l_arabinopyanose
   }
 
   branch from h side right {
     h
-    <-> . +caffeoyl_coa +tryptamine +coa
-    caffeoyltryptamine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_xylose
   }
 
   branch from 17_oxosparteine side left {
@@ -40,61 +40,61 @@ pathway lupanine-to-h2o-null "lupanine to H2O" {
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +homoisoalliin +h2o +nh4
-    e_but_1_en_1_so_peroxol
+    <-> ec_4_4_1_4 [4.4.1.4] +ethylsulfenate +nh4 +h2o
+    ethiin
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +phosphoenolpyruvate
-    n_acetyl_beta_d_glucosamine
+    <-> . +d_alanine +phylloquinone +h2o +nh4
+    phylloquinol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +all_trans_beta_carotene +h +o2 +all_trans_retinal +h2o
-    11_cis_retinal
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    r_linalool
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_316 [1.1.1.316] +nadh +l_galactono_1_4_lactone +h
-    l_galactose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    s_linalool
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threonine +l_cysteine +l_tyrosine
-    tyrosyl_cysteinyl_threonine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_arabinopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_glutamate +l_tyrosine
-    tyrosyl_glutamate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    3_amino_3_deoxy_d_glucopyranose
   }
 
   branch from putrescine side right {
-    putrescine
-    <-> ec_4_1_1_17 [4.1.1.17] +co2 +h
-    ornithine
-  }
-
-  branch from putrescine side left {
     putrescine
     <-> . +o2 +nadph +h +2_hydroxyputrescine +h2o
     nadp
   }
 
+  branch from putrescine side left {
+    putrescine
+    <-> . +nadh +h +4_aminobutanal +nad +h2o
+    sym_homospermidine
+  }
+
   branch from atp side right {
     atp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannose_6_phosphate +h +adp
-    beta_d_mannose
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    alpha_d_quinovopyranose
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_43 [2.7.1.43] +1_phospho_alpha_d_glucuronate +h +adp
-    beta_d_glucuronate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_fructopyranose
   }
 }

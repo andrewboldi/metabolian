@@ -37,24 +37,24 @@ pathway inosine-to-h2o "inosine to H2O" {
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    3_s_hydroxy_pravastatin_tetranor
+    glycine
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    3_s_hydroxy_pravastatin
+    gliclazide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_hydroxy_simvastatin_lactone_form
-    3_hydroxy_simvastatin_acid_form
+    <-> . +l_methionine +l_glutamate
+    glutamyl_methionine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    4_beta_oh_gliclazide
+    <-> . +l_lysine +l_threonine +l_glutamate
+    glutamyl_threonyl_lysine
   }
 }

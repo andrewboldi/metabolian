@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-dyspropterin" {
-  spacing 232
+  spacing 226
 
   spine at 0,0 {
     5_hydroxy_d_tryptophan
@@ -32,14 +32,14 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_208 [1.14.13.208] +benzoyl_coa +h +nadph +2_3_dihydroxy_2_3_dihydrobenzoyl_coa
-    nadp
+    <-> ec_1_14_14_94 [1.14.14.94] +leukotriene_b4 +h +nadph +nadp +h2o
+    19_hydroxyleukotriene_b4
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +h +nadph +nadp +h2o
-    dihydroxycholesterol
+    <-> ec_1_13_12_16 [1.13.12.16] +butanal +nitrite +h
+    1_nitrobutane
   }
 
   branch from 6r_5_6_7_8_tetrahydrobiopterin side left {
@@ -50,8 +50,8 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-
 
   branch from 6r_5_6_7_8_tetrahydrobiopterin side right {
     6r_5_6_7_8_tetrahydrobiopterin
-    <-> ec_1_5_1_33 [1.5.1.33] +h +nadph +nadp
-    l_erythro_biopterin
+    <-> ec_1_5_1_33 [1.5.1.33] +l_erythro_biopterin +h +nadph
+    nadp
   }
 
   branch from l_tryptophan side left {
@@ -67,12 +67,6 @@ pathway 5-hydroxy-d-tryptophan-to-r-dyspropterin "5-hydroxy-D-tryptophan to (R)-
   }
 
   branch from r_dyspropterin side left {
-    r_dyspropterin
-    <-> ec_1_1_1_325 [1.1.1.325] +nadp +nadph +hplus
-    6r_l_threo_tetrahydrobiopterin
-  }
-
-  branch from r_dyspropterin side right {
     r_dyspropterin
     <-> ec_1_1_1_153 [1.1.1.153] +nadp +nadph +hplus
     sapropterin

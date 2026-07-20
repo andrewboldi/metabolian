@@ -18,26 +18,26 @@ pathway 2-oxoglutarate-to-succinate "2-oxoglutarate to succinate" {
 
   branch from co2 side left {
     co2
-    <-> . +2_5_dihydroxypyridine +h
-    3_6_dihydroxypicolinate
+    <-> . +acetyl_coa +malonyl_coa +h +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
+    coa
   }
 
   branch from co2 side right {
     co2
-    <-> . +3_methylbutyraldehyde_oxime +h2o +h
-    n_n_dihydroxy_l_leucine
+    <-> . +malonyl_coa +anthraniloyl_coa +h +coa
+    4_hydroxy_2_quinolone
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +o2 +gibberellin_a44_closed_lactone_form +co2
-    gibberellin_a38
+    <-> . +ambiguine_k +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_l
   }
 
   branch from succinate side right {
     succinate
-    <-> . +succinyl_coa +adp +phosphate +coa
-    atp
+    <-> ec_1_14_20_11 [1.14.20.11] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +2_oxoglutarate +h +o2 +co2 +h2o
+    3_z_2_isocyanoethenyl_1h_indole
   }
 
   branch from 5_formyluracil side left {
@@ -48,25 +48,25 @@ pathway 2-oxoglutarate-to-succinate "2-oxoglutarate to succinate" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_lysine +l_phenylalanine
-    phenylalanyl_lysyl_proline
+    <-> . +l_leucine +l_arginine +l_tyrosine
+    tyrosyl_leucyl_arginine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_asparagine +l_phenylalanine
-    phenylalanyl_phenylalaninyl_asparagine
+    <-> . +l_phenylalanine +l_tyrosine
+    tyrosyl_phenylalanyl_tyrosine
   }
 
   branch from h side right {
     h
-    <-> . +rosuvastatin +h2o
-    rosuvastatin_5s_lactone
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +phosphate +1_2_dipalmitoyl_sn_glycero_3_phospho_1_sn_glycer +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sulphate_conjugate_3_methoxy_acetaminophen
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    16_0_t16_1_pg
   }
 }

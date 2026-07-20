@@ -18,37 +18,37 @@ pathway dtdp-l-oleandrose-to-h2o "dTDP-L-oleandrose to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_15_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pa_18_1_9z_18_3_9z_12z_15z
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_16_1_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pa_18_2_9z_12z_18_3_9z_12z_15z
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_16_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pa_18_3_9z_12z_15z_18_3_9z_12z_15z
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_17_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pc_16_1_9z_18_3_9z_12z_15z
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_lysine +l_phenylalanine +l_tyrosine
-    phenylalanyl_tyrosinyl_lysine
+    <-> . +l_lysine +l_valine +l_tyrosine
+    valyl_lysyl_tyrosine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_phenylalanine +l_tyrosine
-    phenylalanyl_tyrosine
+    <-> . +l_valine +l_arginine +l_phenylalanine
+    valyl_phenylalanyl_arginine
   }
 }

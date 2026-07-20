@@ -36,13 +36,13 @@ pathway yaequinolone-j1-to-luteone "Yaequinolone J1 to luteone" {
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +borneol +h +h2o
-    bornyl_diphosphate
+    <-> ec_6_1_3_1 [6.1.3.1] +amp +3_hexyl_4_septyloxetan_2_one +2r_3s_2_hexyl_3_hydroxydecanoate
+    atp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_6_3_2_52 [6.3.2.52] +jasmonoyl_l_isoleucine +amp +l_isoleucine +jasmonate
-    atp
+    <-> ec_6_2_1_2 [6.2.1.2] +amp +4_oxopentanoyl_coa +atp +coa
+    4_oxopentanoate
   }
 }

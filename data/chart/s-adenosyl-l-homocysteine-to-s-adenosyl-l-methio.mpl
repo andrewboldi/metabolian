@@ -18,13 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-s-adenosyl-l-methio "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +ga34_methyl_ester +h
-    gibberellin_a34
+    <-> ec_3_13_1_8 [3.13.1.8] +adenosine +h +l_methionine
+    h2o
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +dehydrophos +h
-    demethyldehydrophos
+    <-> . +s_adenosyl_l_homocysteine +n_methylwelwitindolinone_c_isothiocyanate +h
+    welwitindolinone_c_isothiocyanate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-carboxy-cis,cis-muconate" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     l_rhamnofuranose
@@ -58,14 +58,14 @@ pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-ca
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_19 [1.4.1.19] +l_tryptophan +nadp +h2o +nadph +hplus
-    3_indol_3_yl_pyruvate
+    <-> ec_1_4_3_14 [1.4.3.14] +l_lysinium +o2 +h2o +h2o2
+    6_amino_2_oxohexanoic_acid
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_4_3_1_18 [4.3.1.18] +pyruvate
-    dserine
+    <-> ec_3_5_4_20 [3.5.4.20] +pyrithiamine +h2o +hplus
+    1_4_hydroxy_2_methylpyrimid_5_ylmethyl_3_2_hydro
   }
 
   branch from 3_dehydroshikimate side left {
@@ -76,23 +76,17 @@ pathway l-rhamnofuranose-to-3-carboxy-cis-cis-muconate "L-rhamnofuranose to 3-ca
 
   branch from 3_4_dihydroxybenzoate side right {
     3_4_dihydroxybenzoate
-    <-> ec_1_14_13_23 [1.14.13.23] +nadph +o2 +hplus +nadp +h2o
-    3_hydroxybenzoate
-  }
-
-  branch from 3_4_dihydroxybenzoate side left {
-    3_4_dihydroxybenzoate
     <-> ec_4_1_1_69 [4.1.1.69] +hplus +co2
     3_4_dihydroxyphthalate
   }
 
-  branch from 3_carboxy_cis_cis_muconate side right {
+  branch from 3_carboxy_cis_cis_muconate side left {
     3_carboxy_cis_cis_muconate
     <-> ec_5_5_1_5 [5.5.1.5]
     2_carboxylatomethyl_5_oxo_2_5_dihydrofuran_2_ide
   }
 
-  branch from 3_carboxy_cis_cis_muconate side left {
+  branch from 3_carboxy_cis_cis_muconate side right {
     3_carboxy_cis_cis_muconate
     <-> ec_5_5_1_2 [5.5.1.2] +hplus
     2_carboxylatomethyl_5_oxo_2_5_dihydro_2_furoate

@@ -18,14 +18,14 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
 
   branch from n_acylsphingosine side left {
     n_acylsphingosine
-    <-> ec_1_14_19_18 [1.14.19.18] +fe2 +o2 +hplus +iron +h2o
-    n_acyl_4e_8e_sphinga_4_8_dienine
+    <-> ec_1_14_19_17 [1.14.19.17] +fe2 +o2 +hplus +iron +h2o
+    dihydroceramide
   }
 
   branch from n_acylsphingosine side right {
     n_acylsphingosine
-    <-> ec_1_14_19_17 [1.14.19.17] +fe2 +o2 +hplus +iron +h2o
-    dihydroceramide
+    <-> . +udp_d_galactose +udp +hplus
+    n_acyl_d_galactosylsphingosine
   }
 
   branch from 2_acyl_sn_glycero_3_phosphocholine side left {
@@ -42,14 +42,14 @@ pathway 1-oleoyl-2-acyl-sn-3-glyc-to-1-2-diacyl-sn-glyce "1-oleoyl-2-acyl-sn-3-g
 
   branch from oleate side left {
     oleate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit
+    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    12_hydroxyoctadecanoate
   }
 
   branch from oleate side right {
     oleate
-    <-> . +n_oleoylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +13_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    13_hydroxyoctadecanoate
   }
 
   branch from phosphatidylcholine side left {

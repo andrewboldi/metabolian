@@ -60,13 +60,13 @@ pathway n-trans-sinapoyltyramine-to-h2o "N-trans-sinapoyltyramine to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro
-    15_epi_lipoxin_b4
+    <-> ec_1_11_1_1 [1.11.1.1] +deamido_nad +h2o2
+    nicotinamide_hypoxanthine_dinucleotide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +7_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h
-    7_8_epoxy_17r_hydroxy_docosahexaenoate
+    <-> ec_3_4_14_5 [3.4.14.5] +his_pro +l_tyrosine
+    his_pro_tyr
   }
 }

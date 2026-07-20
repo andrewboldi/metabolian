@@ -20,14 +20,14 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from glycine side left {
     glycine
-    <-> ec_3_4_11_19 [3.4.11.19] +glycinamide +h +h2o
-    nh4
+    <-> . +nadh +h +acetate +nad +h2o
+    l_threonine
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
-    d_ala_gly
+    <-> . +acetyl_coa +h2 +l_threonine
+    coa
   }
 
   branch from arginine side left {
@@ -38,14 +38,14 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_3 [3.2.1.3] +panose +beta_d_glucose
-    d_maltose
+    <-> ec_3_1_1_20 [3.1.1.20] +methyl_3_4_5_trihydroxybenzoate +h +methanol
+    3_4_5_trihydroxybenzoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_leucine +l_proline
-    leucyl_proline
+    <-> ec_3_1_1_1 [3.1.1.1] +dexmethylphenidate +methanol
+    ritalinic_acid
   }
 
   branch from beta_alanine side right {
@@ -56,14 +56,14 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_4_14 [2.7.4.14] +l_ddcdp +adp +h
-    l_ddcmp
+    <-> . +3_methylbut_2_enoyl_coa +co2 +h2o +h +adp +phosphate
+    3_methyl_2e_glutaconyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_4 [6.3.2.4] +udpmurnac_oyl_l_ala_gamma_d_glu_l_lys_d_ala_d_se +h +adp +phosphate +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi
-    d_alanyl_d_serine
+    <-> . +d_ribose +h +adp +phosphate +h2o
+    beta_d_ribopyranose
   }
 
   branch from l_arginine side left {
@@ -74,7 +74,7 @@ pathway arginyl-glycine-to-h2o "Arginyl-Glycine to H2O" {
 
   branch from l_arginine side right {
     l_arginine
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +h +h2o
-    arg_pro
+    <-> ec_3_4_17_12 [3.4.17.12] +leu_enkephalin_arg +h +h2o
+    leu_enkephalin
   }
 }

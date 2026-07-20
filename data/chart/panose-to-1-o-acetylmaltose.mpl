@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
-  spacing 280
+  spacing 268
 
   spine at 0,0 {
     panose
@@ -26,14 +26,14 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from alpha_d_glucose side left {
     alpha_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +keto_d_fructose +h2o
-    turanose
+    <-> ec_3_2_1_10 [3.2.1.10] +h +4_nitrophenol +h2o
+    4_nitrophenyl_d_glucoside
   }
 
   branch from alpha_d_glucose side right {
     alpha_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +keto_d_fructose +h2o
-    6_o_alpha_d_glucopyranosyl_beta_d_fructofuranose
+    <-> ec_3_2_1_20 [3.2.1.20] +methanol +h2o
+    methyl_d_glucopyranoside
   }
 
   branch from d_maltose side left {
@@ -56,26 +56,26 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_11 [4.2.1.11] +2_phosphonomethyl_3_hydroxypropanoate
-    alpha_dihydroxyphosphinylmethyl_acrylate
+    <-> . +alpha_d_ribose_1_phosphate +h
+    ribose_1_3_cyclic_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +l_phenylalanine
-    phe_pro
+    <-> ec_1_14_12_17 [1.14.12.17] +nadh +h +cumene_hydroperoxide +2_phenylpropan_2_ol
+    nad
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +4_hydroxymandelonitrile +h2o
-    dhurrin
+    <-> ec_5_1_3_3 [5.1.3.3]
+    beta_d_glucose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +pyridoxine +h2o
-    5_o_beta_d_glucosylpyridoxine
+    <-> . +nadp +h +nadph
+    d_glucono_1_5_lactone
   }
 
   branch from d_glucosyl_1_4_d_mannose side right {
@@ -90,28 +90,16 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side right {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_2 [3.2.1.2] +beta_maltose +h2o
-    maltohexaose
-  }
-
-  branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +phosphate
-    d_glucopyranose_1_phosphate
-  }
-
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +o2 +h2o2
-    d_maltotriono_1_5_lactone
+    <-> . +h2o +d_maltose
+    beta_d_fructose
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_2 [3.2.1.2] +maltopentaose +h2o
-    beta_maltose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from maltose side right {
@@ -122,8 +110,8 @@ pathway panose-to-1-o-acetylmaltose "panose to 1-O-acetylmaltose" {
 
   branch from maltose side left {
     maltose
-    <-> ec_2_7_1_208 [2.7.1.208] +n_phosphonato_l_histidine +l_histidine
-    maltose_6_phosphate
+    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
+    d_maltobiono_1_5_lactone
   }
 
   branch from 1_o_acetylmaltose side right {

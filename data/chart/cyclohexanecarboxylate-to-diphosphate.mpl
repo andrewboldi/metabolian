@@ -24,14 +24,14 @@ pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosp
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_53 [1.14.19.53] +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_3_4_didehydroretinol
+    <-> . +1_linoleoyl_2_acyl_3_d_galactosyl_sn_glycerol +di_sulfido_diiron +o2 +hplus +h2o
+    1_linolenoyl_2_acyl_3_d_galactosyl_sn_glycerol
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_4_hydroxyretinol
+    <-> . +cortisol +di_sulfido_diiron +o2 +hplus +h2o
+    18_hydroxycortisol
   }
 
   branch from 4_oxocyclohexanecarboxylate side left {
@@ -42,13 +42,13 @@ pathway cyclohexanecarboxylate-to-diphosphate "cyclohexanecarboxylate to diphosp
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_183 [4.2.3.183] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    nezukol
+    <-> . +5_methyl_ctp +h2o +hplus
+    5_methyl_cmp
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_184 [4.2.3.184] +fpp +h2o
-    5_hydroxy_gurjunene
+    <-> . +ttp +h2o +hplus
+    tmp
   }
 }

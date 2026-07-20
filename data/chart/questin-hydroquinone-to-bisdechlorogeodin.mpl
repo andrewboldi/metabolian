@@ -30,13 +30,13 @@ pathway questin-hydroquinone-to-bisdechlorogeodin "questin hydroquinone to (−)
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
-    n5_methyl_argininium_1
+    <-> ec_2_1_1_337 [2.1.1.337] +s_corytuberine +sam
+    s_magnoflorine
   }
 
   branch from sah side right {
     sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
+    <-> ec_2_1_1_337 [2.1.1.337] +s_glaucine +sam +hplus
+    s_1_2_9_10_tetramethoxy_6_methylaporphine
   }
 }

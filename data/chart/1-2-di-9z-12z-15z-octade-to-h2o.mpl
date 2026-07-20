@@ -22,37 +22,37 @@ pathway 1-2-di-9z-12z-15z-octade-to-h2o "1,2-di-(9Z,12Z,15Z-octade… to H2O" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_227 [2.1.1.227] +cytidine_5_monophosphate_1 +sam +hplus
-    2_o_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_229 [2.1.1.229] +5_carboxymethyl_uridine_5_monophosphate_2 +sam
-    5_2_methoxy_2_oxoethyl_uridine_5_monophosphate
+    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
+    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    tetradecanoic_d27_acid
+    <-> . +diphosphate +2_4_dichlorobenzoyl_coa +amp +2_4_dichlorobenzoate
+    coa
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    s_glutathionyl_ethacrynic_acid
+    <-> . +nadh +3_dehydro_atp +h
+    nad
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    propanoyl_coa
+    <-> . +h +n_carbamoyl_l_glutamate
+    hydantoin_5_propionate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    choloyl_coa
+    <-> . +6_hydroxykynurenic_acid
+    4_2_amino_5_hydroxyphenyl_2_4_dioxobutanoate
   }
 }

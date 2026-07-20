@@ -26,25 +26,25 @@ pathway 4-hydroxyechinenone-to-h2o "4'-hydroxyechinenone to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    r_terpineol
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +3_oxo_homoplatensic_coa +h
+    3s_3_hydroxy_homoplatensic_coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    thujan_3_ol
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +3_oxopentanoyl_coa +h
+    s_3_hydroxypentanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    d_glucosaminyl_1_4_d_glucosamine
+    <-> . +oleandomycin +beta_d_glucose
+    glucosyl_oleandomycin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +6_alpha_maltosylglucose +phosphate +6_alpha_maltosylglucose
-    atp
+    <-> . +15_15_dihydroxy_carotene
+    carotene_15_15_epoxide
   }
 }

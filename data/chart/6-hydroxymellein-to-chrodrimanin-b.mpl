@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-hydroxymellein-to-chrodrimanin-b "6-hydroxymellein to chrodrimanin B" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     6_hydroxymellein
@@ -24,18 +24,6 @@ pathway 6-hydroxymellein-to-chrodrimanin-b "6-hydroxymellein to chrodrimanin B" 
     chrodrimanin_a
     <-> . +acetyl_coa -coa
     chrodrimanin_b
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +2_cis_6_trans_farnesyl_diphosphate
-    z_bisabolene
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    variecoladiene
   }
 
   branch from 3_hydroxypentacecilide_a side left {

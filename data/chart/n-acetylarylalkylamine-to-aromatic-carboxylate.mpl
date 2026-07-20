@@ -18,14 +18,14 @@ pathway n-acetylarylalkylamine-to-aromatic-carboxylate "N-acetylarylalkylamine t
 
   branch from acetate side left {
     acetate
-    <-> . +n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga +h2o
-    d_galactosaminyl_1_3_l_fucosyl_1_2_d_galactosyl
+    <-> ec_4_1_3_22 [4.1.3.22] +pyruvate
+    l_citramalate
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_4_1_3_22 [4.1.3.22] +pyruvate
-    l_citramalate
+    <-> ec_3_7_1_6 [3.7.1.6] +h2o +pyruvate +hplus
+    acetylpyruvate
   }
 
   branch from arenecarbaldehyde side left {

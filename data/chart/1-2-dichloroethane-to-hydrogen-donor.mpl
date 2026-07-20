@@ -34,14 +34,14 @@ pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen don
 
   branch from glycolate side left {
     glycolate
-    <-> ec_3_5_1_124 [3.5.1.124] +s_1_hydroxy_2_oxoethyl_l_cysteine +h2o +hplus
-    l_cysteine
+    <-> . +h2o +dgtp +hplus
+    n2_1_hydroxy_2_oxoethyl_dgtp
   }
 
   branch from glycolate side right {
     glycolate
-    <-> . +h2o +dgtp +hplus
-    n2_1_hydroxy_2_oxoethyl_dgtp
+    <-> . +h2o +gtp +hplus
+    n2_1_hydroxy_2_oxoethyl_gtp
   }
 
   branch from glyoxylate side left {
@@ -58,13 +58,13 @@ pathway 1-2-dichloroethane-to-hydrogen-donor "1,2-dichloroethane to hydrogen don
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +oleoyl_coa +o2 +hydrogen_acceptor +h2o
-    linoleoyl_coa
+    <-> . +3_substituted_propionyl_coa +hydrogen_acceptor
+    2_3_dehydroacyl_coa
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +linoleoyl_coa +o2 +hydrogen_acceptor +h2o
-    linolenoyl_coa
+    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
+    5_s_11_r_dihete
   }
 }

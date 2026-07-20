@@ -18,26 +18,26 @@ pathway s-adenosyl-l-homocysteine-to-precorrin-3b "S-adenosyl-L-homocysteine to 
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +alpha_tocopherol
-    2r_2_5_8_trimethyl_2_4_8_12_trimethyltridecyl_c
+    <-> . +s_adenosyl_l_homocysteine +name
+    nogalonic_acid
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
-    31_o_demethyl_fk_506
+    <-> ec_2_1_1_288 [2.1.1.288] +s_adenosyl_l_homocysteine +aklanonic_acid_methyl_ester
+    aklanonic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_phenylalanine +l_tyrosine
-    tyrosyl_alaninyl_phenylalanine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
+    1_hexacosanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_tyrosine
-    tyr_ala
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
+    1_hexacosanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from precorrin_3b side left {

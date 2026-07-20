@@ -38,61 +38,55 @@ pathway biphenyl-to-nad "biphenyl to NAD" {
     biphenyl_2_3_diol
   }
 
-  branch from 2_6_dioxo_6_phenylhexa_3_enoate side left {
-    2_6_dioxo_6_phenylhexa_3_enoate
-    <-> ec_1_3_1_40 [1.3.1.40] +h +nadph +nadp
-    2_6_dioxo_6_phenylhexanoate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +h +nad
-    r_lactaldehyde
-  }
-
   branch from h2o side left {
     h2o
     <-> ec_3_1_1_1 [3.1.1.1] +n_n_diethylglycine +2_6_dimethylaniline
     lidocaine
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +25r_5beta_cholestane_3alpha_7alpha_26_triol +h +nadph +nadp +h2o
-    25r_3alpha_7alpha_dihydroxy_5beta_cholestan_26
+  branch from h2o side right {
+    h2o
+    <-> . +hexadecanoate +core_oligosaccharide_lipid_a +h
+    hepta_acylated_core_oligosaccharide_lipid_a
   }
 
   branch from o2 side left {
     o2
-    <-> . +antipyrine +h +nadph +nadp +methanol
-    edaravone
+    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +nadp +h2o +h +nadph
+    paclitaxel
   }
 
-  branch from 3_2_3_dihydroxyphenyl_propanoate side right {
-    3_2_3_dihydroxyphenyl_propanoate
-    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
-    2_hydroxy_6_oxonona_2_4_dienedioic_acid
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_14_1 [1.14.14.1] +4_hydroxytolbutamide +nadp +h2o +h +nadph
+    tolbutamide
   }
 
   branch from 3_2_3_dihydroxyphenyl_propanoate side left {
     3_2_3_dihydroxyphenyl_propanoate
     <-> ec_1_13_11_16 [1.13.11.16] +h +o2
+    2_hydroxy_6_oxonona_2_4_dienedioic_acid
+  }
+
+  branch from 3_2_3_dihydroxyphenyl_propanoate side right {
+    3_2_3_dihydroxyphenyl_propanoate
+    <-> ec_1_13_11_16 [1.13.11.16] +h +o2
     2e_4z_2_hydroxy_6_oxonona_2_4_dienedioate
   }
 
-  branch from cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol side right {
+  branch from cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol side left {
     cis_3_3_carboxyethyl_3_5_cyclohexadiene_1_2_diol
     <-> ec_1_14_12_19 [1.14.12.19] +nadh +h +o2 +nad
     3_phenylpropanoate
   }
 
-  branch from nad side left {
+  branch from nad side right {
     nad
     <-> ec_1_2_1_18 [1.2.1.18] +nadh +h +r_methylmalonyl_coa +coa
     2_methyl_3_oxopropanoate
   }
 
-  branch from nad side right {
+  branch from nad side left {
     nad
     <-> . +nadh +h +1_4_dihydroxy_2_naphthoate +h2o
     menadione

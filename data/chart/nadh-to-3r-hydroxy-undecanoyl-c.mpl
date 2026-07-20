@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-3r-hydroxy-undecanoyl-c "NADH to (3R)-hydroxy-undecanoyl-C…" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     nadh
@@ -16,57 +16,51 @@ pathway nadh-to-3r-hydroxy-undecanoyl-c "NADH to (3R)-hydroxy-undecanoyl-C…" {
     3r_hydroxy_undecanoyl_coa
   }
 
-  branch from undecanoyl_coa side left {
-    undecanoyl_coa
-    <-> . +acetyl_coa +h +coa
-    3_oxotridecanoyl_coa
+  branch from fad side left {
+    fad
+    <-> . +4z_7z_10z_13z_hexadecatetraenoyl_coa +fadh2 +h
+    2e_4z_7z_10z_13z_hexadecapentaenoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +h +dihydroxyacetone_phosphate
-    sn_glycerol_3_phosphate
-  }
-
-  branch from fad side left {
-    fad
-    <-> ec_1_1_99_3 [1.1.99.3] +fadh2 +h +2_dehydro_d_gluconate
-    d_gluconate
-  }
-
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
-    tetracenomycin_f2
+    <-> . +octanoyl_coa +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    11z_octadecenoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +6_hydroxymellein +nadp +h2o
-    co2
+    <-> . +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h2o +h
+    5_8_11_14_17_eicosapentenoic_acid
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_ribose +h
-    ribitol
+  branch from coa side right {
+    coa
+    <-> . +trans_trans_deca_2_4_dienoyl_coa +r_carnitine
+    4s_4_2e_4z_2_4_decadienoyloxy_4_trimethylammoni
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_6_2_6 [1.6.2.6] +nadh +ferrileghemoglobin +h
-    ferroleghemoglobin
+    <-> . +nadh +h +11z_octadecenoyl_coa +o2 +h2o
+    9z_12z_octadecadienoyl_coa
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose
-    beta_cellobiose
+  branch from nad side right {
+    nad
+    <-> . +nadh +diphosphate +co2 +h +2_demethylmenaquinone_8 +1_4_dihydroxy_2_naphthoate
+    octaprenyl_diphosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_urobilinogen +o2
-    d_urobilin
+    <-> . +l_alanine +l_tyrosine
+    ala_tyr
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +glucose
+    d_cellobiose
   }
 }

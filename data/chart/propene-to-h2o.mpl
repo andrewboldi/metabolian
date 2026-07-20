@@ -50,26 +50,26 @@ pathway propene-to-h2o "propene to H2O" {
 
   branch from 2_oxobutanoate side left {
     2_oxobutanoate
-    <-> ec_4_4_1_1 [4.4.1.1] +h2o +nh4
-    z_2_aminobutenoic_acid
-  }
-
-  branch from 2_oxobutanoate side right {
-    2_oxobutanoate
     <-> ec_1_2_4_4 [1.2.4.4] +co2 +2_alpha_hydroxypropyl_thiamine_diphosphate +h
     thiamine_diphosphate
   }
 
+  branch from 2_oxobutanoate side right {
+    2_oxobutanoate
+    <-> ec_2_5_1_48 [2.5.1.48] +h2o +nh4 +phosphate
+    o_phospho_l_homoserine
+  }
+
   branch from h side left {
     h
-    <-> . +glucose +ubiquinone_8 +h2o +d_gluconate
-    ubiquinol_8
+    <-> . +adp +phosphate +atp +h2o
+    glycine_betaine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
-    l_glutamine
+    <-> . +adp +phosphate +atp +h2o
+    glycerol_2_phosphate
   }
 
   branch from o2 side left {
@@ -86,14 +86,14 @@ pathway propene-to-h2o "propene to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +l_glutamate +l_glutamate +h2o
+    <-> ec_3_6_3_20 [3.6.3.20] +h +adp +sn_glycerol_3_phosphate +sn_glycerol_3_phosphate +h2o
     atp
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    glycine_betaine
+    glycine
   }
 
   branch from o_succinyl_l_homoserine side left {
@@ -104,19 +104,19 @@ pathway propene-to-h2o "propene to H2O" {
 
   branch from o_succinyl_l_homoserine side right {
     o_succinyl_l_homoserine
-    <-> ec_2_5_1_48 [2.5.1.48] +h +succinate +cystathionine
-    l_cysteine
+    <-> . +h +succinate
+    z_2_aminobutenoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    glycerol_2_phosphate
+    <-> ec_3_4_11_1 [3.4.11.1] +glycine
+    glycylglycine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_20 [3.6.3.20] +h +adp +phosphate +atp
-    sn_glycerol_3_phosphate
+    <-> . +glycine +sarcosine
+    glycylsarcosine
   }
 }

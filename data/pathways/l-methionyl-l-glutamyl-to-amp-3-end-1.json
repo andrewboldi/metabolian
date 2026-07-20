@@ -124,33 +124,68 @@
       }
     },
     {
-      "id": "cyclo_l_leucyl_l_leucyl",
-      "name": "cyclo(L-leucyl-L-leucyl)",
-      "short": "cyclo(L-leucyl-L-le…",
-      "formula": "C12H22N2O2",
-      "charge": 0,
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:67269"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "l_argininiumyl_2_group",
-      "name": "L-argininiumyl(2+) group",
-      "short": "L-argininiumyl(2+)…",
-      "formula": "C6H15N4O",
-      "charge": 2,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:64719"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "l_leucyl_l_arginyl_2_group",
-      "name": "L-leucyl-L-arginyl(2+) group",
-      "short": "L-leucyl-L-arginyl(…",
-      "formula": "C12H26N5O2",
-      "charge": 2,
+      "id": "3_l_glutamate_adenylyl_1_group",
+      "name": "3'-(L-glutamate)adenylyl(1−) group",
+      "short": "3'-(L-glutamate)ade…",
+      "formula": "C15H19N6O9P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:133044"
+        "chebi": "CHEBI:78520"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "3_d_aspartyl_adenylyl_1_group",
+      "name": "3'-(D-aspartyl)adenylyl(1−) group",
+      "short": "3'-(D-aspartyl)aden…",
+      "formula": "C14H17N6O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:188449"
+      }
+    },
+    {
+      "id": "d_aspartate",
+      "name": "D-aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29990"
       }
     }
   ],
@@ -170,17 +205,10 @@
       ]
     },
     {
-      "id": "ec_2_3_2_22",
-      "name": "cyclo(L-leucyl-L-leucyl) synthase",
+      "id": "ec_3_1_1_96",
+      "name": "D-aminoacyl-tRNA deacylase",
       "ec": [
-        "2.3.2.22"
-      ]
-    },
-    {
-      "id": "ec_2_3_2_6",
-      "name": "lysine/arginine leucyltransferase",
-      "ec": [
-        "2.3.2.6"
+        "3.1.1.96"
       ]
     }
   ],
@@ -324,71 +352,73 @@
     },
     {
       "id": "r4",
-      "name": "cyclo(L-leucyl-L-leucyl) synthase",
-      "equation": "2 L-leucyl-tRNA(Leu) = cyclo(L-leucyl-L-leucyl) + 2 tRNA(Leu) + 2 H(+)",
-      "ec": "2.3.2.22",
+      "name": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
+      "equation": "tRNA(Gln) + L-glutamate + ATP = L-glutamyl-tRNA(Gln) + AMP + diphosphate",
       "substrates": [
         {
-          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
-          "stoichiometry": 2
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyclo_l_leucyl_l_leucyl",
+          "metabolite": "3_l_glutamate_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 2
+          "metabolite": "amp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_2_22"
+          "metabolite": "ppi",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:46452"
+        "rhea": "RHEA:64612"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46452"
+            "id": "RHEA:64612"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "lysine/arginine leucyltransferase",
-      "equation": "N-terminal L-arginyl-[protein] + L-leucyl-tRNA(Leu) = N-terminal L-leucyl-L-arginyl-[protein] + tRNA(Leu) + H(+)",
-      "ec": "2.3.2.6",
+      "name": "D-aminoacyl-tRNA deacylase",
+      "equation": "D-aspartyl-tRNA(Asp) + H2O = tRNA(Asp) + D-aspartate + H(+)",
+      "ec": "3.1.1.96",
       "substrates": [
         {
-          "metabolite": "l_argininiumyl_2_group",
+          "metabolite": "3_d_aspartyl_adenylyl_1_group",
           "stoichiometry": 1
         },
         {
-          "metabolite": "3_l_leucyl_adenylyl_zwitterionic_group",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_leucyl_l_arginyl_2_group",
+          "metabolite": "amp_3_end_1",
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp_3_end_1",
+          "metabolite": "d_aspartate",
           "stoichiometry": 1
         },
         {
@@ -398,20 +428,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_3_2_6"
+          "enzyme": "ec_3_1_1_96"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50416"
+        "rhea": "RHEA:69795"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50416"
+            "id": "RHEA:69795"
           }
         ]
       }

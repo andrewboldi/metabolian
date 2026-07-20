@@ -18,61 +18,61 @@ pathway fluoride-to-nad "fluoride to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_14_6 [3.4.14.6] +ala_gly
-    ala_gly_ala_gly
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_42 [3.2.1.42] +gdp +aldehydo_d_mannose +h
-    gdp_alpha_d_mannose
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
 
   branch from h side left {
     h
-    <-> . +2_oxoglutarate +dtdp_4_amino_2_4_dideoxy_beta_l_xylose +l_glutamate
-    dtdp_4_oxo_2_deoxy_beta_l_xylose
+    <-> . +adenosine_3_5_bisphosphate +24_epicathasterone_3_o_sulfate +24_epicathasterone
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_113 [1.1.1.113] +l_xylono_1_4_lactone +nadph +nadp
-    l_xylopyranose
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +dihydro_4_coumaroyl_coa +phloretin +coa
+    co2
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +amp +r_r_chrysanthemoyl_coa +coa
-    r_r_chrysanthemate
+    <-> . +cytosinine +3s_beta_arginine +h +adp +phosphate
+    demethylblasticidin_s
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +3_24_dioxocholest_4_en_26_oyl_coa +coa
-    3_24_dioxo_cholest_4_en_26_oate
+    <-> . +histidyltryptophyldiketopiperazine +diphosphate +h +amp +l_tryptophan
+    l_histidine
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +h +co2 +h2o
-    octaketide_sek4
+    <-> . +3_oxotetradecanoyl_coa +h2o
+    3_oxotetradecanoic_acid
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +malonyl_coa +h +o2 +nadph +nadp +6_2_4_dihydroxy_6_methylphenyl_4_hydroxypyran_2 +h2o
-    co2
+    <-> . +acetyl_coa +l_ornithine +h
+    n5_acetyl_l_ornithine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +3_4_dichlorotoluene +h +o2
-    1r_2s_3_4_dichloro_6_methylcyclohexa_3_5_diene
+    <-> . +nadh +h +thujan_3_one
+    thujan_3_ol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +4_6_dichloro_3_methylcatechol
-    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
+    <-> . +nadh +h +2s_3r_2_amino_3_methyl_4_ketopentanoate
+    4s_4_hydroxy_l_isoleucine
   }
 }

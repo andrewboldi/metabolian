@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-beta-carotene-to-h2o "all-trans-beta-carotene to H2O" {
-  spacing 196
+  spacing 190
 
   spine at 0,0 {
     all_trans_beta_carotene
@@ -22,33 +22,27 @@ pathway all-trans-beta-carotene-to-h2o "all-trans-beta-carotene to H2O" {
     fumarate
   }
 
-  branch from plastoquinol_9 side right {
-    plastoquinol_9
-    <-> ec_1_3_5_1 [1.3.5.1] +plastoquinone_9 +fumarate
-    succinate
+  branch from nad side right {
+    nad
+    <-> ec_1_3_1_41 [1.3.1.41] +nadh +h +xanthommatin
+    5_12_dihydroxanthommatin
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +7_carboxy_4_methyl_3_5_dioxoheptanoyl_coa
-    3r_7_carboxy_3_hydroxy_4_methyl_5_oxoheptanoyl
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +isojusticidin_b
-    7_8_dihydroisojusticidin_b
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    nitrocefin
+    <-> ec_1_3_1_41 [1.3.1.41] +nadh +h +xanthommatin
+    5_12_dihydroxanthommatin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +imipenem +phosphate +imipenem
-    atp
+    <-> . +myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1 +glycine
+    myristoyl_d_asparaginyl_butan_2_aminyl_malonyl_1
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +precolibactin_1491 +unstable_precolibactin_intermediate
+    n_myristoyl_d_asparagine
   }
 }

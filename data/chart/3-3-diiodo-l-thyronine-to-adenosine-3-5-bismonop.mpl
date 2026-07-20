@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop "3,3'-diiodo-L-thyronine to adenosine 3',5'-bismonoph…" {
-  spacing 176
+  spacing 164
 
   spine at 0,0 {
     3_3_diiodo_l_thyronine
@@ -14,18 +14,6 @@ pathway 3-3-diiodo-l-thyronine-to-adenosine-3-5-bismonop "3,3'-diiodo-L-thyronin
     l_thyroxine
     <-> . +3_phosphonato_5_adenylyl_sulfate -adenosine_3_5_bismonophosphate -hplus
     l_thyroxine_sulfate
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
-    9_s_hode
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +cyathatriol +hydrogen_acceptor
-    cyathin_a3
   }
 
   branch from adenosine_3_5_bismonophosphate side left {

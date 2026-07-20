@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinofuranose-to-d-arabinono-1-4-lactone "D-arabinofuranose to D-arabinono-1,4-lactone" {
-  spacing 268
+  spacing 256
 
   spine at 0,0 {
     d_arabinofuranose
@@ -18,49 +18,37 @@ pathway d-arabinofuranose-to-d-arabinono-1-4-lactone "D-arabinofuranose to D-ara
 
   branch from h side left {
     h
-    <-> ec_3_1_1_1 [3.1.1.1] +methanol +jasmonic_acid_anion +h2o
-    methyl_jasmonate
+    <-> . +udp_n_acetyl_alpha_d_galactosamine +alpha_l_rha_1_4_alpha_d_glc_1_4_beta_d_gal_1_3_g +beta_d_galnac_1_3_alpha_l_rha_1_4_alpha_d_glc_1
+    udp
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +benzylglucosinolate_aglycone +h2o
-    z_glucotropeolin
+    <-> . +p_gingivalis_kdo2_lipid_a_3_deacylated_4_dephosp +3r_3_hydroxy_13_methyltetradecanoate +h2o
+    p_gingivalis_kdo2_lipid_a_penta_acylated_4_depho
   }
 
   branch from nadph side left {
     nadph
-    <-> . +abietatriene +nadp +h2o +h +miltiradiene
-    o2
+    <-> ec_1_6_99_1 [1.6.99.1] +2_hexenal +h +nadp
+    hexanal
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_190 [1.14.13.190] +abietatriene +h +o2 +nadp +h2o
-    ferruginol
-  }
-
-  branch from aldehydo_d_arabinose side left {
-    aldehydo_d_arabinose
-    <-> . +d_galactopyranose +h2o
-    3_o_d_galactopyranosyl_d_arabinose
-  }
-
-  branch from aldehydo_d_arabinose side right {
-    aldehydo_d_arabinose
-    <-> . +beta_d_galactose +3_o_d_galactopyranosyl_d_arabinose
-    h2o
+    <-> ec_1_3_1_27 [1.3.1.27] +2_hexadecenal +h +nadp
+    hexadecanal
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_294 [1.1.1.294] +nadh +chlorophyll_b +h
-    71_hydroxychlorophyll_a
+    <-> ec_1_4_1_21 [1.4.1.21] +nadh +iminoaspartate +h
+    l_aspartate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_4_dichloroaniline +o2 +4_5_dichlorobenzene_1_2_diol
-    nh4
+    <-> ec_1_4_1_21 [1.4.1.21] +nadh +h +l_aspartate
+    iminoaspartate
   }
 }

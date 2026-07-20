@@ -198,15 +198,6 @@
       }
     },
     {
-      "id": "beta_l_fucose",
-      "name": "beta-L-fucose",
-      "formula": "C6H12O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1106904"
-      }
-    },
-    {
       "id": "h",
       "name": "H",
       "formula": "H",
@@ -222,6 +213,16 @@
       "charge": -3,
       "xrefs": {
         "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii",
+      "name": "2'''-N-Acetyl-6'''-deamino-6'''-hydroxyparomomycin II",
+      "short": "2'''-N-Acetyl-6'''-…",
+      "formula": "C25H46N4O16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:190268"
       }
     },
     {
@@ -243,31 +244,85 @@
       }
     },
     {
-      "id": "beta_d_ribopyranose",
-      "name": "beta-D-ribopyranose",
-      "formula": "C5H10O5",
+      "id": "6_deamino_6_hydroxyparomomycin_ii",
+      "name": "6'''-Deamino-6'''-hydroxyparomomycin II",
+      "short": "6'''-Deamino-6'''-h…",
+      "formula": "C23H44N4O15",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM732914"
+        "chebi": "CHEBI:190275"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:61961"
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "soppiline_a",
+      "name": "soppiline A",
+      "formula": "C21H33O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167558"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "avenanthramide_c",
+      "name": "avenanthramide C",
+      "formula": "C16H12NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167577"
+      }
+    },
+    {
+      "id": "avenanthramide_b",
+      "name": "avenanthramide B",
+      "formula": "C17H14NO6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167465"
       }
     }
   ],
@@ -308,24 +363,10 @@
       ]
     },
     {
-      "id": "ec_3_6_3_17",
-      "name": "EC 3.6.3.17",
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
       "ec": [
-        "3.6.3.17"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_359",
-      "name": "[histone H3]-lysine(36) N-trimethyltransferase",
-      "ec": [
-        "2.1.1.359"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_360",
-      "name": "[histone H3]-lysine(79) N-trimethyltransferase",
-      "ec": [
-        "2.1.1.360"
+        "3.6.3.44"
       ]
     }
   ],
@@ -623,13 +664,9 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR174756",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175116",
+      "ec": "3.6.3.44",
       "substrates": [
-        {
-          "metabolite": "beta_l_fucose",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -639,17 +676,21 @@
           "stoichiometry": 1
         },
         {
+          "metabolite": "2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "beta_l_fucose",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "2_n_acetyl_6_deamino_6_hydroxyparomomycin_ii",
           "stoichiometry": 1
         },
         {
@@ -659,28 +700,28 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR174756"
+        "metanetx": "MNXR175116"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174756"
+            "id": "MNXR175116"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR174758",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175117",
+      "ec": "3.6.3.44",
       "substrates": [
         {
           "metabolite": "h",
@@ -691,7 +732,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "beta_d_ribopyranose",
+          "metabolite": "6_deamino_6_hydroxyparomomycin_ii",
           "stoichiometry": 1
         },
         {
@@ -705,7 +746,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "beta_d_ribopyranose",
+          "metabolite": "6_deamino_6_hydroxyparomomycin_ii",
           "stoichiometry": 1
         },
         {
@@ -715,118 +756,130 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR174758"
+        "metanetx": "MNXR175117"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174758"
+            "id": "MNXR175117"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "[histone H3]-lysine(36) N-trimethyltransferase",
-      "equation": "L-lysyl(36)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(36)-[histone H3] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.359",
+      "name": "9 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + 13 NADPH + 20 H(+) = soppiline A...",
+      "equation": "9 malonyl-CoA + acetyl-CoA + S-adenosyl-L-methionine + 13 NADPH + 20 H(+) = soppiline A + S-adenosyl-L-homocysteine + 9 CO2 + 13 NADP(+) + 10 CoA + 7 H2O",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 9
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 3
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 13
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 20
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "soppiline_a",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
+          "metabolite": "co2",
+          "stoichiometry": 9
+        },
         {
-          "enzyme": "ec_2_1_1_359"
+          "metabolite": "nadp",
+          "stoichiometry": 13
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 10
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 7
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:60324"
+        "rhea": "RHEA:66908"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60324"
+            "id": "RHEA:66908"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "[histone H3]-lysine(79) N-trimethyltransferase",
-      "equation": "L-lysyl(79)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(79)-[histone H3] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.360",
+      "name": "avenanthramide C + S-adenosyl-L-methionine = avenanthramide B + S-adenosyl-L-homocystei...",
+      "equation": "avenanthramide C + S-adenosyl-L-methionine = avenanthramide B + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "avenanthramide_c",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "avenanthramide_b",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_360"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:60328"
+        "rhea": "RHEA:66912"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60328"
+            "id": "RHEA:66912"
           }
         ]
       }

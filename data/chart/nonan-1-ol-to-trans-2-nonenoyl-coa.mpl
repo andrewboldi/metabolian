@@ -34,13 +34,13 @@ pathway nonan-1-ol-to-trans-2-nonenoyl-coa "nonan-1-ol to trans-2-nonenoyl-CoA" 
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_122 [2.5.1.122] +tyrosine +dmapp
-    4_o_dimethylallyl_l_tyrosine
+    <-> . +r_lipoate +gtp +hplus
+    r_lipoyl_gmp
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_86 [2.7.7.86] +gtp +atp
-    2_3_cgamp
+    <-> ec_4_2_3_198 [4.2.3.198] +fpp
+    selinene
   }
 }

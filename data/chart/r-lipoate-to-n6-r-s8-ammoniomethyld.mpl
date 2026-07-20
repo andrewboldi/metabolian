@@ -18,13 +18,13 @@ pathway r-lipoate-to-n6-r-s8-ammoniomethyld "(R)-lipoate to N6-[(R)-S8-ammoniome
 
   branch from ppi side left {
     ppi
-    <-> . +l_threonine +utp
-    uridylyl_l_threonine_1
+    <-> . +fpp
+    cis_farnesene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_222 [4.2.3.222] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    phomopsene
+    <-> . +2_cis_6_cis_farnesyl_diphosphate
+    acoradiene
   }
 }

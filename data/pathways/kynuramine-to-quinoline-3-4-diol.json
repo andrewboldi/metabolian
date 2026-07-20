@@ -119,39 +119,50 @@
       }
     },
     {
-      "id": "glutamine",
-      "name": "L-Glutamine",
-      "formula": "C5H10N2O3",
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58359"
+        "chebi": "CHEBI:30011"
       }
     },
     {
-      "id": "2_oxoglutaramate",
-      "name": "2-oxoglutaramate",
-      "formula": "C5H6NO4",
-      "charge": -1,
+      "id": "serotonin",
+      "name": "serotonin",
+      "formula": "C10H13N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16769"
+        "chebi": "CHEBI:350546"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine",
+      "name": "N-[2-(5-hydroxy-1H-indol-3-yl)ethyl]-L-glutamine",
+      "short": "N-[2-(5-hydroxy-1H-…",
+      "formula": "C15H17N3O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
+        "chebi": "CHEBI:167174"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "dopamine",
+      "name": "Dopamine",
+      "formula": "C8H12NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:59905"
+      }
+    },
+    {
+      "id": "n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine",
+      "name": "N-[2-(3,4-dihydroxyphenyl)ethyl]-L-glutamine",
+      "short": "N-[2-(3,4-dihydroxy…",
+      "formula": "C13H16N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167175"
       }
     }
   ],
@@ -306,29 +317,21 @@
     },
     {
       "id": "r4",
-      "name": "L-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
-      "equation": "L-glutamine + O2 + H2O = 2-oxoglutaramate + H2O2 + NH4(+)",
+      "name": "L-glutaminyl-[protein] + serotonin = 5-serotonyl-L-glutamyl-[protein] + NH4(+)",
+      "equation": "L-glutaminyl-[protein] + serotonin = 5-serotonyl-L-glutamyl-[protein] + NH4(+)",
       "substrates": [
         {
-          "metabolite": "glutamine",
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "serotonin",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_oxoglutaramate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "n_2_5_hydroxy_1h_indol_3_yl_ethyl_l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -339,43 +342,35 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:61260"
+        "rhea": "RHEA:66552"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61260"
+            "id": "RHEA:66552"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
-      "equation": "L-alanine + O2 + H2O = pyruvate + H2O2 + NH4(+)",
+      "name": "L-glutaminyl-[protein] + dopamine = 5-dopaminyl-L-glutamyl-[protein] + NH4(+)",
+      "equation": "L-glutaminyl-[protein] + dopamine = 5-dopaminyl-L-glutamyl-[protein] + NH4(+)",
       "substrates": [
         {
-          "metabolite": "alanine",
+          "metabolite": "l_glutamine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "dopamine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
+          "metabolite": "n_2_3_4_dihydroxyphenyl_ethyl_l_glutamine",
           "stoichiometry": 1
         },
         {
@@ -386,14 +381,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:61264"
+        "rhea": "RHEA:66556"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:61264"
+            "id": "RHEA:66556"
           }
         ]
       }

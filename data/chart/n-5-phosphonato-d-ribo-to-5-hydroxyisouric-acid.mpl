@@ -40,25 +40,123 @@ pathway n-5-phosphonato-d-ribo-to-5-hydroxyisouric-acid "N-(5-phosphonato-β-D-r
     5_hydroxyisouric_acid
   }
 
+  branch from l_tryptophan side left {
+    l_tryptophan
+    <-> ec_1_3_3_10 [1.3.3.10] +o2 +h2o2
+    didehydrotryptophan
+  }
 
+  branch from l_tryptophan side right {
+    l_tryptophan
+    <-> ec_1_13_11_11 [1.13.11.11] +o2
+    n_formyl_l_kynurenine
+  }
 
+  branch from 1_deoxy_d_xylulose_5_phosphate side left {
+    1_deoxy_d_xylulose_5_phosphate
+    <-> . +1_methylthio_d_xylulose_5_phosphate +hydrogen_donor +hydrogen_acceptor
+    methanethiol
+  }
 
+  branch from r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e side right {
+    r_z_2_carboxylato_4_methyl_5_2_phosphonatooxy_e
+    <-> ec_5_3_99_10 [5.3.99.10]
+    2_2_carboxy_4_methylthiazol_5_yl_ethyl_phosphate
+  }
 
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_36 [4.2.3.36] +terpentedienyl_diphosphate
+    terpentetriene
+  }
 
+  branch from ppi side right {
+    ppi
+    <-> . +gpp
+    pinene
+  }
 
+  branch from l_cysteine side left {
+    l_cysteine
+    <-> ec_2_3_1_225 [2.3.1.225] +palmitoyl_coa +coa
+    s_palmitoyl_l_cysteine
+  }
 
+  branch from l_cysteine side right {
+    l_cysteine
+    <-> ec_4_4_1_29 [4.4.1.29] +s_3_2r_phycocyanobilin_l_cysteine_2
+    3e_phycocyanobilin
+  }
 
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> ec_1_5_99_4 [1.5.99.4] +r_nicotinium +h2o +hydrogen_donor
+    r_6_hydroxynicotinium
+  }
 
+  branch from hydrogen_acceptor side right {
+    hydrogen_acceptor
+    <-> ec_2_8_1_9 [2.8.1.9] +mo_vi_o2_oh_molybdopterin_cofactor +cysteine +hydrogen_donor +alanine +h2o
+    mo_vi_o_s_oh_molybdopterin_cofactor
+  }
 
+  branch from molybdopterin_adenine_dinucleotide side left {
+    molybdopterin_adenine_dinucleotide
+    <-> . +tungstate +amp +hplus
+    w_vi_o2_oh_molybdopterin_cofactor
+  }
 
+  branch from mo_vi_o2_oh_molybdopterin_cofactor side right {
+    mo_vi_o2_oh_molybdopterin_cofactor
+    <-> . +h +amp +molybdate
+    adenylated_molybdopterin
+  }
 
+  branch from guanine side left {
+    guanine
+    <-> . +2_deoxyguanosine_5_monophosphate +h2o
+    2_deoxy_d_ribofuranose_5_phosphate
+  }
 
+  branch from guanine side right {
+    guanine
+    <-> . +guanosine_5_monophosphate_1 +queuine
+    queuosine_5_phosphate_1
+  }
 
+  branch from nh3 side left {
+    nh3
+    <-> ec_3_5_1_100 [3.5.1.100] +r_nipecotamide +h2o
+    r_nipecotic_acid
+  }
 
+  branch from nh3 side right {
+    nh3
+    <-> ec_4_3_1_27 [4.3.1.27] +3r_3_hydroxy_d_aspartate
+    oxaloacetate
+  }
 
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side left {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> ec_2_4_2_16 [2.4.2.16] +alpha_d_ribose_1_phosphate +h +phosphate
+    urate_3_ribonucleoside
+  }
 
+  branch from 7_9_dihydro_1h_purine_2_6_8_3h_trione side right {
+    7_9_dihydro_1h_purine_2_6_8_3h_trione
+    <-> . +o2 +h2o +h2o2 +s_allantoin
+    co2
+  }
 
+  branch from succinate side left {
+    succinate
+    <-> ec_1_14_11_30 [1.14.11.30] +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
+  }
 
-
-
+  branch from succinate side right {
+    succinate
+    <-> ec_1_14_11_n4 [1.14.11.n4] +akg +o2 +3s_3_hydroxy_l_asparagine +co2
+    l_asparagine
+  }
 }

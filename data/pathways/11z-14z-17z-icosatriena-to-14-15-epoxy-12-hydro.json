@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "11z-14z-17z-icosatriena-to-14-15-epoxy-12-hydro",
   "name": "(11Z,14Z,17Z)-icosatriena… to 14(15)-epoxy-12-hydroxy-(…",
-  "category": "other",
+  "category": "redox-detox",
   "summary": "A 3-step route from (11Z,14Z,17Z)-icosatrienamide to 14(15)-epoxy-12-hydroxy-(10E,17Z)-icosadienoate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -85,51 +85,49 @@
       }
     },
     {
-      "id": "s_1_hydroxy_3_methylhexan_3_yl_l_cysteine",
-      "name": "S-(1-hydroxy-3-methylhexan-3-yl)-L-cysteine",
-      "short": "S-(1-hydroxy-3-meth…",
-      "formula": "C10H21NO3S",
-      "charge": 0,
+      "id": "spermine",
+      "name": "spermine",
+      "formula": "C10H30N4",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:145805"
+        "chebi": "CHEBI:45725"
       }
     },
     {
-      "id": "3_methyl_3_sulfanylhexan_1_ol",
-      "name": "3-methyl-3-sulfanylhexan-1-ol",
-      "short": "3-methyl-3-sulfanyl…",
-      "formula": "C7H16OS",
-      "charge": 0,
+      "id": "spermine_dialdehyde",
+      "name": "spermine dialdehyde",
+      "formula": "C10H22N2O2",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:146780"
+        "chebi": "CHEBI:180902"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:16240"
       }
     },
     {
-      "id": "3_sulfanylhexan_1_ol_l_cysteine",
-      "name": "3-sulfanylhexan-1-ol-L-cysteine",
-      "short": "3-sulfanylhexan-1-o…",
-      "formula": "C9H19NO3S",
-      "charge": 0,
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:156140"
+        "chebi": "CHEBI:58145"
       }
     },
     {
-      "id": "3_mercaptohexanol",
-      "name": "3-mercaptohexanol",
-      "formula": "C6H14OS",
-      "charge": 0,
+      "id": "4_guanidiniumylbutanal",
+      "name": "4-guanidiniumylbutanal",
+      "short": "4-guanidiniumylbuta…",
+      "formula": "C5H12N3O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:77690"
+        "chebi": "CHEBI:57854"
       }
     },
     {
@@ -252,54 +250,62 @@
     },
     {
       "id": "r4",
-      "name": "S-(1-hydroxy-3-methylhexan-3-yl)-L-cysteine + H2O = 3-methyl-3-sulfanylhexan-1-ol + pyr...",
-      "equation": "S-(1-hydroxy-3-methylhexan-3-yl)-L-cysteine + H2O = 3-methyl-3-sulfanylhexan-1-ol + pyruvate + NH4(+)",
+      "name": "spermine + 2 O2 + 2 H2O = spermine dialdehyde + 2 H2O2 + 2 NH4(+)",
+      "equation": "spermine + 2 O2 + 2 H2O = spermine dialdehyde + 2 H2O2 + 2 NH4(+)",
       "substrates": [
         {
-          "metabolite": "s_1_hydroxy_3_methylhexan_3_yl_l_cysteine",
+          "metabolite": "spermine",
           "stoichiometry": 1
         },
         {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_methyl_3_sulfanylhexan_1_ol",
+          "metabolite": "spermine_dialdehyde",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
+          "metabolite": "h2o2",
+          "stoichiometry": 2
         },
         {
           "metabolite": "nh3",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:64740"
+        "rhea": "RHEA:69136"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64740"
+            "id": "RHEA:69136"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "S-3-(hexan-1-ol)-L-cysteine + H2O = 3-sulfanyl-1-hexanol + pyruvate + NH4(+)",
-      "equation": "S-3-(hexan-1-ol)-L-cysteine + H2O = 3-sulfanyl-1-hexanol + pyruvate + NH4(+)",
+      "name": "agmatine + O2 + H2O = 4-guanidinobutanal + H2O2 + NH4(+)",
+      "equation": "agmatine + O2 + H2O = 4-guanidinobutanal + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "3_sulfanylhexan_1_ol_l_cysteine",
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -309,11 +315,11 @@
       ],
       "products": [
         {
-          "metabolite": "3_mercaptohexanol",
+          "metabolite": "4_guanidiniumylbutanal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -324,14 +330,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:64744"
+        "rhea": "RHEA:69144"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64744"
+            "id": "RHEA:69144"
           }
         ]
       }

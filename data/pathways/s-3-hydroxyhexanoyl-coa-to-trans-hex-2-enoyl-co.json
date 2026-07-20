@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co",
   "name": "(S)-3-hydroxyhexanoyl-CoA to trans-hex-2-enoyl-CoA",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from (S)-3-hydroxyhexanoyl-CoA(4−) to trans-hex-2-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,22 +138,22 @@
       }
     },
     {
-      "id": "malonyl-acp",
-      "name": "Malonyl-[ACP]",
-      "formula": "C17H26N3O11PS",
-      "charge": -2,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:78449"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine",
-      "name": "O-(S-3-oxooctanoylpantetheine-4-phosphoryl)serine(1−)",
-      "short": "O-(S-3-oxooctanoylp…",
-      "formula": "C22H37N3O10PS",
-      "charge": -1,
+      "id": "4_hydroxy_6_pentylpyran_2_one",
+      "name": "4-hydroxy-6-pentylpyran-2-one",
+      "short": "4-hydroxy-6-pentylp…",
+      "formula": "C10H14O3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:78460"
+        "chebi": "CHEBI:66958"
       }
     },
     {
@@ -396,47 +396,47 @@
     },
     {
       "id": "r7",
-      "name": "hexanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxooctanoyl-[ACP] + CO2 + CoA",
-      "equation": "hexanoyl-CoA + malonyl-[ACP] + H(+) = 3-oxooctanoyl-[ACP] + CO2 + CoA",
+      "name": "hexanoyl-CoA + 2 malonyl-CoA + 2 H(+) = 4-hydroxy-6-pentylpyran-2-one + 2 CO2 + 3 CoA",
+      "equation": "hexanoyl-CoA + 2 malonyl-CoA + 2 H(+) = 4-hydroxy-6-pentylpyran-2-one + 2 CO2 + 3 CoA",
       "substrates": [
         {
           "metabolite": "hexanoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "malonyl-acp",
-          "stoichiometry": 1
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine",
+          "metabolite": "4_hydroxy_6_pentylpyran_2_one",
           "stoichiometry": 1
         },
         {
           "metabolite": "co2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "coa",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:42256"
+        "rhea": "RHEA:43452"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42256"
+            "id": "RHEA:43452"
           }
         ]
       }

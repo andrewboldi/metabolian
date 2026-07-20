@@ -18,37 +18,37 @@ pathway 5-dehydro-2-deoxy-d-gluco-to-nad "5-dehydro-2-deoxy-D-gluco… to NAD" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    9_10_dihome
+    <-> . +l_leucine +l_lysine +l_aspartate
+    leucyl_aspartyl_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    12_13_dihome
+    <-> . +l_leucine +l_tryptophan
+    leucyl_leucyl_tryptophan
   }
 
   branch from myo_inositol side left {
     myo_inositol
-    <-> ec_1_13_99_1 [1.13.99.1] +o2 +h +h2o
-    beta_d_glucuronate
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +h2o
+    alpha_d_galactosyl_1_3_1d_myo_inositol
   }
 
   branch from myo_inositol side right {
     myo_inositol
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +h2o
-    alpha_d_galactosyl_1_3_1d_myo_inositol
+    <-> ec_2_7_8_11 [2.7.8.11] +cmp +h +dipalmitoyl_l_1_phosphatidyl_inositol
+    cdp_dipalmitoyl_sn_glycerol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +trans_9_octadecenoyl_coa +coa +h2o
-    fad
+    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_xylono_1_5_lactone +h
+    beta_d_xylose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +7z_octadecenoyl_coa +h2o
-    coa
+    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
+    beta_l_arabinofuranose
   }
 }

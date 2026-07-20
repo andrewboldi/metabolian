@@ -22,14 +22,14 @@ pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihyd
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_21_99_4 [1.21.99.4] +3_3_5_triiodo_l_thyronine +iodide +hydrogen_acceptor +hplus
-    l_thyroxine
+    <-> ec_1_21_99_5 [1.21.99.5] +trichloroethene +chloride +hydrogen_acceptor +hplus
+    tetrachloroethene
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_5_99_3 [1.5.99.3] +l_pipecolic_acid +hydrogen_acceptor +hplus
-    s_1_piperideine_6_carboxylate
+    <-> ec_1_1_99_27 [1.1.99.27] +r_pantolactone +hydrogen_acceptor
+    2_dehydropantolactone
   }
 
   branch from 6_hydroxypseudooxynicotinium side left {

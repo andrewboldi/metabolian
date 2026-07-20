@@ -84,49 +84,95 @@
       }
     },
     {
-      "id": "isomaltose",
-      "name": "isomaltose",
-      "formula": "C12H22O11",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1107787"
+        "metanetx": "MNXM13"
       }
     },
     {
-      "id": "glucose",
-      "name": "D-Glucose",
-      "formula": "C6H12O6",
+      "id": "z_2_methyl_3_aminoperacrylic_acid",
+      "name": "(Z)-2-methyl-3-aminoperacrylic acid",
+      "short": "2-methyl-3-aminoper…",
+      "formula": "C4H7NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:4167"
+        "chebi": "CHEBI:63250"
       }
     },
     {
-      "id": "melibiose",
-      "name": "melibiose",
-      "formula": "C12H22O11",
-      "charge": 0,
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1103965"
+        "metanetx": "MNXM729302"
       }
     },
     {
-      "id": "d_galactopyranose",
-      "name": "D-galactopyranose",
-      "formula": "C6H12O6",
-      "charge": 0,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:4139"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox",
-      "name": "(2R,3R,4S,5S,6R)-6-[[(2S,3R,4S,5R,6R)-3,4,5-Trihydroxy-6-[[(2S,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]oxymethyl]oxan-2-yl]oxymethyl]oxane-2,3,4,5-tetrol",
-      "short": "(2R,3R,4S,5S,6R)-6-…",
-      "formula": "C18H32O16",
+      "id": "z_2_methylureidoperacrylic_acid",
+      "name": "(Z)-2-methylureidoperacrylic acid",
+      "short": "2-methylureidoperac…",
+      "formula": "C5H8N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:155215"
+        "chebi": "CHEBI:63249"
+      }
+    },
+    {
+      "id": "dehydroxypaxilline",
+      "name": "Dehydroxypaxilline",
+      "formula": "C27H33NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:187070"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "beta_pc_m6",
+      "name": "beta-PC-M6",
+      "formula": "C27H35NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:181929"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
       }
     },
     {
@@ -151,17 +197,17 @@
   ],
   "enzymes": [
     {
-      "id": "ec_3_2_1_10",
-      "name": "oligo-1,6-glucosidase",
+      "id": "ec_3_5_1_10",
+      "name": "formyltetrahydrofolate deformylase",
       "ec": [
-        "3.2.1.10"
+        "3.5.1.10"
       ]
     },
     {
-      "id": "ec_3_2_1_22",
-      "name": "alpha-galactosidase",
+      "id": "ec_3_5_1_110",
+      "name": "ureidoacrylate amidohydrolase",
       "ec": [
-        "3.2.1.22"
+        "3.5.1.110"
       ]
     }
   ],
@@ -274,11 +320,29 @@
     },
     {
       "id": "r4",
-      "name": "oligo-1,6-glucosidase",
-      "ec": "3.2.1.10",
+      "name": "formyltetrahydrofolate deformylase",
+      "ec": "3.5.1.10",
       "substrates": [
         {
-          "metabolite": "isomaltose",
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methyl_3_aminoperacrylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_2_methylureidoperacrylic_acid",
           "stoichiometry": 1
         },
         {
@@ -286,72 +350,72 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 2
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_10"
+          "enzyme": "ec_3_5_1_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR145630"
+        "metanetx": "MNXR150706"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR145630"
+            "id": "MNXR150706"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "alpha-galactosidase",
-      "ec": "3.2.1.22",
+      "name": "Reaction MNXR150803",
       "substrates": [
         {
-          "metabolite": "melibiose",
+          "metabolite": "dehydroxypaxilline",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_galactopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox",
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_3_2_1_22"
+          "metabolite": "beta_pc_m6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR145714"
+        "metanetx": "MNXR150803"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR145714"
+            "id": "MNXR150803"
           }
         ]
       }

@@ -26,14 +26,14 @@ pathway 5-chloro-5-deoxy-d-ribona-to-phosphate "5-chloro-5-deoxy-D-ribona… to 
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +scopoletin
-    scopolin
+    <-> . +methylsulfanol
+    methanesulfinylsulfanyl_methane
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_17 [4.2.1.17] +3_hydroxyisovaleryl_coa
-    2e_2_methylbut_2_enoyl_coa
+    <-> . +s_ethyl_ethanesulfinothioate
+    ethylsulfenate
   }
 
   branch from 5_chloro_5_deoxy_d_ribose side right {
@@ -44,25 +44,25 @@ pathway 5-chloro-5-deoxy-d-ribona-to-phosphate "5-chloro-5-deoxy-D-ribona… to 
 
   branch from nad side left {
     nad
-    <-> . +nadh +co2 +4_4_hydroxyphenyl_2_oxobutanoate
-    3_4_hydroxybenzyl_malate
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +but_1_ene +o2 +h2o
+    1_2_epoxybutane
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_211 [1.1.1.211] +nadh +11z_3_oxohexadecenoyl_coa +h
-    3s_11z_3_hydroxyhexadec_11_enoyl_coa
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +trans_but_2_ene +h2o
+    trans_2r_3r_epoxybutane
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_4 [3.1.3.4] +h +dg_18_0_16_0_0_0 +h2o
-    2r_2_palmitoyloxy_3_phosphonooxy_propyl_stearat
+    <-> . +aldehydo_d_mannose +h2o
+    aldehydo_d_mannose_6_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_4 [3.1.3.4] +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc +h2o
-    1_18_hydroxyoeoyl_2_18_hydroxy_lioleoyl_sn_glyce
+    <-> . +aldehydo_d_mannose +h2o
+    alpha_d_mannose_1_phosphate
   }
 }

@@ -30,13 +30,13 @@ pathway n-1-deoxy-d-fructopyra-to-cortalcerone "N-(1-deoxy-β-D-fructopyra… to
 
   branch from glycine side left {
     glycine
-    <-> . +linoleoyl_coa +coa +hplus
-    n_linoleoylglycine
+    <-> . +n_n_dimethyl_l_argininium +glyoxylate
+    5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_glutamate +atp +adp +pi +hplus
-    glycyl_l_glutamate_1
+    <-> . +2s_2_ammonio_5_iminio_methylamino_methyl_amino +glyoxylate
+    5_3_methylguanidino_2_oxopentanoate
   }
 }

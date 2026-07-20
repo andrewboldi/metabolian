@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-3-st-to-diphosphate "1-palmitoyl-2-oleoyl-3-st… to diphosphate" {
-  spacing 224
+  spacing 218
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol
@@ -17,7 +17,6 @@ pathway 1-palmitoyl-2-oleoyl-3-st-to-diphosphate "1-palmitoyl-2-oleoyl-3-st… t
     <-> . +palmitate +atp +coa -amp -ppi
     palmitoyl_coa
   }
-
 
 
 

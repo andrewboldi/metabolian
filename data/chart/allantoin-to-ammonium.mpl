@@ -44,19 +44,19 @@ pathway allantoin-to-ammonium "allantoin to ammonium" {
 
   branch from glyoxylate side left {
     glyoxylate
-    <-> ec_1_14_14_33 [1.14.14.33] +edta +fmnh2 +o2 +fmn +h2o +hplus
-    ethylenediaminediacetate
+    <-> . +propionyl_coa +h2o +coa +hplus
+    3_methylmalate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +3_oxocyclopentanecarbonitrile +h2o
-    3_oxocyclopentanecarboxylate
+    <-> . +l_threo_3_phenylserine
+    keto_phenylpyruvate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +methyl_3_cyano_2_phenylpropanoate +h2o
-    4_methoxy_4_oxo_3_phenylbutanoate
+    <-> ec_1_4_1_25 [1.4.1.25] +arginine +nad +h2o +nadh +hplus
+    5_guanidino_2_oxopentanoic_acid
   }
 }

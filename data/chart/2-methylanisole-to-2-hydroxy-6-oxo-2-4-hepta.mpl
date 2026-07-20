@@ -30,14 +30,14 @@ pathway 2-methylanisole-to-2-hydroxy-6-oxo-2-4-hepta "2-methylanisole to 2-hydro
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +succinate +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +succinate +co2
+    n6_methyl_l_lysinium
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_99_66 [1.14.99.66] +n6_n6_dimethyl_l_lysine_1 +hydrogen_acceptor +h2o +hydrogen_donor
-    l_lysinium
+    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +n6_methyl_l_lysinium +co2
+    succinate
   }
 
   branch from 3_methylcatechol side left {

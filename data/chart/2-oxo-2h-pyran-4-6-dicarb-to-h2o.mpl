@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxo-2h-pyran-4-6-dicarb-to-h2o "2-oxo-2H-pyran-4,6-dicarb… to H2O" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     2_oxo_2h_pyran_4_6_dicarboxylate
@@ -16,57 +16,45 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-h2o "2-oxo-2H-pyran-4,6-dicarb… to H2O" {
     4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
   }
 
-  branch from 4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien side left {
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
-    <-> . +h +methanol +h2o
+  branch from 1e_4_oxobut_1_ene_1_2_4_tricarboxylate side left {
+    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
+    <-> ec_5_3_3_10 [5.3.3.10]
     4_carboxy_2_hydroxyhexa_2_4_dienedioate
-  }
-
-  branch from 4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien side right {
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
-    <-> . +h +o2
-    3_o_methylgallate
-  }
-
-  branch from h side left {
-    h
-    <-> . +quinidinone +nadph +nadp
-    quinine
   }
 
   branch from h side right {
     h
-    <-> ec_2_8_2_38 [2.8.2.38] +adenosine_3_5_bisphosphate +glucoerucin +4_methylthiobutyl_desulfoglucosinolate
-    3_phosphoadenylyl_sulfate
+    <-> . +adp +11_dehydrothromboxane_b2 +phosphate +11_dehydrothromboxane_b2 +h2o
+    atp
   }
 
-  branch from methanol side left {
-    methanol
-    <-> ec_1_14_14_1 [1.14.14.1] +2_ethylidene_1_5_dimethyl_3_3_diphenylpyrrolidin
-    6_dimethylamino_4_4_diphenylheptan_3_one
+  branch from h side left {
+    h
+    <-> . +adp +phosphate +atp +h2o
+    4_hydroxynon_2_enal
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +h2o
-    methyl_d_glucopyranoside
+    <-> ec_3_1_1_1 [3.1.1.1] +acibenzolar +h2o
+    acibenzolar_s_methyl
   }
 
-  branch from 4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien side left {
-    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
-    <-> ec_1_13_11_8 [1.13.11.8] +h +3_o_methylgallate
-    o2
+  branch from methanol side left {
+    methanol
+    <-> ec_3_1_1_1 [3.1.1.1] +h +jasmonic_acid_anion +h2o
+    methyl_jasmonate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyll_b +phytol
-    chlorophyllide_b
+    <-> . +l_histidine +l_proline +l_aspartate
+    aspartyl_histidyl_proline
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyllide_b +h +phytol
-    chlorophyll_b
+    <-> . +l_lysine +l_aspartate +l_glutamate
+    aspartyl_lysyl_glutamate
   }
 }

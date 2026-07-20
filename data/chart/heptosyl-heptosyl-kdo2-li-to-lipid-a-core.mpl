@@ -46,14 +46,14 @@ pathway heptosyl-heptosyl-kdo2-li-to-lipid-a-core "Heptosyl-heptosyl-kdo2-li… 
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    chenodeoxycholic_acid_24_o_d_glucuronide
+    <-> . +adp +acetaminophen_mercapturate_conjugate_n_acetyl_cy +phosphate +acetaminophen_mercapturate_conjugate_n_acetyl_cy +h2o
+    atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    chenodeoxycholate_3_o_d_glucuronide
+    acetaminophen_mercapturate_conjugate_n_acetyl_cy
   }
 
   branch from heptosyl_kdo_2_lipid_a side left {

@@ -20,14 +20,14 @@ pathway fadh2-to-coa-null "FADH2 to CoA" {
 
   branch from fad side left {
     fad
-    <-> ec_1_1_99_21 [1.1.99.21] +fadh2 +l_sorbopyranose +h
-    d_sorbitol
+    <-> . +fadh2 +7_hydroxy_3_isocyanochromen_2_one +h +o2 +h2o
+    6_7_dihydroxy_3_isocyanochromen_2_one
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_1_99_13 [1.1.99.13] +sucrose +fadh2 +h
-    3_dehydro_alpha_d_glucosyl_beta_d_fructofuranosi
+    <-> ec_1_5_99_8 [1.5.99.8] +s_1_pyrroline_5_carboxylate +fadh2 +h
+    l_proline
   }
 
   branch from 5e_8e_tetradecadienoyl_coa side left {
@@ -38,38 +38,38 @@ pathway fadh2-to-coa-null "FADH2 to CoA" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +beta_d_galactose
-    alpha_d_glucose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +aeruginopeptin_917s_c +phosphate +aeruginopeptin_917s_c
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_74 [3.2.1.74] +alpha_d_glucose
-    d_cellobiose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
+    aeruginopeptin_917s_a
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +deslanoside
-    lanatoside_c
+    <-> . +acetyl_coa +trans_homoaconitate +h2o
+    pentane_1_2_3_5_tetracarboxylic_acid
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +gitoxigenin
-    oleandrigenin
+    <-> . +h +perillate +atp +perillyl_coenzyme_a +phosphate +h2o
+    adp
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_96 [1.14.13.96] +nadh +h +5beta_cholestane_3alpha_7alpha_diol +o2 +h2o
-    5beta_cholestane_3alpha_7alpha_12alpha_triol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +palustradienal
+    isopimara_7_15_dienol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_99_33 [1.14.99.33] +nadh +9z_12z_octadecadienoate +h +o2 +h2o
-    crepenynate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +dehydroabietadienal
+    dehydroabietadienol
   }
 
   branch from linoelaidyl_coenzyme_a side right {

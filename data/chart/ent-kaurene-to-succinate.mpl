@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ent-kaurene-to-succinate "ent-kaurene to succinate" {
-  spacing 278
+  spacing 260
 
   spine at 0,0 {
     ent_kaurene
@@ -30,79 +30,61 @@ pathway ent-kaurene-to-succinate "ent-kaurene to succinate" {
 
   branch from fmn side left {
     fmn
-    <-> . +oleanolate +fmnh2 +o2 +h2o +hplus
-    hederagenin
+    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
+    11_oxomiltiradiene
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_171 [1.14.14.171] +amyrin +fmnh2 +o2 +h2o +hplus
-    16_hydroxy_amyrin
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +2_22_25_trideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
-    2_22_dideoxyecdysone
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +2_22_dideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
-    22_deoxyecdysone
-  }
-
-  branch from gibberellin_a9 side left {
-    gibberellin_a9
-    <-> . +o2 +hplus +co2 +h2o
-    gibberellin_a24
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> . +miltiradiene +fmnh2 +o2 +h2o +hplus
+    miltiradien_20_al
   }
 
   branch from sah side left {
     sah
-    <-> . +desmethylnectriapyrone +sam +hplus
-    nectriapyrone
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_1_1_288 [2.1.1.288] +s_adenosyl_l_homocysteine +aklanonic_acid_methyl_ester
-    aklanonic_acid
+  branch from sah side right {
+    sah
+    <-> ec_2_1_1_365 [2.1.1.365] +d_man3me_1_4_d_man3me +sam +hplus
+    1_3_3_tri_o_methyl_4_mannobiose
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +1_dehydro_6_gingerdione +h
-    1_3_4_dihydroxyphenyl_1_decene_3_5_dione
+    <-> . +s_adenosyl_l_homocysteine +premithramycin_a3 +h
+    premithramycin_a3
   }
 
-  branch from co2 side right {
-    co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_18_3_9z_12z_15z_18_3_9z_12z_15z
-    ps_18_3_9z_12z_15z_18_3_9z_12z_15z
+  branch from s_adenosyl_l_methionine side right {
+    s_adenosyl_l_methionine
+    <-> ec_2_1_1_153 [2.1.1.153] +s_adenosyl_l_homocysteine +7_o_methylvitexin_2_o_l_rhamnoside +h
+    vitexin_2_o_l_rhamnoside
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_0_18_2_9z_12z +h
-    20_0_18_2_ps
+    <-> ec_4_1_1_65 [4.1.1.65] +24_0_18_2_pe +h
+    24_0_18_2_ps
   }
 
-  branch from succinate side right {
-    succinate
-    <-> . +ambiguine_k +co2 +h2o +2_oxoglutarate +h +o2 +chloride
-    ambiguine_l
+  branch from co2 side right {
+    co2
+    <-> ec_4_1_1_65 [4.1.1.65] +1_tetracosanoyl_2_9z_12z_15z_octadecatrienoyl_sn +h
+    24_0_18_3_ps
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_20_11 [1.14.20.11] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +2_oxoglutarate +h +o2 +co2 +h2o
-    3_z_2_isocyanoethenyl_1h_indole
+    <-> ec_1_14_20_14 [1.14.20.14] +ambiguine_d +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_j
+  }
+
+  branch from succinate side right {
+    succinate
+    <-> . +ambiguine_d +co2 +h2o +2_oxoglutarate +h +o2 +chloride
+    ambiguine_j
   }
 }

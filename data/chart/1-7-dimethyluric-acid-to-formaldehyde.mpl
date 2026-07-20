@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-7-dimethyluric-acid-to-formaldehyde "1,7-Dimethyluric acid to formaldehyde" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     1_7_dimethyluric_acid
@@ -20,43 +20,37 @@ pathway 1-7-dimethyluric-acid-to-formaldehyde "1,7-Dimethyluric acid to formalde
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +h2o2
-    alpha_d_glucose
+    <-> ec_1_14_18_3 [1.14.18.3] +ubiquinol_10 +methane +methanol +h2o
+    ubiquinone_10
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o +h +h2o2
-    d_galactonate
+    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_10 +h2o
+    ubiquinol_10
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_glutamine
-    prolyl_glutaminyl_proline
+    <-> . +l_valine
+    valyl_valine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_proline +l_tyrosine
-    pro_his_tyr
-  }
-
-  branch from 7_methylxanthine side left {
-    7_methylxanthine
-    <-> ec_3_2_2_25 [3.2.2.25] +h +beta_d_ribofuranose +h2o
-    7_methylxanthosine
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> . +4_dephosphorylated_1_petn_kdo_lipid_a +r_3_tetradecanoyloxy_hexadecanoic_acid
+    h_pylori_kdo_lipid_a
   }
 
   branch from sah side left {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    n3_methylcytidine_5_monophosphate_1
+  }
+
+  branch from sah side right {
+    sah
+    <-> . +sam +n3_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

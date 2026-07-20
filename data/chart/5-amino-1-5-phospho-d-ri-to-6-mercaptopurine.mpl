@@ -24,13 +24,13 @@ pathway 5-amino-1-5-phospho-d-ri-to-6-mercaptopurine "5-amino-1-(5-phospho-D-riâ
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    7alpha_hydroxycholest_4_en_3_one
+    <-> ec_2_7_4_10 [2.7.4.10] +utp +amp
+    udp
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
+    <-> ec_2_7_2_13 [2.7.2.13] +h +atp +l_glutamate
+    l_alpha_glutamyl_phosphate
   }
 }

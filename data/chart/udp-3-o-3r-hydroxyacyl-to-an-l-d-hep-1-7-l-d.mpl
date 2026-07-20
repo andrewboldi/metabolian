@@ -36,14 +36,14 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_51 [6.2.1.51] +17_4_hydroxyphenyl_heptadecanoate +atp +amp +ppi
-    o_s_17_4_hydroxyphenyl_heptadecanoyl_pantetheine
+    <-> ec_6_2_1_71 [6.2.1.71] +2_3_dihydroxybenzoate +atp +amp +ppi
+    o_s_2_3_dihydroxybenzoylpantetheine_4_phosphoryl
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> . +l_cysteinyl_amp +amp +hplus
+    o_s_l_cysteinyl_pantetheine_4_phosphoryl_l_serin
   }
 
   branch from a_kdo_lipid_iva side left {
@@ -54,25 +54,19 @@ pathway udp-3-o-3r-hydroxyacyl-to-an-l-d-hep-1-7-l-d "UDP-3-O-[(3R)-hydroxyacylâ
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_3_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    an_kdo_2_8_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_gl +cmp_n_acetyl_neuraminate +hplus
-    monosialyl_gb5
+    <-> ec_2_4_99_15 [2.4.99.15] +a_kdo_2_lipid_iva +cmp_3_deoxy_d_manno_octulosonate +hplus
+    an_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
   }
 
   branch from a_kdo_2_lipid_iva side right {
     a_kdo_2_lipid_iva
-    <-> ec_2_4_99_14 [2.4.99.14] +cmp_3_deoxy_d_manno_octulosonate +cytidine_5_monophosphate +hplus
-    a_kdo_3_lipid_iva
-  }
-
-  branch from a_kdo_2_lipid_iva side left {
-    a_kdo_2_lipid_iva
-    <-> ec_2_4_99_15 [2.4.99.15] +cmp_3_deoxy_d_manno_octulosonate +cytidine_5_monophosphate +hplus
-    an_kdo_2_4_kdo_2_4_kdo_2_6_lipid_iva
+    <-> ec_2_3_1_242 [2.3.1.242] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +holo-acp
+    an_acyl_kdo_2_4_kdo_2_6_lipid_iva
   }
 }

@@ -26,26 +26,26 @@ pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocit
 
   branch from coa side right {
     coa
-    <-> . +2_aminobenzoylacetyl_coa
-    4_hydroxy_2_quinolone
+    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_beta_d_glucosyl_1_2_glucosyl_1_2
+    kaempferol_3_o_6_4_coumaroyl_beta_d_glucosyl_1_2
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +z_tetradec_7_enoyl_coa +acetyl_coa
-    z_3_oxohexadec_9_enoyl_coa
+    <-> . +7_o_beta_d_glucosyl_7_hydroxyflavone +malonyl_coa
+    7_hydroxyflavone_7_o_6_malonyl_beta_d_glucoside
   }
 
   branch from 2_oxoadipate side right {
     2_oxoadipate
-    <-> ec_1_2_4_2 [1.2.4.2] +r_lipoamide +h +co2
-    s_8_glutaryldihydrolipoamide
+    <-> . +acetyl_coa +h2o +h +coa
+    dihomocitrate
   }
 
   branch from 2_oxoadipate side left {
     2_oxoadipate
-    <-> . +nadh +2e_4z_2_aminomuconic_acid +h2o +nad
-    nh4
+    <-> . +co2 +4_carboxy_1_hydroxybutyryl_thpp +h
+    thiamine_diphosphate
   }
 
   branch from 3_hydroxy_l_kynurenine side right {
@@ -62,25 +62,25 @@ pathway octanoyl-coa-to-2r-3s-homoisocitrate "octanoyl-CoA to (2R,3S)-homoisocit
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph +nad
-    o_s_9z_21z_tetracontadienoylpantetheine_4_phosph
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +norcamphor +nad
+    trans_bicyclo_2_2_1_heptanol
   }
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_15z_27z_hexatetracontatrienoylpantetheine +nad
-    o_s_15z_27z_hexatetracontadienoylpantetheine_4_p
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylcyclohexanone +nad
+    cis_4_methylcyclohexanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_29z_octatetracontatrienoylpantetheine +h
-    o_s_17z_29z_octatetracontadienoylpantetheine_4_p
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +3_methylbutan_2_one
+    r_3_methylbutan_2_ol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho +h
-    o_s_17z_hexatriacontenoylpantetheine_4_phosphory
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_oxohexane
+    s_2_hexanol
   }
 }

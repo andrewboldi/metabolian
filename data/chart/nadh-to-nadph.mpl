@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-nadph "NADH to NADPH" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     nadh
@@ -18,49 +18,43 @@ pathway nadh-to-nadph "NADH to NADPH" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +all_trans_zeaxanthin +h +o2 +h2o
-    nostoxanthin
+    <-> ec_1_14_13_24 [1.14.13.24] +nadh +3_hydroxy_4_methyl_benzoate +h +o2 +h2o
+    4_methylgentisate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +all_trans_beta_carotene +h +o2 +h2o
-    2s_2_s_dihydroxy_all_trans_beta_carotene
+    <-> . +nadh +2_5_xylenol +h +o2 +h2o
+    5_hydroxymethyl_2_methylphenol
   }
 
   branch from dtdp_alpha_d_glucose side left {
-    dtdp_alpha_d_glucose
-    <-> ec_2_4_1_13 [2.4.1.13] +sucrose +dtdp +h
-    keto_d_fructose
-  }
-
-  branch from dtdp_alpha_d_glucose side right {
     dtdp_alpha_d_glucose
     <-> ec_5_1_3_2 [5.1.3.2] +h
     dtdp_d_galactose
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_11_25 [3.4.11.25] +3s_3_3s_3_aminobutanoyl_amino_5_methylhexanoic +3r_beta_leucine
-    beta_homovaline_beta_homoalanine_beta_homoleucin
-  }
-
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +alpha_d_xylose
-    glucose
+    <-> . +glucose +20s_ginsenoside_rh1
+    ginsenoside_rf
   }
 
-  branch from nadph side left {
-    nadph
-    <-> . +sulfonopine +nadp +h2o +h +s_methyl_l_methionine
-    pyruvate
+  branch from h2o side left {
+    h2o
+    <-> . +notoginsenoside_fe +glucose
+    ginsenoside_rc
   }
 
   branch from nadph side right {
     nadph
-    <-> . +n_3_hydroxybutan_2_yl_acetamide +nadp +h
-    n_3_oxobutan_2_yl_acetamide
+    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp
+    auricoloyl_coa
+  }
+
+  branch from nadph side left {
+    nadph
+    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp
+    gdp_6_deoxy_d_altro_heptose
   }
 }

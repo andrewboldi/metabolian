@@ -38,14 +38,14 @@ pathway 1-6-anhydro-n-acetyl-mu-to-l-2-aminoadipate "1,6-anhydro-N-acetyl-Î²-muâ
 
   branch from n_acetylneuraminate side left {
     n_acetylneuraminate
-    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +h2o
-    gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1
+    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +h2o
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
 
   branch from n_acetylneuraminate side right {
     n_acetylneuraminate
-    <-> . +gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac_2_3_gal_1 +h2o
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
+    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +h2o
+    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
   }
 
   branch from cmp_n_acetyl_neuraminate side left {
@@ -56,31 +56,31 @@ pathway 1-6-anhydro-n-acetyl-mu-to-l-2-aminoadipate "1,6-anhydro-N-acetyl-Î²-muâ
 
   branch from cmp_n_acetyl_neuraminate side right {
     cmp_n_acetyl_neuraminate
-    <-> . +n_acyl_d_galactosylsphingosine +cytidine_5_monophosphate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosylceramide
+    <-> . +neu5ac_2_3_d_gal_1_3_d_glcnac_1_3_d_gal_1_4_d_g +cytidine_5_monophosphate +hplus
+    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_glcnac_1_3_d
   }
 
   branch from ppi side left {
     ppi
-    <-> . +gtp
-    precursor_z
+    <-> ec_4_2_3_57 [4.2.3.57] +fpp
+    caryophyllene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_45 [4.2.3.45] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    phyllocladan_16_ol
+    <-> ec_4_2_3_59 [4.2.3.59] +fpp
+    e_bisabolene
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> ec_6_2_1_46 [6.2.1.46] +l_alloisoleucine +atp +amp +ppi
-    o_s_l_alloisoleucyl_pantetheine_4_phosphoryl_ser
+    <-> . +l_serine +coa +hplus
+    adenosine_3_5_bismonophosphate
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_serine +coa +hplus
-    adenosine_3_5_bismonophosphate
+    <-> ec_6_2_1_47 [6.2.1.47] +medium_chain_fatty_acid_anion +atp +amp +ppi
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
   }
 }

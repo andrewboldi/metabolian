@@ -20,14 +20,14 @@ pathway z-glucosinolate-to-acetate "(Z)-glucosinolate to acetate" {
 
   branch from glucose side left {
     glucose
-    <-> . +campesterol_3_d_glucoside +h2o
-    campesterol
+    <-> . +glucoerucin +h2o
+    z_4_methylsulfanylbutyl_n_sulfonatooxy_methanim
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_48 [3.2.1.48] +maltose +h2o
-    d_glucose
+    <-> ec_1_1_1_432 [1.1.1.432] +nadp +nadph +hplus
+    6_dehydro_d_glucose
   }
 
   branch from sulfur_atom side left {
@@ -42,21 +42,15 @@ pathway z-glucosinolate-to-acetate "(Z)-glucosinolate to acetate" {
     fenthion
   }
 
-  branch from h2s side left {
-    h2s
-    <-> . +cysteine +hplus
-    l_lanthionine_dizwitterion
-  }
-
-  branch from cysteine side right {
-    cysteine
-    <-> . +indole_3_butyrate +atp +amp +ppi +hplus
-    n_4_indol_3_yl_butanoyl_l_cysteinate
-  }
-
   branch from cysteine side left {
     cysteine
     <-> . +atp +hplus +ppi
     l_cysteinyl_amp
+  }
+
+  branch from cysteine side right {
+    cysteine
+    <-> . +ala_cys +h2o
+    alanine
   }
 }

@@ -20,14 +20,14 @@ pathway n-3r-4r-5s-6r-5-2s-3-to-gdp-d-mannose "N-[(3R,4R,5S,6R)-5-[(2S,3… to G
 
   branch from d_mannopyranose side left {
     d_mannopyranose
-    <-> . +h +adp +phosphate +h2o
-    atp
+    <-> ec_1_1_1_292 [1.1.1.292] +nadp +d_glucosone +nadph
+    h
   }
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> ec_1_1_1_292 [1.1.1.292] +nadp +d_glucosone +nadph
-    h
+    <-> ec_5_3_1_15 [5.3.1.15]
+    keto_d_fructose
   }
 
   branch from gdp_d_mannose side left {

@@ -20,50 +20,50 @@ pathway 4-formylbenzoate-to-nadp "4-formylbenzoate to NADP" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +d_xylonate +h +h2o
-    aldehydo_d_xylose
+    <-> . +nadh +h +3_5_xylenol +o2 +h2o
+    3_hydroxymethyl_5_methylphenol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +2_benzyl_3_oxobutanedioate +h
-    3_benzylmalic_acid
+    <-> ec_1_1_1_90 [1.1.1.90] +nadh +3_hydroxy_4_methylbenzaldehyde +h
+    5_hydroxymethyl_2_methylphenol
   }
 
   branch from nadh side left {
     nadh
-    <-> . +acetyl_coa +6_trans_tridecenoyl_coa +h +h2o2 +coa +o2 +nad +h2o
-    10_trans_heptadecenoyl_coa
+    <-> .
+    6_hydro_nad
   }
 
   branch from nadh side right {
     nadh
-    <-> . +acetyl_coa +5_cis_7_trans_tetradecadienoyl_coa +h +h2o2 +coa +o2 +nad +h2o
-    9z_11e_octadecadienoyl_coa
+    <-> .
+    2_hydro_nad
   }
 
   branch from h side left {
     h
-    <-> . +9z_octadecenoate +h2o2 +1e_8z_heptadecadiene +h2o
-    co2
+    <-> . +monacolin_l_carboxylate +h2o
+    monacolin_l
   }
 
   branch from h side right {
     h
-    <-> . +9z_12z_octadecadienoate +h2o2 +co2 +h2o
-    z_z_1_8_11_heptadecatriene
+    <-> . +3_hydroxy_3_5_dihydromonacolin_l_carboxylate +h2o
+    3alpha_hydroxy_3_5_dihydromonacolin_l_lactone
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_aminophenoxazin_3_one +h2o
-    6_iminocyclohexa_2_4_dienone
+    <-> . +4_sulfanylbutanoate +h2o
+    4_oxo_4_sulfanylbutanoate
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_13_11_65 [1.13.11.65] +all_trans_beta_carotene +all_trans_retinal
-    11_cis_retinal
+    <-> ec_1_8_3_2 [1.8.3.2] +3_benzyl_3_6_disulfide_6_hydroxymethyl_diketopip +h2o2
+    3_benzyl_3_6_dithio_6_hydroxymethyl_diketopipera
   }
 
   branch from 4_methylbenzaldehyde side left {
@@ -74,25 +74,25 @@ pathway 4-formylbenzoate-to-nadp "4-formylbenzoate to NADP" {
 
   branch from nadp side right {
     nadp
-    <-> . +9_hydroxy_aurachin_d +h +o2 +nadph +h2o
-    aurachin_re
+    <-> . +gdp_6_deoxy_4_keto_l_xylo_heptose +h +nadph
+    gdp_6_deoxy_l_gluco_heptose
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +aurachin_d +o2 +nadph +h2o
-    aurachin_c
+    <-> . +tridecane_3_4_dione +h +nadph
+    cai_1
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3_4_dihydroxybenzoate +2_4_6_trihydroxybenzoic_acid
-    2_3_4_dihydroxybenzoyloxy_4_6_dihydroxybenzoate
+    <-> ec_4_2_1_84 [4.2.1.84] +butanamide
+    butyronitrile
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_52 [3.2.1.52] +n_acetyl_d_hexosamine +n_n_diacetylchitobiose
-    n_n_n_triacetylchitotriose
+    <-> ec_4_2_1_119 [4.2.1.119] +2_trans_6_trans_tridecadienoyl_coa
+    3r_hydroxy_6_trans_tridecenoyl_coa
   }
 }

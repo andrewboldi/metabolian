@@ -20,14 +20,14 @@ pathway r-pantothenate-to-h2o "(R)-pantothenate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +9_10_epode
-    9_10_dihode
+    <-> ec_3_2_1_179 [3.2.1.179] +n_acetyl_d_galactosamine +5_dehydro_4_deoxy_2_o_sulfo_d_glucuronic_acid
+    4_deoxy_4_d_glcpa2s_1_3_d_galpnac
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_10 [3.3.2.10] +12_13_dihode
-    a_12_13_epode
+    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy
+    isoorientin
   }
 
   branch from 3_phosphoadenylyl_sulfate side left {
@@ -62,25 +62,25 @@ pathway r-pantothenate-to-h2o "(R)-pantothenate to H2O" {
 
   branch from h side right {
     h
-    <-> . +neocarratetraose_4_o_disulfate +h2o +sulfate
-    neocarratetraose_4_o_sulfate
+    <-> . +emodin +emodin_anthrone +h2o
+    emodin_dianthrone
   }
 
   branch from h side left {
     h
-    <-> . +neocarrabiose +sulfate +h2o
-    neocarrabiose_sulfate
+    <-> ec_3_1_1_26 [3.1.1.26] +9z_octadecenoate +mgmg_0_0_16_0 +h2o
+    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_93 [1.3.1.93] +lesqueroloyl_coa +h +nadph
-    trans_lesqueroloyl_coa
+    <-> . +l_galactopyranose +h +nadph
+    l_galactono_1_5_lactone
   }
 
   branch from nadp side left {
     nadp
-    <-> . +14alpha_hydroxy_cholesta_4_7_diene_3_6_dione +h +nadph
-    14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione
+    <-> . +malonyl_coa +s_methylmalonyl_coa +4_aminobenzoyl_coa +h +nadph +candicinolide +coa +h2o
+    co2
   }
 }

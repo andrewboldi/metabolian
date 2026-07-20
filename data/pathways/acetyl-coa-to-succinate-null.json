@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "acetyl-coa-to-succinate-null",
+  "name": "acetyl-CoA to succinate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from acetyl-CoA to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204108"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "l_isoleucine",
+      "name": "L-isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM728337"
+      }
+    },
+    {
+      "id": "n_acetyl_l_isoleucinate",
+      "name": "N-acetyl-L-isoleucinate",
+      "short": "N-acetyl-L-isoleuci…",
+      "formula": "C8H14NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133735"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "isoleucine",
+      "name": "L-Isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58045"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4s_4_hydroxy_l_isoleucine",
+      "name": "(4S)-4-hydroxy-L-isoleucine",
+      "short": "4-hydroxy-L-isoleuc…",
+      "formula": "C6H13NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78247"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_45",
+      "name": "L-isoleucine 4-hydroxylase",
+      "ec": [
+        "1.14.11.45"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204108",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_isoleucine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_isoleucinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204108"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-L-isoleucine + H2O = L-isoleucine + acetate",
+      "equation": "N-acetyl-L-isoleucine + H2O = L-isoleucine + acetate",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_isoleucinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:81119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-isoleucine 4-hydroxylase",
+      "equation": "L-isoleucine + 2-oxoglutarate + O2 = (4S)-4-hydroxy-L-isoleucine + succinate + CO2",
+      "ec": "1.14.11.45",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4s_4_hydroxy_l_isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41448"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy "1-(11Z-icosenoyl)glycerol to 1-α-linolenoyl-2-oleoylgl…" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     1_11z_icosenoyl_glycerol
@@ -18,17 +18,11 @@ pathway 1-11z-icosenoyl-glycerol-to-1-linolenoyl-2-oleoy "1-(11Z-icosenoyl)glyce
 
   branch from gondoate side left {
     gondoate
-    <-> . +gondamide +h2o
-    nh3
-  }
-
-  branch from gondoate side right {
-    gondoate
     <-> . +h2o +coa +hplus
     11z_eicosenoyl_coa
   }
 
-  branch from 1_linolenoylglycerol side left {
+  branch from 1_linolenoylglycerol side right {
     1_linolenoylglycerol
     <-> . +oleoyl_coa +coa
     1_linolenoyl_3_oleoylglycerol

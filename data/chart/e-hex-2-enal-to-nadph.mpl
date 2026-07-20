@@ -18,37 +18,37 @@ pathway e-hex-2-enal-to-nadph "(E)-hex-2-enal to NADPH" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
-    l_arabinopyranose
+    <-> ec_1_14_13_5 [1.14.13.5] +nadh +imidazole_4_acetate +o2 +h2o
+    5_hydroxy_4_imidazoleacetate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +l_alanine +h +h2o
-    s_2_aminopropanal
+    <-> ec_1_14_13_5 [1.14.13.5] +nadh +h +imidazole_4_acetate +o2 +h2o
+    imidazolone_acetate
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +amikacin +phosphate +amikacin +h2o
-    atp
+    <-> ec_5_4_99_3 [5.4.99.3] +3_hydroxy_3_methyl_2_oxopentanoic_acid
+    s_2_ethyl_2_hydroxy_3_oxobutanoate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    gentamicin_a2e
+    <-> ec_2_3_1_226 [2.3.1.226] +methylmalonyl_coa +co2
+    propanoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_2_3_1_86 [2.3.1.86] +octanoyl_coa +co2 +nadp +coa +h2o +malonyl_coa +h
-    acetyl_coa
+    <-> . +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +nadp +h
+    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nadp
-    beta_d_glucose_6_phosphate
+    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +h +nadp
+    sulfinamide_glutathione
   }
 }

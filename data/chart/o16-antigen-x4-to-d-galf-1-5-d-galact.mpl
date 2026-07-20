@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o16-antigen-x4-to-d-galf-1-5-d-galact "(O16 antigen)x4… to β-D-Galf-(1→5)-β-D-galact…" {
-  spacing 330
+  spacing 324
 
   spine at 0,0 {
     o16_antigen_x4_undecaprenyl_diphosphate
@@ -24,31 +24,25 @@ pathway o16-antigen-x4-to-d-galf-1-5-d-galact "(O16 antigen)x4… to β-D-Galf-(
 
   branch from h side left {
     h
-    <-> . +2_trans_6_cis_dodeca_2_6_dienoyl_coa +h2o
-    3s_3_hydroxydodec_cis_6_enoyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn +phosphate +1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_sn +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +cis_cis_tetradeca_5_8_dienoyl_coa +coa
-    3_oxo_cis_cis_7_10_hexadecadienoyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_12z_15z_octadecatrienoyl_2_9z_octadecenoyl
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +3_o_beta_d_glucoside_digitoxigenin +h
-    digitoxigenin
+    <-> ec_2_4_1_115 [2.4.1.115] +udp +pelargonidin_3_glucoside
+    pelargonidin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_219 [2.4.1.219] +udp +raucaffricine +h
-    vomilenine
-  }
-
-  branch from glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl side left {
-    glucosyl_o_acetyl_rhamanosyl_n_acetylglucosamyl
-    <-> . +udp +h +udp_alpha_d_glucose
-    o_acetyl_rhamanosyl_n_acetylglucosamyl_undecapre
+    <-> ec_2_4_1_115 [2.4.1.115] +udp +mirtillin
+    ephdine
   }
 }

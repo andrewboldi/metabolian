@@ -18,26 +18,26 @@ pathway diphosphate-to-laudanine "diphosphate to laudanine" {
 
   branch from h side left {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ether_glucuronide +3_3_5_5_tetraiodothyroacetic_acid
-    udp_alpha_d_glucuronate
+    <-> . +9z_12z_octadecadienoate +h2o2 +z_z_1_8_11_heptadecatriene +h2o
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ester_glucuronide +udp_alpha_d_glucuronate
-    3_3_5_5_tetraiodothyroacetic_acid
+    <-> . +udp +beta_d_galactosyl_1_4_alpha_d_galactosyl_1_3_n_n +alpha_d_galactosyl_1_3_n_n_diacetyl_alpha_d_baci
+    udp_alpha_d_galactose
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_29 [6.3.2.29] +cyanophycin_primer_l_aspartate +h +adp +phosphate +cyanophycin_primer
-    l_aspartate
+    <-> . +s_adenosyl_l_homocysteine +diphosphate +co2 +dieckmann_product +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +l_serine +nadph
+    malonyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +3r_3_ammonio_3_phenylpropanoyl_coa +r_3_ammonio_3_phenylpropanoate
-    coa
+    <-> ec_2_7_1_166 [2.7.1.166] +alpha_kdo8n_2_6_lipid_iva +h +adp
+    4_o_phospho_alpha_kdo8n_2_6_lipid_iva
   }
 
   branch from gentamicin_a side left {
@@ -54,25 +54,25 @@ pathway diphosphate-to-laudanine "diphosphate to laudanine" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_6_7_2_4_pentamethylquercetagetin +h
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin
+    <-> . +s_adenosyl_l_homocysteine +h +patulitrin
+    quercetagitrin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +4alpha_14alpha_dimethyl_porifersta_8_25_27_dieno +h
-    obtusifoliol
+    <-> . +s_adenosyl_l_homocysteine +3_4_5_o_trimethylmyricetin_3_7_diolate +h
+    3_4_dimethylmyricetin
   }
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +h +patuletin +s_adenosyl_l_methionine
-    quercetagetin
+    <-> . +h +gentamicin_c2b +s_adenosyl_l_methionine
+    gentamicin_c1a
   }
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +h +patulitrin +s_adenosyl_l_methionine
-    quercetagitrin
+    <-> . +7_4_dihydroxy_8_methoxyflavone +s_adenosyl_l_methionine
+    4_8_dihydroxyflavone_7_olate
   }
 }

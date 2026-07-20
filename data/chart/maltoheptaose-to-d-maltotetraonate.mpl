@@ -18,13 +18,13 @@ pathway maltoheptaose-to-d-maltotetraonate "maltoheptaose to D-maltotetraonate" 
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_2_4_1_1 [2.4.1.1] +maltopentaose +phosphate
-    d_glucopyranose_1_phosphate
+    <-> ec_2_4_1_25 [2.4.1.25] +d_maltose +glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_21 [3.2.1.21] +h2o +glucose
-    cellotriose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +glucose
+    d_maltose
   }
 }

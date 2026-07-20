@@ -34,14 +34,14 @@ pathway lumisterol-3-to-di-sulfido-diiron "lumisterol 3 to di-μ-sulfido-diiron"
 
   branch from fmn side left {
     fmn
-    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
-    all_trans_4_hydroxyretinoate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    11_hydroxytestosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
-    4z_7z_10z_13z_16z_19r_20s_19_20_epoxydocosapent
+    <-> . +9s_10r_epoxyoctadecanoate +fmnh2 +o2 +h2o +hplus
+    9s_10r_9_10_epoxy_18_hydroxyoctadecanoate
   }
 
   branch from calcitriol side left {
@@ -52,13 +52,13 @@ pathway lumisterol-3-to-di-sulfido-diiron "lumisterol 3 to di-μ-sulfido-diiron"
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +5_cholestan_3_ol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_26_hydroxycholestanol
+    <-> . +2_22_25_trideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    2_22_dideoxyecdysone
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_61 [1.14.19.61] +dihydrorhizobitoxine +di_sulfido_diiron +o2 +hplus +h2o
-    rhizobitoxine
+    <-> . +2_22_dideoxyecdysone +di_sulfido_diiron +o2 +hplus +h2o
+    22_deoxyecdysone
   }
 }

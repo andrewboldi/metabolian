@@ -24,20 +24,20 @@ pathway r-lipoamide-to-h2o "(R)-lipoamide to H2O" {
 
   branch from r_dihydrolipoamide side right {
     r_dihydrolipoamide
-    <-> ec_2_3_1_61 [2.3.1.61] +glutaryl_coa +h +s_8_glutaryldihydrolipoamide
+    <-> ec_2_3_1_61 [2.3.1.61] +succinyl_coa +s_succinyl_dihydrolipoamide
     coa
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_94 [1.3.1.94] +h +di_trans_poly_cis_polyprenol_c80 +nadph
-    c80_dolichol
+    <-> ec_1_1_1_188 [1.1.1.188] +duroquinol +h +nadph
+    duroquinone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_274 [1.1.1.274] +ethyl_2r_methyl_3s_hydroxybutanoate +h +nadph
-    ethyl_2_methylacetoacetate
+    <-> ec_1_1_1_21 [1.1.1.21] +h +l_xylose +nadph
+    xylitol
   }
 
   branch from 6s_5_6_7_8_tetrahydrofolate side left {
@@ -54,14 +54,14 @@ pathway r-lipoamide-to-h2o "(R)-lipoamide to H2O" {
 
   branch from h side left {
     h
-    <-> . +9z_12z_hexadeca_9_12_15_trienoyl_coa +malonyl_coa +5_pentadeca_8_11_14_trien_1_yl_resorcinol +coa
-    co2
+    <-> ec_3_5_1_11 [3.5.1.11] +7_amino_8_oxo_3_pyridin_1_ium_1_ylmethyl_5_thia +thien_2_ylacetate +h2o
+    cefaloridine
   }
 
   branch from h side right {
     h
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +dodecanoyl_pantetheine_4_phosphorylserine_1 +co2 +coa
-    o_s_3_oxotetradecanoylpantetheine_4_phosphoryl_s
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +5_dihydrotestosterone +nad
+    5_androstane_3_17_diol
   }
 
   branch from thf_l_glutamate side left {
@@ -78,13 +78,13 @@ pathway r-lipoamide-to-h2o "(R)-lipoamide to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_86 [3.2.1.86] +beta_d_glucose_6_phosphate +methanol
-    methyl_beta_d_glucoside_6_phosphate
+    <-> ec_3_4_22_40 [3.4.22.40] +l_histidine +2_naphthylamine
+    l_histidyl_beta_naphthylamide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +ctp +hydroxyl +h
-    5_hydroxy_ctp
+    <-> ec_3_4_11_4 [3.4.11.4] +l_alanine +ala_ala
+    ala_ala_ala
   }
 }

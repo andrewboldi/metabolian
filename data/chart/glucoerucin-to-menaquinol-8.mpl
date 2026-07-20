@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glucoerucin-to-menaquinol-8 "glucoerucin to Menaquinol 8" {
-  spacing 324
+  spacing 318
 
   spine at 0,0 {
     glucoerucin
@@ -26,38 +26,38 @@ pathway glucoerucin-to-menaquinol-8 "glucoerucin to Menaquinol 8" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_15_15 [1.14.15.15] +h +o2 +epidihydrocholesterin +nadph +h2o
-    5beta_cholestane_3alpha_26_diol
+    <-> ec_1_2_1_10 [1.2.1.10] +acetyl_coa +h +nadph +acetaldehyde
+    coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +4_phenylbutan_2_one +h +nadph
-    s_4_phenyl_2_butanol
+    <-> ec_1_1_1_151 [1.1.1.151] +21_dehydrocorticosterone +h +nadph
+    corticosterone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_28 [3.1.1.28] +hexadecanoate +r_carnitine +h
-    o_hexadecanoyl_r_carnitine
+    <-> ec_3_2_1_21 [3.2.1.21] +4_nitrophenyl_l_arabinoside +h +alpha_l_arabinopyanose
+    4_nitrophenol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +isonicotinate +nad
-    4_pyridinecarboxaldehyde
+    <-> ec_3_5_1_1 [3.5.1.1] +d_aspartate +nh4
+    d_asparagine
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +compound_0045496
-    tetrafluoro_1_4_benzoquinone
+    <-> ec_3_2_1_21 [3.2.1.21] +pyridoxine +h2o
+    5_o_beta_d_glucosylpyridoxine
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +h2o
-    allolactose
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
+    d_galactopyranose
   }
 
   branch from sulfur_atom side left {
@@ -74,38 +74,38 @@ pathway glucoerucin-to-menaquinol-8 "glucoerucin to Menaquinol 8" {
 
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> ec_1_8_5_5 [1.8.5.5] +thiosulfate +menaquinol +h +sulfite
-    menaquinone
+    <-> . +acetyl_coa +l_serine +coa +l_cysteine
+    acetate
   }
 
   branch from hydrogen_sulfide side right {
     hydrogen_sulfide
-    <-> ec_4_4_1_9 [4.4.1.9] +3_cyano_l_alanine +cysteine
-    cyanide
+    <-> ec_2_5_1_47 [2.5.1.47] +o_acetyl_l_serine +acetate
+    cysteine
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_1_3 [3.5.1.3] +ethanol +succinate +h2o
-    4_ethoxy_4_oxobutanoic_acid
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +1_ketoacenaphthalene +nad
+    1_acenaphthalenol
   }
 
   branch from h side right {
     h
-    <-> ec_3_5_1_3 [3.5.1.3] +glutarate +nh4 +h2o
-    glutaramic_acid
+    <-> ec_1_1_1_88 [1.1.1.88] +nadh +3s_3_hydroxy_3_methylglutaryl_coa +coa +nad
+    r_mevaldate
   }
 
   branch from sulfite side left {
     sulfite
-    <-> ec_2_8_1_2 [2.8.1.2] +thiosulfate +pyruvate +h
-    2_oxo_3_sulfanylpropanoate
+    <-> ec_4_4_1_24 [4.4.1.24] +h +pyruvate
+    3_sulfolactic_acid
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_4_4_1_24 [4.4.1.24] +h +pyruvate
-    3_sulfolactic_acid
+    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxymuconate +o2 +h2o
+    2_3_dihydroxybenzenesulfonate
   }
 
   branch from menaquinol_8 side left {
@@ -134,13 +134,7 @@ pathway glucoerucin-to-menaquinol-8 "glucoerucin to Menaquinol 8" {
 
   branch from nitrous_oxide side left {
     nitrous_oxide
-    <-> ec_1_7_5_2 [1.7.5.2] +nitric_oxide +menaquinone +h2o
-    menaquinol
-  }
-
-  branch from nitrous_oxide side right {
-    nitrous_oxide
-    <-> ec_1_7_99_6 [1.7.99.6] +nadh +h +nad +h2o
-    n2
+    <-> ec_1_7_5_2 [1.7.5.2] +nitric_oxide +menaquinol +h2o
+    menaquinone_2
   }
 }

@@ -172,63 +172,31 @@
       }
     },
     {
-      "id": "ribonucleotide_ribonucleotide_2",
-      "name": "ribonucleotide-ribonucleotide(2−)",
-      "short": "ribonucleotide-ribo…",
-      "formula": "C10H14O12P2R2",
-      "charge": -2,
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:173118"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "5_end_ribonucleoside",
-      "name": "5'-end ribonucleoside",
-      "short": "5'-end ribonucleosi…",
-      "formula": "C5H8O4R",
+      "id": "7_epi_eudesmol",
+      "name": "7-epi-α-eudesmol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:138284"
+        "chebi": "CHEBI:138040"
       }
     },
     {
-      "id": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
-      "name": "1-stearoyl-2-linoleoyl-sn-glycero-3-phosphate",
-      "short": "1-stearoyl-2-linole…",
-      "formula": "C39H71O8P",
-      "charge": -2,
+      "id": "4_epi_cubebol",
+      "name": "(+)-4-epi-cubebol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:77098"
-      }
-    },
-    {
-      "id": "cdp_1_stearoyl_2_linoleoyl_sn_glycerol",
-      "name": "CDP-1-stearoyl-2-linoleoyl-sn-glycerol",
-      "short": "CDP-1-stearoyl-2-li…",
-      "formula": "C48H83N3O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85352"
-      }
-    },
-    {
-      "id": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-      "name": "1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycero-3-phosphate",
-      "short": "1-stearoyl-2-(4Z,7Z…",
-      "formula": "C43H71O8P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:77130"
-      }
-    },
-    {
-      "id": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
-      "name": "CDP-1-stearoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl-sn-glycerol",
-      "short": "CDP-1-stearoyl-2-(4…",
-      "formula": "C52H83N3O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:85354"
+        "chebi": "CHEBI:138041"
       }
     },
     {
@@ -239,6 +207,16 @@
       "charge": -3,
       "xrefs": {
         "chebi": "CHEBI:83069"
+      }
+    },
+    {
+      "id": "ribonucleotide_ribonucleotide_2",
+      "name": "ribonucleotide-ribonucleotide(2−)",
+      "short": "ribonucleotide-ribo…",
+      "formula": "C10H14O12P2R2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:173118"
       }
     },
     {
@@ -275,17 +253,17 @@
       ]
     },
     {
-      "id": "ec_4_6_1_19",
-      "name": "ribonuclease T2",
+      "id": "ec_4_2_3_169",
+      "name": "7-epi-alpha-eudesmol synthase",
       "ec": [
-        "4.6.1.19"
+        "4.2.3.169"
       ]
     },
     {
-      "id": "ec_6_5_1_8",
-      "name": "3'-phosphate/5'-hydroxy nucleic acid ligase",
+      "id": "ec_4_2_3_170",
+      "name": "4-epi-cubebol synthase",
       "ec": [
-        "6.5.1.8"
+        "4.2.3.170"
       ]
     }
   ],
@@ -560,12 +538,12 @@
     },
     {
       "id": "r7",
-      "name": "ribonuclease T2",
-      "equation": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end 3'-phospho-ribonucleotide-RNA + a 5'-end dephospho-ribonucleoside-RNA + H(+)",
-      "ec": "4.6.1.19",
+      "name": "7-epi-alpha-eudesmol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 7-epi-alpha-eudesmol + diphosphate",
+      "ec": "4.2.3.169",
       "substrates": [
         {
-          "metabolite": "ribonucleotide_ribonucleotide_2",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
@@ -575,64 +553,52 @@
       ],
       "products": [
         {
-          "metabolite": "3_end_ribonucleotide_3_phosphate_3",
+          "metabolite": "7_epi_eudesmol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_end_ribonucleoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_6_1_19"
+          "enzyme": "ec_4_2_3_169"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:68052"
+        "rhea": "RHEA:54044"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68052"
+            "id": "RHEA:54044"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "3'-phosphate/5'-hydroxy nucleic acid ligase",
-      "equation": "a 3'-end 3'-phospho-ribonucleotide-RNA + a 5'-end dephospho-ribonucleoside-RNA + GTP = a ribonucleotidyl-ribonucleotide-RNA + GMP + diphosphate",
-      "ec": "6.5.1.8",
+      "name": "4-epi-cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 4-epi-cubebol + diphosphate",
+      "ec": "4.2.3.170",
       "substrates": [
         {
-          "metabolite": "3_end_ribonucleotide_3_phosphate_3",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "5_end_ribonucleoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ribonucleotide_ribonucleotide_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gmp",
+          "metabolite": "4_epi_cubebol",
           "stoichiometry": 1
         },
         {
@@ -642,112 +608,26 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_5_1_8"
+          "enzyme": "ec_4_2_3_170"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:68076"
+        "rhea": "RHEA:54048"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68076"
+            "id": "RHEA:54048"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octad...",
-      "equation": "1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cdp_1_stearoyl_2_linoleoyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:45660"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:45660"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP +...",
-      "equation": "1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphate + CTP + H(+) = 1-octadecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-cytidine-5'-diphosphate + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahexaeno",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ctp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "cdp_1_stearoyl_2_4z_7z_10z_13z_16z_19z_docosahex",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:45668"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:45668"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
       "name": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
       "equation": "a tRNA precursor + 2 CTP = a tRNA with a 3' CC end + 2 diphosphate",
       "substrates": [
@@ -771,7 +651,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:60008"
       },
@@ -786,7 +666,7 @@
       }
     },
     {
-      "id": "r12",
+      "id": "r10",
       "name": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a 5'-end 5'-...",
       "equation": "a ribonucleotidyl-ribonucleotide-RNA + H2O = a 3'-end ribonucleotide-RNA + a 5'-end 5'-phospho-ribonucleoside-RNA + H(+)",
       "substrates": [
@@ -814,7 +694,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 10,
       "xrefs": {
         "rhea": "RHEA:68096"
       },

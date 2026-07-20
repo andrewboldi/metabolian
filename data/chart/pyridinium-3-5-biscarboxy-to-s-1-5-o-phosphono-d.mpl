@@ -18,13 +18,13 @@ pathway pyridinium-3-5-biscarboxy-to-s-1-5-o-phosphono-d "pyridinium-3,5-biscarb
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_221 [4.2.3.221] +all_trans_hexaprenyl_diphosphate
-    macrophomene
+    <-> . +framycetin +atp
+    4_adenylylframycetin_b
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_220 [4.2.3.220] +all_trans_hexaprenyl_diphosphate
-    talaropentaene
+    <-> . +paromomycin +atp
+    4_adenylylparomomycin
   }
 }

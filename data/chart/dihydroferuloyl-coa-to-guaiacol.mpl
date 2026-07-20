@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroferuloyl-coa-to-guaiacol "dihydroferuloyl-CoA to guaiacol" {
-  spacing 196
+  spacing 190
 
   spine at 0,0 {
     dihydroferuloyl_coa
@@ -22,13 +22,7 @@ pathway dihydroferuloyl-coa-to-guaiacol "dihydroferuloyl-CoA to guaiacol" {
 
   branch from trans_feruloyl_coa side left {
     trans_feruloyl_coa
-    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa +hplus
-    myricetin_3_o_6_o_trans_feruloyl_d_glucosyl_1_2
-  }
-
-  branch from trans_feruloyl_coa side right {
-    trans_feruloyl_coa
-    <-> ec_1_2_1_44 [1.2.1.44] +nadp +coa +nadph +hplus
-    coniferyl_aldehyde
+    <-> . +2r_3s_piscidate +coa
+    cimicifugate_e
   }
 }

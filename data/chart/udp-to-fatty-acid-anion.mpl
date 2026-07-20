@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-fatty-acid-anion "UDP to fatty acid anion" {
-  spacing 238
+  spacing 220
 
   spine at 0,0 {
     udp
@@ -16,23 +16,5 @@ pathway udp-to-fatty-acid-anion "UDP to fatty acid anion" {
     1_alkyl_3_acyl_sn_glycerol
     <-> . +h2o -fatty-acid -hplus
     1_o_alkyl_sn_glycerol
-  }
-
-  branch from udp_alpha_d_galactose side left {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_alpha_d_glcnac_1_2_beta_d_gal_1_4 +h
-    alpha_d_glcnac_1_2_beta_d_gal_1_4_alpha_l_fuc_1
-  }
-
-  branch from udp_alpha_d_galactose side right {
-    udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +beta_d_gal_1_4_beta_d_glcnac_1_3_beta_d_gal_1_4 +h
-    beta_d_glcnac_1_3_beta_d_gal_1_4_alpha_l_fuc_1_3
-  }
-
-  branch from 1_alkyl_2_acyl_sn_glycerol side left {
-    1_alkyl_2_acyl_sn_glycerol
-    <-> . +atp +adp +hplus
-    1_alkyl_2_acyl_sn_glycero_3_phosphate
   }
 }

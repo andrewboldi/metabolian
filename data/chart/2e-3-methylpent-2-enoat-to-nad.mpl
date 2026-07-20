@@ -22,49 +22,49 @@ pathway 2e-3-methylpent-2-enoat-to-nad "(2E)-3-methylpent-2-enoat… to NAD" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +l_alanyl_l_glutamate +adp +phosphate +l_alanyl_l_glutamate +h2o
-    atp
+    <-> . +bromide +spongiadioxin_c
+    2_4_dibromo_6_2_4_dibromo_6_hydroxyphenoxy_pheno
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    glycylglycine
+    <-> ec_2_7_1_32 [2.7.1.32] +prenyl_phosphate +adp +prenol
+    atp
   }
 
   branch from ctp side left {
     ctp
-    <-> . +cdp +4_amino_2_methyl_5_phosphooxymethyl_pyrimidine +h
-    4_amino_5_hydroxymethyl_2_methylpyrimidine
+    <-> ec_2_7_7_76 [2.7.7.76] +moo3_molybdopterin_cofactor +h +diphosphate
+    cytidylyl_molybdenum_cofactor_trioxo
   }
 
   branch from ctp side right {
     ctp
-    <-> ec_2_7_7_41 [2.7.7.41] +h +1_2_dihexadecanoyl_sn_glycerol_3_phosphate +cdp_dipalmitoyl_sn_glycerol
+    <-> ec_2_7_7_38 [2.7.7.38] +3_deoxy_d_manno_octulosonate +cmp_3_deoxy_beta_d_manno_octulosonate
     diphosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinopyranose +nadp +h
-    l_arabinono_1_4_lactone
+    <-> ec_1_1_1_195 [1.1.1.195] +4_hydroxycinnamyl_alcohol +nadp +h
+    e_4_coumaraldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadp
-    alpha_l_arabinofuranose
+    <-> ec_1_14_13_200 [1.14.13.200] +tetracenomycin_b2 +h +o2 +nadp +h2o
+    8_demethyltetracenomycin_c
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienal
-    neoabietadienol
+    <-> . +nadh +9_13_cis_retinoic_acid +h +h2o
+    9_cis_retinal
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienal
-    palustradienol
+    <-> ec_1_1_1_93 [1.1.1.93] +nadh +2r_2_hydroxy_3_oxosuccinic_acid +h
+    2r_3r_tartrate
   }
 }

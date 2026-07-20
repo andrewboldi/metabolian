@@ -30,14 +30,14 @@ pathway d-valine-to-2s-2-hydroxy-3-methylbu "D-valine to (2S)-2-hydroxy-3-methyl
 
   branch from nh3 side left {
     nh3
-    <-> . +s_4_aminopentanoic_acid +nad +h2o +nadh +hplus
-    4_oxopentanoate
+    <-> . +1s_3_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
+    3_methylcyclohexanone
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +2_deoxyguanosine +h2o +hplus
-    2_deoxyxanthosine
+    <-> . +nadp +h2o +3_methylcyclohexanone +nadph +hplus
+    1s_3_methyl_cyclohexylammonium
   }
 
   branch from isobutyraldehyde side left {

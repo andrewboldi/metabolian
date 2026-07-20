@@ -18,37 +18,37 @@ pathway n-aryl-1-2-dipalmitoyl-sn-to-16-feruloyloxypalmi "N-aryl-1,2-dipalmitoyl
 
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
+    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h2o +hplus
-    2_linoleoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +1_hexadecanoyl_2_9_oxononanoyl_sn_glycero_3_phos +h2o +hplus
+    2_9_oxononanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from 16_hydroxyhexadecanoate side left {
-    16_hydroxyhexadecanoate
-    <-> . +atp +coa +amp +ppi
-    16_hydroxyhexadecanoyl_coa
-  }
-
-  branch from 16_hydroxyhexadecanoate side right {
     16_hydroxyhexadecanoate
     <-> . +udp_d_glucose +udp +hplus
     16_d_glucopyranosyloxy_hexadecanoate
   }
 
+  branch from 16_hydroxyhexadecanoate side right {
+    16_hydroxyhexadecanoate
+    <-> . +nad +nadh +hplus
+    16_oxohexadecanoate
+  }
+
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    18_r_hete
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_19z_16_17_epoxydocosapentaenoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +prostaglandin_h2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxyprostaglandin_h2
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_16z_19z_13_14_epoxydocosapentaenoate
   }
 }

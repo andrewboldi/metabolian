@@ -36,13 +36,13 @@ pathway vancomycin-aglycone-to-dtdp-d-galacturonate "vancomycin aglycone to dTDP
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_66 [4.2.3.66] +fpp
-    selinene
+    <-> ec_4_2_3_83 [4.2.3.83] +fpp
+    santalene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_67 [4.2.3.67] +fpp
-    cis_muurola_3_5_diene
+    <-> ec_4_2_3_82 [4.2.3.82] +fpp
+    santalene
   }
 }

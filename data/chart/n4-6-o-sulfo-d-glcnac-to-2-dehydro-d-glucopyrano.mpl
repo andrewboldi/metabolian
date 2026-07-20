@@ -21,12 +21,12 @@ pathway n4-6-o-sulfo-d-glcnac-to-2-dehydro-d-glucopyrano "N4-{6-O-sulfo-β-D-Glc
   branch from d_mannopyranose side left {
     d_mannopyranose
     <-> .
-    beta_d_fructose
+    beta_d_mannose
   }
 
   branch from d_mannopyranose side right {
     d_mannopyranose
-    <-> .
-    beta_d_mannose
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 }

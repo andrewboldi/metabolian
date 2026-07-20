@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sn-glycerol-3-phosphate-to-h2o "sn-glycerol 3-phosphate to H2O" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     sn_glycerol_3_phosphate
@@ -16,45 +16,39 @@ pathway sn-glycerol-3-phosphate-to-h2o "sn-glycerol 3-phosphate to H2O" {
     atp
   }
 
-  branch from 1_7z_tetradecenoyl_sn_glycero_3_phosphate side left {
-    1_7z_tetradecenoyl_sn_glycero_3_phosphate
-    <-> . +9e_tetradecenoic_acid +h2o
-    1_2_di_7z_tetradecenoyl_sn_glycero_3_phosphate
+  branch from h2o side left {
+    h2o
+    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phe_gly +h
+    lys_phe_gly
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_1_88 [3.5.1.88] +met_ala_ser +formate
-    n_formyl_l_methionyl_l_alanyl_l_serinate
+    <-> ec_3_4_11_2 [3.4.11.2] +l_lysine +phe_glu +h
+    lys_phe_glu
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_16_5 [3.4.16.5] +ethanol +n_benzoyl_l_tyrosine
-    ethyl_n_benzoyl_l_tyrosinate
-  }
-
-  branch from 1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate side right {
+  branch from 1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate side left {
     1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
     <-> ec_3_6_1_26 [3.6.1.26] +cmp +h +h2o
     cdp_1_2_ditetradec_7_enoylglycerol
   }
 
-  branch from 1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate side left {
+  branch from 1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate side right {
     1_2_ditetradec_7_enoyl_sn_glycerol_3_phosphate
-    <-> ec_2_7_7_41 [2.7.7.41] +ctp +cdp_1_2_ditetradec_7_enoylglycerol
-    diphosphate
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_6_3_2_45 [6.3.2.45] +udp_n_acetyl_alpha_d_muramate +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h +adp +phosphate
-    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
+    <-> . +phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1 +h2o
+    cardiolipin_tetratetradec_7_enoyl_n_c14_1
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_45 [6.3.2.45] +udp_n_acetyl_alpha_d_muramate +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo +h +adp +phosphate
-    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
+    <-> . +h +adp +phosphate +h2o
+    l_prolinylglycine
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    puromycin
   }
 }

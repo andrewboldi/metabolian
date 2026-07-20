@@ -20,37 +20,37 @@ pathway brexanolone-to-nad "brexanolone to NAD" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_33 [3.6.3.33] +adp +hydroxycobalamin +phosphate +hydroxycobalamin +h2o
-    atp
+    <-> . +co2 +urolithin_m5
+    3_4_8_9_10_pentahydroxy_6_oxobenzo_c_chromene_1
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_39 [3.6.3.39] +adp +phosphate +atp +h2o
-    kdo_lipid_a
+    <-> . +alpha_d_ribofuranose_5_phosphate +h2o +phosphate
+    beta_d_ribopyranose
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_46 [1.1.1.46] +l_arabinono_1_4_lactone +h +nadp
-    beta_l_arabinofuranose
+    <-> . +2_octaprenyl_6_methoxyphenol +h +o2 +nadp +h2o
+    2_octaprenyl_6_methoxy_1_4_benzoquinol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +l_alanine +h +nadp +h2o
-    s_2_aminopropanal
+    <-> . +elymoclavine_aldehyde +o2 +nadp +h2o
+    paspalic_acid
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +levopimaradienal
-    isopimara_7_15_dienol
+    <-> ec_1_1_1_93 [1.1.1.93] +nadh +oxaloglycolate +h
+    2r_3r_tartrate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
-    neoabietadienol
+    <-> ec_1_1_1_93 [1.1.1.93] +2r_3s_tartrate +h +nadh
+    2s_2_hydroxy_3_oxosuccinic_acid
   }
 }

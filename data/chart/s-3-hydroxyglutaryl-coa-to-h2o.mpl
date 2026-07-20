@@ -24,37 +24,37 @@ pathway s-3-hydroxyglutaryl-coa-to-h2o "(S)-3-hydroxyglutaryl-CoA to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_104 [3.2.1.104] +alpha_d_glucose +cholesterol
-    cholesteryl_3_beta_d_glucoside
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +fagopyritol_a3 +phosphate +fagopyritol_a3
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose +beta_d_glucose
-    isomaltose
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
+    agarotetraose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +phosphate +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +h2o
-    atp
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    d_apiofuranosyl_1_6_d_glucopyranose
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    18_0_18_3_pe
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    lambda_carratetraose
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_26 [2.3.1.26] +decanoyl_coa +cholesterol
-    decanoyl_cholesterol
+    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_alpha_neuraminate
+    n_acetyl_7_o_acetylneuraminate
   }
 
   branch from coa side left {
     coa
-    <-> . +chaxamycin_c_rel +acetyl_coa
-    25_acetylchaxamycin_c
+    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_neuraminic_acid
+    neuac9ac
   }
 }

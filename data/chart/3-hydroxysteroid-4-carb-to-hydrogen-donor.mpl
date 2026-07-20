@@ -36,13 +36,13 @@ pathway 3-hydroxysteroid-4-carb-to-hydrogen-donor "3β-hydroxysteroid-4α-carb�
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_2_99_10 [1.2.99.10] +4_4_diapolycopen_4_al +hydrogen_acceptor +h2o +hplus
-    4_4_diapolycopen_4_oate
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    9_hode
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +3_hydroxychol_5_en_24_oyl_coa +hydrogen_acceptor
-    3_hydroxychola_5_22_dien_24_oyl_coa
+    <-> . +7_chloro_l_tryptophan +o2 +hydrogen_acceptor +co2 +h2o
+    monodechloroaminopyrrolnitrin
   }
 }

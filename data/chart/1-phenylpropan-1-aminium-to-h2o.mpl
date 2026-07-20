@@ -28,14 +28,14 @@ pathway 1-phenylpropan-1-aminium-to-h2o "1-phenylpropan-1-aminium to H2O" {
 
   branch from alanine side right {
     alanine
-    <-> . +2_methyl_l_serine
-    formaldehyde
+    <-> . +atp +hplus +ppi
+    l_alanyl_amp
   }
 
   branch from alanine side left {
     alanine
-    <-> . +2_phenylethanaminium +pyruvate
-    phenylacetaldehyde
+    <-> . +3_phenylpropylaminium +pyruvate
+    3_phenylpropanal
   }
 
   branch from n_n_dimethyl_4_nitrosoaniline side right {
@@ -70,13 +70,13 @@ pathway 1-phenylpropan-1-aminium-to-h2o "1-phenylpropan-1-aminium to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +taurochenodeoxycholate +phosphate +taurochenodeoxycholate
-    atp
+    <-> ec_4_1_2_34 [4.1.2.34] +2_formylbenzoate +h +pyruvate
+    trans_2_carboxybenzylidenepyruvic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    sulfate
+    <-> . +3_beta_d_galactosyl_sn_glycerol +glycerol
+    aldehydo_d_galactose
   }
 }

@@ -18,14 +18,14 @@ pathway h-to-nadph "H to NADPH" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_lysine +l_arginine
-    arginyl_arginyl_lysine
+    <-> . +h +adp +13_16_19_docosatrienoic_acid +phosphate +13_16_19_docosatrienoic_acid
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_arginine
-    arginyl_arginine
+    <-> . +h +adp +phosphate +atp
+    all_cis_docosa_7_10_13_16_tetraenoic_acid
   }
 
   branch from 2_deoxy_d_glucose side left {
@@ -42,37 +42,37 @@ pathway h-to-nadph "H to NADPH" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_oxononadecanoyl_coenzyme_a
-    3_hydroxynonadecanoyl_coenzyme_a
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +s_lipoic_acid +h
+    s_dihydrolipoic_acid
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxoheptadecanoyl_coenzyme_a
-    3_hydroxyheptadecanoyl_coenzyme_a
+    <-> ec_1_8_1_4 [1.8.1.4] +nadh +h +1_2_diselenolane_3_pentanoic_acid
+    6_8_diselenyloctanoic_acid
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    pmf
+    tetracosatetraenoic_acid_n_6
   }
 
   branch from h side right {
     h
-    <-> . +pmf +adp +phosphate +pmf +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    6z_9z_12z_15z_18z_tetracosapentaenoate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +2e_henicosenoyl_coa +nadp
-    heneicosanoyl_coenzyme_a
+    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa +h2o
+    co2
   }
 
   branch from nadph side right {
     nadph
-    <-> . +2e_tricosenoyl_coa +h +nadp
-    tricosanoyl_coa
+    <-> . +2_methylpropanoyl_coa +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
+    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone
   }
 }

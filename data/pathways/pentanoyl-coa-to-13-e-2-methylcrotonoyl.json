@@ -1,0 +1,255 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pentanoyl-coa-to-13-e-2-methylcrotonoyl",
+  "name": "pentanoyl-CoA to 13-[(E)-2-methylcrotonoyl…",
+  "category": "other",
+  "summary": "A 3-step route from pentanoyl-CoA to 13-[(E)-2-methylcrotonoyl]oxylupanine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR203948"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pentanoyl_coa",
+      "name": "pentanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104372"
+      }
+    },
+    {
+      "id": "propanoyl_coa",
+      "name": "propanoyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "3_hydroxyisovaleryl_coa",
+      "name": "3-hydroxyisovaleryl-CoA",
+      "short": "3-hydroxyisovaleryl…",
+      "formula": "C26H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104561"
+      }
+    },
+    {
+      "id": "2e_2_methylbut_2_enoyl_coa",
+      "name": "(2E)-2-methylbut-2-enoyl-CoA",
+      "short": "2-methylbut-2-enoyl…",
+      "formula": "C26H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1364002"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "13_hydroxylupanine",
+      "name": "13-hydroxylupanine",
+      "formula": "C15H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1371287"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "13_e_2_methylcrotonoyl_oxylupanine",
+      "name": "13-[(E)-2-methylcrotonoyl]oxylupanine",
+      "short": "13-[(E)-2-methylcro…",
+      "formula": "C20H31N2O3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM731160"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_17",
+      "name": "enoyl-CoA hydratase",
+      "ec": [
+        "4.2.1.17"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_93",
+      "name": "13-hydroxylupanine O-tigloyltransferase",
+      "ec": [
+        "2.3.1.93"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR203948",
+      "substrates": [
+        {
+          "metabolite": "pentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "propanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyisovaleryl_coa",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR203948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR203948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enoyl-CoA hydratase",
+      "ec": "4.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyisovaleryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_2_methylbut_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR118591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118591"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "13-hydroxylupanine O-tigloyltransferase",
+      "ec": "2.3.1.93",
+      "substrates": [
+        {
+          "metabolite": "2e_2_methylbut_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_hydroxylupanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "13_e_2_methylcrotonoyl_oxylupanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR122427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR122427"
+          }
+        ]
+      }
+    }
+  ]
+}

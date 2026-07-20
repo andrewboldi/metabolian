@@ -22,50 +22,38 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
 
   branch from biotinate side left {
     biotinate
-    <-> ec_6_2_1_11 [6.2.1.11] +atp +coa +amp +ppi
-    biotinyl_coa
-  }
-
-  branch from biotinate side right {
-    biotinate
     <-> . +nadph +hplus +nadp +h2o
     biotinate_sulfoxide
   }
 
+  branch from biotinate side right {
+    biotinate
+    <-> . +atp +hplus +ppi
+    biotinyl_5_amp
+  }
+
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_10 [1.4.1.10] +glycine +nad +h2o +nadh +hplus
-    glyoxylate
+    <-> ec_6_3_1_2 [6.3.1.2] +glutamate +atp +adp +pi +hplus
+    glutamine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_5 [1.4.3.5] +o2 +h2o +plp +h2o2
-    pyridoxamine_5_phosphate
-  }
-
-  branch from biotinyl_l_lysine side left {
-    biotinyl_l_lysine
-    <-> . +l_lysinium +amp +hplus
-    biotinyl_5_amp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_24 [4.2.3.24] +fpp
-    amorpha_4_11_diene
+    <-> . +utp +atp +adp +pi +hplus
+    ctp
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_1_1_23 [6.1.1.23] +amp_3_end_1 +aspartate +atp +amp
-    3_l_aspartate_adenylyl_1_group
+    <-> ec_6_2_1_15 [6.2.1.15] +arachidonate +atp +coa +amp
+    arachidonoyl_coa
   }
 
-  branch from acetyl-acp side right {
-    acetyl-acp
-    <-> ec_2_3_1_38 [2.3.1.38] +acetyl_coa +coa
-    holo-acp
+  branch from ppi side right {
+    ppi
+    <-> ec_4_2_3_9 [4.2.3.9] +fpp
+    aristolochene
   }
 
   branch from acetyl-acp side left {
@@ -74,7 +62,13 @@ pathway biotin-amide-to-4-hydroxy-5-methyl-6-pent "biotin amide to 4-hydroxy-5-m
     adenosine_3_5_bismonophosphate
   }
 
-  branch from methylmalonyl_coa side right {
+  branch from acetyl-acp side right {
+    acetyl-acp
+    <-> ec_2_3_3_22 [2.3.3.22] +o_s_3_oxoacylpantetheine_4_phosphoryl_l_serine_1 +h2o +holo-acp +hplus
+    o_s_3_carboxymethyl_3_hydroxyacylpantetheine_4_p
+  }
+
+  branch from methylmalonyl_coa side left {
     methylmalonyl_coa
     <-> . +stearoyl_coa +malonyl-coa +hplus +co2 +coa
     4_hydroxy_5_methyl_6_heptadecylpyran_2_one

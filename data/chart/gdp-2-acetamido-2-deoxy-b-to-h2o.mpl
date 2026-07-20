@@ -24,43 +24,43 @@ pathway gdp-2-acetamido-2-deoxy-b-to-h2o "GDP-2-acetamido-2-deoxy-b… to H2O" {
 
   branch from gdp side right {
     gdp
-    <-> ec_2_7_7_69 [2.7.7.69] +d_glucopyranose_1_phosphate +h +phosphate
-    gdp_alpha_d_glucose
+    <-> ec_2_7_1_81 [2.7.1.81] +5r_5_phosphooxy_l_lysine +gtp
+    threo_5_hydroxy_l_lysine
   }
 
   branch from h side left {
     h
-    <-> . +2_2_methylsulfanyl_hexyl_maleate +h2o
-    2_6_methylthio_hexylmalic_acid
+    <-> . +gdp_guluronate
+    gdp_d_mannuronate
   }
 
   branch from h side right {
     h
-    <-> . +2_2_methylsulfanyl_hexyl_maleate +h2o
-    3_6_methylthio_hexylmalic_acid
+    <-> ec_5_5_1_7 [5.5.1.7] +2_chloromuconolactone
+    2e_4z_2_chloromuconate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +n_acetyl_d_glucosaminyl_n_acetyl_tunicaminyl_ura +acetate
-    n_acetyl_d_glucosaminyl_tunicaminyl_uracil
+    <-> . +glucose +s_4_hydroxymandelonitrile
+    dhurrin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_2_methylsulfanyl_heptyl_maleate +h
-    2_7_methylthio_heptylmalic_acid
+    <-> ec_2_3_1_86 [2.3.1.86] +o_s_3r_hydroxyoctadecanoylpantetheine_4_phosphor
+    o_s_2e_octadecenoylpantetheine_4_phosphoryl_seri
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_145 [2.7.1.145] +cytarabine +h +adp
-    1_beta_d_arabinofuranosylcytosine_5_monophosphat
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoyltaurine +amp +r_pantoate
+    taurine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_74 [2.7.1.74] +zalcitabine +h +adp
-    l_ddcmp
+    <-> ec_6_3_2_1 [6.3.2.1] +diphosphate +pantoylglycine +amp +r_pantoate
+    glycine
   }
 }

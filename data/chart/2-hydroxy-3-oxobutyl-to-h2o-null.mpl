@@ -18,38 +18,38 @@ pathway 2-hydroxy-3-oxobutyl-to-h2o-null "2-hydroxy-3-oxobutyl… to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    7_palmitoleic_acid
+    <-> . +adp +sm_d18_1_21_0_sphingomyelin +phosphate +sm_d18_1_21_0_sphingomyelin +h2o
+    atp
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    margaric_acid_d3
+    sm_d18_1_22_1_sphingomyelin
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    9z_heptadecenoate
+    sm_d18_1_22_0_sphingomyelin
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    stearic_acid_d3
+    sm_d18_1_23_0_sphingomyelin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_methionine +l_glutamate
-    glutamyl_methioninyl_histidine
+    <-> . +l_proline +l_arginine +l_phenylalanine
+    phenylalanyl_prolyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_methionine +l_glutamate
-    glutamyl_methionine
+    <-> . +l_serine +l_tryptophan +l_phenylalanine
+    phenylalanyl_seryl_tryptophan
   }
 
   branch from 4_1_d_ribitylamino_5_aminouracil side left {

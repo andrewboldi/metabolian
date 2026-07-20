@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     dichloromethane
@@ -20,14 +20,14 @@ pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_1_14_13_179 [1.14.13.179] +theobromine +nadph +o2 +hplus +nadp +h2o
-    7_methylxanthine
+    <-> ec_1_14_11_53 [1.14.11.53] +n6_methyladenosine_5_monophosphate_1 +akg +o2 +succinate +co2
+    adenosine_5_monophosphate_1
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_14_99_48 [1.14.99.48] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +hydrogen_acceptor +h2o
-    5_oxo_bilirubin
+    <-> . +n1_methyladenosine_5_monophosphate_1 +akg +o2 +adenosine_5_monophosphate_1 +co2
+    succinate
   }
 
   branch from dtmp side left {
@@ -40,17 +40,5 @@ pathway dichloromethane-to-dtmp "dichloromethane to dTMP" {
     dtmp
     <-> . +dttp
     dtdp
-  }
-
-  branch from thymidine side left {
-    thymidine
-    <-> ec_2_4_2_2 [2.4.2.2] +pi +thymine
-    2_deoxy_d_ribose_1_phosphate
-  }
-
-  branch from thymidine side right {
-    thymidine
-    <-> . +dttp +h2o +hplus
-    triphosphate
   }
 }

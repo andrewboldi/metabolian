@@ -18,13 +18,13 @@ pathway 2-aminopropan-1-ol-to-s-lactaldehyde "2-aminopropan-1-ol to (S)-lactalde
 
   branch from nh3 side left {
     nh3
-    <-> . +2_azaniumyl_2_deoxyisochorismate +glutamine +h2o +glutamate
-    4_amino_4_deoxychorismate
+    <-> . +s_methioninol +nad +h2o +nadh +hplus
+    1_hydroxy_4_methythio_butan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +n_acetylputrescinium +o2 +h2o +h2o2
-    4_acetamidobutanal
+    <-> . +nad +h2o +pyruvate +nadh +hplus
+    d_alanine
   }
 }

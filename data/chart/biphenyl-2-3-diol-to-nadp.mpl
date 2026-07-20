@@ -18,25 +18,25 @@ pathway biphenyl-2-3-diol-to-nadp "biphenyl-2,3-diol to NADP" {
 
   branch from h side left {
     h
-    <-> . +adenosine_3_5_bisphosphate +brassinolide_22_o_sulfate +brassinolide
-    3_phosphoadenylyl_sulfate
+    <-> ec_5_5_1_7 [5.5.1.7] +2e_4z_2_chloromuconate +chloride
+    trans_4_carboxymethylenebut_2_en_4_olide
   }
 
   branch from h side right {
     h
-    <-> ec_1_11_2_3 [1.11.2.3] +9z_12z_octadecadienoate +9s_10e_12z_15z_9_hydroperoxyoctadeca_10_12_15_t +9_s_hotre
-    9_10_epome
+    <-> . +10r_hydroxy_11s_12s_epoxy_5z_8z_14z_eicosatrien +h2o
+    5z_8z_14z_11r_12r_10_11_12_trihydroxyicosa_5_8
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_105 [1.1.1.105] +retinal +h +nadph
-    retinol
+    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
+    glyceollin_iii
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +13_cis_retinoate +o2 +nadph +h2o
-    rac_5_6_epoxy_retinoate
+    <-> ec_1_14_13_85 [1.14.13.85] +h +6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero +o2 +nadph +h2o
+    glyceollin_i
   }
 }

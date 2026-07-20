@@ -20,13 +20,13 @@ pathway udp-to-beta-d-man-1-3-glcnac "UDP to beta-D-Man-(1->3)-GlcNAc-…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +apigeninidin_5_o_glucoside +h
-    apigeninidin
+    <-> ec_2_4_1_238 [2.4.1.238] +udp +albireodelphin +h
+    delphinidin_3_glucoside_5_caffoyl_glucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside
-    cyanidin_3_o_d_xylosyl_1_2_d_galactoside
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
+    oleanolate_3_beta_d_glucuronoside_3_1_galactosid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
-  spacing 272
+  spacing 254
 
   spine at 0,0 {
     l_glutamate_5_semialdehyde
@@ -24,38 +24,38 @@ pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +h +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_e_coli +o2 +succinate +s_2_hydroxymyristate_modified_lipid_a
+    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +ambiguine_l_isonitrile +succinate +ambiguine_k_isonitrile +h2o
     co2
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +o2 +co2 +7_epi_cylindrospermopsin
+    <-> ec_1_14_20_14 [1.14.20.14] +h +o2 +chloride +ambiguine_i +co2 +ambiguine_e +h2o
     succinate
   }
 
   branch from h side left {
     h
-    <-> . +cardiolipin_tetrahexadecanoyl_n_c16_0 +glycerol
-    dipalmitoyl_phosphatidylglycerol
+    <-> . +l_alanine +l_glutamate +l_tryptophan +h2o
+    glu_trp_ala
   }
 
   branch from h side right {
     h
-    <-> ec_4_1_2_21 [4.1.2.21] +glyceraldehyde_3_phosphate +pyruvate
-    2_dehydro_3_deoxy_6_phospho_d_galactonate
+    <-> . +adp +glycyl_dl_phenylalanine +phosphate +glycyl_dl_phenylalanine +h2o
+    atp
   }
 
   branch from ornithine side left {
     ornithine
-    <-> ec_3_5_1_16 [3.5.1.16] +h +acetate +h2o
-    n_2_acetyl_l_ornithine
+    <-> . +nh4 +h
+    l_proline
   }
 
   branch from ornithine side right {
     ornithine
-    <-> ec_2_1_3_3 [2.1.3.3] +carbamoyl_phosphate +phosphate
-    l_citrulline
+    <-> . +n_acetyl_l_glutamate +h +l_glutamate
+    n_2_acetyl_l_ornithine
   }
 
   branch from 5_amino_2_oxopentanoate side left {
@@ -66,14 +66,14 @@ pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_proline +l_arginine +h2o
-    arginyl_glutamyl_proline
+    <-> . +l_leucine +l_arginine +h2o
+    glutaminyl_arginyl_leucine
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_asparagine +l_aspartate +h2o
-    aspartyl_asparaginyl_glutamate
+    <-> . +l_leucine +l_asparagine +h2o
+    glutaminyl_asparaginyl_leucine
   }
 
   branch from 1_pyrroline_2_carboxylate side right {
@@ -90,55 +90,37 @@ pathway l-glutamate-5-semialdehyde-to-h2o "L-glutamate 5-semialdehyde to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +d_mannopyranose +d_galactose
-    epimelibiose
+    <-> . +l_leucine +l_glutamine +l_tyrosine
+    glutaminyl_tyrosyl_leucine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +d_galactopyranose +d_mannopyranose
-    epimelibiose
+    <-> . +l_glutamate
+    glutamyl_glutamate
   }
 
   branch from fad side right {
     fad
-    <-> . +3r_11z_3_hydroxyoctadecenoyl_coa +fadh2 +h +h2o
-    9z_octadecenoyl_coa
+    <-> . +2_methyl_3_n_amyl_pyrrole +fadh2 +h
+    2_methyl_3_n_amyl_dihydropyrrole
   }
 
   branch from fad side left {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +3_6_9_12_octadecatetraenoyl_coenzyme_a +coa +nad +h2o
-    5z_8z_11z_14z_eicosatetraenoyl_coa
+    <-> . +fadh2 +h +o2 +chloride +naphthomycin_e +h2o
+    naphthomycin_a
   }
 
   branch from d_proline side right {
-    d_proline
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from d_proline side left {
     d_proline
     <-> ec_1_21_4_1 [1.21.4.1] +nadh +h +5_aminopentanoate
     nad
   }
 
-  branch from r_lipoate side right {
-    r_lipoate
-    <-> . +d_ribose +arsenous_acid +r_dihydrolipoate +h
-    ribose_1_arsenate
-  }
-
-  branch from r_lipoate side left {
-    r_lipoate
-    <-> ec_1_8_1_4 [1.8.1.4] +nadh +h +nad
-    dihydrolipoic_acid
-  }
-
-  branch from 5_aminopentanoate side right {
-    5_aminopentanoate
-    <-> . +h +phosphate +atp +h2o
-    adp
+  branch from d_proline side left {
+    d_proline
+    <-> . +ubiquinol_10 +1_pyrroline_2_carboxylate
+    ubiquinone_10
   }
 }

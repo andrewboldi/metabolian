@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3r-6z-9z-12z-15z-3-hydr-to-3-7-10-13-hexadecate "(3R,6Z,9Z,12Z,15Z)-3-hydr… to 3,7,10,13-Hexadecatetraen…" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     3r_6z_9z_12z_15z_3_hydroxyoctadecatetraenoyl_co
@@ -18,21 +18,15 @@ pathway 3r-6z-9z-12z-15z-3-hydr-to-3-7-10-13-hexadecate "(3R,6Z,9Z,12Z,15Z)-3-hy
     nadp
   }
 
-  branch from 3_oxo_6z_9z_12z_15z_octadecatetraenoyl_coa side left {
-    3_oxo_6z_9z_12z_15z_octadecatetraenoyl_coa
-    <-> . +nad +nadh +hplus
-    3s_6z_9z_12z_15z_3_hydroxyoctadecatetraenoyl_co
+  branch from nadp side left {
+    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +e_hex_2_en_1_ol +h +nadph
+    2_hexenal
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_412 [1.1.1.412] +h +nadph +2r_2_decyl_3_oxotetradecanoate
-    2r_3s_2_decyl_3_hydroxytetradecanoate
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriopheophytin +nadph
-    bacteriophaeophytin_a
+    <-> . +ent_kaur_19_al_17_oate +h +o2 +nadph +h2o
+    ent_kauran_17_19_dioic_acid
   }
 }

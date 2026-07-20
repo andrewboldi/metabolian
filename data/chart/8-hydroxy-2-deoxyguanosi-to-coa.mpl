@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 8-hydroxy-2-deoxyguanosi-to-coa "8-hydroxy-2'-deoxyguanosi… to CoA" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     8_hydroxy_2_deoxyguanosine
@@ -22,50 +22,50 @@ pathway 8-hydroxy-2-deoxyguanosi-to-coa "8-hydroxy-2'-deoxyguanosi… to CoA" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_16_1 [1.14.16.1] +6_7_dimethyl_tetrahydropteridine +l_phenylalanine +l_tyrosine +h2o
-    6_7_dimethyl_dihydropteridine
+    <-> ec_1_14_13_24 [1.14.13.24] +3_hydroxybenzoate +h +nadph +2_5_dihydroxybenzoate +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_4 [1.1.3.4] +2_deoxy_d_glucose +h2o2
-    2_deoxy_d_glucono_1_5_lactone
+    <-> ec_1_14_13_8 [1.14.13.8] +methyl_p_tolyl_sulfide +h +nadph +nadp +h2o
+    methyl_4_tolyl_sulfoxide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +l_valyl_l_aspartate +nh4 +h
-    val_asn
+    <-> ec_3_5_1_1 [3.5.1.1] +l_aspartate +coumarin_120 +h
+    l_aspartic_acid_beta_7_amido_4_methylcoumarin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +beta_d_glucose
-    2_o_beta_d_glucopyranosyl_beta_d_glucopyranose
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +l_phenylalanine
+    ethyl_l_phenylalaninate
   }
 
   branch from udp side left {
     udp
-    <-> . +epicatechin_3_o_glucoside +h +epicatechin
+    <-> . +h +trans_zeatin_7_n_glucoside +trans_zeatin
     udp_alpha_d_glucose
   }
 
   branch from udp side right {
     udp
-    <-> . +glc_aatgal_pp_undecaprenol +h +udp_alpha_d_glucose
-    2_acetamido_4_amino_2_4_6_trideoxy_alpha_d_galac
+    <-> . +h +9_d_glucosyl_trans_zeatin +udp_alpha_d_glucose
+    trans_zeatin
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_heptanone +heptan_4_ol
-    nad
+    <-> ec_1_3_1_20 [1.3.1.20] +methyl_2_hydroxypropionate +nadp +nadph
+    methyl_pyruvate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methylbutan_2_one +nad
-    s_3_methylbutan_2_ol
+    <-> ec_3_1_1_1 [3.1.1.1] +ethanol +n_acetyl_l_phenylalanine +h2o
+    n_acetyl_l_phenylalanine_ethyl_ester
   }
 
   branch from dgmp side left {
@@ -74,28 +74,16 @@ pathway 8-hydroxy-2-deoxyguanosi-to-coa "8-hydroxy-2'-deoxyguanosi… to CoA" {
     atp
   }
 
-  branch from dgmp side right {
-    dgmp
-    <-> . +datp +dadp
-    dgdp
-  }
-
-  branch from gtp side left {
-    gtp
-    <-> ec_3_6_5_1 [3.6.5.1] +gdp +h +phosphate +h2o
-    pmf
-  }
-
   branch from gtp side right {
     gtp
     <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_4 +h +phosphate +l_glutamate
     coenzyme_f420_3
   }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +2e_geranyl_diphosphate
-    2_carene
+  branch from gtp side left {
+    gtp
+    <-> ec_6_3_2_34 [6.3.2.34] +gdp +oxidized_factor_420_5 +h +phosphate +l_glutamate
+    oxidized_factor_420_4
   }
 
   branch from diphosphate side right {
@@ -104,15 +92,21 @@ pathway 8-hydroxy-2-deoxyguanosi-to-coa "8-hydroxy-2'-deoxyguanosi… to CoA" {
     2e_6e_farnesyl_diphosphate
   }
 
-  branch from coa side left {
-    coa
-    <-> . +trans_4_coumaroyl_coa +r_3_4_hydroxyphenyl_lactate
-    4_coumaroyl_4_hydroxyphenyllactate
+  branch from diphosphate side left {
+    diphosphate
+    <-> . +2e_6e_farnesyl_diphosphate
+    gamma_amorphene
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_173 [2.3.1.173] +trans_4_coumaroyl_coa +kaempferol_3_o_beta_d_glucosyl_1_2_glucosyl_1_2
-    kaempferol_3_o_6_4_coumaroyl_beta_d_glucosyl_1_2
+    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +11_cis_retinol
+    all_trans_retinyl_hexadecanoate
+  }
+
+  branch from coa side left {
+    coa
+    <-> ec_2_3_1_78 [2.3.1.78] +acetyl_coa +beta_d_glucosamine
+    n_acetyl_beta_d_galactosamine
   }
 }

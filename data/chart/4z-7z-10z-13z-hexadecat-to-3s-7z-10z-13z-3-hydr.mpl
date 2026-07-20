@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4z-7z-10z-13z-hexadecat-to-3s-7z-10z-13z-3-hydr "(4Z,7Z,10Z,13Z)-hexadecat… to (3S,7Z,10Z,13Z)-3-hydroxy…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     4z_7z_10z_13z_hexadecatetraenoyl_coa
@@ -16,17 +16,5 @@ pathway 4z-7z-10z-13z-hexadecat-to-3s-7z-10z-13z-3-hydr "(4Z,7Z,10Z,13Z)-hexadec
     2e_7z_10z_13z_hexadecatetraenoyl_coa
     <-> . +h2o
     3s_7z_10z_13z_3_hydroxyhexadecatrienoyl_coa
-  }
-
-  branch from 2e_7z_10z_13z_hexadecatetraenoyl_coa side left {
-    2e_7z_10z_13z_hexadecatetraenoyl_coa
-    <-> . +h2o
-    3r_7z_10z_13z_3_hydroxyhexadecatrienoyl_coa
-  }
-
-  branch from 2e_7z_10z_13z_hexadecatetraenoyl_coa side right {
-    2e_7z_10z_13z_hexadecatetraenoyl_coa
-    <-> .
-    3_7_10_13_hexadecatetraenoyl_coenzyme_a
   }
 }

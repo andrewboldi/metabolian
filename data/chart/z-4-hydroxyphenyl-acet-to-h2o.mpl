@@ -18,26 +18,26 @@ pathway z-4-hydroxyphenyl-acet-to-h2o "(Z)-(4-hydroxyphenyl)acet… to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +trans_11_hydroxyjasmonate +h2o +h +o2 +nadph
-    jasmonate
+    <-> . +dtdp_3_n_n_dimethylamino_4_oxo_2_3_6_trideoxy_l +h +nadph
+    dtdp_l_megosamine
   }
 
   branch from nadp side right {
     nadp
-    <-> . +hexadecanoyl_coa +h +o2 +nadph +h2o
-    16_hydroxyhexadecanoyl_coa
+    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +nadph +h2o
+    2_hydroxy_3_7_4_trimethylquercetin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxododecanoyl_l_homoserine_lactone +h
-    n_3_oxododecanoyl_l_homoserine
+    <-> . +3r_2_hydroxydihydrodaidzein
+    anhydroglycinol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h
-    n_3_oxohexanoyl_l_homoserine
+    <-> ec_3_4_13_23 [3.4.13.23] +l_cys_ian +glycine
+    cys_ian_gly
   }
 
   branch from z_1_l_cysteinylglycin_s_yl_n_hydroxy_2_4_hydrox side left {

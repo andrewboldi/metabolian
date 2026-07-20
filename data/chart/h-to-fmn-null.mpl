@@ -20,37 +20,37 @@ pathway h-to-fmn-null "H to FMN" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampesterol +h +o2 +nadph +h2o
-    22r_23r_22_23_dihydroxycampesterol
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_6e_farnesal +h +nadph
+    2_trans_6_cis_farnesol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_112 [1.14.13.112] +22s_22_hydroxycampest_4_en_3_one +h +o2 +nadph +h2o
-    22r_23r_22_23_dihydroxycampest_4_en_3_one
+    <-> ec_1_1_1_71 [1.1.1.71] +e_hex_2_en_1_ol +h +nadph
+    cis_3_hexenal
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_aspartate +l_arginine
-    prolyl_arginyl_aspartate
+    <-> . +l_proline +l_valine +l_tryptophan
+    val_pro_trp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_cysteine +l_arginine
-    prolyl_arginyl_cysteine
+    <-> . +l_valine +l_serine +l_arginine
+    valyl_seryl_arginine
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_64 [1.14.14.64] +amyrin +fmnh2 +o2 +h2o +hplus
-    daturadiol
+    <-> . +cholesterol_sulfate +fmnh2 +o2 +h2o +hplus
+    24s_hydroxycholesterol_3_sulfate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_67 [1.14.14.67] +11_hydroxysugiol +fmnh2 +o2 +h2o +hplus
-    11_20_dihydroxysugiol
+    <-> . +linoleate +fmnh2 +o2 +h2o +hplus
+    18_hydroxylinoleate
   }
 }

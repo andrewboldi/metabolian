@@ -1,0 +1,339 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "alpha-d-lyxopyranose-to-d-xylono-1-5-lactone",
+  "name": "alpha-D-lyxopyranose to D-xylono-1,5-lactone",
+  "category": "redox-detox",
+  "summary": "A 3-step route from alpha-D-lyxopyranose to D-xylono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196500"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "alpha_d_lyxopyranose",
+      "name": "alpha-D-lyxopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368631"
+      }
+    },
+    {
+      "id": "d_xylulose",
+      "name": "D-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1371292"
+      }
+    },
+    {
+      "id": "d_xylopyranose",
+      "name": "D-xylopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53455"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "d_xylono_1_5_lactone",
+      "name": "D-xylono-1,5-lactone",
+      "formula": "C5H8O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15867"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "xylitol",
+      "name": "xylitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17151"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_xylofuranose",
+      "name": "D-xylofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:146758"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_15",
+      "name": "D-lyxose ketol-isomerase",
+      "ec": [
+        "5.3.1.15"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_307",
+      "name": "D-xylose reductase [NAD(P)H]",
+      "ec": [
+        "1.1.1.307"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_431",
+      "name": "D-xylose reductase (NADPH)",
+      "ec": [
+        "1.1.1.431"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-lyxose ketol-isomerase",
+      "ec": "5.3.1.15",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_lyxopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196500"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
+      "substrates": [
+        {
+          "metabolite": "d_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197322"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197322"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-xylose + O2 = D-xylono-1,5-lactone + H2O2",
+      "equation": "D-xylose + O2 = D-xylono-1,5-lactone + H2O2",
+      "substrates": [
+        {
+          "metabolite": "d_xylopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "D-xylose reductase [NAD(P)H]",
+      "equation": "xylitol + NADP(+) = D-xylose + NADPH + H(+)",
+      "ec": "1.1.1.307",
+      "substrates": [
+        {
+          "metabolite": "xylitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_307"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:27445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR199562",
+      "substrates": [
+        {
+          "metabolite": "d_xylofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_xylopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR199562"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199562"
+          }
+        ]
+      }
+    }
+  ]
+}

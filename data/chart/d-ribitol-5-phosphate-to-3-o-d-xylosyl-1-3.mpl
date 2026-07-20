@@ -30,14 +30,14 @@ pathway d-ribitol-5-phosphate-to-3-o-d-xylosyl-1-3 "D-ribitol 5-phosphate to 3-O
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    3e_7e_dolabella_3_7_dien_18_ol
+    <-> ec_2_7_7_11 [2.7.7.11] +utp +hplus +udp_d_xylose
+    d_xylose_1_phosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_123 [2.5.1.123] +flaviolin_2_olate +gpp
-    3_linalylflaviolin_2_olate
+    <-> ec_2_7_7_42 [2.7.7.42] +l_tyrosine +atp
+    o_adenyl_l_tyrosine_1
   }
 
   branch from cytidine_5_monophosphate side right {

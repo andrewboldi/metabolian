@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-s-hpepe-to-h2o",
   "name": "5(S)-HpEPE to H2O",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from 5(S)-HpEPE(1−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -100,51 +100,87 @@
       }
     },
     {
-      "id": "octyl_alpha_d_mannopyranoside",
-      "name": "octyl alpha-D-mannopyranoside",
-      "short": "octyl alpha-D-manno…",
-      "formula": "C14H28O6",
-      "charge": 0,
+      "id": "hexadecanoate",
+      "name": "hexadecanoate",
+      "formula": "C16H31O2",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM65379"
+        "metanetx": "MNXM108"
       }
     },
     {
-      "id": "octyl_alpha_d_galactopyranoside",
-      "name": "octyl alpha-D-galactopyranoside",
-      "short": "octyl alpha-D-galac…",
-      "formula": "C14H28O6",
-      "charge": 0,
+      "id": "hexadecanoyl_phosphate",
+      "name": "hexadecanoyl phosphate",
+      "short": "hexadecanoyl P",
+      "formula": "C16H31O5P",
+      "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM521805"
+        "chebi": "CHEBI:138436"
       }
     },
     {
-      "id": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
-      "name": "octyl 2-acetamido-2-deoxy-alpha-D-glucopyranoside",
-      "short": "octyl 2-acetamido-2…",
-      "formula": "C16H31NO6",
+      "id": "l_ectoine",
+      "name": "L-ectoine",
+      "formula": "C6H10N2O2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1107589"
+        "metanetx": "MNXM1101175"
       }
     },
     {
-      "id": "lipid_a_e_coli",
-      "name": "lipid A (E. coli)",
-      "formula": "C94H178N2O25P2",
+      "id": "5_hydroxybenzimidazole_ribotide_phosphate",
+      "name": "5-hydroxybenzimidazole ribotide phosphate",
+      "short": "5-hydroxybenzimidaz…",
+      "formula": "C12H13N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM818816"
+      }
+    },
+    {
+      "id": "5_hydroxybenzimidazole_ribotide",
+      "name": "5-hydroxybenzimidazole ribotide",
+      "short": "5-hydroxybenzimidaz…",
+      "formula": "C12H14N2O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:134256"
+        "metanetx": "MNXM818824"
+      }
+    },
+    {
+      "id": "4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate",
+      "name": "(4-octanoyl-5-oxo-2H-furan-3-yl)methyl phosphate",
+      "short": "(4-octanoyl-5-oxo-2…",
+      "formula": "C13H19O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM819630"
+      }
+    },
+    {
+      "id": "2_oxo_3_phosphooxy_propyl_3_oxodecanoate",
+      "name": "2-oxo-3-(phosphooxy)propyl 3-oxodecanoate",
+      "short": "2-oxo-3-(phosphooxy…",
+      "formula": "C13H21O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM819635"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_3_6_3_39",
-      "name": "EC 3.6.3.39",
+      "id": "ec_2_7_2_18",
+      "name": "fatty acid kinase",
       "ec": [
-        "3.6.3.39"
+        "2.7.2.18"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_73",
+      "name": "adenosylcobalamin/alpha-ribazole phosphatase",
+      "ec": [
+        "3.1.3.73"
       ]
     }
   ],
@@ -271,65 +307,56 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR174990",
-      "ec": "3.6.3.39",
+      "name": "fatty acid kinase",
+      "ec": "2.7.2.18",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "hexadecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "octyl_alpha_d_mannopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "hexadecanoyl_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "octyl_alpha_d_mannopyranoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
+          "metabolite": "adp",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_39"
+          "enzyme": "ec_2_7_2_18"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR174990"
+        "metanetx": "MNXR187720"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174990"
+            "id": "MNXR187720"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR174991",
-      "ec": "3.6.3.39",
+      "name": "Reaction MNXR188086",
       "substrates": [
+        {
+          "metabolite": "l_ectoine",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "h",
           "stoichiometry": 1
@@ -339,21 +366,17 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "octyl_alpha_d_galactopyranoside",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "phosphate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "l_ectoine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "octyl_alpha_d_galactopyranoside",
+          "metabolite": "atp",
           "stoichiometry": 1
         },
         {
@@ -361,55 +384,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_6_3_39"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR174991"
+        "metanetx": "MNXR188086"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174991"
+            "id": "MNXR188086"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR174992",
-      "ec": "3.6.3.39",
+      "name": "adenosylcobalamin/alpha-ribazole phosphatase",
+      "ec": "3.1.3.73",
       "substrates": [
         {
-          "metabolite": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "5_hydroxybenzimidazole_ribotide_phosphate",
           "stoichiometry": 1
         },
         {
@@ -417,55 +413,42 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "5_hydroxybenzimidazole_ribotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_39"
+          "enzyme": "ec_3_1_3_73"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR174992"
+        "metanetx": "MNXR185065"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174992"
+            "id": "MNXR185065"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR174993",
-      "ec": "3.6.3.39",
+      "name": "Reaction MNXR185172",
       "substrates": [
         {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "lipid_a_e_coli",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "lipid_a_e_coli",
+          "metabolite": "4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate",
           "stoichiometry": 1
         },
         {
@@ -473,22 +456,23 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_3_6_3_39"
+          "metabolite": "2_oxo_3_phosphooxy_propyl_3_oxodecanoate",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR174993"
+        "metanetx": "MNXR185172"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174993"
+            "id": "MNXR185172"
           }
         ]
       }

@@ -30,13 +30,13 @@ pathway 2-deoxyecdysone-to-3-dehydroecdysone "2-deoxyecdysone… to 3-dehydroecd
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +24r_24_25_dihydroxycalciol +di_sulfido_diiron +o2 +hplus +h2o
-    25_hydroxy_24_oxocalciol
+    <-> . +mevastatin +di_sulfido_diiron +o2 +hplus +h2o
+    pravastatin_lactone
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
-    20s_24r_dihydroxyvitamin_d3
+    <-> . +alachlor +di_sulfido_diiron +o2 +hplus +n_2_6_diethylphenyl_2_chloroacetamide +h2o
+    methyl_formate
   }
 }

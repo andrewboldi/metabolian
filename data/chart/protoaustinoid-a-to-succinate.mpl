@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway protoaustinoid-a-to-succinate "protoaustinoid A to succinate" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     protoaustinoid_a
@@ -22,31 +22,25 @@ pathway protoaustinoid-a-to-succinate "protoaustinoid A to succinate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +1_hydroxy_carotene +hydrogen_donor
-    1_hydroxytorulene
+    <-> ec_1_17_99_10 [1.17.99.10] +calciol +h2o +hydrogen_donor
+    calcidiol
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_donor
-    1_1_dihydroxy_3_4_didehydrolycopene
+    <-> . +1_hydroxy_3_oxo_steroid +hydrogen_donor
+    steroid_1_3_dione
   }
 
   branch from succinate side left {
     succinate
-    <-> . +eriodictyol +akg +o2 +co2
-    taxifolin
+    <-> . +prekainate +akg +o2 +hplus +co2 +h2o
+    kainate_lactone
   }
 
   branch from succinate side right {
     succinate
-    <-> . +dihydrokaempferol +akg +o2 +co2 +h2o +hplus
-    kaempferol_oxoanion
-  }
-
-  branch from preaustinoid_a1 side left {
-    preaustinoid_a1
-    <-> . +akg +o2 +succinate +co2 +h2o
-    berkeleyone_b
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
+    2_phenylsuccinyl_coa
   }
 }

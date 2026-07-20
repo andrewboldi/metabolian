@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-vinylglycine-to-glycine "L-vinylglycine to glycine" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     l_vinylglycine
@@ -14,17 +14,5 @@ pathway l-vinylglycine-to-glycine "L-vinylglycine to glycine" {
     4_2_aminophenyl_2_4_dioxobutanoate
     <-> . +l_aminobutyrate +glyoxylate -glycine
     oxobut
-  }
-
-  branch from glycine side left {
-    glycine
-    <-> . +o_s_3r_hydroxyhexadecanoylpantetheine_4_phosphor +holo-acp +hplus
-    n2_3r_3_hydroxyhexadecanoyl_glycinate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +nad +h2o +nadh +hplus
-    ammonioacetaldehyde
   }
 }

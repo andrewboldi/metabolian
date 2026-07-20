@@ -102,12 +102,12 @@
       }
     },
     {
-      "id": "o2",
-      "name": "Dioxygen (O2)",
-      "formula": "O2",
-      "charge": 0,
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15379"
+        "chebi": "CHEBI:57540"
       }
     },
     {
@@ -120,12 +120,12 @@
       }
     },
     {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
-      "charge": 0,
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:57945"
       }
     },
     {
@@ -176,40 +176,39 @@
       }
     },
     {
-      "id": "avenacin_a_2",
-      "name": "avenacin A-2",
-      "formula": "C54H80O21",
+      "id": "d_fructofuranose",
+      "name": "D-fructofuranose",
+      "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368264"
+        "chebi": "CHEBI:37721"
       }
     },
     {
-      "id": "des_acyl_avenacin_a",
-      "name": "des-acyl avenacin A",
-      "formula": "C47H76O20",
+      "id": "vomilenine",
+      "name": "vomilenine",
+      "formula": "C21H22N2O3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM146544"
+        "metanetx": "MNXM726775"
       }
     },
     {
-      "id": "benzoyl_d_glucoside",
-      "name": "benzoyl-β-D-glucoside",
-      "short": "benzoyl-β-D-glucosi…",
-      "formula": "C13H16O7",
+      "id": "raucaffricine",
+      "name": "raucaffricine",
+      "formula": "C27H32N2O8",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:141410"
+        "metanetx": "MNXM1371435"
       }
     },
     {
-      "id": "avenacin_a_2",
-      "name": "avenacin A-2",
-      "formula": "C54H80O21",
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1368265"
+        "metanetx": "WATER"
       }
     }
   ],
@@ -222,10 +221,10 @@
       ]
     },
     {
-      "id": "ec_1_4_3_16",
-      "name": "L-aspartate oxidase",
+      "id": "ec_1_4_1_29",
+      "name": "iminosuccinate reductase",
       "ec": [
-        "1.4.3.16"
+        "1.4.1.29"
       ]
     },
     {
@@ -233,6 +232,20 @@
       "name": "2-amino-2'-deoxyadenylo-succinate synthase",
       "ec": [
         "6.3.4.25"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_125",
+      "name": "raucaffricine beta-glucosidase",
+      "ec": [
+        "3.2.1.125"
       ]
     }
   ],
@@ -370,16 +383,16 @@
     },
     {
       "id": "r4",
-      "name": "L-aspartate oxidase",
-      "equation": "L-aspartate + O2 = iminosuccinate + H2O2",
-      "ec": "1.4.3.16",
+      "name": "iminosuccinate reductase",
+      "equation": "L-aspartate + NAD(+) = iminosuccinate + NADH + H(+)",
+      "ec": "1.4.1.29",
       "substrates": [
         {
           "metabolite": "aspartate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "o2",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
@@ -389,26 +402,30 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o2",
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_3_16"
+          "enzyme": "ec_1_4_1_29"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:25876"
+        "rhea": "RHEA:42440"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:25876"
+            "id": "RHEA:42440"
           }
         ]
       }
@@ -472,76 +489,80 @@
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR196873",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
       "substrates": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "avenacin_a_2",
+          "metabolite": "d_fructofuranose",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "des_acyl_avenacin_a",
+          "metabolite": "glucose",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "benzoyl_d_glucoside",
-          "stoichiometry": 1
+          "enzyme": "ec_5_3_1_5"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR196873"
+        "metanetx": "MNXR197792"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196873"
+            "id": "MNXR197792"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR196874",
+      "name": "raucaffricine beta-glucosidase",
+      "ec": "3.2.1.125",
       "substrates": [
         {
           "metabolite": "glucose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "avenacin_a_2",
+          "metabolite": "vomilenine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "des_acyl_avenacin_a",
+          "metabolite": "raucaffricine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "benzoyl_d_glucoside",
+          "metabolite": "h2o",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_125"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR196874"
+        "metanetx": "MNXR197890"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR196874"
+            "id": "MNXR197890"
           }
         ]
       }

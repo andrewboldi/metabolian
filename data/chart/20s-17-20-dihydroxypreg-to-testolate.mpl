@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to testolate" {
-  spacing 256
+  spacing 250
 
   spine at 0,0 {
     20s_17_20_dihydroxypregn_4_en_3_one
@@ -20,49 +20,43 @@ pathway 20s-17-20-dihydroxypreg-to-testolate "(20S)-17,20-dihydroxypreg… to te
 
   branch from 17_hydroxyprogesterone side left {
     17_hydroxyprogesterone
-    <-> ec_1_14_14_19 [1.14.14.19] +fmnh2 +o2 +fmn +h2o +hplus
-    progesterone
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    algestone
   }
 
-  branch from 17_hydroxyprogesterone side right {
-    17_hydroxyprogesterone
-    <-> ec_1_14_14_16 [1.14.14.16] +fmnh2 +o2 +fmn +h2o +hplus
-    11_deoxycortisol
-  }
-
-  branch from androst_4_ene_3_17_dione side left {
+  branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
     <-> . +testosterone +hydrogen_acceptor
     hydrogen_donor
   }
 
-  branch from androst_4_ene_3_17_dione side right {
+  branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> ec_1_14_15_19 [1.14.15.19] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
     1_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from acetate side left {
-    acetate
-    <-> . +1_decyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_decyl_sn_glycero_3_phosphocholine
-  }
-
   branch from acetate side right {
     acetate
-    <-> . +1_palmityl_2_acetyl_sn_glycero_3_phosphate +h2o +hplus
-    1_hexadecyl_sn_glycero_3_phosphate
+    <-> . +16_17_dihydroxypregnenolone +fmnh2 +o2 +fmn +h2o +hplus
+    16_hydroxydehydroepiandrosterone
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_148 [1.14.14.148] +s_columbianetin +fmnh2 +o2 +acetone +h2o +hplus
-    angelicin
+  branch from acetate side left {
+    acetate
+    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
+    adp_d_ribose
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
-    capsidiol
+    <-> ec_1_14_14_38 [1.14.14.38] +valine +fmnh2 +o2 +co2 +h2o +hplus
+    e_2_methylpropanal_oxime
+  }
+
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
+    cryptoxanthin
   }
 }

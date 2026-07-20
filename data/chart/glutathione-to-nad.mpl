@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glutathione-to-nad "glutathione to NAD" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     glutathione
@@ -28,33 +28,27 @@ pathway glutathione-to-nad "glutathione to NAD" {
     3_phosphoadenylyl_sulfate
   }
 
-  branch from 2s_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me side left {
-    2s_2_glutathion_s_yl_3_hydroxy_1_4_hydroxy_3_me
-    <-> . +glutathione_disulfide +glutathione
-    3_hydroxy_1_4_hydroxy_3_methoxyphenyl_propan_1_o
-  }
-
-  branch from glutathione side right {
+  branch from glutathione side left {
     glutathione
     <-> . +urocanate
     s_2_carboxy_1_1h_imidazol_4_yl_ethyl_glutathione
   }
 
-  branch from glutathione side left {
+  branch from glutathione side right {
     glutathione
     <-> ec_2_5_1_18 [2.5.1.18] +2_s_glutathionyl_acetyl_chloride +chloride
     2_s_glutathionyl_acetyl_glutathione
   }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +adonixanthin +o2 +h2o
-    2_hydroxyadonixanthin
-  }
-
   branch from nad side left {
     nad
-    <-> . +nadh +2_hydroxyadonixanthin +h +o2 +h2o
-    2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +styrene +o2 +h2o
+    r_styrene_oxide
+  }
+
+  branch from nad side right {
+    nad
+    <-> . +nadh +2_carboxyethyl_com +h +h2o
+    2_hydroxyethyl_com
   }
 }

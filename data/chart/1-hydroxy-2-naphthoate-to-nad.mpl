@@ -20,61 +20,61 @@ pathway 1-hydroxy-2-naphthoate-to-nad "1-hydroxy-2-naphthoate to NAD" {
 
   branch from fadh2 side left {
     fadh2
-    <-> . +2e_13z_icosadienoyl_coa +h +fad
-    13z_icosenoyl_coa
+    <-> ec_1_1_99_21 [1.1.99.21] +l_sorbopyranose +h +fad
+    d_sorbitol
   }
 
   branch from fadh2 side right {
     fadh2
-    <-> . +2e_11z_octadecadienoyl_coa +h +fad
-    vaccenyl_coenzyme_a
+    <-> ec_1_1_99_13 [1.1.99.13] +sucrose +fad +h
+    3_dehydro_alpha_d_glucosyl_beta_d_fructofuranosi
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    5_s_glutathionyl_dopamine
+    2_oleoylglycerophosphocholine
   }
 
   branch from h side right {
     h
-    <-> . +adp +15_r_hepe +phosphate +15_r_hepe +h2o
+    <-> . +adp +1_docosahexaenoylglycerophosphocholine +phosphate +1_docosahexaenoylglycerophosphocholine +h2o
     atp
   }
 
   branch from o2 side left {
     o2
-    <-> . +fadh2 +h +4_hydroxyphenylacetate +fad +3_4_dihydroxyphenylacetate +h2o
-    pmf
+    <-> ec_1_1_3_9 [1.1.3.9] +beta_d_galactose +h2o2
+    d_galacto_hexodialdose
   }
 
   branch from o2 side right {
     o2
-    <-> . +losartan_carboxylic_acid +h2o
-    losartan
+    <-> ec_1_1_3_9 [1.1.3.9] +alpha_d_galactose +d_galacto_hexodialdose
+    h2o2
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +9z_12z_octadecadienoyl_coa +h2o
-    coa
+    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
+    alpha_l_arabinofuranose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    8z_11z_icosadienoyl_coa
+    <-> ec_1_1_1_227 [1.1.1.227] +nadh +h +1r_4r_camphor
+    borneol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    15_s_hepe
+    <-> . +l_leucine +l_tyrosine
+    leucyl_tyrosyl_tyrosine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    5_hepe
+    <-> . +l_leucine +l_valine
+    leucyl_valine
   }
 }

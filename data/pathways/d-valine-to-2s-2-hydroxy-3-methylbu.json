@@ -202,13 +202,13 @@
       }
     },
     {
-      "id": "s_4_aminopentanoic_acid",
-      "name": "(S)-4-aminopentanoic acid",
-      "short": "4-aminopentanoic…",
-      "formula": "C5H11NO2",
-      "charge": 0,
+      "id": "1s_3_methyl_cyclohexylammonium",
+      "name": "(1S)-3-methyl-cyclohexylammonium",
+      "short": "3-methyl-cyclohexyl…",
+      "formula": "C7H16N",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:194493"
+        "chebi": "CHEBI:195388"
       }
     },
     {
@@ -221,12 +221,13 @@
       }
     },
     {
-      "id": "4_oxopentanoate",
-      "name": "4-oxopentanoate",
-      "formula": "C5H7O3",
-      "charge": -1,
+      "id": "3_methylcyclohexanone",
+      "name": "3-methylcyclohexanone",
+      "short": "3-methylcyclohexano…",
+      "formula": "C7H12O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:39150"
+        "chebi": "CHEBI:195391"
       }
     },
     {
@@ -239,21 +240,21 @@
       }
     },
     {
-      "id": "2_deoxyguanosine",
-      "name": "2'-deoxyguanosine",
-      "formula": "C10H13N5O4",
-      "charge": 0,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:17172"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "2_deoxyxanthosine",
-      "name": "2'-deoxyxanthosine",
-      "formula": "C10H12N4O5",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:194503"
+        "chebi": "CHEBI:57783"
       }
     },
     {
@@ -522,11 +523,11 @@
     },
     {
       "id": "r6",
-      "name": "(S)-4-aminopentanoate + NAD(+) + H2O = 4-oxopentanoate + NH4(+) + NADH + H(+)",
-      "equation": "(S)-4-aminopentanoate + NAD(+) + H2O = 4-oxopentanoate + NH4(+) + NADH + H(+)",
+      "name": "(1S)-3-methyl-cyclohexylamine + NAD(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADH + ...",
+      "equation": "(1S)-3-methyl-cyclohexylamine + NAD(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADH + H(+)",
       "substrates": [
         {
-          "metabolite": "s_4_aminopentanoic_acid",
+          "metabolite": "1s_3_methyl_cyclohexylammonium",
           "stoichiometry": 1
         },
         {
@@ -540,7 +541,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_oxopentanoate",
+          "metabolite": "3_methylcyclohexanone",
           "stoichiometry": 1
         },
         {
@@ -559,29 +560,47 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:75923"
+        "rhea": "RHEA:76911"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:75923"
+            "id": "RHEA:76911"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "2'-deoxyguanosine + H2O + H(+) = 2'-deoxyxanthosine + NH4(+)",
-      "equation": "2'-deoxyguanosine + H2O + H(+) = 2'-deoxyxanthosine + NH4(+)",
+      "name": "(1S)-3-methyl-cyclohexylamine + NADP(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADPH ...",
+      "equation": "(1S)-3-methyl-cyclohexylamine + NADP(+) + H2O = 3-methylcyclohexanone + NH4(+) + NADPH + H(+)",
       "substrates": [
         {
-          "metabolite": "2_deoxyguanosine",
+          "metabolite": "1s_3_methyl_cyclohexylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylcyclohexanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -589,27 +608,17 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "2_deoxyxanthosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:76527"
+        "rhea": "RHEA:76915"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76527"
+            "id": "RHEA:76915"
           }
         ]
       }

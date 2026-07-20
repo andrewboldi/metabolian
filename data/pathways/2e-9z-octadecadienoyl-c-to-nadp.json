@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-9z-octadecadienoyl-c-to-nadp",
+  "name": "(2E,9Z)-octadecadienoyl-C… to NADP",
+  "category": "other",
+  "summary": "A 3-step route from (2E,9Z)-octadecadienoyl-CoA(4−) to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:86491"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77553"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_9z_octadecadienoyl_coa",
+      "name": "(2E,9Z)-octadecadienoyl-CoA",
+      "short": "(2E,9Z)-octadecadie…",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77553"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3r_9z_hydroxyoctadec_9_enoyl_coa",
+      "name": "(3R,9Z)-hydroxyoctadec-9-enoyl-CoA",
+      "short": "(3R,9Z)-hydroxyocta…",
+      "formula": "C39H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:235452"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_oxooleoyl_coa",
+      "name": "3-oxooleoyl-CoA",
+      "formula": "C39H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87695"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "3_s_hydroxy_cis_9_octadecenoyl_coa",
+      "name": "3(S)-hydroxy-cis-9-octadecenoyl-CoA",
+      "short": "3(S)-hydroxy-cis-9-…",
+      "formula": "C39H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM163175"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(2E,9Z)-octadecadienoyl-CoA + H2O = (3R)-hydroxy-(9Z)-octadecenoyl-CoA",
+      "equation": "(2E,9Z)-octadecadienoyl-CoA + H2O = (3R)-hydroxy-(9Z)-octadecenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_9z_octadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_9z_hydroxyoctadec_9_enoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:86491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86491"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(3R)-hydroxy-(9Z)-octadecenoyl-CoA + NAD(+) = 3-oxo-(9Z-octadecenoyl)-CoA + NADH + H(+)",
+      "equation": "(3R)-hydroxy-(9Z)-octadecenoyl-CoA + NAD(+) = 3-oxo-(9Z-octadecenoyl)-CoA + NADH + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3r_9z_hydroxyoctadec_9_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxooleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:86183"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:86183"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR103847",
+      "substrates": [
+        {
+          "metabolite": "3_oxooleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_s_hydroxy_cis_9_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR103847"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR103847"
+          }
+        ]
+      }
+    }
+  ]
+}

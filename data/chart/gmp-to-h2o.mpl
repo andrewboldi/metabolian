@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gmp-to-h2o "GMP to H2O" {
-  spacing 340
+  spacing 322
 
   spine at 0,0 {
     gmp
@@ -18,73 +18,55 @@ pathway gmp-to-h2o "GMP to H2O" {
 
   branch from gtp side left {
     gtp
-    <-> ec_6_2_1_4 [6.2.1.4] +gdp +itaconyl_coa +phosphate +coa
-    itaconate
+    <-> . +gdp +h +phosphate +h2o
+    fe
   }
 
   branch from gtp side right {
     gtp
-    <-> ec_2_7_1_36 [2.7.1.36] +gdp +h +r_5_phosphomevalonate
-    r_mevalonate
+    <-> ec_2_7_2_10 [2.7.2.10] +gdp +glyceric_acid_1_3_biphosphate +h
+    2r_3_phosphoglycerate
   }
 
   branch from aldehydo_d_ribose_5_phosphate side left {
     aldehydo_d_ribose_5_phosphate
-    <-> . +h
-    alpha_d_ribofuranose_5_phosphate
+    <-> ec_5_4_2_2 [5.4.2.2]
+    alpha_d_ribose_1_phosphate
   }
 
   branch from aldehydo_d_ribose_5_phosphate side right {
     aldehydo_d_ribose_5_phosphate
-    <-> . +h
-    5_o_phosphono_d_ribofuranose
-  }
-
-  branch from r_lipoate side left {
-    r_lipoate
-    <-> . +r_dihydrolipoate +nadp +h
-    nadph
-  }
-
-  branch from r_lipoate side right {
-    r_lipoate
-    <-> ec_1_17_4_2 [1.17.4.2] +cmp +dihydrolipoic_acid +h +h2o
-    dcmp
+    <-> ec_3_2_2_14 [3.2.2.14] +h +nicotinamide +h2o
+    beta_nicotinamide_d_ribonucleotide
   }
 
   branch from h side left {
     h
-    <-> ec_1_5_1_34 [1.5.1.34] +nadh +2_amino_4_hydroxy_6_7_dimethyldihydropteridine +nad
-    6_7_dimethyltetrahydropterin
+    <-> . +nadh +indigo +nad
+    leucoindigo
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_18 [3.2.1.18] +n_acetylneuraminate +4_methylumbelliferone +h2o
-    2_4_methylumbelliferyl_alpha_d_n_acetylneuramini
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +ubiquinone_2 +nad
+    ubiquinol_2
   }
 
   branch from dgtp side left {
     dgtp
-    <-> ec_3_6_1_19 [3.6.1.19] +h +amp +h2o
-    diphosphate
-  }
-
-  branch from dgtp side right {
-    dgtp
-    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +adp
-    2_deoxycytidine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +methylacrylonitrile
-    methacrylamide
+    <-> . +cdp +dgdp
+    cmp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_2 [3.4.11.2] +l_leucine +l_phenylalanine
-    leu_phe
+    <-> ec_1_2_1_36 [1.2.1.36] +nadh +2e_hexenoic_acid +h +nad
+    2_hexenal
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_1_7_99_4 [1.7.99.4] +nitrite +ubiquinone_2 +ubiquinol_2
+    nitrate
   }
 }

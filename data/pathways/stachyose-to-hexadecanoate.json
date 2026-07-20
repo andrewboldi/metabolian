@@ -132,12 +132,12 @@
       }
     },
     {
-      "id": "lactose",
-      "name": "lactose",
+      "id": "alpha_lactose",
+      "name": "alpha-lactose",
       "formula": "C12H22O11",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1104432"
+        "metanetx": "MNXM1104434"
       }
     },
     {
@@ -159,12 +159,40 @@
       }
     },
     {
-      "id": "alpha_lactose",
-      "name": "alpha-lactose",
-      "formula": "C12H22O11",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM1104434"
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "alpha_d_galactose_1_phosphate",
+      "name": "alpha-D-galactose 1-phosphate",
+      "short": "alpha-D-galactose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364213"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
       }
     }
   ],
@@ -188,6 +216,13 @@
       "name": "beta-galactosidase",
       "ec": [
         "3.2.1.23"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_6",
+      "name": "galactokinase",
+      "ec": [
+        "2.7.1.6"
       ]
     }
   ],
@@ -368,7 +403,7 @@
       "ec": "3.2.1.108",
       "substrates": [
         {
-          "metabolite": "lactose",
+          "metabolite": "alpha_lactose",
           "stoichiometry": 1
         },
         {
@@ -394,50 +429,6 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR189694"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR189694"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "lactase",
-      "ec": "3.2.1.108",
-      "substrates": [
-        {
-          "metabolite": "alpha_lactose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "d_galactopyranose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_108"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
         "metanetx": "MNXR189695"
       },
       "provenance": {
@@ -446,6 +437,54 @@
           {
             "db": "MetaNetX",
             "id": "MNXR189695"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "galactokinase",
+      "ec": "2.7.1.6",
+      "substrates": [
+        {
+          "metabolite": "d_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_galactose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR192437"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR192437"
           }
         ]
       }

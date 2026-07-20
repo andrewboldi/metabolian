@@ -18,25 +18,25 @@ pathway udp-to-kaempferol-3-o-beta-d-glu "UDP to kaempferol 3-O-beta-D-glu…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
-    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
+    <-> . +4_o_beta_d_glucosyl_indol_3_yl_formamide +udp +h
+    n_4_hydroxy_1h_indol_3_yl_formamide
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +decaprenoxanthin_diglucoside +h
-    decaprenoxanthin_monoglucoside
+    <-> . +udp +h +medicagenate_28_o_beta_d_glucoside
+    medicagenic_acid
   }
 
   branch from dtdp side left {
     dtdp
-    <-> . +beta_d_man_1_3_beta_d_glc_1_3_alpha_d_glcnac_pp +dtdp_3_deoxy_3_formamido_alpha_d_fucose +h
-    alpha_d_fuc3nfo_1_3_beta_d_man_1_3_beta_d_glc_1
+    <-> . +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +dtdp_3_acetamido_3_6_dideoxy_d_galactopyranose +h
+    alpha_d_fuc3nac_1_4_beta_d_gal_1_4_alpha_d_glc_1
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_3_acetamido_3_6_dideoxy_alpha_d_glucose +alpha_d_man_1_3_alpha_l_fuc_1_3_alpha_d_galnac_p +h
-    alpha_d_qui3nac_1_3_alpha_d_man_1_3_alpha_l_fuc
+    <-> . +dtdp_beta_l_rhamnose +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
+    alpha_l_rha_1_4_alpha_d_glcnac_1_4_beta_d_gal_1
   }
 }

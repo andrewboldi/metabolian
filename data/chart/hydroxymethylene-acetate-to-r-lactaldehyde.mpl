@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxymethylene-acetate-to-r-lactaldehyde "hydroxymethylene acetate to (R)-lactaldehyde" {
-  spacing 254
+  spacing 248
 
   spine at 0,0 {
     hydroxymethylene_acetate
@@ -18,67 +18,61 @@ pathway hydroxymethylene-acetate-to-r-lactaldehyde "hydroxymethylene acetate to 
 
   branch from hydroxyacetone side left {
     hydroxyacetone
-    <-> ec_4_1_99_25 [4.1.99.25] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +formaldehyde +phosphate +h2o +l_tryptophan
-    d_ribulose_5_phosphate
+    <-> ec_2_7_1_29 [2.7.1.29] +atp +h +adp
+    hydroxyacetone_phosphate
   }
 
   branch from hydroxyacetone side right {
     hydroxyacetone
-    <-> ec_4_1_99_24 [4.1.99.24] +2s_3_4_hydroxyphenyl_2_isocyanopropanoate +formaldehyde +phosphate +h2o +d_ribulose_5_phosphate
-    l_tyrosine
+    <-> . +h +o2 +nadph +nadp +h2o
+    methylglyoxal
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +thiolactomycin +phosphate +thiolactomycin +h2o
-    atp
+    <-> . +2s_2_carboxyamino_3_methylamino_propanoate +h2o
+    1_methyl_2_oxoimidazolidine_4_carboxylate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    myxothiazol
+    <-> . +dehydrotomatidine +h2o
+    26_amino_furostanol
   }
 
   branch from o2 side left {
     o2
-    <-> . +nitric_oxide
-    n2
+    <-> . +2_formylindan_1_one +indan_1_one
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_122 [1.14.13.122] +chlorophyllide_a +h +nadph +nadp +h2o
-    chlorophyllide_b
+    <-> . +2_formyl_1_indanone +h +co2
+    indan_1_one
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_294 [1.1.1.294] +nadp +chlorophyllide_b +h
-    71_hydroxychlorophyllide_a
+    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_294 [1.1.1.294] +71_hydroxychlorophyll_a +nadp +h
-    chlorophyll_b
+    <-> . +4_demethylpremithracinone +nadp +h2o +h +o2
+    4s_2_acetyl_3_4_8_10_11_12_hexahydroxy_1_4_dihy
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +bacteriochlorophyllide_b +h
-    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
+    <-> . +nicotinamide
+    cyclic_adp_ribose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +7_8_dihydroisojusticidin_b
-    7_8_7_8_tetrahydroisojusticidin_b
-  }
-
-  branch from r_lactaldehyde side left {
-    r_lactaldehyde
-    <-> ec_1_1_1_21 [1.1.1.21] +nadp +h +nadph
-    r_propane_1_2_diol
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh +lyxulose +h
+    l_arabinitol
   }
 }

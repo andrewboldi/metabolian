@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 19-hydroxyandrostenedione-to-4-hydroxyestrone "19-Hydroxyandrostenedione to 4-hydroxyestrone…" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     19_hydroxyandrostenedione
@@ -20,41 +20,35 @@ pathway 19-hydroxyandrostenedione-to-4-hydroxyestrone "19-Hydroxyandrostenedione
 
   branch from h2o2 side left {
     h2o2
-    <-> . +16_hydroxyhexadecanoic_acid +o2
-    16_oxohexadecanoic_acid
+    <-> . +h +sulochrin +chloride +h2o
+    dihydrogeodin
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +h +18_hydroxyoleate +o2
-    18_oxooleic_acid
-  }
-
-  branch from estrone side left {
-    estrone
-    <-> . +udp_d_glucuronate +udp +hplus
-    estrone_3_o_d_glucuronide
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
-    all_trans_18_hydroxyretinoate
+    <-> . +alliin +o2 +h2o
+    s_allylcysteine
   }
 
   branch from fmn side left {
     fmn
-    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
-    5_6_epoxyretinoate
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    8_9_eet
   }
 
-  branch from 4_hydroxyestrone side right {
+  branch from fmn side right {
+    fmn
+    <-> . +asperaculane_e +fmnh2 +o2 +h2o +hplus
+    asperaculane_g
+  }
+
+  branch from 4_hydroxyestrone side left {
     4_hydroxyestrone
     <-> . +udp_d_glucuronate +udp +hplus
     4_hydroxyestrone_4_o_d_glucuronide
   }
 
-  branch from 4_hydroxyestrone side left {
+  branch from 4_hydroxyestrone side right {
     4_hydroxyestrone
     <-> . +o2 +hplus
     2z_10z_3_hydroxy_5_17_dioxo_4_5_secoestra_2_10

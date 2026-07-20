@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-22s-2-3-22-23-diepox-to-fmn "(3S,22S)-2,3:22,23-diepox… to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3s_22s_2_3_22_23_diepoxy_2_3_22_23_tetrahydrosq
@@ -14,17 +14,5 @@ pathway 3s-22s-2-3-22-23-diepox-to-fmn "(3S,22S)-2,3:22,23-diepox… to FMN" {
     24r_24_25_dihydroxycucurbitadienol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     mogrol
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +dauca_4_11_8_diene +fmnh2 +o2 +h2o +hplus
-    8r_9s_8_9_epoxydauca_4_11_ene_8_oate
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +8r_9s_8_9_epoxydauca_4_11_ene_8_oate +fmnh2 +o2 +h2o +hplus
-    aspterrate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-4-amino-4-6-dideoxy-to-5-deoxy-d-ribose "dTDP-4-amino-4,6-dideoxy-… to 5-deoxy-α-D-ribose…" {
-  spacing 310
+  spacing 298
 
   spine at 0,0 {
     dtdp_4_amino_4_6_dideoxy_d_glucose
@@ -18,50 +18,38 @@ pathway dtdp-4-amino-4-6-dideoxy-to-5-deoxy-d-ribose "dTDP-4-amino-4,6-dideoxy-�
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +5_deoxyadenosin_5_yl_radical +2_deoxyadenosine_5_monophosphate +hydrogen_acceptor +hydrogen_donor
-    4_phospho_dehydrooxetanocin
+    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +methionine
+    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
   }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> . +cytidine_5_hydroxy_2_hydroxyethyl_phosphonoyl_ph +methylcobalamin +sam +cob_iii_alamin +methionine
-    cytidine_5_hydroxy_s_2_hydroxypropyl_phosphonoyl
-  }
-
-  branch from methionine side left {
+  branch from methionine side right {
     methionine
     <-> . +hydrogen_donor +sam +hydrogen_acceptor +hplus
     5_deoxyadenosin_5_yl_radical
   }
 
-  branch from methionine side right {
-    methionine
-    <-> . +2r_3r_5r_2_s_pantetheinyl_carbapenam_3_carboxyl +methylcobalamin +sam +cob_iii_alamin +5_deoxyadenosine
-    2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena
-  }
-
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +arachidonate +hydrogen_donor +o2 +h2o
-    11_r_hete
+    <-> ec_1_14_99_63 [1.14.99.63] +carotene +hydrogen_donor +o2 +h2o
+    echinenone
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +arachidonate +hydrogen_donor +o2 +h2o
-    15_r_hete
+    <-> . +h2o +pyruvate +hydrogen_donor +nh3
+    d_alanine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +alkylaminium +l_glutamine
-    n5_alkyl_l_glutamine
+    <-> . +7_cyano_7_carbaguanine_5_phosphate_1
+    archaeosine_5_phosphate_zwitterionic
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +l_threo_3_phenylserine
-    keto_phenylpyruvate
+    <-> ec_4_1_1_107 [4.1.1.107] +ldopa +o2 +h2o +hplus +h2o2 +co2
+    dopal
   }
 
   branch from 5_deoxy_d_ribofuranose side left {

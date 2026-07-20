@@ -105,41 +105,40 @@
       }
     },
     {
-      "id": "2_cis_6_cis_farnesyl_diphosphate",
-      "name": "2-cis,6-cis-farnesyl diphosphate",
-      "short": "2-cis,6-cis-farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:60374"
-      }
-    },
-    {
-      "id": "z_bisabolene",
-      "name": "(Z)-γ-bisabolene",
-      "formula": "C15H24",
+      "id": "neoechinulin_a",
+      "name": "neoechinulin A",
+      "formula": "C19H21N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49238"
+        "chebi": "CHEBI:193004"
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58057"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "z_ocimene",
-      "name": "(Z)-β-ocimene",
-      "formula": "C10H16",
+      "id": "isoechinulin_a",
+      "name": "isoechinulin A",
+      "formula": "C24H29N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87574"
+        "chebi": "CHEBI:193010"
+      }
+    },
+    {
+      "id": "dehydroechinulin",
+      "name": "dehydroechinulin",
+      "formula": "C29H37N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193011"
       }
     },
     {
@@ -162,13 +161,13 @@
       }
     },
     {
-      "id": "n_acetyl_alpha_d_glucosamine_1_phosphate",
-      "name": "N-acetyl-alpha-D-glucosamine 1-phosphate",
-      "short": "N-acetyl-alpha-D-gl…",
-      "formula": "C8H14NO9P",
-      "charge": -2,
+      "id": "demycarosyl_mithramycin",
+      "name": "Demycarosyl-mithramycin",
+      "short": "Demycarosyl-mithram…",
+      "formula": "C49H70O23",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1105798"
+        "chebi": "CHEBI:213346"
       }
     },
     {
@@ -208,13 +207,12 @@
       }
     },
     {
-      "id": "n_acetyl_beta_d_glucosamine",
-      "name": "N-acetyl-beta-D-glucosamine",
-      "short": "N-acetyl-beta-D-glu…",
-      "formula": "C8H15NO6",
+      "id": "mithramycin_sdk",
+      "name": "mithramycin SDK",
+      "formula": "C51H72O23",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM2138"
+        "chebi": "CHEBI:234131"
       }
     }
   ],
@@ -234,13 +232,6 @@
       ]
     },
     {
-      "id": "ec_4_2_3_228",
-      "name": "(Z)-beta-ocimene synthase",
-      "ec": [
-        "4.2.3.228"
-      ]
-    },
-    {
       "id": "ec_4_2_3_42",
       "name": "aphidicolan-16beta-ol synthase",
       "ec": [
@@ -248,10 +239,10 @@
       ]
     },
     {
-      "id": "ec_3_6_3_17",
-      "name": "EC 3.6.3.17",
+      "id": "ec_3_6_3_44",
+      "name": "EC 3.6.3.44",
       "ec": [
-        "3.6.3.17"
+        "3.6.3.44"
       ]
     }
   ],
@@ -409,17 +400,21 @@
     },
     {
       "id": "r5",
-      "name": "(2Z,6Z)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
-      "equation": "(2Z,6Z)-farnesyl diphosphate = (Z)-gamma-bisabolene + diphosphate",
+      "name": "neoechinulin A + dimethylallyl diphosphate = isoechinulin A + diphosphate",
+      "equation": "neoechinulin A + dimethylallyl diphosphate = isoechinulin A + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_cis_6_cis_farnesyl_diphosphate",
+          "metabolite": "neoechinulin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "z_bisabolene",
+          "metabolite": "isoechinulin_a",
           "stoichiometry": 1
         },
         {
@@ -430,32 +425,35 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68788"
+        "rhea": "RHEA:73795"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68788"
+            "id": "RHEA:73795"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(Z)-beta-ocimene synthase",
-      "equation": "(2E)-geranyl diphosphate = (Z)-beta-ocimene + diphosphate",
-      "ec": "4.2.3.228",
+      "name": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
+      "equation": "isoechinulin A + dimethylallyl diphosphate = dehydroechinulin + diphosphate",
       "substrates": [
         {
-          "metabolite": "gpp",
+          "metabolite": "isoechinulin_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "z_ocimene",
+          "metabolite": "dehydroechinulin",
           "stoichiometry": 1
         },
         {
@@ -463,22 +461,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_228"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:68824"
+        "rhea": "RHEA:73799"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68824"
+            "id": "RHEA:73799"
           }
         ]
       }
@@ -573,11 +566,11 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR174789",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175150",
+      "ec": "3.6.3.44",
       "substrates": [
         {
-          "metabolite": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+          "metabolite": "demycarosyl_mithramycin",
           "stoichiometry": 1
         },
         {
@@ -595,7 +588,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_alpha_d_glucosamine_1_phosphate",
+          "metabolite": "demycarosyl_mithramycin",
           "stoichiometry": 1
         },
         {
@@ -609,35 +602,35 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR174789"
+        "metanetx": "MNXR175150"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174789"
+            "id": "MNXR175150"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR174790",
-      "ec": "3.6.3.17",
+      "name": "Reaction MNXR175151",
+      "ec": "3.6.3.44",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "mithramycin_sdk",
           "stoichiometry": 1
         },
         {
-          "metabolite": "n_acetyl_beta_d_glucosamine",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
@@ -651,7 +644,7 @@
       ],
       "products": [
         {
-          "metabolite": "n_acetyl_beta_d_glucosamine",
+          "metabolite": "mithramycin_sdk",
           "stoichiometry": 1
         },
         {
@@ -665,20 +658,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_6_3_17"
+          "enzyme": "ec_3_6_3_44"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR174790"
+        "metanetx": "MNXR175151"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR174790"
+            "id": "MNXR175151"
           }
         ]
       }

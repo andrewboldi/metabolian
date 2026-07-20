@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadienoyl)… to (2E,8Z,11Z,14Z,17Z,20Z,23…" {
-  spacing 242
+  spacing 212
 
   spine at 0,0 {
     1_11z_14z_eicosadienoyl_glycero_3_phosphate
@@ -42,40 +42,28 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
     2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co
   }
 
-  branch from 11z_14z_icosadienoyl_coa side left {
-    11z_14z_icosadienoyl_coa
-    <-> ec_1_14_19_37 [1.14.19.37] +fe2 +o2 +hplus +iron +h2o
-    5z_11z_14z_icosatrienoyl_coa
-  }
-
-  branch from 11z_14z_icosadienoyl_coa side right {
-    11z_14z_icosadienoyl_coa
-    <-> . +11_z_14_z_eicosadienoic_acid +coa
-    h2o
-  }
-
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_9z_octadecenoyl_sn_glycero_3_phosphocholine +phosphate +1_9z_octadecenoyl_sn_glycero_3_phosphocholine +h2o
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +gramicidin_c +phosphate +gramicidin_c +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_9z_12z_octadecadienoyl_sn_glycero_3_phosphocho
+    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
+    aeruginosin_b
   }
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> . +9e_myristelaidoyl_coa +coa
-    1_9z_tetradecenoyl_glycero_3_phosphate
+    <-> . +trans_9_octadecenoyl_coa +coa
+    1_acylglycerol_3p_9_octade
   }
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> . +pentadecanoyl_coa +coa
-    1_pentadecanoyl_glycero_3_phosphate
+    <-> . +7z_octadec_7_enoyl_coa +h +coa
+    1_acylglycerol_3p_7_octade
   }
 
   branch from 8z_11z_14z_icosatrienoyl_coa side left {
@@ -104,29 +92,11 @@ pathway 1-11z-14z-eicosadienoyl-to-2e-8z-11z-14z-17z-20z "1-(11Z,14Z-eicosadieno
 
   branch from 2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa side left {
     2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> .
-    3e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
+    <-> . +3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
+    h2o
   }
 
-  branch from 2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa side right {
-    2e_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-    <-> . +h2o
-    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
-  }
-
-  branch from 7z_10z_13z_16z_19z_docosapentaenoyl_coa side left {
-    7z_10z_13z_16z_19z_docosapentaenoyl_coa
-    <-> . +fe2 +o2 +hplus +iron +h2o
-    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
-  }
-
-  branch from 2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa side right {
-    2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
-    <-> . +h2o
-    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
-  }
-
-  branch from 2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co side left {
+  branch from 2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co side right {
     2e_8z_11z_14z_17z_20z_23z_hexacosaheptaenoyl_co
     <-> . +nadph +hplus +nadp
     8z_11z_14z_17z_20z_23z_hexacosahexaenoyl_coa

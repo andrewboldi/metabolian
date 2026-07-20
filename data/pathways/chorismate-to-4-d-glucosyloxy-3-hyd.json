@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "chorismate-to-4-d-glucosyloxy-3-hyd",
+  "name": "chorismate to 4-(β-D-glucosyloxy)-3-hyd…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from chorismate(2−) to 4-(β-D-glucosyloxy)-3-hydroxybenzoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38315"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29748"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "chorismate",
+      "name": "chorismate",
+      "formula": "C10H8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29748"
+      }
+    },
+    {
+      "id": "3_hydroxybenzoate",
+      "name": "3-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16193"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36241"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "4_d_glucosyloxy_3_hydroxybenzoate",
+      "name": "4-(β-D-glucosyloxy)-3-hydroxybenzoate",
+      "short": "4-(β-D-glucosyloxy)…",
+      "formula": "C13H15O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234607"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_3_45",
+      "name": "3-hydroxybenzoate synthase",
+      "ec": [
+        "4.1.3.45"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_23",
+      "name": "3-hydroxybenzoate 4-monooxygenase",
+      "ec": [
+        "1.14.13.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hydroxybenzoate synthase",
+      "equation": "chorismate = 3-hydroxybenzoate + pyruvate",
+      "ec": "4.1.3.45",
+      "substrates": [
+        {
+          "metabolite": "chorismate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-hydroxybenzoate 4-monooxygenase",
+      "equation": "3-hydroxybenzoate + NADPH + O2 + H(+) = 3,4-dihydroxybenzoate + NADP(+) + H2O",
+      "ec": "1.14.13.23",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11480"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3,4-dihydroxybenzoate + UDP-alpha-D-glucose = 4-(beta-D-glucosyloxy)-3-hydroxybenzoate ...",
+      "equation": "3,4-dihydroxybenzoate + UDP-alpha-D-glucose = 4-(beta-D-glucosyloxy)-3-hydroxybenzoate + UDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_d_glucosyloxy_3_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:85843"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85843"
+          }
+        ]
+      }
+    }
+  ]
+}

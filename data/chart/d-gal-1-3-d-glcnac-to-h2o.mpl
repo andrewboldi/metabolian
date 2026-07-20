@@ -38,80 +38,68 @@ pathway d-gal-1-3-d-glcnac-to-h2o "β-D-Gal-(1→3)-β-D-GlcNAc-… to H2O" {
 
   branch from lactose side left {
     lactose
-    <-> ec_2_7_1_207 [2.7.1.207] +n_phosphonato_l_histidine +l_histidine
-    lactose_6_phosphate
+    <-> ec_3_2_1_227 [3.2.1.227] +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc +h2o
+    n_acetyllactosamine
   }
 
   branch from lactose side right {
     lactose
-    <-> . +gdp_l_fucose +gdp +hplus
-    3_fucosyllactose
+    <-> .
+    d_gal_1_4_d_man
   }
 
   branch from d_galactose_1_phosphate side left {
     d_galactose_1_phosphate
-    <-> . +udp_d_glucose +h2o +hplus
+    <-> . +udp_d_galactose +h2o +hplus
     ump
   }
 
-  branch from n_acetyl_d_glucosamine side right {
-    n_acetyl_d_glucosamine
-    <-> . +utp +udp +hplus
-    n_acetyl_d_glucosamine_6_phosphate
-  }
-
-  branch from n_acetyl_d_glucosamine side left {
-    n_acetyl_d_glucosamine
-    <-> . +n4_d_glcnac_1_2_d_man_1_3_d_man_1_6_d_man_1_4_d +h2o
-    n4_d_manp_1_3_d_manp_1_6_d_manp_1_4_d_glcpnac_1
-  }
-
   branch from udp_d_galactose side right {
-    udp_d_galactose
-    <-> ec_2_4_1_50 [2.4.1.50] +5r_5_hydroxy_l_lysine_1 +udp +hplus
-    5r_5_d_galactosyloxy_l_lysine_1
-  }
-
-  branch from udp_d_galactose side left {
     udp_d_galactose
     <-> ec_2_4_1_87 [2.4.1.87] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
     d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl
   }
 
+  branch from udp_d_galactose side left {
+    udp_d_galactose
+    <-> ec_2_4_1_137 [2.4.1.137] +sn_glycerol_3_phosphate +udp +hplus
+    2_d_galactosyl_sn_glycerol_3_phosphate
+  }
+
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> . +gpp
+    pinene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_56 [4.2.3.56] +fpp
-    himachalene
+    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_pentaprenyl_diphosphate
   }
 
   branch from triphosphate side right {
     triphosphate
-    <-> . +dctp +h2o +hplus
-    2_deoxycytidine
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +6_hydroxymethyl_7_8_dihydropterin
+    acetate
   }
 
   branch from triphosphate side left {
     triphosphate
-    <-> ec_2_7_1_90 [2.7.1.90] +diphosphate +beta_d_fructose_1_6_bisphosphate
-    keto_d_fructose_6_phosphate
+    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +glycolaldehyde
+    6_hydroxymethyl_7_8_dihydropterin
   }
 
   branch from cbl side right {
     cbl
-    <-> ec_1_16_1_6 [1.16.1.6] +nadp +h +nadph +dicopac
-    hydrogen_cyanide
+    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcob_iii_alamin +phosphate +h +atp +h2o
+    diphosphate
   }
 
   branch from cbl side left {
     cbl
-    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcob_iii_alamin +phosphate +h +atp +h2o
-    diphosphate
+    <-> ec_2_1_1_251 [2.1.1.251] +h +methyl_coenzyme_m +methylcobalamin
+    coenzyme_m
   }
 
   branch from h side right {
@@ -128,37 +116,37 @@ pathway d-gal-1-3-d-glcnac-to-h2o "β-D-Gal-(1→3)-β-D-GlcNAc-… to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +2_methylfumaryl_coa +adp +phosphate +coa
-    mesaconate
+    <-> . +1d_myo_inositol_3_4_bisphosphate +h +adp
+    1d_myo_inositol_4_phosphate
   }
 
   branch from atp side left {
     atp
-    <-> ec_7_4_2_11 [7.4.2.11] +h +adp +phosphate +h2o
-    d_methionine
+    <-> ec_3_6_3_29 [3.6.3.29] +h +adp +phosphate +h2o
+    molybdate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +ebastine +o2 +nadp +h2o
-    hydroxyebastine
+    <-> . +cholestane_3_7_12_24_25_pentol +nadp +h2o +h +o2
+    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_17 [1.14.13.17] +h +cholesterol +o2 +nadp +h2o
-    7alpha_hydroxycholesterol
+    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +nadp +h2o +h +5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
+    o2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_methylfumaryl_coa +pyruvate
-    acetyl_coa
+    <-> . +1d_myo_inositol_1_4_bisphosphate +phosphate
+    1d_myo_inositol_1_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_2 [3.6.3.2] +h +adp +phosphate +atp
-    mg
+    <-> . +h +adp +phosphate +atp
+    methanesulfonate
   }
 }

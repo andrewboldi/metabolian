@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway creatinine-phosphate-to-h2o "creatinine phosphate to H2O" {
-  spacing 332
+  spacing 308
 
   spine at 0,0 {
     creatinine_phosphate
@@ -26,40 +26,16 @@ pathway creatinine-phosphate-to-h2o "creatinine phosphate to H2O" {
     creatinine
   }
 
-  branch from dctp side right {
-    dctp
-    <-> . +dcdp
-    dcmp
-  }
-
-  branch from dctp side left {
-    dctp
-    <-> . +cdp +dcdp
-    cmp
-  }
-
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    n_carbamoylputrescine
+    <-> . +benzoyl_coa +tryptamine +n_benzoyltryptamine
+    coa
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    n_desmethyl_rosuvastatin
-  }
-
-  branch from dcdp side right {
-    dcdp
-    <-> . +dcmp +dgtp
-    dgdp
-  }
-
-  branch from dcdp side left {
-    dcdp
-    <-> . +utp +dcmp
-    udp
+    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +3_cyano_l_alanine +s_sulfo_l_cysteine
+    cyanide
   }
 
   branch from udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g side right {
@@ -70,25 +46,25 @@ pathway creatinine-phosphate-to-h2o "creatinine phosphate to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    nitrite
+    <-> ec_2_7_1_179 [2.7.1.179] +h +aldehydo_d_kanosamine +adp
+    3_amino_3_deoxy_6_o_phosphono_d_glucopyranose
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    r_noradrenaline
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannopyranose +h +adp
+    alpha_d_mannose_6_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_maltose
-    beta_d_fructose
+    <-> . +l_lysine +l_serine +l_phenylalanine
+    seryl_phenylalanyl_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +trans_2_pentadecenoyl_coa +trans_2_pentadecenoic_acid
-    coa
+    <-> . +l_histidine +l_serine +l_tryptophan
+    seryl_tryptophanyl_histidine
   }
 }

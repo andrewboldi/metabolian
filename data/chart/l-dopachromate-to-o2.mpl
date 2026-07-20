@@ -18,13 +18,13 @@ pathway l-dopachromate-to-o2 "L-dopachromate to O2" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_3 [1.1.3.3] +s_malate +h2o2
-    oxaloacetate
+    <-> . +4_oxoisotretinoin +h2o +13_cis_retinoate
+    h
   }
 
   branch from o2 side right {
     o2
-    <-> . +4_oxoisotretinoin +h2o +13_cis_retinoate
-    h
+    <-> . +h +cholesterol +nadph +pregnenolone +4_methylpentanal +h2o
+    nadp
   }
 }

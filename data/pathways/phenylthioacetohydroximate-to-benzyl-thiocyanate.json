@@ -208,50 +208,40 @@
       }
     },
     {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "g6p",
-      "name": "D-Glucose 6-phosphate",
-      "short": "D-Glucose 6-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:61548"
-      }
-    },
-    {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "cholesteryl_d_glucoside",
-      "name": "cholesteryl β-D-glucoside",
-      "short": "cholesteryl…",
-      "formula": "C33H56O6",
+      "id": "avenacoside_a",
+      "name": "avenacoside A",
+      "formula": "C51H82O23",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17495"
+        "chebi": "CHEBI:2937"
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
+      "id": "26_desglucoavenacoside_a",
+      "name": "26-desglucoavenacoside A",
+      "short": "26-desglucoavenacos…",
+      "formula": "C45H72O18",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:75932"
+      }
+    },
+    {
+      "id": "r_amygdalin",
+      "name": "(R)-amygdalin",
+      "formula": "C20H27NO11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17019"
+      }
+    },
+    {
+      "id": "r_prunasin",
+      "name": "(R)-prunasin",
+      "formula": "C14H17NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17396"
       }
     },
     {
@@ -309,23 +299,22 @@
       }
     },
     {
-      "id": "s_2_sulfodisulfanyl_l_cysteine_1",
-      "name": "S-(2-sulfodisulfanyl)-L-cysteine(1−)",
-      "short": "S-(2-sulfodisulfany…",
-      "formula": "C3H4NO4S4",
+      "id": "primary_linear_alkyl_sulfate_ester",
+      "name": "primary linear alkyl sulfate ester",
+      "short": "primary linear…",
+      "formula": "CH2O4SR",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140664"
+        "chebi": "CHEBI:157685"
       }
     },
     {
-      "id": "3_trisulfanyl_l_alanine",
-      "name": "3-trisulfanyl-L-alanine",
-      "short": "3-trisulfanyl-L-ala…",
-      "formula": "C3H5NOS3",
+      "id": "aldehyde",
+      "name": "aldehyde",
+      "formula": "CHOR",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:139319"
+        "chebi": "CHEBI:17478"
       }
     }
   ],
@@ -366,17 +355,10 @@
       ]
     },
     {
-      "id": "ec_2_7_1_147",
-      "name": "ADP-specific glucose/glucosamine kinase",
+      "id": "ec_3_2_1_117",
+      "name": "amygdalin beta-glucosidase",
       "ec": [
-        "2.7.1.147"
-      ]
-    },
-    {
-      "id": "ec_3_2_1_104",
-      "name": "steryl-beta-glucosidase",
-      "ec": [
-        "3.2.1.104"
+        "3.2.1.117"
       ]
     },
     {
@@ -384,13 +366,6 @@
       "name": "alkyl sulfatase",
       "ec": [
         "1.14.11.77"
-      ]
-    },
-    {
-      "id": "ec_3_1_6_20",
-      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
-      "ec": [
-        "3.1.6.20"
       ]
     }
   ],
@@ -743,61 +718,11 @@
     },
     {
       "id": "r9",
-      "name": "ADP-specific glucose/glucosamine kinase",
-      "equation": "D-glucose + ADP = D-glucose 6-phosphate + AMP + H(+)",
-      "ec": "2.7.1.147",
+      "name": "avenacoside A + H2O = 26-desgluco-avenacoside A + D-glucose",
+      "equation": "avenacoside A + H2O = 26-desgluco-avenacoside A + D-glucose",
       "substrates": [
         {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "g6p",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_147"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:11460"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:11460"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
-      "name": "steryl-beta-glucosidase",
-      "equation": "cholesteryl 3-beta-D-glucoside + H2O = cholesterol + D-glucose",
-      "ec": "3.2.1.104",
-      "substrates": [
-        {
-          "metabolite": "cholesteryl_d_glucoside",
+          "metabolite": "avenacoside_a",
           "stoichiometry": 1
         },
         {
@@ -807,7 +732,47 @@
       ],
       "products": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "26_desglucoavenacoside_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:12468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "amygdalin beta-glucosidase",
+      "equation": "(R)-amygdalin + H2O = (R)-prunasin + D-glucose",
+      "ec": "3.2.1.117",
+      "substrates": [
+        {
+          "metabolite": "r_amygdalin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_prunasin",
           "stoichiometry": 1
         },
         {
@@ -817,20 +782,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_104"
+          "enzyme": "ec_3_2_1_117"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:11956"
+        "rhea": "RHEA:14177"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:11956"
+            "id": "RHEA:14177"
           }
         ]
       }
@@ -898,26 +863,38 @@
     },
     {
       "id": "r12",
-      "name": "S-sulfosulfanyl-L-cysteine sulfohydrolase",
-      "equation": "S-(2-sulfodisulfanyl)-L-cysteinyl-[SoxY protein] + H2O = S-disulfanyl-L-cysteinyl-[SoxY protein] + sulfate + H(+)",
-      "ec": "3.1.6.20",
+      "name": "alkyl sulfatase",
+      "equation": "a primary linear alkyl sulfate ester + 2-oxoglutarate + O2 = an aldehyde + sulfate + succinate + CO2 + H(+)",
+      "ec": "1.14.11.77",
       "substrates": [
         {
-          "metabolite": "s_2_sulfodisulfanyl_l_cysteine_1",
+          "metabolite": "primary_linear_alkyl_sulfate_ester",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_trisulfanyl_l_alanine",
+          "metabolite": "aldehyde",
           "stoichiometry": 1
         },
         {
           "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -927,20 +904,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_6_20"
+          "enzyme": "ec_1_14_11_77"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:56716"
+        "rhea": "RHEA:65716"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56716"
+            "id": "RHEA:65716"
           }
         ]
       }

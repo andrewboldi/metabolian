@@ -18,25 +18,25 @@ pathway undecaprenyl-diphospho-to-h2o "Undecaprenyl-diphospho… to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +ubiquinone_6 +h
-    ubiquinol_6
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +methylglyoxal
+    lactaldehyde
   }
 
   branch from nad side right {
     nad
-    <-> . +nicotinamide +h +h2o
-    adp_beta_d_ribose
+    <-> . +3_methylcatechol +nadh +co2 +h
+    1_6_dihydroxy_5_methylcyclohexa_2_4_dienecarboxy
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +3_beta_d_galactosyl_sn_glycerol +glycerol
-    d_galactopyranose
+    <-> . +diphosphate +borneol
+    bornyl_diphosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +glucose
-    beta_lactose
+    <-> ec_1_14_13_107 [1.14.13.107] +h +o2 +nadph +limonene +limonene_1_2_epoxide
+    nadp
   }
 }

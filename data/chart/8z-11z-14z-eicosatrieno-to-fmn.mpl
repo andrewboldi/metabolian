@@ -30,13 +30,13 @@ pathway 8z-11z-14z-eicosatrieno-to-fmn "(8Z,11Z,14Z)-eicosatrieno… to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +n_12_oxojasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
-    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
+    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    6_8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_59 [1.14.14.59] +3s_6e_nerolidol +fmnh2 +o2 +buten_2_one +h2o +hplus
-    e_4_8_dimethyl_1_3_7_nonatriene
+    <-> . +germacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o +hplus
+    8_hydroxygermacra_1_10_4_11_13_trien_12_oate
   }
 }

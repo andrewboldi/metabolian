@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-1-2-dihexadecanoyl "glycerophosphatidylethano… to 1,2-dihexadecanoyl-sn-gly…" {
-  spacing 218
+  spacing 188
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
@@ -18,69 +18,39 @@ pathway glycerophosphatidylethano-to-1-2-dihexadecanoyl "glycerophosphatidyletha
     1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
   }
 
-  branch from 2_hexadecanoyl_sn_glycero_3_phosphoethanolamine side left {
-    2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_3_1_1_5 [3.1.1.5] +hexadecanoate +h +h2o
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from 2_hexadecanoyl_sn_glycero_3_phosphoethanolamine side right {
-    2_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> ec_2_3_1_40 [2.3.1.40] +hexadecanoate +atp +1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam +amp
-    diphosphate
-  }
-
   branch from dipalmitoyl_phosphatidylglycerol side left {
-    dipalmitoyl_phosphatidylglycerol
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from dipalmitoyl_phosphatidylglycerol side right {
     dipalmitoyl_phosphatidylglycerol
     <-> ec_3_1_3_27 [3.1.3.27] +phosphate +h2o
     phosphatidylglycerophosphate_dihexadecanoyl_n_c1
   }
 
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam side left {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-    <-> ec_4_1_1_65 [4.1.1.65] +co2 +h
-    phosphatidylserine_dihexadecanoyl_n_c16_0
-  }
-
-  branch from 1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam side right {
-    1_2_dihexadecanoyl_sn_glycero_3_phosphoethanolam
-    <-> . +h +o2 +nadph +phosphatidylethanolamine_dihexadec_9enoyl_n_c16 +h2o
-    nadp
+  branch from dipalmitoyl_phosphatidylglycerol side right {
+    dipalmitoyl_phosphatidylglycerol
+    <-> . +hexadecanoate +h +h2o
+    3_2_3_dihydroxypropoxy_hydroxy_phosphoryl_oxy_2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +cyclohex_1_ene_1_carbonyl_coa
-    2_hydroxycyclohexane_1_carbonyl_coa
+    <-> ec_2_5_1_18 [2.5.1.18] +7_8_dihydro_7_hydroxy_8s_glutathionylbenzo_a_pyr +h +glutathione
+    benzo_a_pyrene_7_8_diol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_carboxyhex_2_enoyl_coa +h
-    3_hydroxy_6_carboxyhexanoyl_coa
+    <-> ec_1_14_14_1 [1.14.14.1] +9_hydroxybenzo_a_pyrene_4_5_oxide +nadp +h +o2 +nadph
+    9_hydroxybenzo_a_pyrene
   }
 
   branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side left {
-    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
-    <-> . +oleoyl_coa +coa
-    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
-  }
-
-  branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side right {
     1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
     <-> . +linoleoyl_coa +coa
     1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
-  branch from palmitate side left {
-    palmitate
-    <-> . +s_palmitoyl_n_acetylcysteine_methyl_ester +h2o +hplus
-    n_acetylcysteine_methyl_ester
+  branch from 1_hexadecanoyl_sn_glycero_3_phosphoethanolamine side right {
+    1_hexadecanoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +arachidonoyl_coa +coa
+    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
   }
 }

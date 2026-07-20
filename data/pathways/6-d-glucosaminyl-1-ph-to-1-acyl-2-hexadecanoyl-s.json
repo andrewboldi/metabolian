@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "6-d-glucosaminyl-1-ph-to-1-acyl-2-hexadecanoyl-s",
   "name": "6-(α-D-glucosaminyl)-1-ph… to 1-acyl-2-hexadecanoyl-sn-…",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol zwitterion to 1-acyl-2-hexadecanoyl-sn-glycero-3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -124,41 +124,22 @@
       }
     },
     {
-      "id": "arachidonoyl_coa",
-      "name": "arachidonoyl-CoA",
-      "formula": "C41H62N7O17P3S",
+      "id": "lauroyl_coa",
+      "name": "lauroyl-CoA",
+      "formula": "C33H54N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57368"
+        "chebi": "CHEBI:57375"
       }
     },
     {
-      "id": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphate",
-      "name": "1-acyl-2-arachidonoyl-sn-glycero-3-phosphate",
-      "short": "1-acyl-2-arachidono…",
-      "formula": "C24H36O8PR",
+      "id": "1_acyl_2_dodecanoyl_sn_glycero_3_phosphate",
+      "name": "1-acyl-2-dodecanoyl-sn-glycero-3-phosphate",
+      "short": "1-acyl-2-dodecanoyl…",
+      "formula": "C16H28O8PR",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:74922"
-      }
-    },
-    {
-      "id": "1_acyl_sn_glycero_3_phosphoserine",
-      "name": "1-acyl-sn-glycero-3-phosphoserine",
-      "short": "1-acyl-sn-glycero-3…",
-      "formula": "C7H12NO9PR",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64379"
-      }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
+        "chebi": "CHEBI:64865"
       }
     }
   ],
@@ -301,21 +282,21 @@
     },
     {
       "id": "r4",
-      "name": "a 1-acyl-sn-glycero-3-phosphate + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = a 1-acyl-2-(5Z...",
-      "equation": "a 1-acyl-sn-glycero-3-phosphate + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = a 1-acyl-2-(5Z,8Z,11Z,14Z)-eicosatetraenoyl-sn-glycero-3-phosphate + CoA",
+      "name": "a 1-acyl-sn-glycero-3-phosphate + dodecanoyl-CoA = a 1-acyl-2-dodecanoyl-sn-glycero-3-p...",
+      "equation": "a 1-acyl-sn-glycero-3-phosphate + dodecanoyl-CoA = a 1-acyl-2-dodecanoyl-sn-glycero-3-phosphate + CoA",
       "substrates": [
         {
           "metabolite": "1_acyl_sn_glycerol_3_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "arachidonoyl_coa",
+          "metabolite": "lauroyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_arachidonoyl_sn_glycero_3_phosphate",
+          "metabolite": "1_acyl_2_dodecanoyl_sn_glycero_3_phosphate",
           "stoichiometry": 1
         },
         {
@@ -326,57 +307,14 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:37439"
+        "rhea": "RHEA:44304"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:37439"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = a 1-acyl-sn-glycero-3-phosphate + L-seri...",
-      "equation": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = a 1-acyl-sn-glycero-3-phosphate + L-serine + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_acyl_sn_glycero_3_phosphoserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "1_acyl_sn_glycerol_3_phosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:38999"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:38999"
+            "id": "RHEA:44304"
           }
         ]
       }

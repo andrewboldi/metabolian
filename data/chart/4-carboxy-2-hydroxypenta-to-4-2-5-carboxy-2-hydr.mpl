@@ -18,26 +18,26 @@ pathway 4-carboxy-2-hydroxypenta-to-4-2-5-carboxy-2-hydr "4-carboxy-2-hydroxypen
 
   branch from h side left {
     h
-    <-> . +3_1h_indol_3_yl_propanoate_cation_radical +superoxide
-    kynurate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_13z_docosenoyl_2_9z_octadecenoyl_sn_glycero_3
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_109 [3.1.1.109] +iron_iii_diglucosyl_2_3_dihydroxybenzoylserine_2 +h2o +n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_se
-    fe_iii_n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzo
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +phosphate +1_docosanoyl_2_9z_12z_octadecadienoyl_sn_glycero +h2o
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_aspartate +glycine +l_tryptophan
-    tryptophanyl_glycyl_aspartate
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_mannopyranose +alpha_d_galactose
+    epimelibiose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glycyl_l_leucine +l_tryptophan
-    tryptophanyl_glycyl_leucine
+    <-> ec_3_2_1_104 [3.2.1.104] +beta_d_glucose +cholesterol
+    cholesteryl_3_beta_d_glucoside
   }
 
   branch from 5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox side left {
@@ -48,13 +48,13 @@ pathway 4-carboxy-2-hydroxypenta-to-4-2-5-carboxy-2-hydr "4-carboxy-2-hydroxypen
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_151 [1.14.13.151] +nadh +s_linalool +h +nad +h2o
-    6e_8_oxolinalool
+    <-> . +docosan_1_ol +h2o2
+    docosanal
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_150 [1.14.13.150] +1e_4e_8e_humulene +h +nadph +nadp +h2o
-    8_hydroxy_humulene
+    <-> . +hexacosan_1_ol +h2o2
+    hexacosanal
   }
 }

@@ -38,8 +38,8 @@ pathway l-cys-ian-to-nadp "L-Cys(IAN) to NADP" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_58 [1.14.14.58] +geranyllinalool +fmnh2 +o2 +buten_2_one +h2o +hplus
-    4_8_12_trimethyltrideca_1_3_7_11_tetraene
+    <-> ec_1_14_14_136 [1.14.14.136] +10_deoxysarpagine +fmnh2 +o2 +h2o +hplus
+    sarpagine
   }
 
   branch from h side left {

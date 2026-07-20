@@ -121,49 +121,49 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "amikacin",
+      "name": "amikacin",
+      "formula": "C22H47N5O13",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:84739"
       }
     },
     {
-      "id": "h2o",
-      "name": "Water",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:15377"
+        "chebi": "CHEBI:37563"
       }
     },
     {
-      "id": "penichrysol",
-      "name": "penichrysol",
-      "formula": "C20H34O",
-      "charge": 0,
+      "id": "4_cytidylylamikacin",
+      "name": "4'-cytidylylamikacin",
+      "formula": "C31H58N8O20P",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:177897"
+        "chebi": "CHEBI:233260"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:46398"
       }
     },
     {
-      "id": "l_lysyl_5_amp",
-      "name": "L-lysyl-5'-AMP",
-      "formula": "C16H27N7O8P",
-      "charge": 1,
+      "id": "4_uridylylamikacin",
+      "name": "4'-uridylylamikacin",
+      "formula": "C31H57N7O21P",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:176581"
+        "chebi": "CHEBI:233261"
       }
     }
   ],
@@ -348,21 +348,21 @@
     },
     {
       "id": "r4",
-      "name": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (+)-penichrysol + diphosphate",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate + H2O = (+)-penichrysol + diphosphate",
+      "name": "amikacin + CTP = 4'-cytidylylamikacin + diphosphate",
+      "equation": "amikacin + CTP = 4'-cytidylylamikacin + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "amikacin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "ctp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "penichrysol",
+          "metabolite": "4_cytidylylamikacin",
           "stoichiometry": 1
         },
         {
@@ -373,39 +373,35 @@
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:78403"
+        "rhea": "RHEA:83735"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78403"
+            "id": "RHEA:83735"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-lysine + ATP + H(+) = L-lysyl-5'-AMP + diphosphate",
-      "equation": "L-lysine + ATP + H(+) = L-lysyl-5'-AMP + diphosphate",
+      "name": "amikacin + UTP = 4'-uridylylamikacin + diphosphate",
+      "equation": "amikacin + UTP = 4'-uridylylamikacin + diphosphate",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "amikacin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "utp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "l_lysyl_5_amp",
+          "metabolite": "4_uridylylamikacin",
           "stoichiometry": 1
         },
         {
@@ -416,14 +412,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78615"
+        "rhea": "RHEA:83739"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78615"
+            "id": "RHEA:83739"
           }
         ]
       }

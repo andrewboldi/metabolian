@@ -20,25 +20,25 @@ pathway s-cheilanthifoline-to-fmn "(S)-cheilanthifoline to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +s_macrocarpene +fmnh2 +o2 +h2o +hplus
-    s_macrocarpen_15_ol
+    <-> . +quiannulatene +fmnh2 +o2 +h2o +hplus
+    quiannulatate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +s_macrocarpen_15_ol +fmnh2 +o2 +h2o +hplus
-    4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    12_hydroxymyristate
   }
 
   branch from sah side left {
     sah
-    <-> . +s_reticulinium +sam +hplus
-    s_codamine
+    <-> . +n_terminal_amino_acid_1 +sam +hplus
+    n_terminal_trimethyl_amino_acid_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_363 [2.1.1.363] +fpp +sam +hplus
-    pre_sodorifen_diphosphate
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
+    5_methylorsellinate
   }
 }

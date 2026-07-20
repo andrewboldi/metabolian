@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     cis_vaccenate
@@ -20,14 +20,14 @@ pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
 
   branch from 11z_octadecenoyl_coa side left {
     11z_octadecenoyl_coa
-    <-> . +fad +hplus +fadh2
-    2e_11z_octadecadienoyl_coa
+    <-> . +fadh2 +3_hydroxyoctadecenoylcoa +h +h2o
+    fad
   }
 
   branch from 11z_octadecenoyl_coa side right {
     11z_octadecenoyl_coa
-    <-> ec_2_3_1_51 [2.3.1.51] +pa_16_0_18_1_11z +coa +h
-    1_hexadecanoyl_sn_glycero_3_phosphate
+    <-> . +car_18_1_11e +coa
+    s_carnitine
   }
 
   branch from 13z_3_oxoicosenoyl_coa side left {
@@ -44,14 +44,14 @@ pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_86 [2.3.1.86] +decanoyl_coa +co2 +nadp +coa +h2o +h +nadph
-    octanoyl_coa
+    <-> ec_2_3_1_115 [2.3.1.115] +apiin +h +coa
+    malonylapiin
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> ec_2_3_1_85 [2.3.1.85] +decanoate +h +nadph +co2 +nadp +coa +h2o
-    dodecanoate
+    <-> ec_2_3_1_115 [2.3.1.115] +h +coa +malonylapiin
+    apiin
   }
 
   branch from vaccenyl_coenzyme_a side left {
@@ -66,33 +66,27 @@ pathway cis-vaccenate-to-coa "cis-vaccenate to CoA" {
     9z_12z_octadecadienoyl_coa
   }
 
-  branch from car_18_1_11e side left {
-    car_18_1_11e
-    <-> . +11e_octadecenoyl_coa +coa
-    s_carnitine
+  branch from h side left {
+    h
+    <-> . +ellagic_acid +h2o
+    3_4_8_9_10_pentahydroxy_6_oxobenzo_c_chromene_1
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_31 [3.6.3.31] +adp +caldopentamine +phosphate +caldopentamine +h2o
-    atp
-  }
-
-  branch from h side left {
-    h
-    <-> ec_3_6_3_33 [3.6.3.33] +adp +phosphate +atp +h2o
-    5_methoxybenzimidazolylcobamide
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +acetyl_coa +z_octadec_11_enol
-    z_octadec_11_enyl_acetate
+    <-> . +d_galactofuranose +4_nitrophenol +h2o
+    4_nitrophenyl_beta_d_galactofuranoside
   }
 
   branch from coa side left {
     coa
-    <-> . +dodecanoyl_coa +hydroxychlorobactene_glucoside
-    lauryl_hydroxychlorobactene_glucoside
+    <-> ec_6_2_1_3 [6.2.1.3] +7_methyloct_6_enoate +atp +adp +phosphate
+    7_methyloct_6_enoyl_coa
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_6_2_1_3 [6.2.1.3] +9_methyldecanoyl_coa +h +adp +phosphate +atp
+    9_methyl_decanoic_acid
   }
 }

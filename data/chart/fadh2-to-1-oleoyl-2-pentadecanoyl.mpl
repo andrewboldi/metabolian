@@ -18,73 +18,73 @@ pathway fadh2-to-1-oleoyl-2-pentadecanoyl "FADH2 to 1-oleoyl-2-pentadecanoyl-…
 
   branch from tridecanoyl_coa side left {
     tridecanoyl_coa
-    <-> . +acetyl_coa +coa
-    3_oxopentadecanoyl_coenzyme_a
-  }
-
-  branch from tridecanoyl_coa side right {
-    tridecanoyl_coa
     <-> . +h +sn_glycerol_3_phosphate +coa
     pa_13_0_0_0
   }
 
+  branch from tridecanoyl_coa side right {
+    tridecanoyl_coa
+    <-> . +s_carnitine +h +coa
+    acar_13_0
+  }
+
   branch from fad side left {
     fad
-    <-> . +dodecanoyl_coa +h2o +fadh2 +h
-    3s_3_hydroxydodecanoyl_coa
+    <-> . +2e_13z_icosadienoyl_coa +fadh2 +h
+    13z_icosenoyl_coa
   }
 
   branch from fad side right {
     fad
-    <-> . +nadh +acetyl_coa +fadh2 +h +3_6_9_dodecatrienoyl_coenzyme_a +coa +nad +h2o
-    5_8_11_tetradecatrienoyl_coenzyme_a
+    <-> . +nadh +acetyl_coa +fadh2 +h +coa +nad +h2o
+    13z_octadecenoyl_coa
   }
 
   branch from pentadecanoyl_coa side left {
-    pentadecanoyl_coa
-    <-> . +fad +hplus +fadh2
-    trans_2_pentadecenoyl_coa
-  }
-
-  branch from pentadecanoyl_coa side right {
     pentadecanoyl_coa
     <-> . +cholesterol +coa
     cholest_5_en_3b_yl_pentadecanoate
   }
 
+  branch from pentadecanoyl_coa side right {
+    pentadecanoyl_coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_pentadecanoyl_glycero_3_phosphate
+  }
+
   branch from coa side left {
     coa
-    <-> . +3_hydroxyisovaleryl_coa +h2o
-    3_hydroxyisovaleric_acid
+    <-> . +r_carnitine +malonyl_coa +h
+    o_malonyl_d_carnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +h2o +h
-    5_8_11_14_17_eicosapentenoic_acid
+    <-> . +3_hydroxyisovaleryl_coa +r_carnitine
+    3_hydroxyisovalerylcarnitine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser
-    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
+    <-> . +nadh +h +3_oxotridecanoyl_coenzyme_a
+    3_hydroxytridecanoyl_coenzyme_a
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_9 [1.3.1.9] +nadh +h +o_s_2e_hexadecenoylpantetheine_4_phosphoryl_seri
-    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
+    <-> . +nadh +13z_3_oxoicosenoyl_coa +h
+    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_68 [4.2.1.68] +2_dehydro_3_deoxy_l_fuconate
-    d_fuconate
+    <-> . +4_hydroxy_2_oxoheptanedioate +h
+    cis_2_oxohept_3_enedioic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_38 [3.1.1.38] +h +triacetate
-    triacetate_lactone
+    <-> ec_4_2_1_17 [4.2.1.17] +z_2_3_dehydroadipyl_coa
+    3s_hydroxyadipyl_coa
   }
 }

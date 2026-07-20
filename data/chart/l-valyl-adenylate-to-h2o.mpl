@@ -18,37 +18,37 @@ pathway l-valyl-adenylate-to-h2o "(L-valyl)adenylate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_1
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_galactose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    2_o_geranylgeranyl_3_o_geranylfarnesyl_sn_glycer
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_glucose
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    2_3_bis_o_geranylfarnesyl_sn_glycero_1_phospho_1
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_gulopyranose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_palmitoyl_2_vernoloyl_phosphatidylcholine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    d_idopyranose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3s_3_hydroxycyclohexane_1_carbonyl_coa
-    cyclohex_2_ene_1_carbonyl_coa
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_fuculose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_13_11_34 [1.13.11.34] +5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic
-    7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_galactose
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-3-hydroxyoleoyl-coa-to-nad "(3S)-3-hydroxyoleoyl-CoA to NAD" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     3s_3_hydroxyoleoyl_coa
@@ -24,31 +24,25 @@ pathway 3s-3-hydroxyoleoyl-coa-to-nad "(3S)-3-hydroxyoleoyl-CoA to NAD" {
 
   branch from 3_oxooleoyl_coa side left {
     3_oxooleoyl_coa
-    <-> . +nad +nadh +hplus
-    3r_9z_hydroxyoctadec_9_enoyl_coa
-  }
-
-  branch from 3_oxooleoyl_coa side right {
-    3_oxooleoyl_coa
     <-> . +h +nadph +nadp
     3_s_hydroxy_cis_9_octadecenoyl_coa
   }
 
-  branch from 7z_hexadecenoyl_coa side left {
+  branch from 7z_hexadecenoyl_coa side right {
     7z_hexadecenoyl_coa
     <-> . +s_carnitine +2e_hexadecenoylcarnitine
     coa
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    1r_2s_4r_borneol
-  }
-
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
-    neomenthol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +r_3_hydroxybutanal +h
+    r_butane_1_3_diol
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +bhb +h +h2o
+    r_3_hydroxybutanal
   }
 }

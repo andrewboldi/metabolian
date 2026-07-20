@@ -24,14 +24,14 @@ pathway d-glycero-d-manno-hepto-to-l-d-hep-1-7-l-d-hep "D-glycero-β-D-manno-hep
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    bisabolene
+    <-> . +trans_caffeate +atp +hplus
+    trans_caffeoyl_amp
   }
 
   branch from ppi side left {
     ppi
-    <-> . +bisabolene
-    fpp
+    <-> . +trans_sinapate +atp +coa +amp
+    sinapoyl_coa
   }
 
   branch from adp_l_glycero_d_manno_heptose side right {

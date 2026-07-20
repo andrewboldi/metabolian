@@ -1,0 +1,241 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-alanine-to-l-glutamate",
+  "name": "L-alanine to L-glutamate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-alanine to L-glutamate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR133901"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_alanine",
+      "name": "L-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105732"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM331"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "gamma_amino_gamma_cyanobutanoic_acid",
+      "name": "gamma-amino-gamma-cyanobutanoic acid",
+      "short": "gamma-amino-gamma-c…",
+      "formula": "C5H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6272"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_21",
+      "name": "D-amino-acid transaminase",
+      "ec": [
+        "2.6.1.21"
+      ]
+    },
+    {
+      "id": "ec_3_5_5_1",
+      "name": "nitrilase",
+      "ec": [
+        "3.5.5.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-amino-acid transaminase",
+      "ec": "2.6.1.21",
+      "substrates": [
+        {
+          "metabolite": "l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR133901"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133901"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nitrilase",
+      "ec": "3.5.5.1",
+      "substrates": [
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gamma_amino_gamma_cyanobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173257"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173257"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitrilase",
+      "ec": "3.5.5.1",
+      "substrates": [
+        {
+          "metabolite": "gamma_amino_gamma_cyanobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR145816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR145816"
+          }
+        ]
+      }
+    }
+  ]
+}

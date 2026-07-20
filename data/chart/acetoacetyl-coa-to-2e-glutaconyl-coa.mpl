@@ -32,38 +32,38 @@ pathway acetoacetyl-coa-to-2e-glutaconyl-coa "acetoacetyl-CoA to (2E)-glutaconyl
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_6_6_trimethylbicyclo_3_1_1_hept_3_en_2_one +nad
-    r_cis_verbenol
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5beta_pregnan_3_20_dione +nad
+    5_pregnan_20_ol_3_one
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_oxohexane +hexan_2_ol
-    nad
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +5_pregnan_20_ol_3_one +nad
+    pregnanediol
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_4_8 [2.7.4.8] +8_azaguanosine_5_diphosphate +h +atp
-    8_azaguanosine_5_monophosphate
+    <-> . +acetyl_coa +co2 +atp +h2o +h +phosphate
+    malonyl_coa
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_1_29 [3.6.1.29] +h +amp +h2o
-    p_1_p_2_bis_5_adenosyl_triphosphate
+    <-> . +d_ribose +nicotinamide +atp +h2o
+    beta_nicotinamide_d_ribonucleotide
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +2_naphthyl_dihydrogen_phosphate +h2o +h
-    2_naphthol
+    <-> ec_3_1_3_36 [3.1.3.36] +1d_myo_inositol_4_phosphate +h2o
+    1d_myo_inositol_4_5_bisphosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_48 [3.1.3.48] +6_8_difluoro_4_methylumbelliferyl_phosphate +h2o +h
-    6_8_difluoro_7_hydroxy_4_methylcoumarin
+    <-> ec_3_1_3_2 [3.1.3.2] +thymophthalein +h +h2o
+    thymolphthalein_monophosphate
   }
 
   branch from glutaryl_coa side left {
@@ -80,13 +80,13 @@ pathway acetoacetyl-coa-to-2e-glutaconyl-coa "acetoacetyl-CoA to (2E)-glutaconyl
 
   branch from fadh2 side left {
     fadh2
-    <-> ec_1_4_3_16 [1.4.3.16] +iminoaspartate +h +fad
-    l_aspartate
+    <-> . +h +menaquinone_6 +fad
+    menaquinol_6
   }
 
   branch from fadh2 side right {
     fadh2
-    <-> . +h +fad +l_aspartate
-    iminoaspartate
+    <-> . +hexadecanoate +fad +atp +coa +nad +h2o +acetyl_coa +diphosphate +h +amp
+    nadh
   }
 }

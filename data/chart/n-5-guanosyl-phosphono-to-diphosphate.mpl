@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-5-guanosyl-phosphono-to-diphosphate "Nπ-(5'-guanosyl-phosphono… to diphosphate" {
-  spacing 254
+  spacing 236
 
   spine at 0,0 {
     n_5_guanosyl_phosphono_l_histidine_1
@@ -16,23 +16,5 @@ pathway n-5-guanosyl-phosphono-to-diphosphate "Nπ-(5'-guanosyl-phosphono… to 
     3_end_ribonucleotide_2_3_cyclic_phosphate_2
     <-> ec_6_5_1_8 [6.5.1.8] +5_end_ribonucleoside +gtp +h2o -gmp -ppi -hplus
     ribonucleotide_ribonucleotide_2
-  }
-
-  branch from 5_end_ribonucleoside side left {
-    5_end_ribonucleoside
-    <-> ec_3_1_3_33 [3.1.3.33] +h2o +pi
-    5_end_ribonucleotide_2
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_12e_labda_8_17_12_14_triene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    16_hydroxy_ent_kaurene
   }
 }

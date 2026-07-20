@@ -20,25 +20,25 @@ pathway n-2-hydroxy-fatty-to-s-adenosyl-l-homocysteine "N-(2-hydroxy-fatty… to
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
     neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_3_d_gal_1_3_neu5ac_2_6_d_galnac_1_4_ne
+    <-> . +neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_266 [2.1.1.266] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_264 [2.1.1.264] +guanosine_5_monophosphate_1 +sam +hplus
-    n2_methylguanosine_5_monophosphate_1
+    <-> . +sam +2_o_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
   }
 }

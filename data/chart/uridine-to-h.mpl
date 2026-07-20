@@ -44,26 +44,26 @@ pathway uridine-to-h "uridine to H" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +2_pyridinylmethanol +nadp +nadph
-    2_formylpyridine
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +bromide +glutathione
+    2_4_dinitrobromobenzene
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +1_naphthaldehyde +nadph +1_naphthyl_methanol
-    nadp
+    <-> ec_2_5_1_18 [2.5.1.18] +s_2_4_dinitrophenyl_glutathione +iodide +glutathione
+    2_4_dinitroiodobenzene
   }
 
   branch from udp side left {
     udp
-    <-> . +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h +galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
-    udp_alpha_d_glucose
+    <-> . +kinetin_7_n_glucoside +h +udp_alpha_d_glucose
+    kinetin
   }
 
   branch from udp side right {
     udp
-    <-> . +glc_galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp +h +udp_alpha_d_glucose
-    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
+    <-> . +9_d_glucosyl_kinetin +h +kinetin
+    udp_alpha_d_glucose
   }
 
   branch from alpha_d_galnac_1_3_alpha_d_galnac_diphospho_ditr side left {

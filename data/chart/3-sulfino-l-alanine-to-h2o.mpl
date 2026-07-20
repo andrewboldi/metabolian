@@ -20,26 +20,26 @@ pathway 3-sulfino-l-alanine-to-h2o "3-sulfino-L-alanine to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +tetracosanal
-    tetracosan_1_ol
+    <-> ec_1_1_1_60 [1.1.1.60] +nadh +2r_tartronate_semialdehyde +h
+    r_glycerate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +triacontanal
-    triacontan_1_ol
+    <-> ec_1_17_1_2 [1.17.1.2] +nadh +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +h2o
+    ipp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    aeruginosin_b
+    <-> ec_3_1_1_3 [3.1.1.3] +hexadecanoate +h +1_2_dipalmitoylglycerol
+    tripalmitin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    gly_pro
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +beta_d_glucose
+    linustatin
   }
 
   branch from l_cysteate side left {
@@ -56,13 +56,13 @@ pathway 3-sulfino-l-alanine-to-h2o "3-sulfino-L-alanine to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    angiotensin_ii
+    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_galactose +h +adp
+    6_o_phosphonohexopyranose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ile5_angiotensin_ii_1_7
+    <-> ec_2_7_1_1 [2.7.1.1] +h +adp +6_o_phosphonohexopyranose
+    aldehydo_d_galactose
   }
 }

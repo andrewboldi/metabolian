@@ -20,13 +20,13 @@ pathway 4-hydroxy-3-all-trans-hex-to-di-sulfido-diiron "4-hydroxy-3-all-trans-he
 
   branch from sah side left {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> ec_2_1_1_375 [2.1.1.375] +g5_ppp5_aaca_mrna +sam +hplus
+    m7g5_ppp5_m2_aaca_mrna
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +g5_ppp5_aaca_mrna +sam +hplus
+    g5_ppp5_m2_aaca_mrna
   }
 }

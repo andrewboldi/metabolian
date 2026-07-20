@@ -141,31 +141,41 @@
       }
     },
     {
-      "id": "linoleate",
-      "name": "linoleate",
-      "formula": "C18H31O2",
-      "charge": -1,
+      "id": "c28_steroid",
+      "name": "C28-steroid",
+      "formula": "C28H50",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30245"
+        "chebi": "CHEBI:188921"
       }
     },
     {
-      "id": "18_hydroxylinoleate",
-      "name": "18-hydroxylinoleate",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "22s_22_hydroxy_c28_steroid",
+      "name": "(22S)-22-hydroxy C28-steroid",
+      "short": "22-hydroxy…",
+      "formula": "C28H50O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:132029"
+        "chebi": "CHEBI:188922"
       }
     },
     {
-      "id": "9z_12z_17_hydroxyoctadeca_9_12_dienoate",
-      "name": "(9Z,12Z)-17-hydroxyoctadeca-9,12-dienoate",
-      "short": "(9Z,12Z)-17-hydroxy…",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "c29_steroid",
+      "name": "C29-steroid",
+      "formula": "C29H52",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:144041"
+        "chebi": "CHEBI:188923"
+      }
+    },
+    {
+      "id": "22s_22_hydroxy_c29_steroid",
+      "name": "(22S)-22-hydroxy C29-steroid",
+      "short": "22-hydroxy…",
+      "formula": "C29H52O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188924"
       }
     }
   ],
@@ -182,6 +192,13 @@
       "name": "cyanohydrin beta-glucosyltransferase",
       "ec": [
         "2.4.1.85"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_178",
+      "name": "steroid 22S-hydroxylase",
+      "ec": [
+        "1.14.14.178"
       ]
     }
   ],
@@ -368,11 +385,12 @@
     },
     {
       "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(9...",
-      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 18-hydroxy-(9Z,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "steroid 22S-hydroxylase",
+      "equation": "a C28-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C28-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.178",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "c28_steroid",
           "stoichiometry": 1
         },
         {
@@ -386,7 +404,7 @@
       ],
       "products": [
         {
-          "metabolite": "18_hydroxylinoleate",
+          "metabolite": "22s_22_hydroxy_c28_steroid",
           "stoichiometry": 1
         },
         {
@@ -402,28 +420,34 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_178"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60580"
+        "rhea": "RHEA:70063"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60580"
+            "id": "RHEA:70063"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hydroxy-(9...",
-      "equation": "(9Z,12Z)-octadecadienoate + reduced [NADPH--hemoprotein reductase] + O2 = 17-hydroxy-(9Z,12Z)-octadecadienoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "steroid 22S-hydroxylase",
+      "equation": "a C29-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C29-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.178",
       "substrates": [
         {
-          "metabolite": "linoleate",
+          "metabolite": "c29_steroid",
           "stoichiometry": 1
         },
         {
@@ -437,7 +461,7 @@
       ],
       "products": [
         {
-          "metabolite": "9z_12z_17_hydroxyoctadeca_9_12_dienoate",
+          "metabolite": "22s_22_hydroxy_c29_steroid",
           "stoichiometry": 1
         },
         {
@@ -453,17 +477,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_178"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:60932"
+        "rhea": "RHEA:70067"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60932"
+            "id": "RHEA:70067"
           }
         ]
       }

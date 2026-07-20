@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "dibenzothiophene-to-biphenyl-2-3-diol",
   "name": "dibenzothiophene to biphenyl-2,3-diol",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from dibenzothiophene to biphenyl-2,3-diol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,32 +138,39 @@
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "5_hete",
+      "name": "5-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:65341"
       }
     },
     {
-      "id": "22r_22_hydroxycholesterol",
-      "name": "(22R)-22-hydroxycholesterol",
-      "short": "22-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "5_20_dihete",
+      "name": "5,20-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:67237"
+        "chebi": "CHEBI:90715"
       }
     },
     {
-      "id": "24r_24_hydroxycholesterol",
-      "name": "(24R)-24-hydroxycholesterol",
-      "short": "24-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "8_hete",
+      "name": "8-HETE",
+      "formula": "C20H31O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:50516"
+        "chebi": "CHEBI:90716"
+      }
+    },
+    {
+      "id": "8_20_dihete",
+      "name": "8,20-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90717"
       }
     }
   ],
@@ -428,11 +435,11 @@
     },
     {
       "id": "r5",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (22R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
+      "equation": "5-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 5,20-dihydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "5_hete",
           "stoichiometry": 1
         },
         {
@@ -446,7 +453,7 @@
       ],
       "products": [
         {
-          "metabolite": "22r_22_hydroxycholesterol",
+          "metabolite": "5_20_dihete",
           "stoichiometry": 1
         },
         {
@@ -465,25 +472,25 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46140"
+        "rhea": "RHEA:48656"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46140"
+            "id": "RHEA:48656"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + ...",
-      "equation": "cholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24R)-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "8-hydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + ...",
+      "equation": "8-hydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + reduced [NADPH--hemoprotein reductase] + O2 = 8,20-dihydroxy-(5Z,9E,11Z,14Z)-eicosatetraenoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "cholesterol",
+          "metabolite": "8_hete",
           "stoichiometry": 1
         },
         {
@@ -497,7 +504,7 @@
       ],
       "products": [
         {
-          "metabolite": "24r_24_hydroxycholesterol",
+          "metabolite": "8_20_dihete",
           "stoichiometry": 1
         },
         {
@@ -516,14 +523,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46144"
+        "rhea": "RHEA:48660"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46144"
+            "id": "RHEA:48660"
           }
         ]
       }

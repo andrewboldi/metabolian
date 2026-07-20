@@ -112,31 +112,40 @@
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "preechinulin",
+      "name": "preechinulin",
+      "formula": "C19H23N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193003"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "elemene",
-      "name": "(−)-β-elemene",
-      "formula": "C15H24",
+      "id": "tardioxopiperazine_b",
+      "name": "tardioxopiperazine B",
+      "formula": "C24H31N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62855"
+        "chebi": "CHEBI:193006"
       }
     },
     {
-      "id": "germacrene_d",
-      "name": "germacrene D",
-      "formula": "C15H24",
+      "id": "tardioxopiperazine_a",
+      "name": "tardioxopiperazine A",
+      "formula": "C24H31N3O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49045"
+        "chebi": "CHEBI:193007"
       }
     }
   ],
@@ -355,17 +364,21 @@
     },
     {
       "id": "r5",
-      "name": "(2E,6E)-farnesyl diphosphate = (1S,2S,4R)-beta-elemene + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = (1S,2S,4R)-beta-elemene + diphosphate",
+      "name": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
+      "equation": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "preechinulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "elemene",
+          "metabolite": "tardioxopiperazine_b",
           "stoichiometry": 1
         },
         {
@@ -376,31 +389,35 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:68712"
+        "rhea": "RHEA:73775"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68712"
+            "id": "RHEA:73775"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(2E,6E)-farnesyl diphosphate = germacrene D + diphosphate",
-      "equation": "(2E,6E)-farnesyl diphosphate = germacrene D + diphosphate",
+      "name": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine A + diphosphate",
+      "equation": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine A + diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "preechinulin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "germacrene_d",
+          "metabolite": "tardioxopiperazine_a",
           "stoichiometry": 1
         },
         {
@@ -411,14 +428,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:68716"
+        "rhea": "RHEA:73779"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:68716"
+            "id": "RHEA:73779"
           }
         ]
       }

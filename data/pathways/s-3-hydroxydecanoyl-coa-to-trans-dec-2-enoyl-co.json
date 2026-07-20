@@ -112,13 +112,31 @@
       }
     },
     {
-      "id": "2e_4z_deca_2_4_dienoyl_coa",
-      "name": "(2E,4Z)-deca-2,4-dienoyl-CoA",
-      "short": "(2E,4Z)-deca-2,4-di…",
-      "formula": "C31H46N7O17P3S",
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a",
+      "name": "(4-octa-1-enyl-2,5-dioxo-2,5-dihydro-3-furanyl)acetate",
+      "short": "(4-octa-1-enyl-2,5-…",
+      "formula": "C14H17O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:197421"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:137593"
+        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -139,15 +157,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:75300"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -320,25 +329,15 @@
     },
     {
       "id": "r5",
-      "name": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
-      "equation": "(2E)-decenoyl-CoA + NADP(+) = (2E,4Z)-decadienoyl-CoA + NADPH + H(+)",
+      "name": "(2E)-decenoyl-CoA + oxaloacetate + H(+) = (4-octa-1-enyl-2,5-dioxo-2,5-dihydro-3-furany...",
+      "equation": "(2E)-decenoyl-CoA + oxaloacetate + H(+) = (4-octa-1-enyl-2,5-dioxo-2,5-dihydro-3-furanyl)acetate + CoA + H2O",
       "substrates": [
         {
           "metabolite": "trans_dec_2_enoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_4z_deca_2_4_dienoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
+          "metabolite": "oxaloacetate",
           "stoichiometry": 1
         },
         {
@@ -346,17 +345,31 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:53708"
+        "rhea": "RHEA:77623"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:53708"
+            "id": "RHEA:77623"
           }
         ]
       }

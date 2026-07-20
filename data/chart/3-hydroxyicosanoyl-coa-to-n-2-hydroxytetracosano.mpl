@@ -112,14 +112,14 @@ pathway 3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano "3-hydroxyicosanoyl-CoA
 
   branch from n_tetracosanoylsphinganine side left {
     n_tetracosanoylsphinganine
-    <-> . +1_phosphatidyl_1d_myo_inositol +dag
-    ins_1_p_cer_d18_0_24_0
+    <-> . +h +o2 +nadph +n_tetracosanoyl_4r_hydroxysphinganine +h2o
+    nadp
   }
 
   branch from n_tetracosanoylsphinganine side right {
     n_tetracosanoylsphinganine
-    <-> . +h +o2 +nadph +n_tetracosanoyl_4r_hydroxysphinganine +h2o
-    nadp
+    <-> . +h +o2 +nadph +nadp +h2o
+    cer_d18_0_h24_0
   }
 
   branch from n_2_hydroxytetracosanoyl_sphinganine side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdp-to-d-rhamnosyl-1-3-n-ace "GDP to α-D-rhamnosyl-(1→3)-N-ace…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     gdp
@@ -16,11 +16,5 @@ pathway gdp-to-d-rhamnosyl-1-3-n-ace "GDP to α-D-rhamnosyl-(1→3)-N-ace…" {
     gdp_alpha_d_mannose
     <-> . +gdp_6_deoxy_d_mannose +n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po -gdp -hplus
     d_rhamnosyl_1_3_n_acetyl_d_galactosaminyl_1_dip
-  }
-
-  branch from gdp_alpha_d_mannose side left {
-    gdp_alpha_d_mannose
-    <-> . +gdp +d_mannose_1_phosphate +h
-    phosphate
   }
 }

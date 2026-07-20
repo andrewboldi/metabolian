@@ -26,61 +26,61 @@ pathway h2o2-to-h2o "H2O2 to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +h +z_4_2_hydroxy_5_sulfonatophenyl_2_oxobut_3_enoa
-    1_2_dihydroxynaphthalene_6_sulfonate
+    <-> ec_1_13_11_1 [1.13.11.1] +3_fluorocatechol
+    2_fluoro_cis_cis_muconate
   }
 
   branch from o2 side left {
     o2
-    <-> . +3_hydroxy_2_naphthoate
-    3_6_carboxymethylene_cyclohexa_2_4_dien_1_yliden
+    <-> ec_1_13_11_1 [1.13.11.1] +4_fluorocatechol
+    3_fluoro_cis_cis_muconate
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h +adp +phosphate
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl
+    <-> . +l_leucine +jasmonate +diphosphate +h +amp
+    jasmonoyl_l_leucine
   }
 
   branch from atp side left {
     atp
-    <-> ec_7_5_2_10 [7.5.2.10] +h +adp +phosphate +h2o
-    aldehydo_d_xylose
+    <-> ec_6_3_2_52 [6.3.2.52] +l_leucine +jasmonic_acid_anion +diphosphate +h +amp
+    a_jasmonoyl_l_leucine
   }
 
   branch from coa side right {
     coa
-    <-> . +spermidine +trans_4_coumaroyl_coa +h
-    n1_n5_n10_e_tri_p_coumaroylspermidine
+    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +d_threo_isocitrate +h
+    2_caffeoylisocitric_acid
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_64 [2.3.1.64] +e_feruloyl_coa +agmatine +h
-    feruloylagmatine
+    <-> . +s_carnitine +h +h2o
+    s_carnitinyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o
-    maackiain
+    <-> . +cinchonidine +nadp +h
+    cinchoninone
   }
 
   branch from nadph side left {
     nadph
-    <-> . +thiobenzamide_s_oxide +nadp +h2o +h +o2
-    thiobenzamide
+    <-> . +cinchonidine +nadp +h
+    cinchonidinone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_2_4_1_8 [2.4.1.8] +gamma_carotene
-    1_hydroxy_carotene
+    <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +l_cysteine
+    s_indolylmethylthiohydroximoyl_l_cysteine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_131 [4.2.1.131] +anhydrorhodovibrin
-    rhodovibrin
+    <-> . +z_phenylacetaldehyde_oxime +h +o2 +l_cysteine +nadph +nadp
+    s_phenylacetothiohydroximoyl_l_cysteine
   }
 }

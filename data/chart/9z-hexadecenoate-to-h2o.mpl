@@ -24,14 +24,14 @@ pathway 9z-hexadecenoate-to-h2o "(9Z)-hexadecenoate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    20_0_18_2_ps
+    <-> ec_3_6_3_42 [3.6.3.42] +h +adp +phosphate +atp
+    cellopentaose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    20_0_18_3_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    cephalosporin_c
   }
 
   branch from phosphatidylglycerophosphate_dihexadec_9_enoyl_n side right {
@@ -42,13 +42,13 @@ pathway 9z-hexadecenoate-to-h2o "(9Z)-hexadecenoate to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_11z_eicosenoyl_2_9z_12z_octadecadienoyl_sn_gly
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    terpentecin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    ps_20_1_11z_18_3_9z_12z_15z
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    rifamycin_sv
   }
 }

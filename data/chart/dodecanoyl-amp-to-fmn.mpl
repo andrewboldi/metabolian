@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dodecanoyl-amp-to-fmn "dodecanoyl-AMP to FMN" {
-  spacing 272
+  spacing 248
 
   spine at 0,0 {
     dodecanoyl_amp
@@ -16,39 +16,15 @@ pathway dodecanoyl-amp-to-fmn "dodecanoyl-AMP to FMN" {
     r_11_hydroxylaurate
   }
 
-  branch from dodecanoate side left {
-    dodecanoate
-    <-> ec_1_13_11_92 [1.13.11.92] +o2
-    2r_2_hydroperoxydodecanoate
-  }
-
-  branch from dodecanoate side right {
-    dodecanoate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    3_hydroxylaurate
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +l_lysinium +hplus
-    n6_fatty_acyl_l_lysine
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +alanyl_5_amp +amp +hplus
-    o_s_alanyl_pantetheine_4_phosphoryl_l_serine_res
-  }
-
   branch from fmn side left {
     fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
-    thymol
+    <-> . +2_hexyl_5_pentylresorcinol +fmnh2 +o2 +h2o +hplus
+    2_hexyl_5_5_hydroxypentyl_resorcinol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +terpinene +fmnh2 +o2 +h2o +hplus
-    carvacrol
+    <-> . +2_hexyl_5_heptylresorcinol +fmnh2 +o2 +h2o +hplus
+    2_hexyl_5_7_hydroxyheptyl_resorcinol
   }
 }

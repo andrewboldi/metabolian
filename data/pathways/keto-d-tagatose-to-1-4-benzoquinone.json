@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "keto-d-tagatose-to-1-4-benzoquinone",
+  "name": "keto-D-tagatose to 1,4-benzoquinone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from keto-D-tagatose to 1,4-benzoquinone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205874"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:47693"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "keto_d_tagatose",
+      "name": "keto-D-tagatose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47693"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "d_tagatose_1_phosphate",
+      "name": "D-Tagatose 1-phosphate",
+      "short": "D-Tagatose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560763"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "d_glyceraldehyde",
+      "name": "D-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM435"
+      }
+    },
+    {
+      "id": "dihydroxyacetone_phosphate",
+      "name": "dihydroxyacetone phosphate",
+      "short": "dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM77"
+      }
+    },
+    {
+      "id": "hydroquinone",
+      "name": "hydroquinone",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM376"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "1_4_benzoquinone",
+      "name": "1,4-benzoquinone",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740100"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_3",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "ec": [
+        "1.1.5.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205874",
+      "substrates": [
+        {
+          "metabolite": "keto_d_tagatose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_tagatose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205874"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205874"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR204806",
+      "substrates": [
+        {
+          "metabolite": "d_tagatose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR204806"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204806"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycerol-3-phosphate dehydrogenase",
+      "ec": "1.1.5.3",
+      "substrates": [
+        {
+          "metabolite": "hydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dihydroxyacetone_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_benzoquinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR137892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137892"
+          }
+        ]
+      }
+    }
+  ]
+}

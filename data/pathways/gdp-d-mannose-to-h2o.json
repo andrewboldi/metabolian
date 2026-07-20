@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gdp-d-mannose-to-h2o",
+  "name": "GDP-α-D-mannose to H2O",
+  "category": "other",
+  "summary": "A 3-step route from GDP-α-D-mannose(2−) to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28102"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57527"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_mannopyranose",
+      "name": "D-mannopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4208"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_manp_1_6_d_manp",
+      "name": "α-D-Manp-(1→6)-D-Manp",
+      "short": "α-D-Manp-(1→6)-D-Ma…",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:53445"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_163",
+      "name": "1,6-alpha-D-mannosidase",
+      "ec": [
+        "3.2.1.163"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_18",
+      "name": "EC 3.6.3.18",
+      "ec": [
+        "3.6.3.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "GDP-alpha-D-mannose + H2O = D-mannose + GDP + H(+)",
+      "equation": "GDP-alpha-D-mannose + H2O = D-mannose + GDP + H(+)",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28102"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28102"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1,6-alpha-D-mannosidase",
+      "ec": "3.2.1.163",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_manp_1_6_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR143714"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR143714"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR174879",
+      "ec": "3.6.3.18",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_manp_1_6_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_manp_1_6_d_manp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR174879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174879"
+          }
+        ]
+      }
+    }
+  ]
+}

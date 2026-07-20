@@ -24,14 +24,14 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
 
   branch from nadp side left {
     nadp
-    <-> . +ferroheme_o +h2o +nadph
-    ferroheme_a
+    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +h +nadph
+    d_galactono_1_5_lactone
   }
 
   branch from nadp side right {
     nadp
-    <-> . +dihydroxy_4_cholesten_3_one_7a26 +h +o2 +nadph +h2o
-    7alpha_12alpha_26_trihydroxycholest_4_en_3_one
+    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +h +nadph
+    d_galactono_1_4_lactone
   }
 
   branch from 2_demethylmenaquinol_9 side left {
@@ -54,14 +54,14 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
 
   branch from sah side right {
     sah
-    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +desmethylnectriapyrone +sam +hplus
+    nectriapyrone
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
+    desmethylnectriapyrone
   }
 
   branch from menaquinone_9 side right {
@@ -78,38 +78,26 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
 
   branch from h side right {
     h
-    <-> . +adp +3alpha_hydroxy_5beta_androstan_17_one +phosphate +3alpha_hydroxy_5beta_androstan_17_one +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    margaric_acid_d3
   }
 
   branch from h side left {
     h
-    <-> . +l_alanine +l_lysine +glycine +h2o
-    ala_gly_lys
+    <-> . +adp +phosphate +atp +h2o
+    9z_heptadecenoate
   }
 
   branch from nadph side right {
     nadph
-    <-> . +nadp +h +7alpha_12alpha_26_trihydroxycholest_4_en_3_one
-    7_12_26_trihydroxy_5_cholestan_3_one
+    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadp
+    beta_d_xylose
   }
 
   branch from nadph side left {
     nadph
-    <-> . +dihydroxy_4_cholesten_3_one_7a26 +h +nadp
-    7alpha_26_dihydroxy_5beta_cholestan_3_one
-  }
-
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    19_hydroxy_11_deoxycorticosterone
-  }
-
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> . +19_hydroxy_11_deoxycorticosterone +di_sulfido_diiron +o2 +hplus +h2o
-    19_oxo_deoxycorticosterone
+    <-> ec_1_1_1_21 [1.1.1.21] +alpha_d_xylose +h +nadp
+    xylitol
   }
 
   branch from adenosine_3_5_bismonophosphate side right {

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-monolysocardiolipin-to-amp-3-end-1",
   "name": "1-monolysocardiolipin to AMP 3'-end(1−)",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from 1-monolysocardiolipin(2−) to AMP 3'-end(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -152,32 +152,32 @@
       }
     },
     {
-      "id": "l_cysteine",
-      "name": "L-cysteine",
-      "formula": "C3H5NOS",
+      "id": "n_acetylsphingosine",
+      "name": "N-acetylsphingosine",
+      "formula": "C20H39NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:29950"
+        "chebi": "CHEBI:46979"
       }
     },
     {
-      "id": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
-      "name": "S-1,2-diacyl-sn-glyceryl-L-cysteine",
-      "short": "S-1,2-diacyl-sn-gly…",
-      "formula": "C8H9NO5SR2",
-      "charge": 0,
+      "id": "2_acyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "2-acyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C7H13O9PR",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:140658"
+        "chebi": "CHEBI:76528"
       }
     },
     {
-      "id": "sn_glycerol_1_phosphate",
-      "name": "sn-glycerol 1-phosphate",
-      "short": "sn-glycerol 1-P",
-      "formula": "C3H7O6P",
-      "charge": -2,
+      "id": "1_o_acyl_n_acetylsphingosine",
+      "name": "1-O-acyl-N-acetylsphingosine",
+      "short": "1-O-acyl-N-acetylsp…",
+      "formula": "C21H38NO4R",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57685"
+        "chebi": "CHEBI:84483"
       }
     },
     {
@@ -198,25 +198,6 @@
       "xrefs": {
         "chebi": "CHEBI:57972"
       }
-    },
-    {
-      "id": "3_l_seryl_adenylyl_1_group",
-      "name": "3'-(L-seryl)adenylyl(1−) group",
-      "short": "3'-(L-seryl)adenyly…",
-      "formula": "C13H17N6O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:78533"
-      }
-    },
-    {
-      "id": "serine",
-      "name": "L-Serine",
-      "formula": "C3H7NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:33384"
-      }
     }
   ],
   "enzymes": [
@@ -225,13 +206,6 @@
       "name": "lysyltransferase",
       "ec": [
         "2.3.2.3"
-      ]
-    },
-    {
-      "id": "ec_2_5_1_145",
-      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
-      "ec": [
-        "2.5.1.145"
       ]
     }
   ],
@@ -404,57 +378,47 @@
     },
     {
       "id": "r5",
-      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
-      "equation": "L-cysteinyl-[prolipoprotein] + a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = an S-1,2-diacyl-sn-glyceryl-L-cysteinyl-[prolipoprotein] + sn-glycerol 1-phosphate + H(+)",
-      "ec": "2.5.1.145",
+      "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-sphing-4-enine = 2-acyl...",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) + N-(acetyl)-sphing-4-enine = 2-acyl-sn-glycero-3-phospho-(1'-sn-glycerol) + 1-O-acyl-N-(acetyl)-sphing-4-enine",
       "substrates": [
         {
-          "metabolite": "l_cysteine",
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "metabolite": "n_acetylsphingosine",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
+          "metabolite": "2_acyl_sn_glycero_3_phospho_1_sn_glycerol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sn_glycerol_1_phosphate",
+          "metabolite": "1_o_acyl_n_acetylsphingosine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_145"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56712"
+        "rhea": "RHEA:78359"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56712"
+            "id": "RHEA:78359"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
-      "equation": "L-alanyl-tRNA(Pro) + H2O = tRNA(Pro) + L-alanine + H(+)",
+      "name": "L-alanyl-tRNA(Ala) + H2O = tRNA(Ala) + L-alanine + H(+)",
+      "equation": "L-alanyl-tRNA(Ala) + H2O = tRNA(Ala) + L-alanine + H(+)",
       "substrates": [
         {
           "metabolite": "3_l_alanyl_adenylyl_zwitterionic_group",
@@ -482,53 +446,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:74243"
+        "rhea": "RHEA:85871"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:74243"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
-      "equation": "L-seryl-tRNA(Ser) + H2O = tRNA(Ser) + L-serine",
-      "substrates": [
-        {
-          "metabolite": "3_l_seryl_adenylyl_1_group",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "amp_3_end_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "serine",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:74551"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:74551"
+            "id": "RHEA:85871"
           }
         ]
       }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z,8Z… to ricinoleoyl-sn-glycero-3-…" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     1_tetradecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl
@@ -18,38 +18,26 @@ pathway 1-tetradecanoyl-2-5z-8z-to-ricinoleoyl-sn-glycer "1-tetradecanoyl-2-[(5Z
 
   branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side left {
     2_arachidonoyl_sn_glycero_3_phosphocholine
-    <-> . +o2
-    2_9s_11r_epidioxy_15s_hydroperoxy_5z_13e_prostad
-  }
-
-  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side right {
-    2_arachidonoyl_sn_glycero_3_phosphocholine
     <-> . +1_2_di_o_arachidonoyl_sn_glycero_3_phosphocholin +1_2_dioleoyl_sn_glycero_3_phosphoethanolamine +hplus
     n_arachidonoyl_1_2_dioleoyl_sn_glycero_3_phospho
   }
 
+  branch from 2_arachidonoyl_sn_glycero_3_phosphocholine side right {
+    2_arachidonoyl_sn_glycero_3_phosphocholine
+    <-> . +stearoyl_coa +coa
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoch
+  }
+
   branch from tetradecanoate side left {
     tetradecanoate
-    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
-    2r_2_hydroxytetradecanoate
+    <-> . +1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe +h2o +hplus
+    2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce
   }
 
   branch from tetradecanoate side right {
     tetradecanoate
-    <-> ec_1_11_2_4 [1.11.2.4] +h2o2 +h2o
-    2s_2_hydroxytetradecanoate
-  }
-
-  branch from choline_alfoscerate side left {
-    choline_alfoscerate
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +1_o_acyl_sn_glycero_3_phosphocholine
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from choline_alfoscerate side right {
-    choline_alfoscerate
-    <-> . +1_acyl_sn_glycero_3_phosphoethanolamine +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    2_acyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_di_o_myristoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_tetradecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from arachidonate side left {

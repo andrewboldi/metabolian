@@ -250,43 +250,43 @@
       }
     },
     {
-      "id": "7alpha_hydroxycholest_4_en_3_one",
-      "name": "7alpha-hydroxycholest-4-en-3-one",
-      "short": "7alpha-hydroxychole…",
-      "formula": "C27H44O2",
-      "charge": 0,
+      "id": "z_3_oxohexadec_9_enoyl_coa",
+      "name": "(Z)-3-oxohexadec-9-enoyl-CoA",
+      "short": "3-oxohexadec-9-enoy…",
+      "formula": "C37H58N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM730346"
+        "chebi": "CHEBI:232642"
       }
     },
     {
-      "id": "20_hydroxycholesterol",
-      "name": "20-hydroxycholesterol",
-      "short": "20-hydroxycholester…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "3s_9z_3_hydroxyhexadecenoyl_coa",
+      "name": "(3S,9Z)-3-hydroxyhexadecenoyl-CoA",
+      "short": "(3S,9Z)-3-hydroxyhe…",
+      "formula": "C37H60N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:1296"
+        "chebi": "CHEBI:232641"
       }
     },
     {
-      "id": "all_trans_3_4_didehydroretinoate",
-      "name": "all-trans-3,4-didehydroretinoate",
-      "short": "all-trans-3,4-dideh…",
-      "formula": "C20H25O2",
-      "charge": -1,
+      "id": "z_3_oxotetradec_7_enoyl_coa",
+      "name": "(Z)-3-oxotetradec-7-enoyl-CoA",
+      "short": "3-oxotetradec-7-eno…",
+      "formula": "C35H54N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:132260"
+        "chebi": "CHEBI:232679"
       }
     },
     {
-      "id": "all_trans_3_4_didehydroretinol",
-      "name": "all-trans-3,4-didehydroretinol",
-      "short": "all-trans-3,4-dideh…",
-      "formula": "C20H28O",
-      "charge": 0,
+      "id": "cis_3s_hydroxytetradec_7_enoyl_coa",
+      "name": "Cis-(3S)-hydroxytetradec-7-enoyl-CoA",
+      "short": "Cis-(3S)-hydroxytet…",
+      "formula": "C35H56N7O18P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:132246"
+        "metanetx": "MNXM731308"
       }
     }
   ],
@@ -317,6 +317,13 @@
       "name": "4-hydroxy-tetrahydrodipicolinate reductase",
       "ec": [
         "1.17.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_35",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": [
+        "1.1.1.35"
       ]
     }
   ],
@@ -705,24 +712,25 @@
     },
     {
       "id": "r9",
-      "name": "Reaction MNXR103539",
+      "name": "3-hydroxyacyl-CoA dehydrogenase",
+      "ec": "1.1.1.35",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h",
+          "metabolite": "z_3_oxohexadec_9_enoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "7alpha_hydroxycholest_4_en_3_one",
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "20_hydroxycholesterol",
+          "metabolite": "3s_9z_3_hydroxyhexadecenoyl_coa",
           "stoichiometry": 1
         },
         {
@@ -730,63 +738,64 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_35"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR103539"
+        "metanetx": "MNXR103757"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103539"
+            "id": "MNXR103757"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "Reaction MNXR103629",
+      "name": "Reaction MNXR103758",
       "substrates": [
         {
           "metabolite": "nadh",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "z_3_oxotetradec_7_enoyl_coa",
+          "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "all_trans_3_4_didehydroretinoate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_3_4_didehydroretinol",
+          "metabolite": "cis_3s_hydroxytetradec_7_enoyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR103629"
+        "metanetx": "MNXR103758"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR103629"
+            "id": "MNXR103758"
           }
         ]
       }

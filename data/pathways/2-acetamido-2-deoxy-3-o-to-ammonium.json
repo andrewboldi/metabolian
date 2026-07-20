@@ -160,6 +160,45 @@
       }
     },
     {
+      "id": "flaviolin_2_olate",
+      "name": "flaviolin-2-olate",
+      "formula": "C10H5O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58696"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "3_linalylflaviolin_2_olate",
+      "name": "3-linalylflaviolin-2-olate",
+      "short": "3-linalylflaviolin-…",
+      "formula": "C20H21O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78347"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -170,31 +209,13 @@
       }
     },
     {
-      "id": "10_epi_juneol",
-      "name": "10-epi-juneol",
-      "formula": "C15H26O",
-      "charge": 0,
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:138037"
-      }
-    },
-    {
-      "id": "ctp",
-      "name": "CTP (cytidine 5'-triphosphate)",
-      "short": "CTP (cytidine 5'-TP)",
-      "formula": "C9H12N3O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37563"
-      }
-    },
-    {
-      "id": "3_5_cyclic_cmp",
-      "name": "3',5'-cyclic CMP",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58003"
+        "chebi": "CHEBI:58756"
       }
     },
     {
@@ -291,17 +312,17 @@
       ]
     },
     {
-      "id": "ec_4_2_3_172",
-      "name": "10-epi-juneol synthase",
+      "id": "ec_2_5_1_123",
+      "name": "flaviolin linalyltransferase",
       "ec": [
-        "4.2.3.172"
+        "2.5.1.123"
       ]
     },
     {
-      "id": "ec_4_6_1_6",
-      "name": "cytidylate cyclase",
+      "id": "ec_2_5_1_29",
+      "name": "geranylgeranyl diphosphate synthase",
       "ec": [
-        "4.6.1.6"
+        "2.5.1.29"
       ]
     },
     {
@@ -606,22 +627,22 @@
     },
     {
       "id": "r7",
-      "name": "10-epi-juneol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-juneol + diphosphate",
-      "ec": "4.2.3.172",
+      "name": "flaviolin linalyltransferase",
+      "equation": "flaviolin + (2E)-geranyl diphosphate = 3-linalylflaviolin + diphosphate",
+      "ec": "2.5.1.123",
       "substrates": [
         {
-          "metabolite": "fpp",
+          "metabolite": "flaviolin_2_olate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "gpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "10_epi_juneol",
+          "metabolite": "3_linalylflaviolin_2_olate",
           "stoichiometry": 1
         },
         {
@@ -631,38 +652,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_172"
+          "enzyme": "ec_2_5_1_123"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:14485"
+        "rhea": "RHEA:17449"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14485"
+            "id": "RHEA:17449"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "cytidylate cyclase",
-      "equation": "CTP = 3',5'-cyclic CMP + diphosphate",
-      "ec": "4.6.1.6",
+      "name": "geranylgeranyl diphosphate synthase",
+      "equation": "isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = (2E,6E,10E)-geranylgeranyl diphosphate + diphosphate",
+      "ec": "2.5.1.29",
       "substrates": [
         {
-          "metabolite": "ctp",
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_5_cyclic_cmp",
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
           "stoichiometry": 1
         },
         {
@@ -672,20 +697,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_6_1_6"
+          "enzyme": "ec_2_5_1_29"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:14737"
+        "rhea": "RHEA:17653"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14737"
+            "id": "RHEA:17653"
           }
         ]
       }

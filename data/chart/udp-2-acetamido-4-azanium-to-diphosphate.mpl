@@ -26,13 +26,13 @@ pathway udp-2-acetamido-4-azanium-to-diphosphate "UDP-2-acetamido-4-azanium… t
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_59 [4.2.3.59] +fpp
-    e_bisabolene
+    <-> ec_4_2_3_77 [4.2.3.77] +fpp
+    germacrene_d
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_60 [4.2.3.60] +fpp
-    germacrene_c
+    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
+    endo_bergamotene
   }
 }

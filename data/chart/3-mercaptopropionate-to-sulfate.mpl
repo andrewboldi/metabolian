@@ -26,25 +26,25 @@ pathway 3-mercaptopropionate-to-sulfate "3-mercaptopropionate to sulfate" {
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> . +acetyl_coa +coa
-    maa_coa
-  }
-
-  branch from propionyl_coa side left {
-    propionyl_coa
     <-> . +nad +coa +co2 +nadh
     mmsa
   }
 
+  branch from propionyl_coa side left {
+    propionyl_coa
+    <-> . +fad +hplus +fadh2
+    acryloyl_coa
+  }
+
   branch from sulfate side right {
     sulfate
-    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
-    sulforaphane
+    <-> . +z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
+    s_goitrin
   }
 
   branch from sulfate side left {
     sulfate
-    <-> . +z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani
-    s_goitrin
+    <-> . +z_2r_2_hydroxy_3_butenyl_n_sulfonatooxy_methani +sulfur_atom
+    3_hydroxypent_4_ene_nitrile
   }
 }

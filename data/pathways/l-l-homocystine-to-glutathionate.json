@@ -1,0 +1,391 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-l-homocystine-to-glutathionate",
+  "name": "L,L-homocystine to glutathionate",
+  "category": "redox-detox",
+  "summary": "A 5-step route from L,L-homocystine zwitterion to glutathionate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11464"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:140613"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_l_homocystine",
+      "name": "L,L-homocystine",
+      "formula": "C8H16N2O4S2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140613"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "homocysteine",
+      "name": "L-Homocysteine",
+      "formula": "C4H9NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58199"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58297"
+      }
+    },
+    {
+      "id": "2_aminobut_2_enoic_acid",
+      "name": "2-aminobut-2-enoic acid",
+      "short": "2-aminobut-2-enoic…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48306"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_4_benzoquinones",
+      "name": "1,4-benzoquinones",
+      "formula": "C6O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:132124"
+      }
+    },
+    {
+      "id": "s_sulfanylglutathionate",
+      "name": "S-sulfanylglutathionate",
+      "short": "S-sulfanylglutathio…",
+      "formula": "C10H16N3O6S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58905"
+      }
+    },
+    {
+      "id": "hydroquinones",
+      "name": "hydroquinones",
+      "formula": "C6H2O2R4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:24646"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "glutathione_s_sulfinate",
+      "name": "glutathione S-sulfinate",
+      "short": "glutathione…",
+      "formula": "C10H15N3O8S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:85586"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_8_4_1",
+      "name": "glutathione--homocystine transhydrogenase",
+      "ec": [
+        "1.8.4.1"
+      ]
+    },
+    {
+      "id": "ec_1_8_5_8",
+      "name": "eukaryotic sulfide quinone oxidoreductase",
+      "ec": [
+        "1.8.5.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glutathione--homocystine transhydrogenase",
+      "equation": "L,L-homocystine + 2 glutathione = 2 L-homocysteine + glutathione disulfide",
+      "ec": "1.8.4.1",
+      "substrates": [
+        {
+          "metabolite": "l_l_homocystine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "homocysteine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_4_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-homocysteine = 2-aminobut-2-enoate + hydrogen sulfide + H(+)",
+      "equation": "L-homocysteine = 2-aminobut-2-enoate + hydrogen sulfide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "homocysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminobut_2_enoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "eukaryotic sulfide quinone oxidoreductase",
+      "equation": "a quinone + hydrogen sulfide + glutathione + H(+) = S-sulfanylglutathione + a quinol",
+      "ec": "1.8.5.8",
+      "substrates": [
+        {
+          "metabolite": "1_4_benzoquinones",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_sulfanylglutathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydroquinones",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_5_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55156"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55156"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "S-sulfanylglutathione + O2 = glutathione S,S-dioxide + H(+)",
+      "equation": "S-sulfanylglutathione + O2 = glutathione S,S-dioxide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "s_sulfanylglutathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glutathione_s_sulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13061"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glutathione S,S-dioxide + H2O = sulfite + glutathione + H(+)",
+      "equation": "glutathione S,S-dioxide + H2O = sulfite + glutathione + H(+)",
+      "substrates": [
+        {
+          "metabolite": "glutathione_s_sulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:28655"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28655"
+          }
+        ]
+      }
+    }
+  ]
+}

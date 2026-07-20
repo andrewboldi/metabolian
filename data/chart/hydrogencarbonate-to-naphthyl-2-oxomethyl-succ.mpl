@@ -18,25 +18,25 @@ pathway hydrogencarbonate-to-naphthyl-2-oxomethyl-succ "hydrogencarbonate to Nap
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +4_5_methylenedioxy_6_hydroxyaurone +phosphate +4_5_methylenedioxy_6_hydroxyaurone
-    atp
+    <-> ec_3_2_1_164 [3.2.1.164] +d_galactopyranose +d_galp_1_6_d_galp
+    3r_4s_5r_6r_6_2r_3r_4s_5r_6r_3_4_5_trihydroxy_6
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    streptothricin_f
+    <-> ec_3_2_1_214 [3.2.1.214] +sophorose
+    3r_4s_5s_6r_3_2s_3r_4s_5s_6r_3_2s_3r_4s_5s_6r_4
   }
 
   branch from coa side left {
     coa
-    <-> . +glycine +3_hydroxyhexadecanoyl_coa
-    n_3_hydroxy_1_oxohexadecyl_glycine
+    <-> . +acetyl_coa +alpha_neu5ac_2_6_beta_d_gal_1_6_beta_d_glcl_1_3
+    alpha_neu5_7_9ac3_2_6_beta_d_gal_1_6_beta_d_glcl
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_107 [2.3.1.107] +acetyl_coa +deacetylvindorosine
-    vindorosine
+    <-> . +acetyl_coa +n_glycylclavaminate +h
+    n_acetylglycylclavaminate
   }
 }

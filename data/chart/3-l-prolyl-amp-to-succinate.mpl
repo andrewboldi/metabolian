@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-l-prolyl-amp-to-succinate "3'-L-prolyl-AMP to succinate" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     3_l_prolyl_amp
@@ -14,17 +14,5 @@ pathway 3-l-prolyl-amp-to-succinate "3'-L-prolyl-AMP to succinate" {
     aculene_b
     <-> . +akg +o2 -succinate -co2 -h2o
     aculene_a
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_6_2_1_77 [6.2.1.77] +l_lysinium +atp +amp +ppi
-    o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> . +o_s_l_lysyl_pantetheine_4_phosphoryl_l_serine_1 +amp +hplus
-    l_lysyl_5_amp
   }
 }

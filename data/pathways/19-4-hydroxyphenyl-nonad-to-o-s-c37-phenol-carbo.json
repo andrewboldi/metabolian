@@ -169,41 +169,51 @@
       }
     },
     {
-      "id": "guanosine_3_diphosphate_5_triphosphate_hexaanion",
-      "name": "guanosine 3'-diphosphate 5'-triphosphate hexaanion",
-      "short": "guanosine 3'-PP…",
-      "formula": "C10H12N5O20P5",
-      "charge": -6,
-      "xrefs": {
-        "chebi": "CHEBI:142410"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:175763"
+        "chebi": "CHEBI:57623"
       }
     },
     {
-      "id": "muurolene",
-      "name": "α-muurolene",
-      "formula": "C15H24",
+      "id": "n6_dimethylallyl_adenosine_5_triphosphate",
+      "name": "N6-(dimethylallyl)adenosine 5'-triphosphate",
+      "short": "N6-(dimethylallyl)a…",
+      "formula": "C15H20N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73532"
+      }
+    },
+    {
+      "id": "threonine",
+      "name": "L-Threonine",
+      "formula": "C4H9NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:64797"
+        "chebi": "CHEBI:57926"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "l_threonylcarbamoyladenylate",
+      "name": "L-threonylcarbamoyladenylate",
+      "short": "L-threonylcarbamoyl…",
+      "formula": "C15H19N6O11P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:73682"
       }
     }
   ],
@@ -216,17 +226,17 @@
       ]
     },
     {
-      "id": "ec_3_1_7_2",
-      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
+      "id": "ec_2_5_1_112",
+      "name": "adenylate dimethylallyltransferase (ADP/ATP-dependent)",
       "ec": [
-        "3.1.7.2"
+        "2.5.1.112"
       ]
     },
     {
-      "id": "ec_4_2_3_125",
-      "name": "alpha-muurolene synthase",
+      "id": "ec_2_7_7_87",
+      "name": "L-threonylcarbamoyladenylate synthase",
       "ec": [
-        "4.2.3.125"
+        "2.7.7.87"
       ]
     }
   ],
@@ -388,12 +398,75 @@
     },
     {
       "id": "r4",
-      "name": "guanosine-3',5'-bis(diphosphate) 3'-diphosphatase",
-      "equation": "guanosine 3'-diphosphate 5'-triphosphate + H2O = GTP + diphosphate + H(+)",
-      "ec": "3.1.7.2",
+      "name": "adenylate dimethylallyltransferase (ADP/ATP-dependent)",
+      "equation": "dimethylallyl diphosphate + ATP = N(6)-(dimethylallyl)adenosine 5'-triphosphate + diphosphate",
+      "ec": "2.5.1.112",
       "substrates": [
         {
-          "metabolite": "guanosine_3_diphosphate_5_triphosphate_hexaanion",
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_dimethylallyl_adenosine_5_triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_112"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:36331"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36331"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "L-threonylcarbamoyladenylate synthase",
+      "equation": "L-threonine + hydrogencarbonate + ATP = L-threonylcarbamoyladenylate + diphosphate + H2O",
+      "ec": "2.7.7.87",
+      "substrates": [
+        {
+          "metabolite": "threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_threonylcarbamoyladenylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
           "stoichiometry": 1
         },
         {
@@ -401,77 +474,22 @@
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
       "catalysts": [
         {
-          "enzyme": "ec_3_1_7_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:33055"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33055"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "alpha-muurolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = alpha-muurolene + diphosphate",
-      "ec": "4.2.3.125",
-      "substrates": [
-        {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "muurolene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_125"
+          "enzyme": "ec_2_7_7_87"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:33103"
+        "rhea": "RHEA:36407"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:33103"
+            "id": "RHEA:36407"
           }
         ]
       }

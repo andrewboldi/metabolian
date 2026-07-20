@@ -24,13 +24,13 @@ pathway 5-fluoro-5-deoxy-d-ribose-to-fluoroacetate "5-fluoro-5-deoxy-D-ribose…
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> ec_2_3_1_42 [2.3.1.42] +9z_octadecenoyl_coa +coa
-    1_9z_octadecenoylglycerone_3_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_2 +ubiquinone_2
+    sn_glycerol_3_phosphate
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_4_1_2_13 [4.1.2.13] +d_arabinose_5_phosphate +h
-    d_glycero_d_ido_octulose_1_8_bisphosphate
+    <-> ec_4_1_2_17 [4.1.2.17] +l_fucose_1_phosphate +s_lactaldehyde
+    h
   }
 }

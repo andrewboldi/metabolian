@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-nitrosoamino-1-3-pyr-to-phosphate "4-(Nitrosoamino)-1-(3-pyr… to phosphate" {
-  spacing 288
+  spacing 282
 
   spine at 0,0 {
     4_nitrosoamino_1_3_pyridinyl_1_butanone
@@ -38,91 +38,85 @@ pathway 4-nitrosoamino-1-3-pyr-to-phosphate "4-(Nitrosoamino)-1-(3-pyr… to pho
 
   branch from h2 side right {
     h2
-    <-> . +all_trans_phytofluene
-    all_trans_phytoene
+    <-> . +hydroxyspirilloxanthin
+    rhodovibrin
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_17_7_3 [1.17.7.3] +fmnh2 +2_c_methyl_d_erythritol_2_4_cyclic_diphosphate +h +h2o
-    2e_4_hydroxy_3_methylbut_2_enyl_diphosphate
+    <-> ec_1_14_99_46 [1.14.99.46] +nadh +fmnh2 +thymine +h +o2 +nad +h2o
+    z_2_methylureidoacrylate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_5 [1.14.14.5] +fmnh2 +h +taurine +o2 +sulfite +h2o
-    aminoacetaldehyde
+    <-> ec_1_3_8_17 [1.3.8.17] +fmnh2 +dehydro_coenzyme_f420_0
+    f420_0
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +o2 +nadph +4r_limonene_1_2_epoxide +h2o
-    nadp
+    <-> . +adp +phosphate +atp +h2o
+    9_10_dihome
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_107 [1.14.13.107] +o2 +nadph +limonene +nadp +h2o
-    limonene_1_2_epoxide
+    <-> . +adp +phosphate +atp +h2o
+    12_13_dihome
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    13_o_desmethyl_tacrolimus_13_dmt_or_m_i
+    5alpha_androstane_3alpha_17beta_diol
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    13_15_o_didesmethyl_tacrolimus
+    3alpha_hydroxy_5alpha_pregnan_20_one
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_1_10 [3.5.1.10] +co2 +z_2_methyl_3_aminoperacrylic_acid +h +h2o
-    z_2_methylureidoperacrylic_acid
+    <-> . +l_histidine +h2o +l_glutamate
+    formamide
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_99_11 [3.5.99.11] +h +2e_4z_2_hydroxymuconate +h2o
-    2e_4z_2_aminomuconic_acid
+    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +5_phospho_beta_d_ribosylamine
+    diphosphate
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    15_31_o_didesmethyl_tacrolimus
+    6_trans_leukotriene_b4
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    15_dmt_or_m_iii_15_o_desmethyl_tacrolimus
+    11z_icos_11_enoic_acid
   }
 
   branch from alpha_d_glucose_1_phosphate side left {
     alpha_d_glucose_1_phosphate
-    <-> ec_2_4_1_20 [2.4.1.20] +alpha_d_glucose +phosphate
-    d_cellobiose
+    <-> ec_2_7_1_41 [2.7.1.41] +beta_d_glucose
+    alpha_d_glucose_1_6_bisphosphate
   }
 
   branch from alpha_d_glucose_1_phosphate side right {
     alpha_d_glucose_1_phosphate
-    <-> ec_2_7_1_62 [2.7.1.62] +beta_d_glucose +h +nh4
-    phosphoramidate
+    <-> ec_2_7_1_41 [2.7.1.41] +alpha_d_glucose_1_6_bisphosphate
+    glucose
   }
 
   branch from riboflavin side left {
     riboflavin
-    <-> ec_2_7_1_42 [2.7.1.42] +fmn +alpha_d_glucose_1_phosphate +h
-    glucose
-  }
-
-  branch from riboflavin side right {
-    riboflavin
-    <-> ec_2_7_1_161 [2.7.1.161] +cdp +fmn +h
-    ctp
+    <-> . +fe +enterobactin +h +fe_enterobactin
+    4a_5_dihydroriboflavin
   }
 }

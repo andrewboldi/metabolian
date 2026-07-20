@@ -18,13 +18,13 @@ pathway combretol-to-s-adenosyl-l-methionine "combretol to S-adenosyl-L-methioni
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +3_hydroxy_5_methoxybiphenyl +s_adenosyl_l_homocysteine +h
-    3_5_dihydroxybiphenyl
+    <-> . +s_adenosyl_l_homocysteine +4_methoxyglucobrassicin +h
+    4_hydroxyglucobrassicin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +aucuparin
-    noraucuparin
+    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +r_coclaurine +h
+    r_norcoclaurine
   }
 }

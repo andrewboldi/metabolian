@@ -18,26 +18,26 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
 
   branch from 1_oleoyl_sn_glycero_3_phosphate side left {
     1_oleoyl_sn_glycero_3_phosphate
-    <-> . +arachidonoyl_coa +coa
-    1_oleoyl_2_arachidonoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
-    1_oleoyl_sn_glycero_3_phosphate
     <-> . +nonadecanoyl_coa +coa
     1_oleoyl_2_nonadecanoyl_sn_glycero_3_phosphate
   }
 
+  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
+    1_oleoyl_sn_glycero_3_phosphate
+    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
+    serine
+  }
+
   branch from fatty-acid side left {
     fatty-acid
-    <-> . +n_fatty_acyl_l_lysine +h2o
-    l_lysinium
+    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano +h2o +hplus
+    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_fatty_acyl_l_glutamine +h2o
-    glutamine
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_n_acyl_serine +h2o +hplus
+    1_acyl_2_hydroxy_sn_glycero_3_phospho_n_acyl_ser
   }
 
   branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate side left {
@@ -48,25 +48,25 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
 
   branch from atp side right {
     atp
-    <-> ec_6_3_2_4 [6.3.2.4] +d_alanyl_d_alanine +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi +h +adp +phosphate
-    udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
+    <-> . +h +adp +phosphate +h2o
+    taurolithocholate_3_sulfate
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
-    l_valine
+    <-> . +h +adp +phosphate +h2o
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +d_alanine +udp_n_acetyl_alpha_d_muramoyl_l_alanyl_gamma_d_g
-    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
+    <-> . +h +adp +phosphate +atp
+    3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    alpha_tocopherol
+    <-> . +formate +nh4
+    hydrogen_cyanide
   }
 }

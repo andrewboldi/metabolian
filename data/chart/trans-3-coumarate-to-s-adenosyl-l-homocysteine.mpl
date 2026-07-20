@@ -34,13 +34,13 @@ pathway trans-3-coumarate-to-s-adenosyl-l-homocysteine "trans-3-coumarate to S-a
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_46 [2.1.1.46] +4_hydroxyisoflavones +sam +hplus
-    4_methoxyisoflavones
+    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
+    3_4_5_o_trimethyltricetin
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_231 [2.1.1.231] +4_hydroxyflavanones +sam +hplus
-    4_methoxyflavanones
+    <-> ec_2_1_1_255 [2.1.1.255] +gpp +sam +hplus
+    e_2_methylgeranyl_diphosphate
   }
 }

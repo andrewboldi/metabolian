@@ -137,79 +137,32 @@
       }
     },
     {
-      "id": "3_disulfanyl_l_alanine",
-      "name": "3-disulfanyl-L-alanine",
-      "short": "3-disulfanyl-L-alan…",
-      "formula": "C3H7NO2S2",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58591"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "3_trisulfanyl_l_alanine",
-      "name": "3-trisulfanyl-L-alanine",
-      "short": "3-trisulfanyl-L-ala…",
-      "formula": "C3H7NO2S3",
+      "id": "2_oxoethane_1_sulfonamide",
+      "name": "2-oxoethane-1-sulfonamide",
+      "short": "2-oxoethane-1-sulfo…",
+      "formula": "C2H5NO3S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:229465"
+        "chebi": "CHEBI:231960"
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
+      "id": "z_2_aminoethene_1_so_thioperoxol",
+      "name": "(Z)-2-aminoethene-1-SO-thioperoxol",
+      "short": "2-aminoethene-1-SO-…",
+      "formula": "C2H5NOS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
-      "id": "glyoxylate",
-      "name": "Glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:36655"
-      }
-    },
-    {
-      "id": "mercaptopyruvate",
-      "name": "3-Mercaptopyruvate",
-      "formula": "C3H3O3S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57678"
-      }
-    },
-    {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57305"
-      }
-    },
-    {
-      "id": "myristoyl_coa",
-      "name": "Myristoyl-CoA (tetradecanoyl-CoA)",
-      "short": "Myristoyl-CoA…",
-      "formula": "C35H58N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57385"
-      }
-    },
-    {
-      "id": "2_methyl_3_oxopalmitoyl_coa",
-      "name": "2-methyl-3-oxopalmitoyl-CoA",
-      "short": "2-methyl-3-oxopalmi…",
-      "formula": "C38H62N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:86042"
+        "chebi": "CHEBI:231967"
       }
     },
     {
@@ -220,6 +173,25 @@
       "charge": -5,
       "xrefs": {
         "chebi": "CHEBI:57327"
+      }
+    },
+    {
+      "id": "mycophenolyl_coa",
+      "name": "mycophenolyl-CoA",
+      "formula": "C38H50N7O21P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:167447"
+      }
+    },
+    {
+      "id": "4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl",
+      "name": "4-[3-oxo-2,6-dimethyl-(6E)-octenoyl-CoA]-5-O-methyl-3-hydroxy-6-methyl-phthalide",
+      "short": "4-[3-oxo-2,6-dimeth…",
+      "formula": "C41H54N7O22P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:167867"
       }
     }
   ],
@@ -236,6 +208,13 @@
       "name": "cystathionine gamma-lyase",
       "ec": [
         "4.4.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_95",
+      "name": "2-oxoethane-1-sulfonamide synthase",
+      "ec": [
+        "1.13.11.95"
       ]
     },
     {
@@ -394,123 +373,98 @@
     },
     {
       "id": "r4",
-      "name": "S-sulfanyl-L-cysteine + L-cysteine = S-disulfanyl-L-cysteine + L-alanine",
-      "equation": "S-sulfanyl-L-cysteine + L-cysteine = S-disulfanyl-L-cysteine + L-alanine",
+      "name": "2-oxoethane-1-sulfonamide synthase",
+      "equation": "L-cysteine + 2 O2 = 2-oxoethane-1-sulfonamide + CO2 + H2O",
+      "ec": "1.13.11.95",
       "substrates": [
-        {
-          "metabolite": "3_disulfanyl_l_alanine",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "cysteine",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "3_trisulfanyl_l_alanine",
+          "metabolite": "2_oxoethane_1_sulfonamide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alanine",
+          "metabolite": "co2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_95"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:78627"
+        "rhea": "RHEA:81871"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78627"
+            "id": "RHEA:81871"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-cysteine + glyoxylate = 2-oxo-3-sulfanylpropanoate + glycine",
-      "equation": "L-cysteine + glyoxylate = 2-oxo-3-sulfanylpropanoate + glycine",
+      "name": "L-cysteine + O2 = (Z)-2-aminoethene-1-SO-thioperoxol + CO2 + H2O",
+      "equation": "L-cysteine + O2 = (Z)-2-aminoethene-1-SO-thioperoxol + CO2 + H2O",
       "substrates": [
         {
           "metabolite": "cysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glyoxylate",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "mercaptopyruvate",
+          "metabolite": "z_2_aminoethene_1_so_thioperoxol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glycine",
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:81631"
+        "rhea": "RHEA:82007"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:81631"
+            "id": "RHEA:82007"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "propanoyl-CoA + tetradecanoyl-CoA = 3-oxo-2-methylhexadecanoyl-CoA + CoA",
-      "equation": "propanoyl-CoA + tetradecanoyl-CoA = 3-oxo-2-methylhexadecanoyl-CoA + CoA",
-      "substrates": [
-        {
-          "metabolite": "propionyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "myristoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_methyl_3_oxopalmitoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:46344"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46344"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "ethylmalonyl-CoA decarboxylase",
       "equation": "(S)-methylmalonyl-CoA + H(+) = propanoyl-CoA + CO2",
       "ec": "4.1.1.94",
@@ -540,7 +494,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
         "rhea": "RHEA:61340"
       },
@@ -550,6 +504,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:61340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "mycophenolyl-CoA + propanoyl-CoA = (6E)-8-(4-hydroxy-6-methoxy-7-methyl-3-oxo-1,3-dihyd...",
+      "equation": "mycophenolyl-CoA + propanoyl-CoA = (6E)-8-(4-hydroxy-6-methoxy-7-methyl-3-oxo-1,3-dihydro-2-benzofuran-5-yl)-3-oxo-2,6-dimethyloct-6-enoyl-CoA + CoA",
+      "substrates": [
+        {
+          "metabolite": "mycophenolyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 7,
+      "xrefs": {
+        "rhea": "RHEA:67236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67236"
           }
         ]
       }

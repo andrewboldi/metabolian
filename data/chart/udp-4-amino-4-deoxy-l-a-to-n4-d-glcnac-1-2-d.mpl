@@ -24,14 +24,14 @@ pathway udp-4-amino-4-deoxy-l-a-to-n4-d-glcnac-1-2-d "UDP-4-amino-4-deoxy-β-L-a
 
   branch from glutamate side right {
     glutamate
-    <-> ec_2_6_1_90 [2.6.1.90] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +akg
-    dtdp_3_dehydro_6_deoxy_d_galactose
+    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +akg
+    dtdp_3_dehydro_6_deoxy_d_glucose
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_89 [2.6.1.89] +dtdp_3_azaniumyl_3_6_dideoxy_d_glucose +akg
-    dtdp_3_dehydro_6_deoxy_d_glucose
+    <-> ec_2_6_1_93 [2.6.1.93] +neamine +akg
+    6_oxoparomamine
   }
 
   branch from udp_d_xylose side right {

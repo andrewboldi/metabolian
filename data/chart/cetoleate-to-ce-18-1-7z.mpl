@@ -44,14 +44,14 @@ pathway cetoleate-to-ce-18-1-7z "cetoleate to CE 18:1(7Z)" {
 
   branch from ppi side left {
     ppi
-    <-> . +6_1s_5s_4_oxo_5_2z_pent_2_en_1_yl_cyclopent_2_en +atp +coa +amp
-    9s_13s_1a_1b_dinor_12_oxo_10_15_phytodienoyl_co
+    <-> . +fpp
+    sesquisabinene_b
   }
 
   branch from ppi side right {
     ppi
-    <-> . +c_terminal_gly_gly_1 +atp +hplus
-    c_terminal_gly_gly_amp_1_group
+    <-> . +fpp
+    sesquisabinene_a
   }
 
   branch from 2e_11z_docosadi_2_11_enoyl_coa side left {
@@ -98,13 +98,13 @@ pathway cetoleate-to-ce-18-1-7z "cetoleate to CE 18:1(7Z)" {
 
   branch from 7z_octadecenoyl_coa side right {
     7z_octadecenoyl_coa
-    <-> . +fad +hplus +fadh2
-    2e_7z_octadecadi_2_7_enoyl_coa
+    <-> . +octadecanoyl_coa +h +o2 +nadph +h2o
+    nadp
   }
 
   branch from 7z_octadecenoyl_coa side left {
     7z_octadecenoyl_coa
-    <-> . +coa +h2o
-    7z_octadecenoic_acid
+    <-> . +acetyl_coa +fadh2 +h +fad +coa +nad +h2o
+    nadh
   }
 }

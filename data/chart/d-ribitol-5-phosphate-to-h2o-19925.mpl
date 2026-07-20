@@ -26,14 +26,14 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> . +n_methyl_argininium_1 +akg +o2 +succinate +co2
-    l_argininium
+    <-> ec_1_14_13_247 [1.14.13.247] +l_proline_betaine +nadh +o2 +hplus +nad +h2o
+    n_methylproline
   }
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> . +akg +o2 +l_argininium +succinate +co2
-    n_n_dimethyl_l_arginine_1
+    <-> . +2_methyl_l_serine
+    alanine
   }
 
   branch from 2e_3_4_hydroxyphenyl_2_isocyanoprop_2_enoate side right {
@@ -44,14 +44,14 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> . +l_asparagine +akg +o2 +co2
+    3s_3_hydroxy_l_asparagine
   }
 
   branch from succinate side right {
     succinate
-    <-> . +2_4_dichlorophenoxy_acetate +akg +o2 +glyoxylate +co2
-    2_4_dichlorophenol
+    <-> ec_1_14_11_n4 [1.14.11.n4] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
   }
 
   branch from 2e_3_3_4_dioxocyclohexa_1_5_dien_1_yl_2_isocyan side left {
@@ -62,13 +62,13 @@ pathway d-ribitol-5-phosphate-to-h2o-19925 "D-ribitol 5-phosphate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +glycerophosphatidylethanolamine +9z_octadecenoate +h
-    2_acyl_sn_glycero_3_phosphoethanolamine_n_c18_1
+    <-> ec_3_6_3_2 [3.6.3.2] +h +adp +mg +phosphate +mg
+    atp
   }
 
   branch from h2o side left {
     h2o
-    <-> . +leukotriene_f4_cytosol +glycine
-    leukotriene_c4
+    <-> . +2_methylfumaryl_coa
+    3s_citramalyl_coa
   }
 }

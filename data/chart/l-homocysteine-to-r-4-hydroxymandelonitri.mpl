@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydroxymandelonitri…" {
-  spacing 270
+  spacing 258
 
   spine at 0,0 {
     l_homocysteine
@@ -16,45 +16,33 @@ pathway l-homocysteine-to-r-4-hydroxymandelonitri "L-homocysteine to (R)-4-hydro
     udp_alpha_d_glucose
   }
 
-  branch from hydrogen_cyanide side left {
-    hydrogen_cyanide
-    <-> ec_3_2_1_21 [3.2.1.21] +4_hydroxybenzaldehyde +taxiphyllin +h2o
-    beta_d_glucose
-  }
-
-  branch from hydrogen_cyanide side right {
-    hydrogen_cyanide
-    <-> ec_1_14_17_4 [1.14.17.4] +l_dehydroascorbic_acid +co2 +ethene +h2o +h +l_ascorbate +o2
-    1_aminocyclopropane_1_carboxylate
-  }
-
-  branch from taxiphyllin side left {
-    taxiphyllin
-    <-> ec_2_4_1_178 [2.4.1.178] +udp +h +udp_alpha_d_glucose
-    s_4_hydroxymandelonitrile
+  branch from h2o side left {
+    h2o
+    <-> . +nitrite +menaquinone_2 +menaquinol
+    nitrate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +p_dimethylamino_cinnamate +h +nad
-    4_dimethylaminocinnamaldehyde
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +4_methoxybenzoate +nad
-    4_methoxybenzaldehyde
-  }
-
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +16_alpha_hydroxygypsogenate_28_beta_d_glucoside
-    16_hydroxygypsogenate
+    <-> . +2_methoxy_6_all_trans_octaprenyl_phenol +o2
+    6_methoxy_2_all_trans_octaprenyl_1_4_benzoquinon
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +medicagenate_23_o_beta_d_glucoside
-    medicagenic_acid
+    <-> ec_2_4_1_195 [2.4.1.195] +udp +4_methylthiobutyl_desulfoglucosinolate +h
+    z_omega_methylsulfanyl_pentyl_thiohydroximate
+  }
+
+  branch from udp_alpha_d_glucose side right {
+    udp_alpha_d_glucose
+    <-> ec_2_4_1_195 [2.4.1.195] +5_methylsulfanyl_pentyl_desulfoglucosinolate +udp +h
+    z_omega_methylsulfanyl_hexyl_thiohydroximate
+  }
+
+  branch from r_4_hydroxymandelonitrile side left {
+    r_4_hydroxymandelonitrile
+    <-> .
+    s_4_hydroxymandelonitrile
   }
 }

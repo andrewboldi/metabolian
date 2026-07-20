@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleoside 5'-diphosphate" {
-  spacing 264
+  spacing 258
 
   spine at 0,0 {
     ndp_d_glucose
@@ -18,14 +18,14 @@ pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleosid
 
   branch from nucleoside_5_diphosphate side left {
     nucleoside_5_diphosphate
-    <-> ec_2_7_4_4 [2.7.4.4] +atp +adp
-    nucleoside_5_monophosphate
+    <-> ec_2_4_1_245 [2.4.1.245] +ndp_d_glucose +glucose +hplus
+    trehalose
   }
 
   branch from nucleoside_5_diphosphate side right {
     nucleoside_5_diphosphate
-    <-> ec_2_4_1_245 [2.4.1.245] +ndp_d_glucose +glucose +hplus
-    trehalose
+    <-> . +ribonucleoside_5_diphosphate_d_glucose +g6p +hplus
+    trehalose_6_phosphate
   }
 
   branch from sucrose side left {
@@ -42,13 +42,7 @@ pathway ndp-d-glucose-to-nucleoside-5-diphosphate "NDP-α-D-glucose to nucleosid
 
   branch from nucleoside_5_triphoshate side left {
     nucleoside_5_triphoshate
-    <-> ec_3_6_1_9 [3.6.1.9] +h2o +nucleoside_5_monophosphate +hplus
-    ppi
-  }
-
-  branch from nucleoside_5_triphoshate side right {
-    nucleoside_5_triphoshate
-    <-> . +pyruvate +nucleoside_5_diphosphate +hplus
-    phosphonatoenolpyruvate
+    <-> ec_3_6_1_5 [3.6.1.5] +h2o +pi +hplus
+    nucleoside_5_monophosphate
   }
 }

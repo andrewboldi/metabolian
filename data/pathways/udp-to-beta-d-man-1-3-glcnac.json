@@ -110,46 +110,61 @@
       }
     },
     {
-      "id": "apigeninidin_5_o_glucoside",
-      "name": "apigeninidin 5-O-glucoside",
-      "short": "apigeninidin…",
-      "formula": "C21H20O9",
-      "charge": 0,
+      "id": "albireodelphin",
+      "name": "Albireodelphin",
+      "formula": "C42H47O25",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1368261"
+        "chebi": "CHEBI:80469"
       }
     },
     {
-      "id": "apigeninidin",
-      "name": "Apigeninidin",
-      "formula": "C15H10O4",
-      "charge": 0,
+      "id": "delphinidin_3_glucoside_5_caffoyl_glucoside",
+      "name": "Delphinidin 3-glucoside 5-caffoyl-glucoside",
+      "short": "Delphinidin…",
+      "formula": "C36H37O20",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1368493"
+        "chebi": "CHEBI:80440"
       }
     },
     {
-      "id": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
-      "name": "cyanidin 3-O-(6-O-glucosyl-2-O-xylosylgalactoside) betaine",
-      "short": "cyanidin 3-O-(6-O-g…",
-      "formula": "C32H38O20",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368532"
-      }
-    },
-    {
-      "id": "cyanidin_3_o_d_xylosyl_1_2_d_galactoside",
-      "name": "cyanidin 3-O-[β-D-xylosyl-(1→2)-β-D-galactoside]",
-      "short": "cyanidin 3-O-[β-D-x…",
-      "formula": "C26H27O15",
+      "id": "oleanolate_3_beta_d_glucuronoside_3_1_galactosid",
+      "name": "oleanolate-3-beta-D-glucuronoside-(3,1)-galactoside-(4,1)-glucoside-28-glucoside",
+      "short": "oleanolate-3-beta-D…",
+      "formula": "C54H85O24",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:71516"
+        "metanetx": "MNXM12517"
+      }
+    },
+    {
+      "id": "oleanolate_3_beta_d_glucuronoside_3_1_galactosid",
+      "name": "oleanolate 3-beta-D-glucuronoside-(3,1)-galactoside-28-glucoside",
+      "short": "oleanolate…",
+      "formula": "C48H75O19",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1372530"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_238",
+      "name": "delphinidin 3,5-di-O-glucoside 3'-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.238"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_298",
+      "name": "anthocyanidin 3-O-glucoside 5-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.298"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -321,14 +336,62 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR197634",
+      "name": "delphinidin 3,5-di-O-glucoside 3'-O-glucosyltransferase",
+      "ec": "2.4.1.238",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "apigeninidin_5_o_glucoside",
+          "metabolite": "albireodelphin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "delphinidin_3_glucoside_5_caffoyl_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_238"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR197671"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197671"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "Reaction MNXR197678",
+      "substrates": [
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oleanolate_3_beta_d_glucuronoside_3_1_galactosid",
           "stoichiometry": 1
         },
         {
@@ -342,59 +405,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "apigeninidin",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR197634"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR197634"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "Reaction MNXR197639",
-      "substrates": [
-        {
-          "metabolite": "udp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_alpha_d_glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "cyanidin_3_o_d_xylosyl_1_2_d_galactoside",
+          "metabolite": "oleanolate_3_beta_d_glucuronoside_3_1_galactosid",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR197639"
+        "metanetx": "MNXR197678"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR197639"
+            "id": "MNXR197678"
           }
         ]
       }

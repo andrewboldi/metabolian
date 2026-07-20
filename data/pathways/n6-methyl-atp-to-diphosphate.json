@@ -166,59 +166,31 @@
       }
     },
     {
-      "id": "5_end_purine_ribonucleotide_5_triphosphate_4",
-      "name": "5'-end purine ribonucleotide 5'-triphosphate(4−)",
-      "short": "5'-end purine…",
-      "formula": "C5H7O13P3R",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:138288"
-      }
-    },
-    {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58189"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "5_5_triphosphoguanosine_purine_ribonucleotide_3",
-      "name": "5'-(5'-triphosphoguanosine)-(purine-ribonucleotide)(3−)",
-      "short": "5'-(5'-triphosphogu…",
-      "formula": "C15H19N5O17P3R",
-      "charge": -3,
+      "id": "2z_6e_hedycaryol",
+      "name": "(2Z,6E)-hedycaryol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:136896"
+        "chebi": "CHEBI:138044"
       }
     },
     {
-      "id": "r_lipoate",
-      "name": "(R)-lipoate",
-      "formula": "C8H13O2S2",
-      "charge": -1,
+      "id": "10_epi_cubebol",
+      "name": "(−)-10-epi-cubebol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:83088"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "r_lipoyl_gmp",
-      "name": "(R)-lipoyl-GMP",
-      "formula": "C18H25N5O9PS2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:86460"
+        "chebi": "CHEBI:138045"
       }
     },
     {
@@ -240,22 +212,22 @@
       }
     },
     {
-      "id": "2_deoxyinosine_5_phosphate",
-      "name": "2'-deoxyinosine 5'-phosphate",
-      "short": "2'-deoxyinosine 5'-P",
-      "formula": "C10H11N4O7P",
+      "id": "2_deoxyguanosine_5_monophosphate",
+      "name": "2'-deoxyguanosine 5'-monophosphate",
+      "short": "2'-deoxyguanosine…",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:61194"
+        "chebi": "CHEBI:57673"
       }
     },
     {
-      "id": "2_deoxyinosine",
-      "name": "2'-deoxyinosine",
-      "formula": "C10H12N4O4",
+      "id": "2_deoxyguanosine",
+      "name": "2'-deoxyguanosine",
+      "formula": "C10H13N5O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:28997"
+        "chebi": "CHEBI:17172"
       }
     }
   ],
@@ -265,6 +237,20 @@
       "name": "IMP dehydrogenase",
       "ec": [
         "1.1.1.205"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_187",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "ec": [
+        "4.2.3.187"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_175",
+      "name": "10-epi-cubebol synthase",
+      "ec": [
+        "4.2.3.175"
       ]
     },
     {
@@ -511,25 +497,22 @@
     },
     {
       "id": "r6",
-      "name": "a 5'-end triphospho-(purine-ribonucleoside) in mRNA + GDP + H(+) = a 5'-end (5'-triphos...",
-      "equation": "a 5'-end triphospho-(purine-ribonucleoside) in mRNA + GDP + H(+) = a 5'-end (5'-triphosphoguanosine)-(purine-ribonucleoside) in mRNA + diphosphate",
+      "name": "(2Z,6E)-hedycaryol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (2Z,6E)-hedycaryol + diphosphate",
+      "ec": "4.2.3.187",
       "substrates": [
         {
-          "metabolite": "5_end_purine_ribonucleotide_5_triphosphate_4",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_5_triphosphoguanosine_purine_ribonucleotide_3",
+          "metabolite": "2z_6e_hedycaryol",
           "stoichiometry": 1
         },
         {
@@ -537,42 +520,44 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_187"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46292"
+        "rhea": "RHEA:54060"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46292"
+            "id": "RHEA:54060"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
-      "equation": "(R)-lipoate + GTP + H(+) = (R)-lipoyl-GMP + diphosphate",
+      "name": "10-epi-cubebol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = 10-epi-cubebol + diphosphate",
+      "ec": "4.2.3.175",
       "substrates": [
         {
-          "metabolite": "r_lipoate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_lipoyl_gmp",
+          "metabolite": "10_epi_cubebol",
           "stoichiometry": 1
         },
         {
@@ -580,17 +565,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_175"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:46700"
+        "rhea": "RHEA:54064"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46700"
+            "id": "RHEA:54064"
           }
         ]
       }
@@ -642,11 +632,11 @@
     },
     {
       "id": "r9",
-      "name": "dIMP + inosine = 2'-deoxyinosine + IMP",
-      "equation": "dIMP + inosine = 2'-deoxyinosine + IMP",
+      "name": "dGMP + inosine = 2'-deoxyguanosine + IMP",
+      "equation": "dGMP + inosine = 2'-deoxyguanosine + IMP",
       "substrates": [
         {
-          "metabolite": "2_deoxyinosine_5_phosphate",
+          "metabolite": "2_deoxyguanosine_5_monophosphate",
           "stoichiometry": 1
         },
         {
@@ -656,7 +646,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_deoxyinosine",
+          "metabolite": "2_deoxyguanosine",
           "stoichiometry": 1
         },
         {
@@ -667,14 +657,14 @@
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:69572"
+        "rhea": "RHEA:69580"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69572"
+            "id": "RHEA:69580"
           }
         ]
       }

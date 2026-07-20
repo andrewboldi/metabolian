@@ -50,26 +50,26 @@ pathway ephedrinium-to-h2o "(−)-ephedrinium to H2O" {
 
   branch from s_methyl_5_thioadenosine side right {
     s_methyl_5_thioadenosine
-    <-> . +spermidine +co2 +s_adenosyl_l_methionine
-    putrescine
-  }
-
-  branch from s_methyl_5_thioadenosine side left {
-    s_methyl_5_thioadenosine
     <-> ec_2_5_1_38 [2.5.1.38] +h +isonocardicin_a +s_adenosyl_l_methionine
     nocardicin_f
   }
 
+  branch from s_methyl_5_thioadenosine side left {
+    s_methyl_5_thioadenosine
+    <-> ec_2_3_1_229 [2.3.1.229] +n_4_coumaroyl_l_homoserine_lactone +h +coa +s_adenosyl_l_methionine
+    trans_4_coumaroyl_coa
+  }
+
   branch from co2 side right {
     co2
-    <-> . +acetoacetyl_coa +1_piperideinium +h2o +h +coa
-    pelletierine
+    <-> . +deacetylcephalosporin_c +succinate +h2o +penicillin_n +o2
+    2_oxoglutarate
   }
 
   branch from co2 side left {
     co2
-    <-> . +deacetylcephalosporin_c +succinate +h2o +penicillin_n +o2
-    2_oxoglutarate
+    <-> . +4_4_dichlorodiphenylmethane
+    bis_4_chlorophenyl_acetic_acid
   }
 
   branch from 3_aminotridec_2_en_4_one side right {
@@ -80,25 +80,25 @@ pathway ephedrinium-to-h2o "(−)-ephedrinium to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +5z_8z_11z_14z_17z_eicosapentaenoyl_coa +r_carnitine
-    timnodonyl_carnitine
+    <-> ec_2_3_1_57 [2.3.1.57] +acetyl_coa +primary_diamine
+    n_acetyldiamine
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +vaccenyl_coenzyme_a +h
-    vaccenyl_carnitine
+    <-> ec_2_3_1_118 [2.3.1.118] +acetyl_coa +n_phenylhydroxylamine
+    n_acetyloxy_benzenamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_5 [3.6.3.5] +h +adp +zn +phosphate +zn
-    atp
+    <-> ec_3_5_1_17 [3.5.1.17] +l_lysine +acetate
+    n_6_acetyl_l_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    1_pentanesulfonate
+    <-> ec_3_6_1_14 [3.6.1.14] +itp +h +phosphate
+    inosine_5_tetraphosphate
   }
 }

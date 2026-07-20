@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-oxoglutaramate-to-h2o-null "2-oxoglutaramate to H2O" {
-  spacing 276
+  spacing 270
 
   spine at 0,0 {
     2_oxoglutaramate
@@ -20,14 +20,14 @@ pathway 2-oxoglutaramate-to-h2o-null "2-oxoglutaramate to H2O" {
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> ec_4_3_3_6 [4.3.3.6] +glyceraldehyde_3_phosphate +d_ribulose_5_phosphate +h +l_glutamate +phosphate +h2o
+    <-> ec_4_3_3_6 [4.3.3.6] +alpha_d_ribofuranose_5_phosphate +d_glyceraldehyde_3_phosphate +h +l_glutamate +phosphate +h2o
     pyridoxal_5_phosphate
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> ec_4_3_3_6 [4.3.3.6] +d_glyceraldehyde_3_phosphate +d_ribulose_5_phosphate +pyridoxal_5_phosphate +h +phosphate +h2o
-    l_glutamate
+    <-> . +l_cysteine +l_methionine +h2o
+    cystyl_glutaminyl_methionine
   }
 
   branch from 3_hydroxypyruvate side left {
@@ -36,45 +36,39 @@ pathway 2-oxoglutaramate-to-h2o-null "2-oxoglutaramate to H2O" {
     dihydroxyfumarate
   }
 
-  branch from 3_hydroxypyruvate side right {
-    3_hydroxypyruvate
-    <-> . +fadh2 +h +nh4 +d_serine +h2o
-    fad
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +isatin +h
+    2_3_dihydroxyindole
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +2_octanone
-    2s_octan_2_ol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
-    heptan_2r_ol
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_4_14_5 [3.4.14.5] +l_alanine +gly_pro
-    gly_pro_ala
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +6_tert_butyl_2_3_epoxy_5_cyclohexene_1_4_dione +h
+    6_tert_butyl_2_3_epoxy_4_hydroxy_5_cyclohexene_1
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_3 [3.2.1.3] +isomaltose
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +4_methylumbelliferone
     beta_d_glucose
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +fluoroacetyl_coa +amp +coa
-    fluoroacetate
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_methylumbelliferone
+    4_methylumbelliferyl_d_galactoside
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_xylose +h +adp
-    alpha_d_xylose_1_phosphate
+    <-> . +l_alanine +l_histidine +h +adp +phosphate
+    ala_his
+  }
+
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    pb
   }
 }

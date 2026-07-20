@@ -18,14 +18,14 @@ pathway 4-hydroxy-l-tryptophan-to-s-adenosyl-l-homocyste "4-hydroxy-L-tryptophan
 
   branch from co2 side left {
     co2
-    <-> . +nyasol
-    4_coumaryl_4_coumarate
+    <-> ec_4_1_1_68 [4.1.1.68] +2_hydroxyhepta_2_4_dienedioic_acid
+    5_carboxy_2_oxohept_3_enedioate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_42 [4.1.1.42] +r_carnitine +h
-    2_methylcholine
+    <-> ec_4_1_1_77 [4.1.1.77] +2_hydroxy_cis_hex_2_4_dienoate
+    2_oxo_5_methyl_cis_muconate
   }
 
   branch from norbaeocystin side left {
@@ -36,13 +36,13 @@ pathway 4-hydroxy-l-tryptophan-to-s-adenosyl-l-homocyste "4-hydroxy-L-tryptophan
 
   branch from sah side right {
     sah
-    <-> . +4_demethylwyosine_5_monophosphate_1 +sam +hplus
-    isowyosine_5_monophosphate_1
+    <-> ec_2_1_1_257 [2.1.1.257] +pseudouridine_5_phosphate_1 +sam +hplus
+    n1_methylpseudouridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_42 [2.1.1.42] +3_hydroxyflavonoid +sam +hplus
+    3_methoxyflavones
   }
 }

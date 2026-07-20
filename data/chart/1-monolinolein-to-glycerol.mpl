@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monolinolein-to-glycerol "1-monolinolein to glycerol" {
-  spacing 228
+  spacing 210
 
   spine at 0,0 {
     1_monolinolein
@@ -18,37 +18,19 @@ pathway 1-monolinolein-to-glycerol "1-monolinolein to glycerol" {
 
   branch from linoleate side left {
     linoleate
-    <-> ec_1_13_11_58 [1.13.11.58] +o2
-    9_s_hpode
-  }
-
-  branch from linoleate side right {
-    linoleate
     <-> ec_1_13_11_61 [1.13.11.61] +o2
     9_r_hpode
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> . +3_acyl_sn_glycerol +h2o +hplus
-    fatty-acid
-  }
-
-  branch from glycerol side right {
-    glycerol
-    <-> . +r_s_glycero_1_phospho_3_9z_octadecenoyl_1_glyce +1_oleoyl_sn_glycerol
-    s_s_bis_3_oleoylglycero_1_phosphate
+  branch from linoleate side right {
+    linoleate
+    <-> ec_1_13_11_62 [1.13.11.62] +o2
+    8e_10r_12z_10_hydroperoxy_8_12_octadecadienoate
   }
 
   branch from d_glyceraldehyde side left {
     d_glyceraldehyde
-    <-> . +3_hydroxypyruvate
-    3r_4s_5r_3_4_5_6_tetrahydroxy_2_oxohexanoate
-  }
-
-  branch from d_glyceraldehyde side right {
-    d_glyceraldehyde
-    <-> . +3_hydroxypyruvate
-    2_dehydro_d_galactonate
+    <-> . +pyruvate
+    2_keto_3_deoxy_l_galactonate
   }
 }

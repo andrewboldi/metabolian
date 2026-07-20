@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-eriodictyol-to-fmn",
+  "name": "(S)-eriodictyol to FMN",
+  "category": "other",
+  "summary": "A 3-step route from (S)-eriodictyol to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199624"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_eriodictyol",
+      "name": "(S)-eriodictyol",
+      "formula": "C15H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1326"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "eriodictyol_7_o_d_glucopyranoside",
+      "name": "eriodictyol 7-O-β-D-glucopyranoside",
+      "short": "eriodictyol…",
+      "formula": "C21H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139458"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "eriodictyol",
+      "name": "eriodictyol",
+      "formula": "C15H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28412"
+      }
+    },
+    {
+      "id": "d_glucose",
+      "name": "β-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15903"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2s_2_hydroxyeriodictyol",
+      "name": "(2S)-2-hydroxyeriodictyol",
+      "short": "2-hydroxyeriodictyol",
+      "formula": "C15H12O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141995"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_62",
+      "name": "glycosylceramidase",
+      "ec": [
+        "3.2.1.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glycosylceramidase",
+      "ec": "3.2.1.62",
+      "substrates": [
+        {
+          "metabolite": "s_eriodictyol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eriodictyol_7_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "eriodictyol-7-O-beta-D-glucoside + H2O = (S)-eriodictyol + beta-D-glucose",
+      "equation": "eriodictyol-7-O-beta-D-glucoside + H2O = (S)-eriodictyol + beta-D-glucose",
+      "substrates": [
+        {
+          "metabolite": "eriodictyol_7_o_d_glucopyranoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "eriodictyol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:69675"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69675"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(S)-eriodictyol + reduced [NADPH--hemoprotein reductase] + O2 = (2S)-2-hydroxyeriodicty...",
+      "equation": "(S)-eriodictyol + reduced [NADPH--hemoprotein reductase] + O2 = (2S)-2-hydroxyeriodictyol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "eriodictyol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_2_hydroxyeriodictyol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57596"
+          }
+        ]
+      }
+    }
+  ]
+}

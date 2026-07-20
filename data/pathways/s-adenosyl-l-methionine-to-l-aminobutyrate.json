@@ -1,0 +1,262 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-adenosyl-l-methionine-to-l-aminobutyrate",
+  "name": "S-adenosyl-L-methionine to L-α-aminobutyrate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-adenosyl-L-methionine zwitterion to L-α-aminobutyrate zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21744"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59789"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "1_aminocyclopropanecarboxylic_acid",
+      "name": "1-aminocyclopropanecarboxylic acid",
+      "short": "1-aminocyclopropane…",
+      "formula": "C4H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58360"
+      }
+    },
+    {
+      "id": "5_s_methyl_5_thioadenosine",
+      "name": "5'-S-methyl-5'-thioadenosine",
+      "short": "5'-S-methyl-5'-thio…",
+      "formula": "C11H15N5O3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17509"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "oxobut",
+      "name": "2-Oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16763"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "2_oxoglutaramate",
+      "name": "2-oxoglutaramate",
+      "formula": "C5H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "l_aminobutyrate",
+      "name": "L-α-aminobutyrate",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:74359"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_14",
+      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "ec": [
+        "4.4.1.14"
+      ]
+    },
+    {
+      "id": "ec_3_5_99_7",
+      "name": "1-aminocyclopropane-1-carboxylate deaminase",
+      "ec": [
+        "3.5.99.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "equation": "S-adenosyl-L-methionine = 1-aminocyclopropane-1-carboxylate + S-methyl-5'-thioadenosine + H(+)",
+      "ec": "4.4.1.14",
+      "substrates": [
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_aminocyclopropanecarboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_s_methyl_5_thioadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-aminocyclopropane-1-carboxylate deaminase",
+      "equation": "1-aminocyclopropane-1-carboxylate + H2O = 2-oxobutanoate + NH4(+)",
+      "ec": "3.5.99.7",
+      "substrates": [
+        {
+          "metabolite": "1_aminocyclopropanecarboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_99_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16933"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16933"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxobutanoate + L-glutamine = 2-oxoglutaramate + (2S)-2-aminobutanoate",
+      "equation": "2-oxobutanoate + L-glutamine = 2-oxoglutaramate + (2S)-2-aminobutanoate",
+      "substrates": [
+        {
+          "metabolite": "oxobut",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_aminobutyrate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66116"
+          }
+        ]
+      }
+    }
+  ]
+}

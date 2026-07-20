@@ -42,25 +42,25 @@ pathway s-1-2-dichlorovinyl-glut-to-dichloroacetyl-chlor "S-(1,2-Dichlorovinyl)g
 
   branch from nadp side left {
     nadp
-    <-> . +dtdp_4_oxo_2_6_dideoxy_d_allose +h +nadph
-    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
+    <-> . +22_hydroxy_docosanoyl_coa +h +nadph
+    22_oxo_docosanoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> . +3_oxoribostamycin +h +nadph
-    xylostasin
+    <-> . +h +nadph +22_oxo_docosanoyl_coa +h2o
+    22_carboxy_docosanoyl_coa
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat +h +diphosphate
-    precursor_z_hydrate
+    <-> . +holyrine_b
+    o_demethyl_n_demethyl_staurosporine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +dtdp_4_oxo_alpha_d_xylose
-    dtdp_4_oxo_2_deoxy_alpha_d_pentos_2_ene
+    <-> . +melatonin +h2o2
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 }

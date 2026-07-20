@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphenol" {
-  spacing 286
+  spacing 274
 
   spine at 0,0 {
     shikimate
@@ -24,14 +24,14 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_52 [1.14.14.52] +4s_limonene +fmnh2 +o2 +h2o +hplus
-    s_perillyl_alcohol
+    <-> ec_1_14_14_57 [1.14.14.57] +lithocholate +fmnh2 +o2 +h2o +hplus
+    hyodeoxycholate
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_19_66 [1.14.19.66] +r_n_methylcoclaurinium +s_n_methylcoclaurinium +fmnh2 +o2 +h2o +hplus
-    berbamuninium
+    <-> . +n_hydroxy_l_tyrosinate +fmnh2 +o2 +h2o +hplus
+    n_n_dihydroxy_l_tyrosinate
   }
 
   branch from shikimate side left {
@@ -40,46 +40,34 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
     3_dehydroshikimate
   }
 
-  branch from shikimate side right {
-    shikimate
-    <-> . +1_4_benzoquinones +3_dehydroshikimate
-    hydroquinones
+  branch from trans_caffeate side right {
+    trans_caffeate
+    <-> . +udp_d_glucose +udp
+    1_caffeoyl_d_glucose
   }
 
   branch from trans_caffeate side left {
     trans_caffeate
-    <-> ec_3_1_1_42 [3.1.1.42] +chlorogenate +h2o +hplus
-    quinate
-  }
-
-  branch from trans_caffeate side right {
-    trans_caffeate
-    <-> ec_1_13_11_22 [1.13.11.22] +o2 +hplus
-    3_2_carboxylatoethenyl_cis_cis_muconate
-  }
-
-  branch from trans_ferulate side left {
-    trans_ferulate
-    <-> . +h2o +coa +hplus
-    trans_feruloyl_coa
+    <-> . +malonyl-coa +atp +hplus +amp +co2 +ppi +coa
+    hispidin
   }
 
   branch from trans_ferulate side right {
     trans_ferulate
-    <-> . +udp_d_glucuronate +udp +hplus
-    e_4_o_d_glucuronosyl_ferulate
+    <-> . +udp_d_glucuronate +udp
+    e_ferulic_acid_d_glucuronate_ester
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_158 [2.1.1.158] +xanthosine +sam
-    7_methylxanthosine
+    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
+    6_methoxymellein
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_53 [2.1.1.53] +1_4_butanediammonium +sam +hplus
-    n_methylputrescinium
+    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
+    palmatine
   }
 
   branch from 2_methoxy_4_vinylphenol side left {

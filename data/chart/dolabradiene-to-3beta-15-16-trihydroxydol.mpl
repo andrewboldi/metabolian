@@ -18,13 +18,13 @@ pathway dolabradiene-to-3beta-15-16-trihydroxydol "dolabradiene to 3beta,15,16-t
 
   branch from fmn side left {
     fmn
-    <-> . +6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    28_norteasterone
+    <-> . +longiborneol +fmnh2 +o2 +h2o +hplus
+    culmorin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +3_dehydro_6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    6_dehydro_28_norteasterone
+    <-> . +5_pregnan_3_11_20_trione +fmnh2 +o2 +h2o +hplus
+    17_hydroxy_5_pregnan_3_11_20_trione
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-nadp "UDP to NADP" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     udp
@@ -22,38 +22,26 @@ pathway udp-to-nadp "UDP to NADP" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +h +3_beta_d_glucopyranosyl_2_hydroxy_beta_oxodihydr
-    1_2_hydroxyphenyl_3_phenylpropane_1_3_dione
+    <-> . +udp +h +2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
+    2_2_bis_4_hydroxy_3_methybut_2_enyl_beta_beta_ca
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +h +nothofagin
-    phloretin
-  }
-
-  branch from curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc side left {
-    curcumin_4_o_beta_d_gentiobiosyl_4_o_beta_d_gluc
-    <-> . +udp +h +udp_alpha_d_glucose
-    curcumin_diglucoside
-  }
-
-  branch from curcumin_4_o_beta_d_gentiobioside side right {
-    curcumin_4_o_beta_d_gentiobioside
-    <-> . +udp +h +udp_alpha_d_glucose
-    curcumin_4_o_beta_d_gentiotrioside
+    <-> . +udp +decaprenoxanthin_diglucoside +h
+    decaprenoxanthin_monoglucoside
   }
 
   branch from curcumin_4_o_beta_d_gentiobioside side left {
     curcumin_4_o_beta_d_gentiobioside
     <-> . +udp +h +udp_alpha_d_glucose
-    curcumin_4_o_d_gentiotrioside
+    curcumin_4_o_beta_d_gentiotrioside
   }
 
-  branch from curcumin_monoglucoside side right {
-    curcumin_monoglucoside
+  branch from curcumin_4_o_beta_d_gentiobioside side right {
+    curcumin_4_o_beta_d_gentiobioside
     <-> . +udp +h +udp_alpha_d_glucose
-    curcumin
+    curcumin_4_o_d_gentiotrioside
   }
 
   branch from curcumin side left {
@@ -70,13 +58,13 @@ pathway udp-to-nadp "UDP to NADP" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +d_threitol +h +nadph
-    d_threose
+    <-> ec_1_1_1_21 [1.1.1.21] +d_arabinitol +h +nadph
+    d_lyxose
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +h +pentane_2_3_dione +nadph
-    3_hydroxy_2_pentanone
+    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_2 +h +nadph
+    ubiquinone_2
   }
 }

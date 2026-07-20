@@ -20,14 +20,14 @@ pathway 3-l-homoseryl-adenylyl-to-acetaldehyde "3'-(L-homoseryl)adenylyl to acet
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> . +3_l_seryl_adenylyl_1_group +h2o
-    serine
+    <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
+    alanine
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> . +h2o +threonine
-    3_l_threonyl_adenylyl_1_group
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 
   branch from threonine side left {

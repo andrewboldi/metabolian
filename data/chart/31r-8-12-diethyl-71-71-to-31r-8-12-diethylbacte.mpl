@@ -18,25 +18,25 @@ pathway 31r-8-12-diethyl-71-71-to-31r-8-12-diethylbacte "(31R)-8,12-diethyl-71,7
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +menaquinol
-    demethylmenaquinol
+    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +rosuvastatin +h2o2 +n_desmethyl_rosuvastatin
+    nadp
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_144 [2.1.1.144] +s_adenosyl_l_homocysteine +e_3_carboxy_2_pentenedioate_6_methyl_ester
-    trans_aconitate
+    <-> . +s_adenosyl_l_homocysteine +n_6_n_6_n_6_trimethyl_l_lysine +h
+    l_lysine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_21_3 [1.14.21.3] +h +r_n_methylcoclaurine +o2 +nadph +s_n_methylcoclaurine +nadp
-    berbamunine
+    <-> . +4_hydroxymidazolam +h +o2 +nadph +nadp
+    1_4_dihydroxymidazolam
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_55 [1.14.13.55] +h +protopine +o2 +nadph +nadp
-    6_hydroxyprotopine
+    <-> . +h +o2 +nadph +nadp +1_4_dihydroxymidazolam
+    1_hydroxymidazolam
   }
 }

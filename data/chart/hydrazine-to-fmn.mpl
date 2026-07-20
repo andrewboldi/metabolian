@@ -32,13 +32,13 @@ pathway hydrazine-to-fmn "hydrazine to FMN" {
 
   branch from fmn side left {
     fmn
-    <-> . +methyl_very_long_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    hydroxy_very_long_chain_fatty_acid_anion
+    <-> . +1r_4r_5s_acoradiene +fmnh2 +o2 +h2o +hplus
+    2_6_9_trimethyl_13_oxatetracyclo_6_3_1_16_9_01_5
   }
 
   branch from fmn side right {
     fmn
-    <-> . +6_methoxycoumarin +fmnh2 +o2 +h2o +hplus
-    scopoletin
+    <-> ec_1_14_14_185 [1.14.14.185] +4alpha_5beta_5_20_epoxytax_11_ene_4_ol +fmnh2 +o2 +h2o +hplus
+    4_5_9_5_20_epoxytax_11_ene_4_9_diol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosyl-(1… to sn-glycerol 3-phosphate" {
-  spacing 230
+  spacing 206
 
   spine at 0,0 {
     2_acyl_6_d_mannosyl_1_2_d_mannosyl_1_2_d_mannosy
@@ -24,46 +24,22 @@ pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosy
     ethanolaminium
   }
 
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side left {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +3_acyl_sn_glycerol +phosphatidylcholine
-    1_3_diglyceride
-  }
-
-  branch from 1_o_acyl_sn_glycero_3_phosphocholine side right {
-    1_o_acyl_sn_glycero_3_phosphocholine
-    <-> . +1_alkyl_2_acyl_sn_glycerol +phosphatidylcholine
-    1_alkyl_2_3_diacyl_sn_glycerol
-  }
-
   branch from 1_3_diacyl_sn_glycerol side left {
     1_3_diacyl_sn_glycerol
-    <-> . +1_2_diacyl_sn_glycero_3_phosphoethanolamine +1_acyl_sn_glycero_3_phosphoethanolamine
+    <-> . +acyl_coa +coa
     3_acyl_sn_glycerol
-  }
-
-  branch from 1_3_diacyl_sn_glycerol side right {
-    1_3_diacyl_sn_glycerol
-    <-> . +3_acyl_sn_glycerol +coa
-    acyl_coa
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +n_fatty_acyl_l_tryptophan +h2o
-    l_tryptophan
   }
 
   branch from fatty-acid side right {
     fatty-acid
-    <-> . +n_fatty_acyl_l_tyrosine +h2o
-    tyrosine
+    <-> . +1_2_diacyl_sn_glycero_3_phospholipid +h2o +hplus
+    a_2_acyl_sn_glycero_3_phospholipid
   }
 
-  branch from 1_acyl_sn_glycerol side left {
-    1_acyl_sn_glycerol
-    <-> . +1_acyl_sn_glycero_3_phospho_1d_myo_inositol +h2o +hplus
-    1d_myo_inositol_1_phosphate
+  branch from fatty-acid side left {
+    fatty-acid
+    <-> . +1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from 1_acyl_sn_glycero_3_phosphoethanolamine side right {
@@ -74,8 +50,8 @@ pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosy
 
   branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
     1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +palmitoleoyl_coa +coa
-    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphoethano
+    <-> . +oleoyl_coa +coa
+    1_acyl_2_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side right {
@@ -92,13 +68,13 @@ pathway 2-acyl-6-d-mannosyl-1-to-sn-glycerol-3-phosphate "2-acyl-6-[α-D-mannosy
 
   branch from sn_glycerol_3_phosphate side right {
     sn_glycerol_3_phosphate
-    <-> . +palmitoleoyl_coa +coa
-    1_palmitoleoyl_sn_glycerol_3_phosphate
+    <-> . +n_icosanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
+    n_icosanoyl_ethanolamine
   }
 
   branch from sn_glycerol_3_phosphate side left {
     sn_glycerol_3_phosphate
-    <-> . +n_icosanoyl_sn_glycero_3_phosphoethanolamine +h2o +hplus
-    n_icosanoyl_ethanolamine
+    <-> . +n_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce +h2o +hplus
+    n_4z_7z_10z_13z_16z_19z_docosahexaenoylethanolam
   }
 }

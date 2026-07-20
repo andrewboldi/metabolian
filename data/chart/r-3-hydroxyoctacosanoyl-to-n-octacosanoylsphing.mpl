@@ -18,13 +18,13 @@ pathway r-3-hydroxyoctacosanoyl-to-n-octacosanoylsphing "(R)-3-hydroxyoctacosano
 
   branch from montanoyl_coa side left {
     montanoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    3_oxotriacontanoyl_coa
+    <-> . +nadph +hplus +nadp +coa
+    octacosan_1_ol
   }
 
   branch from montanoyl_coa side right {
     montanoyl_coa
-    <-> . +nadph +hplus +nadp +coa
-    octacosan_1_ol
+    <-> . +octacosanoate +atp +coa +amp
+    ppi
   }
 }

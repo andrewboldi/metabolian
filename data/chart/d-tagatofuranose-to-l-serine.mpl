@@ -42,32 +42,20 @@ pathway d-tagatofuranose-to-l-serine "D-tagatofuranose… to L-serine" {
 
   branch from dhap side right {
     dhap
-    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinone_8 +sn_glycerol_3_phosphate
-    ubiquinol_8
-  }
-
-  branch from dhap side left {
-    dhap
     <-> . +fad +hplus +fadh2
     sn_glycerol_3_phosphate
   }
 
-  branch from bpg13 side right {
-    bpg13
-    <-> . +r1p +pg3 +hplus
-    d_ribose_1_5_bisphosphate
+  branch from dhap side left {
+    dhap
+    <-> . +sn_glycerol_3_phosphate +hydrogen_acceptor
+    hydrogen_donor
   }
 
-  branch from bpg13 side left {
+  branch from bpg13 side right {
     bpg13
     <-> . +d_mannose_1_phosphate +pg3 +hplus
     d_mannose_1_6_bisphosphate
-  }
-
-  branch from pg3 side right {
-    pg3
-    <-> ec_5_4_2_11 [5.4.2.11]
-    pg2
   }
 
   branch from pg3 side left {
@@ -76,39 +64,45 @@ pathway d-tagatofuranose-to-l-serine "D-tagatofuranose… to L-serine" {
     d_ribulose_1_5_bisphosphate
   }
 
-  branch from o_phospho_l_serine_2 side right {
+  branch from pg3 side right {
+    pg3
+    <-> ec_2_7_1_31 [2.7.1.31] +atp +adp +hplus
+    d_glycerate
+  }
+
+  branch from o_phospho_l_serine_2 side left {
     o_phospho_l_serine_2
     <-> . +pi +hplus +l_serine
     ppi
   }
 
-  branch from o_phospho_l_serine_2 side left {
+  branch from o_phospho_l_serine_2 side right {
     o_phospho_l_serine_2
     <-> . +5_diphospho_1d_myo_inositol_pentakisphosphate +myo_inositol_hexakisphosphate
     o_diphosphonato_l_serine_3
   }
 
-  branch from d_glucose_6_phosphate side right {
+  branch from d_glucose_6_phosphate side left {
     d_glucose_6_phosphate
     <-> ec_5_1_3_15 [5.1.3.15]
     d_glucose_6_phosphate
   }
 
-  branch from d_glucose_6_phosphate side left {
+  branch from d_glucose_6_phosphate side right {
     d_glucose_6_phosphate
     <-> ec_3_1_3_9 [3.1.3.9] +h2o +pi
     d_glucose
   }
 
-  branch from l_serine side right {
+  branch from l_serine side left {
     l_serine
     <-> ec_5_1_1_16 [5.1.1.16]
     d_serine
   }
 
-  branch from l_serine side left {
+  branch from l_serine side right {
     l_serine
-    <-> ec_2_4_1_41 [2.4.1.41] +udp_n_acetyl_d_galactosamine +udp +hplus
-    o_n_acetyl_d_galactosaminyl_l_serine
+    <-> ec_3_2_1_97 [3.2.1.97] +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +h2o
+    d_galp_1_3_d_galpnac
   }
 }

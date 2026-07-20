@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-lactoyl-amp-to-acetate "(S)-lactoyl-AMP to acetate" {
-  spacing 174
+  spacing 162
 
   spine at 0,0 {
     s_lactoyl_amp
@@ -20,17 +20,5 @@ pathway s-lactoyl-amp-to-acetate "(S)-lactoyl-AMP to acetate" {
     lactate
     <-> . +h2o +pi
     2_phosphonato_l_lactate
-  }
-
-  branch from l_lysinium side right {
-    l_lysinium
-    <-> . +n6_benzoyl_l_lysine +nad +h2o +nicotinamide
-    2_o_benzoyl_adp_d_ribose
-  }
-
-  branch from l_lysinium side left {
-    l_lysinium
-    <-> . +methacrylyl_coa +coa +hplus
-    n6_2_methylpropenoyl_l_lysine
   }
 }

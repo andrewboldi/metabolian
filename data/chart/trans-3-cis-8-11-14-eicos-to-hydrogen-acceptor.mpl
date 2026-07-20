@@ -18,14 +18,14 @@ pathway trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor "Trans-3-Cis-8,11,14-Eico
 
   branch from 2e_8z_11z_14z_icosatetraenoyl_coa side left {
     2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +h2o
-    3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +fad +h
+    fadh2
   }
 
   branch from 2e_8z_11z_14z_icosatetraenoyl_coa side right {
     2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +fad +h
-    fadh2
+    <-> . +3_icosa_8_11_14_trienoyl_coa +h2o
+    h
   }
 
   branch from arachidonoyl_coa side left {
@@ -36,7 +36,7 @@ pathway trans-3-cis-8-11-14-eicos-to-hydrogen-acceptor "Trans-3-Cis-8,11,14-Eico
 
   branch from arachidonoyl_coa side right {
     arachidonoyl_coa
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphoethanolamine +coa
-    1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s
+    <-> . +malonyl-coa +hplus +co2 +coa
+    7z_10z_13z_16z_3_oxodocosatetraenoyl_coa
   }
 }

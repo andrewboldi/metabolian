@@ -18,13 +18,13 @@ pathway 5-phosphonato-d-ribose-to-diphosphate "5-phosphonato-α-D-ribose… to d
 
   branch from ppi side left {
     ppi
-    <-> . +butyrolactone_ii +dmapp
-    butyrolactone_i
+    <-> ec_4_2_3_216 [4.2.3.216] +all_trans_pentaprenyl_diphosphate
+    somaliensene_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_4_1_12 [6.4.1.12] +3_indol_3_yl_pyruvate +atp +amp +hplus
-    didemethylasterriquinone_d
+    <-> ec_4_2_3_217 [4.2.3.217] +all_trans_pentaprenyl_diphosphate
+    somaliensene_b
   }
 }

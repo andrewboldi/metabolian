@@ -22,14 +22,14 @@ pathway udp-to-1-fluorocyclohexadiene-ci "UDP to 1-Fluorocyclohexadiene-ci…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +beta_d_man_1_2_alpha_d_glc_1_3_alpha_d_man_1_2_a +h
-    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
+    <-> . +udp +aloenin +h
+    6_2_4_dihydroxy_6_methylphenyl_4_methoxypyran_2
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +beta_d_man_1_2_alpha_d_man_1_2_alpha_d_man_1_2_b
-    beta_d_man_1_2_alpha_d_man_1_2_alpha_d_glc_1_3_a
+    <-> . +udp +glucosyl_heptosyl_2_kdo2_lipid_a +h
+    alpha_hep_1_3_alpha_hep_1_5_alpha_kdo_2_4_alpha
   }
 
   branch from guaiacol side left {
@@ -52,13 +52,13 @@ pathway udp-to-1-fluorocyclohexadiene-ci "UDP to 1-Fluorocyclohexadiene-ci…" {
 
   branch from catechol side right {
     catechol
-    <-> ec_3_7_1_8 [3.7.1.8] +h +2e_4z_2_hydroxymuconate +h2o
-    2_hydroxy_6_2_hydroxyphenoxy_6_oxo_cis_cis_hexa
+    <-> ec_1_11_1_16 [1.11.1.16] +h2o2 +h2o
+    1_2_benzoquinone
   }
 
   branch from catechol side left {
     catechol
-    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
-    o2
+    <-> . +nadh +h +o2 +aniline +nad
+    nh4
   }
 }

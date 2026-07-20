@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-erythro-ascorbate-to-diphosphate "D-erythro-Ascorbate to diphosphate" {
-  spacing 256
+  spacing 244
 
   spine at 0,0 {
     d_erythro_ascorbate
@@ -24,49 +24,37 @@ pathway d-erythro-ascorbate-to-diphosphate "D-erythro-Ascorbate to diphosphate" 
 
   branch from o2 side left {
     o2
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h +nadph +nadp +h2o
-    1_palmitoyl_2_vernoloyl_phosphatidylcholine
+    <-> . +h +2s_flavanone +nadph +3_5_dihydroxyflavanone +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +3s_6e_nerolidol +nadph +buten_2_one +e_4_8_dimethyl_1_3_7_nonatriene +h2o
-    nadp
-  }
-
-  branch from d_arabinono_1_4_lactone side left {
-    d_arabinono_1_4_lactone
-    <-> ec_1_1_1_117 [1.1.1.117] +d_arabinofuranose +nadp +h
-    nadph
-  }
-
-  branch from d_arabinono_1_4_lactone side right {
-    d_arabinono_1_4_lactone
-    <-> ec_1_1_1_117 [1.1.1.117] +nadh +h +nad
-    d_arabinofuranose
+    <-> . +luteolin +h +nadph +nadp +h2o
+    tricetin
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +1s_bornane_2_5_dione +h +o2 +h2o
-    1r_4r_5_oxo_1_2_campholide
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1s_2s_4r_endo_fenchol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +all_trans_zeaxanthin +h +o2 +3r_11_cis_3_hydroxyretinal +h2o
-    3r_all_trans_3_hydroxyretinal
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    nerol
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    syn_isopimara_7_15_diene
+    <-> . +fpp
+    allo_aromadendrene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +r_2_hydroxy_3_methylbutyrate +l_phenylalanine +sam +atp +amp +sah +hplus
-    beauvericin
+    <-> . +o6_methyl_dgtp +h2o +hplus
+    o6_methyl_dgmp
   }
 }

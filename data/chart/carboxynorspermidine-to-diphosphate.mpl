@@ -36,8 +36,8 @@ pathway carboxynorspermidine-to-diphosphate "carboxynorspermidine to diphosphate
 
   branch from 5_s_methyl_5_thioadenosine side left {
     5_s_methyl_5_thioadenosine
-    <-> ec_4_4_1_14 [4.4.1.14] +sam +hplus
-    1_aminocyclopropanecarboxylic_acid
+    <-> ec_4_4_1_42 [4.4.1.42] +sam
+    l_homoserine_lactone
   }
 
   branch from r_4_phosphonatopantothenate side right {
@@ -48,13 +48,13 @@ pathway carboxynorspermidine-to-diphosphate "carboxynorspermidine to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_141 [2.5.1.141] +ferroheme_b +fpp +h2o
-    ferroheme_o
+    <-> ec_4_2_3_79 [4.2.3.79] +fpp
+    thujopsene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_55 [4.2.3.55] +fpp
-    s_bisabolene
+    <-> ec_4_2_3_78 [4.2.3.78] +fpp
+    chamigrene
   }
 }

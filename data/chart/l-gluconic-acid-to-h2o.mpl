@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-gluconic-acid-to-h2o "L-gluconic acid to H2O" {
-  spacing 194
+  spacing 188
 
   spine at 0,0 {
     l_gluconic_acid
@@ -16,45 +16,39 @@ pathway l-gluconic-acid-to-h2o "L-gluconic acid to H2O" {
     atp
   }
 
-  branch from l_glucono_1_5_lactone side left {
-    l_glucono_1_5_lactone
-    <-> ec_1_1_1_370 [1.1.1.370] +nadh +h +nad
-    aldehydo_l_glucose
+  branch from h2o side left {
+    h2o
+    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose
+    d_maltose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gentamicin_x2_cation
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    antibiotic_ji_20a
-  }
-
-  branch from nad side right {
-    nad
-    <-> . +nadh +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h
-    3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa
+    <-> ec_3_2_1_20 [3.2.1.20] +alpha_d_glucose
+    nigerose
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +artemisinic_aldehyde
-    11r_dihydroartemisinic_aldehyde
+    <-> ec_1_1_1_14 [1.1.1.14] +nadh +keto_d_fructose +h
+    d_mannitol
   }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    gentamicin_c1a
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_124 [1.1.1.124] +nadh +d_fructofuranose +h
+    d_sorbitol
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    gentamicin_b
+    <-> ec_3_6_3_16 [3.6.3.16] +h +adp +phosphate +h2o
+    arsenous_acid
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_2_7_4_21 [2.7.4.21] +1d_myo_inositol_1_3_4_5_6_pentakisphosphate +h +adp
+    diphosphoinositol_tetrakisphosphate
   }
 }

@@ -32,14 +32,14 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-2-arachidonoyl-sn-g "1-oleoyl-sn-glycero-3-
 
   branch from oleate side left {
     oleate
-    <-> . +1_2_dioleoylglycerol +h2o +hplus
-    1_oleoylglycerol
+    <-> . +n_oleoylphytosphingosine +h2o
+    phytosphingosine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
-    1_palmitoyl_3_stearoyl_sn_glycerol
+    <-> . +n_9z_octadecenoyl_sphinganine +h2o
+    sphinganine
   }
 
   branch from 1d_myo_inositol_1_phosphate side left {

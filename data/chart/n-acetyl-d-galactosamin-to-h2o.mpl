@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
@@ -18,37 +18,25 @@ pathway n-acetyl-d-galactosamin-to-h2o "N-acetyl-α-D-galactosamin… to H2O" {
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> ec_3_2_1_49 [3.2.1.49] +l_fucosyl_1_2_d_galactoside +h2o
-    n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
-    n_acetyl_d_galactosamine
     <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
     atp
   }
 
-  branch from l_fucopyranose side left {
-    l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +xxlg_xyloglucan_oligosaccharide +h2o
-    xxfg_xyloglucan_oligosaccharide
-  }
-
   branch from l_fucopyranose side right {
     l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o
-    l_fucp_1_6_d_galp
+    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o
+    l_fucp_1_3_d_glcpnac
   }
 
   branch from h2o side left {
     h2o
-    <-> . +neuromedin_n +neuromedin_n_1_4
-    l_leucine
+    <-> . +trans_cis_cis_cis_cis_2_10_13_16_19_docosapentae
+    3_s_hydroxy_docosa_10_13_16_19_all_cis_tetraenoy
   }
 
   branch from h2o side right {
     h2o
-    <-> . +superoxide +h +melatonin
-    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
+    <-> . +2e_9z_octadecadienoyl_coa
+    3_s_hydroxy_cis_9_octadecenoyl_coa
   }
 }

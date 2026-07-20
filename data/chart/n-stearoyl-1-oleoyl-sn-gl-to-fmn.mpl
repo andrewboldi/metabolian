@@ -18,37 +18,37 @@ pathway n-stearoyl-1-oleoyl-sn-gl-to-fmn "N-stearoyl-1-oleoyl-sn-gl… to FMN" {
 
   branch from oleate side left {
     oleate
-    <-> . +n_oleoyl_l_glutamate +h2o
-    glutamate
+    <-> . +1_2_dioleoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +12_9z_octadecenoyloxy_octadecanoate +h2o +hplus
-    12_hydroxyoctadecanoate
+    <-> . +1_oleoyl_2_acyl_sn_glycero_3_phosphoglycerol +h2o +hplus
+    2_acyl_sn_glycero_3_phosphoglycerol
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
-    mycobilin_a
+    <-> . +1_1_dihydroxy_1_1_2_2_tetrahydrolycopene +hydrogen_donor
+    1_1_dihydroxy_3_4_didehydrolycopene
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_57 [1.14.99.57] +ferroheme_b +hydrogen_donor +o2 +hplus +fe2 +h2o
-    mycobilin_b
+    <-> . +cannabigerolate +hydrogen_donor
+    cannabichromenate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +all_trans_retinol +fmnh2 +o2 +h2o +hplus
-    all_trans_retinal
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    2_hydroxy_17_estradiol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_124 [1.14.14.124] +dihydromonacolin_l_carboxylate +fmnh2 +o2 +h2o +hplus
-    monacolin_l_carboxylate
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_17_estradiol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sedoheptulose-1-phosphate-to-nad "sedoheptulose 1-phosphate to NAD" {
-  spacing 266
+  spacing 254
 
   spine at 0,0 {
     sedoheptulose_1_phosphate
@@ -24,61 +24,49 @@ pathway sedoheptulose-1-phosphate-to-nad "sedoheptulose 1-phosphate to NAD" {
 
   branch from h side right {
     h
-    <-> . +nadh +cob_ii_yrinate_diamide +nad
-    cob_i_yrinate_diamide
+    <-> ec_3_5_1_1 [3.5.1.1] +l_asparagine +hydroxylamine +n_hydroxy_l_aspartic_1_amide
+    nh4
   }
 
   branch from h side left {
     h
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +menaquinone_2 +nad
-    menaquinol
+    <-> . +d_glucono_1_5_lactone +h2o +d_gluconate
+    pmf
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    d_ribopyranose
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    ala_leu
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_9_3 [2.7.9.3] +selenophosphate +h +amp +phosphate +h2o
-    selenide
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
+    2_deoxy_d_ribofuranose
   }
 
   branch from d_ribose side right {
     d_ribose
-    <-> . +beta_d_ribopyranose
-    pmf
+    <-> . +pmf +pmf
+    beta_d_ribopyranose
   }
 
   branch from d_ribose side left {
     d_ribose
-    <-> ec_4_4_1_21 [4.4.1.21] +l_homocysteine +h2o
-    s_ribosyl_l_homocysteine
-  }
-
-  branch from d_xylulose_5_phosphate side right {
-    d_xylulose_5_phosphate
-    <-> . +atp +h +adp
-    d_ribulose
-  }
-
-  branch from d_xylulose_5_phosphate side left {
-    d_xylulose_5_phosphate
-    <-> ec_2_7_1_17 [2.7.1.17] +atp +h +adp
-    d_xylulofuranose
+    <-> .
+    beta_d_ribofuranose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_99_5 [1.2.99.5] +nadh +co2 +methanofuran +h2o
-    n_formylmethanofuran
+    <-> ec_1_14_13_25 [1.14.13.25] +nadh +h +ethene_1_2_diyl_group +o2 +h2o
+    epoxy_group
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este
-    13_1_hydroxy_mg_protoporphyrin_ix_13_monomethyl
+    <-> ec_1_1_1_241 [1.1.1.241] +nadh +6_oxocineole +h
+    6_endo_hydroxycineole
   }
 }

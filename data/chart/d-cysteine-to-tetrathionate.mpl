@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-cysteine-to-tetrathionate "D-cysteine to tetrathionate" {
-  spacing 268
+  spacing 250
 
   spine at 0,0 {
     d_cysteine
@@ -20,27 +20,9 @@ pathway d-cysteine-to-tetrathionate "D-cysteine to tetrathionate" {
     tetrathionate
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_3_5_3_27 [3.5.3.27] +arginine +h2o +hplus +co2
-    ornithine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +cordycepin +h2o +hplus
-    3_deoxyinosine
-  }
-
   branch from tetrathionate side left {
     tetrathionate
     <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +phylloquinone
     phylloquinol
-  }
-
-  branch from tetrathionate side right {
-    tetrathionate
-    <-> ec_1_8_5_2 [1.8.5.2] +ubiquinol_9 +ubiquinone_9
-    thiosulfate
   }
 }

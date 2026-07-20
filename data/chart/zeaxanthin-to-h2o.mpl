@@ -22,25 +22,25 @@ pathway zeaxanthin-to-h2o "zeaxanthin to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    nerol
+    <-> . +nadh +acetyl_coa +4_hydroxybenzoyl_coa +h +coa +h2o
+    trans_4_coumaroyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    s_linalool
+    <-> . +nadh +acetyl_coa +h +coa
+    ethanol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +l_xylose +phosphate +l_xylose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +durhamycin_a +phosphate +durhamycin_a
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    lyxulose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    mithramycin_sk
   }
 }

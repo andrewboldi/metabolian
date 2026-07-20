@@ -44,8 +44,8 @@ pathway amino-acid-ester-to-l-argininium "α-amino acid ester to L-argininium" {
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_6_1_1_17 [6.1.1.17] +glutamate +atp +amp +ppi
-    3_l_glutamate_adenylyl_1_group
+    <-> ec_3_6_1_n2 [3.6.1.n2] +3_l_cysteinyl_adenylyl_zwitterionic_group +h2o +hplus
+    cysteine
   }
 
   branch from arginine side right {

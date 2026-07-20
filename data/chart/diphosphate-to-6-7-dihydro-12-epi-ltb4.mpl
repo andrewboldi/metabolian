@@ -26,50 +26,50 @@ pathway diphosphate-to-6-7-dihydro-12-epi-ltb4 "diphosphate to 6,7-dihydro-12-ep
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    1_deoxyxylonojirimycin
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    aclacinomycin_a
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    alpha_d_glucose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    megalomicin_a
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +3_decanoyl_3_4_di_3_methylbutanoyl_sucrose
-    2_acetyl_3_decanoyl_3_4_di_3_methylbutanoyl_sucr
+    <-> ec_6_2_1_3 [6.2.1.3] +hexadecanoate +atp +diphosphate +amp
+    hexadecanoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +3_methylbutanoyl_coa +4_3_methylbutanoyl_sucrose
-    2_4_di_3_methylbutanoyl_sucrose
+    <-> ec_6_2_1_1 [6.2.1.1] +propanoyl_amp +h +amp
+    propanoyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadp
-    neodihydrocarveol
+    <-> ec_2_3_1_41 [2.3.1.41] +hexadecanoate +co2 +nadp +coa +h2o +malonyl_coa +h
+    acetyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +11r_dihydroartemisinic_aldehyde +nadp
-    presilphiperfolan_8_ol
+    <-> ec_1_1_1_330 [1.1.1.330] +s_3_hydroxyoctadecanoyl_coa +nadp +h
+    3_oxooctadecanoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    thujan_3_ol
+    <-> ec_2_3_1_86 [2.3.1.86] +decanoyl_coa +co2 +coa +h2o +malonyl_coa +h +nadph
+    octanoyl_coa
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
-    r_terpineol
+    <-> ec_2_3_1_86 [2.3.1.86] +dodecanoyl_coa +malonyl_coa +h +nadph +co2 +coa +h2o
+    tetradecanoyl_coa
   }
 
   branch from 6_7_dihydro_12_epi_ltb4 side right {

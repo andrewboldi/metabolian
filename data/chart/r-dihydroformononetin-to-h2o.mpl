@@ -26,61 +26,61 @@ pathway r-dihydroformononetin-to-h2o "(R)-dihydroformononetin to H2O" {
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_myristoyl_sn_glycero_3_phosphoethanolamine
+    <-> ec_3_6_1_59 [3.6.1.59] +n_7_methyl_gmp +phosphate +h2o
+    7_methylguanosine_5_diphosphate
   }
 
   branch from h side left {
     h
-    <-> . +adp +lysope_0_0_15_0 +phosphate +lysope_0_0_15_0 +h2o
-    atp
+    <-> ec_2_7_1_62 [2.7.1.62] +a_hexose +phosphoramidate +alpha_d_hexose_1_phosphate
+    nh4
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +beta_d_galactose +h +nadp
-    galactitol
+    <-> . +diphosphate +nadp +c30_botryococcene +h
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +nadp +h
-    d_galactono_1_5_lactone
+    <-> . +gibberellin_a1 +nadp +h2o +h +o2
+    gibberellin_a4
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_275 [2.1.1.275] +s_adenosyl_l_homocysteine +methyl_gibberellin_a9 +h
-    gibberellin_a9
+    <-> ec_2_1_1_64 [2.1.1.64] +s_adenosyl_l_homocysteine +h +ubiquinol
+    3_demethylubiquinol
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +r_nicotine_isomethonium_ion
-    s_nicotine
+    <-> . +s_adenosyl_l_methionyl_adenylate +diphosphate +h
+    atp
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +h +nadph
-    d_galactono_1_4_lactone
+    <-> ec_1_14_13_70 [1.14.13.70] +h +o2 +nadph +lanost_8_ene_3_30_diol +h2o
+    3_hydroxylanost_8_en_32_al
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_179 [1.1.1.179] +alpha_d_xylose +h +nadph
-    d_xylono_1_5_lactone
+    <-> ec_1_14_13_70 [1.14.13.70] +h +o2 +lanosterol +nadph +h2o
+    32_hydroxylanosterol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_lysine
-    lysyl_lysyl_lysine
+    <-> . +l_leucine +l_valine +l_tryptophan
+    tryptophanyl_leucyl_valine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_lysine +l_isoleucine +l_phenylalanine
-    lysyl_phenylalanyl_isoleucine
+    <-> . +l_lysine +l_tryptophan
+    tryptophanyl_lysine
   }
 }

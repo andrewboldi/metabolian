@@ -30,25 +30,25 @@ pathway 1-octadecanoyl-2-9z-octa-to-h2o "1-octadecanoyl-2-(9Z-octa… to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostopeptolide_a1
+    <-> . +h +adp +phosphate +h2o
+    l_sorbosone_2_6_lactone
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    nostocyclopeptide_a1
+    <-> . +h +adp +phosphate +h2o
+    perosamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    nostocyclopeptide_a2
+    <-> . +h +adp +phosphate +atp
+    6_6_kestotetraose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    nostocyclopeptide_a3
+    <-> . +h +adp +phosphate +atp
+    octyl_d_glucopyranoside
   }
 }

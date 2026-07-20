@@ -34,14 +34,14 @@ pathway 8-1s-2s-3-oxo-2-z-p-to-hopan-22-ol "8-[(1S,2S)-3-oxo-2-{(Z)-p… to hopa
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_109 [4.2.3.109] +gpp
-    sabinene
+    <-> ec_4_2_3_43 [4.2.3.43] +geranylgeranyl_diphosphate
+    fusicocca_2_10_14_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_28 [4.2.3.28] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_cassa_12_15_diene
+    <-> . +gtp
+    precursor_z
   }
 
   branch from presqualene_pp side left {
@@ -58,13 +58,13 @@ pathway 8-1s-2s-3-oxo-2-z-p-to-hopan-22-ol "8-[(1S,2S)-3-oxo-2-{(Z)-p… to hopa
 
   branch from squalene side left {
     squalene
-    <-> ec_5_4_99_17 [5.4.99.17]
-    hop_22_29_ene
+    <-> ec_4_2_1_123 [4.2.1.123] +h2o
+    tetrahymanol
   }
 
   branch from squalene side right {
     squalene
-    <-> ec_4_2_1_123 [4.2.1.123] +h2o
-    tetrahymanol
+    <-> ec_5_4_99_37 [5.4.99.37]
+    dammara_20_24_diene
   }
 }

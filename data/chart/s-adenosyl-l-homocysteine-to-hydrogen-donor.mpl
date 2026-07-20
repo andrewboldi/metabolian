@@ -18,14 +18,14 @@ pathway s-adenosyl-l-homocysteine-to-hydrogen-donor "S-adenosyl-L-homocysteine t
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_a +h
-    7_demethylmitomycin_a
+    <-> ec_2_1_1_295 [2.1.1.295] +s_adenosyl_l_homocysteine +h +plastoquinol_9
+    2_methyl_6_solanyl_1_4_benzoquinol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +lincomycin_s_cysteine_conjugate +h
-    n_demethyllincomycin_s_cysteine_conjugate
+    <-> . +s_adenosyl_l_homocysteine +methyl_gibberellin_a34 +h
+    gibberellin_a34
   }
 
   branch from 1_hydroxyneurosporene side left {

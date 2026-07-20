@@ -20,14 +20,14 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade "1-oleoyl-2-stearoyl-sn
 
   branch from oleate side left {
     oleate
-    <-> . +h2o +coa +hplus
-    oleoyl_coa
+    <-> . +1_3_dipalmitoyl_2_oleoylglycerol +h2o +hplus
+    1_3_dipalmitoylglycerol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    sn_glycero_3_phosphoserine
+    <-> . +1_palmitoyl_2_oleoyl_3_stearoyl_sn_glycerol +h2o +hplus
+    1_palmitoyl_3_stearoyl_sn_glycerol
   }
 
   branch from 18_hydroxyoleate side left {
@@ -44,13 +44,13 @@ pathway 1-oleoyl-2-stearoyl-sn-gl-to-9z-18-hydroxyoctade "1-oleoyl-2-stearoyl-sn
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    18_hete
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxytestosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> . +behenate +fmnh2 +o2 +h2o +hplus
-    22_hydroxydocosanoate
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 }

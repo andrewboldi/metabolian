@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-n-dimethyl-l-histidine-to-ergothioneyl-d-linco "Nα,Nα-dimethyl-L-histidine to ergothioneyl-α-D-lincosam…" {
-  spacing 302
+  spacing 278
 
   spine at 0,0 {
     n_n_dimethyl_l_histidine
@@ -28,37 +28,13 @@ pathway n-n-dimethyl-l-histidine-to-ergothioneyl-d-linco "Nα,Nα-dimethyl-L-his
 
   branch from sah side right {
     sah
-    <-> . +trichosetin +sam +hplus
-    equisetin
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> . +n_terminal_glycyl_l_lysyl_l_glutamate_1 +sam +hplus
-    n_terminal_n_n_n_trimethyl_l_glycyl_l_lysyl_l_gl
-  }
-
-  branch from glutamate side right {
-    glutamate
-    <-> . +cadaverine +atp +adp +pi +hplus
-    l_glutamylcadaverine
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> . +n6_hydroxy_l_lysine +atp +amp +ppi +hplus
-    1_l_glutamo_2_n6_l_lysinohydrazine
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +d_asparagine +o2 +h2o +h2o2
-    2_oxosuccinamate
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +d_tryptophan +o2 +h2o +h2o2
-    3_indol_3_yl_pyruvate
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

@@ -18,37 +18,37 @@ pathway 1-stearoyl-2-arachidonoyl-to-h2o "1-stearoyl-2-arachidonoyl… to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +hexanoyl_coa +h +nadph +hexanal
-    nadp
+    <-> . +feruloyl_diketide +trans_4_coumaroyl_coa +h +co2
+    demethoxycurcumin
   }
 
   branch from coa side right {
     coa
-    <-> . +r_3_hydroxyisobutyrate +h +h2o
-    r_3_hydroxy_isobutanoyl_coa
+    <-> . +4_coumaroyl_diketide +trans_4_coumaroyl_coa +h +co2
+    1e_4z_6e_5_hydroxy_1_7_bis_4_hydroxyphenyl_hept
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    aeruginopeptin_917s_b
+    <-> . +h +adp +phosphate +h2o
+    enterobactin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    aeruginopeptin_917s_c
+    <-> . +h +adp +2r_2_3_bisphosphoglycerate
+    2r_3_phosphoglycerate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    aeruginopeptin_917s_a
+    <-> . +2_succinylbenzoate +h
+    1s_6r_2_succinyl_6_hydroxycyclohexa_2_4_diene_1
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    nodularin_v
+    <-> . +melibiose +aldehydo_d_galactose
+    beta_d_glucose
   }
 }

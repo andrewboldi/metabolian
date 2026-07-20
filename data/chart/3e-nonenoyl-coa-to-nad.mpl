@@ -24,14 +24,14 @@ pathway 3e-nonenoyl-coa-to-nad "(3E)-nonenoyl-CoA to NAD" {
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +l_l_cystathionine +h
-    n_acetyl_l_cystathionine
+    <-> . +2s_2_methylbutanoyl_coa +glycine
+    n_2_methylbutanoyl_glycine
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +l_cysteine +h
-    n_acetyl_l_cysteine
+    <-> . +3_oxo_10_r_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o
+    6e_8e_10r_12z_10_hydroxy_3_oxooctadecatrienoic
   }
 
   branch from 3r_hydroxy_4_trans_undecenoyl_coa side right {
@@ -42,13 +42,13 @@ pathway 3e-nonenoyl-coa-to-nad "(3E)-nonenoyl-CoA to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +methylmalonate +h +h2o
-    2_methyl_3_oxopropanoate
+    <-> ec_1_2_1_40 [1.2.1.40] +nadh +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o
+    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_8_1_22 [1.8.1.22] +nadh +h +sulfite +h2o
-    trithionate
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +21_hydroxyprogesterone
+    21_hydroxypregnenolone
   }
 }

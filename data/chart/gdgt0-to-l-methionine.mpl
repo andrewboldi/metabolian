@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gdgt0-to-l-methionine "GDGT0 to L-methionine" {
-  spacing 222
+  spacing 216
 
   spine at 0,0 {
     gdgt0
@@ -18,31 +18,25 @@ pathway gdgt0-to-l-methionine "GDGT0 to L-methionine" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +dehydrocholesterol_7 +h2o +hydrogen_donor
-    cholesta_5_7_dien_3_25_diol
+    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
+    3_5_diiodothyronamine
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_17_99_10 [1.17.99.10] +3_oxocholestane +h2o +hydrogen_donor
-    25_hydroxy_3_oxocholestane
+    <-> . +3_iodothyronamine +iodide +hplus +hydrogen_donor
+    3_3_diiodothyronamine
   }
 
   branch from glutamate side left {
     glutamate
-    <-> . +cadaverine +akg
-    5_ammoniopentanal
+    <-> . +nadp +h2o +nadph +hplus
+    l_glutamic_5_semialdehyde
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_2_1_68 [6.2.1.68] +holo-acp +atp +amp +ppi
-    o_s_l_glutamyl_pantetheine_4_phosphoryl_serine_1
-  }
-
-  branch from kynurenate side left {
-    kynurenate
-    <-> . +keto_phenylpyruvate +l_kynurenine +h2o
-    l_phenylalanine
+    <-> . +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
+    l_glutamyl_l_glutamyl_l_glutamate_3
   }
 }

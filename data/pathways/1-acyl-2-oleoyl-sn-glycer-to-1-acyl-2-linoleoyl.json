@@ -131,15 +131,6 @@
       }
     },
     {
-      "id": "13_hpode",
-      "name": "13-HPODE",
-      "formula": "C18H31O4",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:90823"
-      }
-    },
-    {
       "id": "11r_11_hydroperoxylinoleate",
       "name": "(11R)-11-hydroperoxylinoleate",
       "short": "11-hydroperoxylinol…",
@@ -147,6 +138,26 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:134248"
+      }
+    },
+    {
+      "id": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
+      "name": "1-tetradecanoyl-2-[(9Z,12Z)-octadecadienoyl]-sn-glycero-3-phosphocholine",
+      "short": "1-tetradecanoyl-2-[…",
+      "formula": "C40H76NO8P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86094"
+      }
+    },
+    {
+      "id": "1_myristoyl_sn_glycero_3_phosphocholine",
+      "name": "1-myristoyl-sn-glycero-3-phosphocholine",
+      "short": "1-myristoyl-sn-glyc…",
+      "formula": "C22H46NO7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64489"
       }
     }
   ],
@@ -338,41 +349,6 @@
     },
     {
       "id": "r5",
-      "name": "(9Z,12Z)-octadecadienoate + O2 = 13-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "equation": "(9Z,12Z)-octadecadienoate + O2 = 13-hydroperoxy-(9Z,11E)-octadecadienoate",
-      "substrates": [
-        {
-          "metabolite": "linoleate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "13_hpode",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:48848"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:48848"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "(9Z,12Z)-octadecadienoate + O2 = (11R)-hydroperoxy-(9Z,12Z)-octadecadienoate",
       "equation": "(9Z,12Z)-octadecadienoate + O2 = (11R)-hydroperoxy-(9Z,12Z)-octadecadienoate",
       "substrates": [
@@ -392,7 +368,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:51640"
       },
@@ -402,6 +378,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:51640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 1-tetrad...",
+      "equation": "1-tetradecanoyl-2-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phosphocholine + H2O = 1-tetradecanoyl-sn-glycero-3-phosphocholine + (9Z,12Z)-octadecadienoate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_myristoyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "linoleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:54392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54392"
           }
         ]
       }

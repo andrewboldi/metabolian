@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "cyclotriphosphate-to-nadp",
   "name": "cyclotriphosphate to NADP",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 7-step route from cyclotriphosphate(3−) to NADP(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -196,26 +196,6 @@
       }
     },
     {
-      "id": "2_deoxyribonucleoside_5_triphosphate",
-      "name": "2'-deoxyribonucleoside 5'-triphosphate",
-      "short": "2'-deoxyribonucleos…",
-      "formula": "C5H8O12P3R",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:61560"
-      }
-    },
-    {
-      "id": "2_deoxyribonucleoside",
-      "name": "2'-deoxyribonucleoside",
-      "short": "2'-deoxyribonucleos…",
-      "formula": "C5H9O3R",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:18274"
-      }
-    },
-    {
       "id": "datp",
       "name": "dATP",
       "formula": "C10H12N5O12P3",
@@ -234,22 +214,39 @@
       }
     },
     {
-      "id": "4_methylene_l_glutamate",
-      "name": "4-methylene-L-glutamate",
-      "short": "4-methylene-L-gluta…",
-      "formula": "C6H8NO4",
-      "charge": -1,
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:58733"
+        "chebi": "CHEBI:61481"
       }
     },
     {
-      "id": "nh3",
-      "name": "Ammonia (NH3)",
-      "formula": "H4N",
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:28938"
+        "chebi": "CHEBI:32682"
       }
     },
     {
@@ -262,13 +259,13 @@
       }
     },
     {
-      "id": "4_methylene_l_glutamine",
-      "name": "4-methylene-L-glutamine",
-      "short": "4-methylene-L-gluta…",
-      "formula": "C6H10N2O3",
-      "charge": 0,
+      "id": "l_tyrosiniumyl_l_arginine",
+      "name": "L-tyrosiniumyl-L-arginine",
+      "short": "L-tyrosiniumyl-L-ar…",
+      "formula": "C15H24N5O4",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:57879"
+        "chebi": "CHEBI:58184"
       }
     },
     {
@@ -281,22 +278,13 @@
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5α,9α,10β-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5α,9α,10β-labda-8(2…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
+      "id": "camp",
+      "name": "3',5'-Cyclic AMP (cAMP)",
+      "short": "3',5'-Cyclic AMP…",
+      "formula": "C10H11N5O6P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:58635"
-      }
-    },
-    {
-      "id": "abieta_7_13_diene",
-      "name": "abieta-7,13-diene",
-      "formula": "C20H32",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:30232"
+        "chebi": "CHEBI:58165"
       }
     },
     {
@@ -457,17 +445,17 @@
       ]
     },
     {
-      "id": "ec_6_3_1_7",
-      "name": "4-methyleneglutamate--ammonia ligase",
+      "id": "ec_6_3_2_24",
+      "name": "tyrosine--arginine ligase",
       "ec": [
-        "6.3.1.7"
+        "6.3.2.24"
       ]
     },
     {
-      "id": "ec_4_2_3_18",
-      "name": "abieta-7,13-diene synthase",
+      "id": "ec_4_6_1_1",
+      "name": "adenylate cyclase",
       "ec": [
-        "4.2.3.18"
+        "4.6.1.1"
       ]
     }
   ],
@@ -802,49 +790,6 @@
     },
     {
       "id": "r8",
-      "name": "a 2'-deoxyribonucleoside 5'-triphosphate + H2O = a 2'-deoxyribonucleoside + triphosphat...",
-      "equation": "a 2'-deoxyribonucleoside 5'-triphosphate + H2O = a 2'-deoxyribonucleoside + triphosphate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "2_deoxyribonucleoside_5_triphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_deoxyribonucleoside",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "triphosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:46148"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46148"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
       "name": "dATP + H2O = 2'-deoxyadenosine + triphosphate + H(+)",
       "equation": "dATP + H2O = 2'-deoxyadenosine + triphosphate + H(+)",
       "substrates": [
@@ -872,7 +817,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:67648"
       },
@@ -887,17 +832,60 @@
       }
     },
     {
-      "id": "r10",
-      "name": "4-methyleneglutamate--ammonia ligase",
-      "equation": "4-methylene-L-glutamate + NH4(+) + ATP = 4-methylene-L-glutamine + AMP + diphosphate + H(+)",
-      "ec": "6.3.1.7",
+      "id": "r9",
+      "name": "dCTP + H2O = 2'-deoxycytidine + triphosphate + H(+)",
+      "equation": "dCTP + H2O = 2'-deoxycytidine + triphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "4_methylene_l_glutamate",
+          "metabolite": "dctp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nh3",
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 9,
+      "xrefs": {
+        "rhea": "RHEA:80083"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80083"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "tyrosine--arginine ligase",
+      "equation": "L-tyrosine + L-arginine + ATP = L-tyrosyl-L-arginine + AMP + diphosphate + H(+)",
+      "ec": "6.3.2.24",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
           "stoichiometry": 1
         },
         {
@@ -907,7 +895,7 @@
       ],
       "products": [
         {
-          "metabolite": "4_methylene_l_glutamine",
+          "metabolite": "l_tyrosiniumyl_l_arginine",
           "stoichiometry": 1
         },
         {
@@ -925,38 +913,38 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_1_7"
+          "enzyme": "ec_6_3_2_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:13853"
+        "rhea": "RHEA:15345"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13853"
+            "id": "RHEA:15345"
           }
         ]
       }
     },
     {
       "id": "r11",
-      "name": "abieta-7,13-diene synthase",
-      "equation": "(+)-copalyl diphosphate = abieta-7,13-diene + diphosphate",
-      "ec": "4.2.3.18",
+      "name": "adenylate cyclase",
+      "equation": "ATP = 3',5'-cyclic AMP + diphosphate",
+      "ec": "4.6.1.1",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "abieta_7_13_diene",
+          "metabolite": "camp",
           "stoichiometry": 1
         },
         {
@@ -966,20 +954,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_18"
+          "enzyme": "ec_4_6_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:13873"
+        "rhea": "RHEA:15389"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:13873"
+            "id": "RHEA:15389"
           }
         ]
       }

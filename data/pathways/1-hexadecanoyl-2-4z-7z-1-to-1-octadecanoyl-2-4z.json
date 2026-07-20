@@ -145,43 +145,41 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "2_o_methyladenosine_5_monophosphate_1",
-      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
-      "short": "2'-O-methyladenosin…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
+      "id": "7_methyl_gtp",
+      "name": "7-methyl-GTP",
+      "formula": "C11H15N5O14P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:74477"
+        "chebi": "CHEBI:87133"
       }
     },
     {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:74483"
       }
     },
     {
@@ -212,43 +210,9 @@
       "xrefs": {
         "chebi": "CHEBI:72998"
       }
-    },
-    {
-      "id": "1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe",
-      "name": "1-tetradecanoyl-2-[(4Z,7Z,10Z,13Z,16Z,19Z)-docosahexaenoyl]-sn-glycero-3-phosphocholine",
-      "short": "1-tetradecanoyl-2-[…",
-      "formula": "C44H76NO8P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:86162"
-      }
-    },
-    {
-      "id": "tetradecanoate",
-      "name": "tetradecanoate",
-      "formula": "C14H27O2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30807"
-      }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_230",
-      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
-      "ec": [
-        "2.1.1.230"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_242",
-      "name": "16S rRNA (guanine(1516)-N(2))-methyltransferase",
-      "ec": [
-        "2.1.1.242"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -459,12 +423,11 @@
     },
     {
       "id": "r6",
-      "name": "23S rRNA (adenosine(1067)-2'-O)-methyltransferase",
-      "equation": "adenosine(1067) in 23S rRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(1067) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.230",
+      "name": "GTP + S-adenosyl-L-methionine = N(7)-methyl-GTP + S-adenosyl-L-homocysteine",
+      "equation": "GTP + S-adenosyl-L-methionine = N(7)-methyl-GTP + S-adenosyl-L-homocysteine",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "gtp",
           "stoichiometry": 1
         },
         {
@@ -474,46 +437,36 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
+          "metabolite": "7_methyl_gtp",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_230"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:43212"
+        "rhea": "RHEA:46948"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43212"
+            "id": "RHEA:46948"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "16S rRNA (guanine(1516)-N(2))-methyltransferase",
-      "equation": "guanosine(1516) in 16S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(1516) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.242",
+      "name": "cytidine(1400) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1400) in 16S rR...",
+      "equation": "cytidine(1400) in 16S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1400) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -523,7 +476,7 @@
       ],
       "products": [
         {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -535,22 +488,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_242"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:43220"
+        "rhea": "RHEA:47732"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43220"
+            "id": "RHEA:47732"
           }
         ]
       }
@@ -594,49 +542,6 @@
           {
             "db": "Rhea",
             "id": "RHEA:41231"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "1-tetradecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphocholine +...",
-      "equation": "1-tetradecanoyl-2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphocholine + H2O = 2-(4Z,7Z,10Z,13Z,16Z,19Z-docosahexaenoyl)-sn-glycero-3-phosphocholine + tetradecanoate + H(+)",
-      "substrates": [
-        {
-          "metabolite": "1_tetradecanoyl_2_4z_7z_10z_13z_16z_19z_docosahe",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_4z_7z_10z_13z_16z_19z_docosahexaenoyl_sn_glyce",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "tetradecanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:54400"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:54400"
           }
         ]
       }

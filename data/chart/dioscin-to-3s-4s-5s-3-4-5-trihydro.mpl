@@ -34,7 +34,7 @@ pathway dioscin-to-3s-4s-5s-3-4-5-trihydro "dioscin to (3S,4S,5S)-3,4,5-trihydro
 
   branch from l_rhamnopyranose side left {
     l_rhamnopyranose
-    <-> ec_3_2_1_189 [3.2.1.189] +dioscin +h2o +diosgenin
+    <-> ec_3_2_1_194 [3.2.1.194] +ginsenoside_rg2 +h2o +protopanaxatriol
     glucose
   }
 }

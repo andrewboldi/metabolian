@@ -18,26 +18,26 @@ pathway 5-trans-prostaglandin-d2-to-r-pgj2-s-glutathione "5-trans Prostaglandin 
 
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_altropyranose +phosphate +d_altropyranose +h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +megalomicin_c +phosphate +megalomicin_c +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    alpha_l_arabinopyanose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    1r_6r_1_2_5_5a_6_7_hexahydrophenazine_1_6_dicar
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_d_xylose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    sangivamycin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_arabinopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    tubercidin
   }
 
   branch from prostaglandin_j2 side left {

@@ -26,14 +26,14 @@ pathway nadh-to-adenosine-gdp-cobinamide "NADH to Adenosine-GDP-cobinamide" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h
-    3_s_hydroxy_dihomo_gama_linolenoyl_coenzyme_a
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +linalool +h +o2 +h2o
+    6e_8_oxolinalool
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +3_oxo_6z_9z_12z_octadecatrienoyl_coa
-    3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coenzyme
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +r_linalool +h +o2 +6e_8_oxolinalool
+    h2o
   }
 
   branch from r_1_aminopropan_2_yl_phosphate side right {
@@ -45,36 +45,36 @@ pathway nadh-to-adenosine-gdp-cobinamide "NADH to Adenosine-GDP-cobinamide" {
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    tauroursodeoxycholate
+    sulphate_conjugate_3_methoxy_acetaminophen
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    glycoursodeoxycholate
+    siroheme
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    sulfochenodeoxycholate
+    <-> . +d_ribulose +h2o
+    d_ribulose_5_phosphate
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    l_homocysteine
+    simvastatin_hydroxy_acid
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +5z_8z_11z_eicosatrienoyl_coenzyme_a +amp +h +atp +coa
-    5z_8z_11z_eicosatrienoic_acid
+    <-> ec_6_2_1_53 [6.2.1.53] +l_proline +h +atp
+    l_prolyl_adenylate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +henicosanoic_acid +atp +coa +h +heneicosanoyl_coenzyme_a
+    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp +jasmonic_acid_anion +h +7_epi_jasmonoyl_l_alanine
     amp
   }
 

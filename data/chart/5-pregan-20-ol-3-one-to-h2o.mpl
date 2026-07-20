@@ -24,14 +24,14 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from h side left {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dihexadec_9_enoyl_n_c16_1 +l_serine
-    cdp_1_2_dihexadec_9_enoylglycerol
+    <-> . +udp +3_5_diiodothyroacetate_beta_d_glucuronoside +3_5_diiodothyroacetate
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_dioctadec_11_enoyl_n_c18_1 +l_serine
-    cdp_1_2_dioctadec_11_enoylglycerol
+    <-> . +17_estradiol_3_4_quinone +glutathione
+    4_hydroxy_17beta_estradiol_2_s_glutathione
   }
 
   branch from 3alpha_hydroxy_5alpha_pregnan_20_one side left {
@@ -42,14 +42,14 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> . +4_oxo_9_cis_retinoate +h +nadp
-    9_cis_4_oxo_13_14_dihydro_retinoate
+    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadp +h2o
+    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
   }
 
   branch from nadph side left {
     nadph
-    <-> . +adrenochrome +h +nadp
-    adrenochrome_o_semiquinone
+    <-> . +cholestane_3_7_12_24_25_pentol +nadp +h
+    3alpha_7alpha_12alpha_25_tetrahydroxy_5beta_chol
   }
 
   branch from 5_alpha_thdoc side right {
@@ -60,37 +60,37 @@ pathway 5-pregan-20-ol-3-one-to-h2o "5α-pregan-20β-ol-3-one to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +z_3_oxohexadec_9_enoyl_coa +h
-    3s_9z_3_hydroxyhexadecenoyl_coa
+    <-> . +nadh +h +12_dehydro_leukotriene_b4
+    10_11_dihydro_12_oxo_ltb4
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +z_3_oxotetradec_7_enoyl_coa +h
-    cis_3s_hydroxytetradec_7_enoyl_coa
+    <-> . +nadh +h +3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
+    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
+    <-> . +superoxide +h +melatonin
+    n_gamma_acetyl_n_2_formyl_5_methoxykynurenamine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +maltodecaose +beta_d_fructose
-    maltononaose
+    <-> . +5_ht_moduline +d_ala_leu
+    l_leucyl_l_serine
   }
 
   branch from atp side left {
     atp
-    <-> . +diphosphate +10_11_dihydro_ltb4_coa +h +amp +coa
-    6_7_dihydro_12_epi_ltb4
+    <-> . +h +adp +phosphate +h2o
+    6z_9z_12z_15z_octadecatetraenoyl_coa
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    d_ribose
+    succinate
   }
 }

@@ -18,26 +18,26 @@ pathway diaminobutyryl-citryl-eth-to-amp "diaminobutyryl-citryl-eth… to AMP" {
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +l_leucine +o2 +5_hydroxy_leucine +succinate
+    <-> . +gibberellin_a34 +o2 +succinate +gibberellin_a34_catabolite +h2o
     co2
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +5_hydroxy_leucine +o2 +co2 +succinate
-    5_5_dihydroxy_leucine
+    <-> . +gibberellin_a13 +co2 +succinate +h +gibberellin_a25
+    o2
   }
 
   branch from atp side left {
     atp
-    <-> . +l_alanine +indol_3_yl_acetate +diphosphate +amp
-    n_indole_3_acetyl_l_alanine
+    <-> ec_6_2_1_3 [6.2.1.3] +phytenoyl_coa +diphosphate +h +amp +coa
+    2e_phytenoic_acid
   }
 
   branch from atp side right {
     atp
-    <-> . +l_leucine +indol_3_yl_acetate +diphosphate +amp
-    n_indole_3_acetyl_l_leucine
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
+    l_phenylalanine
   }
 
   branch from l_2_4_diaminobutanoate side left {
@@ -66,37 +66,37 @@ pathway diaminobutyryl-citryl-eth-to-amp "diaminobutyryl-citryl-eth… to AMP" {
 
   branch from h side left {
     h
-    <-> . +co2 +2_keto_4_hydroxy_5_phosphopentanoate +phosphonoacetaldehyde
-    oxaloacetate
+    <-> ec_1_2_1_84 [1.2.1.84] +7_hydroxylauroyl_coa +nadph +nadp +coa
+    1_7_dodecanediol
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +fusicocca_1_10_14_diene_16_hydroxymethyl_3_8beta +fusicocca_1_10_14_diene_3_8beta_16_triol
-    s_adenosyl_l_methionine
+    <-> ec_2_7_7_77 [2.7.7.77] +bis_guanylyl_molybdopterin_cofactor +diphosphate +gtp
+    bis_molybdenum_cofactor
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
-    3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
+    <-> ec_2_3_1_15 [2.3.1.15] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
+    1_c16_0_alpha_omega_dicarboxyl_2_lysophosphatida
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_c22_0_dca_lpa +sn_glycerol_3_phosphate
-    22_carboxy_docosanoyl_coa
+    <-> . +kaempferol_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
+    kaempferol_3_o_3_o_4_coumaroyl_6_o_feruloyl_gluc
   }
 
   branch from amp side left {
     amp
-    <-> . +diphosphate +h +n_indole_3_acetyl_l_aspartate +indol_3_yl_acetate +atp
-    l_aspartate
+    <-> ec_6_2_1_3 [6.2.1.3] +diphosphate +2_3_4_saturated_fatty_acyl_coa +atp +coa +2_3_4_saturated_fatty_acid
+    pmf
   }
 
   branch from amp side right {
     amp
-    <-> . +diphosphate +indole_3_acetyl_l_glutamic_acid +h +atp +l_glutamate
-    indol_3_yl_acetate
+    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +h +atp +coa
+    4_methoxycinnamic_acid
   }
 }

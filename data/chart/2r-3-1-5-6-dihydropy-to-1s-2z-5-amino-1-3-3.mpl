@@ -24,13 +24,13 @@ pathway 2r-3-1-5-6-dihydropy-to-1s-2z-5-amino-1-3-3 "(2R)-3-{[1-(5,6-dihydropyâ€
 
   branch from fad side right {
     fad
-    <-> . +erucoyl_coa +fadh2 +h
-    2e_13z_docosadienoyl_coa
+    <-> . +fadh2 +h +2_4_6_trichlorophenolate +o2 +chloride +h2o
+    2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from fad side left {
     fad
-    <-> . +11z_eicosenoyl_coa +fadh2 +h
-    2e_11z_icosadienoyl_coa
+    <-> . +aminopyrrolnitrin +h2o +fadh2 +h +o2 +chloride
+    monodechloroaminopyrrolnitrin
   }
 }

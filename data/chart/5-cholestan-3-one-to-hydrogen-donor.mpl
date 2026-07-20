@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen donor" {
-  spacing 284
+  spacing 266
 
   spine at 0,0 {
     5_cholestan_3_one
@@ -24,14 +24,14 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
 
   branch from cholest_4_en_3_one side left {
     cholest_4_en_3_one
-    <-> ec_5_3_3_1 [5.3.3.1]
-    cholest_5_en_3_one
+    <-> ec_1_17_99_10 [1.17.99.10] +hydrogen_acceptor +h2o +hydrogen_donor
+    25_hydroxycholest_4_en_3_one
   }
 
   branch from cholest_4_en_3_one side right {
     cholest_4_en_3_one
-    <-> ec_1_14_15_28 [1.14.15.28] +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    25r_4_dafachronate
+    <-> . +fmnh2 +o2 +25s_4_dafachronate +h2o +hplus
+    fmn
   }
 
   branch from di_sulfido_diiron side left {
@@ -46,51 +46,33 @@ pathway 5-cholestan-3-one-to-hydrogen-donor "5β-cholestan-3-one to hydrogen don
     biliverdin
   }
 
-  branch from 25s_3_ketocholest_4_en_26_al side left {
-    25s_3_ketocholest_4_en_26_al
-    <-> . +nadh +h +25s_4_dafachronate +h2o
-    nad
-  }
-
-  branch from 25s_3_ketocholest_4_en_26_al side right {
-    25s_3_ketocholest_4_en_26_al
-    <-> . +nadh +h +nad
-    26_hydroxycholest_4_en_3_one
-  }
-
-  branch from 25s_4_dafachronate side left {
-    25s_4_dafachronate
-    <-> . +cholest_4_en_3_one +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
-
-  branch from 25s_3_oxocholest_4_en_26_oyl_coa side right {
+  branch from 25s_3_oxocholest_4_en_26_oyl_coa side left {
     25s_3_oxocholest_4_en_26_oyl_coa
     <-> .
     25r_3_oxocholest_4_en_26_oyl_coa
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
-    pimeloyl_coa
-  }
-
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    casbene
+    <-> ec_6_1_1_16 [6.1.1.16] +amp_3_end_1 +cysteine +atp +amp
+    3_l_cysteinyl_adenylyl_zwitterionic_group
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_3_99_19 [1.3.99.19] +quinoline_4_carboxylate +hydrogen_acceptor +h2o
-    2_oxo_1_2_dihydroquinoline_4_carboxylate
+  branch from ppi side left {
+    ppi
+    <-> ec_4_2_3_7 [4.2.3.7] +fpp
+    pentalenene
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
-    phenylglyoxylate
+    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_acceptor
+    cyclohexane_1_3_dione
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_97_1_1 [1.97.1.1] +chlorate +hydrogen_acceptor +h2o
+    chlorite
   }
 }

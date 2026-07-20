@@ -24,14 +24,14 @@ pathway 1-5-anhydro-d-fructose-to-microthecin "1,5-anhydro-D-fructose to microth
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_57 [1.2.1.57] +nadh +hexanoyl_coa +h +hexanal
-    coa
+    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_12z_octadecadienoate +h +h2o
+    a_linoleate_group
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_328 [1.1.1.328] +nadh +duroquinone +h
-    durohydroquinone
+    <-> ec_1_2_1_48 [1.2.1.48] +nadh +2_butenoic_acid +h +h2o
+    crotonaldehyde
   }
 
   branch from 1_5_anhydro_d_fructose side right {

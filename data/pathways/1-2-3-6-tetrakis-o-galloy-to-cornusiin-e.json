@@ -103,49 +103,41 @@
       }
     },
     {
-      "id": "r_prunasin",
-      "name": "(R)-prunasin",
-      "formula": "C14H17NO6",
+      "id": "1_o_sinapoyl_d_glucose",
+      "name": "1-O-sinapoyl-β-D-glucose",
+      "short": "1-O-sinapoyl-β-D-gl…",
+      "formula": "C17H22O10",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:17396"
+        "chebi": "CHEBI:16546"
       }
     },
     {
-      "id": "mandelonitrile",
-      "name": "mandelonitrile",
-      "formula": "C8H7NO",
+      "id": "1_2_di_o_sinapoyl_d_glucose",
+      "name": "1,2-di-O-sinapoyl-β-D-glucose",
+      "short": "1,2-di-O-sinapoyl-β…",
+      "formula": "C28H32O14",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16910"
+        "chebi": "CHEBI:27993"
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "melibiose",
+      "name": "melibiose",
+      "formula": "C12H22O11",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:30616"
+        "chebi": "CHEBI:28053"
       }
     },
     {
-      "id": "g6p",
-      "name": "D-Glucose 6-phosphate",
-      "short": "D-Glucose 6-P",
-      "formula": "C6H11O9P",
-      "charge": -2,
+      "id": "d_galactopyranose",
+      "name": "D-galactopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61548"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
+        "chebi": "CHEBI:4139"
       }
     },
     {
@@ -194,24 +186,10 @@
       ]
     },
     {
-      "id": "ec_3_2_1_118",
-      "name": "prunasin beta-glucosidase",
+      "id": "ec_2_3_1_103",
+      "name": "sinapoylglucose--sinapoylglucose O-sinapoyltransferase",
       "ec": [
-        "3.2.1.118"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_1",
-      "name": "hexokinase",
-      "ec": [
-        "2.7.1.1"
-      ]
-    },
-    {
-      "id": "ec_2_7_1_2",
-      "name": "glucokinase",
-      "ec": [
-        "2.7.1.2"
+        "2.3.1.103"
       ]
     }
   ],
@@ -349,12 +327,52 @@
     },
     {
       "id": "r4",
-      "name": "prunasin beta-glucosidase",
-      "equation": "(R)-prunasin + H2O = mandelonitrile + D-glucose",
-      "ec": "3.2.1.118",
+      "name": "sinapoylglucose--sinapoylglucose O-sinapoyltransferase",
+      "equation": "2 1-O-(trans-sinapoyl)-beta-D-glucose = 1,2-di-O-sinapoyl beta-D-glucose + D-glucose",
+      "ec": "2.3.1.103",
       "substrates": [
         {
-          "metabolite": "r_prunasin",
+          "metabolite": "1_o_sinapoyl_d_glucose",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_di_o_sinapoyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:22664"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "melibiose + H2O = D-galactose + D-glucose",
+      "equation": "melibiose + H2O = D-galactose + D-glucose",
+      "substrates": [
+        {
+          "metabolite": "melibiose",
           "stoichiometry": 1
         },
         {
@@ -364,79 +382,25 @@
       ],
       "products": [
         {
-          "metabolite": "mandelonitrile",
+          "metabolite": "d_galactopyranose",
           "stoichiometry": 1
         },
         {
           "metabolite": "glucose",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_118"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:16489"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:16489"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "hexokinase",
-      "equation": "D-glucose + ATP = D-glucose 6-phosphate + ADP + H(+)",
-      "ec": "2.7.1.1",
-      "substrates": [
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "g6p",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_1_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:17825"
+        "rhea": "RHEA:28663"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:17825"
+            "id": "RHEA:28663"
           }
         ]
       }

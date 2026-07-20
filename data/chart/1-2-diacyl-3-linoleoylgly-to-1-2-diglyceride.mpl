@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diacyl-3-linoleoylgly-to-1-2-diglyceride "1,2-diacyl-3-linoleoylglyâ€¦ to 1,2-diglyceride" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     1_2_diacyl_3_linoleoylglycerol
@@ -14,11 +14,5 @@ pathway 1-2-diacyl-3-linoleoylgly-to-1-2-diglyceride "1,2-diacyl-3-linoleoylglyâ
     1_monoglyceride
     <-> . +acyl_coa -coa
     1_2_diglyceride
-  }
-
-  branch from 1_2_diglyceride side left {
-    1_2_diglyceride
-    <-> . +acyl_coa +coa
-    triglyceride
   }
 }

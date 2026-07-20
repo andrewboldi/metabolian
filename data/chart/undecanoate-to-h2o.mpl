@@ -48,14 +48,14 @@ pathway undecanoate-to-h2o "undecanoate to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_80 [4.2.3.80] +fpp
-    longipinene
+    <-> ec_4_2_3_94 [4.2.3.94] +fpp
+    curcumene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_96 [2.5.1.96] +fpp
-    15_cis_4_4_diapophytoene
+    <-> ec_3_1_7_10 [3.1.7.10] +geranylgeranyl_diphosphate +h2o
+    13e_labda_7_13_dien_15_ol
   }
 
   branch from trans_2_undecenoyl_coa side left {
@@ -72,38 +72,38 @@ pathway undecanoate-to-h2o "undecanoate to H2O" {
 
   branch from h side left {
     h
-    <-> . +4_oxoisotretinoin
-    all_trans_4_oxoretinoate
+    <-> . +rac_5_6_epoxy_retinoyl_beta_d_glucuronide +udp +rac_5_6_epoxy_retinoate
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +udp +3_5_3_5_tetraiodothyroacetate_beta_d_glucuronosi +3_3_5_5_tetraiodothyroacetic_acid
-    udp_alpha_d_glucuronate
+    <-> . +udp +4_oxo_9_cis_retinoyl_beta_glucuronide +udp_alpha_d_glucuronate
+    4_oxo_9_cis_retinoate
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +nadp +noradrenochrome_o_semiquinone
-    noradrenochrome
+    <-> . +8z_11z_14z_17z_3_oxoicosatetraenoyl_coa +h +nadp
+    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadp +h2o
-    3alpha_7alpha_12alpha_trihydroxy_5beta_cholestan
+    <-> . +h +7z_10z_13z_16z_19z_3_oxodocosapentaenoyl_coa +nadp
+    3_s_hydroxy_docosa_7_10_13_16_19_all_cis_pentaen
   }
 
   branch from o2 side left {
     o2
-    <-> . +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h2o2
-    5_oxo_12_r_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
+    <-> . +coa_18_cooh_16e_dinor_lte5 +h2o2
+    coa_omega_cooh_dinor_lte4
   }
 
   branch from o2 side right {
     o2
-    <-> . +5_oxo_12_s_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h2o2
-    5_oxo_12_s_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
+    <-> . +benzo_a_pyrene_2_3_oxide +nadp +h2o +h +nadph
+    benzo_a_pyrene
   }
 
   branch from coa side left {
@@ -120,26 +120,26 @@ pathway undecanoate-to-h2o "undecanoate to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +3alpha_7alpha_12alpha_trihydroxy_24_oxo_5beta_ch +h
-    24_r_25_r_varanoyl_coa
+    <-> ec_1_6_1_1 [1.6.1.1] +nadh +nadp +nadph
+    pmf
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +12_dehydro_leukotriene_b4
-    10_11_dihydro_12_oxo_ltb4
+    <-> ec_1_14_18_2 [1.14.18.2] +nadh +n_glycoloylneuraminic_acid +h +o2 +h2o
+    n_acetyl_neuraminic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +prostaglandin_e2
-    prostaglandin_b2
+    <-> . +2e_9z_12z_15z_18z_21z_tetracosahexaenoyl_coa
+    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
   }
 
   branch from h2o side right {
     h2o
-    <-> . +prostaglandin_pge2_glyceryl_ester
-    prostaglandin_pgb2_glyceryl_ester
+    <-> . +3_s_hydroxy_tetracosa_12_15_18_21_all_cis_tetrae
+    2e_9z_12z_15z_18z_tetracosapentaenoyl_coa
   }
 
   branch from 10z_heptadecenoyl_coa side left {
@@ -156,25 +156,13 @@ pathway undecanoate-to-h2o "undecanoate to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sulfite
+    <-> ec_3_6_3_36 [3.6.3.36] +h +adp +phosphate +h2o
+    taurine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
-    spermidine
-  }
-
-  branch from 10z_heptadecenoic_acid side left {
-    10z_heptadecenoic_acid
-    <-> . +cholesterol +h2o
-    cholest_5_en_3b_yl_9z_heptadecenoate
-  }
-
-  branch from 10z_heptadecenoic_acid side right {
-    10z_heptadecenoic_acid
-    <-> . +cholest_5_en_3b_yl_9z_heptadecenoate +h2o
-    cholesterol
+    <-> . +h +adp +phosphate +h2o
+    taurocholate
   }
 }

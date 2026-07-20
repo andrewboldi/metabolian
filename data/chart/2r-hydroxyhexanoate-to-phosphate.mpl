@@ -20,37 +20,37 @@ pathway 2r-hydroxyhexanoate-to-phosphate "(2R)-hydroxyhexanoate to phosphate" {
 
   branch from h side left {
     h
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_4_dichlorobenzene +o2 +nad
-    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
+    <-> . +cyromazine +h2o +nh4
+    n_cyclopropylammeline
   }
 
   branch from h side right {
     h
-    <-> . +nadh +ethylbenzene +o2 +nad
-    cis_1_2_dihydro_3_ethylcatechol
+    <-> ec_2_5_1_18 [2.5.1.18] +1r_hydroxy_2r_glutathionyl_1_2_dihydronaphthale +glutathione
+    1r_2s_naphthalene_1_2_oxide
   }
 
   branch from adp side left {
     adp
-    <-> ec_2_7_4_10 [2.7.4.10] +utp +amp
-    udp
+    <-> ec_2_7_12_2 [2.7.12.2] +h +atp +l_threonine
+    o_phospho_l_threonine
   }
 
   branch from adp side right {
     adp
-    <-> ec_6_3_1_9 [6.3.1.9] +h +glutathionylspermine +phosphate +atp +glutathione
-    spermine
+    <-> ec_3_6_3_49 [3.6.3.49] +h +phosphate +atp +h2o
+    chloride
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph +phosphoenolpyruvate +h2o
-    iminoerythrose_4_phosphate
+    <-> . +salbostatin_6_phosphate +h2o +h
+    salbostatin
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +aminodhq
-    4_amino_3_4_dideoxy_d_arabino_heptulosonate_7_ph
+    <-> ec_2_4_1_216 [2.4.1.216] +beta_d_glucose_6_phosphate +beta_d_glucose_1_phosphate
+    alpha_alpha_trehalose_6_phosphate
   }
 }

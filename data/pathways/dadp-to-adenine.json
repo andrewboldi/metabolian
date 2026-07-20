@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dadp-to-adenine",
+  "name": "dADP to adenine",
+  "category": "other",
+  "summary": "A 3-step route from dADP(3−) to adenine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:64928"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57667"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dadp",
+      "name": "dADP",
+      "formula": "C10H12N5O9P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57667"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine_5_monophosphate",
+      "name": "2'-deoxyadenosine 5'-monophosphate",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H12N5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58245"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine",
+      "name": "2'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17256"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_phosphate",
+      "name": "2-deoxy-α-D-ribose 1-phosphate",
+      "short": "2-deoxy-α-D-ribose…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57259"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "Adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16708"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dADP + H2O = dAMP + phosphate + H(+)",
+      "equation": "dADP + H2O = dAMP + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "dadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:64928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dAMP + H2O = 2'-deoxyadenosine + phosphate",
+      "equation": "dAMP + H2O = 2'-deoxyadenosine + phosphate",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29371"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "2'-deoxyadenosine + phosphate = 2-deoxy-alpha-D-ribose 1-phosphate + adenine",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27742"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27742"
+          }
+        ]
+      }
+    }
+  ]
+}

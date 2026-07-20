@@ -114,51 +114,77 @@
       }
     },
     {
-      "id": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
-      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine",
-      "short": "S-(4-hydroxy-3-meth…",
-      "formula": "C8H17NO3S",
-      "charge": 0,
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
       "xrefs": {
-        "chebi": "CHEBI:156146"
+        "chebi": "CHEBI:58145"
       }
     },
     {
-      "id": "2_methyl_3_sulfanylbutan_1_ol",
-      "name": "2-methyl-3-sulfanylbutan-1-ol",
-      "short": "2-methyl-3-sulfanyl…",
-      "formula": "C5H12OS",
-      "charge": 0,
+      "id": "2r_2_hydroxypyrrolidine_1_carboximidamide",
+      "name": "(2R)-2-hydroxypyrrolidine-1-carboximidamide",
+      "short": "2-hydroxypyrrolidin…",
+      "formula": "C5H12N3O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:156147"
+        "chebi": "CHEBI:180910"
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:57540"
       }
     },
     {
-      "id": "3_sulfanylpentan_1_ol_l_cysteine",
-      "name": "3-sulfanylpentan-1-ol-L-cysteine",
-      "short": "3-sulfanylpentan-1-…",
-      "formula": "C8H17NO3S",
-      "charge": 0,
+      "id": "adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2",
+      "name": "ADP-2'-imine-ribofurano[1',2':4,5]oxazolidine(2−)",
+      "short": "ADP-2'-imine-ribofu…",
+      "formula": "C21H28N8O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:156143"
+        "chebi": "CHEBI:184300"
       }
     },
     {
-      "id": "3_mercaptopentanol",
-      "name": "3-mercaptopentanol",
-      "formula": "C5H12OS",
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156144"
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
       }
     }
   ],
@@ -318,11 +344,15 @@
     },
     {
       "id": "r5",
-      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyr...",
-      "equation": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine + H2O = 2-methyl-3-sulfanylbutan-1-ol + pyruvate + NH4(+)",
+      "name": "agmatine + O2 + H2O = N-amidino-(2R)-hydroxypyrrolidine + H2O2 + NH4(+)",
+      "equation": "agmatine + O2 + H2O = N-amidino-(2R)-hydroxypyrrolidine + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
@@ -332,11 +362,11 @@
       ],
       "products": [
         {
-          "metabolite": "2_methyl_3_sulfanylbutan_1_ol",
+          "metabolite": "2r_2_hydroxypyrrolidine_1_carboximidamide",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -347,57 +377,61 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:64748"
+        "rhea": "RHEA:69160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64748"
+            "id": "RHEA:69160"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
-      "equation": "3-sulfanylpentan-1-ol-L-cysteine + H2O = 3-sulfanyl-1-pentanol + pyruvate + NH4(+)",
+      "name": "L-arginyl-[protein] + NAD(+) = ADP-riboxanated L-argininyl-[protein] + nicotinamide + N...",
+      "equation": "L-arginyl-[protein] + NAD(+) = ADP-riboxanated L-argininyl-[protein] + nicotinamide + NH4(+) + H(+)",
       "substrates": [
         {
-          "metabolite": "3_sulfanylpentan_1_ol_l_cysteine",
+          "metabolite": "l_argininium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "nad",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3_mercaptopentanol",
+          "metabolite": "adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "pyruvate",
+          "metabolite": "nicotinamide",
           "stoichiometry": 1
         },
         {
           "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64752"
+        "rhea": "RHEA:69500"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64752"
+            "id": "RHEA:69500"
           }
         ]
       }

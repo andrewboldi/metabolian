@@ -18,13 +18,13 @@ pathway 2r-hydroxyhexanoate-to-l-glutamate "(2R)-hydroxyhexanoate to L-glutamate
 
   branch from glutamate side left {
     glutamate
-    <-> ec_2_6_1_7 [2.6.1.7] +3_hydroxy_l_kynurenine +akg +h2o
-    xanthurenate
+    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
+    l_glutamyl_l_glutamyl_l_glutamate_3
   }
 
   branch from glutamate side right {
     glutamate
-    <-> . +3_hydroxy_l_kynurenine +akg
-    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+    <-> ec_6_3_2_62 [6.3.2.62] +atp +l_glutamyl_l_glutamyl_l_glutamate_3 +adp +pi +hplus
+    l_glutamyl_l_glutamate_2
   }
 }

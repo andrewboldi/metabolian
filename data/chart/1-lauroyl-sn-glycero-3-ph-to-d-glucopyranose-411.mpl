@@ -24,14 +24,14 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3
 
   branch from phosphocholine side left {
     phosphocholine
-    <-> . +sphingosine_1_phosphocholine +h2o +hplus
-    sphingosine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_hexadecanoyl_sn_glycerol
   }
 
   branch from phosphocholine side right {
     phosphocholine
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_hexadecanoyl_sn_glycerol
+    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_acyl_sn_glycerol
   }
 
   branch from cdp_choline side left {
@@ -48,14 +48,14 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_77 [4.2.3.77] +fpp
-    germacrene_d
+    <-> ec_4_2_3_90 [4.2.3.90] +fpp
+    5_epi_selinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_54 [4.2.3.54] +2_cis_6_cis_farnesyl_diphosphate
-    endo_bergamotene
+    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
+    cubebol
   }
 
   branch from sphingomyelin side left {
@@ -66,14 +66,14 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
-    neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac
+    <-> ec_2_4_3_6 [2.4.3.6] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetylneuraminyl_2_3_d_galactosyl_1_4_n_acety
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_1 [2.4.3.1] +d_galactoside +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminyl_2_6_d_galactoside
+    <-> ec_2_4_3_2 [2.4.3.2] +d_galactosyl_1_3_n_acetyl_d_galactosaminide +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety
   }
 
   branch from n_acylsphingosine side right {
@@ -102,13 +102,13 @@ pathway 1-lauroyl-sn-glycero-3-ph-to-d-glucopyranose-411 "1-lauroyl-sn-glycero-3
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_186 [3.2.1.186] +protodioscin +h2o
-    26_desglucoprotodioscin
+    <-> . +d_glucosyl_n_octadecanoylsphingosine +h2o
+    n_octadecanoylsphingosine
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_4_2_99_23 [4.2.99.23] +6_tuliposide_b
-    tulipalin_b
+    <-> . +nadp +nadph +hplus
+    d_glucitol
   }
 }

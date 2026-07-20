@@ -18,14 +18,14 @@ pathway r-g-keto-i-to-h "R.g.-Keto I to H" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +1d_5_o_methyl_myo_inositol
-    myo_inositol
+    <-> . +s_adenosyl_l_homocysteine +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h
+    dtdp_4_dehydro_2_6_dideoxy_d_glucose
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +dtdp_4_dehydro_3_c_methyl_2_6_dideoxy_alpha_d_gl +h
-    dtdp_4_dehydro_2_6_dideoxy_d_glucose
+    <-> . +s_adenosyl_l_homocysteine +h +c33_botryococcene
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 
   branch from 12_ethyl_8_propyl_3_vinylbacteriochlorophyllide side left {
@@ -36,25 +36,25 @@ pathway r-g-keto-i-to-h "R.g.-Keto I to H" {
 
   branch from s_adenosyl_l_homocysteine side right {
     s_adenosyl_l_homocysteine
-    <-> . +2_oxoglutarate +h +gentamicin_a +h2o2 +s_adenosyl_l_methionine +o2 +l_glutamate
-    gentamicin_a2
+    <-> . +h +a_c34_botryococcenes +s_adenosyl_l_methionine
+    c33_botryococcene
   }
 
   branch from s_adenosyl_l_homocysteine side left {
     s_adenosyl_l_homocysteine
-    <-> . +gentamicin_x2_cation +s_adenosyl_l_methionine +h
-    gentamicin_a
+    <-> . +h +2_3_4_o_methyl_rhamnosyl_tetracyclic_spinosyn_ps +s_adenosyl_l_methionine
+    2_3_o_methyl_rhamnosyl_tetracyclic_spinosyn_pseu
   }
 
   branch from h side right {
     h
-    <-> ec_2_6_1_94 [2.6.1.94] +2_oxoglutarate +kanamycin_b +l_glutamate
-    6_oxokanamycin_c
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ester_glucuronide +3_3_5_5_tetraiodothyroacetic_acid
+    udp_alpha_d_glucuronate
   }
 
   branch from h side left {
     h
-    <-> . +paromomycin_ii
-    paromomycin
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +triiodothyroacetate_ester_glucuronide +udp_alpha_d_glucuronate
+    tiratricol
   }
 }

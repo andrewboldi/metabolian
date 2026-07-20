@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6s-5-formyltetrahydrofo-to-l-serine "(6S)-5-formyltetrahydrofo… to L-serine" {
-  spacing 320
+  spacing 314
 
   spine at 0,0 {
     6s_5_formyltetrahydrofolate
@@ -18,25 +18,19 @@ pathway 6s-5-formyltetrahydrofo-to-l-serine "(6S)-5-formyltetrahydrofo… to L-s
 
   branch from glycine side left {
     glycine
-    <-> . +glycocholate +arginine
-    l_arginocholate
-  }
-
-  branch from glycine side right {
-    glycine
-    <-> . +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +holo-acp +hplus
-    n2_3r_3_hydroxyacyl_glycinate
-  }
-
-  branch from serine side left {
-    serine
-    <-> ec_1_1_1_387 [1.1.1.387] +nad +co2 +nadh
-    ammonioacetaldehyde
+    <-> . +restrictinol +hplus +h2o
+    restricticin
   }
 
   branch from serine side right {
     serine
     <-> ec_2_7_1_225 [2.7.1.225] +atp +adp +hplus
     pser
+  }
+
+  branch from serine side left {
+    serine
+    <-> . +n_arachidonoyl_l_serine +h2o
+    arachidonate
   }
 }

@@ -122,42 +122,49 @@
       }
     },
     {
-      "id": "sam",
-      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
-      "short": "S-Adenosyl-L-methio…",
-      "formula": "C15H23N6O5S",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:59789"
-      }
-    },
-    {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:61961"
-      }
-    },
-    {
-      "id": "sah",
-      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
-      "short": "S-Adenosyl-L-homocy…",
-      "formula": "C14H20N6O5S",
+      "id": "l_methionine",
+      "name": "L-methionine",
+      "formula": "C5H9NOS",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57856"
+        "chebi": "CHEBI:16044"
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
-      "charge": 1,
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "s_l_lysyl_l_methionine_sulfilimine",
+      "name": "S-(L-lysyl)-L-methionine sulfilimine",
+      "short": "S-(L-lysyl)-L-methi…",
+      "formula": "C11H19N3O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:166867"
+      }
+    },
+    {
+      "id": "hypobromite",
+      "name": "hypobromite",
+      "formula": "BrO",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29250"
+      }
+    },
+    {
+      "id": "bromide",
+      "name": "bromide",
+      "formula": "Br",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15858"
       }
     }
   ],
@@ -167,20 +174,6 @@
       "name": "protein-ribulosamine 3-kinase",
       "ec": [
         "2.7.1.172"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_356",
-      "name": "[histone H3]-lysine(27) N-trimethyltransferase",
-      "ec": [
-        "2.1.1.356"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_369",
-      "name": "[histone H3]-lysine(27) N-methyltransferase",
-      "ec": [
-        "2.1.1.369"
       ]
     }
   ],
@@ -357,75 +350,80 @@
     },
     {
       "id": "r5",
-      "name": "[histone H3]-lysine(27) N-trimethyltransferase",
-      "equation": "L-lysyl(27)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(27)-[histone H3] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
-      "ec": "2.1.1.356",
+      "name": "L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-L-lysyl-N-S-L-methionyl...",
+      "equation": "L-lysyl-[collagen] + L-methionyl-[collagen] + H2O2 = [collagen]-L-lysyl-N-S-L-methionyl-[collagen] + 2 H2O + H(+)",
       "substrates": [
         {
           "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
-          "stoichiometry": 3
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "s_l_lysyl_l_methionine_sulfilimine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
-          "stoichiometry": 3
+          "metabolite": "h2o",
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_356"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:60292"
+        "rhea": "RHEA:66020"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60292"
+            "id": "RHEA:66020"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "[histone H3]-lysine(27) N-methyltransferase",
-      "equation": "L-lysyl(27)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(27)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.369",
+      "name": "L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-L-lysyl-N-S-L-me...",
+      "equation": "L-lysyl-[collagen] + L-methionyl-[collagen] + hypobromite = [collagen]-L-lysyl-N-S-L-methionyl-[collagen] + bromide + H2O + H(+)",
       "substrates": [
         {
           "metabolite": "l_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sam",
+          "metabolite": "l_methionine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hypobromite",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_methyl_l_lysinium",
+          "metabolite": "s_l_lysyl_l_methionine_sulfilimine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "sah",
+          "metabolite": "bromide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         },
         {
@@ -433,22 +431,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_369"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:60296"
+        "rhea": "RHEA:66024"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:60296"
+            "id": "RHEA:66024"
           }
         ]
       }

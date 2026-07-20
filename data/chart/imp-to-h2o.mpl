@@ -20,14 +20,14 @@ pathway imp-to-h2o "IMP to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +pentan_3_one +nadh +nad
-    pentan_3_ol
+    <-> ec_3_5_1_11 [3.5.1.11] +phenylacetylglycine +h2o +phenyl_acetate
+    glycine
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_oxoretinal +nad
-    all_trans_4_oxoretinol
+    <-> ec_1_3_5_2 [1.3.5.2] +ubiquinol_2 +methyl_s_orotate +ubiquinone_2
+    methyl_s_dihydroorotate
   }
 
   branch from d_glyceraldehyde_3_phosphate side left {
@@ -44,49 +44,49 @@ pathway imp-to-h2o "IMP to H2O" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_91 [3.1.3.91] +n_7_methyl_gmp +h2o +h
-    n2_methylguanosine
+    <-> ec_3_1_3_27 [3.1.3.27] +distearoyl_phosphatidylglycerol +h2o
+    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_6_1_1 [3.6.1.1] +diphosphate +h2o +h
-    pmf
+    <-> ec_3_1_3_1 [3.1.3.1] +phenol +h2o
+    phenyl_phosphate
   }
 
   branch from d_glyceraldehyde side left {
     d_glyceraldehyde
-    <-> ec_2_7_1_28 [2.7.1.28] +adp +h +atp
+    <-> . +h2o +h +phosphate
     glyceraldehyde_3_phosphate
   }
 
   branch from d_glyceraldehyde side right {
     d_glyceraldehyde
-    <-> . +d_fructose_1_phosphate
+    <-> . +d_tagatose_1_phosphate +h
     dihydroxyacetone_phosphate
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    3_n_morpholino_propanesulfonate
+    ferroxamine
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_6_1_1 [6.6.1.1] +protoporphyrin_ix +mg +h2o +h +adp +phosphate
-    magnesium_protoporphyrin
+    <-> . +h +adp +phosphate +h2o
+    ferroxamine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +phenylalanyl_phenylalanine
-    l_phenylalanine
+    <-> ec_3_5_1_28 [3.5.1.28] +glcnac_1_6_anhmurnac +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    glcnac_1_6_anhmurnac_l_ala_gamma_d_glu_meso_dap
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine
-    ala_ala
+    <-> ec_3_5_1_11 [3.5.1.11] +ethanol +phenyl_acetate
+    ethyl_phenylacetate
   }
 }

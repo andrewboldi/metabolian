@@ -24,13 +24,13 @@ pathway p-cumate-to-h2o "p-cumate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +s_salsolinol +acetaldehyde
-    dopamine
+    <-> . +xanthurenate_8_o_beta_d_glucoside +l_glutamate +3_hydroxykynurenine_o_beta_d_glucoside +h
+    2_oxoglutarate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +norlaudanosoline +h +dopamine
-    3_4_dihydroxyphenylacetaldehyde
+    <-> . +h +w_carboxy_leukotriene_b4
+    20_trihydroxy_leukotriene_b4
   }
 }

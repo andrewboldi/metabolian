@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d "α-D-GalNAc-(1→3)-β-D-GalN… to α-D-galactosyl-(1→4)-β-D-…" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d
@@ -20,35 +20,29 @@ pathway d-galnac-1-3-d-galn-to-d-galactosyl-1-4-d "α-D-GalNAc-(1→3)-β-D-GalN
 
   branch from n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d side left {
     n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
-    <-> . +udp_d_galactose +udp +hplus
-    d_galactosyl_1_4_n_acetyl_d_galactosaminyl_1_3
-  }
-
-  branch from n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d side right {
-    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
     <-> . +d_galnac_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d +udp +hplus
     udp_n_acetyl_d_galactosamine
   }
 
-  branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1 side left {
+  branch from d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1 side right {
     d_galactosyl_1_4_d_galactosyl_1_4_d_glucosyl_1
     <-> . +udp_d_galactose +udp +hplus
     d_gal_1_3_d_gal_1_4_d_gal_1_4_d_glc_1_1_cer
   }
 
-  branch from n_acetyl_d_galactosamine side right {
+  branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
     <-> . +n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d +h2o
     d_galactosyl_1_4_d_glucosyl_1_1_n_acylsphingosi
   }
 
-  branch from d_galactopyranose side left {
+  branch from d_galactopyranose side right {
     d_galactopyranose
     <-> . +melibiose +h2o
     beta_d_glucose
   }
 
-  branch from d_galactopyranose side right {
+  branch from d_galactopyranose side left {
     d_galactopyranose
     <-> ec_3_2_1_23 [3.2.1.23] +h +4_nitrophenol +h2o
     4_nitrophenyl_d_galactoside

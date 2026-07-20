@@ -18,13 +18,13 @@ pathway o-s-3-2-4-dioxopentyl-to-s-adenosyl-l-homocystei "O-(S-3-(2,4-dioxopenty
 
   branch from sah side left {
     sah
-    <-> . +4_amino_l_phenylalanine +sam +hplus
-    4_methylamino_l_phenylalanine
+    <-> . +heliamine +sam +hplus
+    n_methylheliamine
   }
 
   branch from sah side right {
     sah
-    <-> . +4_methylamino_l_phenylalanine +sam +hplus
-    4_dimethylamino_l_phenylalanine
+    <-> ec_2_1_1_122 [2.1.1.122] +an_s_7_8_13_14_tetrahydroprotoberberine +sam
+    an_s_cis_n_methyl_7_8_13_14_tetrahydroprotoberbe
   }
 }

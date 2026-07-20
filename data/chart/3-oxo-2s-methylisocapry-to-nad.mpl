@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-oxo-2s-methylisocapry-to-nad "3-Oxo-(2S)-Methylisocapry… to NAD" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     3_oxo_2s_methylisocapryloyl_coenzyme_a
@@ -18,49 +18,43 @@ pathway 3-oxo-2s-methylisocapry-to-nad "3-Oxo-(2S)-Methylisocapry… to NAD" {
 
   branch from propanoyl_coa side left {
     propanoyl_coa
-    <-> ec_2_8_3_1 [2.8.3.1] +propanoate +lactoyl_coa +h
-    s_lactate
+    <-> ec_2_3_1_26 [2.3.1.26] +cholesterol +coa
+    propionyl_cholesterol
   }
 
   branch from propanoyl_coa side right {
     propanoyl_coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +coa +o2 +nad +h2o
-    tricosanoyl_coa
-  }
-
-  branch from 4_methyl_pentanoyl_coa side left {
-    4_methyl_pentanoyl_coa
-    <-> . +fadh2 +h +4_methyl_trans_2_pentenoyl_coa
-    fad
-  }
-
-  branch from coa side right {
-    coa
-    <-> . +3r_11z_3_hydroxyoctadecenoyl_coa +r_carnitine
-    3_hydroxy_octadecenoyl_carnitine
+    <-> ec_2_3_1_84 [2.3.1.84] +ethanol +coa
+    ethyl_propionate
   }
 
   branch from coa side left {
     coa
-    <-> . +r_carnitine +3_hydroxyoctadecadienoyl_coenzyme_a
-    3_hydroxyoctadecadienoylcarnitine
+    <-> . +13z_icosenoyl_coa +h2o
+    z_icos_13_enoic_acid
   }
 
-  branch from 3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa side right {
+  branch from coa side right {
+    coa
+    <-> . +8z_11z_icosadienoyl_coa +h2o
+    8_11_eicosadienoic_acid
+  }
+
+  branch from 3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa side left {
     3_s_hydroxy_2_s_6_dimethyl_heptanoyl_coa
     <-> . +h2o
     2_6_dimethyl_trans_2_heptenoyl_coa
   }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_429 [1.1.1.429] +nadh +s_2_benzoylsuccinyl_coa +h
-    r_s_hydroxy_phenyl_methyl_succinyl_coa
-  }
-
   branch from nad side right {
     nad
-    <-> ec_1_8_1_15 [1.8.1.15] +nadh +h +mycothione
-    mycothiol
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    cis_cis_cis_10_13_16_docosatrienoyl_coa
+  }
+
+  branch from nad side left {
+    nad
+    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
+    5z_8z_11z_14z_17z_eicosapentaenoyl_coa
   }
 }

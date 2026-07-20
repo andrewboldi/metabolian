@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway carbamoyl-adenylate-to-phosphate "carbamoyl adenylate to phosphate" {
-  spacing 230
+  spacing 224
 
   spine at 0,0 {
     carbamoyl_adenylate
@@ -18,79 +18,73 @@ pathway carbamoyl-adenylate-to-phosphate "carbamoyl adenylate to phosphate" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    3a_deolivosylpremithramycin_b
+    <-> . +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h2o
+    l_alanine_d_glutamate_meso_2_6_diaminoheptanedio
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    premithramycin_b_lactone
+    <-> . +udp +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h2o
+    udp_2_acetamido_4_d_alanylamino_2_4_6_trideoxy_a
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_3 [6.2.1.3] +hexadecanoate +atp +coa +diphosphate
-    hexadecanoyl_coa
+    <-> . +diphosphate +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h +atp +nh4
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_2_1_1 [6.2.1.1] +propanoyl_amp +coa +h
-    propanoyl_coa
+    <-> . +diphosphate +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +h +atp +nh4
+    n_acetylmuramoyl_l_alanyl_d_isoglutaminyl_n_beta
   }
 
   branch from carbamoyl_phosphate side left {
-    carbamoyl_phosphate
-    <-> . +tobramycin +phosphate
-    nebramycin_5
-  }
-
-  branch from carbamoyl_phosphate side right {
     carbamoyl_phosphate
     <-> . +ansamitocinoside_p3 +phosphate
     4_carbamoyl_ansamitocinoside_p3
   }
 
+  branch from carbamoyl_phosphate side right {
+    carbamoyl_phosphate
+    <-> . +l_ornithine +h +phosphate
+    l_citrulline
+  }
+
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    chromomycin_a3
+    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +diphosphate +h
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    olivomycin_a
-  }
-
-  branch from kanamycin_b side left {
-    kanamycin_b
-    <-> ec_3_6_3_44 [3.6.3.44] +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    durhamycin_a
+    <-> . +3_o_phospho_chloramphenicol +h +adp
+    chloramphenicol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    mithramycin_sk
+    <-> . +2_acetamido_4_d_alanylamino_2_4_6_trideoxy_d_man +h +phosphoenolpyruvate +phosphate
+    5_n_acetyl_7_n_d_alanyl_legionaminic_acid
   }
 
-  branch from phosphate side right {
-    phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
-    demycarosyl_mithramycin
+  branch from h2o side right {
+    h2o
+    <-> ec_1_17_99_11 [1.17.99.11] +1_hydroxy_3_oxo_steroid
+    3_oxo_delta1_steroid
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +atp +h2o
-    mithramycin_sdk
+    <-> ec_2_4_2_1 [2.4.2.1] +7h_purine +alpha_d_ribose_1_phosphate
+    nebularine
+  }
+
+  branch from phosphate side right {
+    phosphate
+    <-> . +heptaprenylglyceryl_phosphate +h2o +h
+    heptaprenylglycerol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-s-lactoylglutathione-to-h2o "(R)-S-lactoylglutathione to H2O" {
-  spacing 280
+  spacing 274
 
   spine at 0,0 {
     r_s_lactoylglutathione
@@ -32,14 +32,14 @@ pathway r-s-lactoylglutathione-to-h2o "(R)-S-lactoylglutathione to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +streptomycin_6_phosphate
-    dihydrostreptomycin_6_phosphate
+    <-> ec_1_1_1_12 [1.1.1.12] +nadh +l_sorbopyranose +h
+    l_iditol
   }
 
   branch from nad side right {
     nad
-    <-> . +1_hydroxy_2_naphthoate +nadh +h +h2o
-    1_hydroxy_2_naphthaldehyde
+    <-> ec_1_3_1_77 [1.3.1.77] +nadh +3_hydroxy_2_phenylchromenylium +h
+    2r_3r_flavan_3_ol
   }
 
   branch from r_lactaldehyde side left {
@@ -60,45 +60,39 @@ pathway r-s-lactoylglutathione-to-h2o "(R)-S-lactoylglutathione to H2O" {
     nadph
   }
 
-  branch from s_propane_1_2_diol side right {
-    s_propane_1_2_diol
-    <-> ec_1_1_1_21 [1.1.1.21] +nadp +h +nadph
-    hydroxyacetone
-  }
-
-  branch from propanal side left {
-    propanal
-    <-> ec_4_1_2_10 [4.1.2.10] +cyanide +h
-    r_2_hydroxybutanenitrile
-  }
-
   branch from propanal side right {
     propanal
     <-> . +nadh +h +nad
     acrolein
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_5_1 [3.5.5.1] +benzoate +nh4
-    benzonitrile
+  branch from propanal side left {
+    propanal
+    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
+    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_84 [4.2.1.84] +benzonitrile
-    benzamide
+    <-> ec_3_3_2_9 [3.3.2.9] +bromobenzene_2_3_dihydrodiol
+    bromobenzene_2_3_oxide
   }
 
-  branch from o2 side left {
-    o2
-    <-> . +fluorene
-    3_4_dihydroxyfluorene
+  branch from h2o side left {
+    h2o
+    <-> ec_3_3_2_9 [3.3.2.9] +benzo_a_pyrene_7_8_diol
+    benzo_a_pyrene_7_8_oxide
   }
 
   branch from o2 side right {
     o2
-    <-> . +fluorene
-    1_2_dihydroxyfluorene
+    <-> . +1_2_dihydroxy_8_carboxynaphthalene
+    2_carboxy_2_hydroxy_8_carboxychromene
+  }
+
+  branch from o2 side left {
+    o2
+    <-> . +2_hydroxy_7_hydroxymethylchromene_2_carboxylate
+    1_2_dihydroxy_7_hydroxymethylnaphthalene
   }
 }

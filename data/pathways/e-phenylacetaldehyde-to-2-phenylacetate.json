@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "e-phenylacetaldehyde-to-2-phenylacetate",
+  "name": "(E)-phenylacetaldehyde… to 2-phenylacetate",
+  "category": "other",
+  "summary": "A 3-step route from (E)-phenylacetaldehyde oxime to 2-phenylacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52160"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:47793"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "e_phenylacetaldehyde_oxime",
+      "name": "(E)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47793"
+      }
+    },
+    {
+      "id": "z_phenylacetaldehyde_oxime",
+      "name": "(Z)-phenylacetaldehyde oxime",
+      "short": "phenylacetaldehyde…",
+      "formula": "C8H9NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50723"
+      }
+    },
+    {
+      "id": "phenylacetonitrile",
+      "name": "phenylacetonitrile",
+      "formula": "C8H7N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25979"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "2_phenylacetate",
+      "name": "2-phenylacetate",
+      "formula": "C8H7O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM737265"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "2_aminoprop_2_enoate",
+      "name": "2-aminoprop-2-enoate",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM734499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_8_1_4",
+      "name": "phenylacetaldoxime dehydratase",
+      "ec": [
+        "4.8.1.4"
+      ]
+    },
+    {
+      "id": "ec_3_5_5_1",
+      "name": "nitrilase",
+      "ec": [
+        "3.5.5.1"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_17",
+      "name": "L-serine ammonia-lyase",
+      "ec": [
+        "4.3.1.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(E)-phenylacetaldehyde oxime = (Z)-phenylacetaldehyde oxime",
+      "equation": "(E)-phenylacetaldehyde oxime = (Z)-phenylacetaldehyde oxime",
+      "substrates": [
+        {
+          "metabolite": "e_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phenylacetaldoxime dehydratase",
+      "equation": "(Z)-phenylacetaldehyde oxime = phenylacetonitrile + H2O",
+      "ec": "4.8.1.4",
+      "substrates": [
+        {
+          "metabolite": "z_phenylacetaldehyde_oxime",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_8_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20069"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20069"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitrilase",
+      "ec": "3.5.5.1",
+      "substrates": [
+        {
+          "metabolite": "phenylacetonitrile",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_phenylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_5_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150089"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-serine ammonia-lyase",
+      "ec": "4.3.1.17",
+      "substrates": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_aminoprop_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR94778"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR94778"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,25 +18,25 @@ pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-propylbac "12-ethyl-71,71-dihydro
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
-    13_o_desmethyl_tacrolimus_13_dmt_or_m_i
+    <-> . +s_adenosyl_l_homocysteine +nbeta_methylnorajmaline
+    norajmaline
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +13_o_desmethyl_tacrolimus_13_dmt_or_m_i
-    13_15_o_didesmethyl_tacrolimus
+    <-> . +s_adenosyl_l_homocysteine +h +s_isococlaurine
+    s_norcoclaurine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_99_9 [1.14.99.9] +20s_17_20_dihydroxycholesterol +nadp +h +o2 +nadph
-    20_hydroxycholesterol
+    <-> . +h +adp +4_s_glutathionyl_5_6_dihydroxyindoline +phosphate +4_s_glutathionyl_5_6_dihydroxyindoline
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_methoxy_5_methyl_6_all_trans_hexaprenyl_1_4_be +o2 +nadph +nadp
-    3_demethylubiquinone_6
+    <-> . +h +adp +phosphate +atp
+    para_hydroxyatorvastatin
   }
 }

@@ -18,13 +18,13 @@ pathway guanidinoacetic-acid-to-s-adenosyl-l-homocystein "guanidinoacetic acid t
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_351 [2.1.1.351] +nocamycin_e +sam
-    nocamycin_i
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +adenosine_5_monophosphate_1 +sam +hplus
-    2_o_methyladenosine_5_monophosphate_1
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

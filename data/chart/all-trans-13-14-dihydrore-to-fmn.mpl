@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway all-trans-13-14-dihydrore-to-fmn "all-trans-13,14-dihydrore… to FMN" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     all_trans_13_14_dihydroretinol
@@ -16,17 +16,5 @@ pathway all-trans-13-14-dihydrore-to-fmn "all-trans-13,14-dihydrore… to FMN" {
     4_hydroxy_all_trans_13_14_dihydroretinoate
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     4_keto_all_trans_13_14_dihydroretinoic_acid_anio
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +hancockiamide_d +fmnh2 +o2 +h2o +hplus
-    hancockiamide_h
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +n1_n5_n10_e_tri_p_coumaroylspermidine +fmnh2 +o2 +h2o +hplus
-    n1_n5_n10_tris_e_caffeoyl_spermidine
   }
 }

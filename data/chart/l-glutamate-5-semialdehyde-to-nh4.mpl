@@ -18,26 +18,26 @@ pathway l-glutamate-5-semialdehyde-to-nh4 "L-glutamate 5-semialdehyde to NH4" {
 
   branch from h side left {
     h
-    <-> . +palustradiene_diol +nadp +h2o +nadph +palustradienol
-    o2
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_3_hydroxytetratriacontenoylpantethein +nadp +nadph
+    o_s_15z_3_oxotetratriacontenoylpantetheine_4_pho
   }
 
   branch from h side right {
     h
-    <-> . +abietatriene +o2 +nadph +dehydroabietadienol +h2o
-    nadp
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_7z_3_hydroxyhexacosenoylpantetheine_4_pho +nadp +nadph
+    o_s_7z_3_oxohexacosenoylpantetheine_4_phosphoryl
   }
 
   branch from h2o side left {
     h2o
-    <-> . +neoabietadiene_diol
-    neoabietadienal
+    <-> . +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante
+    o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4
   }
 
   branch from h2o side right {
     h2o
-    <-> . +neoabietadienal +o2 +nadph +nadp
-    neoabietic_acid
+    <-> . +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan
+    o_s_2e_15z_27z_hexatetracontatrienoylpantetheine
   }
 
   branch from 2r_4e_2_amino_5_2s_3r_2_hydroxy_3_1h_indol_3_yl side left {
@@ -48,13 +48,13 @@ pathway l-glutamate-5-semialdehyde-to-nh4 "L-glutamate 5-semialdehyde to NH4" {
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_octyl_thiohydroximate
-    pyruvate
+    <-> ec_3_5_1_4 [3.5.1.4] +benzamide +h +hydroxylamine
+    benzhydroxamic_acid
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
-    9_methylthio_nonyl_thiohydroximic_acid
+    <-> ec_3_5_1_4 [3.5.1.4] +valerylhydroxamic_acid +h +hydroxylamine
+    pentanamide
   }
 }

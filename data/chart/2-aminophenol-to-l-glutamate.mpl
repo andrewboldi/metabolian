@@ -34,50 +34,50 @@ pathway 2-aminophenol-to-l-glutamate "2-aminophenol to L-glutamate" {
 
   branch from h side left {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +s_2_2_dichloro_1_hydroxy_ethyl_glutathione +2_2_dichloroacetaldehyde
-    glutathione
+    <-> ec_2_7_8_23 [2.7.8.23] +co2 +3_hydrohydroxyphosphoryl_pyruvate
+    carboxyphosphonopyruvate
   }
 
   branch from h side right {
     h
-    <-> ec_2_6_1_29 [2.6.1.29] +alpha_omega_diamine +2_oxoglutarate +l_glutamate
-    omega_aminoaldehyde
+    <-> . +nadph +tetrachlorocatechol +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
+    nadp
   }
 
   branch from anthranilate side left {
     anthranilate
-    <-> . +asperlicin_d +diphosphate +h +amp +h2o +l_tryptophan
+    <-> ec_2_7_7_55 [2.7.7.55] +diphosphate +n_adenylylanthranilic_acid +h
     atp
   }
 
   branch from anthranilate side right {
     anthranilate
-    <-> ec_2_7_7_55 [2.7.7.55] +diphosphate +h +atp
-    n_adenylylanthranilic_acid
+    <-> ec_1_7_1_6 [1.7.1.6] +methyl_red +h +nadph +nadp
+    n_n_dimethyl_1_4_phenylenediamine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
-    3_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> . +nadh +phenanthrene_4_carboxylate +h +o2
+    cis_3_4_phenanthrenedihydrodiol_4_carboxylate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_10 [1.14.12.10] +nadh +h +3_fluorobenzoic_acid +o2
-    5_fluorocyclohexadiene_cis_cis_1_2_diol_1_carbox
+    <-> . +nadh +h +o2 +2_4_dichlorotoluene
+    4_6_dichloro_3_methyl_cis_1_2_dihydroxycyclohexa
   }
 
   branch from h2o side left {
     h2o
-    <-> . +isoniazid_alpha_ketoglutaric_acid +h +isoniazide
-    2_oxoglutarate
+    <-> . +h +4_amino_2_nitrotoluene +nadph +nadp
+    2_4_diaminotoluene
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_1 [3.1.1.1] +4_amino_1_piperidinecarboxylic_acid +sn_38
-    npc
+    <-> . +7_9_12_octaketide_intermediate_2
+    7_9_12_octaketide_intermediate_3
   }
 
   branch from chorismate side left {
@@ -94,14 +94,14 @@ pathway 2-aminophenol-to-l-glutamate "2-aminophenol to L-glutamate" {
 
   branch from nh4 side left {
     nh4
-    <-> . +co2 +atropaldehyde +h
-    3_carbamoyl_2_phenylpropionaldehyde
+    <-> . +2_oxo_4_hydroxy_5_aminovalerate
+    2_5_dioxopentanoate
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +pyruvate +p_hydroxyphenylacetothiohydroximate +h2o
-    s_hydroxyphenylacetothiohydroximoyl_l_cysteine
+    <-> . +4_aminocatechol +h +h2o
+    benzene_1_2_4_triol
   }
 
   branch from diphosphate side left {
@@ -118,20 +118,20 @@ pathway 2-aminophenol-to-l-glutamate "2-aminophenol to L-glutamate" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +salicin_6_phosphate +phosphoenolpyruvate
-    salicin
+    <-> . +formaldehyde +h +co2
+    hydroxyacetone
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_4_1_13 [4.4.1.13] +4_methylthiobutylthiohydroximate +nh4 +h2o
-    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+    <-> . +h +fumarate +h2o
+    3_maleylpyruvate
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_2_6_1_22 [2.6.1.22] +s_2_methyl_3_oxopropanoate +2_oxoglutarate
-    s_3_amino_2_methylpropanoate
+    <-> ec_2_6_1_22 [2.6.1.22] +s_2_methyl_3_oxopropanoate +s_3_amino_2_methylpropanoate
+    2_oxoglutarate
   }
 
   branch from l_glutamate side right {

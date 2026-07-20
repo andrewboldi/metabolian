@@ -18,73 +18,73 @@ pathway secalciferol-to-h2o "secalciferol to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +3_cyanobenzaldehyde +nad
-    3_cyanobenzyl_alcohol
+    <-> ec_1_13_11_4 [1.13.11.4] +3_bromo_4_hydroxy_6_oxo_hepta_2_4_dienedioic_aci +o2
+    3_bromogentisate
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +4_chlorobenzaldehyde +nad
-    pr01
+    <-> . +d_tryptophan +nh4 +h2o
+    d_tryptophanamide
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_4 [1.1.3.4] +d_xylono_1_5_lactone +h2o2
-    aldehydo_d_xylose
+    <-> ec_1_4_3_21 [1.4.3.21] +mafenide +h +h2o +nh4 +h2o2
+    4_formylbenzenesulfonamide
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_17_3_2 [1.17.3.2] +2_hydroxy_7_9_dihydropurin_8_one +h2o2 +h2o
-    2_hydroxypurine
+    <-> ec_1_1_3_9 [1.1.3.9] +methyl_alpha_d_galacto_hexodialdopyranoside +h2o2
+    methyl_alpha_d_galactoside
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +2_ethylbutanal +h +nadp
-    2_ethylbutanol
+    <-> ec_1_1_1_324 [1.1.1.324] +6e_8_hydroxygeraniol +nadp +h +6e_8_oxogeraniol
+    6e_8_hydroxygeranial
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0066905 +h +nadp
-    p_fluorobenzyl_alcohol
+    <-> ec_1_1_1_324 [1.1.1.324] +e_hept_2_enal +h +nadp
+    trans_2_heptenol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +compound_0063751 +h +nadph
-    p_chlorophenylglyoxal
+    <-> ec_1_1_1_209 [1.1.1.209] +testosterone +h +nadph
+    androst_4_ene_3alpha_17beta_diol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_bromophenylglyoxal +h +nadph
-    4_bromobenzoyl_methanol
+    <-> ec_1_1_1_209 [1.1.1.209] +androstenediol_3_sulfate +h +nadph
+    dehydroepiandrosterone_3_sulfate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +benzylaminium +h
-    d_alanine_benzylamide
+    <-> ec_3_7_1_8 [3.7.1.8] +2_hydroxy_3_chloro_6_oxo_6_phenylhexa_2_4_dienoa +h +2_hydroxy_3_chloropenta_2_4_dienoate
+    benzoate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glcp_1_6_beta_d_glcp
-    beta_d_glucose
+    <-> ec_3_3_2_6 [3.3.2.6] +l_lysine +h +4_nitroaniline
+    l_lysine_p_nitroanilide
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +p_fluorobenzyl_alcohol
-    compound_0066905
+    <-> ec_1_1_1_210 [1.1.1.210] +nadh +h +5beta_androstane_3_17_dione
+    epietiocholanolone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +4_methoxybenzyl_alcohol +nadh +h
-    4_methoxybenzaldehyde
+    <-> ec_1_1_1_328 [1.1.1.328] +nadh +h +2_6_dichloroindophenol
+    reduced_2_6_dichlorophenolindophenol
   }
 }

@@ -20,26 +20,26 @@ pathway quinine-to-hydrogen-donor "quinine to hydrogen donor" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_112 [1.14.14.112] +ent_cassa_12_15_diene +fmnh2 +o2 +h2o +hplus
-    11_hydroxy_ent_cassa_12_15_diene
+    <-> ec_1_14_14_42 [1.14.14.42] +l_tetrahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
+    e_7_methylsulfanyl_heptanal_oxime
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
-    e_4_hydroxyphenyl_acetaldehyde_oxime
+    <-> ec_1_14_14_40 [1.14.14.40] +l_phenylalanine +fmnh2 +o2 +co2 +h2o +hplus
+    e_phenylacetaldehyde_oxime
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_26 [1.3.99.26] +all_trans_carotene +hydrogen_acceptor
-    lycopene
+    <-> . +decanedioyl_coa +hydrogen_acceptor
+    trans_2_decenedioyl_coa
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +hydrogen_acceptor +lycopene
-    neurosporene
+    <-> ec_1_14_19_37 [1.14.19.37] +11z_14z_17z_icosatrienoyl_coa +o2 +hydrogen_acceptor +h2o
+    5z_11z_14z_17z_icosatetraenoyl_coa
   }
 
   branch from akg side left {

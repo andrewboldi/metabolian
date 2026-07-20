@@ -18,14 +18,14 @@ pathway 1-2-dioleoyl-sn-glycero-3-to-oleoyl-sn-glycero-3 "1,2-dioleoyl-sn-glycer
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_371 [2.1.1.371] +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +3_4_dihydroxyflavone_7_olate +sam +hplus
+    4_hydroxy_3_methoxyflavone_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_372 [2.1.1.372] +l_lysinium +sam +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> . +3_4_8_trihydroxyflavone_7_olate +sam +hplus
+    3_4_dihydroxy_8_methoxyflavone_7_olate
   }
 
   branch from 1_palmityl_2_acetyl_3_oleoyl_sn_glycerol side left {

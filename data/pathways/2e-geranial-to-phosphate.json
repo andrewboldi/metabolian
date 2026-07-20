@@ -1,0 +1,343 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-geranial-to-phosphate",
+  "name": "(2E)-geranial to phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2E)-geranial to phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR197100"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_geranial",
+      "name": "(2E)-geranial",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368412"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "geranate",
+      "name": "geranate",
+      "formula": "C10H15O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:67260"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "trans_geranyl_coa",
+      "name": "trans-Geranyl-CoA",
+      "formula": "C31H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1371419"
+      }
+    },
+    {
+      "id": "hydrogencarbonate",
+      "name": "hydrogencarbonate",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1094693"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa",
+      "name": "3-(4-methylpent-3-en-1-yl)pent-2-enedioyl-CoA",
+      "short": "3-(4-methylpent-3-e…",
+      "formula": "C32H45N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM1371391"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "geranoyl_coa",
+      "name": "Geranoyl-CoA",
+      "formula": "C31H46N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1371418"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_3_1",
+      "name": "aldehyde oxidase",
+      "ec": [
+        "1.2.3.1"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_5",
+      "name": "geranoyl-CoA carboxylase",
+      "ec": [
+        "6.4.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldehyde oxidase",
+      "ec": "1.2.3.1",
+      "substrates": [
+        {
+          "metabolite": "2e_geranial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geranate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR197100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196120",
+      "substrates": [
+        {
+          "metabolite": "geranate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_geranyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196120"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196120"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "geranoyl-CoA carboxylase",
+      "ec": "6.4.1.5",
+      "substrates": [
+        {
+          "metabolite": "hydrogencarbonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_geranyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_methylpent_3_en_1_yl_pent_2_enedioyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR196507"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196507"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR196122",
+      "substrates": [
+        {
+          "metabolite": "geranoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_geranyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR196122"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196122"
+          }
+        ]
+      }
+    }
+  ]
+}

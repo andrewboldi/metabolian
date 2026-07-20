@@ -32,73 +32,73 @@ pathway l-glutamate-5-semialdehyde-to-h2o-null "L-glutamate 5-semialdehyde to H2
 
   branch from l_ornithine side left {
     l_ornithine
-    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_methionine
-    4_methylsulfanyl_2_oxobutanoate
-  }
-
-  branch from l_ornithine side right {
-    l_ornithine
     <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_alanine
     pyruvate
   }
 
+  branch from l_ornithine side right {
+    l_ornithine
+    <-> ec_2_6_1_13 [2.6.1.13] +l_glutamate_5_semialdehyde +l_tyrosine
+    3_4_hydroxyphenyl_pyruvate
+  }
+
   branch from fad side left {
     fad
-    <-> . +fadh2 +h +2_4_7_10_13_16_docosahexenoyl_coenzyme_a
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+    <-> . +fadh2 +2_6_dichlorobenzoquinone +h
+    2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +h +cis2trans4decadienoyl_coenzyme_a
-    trans4decenoyl_coenzyme_a
+    <-> . +thca_coa_25r +fadh2 +h
+    24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
   }
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_8
-    tetrathionate
+    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinone_8 +h +formate
+    co2
   }
 
   branch from ubiquinol_8 side right {
     ubiquinol_8
-    <-> . +ubiquinone_8 +h2o +pyruvate +nh4
-    d_alanine
+    <-> ec_1_10_3_11 [1.10.3.11] +ubiquinone_8 +h2o
+    o2
   }
 
   branch from ubiquinone_8 side left {
     ubiquinone_8
-    <-> ec_1_1_5_2 [1.1.5.2] +beta_d_glucose +ubiquinol_8
-    d_glucono_1_5_lactone
+    <-> . +l_aspartate +ubiquinol_8 +h
+    iminoaspartate
   }
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> ec_1_1_5_6 [1.1.5.6] +h +formate +ubiquinol_8
-    co2
+    <-> . +l_aspartate +ubiquinol_8
+    iminoaspartate
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_1_131 [3.5.1.131] +3_oxo_3_ureidopropanoate +h2o
-    1_carboxymalonamate
+    <-> . +h +amicoumacin_a
+    amicoumacin_c
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxynitrourea +h2o
-    1_nitrobiuret
+    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h +h2o
+    l_leucinamide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_cysteine +l_arginine
-    alanyl_arginyl_cysteine
+    <-> . +l_histidine +l_lysine +l_threonine
+    histidyl_lysyl_threonine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +glycine +l_arginine
-    alanyl_arginyl_glycine
+    <-> . +l_histidine +l_glutamine +l_methionine
+    histidyl_methionyl_glutamine
   }
 }

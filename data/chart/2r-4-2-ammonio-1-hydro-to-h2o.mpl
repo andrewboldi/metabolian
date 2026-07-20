@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2r-4-2-ammonio-1-hydro-to-h2o "(2R)-4-(2-ammonio-1-hydro… to H2O" {
-  spacing 318
+  spacing 312
 
   spine at 0,0 {
     2r_4_2_ammonio_1_hydroxyethyl_phenol
@@ -34,85 +34,79 @@ pathway 2r-4-2-ammonio-1-hydro-to-h2o "(2R)-4-(2-ammonio-1-hydro… to H2O" {
 
   branch from menaquinol_8 side right {
     menaquinol_8
-    <-> ec_1_2_2_1 [1.2.2.1] +pmf +co2 +pmf +mk_8 +h
-    formate
-  }
-
-  branch from menaquinol_8 side left {
-    menaquinol_8
     <-> . +fadh2 +mk_8 +h
     fad
   }
 
-  branch from mk_8 side right {
-    mk_8
-    <-> ec_1_2_2_1 [1.2.2.1] +pmf +menaquinol_8 +pmf +h +formate
-    co2
+  branch from menaquinol_8 side left {
+    menaquinol_8
+    <-> ec_1_2_2_1 [1.2.2.1] +pmf +co2 +pmf +mk_8 +h
+    formate
   }
 
-  branch from mk_8 side left {
+  branch from mk_8 side right {
     mk_8
     <-> . +pmf +menaquinol_8 +fumarate +pmf
     succinate
   }
 
-  branch from s_lactate side right {
-    s_lactate
-    <-> ec_1_2_1_5 [1.2.1.5] +h +nadph +r_lactaldehyde +h2o
-    nadp
-  }
-
   branch from s_lactate side left {
     s_lactate
-    <-> ec_1_2_1_5 [1.2.1.5] +nadh +h +r_lactaldehyde +h2o
-    nad
+    <-> . +ubiquinol_9 +pyruvate
+    ubiquinone_9
   }
 
-  branch from pmf side right {
-    pmf
-    <-> ec_7_1_1_12 [7.1.1.12] +menaquinol_9 +fumarate +succinate
-    menaquinone_9
+  branch from s_lactate side right {
+    s_lactate
+    <-> . +ubiquinol_10 +pyruvate
+    ubiquinone_10
   }
 
   branch from pmf side left {
     pmf
-    <-> ec_1_2_2_1 [1.2.2.1] +menaquinol_8 +co2 +h +formate
-    menaquinone_8
+    <-> . +partially_degraded_s_cerevisiae_mannan_extracell
+    partially_degraded_s_cerevisiae_mannan_periplasm
   }
 
-  branch from nitrate side right {
+  branch from pmf side right {
+    pmf
+    <-> . +ferricytochrome_c +h2o +h +o2
+    ferrocytochrome_c
+  }
+
+  branch from nitrate side left {
     nitrate
     <-> ec_1_7_5_1 [1.7.5.1] +nitrite +phylloquinone +h2o
     phylloquinol
   }
 
-  branch from nitrate side left {
+  branch from nitrate side right {
     nitrate
-    <-> ec_1_7_5_1 [1.7.5.1] +nitrite +ubiquinone_9 +h2o
-    ubiquinol_9
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    l_ribose
+    <-> . +superoxide
+    nitric_oxide
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    n_acetyl_d_galactosamine_1_phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    apramycin
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    3_6_anhydro_l_galactofuranose
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    nebramycin_iv
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_colitopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    3_deoxycarbamoylkanamycin_c
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    dibekacin
   }
 }

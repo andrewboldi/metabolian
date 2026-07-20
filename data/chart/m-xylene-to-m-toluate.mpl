@@ -18,13 +18,13 @@ pathway m-xylene-to-m-toluate "m-xylene to m-toluate" {
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +di_sulfido_diiron +o2 +hplus +h2o
-    1_acyl_2_palmitoleoylglycerolipid
+    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_24r_dihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_1_108 [1.3.1.108] +dihydrocaffeoyl_coa +di_sulfido_diiron +nad +nadh
-    trans_caffeoyl_coa
+    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20s_24s_dihydroxyvitamin_d3
   }
 }

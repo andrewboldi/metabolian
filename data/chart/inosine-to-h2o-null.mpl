@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway inosine-to-h2o-null "inosine to H2O" {
-  spacing 220
+  spacing 214
 
   spine at 0,0 {
     inosine
@@ -18,37 +18,31 @@ pathway inosine-to-h2o-null "inosine to H2O" {
 
   branch from xanthosine side left {
     xanthosine
-    <-> ec_3_2_2_1 [3.2.2.1] +h2o +xanthine
-    aldehydo_d_ribose
-  }
-
-  branch from xanthosine side right {
-    xanthosine
     <-> . +h2o +xanthine
     beta_d_ribopyranose
   }
 
-  branch from beta_d_ribofuranose side left {
-    beta_d_ribofuranose
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    atp
-  }
-
   branch from beta_d_ribofuranose side right {
     beta_d_ribofuranose
-    <-> ec_2_7_1_15 [2.7.1.15] +adp +h +atp
-    alpha_d_ribofuranose_5_phosphate
+    <-> ec_1_1_1_21 [1.1.1.21] +h +nadph +l_arabinitol
+    nadp
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +prochaxamycin
-    3_demethylchaxamycin_b
+  branch from beta_d_ribofuranose side left {
+    beta_d_ribofuranose
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +h +nad
+    l_arabinitol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +naphthomycin_e
-    pronaphthomycin
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    2_deoxy_2_fluoro_beta_d_galactose
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    2_aminogalactopyranose
   }
 }

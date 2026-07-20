@@ -115,61 +115,6 @@
       }
     },
     {
-      "id": "gdp_d_mannose",
-      "name": "GDP-α-D-mannose",
-      "formula": "C16H23N5O16P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57527"
-      }
-    },
-    {
-      "id": "gdp",
-      "name": "GDP",
-      "formula": "C10H12N5O11P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58189"
-      }
-    },
-    {
-      "id": "hplus",
-      "name": "Proton (H+)",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:15378"
-      }
-    },
-    {
-      "id": "gtp",
-      "name": "GTP",
-      "formula": "C10H12N5O14P3",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:37565"
-      }
-    },
-    {
-      "id": "n_5_guanosyl_phosphono_l_histidine_1",
-      "name": "Nπ-(5'-guanosyl-phosphono)-L-histidine(1−)",
-      "short": "Nπ-(5'-guanosyl-pho…",
-      "formula": "C16H18N8O8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:176906"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
-      }
-    },
-    {
       "id": "nad",
       "name": "NAD+",
       "formula": "C21H26N7O14P2",
@@ -196,6 +141,43 @@
       "xrefs": {
         "chebi": "CHEBI:17154"
       }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "n_uridylyl_l_histidine_1",
+      "name": "Nτ-(uridylyl)-L-histidine(1−)",
+      "short": "Nτ-(uridylyl)-L-his…",
+      "formula": "C15H17N5O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233474"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
     }
   ],
   "enzymes": [
@@ -211,13 +193,6 @@
       "name": "protein-N(pi)-phosphohistidine--2-O-alpha-mannosyl-D-glycerate",
       "ec": [
         "2.7.1.195"
-      ]
-    },
-    {
-      "id": "ec_2_4_1_269",
-      "name": "mannosylglycerate synthase",
-      "ec": [
-        "2.4.1.269"
       ]
     }
   ],
@@ -384,94 +359,6 @@
     },
     {
       "id": "r5",
-      "name": "mannosylglycerate synthase",
-      "equation": "(R)-glycerate + GDP-alpha-D-mannose = (2R)-2-O-(alpha-D-mannosyl)-glycerate + GDP + H(+)",
-      "ec": "2.4.1.269",
-      "substrates": [
-        {
-          "metabolite": "d_glycerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp_d_mannose",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_d_mannosyl_d_glycerate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gdp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_4_1_269"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:30639"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:30639"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-histidyl-[RNA ligase] + GTP = N(pros)-(5'-guanosyl-phosphono)-L-histidyl-[RNA ligase]...",
-      "equation": "L-histidyl-[RNA ligase] + GTP = N(pros)-(5'-guanosyl-phosphono)-L-histidyl-[RNA ligase] + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "l_histidine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n_5_guanosyl_phosphono_l_histidine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:68084"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:68084"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotina...",
       "equation": "L-histidyl-[protein] + NAD(+) = N(tele)-(ADP-D-ribosyl)-L-histidyl-[protein] + nicotinamide + H(+)",
       "substrates": [
@@ -499,7 +386,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:72071"
       },
@@ -509,6 +396,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:72071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "equation": "L-histidyl-[protein] + UTP = N(tele)-(5'-uridylyl)-L-histidyl-[protein] + diphosphate",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_uridylyl_l_histidine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:83891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83891"
           }
         ]
       }

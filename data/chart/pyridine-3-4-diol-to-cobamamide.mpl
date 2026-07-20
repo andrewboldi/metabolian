@@ -36,14 +36,14 @@ pathway pyridine-3-4-diol-to-cobamamide "pyridine-3,4-diol to cobamamide" {
 
   branch from acetate side left {
     acetate
-    <-> . +n2_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
+    3_5_oxoisoxazolin_4_yl_l_alanine
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_5_1_144 [2.5.1.144] +o_acetyl_l_serine +trioxidosulfanidosulfate +hplus
-    s_sulfo_l_cysteinate
+    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
+    1_o_octadecyl_sn_glycero_3_phosphocholine
   }
 
   branch from s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l side left {
@@ -54,14 +54,14 @@ pathway pyridine-3-4-diol-to-cobamamide "pyridine-3,4-diol to cobamamide" {
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_45 [2.7.7.45] +gtp +hplus
-    p1_p4_bis_5_guanosyl_tetraphosphate
+    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
+    3_l_aspartate_adenylyl_1_group
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_8 [6.2.1.8] +oxalate +atp +coa +amp
-    oxalyl_coa
+    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp
+    biotinyl_coa
   }
 
   branch from d_pantetheine_4_phosphate side right {
@@ -84,14 +84,14 @@ pathway pyridine-3-4-diol-to-cobamamide "pyridine-3,4-diol to cobamamide" {
 
   branch from adenine side left {
     adenine
-    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyadenosine +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> ec_2_4_2_57 [2.4.2.57] +amp +pi
+    d_ribose_1_5_bisphosphate
   }
 
   branch from adenine side right {
     adenine
-    <-> ec_3_2_2_30 [3.2.2.30] +aminodeoxyfutalosinate +h2o
-    dehypoxanthine_futalosinate
+    <-> . +atp +h2o
+    d_ribose_5_triphosphate
   }
 
   branch from glutamine side left {
@@ -112,27 +112,21 @@ pathway pyridine-3-4-diol-to-cobamamide "pyridine-3,4-diol to cobamamide" {
     d_ribosylnicotinate
   }
 
-  branch from nicotinate_d_ribonucleotide side right {
-    nicotinate_d_ribonucleotide
-    <-> ec_2_4_2_55 [2.4.2.55] +phenol +nicotinate +hplus
-    phenyl_5_phosphonato_d_ribofuranoside
-  }
-
-  branch from ribazole_5_phosphate side left {
+  branch from ribazole_5_phosphate side right {
     ribazole_5_phosphate
     <-> ec_3_1_3_73 [3.1.3.73] +h2o +pi
     ribazole
-  }
-
-  branch from nicotinate side right {
-    nicotinate
-    <-> ec_2_4_1_196 [2.4.1.196] +udp_d_glucose +udp
-    n_d_glucosyl_nicotinate
   }
 
   branch from nicotinate side left {
     nicotinate
     <-> ec_2_1_1_7 [2.1.1.7] +sam +sah
     n_methylnicotinate
+  }
+
+  branch from nicotinate side right {
+    nicotinate
+    <-> ec_1_17_2_1 [1.17.2.1] +iron +h2o +fe2 +hplus
+    6_hydroxynicotinate
   }
 }

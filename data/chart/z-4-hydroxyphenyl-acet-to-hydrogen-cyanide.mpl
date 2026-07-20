@@ -18,14 +18,14 @@ pathway z-4-hydroxyphenyl-acet-to-hydrogen-cyanide "(Z)-(4-hydroxyphenyl)acet…
 
   branch from fmn side left {
     fmn
-    <-> . +26_oxolanosterol +fmnh2 +o2 +h2o +hplus
-    3_hydroxy_lanosta_8_24_dien_26_oate
+    <-> . +4_carboxyl_motiol +fmnh2 +o2 +h2o +hplus
+    2_deoxypolytolypin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +ganoderate_dm +fmnh2 +o2 +h2o +hplus
-    hainanate_a
+    <-> . +2_deoxypolytolypin +fmnh2 +o2 +h2o +hplus
+    polytolypin
   }
 
   branch from hydrogen_cyanide side left {

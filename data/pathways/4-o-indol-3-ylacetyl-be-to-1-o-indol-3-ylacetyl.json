@@ -167,12 +167,30 @@
       }
     },
     {
-      "id": "d_galactose",
-      "name": "D-Galactose",
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "beta_d_glucuronate",
+      "name": "beta-D-glucuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM728682"
+      }
+    },
+    {
+      "id": "beta_d_galactose",
+      "name": "beta-D-galactose",
       "formula": "C6H12O6",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM1364488"
+        "metanetx": "MNXM112"
       }
     },
     {
@@ -183,15 +201,6 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM1371206"
-      }
-    },
-    {
-      "id": "d_galactopyranose",
-      "name": "D-galactopyranose",
-      "formula": "C6H12O6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:4139"
       }
     }
   ],
@@ -222,6 +231,13 @@
       "name": "sinapoylglucose--sinapoylglucose O-sinapoyltransferase",
       "ec": [
         "2.3.1.103"
+      ]
+    },
+    {
+      "id": "ec_1_13_99_1",
+      "name": "inositol oxygenase",
+      "ec": [
+        "1.13.99.1"
       ]
     },
     {
@@ -553,21 +569,25 @@
     },
     {
       "id": "r9",
-      "name": "alpha-galactosidase",
-      "ec": "3.2.1.22",
+      "name": "inositol oxygenase",
+      "ec": "1.13.99.1",
       "substrates": [
         {
           "metabolite": "myo_inositol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_galactose",
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "alpha_d_galactosyl_1_3_1d_myo_inositol",
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_d_glucuronate",
           "stoichiometry": 1
         },
         {
@@ -577,20 +597,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_2_1_22"
+          "enzyme": "ec_1_13_99_1"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "metanetx": "MNXR153739"
+        "metanetx": "MNXR173163"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153739"
+            "id": "MNXR173163"
           }
         ]
       }
@@ -605,7 +625,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "d_galactopyranose",
+          "metabolite": "beta_d_galactose",
           "stoichiometry": 1
         }
       ],
@@ -627,14 +647,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "metanetx": "MNXR153740"
+        "metanetx": "MNXR173164"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR153740"
+            "id": "MNXR173164"
           }
         ]
       }

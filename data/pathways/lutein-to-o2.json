@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "lutein-to-o2",
   "name": "lutein to O2",
-  "category": "amino-acid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from lutein to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -115,31 +115,48 @@
       }
     },
     {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM13"
+        "metanetx": "MNXM1"
       }
     },
     {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
+      "id": "methylarsonate",
+      "name": "methylarsonate",
+      "formula": "CH4AsO3",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM5"
+        "metanetx": "MNXM2131"
       }
     },
     {
-      "id": "e_4_hydroxyphenylacetaldehyde_oxime",
-      "name": "(E)-4-hydroxyphenylacetaldehyde oxime",
-      "short": "4-hydroxyphenylacet…",
-      "formula": "C8H9NO2",
+      "id": "methylarsonous_acid",
+      "name": "methylarsonous acid",
+      "formula": "CH5AsO2",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM725973"
+        "chebi": "CHEBI:17826"
+      }
+    },
+    {
+      "id": "tyrindoxyl",
+      "name": "tyrindoxyl",
+      "formula": "C9H8BrNOS",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132865"
+      }
+    },
+    {
+      "id": "tyrindoleninone",
+      "name": "tyrindoleninone",
+      "formula": "C9H6BrNOS",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1132866"
       }
     },
     {
@@ -150,52 +167,6 @@
       "xrefs": {
         "metanetx": "WATER"
       }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H11NO3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM76"
-      }
-    },
-    {
-      "id": "phylloquinone",
-      "name": "phylloquinone",
-      "formula": "C31H46O2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1364296"
-      }
-    },
-    {
-      "id": "omega_hydroxyphylloquinone",
-      "name": "omega-Hydroxyphylloquinone",
-      "short": "omega-Hydroxyphyllo…",
-      "formula": "C31H46O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM728830"
-      }
     }
   ],
   "enzymes": [
@@ -204,13 +175,6 @@
       "name": "carotenoid-9',10'-cleaving dioxygenase",
       "ec": [
         "1.13.11.71"
-      ]
-    },
-    {
-      "id": "ec_1_14_13_194",
-      "name": "EC 1.14.13.194",
-      "ec": [
-        "1.14.13.194"
       ]
     }
   ],
@@ -383,110 +347,76 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR183489",
+      "name": "Reaction MNXR193831",
       "substrates": [
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "e_4_hydroxyphenylacetaldehyde_oxime",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
         {
           "metabolite": "h",
           "stoichiometry": 2
         },
         {
+          "metabolite": "methylarsonate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methylarsonous_acid",
+          "stoichiometry": 2
+        },
+        {
           "metabolite": "o2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "l_tyrosine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR183489"
+        "metanetx": "MNXR193831"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR183489"
+            "id": "MNXR193831"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR183502",
-      "ec": "1.14.13.194",
+      "name": "Reaction MNXR193836",
       "substrates": [
         {
-          "metabolite": "phylloquinone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
+          "metabolite": "tyrindoxyl",
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "omega_hydroxyphylloquinone",
-          "stoichiometry": 1
+          "metabolite": "tyrindoleninone",
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_13_194"
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR183502"
+        "metanetx": "MNXR193836"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR183502"
+            "id": "MNXR193836"
           }
         ]
       }

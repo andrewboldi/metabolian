@@ -1,0 +1,265 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nadh-to-l-tyrosine",
+  "name": "NADH to L-tyrosine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from NADH to L-tyrosine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR195775"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "stizolobic_acid",
+      "name": "Stizolobic acid",
+      "formula": "C9H9NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:177665"
+      }
+    },
+    {
+      "id": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+      "name": "4-(L-Alanin-3-yl)-2-hydroxy-cis,cis-muconate 6-semialdehyde",
+      "short": "4-(L-Alanin-3-yl)-2…",
+      "formula": "C9H10NO6",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1368751"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_dopa",
+      "name": "L-dopa",
+      "formula": "C9H11NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM279"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob",
+      "name": "(4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
+      "short": "(4aS,6R)-4a-hydroxy…",
+      "formula": "C9H15N5O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM31340"
+      }
+    },
+    {
+      "id": "6r_5_6_7_8_tetrahydrobiopterin",
+      "name": "(6R)-5,6,7,8-tetrahydrobiopterin",
+      "short": "5,6,7,8-tetrahydrob…",
+      "formula": "C9H15N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136570"
+      }
+    },
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM76"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_29",
+      "name": "stizolobate synthase",
+      "ec": [
+        "1.13.11.29"
+      ]
+    },
+    {
+      "id": "ec_1_14_16_2",
+      "name": "tyrosine 3-monooxygenase",
+      "ec": [
+        "1.14.16.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "stizolobate synthase",
+      "ec": "1.13.11.29",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "stizolobic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR195775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "stizolobate synthase",
+      "ec": "1.13.11.29",
+      "substrates": [
+        {
+          "metabolite": "4_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_dopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR195668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tyrosine 3-monooxygenase",
+      "ec": "1.14.16.2",
+      "substrates": [
+        {
+          "metabolite": "l_dopa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6r_5_6_7_8_tetrahydrobiopterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_16_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR141023"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR141023"
+          }
+        ]
+      }
+    }
+  ]
+}

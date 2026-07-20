@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway salicyl-alcohol-to-diphosphate "salicyl alcohol to diphosphate" {
-  spacing 240
+  spacing 228
 
   spine at 0,0 {
     salicyl_alcohol
@@ -14,17 +14,5 @@ pathway salicyl-alcohol-to-diphosphate "salicyl alcohol to diphosphate" {
     salicylate
     <-> ec_6_2_1_61 [6.2.1.61] +holo-acp +atp -amp -ppi
     o_s_2_hydroxybenzoylpantetheine_4_phosphoryl_l_s
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +n6_hydroxy_datp +h2o +hplus
-    n6_hydroxy_damp
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +octacosanoate +atp +coa +amp
-    montanoyl_coa
   }
 }

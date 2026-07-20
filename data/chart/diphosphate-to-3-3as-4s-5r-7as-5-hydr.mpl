@@ -18,49 +18,49 @@ pathway diphosphate-to-3-3as-4s-5r-7as-5-hydr "diphosphate to 3-[(3aS,4S,5R,7aS)
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    trans_2_pentadecenoic_acid
+    <-> . +2_undecylpyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +adp +phosphate
+    undecylprodigiosin
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    ibuprofen_acyl_glucuronide
+    <-> ec_6_3_2_2 [6.3.2.2] +l_alanine +l_glutamate +h +adp +phosphate
+    gamma_l_glutamyl_d_alanine
   }
 
   branch from coa side left {
     coa
-    <-> . +7z_hexadecenoyl_coa +r_carnitine
-    2e_hexadecenoylcarnitine
+    <-> . +11z_eicosenoyl_coa +cholesterol
+    cholesteryl_11z_icosenoate
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +13z_octadecenoyl_coa
-    octadecenoyl_carnitine
+    <-> . +8z_11z_14z_eicosatrienoyl_coa +cholesterol
+    cholesteryl_all_cis_icosa_8_11_14_trienoate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_histidine +l_lysine
-    histidyl_lysyl_alanine
+    <-> . +l_histidine +l_proline
+    prolyl_histidine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_lysine +l_glutamate
-    histidyl_lysyl_glutamate
+    <-> . +l_leucine +l_proline +l_arginine
+    prolyl_leucyl_arginine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +4_fumarylacetoacetate +h
-    3_5_dioxooctanedioic_acid
+    <-> ec_1_1_1_316 [1.1.1.316] +nadh +l_galactono_1_4_lactone +h
+    l_galactose
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +4_keto_2_undecylpyrroline +h2o
-    2_undecylpyrrole
+    <-> . +nadh +h +o2 +3_chlorotoluene +h2o
+    3_chlorophenyl_methanol
   }
 }

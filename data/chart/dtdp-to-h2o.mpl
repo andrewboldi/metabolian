@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-to-h2o "dTDP to H2O" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     dtdp
@@ -16,57 +16,51 @@ pathway dtdp-to-h2o "dTDP to H2O" {
     atp
   }
 
-  branch from premithramycin_a1 side left {
-    premithramycin_a1
-    <-> . +dtdp_beta_d_oliose +dtdp +h
-    premithramycin_a2
+  branch from dtdp side left {
+    dtdp
+    <-> . +h +phosphoenolpyruvate +dttp
+    pyruvate
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_beta_l_4_epi_vancosamine +chloroorienticin_b +h
-    chloroeremomycin
-  }
-
-  branch from dtdp side left {
-    dtdp
-    <-> . +20_deoxo_20_dihydro_12_13_deepoxyrosamicin +h +tylactone
-    dtdp_alpha_d_desosamine
-  }
-
-  branch from h side right {
-    h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +furfural +nad
-    furfuryl_alcohol
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dttp
+    cytidine
   }
 
   branch from h side left {
     h
-    <-> . +5_hydroxymethylfurfural +nadh +2_5_furandimethanol
-    nad
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxohexanoyl_l_homoserine_lactone +h2o
+    n_3_oxohexanoyl_l_homoserine
   }
 
-  branch from atp side right {
-    atp
-    <-> . +diphosphate +alcaligin +h +amp
-    pre_alcaligin
+  branch from h side right {
+    h
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +4_6_dichloro_3_methylcatechol +nad
+    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_1_12 [6.3.1.12] +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig +d_aspartate +h +adp +phosphate
-    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_ig
+    <-> . +diphosphate +amp +2_naphthoyl_coa +h +coa
+    2_naphthoic_acid
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +7_12_dimethylbenz_a_anthracene_5_6_oxide
-    trans_5_6_dihydro_5_6_dihydroxy_7_12_dimethylben
+  branch from atp side right {
+    atp
+    <-> . +cyclo_l_phenylalanyl_l_seryl +h +adp +phosphate +l_phenylalanine
+    l_serine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_3_45 [4.2.3.45] +diphosphate +phyllocladan_16alpha_ol
-    copalyl_diphosphate
+    <-> . +tetrahydroxoborate +2s_4s_2_methyl_2_3_3_4_tetrahydroxytetrahydrofu
+    autoinducer_2
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_5_1_97 [3.5.1.97] +n_3_oxododecanoyl_l_homoserine_lactone +3_oxododecanoate
+    l_homoserine_lactone
   }
 }

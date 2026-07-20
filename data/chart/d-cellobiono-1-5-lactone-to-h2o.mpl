@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-cellobiono-1-5-lactone-to-h2o "D-cellobiono-1,5-lactone to H2O" {
-  spacing 252
+  spacing 246
 
   spine at 0,0 {
     d_cellobiono_1_5_lactone
@@ -24,43 +24,37 @@ pathway d-cellobiono-1-5-lactone-to-h2o "D-cellobiono-1,5-lactone to H2O" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_11_15 [1.14.11.15] +gibberellin_a4 +co2 +succinate +2_oxoglutarate
-    gibberellin_a9
+    <-> . +co2 +h2o +h
+    formate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a4 +2_oxoglutarate +co2 +succinate
-    gibberellin_a34
-  }
-
-  branch from d_glucosyl_1_4_d_mannose side right {
-    d_glucosyl_1_4_d_mannose
-    <-> ec_5_1_3_11 [5.1.3.11]
-    beta_cellobiose
-  }
-
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    11_deoxycortisol
+    <-> . +h +5_oxo_6e_8z_11z_14z_eicosatetraenoate
+    5_oxo_6_trans_leukotriene_b4
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    21_hydroxyprogesterone
+    11s_12r_eet
   }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
-    3r_6z_9z_12z_15z_18z_3_hydroxytetracosapentaeno
+  branch from atp side left {
+    atp
+    <-> . +h +adp +phosphate +h2o
+    14_15_eet
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
-    6z_9z_12z_15z_18z_3_hydroxytetracosapenta_6_9_1
+    <-> . +l_asparagine +l_arginine
+    asparaginyl_asparaginyl_arginine
+  }
+
+  branch from h2o side left {
+    h2o
+    <-> . +l_asparagine +l_cysteine
+    asn_cys_cys
   }
 }

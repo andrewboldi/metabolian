@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     ginsenoside_mc
@@ -24,14 +24,14 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +pyrrothine
-    l_cystine
+    <-> . +dca_cl
+    dehydrodiconiferyl_acid_aldehyde_gem_diol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +fusaridione_a
-    fusaridione_a_open_ring
+    <-> . +dca_cl
+    dehydrodiconiferyl_acid_gem_diol
   }
 
   branch from l_arabinofuranose side right {
@@ -44,11 +44,5 @@ pathway ginsenoside-mc-to-h2o "ginsenoside Mc to H2O" {
     l_arabinofuranose
     <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
     nad
-  }
-
-  branch from ginsenoside_rd side right {
-    ginsenoside_rd
-    <-> . +udp +h +ginsenoside_f2
-    udp_alpha_d_glucose
   }
 }

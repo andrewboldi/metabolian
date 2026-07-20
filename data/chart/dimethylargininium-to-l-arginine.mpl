@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dimethylargininium-to-l-arginine "dimethylargininium to L-arginine" {
-  spacing 246
+  spacing 240
 
   spine at 0,0 {
     dimethylargininium
@@ -16,67 +16,61 @@ pathway dimethylargininium-to-l-arginine "dimethylargininium to L-arginine" {
     o2
   }
 
-  branch from l_citrulline side left {
-    l_citrulline
-    <-> . +nitric_oxide +nadp +h2o +h +o2 +nadph
-    l_hydroxyarginine
-  }
-
-  branch from dimethylamine side right {
+  branch from dimethylamine side left {
     dimethylamine
     <-> . +co2 +4_chloroaniline +h +h2o
     monuron
   }
 
-  branch from dimethylamine side left {
+  branch from dimethylamine side right {
     dimethylamine
     <-> . +l_citrulline +h2o
     n_omega_n_omega_dimethyl_l_arginine
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +d_arabinopyranose +phosphate +d_arabinopyranose +h2o
-    atp
-  }
-
   branch from h side left {
     h
-    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
-    d_arabinopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    3_o_l_olivosyl_oleandolide
   }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_107 [1.14.13.107] +nadh +4r_limonene +h +4r_limonene_1alpha_2alpha_epoxide +h2o
-    nad
+  branch from h side right {
+    h
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +oleandolide +phosphate +oleandolide +h2o
+    atp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +h +nadph +nadp +h2o
-    4r_limonene_1_2_epoxide
+    <-> ec_1_14_11_15 [1.14.11.15] +gibberellin_a1 +co2 +succinate +2_oxoglutarate
+    gibberellin_a20
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
-    nerol
+  branch from o2 side right {
+    o2
+    <-> ec_1_14_11_14 [1.14.11.14] +anisodamine +2_oxoglutarate +succinate +scopolamine +h2o
+    co2
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +r_linalool +nadp +h
-    phellandral
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadp
+    isocitrate
   }
 
-  branch from l_arginine side right {
-    l_arginine
-    <-> . +2_oxoglutarate +o2 +l_hydroxyarginine +h +succinate
-    co2
+  branch from nadph side right {
+    nadph
+    <-> ec_1_1_1_119 [1.1.1.119] +alpha_d_glucose +nadp +h
+    d_glucono_1_4_lactone
   }
 
   branch from l_arginine side left {
+    l_arginine
+    <-> . +2_oxoglutarate +o2 +co2 +h +succinate
+    l_hydroxyarginine
+  }
+
+  branch from l_arginine side right {
     l_arginine
     <-> ec_1_14_11_34 [1.14.11.34] +s_1_pyrroline_5_carboxylate +co2 +h +succinate +guanidine +h2o +o2
     2_oxoglutarate

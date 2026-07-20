@@ -18,13 +18,13 @@ pathway 1r-1-4-5-10-tetrahydrop-to-1-hydroxyphenazine "(1R)-1,4,5,10-tetrahydrop
 
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_11_1_7 [1.11.1.7] +hispidin +h2o
-    3_14_bihispidinyl
+    <-> ec_1_11_1_7 [1.11.1.7] +uncyclized_xanthommatin +h2o
+    3_hydroxy_l_kynurenine
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> . +menadione +h2o
-    menadiol
+    <-> . +trimethylarsine +h2o
+    trimethylarsine_oxide
   }
 }

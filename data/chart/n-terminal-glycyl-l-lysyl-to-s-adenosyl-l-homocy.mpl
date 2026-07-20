@@ -18,13 +18,13 @@ pathway n-terminal-glycyl-l-lysyl-to-s-adenosyl-l-homocy "N-terminal glycyl-L-ly
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_190 [2.1.1.190] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_208 [2.1.1.208] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_191 [2.1.1.191] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_209 [2.1.1.209] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-dilinoleoyl-sn-glycer-to-glycerol "1,2-dilinoleoyl-sn-glycer… to glycerol" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine
@@ -24,31 +24,25 @@ pathway 1-2-dilinoleoyl-sn-glycer-to-glycerol "1,2-dilinoleoyl-sn-glycer… to g
 
   branch from sah side left {
     sah
-    <-> . +1_hydroxy_6_methoxyphenazine_n10_oxide +sam
-    1_6_dimethoxyphenazine_n5_oxide
+    <-> . +dopamine +sam +hplus
+    epinine_cation
   }
 
   branch from sah side right {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa +h2o
-    4_o_demethylbarbatate
-  }
-
-  branch from 1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp side left {
-    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
-    <-> . +1_myristoyl_sn_glycero_3_phosphocholine +1_linoleoyl_sn_glycero_3_phosphocholine
-    1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc
-  }
-
-  branch from linoleate side right {
-    linoleate
-    <-> . +h2o +coa +hplus
-    linoleoyl_coa
+    <-> . +epinine_cation +sam +hplus
+    n_n_dimethyldopaminium
   }
 
   branch from linoleate side left {
     linoleate
-    <-> . +1_tetradecanoyl_2_9z_12z_octadecadienoyl_sn_glyc +h2o +hplus
-    1_myristoyl_sn_glycero_3_phosphocholine
+    <-> . +1_2_3_trilinoleoylglycerol +h2o +hplus
+    dilinoleoylglycerol
+  }
+
+  branch from linoleate side right {
+    linoleate
+    <-> . +o2
+    9_hpode
   }
 }

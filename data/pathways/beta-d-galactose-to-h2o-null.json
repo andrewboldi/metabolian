@@ -1,0 +1,280 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-galactose-to-h2o-null",
+  "name": "beta-D-galactose to H2O",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-galactose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR176405"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_galactose",
+      "name": "beta-D-galactose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM112"
+      }
+    },
+    {
+      "id": "xxxg_xyloglucan_oligosaccharide",
+      "name": "XXXG xyloglucan oligosaccharide",
+      "short": "XXXG xyloglucan…",
+      "formula": "C39H66O33",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM5333"
+      }
+    },
+    {
+      "id": "xllg_xyloglucan_oligosaccharide",
+      "name": "XLLG xyloglucan oligosaccharide",
+      "short": "XLLG xyloglucan…",
+      "formula": "C51H86O43",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM9238"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "l_fucopyranose",
+      "name": "L-fucopyranose",
+      "formula": "C6H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2181"
+      }
+    },
+    {
+      "id": "xlfg_xyloglucan_oligosaccharide",
+      "name": "XLFG xyloglucan oligosaccharide",
+      "short": "XLFG xyloglucan…",
+      "formula": "C57H96O47",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM89194"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_23",
+      "name": "beta-galactosidase",
+      "ec": [
+        "3.2.1.23"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_51",
+      "name": "alpha-L-fucosidase",
+      "ec": [
+        "3.2.1.51"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_18",
+      "name": "EC 3.6.3.18",
+      "ec": [
+        "3.6.3.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-galactosidase",
+      "ec": "3.2.1.23",
+      "substrates": [
+        {
+          "metabolite": "beta_d_galactose",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "xxxg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xllg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR176405"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-L-fucosidase",
+      "ec": "3.2.1.51",
+      "substrates": [
+        {
+          "metabolite": "l_fucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "xllg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xlfg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR185168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR185168"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR174845",
+      "ec": "3.6.3.18",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "xlfg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "xlfg_xyloglucan_oligosaccharide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR174845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR174845"
+          }
+        ]
+      }
+    }
+  ]
+}

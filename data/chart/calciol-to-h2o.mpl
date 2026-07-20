@@ -18,37 +18,37 @@ pathway calciol-to-h2o "calciol to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_i
+    <-> ec_1_14_13_16 [1.14.13.16] +cyclopentanone +h +o2 +nadph +h2o
+    valerolactone
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +n_tetracosanoylsphinganine +o2 +nadph +h2o
-    cer_d18_0_h24_0
+    <-> ec_1_1_1_206 [1.1.1.206] +tropinone +nadph
+    tropine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +2_4_6_trichlorophenolate +o2 +chloride +nad
-    2_6_dichloro_4_hydroxyphenolate
+    <-> . +d_xylopyranose
+    d_xylobiose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +s_5_hydroxyisourate +allantoin
-    co2
+    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose
+    beta_cellobiose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +o2 +h2o
-    all_trans_antheraxanthin
+    <-> ec_1_1_1_10 [1.1.1.10] +acetoin +nadh +h
+    diacetyl
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_glucono_1_5_lactone +h
-    d_aldose
+    <-> . +acetoin +nadh +h
+    s_s_butane_2_3_diol
   }
 }

@@ -24,25 +24,25 @@ pathway dinitrogen-oxide-to-s-adenosyl-l-homocysteine "dinitrogen oxide to S-ade
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    8_9_eet
+    <-> . +6_deoxo_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    6_hydroxy_28_norcastasterone
   }
 
   branch from fmn side left {
     fmn
-    <-> . +asperaculane_e +fmnh2 +o2 +h2o +hplus
-    asperaculane_g
+    <-> . +6_hydroxy_28_norcastasterone +fmnh2 +o2 +h2o +hplus
+    28_norcastasterone
   }
 
   branch from sah side right {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +4_amino_l_phenylalanine +sam +hplus
+    4_methylamino_l_phenylalanine
   }
 
   branch from sah side left {
     sah
-    <-> . +5_hydroxyuridine_5_phosphate_1 +sam +hplus
-    5_methoxyuridine_5_phosphate_1
+    <-> . +4_methylamino_l_phenylalanine +sam +hplus
+    4_dimethylamino_l_phenylalanine
   }
 }

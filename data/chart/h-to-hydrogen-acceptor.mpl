@@ -18,26 +18,26 @@ pathway h-to-hydrogen-acceptor "H to hydrogen acceptor" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_10 [1.1.1.10] +l_ribulose +h +nadph
-    ribitol
+    <-> . +dihydrogeranylgeranyl_bacteriochlorophyll_a +h +nadph
+    geranylgeranyl_bacteriochlorophyll_a
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +isopropylbenzaldehyde
-    2_isopropylbenzyl_alcohol
+    <-> . +4_chloronitrobenzene +h +nadph +h2o
+    1_chloro_4_nitrosobenzene
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_serine +l_tryptophan
-    leu_ser_trp
+    <-> . +l_aspartate +l_tryptophan
+    tryptophanyl_aspartyl_aspartate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_arginine +l_tryptophan
-    leucyl_tryptophanyl_arginine
+    <-> . +glycyl_l_leucine +l_tryptophan
+    tryptophanyl_glycyl_leucine
   }
 
   branch from p_aminophenylarsonous_acid side left {
@@ -48,13 +48,13 @@ pathway h-to-hydrogen-acceptor "H to hydrogen acceptor" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_3_3_8 [1.3.3.8] +h +sinactine +epiberberine
+    <-> . +cannabigerolate +cannabichromenate
     h2o2
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_3_3_8 [1.3.3.8] +s_cheilanthifoline +h +h2o2
-    dehydrocheilanthifoline
+    <-> ec_1_13_11_52 [1.13.11.52] +d_tryptophan
+    n_formyl_l_kynurenine
   }
 }

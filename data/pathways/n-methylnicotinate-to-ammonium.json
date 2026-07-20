@@ -165,42 +165,34 @@
       }
     },
     {
-      "id": "valencene",
-      "name": "(+)-valencene",
-      "formula": "C15H24",
+      "id": "terpinene",
+      "name": "γ-terpinene",
+      "formula": "C10H16",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61700"
+        "chebi": "CHEBI:10577"
       }
     },
     {
-      "id": "nootkatone",
-      "name": "(+)-nootkatone",
-      "formula": "C15H22O",
+      "id": "carvacrol",
+      "name": "carvacrol",
+      "formula": "C10H14O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:81377"
+        "chebi": "CHEBI:3440"
       }
     },
     {
-      "id": "nootkatol",
-      "name": "α-nootkatol",
-      "formula": "C15H24O",
+      "id": "thymol",
+      "name": "thymol",
+      "formula": "C10H14O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142043"
+        "chebi": "CHEBI:27607"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_151",
-      "name": "premnaspirodiene oxygenase",
-      "ec": [
-        "1.14.14.151"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -400,12 +392,11 @@
     },
     {
       "id": "r5",
-      "name": "premnaspirodiene oxygenase",
-      "equation": "(+)-valencene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = (+)-nootkatone + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
-      "ec": "1.14.14.151",
+      "name": "gamma-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = carvacrol + 2 oxidi...",
+      "equation": "gamma-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = carvacrol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "valencene",
+          "metabolite": "terpinene",
           "stoichiometry": 1
         },
         {
@@ -419,7 +410,7 @@
       ],
       "products": [
         {
-          "metabolite": "nootkatone",
+          "metabolite": "carvacrol",
           "stoichiometry": 1
         },
         {
@@ -435,73 +426,68 @@
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_151"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:57660"
+        "rhea": "RHEA:67404"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57660"
+            "id": "RHEA:67404"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(+)-valencene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-nootkatol + oxidize...",
-      "equation": "(+)-valencene + reduced [NADPH--hemoprotein reductase] + O2 = alpha-nootkatol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "gamma-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = thymol + 2 oxidized...",
+      "equation": "gamma-terpinene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = thymol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "valencene",
+          "metabolite": "terpinene",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "nootkatol",
+          "metabolite": "thymol",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:57664"
+        "rhea": "RHEA:67408"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57664"
+            "id": "RHEA:67408"
           }
         ]
       }

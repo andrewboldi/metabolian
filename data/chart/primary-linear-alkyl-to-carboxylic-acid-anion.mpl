@@ -18,13 +18,13 @@ pathway primary-linear-alkyl-to-carboxylic-acid-anion "primary linear alkyl… t
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_17_99_8 [1.17.99.8] +4s_limonene +hydrogen_acceptor +h2o
-    s_perillyl_alcohol
+    <-> . +cannabinerolate +hydrogen_acceptor
+    cannabichromenate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +s_3_indol_3_ylmethyl_6_7_8_8a_tetrahydropyrrolo +hydrogen_acceptor +hplus
-    1_hydroxy_3_indol_3_ylmethyl_6h_7h_8h_5_5_pyrrol
+    <-> . +r_malate +hydrogen_acceptor
+    oxaloacetate
   }
 }

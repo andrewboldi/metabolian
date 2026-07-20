@@ -133,12 +133,12 @@
       }
     },
     {
-      "id": "n_acetyl_l_aspartate",
-      "name": "N-acetyl-L-aspartate",
-      "formula": "C6H7NO5",
-      "charge": -2,
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:16953"
+        "chebi": "CHEBI:327995"
       }
     },
     {
@@ -151,12 +151,12 @@
       }
     },
     {
-      "id": "ac_asp_glu_glu",
-      "name": "Ac-Asp-Glu-Glu",
-      "formula": "C16H19N3O11",
-      "charge": -4,
+      "id": "glutamyltyramine",
+      "name": "γ-glutamyltyramine",
+      "formula": "C13H18N2O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:76935"
+        "chebi": "CHEBI:83425"
       }
     },
     {
@@ -178,49 +178,33 @@
       }
     },
     {
-      "id": "citrate",
-      "name": "Citrate",
-      "formula": "C6H5O7",
-      "charge": -3,
+      "id": "n_l_glutamyl_l_alaninol",
+      "name": "N-(γ-L-glutamyl)-L-alaninol",
+      "short": "N-(γ-L-glutamyl)-L-…",
+      "formula": "C8H16N2O4",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16947"
+        "chebi": "CHEBI:85421"
       }
     },
     {
-      "id": "citrylglutamate",
-      "name": "β-citrylglutamate",
-      "formula": "C11H11NO10",
-      "charge": -4,
+      "id": "s_2_aminopropan_1_ol",
+      "name": "(S)-2-aminopropan-1-ol",
+      "short": "2-aminopropan-1-ol",
+      "formula": "C3H10NO",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:76942"
+        "chebi": "CHEBI:85422"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "udp_2_acetamido_2_6_dideoxy_l_talose",
-      "name": "UDP-2-acetamido-2,6-dideoxy-β-L-talose",
+      "id": "udp_2_acetamido_2_6_dideoxy_beta_l_mannose",
+      "name": "UDP-2-acetamido-2,6-dideoxy-beta-L-mannose",
       "short": "UDP-2-acetamido-2,6…",
-      "formula": "C17H25N3O16P2",
-      "charge": -2,
+      "formula": "C17H27N3O16P2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:62372"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57540"
+        "metanetx": "MNXM1100476"
       }
     },
     {
@@ -249,16 +233,6 @@
       "xrefs": {
         "metanetx": "MNXM738702"
       }
-    },
-    {
-      "id": "udp_2_acetamido_2_6_dideoxy_beta_l_mannose",
-      "name": "UDP-2-acetamido-2,6-dideoxy-beta-L-mannose",
-      "short": "UDP-2-acetamido-2,6…",
-      "formula": "C17H27N3O16P2",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1100476"
-      }
     }
   ],
   "enzymes": [
@@ -284,24 +258,10 @@
       ]
     },
     {
-      "id": "ec_6_3_2_42",
-      "name": "N-acetylaspartylglutamylglutamate synthase",
+      "id": "ec_6_3_4_24",
+      "name": "tyramine--L-glutamate ligase",
       "ec": [
-        "6.3.2.42"
-      ]
-    },
-    {
-      "id": "ec_6_3_1_17",
-      "name": "beta-citrylglutamate synthase",
-      "ec": [
-        "6.3.1.17"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_367",
-      "name": "UDP-2-acetamido-2,6-beta-L-arabino-hexul-4-ose reductase",
-      "ec": [
-        "1.1.1.367"
+        "6.3.4.24"
       ]
     }
   ],
@@ -505,217 +465,102 @@
     },
     {
       "id": "r6",
-      "name": "N-acetylaspartylglutamylglutamate synthase",
-      "equation": "N-acetyl-L-aspartate + 2 L-glutamate + 2 ATP = N-acetyl-L-aspartyl-L-glutamyl-L-glutamate + 2 ADP + 2 phosphate + 2 H(+)",
-      "ec": "6.3.2.42",
+      "name": "tyramine--L-glutamate ligase",
+      "equation": "tyramine + L-glutamate + ATP = gamma-L-glutamyltyramine + ADP + phosphate + H(+)",
+      "ec": "6.3.4.24",
       "substrates": [
         {
-          "metabolite": "n_acetyl_l_aspartate",
+          "metabolite": "tyraminium",
           "stoichiometry": 1
         },
         {
           "metabolite": "glutamate",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "atp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ac_asp_glu_glu",
+          "metabolite": "glutamyltyramine",
           "stoichiometry": 1
         },
         {
           "metabolite": "adp",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "pi",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_3_2_42"
+          "enzyme": "ec_6_3_4_24"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:40039"
+        "rhea": "RHEA:43544"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40039"
+            "id": "RHEA:43544"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "beta-citrylglutamate synthase",
-      "equation": "citrate + L-glutamate + ATP = beta-citrylglutamate + ADP + phosphate + H(+)",
-      "ec": "6.3.1.17",
+      "name": "gamma-L-glutamyl-L-alaninol + H2O = L-alaninol + L-glutamate",
+      "equation": "gamma-L-glutamyl-L-alaninol + H2O = L-alaninol + L-glutamate",
       "substrates": [
         {
-          "metabolite": "citrate",
+          "metabolite": "n_l_glutamyl_l_alaninol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "glutamate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "citrylglutamate",
+          "metabolite": "s_2_aminopropan_1_ol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "glutamate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_3_1_17"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:40043"
+        "rhea": "RHEA:45768"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:40043"
+            "id": "RHEA:45768"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "UDP-2-acetamido-2,6-beta-L-arabino-hexul-4-ose reductase",
-      "equation": "UDP-2-acetamido-2,6-dideoxy-beta-L-arabino-hex-4-ulose + NADH + H(+) = UDP-2-acetamido-2,6-dideoxy-beta-L-talose + NAD(+)",
-      "ec": "1.1.1.367",
-      "substrates": [
-        {
-          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_talose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_367"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 8,
-      "xrefs": {
-        "rhea": "RHEA:40159"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:40159"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r9",
-      "name": "UDP-2-acetamido-2,6-beta-L-arabino-hexul-4-ose reductase",
-      "ec": "1.1.1.367",
-      "substrates": [
-        {
-          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_talose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_lyxo_hex_4_ulose",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_367"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "metanetx": "MNXR192698"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR192698"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "Reaction MNXR192733",
       "substrates": [
         {
@@ -742,7 +587,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 8,
       "xrefs": {
         "metanetx": "MNXR192733"
       },

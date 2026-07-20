@@ -44,14 +44,14 @@ pathway formononetin-to-h2o "formononetin to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_isoleucine +phosphate +l_isoleucine +h2o
-    atp
+    <-> . +d_tagatose_1_phosphate +adp +atp
+    keto_d_tagatose
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    myo_inositol
+    <-> . +l_alanine +atp +adp +phosphate
+    d_alanyl_d_alanine
   }
 
   branch from malonate side left {
@@ -62,8 +62,8 @@ pathway formononetin-to-h2o "formononetin to H2O" {
 
   branch from malonate side right {
     malonate
-    <-> . +biochanin_a_7_o_beta_d_glucoside_6_o_malonate +h2o +h
-    biochanin_a_7_o_beta_d_glucoside
+    <-> . +6_o_malonylwistin +h2o +h
+    afrormosin_7_o_glucoside
   }
 
   branch from malonyldaidzin side left {
@@ -74,13 +74,13 @@ pathway formononetin-to-h2o "formononetin to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    isethionic_acid
+    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +phosphate
+    2_keto_3_deoxy_d_glycero_d_galactononic_acid_9_p
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2_keto_3_deoxy_d_glycero_d_galactononic_acid +phosphate
-    2_keto_3_deoxy_d_glycero_d_galactononic_acid_9_p
+    <-> ec_1_2_1_23 [1.2.1.23] +nadh +r_lactate +h +r_lactaldehyde
+    nad
   }
 }

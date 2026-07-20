@@ -1,0 +1,223 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-methylpropanoate-to-o2",
+  "name": "2-methylpropanoate to O2",
+  "category": "other",
+  "summary": "A 3-step route from 2-methylpropanoate to O2, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR176919"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_methylpropanoate",
+      "name": "2-methylpropanoate",
+      "formula": "C4H7O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1137660"
+      }
+    },
+    {
+      "id": "2_keto_4_pentenoate",
+      "name": "2-keto-4-pentenoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364413"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+      "name": "7-Methyl-2-hydroxy-6-oxoocta-2,4-dienoate",
+      "short": "7-Methyl-2-hydroxy-…",
+      "formula": "C9H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1371580"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_carboxy_6_oxo_7_methylocta_2_4_dieno",
+      "name": "2-Hydroxy-3-carboxy-6-oxo-7-methylocta-2,4-dienoate",
+      "short": "2-Hydroxy-3-carboxy…",
+      "formula": "C10H10O6",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371586"
+      }
+    },
+    {
+      "id": "2_3_dihydroxy_p_cumate",
+      "name": "2,3-dihydroxy-p-cumate",
+      "short": "2,3-dihydroxy-p-cum…",
+      "formula": "C10H11O4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2316"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR176919",
+      "substrates": [
+        {
+          "metabolite": "2_methylpropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_keto_4_pentenoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR176919"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176919"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR197947",
+      "substrates": [
+        {
+          "metabolite": "7_methyl_2_hydroxy_6_oxoocta_2_4_dienoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_carboxy_6_oxo_7_methylocta_2_4_dieno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197947"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197947"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR197939",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_3_carboxy_6_oxo_7_methylocta_2_4_dieno",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxy_p_cumate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR197939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197939"
+          }
+        ]
+      }
+    }
+  ]
+}

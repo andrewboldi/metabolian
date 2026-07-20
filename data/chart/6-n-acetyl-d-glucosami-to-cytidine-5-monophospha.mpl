@@ -30,13 +30,13 @@ pathway 6-n-acetyl-d-glucosami-to-cytidine-5-monophospha "6-(N-acetyl-α-D-gluco
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_4_n_ace
+    <-> . +o_n_acetyl_d_galactosaminyl_l_serine +cmp_n_acetyl_neuraminate +hplus
+    o3_n_acetyl_neuraminosyl_2_6_n_acetyl_d_galactos
   }
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glcnac_1_3_d +cmp_n_acetyl_neuraminate +hplus
-    n_neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d
+    <-> . +o3_d_galactosyl_1_3_n_acetyl_d_galactosaminyl_l +cmp_n_acetyl_neuraminate +hplus
+    o3_d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n
   }
 }

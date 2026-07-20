@@ -18,8 +18,8 @@ pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl…
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tryptophyl_adenylyl_1_group +h2o
-    d_tryptophan
+    <-> . +3_l_seryl_adenylyl_1_group +h2o
+    serine
   }
 
   branch from amp_3_end_1 side right {
@@ -42,14 +42,14 @@ pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl…
 
   branch from nh3 side left {
     nh3
-    <-> . +serotonin +o2 +h2o +h2o2
-    5_hydroxyindol_3_yl_acetaldehyde
+    <-> . +triuret +h2o
+    1_carboxybiuret
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +norepinephrine +o2 +h2o +h2o2
-    r_3_4_dihydroxymandelaldehyde
+    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
+    3_hydroxypyridin_4_1h_one
   }
 
   branch from oxaloacetate side left {
@@ -66,13 +66,13 @@ pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl…
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
-    n_acetyl_l_phenylalaninate
+    <-> ec_1_14_16_1 [1.14.16.1] +sapropterin +o2 +tyrosine
+    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_4_1_1_53 [4.1.1.53] +hplus +co2
-    2_phenylethanaminium
+    <-> ec_3_4_17_23 [3.4.17.23] +ile5_angiotensin_ii_dizwitterion +h2o
+    ile5_angiotensin_ii_1_7_dizwitterion
   }
 }

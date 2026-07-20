@@ -32,25 +32,25 @@ pathway 1-4-dinitrobenzene-to-3-methoxyphenol "1,4-dinitrobenzene to 3-methoxyph
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_109 [2.5.1.109] +brevianamide_f +dmapp
-    deoxybrevianamide_e
+    <-> . +3_methylundecanoate +atp +coa +amp
+    3_methylundecanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_143 [4.2.3.143] +fpp +h2o
-    kunzeaol
+    <-> . +12_methyloctadecanoate +atp +coa +amp
+    12_methyloctadecanoyl_coa
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_14_99_64 [1.14.99.64] +zeaxanthin +hydrogen_donor +o2 +h2o
-    adonixanthin
+    <-> . +sn_3_o_phytanylglycerol_1_phosphate +hydrogen_donor
+    sn_3_o_geranylgeranyl_glycerol_1_phosphate
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_14_99_64 [1.14.99.64] +adonixanthin +hydrogen_donor +o2 +h2o
-    astaxanthin
+    <-> . +propionyl_coa +malonyl-coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
+    6_ethyl_2_4_dihydroxy_3_5_dimethylbenzaldehyde
   }
 }

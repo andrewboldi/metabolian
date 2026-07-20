@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "5-nitroanthranilate-to-fumarate",
   "name": "5-nitroanthranilate to fumarate",
-  "category": "redox-detox",
+  "category": "amino-acid-metabolism",
   "summary": "A 5-step route from 5-nitroanthranilate to fumarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -156,48 +156,50 @@
       }
     },
     {
-      "id": "1_4_butanediammonium",
-      "name": "1,4-butanediammonium",
-      "formula": "C4H14N2",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:326268"
-      }
-    },
-    {
-      "id": "1_pyrrolinium",
-      "name": "1-pyrrolinium",
-      "formula": "C4H8N",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:36781"
-      }
-    },
-    {
-      "id": "h2o2",
-      "name": "Hydrogen peroxide",
-      "formula": "H2O2",
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16240"
+        "chebi": "CHEBI:57912"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "e_3_indol_3_yl_acrylate",
+      "name": "(E)-3-(indol-3-yl)acrylate",
+      "short": "3-(indol-3-yl)acryl…",
+      "formula": "C11H8NO2",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:131929"
       }
     },
     {
-      "id": "l_pipecolic_acid",
-      "name": "L-pipecolic acid",
-      "formula": "C6H11NO2",
+      "id": "o_carbamoyl_l_serine",
+      "name": "O-carbamoyl-L-serine",
+      "formula": "C4H8N2O4",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:61185"
+        "chebi": "CHEBI:57594"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -294,10 +296,10 @@
       ]
     },
     {
-      "id": "ec_4_3_1_28",
-      "name": "L-lysine cyclodeaminase",
+      "id": "ec_4_3_1_31",
+      "name": "L-tryptophan ammonia lyase",
       "ec": [
-        "4.3.1.28"
+        "4.3.1.31"
       ]
     }
   ],
@@ -571,61 +573,18 @@
     },
     {
       "id": "r7",
-      "name": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
-      "equation": "putrescine + O2 = 1-pyrroline + H2O2 + NH4(+)",
+      "name": "L-tryptophan ammonia lyase",
+      "equation": "L-tryptophan = (E)-3-(indol-3-yl)acrylate + NH4(+)",
+      "ec": "4.3.1.31",
       "substrates": [
         {
-          "metabolite": "1_4_butanediammonium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "l_tryptophan",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_pyrrolinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:33247"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33247"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "L-lysine cyclodeaminase",
-      "equation": "L-lysine = L-pipecolate + NH4(+)",
-      "ec": "4.3.1.28",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_pipecolic_acid",
+          "metabolite": "e_3_indol_3_yl_acrylate",
           "stoichiometry": 1
         },
         {
@@ -635,20 +594,63 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_28"
+          "enzyme": "ec_4_3_1_31"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:34303"
+        "rhea": "RHEA:41259"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34303"
+            "id": "RHEA:41259"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
+      "equation": "O-carbamoyl-L-serine + H(+) = 2-aminoprop-2-enoate + NH4(+) + CO2",
+      "substrates": [
+        {
+          "metabolite": "o_carbamoyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:43004"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43004"
           }
         ]
       }

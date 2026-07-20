@@ -30,38 +30,38 @@ pathway trimethylamine-to-h2o "trimethylamine to H2O" {
 
   branch from h side left {
     h
-    <-> . +erythromycin_a +h2o
-    hydrolyzed_erythromycin_a
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_15z_tetracosenoyl_2_9z_12z_15z_octadecatrienoy
   }
 
   branch from h side right {
     h
-    <-> . +pgp +phosphate +h2o
-    guanosine_3_5_bis_diphosphate
-  }
-
-  branch from pmf side left {
-    pmf
-    <-> . +h +adp +phosphate +h2o
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +phosphate +1_2_dioctadecanoyl_sn_glycerol_3_phosphate +h2o
     atp
   }
 
-  branch from pmf side right {
+  branch from pmf side left {
     pmf
     <-> . +h +phosphate +atp +h2o
     adp
   }
 
+  branch from pmf side right {
+    pmf
+    <-> . +h +adp +atp +h2o
+    phosphate
+  }
+
   branch from hydrogen_sulfide side left {
     hydrogen_sulfide
-    <-> . +h
-    sulfide
+    <-> . +methylmercury +h
+    dimethylmercury_sulfide
   }
 
   branch from hydrogen_sulfide side right {
     hydrogen_sulfide
-    <-> . +dimethylmonothioarsinic_acid +h2o +h
-    dimethylarsinate
+    <-> ec_4_2_1_22 [4.2.1.22] +h +l_serine +h2o
+    l_cysteine
   }
 
   branch from mk_8 side left {
@@ -78,25 +78,25 @@ pathway trimethylamine-to-h2o "trimethylamine to H2O" {
 
   branch from sulfite side left {
     sulfite
-    <-> ec_1_8_99_2 [1.8.99.2] +adenosine_5_phosphosulfate +fadh2 +amp
-    fad
+    <-> . +ferricytochrome_c +h2o +h +sulfate
+    ferrocytochrome_c
   }
 
   branch from sulfite side right {
     sulfite
-    <-> . +thiosulfate +mk_8 +h +menaquinol_8
-    trithionate
+    <-> . +ferricytochrome_c +h2o +ferrocytochrome_c +h
+    sulfate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_arginine +l_glutamate +l_tyrosine
-    tyrosyl_arginyl_glutamate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
+    2_tetradecanoyl_sn_glycero_3_phospho_1_sn_glycer
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_serine +l_arginine +l_tyrosine
-    tyrosyl_arginyl_serine
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
+    2_dodecanoyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 }

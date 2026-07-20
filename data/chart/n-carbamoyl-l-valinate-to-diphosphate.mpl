@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-carbamoyl-l-valinate-to-diphosphate "N-carbamoyl-L-valinate to diphosphate" {
-  spacing 228
+  spacing 216
 
   spine at 0,0 {
     n_carbamoyl_l_valinate
@@ -26,49 +26,37 @@ pathway n-carbamoyl-l-valinate-to-diphosphate "N-carbamoyl-L-valinate to diphosp
 
   branch from nh3 side left {
     nh3
-    <-> . +hexan_2_aminium +nad +h2o +nadh +hplus
-    2_oxohexane
+    <-> . +2s_heptan_2_aminium +nad +h2o +nadh +hplus
+    heptan_2_one
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +3_aminobutan_1_ol +nad +h2o +nadh +hplus
-    4_hydroxybutan_2_one
+    <-> . +5_hydroxyoctan_4_aminium +nad +h2o +nadh +hplus
+    5_hydroxy_4_octanone
   }
 
   branch from alanine side left {
-    alanine
-    <-> . +3_phenylpropylaminium +pyruvate
-    3_phenylpropanal
-  }
-
-  branch from alanine side right {
     alanine
     <-> . +3_hydroxy_l_kynurenine +pyruvate +h2o
     xanthurenate
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +l_thyronine +iodide +hplus +hydrogen_donor
-    3_iodo_l_thyronine
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
-    3_3_5_triiodothyronamine
+  branch from alanine side right {
+    alanine
+    <-> . +3_hydroxy_l_kynurenine +pyruvate
+    4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_195 [4.2.3.195] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    rhizathalene_a
+    <-> . +gpp +h2o
+    4_terpineol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +ipp +fpp
-    all_trans_nonaprenyl_diphosphate
+    <-> ec_4_2_3_205 [4.2.3.205] +pre_sodorifen_diphosphate
+    sodorifen
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway methanofuran-to-ammonium "methanofuran… to ammonium" {
-  spacing 230
+  spacing 218
 
   spine at 0,0 {
     methanofuran_biosynththesis_intermediate_mf1
@@ -20,38 +20,38 @@ pathway methanofuran-to-ammonium "methanofuran… to ammonium" {
 
   branch from phosphoenolpyruvate side left {
     phosphoenolpyruvate
-    <-> . +alpha_lactose +pyruvate
-    lactose_6_phosphate
+    <-> . +d_fructofuranose_1_phosphate +pyruvate
+    d_fructofuranose
   }
 
   branch from phosphoenolpyruvate side right {
     phosphoenolpyruvate
-    <-> . +d_mannopyranose +pyruvate
-    alpha_d_mannose_6_phosphate
+    <-> . +l_fuculose +pyruvate
+    l_fuculose_1_phosphate
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_4_1_2_17 [4.1.2.17] +l_fucose_1_phosphate +s_lactaldehyde
-    h
+    <-> . +alpha_d_ribofuranose_5_phosphate +l_glutamine +h +l_glutamate +phosphate +h2o
+    pyridoxal_5_phosphate
   }
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> . +d_ribulose_5_phosphate +l_glutamine +h +l_glutamate +phosphate +h2o
-    pyridoxal_5_phosphate
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinol_10 +sn_glycerol_3_phosphate
+    ubiquinone_10
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_16_4 [3.4.16.4] +d_alanine +peptidoglycan_dimer_with_tetrapeptide_stems_meso
-    peptidoglycan_dimer_with_pentapeptide_and_tetrap
+    <-> . +l_serine +l_cysteine +l_methionine
+    cystyl_seryl_methionine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_4_dihydroxy_2_heptenedioic_acid
-    cis_2_oxohept_3_enedioic_acid
+    <-> . +l_asparagine +l_cysteine +l_tyrosine
+    cystyl_tyrosyl_asparagine
   }
 
   branch from pyruvate side left {
@@ -62,37 +62,25 @@ pathway methanofuran-to-ammonium "methanofuran… to ammonium" {
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +n_acetylmuramate_6_phosphate +phosphoenolpyruvate
-    n_acetylmuramic_acid
+    <-> . +ferrocytochrome_c +h +ferricytochrome_c
+    r_lactate
   }
 
   branch from serinol side left {
     serinol
-    <-> . +o_acetyl_l_homoserine +h +dihydrorhizobitoxine
-    acetate
+    <-> . +o_acetyl_l_homoserine +acetate +dihydrorhizobitoxine
+    h
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    ortho_hydroxyatorvastatin
+    <-> . +h +adp +n_n_dimethylglycine +n_n_dimethylglycine +h2o
+    atp
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +2_hydroxy_atorvastatin_lactone_glucuronide +2_hydroxy_atorvastatin_lactone_glucuronide +h2o
-    atp
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +cyclopentylammonium +nadp +h2o +nadph +hplus
-    cyclopentanone
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +3_methylcyclopentanaminium +nadp +h2o +nadph +hplus
-    3_methylcyclopentanone
+    <-> . +h +adp +atp +h2o
+    dodecanedioic_acid
   }
 }

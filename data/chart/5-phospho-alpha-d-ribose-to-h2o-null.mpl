@@ -22,62 +22,62 @@ pathway 5-phospho-alpha-d-ribose-to-h2o-null "5-phospho-alpha-D-ribose-… to H2
 
   branch from nadp side left {
     nadp
-    <-> . +acetyl_coa +malonyl_coa +h +nadph +4z_7z_10z_13z_16z_19z_docosahexaenoate +coa +h2o
-    co2
+    <-> . +l_2_amino_8_hydroxydecanoate +h +nadph
+    l_2_amino_8_oxodecanoate
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_330 [1.1.1.330] +3_oxoauricoloyl_coa +h +nadph
-    3r_hydroxy_auricoloyl_coa
+    <-> . +20_hydroxy_prefusarin +h2o +h +o2 +nadph
+    prefusarin
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +2r_3_9s_9ar_9_hydroxy_2_2_dimethyl_3_oxo_1h_2h +nadp +h +o2 +nadph
-    15_15_dimethyl_2_epi_fumiquinazoline_a
+    <-> . +co2 +indole_3_acetaldehyde +h2o2 +h +l_tryptophan +h2o
+    o2
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_1_4 [3.5.1.4] +2_hydroxyisobutyramide +h2o
-    2_hydroxyisobutyrate
+    <-> . +3_aminopropyl_dimethylsulfanium +o2 +h2o +3_dimethylsulfoniopropionaldehyde
+    h2o2
   }
 
   branch from gdp side left {
-    gdp
-    <-> . +gdp_mycosamine +demycosaminyl_candicidin_iii +h
-    candicidin_d
-  }
-
-  branch from gdp side right {
     gdp
     <-> ec_2_7_1_190 [2.7.1.190] +kanamycin_a_2_phosphate +h +gtp
     kanamycin_a
   }
 
+  branch from gdp side right {
+    gdp
+    <-> ec_2_7_1_190 [2.7.1.190] +kanamycin_b_2_phosphate +h +gtp
+    kanamycin_b
+  }
+
   branch from h side left {
     h
-    <-> . +co2 +r_phenylhexane_2_5_dione +trans_benzylideneacetone
-    pyruvate
+    <-> . +s_adenosyl_l_homocysteine +9_n_methoxy_tryptophan +9_n_hydroxy_l_tryptophan
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +co2 +3_2_hydroxyphenyl_1_phenylpentane_1_4_dione +pyruvate
-    2_hydroxychalcone
+    <-> . +trichosetin
+    dieckmann_product
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3 +h2o
-    2_3_bis_o_geranylgeranyl_sn_glycero_1_phospho_3
+    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o +h
+    beta_d_glucosamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +diphosphate +pyruvate +h
-    phosphoenolpyruvate
+    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_3_4_5_pentakisphosphate +h2o
+    d_myo_inositol_1_2_3_4_tetrakisphosphate
   }
 
   branch from fumarate side left {
@@ -94,25 +94,25 @@ pathway 5-phospho-alpha-d-ribose-to-h2o-null "5-phospho-alpha-D-ribose-… to H2
 
   branch from atp side left {
     atp
-    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +adp +phosphate +h +coa
-    3s_3_isopropenyl_6_oxoheptanoate
+    <-> . +h +adp +phosphate +h2o
+    n_acetyl_dl_methionine
   }
 
   branch from atp side right {
     atp
-    <-> . +4_hydroxybenzoyl_acetate +h +amp +phosphate +co2 +h2o
-    4_hydroxyacetophenone
+    <-> . +h +adp +phosphate +h2o
+    methyl_beta_d_galactoside
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2_trans_6_trans_tridecadienoyl_coa
-    3r_hydroxy_6_trans_tridecenoyl_coa
+    <-> . +2r_3_9s_9ar_9_hydroxy_2_2_dimethyl_3_oxo_1h_2h
+    deoxynortryptoquialanone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_119 [4.2.1.119] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa
-    3r_hydroxy_5_cis_7_trans_tetradecadienoyl_coa
+    <-> ec_3_2_1_57 [3.2.1.57] +isomaltose +glucose
+    2r_3s_4s_5r_6s_2_hydroxymethyl_6_2r_3s_4s_5r_6r
   }
 }

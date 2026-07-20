@@ -34,14 +34,14 @@ pathway myo-inositol-to-myo-inositol "myo-inositol to myo-inositol" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_threonine +l_isoleucine +l_arginine
-    threonyl_isoleucyl_arginine
+    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_b_p_put
+    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_threonine +l_methionine +l_arginine
-    threonyl_methionyl_arginine
+    <-> . +3_hydroxy_3_methylbutanenitrile
+    3_methyl_2_butenenitrile
   }
 
   branch from galactinol side left {
@@ -52,25 +52,25 @@ pathway myo-inositol-to-myo-inositol "myo-inositol to myo-inositol" {
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_4_alpha_d_glcnac_1_4_beta_d_gal_1_3 +h
-    alpha_d_glcnac_1_4_beta_d_gal_1_3_alpha_d_glcnac
+    <-> . +udp +alpha_d_gal_1_6_alpha_d_glu_1_4_alpha_l_rha_1_3 +h
+    alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +beta_d_qui3nac_1_3_beta_d_ribf_1_4_alpha_d_gal_1 +h
-    beta_d_qui3nac_1_3_beta_d_ribf_1_4_beta_d_gal_1
+    <-> ec_2_4_1_309 [2.4.1.309] +udp +alpha_d_gal_1_3_alpha_l_fuc_1_2_beta_d_gal_1_3_a +h
+    alpha_l_fuc_1_2_beta_d_gal_1_3_alpha_d_galnac_1
   }
 
   branch from myo_inositol side right {
     myo_inositol
-    <-> . +5_dehydro_2_deoxy_d_gluconate +h +nadph
-    nadp
+    <-> . +phosphate +h2o
+    1d_myo_inositol_hexakisphosphate
   }
 
   branch from myo_inositol side left {
     myo_inositol
-    <-> . +h +nadph +nadp
-    scyllo_inosose
+    <-> ec_1_1_1_18 [1.1.1.18] +nadh +5_dehydro_2_deoxy_d_gluconate +h
+    nad
   }
 }

@@ -18,26 +18,26 @@ pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +nadh +methylacetoacetic_acid +nad
-    methyl_3_hydroxybutyrate
+    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h2o +bromide
+    propane_1_3_diol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +decanal +nad
-    decan_1_ol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_nitrobenzaldehyde +nad
+    3_nitrobenzyl_alcohol
   }
 
   branch from methanol side left {
     methanol
-    <-> ec_3_4_21_104 [3.4.21.104] +p_tosyl_l_arginine +h2o
-    tame
+    <-> ec_1_14_14_1 [1.14.14.1] +2_ethylidene_1_5_dimethyl_3_3_diphenylpyrrolidin
+    6_dimethylamino_4_4_diphenylheptan_3_one
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_phenylalanine_methyl_ester +h2o +h
-    n_acetyl_l_phenylalanine
+    <-> ec_3_5_1_11 [3.5.1.11] +d_alpha_phenylglycine +h2o
+    d_phenylglycine_methyl_ester
   }
 
   branch from 2_hydroxyphenyl_acetate side left {
@@ -48,26 +48,26 @@ pathway methyl-benzeneacetate-to-h2o "Methyl benzeneacetate to H2O" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +tetradecanal +h
-    tetradecan_1_ol
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +d_fucopyranose +h
+    1_deoxy_d_glucitol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +3_methyl_2_butenal +h
-    prenol
+    <-> ec_1_1_1_184 [1.1.1.184] +nadh +5_dihydrotestosterone +h
+    5_androstane_3_17_diol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_24 [1.14.13.24] +3_hydroxy_4_methyl_benzoate +h +o2 +nadph +nadp
-    4_methylgentisate
+    <-> ec_3_2_1_37 [3.2.1.37] +2_nitrophenyl_beta_d_xylopyranoside +h +aldehydo_d_xylose
+    2_nitrophenol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +n_acetyllactosamine
-    alpha_d_galactosyl_1_3_beta_d_galactosyl_1_4_n_a
+    <-> ec_3_3_2_6 [3.3.2.6] +l_leucine +4_nitroaniline
+    l_leucinyl_p_nitroanilide
   }
 
   branch from homogentisate side right {

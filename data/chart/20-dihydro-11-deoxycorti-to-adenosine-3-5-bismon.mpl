@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxycorti… to adenosine 3',5'-bismonoph…" {
-  spacing 206
+  spacing 200
 
   spine at 0,0 {
     20_dihydro_11_deoxycortisol
@@ -16,43 +16,37 @@ pathway 20-dihydro-11-deoxycorti-to-adenosine-3-5-bismon "20β-dihydro-11-deoxyc
     cortisol_21_sulfate
   }
 
-  branch from 11_deoxycortisol side left {
-    11_deoxycortisol
-    <-> . +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    18_hydroxy_11_deoxycortisol
-  }
-
-  branch from cortisol side right {
+  branch from cortisol side left {
     cortisol
     <-> ec_2_3_1_27 [2.3.1.27] +acetyl_coa +coa
     cortisol_21_acetate
   }
 
-  branch from cortisol side left {
+  branch from cortisol side right {
     cortisol
     <-> . +nad +nadh +hplus
     21_dehydrocortisol
   }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> . +mevastatin +di_sulfido_diiron +o2 +hplus +h2o
-    pravastatin_lactone
-  }
-
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +acetochlor +di_sulfido_diiron +o2 +hplus +ethyl_formate +h2o
-    n_2_ethyl_6_methylphenyl_2_chloroacetamide
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_heptaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
+    3_4_dihydroxy_5_all_trans_heptaprenylbenzoate
   }
 
-  branch from adenosine_3_5_bismonophosphate side right {
+  branch from di_sulfido_diiron side right {
+    di_sulfido_diiron
+    <-> ec_1_14_15_45 [1.14.15.45] +4_hydroxy_3_all_trans_decaprenylbenzoate +di_sulfido_diiron +o2 +hplus +h2o
+    3_decaprenyl_4_5_dihydroxybenzoate
+  }
+
+  branch from adenosine_3_5_bismonophosphate side left {
     adenosine_3_5_bismonophosphate
     <-> . +myristoyl_coa +h2o +hplus
     s_tetradecanoyl_4_phosphopantetheine
   }
 
-  branch from adenosine_3_5_bismonophosphate side left {
+  branch from adenosine_3_5_bismonophosphate side right {
     adenosine_3_5_bismonophosphate
     <-> . +palmitoyl_coa +h2o +hplus
     s_hexadecanoyl_4_phosphopantetheine

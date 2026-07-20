@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoacetyl-coa-to-l-lysinium "acetoacetyl-CoA to L-lysinium" {
-  spacing 264
+  spacing 252
 
   spine at 0,0 {
     acetoacetyl_coa
@@ -32,39 +32,27 @@ pathway acetoacetyl-coa-to-l-lysinium "acetoacetyl-CoA to L-lysinium" {
     h2o
   }
 
-  branch from s_lactoyl_coa side left {
-    s_lactoyl_coa
-    <-> . +lactate +atp +coa +amp
-    ppi
-  }
-
-  branch from s_lactoyl_coa side right {
-    s_lactoyl_coa
-    <-> ec_2_8_3_1 [2.8.3.1] +propanoate +s_lactate
-    propanoyl_coa
-  }
-
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +n6_hexanoyl_l_lysine +nad +h2o +l_lysinium
-    2_o_hexanoyl_adp_d_ribose
+    <-> . +gmp +nad +hplus
+    n2_adp_d_ribosyl_gmp
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +guanosine +nad +hplus
-    n2_adp_d_ribosyl_guanosine
+    <-> . +gtp +nad +hplus
+    n2_adp_d_ribosyl_gtp
   }
 
   branch from l_lysinium side left {
     l_lysinium
-    <-> ec_2_1_1_364 [2.1.1.364] +sam +sah +hplus
+    <-> . +sam +sah +hplus
     n6_methyl_l_lysinium
   }
 
   branch from l_lysinium side right {
     l_lysinium
-    <-> ec_2_1_1_355 [2.1.1.355] +sam +sah +hplus
-    n6_n6_n6_trimethyl_l_lysine
+    <-> ec_2_1_1_370 [2.1.1.370] +sam +sah +hplus
+    n6_n6_dimethyl_l_lysine_1
   }
 }

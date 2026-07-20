@@ -20,37 +20,37 @@ pathway udp-to-atp "UDP to ATP" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +ansamitocinoside_p3 +h
-    n_demethylansamitocin_p_3
+    <-> . +udp +benzoylsalicin +h
+    salicyl_benzoate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1 +h
-    2_3_bis_o_sesterterpanyl_sn_glycero_1_phospho_1
+    <-> . +udp +salicyl_salicylate_glucoside +h
+    salicyl_salicylate
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_3_beta_d_galnac_1_4_alpha_d_gal_1_3 +h
-    beta_d_galnac_1_4_alpha_d_gal_1_3_alpha_d_galnac
+    <-> . +udp +3_n_methylgalacamine +h
+    hyosamine
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +alpha_d_gal_1_6_alpha_d_glu_1_4_alpha_l_rha_1_3 +h
-    alpha_d_glu_1_4_alpha_l_rha_1_3_alpha_d_gal_pp_u
+    <-> . +udp +galacamine +h
+    2_deoxystreptamine
   }
 
   branch from atp side left {
     atp
-    <-> . +4_phenylbutyric_acid +coa +h +amp +4_phenylbutanoyl_coa
-    diphosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    ps_20_2_11z_14z_18_2_9z_12z
   }
 
   branch from atp side right {
     atp
-    <-> . +diphosphate +amp +8_phenyldecanoyl_coa +10_phenyldecanoate
-    coa
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    ps_20_2_11z_14z_18_3_9z_12z_15z
   }
 }

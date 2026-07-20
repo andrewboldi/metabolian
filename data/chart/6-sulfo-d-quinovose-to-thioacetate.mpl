@@ -20,25 +20,25 @@ pathway 6-sulfo-d-quinovose-to-thioacetate "6-sulfo-D-quinovose to thioacetate" 
 
   branch from 6_dehydro_d_glucose side left {
     6_dehydro_d_glucose
-    <-> ec_1_1_1_432 [1.1.1.432] +nadp +nadph +hplus
-    glucose
-  }
-
-  branch from 6_dehydro_d_glucose side right {
-    6_dehydro_d_glucose
     <-> ec_1_14_14_181 [1.14.14.181] +fmnh2 +6_sulfo_d_quinovose +h +o2 +sulfite +h2o
     fmn
   }
 
+  branch from 6_dehydro_d_glucose side right {
+    6_dehydro_d_glucose
+    <-> ec_1_14_14_181 [1.14.14.181] +fadh2 +6_sulfo_d_quinovose +h +o2 +sulfite +h2o
+    fad
+  }
+
   branch from fmn side left {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_9r_10s_epoxystearoyl_sn_glycero_3_phosphocho
+    <-> ec_1_14_14_186 [1.14.14.186] +tryptaminium +fmnh2 +o2 +h2o +hplus
+    serotonin
   }
 
   branch from fmn side right {
     fmn
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
-    1_o_9s_10r_epoxystearoyl_sn_glycero_3_phosphocho
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    11_r_hete
   }
 }

@@ -24,20 +24,20 @@ pathway kaempferol-3-o-3-o-4-co-to-coa "kaempferol 3-O-(3″-O-4-co… to CoA" {
 
   branch from trans_4_coumaroyl_coa side right {
     trans_4_coumaroyl_coa
-    <-> ec_4_2_1_175 [4.2.1.175] +h2o
-    r_3_4_hydroxyphenyl_lactoyl_coa
+    <-> . +myricetin_3_o_d_glucosyl_1_2_l_rhamnoside +coa +hplus
+    myricetin_3_o_6_o_trans_4_coumaroyl_d_glucosyl_1
   }
 
   branch from h side left {
     h
-    <-> . +ellagic_acid +h2o
-    4_4_5_5_6_6_hexahydroxydiphenate
+    <-> . +co2 +c33_phthiodiolenone_a
+    c34_carboxyphthiodiolenone
   }
 
   branch from h side right {
     h
-    <-> . +glucose +4_4_5_5_6_6_hexahydroxydiphenate +h2o
-    pedunculagin
+    <-> . +co2 +c31_phthiodiolenone_a
+    c32_carboxyphthiodiolenone
   }
 
   branch from tribuloside side left {
@@ -48,13 +48,13 @@ pathway kaempferol-3-o-3-o-4-co-to-coa "kaempferol 3-O-(3″-O-4-co… to CoA" {
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_26 [2.3.1.26] +9z_octadecenoyl_coa +ergosterol
-    ergosteryl_oleate
+    <-> . +acetyl_coa +11z_tetradecenol
+    11z_tetradecenyl_acetate
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_15 [2.3.1.15] +18_hydroxyoleoyl_coa +sn_glycerol_3_phosphate
-    1_18_hydroxyoleoyl_sn_glycrol_3_phosphate
+    <-> . +acetyl_coa +9z_tetradecen_1_ol
+    9z_tetradecenyl_acetate
   }
 }

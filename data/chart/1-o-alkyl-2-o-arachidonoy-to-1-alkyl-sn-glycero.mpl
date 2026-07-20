@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero "1-O-alkyl-2-O-arachidonoy… to 1-alkyl-sn-glycero-3-phos…" {
-  spacing 336
+  spacing 330
 
   spine at 0,0 {
     1_o_alkyl_2_o_arachidonoyl_sn_glycero_3_phosphoc
@@ -18,23 +18,17 @@ pathway 1-o-alkyl-2-o-arachidonoy-to-1-alkyl-sn-glycero "1-O-alkyl-2-O-arachidon
 
   branch from 1_alkyl_sn_glycero_3_phosphocholine side left {
     1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +1_o_alkyl_2_o_arachidonoyl_sn_glycero_3_phosphoc +coa
-    arachidonoyl_coa
+    <-> . +2_acyl_1_alkyl_sn_glycero_3_phosphocholine +1_z_alk_1_enyl_sn_glycero_3_phosphoethanolamine
+    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano
   }
 
   branch from 1_alkyl_sn_glycero_3_phosphocholine side right {
     1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +h2o +choline +hplus
-    1_alkyl_sn_glycerol_3_phosphate
-  }
-
-  branch from 2_acetyl_1_alkyl_sn_glycero_3_phosphocholine side left {
-    2_acetyl_1_alkyl_sn_glycero_3_phosphocholine
-    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +1_alkyl_sn_glycero_3_phosphocholine
+    <-> . +2_acetyl_1_alkyl_sn_glycero_3_phosphocholine +1_hexadecanoyl_sn_glycero_3_phosphocholine
     1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine
   }
 
-  branch from 2_acetyl_1_alkyl_sn_glycero_3_phosphocholine side right {
+  branch from 2_acetyl_1_alkyl_sn_glycero_3_phosphocholine side left {
     2_acetyl_1_alkyl_sn_glycero_3_phosphocholine
     <-> . +h2o +phosphocholine +hplus
     1_alkyl_2_acetyl_sn_glycerol

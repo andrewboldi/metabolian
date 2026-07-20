@@ -18,14 +18,14 @@ pathway 4-hydroxyhexan-3-aminium-to-propionate "4-hydroxyhexan-3-aminium to prop
 
   branch from nh3 side left {
     nh3
-    <-> . +dserine +o2 +h2o +h2o2
-    3_hydroxypyruvate
+    <-> . +d_aspartate +nad +h2o +nadh +hplus
+    oxaloacetate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +d_tyrosine +o2 +h2o +h2o2
-    3_4_hydroxyphenyl_pyruvate
+    <-> . +2r_butan_2_aminium +nad +h2o +nadh +hplus
+    butan_2_one
   }
 
   branch from propanal side left {

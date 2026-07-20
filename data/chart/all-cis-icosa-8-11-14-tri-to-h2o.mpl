@@ -30,25 +30,25 @@ pathway all-cis-icosa-8-11-14-tri-to-h2o "all-cis-icosa-8,11,14-tri… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    aeruginopeptin_95b
+    <-> . +h +adp +phosphate +atp
+    galactitol
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    aeruginopeptin_95a
+    <-> . +h +adp +phosphate +atp
+    l_xylo_hexos_2_ulose
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    aeruginopeptin_228b
+    <-> . +h +adp +phosphate +h2o
+    n_acetylneuraminate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    aeruginopeptin_228a
+    <-> . +h +adp +phosphate +h2o
+    nystose
   }
 }

@@ -159,60 +159,36 @@
       }
     },
     {
-      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
-      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
-      "short": "2-trans,6-trans,10-…",
-      "formula": "C20H33O7P2",
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:58756"
+        "chebi": "CHEBI:58057"
       }
     },
     {
-      "id": "cattleyene",
-      "name": "Cattleyene",
-      "formula": "C20H32",
+      "id": "1r_2r_menth_2_en_1_ol",
+      "name": "(1R,2R)-menth-2-en-1-ol",
+      "short": "(1R,2R)-menth-2-en-…",
+      "formula": "C10H18O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:226390"
+        "chebi": "CHEBI:234482"
       }
     },
     {
-      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
-      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
-      "short": "5β,9α,10α-labda-8(2…",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58553"
-      }
-    },
-    {
-      "id": "ent_beyerene",
-      "name": "ent-beyerene",
-      "formula": "C20H32",
+      "id": "africanol",
+      "name": "africanol",
+      "formula": "C15H26O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:229601"
+        "chebi": "CHEBI:234485"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_4_2_3_225",
-      "name": "cattleyene synthase",
-      "ec": [
-        "4.2.3.225"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_229",
-      "name": "ent-beyerene synthase",
-      "ec": [
-        "4.2.3.229"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -388,18 +364,21 @@
     },
     {
       "id": "r5",
-      "name": "cattleyene synthase",
-      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = cattleyene + diphosphate",
-      "ec": "4.2.3.225",
+      "name": "(2E)-geranyl diphosphate + H2O = (1R,2R)-menth-2-en-1-ol + diphosphate",
+      "equation": "(2E)-geranyl diphosphate + H2O = (1R,2R)-menth-2-en-1-ol + diphosphate",
       "substrates": [
         {
-          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cattleyene",
+          "metabolite": "1r_2r_menth_2_en_1_ol",
           "stoichiometry": 1
         },
         {
@@ -407,40 +386,38 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_225"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:78987"
+        "rhea": "RHEA:85619"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78987"
+            "id": "RHEA:85619"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "ent-beyerene synthase",
-      "equation": "ent-copalyl diphosphate = ent-beyerene + diphosphate",
-      "ec": "4.2.3.229",
+      "name": "(2E,6E)-farnesyl diphosphate + H2O = africanol + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = africanol + diphosphate",
       "substrates": [
         {
-          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ent_beyerene",
+          "metabolite": "africanol",
           "stoichiometry": 1
         },
         {
@@ -448,22 +425,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_229"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:79011"
+        "rhea": "RHEA:85623"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:79011"
+            "id": "RHEA:85623"
           }
         ]
       }

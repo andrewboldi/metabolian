@@ -109,16 +109,6 @@
       }
     },
     {
-      "id": "l_2_ammoniohexano_6_lactam",
-      "name": "L-2-ammoniohexano-6-lactam",
-      "short": "L-2-ammoniohexano-6…",
-      "formula": "C6H13N2O",
-      "charge": 1,
-      "xrefs": {
-        "chebi": "CHEBI:58113"
-      }
-    },
-    {
       "id": "cadaverine",
       "name": "cadaverine",
       "formula": "C5H16N2",
@@ -134,6 +124,15 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32557"
       }
     }
   ],
@@ -167,17 +166,17 @@
       ]
     },
     {
-      "id": "ec_3_5_2_11",
-      "name": "L-lysine-lactamase",
-      "ec": [
-        "3.5.2.11"
-      ]
-    },
-    {
       "id": "ec_4_1_1_18",
       "name": "lysine decarboxylase",
       "ec": [
         "4.1.1.18"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_5",
+      "name": "lysine racemase",
+      "ec": [
+        "5.1.1.5"
       ]
     }
   ],
@@ -331,47 +330,6 @@
     },
     {
       "id": "r4",
-      "name": "L-lysine-lactamase",
-      "equation": "L-2-aminohexano-6-lactam + H2O = L-lysine",
-      "ec": "3.5.2.11",
-      "substrates": [
-        {
-          "metabolite": "l_2_ammoniohexano_6_lactam",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_2_11"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:21388"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:21388"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "lysine decarboxylase",
       "equation": "L-lysine + H(+) = cadaverine + CO2",
       "ec": "4.1.1.18",
@@ -401,7 +359,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:22352"
       },
@@ -411,6 +369,43 @@
           {
             "db": "Rhea",
             "id": "RHEA:22352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "lysine racemase",
+      "equation": "L-lysine = D-lysine",
+      "ec": "5.1.1.5",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:22864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22864"
           }
         ]
       }

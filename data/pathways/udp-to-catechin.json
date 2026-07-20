@@ -98,40 +98,30 @@
       }
     },
     {
-      "id": "22_oxodocosanoate",
-      "name": "22-oxodocosanoate",
-      "formula": "C22H41O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:76298"
-      }
-    },
-    {
-      "id": "22_hydroxydocosanoate",
-      "name": "22-hydroxydocosanoate",
-      "short": "22-hydroxydocosanoa…",
-      "formula": "C22H43O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:76304"
-      }
-    },
-    {
-      "id": "docosanedioate",
-      "name": "docosanedioate",
-      "formula": "C22H40O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:76299"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "2e_geranial",
+      "name": "(2E)-geranial",
+      "formula": "C10H16O",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM1368412"
+      }
+    },
+    {
+      "id": "r_terpineol",
+      "name": "(R)-(+)-α-terpineol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:300"
+      }
+    },
+    {
+      "id": "thujan_3_ol",
+      "name": "(-)-thujan-3-ol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM97633"
       }
     }
   ],
@@ -141,6 +131,13 @@
       "name": "anthocyanidin 3-O-glucosyltransferase",
       "ec": [
         "2.4.1.115"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
       ]
     }
   ],
@@ -275,14 +272,15 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR176288",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "2e_geranial",
           "stoichiometry": 1
         },
         {
-          "metabolite": "22_oxodocosanoate",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
@@ -296,36 +294,42 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "22_hydroxydocosanoate",
+          "metabolite": "r_terpineol",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR176288"
+        "metanetx": "MNXR181337"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR176288"
+            "id": "MNXR181337"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR176289",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
       "substrates": [
         {
-          "metabolite": "docosanedioate",
+          "metabolite": "2e_geranial",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "nadph",
@@ -338,25 +342,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "22_oxodocosanoate",
+          "metabolite": "thujan_3_ol",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_1_1_1_71"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR176289"
+        "metanetx": "MNXR181343"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR176289"
+            "id": "MNXR181343"
           }
         ]
       }

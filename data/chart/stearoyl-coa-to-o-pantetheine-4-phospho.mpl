@@ -20,25 +20,25 @@ pathway stearoyl-coa-to-o-pantetheine-4-phospho "stearoyl-CoA to O-(pantetheine-
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    1e_4e_8e_humulene
+    <-> . +tardioxopiperazine_a +dmapp
+    echinulin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    curcumene
+    <-> . +tardioxopiperazine_a +dmapp
+    variecolorin_l
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei +h2o
-    dehydrocitreoisocoumarin
+    <-> ec_2_3_1_305 [2.3.1.305] +udp_2_acetamido_3_ammonio_2_3_dideoxy_d_glucopyr +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +hplus
+    udp_2_acetamido_3_3r_3_hydroxyacyl_amino_2_3_did
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +o_s_3_5_7_9_11_pentaoxododecanoyl_pantetheine_4 +h2o
-    6_8_dihydroxy_3_2_oxopropyl_isocoumarin
+    <-> . +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +l_lysinium +hplus
+    n6_fatty_acyl_l_lysine
   }
 }

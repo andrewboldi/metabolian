@@ -18,13 +18,13 @@ pathway 7-9-cis-lycopene-to-o2 "7',9'-cis-lycopene to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +luteolin +h +nadph +nadp +h2o
-    hypolaetin
+    <-> . +2_oxoglutarate +5_hydroxy_leucine +5_5_dihydroxy_leucine +succinate
+    co2
   }
 
   branch from o2 side right {
     o2
-    <-> . +4_sulfoacetophenone +h +nadph +nadp +h2o
-    4_sulfophenyl_acetate
+    <-> . +2_oxoglutarate +l_homotyrosine +co2 +succinate
+    3_hydroxy_l_homotyrosine
   }
 }

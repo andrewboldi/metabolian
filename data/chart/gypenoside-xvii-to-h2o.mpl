@@ -18,14 +18,14 @@ pathway gypenoside-xvii-to-h2o "gypenoside XVII to H2O" {
 
   branch from glucose side left {
     glucose
-    <-> . +evatromonoside +h2o
-    glucoevatromonoside
+    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
+    beta_d_galactose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +digitoxin +h2o
-    purpurea_glycoside_a
+    <-> ec_2_3_1_79 [2.3.1.79] +acetyl_coa +coa
+    6_o_acetyl_beta_d_glucose
   }
 
   branch from ginsenoside_f2 side left {
@@ -42,13 +42,13 @@ pathway gypenoside-xvii-to-h2o "gypenoside XVII to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +pitavastatin
-    pitavastatin_lactone
+    <-> . +3_hydroxypropanal
+    acrolein
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2e_9z_12z_octadecatrienoyl_coa
-    3s_3_hydroxylinoleoyl_coa
+    <-> . +3_hydroxypropanal
+    3_hydroxypropanal_hydrate
   }
 }

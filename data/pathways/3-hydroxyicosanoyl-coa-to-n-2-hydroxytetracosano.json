@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "3-hydroxyicosanoyl-coa-to-n-2-hydroxytetracosano",
   "name": "3-hydroxyicosanoyl-CoA to N-(2-hydroxytetracosanoyl…",
-  "category": "lipid-metabolism",
+  "category": "other",
   "summary": "A 14-step route from 3-hydroxyicosanoyl-CoA(4−) to N-(2-hydroxytetracosanoyl)sphinganine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -445,36 +445,6 @@
       }
     },
     {
-      "id": "1_phosphatidyl_1d_myo_inositol",
-      "name": "1-phosphatidyl-1D-myo-inositol",
-      "short": "1-phosphatidyl-1D-m…",
-      "formula": "C11H16O13PR2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:57880"
-      }
-    },
-    {
-      "id": "ins_1_p_cer_d18_0_24_0",
-      "name": "Ins-1-P-Cer(d18:0/24:0)",
-      "short": "Ins-1-P-Cer(d18:0/2…",
-      "formula": "C48H95NO11P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:65091"
-      }
-    },
-    {
-      "id": "dag",
-      "name": "1,2-Diacyl-sn-glycerol",
-      "short": "1,2-Diacyl-sn-glyce…",
-      "formula": "C5H6O5R2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17815"
-      }
-    },
-    {
       "id": "o2",
       "name": "O2",
       "formula": "O2",
@@ -509,6 +479,15 @@
       "charge": 0,
       "xrefs": {
         "metanetx": "MNXM64019"
+      }
+    },
+    {
+      "id": "cer_d18_0_h24_0",
+      "name": "Cer(d18:0/h24:0)",
+      "formula": "C42H85NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188236"
       }
     },
     {
@@ -1627,45 +1606,6 @@
     },
     {
       "id": "r27",
-      "name": "N-tetracosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-te...",
-      "equation": "N-tetracosanoylsphinganine + a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) = N-tetracosanoylsphinganine-(1D-myo-inositol) + a 1,2-diacyl-sn-glycerol",
-      "substrates": [
-        {
-          "metabolite": "n_tetracosanoylsphinganine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "1_phosphatidyl_1d_myo_inositol",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "ins_1_p_cer_d18_0_24_0",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dag",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 27,
-      "xrefs": {
-        "rhea": "RHEA:33723"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:33723"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r28",
       "name": "Reaction MNXR126673",
       "substrates": [
         {
@@ -1700,7 +1640,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 28,
+      "pathwayStep": 27,
       "xrefs": {
         "metanetx": "MNXR126673"
       },
@@ -1710,6 +1650,56 @@
           {
             "db": "MetaNetX",
             "id": "MNXR126673"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r28",
+      "name": "Reaction MNXR136107",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_tetracosanoylsphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cer_d18_0_h24_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 28,
+      "xrefs": {
+        "metanetx": "MNXR136107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR136107"
           }
         ]
       }

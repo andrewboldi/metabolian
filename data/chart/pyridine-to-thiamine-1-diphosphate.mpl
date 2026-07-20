@@ -36,14 +36,14 @@ pathway pyridine-to-thiamine-1-diphosphate "pyridine to thiamine(1+) diphosphate
 
   branch from ppi side left {
     ppi
-    <-> ec_6_2_1_40 [6.2.1.40] +4_hydroxybutyrate +atp +coa +amp
-    4_hydroxybutyryl_coa
+    <-> . +fpp
+    guaia_6_9_diene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
-    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
+    <-> . +fpp
+    germacrene_a
   }
 
   branch from thiamine_1_diphosphate side left {

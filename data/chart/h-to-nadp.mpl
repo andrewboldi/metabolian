@@ -18,13 +18,13 @@ pathway h-to-nadp "H to NADP" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +o2 +nadph +atorvastatin_lactone +h2o
-    4_hydroxy_atorvastatin_lactone_para_hydroxy_ator
+    <-> . +3_decanone +h +o2 +nadph +h2o
+    heptyl_propanoate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +4_hydroxymidazolam +h2o +h +o2 +nadph
-    midazolam
+    <-> . +3_decanone +h +o2 +nadph +h2o
+    ethyl_octanoate
   }
 }

@@ -42,13 +42,13 @@ pathway gallocatechin-gallate-to-3-o-trigalloyl-1-2-4-6 "(−)-gallocatechin gal
 
   branch from glucose side left {
     glucose
-    <-> . +avenacin_a_1 +n_methylanthraniloyl_beta_d_glucopyranose
-    des_acyl_avenacin_a
+    <-> . +4_o_indol_3_ylacetyl_beta_d_glucose +h2o +h
+    indol_3_yl_acetate
   }
 
   branch from glucose side right {
     glucose
-    <-> . +des_methyl_avenacin_a_1 +des_acyl_avenacin_a
-    beta_glucopyranosyl_anthranilate
+    <-> . +h +indol_3_yl_acetate +h2o
+    1_o_indol_3_ylacetyl_beta_d_glucose
   }
 }

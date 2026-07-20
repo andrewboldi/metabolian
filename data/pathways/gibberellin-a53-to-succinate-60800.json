@@ -173,42 +173,40 @@
       }
     },
     {
-      "id": "trans_4_coumaroyl_coa",
-      "name": "trans-4-coumaroyl-CoA",
-      "short": "trans-4-coumaroyl-C…",
-      "formula": "C30H38N7O18P3S",
-      "charge": -4,
+      "id": "berkeleyone_b",
+      "name": "berkeleyone B",
+      "formula": "C26H34O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:85008"
+        "chebi": "CHEBI:69025"
       }
     },
     {
-      "id": "trans_2_4_dihydroxy_cinnamoyl_coa",
-      "name": "trans-2,4-dihydroxy-cinnamoyl-CoA",
-      "short": "trans-2,4-dihydroxy…",
-      "formula": "C30H38N7O19P3S",
-      "charge": -4,
+      "id": "berkeleydione",
+      "name": "berkeleydione",
+      "formula": "C26H32O7",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:142398"
+        "chebi": "CHEBI:69021"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:29985"
       }
     },
     {
-      "id": "5s_5_hydroxy_l_lysinium",
-      "name": "(5S)-5-hydroxy-L-lysinium",
-      "short": "5-hydroxy-L-lysinium",
-      "formula": "C6H13N2O2",
-      "charge": 1,
+      "id": "3r_3_hydroxy_l_glutamate",
+      "name": "(3R)-3-hydroxy-L-glutamate",
+      "short": "3-hydroxy-L-glutama…",
+      "formula": "C5H8NO5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:141843"
+        "chebi": "CHEBI:155841"
       }
     },
     {
@@ -230,10 +228,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_62",
-      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
+      "id": "ec_1_14_11_76",
+      "name": "L-glutamate 3(R)-hydroxylase",
       "ec": [
-        "1.14.11.62"
+        "1.14.11.76"
       ]
     }
   ],
@@ -449,12 +447,11 @@
     },
     {
       "id": "r5",
-      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
-      "equation": "(E)-4-coumaroyl-CoA + 2-oxoglutarate + O2 = (E)-2,4-dihydroxycinnamoyl-CoA + succinate + CO2",
-      "ec": "1.14.11.62",
+      "name": "berkeleyone B + 2-oxoglutarate + O2 = berkeleydione + succinate + CO2 + H2O",
+      "equation": "berkeleyone B + 2-oxoglutarate + O2 = berkeleydione + succinate + CO2 + H2O",
       "substrates": [
         {
-          "metabolite": "trans_4_coumaroyl_coa",
+          "metabolite": "berkeleyone_b",
           "stoichiometry": 1
         },
         {
@@ -468,7 +465,59 @@
       ],
       "products": [
         {
-          "metabolite": "trans_2_4_dihydroxy_cinnamoyl_coa",
+          "metabolite": "berkeleydione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:65188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "L-glutamate 3(R)-hydroxylase",
+      "equation": "L-glutamate + 2-oxoglutarate + O2 = (3R)-3-hydroxy-L-glutamate + succinate + CO2",
+      "ec": "1.14.11.76",
+      "substrates": [
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_hydroxy_l_glutamate",
           "stoichiometry": 1
         },
         {
@@ -482,67 +531,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_11_62"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:57868"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:57868"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate ...",
-      "equation": "L-lysyl-[protein] + 2-oxoglutarate + O2 = (5S)-5-hydroxy-L-lysyl-[protein] + succinate + CO2",
-      "substrates": [
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "5s_5_hydroxy_l_lysinium",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
+          "enzyme": "ec_1_14_11_76"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:58360"
+        "rhea": "RHEA:65752"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58360"
+            "id": "RHEA:65752"
           }
         ]
       }

@@ -116,47 +116,61 @@
       }
     },
     {
-      "id": "alpha_neu5ac_2_3_alpha_d_glc_1_2_beta_d_glc_1_3",
-      "name": "alpha-Neu5Ac-(2->3)-[alpha-D-Glc-(1->2)]-beta-D-Glc-(1->3)-alpha-D-GalNAc-PP-Und",
-      "short": "alpha-Neu5Ac-(2->3)…",
-      "formula": "C86H139N2O30P2",
-      "charge": -3,
+      "id": "ternatin_c5",
+      "name": "Ternatin C5",
+      "formula": "C36H41O25",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1132703"
+        "metanetx": "MNXM1371483"
       }
     },
     {
-      "id": "alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_galnac_p",
-      "name": "alpha-Neu5Ac-(2->3)-beta-D-Glc-(1->3)-alpha-D-GalNAc-PP-Und",
-      "short": "alpha-Neu5Ac-(2->3)…",
-      "formula": "C80H129N2O25P2",
-      "charge": -3,
+      "id": "delphinidin_3_o_6_o_malonyl_beta_d_glucoside",
+      "name": "Delphinidin 3-O-(6-O-malonyl-beta-D-glucoside)",
+      "short": "Delphinidin…",
+      "formula": "C24H21O15",
+      "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1132702"
+        "metanetx": "MNXM1371396"
       }
     },
     {
-      "id": "alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d",
-      "name": "alpha-D-Glcl-(1->4)-beta-D-Gal-(1->3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol",
-      "short": "alpha-D-Glcl-(1->4)…",
-      "formula": "C75H123NO22P2",
-      "charge": -2,
+      "id": "pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam",
+      "name": "Pelargonidin 5-O-beta-D-glucoside 3-O-beta-D-sambubioside",
+      "short": "Pelargonidin…",
+      "formula": "C32H39O19",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM1132741"
+        "metanetx": "MNXM1368956"
       }
     },
     {
-      "id": "beta_d_gal_1_3_alpha_d_galnac_pp_und",
-      "name": "beta-D-Gal-(1->3)-alpha-D-GalNAc-PP-Und",
-      "short": "beta-D-Gal-(1->3)-a…",
-      "formula": "C69H113NO17P2",
-      "charge": -2,
+      "id": "pelargonidin_3_o_d_sambubioside",
+      "name": "pelargonidin 3-O-β-D-sambubioside",
+      "short": "pelargonidin…",
+      "formula": "C26H29O14",
+      "charge": 1,
       "xrefs": {
-        "metanetx": "MNXM148965"
+        "chebi": "CHEBI:74809"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_249",
+      "name": "delphinidin 3',5'-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.249"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_295",
+      "name": "anthocyanin 3-O-sambubioside 5-O-glucosyltransferase",
+      "ec": [
+        "2.4.1.295"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -282,56 +296,63 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR193638",
+      "name": "delphinidin 3',5'-O-glucosyltransferase",
+      "ec": "2.4.1.249",
       "substrates": [
         {
           "metabolite": "udp",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
-          "metabolite": "alpha_neu5ac_2_3_alpha_d_glc_1_2_beta_d_glc_1_3",
+          "metabolite": "ternatin_c5",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_galnac_p",
-          "stoichiometry": 1
+          "metabolite": "udp_alpha_d_glucose",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "udp_alpha_d_glucose",
+          "metabolite": "delphinidin_3_o_6_o_malonyl_beta_d_glucoside",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_249"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR193638"
+        "metanetx": "MNXR197591"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193638"
+            "id": "MNXR197591"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR193683",
+      "name": "anthocyanin 3-O-sambubioside 5-O-glucosyltransferase",
+      "ec": "2.4.1.295",
       "substrates": [
         {
           "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "alpha_d_glcl_1_4_beta_d_gal_1_3_alpha_d_galnac_d",
+          "metabolite": "pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam",
           "stoichiometry": 1
         },
         {
@@ -345,21 +366,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "beta_d_gal_1_3_alpha_d_galnac_pp_und",
+          "metabolite": "pelargonidin_3_o_d_sambubioside",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_295"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR193683"
+        "metanetx": "MNXR197592"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR193683"
+            "id": "MNXR197592"
           }
         ]
       }

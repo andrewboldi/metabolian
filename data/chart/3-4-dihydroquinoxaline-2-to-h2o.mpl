@@ -26,73 +26,73 @@ pathway 3-4-dihydroquinoxaline-2-to-h2o "3,4-dihydroquinoxaline-2-… to H2O" {
 
   branch from h side left {
     h
-    <-> . +4_coumaroyltriacetate +h2o
-    4_coumaroyltriacetic_acid_lactone
+    <-> . +mycothiol_bimane_conjugate +bromide +mycothiol
+    monobromobimane
   }
 
   branch from h side right {
     h
-    <-> . +2_methylpropanoate +acetate +h2o
-    4_methyl_3_oxopentanoate
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine +nadp +nadph
+    o_s_19z_3_oxooctatriacontenoylpantetheine_4_phos
   }
 
   branch from nad side left {
     nad
-    <-> . +bixin_dialdehyde +h2o +nadh +h
-    norbixin
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_17z_hexatriacontatrienoylpantetheine_4 +h
+    o_s_5z_17z_hexatriacontadienoylpantetheine_4_pho
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_17_1_4 [1.17.1.4] +nadh +h +6_8_dihydroxypurine +h2o
-    hypoxanthine
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4 +h
+    o_s_11z_23z_dotetracontadienoylpantetheine_4_pho
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_5_99_12 [1.5.99.12] +adenosine +fadh2 +h +2e_4_hydroxy_3_methylbut_2_enal +h2o
-    9_ribosyl_trans_zeatin
+    <-> ec_1_3_5_1 [1.3.5.1] +fadh2 +ubiquinone_6 +h
+    ubiquinol_6
   }
 
   branch from fad side right {
     fad
-    <-> . +fadh2 +h +ubiquinone_2
-    ubiquinol_2
+    <-> . +fadh2 +ubiquinone_8 +h
+    ubiquinol_8
   }
 
   branch from h2o side left {
     h2o
-    <-> . +formate +l_isoglutamine
-    formylisoglutamine
+    <-> . +o_s_3r_13z_3_hydroxydotriacontenoylpantetheine_4
+    o_s_2e_13z_dotriacontadienoylpantetheine_4_phosp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +arteannuin +h +o2
-    dihydroartemisinic_acid_hydroperoxide
+    <-> . +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa
+    o_s_2e_13z_25z_tetratetracontatrienoylpantethein
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_6_3_2_2 [6.3.2.2] +gamma_l_glutamyl_s_methyl_l_cysteine +h +adp +phosphate +atp
-    s_methylcysteine
+    <-> ec_6_3_2_18 [6.3.2.18] +diphosphate +h +n_alpha_gamma_l_glutamylhistamine +amp +histamine
+    atp
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_6_3_2_2 [6.3.2.2] +3_cyano_l_alanine +atp +adp +phosphate
-    glutamyl_cyanoalanine
+    <-> ec_6_3_2_17 [6.3.2.17] +h +adp +10_formyl_tetrahydrofolate_tri_l_glutamate +phosphate +atp
+    6r_10_formyltetrahydropteroyldiglutamate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +bergaptol +h2o +o2 +nadph
-    psoralen
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_3_hydroxytriacontenoylpantetheine_4_p +h +nadph
+    o_s_11z_3_oxotriacontenoylpantetheine_4_phosphor
   }
 
   branch from nadp side right {
     nadp
-    <-> . +4_hydroxycinnamoylmethane +h +nadph
-    raspberry_ketone
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_13z_25z_3_hydroxytetratetracontadienoylpa +h +nadph
+    o_s_13z_25z_3_oxotetratetracontadienoylpantethei
   }
 }

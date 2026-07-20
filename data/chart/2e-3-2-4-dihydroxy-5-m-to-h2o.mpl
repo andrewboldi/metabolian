@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2e-3-2-4-dihydroxy-5-m-to-h2o "(2E)-3-(2,4-dihydroxy-5-m… to H2O" {
-  spacing 266
+  spacing 260
 
   spine at 0,0 {
     2e_3_2_4_dihydroxy_5_methoxyphenyl_prop_2_enoic
@@ -16,17 +16,87 @@ pathway 2e-3-2-4-dihydroxy-5-m-to-h2o "(2E)-3-(2,4-dihydroxy-5-m… to H2O" {
     methyl_caffeate
   }
 
+  branch from 2_oxoglutarate side left {
+    2_oxoglutarate
+    <-> . +2_chloro_4_methyl_phenoxyacetate +o2 +co2 +succinate +2_chloro_4_methylphenol
+    glyoxylate
+  }
 
+  branch from 2_oxoglutarate side right {
+    2_oxoglutarate
+    <-> . +gibberellin_a53 +o2 +co2 +succinate
+    gibberellin_a97
+  }
 
+  branch from h side left {
+    h
+    <-> . +c36_phenolphthiodiolone_a +nadph +nadp
+    c36_phenolphthiotriol_a
+  }
 
+  branch from h side right {
+    h
+    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_d +31r_8_ethyl_12_methylbacteriochlorophyllide_d
+    2e_6e_farnesyl_diphosphate
+  }
 
+  branch from e_ferulate side left {
+    e_ferulate
+    <-> ec_2_4_1_126 [2.4.1.126] +udp +1_o_feruloyl_beta_d_glucose
+    udp_alpha_d_glucose
+  }
 
+  branch from e_ferulate side right {
+    e_ferulate
+    <-> . +pelargonidin_3_glucoside +1_o_feruloyl_d_glucose +h
+    pelargonidin_3_7_di_o_beta_d_glucoside
+  }
 
+  branch from o2 side left {
+    o2
+    <-> . +nocardicin_g +h2o
+    nocardicin_f
+  }
 
+  branch from o2 side right {
+    o2
+    <-> ec_1_10_3_1 [1.10.3.1] +2_6_dimethoxyphenol +h2o
+    coerulignone
+  }
 
+  branch from s_s_adenosyl_l_methionine side left {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_155 [2.1.1.155] +s_adenosyl_l_homocysteine +h +prunetin_5_olate
+    genistein
+  }
 
+  branch from s_s_adenosyl_l_methionine side right {
+    s_s_adenosyl_l_methionine
+    <-> ec_2_1_1_283 [2.1.1.283] +s_adenosyl_l_homocysteine +h +questin
+    emodin
+  }
 
+  branch from caffeic_acid side left {
+    caffeic_acid
+    <-> ec_1_14_14_91 [1.14.14.91] +3_coumaric_acid +h +o2 +nadph +h2o
+    nadp
+  }
 
+  branch from caffeic_acid side right {
+    caffeic_acid
+    <-> ec_2_4_1_35 [2.4.1.35] +h +3_o_d_glucosyl_trans_caffeic_acid +udp_alpha_d_glucose
+    udp
+  }
 
+  branch from h2o side left {
+    h2o
+    <-> . +co2 +succinate +acetate +h
+    glycolate
+  }
 
+  branch from h2o side right {
+    h2o
+    <-> ec_4_2_1_84 [4.2.1.84] +2_hydroxyisobutyramide
+    2_hydroxy_2_methylpropanenitrile
+  }
 }

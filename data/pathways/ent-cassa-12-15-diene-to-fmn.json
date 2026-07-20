@@ -104,53 +104,45 @@
       }
     },
     {
-      "id": "c28_steroid",
-      "name": "C28-steroid",
-      "formula": "C28H50",
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:188921"
+        "chebi": "CHEBI:17347"
       }
     },
     {
-      "id": "22s_22_hydroxy_c28_steroid",
-      "name": "(22S)-22-hydroxy C28-steroid",
-      "short": "22-hydroxy…",
-      "formula": "C28H50O",
+      "id": "15_hydroxytestosterone",
+      "name": "15α-hydroxytestosterone",
+      "short": "15α-hydroxytestoste…",
+      "formula": "C19H28O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:188922"
+        "chebi": "CHEBI:34161"
       }
     },
     {
-      "id": "c29_steroid",
-      "name": "C29-steroid",
-      "formula": "C29H52",
+      "id": "progesterone",
+      "name": "progesterone",
+      "formula": "C21H30O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:188923"
+        "chebi": "CHEBI:17026"
       }
     },
     {
-      "id": "22s_22_hydroxy_c29_steroid",
-      "name": "(22S)-22-hydroxy C29-steroid",
-      "short": "22-hydroxy…",
-      "formula": "C29H52O",
+      "id": "15alpha_hydroxyprogesterone",
+      "name": "15alpha-Hydroxyprogesterone",
+      "short": "15alpha-Hydroxyprog…",
+      "formula": "C21H30O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:188924"
+        "chebi": "CHEBI:79866"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_1_14_14_178",
-      "name": "steroid 22S-hydroxylase",
-      "ec": [
-        "1.14.14.178"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -307,12 +299,11 @@
     },
     {
       "id": "r4",
-      "name": "steroid 22S-hydroxylase",
-      "equation": "a C28-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C28-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.178",
+      "name": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha,17beta-dihydroxyan...",
+      "equation": "testosterone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha,17beta-dihydroxyandrost-4-en-3-one + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "c28_steroid",
+          "metabolite": "testosterone",
           "stoichiometry": 1
         },
         {
@@ -326,7 +317,7 @@
       ],
       "products": [
         {
-          "metabolite": "22s_22_hydroxy_c28_steroid",
+          "metabolite": "15_hydroxytestosterone",
           "stoichiometry": 1
         },
         {
@@ -342,34 +333,28 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_178"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:70063"
+        "rhea": "RHEA:83131"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70063"
+            "id": "RHEA:83131"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "steroid 22S-hydroxylase",
-      "equation": "a C29-steroid + reduced [NADPH--hemoprotein reductase] + O2 = a (22S)-22-hydroxy C29-steroid + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
-      "ec": "1.14.14.178",
+      "name": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxyprogesteron...",
+      "equation": "progesterone + reduced [NADPH--hemoprotein reductase] + O2 = 15alpha-hydroxyprogesterone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "c29_steroid",
+          "metabolite": "progesterone",
           "stoichiometry": 1
         },
         {
@@ -383,7 +368,7 @@
       ],
       "products": [
         {
-          "metabolite": "22s_22_hydroxy_c29_steroid",
+          "metabolite": "15alpha_hydroxyprogesterone",
           "stoichiometry": 1
         },
         {
@@ -399,22 +384,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_178"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:70067"
+        "rhea": "RHEA:83163"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:70067"
+            "id": "RHEA:83163"
           }
         ]
       }

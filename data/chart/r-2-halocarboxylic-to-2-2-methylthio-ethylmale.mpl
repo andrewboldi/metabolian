@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-2-halocarboxylic-to-2-2-methylthio-ethylmale "(R)-2-halocarboxylic… to 2-(2-methylthio)ethylmale…" {
-  spacing 308
+  spacing 302
 
   spine at 0,0 {
     r_2_halocarboxylic_acid_anion
@@ -30,41 +30,35 @@ pathway r-2-halocarboxylic-to-2-2-methylthio-ethylmale "(R)-2-halocarboxylic… 
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_39 [1.3.99.39] +carotenoid_end_derivative +hydrogen_acceptor
-    carotenoid_end_group
+    <-> . +linoleate +o2 +hydrogen_acceptor +h2o
+    crepenynate
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_99_65 [1.14.99.65] +o_s_4_amino_l_phenylalanylpantetheine_4_phosphor +o2 +hydrogen_acceptor +h2o
-    o_s_2r_2_4_aminophenyl_l_serylpantetheine_4_phos
+    <-> ec_1_3_99_6 [1.3.99.6] +3_oxo_5_steroid +hydrogen_acceptor
+    3_oxo_4_steroid
   }
 
   branch from 4_methylthio_2_oxobutanoate side right {
-    4_methylthio_2_oxobutanoate
-    <-> . +5_methylsulfanyl_2_3_dioxopentyl_phosphate +o2 +h2o +pi +hplus
-    formate
-  }
-
-  branch from 4_methylthio_2_oxobutanoate side left {
     4_methylthio_2_oxobutanoate
     <-> . +d_methionine +o2 +h2o +h2o2
     nh3
   }
 
-  branch from l_amino_acid side right {
+  branch from l_amino_acid side left {
     l_amino_acid
     <-> . +glycocholate +glycine
     n_choloyl_l_amino_acid_anion
   }
 
-  branch from l_amino_acid side left {
+  branch from l_amino_acid side right {
     l_amino_acid
     <-> . +acetyl_coa +coa +hplus
     n_acetyl_l_amino_acid_anion
   }
 
-  branch from 3_2_methylthioethyl_malate side right {
+  branch from 3_2_methylthioethyl_malate side left {
     3_2_methylthioethyl_malate
     <-> . +nadh +2_2_methylsulfanyl_ethyl_3_oxobutanedioate +h
     nad

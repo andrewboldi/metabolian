@@ -28,27 +28,15 @@ pathway demethylaltemicidin-to-o-pantetheine-4-phospho "demethylaltemicidin to O
     cytidine_5_monophosphate_1
   }
 
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +l_lysyl_5_amp +amp +hplus
-    3_l_lysyl_adenylyl_1_group
-  }
-
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +3_disulfanyl_l_alanine +atp +amp +ppi
-    3_s_sulfanyl_l_cysteinyl_adenylyl_zwitterionic_g
-  }
-
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_tryptophyl_amp +amp
-    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
+    <-> . +n_citryl_spermidine +o_s_3_4_dihydroxybenzoyl_pantetheine_4_phosphory +hplus
+    n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +l_alanyl_amp +amp +hplus
-    o_s_l_alanyl_pantetheine_4_phosphoryl_l_serine_r
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa +h2o
+    o_s_3_6_8_9_tetrahydroxy_1_oxo_3_2_oxopropyl_1_2
   }
 }

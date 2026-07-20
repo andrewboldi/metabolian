@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-fmn "NADH to FMN" {
-  spacing 320
+  spacing 308
 
   spine at 0,0 {
     nadh
@@ -28,74 +28,62 @@ pathway nadh-to-fmn "NADH to FMN" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_oxoisohexanoyl_coa +h
-    3_s_hydroxy_4_methyl_pentanoyl_coa
+    <-> . +nadh +all_trans_zeaxanthin +h +o2 +3r_11_cis_3_hydroxyretinal +h2o
+    3r_all_trans_3_hydroxyretinal
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +4_maleylacetoacetate +h
-    3_5_dioxooctanedioic_acid
+    <-> . +nadh +all_trans_beta_carotene +h +o2 +all_trans_retinal +h2o
+    11_cis_retinal
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    4z_7z_10z_13z_16z_docosapentaenoate
+    25r_5beta_cholestane_3alpha_7alpha_26_triol
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    10z_13z_16z_docosatrienoate
+    <-> . +2_methyl_3_n_amyl_pyrrole +4_methoxy_2_2_bipyrrole_5_carboxaldehyde +h +prodigiosin +phosphate
+    adp
   }
 
   branch from coa side right {
     coa
-    <-> . +h2o +4z_7z_10z_13z_16z_docosapentaenoate +h
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
+    <-> . +10z_heptadecenoyl_coa +cholesterol
+    cholest_5_en_3b_yl_9z_heptadecenoate
   }
 
   branch from coa side left {
     coa
-    <-> . +h2o +10z_13z_16z_docosatrienoate +h
-    cis_cis_cis_10_13_16_docosatrienoyl_coa
+    <-> . +nonadecanoyl_coa +cholesterol
+    cholesteryl_nonadecanoate
   }
 
   branch from ursodeoxycholate side right {
-    ursodeoxycholate
-    <-> . +adenosine_3_5_bisphosphate +ursodeoxycholic_acid_3_sulfate +h
-    3_phosphoadenylyl_sulfate
-  }
-
-  branch from ursodeoxycholate side left {
     ursodeoxycholate
     <-> ec_3_5_1_74 [3.5.1.74] +taurine +h2o
     tauroursodeoxycholate
   }
 
-  branch from muricholate side right {
+  branch from muricholate side left {
     muricholate
     <-> . +allodeoxycholoyl_coa +muricholoyl_coa
     allodeoxycholate
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_49 [1.14.14.49] +n_12_hydroxyjasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
-    n_12_hydroxy_12_oxojasmonyl_l_amino_acid_dianion
-  }
-
   branch from fmn side right {
     fmn
-    <-> . +n_12_hydroxyjasmonyl_l_amino_acid_anion +fmnh2 +o2 +h2o +hplus
-    n_12_oxojasmonyl_l_amino_acid_anion
+    <-> ec_1_14_14_165 [1.14.14.165] +indole_3_carbonyl_nitrile +fmnh2 +o2 +h2o +hplus
+    4_hydroxy_indole_3_carbonyl_nitrile
   }
 
-  branch from lithocholate side left {
-    lithocholate
-    <-> . +udp_d_glucuronate +udp
-    lithocholic_acid_24_o_d_glucuronide
+  branch from fmn side left {
+    fmn
+    <-> ec_1_14_14_169 [1.14.14.169] +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +fmnh2 +o2 +h2o
+    eupatolide
   }
 
   branch from lithocholate side right {

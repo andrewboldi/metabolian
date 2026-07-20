@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-carvone-to-3r-3-isopropenyl-6-oxoh "(S)-carvone to (3R)-3-isopropenyl-6-oxoh…" {
-  spacing 314
+  spacing 308
 
   spine at 0,0 {
     s_carvone
@@ -24,81 +24,14 @@ pathway s-carvone-to-3r-3-isopropenyl-6-oxoh "(S)-carvone to (3R)-3-isopropenyl-
     3r_3_isopropenyl_6_oxoheptanoate
   }
 
-  branch from 4r_limonene side left {
-    4r_limonene
-    <-> . +nadh +h +o2 +nad +h2o
-    perillyl_alcohol
-  }
 
-  branch from 4r_limonene side right {
-    4r_limonene
-    <-> ec_1_14_13_107 [1.14.13.107] +h +o2 +nadph +nadp +h2o
-    4r_limonene_1alpha_2alpha_epoxide
-  }
 
-  branch from h side left {
-    h
-    <-> . +adp +dopamine_3_o_glucuronide +phosphate +dopamine_3_o_glucuronide +h2o
-    atp
-  }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    dopamine_glucuronide
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +nadh +2_octaprenylphenol +h +nad +h2o
-    2_octaprenyl_6_hydroxyphenol
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +pitavastatin +h2o
-    pitavastatin_m3
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_13_237 [1.14.13.237] +h +o2 +omega_methylthio_alkyl_glucosinolate +nadp +h2o
-    omega_methylsulfinyl_alkyl_glucosinolate
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxyisoflavanone +nadp
-    4r_4_2_dihydroxyisoflavan
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +5z_8z_11z_eicosatrienoyl_coenzyme_a +coa +h2o
-    fad
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    4z_7z_10z_13z_16z_docosapentaenoyl_coa
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    d_ornithine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    3beta_16alpha_dihydroxy_androst_5_en_17_one
-  }
-
-  branch from 1s_2s_4r_limonene_1_2_diol side left {
-    1s_2s_4r_limonene_1_2_diol
-    <-> ec_1_1_1_297 [1.1.1.297] +nadh +h +nad
-    1r_4s_1_hydroxylimonen_2_one
-  }
 }

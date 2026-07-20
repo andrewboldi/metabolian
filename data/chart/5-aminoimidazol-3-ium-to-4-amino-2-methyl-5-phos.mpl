@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-ium… to 4-amino-2-methyl-5-phosph…" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     5_aminoimidazol_3_ium_ribonucleoside
@@ -28,11 +28,5 @@ pathway 5-aminoimidazol-3-ium-to-4-amino-2-methyl-5-phos "5-aminoimidazol-3-ium�
     carbon_monoxide
     <-> . +tert_butylisonitrile +h2o +hplus
     tert_butylammonium
-  }
-
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +2r_3r_5s_6r_6_methyl_2_s_pantetheinyl_carbapena +methylcobalamin +sam +cob_iii_alamin +methionine
-    2r_3r_5s_6r_6_ethyl_2_s_pantetheinyl_carbapenam
   }
 }

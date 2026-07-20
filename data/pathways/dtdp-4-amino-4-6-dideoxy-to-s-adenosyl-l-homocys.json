@@ -133,61 +133,43 @@
       }
     },
     {
-      "id": "nad",
-      "name": "NAD+",
-      "formula": "C21H26N7O14P2",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57540"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "methenyl_thf",
-      "name": "5,10-Methenyltetrahydrofolate",
-      "short": "5,10-Methenyltetrah…",
-      "formula": "C20H20N7O6",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57455"
+        "chebi": "CHEBI:74483"
       }
     },
     {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57945"
-      }
-    },
-    {
-      "id": "guanosine_5_monophosphate_1",
-      "name": "guanosine 5'-monophosphate(1−)",
-      "short": "guanosine 5'-MP(1−)",
-      "formula": "C10H11N5O7P",
+      "id": "uridine_5_monophosphate_1",
+      "name": "uridine 5'-monophosphate(1−)",
+      "short": "uridine 5'-MP(1−)",
+      "formula": "C9H10N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74269"
+        "chebi": "CHEBI:65315"
       }
     },
     {
-      "id": "n7_methylguanosine_5_phosphate_zwitterion",
-      "name": "N7-methylguanosine 5'-phosphate zwitterion",
-      "short": "N7-methylguanosine…",
-      "formula": "C11H14N5O7P",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:74480"
-      }
-    },
-    {
-      "id": "n2_methylguanosine_5_monophosphate_1",
-      "name": "N2-methylguanosine 5'-monophosphate(1−)",
-      "short": "N2-methylguanosine…",
-      "formula": "C11H13N5O7P",
+      "id": "n3_methyluridine_5_monophosphate_1",
+      "name": "N3-methyluridine 5'-monophosphate(1−)",
+      "short": "N3-methyluridine…",
+      "formula": "C10H12N2O8P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74481"
+        "chebi": "CHEBI:74502"
       }
     }
   ],
@@ -200,24 +182,17 @@
       ]
     },
     {
-      "id": "ec_1_5_1_15",
-      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
+      "id": "ec_2_1_1_191",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
       "ec": [
-        "1.5.1.15"
+        "2.1.1.191"
       ]
     },
     {
-      "id": "ec_2_1_1_170",
-      "name": "16S rRNA (guanine(527)-N(7))-methyltransferase",
+      "id": "ec_2_1_1_193",
+      "name": "16S rRNA (uracil(1498)-N(3))-methyltransferase",
       "ec": [
-        "2.1.1.170"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_172",
-      "name": "16S rRNA (guanine(1207)-N(2))-methyltransferase",
-      "ec": [
-        "2.1.1.172"
+        "2.1.1.193"
       ]
     }
   ],
@@ -363,57 +338,12 @@
     },
     {
       "id": "r4",
-      "name": "methylenetetrahydrofolate dehydrogenase (NAD(+))",
-      "equation": "(6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NAD(+) = (6R)-5,10-methenyltetrahydrofolate + NADH",
-      "ec": "1.5.1.15",
+      "name": "23S rRNA (cytosine(1962)-C(5))-methyltransferase",
+      "equation": "cytidine(1962) in 23S rRNA + S-adenosyl-L-methionine = 5-methylcytidine(1962) in 23S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.191",
       "substrates": [
         {
-          "metabolite": "methylene_thf",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "methenyl_thf",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_5_1_15"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:22892"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:22892"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "16S rRNA (guanine(527)-N(7))-methyltransferase",
-      "equation": "guanosine(527) in 16S rRNA + S-adenosyl-L-methionine = N(7)-methylguanosine(527) in 16S rRNA + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.170",
-      "substrates": [
-        {
-          "metabolite": "guanosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -423,52 +353,7 @@
       ],
       "products": [
         {
-          "metabolite": "n7_methylguanosine_5_phosphate_zwitterion",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sah",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_170"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:42732"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:42732"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "16S rRNA (guanine(1207)-N(2))-methyltransferase",
-      "equation": "guanosine(1207) in 16S rRNA + S-adenosyl-L-methionine = N(2)-methylguanosine(1207) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.172",
-      "substrates": [
-        {
-          "metabolite": "guanosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "sam",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n2_methylguanosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -482,20 +367,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_172"
+          "enzyme": "ec_2_1_1_191"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:42736"
+        "rhea": "RHEA:42912"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42736"
+            "id": "RHEA:42912"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "16S rRNA (uracil(1498)-N(3))-methyltransferase",
+      "equation": "uridine(1498) in 16S rRNA + S-adenosyl-L-methionine = N(3)-methyluridine(1498) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.193",
+      "substrates": [
+        {
+          "metabolite": "uridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n3_methyluridine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_193"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:42920"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42920"
           }
         ]
       }

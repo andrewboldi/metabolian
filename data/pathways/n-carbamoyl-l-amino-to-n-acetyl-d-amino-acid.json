@@ -111,15 +111,6 @@
       }
     },
     {
-      "id": "alanine",
-      "name": "L-Alanine",
-      "formula": "C3H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57972"
-      }
-    },
-    {
       "id": "nad",
       "name": "NAD+",
       "formula": "C21H26N7O14P2",
@@ -129,12 +120,12 @@
       }
     },
     {
-      "id": "pyruvate",
-      "name": "Pyruvate",
-      "formula": "C3H3O3",
-      "charge": -1,
+      "id": "hydroxylamine",
+      "name": "hydroxylamine",
+      "formula": "H3NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:15361"
+        "chebi": "CHEBI:15429"
       }
     },
     {
@@ -147,22 +138,21 @@
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H15N2O2",
-      "charge": 1,
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:32551"
+        "chebi": "CHEBI:33384"
       }
     },
     {
-      "id": "1_piperideine_2_carboxylic_acid",
-      "name": "1-piperideine-2-carboxylic acid",
-      "short": "1-piperideine-2-car…",
-      "formula": "C6H9NO2",
-      "charge": 0,
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:77631"
+        "chebi": "CHEBI:17180"
       }
     },
     {
@@ -217,17 +207,17 @@
       ]
     },
     {
-      "id": "ec_1_4_1_1",
-      "name": "alanine dehydrogenase",
+      "id": "ec_1_7_1_10",
+      "name": "hydroxylamine reductase (NADH)",
       "ec": [
-        "1.4.1.1"
+        "1.7.1.10"
       ]
     },
     {
-      "id": "ec_1_4_1_15",
-      "name": "lysine dehydrogenase",
+      "id": "ec_1_4_1_7",
+      "name": "serine 2-dehydrogenase",
       "ec": [
-        "1.4.1.15"
+        "1.4.1.7"
       ]
     }
   ],
@@ -373,12 +363,12 @@
     },
     {
       "id": "r4",
-      "name": "alanine dehydrogenase",
-      "equation": "L-alanine + NAD(+) + H2O = pyruvate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.1",
+      "name": "hydroxylamine reductase (NADH)",
+      "equation": "NH4(+) + NAD(+) + H2O = hydroxylamine + NADH + 2 H(+)",
+      "ec": "1.7.1.10",
       "substrates": [
         {
-          "metabolite": "alanine",
+          "metabolite": "nh3",
           "stoichiometry": 1
         },
         {
@@ -392,11 +382,7 @@
       ],
       "products": [
         {
-          "metabolite": "pyruvate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
+          "metabolite": "hydroxylamine",
           "stoichiometry": 1
         },
         {
@@ -405,47 +391,51 @@
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_1_1"
+          "enzyme": "ec_1_7_1_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:18405"
+        "rhea": "RHEA:20581"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18405"
+            "id": "RHEA:20581"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "lysine dehydrogenase",
-      "equation": "L-lysine + NAD(+) = Delta(1)-piperideine-2-carboxylate + NH4(+) + NADH + H(+)",
-      "ec": "1.4.1.15",
+      "name": "serine 2-dehydrogenase",
+      "equation": "L-serine + NAD(+) + H2O = 3-hydroxypyruvate + NH4(+) + NADH + H(+)",
+      "ec": "1.4.1.7",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "serine",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_piperideine_2_carboxylic_acid",
+          "metabolite": "3_hydroxypyruvate",
           "stoichiometry": 1
         },
         {
@@ -463,20 +453,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_4_1_15"
+          "enzyme": "ec_1_4_1_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:18505"
+        "rhea": "RHEA:20884"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:18505"
+            "id": "RHEA:20884"
           }
         ]
       }

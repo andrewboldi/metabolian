@@ -119,21 +119,22 @@
       }
     },
     {
-      "id": "benzoyl_coa",
-      "name": "benzoyl-CoA",
-      "formula": "C28H36N7O17P3S",
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57369"
+        "chebi": "CHEBI:57379"
       }
     },
     {
-      "id": "geranyl_benzoate",
-      "name": "geranyl benzoate",
-      "formula": "C17H22O2",
+      "id": "2e_geranyl_hexadecanoate",
+      "name": "(2E)-geranyl hexadecanoate",
+      "short": "geranyl hexadecanoa…",
+      "formula": "C26H48O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:156234"
+        "chebi": "CHEBI:235328"
       }
     },
     {
@@ -143,42 +144,6 @@
       "charge": -4,
       "xrefs": {
         "chebi": "CHEBI:57287"
-      }
-    },
-    {
-      "id": "nadh",
-      "name": "NADH",
-      "formula": "C21H27N7O14P2",
-      "charge": -2,
-      "xrefs": {
-        "metanetx": "MNXM10"
-      }
-    },
-    {
-      "id": "2e_geranial",
-      "name": "(2E)-geranial",
-      "formula": "C10H16O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM1368412"
-      }
-    },
-    {
-      "id": "h",
-      "name": "H",
-      "formula": "H",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM1"
-      }
-    },
-    {
-      "id": "nad",
-      "name": "NAD",
-      "formula": "C21H26N7O14P2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM8"
       }
     }
   ],
@@ -209,13 +174,6 @@
       "name": "geraniol dehydrogenase (NAD(+))",
       "ec": [
         "1.1.1.347"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_71",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": [
-        "1.1.1.71"
       ]
     }
   ],
@@ -437,21 +395,21 @@
     },
     {
       "id": "r6",
-      "name": "(2E)-geraniol + benzoyl-CoA = (2E)-geranyl benzoate + CoA",
-      "equation": "(2E)-geraniol + benzoyl-CoA = (2E)-geranyl benzoate + CoA",
+      "name": "(2E)-geraniol + hexadecanoyl-CoA = (2E)-geranyl hexadecanoate + CoA",
+      "equation": "(2E)-geraniol + hexadecanoyl-CoA = (2E)-geranyl hexadecanoate + CoA",
       "substrates": [
         {
           "metabolite": "geraniol",
           "stoichiometry": 1
         },
         {
-          "metabolite": "benzoyl_coa",
+          "metabolite": "palmitoyl_coa",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "geranyl_benzoate",
+          "metabolite": "2e_geranyl_hexadecanoate",
           "stoichiometry": 1
         },
         {
@@ -462,62 +420,14 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:64844"
+        "rhea": "RHEA:85979"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:64844"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "alcohol dehydrogenase [NAD(P)(+)]",
-      "ec": "1.1.1.71",
-      "substrates": [
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "2e_geranial",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "s_linalool",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_1_1_71"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "metanetx": "MNXR181637"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR181637"
+            "id": "RHEA:85979"
           }
         ]
       }

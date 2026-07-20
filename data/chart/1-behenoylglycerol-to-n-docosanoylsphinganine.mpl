@@ -18,37 +18,37 @@ pathway 1-behenoylglycerol-to-n-docosanoylsphinganine "1-behenoylglycerol to N-d
 
   branch from behenate side left {
     behenate
-    <-> ec_6_2_1_59 [6.2.1.59] +holo-acp +atp +amp +ppi
-    o_s_docosanoylpantetheine_4_phosphoryl_l_serine
+    <-> . +n_docosanoyltaurine +h2o
+    taurine
   }
 
   branch from behenate side right {
     behenate
-    <-> . +atp +hplus +ppi
-    docosanoyl_amp
+    <-> . +h +o2 +nadph +22_hydroxydocosanoate +h2o
+    nadp
   }
 
   branch from docosanoyl_coa side left {
-    docosanoyl_coa
-    <-> . +fad +hplus +fadh2
-    trans_2_docosenoyl_coa
-  }
-
-  branch from docosanoyl_coa side right {
     docosanoyl_coa
     <-> . +ketosphinganine +coa +hplus
     n_docosanoyl_3_ketodihydrosphingosine
   }
 
+  branch from docosanoyl_coa side right {
+    docosanoyl_coa
+    <-> . +acetyl_coa +coa
+    3_oxotetracosanoyl_coa
+  }
+
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    manool
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +atp +coa +amp
+    4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    13_epi_manool
+    <-> . +linolenate +atp +coa +amp
+    linolenoyl_coa
   }
 }

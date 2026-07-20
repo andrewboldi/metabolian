@@ -18,38 +18,38 @@ pathway 1r-2r-3r-prephytoene-to-2e-6e-10e-geranylgerany "(1R,2R,3R)-prephytoeneâ
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_218 [4.2.3.218] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    variediene
+    <-> . +kanamycin_a +dctp
+    4_2_deoxycytidylyl_kanamycin_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_219 [4.2.3.219] +all_trans_pentaprenyl_diphosphate
-    r_2e_cericerene
+    <-> . +kanamycin_a +dgtp
+    4_2_deoxyguanylyl_kanamycin_a
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    curacin_b
+    <-> . +adp +octyl_alpha_d_galactopyranoside +phosphate +octyl_alpha_d_galactopyranoside +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +aeruginosin_98_b +phosphate +aeruginosin_98_b +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid
   }
 
   branch from nadph side left {
     nadph
-    <-> . +3_oxocholoyl_coa +h +nadp
-    choloyl_coa
+    <-> ec_1_3_1_16 [1.3.1.16] +3_nitropropanoate +nadp +h
+    3_nitroacrylate
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_124 [1.1.1.124] +beta_d_fructose +nadp +h
-    5_dehydro_d_fructose
+    <-> ec_1_14_12_5 [1.14.12.5] +2_hydroxymethyl_3_acetamidomethylene_succinate +nadp +h +o2
+    5_pyridoxate
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {

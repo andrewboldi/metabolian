@@ -20,13 +20,13 @@ pathway 2-azaniumyl-2-deoxyisocho-to-nad "2-azaniumyl-2-deoxyisocho… to NAD" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +eicosanal
-    icosan_1_ol
+    <-> ec_1_1_1_193 [1.1.1.193] +nadh +5_amino_6_5_phospho_d_ribosylamino_uracil +h
+    5_amino_6_5_phospho_d_ribitylamino_uracil
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +hexacosanal
-    hexacosan_1_ol
+    <-> ec_1_1_1_76 [1.1.1.76] +nadh +actn +h
+    s_s_butane_2_3_diol
   }
 }

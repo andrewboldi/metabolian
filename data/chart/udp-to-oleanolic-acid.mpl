@@ -18,14 +18,14 @@ pathway udp-to-oleanolic-acid "UDP to oleanolic acid…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +sarcinaxanthin_monoglucoside
-    sarcinaxanthin
+    <-> . +udp +h +soyasapogenol_b_22_o_beta_d_glucoside
+    soyasapogenol_b
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +sarcinaxanthin_diglucoside
-    sarcinaxanthin_monoglucoside
+    <-> . +udp +h +soyasapogenol_b
+    soyasapogenol_b_3_o_beta_d_glucoside
   }
 
   branch from oleanolate_3_beta_d_glucuronoside_3_1_galactosid side left {
@@ -42,13 +42,13 @@ pathway udp-to-oleanolic-acid "UDP to oleanolic acid…" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +h +beta_lactose
-    alpha_d_glucose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_18_1_2_16_0_digalactosyldiacylglycerol +h
+    1_9z_octadecenoyl_2_hexadecanoyl_3_d_galactosyl
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +alpha_lactose +h
-    beta_d_glucose
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_2_2_16_2_digalactosyldiacylglycerol
+    2s_1_o_7z_10z_hexadecadienoyl_2_o_linoleoyl_3_o
   }
 }

@@ -24,8 +24,8 @@ pathway s-3-hydroxydecanoyl-coa-to-trans-dec-2-enoyl-co "(S)-3-hydroxydecanoyl-C
 
   branch from trans_dec_2_enoyl_coa side right {
     trans_dec_2_enoyl_coa
-    <-> . +nadp +nadph +hplus
-    2e_4z_deca_2_4_dienoyl_coa
+    <-> . +oxaloacetate +hplus +coa +h2o
+    4_octa_1_enyl_2_5_dioxo_2_5_dihydro_3_furanyl_a
   }
 
   branch from decanoyl_coa side left {

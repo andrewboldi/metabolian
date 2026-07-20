@@ -370,26 +370,6 @@
       }
     },
     {
-      "id": "trans_4_coumaroyl_coa",
-      "name": "trans-4-coumaroyl-CoA",
-      "short": "trans-4-coumaroyl-C…",
-      "formula": "C30H38N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:85008"
-      }
-    },
-    {
-      "id": "2_4_4_6_tetrahydroxychalcone",
-      "name": "2',4,4',6'-tetrahydroxychalcone",
-      "short": "2',4,4',6'-tetrahyd…",
-      "formula": "C15H12O5",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:15413"
-      }
-    },
-    {
       "id": "4_coumaroyl_coa",
       "name": "4-coumaroyl-CoA",
       "formula": "C30H38N7O18P3S",
@@ -405,6 +385,16 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:45713"
+      }
+    },
+    {
+      "id": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
+      "name": "3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one",
+      "short": "3,6,7,9-tetrahydrox…",
+      "formula": "C14H11O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142802"
       }
     }
   ],
@@ -470,20 +460,6 @@
       "name": "biotin--[methylcrotonoyl-CoA-carboxylase] ligase",
       "ec": [
         "6.3.4.11"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_74",
-      "name": "chalcone synthase",
-      "ec": [
-        "2.3.1.74"
-      ]
-    },
-    {
-      "id": "ec_2_3_1_156",
-      "name": "phloroisovalerophenone synthase",
-      "ec": [
-        "2.3.1.156"
       ]
     },
     {
@@ -1130,59 +1106,6 @@
     },
     {
       "id": "r14",
-      "name": "chalcone synthase",
-      "equation": "(E)-4-coumaroyl-CoA + 3 malonyl-CoA + 3 H(+) = 2',4,4',6'-tetrahydroxychalcone + 3 CO2 + 4 CoA",
-      "ec": "2.3.1.74",
-      "substrates": [
-        {
-          "metabolite": "trans_4_coumaroyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "malonyl-coa",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 3
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_4_4_6_tetrahydroxychalcone",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 4
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_3_1_74"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 14,
-      "xrefs": {
-        "rhea": "RHEA:11128"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:11128"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r15",
       "name": "trihydroxystilbene synthase",
       "equation": "4-coumaroyl-CoA + 3 malonyl-CoA + 3 H(+) = trans-resveratrol + 4 CO2 + 4 CoA",
       "ec": "2.3.1.95",
@@ -1220,7 +1143,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 15,
+      "pathwayStep": 14,
       "xrefs": {
         "rhea": "RHEA:11936"
       },
@@ -1230,6 +1153,57 @@
           {
             "db": "Rhea",
             "id": "RHEA:11936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r15",
+      "name": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naph...",
+      "equation": "6 malonyl-CoA + acetyl-CoA + 5 H(+) = 3,6,7,9-tetrahydroxy-3-methyl-2,3-dihydro-1H-naphtho[2,1-b]pyran-1-one + 6 CO2 + 7 CoA + H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 15,
+      "xrefs": {
+        "rhea": "RHEA:12060"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12060"
           }
         ]
       }

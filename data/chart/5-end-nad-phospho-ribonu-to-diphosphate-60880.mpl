@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-end-nad-phospho-ribonu-to-diphosphate-60880 "5'-end NAD-phospho-ribonu… to diphosphate" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     5_end_nad_phospho_ribonucleoside
@@ -20,35 +20,29 @@ pathway 5-end-nad-phospho-ribonu-to-diphosphate-60880 "5'-end NAD-phospho-ribonu
 
   branch from 5_end_ribonucleotide_2 side left {
     5_end_ribonucleotide_2
-    <-> . +nucleoside_5_triphoshate +atp +h2o +amp +ppi +hplus
-    5_end_nmp_ribonucleotide_3
+    <-> . +sam +sah
+    5_end_bisphopshomethylribonucleoside
   }
 
   branch from 5_end_ribonucleotide_2 side right {
     5_end_ribonucleotide_2
     <-> . +sam +sah
-    5_end_bisphopshomethylribonucleoside
-  }
-
-  branch from adenosine_5_diphospho_5_ribonucleotide_2 side left {
-    adenosine_5_diphospho_5_ribonucleotide_2
-    <-> . +nucleoside_5_triphoshate +amp +hplus
-    5_end_ntp_ribonucleotide_5
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +25s_cholestenoate +atp +coa +amp
-    25s_3_hydroxy_5_cholesten_26_oyl_coa
+    5_end_phopshomethylribonucleoside_1
   }
 
   branch from ppi side left {
     ppi
-    <-> . +nonadecanoate +atp +coa +amp
-    nonadecanoyl_coa
+    <-> . +14_15_eet +atp +coa +amp
+    14_15_epoxy_5z_8z_11z_icosatrienoyl_coa
   }
 
-  branch from 5_end_gtp_ribonucleotide_5 side right {
+  branch from ppi side right {
+    ppi
+    <-> . +5_6_eet +atp +coa +amp
+    5_6_epoxy_8z_11z_14z_icosatrienoyl_coa
+  }
+
+  branch from 5_end_gtp_ribonucleotide_5 side left {
     5_end_gtp_ribonucleotide_5
     <-> . +sam +sah
     5_methyltriphosphate_guanosine_ribonucleotide_4

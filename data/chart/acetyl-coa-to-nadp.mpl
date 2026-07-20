@@ -20,85 +20,85 @@ pathway acetyl-coa-to-nadp "acetyl-CoA to NADP" {
 
   branch from acetate side left {
     acetate
-    <-> . +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +h2o
-    n_acetyl_s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l
+    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +s_malate
+    s_malyl_coa
   }
 
   branch from acetate side right {
     acetate
-    <-> . +h +hydrazine +h2o
-    acetohydrazide
+    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +2_methylbutanedioic_acid +h
+    methylsuccinyl_coa
   }
 
   branch from butanoyl_coa side left {
     butanoyl_coa
-    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
-    atp
+    <-> ec_2_3_1_206 [2.3.1.206] +malonyl_coa +h +co2 +coa
+    divarinol
   }
 
   branch from butanoyl_coa side right {
     butanoyl_coa
-    <-> . +h +phosphate +atp +h2o
-    adp
+    <-> . +s_carnitine +coa
+    o_butanoyl_l_carnitine
   }
 
   branch from h side left {
     h
-    <-> . +sn_glycerol_3_phosphocholine +h2o +choline
-    glycerol_2_phosphate
+    <-> . +kinetensin +h2o +kinetensin_1_3 +d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl
+    l_leucine
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    ursodeoxycholate
+    <-> . +adp +rosuvastatin_5s_lactone +phosphate +rosuvastatin_5s_lactone +h2o
+    atp
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +coa +13z_16z_19z_docosatrienoyl_coa +h2o
-    fad
+    <-> ec_1_1_1_307 [1.1.1.307] +nadh +alpha_d_xylose +h
+    xylitol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +acetyl_coa +fadh2 +h +fad +coa +h2o
-    all_cis_10_13_16_19_docosatetraenoyl_coa
+    <-> ec_1_1_1_307 [1.1.1.307] +nadh +h +xylitol
+    beta_d_xylose
   }
 
   branch from coa side left {
     coa
-    <-> . +linoelaidic_acid +h2o
-    9z_12z_octadecadienoyl_coa
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +r_carnitine
+    10z_13z_16z_docosatrienoylcarnitine
   }
 
   branch from coa side right {
     coa
-    <-> . +13z_icosenoyl_coa +h2o
-    z_icos_13_enoic_acid
+    <-> . +acetyl_coa +nonanoyl_coa
+    3_oxoundecanoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_glutamine +l_glutamate +l_tryptophan
-    glutaminyl_tryptophanyl_glutamate
+    <-> . +l_leucine +l_histidine +l_phenylalanine
+    phe_leu_his
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_glutamine +l_tyrosine
-    glutaminyl_tyrosyl_leucine
+    <-> . +l_leucine +l_phenylalanine
+    phenylalanyl_leucine
   }
 
   branch from nadp side left {
     nadp
-    <-> . +delta_anaerubin +h +nadph
-    anaerobilin
+    <-> . +diphyllin +h2o +h +nadph +justicidin_b
+    o2
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +anaerobilin
-    beta_anaerubin
+    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +o2 +nadph +h2o
+    zealexin_a1
   }
 }

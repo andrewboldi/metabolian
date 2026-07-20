@@ -18,38 +18,38 @@ pathway diphosphate-to-atp "diphosphate to ATP" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    lactulose
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_octadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
+    beta_d_glcp_1_6_beta_d_glcp
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_stearoyl_2_linolenoyl_sn_glycero_3_phosphochol
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    3_o_d_galactopyranosyl_d_arabinose
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    1_hexadecanoyl_2_z_octadec_9_enoyl_sn_glycero_3
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    sucralose
   }
 
   branch from l_ornithine side left {
     l_ornithine
-    <-> ec_1_5_1_24 [1.5.1.24] +n5_l_1_carboxyethyl_l_ornithine +nadp +h2o +h +nadph
-    pyruvate
+    <-> . +l_citrulline +h2o
+    carbamate
   }
 
   branch from l_ornithine side right {
     l_ornithine
-    <-> . +l_citrulline +h2o
-    carbamate
+    <-> . +co2 +nh4 +h +h2o
+    l_citrulline
   }
 
   branch from l_arginine side left {
@@ -60,8 +60,8 @@ pathway diphosphate-to-atp "diphosphate to ATP" {
 
   branch from l_arginine side right {
     l_arginine
-    <-> . +d_octopine +nadp +h2o +h +pyruvate
-    nadph
+    <-> . +d_octopine +nadp +h2o +h +nadph
+    pyruvate
   }
 
   branch from 1d_1_guanidino_3_amino_1_3_dideoxy_scyllo_inosit side left {

@@ -18,14 +18,14 @@ pathway dihydroisopentenyldehydro-to-hydrogen-donor "dihydroisopentenyldehydroâ€
 
   branch from ppi side left {
     ppi
-    <-> . +isoechinulin_a +dmapp
-    dehydroechinulin
+    <-> ec_6_3_2_63 [6.3.2.63] +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
+    putrebactin
   }
 
   branch from ppi side right {
     ppi
-    <-> . +neoechinulin_b_anion +dmapp
-    isoechinulin_b_anion
+    <-> . +n_3_carboxypropanoyl_n_hydroxyputrescine +atp +amp +hplus
+    pre_putrebactin
   }
 
   branch from bisanhydrobacterioruberin side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway alanyl-l-argininium-to-succinate "β-alanyl-L-argininium to succinate" {
-  spacing 210
+  spacing 204
 
   spine at 0,0 {
     alanyl_l_argininium
@@ -36,33 +36,27 @@ pathway alanyl-l-argininium-to-succinate "β-alanyl-L-argininium to succinate" {
     l_arginocholate
   }
 
-  branch from l_glutamic_5_semialdehyde side left {
-    l_glutamic_5_semialdehyde
-    <-> ec_2_3_1_271 [2.3.1.271] +acetyl_coa +coa +hplus
-    2_acetamido_5_oxopentanoate
+  branch from sah side left {
+    sah
+    <-> . +l_lysinium +sam +hplus
+    n6_n6_dimethyl_l_lysinium
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    soppiline_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    silphinene
+    <-> . +3_4_5_trihydroxy_3_methoxyflavon_7_olate +sam +hplus
+    3_3_o_dimethylquercetin
   }
 
   branch from ppi side left {
     ppi
-    <-> . +5_end_ribonucleotide_5_triphosphate_4 +h2o +hplus
-    5_end_ribonucleotide_2
+    <-> . +l_tyrosine +utp
+    uridylyl_l_tyrosine_1
+  }
+
+  branch from ppi side right {
+    ppi
+    <-> . +fpp +h2o
+    longiborneol
   }
 }

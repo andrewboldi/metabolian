@@ -38,14 +38,14 @@ pathway sedoheptulose-to-2-oxoglutarate "sedoheptulose to 2-oxoglutarate" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_42 [4.2.3.42] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
-    aphidicolan_16_ol
+    <-> ec_2_5_1_91 [2.5.1.91] +ipp +fpp
+    all_trans_decaprenyl_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_3_1_7_5 [3.1.7.5] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    e_e_e_geranylgeraniol
+    <-> ec_4_2_3_51 [4.2.3.51] +neryl_diphosphate
+    phellandrene
   }
 
   branch from akg side left {

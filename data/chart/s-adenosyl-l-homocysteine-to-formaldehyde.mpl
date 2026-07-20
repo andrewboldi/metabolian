@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-adenosyl-l-homocysteine-to-formaldehyde "S-adenosyl-L-homocysteine to formaldehyde" {
-  spacing 312
+  spacing 288
 
   spine at 0,0 {
     s_adenosyl_l_homocysteine
@@ -28,50 +28,26 @@ pathway s-adenosyl-l-homocysteine-to-formaldehyde "S-adenosyl-L-homocysteine to 
 
   branch from fmnh2 side left {
     fmnh2
-    <-> . +methanesulfinate +h +o2 +fmn +methanesulfonate
-    h2o
+    <-> . +h +5_deoxy_dihydrokalafungin +o2 +fmn +h2o
+    dihydrokalafungin_dihydroquinone_form
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_5 [1.14.14.5] +3_n_morpholino_propanesulfonate +o2 +fmn +h +sulfite +h2o
-    3_n_morpholino_propanal
+    <-> ec_1_14_14_108 [1.14.14.108] +1r_4r_bornane_2_5_dione +h +o2 +fmn +h2o
+    1r_4r_5_oxo_1_2_campholide
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +chaxamycin_b_rel +s_adenosyl_l_homocysteine +h
-    3_demethylchaxamycin_b
+    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +mitomycin_a
+    6_demethylmitomycin_a
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +3_o_methylprotoansatrienin
-    protoansatrienin
-  }
-
-  branch from 2_demethylmenaquinone_8 side left {
-    2_demethylmenaquinone_8
-    <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +2_demethylmenaquinol_8
-    9_9_di_cis_carotene
-  }
-
-  branch from 2_demethylmenaquinone_8 side right {
-    2_demethylmenaquinone_8
-    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    mk_8
-  }
-
-  branch from 2_demethylmenaquinol_8 side left {
-    2_demethylmenaquinol_8
-    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    menaquinol_8
-  }
-
-  branch from 2_demethylmenaquinol_8 side right {
-    2_demethylmenaquinol_8
-    <-> ec_2_5_1_74 [2.5.1.74] +diphosphate +co2 +h +1_4_dihydroxy_2_naphthoate
-    octaprenyl_diphosphate
+    <-> . +s_adenosyl_l_homocysteine +h +1_5_dibromo_2_2_4_dibromophenoxy_3_methoxybenzen
+    3_5_dibromo_2_2_4_dibromophenoxy_phenol
   }
 
   branch from sulfonyldimethane side left {
@@ -82,14 +58,14 @@ pathway s-adenosyl-l-homocysteine-to-formaldehyde "S-adenosyl-L-homocysteine to 
 
   branch from fmn side right {
     fmn
-    <-> . +carbocyclic_thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxycarbocyclic_thromboxane_a2
+    <-> ec_1_14_19_76 [1.14.19.76] +flavanones +fmnh2 +o2 +h2o +hplus
+    flavones
   }
 
   branch from fmn side left {
     fmn
-    <-> . +carbocyclic_thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    18_hydroxycarbocyclic_thromboxane_a2
+    <-> ec_1_14_14_164 [1.14.14.164] +fraxetin +fmnh2 +o2 +h2o +hplus
+    sideretin_reduced_form
   }
 
   branch from methanesulfonate side right {

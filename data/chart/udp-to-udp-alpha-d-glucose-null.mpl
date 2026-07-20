@@ -32,25 +32,25 @@ pathway udp-to-udp-alpha-d-glucose-null "UDP to UDP-alpha-D-glucose" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +delphinidin_5_o_beta_d_glucoside_3_o_beta_d_samb
-    delphinidin_3_o_beta_d_sambubioside
+    <-> . +udp +curcumin_4_o_beta_d_gentiotetraside +h
+    curcumin_4_o_beta_d_gentiotrioside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +aloin_a +h
-    aloe_emodin_anthrone
+    <-> . +udp +curcumin_4_o_d_gentiotetraside +h
+    curcumin_4_o_d_gentiotrioside
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +hdm2boa_glucoside
-    dim2boa_beta_d_glucoside
+    <-> . +s_adenosyl_l_homocysteine +1_5_dibromo_3_2_4_dibromophenoxy_2_methoxybenzen
+    2_4_dibromo_6_2_4_dibromophenoxy_phenol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +ginkgotoxin +h
-    pyridoxine
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +r_laudanosolinium
+    r_norlaudanosoline
   }
 }

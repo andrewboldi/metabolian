@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     hydroxyheme_i
@@ -18,14 +18,14 @@ pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_serine +l_arginine
-    histidyl_arginyl_serine
+    <-> . +l_lysine +l_threonine +l_phenylalanine
+    phenylalanyl_threonyl_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_aspartate
-    histidyl_aspartate
+    <-> . +l_leucine +l_tryptophan +l_phenylalanine
+    phenylalanyl_tryptophanyl_leucine
   }
 
   branch from ferroheme_o side left {
@@ -36,19 +36,13 @@ pathway hydroxyheme-i-to-hydrogen-donor "Hydroxyheme I to hydrogen donor" {
 
   branch from nad side right {
     nad
-    <-> . +nadh +ubiquinone_6 +h +ubiquinol_6
-    pmf
+    <-> ec_1_1_1_323 [1.1.1.323] +nadh +h +thujan_3_one
+    thujan_3_ol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +protoporphyrin_ix +h
-    protoporphyrinogen_ix
-  }
-
-  branch from ferroheme_a side right {
-    ferroheme_a
-    <-> . +h2o
-    fe_ii_hydroxyheme_i
+    <-> . +4_oxahomoadamantan_5_one +nadh +h +o2 +h2o
+    1_hydroxy_4_oxahomoadamantan_5_one
   }
 }

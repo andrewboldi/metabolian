@@ -63,8 +63,16 @@
     body[data-page] .readout dt { text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-faint); font-size: 0.88em; }
     body[data-page] .readout dd { margin: 0; color: var(--text); }
 
-    /* --- prose ------------------------------------------------------------- */
-    body[data-page] .prose { max-width: 68ch; }
+    /* --- prose ---------------------------------------------------------------
+       The measure lives on the text elements, not on .prose, so a data table can
+       use the full column while running prose stays at a readable 68ch.
+       min(…, 100%) keeps the wide elements inside the grid column at the
+       breakpoint where the TOC rail appears. */
+    body[data-page] .prose { max-width: min(90ch, 100%); }
+    body[data-page] .prose > p,
+    body[data-page] .prose > ul,
+    body[data-page] .prose > ol,
+    body[data-page] .prose .callout p { max-width: 68ch; }
     body[data-page] .prose p, body[data-page] .prose li { line-height: var(--lead-copy, 1.6); }
     body[data-page] .prose h2 {
       display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 0.4rem; align-items: baseline;
@@ -204,11 +212,11 @@
       <div class="wrap">
         <p class="eyebrow">Project · Method</p>
         <h1>How the atlas is built, and what it does not yet know</h1>
-        <p class="lead">Metabolian is an open successor to Gerhard Michal's Biochemical Pathways chart — 2,496 pathway modules merged into one queryable graph. Every reaction carries the source it was drawn from and an explicit confidence. This page states the method, the exact sources, and the gaps.</p>
+        <p class="lead">Metabolian is an open successor to Gerhard Michal's Biochemical Pathways chart — <span data-atlas="pathways">—</span> pathway modules merged into one queryable graph. Every reaction carries the source it was drawn from and an explicit confidence. This page states the method, the exact sources, and the gaps.</p>
         <dl class="readout" aria-label="Build summary">
-          <div><dt>Modules</dt><dd>2,496</dd></div>
-          <div><dt>Reactions</dt><dd>26,510</dd></div>
-          <div><dt>Citations</dt><dd>27,185</dd></div>
+          <div><dt>Modules</dt><dd data-atlas="pathways">—</dd></div>
+          <div><dt>Reactions</dt><dd data-atlas="reactions">—</dd></div>
+          <div><dt>Metabolites</dt><dd data-atlas="metabolites">—</dd></div>
           <div><dt>Schema</dt><dd>draft 2020-12</dd></div>
         </dl>
       </div>
@@ -220,7 +228,7 @@
 
           <h2 id="method"><span class="h-num">01</span><span>How the atlas is built</span></h2>
           <p>Metabolian is a graph assembled from files. Each <strong>pathway module</strong> is one JSON document describing its own metabolites, enzymes, reactions, and — the part that makes a chart legible — the typed relationships between them. One pathway per file, so two authors are never editing the same document.</p>
-          <p>A build step validates every module against the schema, checks that every internal reference resolves, then merges all 2,496 modules into a single master graph, deduplicating shared molecules across pathways by their database identifiers. Nothing reaches the site that has not passed validation in CI.</p>
+          <p>A build step validates every module against the schema, checks that every internal reference resolves, then merges all <span data-atlas="pathways">—</span> modules into a single master graph, deduplicating shared molecules across pathways by their database identifiers. Nothing reaches the site that has not passed validation in CI.</p>
           <div class="tscroll">
             <table class="dtable">
               <caption>Pipeline</caption>
@@ -236,11 +244,12 @@
             </table>
           </div>
           <div class="callout" data-label="Note">
-            <p><strong>Grounded, not guessed.</strong> Metabolism is too consequential to hallucinate. Every reaction and regulatory link carries provenance — the database or paper it came from — and an explicit confidence level. All 26,771 reaction and regulation records in the current build carry at least one source; there are no exceptions, because the validator rejects them.</p>
+            <p><strong>Grounded, not guessed.</strong> Metabolism is too consequential to hallucinate. Every reaction and regulatory link carries provenance — the database or paper it came from — and an explicit confidence level. Every such record in the build carries at least one source; there are no exceptions, because the validator rejects them.</p>
           </div>
 
           <h2 id="sources"><span class="h-num">02</span><span>Where the data comes from</span></h2>
-          <p>The honest headline is that this atlas has <strong>two tiers, and they are not the same thing</strong>. Twenty-seven modules are hand-curated: they declare organisms, tissues, and compartments, they carry regulation, cross-pathway relations, and literature references. The remaining 2,469 are machine-reconciled reaction sets — balanced chemistry with resolved identifiers, but no regulation, no compartments, and no tissue context.</p>
+          <p>The honest headline is that this atlas has <strong>two tiers, and they are not the same thing</strong>. Twenty-seven modules are hand-curated: they declare organisms, tissues, and compartments, they carry regulation, cross-pathway relations, and literature references. Every other module is a machine-reconciled reaction set — balanced chemistry with resolved identifiers, but no regulation, no compartments, and no tissue context.</p>
+          <p>The curated tier is also the one that is not growing. It has stood at exactly 27 modules while the reconciled tier has added hundreds; the gap between the two is widening, not closing.</p>
           <div class="tscroll">
             <table class="dtable">
               <caption>The two tiers</caption>
@@ -254,7 +263,7 @@
                   <td>Literature, KEGG, Reactome, UniProt, textbooks</td>
                 </tr>
                 <tr>
-                  <td class="key">Reconciled</td><td class="num">2,469</td>
+                  <td class="key">Reconciled</td><td class="num">all others</td>
                   <td>Balanced reactions, EC numbers, formulae, ChEBI identifiers</td>
                   <td>Rhea, MetaNetX</td>
                 </tr>
@@ -264,21 +273,21 @@
           <p>That split explains every other number on this page. It is why two databases carry almost the whole citation load:</p>
           <div class="tscroll">
             <table class="dtable">
-              <caption>Citations by source — 27,185 across 26,771 records</caption>
+              <caption>Citations by source — 30,006 across 29,592 records, measured at 3,308 modules</caption>
               <thead>
                 <tr><th scope="col">Source</th><th scope="col">Role</th><th scope="col" class="num">Citations</th><th scope="col">Share</th></tr>
               </thead>
               <tbody>
-                <tr><td class="key">MetaNetX</td><td>Reaction reconciliation across databases</td><td class="num">13,205</td>
-                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:48.6%"></span></span><span class="share__n">48.6%</span></span></td></tr>
-                <tr><td class="key">Rhea</td><td>Balanced, expert-annotated reaction chemistry</td><td class="num">13,020</td>
-                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:47.9%"></span></span><span class="share__n">47.9%</span></span></td></tr>
+                <tr><td class="key">MetaNetX</td><td>Reaction reconciliation across databases</td><td class="num">15,429</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:51.4%"></span></span><span class="share__n">51.4%</span></span></td></tr>
+                <tr><td class="key">Rhea</td><td>Balanced, expert-annotated reaction chemistry</td><td class="num">13,617</td>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:45.4%"></span></span><span class="share__n">45.4%</span></span></td></tr>
                 <tr><td class="key">KEGG</td><td>Reaction and pathway reference identifiers</td><td class="num">340</td>
-                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:1.3%"></span></span><span class="share__n">1.3%</span></span></td></tr>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:1.1%"></span></span><span class="share__n">1.1%</span></span></td></tr>
                 <tr><td class="key">Textbook</td><td>Canonical, settled biochemistry</td><td class="num">281</td>
-                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:1%"></span></span><span class="share__n">1.0%</span></span></td></tr>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.9%"></span></span><span class="share__n">0.9%</span></span></td></tr>
                 <tr><td class="key">PubMed</td><td>Primary literature for specific claims</td><td class="num">208</td>
-                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.8%"></span></span><span class="share__n">0.8%</span></span></td></tr>
+                  <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.7%"></span></span><span class="share__n">0.7%</span></span></td></tr>
                 <tr><td class="key">UniProt</td><td>Enzyme identity and cross-references</td><td class="num">85</td>
                   <td><span class="share"><span class="share__track"><span class="share__fill" style="width:0.3%"></span></span><span class="share__n">0.3%</span></span></td></tr>
                 <tr><td class="key">Review</td><td>Secondary literature</td><td class="num">38</td>
@@ -293,38 +302,38 @@
           <p>Metabolian keeps the two apart, and so should you when you read an entry. A <strong>cross-reference</strong> tells you <em>what a thing is</em> — ChEBI names the chemical, the EC list names the catalytic activity. A <strong>citation</strong> tells you <em>why we believe a reaction happens</em>. ChEBI appears everywhere on this site and is never used as evidence.</p>
           <div class="tscroll">
             <table class="dtable">
-              <caption>Cross-reference coverage — share of module records</caption>
+              <caption>Cross-reference coverage — share of module records at 3,308 modules</caption>
               <thead>
                 <tr><th scope="col">Identifier</th><th scope="col">Applies to</th><th scope="col" class="num">Records</th><th scope="col" class="num">Coverage</th></tr>
               </thead>
               <tbody>
-                <tr><td class="key">Molecular formula</td><td>Metabolites</td><td class="num">67,777</td><td class="num">99.9%</td></tr>
-                <tr><td class="key">EC number</td><td>Enzymes</td><td class="num">12,133</td><td class="num">99.6%</td></tr>
-                <tr><td class="key">ChEBI</td><td>Metabolites</td><td class="num">42,151</td><td class="num">62.1%</td></tr>
-                <tr><td class="key">Gene symbol</td><td>Enzymes</td><td class="num">384</td><td class="num">3.2%</td></tr>
-                <tr><td class="key">UniProt</td><td>Enzymes</td><td class="num">383</td><td class="num">3.1%</td></tr>
+                <tr><td class="key">Molecular formula</td><td>Metabolites</td><td class="num">77,866</td><td class="num">99.9%</td></tr>
+                <tr><td class="key">EC number</td><td>Enzymes</td><td class="num">13,196</td><td class="num">99.6%</td></tr>
+                <tr><td class="key">ChEBI</td><td>Metabolites</td><td class="num">46,379</td><td class="num">59.5%</td></tr>
+                <tr><td class="key">Gene symbol</td><td>Enzymes</td><td class="num">384</td><td class="num">2.9%</td></tr>
+                <tr><td class="key">UniProt</td><td>Enzymes</td><td class="num">383</td><td class="num">2.9%</td></tr>
               </tbody>
             </table>
           </div>
-          <p>Counts are module records before cross-module deduplication — 67,848 metabolite records resolve to 21,235 distinct metabolites, and 12,182 enzyme records to 5,961 distinct enzymes. Figures are a snapshot of the build this page shipped with; the live totals are always in <code>graph/index.json</code>.</p>
+          <p>Counts are module records before cross-module deduplication — 77,937 metabolite records resolve to <span data-atlas="metabolites">—</span> distinct metabolites, and 13,245 enzyme records to <span data-atlas="enzymes">—</span> distinct enzymes. The record counts and shares in these three tables are a labelled snapshot, because they come from a full scan of <code>data/pathways</code> that the browser cannot repeat; the atlas totals on this page are read live from <code>graph/index.json</code> and are always current.</p>
 
           <h2 id="confidence"><span class="h-num">03</span><span>What confidence means</span></h2>
           <p>Every reaction and regulation carries one of four levels. They describe <em>how well established a claim is</em>, not how important it is.</p>
           <div class="tscroll">
             <table class="dtable">
-              <caption>Confidence across 26,771 records</caption>
+              <caption>Confidence across 29,592 records, measured at 3,308 modules</caption>
               <thead>
                 <tr><th scope="col">Level</th><th scope="col">Means</th><th scope="col" class="num">Records</th><th scope="col" class="num">Share</th></tr>
               </thead>
               <tbody>
-                <tr><td><span class="badge" data-c="high">high</span></td><td>Reconciled across reaction databases, or textbook-settled.</td><td class="num">26,700</td><td class="num">99.7%</td></tr>
-                <tr><td><span class="badge" data-c="medium">medium</span></td><td>Supported by primary or review literature.</td><td class="num">70</td><td class="num">0.3%</td></tr>
+                <tr><td><span class="badge" data-c="high">high</span></td><td>Reconciled across reaction databases, or textbook-settled.</td><td class="num">29,521</td><td class="num">99.8%</td></tr>
+                <tr><td><span class="badge" data-c="medium">medium</span></td><td>Supported by primary or review literature.</td><td class="num">70</td><td class="num">0.2%</td></tr>
                 <tr><td><span class="badge" data-c="low">low</span></td><td>Single report, or inferred by homology.</td><td class="num">1</td><td class="num">&lt;0.1%</td></tr>
                 <tr><td><span class="badge" data-c="hypothesis">hypothesis</span></td><td>Proposed, not demonstrated. Drawn, but marked.</td><td class="num">0</td><td class="num">0%</td></tr>
               </tbody>
             </table>
           </div>
-          <p>The atlas is overwhelmingly high-confidence, and that is a statement about its <em>provenance</em>, not its completeness. It is assembled from reconciled reaction databases where the chemistry has already been balanced and cross-checked. The lower tiers exist for the hand-curated biology being added now: 54 of the 224 regulatory links are already <span class="badge" data-c="medium">medium</span>, because a regulatory claim from one paper is not the same kind of fact as a balanced reaction from Rhea.</p>
+          <p>The atlas is overwhelmingly high-confidence, and that is a statement about its <em>provenance</em>, not its completeness. It is assembled from reconciled reaction databases where the chemistry has already been balanced and cross-checked. The lower tiers exist for the hand-curated biology: 54 of the 224 regulatory links are <span class="badge" data-c="medium">medium</span>, because a regulatory claim from one paper is not the same kind of fact as a balanced reaction from Rhea.</p>
 
           <h2 id="schema"><span class="h-num">04</span><span>The schema and the grammar of arrows</span></h2>
           <p>What makes a pathway chart legible is that its arrows mean something. Metabolian defines <strong>30 relationship types across 7 categories</strong> in a single registry — mass flow, catalysis, regulation, covalent modification, transport, genetic control, and organizational links — each with one authoritative line style, arrowhead, and colour.</p>
@@ -334,10 +343,10 @@
           <h2 id="limits"><span class="h-num">05</span><span>Known limits</span></h2>
           <p>A reference work should state its own coverage. These are measured, not estimated, and they are the gaps we would most like closed.</p>
           <ul>
-            <li><strong>Regulation is thin.</strong> The arrow grammar for regulation is complete; the data is not. There are 224 regulatory links against 26,510 reactions, and all of them live in the 27 curated modules.</li>
-            <li><strong>Structures are sparse.</strong> 383 enzyme records carry a UniProt accession, so the 3D viewer opens for a small subset of enzymes rather than all of them.</li>
-            <li><strong>Sourcing is concentrated.</strong> 96% of citations are Rhea or MetaNetX. That is good evidence of balanced chemistry and weak evidence of physiological context.</li>
-            <li><strong>Context is missing outside the curated tier.</strong> Organism, tissue, and compartment annotations exist in 27 of 2,496 modules. Treat an uncurated reaction as chemistry that occurs somewhere, not as chemistry that occurs in <em>your</em> cell type.</li>
+            <li><strong>Regulation is thin.</strong> The arrow grammar for regulation is complete; the data is not. There are 224 regulatory links against <span data-atlas="reactions">—</span> reactions, and all of them live in the 27 curated modules.</li>
+            <li><strong>Structures are sparse.</strong> 383 enzyme records carry a UniProt accession — under 3% — so the 3D viewer opens for a small subset of enzymes rather than all of them.</li>
+            <li><strong>Sourcing is concentrated.</strong> About 97% of citations are Rhea or MetaNetX. That is good evidence of balanced chemistry and weak evidence of physiological context.</li>
+            <li><strong>Context is missing outside the curated tier.</strong> Organism, tissue, and compartment annotations exist in 27 modules out of <span data-atlas="pathways">—</span>. Treat an uncurated reaction as chemistry that occurs somewhere, not as chemistry that occurs in <em>your</em> cell type.</li>
           </ul>
           <div class="callout callout--warn" data-label="Caution">
             <p><strong>Not medical advice.</strong> Metabolian is an educational and research aggregation. It is not a clinical reference and must not be used to make medical, dietary, or treatment decisions.</p>
@@ -376,5 +385,27 @@
   </main>
   <div id="app-footer"></div>
   <script type="module" src="/src/pages/about.ts"></script>
+  <script type="module">
+    /* Atlas totals are read from the build's own index.json, never hardcoded.
+       data/ grows continuously — the corpus went from 2,496 to 3,308 modules
+       during a single afternoon of authoring — and a stale figure on a
+       citation-grounded atlas is the one error this project cannot afford.
+       The provenance tables below are a labelled snapshot instead, because they
+       come from a full scan of data/pathways that cannot be done in the client.
+       Elements keep their em-dash placeholder if anything goes wrong. */
+    const slots = document.querySelectorAll("[data-atlas]");
+    if (slots.length) {
+      try {
+        const res = await fetch(new URL("graph/index.json", document.baseURI));
+        const { stats } = await res.json();
+        const nf = new Intl.NumberFormat("en-US");
+        const derived = { entries: (stats.metabolites ?? 0) + (stats.enzymes ?? 0) };
+        for (const el of slots) {
+          const v = derived[el.dataset.atlas] ?? stats[el.dataset.atlas];
+          if (typeof v === "number" && v > 0) el.textContent = nf.format(v);
+        }
+      } catch { /* placeholders stand */ }
+    }
+  </script>
 </body>
 </html>

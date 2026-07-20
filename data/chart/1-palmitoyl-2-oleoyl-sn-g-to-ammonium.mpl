@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-palmitoyl-2-oleoyl-sn-g-to-ammonium "1-palmitoyl-2-oleoyl-sn-g… to ammonium" {
-  spacing 222
+  spacing 216
 
   spine at 0,0 {
     1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoglycero
@@ -22,14 +22,14 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-ammonium "1-palmitoyl-2-oleoyl-sn-g… to a
 
   branch from oleate side left {
     oleate
-    <-> . +n_9z_octadecenoyl_sphinganine +h2o
-    sphinganine
+    <-> . +5_9z_octadecenoyloxy_octadecanoate +h2o +hplus
+    5_hydroxyoctadecanoate
   }
 
   branch from oleate side right {
     oleate
-    <-> . +n_icosanoyl_1_oleoyl_sn_glycero_3_phosphoethanol +h2o +hplus
-    n_icosanoyl_sn_glycero_3_phosphoethanolamine
+    <-> . +n_hexadecanoyl_o_1_octadecanoyl_2_oleoyl_sn_glyc +h2o +hplus
+    n_hexadecanoyl_o_1_octadecanoyl_sn_glycero_3_pho
   }
 
   branch from n_oleoylglycinate side left {
@@ -44,33 +44,27 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-ammonium "1-palmitoyl-2-oleoyl-sn-g… to a
     c_terminal_xaa_2s_hydroxyglycino_1
   }
 
-  branch from mdha side left {
-    mdha
-    <-> . +ascorbate
-    l_dehydroascorbate
+  branch from glyoxylate side left {
+    glyoxylate
+    <-> . +5_methyl_dcmp_1 +ascorbate +o2 +co2
+    8s_9r_5_glyceryldeoxycytidine_5_monophosphate_1
   }
 
   branch from glyoxylate side right {
     glyoxylate
-    <-> . +n_octanoyl_2s_hydroxyglycinate
-    octanamide
-  }
-
-  branch from glyoxylate side left {
-    glyoxylate
-    <-> . +n_decanoyl_2s_hydroxyglycinate
-    decanamide
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +gdp_2s_3s_6r_3_hydroxy_5_imino_6_methyloxane +h2o
-    gdp_4_dehydro_3_6_dideoxy_d_mannose
+    <-> ec_2_6_1_63 [2.6.1.63] +3_hydroxy_l_kynurenine +glycine +h2o
+    xanthurenate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_1_121 [3.5.1.121] +l_asparaginyl_group +h2o +hplus
-    l_aspartyl_zwitterionic_group
+    <-> . +l_asparagine +h2o
+    l_aspartate
+  }
+
+  branch from nh3 side right {
+    nh3
+    <-> . +4_hydroxyestrone +o2 +h2o +hplus
+    pyridinestrone_3_carboxylate
   }
 }

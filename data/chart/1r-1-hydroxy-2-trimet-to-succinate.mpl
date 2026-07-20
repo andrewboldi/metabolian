@@ -18,25 +18,25 @@ pathway 1r-1-hydroxy-2-trimet-to-succinate "[(1R)-1-Hydroxy-2-(trimet… to succ
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_1_1_1_42 [1.1.1.42] +co2 +nadph +nadp
-    d_erythro_isocitrate
+    <-> ec_1_2_1_38 [1.2.1.38] +acetyl_coa +atp +nadph +l_glutamate +h2o +acetate +adp +nadp +coa +ornithine +phosphate
+    h
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_1_1_286 [1.1.1.286] +nadh +co2 +d_erythro_isocitrate
-    nad
+    <-> ec_1_14_11_20 [1.14.11.20] +o2 +vindolidine +co2 +succinate
+    deacetylvindorosine
   }
 
   branch from o2 side left {
     o2
-    <-> . +hydroxy_torasemide +h2o
-    torasemide_carboxylic_acid
+    <-> ec_1_14_13_151 [1.14.13.151] +nadh +s_linalool +h +nad +h2o
+    6e_8_oxolinalool
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +3beta_hydroxy_4_4_dimethylsteroid +nad +h2o
-    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
+    <-> . +icosan_1_ol +h2o2
+    eicosanal
   }
 }

@@ -20,14 +20,14 @@ pathway l-idonate-to-h2o "L-idonate to H2O" {
 
   branch from h side left {
     h
-    <-> . +cinchonine +nadp +nadph
-    cinchoninone
+    <-> . +adp +phosphate +atp +h2o
+    12s_hht
   }
 
   branch from h side right {
     h
-    <-> . +quinidine +nadp +nadph
-    6_methoxycinchonan_9_one
+    <-> . +adp +phosphate +atp +h2o
+    cholestane_3_7_12_24_25_pentol
   }
 
   branch from 2_dehydro_d_gluconate side left {
@@ -38,14 +38,14 @@ pathway l-idonate-to-h2o "L-idonate to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> . +quinidine +nadp +h
-    quinidinone
+    <-> . +h +2e_henicosenoyl_coa +nadp
+    heneicosanoyl_coenzyme_a
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +6_methoxycinchonan_9_one +nadp
-    quinine
+    <-> . +octadecanoyl_coa +h +o2 +nadp +h2o
+    vaccenyl_coenzyme_a
   }
 
   branch from d_gluconate side right {
@@ -62,37 +62,37 @@ pathway l-idonate-to-h2o "L-idonate to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_45 [1.14.14.45] +1_aci_nitro_2_1h_indol_3_yl_ethane +h2o +h +o2 +nadph
-    e_indol_3_yl_acetaldehyde_oxime
+    <-> . +17z_hexacosenoyl_coa +h +nadph
+    2e_17z_hexacosadi_2_17_enoyl_coa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +s_reticuline +o2 +nadph +h2o
-    s_corytuberine
+    <-> . +13z_3_oxoicosenoyl_coa +h +nadph
+    3_s_hydroxy_13_cis_eicosenoyl_coenzyme_a
   }
 
   branch from h2o side right {
     h2o
-    <-> . +diphosphate +borneol
-    bornyl_diphosphate
+    <-> . +l_aspartate +l_glutamate
+    aspartyl_glutamate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_103 [1.14.13.103] +h +sophoraflavanone_b +o2 +nadph +nadp
-    leachianone_g
+    <-> . +l_histidine +l_aspartate +l_cysteine
+    aspartyl_histidyl_cysteine
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    12_ht_or_m_vi_12_hydroxy_tacrolimus
+    8_dehydrocholesterol
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    13_31_o_didesmethyl_tacrolimus
+    17alpha_hydroxypregnenolone_sulfate
   }
 }

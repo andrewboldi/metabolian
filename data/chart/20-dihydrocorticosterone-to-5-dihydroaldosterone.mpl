@@ -20,7 +20,7 @@ pathway 20-dihydrocorticosterone-to-5-dihydroaldosterone "20β-dihydrocorticoste
 
   branch from corticosterone side left {
     corticosterone
-    <-> . +nadp +nadph +hplus
+    <-> . +nad +nadh +hplus
     11_dehydrocorticosterone
   }
 

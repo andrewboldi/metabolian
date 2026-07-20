@@ -30,61 +30,61 @@ pathway 4-hydroxyphthalic-acid-to-nad "4-hydroxyphthalic acid to NAD" {
 
   branch from co2 side left {
     co2
-    <-> ec_2_7_8_23 [2.7.8.23] +h +3_hydrohydroxyphosphoryl_pyruvate
-    carboxyphosphonopyruvate
+    <-> . +tabtoxin_biosynthesis_intermediate_4
+    tabtoxin_biosynthesis_intermediate_3
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_95 [4.1.1.95] +4_aminobutyryl_acp
-    gamma_l_glutamyl_acp
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +5_methylsalicylate +h +o2 +nad +h2o
+    4_methylcatechol
   }
 
   branch from h side left {
     h
-    <-> . +dihydrogeranylgeranyl_diphosphate +nadph +nadp
-    tetrahydrogeranylgeranyl_diphosphate
+    <-> . +nadh +5_chloro_2_hydroxy_p_benzoquinone +nad
+    5_chloro_1_2_4_trihydroxybenzene
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_8_23 [2.7.8.23] +carboxyphosphonopyruvate
-    1_carboxyvinyl_carboxyphosphonate
+    <-> . +holyrine_a +dtdp +dtdp_l_ristosamine
+    k_252c
   }
 
   branch from nadp side left {
     nadp
-    <-> . +dtdp_beta_l_rhamnose +h +nadph
-    dtdp_4_dehydro_6_deoxy_alpha_d_glucose
+    <-> . +nocardicin_a +h2o +o2 +nadph
+    nocardicin_c_dizwitterion
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_22 [1.3.1.22] +5_dihydrodeoxycorticosterone +h +nadph
-    21_hydroxyprogesterone
+    <-> ec_1_2_1_96 [1.2.1.96] +4_hydroxy_3_methylbenzaldehyde +h2o +h +nadph
+    4_hydroxy_3_methylbenzoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_45 [3.1.1.45] +2_chloro_5_methyl_cis_dienelactone
-    2_chloro_5_methylmaleylacetate
+    <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
+    3_oxo_3_ureidoisobutyrate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +nadh +h +5_nitro_o_toluidine +nad
-    2_4_diaminotoluene
+    <-> . +l_threonine +tabtoxinine_lactam
+    tabtoxin
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +benzo_a_pyrene +o2
-    benzo_a_pyrene_7_8_diol
+    <-> . +nadh +benzenesulfonic_acid +o2 +h +catechol
+    sulfite
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +4_5_dihydroxypyrene
-    cis_4_5_dihydroxy_4_5_dihydropyrene
+    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +h2o +nadh +h
+    terephthalate
   }
 }

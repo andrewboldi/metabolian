@@ -32,23 +32,17 @@ pathway nadh-to-4-carboxy-2-hydroxy-cis-c "NADH to 4-carboxy-2-hydroxy-cis,c…"
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_272 [1.1.1.272] +nadh +h +3_sulfopyruvate
-    3_sulfolactic_acid
+    <-> ec_1_3_1_32 [1.3.1.32] +5_methylmaleylacetate +chloride +nadh
+    2_chloro_5_methylmaleylacetate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_85 [1.1.1.85] +nadh +co2 +h +2_oxo_8_methylthiooctanoic_acid
-    3_5_methylthio_pentylmalic_acid
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +3_4_hydroxyphenyl_pyruvate +h +nh4 +h2o
+    l_tyrosine
   }
 
-  branch from 1e_4_oxobut_1_ene_1_2_4_tricarboxylate side left {
-    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
-    <-> .
-    2z_4_oxobut_2_ene_1_2_4_tricarboxylate
-  }
-
-  branch from 4_carboxy_2_hydroxy_cis_cis_muconate side right {
+  branch from 4_carboxy_2_hydroxy_cis_cis_muconate side left {
     4_carboxy_2_hydroxy_cis_cis_muconate
     <-> ec_4_2_1_83 [4.2.1.83] +h2o
     2_hydroxy_4_oxobutane_1_2_4_tricarboxylate

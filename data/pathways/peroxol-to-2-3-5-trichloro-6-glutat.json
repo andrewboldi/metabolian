@@ -161,26 +161,6 @@
       }
     },
     {
-      "id": "1_aci_nitro_2_phenyl_ethane",
-      "name": "1-aci-nitro-2-(phenyl)ethane",
-      "short": "1-aci-nitro-2-(phen…",
-      "formula": "C8H9NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:136829"
-      }
-    },
-    {
-      "id": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
-      "name": "(Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate",
-      "short": "1-(glutathione-S-yl…",
-      "formula": "C18H23N4O7S",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:136447"
-      }
-    },
-    {
       "id": "15_deoxy_12_14_prostaglandin_j2",
       "name": "15-deoxy-Δ12,14-prostaglandin J2",
       "short": "15-deoxy-Δ12,14-pro…",
@@ -198,6 +178,44 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:194498"
+      }
+    },
+    {
+      "id": "2_4_6_trinitrotoluene",
+      "name": "2,4,6-trinitrotoluene",
+      "short": "2,4,6-trinitrotolue…",
+      "formula": "C7H5N3O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46053"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione",
+      "name": "S-(2,6-dinitro-4-hydroxylaminotoluyl)glutathione",
+      "short": "S-(2,6-dinitro-4-hy…",
+      "formula": "C17H21N6O11S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:231532"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
       }
     },
     {
@@ -486,45 +504,6 @@
     },
     {
       "id": "r5",
-      "name": "1-aci-nitro-2-(phenyl)ethane + glutathione = (Z)-1-(glutathione-S-yl)-2-phenylacetohydr...",
-      "equation": "1-aci-nitro-2-(phenyl)ethane + glutathione = (Z)-1-(glutathione-S-yl)-2-phenylacetohydroximate + H2O",
-      "substrates": [
-        {
-          "metabolite": "1_aci_nitro_2_phenyl_ethane",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "z_1_glutathione_s_yl_2_phenylacetohydroximate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:52200"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:52200"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "15-deoxy-Delta(12,14)-prostaglandin J2 + glutathione = 15-deoxy-Delta(12,14)-prostaglan...",
       "equation": "15-deoxy-Delta(12,14)-prostaglandin J2 + glutathione = 15-deoxy-Delta(12,14)-prostaglandin J2-S-(R)-glutathione",
       "substrates": [
@@ -544,7 +523,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:75963"
       },
@@ -554,6 +533,53 @@
           {
             "db": "Rhea",
             "id": "RHEA:75963"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,6-dinitro-4-hydroxylaminotoluyl)glutat...",
+      "equation": "2,4,6-trinitrotoluene + glutathione + AH2 = S-(2,6-dinitro-4-hydroxylaminotoluyl)glutathione + A + H2O",
+      "substrates": [
+        {
+          "metabolite": "2_4_6_trinitrotoluene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_6_dinitro_4_hydroxylaminotoluyl_glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:80523"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80523"
           }
         ]
       }

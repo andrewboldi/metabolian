@@ -20,38 +20,38 @@ pathway nadh-to-2-chloroethanol "NADH to 2-chloroethanol" {
 
   branch from nad side left {
     nad
-    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +3_5_dichlorocatechol
-    1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+    <-> . +o_s_docosanoylpantetheine_4_phosphoryl_l_serine +nadh +h
+    o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_chlorobenzoate +o2
-    3_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph +h
+    o_s_9z_21z_tetracontadienoylpantetheine_4_phosph
   }
 
   branch from h2o side left {
     h2o
-    <-> . +dehydroabietadiene_diol
-    dehydroabietadienal
+    <-> . +mycothiol +h2o2
+    mycothione
   }
 
   branch from h2o side right {
     h2o
-    <-> . +formaldehyde +acetate +nadp +o2 +nadph
-    hydroxyacetone
+    <-> . +o_s_3r_17z_29z_3_hydroxyoctatetracontadienoylpan
+    o_s_2e_17z_29z_octatetracontatrienoylpantetheine
   }
 
   branch from h side left {
     h
-    <-> . +o2 +nadph +cyclohexane +nadp +h2o
-    cyclohexanol
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_15z_27z_hexatetracontatrienoylpantetheine +nad
+    o_s_15z_27z_hexatetracontadienoylpantetheine_4_p
   }
 
   branch from h side right {
     h
-    <-> . +e_feruloyl_coa +serotonin +coa
-    n_feruloylserotonin
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante +nadp +nadph
+    o_s_11z_23z_3_oxodotetracontadienoylpantetheine
   }
 
   branch from oxirane side left {

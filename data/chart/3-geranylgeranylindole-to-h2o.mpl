@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-geranylgeranylindole-to-h2o "3-Geranylgeranylindole to H2O" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     3_geranylgeranylindole
@@ -22,31 +22,25 @@ pathway 3-geranylgeranylindole-to-h2o "3-Geranylgeranylindole to H2O" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +3_5_dihydroxy_3_4_7_trimethoxyflavone +o2 +nadph +h2o
-    2_hydroxy_3_7_4_trimethylquercetin
+    <-> . +4_sulfoacetophenone +h +o2 +nadph +h2o
+    4_sulfophenyl_acetate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +casticin +h +o2 +nadph +h2o
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin
+    <-> . +lambertine +nadph
+    berberine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +petivericin
-    phenylmethanesulfenate
+    <-> . +2s_bisdechlorogeodin
+    asterric_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3r_2_hydroxydihydrodaidzein
-    anhydroglycinol
-  }
-
-  branch from paspaline side left {
-    paspaline
-    <-> . +h +o2 +nadph +nadp +h2o
-    terpendole_e
+    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +glucose
+    linustatin
   }
 }

@@ -30,8 +30,8 @@ pathway lipid-a-to-h "lipid A to H" {
 
   branch from n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly side right {
     n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
-    <-> ec_2_4_1_180 [2.4.1.180] +udp_n_acetyl_d_mannosaminouronate +udp +hplus
-    d_mannaca_1_4_d_glcnac_1_diphospho_ditrans_poly
+    <-> ec_5_1_3_26 [5.1.3.26]
+    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
   }
 
   branch from n_acetyl_d_mannosaminyl_1_4_n_acetyl_d_glucosami side left {
@@ -42,14 +42,14 @@ pathway lipid-a-to-h "lipid A to H" {
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_10 [2.4.3.10] +neup5ac_2_3_d_galp_1_3_d_glcpnac_1_3_d_galp_1_4 +cmp_n_acetyl_neuraminate +hplus
-    neup5ac_2_3_d_galp_1_3_neup5ac_2_6_d_glcpnac_1
+    <-> . +d_gal_1_3_d_galnac_1_3_d_gal_1_4_d_gal_1_4_d_gl +cmp_n_acetyl_neuraminate +hplus
+    monosialyl_gb5
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> . +h2o +pi +hplus
-    ctp
+    <-> . +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc_1_1_cer +cmp_n_acetyl_neuraminate +hplus
+    neu5ac_2_3_d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_g
   }
 
   branch from cmp side right {
@@ -66,13 +66,13 @@ pathway lipid-a-to-h "lipid A to H" {
 
   branch from h side right {
     h
-    <-> . +eicosa_2e_8z_11z_14z_17z_pentaenoyl_coa +h2o
-    3s_8z_11z_14z_17z_3_hydroxyicosatetraenoyl_coa
+    <-> . +s_9_deoxy_delta12_pgd2_glutathione +glutathione
+    9_deoxy_delta12_pgd2
   }
 
   branch from h side left {
     h
-    <-> . +erucoyl_coa +h2o +coa
-    13z_docosenoate
+    <-> . +prostaglandin_a1 +glutathione
+    s_pga1_glutathione
   }
 }

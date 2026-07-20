@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway fmnh2-to-menaquinol-6 "FMNH2 to menaquinol-6" {
-  spacing 288
+  spacing 264
 
   spine at 0,0 {
     fmnh2
@@ -16,63 +16,39 @@ pathway fmnh2-to-menaquinol-6 "FMNH2 to menaquinol-6" {
     pmf
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_2_7_7_2 [2.7.7.2] +diphosphate +fad +h
-    atp
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> ec_3_6_1_18 [3.6.1.18] +h +amp +h2o
-    fad
-  }
-
   branch from h2o side left {
     h2o
-    <-> . +ferroheme_a
-    fe_ii_hydroxyheme_i
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +daunosamine +phosphate +daunosamine
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +aldehydo_d_ribose_5_phosphate
-    diphosphate
-  }
-
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_14_13_7 [1.14.13.7] +nadh +fmn +h
-    nad
-  }
-
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_17_7_4 [1.17.7.4] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +h +fmn +h2o
-    dimethylallyl_diphosphate
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_fucose
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +2s_4_prop_1_en_1_yl_2_3_dihydro_1h_pyrrole_2_ca +h
-    2s_4_ethenyl_2_3_dihydro_1h_pyrrole_2_carboxyla
+    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin +h
+    5_hydroxy_desmethylanthrotainin
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +lincomycin +h
-    s_demethyllincomycin
+    <-> . +s_adenosyl_l_homocysteine +5_hydroxyanthrotainin
+    5_hydroxy_desmethylanthrotainin
   }
 
   branch from pmf side left {
     pmf
-    <-> ec_7_1_1_5 [7.1.1.5] +menaquinol_9 +o2 +h2o
-    menaquinone_9
+    <-> ec_1_2_2_1 [1.2.2.1] +menaquinol_8 +co2 +h +formate
+    mk_8
   }
 
   branch from pmf side right {
     pmf
-    <-> . +plastoquinol_9 +o2 +h2o
+    <-> ec_7_1_1_3 [7.1.1.3] +plastoquinol_9 +o2 +h2o
     plastoquinone_9
   }
 }

@@ -18,14 +18,14 @@ pathway udp-to-udp-n-acetyl-alpha-d-mura "UDP to UDP-N-acetyl-alpha-D-mura…" {
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_3_2_1_183 [3.2.1.183] +udp +n_acetyl_d_mannosamine +h
-    h2o
+    <-> . +udp +alpha_d_glcnac_1_4_beta_d_gal_1_3_alpha_d_glcnac +h
+    d_gal_1_3_d_glcnac_diphospho_ditrans_octacis_un
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> ec_5_1_3_2 [5.1.3.2] +h
-    udp_n_acetylgalactosamine
+    <-> . +udp +alpha_d_glcnac_1_3_beta_d_galnac_1_3_alpha_d_gal +h
+    beta_d_galnac_1_3_alpha_d_gal_1_4_beta_d_gal_1_3
   }
 
   branch from alpha_d_glcnac_1_p_6_alpha_d_glc_1_2_beta_d_glc side left {
@@ -36,13 +36,13 @@ pathway udp-to-udp-n-acetyl-alpha-d-mura "UDP to UDP-N-acetyl-alpha-D-mura…" {
 
   branch from h side right {
     h
-    <-> . +2_2_methylsulfanyl_pentyl_maleate +h2o
-    2_5_methylthio_pentylmalic_acid
+    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +o_s_tetradecanoylpantetheine_4_phosphoryl_serine +coa +o_s_3_oxohexadecanoylpantetheine_4_phosphoryl_se
+    co2
   }
 
   branch from h side left {
     h
-    <-> . +2_2_methylsulfanyl_pentyl_maleate +h2o
-    3_5_methylthio_pentylmalic_acid
+    <-> . +3_aminopropyl_dimethylsulfanium +co2
+    s_methyl_l_methionine
   }
 }

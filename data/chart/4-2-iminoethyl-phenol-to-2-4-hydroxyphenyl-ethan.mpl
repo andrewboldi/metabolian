@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol to 2-(4-hydroxyphenyl)ethanol" {
-  spacing 200
+  spacing 194
 
   spine at 0,0 {
     4_2_iminoethyl_phenol
@@ -20,49 +20,43 @@ pathway 4-2-iminoethyl-phenol-to-2-4-hydroxyphenyl-ethan "4-(2-iminoethyl)phenol
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_hexyl_thiohydroximate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +9_methylthio_nonyl_thiohydroximic_acid
     pyruvate
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
-    z_omega_methylsulfanyl_heptyl_thiohydroximate
+    <-> ec_3_5_1_4 [3.5.1.4] +butanamide +h +hydroxylamine
+    butyrylhydroxamic_acid
   }
 
   branch from 2_4_hydroxyphenyl_ethanol side left {
-    2_4_hydroxyphenyl_ethanol
-    <-> . +udp_d_glucose +udp +hplus
-    icariside_d2
-  }
-
-  branch from 2_4_hydroxyphenyl_ethanol side right {
     2_4_hydroxyphenyl_ethanol
     <-> . +salidroside +h2o
     glucose
   }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +2_carboxyethyl_com +h +h2o
-    2_hydroxyethyl_com
-  }
-
   branch from nad side right {
     nad
-    <-> . +nadh +h +methyl_tert_butyl_ether +o2 +h2o
-    tert_butoxymethanol
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_3_dichlorobenzene +h +o2
+    1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
   }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +sesaminol_2_o_beta_d_gentiotrioside +h
-    sesaminol_2_o_d_gentiobioside
+  branch from nad side left {
+    nad
+    <-> ec_1_3_1_119 [1.3.1.119] +nadh +h +1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+    3_5_dichlorocatechol
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +myricetin_3_o_gentiobioside
-    myricetin_3_o_d_glucopyranoside
+    <-> . +udp +3_7_3_4_tetramethylquercetin_2_o_beta_d_glucosid +h
+    2_hydroxy_3_7_3_4_tetramethylquercetin
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +h
+    3_6_7_2_4_pentamethylquercetagetin
   }
 }

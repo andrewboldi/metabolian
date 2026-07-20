@@ -20,38 +20,38 @@ pathway glycodeoxycholate-to-7-12-dioxolithocholate "glycodeoxycholate to 7,12-d
 
   branch from deoxycholate side left {
     deoxycholate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    1_hydroxydeoxycholate
-  }
-
-  branch from deoxycholate side right {
-    deoxycholate
     <-> . +udp_d_glucuronate +udp
     deoxycholic_acid_24_o_d_glucuronide
   }
 
-  branch from glycine side left {
-    glycine
-    <-> . +chenodeoxycholoyl_coa +coa +hplus
-    glycochenodeoxycholate
+  branch from deoxycholate side right {
+    deoxycholate
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    3_sulfodeoxycholate
   }
 
-  branch from glycine side right {
+  branch from glycine side left {
     glycine
     <-> . +icosanoyl_coa +coa +hplus
     n_icosanoylglycinate
   }
 
+  branch from glycine side right {
+    glycine
+    <-> . +leukotriene_c4 +h2o
+    leukotriene_f4
+  }
+
   branch from cholate side left {
     cholate
-    <-> ec_3_1_2_27 [3.1.2.27] +h2o +coa +hplus
-    choloyl_coa
+    <-> . +nadp +nadph +hplus
+    7_12_dihydroxy_3_oxo_5_cholan_24_oate
   }
 
   branch from cholate side right {
     cholate
     <-> . +nadp +nadph +hplus
-    7_12_dihydroxy_3_oxo_5_cholan_24_oate
+    3_12_dihydroxy_7_oxo_5_cholanate
   }
 
   branch from 3_7_dihydroxy_12_oxo_5_cholanate side left {

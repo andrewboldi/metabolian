@@ -22,14 +22,14 @@ pathway h-to-h2o "H to H2O" {
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadp +h2o
-    1_nitronaphthalene_5_6_oxide
+    <-> ec_1_14_13_178 [1.14.13.178] +1_methyl_7h_xanthine +h +o2 +xanthine +nadp +h2o
+    formaldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +9z_12z_octadecadienoate +h +o2 +nadp +h2o
-    9r_10s_9_10_epome
+    <-> ec_1_14_13_179 [1.14.13.179] +1_methyl_7h_xanthine +formaldehyde +nadp +h2o +h +o2
+    theophylline
   }
 
   branch from leucodopachrome side left {
@@ -46,14 +46,14 @@ pathway h-to-h2o "H to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2_2_bis_4_hydroxyphenyl_1_propanol +o2 +h2o
-    2_3_bis_4_hydroxyphenyl_1_2_propanediol
+    <-> . +nadh +h +o2 +1_7_dimethylxanthine +formaldehyde +h2o
+    1_methyl_7h_xanthine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_84 [1.14.13.84] +nadh +h +4_hydroxyacetophenone
-    4_1_hydroxyethyl_phenol
+    <-> ec_1_14_13_178 [1.14.13.178] +nadh +1_methyl_7h_xanthine +h +o2 +formaldehyde +h2o
+    xanthine
   }
 
   branch from l_dopaquinone side left {
@@ -76,25 +76,25 @@ pathway h-to-h2o "H to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +malonyl_coa +h +l_glutamine +h2o +malonamoyl_coa +amp +l_glutamate
-    diphosphate
+    <-> ec_6_3_1_12 [6.3.1.12] +d_aspartate +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h +adp +phosphate
+    und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_7_72 [2.7.7.72] +diphosphate +trna_with_a_3_cca_end +h
-    trna_with_a_3_cc_end
+    <-> ec_7_6_2_14 [7.6.2.14] +h +adp +phosphate +h2o
+    alkanesulfonate_oxoanion
   }
 
   branch from h2o side right {
     h2o
-    <-> . +naphthyl_2_hydroxymethyl_succinyl_coa
-    naphthyl_2_methylene_succinyl_coa
+    <-> ec_4_2_1_131 [4.2.1.131] +3_4_dihydrorhodovibrin
+    3_4_dihydroanhydrorhodovibrin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +nadh +h +1_methylnaphthalene +o2 +nad
-    1_naphthyl_methanol
+    <-> ec_4_2_1_131 [4.2.1.131] +chlorobactene
+    hydroxychlorobactene
   }
 }

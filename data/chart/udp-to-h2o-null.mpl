@@ -18,14 +18,14 @@ pathway udp-to-h2o-null "UDP to H2O" {
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_38 [2.4.1.38] +udp +h +n_acetyllactosamine
-    n_acetyl_beta_d_glucosamine
+    <-> ec_2_4_1_90 [2.4.1.90] +udp +h +n_acetyllactosamine
+    aldehydo_n_acetyl_d_glucosamine
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_22 [2.4.1.22] +udp +alpha_lactose +h
-    glucose
+    <-> ec_2_4_1_74 [2.4.1.74] +udp +h +a_d_galactosylglycosaminoglycan
+    a_glycosaminoglycan
   }
 
   branch from isovitexin side left {
@@ -54,37 +54,37 @@ pathway udp-to-h2o-null "UDP to H2O" {
 
   branch from h side left {
     h
-    <-> . +co2 +2_oxo_6_methylthiohexanoic_acid
-    3_carboxy_6_methylsulfanyl_2_oxohexanoate
+    <-> . +trans_2_methyl_4_carboxylatomethylenebut_2_en_1 +chloride
+    2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
   }
 
   branch from h side right {
     h
-    <-> . +co2 +2_oxopentanoate
-    3_ethyl_2_oxosuccinate
+    <-> ec_5_5_1_7 [5.5.1.7] +2_2_chloro_2_5_dihydro_4_methyl_5_oxofuryl_aceta
+    4_chloro_2_methyl_cis_cis_muconate
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +3_6_7_2_4_pentamethylquercetagetin_3_o_beta_d_gl +h
-    3_6_7_2_4_pentamethylquercetagetin
+    <-> . +udp +2_o_beta_d_glucopyranosyl_tylosin +h
+    tylosin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetagitrin +h
-    quercetagetin
+    <-> . +udp +loganin +h
+    loganetin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +h +indol_3_yl_acetate
-    n_indole_3_acetyl_l_leucine
+    <-> . +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine
+    o_s_2e_19z_octatriacontadienoylpantetheine_4_pho
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_o_indol_3_ylacetyl_beta_d_glucose +glucose +h
-    indol_3_yl_acetate
+    <-> . +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante
+    o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4
   }
 }

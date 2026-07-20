@@ -18,13 +18,13 @@ pathway 2-hydroxyethylphosphonic-to-hydrogen-donor "2-hydroxyethylphosphonic… 
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_14_19_14 [1.14.19.14] +linoleoyl_containing_glycerolipid +o2 +hydrogen_acceptor +h2o
-    8e_10e_12z_octadecatrienoyl_containing_glycerol
+    <-> . +8_s_15_s_dihpete +hydrogen_acceptor +h2o
+    8_s_15_s_dihete
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_14_19_15 [1.14.19.15] +11z_hexadec_11_enoyl_coa +o2 +hydrogen_acceptor +h2o
-    10e_12z_hexadecadienoyl_coa
+    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
+    dehydroprobetaenone_i
   }
 }

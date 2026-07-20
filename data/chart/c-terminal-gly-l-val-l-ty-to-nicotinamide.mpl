@@ -20,14 +20,14 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +protoporphyrinogen9 +hydrogen_donor
-    protoporphyrin9
+    <-> ec_1_17_99_10 [1.17.99.10] +dehydrocholesterol_7 +h2o +hydrogen_donor
+    cholesta_5_7_dien_3_25_diol
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +h2o +hydrogen_donor
-    r_perillyl_alcohol
+    <-> ec_1_17_99_10 [1.17.99.10] +3_oxocholestane +h2o +hydrogen_donor
+    25_hydroxy_3_oxocholestane
   }
 
   branch from glycino_1_group side left {
@@ -44,13 +44,13 @@ pathway c-terminal-gly-l-val-l-ty-to-nicotinamide "C-terminal Gly-L-Val-L-Ty… 
 
   branch from nicotinamide side left {
     nicotinamide
-    <-> . +l_tyrosine +nad +hplus
-    o_adp_d_ribosyl_l_tyrosine_2
+    <-> . +n6_hexadecanoyl_l_lysine +nad +h2o +l_lysinium
+    2_o_hexadecanoyl_adp_d_ribose
   }
 
   branch from nicotinamide side right {
     nicotinamide
-    <-> . +l_argininium +nad +nh3 +hplus
-    adp_2_imine_ribofurano_1_2_4_5_oxazolidine_2
+    <-> . +n6_lauroyl_l_lysine +nad +h2o +l_lysinium
+    2_o_dodecanoyl_adp_d_ribose
   }
 }

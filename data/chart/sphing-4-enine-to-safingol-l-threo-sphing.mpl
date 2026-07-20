@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( L-threo-sphing…" {
-  spacing 244
+  spacing 238
 
   spine at 0,0 {
     sphing_4_enine
@@ -18,61 +18,55 @@ pathway sphing-4-enine-to-safingol-l-threo-sphing "sphing-4-enine to Safingol ( 
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +o_toluate +nad +h2o
-    2_methylbenzaldehyde
+    <-> . +formaldehyde +tryptamine +h2o
+    2_3_4_9_tetrahydro_1h_pyrido_3_4_b_indole
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +2_nitrobenzoate +nad +h2o
-    2_nitrobenzaldehyde
-  }
-
-  branch from 3_dehydrosphingosine side left {
-    3_dehydrosphingosine
-    <-> . +2e_hexadecenoyl_coa +l_serine +coa
-    co2
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +h +aldehydo_l_idose +nadp
-    l_iditol
+    <-> . +l_dehydroascorbic_acid +13_hydroxy_e4_neuroprostane +h2o +l_ascorbate
+    13_hydroperoxy_h4_neuroprostane
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_39 [1.14.13.39] +h +nadp +ferrocyanide
-    ferricyanide
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_phip +nadp +h2o +h +o2
+    phip
   }
 
-  branch from fad side right {
-    fad
-    <-> . +hexadecanoate +atp +coa +nad +h2o +acetyl_coa +fadh2 +diphosphate +h +amp
-    nadh
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_14_91 [1.14.14.91] +2_methoxy_4_hydroxycinnamate +nadp +h2o +h +3_2_methoxyphenyl_2_propenoic_acid
+    o2
   }
 
   branch from fad side left {
     fad
-    <-> ec_1_3_5_1 [1.3.5.1] +fadh2 +h +fumarate
-    succinate
+    <-> . +5_guanidino_2_oxopentanoate +fadh2 +h +nh4 +h2o
+    d_arginine
   }
 
-  branch from 3_oxosphinganine side right {
+  branch from fad side right {
+    fad
+    <-> . +decanoyl_coa +h2o +fadh2 +h
+    3s_hydroxydecanoyl_coa
+  }
+
+  branch from 3_oxosphinganine side left {
     3_oxosphinganine
     <-> . +nadh +h +nad
     sphinganine
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +indan_1_one +h +nadph
-    r_indan_1_ol
-  }
-
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_1 [1.1.1.1] +butan_2_one +h +nadph
-    2s_butan_2_ol
+    <-> ec_1_2_1_5 [1.2.1.5] +malonaldehyde +h2o +h +nadph
+    3_oxopropanoate
+  }
+
+  branch from nadp side left {
+    nadp
+    <-> ec_1_14_13_81 [1.14.13.81] +h +o2 +nadph +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +h2o
+    divinylprotochlorophyllide
   }
 }

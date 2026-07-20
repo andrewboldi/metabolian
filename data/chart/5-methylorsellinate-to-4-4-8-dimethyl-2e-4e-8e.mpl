@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-methylorsellinate-to-4-4-8-dimethyl-2e-4e-8e "5-methylorsellinate to 4-[4,8-dimethyl-(2E,4E,8E…" {
-  spacing 200
+  spacing 176
 
   spine at 0,0 {
     5_methylorsellinate
@@ -24,46 +24,22 @@ pathway 5-methylorsellinate-to-4-4-8-dimethyl-2e-4e-8e "5-methylorsellinate to 4
     4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_196 [1.14.14.196] +polyporic_acid_anion +fmnh2 +o2 +h2o +hplus
-    ascocorynin_anion
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +sakuranetin +fmnh2 +o2 +h2o +hplus
-    2s_carthamidin_7_methyl_ether
-  }
-
   branch from 4_farnesyl_3_5_dihydroxy_6_methylphthalide side left {
     4_farnesyl_3_5_dihydroxy_6_methylphthalide
     <-> . +sam +sah +hplus
     4_farnesyl_3_5_dihydroxy_6_methoxylphthalide
   }
 
-  branch from ppi side right {
-    ppi
-    <-> . +gpp
-    camphene
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +gpp
-    isoterpinolene
-  }
-
   branch from sah side right {
     sah
-    <-> . +esculetin +sam +hplus
-    scopoletin
+    <-> ec_2_1_1_391 [2.1.1.391] +demethylgadusol +sam +hplus
+    gadusol
   }
 
   branch from sah side left {
     sah
-    <-> . +isoscopoletin +sam +hplus
-    scoparone
+    <-> ec_2_1_1_392 [2.1.1.392] +4_methylnorajmaline +sam +hplus
+    4_methylajmaline
   }
 
   branch from 4_4_8_dimethyl_2e_4e_8e_decatrienoyl_coa_5_o_met side right {

@@ -18,37 +18,37 @@ pathway cyanidin-3-o-beta-d-caff-to-cyanidin-3-o-6-o-z-4 "cyanidin 3-O-beta-D-(c
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> . +trans_4_coumaroyl_coa +h +o2 +nadph +h2o
-    nadp
+    <-> ec_2_3_1_126 [2.3.1.126] +h +isocitrate +coa
+    2_caffeoylisocitric_acid
   }
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> . +malonyl_coa +h +coa +hispidin
-    co2
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
+    pelargonidin_3_glucoside_5_caffeoylglucoside
   }
 
   branch from h side left {
     h
-    <-> . +adp +5_8_tetradecadienoic_acid +phosphate +5_8_tetradecadienoic_acid +h2o
-    atp
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phospho_1d_m
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    l_threonate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_octadecanoyl_2_9z_12z_15z_octadecatrienoyl_sn
   }
 
   branch from coa side left {
     coa
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +cholesterol
-    cholesteryl_all_cis_icosa_8_11_14_trienoate
+    <-> . +sucrose +2_methylpropanoyl_coa
+    4_isobutanoyl_sucrose
   }
 
   branch from coa side right {
     coa
-    <-> . +tetradecanoyl_coa +1_myristoyl_sn_glycero_3_phosphoethanolamine
-    phosphatidylethanolamine_ditetradecanoyl_n_c14_0
+    <-> . +sucrose +2s_2_methylbutanoyl_coa
+    beta_d_fructofuranosyl_4_o_2_methylbutanoyl_alph
   }
 }

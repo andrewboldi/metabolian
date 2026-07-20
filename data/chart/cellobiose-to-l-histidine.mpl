@@ -18,13 +18,13 @@ pathway cellobiose-to-l-histidine "cellobiose to L-histidine" {
 
   branch from l_histidine side left {
     l_histidine
-    <-> ec_2_7_1_194 [2.7.1.194] +n_phosphonato_l_histidine +ascorbate
-    l_ascorbate_6_phosphate
+    <-> ec_2_7_1_202 [2.7.1.202] +d_fructofuranose +n_phosphonato_l_histidine
+    d_fructofuranose_1_phosphate
   }
 
   branch from l_histidine side right {
     l_histidine
-    <-> ec_2_7_1_211 [2.7.1.211] +n_phosphonato_l_histidine +sucrose
-    sucrose_6g_phosphate
+    <-> ec_2_7_1_203 [2.7.1.203] +2_amino_2_deoxy_d_gluconic_acid +n_phosphonato_l_histidine
+    d_glucosaminic_acid_6_phosphate
   }
 }

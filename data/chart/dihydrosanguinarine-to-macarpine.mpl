@@ -22,14 +22,14 @@ pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_176 [1.14.14.176] +taxa_4_11_diene +fmnh2 +o2 +h2o +hplus
-    taxa_4_20_11_dien_5_ol
+    <-> . +24r_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24r_7_24_dihydroxycholesterol
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_136 [1.14.14.136] +10_deoxysarpagine +fmnh2 +o2 +h2o +hplus
-    sarpagine
+    <-> ec_1_14_14_96 [1.14.14.96] +trans_5_o_4_coumaroyl_d_quinate +fmnh2 +o2 +h2o +hplus
+    trans_5_o_caffeoyl_d_quinate
   }
 
   branch from dihydrochelirubine side left {

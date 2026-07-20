@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-3-dihydroxy-n-benzoylse-to-nadph "2,3-dihydroxy-N-benzoylse… to NADPH" {
-  spacing 290
+  spacing 272
 
   spine at 0,0 {
     2_3_dihydroxy_n_benzoylserine_dimer
@@ -20,56 +20,32 @@ pathway 2-3-dihydroxy-n-benzoylse-to-nadph "2,3-dihydroxy-N-benzoylse… to NADP
 
   branch from h side left {
     h
-    <-> . +l_2_amino_8_hydroxydecanoate +nadp +nadph
-    l_2_amino_8_oxodecanoate
+    <-> . +diphosphate +12_ethyl_8_isobutylbacteriochlorophyll_d +12_ethyl_8_isobutylbacteriochlorophyllide_d
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +trichosetin
-    dieckmann_product
+    <-> . +diphosphate +31r_8_ethyl_12_methylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
+    31r_8_ethyl_12_methylbacteriochlorophyllide_c
   }
 
   branch from n_2_3_dihydroxybenzoyl_l_serine side left {
-    n_2_3_dihydroxybenzoyl_l_serine
-    <-> ec_6_3_2_14 [6.3.2.14] +h +amp +atp +2_3_dihydroxybenzoate +l_serine
-    diphosphate
-  }
-
-  branch from n_2_3_dihydroxybenzoyl_l_serine side right {
     n_2_3_dihydroxybenzoyl_l_serine
     <-> . +h +h2o
     n_2_3_dihydroxybenzoyl_l_serine_trimer
   }
 
-  branch from atp side left {
-    atp
-    <-> ec_7_4_2_12 [7.4.2.12] +h +adp +phosphate +h2o
-    d_cystine
-  }
-
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    coprogen
+    <-> ec_2_7_1_20 [2.7.1.20] +vidarabine_phosphate_usan +adp +h
+    adenine_arabinoside
   }
 
-  branch from 2_3_dihydroxybenzoate side left {
-    2_3_dihydroxybenzoate
-    <-> ec_3_7_1_8 [3.7.1.8] +2_keto_4_pentenoate +h +h2o
-    2_hydroxy_6_oxo_6_2_3_dihydroxyphenyl_hexa_2_4_d
-  }
-
-  branch from 2_3_dihydroxybenzoate side right {
-    2_3_dihydroxybenzoate
-    <-> ec_1_3_1_28 [1.3.1.28] +nadh +h +nad
-    2_3_dihydroxy_2_3_dihydrobenzoic_acid
-  }
-
-  branch from l_serine side left {
-    l_serine
-    <-> . +ser_gly_gly +h2o
-    glycylglycine
+  branch from atp side left {
+    atp
+    <-> ec_2_7_1_2 [2.7.1.2] +glucose +h +adp
+    d_glucopyranose_1_phosphate
   }
 
   branch from l_serine side right {
@@ -78,81 +54,87 @@ pathway 2-3-dihydroxy-n-benzoylse-to-nadph "2,3-dihydroxy-N-benzoylse… to NADP
     glycine
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +hinokiresinol
-    4_coumaryl_4_coumarate
+  branch from l_serine side left {
+    l_serine
+    <-> ec_3_4_13_9 [3.4.13.9] +l_proline +h2o
+    ser_pro
   }
 
   branch from co2 side right {
     co2
-    <-> . +4_coumaryl_4_coumarate
-    7r_trans_hinokiresinol
+    <-> ec_2_3_1_260 [2.3.1.260] +malonyl_coa +o_s_malonamoylpantetheine_4_phosphoryl_serine_1 +h +coa
+    o_s_18_carbamoyl_3_5_7_9_11_13_15_17_octaoxoocta
   }
 
-  branch from 1_2_3_trihydroxybenzene side left {
+  branch from co2 side left {
+    co2
+    <-> . +2_oxo_10_methylthiodecanoic_acid +h
+    3_carboxy_10_methylsulfanyl_2_oxodecanoate
+  }
+
+  branch from 1_2_3_trihydroxybenzene side right {
     1_2_3_trihydroxybenzene
     <-> ec_1_97_1_2 [1.97.1.2]
     1_3_5_trihydroxybenzene
   }
 
-  branch from 1_2_3_trihydroxybenzene side right {
+  branch from 1_2_3_trihydroxybenzene side left {
     1_2_3_trihydroxybenzene
-    <-> . +o2 +h
-    2e_4z_2_hydroxymuconate
-  }
-
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_396 [1.1.1.396] +nadh +h +3_acetyl_3_devinylchlorophyllide_a
-    3_devinyl_3_1_hydroxyethyl_chlorophyllide_a
+    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +nad +h2o
+    catechol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_223 [1.14.13.223] +nadh +o_s_3_hydroxy_4_methylanthraniloyl_pantetheine_4 +h +o2 +h2o
-    o_s_3_5_dihydroxy_4_methylanthraniloyl_pantethei
+    <-> . +nadh +co2 +h +glycine_betaine +o2 +h2o
+    trimethylaminoacetone
   }
 
-  branch from h2o side left {
-    h2o
-    <-> . +n_acetyl_d_galactosamine +4_deoxy_l_threo_hex_4_enopyranuronate
-    4_deoxy_beta_d_gluc_4_enuronosyl_1_4_n_acetyl_d
+  branch from nad side left {
+    nad
+    <-> ec_1_14_12_16 [1.14.12.16] +nadh +h +3_methyl_quinolin_2_ol +o2
+    5_6_dihydroxy_3_methyl_5_6_dihydroquinolin_2_1h
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_180 [3.2.1.180] +4_deoxy_beta_d_gluc_4_enuronosyl_1_3_n_acetyl_d +n_acetyl_d_glucosamine_6_sulfate
-    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> ec_4_2_1_17 [4.2.1.17] +2e_9z_hexadecadienoyl_coa
+    3s_9z_3_hydroxyhexadecenoyl_coa
   }
 
-  branch from resorcinol side left {
+  branch from h2o side left {
+    h2o
+    <-> ec_4_2_1_17 [4.2.1.17] +e_z_tetradeca_2_7_dienoyl_coa
+    3s_7z_3_hydroxytetradec_7_enoyl_coa
+  }
+
+  branch from resorcinol side right {
     resorcinol
     <-> ec_1_10_3_2 [1.10.3.2] +h2o +o2
     3_benzosemiquinone
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +9_n_hydroxy_l_tryptophan +nadp +h2o +h +nadph
-    l_tryptophan
-  }
-
   branch from o2 side left {
     o2
-    <-> . +stipitaldehydate +nadp +h2o +h +nadph
-    stipitalide
+    <-> . +4_hydroxytetracenomycin_a2 +h2o
+    tetracenomycin_a2_epoxyquinone
   }
 
-  branch from nadph side right {
-    nadph
-    <-> .
-    2_hydro_nadp
+  branch from o2 side right {
+    o2
+    <-> . +lycorine +nadp +h2o +h +nadph
+    caranine
   }
 
   branch from nadph side left {
     nadph
-    <-> .
-    6_hydro_nadp
+    <-> ec_1_3_1_111 [1.3.1.111] +h +geranylgeranyl_bacteriochlorophyllide_b +nadp
+    bacteriochlorophyll_b
+  }
+
+  branch from nadph side right {
+    nadph
+    <-> ec_1_14_13_237 [1.14.13.237] +glucoiberverin +h +o2 +nadp +h2o
+    glucoiberin
   }
 }

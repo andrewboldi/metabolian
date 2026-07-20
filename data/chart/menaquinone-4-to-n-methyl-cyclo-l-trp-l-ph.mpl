@@ -48,13 +48,13 @@ pathway menaquinone-4-to-n-methyl-cyclo-l-trp-l-ph "menaquinone-4 to N-Methyl-cy
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +histamine +coa
-    n_acetylhistamine
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_4_dichlorobenzene +o2 +nad
+    3_6_dichloro_cis_cyclohexa_3_5_diene_1_2_diol
   }
 
   branch from h side left {
     h
-    <-> ec_3_2_2_8 [3.2.2.8] +pyrimidine +d_ribose +h2o
-    pyrimidine_nucleoside
+    <-> . +nadh +ethylbenzene +o2 +nad
+    cis_1_2_dihydro_3_ethylcatechol
   }
 }

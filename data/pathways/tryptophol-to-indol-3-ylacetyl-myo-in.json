@@ -205,21 +205,12 @@
       }
     },
     {
-      "id": "atp",
-      "name": "ATP",
-      "formula": "C10H12N5O13P3",
-      "charge": -4,
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:30616"
-      }
-    },
-    {
-      "id": "coa",
-      "name": "Coenzyme A (CoA-SH)",
-      "formula": "C21H32N7O16P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:57287"
+        "chebi": "CHEBI:57292"
       }
     },
     {
@@ -232,21 +223,12 @@
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:30031"
       }
     },
     {
@@ -269,24 +251,6 @@
       }
     },
     {
-      "id": "r_amygdalin",
-      "name": "(R)-amygdalin",
-      "formula": "C20H27NO11",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17019"
-      }
-    },
-    {
-      "id": "r_prunasin",
-      "name": "(R)-prunasin",
-      "formula": "C14H17NO6",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17396"
-      }
-    },
-    {
       "id": "d_glucono_1_5_lactone",
       "name": "D-glucono-1,5-lactone",
       "short": "D-glucono-1,5-lacto…",
@@ -294,6 +258,26 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16217"
+      }
+    },
+    {
+      "id": "d_glucopyranose_1_phosphate",
+      "name": "D-glucopyranose 1-phosphate",
+      "short": "D-glucopyranose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57629"
+      }
+    },
+    {
+      "id": "d_glucose_1_6_bisphosphate",
+      "name": "D-glucose 1,6-bisphosphate",
+      "short": "D-glucose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58232"
       }
     }
   ],
@@ -334,10 +318,10 @@
       ]
     },
     {
-      "id": "ec_6_2_1_75",
-      "name": "indoleacetate--CoA ligase",
+      "id": "ec_2_8_3_28",
+      "name": "phenylsuccinyl-CoA transferase",
       "ec": [
-        "6.2.1.75"
+        "2.8.3.28"
       ]
     },
     {
@@ -348,13 +332,6 @@
       ]
     },
     {
-      "id": "ec_3_2_1_117",
-      "name": "amygdalin beta-glucosidase",
-      "ec": [
-        "3.2.1.117"
-      ]
-    },
-    {
       "id": "ec_1_1_1_47",
       "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
       "ec": [
@@ -362,10 +339,10 @@
       ]
     },
     {
-      "id": "ec_1_1_1_118",
-      "name": "glucose 1-dehydrogenase (NAD(+))",
+      "id": "ec_1_1_1_119",
+      "name": "glucose 1-dehydrogenase (NADP(+))",
       "ec": [
-        "1.1.1.118"
+        "1.1.1.119"
       ]
     },
     {
@@ -373,6 +350,20 @@
       "name": "aldose 1-dehydrogenase [NAD(P)(+)]",
       "ec": [
         "1.1.1.359"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_360",
+      "name": "glucose/galactose 1-dehydrogenase",
+      "ec": [
+        "1.1.1.360"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_41",
+      "name": "glucose-1-phosphate phosphodismutase",
+      "ec": [
+        "2.7.1.41"
       ]
     }
   ],
@@ -675,20 +666,16 @@
     },
     {
       "id": "r7",
-      "name": "indoleacetate--CoA ligase",
-      "equation": "(indol-3-yl)acetate + ATP + CoA = (indol-3-yl)acetyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.75",
+      "name": "phenylsuccinyl-CoA transferase",
+      "equation": "(indol-3-yl)acetate + succinyl-CoA = (indol-3-yl)acetyl-CoA + succinate",
+      "ec": "2.8.3.28",
       "substrates": [
         {
           "metabolite": "indole_3_acetate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
+          "metabolite": "succinyl_coa",
           "stoichiometry": 1
         }
       ],
@@ -698,30 +685,26 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
+          "metabolite": "succinate",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_6_2_1_75"
+          "enzyme": "ec_2_8_3_28"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:69715"
+        "rhea": "RHEA:69747"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:69715"
+            "id": "RHEA:69747"
           }
         ]
       }
@@ -777,53 +760,8 @@
     },
     {
       "id": "r9",
-      "name": "amygdalin beta-glucosidase",
-      "equation": "(R)-amygdalin + H2O = (R)-prunasin + D-glucose",
-      "ec": "3.2.1.117",
-      "substrates": [
-        {
-          "metabolite": "r_amygdalin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "r_prunasin",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "glucose",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_2_1_117"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:14177"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14177"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
-      "equation": "D-glucose + NAD(+) = D-glucono-1,5-lactone + NADH + H(+)",
+      "equation": "D-glucose + NADP(+) = D-glucono-1,5-lactone + NADPH + H(+)",
       "ec": "1.1.1.47",
       "substrates": [
         {
@@ -831,7 +769,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nad",
+          "metabolite": "nadp",
           "stoichiometry": 1
         }
       ],
@@ -841,7 +779,7 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadh",
+          "metabolite": "nadph",
           "stoichiometry": 1
         },
         {
@@ -855,16 +793,57 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:14293"
+        "rhea": "RHEA:14405"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14293"
+            "id": "RHEA:14405"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r10",
+      "name": "glucose-1-phosphate phosphodismutase",
+      "equation": "2 D-glucopyranose 1-phosphate = D-glucose 1,6-bisphosphate + D-glucose",
+      "ec": "2.7.1.41",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranose_1_phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 10,
+      "xrefs": {
+        "rhea": "RHEA:16397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16397"
           }
         ]
       }

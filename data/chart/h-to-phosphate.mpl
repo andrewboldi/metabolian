@@ -20,14 +20,14 @@ pathway h-to-phosphate "H to phosphate" {
 
   branch from nadp side left {
     nadp
-    <-> . +h +nadph +2e_4z_7z_decatrienoyl_coa
-    3_7_decadienoyl_coenzyme_a
+    <-> . +h +nadph +isopropylbenzaldehyde
+    2_isopropylbenzyl_alcohol
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +2_4_7_10_13_16_docosahexenoyl_coenzyme_a
-    3_7_10_13_16_docosapentenoyl_coenzyme_a
+    <-> ec_1_11_1_21 [1.11.1.21] +h +nadph +tert_butyl_hydroperoxide +h2o
+    tert_butanol
   }
 
   branch from tetratriacontanal side left {
@@ -38,73 +38,73 @@ pathway h-to-phosphate "H to phosphate" {
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    7_hydroxy_3_alpha_iso_pravastatin
+    <-> . +l_histidine +l_glutamate
+    histidyl_glutamate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    7_ketolithocholate
+    <-> . +l_histidine +l_lysine +h
+    his_his_lys
   }
 
   branch from carbon_monoxide side right {
-    carbon_monoxide
-    <-> . +fadh2 +co2 +h +h2o
-    fad
-  }
-
-  branch from carbon_monoxide side left {
     carbon_monoxide
     <-> . +tetradecanal +h
     tridecane
   }
 
+  branch from carbon_monoxide side left {
+    carbon_monoxide
+    <-> . +docosanal +h
+    henicosane
+  }
+
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +tacrolimus
-    31_o_desmethyl_19_hydroxy_37_39_epoxy_tacrolimus
+    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +h +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone
+    2_polyprenyl_6_methoxy_1_4_benzoquinone
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +o2 +nadph +rosuvastatin +nadp +n_desmethyl_rosuvastatin
-    h2o2
+    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +ubiquinone_2
+    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    acetylcholine
+    <-> . +l_histidine +l_lysine +l_valine +h2o
+    his_lys_val
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    acetaminophen_glutathione_conjugate
+    histamine
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    acetaminophen_o_d_glucosiduronate
+    4_amino_5_hydroxymethyl_2_methylpyrimidine
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    4_acetamidophenol
+    tridecanoate
   }
 
   branch from phosphate side right {
     phosphate
     <-> . +h +adp +atp +h2o
-    r_adrenaline
+    cis_tetradec_7_enoic_acid
   }
 
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    agmatine
+    5z_tetradecenoate
   }
 }

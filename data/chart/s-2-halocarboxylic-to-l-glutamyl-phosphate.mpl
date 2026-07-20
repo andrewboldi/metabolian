@@ -44,26 +44,26 @@ pathway s-2-halocarboxylic-to-l-glutamyl-phosphate "(S)-2-halocarboxylic… to L
 
   branch from hydroquinones side left {
     hydroquinones
-    <-> ec_1_10_5_1 [1.10.5.1] +1_d_ribofuranosyl_1_4_dihydronicotinamide +1_4_benzoquinones +hplus
-    n_ribosylnicotinamide
-  }
-
-  branch from hydroquinones side right {
-    hydroquinones
     <-> ec_1_1_5_8 [1.1.5.8] +quinate +1_4_benzoquinones
     3_dehydroquinate
   }
 
+  branch from hydroquinones side right {
+    hydroquinones
+    <-> ec_1_5_5_2 [1.5.5.2] +l_proline +1_4_benzoquinones +hplus
+    s_1_pyrroline_5_carboxylate
+  }
+
   branch from l_glutamic_5_semialdehyde side left {
     l_glutamic_5_semialdehyde
-    <-> ec_1_2_1_88 [1.2.1.88] +nad +h2o +nadh +hplus
-    glutamate
+    <-> . +2_acetamido_5_oxopentanoate +h2o
+    acetate
   }
 
   branch from l_glutamic_5_semialdehyde side right {
     l_glutamic_5_semialdehyde
-    <-> . +2_acetamido_5_oxopentanoate +h2o
-    acetate
+    <-> . +atp +nadph +hplus +adp +pi +nadp
+    glutamate
   }
 
   branch from l_amino_acid side left {

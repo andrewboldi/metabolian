@@ -26,13 +26,13 @@ pathway 17-o-acetylnorajmaline-to-d-glucopyranose "17-O-acetylnorajmaline to D-g
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_108 [3.2.1.108] +lactose +h2o
-    d_galactose
+    <-> ec_1_1_3_10 [1.1.3.10] +o2 +h2o2
+    2_dehydro_d_glucopyranose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_3_10 [1.1.3.10] +o2 +h2o2
-    2_dehydro_d_glucopyranose
+    <-> ec_2_4_1_230 [2.4.1.230] +d_glcp_1_2_d_glcp +pi
+    d_glucose_1_phosphate
   }
 }

@@ -18,14 +18,14 @@ pathway udp-to-gibberellin-a6 "UDP to gibberellin A6" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +pelargonidin_5_o_beta_d_glucoside_3_o_beta_d_sam +h
-    pelargonidin_3_o_beta_d_sambubioside
+    <-> ec_2_4_1_293 [2.4.1.293] +udp +n_acetylgalactosaminyl_2_glucosyl_n_acetylgalac +h
+    n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_295 [2.4.1.295] +udp +delphinidin_5_o_d_glucoside_3_o_d_sambubioside +h
-    delphinidin_3_o_d_sambubioside
+    <-> ec_2_4_1_293 [2.4.1.293] +udp +h +n_acetylgalactosaminyl_5_n_n_diacetylbacillosam
+    n_acetylgalactosaminyl_2_glucosaminyl_n_acetylg
   }
 
   branch from lsm_6641 side left {
@@ -36,61 +36,61 @@ pathway udp-to-gibberellin-a6 "UDP to gibberellin A6" {
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> ec_1_14_11_70 [1.14.11.70] +o2 +deoxycylindrospermopsin +co2 +succinate
-    cylindrospermopsin
+    <-> . +nadh +succinyl_coa +co2 +nad
+    coa
   }
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> . +formaldehyde +co2 +succinate +n_methyl_argininium_1 +h +o2
-    n_n_dimethyl_l_argininyl
+    <-> . +nadh +co2 +nad
+    d_threo_isocitrate
   }
 
   branch from o2 side right {
     o2
-    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
-    h2o2
+    <-> ec_1_10_3_10 [1.10.3.10] +ubiquinol_2 +h2o
+    ubiquinone_2
   }
 
   branch from o2 side left {
     o2
-    <-> . +6z_9z_12z_octadecatrienoyl_coa +h2o2
-    2e_6z_9z_12z_octadecatetraenoyl_coa
+    <-> ec_1_14_13_141 [1.14.13.141] +nadh +h +cholest_4_en_3_one +nad +h2o
+    26_hydroxycholest_4_en_3_one
   }
 
   branch from co2 side right {
     co2
-    <-> . +malonyl_coa +h +heneicosanoyl_coenzyme_a +3_oxotricosanoyl_coenzyme_a
-    coa
+    <-> . +2_3_4_tribromo_1h_pyrrole +h
+    tribromopyrrole_2_carboxylate
   }
 
   branch from co2 side left {
     co2
-    <-> . +4_6_dioxoheptanoic_acid
-    3_5_dioxooctanedioic_acid
+    <-> . +salinisporamycin_a
+    rifsaliniketal
   }
 
   branch from h side right {
     h
-    <-> . +glyceraldehyde_3_phosphate +h2o +phosphate
-    d_glyceraldehyde
+    <-> . +adp +pitavastatin +phosphate +pitavastatin +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> . +adp +glucuronide_conjugate_of_3_methoxy_acetaminophen +phosphate +glucuronide_conjugate_of_3_methoxy_acetaminophen +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    pitavastatin_m3
   }
 
   branch from succinate side right {
     succinate
-    <-> . +formaldehyde +co2 +n_methyl_argininium_1 +2_oxoglutarate +h +o2
-    n_n_dimethyl_l_arginine
+    <-> . +adp +phosphate +atp +coa
+    succinyl_coa
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +dimboa_beta_d_glucoside +o2 +co2
-    trimboa_beta_d_glucoside
+    <-> ec_1_3_5_1 [1.3.5.1] +ubiquinol_10 +fumarate
+    ubiquinone_10
   }
 }

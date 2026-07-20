@@ -1,0 +1,199 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxoglutarate-to-5-oxo-2-furoyl-coa",
+  "name": "2-oxoglutarate to 5-oxo-2-furoyl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from 2-oxoglutarate to 5-oxo-2-furoyl-CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196315"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "2_oxoglutaryl_coa",
+      "name": "2-Oxoglutaryl-CoA",
+      "formula": "C26H40N7O20P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1370830"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "5_hydroxy_2_furoyl_coa",
+      "name": "5-hydroxy-2-furoyl-CoA",
+      "short": "5-hydroxy-2-furoyl-…",
+      "formula": "C26H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "metanetx": "MNXM727180"
+      }
+    },
+    {
+      "id": "5_oxo_2_furoyl_coa",
+      "name": "5-oxo-2-furoyl-CoA",
+      "formula": "C26H34N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM4393"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196315",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196315"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196315"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR196317",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutaryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "5_hydroxy_2_furoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196317"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196317"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR117900",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_hydroxy_2_furoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_oxo_2_furoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR117900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR117900"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,13 +18,13 @@ pathway s-n-acetyl-1-phenylethy-to-r-1-phenylethanol "(S)-N-acetyl-1-phenylethyâ
 
   branch from alanine side left {
     alanine
-    <-> ec_6_3_2_49 [6.3.2.49] +anticapsin +atp +adp +pi +hplus
-    bacilysin
+    <-> . +ala_thr +h2o
+    threonine
   }
 
   branch from alanine side right {
     alanine
-    <-> . +2s_3s_5r_10r_12s_14s_15r_16r_2_amino_12_16_dime +pyruvate
-    3s_5r_10r_12s_14s_15r_16r_3_5_10_14_15_pentahyd
+    <-> ec_6_3_2_49 [6.3.2.49] +anticapsin +atp +adp +pi +hplus
+    bacilysin
   }
 }

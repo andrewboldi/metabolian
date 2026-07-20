@@ -24,13 +24,13 @@ pathway 17-o-acetylnorajmaline-to-s-adenosyl-l-homocyste "17-O-acetylnorajmaline
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_163 [2.1.1.163] +6_methoxy_2_octaprenyl_1_4_benzoquinone +sam +hplus
-    3_methyl_6_methoxy_2_octaprenyl_1_4_benzoquinone
+    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
+    3_o_l_oleandrosyl_oleandolide
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_165 [2.1.1.165] +iodide +sam
-    iodomethane
+    <-> ec_2_1_1_237 [2.1.1.237] +mycinamicin_iii +sam +hplus
+    mycinamicin_iv
   }
 }

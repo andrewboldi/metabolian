@@ -1,0 +1,359 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucopyranose-to-6-o-phosphonohexopyranose",
+  "name": "D-glucopyranose to 6-o-Phosphonohexopyranose",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-glucopyranose to 6-o-Phosphonohexopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR200525"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:4167"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "plastoquinone_9",
+      "name": "plastoquinone-9",
+      "formula": "C53H80O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732531"
+      }
+    },
+    {
+      "id": "d_glucono_1_5_lactone",
+      "name": "D-glucono-1,5-lactone",
+      "short": "D-glucono-1,5-lacto…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369177"
+      }
+    },
+    {
+      "id": "plastoquinol_9",
+      "name": "plastoquinol-9",
+      "formula": "C53H82O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM6387"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "hexopyranose",
+      "name": "hexopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167473"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "6_o_phosphonohexopyranose",
+      "name": "6-o-Phosphonohexopyranose",
+      "short": "6-o-Phosphonohexopy…",
+      "formula": "C6H13O9P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:182132"
+      }
+    },
+    {
+      "id": "alpha_d_glucose",
+      "name": "alpha-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105027"
+      }
+    },
+    {
+      "id": "ubiquinone_2",
+      "name": "ubiquinone-2",
+      "formula": "C19H26O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46372"
+      }
+    },
+    {
+      "id": "ubiquinol_2",
+      "name": "ubiquinol-2",
+      "formula": "C19H28O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167578"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_2",
+      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
+      "ec": [
+        "1.1.5.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_121",
+      "name": "aldose 1-dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.121"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
+      "ec": "1.1.5.2",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "plastoquinone_9",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "plastoquinol_9",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR200525"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR200525"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aldose 1-dehydrogenase (NAD(+))",
+      "ec": "1.1.1.121",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_121"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR115685"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR115685"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hexokinase",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hexopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "6_o_phosphonohexopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR147879"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147879"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
+      "ec": "1.1.5.2",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR173503"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173503"
+          }
+        ]
+      }
+    }
+  ]
+}

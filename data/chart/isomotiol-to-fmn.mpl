@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isomotiol-to-fmn "isomotiol to FMN" {
-  spacing 164
+  spacing 158
 
   spine at 0,0 {
     isomotiol
@@ -18,13 +18,7 @@ pathway isomotiol-to-fmn "isomotiol to FMN" {
     fuscoatroside
   }
 
-  branch from fmn side left {
-    fmn
-    <-> . +11_deoxycorticosterone +fmnh2 +o2 +h2o +hplus
-    6_hydroxy_11_deoxycorticosterone
-  }
-
-  branch from 3_o_d_glucopyranosyl_2_acetoxyisomotiol side right {
+  branch from 3_o_d_glucopyranosyl_2_acetoxyisomotiol side left {
     3_o_d_glucopyranosyl_2_acetoxyisomotiol
     <-> . +acetyl_coa +coa
     3_o_d_glucopyranosyl_2_hydroxyisomotiol

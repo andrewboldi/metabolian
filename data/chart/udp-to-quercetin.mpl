@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-quercetin "UDP to quercetin" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     udp
@@ -24,33 +24,27 @@ pathway udp-to-quercetin "UDP to quercetin" {
     quercetin_3_o_rhamnoside_7_o_glucoside
   }
 
-  branch from quercetin side right {
-    quercetin
-    <-> ec_2_1_1_267 [2.1.1.267] +s_adenosyl_l_homocysteine +h +isorhamnetin
-    s_s_adenosyl_l_methionine
+  branch from h2o side right {
+    h2o
+    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +h +2_nitrophenol
+    o_nitrophenyl_alpha_d_galactoside
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_11_4 [3.4.11.4] +l_alanine +ala_ala
-    ala_ala_ala
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_1_1_28 [3.1.1.28] +r_carnitine +h +dodecanoate
-    o_lauroyl_l_carnitine
-  }
-
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +calycosin_7_o_d_glucoside
-    calycosin
+    <-> ec_3_1_4_1 [3.1.4.1] +gmp +adenosine +h
+    5_apg_3
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_338 [2.4.1.338] +udp +validienamycin +h
-    1_1_bis_valienamine
+    <-> . +udp +glc_galnac_p_gro_p_mannac_glcnac_pp_undecaprenol +h
+    galnac_p_gro_p_mannac_glcnac_pp_undecaprenol
+  }
+
+  branch from udp_alpha_d_glucose side left {
+    udp_alpha_d_glucose
+    <-> . +udp +glc_galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp +h
+    galnac_p_glc_galnac_p_gro_p_mannac_glcnac_pp_und
   }
 }

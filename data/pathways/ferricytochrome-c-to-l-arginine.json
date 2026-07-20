@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ferricytochrome-c-to-l-arginine",
+  "name": "Ferricytochrome c to L-arginine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from Ferricytochrome c to L-arginine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204396"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ferricytochrome_c",
+      "name": "Ferricytochrome c",
+      "formula": "C42H52FeN8O6S2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1582433"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "ferrocytochrome_c",
+      "name": "Ferrocytochrome C",
+      "formula": "C42H52FeN8O6S2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1582439"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "H2O2",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732620"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM107"
+      }
+    },
+    {
+      "id": "nitric_oxide",
+      "name": "nitric oxide",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107902"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "l_citrulline",
+      "name": "L-citrulline",
+      "formula": "C6H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732471"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "l_arginine",
+      "name": "L-arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM739527"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_39",
+      "name": "nitric-oxide synthase (NADPH)",
+      "ec": [
+        "1.14.13.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204396",
+      "substrates": [
+        {
+          "metabolite": "ferricytochrome_c",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferrocytochrome_c",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204396"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206136",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ferrocytochrome_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ferricytochrome_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitric-oxide synthase (NADPH)",
+      "ec": "1.14.13.39",
+      "substrates": [
+        {
+          "metabolite": "nitric_oxide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_citrulline",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_arginine",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR134221"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR134221"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway geranyl-diphosphate-to-h2o "geranyl diphosphate to H2O" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     gpp
@@ -16,51 +16,39 @@ pathway geranyl-diphosphate-to-h2o "geranyl diphosphate to H2O" {
     6e_8_oxolinalool
   }
 
-  branch from r_linalool side left {
-    r_linalool
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +nad
-    phellandral
-  }
-
-  branch from r_linalool side right {
-    r_linalool
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    2e_geranial
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +fpp +h2o
-    koraiol
+    <-> . +fpp
+    elemene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp +h2o
-    trichobrasilenol
+    <-> . +fpp
+    germacrene_d
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    r_terpineol
+    <-> ec_1_1_1_306 [1.1.1.306] +nadh +h +s_formylbacillithiol
+    s_hydroxymethyl_bacillithiol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    thujan_3_ol
+    <-> . +nadh +h +amarouciaxanthin_a
+    fucoxanthinol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    alpha_d_lyxopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    3_deamino_3_hydroxykanamycin_c
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +2_deoxy_d_galactopyranose +phosphate +2_deoxy_d_galactopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +tobramycin +phosphate +tobramycin
     atp
   }
 }

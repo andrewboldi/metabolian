@@ -18,14 +18,14 @@ pathway 8-amino-8-demethylribofla-to-adp "8-amino-8-demethylribofla… to ADP" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_167 [2.1.1.167] +guanosine_5_monophosphate_1 +sam +hplus
-    2_o_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_188 [2.1.1.188] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_168 [2.1.1.168] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_190 [2.1.1.190] +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from roseoflavin side left {
@@ -48,25 +48,25 @@ pathway 8-amino-8-demethylribofla-to-adp "8-amino-8-demethylribofla… to ADP" {
 
   branch from h side right {
     h
-    <-> . +10_11_dihydro_20_trihydroxy_leukotriene_b4 +h2o
-    20_cooh_10_11_dihydro_ltb4
+    <-> . +inner_core_oligosaccharide_lipid_a_with_kdo_iii +dtdp_beta_l_rhamnose +inner_core_oligosaccharide_lipid_a_e_coli
+    dtdp
   }
 
   branch from h side left {
     h
-    <-> . +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c +h2o +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoate
-    coa
+    <-> . +2s_homocitric_acid +h2o
+    cis_homoaconitate
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    6z_9z_12z_15z_octadecatetraenoyl_coa
+    thioglycolate
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    succinate
+    <-> ec_7_6_2_15 [7.6.2.15] +h +phosphate +atp +h2o
+    thiamine
   }
 }

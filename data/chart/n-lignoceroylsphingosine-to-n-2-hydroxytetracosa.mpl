@@ -46,14 +46,14 @@ pathway n-lignoceroylsphingosine-to-n-2-hydroxytetracosa "N-lignoceroylsphingosi
 
   branch from ppi side left {
     ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    isopimara_8_14_15_diene
+    <-> ec_4_2_3_125 [4.2.3.125] +fpp
+    muurolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +isopimara_8_14_15_diene
-    5_9_10_labda_8_20_13_dien_15_yl_diphosphate
+    <-> ec_4_2_3_126 [4.2.3.126] +fpp
+    muurolene
   }
 
   branch from n_2_hydroxytetracosanoyl_phytosphingosine side left {

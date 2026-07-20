@@ -29,24 +29,24 @@ pathway adp-d-glycero-d-manno-hep-to-adp "ADP-D-glycero-D-manno-hep… to ADP" {
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    7z_octadecenoic_acid
+    sphingomyelin_homo_sapiens
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    linoelaidic_acid
+    <-> . +adp +sphingomyelin_homo_sapiens +phosphate +atp +sphingomyelin_homo_sapiens
+    h2o
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    nonadecanoic_acid
+    <-> ec_7_6_2_11 [7.6.2.11] +h +phosphate +atp +h2o
+    spermine
   }
 
   branch from adp side left {
     adp
     <-> . +h +phosphate +atp +h2o
-    gadoleic_acid
+    paracetamol_sulfate
   }
 }

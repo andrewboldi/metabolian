@@ -201,6 +201,16 @@
       }
     },
     {
+      "id": "n5_hydroxyamino_imino_methyl_l_ornithinium",
+      "name": "N5-[(hydroxyamino)(imino)methyl]-L-ornithinium",
+      "short": "N5-[(hydroxyamino)(…",
+      "formula": "C6H15N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:60107"
+      }
+    },
+    {
       "id": "fmnh2",
       "name": "FMNH2",
       "formula": "C17H21N4O9P",
@@ -219,40 +229,43 @@
       }
     },
     {
-      "id": "l_tryptophan",
-      "name": "L-tryptophan",
-      "formula": "C11H12N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:57912"
-      }
-    },
-    {
-      "id": "1h_indole",
-      "name": "1H-indole",
-      "formula": "C8H7N",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16881"
-      }
-    },
-    {
-      "id": "3r_3_hydroxy_l_aspartate",
-      "name": "(3R)-3-hydroxy-L-aspartate",
-      "short": "3-hydroxy-L-asparta…",
-      "formula": "C4H6NO5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58196"
-      }
-    },
-    {
-      "id": "oxaloacetate",
-      "name": "Oxaloacetate",
-      "formula": "C4H2O5",
+      "id": "2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin",
+      "name": "2,5-diamino-4-hydroxy-6-(5-phosphonatoribosylamino)pyrimidine",
+      "short": "2,5-diamino-4-hydro…",
+      "formula": "C9H14N5O8P",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16452"
+        "chebi": "CHEBI:58614"
+      }
+    },
+    {
+      "id": "5_amino_6_5_phospho_d_ribosylamino_uracil",
+      "name": "5-amino-6-(5-phospho-D-ribosylamino)uracil",
+      "short": "5-amino-6-(5-phosph…",
+      "formula": "C9H13N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58453"
+      }
+    },
+    {
+      "id": "3_5_dibromo_4_oxidobenzonitrile",
+      "name": "3,5-dibromo-4-oxidobenzonitrile",
+      "short": "3,5-dibromo-4-oxido…",
+      "formula": "C7H2Br2NO",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58046"
+      }
+    },
+    {
+      "id": "3_5_dibromo_4_oxidobenzoate",
+      "name": "3,5-dibromo-4-oxidobenzoate",
+      "short": "3,5-dibromo-4-oxido…",
+      "formula": "C7H2Br2O3",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57274"
       }
     }
   ],
@@ -300,24 +313,17 @@
       ]
     },
     {
-      "id": "ec_1_14_14_47",
-      "name": "nitric-oxide synthase (flavodoxin)",
+      "id": "ec_3_5_4_26",
+      "name": "diaminohydroxyphosphoribosylaminopyrimidine deaminase",
       "ec": [
-        "1.14.14.47"
+        "3.5.4.26"
       ]
     },
     {
-      "id": "ec_4_1_99_1",
-      "name": "tryptophanase",
+      "id": "ec_3_5_5_6",
+      "name": "bromoxynil nitrilase",
       "ec": [
-        "4.1.99.1"
-      ]
-    },
-    {
-      "id": "ec_4_3_1_20",
-      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
-      "ec": [
-        "4.3.1.20"
+        "3.5.5.6"
       ]
     }
   ],
@@ -636,27 +642,26 @@
     },
     {
       "id": "r7",
-      "name": "nitric-oxide synthase (flavodoxin)",
-      "equation": "3 reduced [flavodoxin] + 2 L-arginine + 4 O2 = 3 oxidized [flavodoxin] + 2 L-citrulline + 2 nitric oxide + 4 H2O + 5 H(+)",
-      "ec": "1.14.14.47",
+      "name": "2 N(omega)-hydroxy-L-arginine + reduced [flavodoxin] + 2 O2 = oxidized [flavodoxin] + 2...",
+      "equation": "2 N(omega)-hydroxy-L-arginine + reduced [flavodoxin] + 2 O2 = oxidized [flavodoxin] + 2 L-citrulline + 2 nitric oxide + 2 H2O + 3 H(+)",
       "substrates": [
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 3
-        },
-        {
-          "metabolite": "arginine",
+          "metabolite": "n5_hydroxyamino_imino_methyl_l_ornithinium",
           "stoichiometry": 2
         },
         {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "o2",
-          "stoichiometry": 4
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
           "metabolite": "fmn",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "citrulline",
@@ -668,55 +673,50 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 5
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_14_47"
+          "stoichiometry": 3
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:52324"
+        "rhea": "RHEA:52332"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52324"
+            "id": "RHEA:52332"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "tryptophanase",
-      "equation": "L-tryptophan + H2O = indole + pyruvate + NH4(+)",
-      "ec": "4.1.99.1",
+      "name": "diaminohydroxyphosphoribosylaminopyrimidine deaminase",
+      "equation": "2,5-diamino-6-hydroxy-4-(5-phosphoribosylamino)-pyrimidine + H2O + H(+) = 5-amino-6-(5-phospho-D-ribosylamino)uracil + NH4(+)",
+      "ec": "3.5.4.26",
       "substrates": [
         {
-          "metabolite": "l_tryptophan",
+          "metabolite": "2_5_diamino_4_hydroxy_6_5_phosphonatoribosylamin",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1h_indole",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pyruvate",
+          "metabolite": "5_amino_6_5_phospho_d_ribosylamino_uracil",
           "stoichiometry": 1
         },
         {
@@ -726,38 +726,42 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_1_99_1"
+          "enzyme": "ec_3_5_4_26"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:19553"
+        "rhea": "RHEA:21868"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19553"
+            "id": "RHEA:21868"
           }
         ]
       }
     },
     {
       "id": "r9",
-      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
-      "equation": "(3R)-3-hydroxy-L-aspartate = oxaloacetate + NH4(+)",
-      "ec": "4.3.1.20",
+      "name": "bromoxynil nitrilase",
+      "equation": "3,5-dibromo-4-hydroxybenzonitrile + 2 H2O = 3,5-dibromo-4-hydroxybenzoate + NH4(+)",
+      "ec": "3.5.5.6",
       "substrates": [
         {
-          "metabolite": "3r_3_hydroxy_l_aspartate",
+          "metabolite": "3_5_dibromo_4_oxidobenzonitrile",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "oxaloacetate",
+          "metabolite": "3_5_dibromo_4_oxidobenzoate",
           "stoichiometry": 1
         },
         {
@@ -767,20 +771,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_3_1_20"
+          "enzyme": "ec_3_5_5_6"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:19757"
+        "rhea": "RHEA:22100"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:19757"
+            "id": "RHEA:22100"
           }
         ]
       }

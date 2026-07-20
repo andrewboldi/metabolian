@@ -55,24 +55,24 @@ pathway trans-sinapyl-alcohol-to-h2o "trans-sinapyl alcohol to H2O" {
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    thioglycolate
+    glycochenodeoxycholate
   }
 
   branch from atp side right {
     atp
-    <-> ec_7_6_2_15 [7.6.2.15] +h +adp +phosphate +h2o
-    thiamine
+    <-> . +h +adp +phosphate +h2o
+    taurochenodeoxycholate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +18e_20_oxo_20_coa_ltb4
-    20_coa_20_oxo_18r_hydroxyleucotriene_b4
+    <-> . +h +adp +phosphate +atp
+    sulfate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +s_2_carboxy_1_1_h_imidazol_4_yl_ethyl_l_cysteine +nh4
-    s_2_carboxy_1_1h_imidazol_4_yl_ethyl_3_thiolacta
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_hexadecenoate +h +cholesterol
+    cholesteryl_palmitoleate
   }
 }

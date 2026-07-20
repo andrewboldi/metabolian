@@ -191,25 +191,6 @@
       }
     },
     {
-      "id": "2_methylpropanoate",
-      "name": "2-methylpropanoate",
-      "formula": "C4H7O2",
-      "charge": -1,
-      "xrefs": {
-        "metanetx": "MNXM1137660"
-      }
-    },
-    {
-      "id": "2_methylpropanoyl_coa",
-      "name": "2-methylpropanoyl-CoA",
-      "short": "2-methylpropanoyl-C…",
-      "formula": "C25H38N7O17P3S",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM1104531"
-      }
-    },
-    {
       "id": "4_hydroxybutanoate",
       "name": "4-hydroxybutanoate",
       "formula": "C4H7O3",
@@ -226,6 +207,51 @@
       "charge": -4,
       "xrefs": {
         "metanetx": "MNXM2334"
+      }
+    },
+    {
+      "id": "2_oxoglutarate",
+      "name": "2-oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1368744"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_methylaspartate",
+      "name": "2-methylaspartate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM89498"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM13"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
       }
     },
     {
@@ -269,6 +295,13 @@
       "name": "butyrate--acetoacetate CoA-transferase",
       "ec": [
         "2.8.3.9"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_19",
+      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
+      "ec": [
+        "2.6.1.19"
       ]
     },
     {
@@ -489,50 +522,6 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "2_methylpropanoate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_methylpropanoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "acetoacetate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_8_3_9"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "metanetx": "MNXR130262"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "MetaNetX",
-            "id": "MNXR130262"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "butyrate--acetoacetate CoA-transferase",
-      "ec": "2.8.3.9",
-      "substrates": [
-        {
-          "metabolite": "acetoacetyl_coa",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "4_hydroxybutanoate",
           "stoichiometry": 1
         }
@@ -553,7 +542,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "metanetx": "MNXR130269"
       },
@@ -563,6 +552,58 @@
           {
             "db": "MetaNetX",
             "id": "MNXR130269"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
+      "ec": "2.6.1.19",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_methylaspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "metanetx": "MNXR133169"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133169"
           }
         ]
       }

@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "glyceraldehyde-3-phosphate-to-2-deoxy-d-ribose",
+  "name": "glyceraldehyde 3-phosphate to 2-deoxy-D-ribose…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from glyceraldehyde 3-phosphate to 2-deoxy-D-ribose 5-phosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR147144"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glyceraldehyde_3_phosphate",
+      "name": "glyceraldehyde 3-phosphate",
+      "short": "glyceraldehyde 3-P",
+      "formula": "C3H7O6P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1372044"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2r_3_phosphoglycerate",
+      "name": "(2R)-3-phosphoglycerate",
+      "short": "3-phosphoglycerate",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM727604"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_1_5_bisphosphate",
+      "name": "2-deoxy-D-ribose 1,5-bisphosphate",
+      "short": "2-deoxy-D-ribose…",
+      "formula": "C5H12O10P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1107188"
+      }
+    },
+    {
+      "id": "2_deoxy_alpha_d_ribose_1_phosphate",
+      "name": "2-deoxy-alpha-D-ribose 1-phosphate",
+      "short": "2-deoxy-alpha-D-rib…",
+      "formula": "C5H9O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1108138"
+      }
+    },
+    {
+      "id": "glyceric_acid_1_3_biphosphate",
+      "name": "Glyceric acid 1,3-biphosphate",
+      "short": "Glyceric acid…",
+      "formula": "C3H8O10P2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:89363"
+      }
+    },
+    {
+      "id": "2_deoxy_d_ribose_5_phosphate",
+      "name": "2-deoxy-D-ribose 5-phosphate",
+      "short": "2-deoxy-D-ribose 5-P",
+      "formula": "C5H11O7P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732593"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_9",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_106",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": [
+        "2.7.1.106"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_7",
+      "name": "phosphopentomutase",
+      "ec": [
+        "5.4.2.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (NADP(+))",
+      "ec": "1.2.1.9",
+      "substrates": [
+        {
+          "metabolite": "glyceraldehyde_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR147144"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR147144"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": "2.7.1.106",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2r_3_phosphoglycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_alpha_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyceric_acid_1_3_biphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR172729"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR172729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphopentomutase",
+      "ec": "5.4.2.7",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_alpha_d_ribose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_d_ribose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173063"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173063"
+          }
+        ]
+      }
+    }
+  ]
+}

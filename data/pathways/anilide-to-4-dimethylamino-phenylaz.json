@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "anilide-to-4-dimethylamino-phenylaz",
   "name": "anilide to 4-(dimethylamino)phenylaz…",
-  "category": "amino-acid-metabolism",
+  "category": "lipid-metabolism",
   "summary": "A 3-step route from anilide to 4-(dimethylamino)phenylazoxybenzene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -113,24 +113,6 @@
       }
     },
     {
-      "id": "4_aminobenzoate",
-      "name": "4-aminobenzoate",
-      "formula": "C7H6NO2",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:17836"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
-      }
-    },
-    {
       "id": "anthranilate",
       "name": "anthranilate",
       "formula": "C7H6NO2",
@@ -140,23 +122,12 @@
       }
     },
     {
-      "id": "3_sn_phosphatidyl_l_serine",
-      "name": "3-sn-phosphatidyl-L-serine",
-      "short": "3-sn-phosphatidyl-L…",
-      "formula": "C8H11NO10PR2",
-      "charge": -1,
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57262"
-      }
-    },
-    {
-      "id": "sn_glycero_3_phosphoserine",
-      "name": "sn-glycero-3-phosphoserine",
-      "short": "sn-glycero-3-phosph…",
-      "formula": "C6H13NO8P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:64765"
+        "chebi": "CHEBI:16526"
       }
     },
     {
@@ -177,6 +148,26 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:58444"
+      }
+    },
+    {
+      "id": "n_acyl_15_methylhexadecasphinganine",
+      "name": "N-acyl-15-methylhexadecasphinganine",
+      "short": "N-acyl-15-methylhex…",
+      "formula": "C18H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:70845"
+      }
+    },
+    {
+      "id": "15_methylhexadecasphinganine",
+      "name": "15-methylhexadecasphinganine",
+      "short": "15-methylhexadecasp…",
+      "formula": "C17H38NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:70829"
       }
     }
   ],
@@ -369,51 +360,6 @@
     {
       "id": "r4",
       "name": "aminobenzoate decarboxylase",
-      "equation": "4-aminobenzoate + H(+) = aniline + CO2",
-      "ec": "4.1.1.24",
-      "substrates": [
-        {
-          "metabolite": "4_aminobenzoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "aniline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_1_1_24"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:24200"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:24200"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "aminobenzoate decarboxylase",
       "equation": "anthranilate + H(+) = aniline + CO2",
       "ec": "4.1.1.24",
       "substrates": [
@@ -442,7 +388,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:24730"
       },
@@ -457,50 +403,7 @@
       }
     },
     {
-      "id": "r6",
-      "name": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + 2 H2O = sn-glycero-3-phospho-L-serine + 2 ...",
-      "equation": "a 1,2-diacyl-sn-glycero-3-phospho-L-serine + 2 H2O = sn-glycero-3-phospho-L-serine + 2 a carboxylate + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "3_sn_phosphatidyl_l_serine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "sn_glycero_3_phosphoserine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "carboxylic_acid_anion",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:32975"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:32975"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
+      "id": "r5",
       "name": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + 2 H2O = sn-glycero-3-phospho-1D-m...",
       "equation": "a 1,2-diacyl-sn-glycero-3-phospho-(1D-myo-inositol) + 2 H2O = sn-glycero-3-phospho-1D-myo-inositol + 2 a carboxylate + 2 H(+)",
       "substrates": [
@@ -528,7 +431,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:32983"
       },
@@ -538,6 +441,45 @@
           {
             "db": "Rhea",
             "id": "RHEA:32983"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "an N-acyl-15-methylhexadecasphinganine + H2O = 15-methylhexadecasphinganine + a carboxy...",
+      "equation": "an N-acyl-15-methylhexadecasphinganine + H2O = 15-methylhexadecasphinganine + a carboxylate",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_15_methylhexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_methylhexadecasphinganine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:34727"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34727"
           }
         ]
       }

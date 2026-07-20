@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde" {
-  spacing 300
+  spacing 282
 
   spine at 0,0 {
     2_hydroxypropyl_com
@@ -24,14 +24,14 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
 
   branch from h side left {
     h
-    <-> . +isopimara_7_15_diene +o2 +nadph +isopimara_7_15_dienol +h2o
-    nadp
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_5z_17z_3_hydroxyhexatriacontadienoylpante +nadp +nadph
+    o_s_5z_17z_3_oxohexatriacontadienoylpantetheine
   }
 
   branch from h side right {
     h
-    <-> . +3r_6e_nerolidol +o2 +nadph +nadp +e_4_8_dimethyl_1_3_7_nonatriene +h2o
-    buten_2_one
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_27z_3_hydroxyhexatetracontadienoylpan +nadp +nadph
+    o_s_15z_27z_3_oxohexatetracontadienoylpantethein
   }
 
   branch from glutathione side left {
@@ -48,37 +48,19 @@ pathway 2-hydroxypropyl-com-to-formaldehyde "2-hydroxypropyl-CoM to formaldehyde
 
   branch from gsh side left {
     gsh
-    <-> . +nad +nadh +hplus
-    gssg
-  }
-
-  branch from gsh side right {
-    gsh
     <-> . +3_glutathion_s_yl_4_hydroxynonanal
     e_4_hydroxynon_2_enal
   }
 
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +6_methylsalicylate +hydrogen_donor +o2 +hplus +co2 +h2o
-    3_methylcatechol
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +3_methylcatechol +hydrogen_donor +o2 +h2o
-    versicolin
+  branch from sah side right {
+    sah
+    <-> . +4_hydroxy_17_estradiol +sam +hplus
+    4_methoxy_17_estradiol
   }
 
   branch from sah side left {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
-  }
-
-  branch from sah side right {
-    sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> . +4_hydroxyestrone +sam +hplus
+    4_methoxyestrone
   }
 }

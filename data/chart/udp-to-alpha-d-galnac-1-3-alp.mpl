@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway udp-to-alpha-d-galnac-1-3-alp "UDP to alpha-D-GalNAc-(1->3)-alp…" {
-  spacing 322
+  spacing 310
 
   spine at 0,0 {
     udp
@@ -18,26 +18,14 @@ pathway udp-to-alpha-d-galnac-1-3-alp "UDP to alpha-D-GalNAc-(1->3)-alp…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
+    <-> . +udp +apigeninidin_5_o_glucoside +h
+    apigeninidin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    1_3_4_dihydroxyphenyl_3_2_4_6_trihydroxyphenyl_p
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side left {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_8 +h
-    keratan_sulfate_ii_biosynthesis_precursor_7
-  }
-
-  branch from udp_n_acetyl_alpha_d_glucosamine side right {
-    udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +keratan_sulfate_ii_biosynthesis_precursor_3 +h
-    keratan_sulfate_ii_biosynthesis_precursor_2
+    <-> . +udp +cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside
+    cyanidin_3_o_d_xylosyl_1_2_d_galactoside
   }
 
   branch from beta_d_gal_1_3_alpha_d_galnac_1_3_alpha_d_glcnac side left {
@@ -48,13 +36,13 @@ pathway udp-to-alpha-d-galnac-1-3-alp "UDP to alpha-D-GalNAc-(1->3)-alp…" {
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_18_1_2_18_3_digalactosyldiacylglycerol
-    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_1_2_18_3_digalactosyldiacylglycerol
+    1_20_1_2_18_3_monogalactosyldiacylglycerol
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_0_2_18_3_digalactosyldiacylglycerol
-    1_20_0_2_18_3_monogalactosyldiacylglycerol
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +h +1_20_2_2_18_2_digalactosyldiacylglycerol
+    1_20_2_2_18_2_monogalactosyldiacylglycerol
   }
 }

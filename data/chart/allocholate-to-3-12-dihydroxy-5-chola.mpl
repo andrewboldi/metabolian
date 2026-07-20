@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway allocholate-to-3-12-dihydroxy-5-chola "allocholate to 3β,12α-dihydroxy-5β-chola…" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     allocholate
@@ -20,23 +20,5 @@ pathway allocholate-to-3-12-dihydroxy-5-chola "allocholate to 3β,12α-dihydroxy
     allocholoyl_coa
     <-> . +allocholate +allodeoxycholoyl_coa
     allodeoxycholate
-  }
-
-  branch from deoxycholate side right {
-    deoxycholate
-    <-> . +nadp +nadph +hplus
-    12_dehydrodeoxycholate
-  }
-
-  branch from 12_hydroxy_3_oxo_5_cholan_24_oate side left {
-    12_hydroxy_3_oxo_5_cholan_24_oate
-    <-> . +nad +nadh +hplus
-    12_hydroxy_3_oxochola_4_en_24_oate
-  }
-
-  branch from 12_hydroxy_3_oxo_5_cholan_24_oate side right {
-    12_hydroxy_3_oxo_5_cholan_24_oate
-    <-> . +3_oxodeoxycholoyl_coa +h2o +coa
-    h
   }
 }

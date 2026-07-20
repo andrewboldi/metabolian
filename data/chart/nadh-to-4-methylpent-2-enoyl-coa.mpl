@@ -24,26 +24,26 @@ pathway nadh-to-4-methylpent-2-enoyl-coa "NADH to 4-methylpent-2-enoyl-CoA" {
 
   branch from h side right {
     h
-    <-> . +chloride +thiophosgene
-    trichloromethanethiol
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_19z_octatriacontatrienoylpantetheine_4 +nad
+    o_s_7z_19z_octatriacontadienoylpantetheine_4_pho
   }
 
   branch from h side left {
     h
-    <-> . +palustradiene +o2 +nadph +palustradienol +h2o
-    nadp
+    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3_oxoicosanoylpantetheine_4_phosphoryl_l_ser +nadph +nadp
+    o_s_3r_hydroxyicosanoylpantetheine_4_phosphoryl
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2z_4e_2_amino_5_methyl_muconate +h2o
-    2z_4e_2_amino_5_methyl_muconate_semialdehyde
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_7z_hexacosadienoylpantetheine_4_phosphory +h
+    o_s_7z_hexacosenoylpantetheine_4_phosphoryl_l_se
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_3_dichlorobenzene +h +o2
-    1r_2s_3_5_dichlorocyclohexa_3_5_diene_1_2_diol
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +h +o_s_2e_15z_tetratriacontadienoylpantetheine_4_ph
+    o_s_15z_tetratriacontenoylpantetheine_4_phosphor
   }
 
   branch from r_2_hydroxy_4_methylpentanoyl_coa side right {

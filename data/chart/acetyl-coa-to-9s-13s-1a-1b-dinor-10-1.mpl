@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetyl-coa-to-9s-13s-1a-1b-dinor-10-1 "acetyl-CoA to (9S,13S)-1a,1b-dinor-10,1…" {
-  spacing 304
+  spacing 292
 
   spine at 0,0 {
     acetyl_coa
@@ -28,73 +28,61 @@ pathway acetyl-coa-to-9s-13s-1a-1b-dinor-10-1 "acetyl-CoA to (9S,13S)-1a,1b-dino
 
   branch from coa side left {
     coa
-    <-> . +succinyl_coa +propanoyl_coa
-    5_carboxy_2_methyl_3_oxopentanoyl_coa
+    <-> . +acetyl_coa +alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
+    alpha_d_gal_1_6_alpha_d_gal_1_4_beta_d_glc_1_3_a
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_3_20 [2.3.3.20] +octanoyl_coa +h2o +h
-    2r_2_hexyl_3_oxodecanoate
-  }
-
-  branch from 3_oxo_opc4_coa side left {
-    3_oxo_opc4_coa
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +nad
-    3_oxo_2_cis_2_pentenyl_cyclopentane_1_3r_hydroxy
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_6_5_2 [1.6.5.2] +ubiquinol_9 +nadh +h
-    ubiquinone_9
+    <-> . +acetyl_coa +beta_d_galf_1_3_alpha_d_gal_pp_und
+    2_o_acetyl_beta_d_galf_1_3_alpha_d_gal_pp_und
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +2_methoxy_3_methyl_6_all_trans_nonaprenylhydroqu +nadh +h
-    2_nonaprenyl_3_methyl_6_methoxy_1_4_benzoquinone
+    <-> . +nadh +2_hydroxy_5_methylquinone +h
+    2_4_5_trihydroxytoluene
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +mycinamicin_v +phosphate +mycinamicin_v
-    atp
+  branch from nad side right {
+    nad
+    <-> ec_1_1_1_333 [1.1.1.333] +nadh +trans_octacis_decaprenylphospho_beta_d_erythro_p +h
+    trans_octacis_decaprenylphospho_beta_d_arabinofu
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    3_o_l_oleandrosyl_oleandolide
+    <-> . +h +adp +phosphate +atp
+    hexadecanoyl_coa
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nifedipine +h +nadph +nadp +h2o
-    monohydroxylated_nifedipine
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_47 [3.6.3.47] +hexadecanoyl_coa +h +adp +phosphate +hexadecanoyl_coa
+    atp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_100 [1.14.13.100] +25r_cholest_5_en_3beta_7alpha_26_triol +nadp +h2o +h +nadph
-    26_hydroxycholesterol
+    <-> ec_1_13_11_2 [1.13.11.2] +5_chloro_2_hydroxymuconic_semialdehyde
+    4_chlorocatechol
   }
 
-  branch from 3_oxo_opc6_coa side right {
-    3_oxo_opc6_coa
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +nad
-    3_oxo_2_cis_2_pentenyl_cyclopentane_1_3r_hydroxy
+  branch from o2 side right {
+    o2
+    <-> ec_1_13_11_2 [1.13.11.2] +h +4_chlorocatechol
+    5_chloro_2_hydroxymuconic_semialdehyde
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    3_o_l_olivosyl_oleandolide
+    <-> . +adp +phosphate +atp +h2o
+    octadecanoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    oleandolide
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    beta_d_fructose
   }
 }

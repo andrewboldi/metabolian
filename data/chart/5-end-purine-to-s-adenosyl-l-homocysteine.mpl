@@ -34,14 +34,14 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from ppi side right {
     ppi
-    <-> ec_4_6_1_2 [4.6.1.2] +gtp
-    3_5_cyclic_gmp
+    <-> ec_6_2_1_14 [6.2.1.14] +pimelate +atp +coa +amp
+    pimeloyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_59 [2.7.7.59] +l_tyrosine +utp
-    uridylyl_l_tyrosine_1
+    <-> ec_4_2_3_8 [4.2.3.8] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    casbene
   }
 
   branch from 5_n7_methyl_5_triphosphoguanosine_purine_ribonuc side right {
@@ -62,18 +62,6 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
     l_isoaspartate_methyl_ester
   }
 
-  branch from homocysteine side left {
-    homocysteine
-    <-> . +c_terminal_n_glycylaminoethanethioate_1 +o_phosphonato_l_homoserine +h2o +pi
-    c_terminal_gly_gly_1
-  }
-
-  branch from homocysteine side right {
-    homocysteine
-    <-> . +atp +amp +ppi
-    l_homocysteine_thiolactone
-  }
-
   branch from adenosine side left {
     adenosine
     <-> . +dgtp +amp +hplus
@@ -88,14 +76,14 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
 
   branch from thf side left {
     thf
-    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadh +hplus +nad
+    <-> ec_2_1_1_74 [2.1.1.74] +uridine_5_monophosphate_1 +methylene_thf +nadph +hplus +nadp
     5_methyluridine_5_monophosphate_1
   }
 
   branch from thf side right {
     thf
-    <-> . +dump +methylene_thf +h2o
-    5_hydroxymethyluridine_2_deoxy_5_phosphate
+    <-> . +methylene_thf +h2o
+    formaldehyde
   }
 
   branch from methionine side left {
@@ -114,17 +102,5 @@ pathway 5-end-purine-to-s-adenosyl-l-homocysteine "5'-end purine… to S-adenosy
     dimethyl_sulfide
     <-> . +hydrogen_donor +methanethiol +hydrogen_acceptor
     methane
-  }
-
-  branch from 6s_5_methyltetrahydrofolate side right {
-    6s_5_methyltetrahydrofolate
-    <-> ec_1_5_1_20 [1.5.1.20] +nadp +nadph +hplus
-    methylene_thf
-  }
-
-  branch from 6s_5_methyltetrahydrofolate side left {
-    6s_5_methyltetrahydrofolate
-    <-> ec_2_1_1_389 [2.1.1.389] +methyl_co +thf +hplus
-    cobalt
   }
 }

@@ -36,26 +36,26 @@ pathway drosopterin-to-6-1-hydroxy-2-oxopropy "drosopterin to 6-(1'-Hydroxy-2'-o
 
   branch from glutathione side right {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +methylmercury +h
-    methylmercury_s_glutatione
+    <-> ec_2_5_1_18 [2.5.1.18] +dichloroacetate +s_alpha_chlorocarboxymethyl_glutathione
+    chloride
   }
 
   branch from glutathione side left {
     glutathione
-    <-> ec_2_5_1_18 [2.5.1.18] +3z_hex_3_en_1_ol
-    3_glutathion_s_yl_hexan_1_ol
+    <-> ec_2_5_1_18 [2.5.1.18] +h +chloride +4_glutathion_s_yl_fenclorim
+    fenclorim
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_120 [1.14.13.120] +germacra_1_10_4_11_13_trien_12_oate +h +o2 +nadph +h2o
-    costunolide
+    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
+    1s_2s_4r_isodihydrocarveol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +h2o +h +o2 +nadph
-    vetispiradiene
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    neodihydrocarveol
   }
 
   branch from 6_1_hydroxy_2_oxopropyl_tetrahydropterin side right {

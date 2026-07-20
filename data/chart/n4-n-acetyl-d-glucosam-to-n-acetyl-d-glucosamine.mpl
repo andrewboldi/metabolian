@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine…" {
-  spacing 290
+  spacing 284
 
   spine at 0,0 {
     n4_n_acetyl_d_glucosaminyl_l_asparagine
@@ -20,14 +20,14 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from n_acetyl_d_glucosamine side left {
     n_acetyl_d_glucosamine
-    <-> ec_2_4_1_280 [2.4.1.280] +n_n_diacetylchitobiose +pi
-    n_acetyl_d_glucosamine_1_phosphate
+    <-> . +ctp +n_acetyl_d_glucosamine_6_phosphate +hplus
+    cdp
   }
 
   branch from n_acetyl_d_glucosamine side right {
     n_acetyl_d_glucosamine
-    <-> . +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +h2o
-    2_ammonio_2_deoxy_d_glucopyranose
+    <-> . +itp +n_acetyl_d_glucosamine_6_phosphate +hplus
+    idp
   }
 
   branch from l_asparagine side left {
@@ -44,31 +44,25 @@ pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-gluc
 
   branch from n_acetyl_d_glucosamine_6_phosphate side left {
     n_acetyl_d_glucosamine_6_phosphate
-    <-> . +n_acetyl_d_glucosamine +ctp +hplus
-    cdp
+    <-> . +n_acetyl_d_glucosamine +udp +hplus
+    utp
   }
 
-  branch from n_acetyl_d_glucosamine_6_phosphate side right {
-    n_acetyl_d_glucosamine_6_phosphate
-    <-> . +itp +n_acetyl_d_glucosamine +hplus
-    idp
-  }
-
-  branch from glucosamine6p side left {
+  branch from glucosamine6p side right {
     glucosamine6p
     <-> ec_5_4_2_10 [5.4.2.10]
     d_glucosamine_1_phosphate
   }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_3_7_1_1 [3.7.1.1] +oxaloacetate +h2o +hplus
-    oxalate
-  }
-
   branch from acetate side left {
     acetate
-    <-> ec_3_5_1_108 [3.5.1.108] +udp_3_o_3r_3_hydroxytetradecanoyl_n_acetylglucos +h2o
-    udp_3_o_3r_3_hydroxytetradecanoyl_d_glucosamine
+    <-> ec_2_8_3_19 [2.8.3.19] +oxalate +acetyl_coa
+    oxalyl_coa
+  }
+
+  branch from acetate side right {
+    acetate
+    <-> . +1_o_palmityl_2_acetyl_sn_glycerol +h2o +hplus
+    1_o_hexadecyl_sn_glycerol
   }
 }

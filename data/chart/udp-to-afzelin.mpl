@@ -26,14 +26,14 @@ pathway udp-to-afzelin "UDP to afzelin" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_35 [2.4.1.35] +udp +phenyl_beta_d_glucopyranoside +h
-    phenol
+    <-> ec_2_4_1_170 [2.4.1.170] +udp +glycitin +h
+    glycitein
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +sterol_3_beta_d_glucoside
-    3beta_hydroxysterol
+    <-> ec_2_4_1_118 [2.4.1.118] +udp +trans_zeatin_7_beta_d_glucoside +h
+    trans_zeatin
   }
 
   branch from s_s_adenosyl_l_methionine side left {
@@ -50,25 +50,25 @@ pathway udp-to-afzelin "UDP to afzelin" {
 
   branch from dtdp side left {
     dtdp
-    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dttp
-    cytidine
+    <-> . +dtdp_beta_l_rhamnose +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
+    alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +alpha_d_glcnac_1_3_alpha_l_quinac_1_3_alpha_d_gl +dtdp_4_deoxy_4_s_3_hydroxybutanoyl_d_alanyl_amin +h
-    beta_d_qui4n_d_ala_shb_1_6_alpha_d_glcnac_1_3_al
+    <-> . +dtdp_beta_l_rhamnose +alpha_l_rha_1_4_alpha_d_glc_1_3_alpha_d_galnac_p +h
+    alpha_l_rha_1_2_alpha_l_rha_1_4_alpha_d_glc_1_3
   }
 
   branch from h side left {
     h
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +2_4_dinitrophenol
-    2_4_dinitrophenyl_alpha_d_glucopyranoside
+    <-> ec_4_2_1_9 [4.2.1.9] +l_threonate +h2o
+    4_hydroxy_2_oxobutanoic_acid
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_184 [1.1.1.184] +nadh +5_dihydrotestosterone +nad
-    5_androstane_3_17_diol
+    <-> ec_4_2_1_9 [4.2.1.9] +d_erythronate +4_hydroxy_2_oxobutanoic_acid
+    h2o
   }
 }

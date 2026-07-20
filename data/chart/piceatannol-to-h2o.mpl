@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway piceatannol-to-h2o "piceatannol to H2O" {
-  spacing 270
+  spacing 264
 
   spine at 0,0 {
     piceatannol
@@ -16,45 +16,39 @@ pathway piceatannol-to-h2o "piceatannol to H2O" {
     nadp
   }
 
-  branch from trans_resveratrol side left {
-    trans_resveratrol
-    <-> ec_2_3_1_95 [2.3.1.95] +malonyl_coa +trans_4_coumaroyl_coa +h +coa
-    co2
+  branch from o2 side left {
+    o2
+    <-> ec_1_13_11_39 [1.13.11.39] +2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa
+    4_chlorobiphenyl_2_3_diol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +h +nadph +n_1_phenylpropan_2_yl_hydroxylamine +nadp +h2o
-    e_n_1_phenylpropan_2_ylidene_hydroxylamine
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_14_20_12 [1.14.20.12] +2s_3_1h_indol_3_yl_2_isocyanopropanoate +2_oxoglutarate +h +co2 +succinate +h2o
-    3_e_2_isocyanoethenyl_1h_indole
-  }
-
-  branch from nadp side right {
-    nadp
-    <-> . +1s_2s_4r_endo_fenchol +h +nadph
-    1r_4s_fenchone
+    <-> ec_1_13_11_39 [1.13.11.39] +h +4_chlorobiphenyl_2_3_diol
+    2_hydroxy_6_oxo_6_4_chlorophenyl_hexa_2_4_dienoa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +furfural +nadph
-    furfuryl_alcohol
+    <-> ec_1_3_1_77 [1.3.1.77] +pelargonidin +h +nadph
+    epiafzelechin
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany +phosphate +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
-    atp
+  branch from nadp side right {
+    nadp
+    <-> ec_1_3_1_77 [1.3.1.77] +h +nadph +epiafzelechin
+    pelargonidin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    met_ala
+    <-> ec_3_3_2_9 [3.3.2.9] +4_1_5_4_methoxyphenyl_1_3_4_oxadiazole_2_carbon
+    2_4_1_5_4_methoxyphenyl_1_3_4_oxadiazole_2_yl_ox
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +6_dehydro_scb2 +phosphate
+    3s_4r_4_octanoyl_5_oxooxolan_3_yl_methyl_phosph
   }
 }

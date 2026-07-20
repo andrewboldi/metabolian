@@ -20,14 +20,14 @@ pathway 7-9-10-trihydroxy-3-2-ox-to-m-viriditoxin "7,9,10-trihydroxy-3-(2-ox… 
 
   branch from sah side left {
     sah
-    <-> . +l_lysinium +sam +hplus
-    n6_methyl_l_lysinium
+    <-> . +3_4_5_o_trimethylmyricetin_3_7_diolate +sam
+    3_3_4_5_o_tetramethylmyricetin_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +serotonin +sam +hplus
+    5_methoxytryptamine
   }
 
   branch from semiviriditoxin side left {

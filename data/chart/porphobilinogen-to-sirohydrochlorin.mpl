@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway porphobilinogen-to-sirohydrochlorin "porphobilinogen to sirohydrochlorin" {
-  spacing 222
+  spacing 210
 
   spine at 0,0 {
     pbg
@@ -20,28 +20,16 @@ pathway porphobilinogen-to-sirohydrochlorin "porphobilinogen to sirohydrochlorin
     sirohydrochlorin
   }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +5_7_dibromo_l_tryptophan +o2 +glyoxylate
-    5_7_dibromo_indole_3_carbaldehyde
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> . +n_carbamoyl_l_phenylalaninate +h2o +hplus +co2
-    l_phenylalanine
-  }
-
   branch from sah side left {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    desmethylnectriapyrone
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    n4_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +ribonucleotide +sam +hplus
-    2_o_methylribonucleotide_1
+    <-> . +sam +n4_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 
   branch from precorrin_2 side left {

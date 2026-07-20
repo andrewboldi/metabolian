@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-hydroxy-steroid-to-dihydroxyacetone "3β-hydroxy steroid to dihydroxyacetone" {
-  spacing 276
+  spacing 270
 
   spine at 0,0 {
     3_hydroxy_steroid
@@ -18,51 +18,45 @@ pathway 3-hydroxy-steroid-to-dihydroxyacetone "3β-hydroxy steroid to dihydroxya
     dihydroxyacetone
   }
 
-  branch from 3_hydroxysterol_ester side left {
-    3_hydroxysterol_ester
-    <-> . +3_hydroxy_steroid +triglyceride
-    1_3_diglyceride
-  }
-
-  branch from diglyceride side right {
+  branch from diglyceride side left {
     diglyceride
     <-> ec_2_3_1_296 [2.3.1.296] +hydroxy_ultra_long_chain_fatty_acylceramide +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
     linoleoyloxy_o_ultra_long_chain_acylceramide
   }
 
-  branch from diglyceride side left {
+  branch from diglyceride side right {
     diglyceride
     <-> . +n_hydroxyoctacosanoyl_sphingosine +linoleoyl_containing_1_2_3_triacyl_sn_glycerol
     n_linoleoyloxy_octacosanoyl_sphingosine
   }
 
-  branch from monoacylglycerol side right {
+  branch from monoacylglycerol side left {
     monoacylglycerol
     <-> . +h2o +fatty-acid +hplus
     1_3_diacyl_sn_glycerol
   }
 
-  branch from fatty-acid side left {
+  branch from fatty-acid side right {
     fatty-acid
     <-> ec_3_1_1_52 [3.1.1.52] +1_phosphatidyl_1d_myo_inositol +h2o +hplus
     1_acyl_sn_glycero_3_phospho_1d_myo_inositol
   }
 
-  branch from fatty-acid side right {
+  branch from fatty-acid side left {
     fatty-acid
     <-> ec_3_1_1_32 [3.1.1.32] +phosphatidylcholine +h2o +hplus
     2_acyl_sn_glycero_3_phosphocholine
   }
 
-  branch from glycerol side left {
-    glycerol
-    <-> . +1_oleoylglycerol +1_2_dioleoylglycerol
-    triolein
-  }
-
   branch from glycerol side right {
     glycerol
-    <-> . +1_monostearoylglycerol +h2o +hplus
-    octadecanoate
+    <-> . +1_oleoylglycerol +h2o +hplus
+    oleate
+  }
+
+  branch from glycerol side left {
+    glycerol
+    <-> . +h2o +oleate +hplus
+    2_oleoylglycerol
   }
 }

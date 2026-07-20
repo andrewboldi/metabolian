@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trimethylamine-to-sulfate "trimethylamine to sulfate" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     trimethylamine
@@ -18,26 +18,26 @@ pathway trimethylamine-to-sulfate "trimethylamine to sulfate" {
 
   branch from ubiquinol_8 side left {
     ubiquinol_8
-    <-> ec_1_7_99_4 [1.7.99.4] +pmf +nitrite +ubiquinone_8 +h2o +pmf
-    nitrate
-  }
-
-  branch from ubiquinol_8 side right {
-    ubiquinol_8
     <-> . +ubiquinone_8 +d_gluconate
     2_dehydro_d_gluconate
   }
 
+  branch from ubiquinol_8 side right {
+    ubiquinol_8
+    <-> ec_1_8_5_2 [1.8.5.2] +thiosulfate +ubiquinone_8
+    tetrathionate
+  }
+
   branch from h side left {
     h
-    <-> . +fluoride +alpha_d_xylose +h2o
-    alpha_d_xylopyranosyl_fluoride
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_7_dimethyl_2z_6e_octadienoic_acid +nad +h2o
+    neral
   }
 
   branch from h side right {
     h
-    <-> ec_2_5_1_18 [2.5.1.18] +fluoride +s_2_4_dinitrophenyl_glutathione +glutathione
-    1_fluoro_2_4_dinitrobenzene
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +ethylmorphinone +nad
+    ethylmorphine
   }
 
   branch from trimethylamine_n_oxide side left {
@@ -46,69 +46,63 @@ pathway trimethylamine-to-sulfate "trimethylamine to sulfate" {
     nad
   }
 
-  branch from trimethylamine_n_oxide side right {
-    trimethylamine_n_oxide
-    <-> . +trimethylamine +menaquinone_8 +h2o +h
-    menaquinol_8
-  }
-
-  branch from pmf side left {
-    pmf
-    <-> ec_1_18_99_1 [1.18.99.1] +h2 +2_demethylmenaquinone_8
-    2_demethylmenaquinol_8
-  }
-
   branch from pmf side right {
     pmf
     <-> . +d_galactopyranose
     aldehydo_d_galactose
   }
 
-  branch from hydrogen_sulfide side left {
-    hydrogen_sulfide
-    <-> ec_4_4_1_9 [4.4.1.9] +3_cyano_l_alanine +h +hydrogen_cyanide
-    d_cysteine
+  branch from pmf side left {
+    pmf
+    <-> . +o2 +menaquinol +h2o
+    menaquinone_2
   }
 
   branch from hydrogen_sulfide side right {
     hydrogen_sulfide
-    <-> . +acetyl_coa +l_serine +coa +l_cysteine
-    acetate
+    <-> . +h
+    sulfide
   }
 
-  branch from ubiquinone_8 side left {
-    ubiquinone_8
-    <-> ec_1_1_5_8 [1.1.5.8] +l_quinate +ubiquinol_8
-    3_dehydroquinate
+  branch from hydrogen_sulfide side left {
+    hydrogen_sulfide
+    <-> . +dimethylmonothioarsinic_acid +h2o +h
+    dimethylarsinate
   }
 
   branch from ubiquinone_8 side right {
     ubiquinone_8
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +ubiquinol_8 +h
-    1_d_ribofuranosyl_1_4_dihydronicotinamide
+    <-> . +d_alanine +h2o +ubiquinol_8 +nh4
+    pyruvate
   }
 
-  branch from sulfite side left {
-    sulfite
-    <-> . +h +cyanate +h2o +h2o2
-    cyanosulfurous_acid_anion
+  branch from ubiquinone_8 side left {
+    ubiquinone_8
+    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinol_8
+    acetaldehyde
   }
 
   branch from sulfite side right {
     sulfite
-    <-> ec_1_8_4_2 [1.8.4.2] +glutathione_disulfide +h +l_cysteine +s_sulfo_l_cysteine
-    glutathione
+    <-> . +sulfo_aldehydes +h2o +h
+    2e_4z_2_hydroxymuconate
   }
 
-  branch from sulfate side left {
-    sulfate
-    <-> . +3_3_5_triiodo_l_thyronine +h +h2o
-    3_3_5_triiodo_l_thyronine_sulfate
+  branch from sulfite side left {
+    sulfite
+    <-> . +adenosine_3_5_bisphosphate +h +nadp +nadph
+    3_phosphoadenylyl_sulfate
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_20 [3.1.6.20] +s_sulfosulfanyl_l_cysteine_1 +h2o +h
-    3_disulfanyl_l_alanine
+    <-> ec_1_8_3_1 [1.8.3.1] +sulfite
+    o2
+  }
+
+  branch from sulfate side left {
+    sulfate
+    <-> . +d_glca_1_4_d_glcnac6s_1_4_d_glca +h +h2o
+    d_glca2s_1_4_d_glcnac6s_1_4_d_glca
   }
 }

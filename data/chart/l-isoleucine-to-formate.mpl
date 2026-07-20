@@ -22,14 +22,14 @@ pathway l-isoleucine-to-formate "L-isoleucine to formate" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> ec_1_17_99_11 [1.17.99.11] +1_dihydrotestosterone +h2o +hydrogen_donor
-    17_hydroxyandrostan_1_3_dione
+    <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
+    3_3_5_triiodothyronamine
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +17_hydroxyandrostan_1_3_dione +hydrogen_donor
-    1_17_dihydroxyandrostan_3_one
+    <-> . +3_3_diiodothyronamine +iodide +hplus +hydrogen_donor
+    3_3_5_triiodothyronamine
   }
 
   branch from 2_aminobut_2_enoic_acid side left {
@@ -52,19 +52,19 @@ pathway l-isoleucine-to-formate "L-isoleucine to formate" {
 
   branch from nh3 side right {
     nh3
-    <-> . +2s_2_aminobutan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxybutan_2_one
+    <-> . +4_methyl_cyclohexylammonium +nadp +h2o +nadph +hplus
+    4_methylcyclohexanone
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +2_aminopentan_1_ol +nad +h2o +nadh +hplus
-    1_hydroxy_2_pentanone
+    <-> . +2_methylcyclopentammonium +nadp +h2o +nadph +hplus
+    2_methylcyclopentanone
   }
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> . +fad +hplus +fadh2
+    <-> ec_1_3_1_95 [1.3.1.95] +nad +nadh +hplus
     acryloyl_coa
   }
 

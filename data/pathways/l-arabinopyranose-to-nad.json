@@ -1,0 +1,322 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-arabinopyranose-to-nad",
+  "name": "β-L-arabinopyranose to NAD",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from β-L-arabinopyranose to NAD(+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR199107"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:40886"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_arabinopyranose",
+      "name": "β-L-arabinopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40886"
+      }
+    },
+    {
+      "id": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
+      "name": "(3S,4S)-2-(Hydroxymethyl)oxolane-2,3,4-triol",
+      "short": "(3S,4S)-2-(Hydroxym…",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:182416"
+      }
+    },
+    {
+      "id": "beta_l_arabinofuranose",
+      "name": "beta-L-arabinofuranose",
+      "short": "beta-L-arabinofuran…",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM730690"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "l_arabinitol",
+      "name": "L-arabinitol",
+      "formula": "C5H12O5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM740330"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "aldehydo_l_arabinose",
+      "name": "aldehydo-L-arabinose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6182"
+      }
+    },
+    {
+      "id": "l_arabinofuranose",
+      "name": "L-arabinofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:6178"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_1_4",
+      "name": "L-arabinose isomerase",
+      "ec": [
+        "5.3.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
+      "ec": [
+        "1.1.1.21"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_5",
+      "name": "xylose isomerase",
+      "ec": [
+        "5.3.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-arabinose isomerase",
+      "ec": "5.3.1.4",
+      "substrates": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR199107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199107"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-arabinose isomerase",
+      "ec": "5.3.1.4",
+      "substrates": [
+        {
+          "metabolite": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "beta_l_arabinofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR173238"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "beta_l_arabinofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR173232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "L-arabinose isomerase",
+      "ec": "5.3.1.4",
+      "substrates": [
+        {
+          "metabolite": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aldehydo_l_arabinose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR198293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "xylose isomerase",
+      "ec": "5.3.1.5",
+      "substrates": [
+        {
+          "metabolite": "3s_4s_2_hydroxymethyl_oxolane_2_3_4_triol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR199500"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR199500"
+          }
+        ]
+      }
+    }
+  ]
+}

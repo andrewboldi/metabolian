@@ -18,25 +18,25 @@ pathway o-s-3r-hydroxy-9z-he-to-o-pantetheine-4-phospho "O-[S-(3R)-hydroxy-(9Z)-
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +tobramycin +phosphate +tobramycin
-    atp
+    <-> ec_3_2_1_162 [3.2.1.162] +neo_lambda_carratetraose +neo_lambda_carrabiose
+    neo_lambda_carrahexaose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    apramycin
+    <-> . +4_propyl_l_proline +methylsulfanyl_lincosamide
+    n_demethyllincomycin
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +3_sulfopropanoic_acid +h2o
-    3_oxopropane_1_sulfonate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_hydroxyretinal +h
+    all_trans_4_hydroxyretinol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_1_74 [1.3.1.74] +nadh +e_hex_2_enal +h
-    hexanal
+    <-> . +nadh +didemethylasterriquinone_d +h
+    hydrodidemethylasterriquinone_d
   }
 }

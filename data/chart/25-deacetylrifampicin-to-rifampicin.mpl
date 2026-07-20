@@ -18,61 +18,61 @@ pathway 25-deacetylrifampicin-to-rifampicin "25-Deacetylrifampicin to rifampicin
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_galactose +4_methylumbelliferone
-    4_methylumbelliferyl_d_galactoside
+    <-> ec_3_1_1_81 [3.1.1.81] +n_hexanoyl_l_homoserine
+    n_2_oxooxolan_3_yl_hexanamide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_20 [3.1.1.20] +methyl_3_4_5_trihydroxybenzoate +h +methanol
-    3_4_5_trihydroxybenzoate
+    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +phe_gly
+    phe_gly_leu_ala
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +1_ketoacenaphthalene +h
-    1_acenaphthalenol
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +veratrate +h2o
+    3_4_dimethoxybenzaldehyde
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_88 [1.1.1.88] +nadh +3s_3_hydroxy_3_methylglutaryl_coa +h +r_mevaldate
-    coa
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_bromo_1_naphthoate +h +h2o
+    5_bromo_1_naphthaldehyde
   }
 
   branch from h side left {
     h
-    <-> . +3beta_hydroxytibolone +nadp +nadph
-    tibolone
+    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +nadph +nadp
+    aldehydo_d_xylose
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_7_1 [2.7.7.1] +itp +beta_nicotinamide_d_ribonucleotide +nicotinamide_hypoxanthine_dinucleotide
-    diphosphate
+    <-> ec_1_1_1_184 [1.1.1.184] +testosterone +nadph +nadp
+    4_androstenediol
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +3_hydroxyphenylacetate +nadp +h2o +nadph
-    compound_0039020
+    <-> ec_1_1_3_17 [1.1.3.17] +betaine_aldehyde +h2o
+    choline
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_84 [1.14.13.84] +phenyl_butyrate +nadp +h2o +h +nadph
-    butyrophenone
+    <-> ec_1_3_3_6 [1.3.3.6] +2e_9z_octadecadienoyl_coa +h2o2
+    9z_octadecenoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_10 [1.2.1.10] +acetyl_coa +h +nadp +coa
-    acetaldehyde
+    <-> ec_1_1_1_184 [1.1.1.184] +4_hydroxynon_2_enal +nadp +h
+    e_4_oxonon_2_enal
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_151 [1.1.1.151] +21_dehydrocortisol +h +nadp
-    cortisol
+    <-> ec_1_1_1_184 [1.1.1.184] +nadp +h +e_4_oxonon_2_enal
+    4_oxononanal
   }
 }

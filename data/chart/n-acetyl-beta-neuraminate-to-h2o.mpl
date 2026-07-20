@@ -31,13 +31,13 @@ pathway n-acetyl-beta-neuraminate-to-h2o "N-acetyl-beta-neuraminate… to H2O" {
   branch from phosphate side left {
     phosphate
     <-> . +h +adp +atp +h2o
-    12_s_hete
+    9r_10s_9_10_epome
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +h +adp +atp +h2o
-    12s_hydroperoxy_5z_8z_10e_14z_eicosatetraenoate
+    <-> . +h +adp +vernolate +vernolate +h2o
+    atp
   }
 
   branch from cmp_n_acetyl_beta_neuraminate side left {
@@ -54,37 +54,37 @@ pathway n-acetyl-beta-neuraminate-to-h2o "N-acetyl-beta-neuraminate… to H2O" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_2_5_1_32 [2.5.1.32] +all_trans_phytoene
-    prephytoene_diphosphate
+    <-> . +h +lovastatin +amp +atp
+    7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +1r_2s_4r_borneol +h2o
-    bornyl_diphosphate
+    <-> . +h +amp +11z_octadecenoyl_coa +atp +vaccenic_acid
+    coa
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +2z_4e_5_hydroxypenta_2_4_diene_1_2_5_tricarboxy +h +h2o
-    2_hydroxy_5_carboxymethylmuconate_semialdehyde
+    <-> . +nadh +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
+    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_3_99_3 [1.3.99.3] +nadh +2e_tetradecenoyl_coa +h
-    tetradecanoyl_coa
+    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +o2 +3beta_hydroxy_4_4_dimethylsteroid +h2o
+    3beta_hydroxy_4alpha_methylsteroid_4beta_carboxy
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_21 [1.14.13.21] +2s_liquiritigenin +h +o2 +nadph +nadp
-    butin
+    <-> . +l_asparagine +l_aspartate +l_phenylalanine
+    asparaginyl_phenylalanyl_aspartate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_21 [1.14.13.21] +garbanzol +h +o2 +nadph +trans_fustin
-    nadp
+    <-> . +l_asparagine +l_cysteine +l_phenylalanine
+    asparaginyl_phenylalanyl_cysteine
   }
 }

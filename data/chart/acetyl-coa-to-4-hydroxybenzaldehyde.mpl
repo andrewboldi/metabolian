@@ -24,14 +24,14 @@ pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde
 
   branch from coa side right {
     coa
-    <-> . +malonyl_coa +2_naphthyl_d_glucoside
-    2_naphthol_6_o_malonylglucoside
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahyd
+    3_3as_4s_5r_7as_5_hydroxy_7a_methyl_1_oxo_octahy
   }
 
   branch from coa side left {
     coa
-    <-> . +malonyl_coa +1_naphthyl_d_glucoside
-    1_naphthol_6_o_malonylglucoside
+    <-> ec_2_3_1_198 [2.3.1.198] +2_c22_0_dca_lpa +sn_glycerol_3_phosphate
+    22_carboxy_docosanoyl_coa
   }
 
   branch from 3_hydroxy_3_4_hydroxyphenyl_propionyl_coa side right {
@@ -42,13 +42,13 @@ pathway acetyl-coa-to-4-hydroxybenzaldehyde "acetyl-CoA to 4-hydroxybenzaldehyde
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +adonixanthin +o2 +h2o
-    2_3_2_3_tetrahydroxy_beta_beta_caroten_4_one
+    <-> . +nadh +h +methyl_tert_butyl_ether +o2 +h2o
+    tert_butoxymethanol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +3_methyl_pyrroline_5_carboxylate +h
-    4_methyl_proline
+    <-> . +nadh +h +tert_butoxymethanol
+    tert_butyl_formate
   }
 }

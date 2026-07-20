@@ -18,14 +18,14 @@ pathway lycopene-to-decaprenoxanthin "lycopene to decaprenoxanthin" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_212 [4.2.3.212] +fpp +h2o
-    cadinol
+    <-> . +kanamycin_a +gtp
+    4_guanylylkanamycin_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_215 [4.2.3.215] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    araneosene
+    <-> . +kanamycin_a +itp
+    4_inosinylylkanamycin_a
   }
 
   branch from flavuxanthin side left {

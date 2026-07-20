@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid to 3-chloro-cis,cis-muconate" {
-  spacing 258
+  spacing 252
 
   spine at 0,0 {
     cis_acetylacrylic_acid
@@ -28,26 +28,26 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
 
   branch from h2o side right {
     h2o
-    <-> . +7_9_12_octaketide_intermediate_2
-    7_9_12_octaketide_intermediate_3
+    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +h +n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_alany
+    n_acetyl_d_glucosaminyl_n_acetylmuramoyl_l_ala_d
   }
 
   branch from h2o side left {
     h2o
-    <-> . +5_5_dehydrodivanillate +h +o2 +nadph +nadp +5_6_6_trihydroxy_5_methoxy_biphenyl_3_3_dicarbox
-    formaldehyde
+    <-> ec_3_4_19_11 [3.4.19.11] +meso_diaminopimeloyl_alanine +n_acetylmuramoyl_l_ala_d_glu
+    n_acetylmuramoyl_l_ala_d_glu_l_meso_diaminopimel
   }
 
   branch from h side right {
     h
-    <-> . +nadph +tetrachlorocatechol +1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
-    nadp
+    <-> . +nebramine +nadp +nadph
+    4_oxonebramine
   }
 
   branch from h side left {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +tetrachloro_cis_cis_muconic_acid +chloride
-    2_3_5_trichlorodienelactone
+    <-> . +paromomycin_ii
+    paromomycin
   }
 
   branch from 3_chloro_cis_cis_muconate side right {
@@ -90,11 +90,5 @@ pathway cis-acetylacrylic-acid-to-3-chloro-cis-cis-mucon "cis-acetylacrylic acid
     r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
     <-> . +h +chloride +h2o
     maleylacetate
-  }
-
-  branch from 3_chloro_cis_cis_muconate side left {
-    3_chloro_cis_cis_muconate
-    <-> . +o2 +hplus
-    4_chlorocatechol
   }
 }

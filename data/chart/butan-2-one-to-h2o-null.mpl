@@ -26,25 +26,25 @@ pathway butan-2-one-to-h2o-null "butan-2-one to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_83 [3.1.1.83] +3s_6s_6_isopropenyl_3_methyloxepan_2_one
-    5r_6_hydroxy_5_isopropenyl_2_methylhexanoate
+    <-> . +l_lysine +l_arginine
+    arginyl_arginyl_lysine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_185 [1.14.13.185] +10_deoxymethymycin +h +o2 +nadph +nadp
-    neomethymycin
+    <-> . +l_arginine
+    arginyl_arginine
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    coprogen
+    atorvastatin_acid
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    ala_leu
+    <-> . +h +amp +atorvastatin_lactone +atorvastatin_acid
+    diphosphate
   }
 }

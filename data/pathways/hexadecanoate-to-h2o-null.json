@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexadecanoate-to-h2o-null",
+  "name": "hexadecanoate to H2O",
+  "category": "other",
+  "summary": "A 3-step route from hexadecanoate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR205981"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexadecanoate",
+      "name": "hexadecanoate",
+      "formula": "C16H31O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM108"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM66"
+      }
+    },
+    {
+      "id": "lpa_0_0_16_0",
+      "name": "LPA(0:0/16:0)",
+      "formula": "C19H39O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:172651"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
+      "name": "1,2-dihexadecanoyl-sn-glycerol-3-phosphate",
+      "short": "1,2-dihexadecanoyl-…",
+      "formula": "C35H67O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:72859"
+      }
+    },
+    {
+      "id": "cmp",
+      "name": "CMP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1103302"
+      }
+    },
+    {
+      "id": "cdp_dipalmitoyl_sn_glycerol",
+      "name": "CDP-dipalmitoyl-sn-glycerol",
+      "short": "CDP-dipalmitoyl-sn-…",
+      "formula": "C44H79N3O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77190"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_26",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": [
+        "3.6.1.26"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR205981",
+      "substrates": [
+        {
+          "metabolite": "hexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lpa_0_0_16_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR205981"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205981"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206386",
+      "substrates": [
+        {
+          "metabolite": "hexadecanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "lpa_0_0_16_0",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206386"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206386"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "CDP-diacylglycerol diphosphatase",
+      "ec": "3.6.1.26",
+      "substrates": [
+        {
+          "metabolite": "cmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "1_2_dihexadecanoyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_dipalmitoyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR153150"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153150"
+          }
+        ]
+      }
+    }
+  ]
+}

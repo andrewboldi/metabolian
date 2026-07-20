@@ -81,71 +81,49 @@
       }
     },
     {
-      "id": "doxorubicinol",
-      "name": "doxorubicinol",
-      "formula": "C27H31NO11",
+      "id": "2_methylpentanal",
+      "name": "2-Methylpentanal",
+      "formula": "C6H12O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133817"
+        "chebi": "CHEBI:89986"
       }
     },
     {
-      "id": "doxorubicin",
-      "name": "doxorubicin",
-      "formula": "C27H30NO11",
-      "charge": 1,
-      "xrefs": {
-        "metanetx": "MNXM735003"
-      }
-    },
-    {
-      "id": "glyoxal",
-      "name": "glyoxal",
-      "formula": "C2H2O2",
+      "id": "2_methylpentanol",
+      "name": "2-Methylpentanol",
+      "formula": "C6H14O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:34779"
+        "metanetx": "MNXM165977"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
+      "id": "4_bromobenzaldehyde",
+      "name": "4-Bromobenzaldehyde",
+      "formula": "C7H5BrO",
       "charge": 0,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM163679"
       }
     },
     {
-      "id": "glyoxylate",
-      "name": "glyoxylate",
-      "formula": "C2HO3",
-      "charge": -1,
+      "id": "4_bromobenzyl_alcohol",
+      "name": "4-Bromobenzyl alcohol",
+      "short": "4-Bromobenzyl…",
+      "formula": "C7H7BrO",
+      "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM69"
+        "metanetx": "MNXM164289"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_1_1_184",
-      "name": "carbonyl reductase (NADPH)",
+      "id": "ec_1_1_1_21",
+      "name": "aldose reductase",
       "ec": [
-        "1.1.1.184"
-      ]
-    },
-    {
-      "id": "ec_1_1_1_2",
-      "name": "alcohol dehydrogenase (NADP(+))",
-      "ec": [
-        "1.1.1.2"
-      ]
-    },
-    {
-      "id": "ec_1_2_1_49",
-      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
-      "ec": [
-        "1.2.1.49"
+        "1.1.1.21"
       ]
     }
   ],
@@ -278,21 +256,15 @@
     },
     {
       "id": "r4",
-      "name": "carbonyl reductase (NADPH)",
-      "ec": "1.1.1.184",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
       "substrates": [
         {
-          "metabolite": "doxorubicinol",
+          "metabolite": "2_methylpentanal",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "doxorubicin",
+          "metabolite": "h",
           "stoichiometry": 1
         },
         {
@@ -300,51 +272,47 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "2_methylpentanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_1_184"
+          "enzyme": "ec_1_1_1_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR124581"
+        "metanetx": "MNXR130074"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR124581"
+            "id": "MNXR130074"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
-      "ec": "1.2.1.49",
+      "name": "aldose reductase",
+      "ec": "1.1.1.21",
       "substrates": [
         {
-          "metabolite": "glyoxal",
+          "metabolite": "4_bromobenzaldehyde",
           "stoichiometry": 1
         },
-        {
-          "metabolite": "nadp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "glyoxylate",
           "stoichiometry": 1
         },
         {
@@ -352,22 +320,32 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "4_bromobenzyl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
       "catalysts": [
         {
-          "enzyme": "ec_1_2_1_49"
+          "enzyme": "ec_1_1_1_21"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR129351"
+        "metanetx": "MNXR130075"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR129351"
+            "id": "MNXR130075"
           }
         ]
       }

@@ -18,25 +18,25 @@ pathway 12-ethyl-71-71-dihydroxy-to-12-ethyl-8-isobutylb "12-ethyl-71,71-dihydro
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_79 [2.1.1.79] +s_adenosyl_l_homocysteine +h +cyclopropane_phosphatidylglycerol_dihexadec_9_10
-    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
+    <-> ec_2_1_1_352 [2.1.1.352] +s_adenosyl_l_homocysteine +h +noscapine
+    narcotoline
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_133 [2.1.1.133] +s_adenosyl_l_homocysteine +cobalt_precorrin_5 +h
-    cobalt_precorrin_4
+    <-> . +brassinin +s_adenosyl_l_homocysteine +h
+    indol_3_ylmethylcarbamodithiolate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_37 [1.14.13.37] +s_cis_n_methylstylopine +o2 +nadph +nadp
-    protopine
+    <-> . +1_hydroxymidazolam +nadp +h +o2 +nadph
+    midazolam
   }
 
   branch from h2o side right {
     h2o
-    <-> . +dihydrosanguinarine
-    6_hydroxyprotopine
+    <-> . +pravastatin_sodium +h +o2 +nadph +3_alpha_5_beta_dihydroxy_pravastatin_3_alpha5_be
+    nadp
   }
 }

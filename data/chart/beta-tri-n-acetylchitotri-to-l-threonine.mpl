@@ -22,14 +22,14 @@ pathway beta-tri-n-acetylchitotri-to-l-threonine "beta-tri-N-acetylchitotri… t
 
   branch from n_acetyl_d_hexosamine side left {
     n_acetyl_d_hexosamine
-    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +h2o
-    diacetylchitobiose_6_phosphate
+    <-> . +h2o
+    chitin
   }
 
   branch from n_acetyl_d_hexosamine side right {
     n_acetyl_d_hexosamine
-    <-> . +alpha_d_glucosamine_6_phosphate +h2o
-    6_phospho_beta_d_glucosaminyl_1_4_n_acetyl_d_glu
+    <-> . +d_mannopyranose +h2o
+    d_manp_1_4_d_glcpnac
   }
 
   branch from o_n_acetyl_d_glucosaminyl_l_threonine side left {
@@ -40,14 +40,14 @@ pathway beta-tri-n-acetylchitotri-to-l-threonine "beta-tri-N-acetylchitotri… t
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +alpha_l_arabinofuranose +phosphate +alpha_l_arabinofuranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +mycinamicin_vi +phosphate +mycinamicin_vi
     atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    beta_l_arabinofuranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    mycinamicin_v
   }
 
   branch from l_threonine side right {
@@ -58,7 +58,7 @@ pathway beta-tri-n-acetylchitotri-to-l-threonine "beta-tri-N-acetylchitotri… t
 
   branch from l_threonine side left {
     l_threonine
-    <-> ec_2_4_1_41 [2.4.1.41] +udp_n_acetyl_d_galactosamine +udp +hplus
-    o_n_acetyl_d_galactosaminyl_l_threonine
+    <-> . +h2o +amp +hplus
+    o_adenyl_l_threonine_1
   }
 }

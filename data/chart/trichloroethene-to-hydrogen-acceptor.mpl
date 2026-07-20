@@ -18,14 +18,14 @@ pathway trichloroethene-to-hydrogen-acceptor "trichloroethene to hydrogen accept
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo +hydrogen_donor
-    3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
+    clavatol
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +ferroheme_o +h2o +hydrogen_donor
-    fe_ii_heme_i
+    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +nadph +hplus +co2 +nadp +coa +h2o
+    cordypyrone_a
   }
 
   branch from ethene side left {

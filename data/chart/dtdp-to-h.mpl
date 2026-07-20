@@ -30,25 +30,25 @@ pathway dtdp-to-h "dTDP to H" {
 
   branch from dtdp side left {
     dtdp
-    <-> . +dtdp_beta_l_digitoxose +jadomycin_a +h
-    jadomycin_b
+    <-> . +2_o_alpha_l_rhamnosylisoorietin +isoorientin
+    dtdp_beta_l_rhamnose
   }
 
   branch from dtdp side right {
     dtdp
-    <-> . +dtdp_beta_l_rhamnose +spinosyn_tricyclic_macrolactone +h
-    rhamnosyl_tricyclic_spinosyn_pseudoaglycone
+    <-> ec_2_4_1_13 [2.4.1.13] +sucrose +h +keto_d_fructose
+    dtdp_alpha_d_glucose
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_323 [1.1.1.323] +nadh +thujone +nad
-    thujan_3_ol
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_hydroxybutanoyl_l_homoserine +h2o
+    hai_1
   }
 
   branch from h side right {
     h
-    <-> . +o2 +nadph +z_2_methylpropanal_oxime +nadp +h2o
-    2_hydroxy_2_methylpropanenitrile
+    <-> ec_3_1_1_81 [3.1.1.81] +n_3_oxododecanoyl_l_homoserine_lactone +h2o
+    n_3_oxododecanoyl_l_homoserine
   }
 }

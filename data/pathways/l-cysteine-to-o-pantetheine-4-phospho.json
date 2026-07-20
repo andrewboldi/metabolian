@@ -1,0 +1,296 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-cysteine-to-o-pantetheine-4-phospho",
+  "name": "L-cysteine to O-(pantetheine-4'-phospho…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-cysteine residue to O-(pantetheine-4'-phosphoryl)serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:56712"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29950"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_cysteine",
+      "name": "L-cysteine",
+      "formula": "C3H5NOS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29950"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+      "name": "1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol)",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C8H12O10PR2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64716"
+      }
+    },
+    {
+      "id": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
+      "name": "S-1,2-diacyl-sn-glyceryl-L-cysteine",
+      "short": "S-1,2-diacyl-sn-gly…",
+      "formula": "C8H9NO5SR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140658"
+      }
+    },
+    {
+      "id": "sn_glycerol_1_phosphate",
+      "name": "sn-glycerol 1-phosphate",
+      "short": "sn-glycerol 1-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57685"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "dhap",
+      "name": "Dihydroxyacetone phosphate",
+      "short": "Dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57642"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o_s_8_methyl_3_oxononanoylpantetheine_4_phosphor",
+      "name": "O-(S-8-methyl-3-oxononanoylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-8-methyl-3-oxo…",
+      "formula": "C24H41N3O10PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:233603"
+      }
+    },
+    {
+      "id": "4_6_methylheptanoyl_5_oxo_2_5_dihydrofuran_3_yl",
+      "name": "[4-(6-methylheptanoyl)-5-oxo-2,5-dihydrofuran-3-yl]methyl phosphate",
+      "short": "[4-(6-methylheptano…",
+      "formula": "C13H19O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:138604"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_145",
+      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
+      "ec": [
+        "2.5.1.145"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_261",
+      "name": "sn-glycerol-1-phosphate dehydrogenase",
+      "ec": [
+        "1.1.1.261"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphatidylglycerol--prolipoprotein diacylglyceryl transferase",
+      "equation": "L-cysteinyl-[prolipoprotein] + a 1,2-diacyl-sn-glycero-3-phospho-(1'-sn-glycerol) = an S-1,2-diacyl-sn-glyceryl-L-cysteinyl-[prolipoprotein] + sn-glycerol 1-phosphate + H(+)",
+      "ec": "2.5.1.145",
+      "substrates": [
+        {
+          "metabolite": "l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_2_diacyl_sn_glyceryl_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_145"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:56712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sn-glycerol-1-phosphate dehydrogenase",
+      "equation": "sn-glycerol 1-phosphate + NAD(+) = dihydroxyacetone phosphate + NADH + H(+)",
+      "ec": "1.1.1.261",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_261"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "8-methyl-3-oxononanoyl-[ACP] + dihydroxyacetone phosphate = [4-(6-methylheptanoyl)-5-ox...",
+      "equation": "8-methyl-3-oxononanoyl-[ACP] + dihydroxyacetone phosphate = [4-(6-methylheptanoyl)-5-oxo-2H-furan-3-yl]methyl phosphate + holo-[ACP] + H2O",
+      "substrates": [
+        {
+          "metabolite": "o_s_8_methyl_3_oxononanoylpantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_6_methylheptanoyl_5_oxo_2_5_dihydrofuran_3_yl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84115"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84115"
+          }
+        ]
+      }
+    }
+  ]
+}

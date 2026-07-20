@@ -18,13 +18,13 @@ pathway 2-acylphloroglucinol-to-diphosphate "2-acylphloroglucinol to diphosphate
 
   branch from ppi side left {
     ppi
-    <-> . +linoleate +atp +coa +amp
-    linoleoyl_coa
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    ent_manool
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_125 [2.5.1.125] +2_o_3_dimethylflaviolin_7_olate +gpp +hplus
-    7_o_geranyl_2_o_3_dimethylflaviolin
+    <-> . +hexadecanedioate +atp +coa +amp
+    hexadecanedioyl_coa
   }
 }

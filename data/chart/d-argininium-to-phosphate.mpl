@@ -24,61 +24,61 @@ pathway d-argininium-to-phosphate "D-argininium to phosphate" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_365 [2.1.1.365] +d_man3me_1_4_d_man3me +sam +hplus
-    1_3_3_tri_o_methyl_4_mannobiose
+    <-> . +diosmetin_7_olate +sam
+    luteolin_4_7_dimethyl_ether
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    n4_methylcytidine_5_monophosphate_1
+    <-> . +quercetin_7_olate +sam +hplus
+    rhamnetin_3_olate
   }
 
   branch from oxaloacetate side left {
-    oxaloacetate
-    <-> . +n_n_dimethyl_l_argininium +aspartate
-    5_3_3_dimethylguanidino_2_oxopentanoate
-  }
-
-  branch from oxaloacetate side right {
     oxaloacetate
     <-> . +aspartate +pyruvate
     alanine
   }
 
+  branch from oxaloacetate side right {
+    oxaloacetate
+    <-> . +2e_10e_dode_2_10_dicenoyl_coa +h2o +coa +hplus
+    4e_11e_2_hydroxytrideca_4_11_dien_1_2_3_tricarb
+  }
+
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    agarobiose
+    <-> ec_3_6_3_47 [3.6.3.47] +adp +phosphate +atp +h2o
+    tetradecanoyl_coa
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    agarotriose
+    <-> ec_3_2_1_147 [3.2.1.147] +beta_d_glucose +benzylglucosinolate_aglycone +h2o
+    z_glucotropeolin
   }
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    neoagarobiose
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_palmitoleoyl_sn_glycerol_3_phosphate
   }
 
   branch from adp side right {
     adp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +phosphate +atp +h2o
-    neoagarotetraose
+    <-> ec_3_6_3_47 [3.6.3.47] +h +phosphate +atp +h2o
+    decanoyl_coa
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_4_1_230 [2.4.1.230] +alpha_d_glucose +beta_d_glucose_1_phosphate
-    d_glcp_1_2_d_glcp
+    <-> ec_2_4_1_8 [2.4.1.8] +d_maltose +beta_d_glucose
+    beta_d_glucose_1_phosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_4_1_279 [2.4.1.279] +beta_d_glucose_1_phosphate +beta_d_glucose
-    nigerose
+    <-> . +carbamoyl_phosphate +kanamycin_b +h
+    nebramycin_iv
   }
 }

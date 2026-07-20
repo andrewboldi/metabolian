@@ -18,13 +18,13 @@ pathway n-acyl-15-methylhexadecas-to-d-glucopyranose "N-acyl-15-methylhexadecasâ
 
   branch from glucose side left {
     glucose
-    <-> ec_1_1_1_119 [1.1.1.119] +d_glucono_1_4_lactone +h +nadph
-    nadp
+    <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate +h +h2o
+    z_glucobrassicin
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_3_2_1_182 [3.2.1.182] +dimboa +h +h2o
-    dimboa_beta_d_glucoside
+    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
+    ternatin_c5
   }
 }

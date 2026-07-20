@@ -113,42 +113,59 @@
       }
     },
     {
-      "id": "2_deoxycytidine_5_monophosphate_1",
-      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
-      "short": "2'-deoxycytidine…",
-      "formula": "C9H11N3O6P",
-      "charge": -1,
+      "id": "5_methoxytryptamine",
+      "name": "5-methoxytryptamine",
+      "formula": "C11H15N2O",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:85452"
+        "chebi": "CHEBI:166874"
       }
     },
     {
-      "id": "dump",
-      "name": "dUMP",
-      "formula": "C9H10N2O7P",
-      "charge": -1,
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:133902"
+        "chebi": "CHEBI:15379"
       }
     },
     {
-      "id": "cytidine_5_monophosphate_1",
-      "name": "cytidine 5'-monophosphate(1−)",
-      "short": "cytidine 5'-MP(1−)",
-      "formula": "C9H11N3O7P",
-      "charge": -1,
+      "id": "5_methoxyindoleacetaldehyde",
+      "name": "5-Methoxyindoleacetaldehyde",
+      "short": "5-Methoxyindoleacet…",
+      "formula": "C11H11NO2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:82748"
+        "chebi": "CHEBI:166541"
       }
     },
     {
-      "id": "uridine_5_monophosphate_1",
-      "name": "uridine 5'-monophosphate(1−)",
-      "short": "uridine 5'-MP(1−)",
-      "formula": "C9H10N2O8P",
-      "charge": -1,
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:65315"
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "4_ammoniobutyl_3_oxopropyl_azanium",
+      "name": "(4-ammoniobutyl)(3-oxopropyl)azanium",
+      "short": "(4-ammoniobutyl)(3-…",
+      "formula": "C7H18N2O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:183796"
       }
     }
   ],
@@ -165,20 +182,6 @@
       "name": "hydroxymethylpyrimidine kinase",
       "ec": [
         "2.7.1.49"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_38",
-      "name": "single-stranded DNA cytosine deaminase",
-      "ec": [
-        "3.5.4.38"
-      ]
-    },
-    {
-      "id": "ec_3_5_4_35",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "ec": [
-        "3.5.4.35"
       ]
     }
   ],
@@ -318,26 +321,29 @@
     },
     {
       "id": "r4",
-      "name": "single-stranded DNA cytosine deaminase",
-      "equation": "a 2'-deoxycytidine in single-stranded DNA + H2O + H(+) = a 2'-deoxyuridine in single-stranded DNA + NH4(+)",
-      "ec": "3.5.4.38",
+      "name": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
+      "equation": "5-methoxytryptamine + O2 + H2O = 5-methoxyindoleacetaldehyde + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "metabolite": "5_methoxytryptamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "dump",
+          "metabolite": "5_methoxyindoleacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -345,48 +351,46 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_38"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:50948"
+        "rhea": "RHEA:59600"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50948"
+            "id": "RHEA:59600"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "tRNA(cytosine(8)) deaminase",
-      "equation": "cytidine(8) in tRNA + H2O + H(+) = uridine(8) in tRNA + NH4(+)",
-      "ec": "3.5.4.35",
+      "name": "spermidine + O2 + H2O = N-(4-aminobutyl)-3-aminopropanal + H2O2 + NH4(+)",
+      "equation": "spermidine + O2 + H2O = N-(4-aminobutyl)-3-aminopropanal + H2O2 + NH4(+)",
       "substrates": [
         {
-          "metabolite": "cytidine_5_monophosphate_1",
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "uridine_5_monophosphate_1",
+          "metabolite": "4_ammoniobutyl_3_oxopropyl_azanium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
           "stoichiometry": 1
         },
         {
@@ -394,22 +398,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_4_35"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:50964"
+        "rhea": "RHEA:59604"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:50964"
+            "id": "RHEA:59604"
           }
         ]
       }

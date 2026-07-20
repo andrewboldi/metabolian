@@ -22,25 +22,25 @@ pathway n-acetyl-d-hexosamine-to-h2o "N-acetyl-D-hexosamine to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    11z_icos_11_enoic_acid
+    <-> . +l_leucine +l_arginine +l_tryptophan
+    leucyl_tryptophanyl_arginine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    15z_tetracosenoate
+    <-> . +l_leucine +l_tryptophan
+    leucyl_tryptophan
   }
 
   branch from h side left {
     h
     <-> . +adp +phosphate +atp +h2o
-    15_s_hetre
+    15z_tetracosenoate
   }
 
   branch from h side right {
     h
-    <-> . +15_s_hetre +adp +phosphate +15_s_hetre +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    5_guanidino_2_oxopentanoate
   }
 }

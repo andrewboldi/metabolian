@@ -1,0 +1,249 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "arachidonate-to-fmn-32307",
+  "name": "arachidonate to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from arachidonate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32307"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:32395"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "leukotriene_a4",
+      "name": "leukotriene A4",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57463"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "lipoxin_b4",
+      "name": "lipoxin B4",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:67031"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "20_hydroxylipoxin_b4",
+      "name": "20-hydroxylipoxin B4",
+      "formula": "C20H31O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90711"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_34",
+      "name": "arachidonate 5-lipoxygenase",
+      "ec": [
+        "1.13.11.34"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arachidonate 5-lipoxygenase",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + O2 = leukotriene A4 + H2O",
+      "ec": "1.13.11.34",
+      "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin B4",
+      "equation": "2 leukotriene A4 + O2 + 2 H2O = 2 lipoxin B4",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lipoxin_b4",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48588"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48588"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lipoxin B4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin B4 + oxid...",
+      "equation": "lipoxin B4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-lipoxin B4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "lipoxin_b4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxylipoxin_b4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48652"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -18,38 +18,38 @@ pathway 4alpha-carboxy-5alpha-cho-to-nadp "4alpha-carboxy-5alpha-cho… to NADP"
 
   branch from nadh side left {
     nadh
-    <-> . +1_5_anhydro_d_fructose +h +nad
-    1_5_anhydro_d_glucitol
+    <-> ec_1_14_13_230 [1.14.13.230] +h +pentane +o2 +nad +h2o
+    pentan_1_ol
   }
 
   branch from nadh side right {
     nadh
-    <-> .
-    6_hydro_nad
+    <-> . +butanal +o2 +nad +h2o
+    butanoate
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_56 [4.1.1.56] +3_oxopalmitic_acid
-    2_pentadecanone
+    <-> . +hinokiresinol
+    4_coumaryl_4_coumarate
   }
 
   branch from co2 side right {
     co2
-    <-> . +n_o_dimethylhydroxylamine +3_4_dichloroaniline +h2o
-    linuron
+    <-> . +4_coumaryl_4_coumarate
+    7r_trans_hinokiresinol
   }
 
   branch from nadp side left {
     nadp
-    <-> . +l_galactopyranose +h +nadph
-    l_galactono_1_5_lactone
+    <-> ec_1_2_1_84 [1.2.1.84] +h +11e_tetradecen_1_ol +coa +nadph
+    trans_tetradec_11_enoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> . +malonyl_coa +s_methylmalonyl_coa +4_aminobenzoyl_coa +h +nadph +co2 +coa +h2o
-    candicinolide
+    <-> ec_1_2_1_84 [1.2.1.84] +tetradecanoyl_coa +h +nadph +coa
+    tetradecan_1_ol
   }
 
   branch from 5alpha_cholesta_7_24_dien_3beta_ol side left {

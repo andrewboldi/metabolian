@@ -24,14 +24,14 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
 
   branch from succinate side left {
     succinate
-    <-> . +isovaleryl_coa +akg +o2 +co2
-    2_hydroxyisovaleryl_coa
+    <-> . +3_methylnonanoyl_coa +akg +o2 +co2
+    2_hydroxy_3_methylnonanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +heptadecanoyl_coa +akg +o2 +co2
-    2_hydroxyheptadecanoyl_coa
+    <-> . +3_methylundecanoyl_coa +akg +o2 +co2
+    2_hydroxy_3_methylundecanoyl_coa
   }
 
   branch from pentalenolactone_f side left {
@@ -42,37 +42,37 @@ pathway 1-deoxypentalenate-to-h2o "1-deoxypentalenate to H2O" {
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_15 [1.14.15.15] +triol_ca +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_7_12_trihydroxy_5_cholestan_26_oate
+    <-> ec_1_14_19_23 [1.14.19.23] +oleoyl_containing_glycerolipid +di_sulfido_diiron +o2 +hplus +h2o
+    linoleoyl_containing_glycerolipid
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_19_70 [1.14.19.70] +cyclo_l_tyrosyl_l_tyrosyl +di_sulfido_diiron +o2 +hplus +h2o
-    mycocyclosin
+    <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
+    25r_cholest_5_ene_3_26_diol
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    prostaglandin_e1
+    d_ribose
   }
 
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    prostaglandin_e2
+    phytanoyl_coa
   }
 
   branch from h2o side right {
     h2o
-    <-> . +9z_hexadecenoate +pg_16_1_9z_0_0
-    phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1
+    <-> . +prostaglandin_pge2_1_glyceryl_ester +h +glycerol
+    prostaglandin_e2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
-    l_proline
+    <-> . +prostaglandin_pge2_3_glyceryl_ester +h +prostaglandin_e2
+    glycerol
   }
 }

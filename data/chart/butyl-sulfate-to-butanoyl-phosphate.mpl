@@ -18,25 +18,25 @@ pathway butyl-sulfate-to-butanoyl-phosphate "butyl sulfate to butanoyl phosphate
 
   branch from sulfate side left {
     sulfate
-    <-> . +1_3_o_sulfonato_d_galactosyl_ceramide +h2o +hplus
-    galactosylceramide
-  }
-
-  branch from sulfate side right {
-    sulfate
     <-> . +sulfosungeidine_f +hplus
     sungeidine_a
   }
 
+  branch from sulfate side right {
+    sulfate
+    <-> . +sulfosungeidine_e +hplus
+    sungeidine_b
+  }
+
   branch from succinate side left {
     succinate
-    <-> . +n6_n6_dimethyl_l_lysine_1 +akg +o2 +formaldehyde +co2
-    n6_methyl_l_lysinium
+    <-> . +2_oxindole_3_acetate +succinyl_coa
+    2_oxoindol_3_yl_acetyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> . +n6_n6_n6_trimethyl_l_lysine +akg +o2 +formaldehyde +co2
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +2_aminophenyl_succinate +succinyl_coa
+    2_2_aminophenyl_succinyl_coa
   }
 }

@@ -40,38 +40,38 @@ pathway nb-feruloyltryptamine-to-3-4-dimethoxyphenyl-met "Nb-Feruloyltryptamine 
 
   branch from h side right {
     h
-    <-> . +rifamycin_b +nadp +nadph
-    rifamycin_o
+    <-> . +adp +phosphate +atp +h2o
+    alaninamide
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_13_89 [1.14.13.89] +daidzein +o2 +nadph +nadp +h2o
-    2_hydroxydaidzein
+    <-> . +adp +5alpha_pregnane_3_20_dione +phosphate +5alpha_pregnane_3_20_dione +h2o
+    atp
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_84 [1.14.13.84] +4_hydroxyacetophenone +o2 +nadph +h2o
-    4_hydroxyphenylacetate
+    <-> . +dihydroxy_4_cholesten_3_one_7a26 +h +nadph
+    7alpha_26_dihydroxy_5beta_cholestan_3_one
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_85 [1.14.13.85] +6as_11as_2_dimethylallyl_3_6a_9_trihydroxyptero +h +o2 +nadph +h2o
-    glyceollin_ii
+    <-> . +h +nadph +7alpha_26_dihydroxy_5beta_cholestan_3_one
+    25r_5beta_cholestane_3alpha_7alpha_26_triol
   }
 
   branch from coa side right {
     coa
-    <-> . +decanoyl_coa +nadh +acetyl_coa +h +nad +h2o
-    2e_dodecenoyl_coa
+    <-> . +17z_hexacosenoyl_coa +h2o +h
+    17z_hexacosenoate
   }
 
   branch from coa side left {
     coa
-    <-> . +nadh +acetyl_coa +4e_decenoyl_coa +h +nad +h2o
-    2_trans_6_cis_dodeca_2_6_dienoyl_coa
+    <-> . +cis_cis_cis_10_13_16_docosatrienoyl_coa +diphosphate +amp +atp
+    10z_13z_16z_docosatrienoate
   }
 
   branch from e_coniferol side right {

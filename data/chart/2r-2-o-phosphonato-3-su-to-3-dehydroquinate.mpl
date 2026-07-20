@@ -24,20 +24,20 @@ pathway 2r-2-o-phosphonato-3-su-to-3-dehydroquinate "(2R)-2-O-phosphonato-3-suâ€
 
   branch from phosphonatoenolpyruvate side right {
     phosphonatoenolpyruvate
-    <-> ec_2_7_7_105 [2.7.7.105] +gtp +hplus +ppi
-    enolpyruvoyl_2_diphospho_5_guanosine
+    <-> ec_2_7_1_40 [2.7.1.40] +datp +pyruvate +hplus
+    dadp
   }
 
   branch from sulfite side left {
     sulfite
-    <-> . +l_cysteate +hplus
-    2_ammonioprop_2_enoate
+    <-> . +tetra_3_sulfido_tetrairon +taurine +h2o +tetra_3_sulfido_tetrairon +hplus
+    ammonioacetaldehyde
   }
 
   branch from sulfite side right {
     sulfite
-    <-> . +nad +h2o +nadh +hplus
-    h2s
+    <-> . +aliphatic_sulfonate_oxoanion +tetra_3_sulfido_tetrairon +h2o +aldehyde +hplus
+    tetra_3_sulfido_tetrairon
   }
 
   branch from 3_dehydroquinate side left {

@@ -52,8 +52,8 @@ pathway n-acetylneuraminyl-2-8-to-cytidine-5-monophosph "α-N-acetylneuraminyl-(
 
   branch from d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 side left {
     d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
-    <-> . +udp_d_galactose +udp +hplus
-    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
+    <-> . +3_phosphonato_5_adenylyl_sulfate +adenosine_3_5_bismonophosphate +hplus
+    d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4
   }
 
   branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side right {

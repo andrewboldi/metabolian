@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway glycerophosphatidylethano-to-h2o-null "glycerophosphatidylethano… to H2O" {
-  spacing 182
+  spacing 176
 
   spine at 0,0 {
     glycerophosphatidylethanolamine
@@ -18,31 +18,25 @@ pathway glycerophosphatidylethano-to-h2o-null "glycerophosphatidylethano… to H
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    gramicidin_s
+    <-> ec_3_1_3_73 [3.1.3.73] +5_methoxy_6_methylbenzimidazolyl_cobamide_5_phos +phosphate
+    5_methoxy_6_methylbenzimidazolyl_cobamide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    destruxin_b
-  }
-
-  branch from phosphatidylethanolamine_ditetradec_7_enoyl_n_c1 side left {
-    phosphatidylethanolamine_ditetradec_7_enoyl_n_c1
-    <-> . +diphosphate +h +amp +9e_tetradecenoic_acid +atp
-    2_acyl_sn_glycero_3_phosphoethanolamine_n_c14_1
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    concanamycin_a
+    <-> ec_3_1_3_73 [3.1.3.73] +coalpha_alpha_2_methyladenin_9_yl_cobeta_adenosy +phosphate
+    coalpha_alpha_2_methyladenin_7_yl_cobeta_adenosy
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    bafilomycin_a1
+    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
+    alpha_lactose
+  }
+
+  branch from atp side right {
+    atp
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    tetracosanoyl_coa
   }
 }

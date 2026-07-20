@@ -231,33 +231,6 @@
       }
     },
     {
-      "id": "ethanol",
-      "name": "ethanol",
-      "formula": "C2H6O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16236"
-      }
-    },
-    {
-      "id": "iron",
-      "name": "iron",
-      "formula": "Fe",
-      "charge": 3,
-      "xrefs": {
-        "chebi": "CHEBI:29034"
-      }
-    },
-    {
-      "id": "fe2",
-      "name": "Ferrous iron (Fe2+)",
-      "formula": "Fe",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:29033"
-      }
-    },
-    {
       "id": "n1_ethyl_2_deoxyadenosine_5_monophosphate",
       "name": "N1-ethyl-2'-deoxyadenosine 5'-monophosphate",
       "short": "N1-ethyl-2'-deoxyad…",
@@ -305,30 +278,40 @@
       }
     },
     {
-      "id": "ethyl_acetate",
-      "name": "ethyl acetate",
-      "formula": "C4H8O2",
+      "id": "melatonin",
+      "name": "melatonin",
+      "formula": "C13H16N2O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:27750"
+        "chebi": "CHEBI:16796"
       }
     },
     {
-      "id": "n6_acetyl_l_lysine",
-      "name": "N6-acetyl-L-lysine",
-      "formula": "C8H14N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61930"
-      }
-    },
-    {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
+      "id": "5_methoxytryptamine",
+      "name": "5-methoxytryptamine",
+      "formula": "C11H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:166874"
+      }
+    },
+    {
+      "id": "n_acetyl_l_glutaminate",
+      "name": "N-acetyl-L-glutaminate",
+      "short": "N-acetyl-L-glutamin…",
+      "formula": "C7H11N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143879"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
       }
     }
   ],
@@ -387,20 +370,6 @@
       "name": "arginine--pyruvate transaminase",
       "ec": [
         "2.6.1.84"
-      ]
-    },
-    {
-      "id": "ec_3_1_1_113",
-      "name": "ethyl acetate hydrolase",
-      "ec": [
-        "3.1.1.113"
-      ]
-    },
-    {
-      "id": "ec_3_5_1_98",
-      "name": "histone deacetylase",
-      "ec": [
-        "3.5.1.98"
       ]
     }
   ],
@@ -779,49 +748,6 @@
     },
     {
       "id": "r9",
-      "name": "ethanol + 2 Fe(III)-[cytochrome c] = acetaldehyde + 2 Fe(II)-[cytochrome c] + 2 H(+)",
-      "equation": "ethanol + 2 Fe(III)-[cytochrome c] = acetaldehyde + 2 Fe(II)-[cytochrome c] + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "ethanol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "iron",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "acetaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "fe2",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 9,
-      "xrefs": {
-        "rhea": "RHEA:62200"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62200"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r10",
       "name": "an N(1)-ethyl-2'-deoxyadenosine in single-stranded DNA + 2-oxoglutarate + O2 = a 2'-deo...",
       "equation": "an N(1)-ethyl-2'-deoxyadenosine in single-stranded DNA + 2-oxoglutarate + O2 = a 2'-deoxyadenosine in single-stranded DNA + acetaldehyde + succinate + CO2 + H(+)",
       "substrates": [
@@ -861,7 +787,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 10,
+      "pathwayStep": 9,
       "xrefs": {
         "rhea": "RHEA:70451"
       },
@@ -876,13 +802,12 @@
       }
     },
     {
-      "id": "r11",
-      "name": "ethyl acetate hydrolase",
-      "equation": "ethyl acetate + H2O = ethanol + acetate + H(+)",
-      "ec": "3.1.1.113",
+      "id": "r10",
+      "name": "melatonin + H2O = 5-methoxytryptamine + acetate",
+      "equation": "melatonin + H2O = 5-methoxytryptamine + acetate",
       "substrates": [
         {
-          "metabolite": "ethyl_acetate",
+          "metabolite": "melatonin",
           "stoichiometry": 1
         },
         {
@@ -892,46 +817,36 @@
       ],
       "products": [
         {
-          "metabolite": "ethanol",
+          "metabolite": "5_methoxytryptamine",
           "stoichiometry": 1
         },
         {
           "metabolite": "acetate",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_1_1_113"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:58148"
+        "rhea": "RHEA:67208"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58148"
+            "id": "RHEA:67208"
           }
         ]
       }
     },
     {
-      "id": "r12",
-      "name": "histone deacetylase",
-      "equation": "N(6)-acetyl-L-lysyl-[histone] + H2O = L-lysyl-[histone] + acetate",
-      "ec": "3.5.1.98",
+      "id": "r11",
+      "name": "N-acetyl-L-glutamine + H2O = L-glutamine + acetate",
+      "equation": "N-acetyl-L-glutamine + H2O = L-glutamine + acetate",
       "substrates": [
         {
-          "metabolite": "n6_acetyl_l_lysine",
+          "metabolite": "n_acetyl_l_glutaminate",
           "stoichiometry": 1
         },
         {
@@ -941,7 +856,7 @@
       ],
       "products": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "glutamine",
           "stoichiometry": 1
         },
         {
@@ -949,22 +864,17 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_3_5_1_98"
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 12,
+      "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:58196"
+        "rhea": "RHEA:67368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:58196"
+            "id": "RHEA:67368"
           }
         ]
       }

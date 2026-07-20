@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "molybdopterin-adenine-to-diphosphate",
   "name": "molybdopterin adenine… to diphosphate",
-  "category": "amino-acid-metabolism",
+  "category": "nucleotide-metabolism",
   "summary": "A 4-step route from molybdopterin adenine dinucleotide(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -123,42 +123,31 @@
       }
     },
     {
-      "id": "l_tyrosine",
-      "name": "L-tyrosine",
-      "formula": "C9H9NO2",
-      "charge": 0,
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:46858"
+        "chebi": "CHEBI:30616"
       }
     },
     {
-      "id": "o_guanylyl_l_tyrosine_1",
-      "name": "O-guanylyl-L-tyrosine(1−)",
-      "short": "O-guanylyl-L-tyrosi…",
-      "formula": "C19H20N6O9P",
-      "charge": -1,
+      "id": "cyclic_hexaadenylate",
+      "name": "cyclic hexaadenylate",
+      "formula": "C60H66N30O36P6",
+      "charge": -6,
       "xrefs": {
-        "chebi": "CHEBI:138114"
+        "chebi": "CHEBI:142456"
       }
     },
     {
-      "id": "fpp",
-      "name": "trans,trans-Farnesyl diphosphate (FPP)",
-      "short": "trans,trans-Farnesy…",
-      "formula": "C15H25O7P2",
-      "charge": -3,
+      "id": "cyclic_tetraadenylate",
+      "name": "cyclic tetraadenylate",
+      "short": "cyclic tetraadenyla…",
+      "formula": "C40H44N20O24P4",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:175763"
-      }
-    },
-    {
-      "id": "2s_3r_9r_pristinol",
-      "name": "(+)-(2S,3R,9R)-pristinol",
-      "short": "(+)-(2S,3R,9R)-pris…",
-      "formula": "C15H26O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138165"
+        "chebi": "CHEBI:142457"
       }
     }
   ],
@@ -168,20 +157,6 @@
       "name": "molybdenum cofactor guanylyltransferase",
       "ec": [
         "2.7.7.77"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_n6",
-      "name": "guanine phosphate-protein transferase",
-      "ec": [
-        "2.7.7.n6"
-      ]
-    },
-    {
-      "id": "ec_4_2_3_182",
-      "name": "pristinol synthase",
-      "ec": [
-        "4.2.3.182"
       ]
     }
   ],
@@ -354,90 +329,70 @@
     },
     {
       "id": "r5",
-      "name": "guanine phosphate-protein transferase",
-      "equation": "L-tyrosyl-[protein] + GTP = O-(5'-guanylyl)-L-tyrosyl-[protein] + diphosphate",
-      "ec": "2.7.7.n6",
+      "name": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
+      "equation": "6 ATP = cyclic hexaadenylate + 6 diphosphate",
       "substrates": [
         {
-          "metabolite": "l_tyrosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gtp",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 6
         }
       ],
       "products": [
         {
-          "metabolite": "o_guanylyl_l_tyrosine_1",
+          "metabolite": "cyclic_hexaadenylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_7_7_n6"
+          "stoichiometry": 6
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:54296"
+        "rhea": "RHEA:58276"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54296"
+            "id": "RHEA:58276"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "pristinol synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-(2S,3R,9R)-pristinol + diphosphate",
-      "ec": "4.2.3.182",
+      "name": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
+      "equation": "4 ATP = cyclic tetraadenylate + 4 diphosphate",
       "substrates": [
         {
-          "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "metabolite": "atp",
+          "stoichiometry": 4
         }
       ],
       "products": [
         {
-          "metabolite": "2s_3r_9r_pristinol",
+          "metabolite": "cyclic_tetraadenylate",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_4_2_3_182"
+          "stoichiometry": 4
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:54372"
+        "rhea": "RHEA:58280"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54372"
+            "id": "RHEA:58280"
           }
         ]
       }

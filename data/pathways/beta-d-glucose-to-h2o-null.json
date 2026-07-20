@@ -1,0 +1,339 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-glucose-to-h2o-null",
+  "name": "beta-D-glucose to H2O",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from beta-D-glucose to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181994"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_glucose",
+      "name": "beta-D-glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364060"
+      }
+    },
+    {
+      "id": "ubiquinone_8",
+      "name": "ubiquinone-8",
+      "formula": "C49H74O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61683"
+      }
+    },
+    {
+      "id": "d_glucono_1_5_lactone",
+      "name": "D-glucono-1,5-lactone",
+      "short": "D-glucono-1,5-lacto…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1369177"
+      }
+    },
+    {
+      "id": "ubiquinol_8",
+      "name": "ubiquinol-8",
+      "formula": "C49H76O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61682"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "d_allose",
+      "name": "D-allose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM732104"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "d_allopyranose",
+      "name": "D-allopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4093"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM3"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_5_2",
+      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
+      "ec": [
+        "1.1.5.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_121",
+      "name": "aldose 1-dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.121"
+      ]
+    },
+    {
+      "id": "ec_3_6_3_17",
+      "name": "EC 3.6.3.17",
+      "ec": [
+        "3.6.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "quinoprotein glucose dehydrogenase (PQQ, quinone)",
+      "ec": "1.1.5.2",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_8",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinol_8",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181994"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181994"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aldose 1-dehydrogenase (NAD(+))",
+      "ec": "1.1.1.121",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_allose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_121"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR133339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR133339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR118890",
+      "substrates": [
+        {
+          "metabolite": "d_allose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR118890"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR118890"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR152956",
+      "ec": "3.6.3.17",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_allopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR152956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152956"
+          }
+        ]
+      }
+    }
+  ]
+}

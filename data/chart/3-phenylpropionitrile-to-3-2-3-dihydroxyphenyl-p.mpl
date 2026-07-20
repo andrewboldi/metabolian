@@ -24,13 +24,13 @@ pathway 3-phenylpropionitrile-to-3-2-3-dihydroxyphenyl-p "3-phenylpropionitrile 
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_122 [3.5.1.122] +l_glutaminiumyl_group +h2o
-    l_glutamyl_zwitterionic_group
+    <-> . +hco3 +h2o +hplus
+    carbamate
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_21_98_2 [1.21.98.2] +2_iminio_3_indol_3_yl_propanoate +h2o2 +h2o +hplus
-    chromopyrrolate
+    <-> ec_3_5_1_131 [3.5.1.131] +1_carboxybiuret +h2o
+    1_3_dicarboxyurea
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucitol-6-phosphate-to-5-dehydro-d-fructose "D-glucitol 6-phosphate to 5-dehydro-D-fructose" {
-  spacing 210
+  spacing 204
 
   spine at 0,0 {
     d_glucitol_6_phosphate
@@ -14,11 +14,5 @@ pathway d-glucitol-6-phosphate-to-5-dehydro-d-fructose "D-glucitol 6-phosphate t
     keto_l_sorbose
     <-> ec_1_1_3_11 [1.1.3.11] +o2 -h2o2
     5_dehydro_d_fructose
-  }
-
-  branch from d_glucitol side left {
-    d_glucitol
-    <-> ec_1_1_3_40 [1.1.3.40] +o2 +h2o2
-    d_sorbopyranose
   }
 }

@@ -38,14 +38,14 @@ pathway n-methylputrescinium-to-p-coumaroylputrescine "N-methylputrescinium to p
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_156 [2.3.1.156] +2s_2_methylbutanoyl_coa +h +co2 +coa
-    2_2_methylbutanoyl_phloroglucinol
+    <-> ec_2_3_1_199 [2.3.1.199] +decanoyl_coa +h +co2 +coa
+    3_oxododecanoyl_coa
   }
 
   branch from malonyl_coa side right {
     malonyl_coa
-    <-> ec_2_3_1_41 [2.3.1.41] +hexadecanoate +co2 +nadp +coa +h2o +h +nadph
-    acetyl_coa
+    <-> ec_2_3_1_95 [2.3.1.95] +trans_4_coumaroyl_coa +h +co2 +coa
+    trans_resveratrol
   }
 
   branch from 1_methylpyrrolinium side left {
@@ -56,61 +56,61 @@ pathway n-methylputrescinium-to-p-coumaroylputrescine "N-methylputrescinium to p
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +balenine +phosphate +balenine +h2o
-    atp
+    <-> ec_2_7_8_8 [2.7.8.8] +cmp +1_2_distearoyl_sn_glycero_3_phosphoserine +l_serine
+    1_2_dioctadecanoyl_sn_glycero_3_cytidine_5_dipho
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    d_alanyl_r_lactic_acid
+    <-> ec_2_4_1_13 [2.4.1.13] +cdp +sucrose +cdp_alpha_d_glucose
+    beta_d_fructopyranose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    d_alanyl_d_serine
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +h +l_serine
+    2_oxobutanoate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    angiotensin_i_dizwitterion
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_glutamate +h +pyruvate
+    l_threonine
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_8 [1.14.13.8] +h +nadph +n_methyl_n_2s_1_phenylpropan_2_yl_hydroxylamine +z_methyl_oxido_1_phenylpropan_2_ylidene_azanium +h2o
-    nadp
+    <-> ec_1_3_3_4 [1.3.3.4] +protoporphyrin +h2o2
+    protoporphyrinogen_ix
   }
 
   branch from o2 side left {
     o2
-    <-> . +h +nadph +5_methyl_n_4_nitrophenyl_1_oxo_1lambda4_thiophen +nadp +h2o
-    5_methyl_n_4_nitrophenyl_1_1_dioxo_1lambda6_thio
+    <-> ec_1_1_3_29 [1.1.3.29] +h +n_acetyl_d_glucosaminate +h2o2 +h2o
+    n_acetyl_beta_d_glucosamine
   }
 
   branch from putrescine side right {
     putrescine
-    <-> ec_7_6_2_16 [7.6.2.16] +h +phosphate +atp +h2o
-    adp
+    <-> ec_7_6_2_16 [7.6.2.16] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from putrescine side left {
     putrescine
-    <-> . +nadh +h +4_aminobutanal +nad +h2o
-    sym_homospermidine
+    <-> . +hydrogencarbonate +nh4 +h +h2o
+    n_carbamoylputrescine
   }
 
   branch from coa side right {
     coa
-    <-> ec_1_2_1_84 [1.2.1.84] +h +11z_octadecenoyl_coa +nadph +nadp
-    z_octadec_11_enol
+    <-> ec_6_2_1_3 [6.2.1.3] +4e_6_methylhept_4_enoate +atp +adp +phosphate
+    4e_6_methylhept_4_enoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_3_20 [2.3.3.20] +dodecanoyl_coa +h2o +h
-    2r_2_decyl_3_oxotetradecanoate
+    <-> ec_6_2_1_3 [6.2.1.3] +h +7_methyloctanoic_acid +atp +7_methyloctanoyl_coa +phosphate
+    adp
   }
 }

@@ -18,13 +18,13 @@ pathway aldehydo-d-mannose-to-diphosphate "aldehydo-D-mannose… to diphosphate"
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    aristolene
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    z_bisabolene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    1_10_aristolene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    variecoladiene
   }
 }

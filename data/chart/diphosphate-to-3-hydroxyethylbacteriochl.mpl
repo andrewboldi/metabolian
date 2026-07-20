@@ -32,25 +32,25 @@ pathway diphosphate-to-3-hydroxyethylbacteriochl "diphosphate to 3-Hydroxyethylb
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +phenanthrene +o2 +h2o
-    1s_2r_1_2_epoxy_1_2_dihydrophenanthrene
+    <-> . +nadh +alpha_pinene +h +o2 +h2o
+    alpha_pinene_oxide
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +indigo +h
-    leucoindigo
+    <-> ec_1_3_1_87 [1.3.1.87] +nadh +h +3_2_3_dihydroxyphenyl_propanoate
+    3_5s_6r_5_6_dihydroxycyclohexa_1_3_dienyl_propan
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_13_18 [3.4.13.18] +l_aspartate +glycine
-    gly_asp
+    <-> . +diphosphate +h +3_dehydro_amp
+    3_dehydro_atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +gly_ala_ala +alanylalanine
-    glycine
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +methanol +16_epivellosimine
+    co2
   }
 }

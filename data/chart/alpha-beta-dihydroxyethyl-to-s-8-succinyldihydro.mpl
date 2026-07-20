@@ -18,14 +18,14 @@ pathway alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro "alpha,beta-Dihydroxyet
 
   branch from h side left {
     h
-    <-> . +2_oxo_4_phenylbutyric_acid +nadh +co2 +nad
-    3_benzylmalic_acid
+    <-> . +3_chloro_5_fluorocatechol +o2
+    2_chloro_4_fluoromuconate
   }
 
   branch from h side right {
     h
-    <-> . +nadh +d_galactopyranuronic_acid +nad
-    l_galactonic_acid
+    <-> . +4_chloro_2_fluoromuconate +o2
+    3_chloro_6_fluorocatechol
   }
 
   branch from thiamine_diphosphate side left {
@@ -42,26 +42,26 @@ pathway alpha-beta-dihydroxyethyl-to-s-8-succinyldihydro "alpha,beta-Dihydroxyet
 
   branch from dihydroxyacetone side left {
     dihydroxyacetone
-    <-> . +d_glyceraldehyde_3_phosphate
-    keto_d_fructose_6_phosphate
-  }
-
-  branch from dihydroxyacetone side right {
-    dihydroxyacetone
     <-> . +beta_d_fructose_6_phosphate +h
     glyceraldehyde_3_phosphate
   }
 
+  branch from dihydroxyacetone side right {
+    dihydroxyacetone
+    <-> ec_2_2_1_3 [2.2.1.3] +formaldehyde +h +co2
+    3_hydroxypyruvate
+  }
+
   branch from co2 side left {
     co2
-    <-> . +phenanthrene_4_carboxylate
-    phenanthrene_4_5_dicarboxylate
+    <-> ec_1_14_12_13 [1.14.12.13] +nadh +2_bromobenzoate +h +o2 +bromide +nad
+    catechol
   }
 
   branch from co2 side right {
     co2
-    <-> . +4_chrysenecarboxylate
-    4_5_chrysenedicarboxylate
+    <-> . +7_7_dimethyl_2_methylenebicyclo_2_2_1_heptane +o2 +h2o
+    alpha_fenchocamphorone
   }
 
   branch from s_8_succinyldihydrolipoamide side left {

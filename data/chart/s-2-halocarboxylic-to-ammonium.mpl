@@ -50,13 +50,13 @@ pathway s-2-halocarboxylic-to-ammonium "(S)-2-halocarboxylic… to ammonium" {
 
   branch from nh3 side right {
     nh3
-    <-> . +ldopa
-    trans_caffeate
+    <-> ec_3_5_4_15 [3.5.4.15] +guanosine +h2o +hplus
+    xanthosine
   }
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_7 [3.5.4.7] +adp +h2o +hplus
-    idp
+    <-> ec_1_7_2_2 [1.7.2.2] +iron +h2o +fe2 +hplus
+    nitrite
   }
 }

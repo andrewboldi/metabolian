@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
-  spacing 294
+  spacing 288
 
   spine at 0,0 {
     s_reticuline
@@ -22,14 +22,14 @@ pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_212 [2.1.1.212] +s_adenosyl_l_homocysteine +biochanin_a +h
-    genistein
+    <-> ec_2_1_1_129 [2.1.1.129] +s_adenosyl_l_homocysteine +h +1d_6_o_methyl_myo_inositol
+    myo_inositol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_demethylstaurosporine
-    o_demethyl_n_demethyl_staurosporine
+    <-> ec_2_1_1_65 [2.1.1.65] +s_adenosyl_l_homocysteine +h +2_o_methyllicodione
+    licodione
   }
 
   branch from s_norlaudanosoline side left {
@@ -40,44 +40,32 @@ pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
 
   branch from 3_4_dihydroxyphenylacetaldehyde side right {
     3_4_dihydroxyphenylacetaldehyde
-    <-> . +h +nadph +nadp
-    hydroxytyrosol
-  }
-
-  branch from 3_4_dihydroxyphenylacetaldehyde side left {
-    3_4_dihydroxyphenylacetaldehyde
     <-> ec_1_2_1_5 [1.2.1.5] +nadp +h2o +h +nadph
     3_4_dihydroxyphenylacetate
   }
 
-  branch from dopamine side right {
+  branch from dopamine side left {
     dopamine
     <-> ec_1_14_17_1 [1.14.17.1] +l_dehydroascorbic_acid +r_noradrenaline +h2o +h +o2
     l_ascorbate
   }
 
-  branch from dopamine side left {
+  branch from dopamine side right {
     dopamine
     <-> . +h +adp +phosphate +h2o
     atp
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_5_1_11 [3.5.1.11] +7_amino_8_oxo_3_pyridin_1_ium_1_ylmethyl_5_thia +thien_2_ylacetate +h2o
-    cefaloridine
-  }
-
   branch from h side left {
     h
-    <-> ec_3_1_4_1 [3.1.4.1] +4_nitrophenyl_phosphate +choline +h2o
-    p_nitrophenylphosphocholine
+    <-> ec_1_1_1_21 [1.1.1.21] +nadh +compound_0066905 +nad
+    p_fluorobenzyl_alcohol
   }
 
-  branch from l_dopa side right {
-    l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +5_6_7_8_tetrahydrobiopterin +o2 +l_tyrosine +h2o
-    tetrahydrobiopterin_4a_carbinolamine
+  branch from h side right {
+    h
+    <-> ec_1_1_1_1 [1.1.1.1] +4_methoxybenzyl_alcohol +nad +4_methoxybenzaldehyde
+    nadh
   }
 
   branch from l_dopa side left {
@@ -86,27 +74,33 @@ pathway s-reticuline-to-h2o2 "(S)-reticuline to H2O2" {
     4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob
   }
 
-  branch from 3_phenylpyruvate side right {
+  branch from l_dopa side right {
+    l_dopa
+    <-> ec_1_13_11_30 [1.13.11.30] +h +o2
+    5_l_alanin_3_yl_2_hydroxy_cis_cis_muconate_6_sem
+  }
+
+  branch from 3_phenylpyruvate side left {
     3_phenylpyruvate
     <-> ec_2_6_1_57 [2.6.1.57] +3_4_hydroxyphenyl_pyruvate +l_phenylalanine
     l_tyrosine
   }
 
-  branch from 3_phenylpyruvate side left {
+  branch from 3_phenylpyruvate side right {
     3_phenylpyruvate
     <-> ec_2_6_1_21 [2.6.1.21] +2_oxoglutarate +d_phenylalanine
     d_glutamate
   }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_chloro_anisaldehyde +o2
-    3_chloroanisylalcohol
-  }
-
   branch from h2o2 side left {
     h2o2
-    <-> ec_1_1_3_7 [1.1.3.7] +3_chlorobenzaldehyde +o2
-    3_chlorophenyl_methanol
+    <-> ec_1_1_3_4 [1.1.3.4] +2_deoxy_d_glucose +o2
+    2_deoxy_d_glucono_1_5_lactone
+  }
+
+  branch from h2o2 side right {
+    h2o2
+    <-> ec_1_17_3_2 [1.17.3.2] +2_hydroxy_7_9_dihydropurin_8_one +o2 +h2o
+    2_hydroxypurine
   }
 }

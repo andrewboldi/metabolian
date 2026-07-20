@@ -42,14 +42,14 @@ pathway h-to-3-o-d-xyl-1-3-d-g "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
 
   branch from h2o side left {
     h2o
-    <-> . +z_n_n_but_2_ene_2_3_diyl_diacetamide +acetamide
-    n_3_oxobutan_2_yl_acetamide
+    <-> . +20_hydroxy_13_14_epoxy_prefusarin +nadp +h +o2 +nadph
+    20_hydroxy_prefusarin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_e_2_methylamino_ethenyl_phenol
-    r_synephrine
+    <-> . +20_hydroxy_13_14_epoxy_prefusarin +h +o2 +nadph +nadp
+    20_hydroxy_fusarin
   }
 
   branch from udp_beta_l_rhamnose side left {
@@ -78,26 +78,26 @@ pathway h-to-3-o-d-xyl-1-3-d-g "H to 3-O-{β-D-Xyl-(1→3)-[β-D-G…" {
 
   branch from h side left {
     h
-    <-> . +s_adenosyl_l_homocysteine +l_leucyl_arginomycin +l_leucyl_demethylarginomycin
-    s_adenosyl_l_methionine
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +netilmycin_2_phosphate +netilmicin
+    gtp
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +l_leucyl_blasticidin_s +s_adenosyl_l_methionine
-    l_leucyl_demethyl_blasticidin_s
+    <-> . +9_n_hydroxy_l_tryptophan +nadp +h2o +nadph +l_tryptophan
+    o2
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_3_1_93 [1.3.1.93] +2e_11z_14r_17z_14_hydroxy_icosa_2_11_17_trienoy +h +nadp
-    auricoloyl_coa
+    <-> .
+    2_hydro_nadp
   }
 
   branch from nadph side right {
     nadph
-    <-> . +gdp_6_deoxy_4_keto_d_arabino_heptose +h +nadp
-    gdp_6_deoxy_d_altro_heptose
+    <-> .
+    6_hydro_nadp
   }
 
   branch from udp_alpha_d_xylose side left {

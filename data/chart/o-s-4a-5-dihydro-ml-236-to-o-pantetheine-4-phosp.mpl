@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway o-s-4a-5-dihydro-ml-236-to-o-pantetheine-4-phosp "O-[S-(4a,5-dihydro-ML-236… to O-(pantetheine-4'-phospho…" {
-  spacing 188
+  spacing 176
 
   spine at 0,0 {
     o_s_4a_5_dihydro_ml_236c_carboxy_pantetheine_4_p
@@ -18,18 +18,6 @@ pathway o-s-4a-5-dihydro-ml-236-to-o-pantetheine-4-phosp "O-[S-(4a,5-dihydro-ML-
     mevinic_acid_anion
   }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +2s_3r_methylphenylalanine +atp +amp +ppi
-    o_s_3r_3_methyl_l_phenylalanylpantetheine_4_phos
-  }
-
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_2_3_1_327 [2.3.1.327] +o_s_11_methyldodecanoylpantetheine_4_phosphoryl +l_phenylalanine +hplus
-    n_11_methyldodecanoyl_l_phenylalanine
-  }
-
   branch from ml_236c_carboxylate side left {
     ml_236c_carboxylate
     <-> . +h2o
@@ -38,14 +26,14 @@ pathway o-s-4a-5-dihydro-ml-236-to-o-pantetheine-4-phosp "O-[S-(4a,5-dihydro-ML-
 
   branch from fmn side right {
     fmn
-    <-> . +3_dehydro_6_deoxo_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    3_dehydro_6_hydroxy_28_norteasterone
+    <-> ec_1_14_14_191 [1.14.14.191] +taxa_4_20_11_diene_2_5_7_9_10_13_hexayl_hexaacet +fmnh2 +o2 +h2o +hplus
+    1_dehydroxybaccatin_iv
   }
 
   branch from fmn side left {
     fmn
-    <-> . +3_dehydro_6_hydroxy_28_norteasterone +fmnh2 +o2 +h2o +hplus
-    6_dehydro_28_norteasterone
+    <-> . +taxusin +fmnh2 +o2 +h2o +hplus
+    1_hydroxytaxusin
   }
 
   branch from mevinic_acid_anion side right {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 5-oxo-2-sulfonato-2-5-di-to-3-sulfonatopyruvate "(5-oxo-2-sulfonato-2,5-di… to 3-sulfonatopyruvate" {
-  spacing 238
+  spacing 232
 
   spine at 0,0 {
     5_oxo_2_sulfonato_2_5_dihydrofuran_2_yl_acetate
@@ -32,20 +32,8 @@ pathway 5-oxo-2-sulfonato-2-5-di-to-3-sulfonatopyruvate "(5-oxo-2-sulfonato-2,5-
 
   branch from sulfite side left {
     sulfite
-    <-> . +trioxidosulfanidosulfate +gsh +hplus
-    s_sulfanylglutathionate
-  }
-
-  branch from sulfite side right {
-    sulfite
-    <-> . +tetra_3_sulfido_tetrairon +taurine +h2o +tetra_3_sulfido_tetrairon +hplus
-    ammonioacetaldehyde
-  }
-
-  branch from dag side left {
-    dag
-    <-> . +acyl_coa +coa
-    2_monoglyceride
+    <-> . +isethionate +hydrogen_donor +hydrogen_acceptor +hplus
+    ethanol
   }
 
   branch from dag side right {
@@ -54,19 +42,25 @@ pathway 5-oxo-2-sulfonato-2-5-di-to-3-sulfonatopyruvate "(5-oxo-2-sulfonato-2,5-
     inositol_phosphophytoceramide_t18_0
   }
 
-  branch from 6_sulfo_d_quinovose side left {
+  branch from dag side left {
+    dag
+    <-> . +n_tetracosanoylsphinganine +1_phosphatidyl_1d_myo_inositol
+    ins_1_p_cer_d18_0_24_0
+  }
+
+  branch from 6_sulfo_d_quinovose side right {
     6_sulfo_d_quinovose
     <-> ec_5_3_1_31 [5.3.1.31]
     6_sulfo_d_rhamnose
   }
 
-  branch from l_3_sulfolactaldehyde side right {
+  branch from l_3_sulfolactaldehyde side left {
     l_3_sulfolactaldehyde
     <-> ec_1_1_1_373 [1.1.1.373] +nad +nadh +hplus
     2s_3_sulfopropanediol
   }
 
-  branch from 3_sulfonatopyruvate side left {
+  branch from 3_sulfonatopyruvate side right {
     3_sulfonatopyruvate
     <-> ec_1_1_1_338 [1.1.1.338] +nadp +nadph +hplus
     r_3_sulfolactate

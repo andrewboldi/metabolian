@@ -18,13 +18,13 @@ pathway geranyl-diphosphate-to-2z-5-isopropyl-2-methyl "geranyl diphosphate to (
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    gurjunene
+    <-> . +streptidine +atp
+    6_o_adenylylstreptidine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    e_bisabolene
+    <-> ec_4_6_1_26 [4.6.1.26] +utp
+    3_5_cyclic_ump
   }
 }

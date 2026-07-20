@@ -24,25 +24,25 @@ pathway xtp-to-diphosphate "XTP to diphosphate" {
 
   branch from glutamate side right {
     glutamate
-    <-> . +n_4_aminobenzoyl_l_glutamate +h2o
-    4_aminobenzoate
+    <-> ec_2_6_1_102 [2.6.1.102] +gdp_4_amino_4_6_dideoxy_d_mannose +akg
+    gdp_4_dehydro_6_deoxy_d_mannose
   }
 
   branch from glutamate side left {
     glutamate
-    <-> . +gly_glu +h2o
-    glycine
+    <-> . +d_lysinium +akg
+    6_amino_2_oxohexanoic_acid
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_83 [2.5.1.83] +ipp +fpp
-    all_trans_hexaprenyl_diphosphate
+    <-> ec_4_2_3_63 [4.2.3.63] +fpp
+    cubenene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_5_1_84 [2.5.1.84] +ipp +gpp
-    all_trans_nonaprenyl_diphosphate
+    <-> ec_4_2_3_64 [4.2.3.64] +fpp +h2o
+    epicubenol
   }
 }

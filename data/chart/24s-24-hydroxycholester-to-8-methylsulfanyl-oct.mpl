@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 24s-24-hydroxycholester-to-8-methylsulfanyl-oct "(24S)-24-hydroxycholester… to 8-(methylsulfanyl)octyl-g…" {
-  spacing 312
+  spacing 306
 
   spine at 0,0 {
     24s_24_hydroxycholesterol
@@ -36,27 +36,15 @@ pathway 24s-24-hydroxycholester-to-8-methylsulfanyl-oct "(24S)-24-hydroxycholest
     24s_hydroxycholesterol_3_sulfate
   }
 
-  branch from 24s_24_hydroxycholesterol side right {
-    24s_24_hydroxycholesterol
-    <-> . +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +1_hexadecanoyl_sn_glycero_3_phosphocholine
-    24s_24_hydroxycholesterol_3_linoleoate
-  }
-
-  branch from 3_phosphoadenylyl_sulfate side left {
-    3_phosphoadenylyl_sulfate
-    <-> ec_2_8_2_24 [2.8.2.24] +adenosine_3_5_bisphosphate +glucobrassicin
-    z_indolylmethyl_desulfoglucosinolate
-  }
-
   branch from 3_phosphoadenylyl_sulfate side right {
     3_phosphoadenylyl_sulfate
     <-> . +adenosine_3_5_bisphosphate +glucoerucin
     4_methylthiobutyl_desulfoglucosinolate
   }
 
-  branch from adenosine_3_5_bisphosphate side left {
-    adenosine_3_5_bisphosphate
-    <-> ec_2_8_2_36 [2.8.2.36] +a_47934 +3_phosphoadenylyl_sulfate
+  branch from 3_phosphoadenylyl_sulfate side left {
+    3_phosphoadenylyl_sulfate
+    <-> ec_2_8_2_36 [2.8.2.36] +adenosine_3_5_bisphosphate +a_47934
     desulfo_a47934
   }
 
@@ -66,15 +54,21 @@ pathway 24s-24-hydroxycholester-to-8-methylsulfanyl-oct "(24S)-24-hydroxycholest
     4_acetamidophenol
   }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    ajugose
+  branch from adenosine_3_5_bisphosphate side left {
+    adenosine_3_5_bisphosphate
+    <-> . +2r_2_amino_3_4_3_iodo_4_sulfooxy_phenoxy_phenyl +3_phosphoadenylyl_sulfate
+    3_monoiodo_l_thyronine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    fagopyritol_b2
+    <-> . +3_4_6_trihydroxy_cis_cinnamate
+    3_4_6_dihydroxy_3_oxocyclohexa_1_4_dien_1_yl_acr
+  }
+
+  branch from h side left {
+    h
+    <-> . +cis_caffeic_acid
+    e_caffeate
   }
 }

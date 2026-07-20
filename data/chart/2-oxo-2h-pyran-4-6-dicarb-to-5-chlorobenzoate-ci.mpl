@@ -18,25 +18,25 @@ pathway 2-oxo-2h-pyran-4-6-dicarb-to-5-chlorobenzoate-ci "2-oxo-2H-pyran-4,6-dic
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
-    alpha_d_mannopyranose
+    <-> ec_1_14_13_90 [1.14.13.90] +nadh +all_trans_zeaxanthin +h +nad +h2o
+    all_trans_violaxanthin
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_40 [1.1.3.40] +d_mannitol +h2o2
-    beta_d_mannose
+    <-> . +h +18_hydroxyoleate +h2o2
+    18_oxooleic_acid
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_376 [1.1.1.376] +nadh +h +d_talono_1_4_lactone
-    d_talopyranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    3r_6e_nerolidol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_14 [1.1.1.14] +nadh +h +5_dehydro_d_fructose
-    keto_d_fructose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    2_trans_6_cis_farnesol
   }
 }

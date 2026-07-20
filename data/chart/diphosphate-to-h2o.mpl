@@ -18,26 +18,26 @@ pathway diphosphate-to-h2o "diphosphate to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_2_7_1_166 [2.7.1.166] +alpha_kdo8n_2_6_lipid_iva +h +adp
-    4_o_phospho_alpha_kdo8n_2_6_lipid_iva
+    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h +adp
+    1d_myo_inositol_3_4_6_trisphosphate
   }
 
   branch from atp side right {
     atp
-    <-> . +s_adenosyl_l_homocysteine +5s_5_2s_2_carboxylato_2_hydroxy_2_methylethyl_2 +diphosphate +co2 +nadp +coa +amp +h2o +s_adenosyl_l_methionine +h +4_hydroxy_4_methyl_l_glutamic_acid +nadph
-    malonyl_coa
+    <-> ec_6_2_1_26 [6.2.1.26] +2_succinylbenzoate +coa +2_succinylbenzoyl_coa +phosphate
+    adp
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_4_hydroxy_nonenal_3_yl_l_cysteinylglycine +h2o
-    3_glutathion_s_yl_4_hydroxynonanal
+    <-> . +2_oxoglutarate +validamine_7_phosphate
+    validone_7_phosphate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> ec_3_4_11_7 [3.4.11.7] +s_trans_1_propenyl_l_cysteine +h +h2o
-    n_gamma_glutamyl_s_trans_1_propenyl_cysteine
+    <-> ec_2_6_1_13 [2.6.1.13] +2_oxoglutarate +2s_2_4_diaminopentanedioate
+    2s_2_amino_4_oxopentanedioate
   }
 
   branch from vanillate side left {
@@ -54,13 +54,13 @@ pathway diphosphate-to-h2o "diphosphate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +glucose +7_8_dihydroxycoumarin
-    daphnin
+    <-> . +4_e_2_methylamino_ethenyl_phenol
+    r_synephrine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +glucose +7_8_dihydroxycoumarin
-    daphnetin_8_glucoside
+    <-> ec_3_2_1_31 [3.2.1.31] +luteolin +beta_d_glucuronate
+    luteolin_7_o_beta_d_glucuronide
   }
 }

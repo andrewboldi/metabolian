@@ -18,26 +18,26 @@ pathway utp-to-h "UTP to H" {
 
   branch from udp side left {
     udp
-    <-> . +fluvstatin_glucuronide +fluvastatin
-    udp_alpha_d_glucuronate
+    <-> . +alloxanthine +udp_ribose +h
+    oxypurinol_1_riboside
   }
 
   branch from udp side right {
     udp
-    <-> . +des_isopropyl_dihydro_fluvastatin_tetranor_glucu +udp_alpha_d_glucuronate
-    des_isopropyl_dihydro_fluvastatin_tetranor
+    <-> . +alloxanthine +udp_ribose +h
+    oxypurinol_7_riboside
   }
 
   branch from h side left {
     h
-    <-> . +adp +12s_hht +phosphate +12s_hht +h2o
-    atp
+    <-> . +adp +phosphate +atp +h2o
+    n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    cholestane_3_7_12_24_25_pentol
+    6r_5_10_methylene_5_6_7_8_tetrahydrofolate
   }
 
   branch from uracil side left {

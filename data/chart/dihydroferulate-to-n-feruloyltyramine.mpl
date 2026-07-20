@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroferulate-to-n-feruloyltyramine "dihydroferulate to N-feruloyltyramine" {
-  spacing 208
+  spacing 196
 
   spine at 0,0 {
     dihydroferulate
@@ -16,27 +16,15 @@ pathway dihydroferulate-to-n-feruloyltyramine "dihydroferulate to N-feruloyltyra
     n_feruloyltyramine
   }
 
-  branch from trans_ferulate side left {
-    trans_ferulate
-    <-> . +udp_d_glucuronate +udp
-    e_ferulic_acid_d_glucuronate_ester
-  }
-
-  branch from trans_feruloyl_coa side right {
-    trans_feruloyl_coa
-    <-> . +2r_3s_piscidate +coa
-    cimicifugate_e
-  }
-
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_185 [4.2.3.185] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_atiserene
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +nadh +hplus +nad
+    lycopaoctaene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_188 [4.2.3.188] +all_trans_pentaprenyl_diphosphate
-    geranylfarnesene
+    <-> . +nadh +hplus +lycopaoctaene +nad
+    1r_2r_3r_prephytoene_diphosphate
   }
 }

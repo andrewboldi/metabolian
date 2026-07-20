@@ -30,26 +30,26 @@ pathway 1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor "1-oleoyl-2-arachidonoyl-sâ€
 
   branch from oleate side left {
     oleate
-    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    2_palmitoyl_sn_glycero_3_phosphocholine
+    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_stearoyl_sn_glycero_3_phosphocholine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_3_dioleoylglycerol +h2o +hplus
+    <-> . +1_2_dioleoylglycerol +h2o +hplus
     1_oleoylglycerol
   }
 
   branch from glycerol side left {
     glycerol
-    <-> . +1_myristoyl_sn_glycerol +h2o +hplus
-    tetradecanoate
+    <-> . +1_monooctanoylglycerol +h2o +hplus
+    octanoate
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +h2o +tetradecanoate +hplus
-    1_monomyristoylglycerol
+    <-> . +h2o +arachidonate +hplus
+    1_arachidonoylglycerol
   }
 
   branch from arachidonate side left {
@@ -66,13 +66,13 @@ pathway 1-oleoyl-2-arachidonoyl-s-to-hydrogen-donor "1-oleoyl-2-arachidonoyl-sâ€
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +prostaglandin_g3 +hydrogen_acceptor +h2o
-    prostaglandin_h3
+    <-> ec_1_1_99_41 [1.1.99.41] +3r_3_hydroxy_2_3_dihydrotabersoninium +hydrogen_acceptor
+    3r_1_2_didehydro_3_hydroxy_2_3_dihydrotabersoni
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +o2 +hydrogen_acceptor +h2o
-    11_r_hepe
+    <-> ec_1_3_99_40 [1.3.99.40] +carotenoid_end_derivative +hydrogen_acceptor
+    carotenoid_end_group
   }
 }

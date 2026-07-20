@@ -40,14 +40,14 @@ pathway 2-hydroxy-n-methyl-5-oxop-to-h2o "2-hydroxy-N-methyl-5-oxop… to H2O" {
 
   branch from nh4 side right {
     nh4
-    <-> . +chromopyrrolate +h
-    2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_pentyl_thiohydroximate
+    pyruvate
   }
 
   branch from nh4 side left {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +l_djenkolic_acid +h2o +pyruvate
-    s_sulfanylmethyl_l_cysteine
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
+    z_omega_methylsulfanyl_hexyl_thiohydroximate
   }
 
   branch from 5_methyl_5_6_7_8_tetrahydromethanopterin side right {
@@ -58,13 +58,13 @@ pathway 2-hydroxy-n-methyl-5-oxop-to-h2o "2-hydroxy-N-methyl-5-oxop… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +6_hydroxy_allocryptopine
-    dihydrochelerythrine
+    <-> ec_3_5_1_28 [3.5.1.28] +peptidoglycan_dimer_with_a_single_pentapeptide_s +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    peptidoglycan_dimer_with_pentapeptide_stems_meso
   }
 
   branch from h2o side right {
     h2o
-    <-> . +2_keto_4_hydroxy_5_phosphopentanoate
-    2_keto_5_phospho_3_cis_pentenoate
+    <-> . +cytidine +agmatine
+    agmatidine
   }
 }

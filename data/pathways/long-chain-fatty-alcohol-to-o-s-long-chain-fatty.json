@@ -142,31 +142,41 @@
       }
     },
     {
-      "id": "trans_sinapate",
-      "name": "trans-sinapate",
-      "formula": "C11H11O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:30023"
-      }
-    },
-    {
-      "id": "trans_sinapoyl_amp",
-      "name": "trans-sinapoyl-AMP",
-      "formula": "C21H23N5O11P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:192469"
-      }
-    },
-    {
-      "id": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
-      "name": "cyclic A(3'-5')pA(3'-5')pA(3'-5')p",
-      "short": "cyclic A(3'-5')pA(3…",
-      "formula": "C30H33N15O18P3",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:192523"
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "cadinol",
+      "name": "(+)-δ-cadinol",
+      "formula": "C15H26O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:184119"
+      }
+    },
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "araneosene",
+      "name": "δ-araneosene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:192991"
       }
     }
   ],
@@ -183,6 +193,20 @@
       "name": "wax-ester hydrolase",
       "ec": [
         "3.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_212",
+      "name": "(+)-delta-cadinol synthase",
+      "ec": [
+        "4.2.3.212"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_215",
+      "name": "delta-araneosene synthase",
+      "ec": [
+        "4.2.3.215"
       ]
     }
   ],
@@ -369,25 +393,22 @@
     },
     {
       "id": "r5",
-      "name": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
-      "equation": "(E)-sinapate + ATP + H(+) = (E)-sinapoyl-AMP + diphosphate",
+      "name": "(+)-delta-cadinol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-delta-cadinol + diphosphate",
+      "ec": "4.2.3.212",
       "substrates": [
         {
-          "metabolite": "trans_sinapate",
+          "metabolite": "fpp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "trans_sinapoyl_amp",
+          "metabolite": "cadinol",
           "stoichiometry": 1
         },
         {
@@ -395,52 +416,63 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_212"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:72603"
+        "rhea": "RHEA:78271"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72603"
+            "id": "RHEA:78271"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
-      "equation": "3 ATP = 3',3',3'-c-tri-AMP + 3 diphosphate",
+      "name": "delta-araneosene synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = delta-araneosene + diphosphate",
+      "ec": "4.2.3.215",
       "substrates": [
         {
-          "metabolite": "atp",
-          "stoichiometry": 3
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "cyclic_a_3_5_pa_3_5_pa_3_5_p",
+          "metabolite": "araneosene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 3
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_215"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:72755"
+        "rhea": "RHEA:78275"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:72755"
+            "id": "RHEA:78275"
           }
         ]
       }

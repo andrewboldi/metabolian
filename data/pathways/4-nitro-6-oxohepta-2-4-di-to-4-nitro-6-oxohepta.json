@@ -112,49 +112,23 @@
       }
     },
     {
-      "id": "9z_12z_octadecadienoate",
-      "name": "(9Z,12Z)-octadecadienoate",
-      "short": "(9Z,12Z)-octadecadi…",
-      "formula": "C18H31O2",
+      "id": "2z_4e_4_hydroxy_6_methoxy_6_oxohexa_2_4_dienoat",
+      "name": "(2Z,4E)-4-hydroxy-6-methoxy-6-oxohexa-2,4-dienoate",
+      "short": "(2Z,4E)-4-hydroxy-6…",
+      "formula": "C7H7O5",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1108069"
+        "metanetx": "MNXM1132315"
       }
     },
     {
-      "id": "nadph",
-      "name": "NADPH",
-      "formula": "C21H26N7O17P3",
-      "charge": -4,
-      "xrefs": {
-        "metanetx": "MNXM738702"
-      }
-    },
-    {
-      "id": "vernolic_acid",
-      "name": "(+)-vernolic acid",
-      "formula": "C18H32O3",
+      "id": "2_methoxyhydroquinone",
+      "name": "2-methoxyhydroquinone",
+      "short": "2-methoxyhydroquino…",
+      "formula": "C7H8O3",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM30177"
-      }
-    },
-    {
-      "id": "nadp",
-      "name": "NADP",
-      "formula": "C21H25N7O17P3",
-      "charge": -3,
-      "xrefs": {
-        "metanetx": "MNXM5"
-      }
-    },
-    {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "WATER"
+        "chebi": "CHEBI:176649"
       }
     },
     {
@@ -167,6 +141,34 @@
       }
     },
     {
+      "id": "para_isopropylaniline",
+      "name": "para-isopropylaniline",
+      "short": "para-isopropylanili…",
+      "formula": "C9H13N",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:43405"
+      }
+    },
+    {
+      "id": "4_isopropylcatechol",
+      "name": "4-isopropylcatechol",
+      "formula": "C9H12O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM487113"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
       "id": "nad",
       "name": "NAD",
       "formula": "C21H26N7O14P2",
@@ -176,7 +178,15 @@
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_66",
+      "name": "hydroquinone 1,2-dioxygenase",
+      "ec": [
+        "1.13.11.66"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -326,64 +336,58 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR182475",
+      "name": "hydroquinone 1,2-dioxygenase",
+      "ec": "1.13.11.66",
       "substrates": [
         {
-          "metabolite": "9z_12z_octadecadienoate",
+          "metabolite": "2z_4e_4_hydroxy_6_methoxy_6_oxohexa_2_4_dienoat",
           "stoichiometry": 1
         },
         {
           "metabolite": "h",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadph",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "vernolic_acid",
+          "metabolite": "o2",
           "stoichiometry": 1
         },
         {
-          "metabolite": "nadp",
+          "metabolite": "2_methoxyhydroquinone",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_1_13_11_66"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR182475"
+        "metanetx": "MNXR193057"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR182475"
+            "id": "MNXR193057"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR182476",
+      "name": "Reaction MNXR193065",
       "substrates": [
         {
           "metabolite": "nadh",
           "stoichiometry": 1
         },
         {
-          "metabolite": "9z_12z_octadecadienoate",
+          "metabolite": "para_isopropylaniline",
           "stoichiometry": 1
         },
         {
@@ -397,29 +401,29 @@
       ],
       "products": [
         {
-          "metabolite": "vernolic_acid",
+          "metabolite": "4_isopropylcatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
           "stoichiometry": 1
         },
         {
           "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR182476"
+        "metanetx": "MNXR193065"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR182476"
+            "id": "MNXR193065"
           }
         ]
       }

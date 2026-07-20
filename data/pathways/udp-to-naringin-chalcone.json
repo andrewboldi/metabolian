@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "udp-to-naringin-chalcone",
   "name": "UDP to naringin chalcone",
-  "category": "amino-acid-metabolism",
+  "category": "other",
   "summary": "A 3-step route from UDP to naringin chalcone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -160,43 +160,48 @@
       }
     },
     {
-      "id": "o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe",
-      "name": "O-{S-[(3R,9Z,21Z)-3-hydroxytetracontadienoylpantetheine]-4'-phosphoryl}-L-serine(1−)",
-      "short": "O-{S-[(3R,9Z,21Z)-3…",
-      "formula": "C54H99N3O10PS",
+      "id": "propanoate",
+      "name": "propanoate",
+      "formula": "C3H5O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:87887"
+        "metanetx": "MNXM1094052"
       }
     },
     {
-      "id": "o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph",
-      "name": "O-[S-(2E,9Z,21Z-tetracontatrienoylpantetheine)-4'-phosphoryl]-L-serine(1−)",
-      "short": "O-[S-(2E,9Z,21Z-tet…",
-      "formula": "C54H97N3O9PS",
-      "charge": -1,
+      "id": "ethanol",
+      "name": "ethanol",
+      "formula": "C2H6O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87888"
+        "metanetx": "MNXM1108092"
       }
     },
     {
-      "id": "o_s_3r_hydroxydocosanoylpantetheine_4_phosphoryl",
-      "name": "O-[S-(3R-hydroxydocosanoylpantetheine)-4'-phosphoryl]-L-serine(1−)",
-      "short": "O-[S-(3R-hydroxydoc…",
-      "formula": "C36H67N3O10PS",
-      "charge": -1,
+      "id": "ethyl_propionate",
+      "name": "ethyl propionate",
+      "formula": "C5H10O2",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87850"
+        "chebi": "CHEBI:41330"
       }
     },
     {
-      "id": "o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri",
-      "name": "O-[S-(2E-docosenoylpantetheine)-4'-phosphoryl]-L-serine(1−)",
-      "short": "O-[S-(2E-docosenoyl…",
-      "formula": "C36H65N3O9PS",
+      "id": "butanoate",
+      "name": "butanoate",
+      "formula": "C4H7O2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:87851"
+        "metanetx": "MNXM458"
+      }
+    },
+    {
+      "id": "ethyl_butyrate",
+      "name": "ethyl butyrate",
+      "formula": "C6H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:88764"
       }
     }
   ],
@@ -220,6 +225,20 @@
       "name": "glycosylceramidase",
       "ec": [
         "3.2.1.62"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_1",
+      "name": "carboxylesterase",
+      "ec": [
+        "3.1.1.1"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_2",
+      "name": "arylesterase",
+      "ec": [
+        "3.1.1.2"
       ]
     }
   ],
@@ -468,16 +487,25 @@
     },
     {
       "id": "r7",
-      "name": "Reaction MNXR123537",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
       "substrates": [
         {
-          "metabolite": "o_s_3r_9z_21z_3_hydroxytetracontadienoylpantethe",
+          "metabolite": "propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_2e_9z_21z_tetracontatrienoylpantetheine_4_ph",
+          "metabolite": "ethyl_propionate",
           "stoichiometry": 1
         },
         {
@@ -485,33 +513,47 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "metanetx": "MNXR123537"
+        "metanetx": "MNXR129827"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR123537"
+            "id": "MNXR129827"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "Reaction MNXR123550",
+      "name": "carboxylesterase",
+      "ec": "3.1.1.1",
       "substrates": [
         {
-          "metabolite": "o_s_3r_hydroxydocosanoylpantetheine_4_phosphoryl",
+          "metabolite": "ethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "butanoate",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "o_s_2e_docosenoylpantetheine_4_phosphoryl_l_seri",
+          "metabolite": "ethyl_butyrate",
           "stoichiometry": 1
         },
         {
@@ -519,17 +561,22 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_1"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "metanetx": "MNXR123550"
+        "metanetx": "MNXR129829"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR123550"
+            "id": "MNXR129829"
           }
         ]
       }

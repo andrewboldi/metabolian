@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway gardenin-b-to-h2o "gardenin B to H2O" {
-  spacing 248
+  spacing 224
 
   spine at 0,0 {
     gardenin_b
@@ -16,30 +16,6 @@ pathway gardenin-b-to-h2o "gardenin B to H2O" {
     5_deoxyadenosine
     <-> ec_3_5_1_12 [3.5.1.12] +6_aminoquinoline +h +biotin -h2o
     biotinyl_6_aminoquinoline
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +fenuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    1_methyl_3_phenylurea
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +3_methyldeoxycytidine_5_monophosphate_zwitterion +akg +o2 +succinate +co2 +hplus
-    2_deoxycytidine_5_monophosphate_1
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +s_2_benzylsuccinate +succinyl_coa
-    s_2_benzylsuccinyl_coa
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> . +2_oxindole_3_acetate +succinyl_coa
-    2_oxoindol_3_yl_acetyl_coa
   }
 
   branch from s_adenosyl_l_methionine side left {
@@ -56,14 +32,14 @@ pathway gardenin-b-to-h2o "gardenin B to H2O" {
 
   branch from 5_deoxyadenosine side left {
     5_deoxyadenosine
-    <-> . +h +l_methionine +13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este +s_adenosyl_l_methionine
-    13_1_hydroxy_mg_protoporphyrin_ix_13_monomethyl
+    <-> . +l_methionine +divinylprotochlorophyllide +s_adenosyl_l_methionine
+    13_1_oxo_mg_protoporphyrin_ix_13_monomethyl_este
   }
 
   branch from 5_deoxyadenosine side right {
     5_deoxyadenosine
-    <-> ec_1_17_98_2 [1.17.98.2] +12_ethyl_8_isobutylbacteriochlorophyllide_e +h +l_methionine +s_adenosyl_l_methionine +h2o
-    12_ethyl_8_isobutylbacteriochlorophyllide_c
+    <-> . +31r_8_12_diethyl_71_hydroxybacteriochlorophylli +h +l_methionine +s_adenosyl_l_methionine +h2o
+    31r_8_12_diethylbacteriochlorophyllide_c
   }
 
   branch from l_alanine side left {
@@ -80,37 +56,37 @@ pathway gardenin-b-to-h2o "gardenin B to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_7_1_26 [3.7.1.26] +glycolate +pyruvate +h2o
-    5_hydroxy_2_4_dioxopentanoate
+    <-> . +2_3_dihydroxy_ddt +nadph +nadp
+    1s_2s_ddt_2_3_dihydrodiol
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_1_7 [3.6.1.7] +benzoate +phosphate +h2o
-    benzoyl_phosphate
+    <-> . +nadh +o_toluate +o2 +nad
+    1_6_dihydroxy_2_methylcyclohexa_2_4_dienecarboxy
   }
 
   branch from l_methionine side left {
     l_methionine
-    <-> ec_1_14_13_8 [1.14.13.8] +l_methionine_s_oxide +nadp +h2o +h +nadph
-    o2
+    <-> ec_3_3_2_6 [3.3.2.6] +l_methionine_p_nitroanilide +h2o
+    4_nitroaniline
   }
 
   branch from l_methionine side right {
     l_methionine
-    <-> ec_3_4_11_1 [3.4.11.1] +glycine +h2o
-    methionyl_glycine
+    <-> ec_3_4_11_18 [3.4.11.18] +gly_met_met +h2o
+    met_gly_met_met
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_3_10 [3.1.3.10] +alpha_d_glucose +phosphate
-    alpha_d_glucose_1_phosphate
+    <-> . +nadh +o2 +2_6_dichlorophenol +nad
+    2_6_dichloro_4_hydroxyphenolate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_1_20 [3.6.1.20] +h +benzoate +amp
-    benzoyl_amp
+    <-> . +2_succinylbenzoate +h
+    spirodilactone
   }
 }

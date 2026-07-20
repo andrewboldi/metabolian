@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(1−)" {
-  spacing 250
+  spacing 238
 
   spine at 0,0 {
     n_oleoyl_l_leucinate
@@ -18,26 +18,14 @@ pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(
 
   branch from leucine side left {
     leucine
-    <-> . +dlactate +sam +atp +amp +sah +ppi +hplus
-    pf1022f
+    <-> ec_2_1_4_4 [2.1.4.4] +arginine +ornithine
+    n_amidino_l_leucine
   }
 
   branch from leucine side right {
     leucine
-    <-> . +isoleucine +l_asparagine +l_histidine +ornithine +l_lysinium +cysteine +aspartate +l_phenylalanine +glutamate +atp +amp +ppi +h2o +hplus
-    bacitracin_a
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +1_palmitoyl_2_oleoyl_sn_glycero_3_phosphate +h2o +hplus
-    1_palmitoyl_sn_glycerol_3_phosphate
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +n_oleoyl_l_asparagine +h2o
-    l_asparagine
+    <-> . +n_carbamoyl_l_leucinate +h2o +hplus +co2
+    nh3
   }
 
   branch from 3_l_leucyl_adenylyl_zwitterionic_group side left {
@@ -48,25 +36,25 @@ pathway n-oleoyl-l-leucinate-to-amp-3-end-1 "N-oleoyl-L-leucinate to AMP 3'-end(
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_129 [4.2.3.129] +fpp
-    sativene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    copalol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_130 [4.2.3.130] +all_trans_heptaprenyl_diphosphate
-    r_tetraprenyl_curcumene
+    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    manool
   }
 
   branch from amp_3_end_1 side right {
     amp_3_end_1
-    <-> ec_3_1_1_96 [3.1.1.96] +3_glycyladenylyl_zwitterionic_group +h2o +hplus
-    glycine
+    <-> ec_3_1_1_96 [3.1.1.96] +3_d_tryptophyl_adenylyl_1_group +h2o
+    d_tryptophan
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
-    <-> . +d_tyrosine +atp +amp +ppi +hplus
-    3_d_tyrosyl_adenylyl_1_group
+    <-> . +3_l_threonyl_adenylyl_1_group +h2o
+    threonine
   }
 }

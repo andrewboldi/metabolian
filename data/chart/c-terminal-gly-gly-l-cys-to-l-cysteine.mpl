@@ -22,26 +22,26 @@ pathway c-terminal-gly-gly-l-cys-to-l-cysteine "C-terminal Gly-Gly-L-Cys(… to 
 
   branch from cysteine side left {
     cysteine
-    <-> ec_1_8_3_5 [1.8.3.5] +s_2e_6e_10e_geranylgeranyl_l_cysteine +o2 +h2o +h2o2
-    2e_6e_10e_geranylgeranial
-  }
-
-  branch from cysteine side right {
-    cysteine
     <-> . +alanine
     3_disulfanyl_l_alanine
   }
 
+  branch from cysteine side right {
+    cysteine
+    <-> . +glyoxylate +glycine
+    mercaptopyruvate
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_191 [4.2.3.191] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cycloaraneosene
+    <-> ec_4_2_3_202 [4.2.3.202] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    hydropyrenol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +very_long_chain_fatty_acid_anion +atp +coa +amp
-    very_long_chain_fatty_acyl_coa
+    <-> ec_4_2_3_203 [4.2.3.203] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    isoelisabethatriene
   }
 
   branch from l_cysteine side left {
@@ -54,18 +54,6 @@ pathway c-terminal-gly-gly-l-cys-to-l-cysteine "C-terminal Gly-Gly-L-Cys(… to 
     l_cysteine
     <-> ec_4_4_1_29 [4.4.1.29] +3e_phycocyanobilin
     s_3_2r_phycocyanobilin_l_cysteine_2
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    13_s_hode
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    13_r_hode
   }
 
   branch from c_terminal_s_gly_gly_l_cys_zwitterion side left {

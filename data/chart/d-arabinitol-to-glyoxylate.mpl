@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-arabinitol-to-glyoxylate "D-arabinitol to glyoxylate" {
-  spacing 218
+  spacing 200
 
   spine at 0,0 {
     d_arabinitol
@@ -20,43 +20,25 @@ pathway d-arabinitol-to-glyoxylate "D-arabinitol to glyoxylate" {
     glyoxylate
   }
 
-  branch from d_ribulose_1_phosphate side left {
-    d_ribulose_1_phosphate
-    <-> ec_2_7_1_3 [2.7.1.3] +h +adp +atp
-    d_ribulose
-  }
-
-  branch from d_ribulose_1_phosphate side right {
-    d_ribulose_1_phosphate
-    <-> . +h +adp +atp
-    d_xylulose
-  }
-
-  branch from dhap side left {
-    dhap
-    <-> . +o_s_8_methyl_3_oxononanoylpantetheine_4_phosphor +holo-acp +h2o
-    4_6_methylheptanoyl_5_oxo_2_5_dihydrofuran_3_yl
-  }
-
-  branch from glycolate side right {
-    glycolate
-    <-> ec_3_5_1_124 [3.5.1.124] +n_1_hydroxy_2_oxoethyl_l_argininium +h2o +hplus
-    l_argininium
-  }
-
   branch from glycolate side left {
     glycolate
     <-> ec_3_5_1_124 [3.5.1.124] +n6_1_hydroxy_2_oxoethyl_l_lysinium +h2o +hplus
     l_lysinium
   }
 
-  branch from glyoxylate side right {
+  branch from glycolate side right {
+    glycolate
+    <-> ec_3_5_1_124 [3.5.1.124] +s_1_hydroxy_2_oxoethyl_l_cysteine +h2o +hplus
+    l_cysteine
+  }
+
+  branch from glyoxylate side left {
     glyoxylate
     <-> . +pyruvate
     4_hydroxy_2_oxoglutarate
   }
 
-  branch from glyoxylate side left {
+  branch from glyoxylate side right {
     glyoxylate
     <-> ec_3_5_1_116 [3.5.1.116] +ureidoglycolate +h2o +hplus +co2
     nh3

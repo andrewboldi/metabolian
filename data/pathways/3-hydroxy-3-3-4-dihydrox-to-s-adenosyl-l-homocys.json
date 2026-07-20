@@ -123,54 +123,45 @@
       }
     },
     {
-      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(ribonucleotide)(3−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C22H31N5O23P4R2",
-      "charge": -3,
+      "id": "kaempferol_oxoanion",
+      "name": "kaempferol oxoanion",
+      "formula": "C15H9O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167612"
+        "chebi": "CHEBI:58573"
       }
     },
     {
-      "id": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
-      "name": "5'-(N7-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(2'-O-methyl-ribonucleotide)(3−)",
-      "short": "5'-(N7-methyl…",
-      "formula": "C23H33N5O23P4R2",
-      "charge": -3,
+      "id": "3_o_methylkaempferol_7_olate",
+      "name": "3-O-methylkaempferol 7-olate",
+      "short": "3-O-methylkaempfero…",
+      "formula": "C16H11O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167614"
+        "chebi": "CHEBI:194073"
       }
     },
     {
-      "id": "l_lysinium",
-      "name": "L-lysinium",
-      "formula": "C6H13N2O",
-      "charge": 1,
+      "id": "myricetin",
+      "name": "myricetin",
+      "formula": "C15H9O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:29969"
+        "chebi": "CHEBI:58395"
       }
     },
     {
-      "id": "n6_n6_n6_trimethyl_l_lysine",
-      "name": "N6,N6,N6-trimethyl-L-lysine",
-      "short": "N6,N6,N6-trimethyl-…",
-      "formula": "C9H19N2O",
-      "charge": 1,
+      "id": "3_o_methylmyricetin_7_olate",
+      "name": "3-O-methylmyricetin 7-olate",
+      "short": "3-O-methylmyricetin…",
+      "formula": "C16H11O8",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:61961"
+        "chebi": "CHEBI:194072"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_2_1_1_296",
-      "name": "methyltransferase cap2",
-      "ec": [
-        "2.1.1.296"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -299,12 +290,11 @@
     },
     {
       "id": "r4",
-      "name": "methyltransferase cap2",
-      "equation": "a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(ribonucleotide) in mRNA + S-adenosyl-L-methionine = a 5'-end (N(7)-methyl 5'-triphosphoguanosine)-(2'-O-methyl-ribonucleoside)-(2'-O-methyl-ribonucleotide) in mRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.296",
+      "name": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine...",
+      "equation": "kaempferol + S-adenosyl-L-methionine = 3-O-methylkaempferol + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
+          "metabolite": "kaempferol_oxoanion",
           "stoichiometry": 1
         },
         {
@@ -314,7 +304,7 @@
       ],
       "products": [
         {
-          "metabolite": "5_n7_methyl_5_triphosphoguanosine_2_o_methyl_rib",
+          "metabolite": "3_o_methylkaempferol_7_olate",
           "stoichiometry": 1
         },
         {
@@ -326,65 +316,60 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_1_1_296"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:67024"
+        "rhea": "RHEA:74743"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67024"
+            "id": "RHEA:74743"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "L-lysyl(37)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl...",
-      "equation": "L-lysyl(37)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(37)-[histone H3] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "name": "myricetin + S-adenosyl-L-methionine = 3-O-methylmyricetin + S-adenosyl-L-homocysteine +...",
+      "equation": "myricetin + S-adenosyl-L-methionine = 3-O-methylmyricetin + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "l_lysinium",
+          "metabolite": "myricetin",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "metabolite": "3_o_methylmyricetin_7_olate",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:67108"
+        "rhea": "RHEA:74747"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:67108"
+            "id": "RHEA:74747"
           }
         ]
       }

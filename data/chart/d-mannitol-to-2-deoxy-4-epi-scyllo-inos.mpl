@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-mannitol-to-2-deoxy-4-epi-scyllo-inos "D-mannitol to 2-deoxy-4-epi-scyllo-inos…" {
-  spacing 314
+  spacing 308
 
   spine at 0,0 {
     d_mannitol
@@ -14,11 +14,5 @@ pathway d-mannitol-to-2-deoxy-4-epi-scyllo-inos "D-mannitol to 2-deoxy-4-epi-scy
     d_mannopyranose_6_phosphate
     <-> ec_4_2_3_230 [4.2.3.230] -pi
     2_deoxy_4_epi_scyllo_inosose
-  }
-
-  branch from l_histidine side left {
-    l_histidine
-    <-> . +utp +ppi
-    n_uridylyl_l_histidine_1
   }
 }

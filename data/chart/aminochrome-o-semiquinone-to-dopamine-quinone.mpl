@@ -18,38 +18,38 @@ pathway aminochrome-o-semiquinone-to-dopamine-quinone "Aminochrome o-semiquinone
 
   branch from h side left {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a2a_monosaccharide +dtdp
-    avermectin_a2a
+    <-> ec_2_5_1_18 [2.5.1.18] +3_4_dihydro_3_hydroxy_4_s_glutathionyl_bromobenz +glutathione
+    bromobenzene_3_4_oxide
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a1a_aglycone +avermectin_a1a_monosaccharide
-    dtdp
+    <-> ec_2_5_1_18 [2.5.1.18] +2_3_dihydro_2_s_glutathionyl_3_hydroxy_bromobenz +glutathione
+    bromobenzene_2_3_oxide
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +naphthalene +h +o2 +nadp +h2o
-    1s_2r_naphthalene_1_2_oxide
+    <-> . +h +2_nitrobenzoate +nadp +h2o
+    2_hydroxylaminobenzoic_acid
   }
 
   branch from nadph side right {
     nadph
-    <-> . +1_2_dihydronaphthalene_1_2_diol +h +o2 +nadp +h2o
-    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
+    <-> ec_1_1_1_246 [1.1.1.246] +h +sophorol +nadp +h2o
+    maackiain
   }
 
   branch from nadp side left {
     nadp
-    <-> . +h +2_naphthol +o2 +nadph +h2o
-    naphthalene_1_2_diol
+    <-> . +thiobenzamide_s_oxide +h2o +h +o2 +nadph
+    thiobenzamide
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadph +h2o
-    1_nitronaphthalene_7_8_oxide
+    <-> . +thiobenzamide_s_oxide +h +o2 +nadph +h2o
+    thiobenzamide_s_s_dioxide
   }
 
   branch from leukoaminochrome side left {
@@ -66,13 +66,13 @@ pathway aminochrome-o-semiquinone-to-dopamine-quinone "Aminochrome o-semiquinone
 
   branch from dopamine_quinone side left {
     dopamine_quinone
-    <-> . +o2 +h2o
-    dopamine
+    <-> . +5_s_glutathionyl_dopamine
+    glutathione
   }
 
   branch from dopamine_quinone side right {
     dopamine_quinone
-    <-> . +5_s_glutathionyl_dopamine
-    glutathione
+    <-> . +5_s_cysteinyl_dopamine
+    l_cysteine
   }
 }

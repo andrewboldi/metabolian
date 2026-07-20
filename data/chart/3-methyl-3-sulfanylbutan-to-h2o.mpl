@@ -30,13 +30,13 @@ pathway 3-methyl-3-sulfanylbutan-to-h2o "3-methyl-3-sulfanylbutan-… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +cyclosporin_a_metabolite_m21 +phosphate +cyclosporin_a_metabolite_m21
-    atp
+    <-> . +h +adp +phosphate +atp
+    13z_docosenoate
   }
 
   branch from h2o side right {
     h2o
     <-> . +h +adp +phosphate +atp
-    cyclosporin_a_metabolite_m1
+    cetoleic_acid
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isopentenyl-diphosphate-to-fmn-66860 "isopentenyl diphosphate to FMN" {
-  spacing 180
+  spacing 156
 
   spine at 0,0 {
     ipp
@@ -14,29 +14,5 @@ pathway isopentenyl-diphosphate-to-fmn-66860 "isopentenyl diphosphate to FMN" {
     sesterfisherol
     <-> . +fmnh2 +o2 -fmn -h2o -hplus
     sesterfisherate
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    eudesmol
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_trachylobane
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +methyl_medium_chain_fatty_acid_anion +fmnh2 +o2 +h2o +hplus
-    hydroxy_medium_chain_fatty_acid_anion
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +cyatha_3_12_diene +fmnh2 +o2 +h2o +hplus
-    erinacol
   }
 }

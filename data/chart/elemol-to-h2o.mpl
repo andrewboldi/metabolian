@@ -18,37 +18,37 @@ pathway elemol-to-h2o "elemol to H2O" {
 
   branch from 2e_6e_farnesyl_diphosphate side left {
     2e_6e_farnesyl_diphosphate
-    <-> ec_4_2_3_67 [4.2.3.67] +diphosphate
-    cis_muurola_4_15_5_diene
-  }
-
-  branch from 2e_6e_farnesyl_diphosphate side right {
-    2e_6e_farnesyl_diphosphate
     <-> ec_4_2_3_95 [4.2.3.95] +diphosphate
     alpha_cuprenene
   }
 
+  branch from 2e_6e_farnesyl_diphosphate side right {
+    2e_6e_farnesyl_diphosphate
+    <-> ec_4_2_3_133 [4.2.3.133] +diphosphate
+    alpha_copaene
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_14 [3.1.1.14] +chlorophyllide_a +h +phytol
-    chlorophyll_a
+    <-> . +n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl +nadp +h +o2 +nadph
+    gliclazide
   }
 
   branch from h2o side right {
     h2o
-    <-> . +diphosphate +h +3_dehydro_amp
-    3_dehydro_atp
+    <-> . +h +adp +phosphate +atp
+    4_acetamidophenol
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_4_2_17 [2.4.2.17] +5_phospho_alpha_d_ribose_1_diphosphate +h +diphosphate
-    1_5_phosphoribosyl_atp
+    <-> . +h +adp +phosphate +h2o
+    r_adrenaline
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_14 [3.6.3.14] +h +adp +phosphate +h2o
-    pmf
+    <-> . +h +adp +phosphate +h2o
+    agmatine
   }
 }

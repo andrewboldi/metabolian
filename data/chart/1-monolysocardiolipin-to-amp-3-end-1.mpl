@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-end(1−)" {
-  spacing 176
+  spacing 170
 
   spine at 0,0 {
     1_monolysocardiolipin
@@ -24,19 +24,13 @@ pathway 1-monolysocardiolipin-to-amp-3-end-1 "1-monolysocardiolipin to AMP 3'-en
 
   branch from 1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol side right {
     1_2_diacyl_sn_glycero_3_phospho_1_sn_glycerol
-    <-> ec_2_5_1_145 [2.5.1.145] +l_cysteine +sn_glycerol_1_phosphate +hplus
-    s_1_2_diacyl_sn_glyceryl_l_cysteine
+    <-> . +n_acetylsphingosine +1_o_acyl_n_acetylsphingosine
+    2_acyl_sn_glycero_3_phospho_1_sn_glycerol
   }
 
   branch from amp_3_end_1 side left {
     amp_3_end_1
     <-> . +3_l_alanyl_adenylyl_zwitterionic_group +h2o +hplus
     alanine
-  }
-
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +3_l_seryl_adenylyl_1_group +h2o
-    serine
   }
 }

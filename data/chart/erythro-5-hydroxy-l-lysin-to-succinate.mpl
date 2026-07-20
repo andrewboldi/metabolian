@@ -40,37 +40,37 @@ pathway erythro-5-hydroxy-l-lysin-to-succinate "erythro-5-hydroxy-L-lysin… to 
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
-    hydroxylamine
+    <-> ec_4_3_1_19 [4.3.1.19] +threonine
+    oxobut
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
-    3_hydroxypyruvate
+    <-> ec_3_5_4_8 [3.5.4.8] +4_aminoimidazole +h2o +hplus
+    3_5_dihydro_4h_imidazol_4_one
   }
 
   branch from ppi side left {
     ppi
-    <-> . +pppgp_2_5_a
-    2_3_cgamp
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_2 [6.1.1.2] +amp_3_end_1 +l_tryptophan +atp +amp +hplus
-    3_l_tryptophyl_adenylyl_1_group
+    <-> ec_4_2_3_56 [4.2.3.56] +fpp
+    himachalene
   }
 
   branch from succinate side left {
     succinate
-    <-> . +l_proline +akg +o2 +co2
-    trans_3_hydroxy_l_proline
+    <-> . +trans_3_hydroxy_l_proline +akg +o2 +co2
+    3s_3_4_dihydroxy_l_proline
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_29 [1.14.11.29] +l_proline +akg +o2 +co2
-    trans_4_hydroxy_l_proline
+    <-> ec_1_14_11_79 [1.14.11.79] +l_histidine +akg +o2 +co2
+    3s_3_hydroxy_l_histidine
   }
 }

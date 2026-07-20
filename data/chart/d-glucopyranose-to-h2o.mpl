@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-glucopyranose-to-h2o "D-glucopyranose to H2O" {
-  spacing 314
+  spacing 308
 
   spine at 0,0 {
     glucose
@@ -22,14 +22,14 @@ pathway d-glucopyranose-to-h2o "D-glucopyranose to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_leucine +l_asparagine
-    alanyl_asparaginyl_leucine
+    <-> . +l_histidine +l_methionine
+    his_met
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_histidine
-    ala_his_ala
+    <-> . +l_histidine +l_arginine +l_phenylalanine
+    histidyl_phenylalanyl_arginine
   }
 
   branch from n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_2_d_man side left {
@@ -39,12 +39,6 @@ pathway d-glucopyranose-to-h2o "D-glucopyranose to H2O" {
   }
 
   branch from n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d side right {
-    n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d
-    <-> . +beta_d_mannose +h2o
-    n4_d_man_1_2_d_man_1_3_d_man_1_3_d_man_1_2_d_man
-  }
-
-  branch from n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d side left {
     n4_d_manp_1_2_d_manp_1_2_d_manp_1_3_d_manp_1_3_d
     <-> ec_3_2_1_210 [3.2.1.210] +h2o +beta_d_mannose
     n4_d_man_1_2_d_man_1_2_d_man_1_3_d_man_1_3_d_man

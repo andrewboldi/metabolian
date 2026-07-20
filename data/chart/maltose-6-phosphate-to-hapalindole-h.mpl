@@ -26,51 +26,45 @@ pathway maltose-6-phosphate-to-hapalindole-h "α-maltose 6'-phosphate to hapalin
     hapalindole_h
   }
 
-  branch from g6p side left {
-    g6p
-    <-> ec_2_7_1_232 [2.7.1.232] +atp +h2o +adp +hplus
-    levoglucosan
+  branch from glucose side left {
+    glucose
+    <-> . +benzylglucosinolate_aglycone +h +h2o
+    z_glucotropeolin
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
-    beta_d_fructose
+    <-> ec_3_2_1_147 [3.2.1.147] +z_indol_3_yl_n_sulfonatooxy_methanimidothioate +h +h2o
+    z_glucobrassicin
   }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +cis_beta_d_glucosyl_2_hydroxycinnamate +h2o
-    cis_2_coumarate
-  }
-
-  branch from 6pgc side right {
+  branch from 6pgc side left {
     6pgc
     <-> ec_1_1_1_43 [1.1.1.43] +nadp +nadph +hplus
     6_phospho_2_dehydro_d_gluconate
   }
 
-  branch from 3_geranyl_3_z_2_isocyanovinyl_3h_indole side left {
+  branch from 3_geranyl_3_z_2_isocyanovinyl_3h_indole side right {
     3_geranyl_3_z_2_isocyanovinyl_3h_indole
     <-> ec_5_5_1_32 [5.5.1.32]
     12_epi_hapalindole_u
   }
 
-  branch from 3_geranyl_3_z_2_isocyanovinyl_3h_indole side right {
+  branch from 3_geranyl_3_z_2_isocyanovinyl_3h_indole side left {
     3_geranyl_3_z_2_isocyanovinyl_3h_indole
     <-> ec_5_5_1_33 [5.5.1.33]
     12_epi_fischerindole_u
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +2_oxo_atp +h2o +hplus
-    2_oxo_amp
-  }
-
   branch from ppi side right {
     ppi
-    <-> . +fpp
-    allo_aromadendrene
+    <-> . +fpp +h2o
+    1s_6s_7r_sesquipiperitol
+  }
+
+  branch from ppi side left {
+    ppi
+    <-> . +2_cis_6_trans_farnesyl_diphosphate
+    trans_farnesene
   }
 }

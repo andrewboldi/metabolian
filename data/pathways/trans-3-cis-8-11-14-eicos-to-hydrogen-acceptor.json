@@ -117,16 +117,6 @@
       }
     },
     {
-      "id": "3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa",
-      "name": "(3R,8Z,11Z,14Z)-3-hydroxyicosatrienoyl-CoA",
-      "short": "(3R,8Z,11Z,14Z)-3-h…",
-      "formula": "C41H64N7O18P3S",
-      "charge": -4,
-      "xrefs": {
-        "chebi": "CHEBI:76411"
-      }
-    },
-    {
       "id": "8z_11z_14z_eicosatrienoyl_coa",
       "name": "(8Z,11Z,14Z)-eicosatrienoyl-CoA",
       "short": "(8Z,11Z,14Z)-eicosa…",
@@ -164,6 +154,25 @@
       }
     },
     {
+      "id": "3_icosa_8_11_14_trienoyl_coa",
+      "name": "3-Icosa-8,11,14-trienoyl-CoA",
+      "short": "3-Icosa-8,11,14-tri…",
+      "formula": "C41H68N7O18P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1554455"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
       "id": "1_hexadecanoyl_sn_glycero_3_phospho_d_myo_inosit",
       "name": "1-hexadecanoyl-sn--glycero-3-phospho-D-myo-inositol",
       "short": "1-hexadecanoyl-sn--…",
@@ -193,23 +202,31 @@
       }
     },
     {
-      "id": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine",
-      "short": "1-hexadecanoyl-sn-g…",
-      "formula": "C21H44NO7P",
-      "charge": 0,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:73004"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s",
-      "name": "1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-icosatetraenoyl)-sn-glycero-3-phosphoethanolamine",
-      "short": "1-hexadecanoyl-2-(5…",
-      "formula": "C41H74NO8P",
+      "id": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+      "name": "(7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA",
+      "short": "(7Z,10Z,13Z,16Z)-3-…",
+      "formula": "C43H64N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:73852"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:73009"
+        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -337,41 +354,6 @@
     },
     {
       "id": "r4",
-      "name": "(3R)-hydroxy-(8Z,11Z,14Z)-eicosatrienoyl-CoA = (2E,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O",
-      "equation": "(3R)-hydroxy-(8Z,11Z,14Z)-eicosatrienoyl-CoA = (2E,8Z,11Z,14Z)-eicosatetraenoyl-CoA + H2O",
-      "substrates": [
-        {
-          "metabolite": "3r_8z_11z_14z_3_hydroxyicosatrienoyl_coa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2e_8z_11z_14z_icosatetraenoyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:39315"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:39315"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "Reaction MNXR158707",
       "substrates": [
         {
@@ -398,7 +380,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "metanetx": "MNXR158707"
       },
@@ -408,6 +390,44 @@
           {
             "db": "MetaNetX",
             "id": "MNXR158707"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "Reaction MNXR205364",
+      "substrates": [
+        {
+          "metabolite": "3_icosa_8_11_14_trienoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_8z_11z_14z_icosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "metanetx": "MNXR205364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR205364"
           }
         ]
       }
@@ -453,21 +473,29 @@
     },
     {
       "id": "r7",
-      "name": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA ...",
-      "equation": "1-hexadecanoyl-sn-glycero-3-phosphoethanolamine + (5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA = 1-hexadecanoyl-2-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-sn-glycero-3-phosphoethanolamine + CoA",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + malonyl-CoA + H(+) = (7Z,10Z,13Z,16Z)-3-oxodocos...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoyl-CoA + malonyl-CoA + H(+) = (7Z,10Z,13Z,16Z)-3-oxodocosatetraenoyl-CoA + CO2 + CoA",
       "substrates": [
         {
-          "metabolite": "1_hexadecanoyl_sn_glycero_3_phosphoethanolamine",
+          "metabolite": "arachidonoyl_coa",
           "stoichiometry": 1
         },
         {
-          "metabolite": "arachidonoyl_coa",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "1_hexadecanoyl_2_5z_8z_11z_14z_icosatetraenoyl_s",
+          "metabolite": "7z_10z_13z_16z_3_oxodocosatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
           "stoichiometry": 1
         },
         {
@@ -478,14 +506,14 @@
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:36023"
+        "rhea": "RHEA:36475"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36023"
+            "id": "RHEA:36475"
           }
         ]
       }

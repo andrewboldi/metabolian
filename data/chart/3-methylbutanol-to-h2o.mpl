@@ -52,25 +52,25 @@ pathway 3-methylbutanol-to-h2o "3-methylbutanol to H2O" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_209 [1.1.1.209] +h +5beta_dihydrocorticosterone +nadph
-    tetrahydrocorticosterone
+    <-> . +h +nadph +2_4_7_10_13_16_docosahexenoyl_coenzyme_a
+    3_7_10_13_16_docosapentenoyl_coenzyme_a
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_10 [1.3.1.10] +h +o_s_2e_tetradecenoylpantetheine_4_phosphoryl_ser +nadph
-    o_s_tetradecanoylpantetheine_4_phosphoryl_serine
+    <-> . +h +nadph +2_4_7_10_13_16_19_docosaheptenoyl_coenzyme_a
+    3_7_10_13_16_19_docosahexenoyl_coenzyme_a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +alpha_d_glucose
-    isomaltose
+    <-> . +atp +1_6_anhydrous_n_acetylmuramate +n_acetylmuramate_6_phosphate
+    adp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_78 [1.14.13.78] +ent_kaur_16_en_19_al +nadp +h +o2 +nadph
-    ent_kaur_16_en_19_ol
+    <-> . +l_dehydroascorbic_acid +all_trans_zeaxanthin +h +l_ascorbate
+    all_trans_antheraxanthin
   }
 }

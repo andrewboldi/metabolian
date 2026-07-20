@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway prostaglandin-g2-to-11-epi-prostaglandin-f2 "prostaglandin G2 to 11-epi-prostaglandin F2α" {
-  spacing 172
+  spacing 166
 
   spine at 0,0 {
     prostaglandin_g2
@@ -17,12 +17,6 @@ pathway prostaglandin-g2-to-11-epi-prostaglandin-f2 "prostaglandin G2 to 11-epi-
   }
 
   branch from prostaglandin_h2 side left {
-    prostaglandin_h2
-    <-> ec_5_3_99_5 [5.3.99.5]
-    thromboxane_a2
-  }
-
-  branch from prostaglandin_h2 side right {
     prostaglandin_h2
     <-> ec_5_3_99_4 [5.3.99.4]
     prostaglandin_i2

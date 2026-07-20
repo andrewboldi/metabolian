@@ -24,26 +24,26 @@ pathway 2-o-glutaroyl-1-o-palmito-to-hexadecanoate "2-O-glutaroyl-1-O-palmito…
 
   branch from palmitate side left {
     palmitate
-    <-> . +tripalmitin +h2o +hplus
-    dihexadecanoylglycerol
+    <-> . +s_palmitoyl_n_acetylcysteamine +h2o +hplus
+    n_acetylcysteamine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_o_palmitoyl_2_o_5_oxovaleryl_sn_glycero_3_phos +h2o +hplus
-    2_5_oxovaleroyl_sn_glycero_3_phosphocholine
+    <-> . +s_palmitoyl_n_acetylcysteine_methyl_ester +h2o +hplus
+    n_acetylcysteine_methyl_ester
   }
 
   branch from ppi side left {
     ppi
-    <-> . +12_methyloctadecanoate +atp +coa +amp
-    12_methyloctadecanoyl_coa
+    <-> . +5z_8z_11z_13e_15_hete +atp +coa +amp
+    15_hydroxy_5z_8z_11z_13e_icosatetraenoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_hydroxyhexadecanoate +atp +coa +amp
-    2_hydroxypalmitoyl_coa
+    <-> ec_4_2_3_164 [4.2.3.164] +fpp
+    eremophilene
   }
 
   branch from o_s_hexadecanoylpantetheine_4_phosphoryl_serine side left {
@@ -60,25 +60,25 @@ pathway 2-o-glutaroyl-1-o-palmito-to-hexadecanoate "2-O-glutaroyl-1-O-palmito…
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side left {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +linoleoyl_coa +coa
-    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
+    <-> . +h2o +pi
+    1_hexadecanoyl_sn_glycerol
   }
 
   branch from 1_palmitoyl_sn_glycerol_3_phosphate side right {
     1_palmitoyl_sn_glycerol_3_phosphate
-    <-> . +arachidonoyl_coa +coa
-    1_hexadecanoyl_2_5z_8z_11z_14z_eicosatetraenoyl
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +coa
+    1_palmitoyl_2_4z_7z_10z_13z_16z_19z_docosahexaen
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +icosanoyl_amp +amp +hplus
-    o_s_icosanoylpantetheine_4_phosphoryl_l_serine_1
+    <-> . +glycyl_amp +amp +hplus
+    o_s_glycylpantetheine_4_phosphoryl_l_serine_resi
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +docosanoyl_amp +amp +hplus
-    o_s_docosanoylpantetheine_4_phosphoryl_l_serine
+    <-> ec_6_2_1_72 [6.2.1.72] +serine +atp +amp +ppi
+    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
   }
 }

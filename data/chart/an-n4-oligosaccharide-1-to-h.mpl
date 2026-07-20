@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway an-n4-oligosaccharide-1-to-h "an N4-(oligosaccharide-(1… to H" {
-  spacing 340
+  spacing 336
 
   spine at 0,0 {
     an_n4_oligosaccharide_1_3_oligosaccharide_1_6_d
@@ -32,31 +32,25 @@ pathway an-n4-oligosaccharide-1-to-h "an N4-(oligosaccharide-(1… to H" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a
+    <-> . +6_aminohexanoate
+    epsilon_caprolactam
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_1_14 [3.6.1.14] +itp +h +phosphate
-    inosine_5_tetraphosphate
-  }
-
-  branch from glucose_1_6_bisphosphate side left {
-    glucose_1_6_bisphosphate
-    <-> ec_2_7_1_106 [2.7.1.106] +d_glucopyranose_1_phosphate +glyceric_acid_1_3_biphosphate +h
-    2r_3_phosphoglycerate
-  }
-
-  branch from h side right {
-    h
-    <-> ec_2_7_2_13 [2.7.2.13] +atp +l_glutamate +adp
-    l_alpha_glutamyl_phosphate
+    <-> ec_1_14_13_69 [1.14.13.69] +nadh +h +o2 +ethene +nad
+    oxirane
   }
 
   branch from h side left {
     h
-    <-> ec_2_7_1_1 [2.7.1.1] +beta_d_fructose_6_phosphate +dadp +datp
-    d_fructofuranose
+    <-> ec_5_5_1_1 [5.5.1.1] +4_methylmuconolactone
+    3_methyl_cis_cis_muconic_acid
+  }
+
+  branch from h side right {
+    h
+    <-> . +4_sulfomuconolactone
+    3_sulfomuconate
   }
 }

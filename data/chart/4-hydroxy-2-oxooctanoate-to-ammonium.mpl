@@ -24,26 +24,26 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium "4-Hydroxy-2-oxooctanoate to ammoni
 
   branch from h side left {
     h
-    <-> ec_1_1_1_2 [1.1.1.2] +16_ketoestrone +nadph +nadp
-    16_hydroxyestrone
+    <-> ec_3_4_24_27 [3.4.24.27] +l_leucyl_l_alanine +n_benzyloxycarbonylglycine +h2o
+    benzyloxycarbonyl_gly_leu_ala
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_209 [1.1.1.209] +pregnanediol +nadp +nadph
-    5_pregnan_20_ol_3_one
+    <-> ec_1_14_14_1 [1.14.14.1] +fenthion_sulfoxide +o2 +nadph +nadp +h2o
+    fenthion_sulfone
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> ec_2_6_1_21 [2.6.1.21] +l_alanine +2_oxoglutarate
-    d_glutamate
+    <-> . +d_alanine +2_oxoglutarate
+    l_glutamate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_2_7_1_40 [2.7.1.40] +8_bromoadenosine_5_diphosphate +h +phosphoenolpyruvate
-    8_bromoadenosine_5_triphosphate
+    <-> . +co2 +h
+    enol_oxaloacetate
   }
 
   branch from pentanal side left {
@@ -60,14 +60,14 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium "4-Hydroxy-2-oxooctanoate to ammoni
 
   branch from nad side left {
     nad
-    <-> ec_1_11_1_1 [1.11.1.1] +nadh +2_5_dimethyl_1_4_benzoquinone +h
-    compound_0069549
+    <-> ec_1_2_1_48 [1.2.1.48] +nadh +9z_hexadecenoate +h +h2o
+    9z_hexadecenal
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_8 [1.1.1.8] +nadh +4_hydroxy_3_oxobutylphosphonate
-    3_4_dihydroxybutylphosphonate
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +2_4_dinitrobenzoate +h +h2o
+    2_4_dinitrobenzaldehyde
   }
 
   branch from 5_3_3_dimethylguanidino_2_oxopentanoate side left {
@@ -78,19 +78,19 @@ pathway 4-hydroxy-2-oxooctanoate-to-ammonium "4-Hydroxy-2-oxooctanoate to ammoni
 
   branch from 5_3_3_dimethylguanidino_2_oxopentanoate side right {
     5_3_3_dimethylguanidino_2_oxopentanoate
-    <-> . +n_n_dimethyl_l_argininium +glyoxylate
-    glycine
+    <-> . +n_n_dimethyl_l_argininium +oxaloacetate
+    aspartate
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +2_methylcyclopentammonium +nadp +h2o +nadph +hplus
-    2_methylcyclopentanone
+    <-> . +d_allothreonine +o2 +h2o +h2o2
+    r_3_hydroxy_2_oxobutanoate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +pentan_3_aminium +nadp +h2o +nadph +hplus
-    pentan_3_one
+    <-> . +d_asparagine +o2 +h2o +h2o2
+    2_oxosuccinamate
   }
 }

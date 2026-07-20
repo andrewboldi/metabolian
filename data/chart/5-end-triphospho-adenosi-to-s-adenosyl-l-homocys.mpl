@@ -26,14 +26,14 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    r_nephthenol
+    <-> ec_4_6_1_17 [4.6.1.17] +8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
+    precursor_z
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_150 [4.2.3.150] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    r_cembrene_a
+    <-> . +suberate +atp +coa +amp
+    octanedioyl_coa
   }
 
   branch from 5_end_n7_methyl_5_triphospho_guanosine_adenosine side right {
@@ -44,13 +44,13 @@ pathway 5-end-triphospho-adenosi-to-s-adenosyl-l-homocys "5'-end triphospho-aden
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> ec_2_1_1_220 [2.1.1.220] +adenosine_5_monophosphate_1 +sam +hplus
+    n1_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
+    <-> ec_2_1_1_221 [2.1.1.221] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 }

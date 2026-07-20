@@ -18,13 +18,13 @@ pathway 9s-13s-15z-12-oxophyto-to-9-hydroxy-12-oxo-15-z "(9S,13S,15Z)-12-oxophyt
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_2 [1.1.1.2] +d_ribose +h +nadph
-    ribitol
+    <-> ec_1_1_1_145 [1.1.1.145] +h +21_hydroxyprogesterone +nadph
+    21_hydroxypregnenolone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +h +3_nitrobenzaldehyde +nadph
-    3_nitrobenzyl_alcohol
+    <-> ec_1_17_1_8 [1.17.1.8] +h +nadph +2_3_dihydrodipicolinate
+    2_3_4_5_tetrahydrodipicolinate
   }
 }

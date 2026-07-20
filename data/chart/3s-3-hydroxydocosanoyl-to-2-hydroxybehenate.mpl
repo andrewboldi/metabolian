@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€¦ to 2-hydroxybehenate" {
-  spacing 188
+  spacing 182
 
   spine at 0,0 {
     3s_3_hydroxydocosanoyl_coa
@@ -32,25 +32,19 @@ pathway 3s-3-hydroxydocosanoyl-to-2-hydroxybehenate "(3S)-3-hydroxydocosanoyl-â€
 
   branch from docosanoyl_coa side left {
     docosanoyl_coa
-    <-> . +acetyl_coa +coa
-    3_oxotetracosanoyl_coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_docosanoyl_sn_glycero_3_phosphate +coa
+    sn_glycerol_3_phosphate
   }
 
   branch from docosanoyl_coa side right {
     docosanoyl_coa
-    <-> . +nadph +hplus +nadp +coa
-    docosan_1_ol
+    <-> . +nadh +eicosanoyl_coa +acetyl_coa +h +h2o2 +o2 +nad +h2o
+    coa
   }
 
   branch from behenate side left {
     behenate
-    <-> . +n_docosanoyltaurine +h2o
-    taurine
-  }
-
-  branch from behenate side right {
-    behenate
-    <-> . +h +o2 +nadph +22_hydroxydocosanoate +h2o
-    nadp
+    <-> . +h +adp +phosphate +h2o
+    atp
   }
 }

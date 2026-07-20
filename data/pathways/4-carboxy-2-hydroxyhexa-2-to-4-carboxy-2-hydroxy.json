@@ -1,0 +1,228 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-carboxy-2-hydroxyhexa-2-to-4-carboxy-2-hydroxy",
+  "name": "4-Carboxy-2-hydroxyhexa-2… to 4-Carboxy-2-hydroxy-6-met…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-Carboxy-2-hydroxyhexa-2,4-dienedioate to 4-Carboxy-2-hydroxy-6-methoxy-6-oxohexa-2,4-dienoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR196575"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_carboxy_2_hydroxyhexa_2_4_dienedioate",
+      "name": "4-Carboxy-2-hydroxyhexa-2,4-dienedioate",
+      "short": "4-Carboxy-2-hydroxy…",
+      "formula": "C7H3O7",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM1365052"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM729799"
+      }
+    },
+    {
+      "id": "4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien",
+      "name": "4-Carboxy-2-hydroxy-6-methoxy-6-oxohexa-2,4-dienoate",
+      "short": "4-Carboxy-2-hydroxy…",
+      "formula": "C8H6O7",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1371959"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "3_o_methylgallate",
+      "name": "3-O-methylgallate",
+      "formula": "C8H7O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2329"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien",
+      "name": "4-Carboxy-2-hydroxy-6-methoxy-6-oxohexa-2,4-dienoate",
+      "short": "4-Carboxy-2-hydroxy…",
+      "formula": "C8H8O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:81691"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_8",
+      "name": "protocatechuate 4,5-dioxygenase",
+      "ec": [
+        "1.13.11.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR196575",
+      "substrates": [
+        {
+          "metabolite": "4_carboxy_2_hydroxyhexa_2_4_dienedioate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR196575"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196575"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR198030",
+      "substrates": [
+        {
+          "metabolite": "4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_o_methylgallate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR198030"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR198030"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "protocatechuate 4,5-dioxygenase",
+      "ec": "1.13.11.8",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_o_methylgallate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR150518"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR150518"
+          }
+        ]
+      }
+    }
+  ]
+}

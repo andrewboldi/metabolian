@@ -1,0 +1,311 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "xanthosine-to-5-ureidoimidazole-4-carbo",
+  "name": "xanthosine to 5-ureidoimidazole-4-carbo…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from xanthosine to 5-ureidoimidazole-4-carboxylic acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15025"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18107"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "xanthosine",
+      "name": "xanthosine",
+      "formula": "C10H12N4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18107"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "7_methylxanthosine",
+      "name": "7-methylxanthosine",
+      "formula": "C11H15N4O6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49310"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "s_adenosyl_l_homocysteine",
+      "name": "S-adenosyl-L-homocysteine",
+      "short": "S-adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1102167"
+      }
+    },
+    {
+      "id": "xanthosine",
+      "name": "xanthosine",
+      "formula": "C10H12N4O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103769"
+      }
+    },
+    {
+      "id": "s_s_adenosyl_l_methionine",
+      "name": "(S)-S-adenosyl-L-methionine",
+      "short": "S-adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:142094"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "xanthine",
+      "name": "xanthine",
+      "formula": "C5H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM174"
+      }
+    },
+    {
+      "id": "aldehydo_d_ribose",
+      "name": "aldehydo-D-ribose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47014"
+      }
+    },
+    {
+      "id": "5_ureidoimidazole_4_carboxylic_acid",
+      "name": "5-ureidoimidazole-4-carboxylic acid",
+      "short": "5-ureidoimidazole-4…",
+      "formula": "C5H6N4O3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4401"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_158",
+      "name": "7-methylxanthosine synthase",
+      "ec": [
+        "2.1.1.158"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_1",
+      "name": "purine nucleosidase",
+      "ec": [
+        "3.2.2.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7-methylxanthosine synthase",
+      "equation": "xanthosine + S-adenosyl-L-methionine = 7-methylxanthosine + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.158",
+      "substrates": [
+        {
+          "metabolite": "xanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_methylxanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15025"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15025"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-methylxanthosine synthase",
+      "ec": "2.1.1.158",
+      "substrates": [
+        {
+          "metabolite": "s_adenosyl_l_homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_methylxanthosine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "s_s_adenosyl_l_methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_158"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR196066"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR196066"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "purine nucleosidase",
+      "ec": "3.2.2.1",
+      "substrates": [
+        {
+          "metabolite": "xanthosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aldehydo_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR177658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR177658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR107332",
+      "substrates": [
+        {
+          "metabolite": "xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_ureidoimidazole_4_carboxylic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR107332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR107332"
+          }
+        ]
+      }
+    }
+  ]
+}

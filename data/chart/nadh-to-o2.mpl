@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nadh-to-o2 "NADH to O2" {
-  spacing 232
+  spacing 226
 
   spine at 0,0 {
     nadh
@@ -18,49 +18,43 @@ pathway nadh-to-o2 "NADH to O2" {
 
   branch from nad side left {
     nad
-    <-> . +5_chloro_3_5_cyclohexadiene_l_2_diol_1_carboxyla +nadh +h +o2
-    3_chlorobenzoate
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_29z_octatetracontatrienoylpantetheine +h
+    o_s_17z_29z_octatetracontadienoylpantetheine_4_p
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_26 [1.14.12.26] +nadh +1_2_4_5_tetrachlorobenzene +h +o2
-    1r_2s_1_3_4_6_tetrachlorocyclohexa_3_5_diene_1
+    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho +h
+    o_s_17z_hexatriacontenoylpantetheine_4_phosphory
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_4_2_1_165 [4.2.1.165] +3_deacetyl_3_vinylbacteriochlorophyllide_a
-    3_deacetyl_3_1_hydroxyethyl_bacteriochlorophylli
+    <-> . +o_s_3r_17z_3_hydroxyhexatriacontenoylpantetheine
+    o_s_2e_17z_hexatriacontadienoylpantetheine_4_pho
   }
 
   branch from h2o side right {
     h2o
-    <-> . +4_hydroxy_2_keto_5_methyl_6_oxo_3_hexenoate +2_methyl_3_oxopropanoate
-    pyruvate
+    <-> . +simvastatin
+    simvastatin_hydroxy_acid
   }
 
   branch from propanal side left {
     propanal
-    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
+    <-> . +4_hydroxy_5_methyl_3_2h_furanone +h2o
     2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
-  }
-
-  branch from propanal side right {
-    propanal
-    <-> . +2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano +h2o
-    4_hydroxy_5_methyl_3_2h_furanone
-  }
-
-  branch from o2 side left {
-    o2
-    <-> ec_1_13_11_74 [1.13.11.74] +2_amino_5_methylphenol +h
-    2z_4e_2_amino_5_methyl_muconate_semialdehyde
   }
 
   branch from o2 side right {
     o2
-    <-> . +s_ethyl_l_cysteine +h2o +h2o2
-    ethiin
+    <-> ec_1_2_3_1 [1.2.3.1] +nicotine_delta1_5_iminium_ion +h2o +h +cotinine
+    h2o2
+  }
+
+  branch from o2 side left {
+    o2
+    <-> ec_1_14_13_237 [1.14.13.237] +glucohirsutin +nadp +h2o +h +nadph
+    8_methylsulfanyl_octyl_glucosinolate
   }
 }

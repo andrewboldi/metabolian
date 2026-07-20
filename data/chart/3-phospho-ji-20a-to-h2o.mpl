@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-phospho-ji-20a-to-h2o "3'-phospho-JI-20A to H2O" {
-  spacing 218
+  spacing 212
 
   spine at 0,0 {
     3_phospho_ji_20a
@@ -22,67 +22,61 @@ pathway 3-phospho-ji-20a-to-h2o "3'-phospho-JI-20A to H2O" {
 
   branch from h side left {
     h
-    <-> . +dtdp_beta_l_digitoxose +nadp +nadph
-    dtdp_4_dehydro_2_6_dideoxy_beta_l_glucose
+    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_d +31r_8_12_diethylbacteriochlorophyllide_d
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from h side right {
     h
-    <-> . +tryptoquialanol +nadp +nadph
-    tryptoquialanone
+    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_d +2e_6e_farnesyl_diphosphate
+    12_ethyl_8_propylbacteriochlorophyllide_d
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +phytenoyl_coa +diphosphate +h +amp +2e_phytenoic_acid
-    coa
+    <-> ec_2_7_1_145 [2.7.1.145] +cytarabine +h +adp
+    1_beta_d_arabinofuranosylcytosine_5_monophosphat
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    glucosyl_oleandomycin
+    <-> ec_2_7_1_74 [2.7.1.74] +zalcitabine +h +adp
+    l_ddcmp
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +2_oxoglutarate +3r_beta_leucine
-    4_methyl_3_oxopentanoate
+    <-> ec_2_3_2_2 [2.3.2.2] +h +4_nitroaniline +h2o
+    gamma_glutamyl_p_nitroanilide
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_glutamate +h2o
-    n_beta_d_glucosyl_indol_3_yl_acetate
+    <-> ec_3_4_17_11 [3.4.17.11] +methotrexate +h +h2o
+    4_amino_n10_methylpteroic_acid
   }
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +6_carboxyhex_2_enoyl_coa +h
-    6_carboxyhexanoyl_coa
+    <-> ec_1_5_99_12 [1.5.99.12] +adenosine +fadh2 +h +2e_4_hydroxy_3_methylbut_2_enal +h2o
+    9_ribosyl_trans_zeatin
   }
 
   branch from fad side right {
     fad
-    <-> . +l_glutamate_5_semialdehyde +fadh2 +h +h2o
-    l_proline
-  }
-
-  branch from gentamicin_x2_cation side left {
-    gentamicin_x2_cation
-    <-> . +s_adenosyl_l_homocysteine +h +geneticin_cation
-    s_adenosyl_l_methionine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +4_deoxy_l_threo_hex_4_enopyranosiduronate_alpha +4_deoxy_l_threo_hex_4_enopyranuronate
-    alpha_l_rhamnopyranose_3_sulfate
+    <-> . +fadh2 +h +ubiquinone_2
+    ubiquinol_2
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_56 [3.2.1.56] +4_deoxy_beta_l_erythro_hex_4_enopyranuronosyl_1 +n_sulfo_d_glucosamine
-    4_deoxy_l_threo_hex_4_enopyranuronate
+    <-> . +tert_butyl_formate +h +formate
+    tert_butanol
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +beta_d_galactose +d_fructofuranose
+    lactulose
   }
 }

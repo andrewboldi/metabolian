@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway delphinidin-to-coa-null "Delphinidin… to CoA" {
-  spacing 250
+  spacing 244
 
   spine at 0,0 {
     delphinidin_3_o_6_caffeoyl_beta_d_glucoside
@@ -18,20 +18,8 @@ pathway delphinidin-to-coa-null "Delphinidin… to CoA" {
 
   branch from mirtillin side left {
     mirtillin
-    <-> ec_2_4_1_115 [2.4.1.115] +udp +ephdine
+    <-> . +udp +delphinidin_3_o_sophoroside +h
     udp_alpha_d_glucose
-  }
-
-  branch from mirtillin side right {
-    mirtillin
-    <-> . +delphinidin_3_o_sophoroside +h +udp_alpha_d_glucose
-    udp
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
-    <-> ec_2_8_3_23 [2.8.3.23] +dihydrocaffeoyl_coa +trans_caffeate
-    3_3_4_dihydroxyphenyl_propanoate
   }
 
   branch from trans_caffeoyl_coa side right {
@@ -40,21 +28,27 @@ pathway delphinidin-to-coa-null "Delphinidin… to CoA" {
     3_hydroxy_3_3_4_dihydroxyphenyl_propanoyl_coa
   }
 
-  branch from delphinidin_3_o_6_o_malonyl_beta_d_glucoside side left {
-    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
-    <-> ec_2_4_1_238 [2.4.1.238] +udp +h +udp_alpha_d_glucose
-    delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
+    avenanthramide_c
   }
 
-  branch from coa side right {
-    coa
-    <-> . +r_carnitine +docosanoyl_coa
-    o_behenoylcarnitine
+  branch from delphinidin_3_o_6_o_malonyl_beta_d_glucoside side right {
+    delphinidin_3_o_6_o_malonyl_beta_d_glucoside
+    <-> ec_2_4_1_238 [2.4.1.238] +delphinidin_3_o_6_o_malonyl_beta_glucoside_3_o_b +h +udp_alpha_d_glucose
+    udp
   }
 
   branch from coa side left {
     coa
-    <-> . +erucoyl_coa +r_carnitine
-    erucoylcarnitine
+    <-> ec_2_3_1_26 [2.3.1.26] +hexanoyl_coa +cholesterol
+    hexanoyl_cholesterol
+  }
+
+  branch from coa side right {
+    coa
+    <-> ec_2_3_1_26 [2.3.1.26] +decanoyl_coa +cholesterol
+    decanoyl_cholesterol
   }
 }

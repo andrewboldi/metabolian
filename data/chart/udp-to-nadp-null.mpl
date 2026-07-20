@@ -18,26 +18,26 @@ pathway udp-to-nadp-null "UDP to NADP" {
 
   branch from o2 side left {
     o2
-    <-> . +stercobilinogen +h2o
-    l_urobilin
+    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o
+    carboxy_gliclazide
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_78 [1.14.13.78] +ent_kaur_16_ene +h +nadph +nadp +h2o
-    ent_kaur_16_en_19_ol
+    <-> . +h +nadph +cerivastatin +nadp +h2o
+    cerivastatin_m23
   }
 
   branch from h2o side left {
     h2o
-    <-> . +protoemetine
-    ankorine
+    <-> . +h +adp +cyclosporin_a_metabolite_m1 +phosphate +cyclosporin_a_metabolite_m1
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +loganate
-    10_deoxygeniposidic_acid
+    <-> . +h +adp +phosphate +atp
+    androst_4_ene_3_17_dione
   }
 
   branch from gentisyl_alcohol side left {
@@ -48,13 +48,13 @@ pathway udp-to-nadp-null "UDP to NADP" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_184 [1.1.1.184] +h +5beta_androstane_3_17_dione +nadph
-    3alpha_hydroxy_5beta_androstan_17_one
+    <-> . +brassicasterol +h +nadph
+    ergosterol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_50 [1.1.1.50] +h +5_dihydrocortisol +nadph
-    tetrahydrocortisol
+    <-> . +h +nadph +2e_4z_7z_decatrienoyl_coa
+    3_7_decadienoyl_coenzyme_a
   }
 }

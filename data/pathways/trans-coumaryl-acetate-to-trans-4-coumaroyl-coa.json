@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-coumaryl-acetate-to-trans-4-coumaroyl-coa",
+  "name": "trans-coumaryl acetate to trans-4-coumaroyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from trans-coumaryl acetate to trans-4-coumaroyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR176535"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73346"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_coumaryl_acetate",
+      "name": "trans-coumaryl acetate",
+      "short": "trans-coumaryl…",
+      "formula": "C11H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73346"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "trans_p_coumaryl_alcohol",
+      "name": "trans-p-coumaryl alcohol",
+      "short": "trans-p-coumaryl…",
+      "formula": "C9H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64555"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM26"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "4_hydroxycinnamaldehyde",
+      "name": "4-hydroxycinnamaldehyde",
+      "short": "4-hydroxycinnamalde…",
+      "formula": "C9H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28353"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_195",
+      "name": "cinnamyl-alcohol dehydrogenase",
+      "ec": [
+        "1.1.1.195"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_44",
+      "name": "cinnamoyl-CoA reductase",
+      "ec": [
+        "1.2.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR176535",
+      "substrates": [
+        {
+          "metabolite": "trans_coumaryl_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_p_coumaryl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR176535"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR176535"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cinnamyl-alcohol dehydrogenase",
+      "equation": "(E)-4-coumaroyl alcohol + NADP(+) = (E)-4-coumaraldehyde + NADPH + H(+)",
+      "ec": "1.1.1.195",
+      "substrates": [
+        {
+          "metabolite": "trans_p_coumaryl_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxycinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_195"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45724"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45724"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cinnamoyl-CoA reductase",
+      "equation": "(E)-4-coumaraldehyde + NADP(+) + CoA = (E)-4-coumaroyl-CoA + NADPH + H(+)",
+      "ec": "1.2.1.44",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxycinnamaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64652"
+          }
+        ]
+      }
+    }
+  ]
+}

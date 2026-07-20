@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway co2-to-nad "CO2 to NAD" {
-  spacing 286
+  spacing 280
 
   spine at 0,0 {
     co2
@@ -22,103 +22,97 @@ pathway co2-to-nad "CO2 to NAD" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_150 [1.1.1.150] +nadh +21_dehydrocorticosterone +nad
-    corticosterone
+    <-> ec_1_1_1_2 [1.1.1.2] +4_cyanobenzaldehyde +nadph +nadp
+    4_cyanobenzyl_alcohol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_151 [1.1.1.151] +21_dehydrocorticosterone +nadph +corticosterone
-    nadp
+    <-> ec_1_1_1_2 [1.1.1.2] +4_formylbenzoate +nadph +nadp
+    4_carboxybenzyl_alcohol
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +beta_d_fructose_6_phosphate +phosphoenolpyruvate
-    d_fructofuranose
+    <-> ec_4_4_1_13 [4.4.1.13] +h +z_2_phenyl_1_thioacetohydroximate +nh4 +h2o
+    s_phenylacetothiohydroximoyl_l_cysteine
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> . +d_alanine +2_oxoglutarate
-    l_glutamate
+    <-> . +ubiquinol_2 +co2 +acetate +h2o
+    ubiquinone_2
   }
 
   branch from benzaldehyde side left {
-    benzaldehyde
-    <-> ec_4_1_2_10 [4.1.2.10] +mandelonitrile +h
-    cyanide
-  }
-
-  branch from benzaldehyde side right {
     benzaldehyde
     <-> ec_4_1_2_38 [4.1.2.38]
     s_benzoin
   }
 
-  branch from cinnamoyl_coa side left {
-    cinnamoyl_coa
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +amp +h +atp +coa
-    e_cinnamate
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> ec_4_1_2_38 [4.1.2.38]
+    r_benzoin
   }
 
-  branch from cinnamoyl_coa side right {
+  branch from cinnamoyl_coa side left {
     cinnamoyl_coa
     <-> ec_2_3_1_146 [2.3.1.146] +malonyl_coa +co2 +h +coa
     pinosylvin
   }
 
+  branch from cinnamoyl_coa side right {
+    cinnamoyl_coa
+    <-> ec_2_3_1_74 [2.3.1.74] +malonyl_coa +co2 +h +coa
+    pinocembrin_chalcone
+  }
+
   branch from h2o side left {
     h2o
-    <-> ec_1_2_3_1 [1.2.3.1] +e_cinnamaldehyde +2_6_dichloroindophenol +cinnamate +h
-    reduced_2_6_dichlorophenolindophenol
+    <-> ec_3_4_24_27 [3.4.24.27] +leu_gly_pro +z_gly_pro
+    z_gly_pro_leu_gly_pro
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_3_1 [1.2.3.1] +citral +2_6_dichloroindophenol +h +reduced_2_6_dichlorophenolindophenol
-    geranate
-  }
-
-  branch from cinnamate side left {
-    cinnamate
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +h +nad +h2o
-    e_cinnamaldehyde
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_6_2_1_3 [6.2.1.3] +dodecanoyl_coa +diphosphate +amp +coa
-    dodecanoate
+    <-> ec_3_4_21_26 [3.4.21.26] +coumarin_120 +z_gly_pro
+    z_gly_pro_amc
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_2_1_3 [6.2.1.3] +hexanoyl_coa +diphosphate +amp +coa
-    hexanoate
+    <-> ec_6_3_2_45 [6.3.2.45] +udp_n_acetyl_alpha_d_muramate +l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo +h +adp +phosphate
+    udp_n_acetyl_d_muramoyl_l_alanyl_d_glutamyl_meso
   }
 
-  branch from coa side right {
-    coa
-    <-> ec_2_3_1_93 [2.3.1.93] +2e_2_methylbut_2_enoyl_coa +13_hydroxylupanine
-    13_e_2_methylcrotonoyl_oxylupanine
+  branch from atp side right {
+    atp
+    <-> . +fructoselysine_3_phosphate +h +adp
+    1_deoxy_1_n6_lysino_d_fructose
   }
 
   branch from coa side left {
     coa
-    <-> . +4_1_methyl_2_pyrrolidinyl_3_oxobutanoyl_coa +acetyl_coa
-    1_methylpyrrolidine_2_acetyl_coa
+    <-> . +methylmalonate +h +h2o
+    r_methylmalonyl_coa
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +4_5beta_dihydrocortisone +h
-    urocortisone
+  branch from coa side right {
+    coa
+    <-> . +9z_octadecenoyl_coa +h2o
+    octadecenoic_acid
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +s_nitrosoglutathione +nadh +h
-    sulfinamide_glutathione
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_methoxyindole_2_carboxylic_acid +h +h2o
+    5_methoxyindole_3_carbaldehyde
+  }
+
+  branch from nad side right {
+    nad
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +5_nitro_1_naphthoate +h +h2o
+    5_nitro_1_naphthaldehyde
   }
 }

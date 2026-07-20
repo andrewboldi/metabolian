@@ -18,13 +18,13 @@ pathway 2-aminophenol-to-diphosphate "2-aminophenol to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    acoradiene
+    <-> . +all_trans_pentaprenyl_diphosphate
+    astellatene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +acoradiene
-    fpp
+    <-> . +all_trans_pentaprenyl_diphosphate +h2o
+    preaspterpenacid_acid_i
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
-  spacing 334
+  spacing 322
 
   spine at 0,0 {
     benzene
@@ -34,18 +34,6 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
     acetaldehyde
   }
 
-  branch from 2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate side left {
-    2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
-    <-> ec_1_2_1_85 [1.2.1.85] +nad +h2o +nadh +hplus
-    2z_4e_2_hydroxymuconate
-  }
-
-  branch from 2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate side right {
-    2z_4e_2_hydroxy_6_oxohexa_2_4_dienoate
-    <-> . +2z_4z_2_hydroxy_5_carboxymuconate_6_semialdehyd +h
-    co2
-  }
-
   branch from 2_oxopent_4_enoate side left {
     2_oxopent_4_enoate
     <-> .
@@ -60,14 +48,14 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from formate side left {
     formate
-    <-> ec_3_5_4_39 [3.5.4.39] +gtp +h2o +ppi +hplus
-    7_8_dihydro_d_neopterin_2_3_cyclic_phosphate
+    <-> ec_4_1_99_5 [4.1.99.5] +octadecanal +nadph +o2 +hplus +nadp +h2o
+    heptadecane
   }
 
   branch from formate side right {
     formate
-    <-> ec_3_5_1_102 [3.5.1.102] +2_amino_5_formylamino_6_1_d_ribosylamino_pyrimid +h2o +hplus
-    2_5_diamino_6_1_d_ribosylamino_pyrimidin_4_3h_on
+    <-> ec_1_14_14_154 [1.14.14.154] +14_methyl_steroid +fmnh2 +o2 +fmn +h2o +hplus
+    14_steroid
   }
 
   branch from 2_hydroxy_5_methyl_6_oxohexa_2_4_dienoate side left {
@@ -78,26 +66,26 @@ pathway benzene-to-4-methylcatechol "benzene to 4-methylcatechol" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_1 [3.4.11.1] +glycine
-    glycylglycine
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
+    l_histidine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +sarcosine
-    glycylsarcosine
+    <-> . +2_oxoglutarate +nh4
+    4_oxoglutaramate
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +cholesterol +nadph +pregnenolone +4_methylpentanal +h2o
+    <-> ec_1_14_15_4 [1.14.15.4] +h +21_hydroxyprogesterone +nadph +corticosterone +h2o
     nadp
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_15_4 [1.14.15.4] +h +21_hydroxyprogesterone +nadph +nadp +h2o
-    corticosterone
+    <-> . +h +21_hydroxyprogesterone +nadph +nadp +h2o
+    aldosterone
   }
 
   branch from 4_methylcatechol side right {

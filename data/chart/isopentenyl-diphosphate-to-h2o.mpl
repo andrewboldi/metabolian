@@ -16,51 +16,39 @@ pathway isopentenyl-diphosphate-to-h2o "isopentenyl diphosphate to H2O" {
     nadp
   }
 
-  branch from 2_cis_6_cis_farnesyl_diphosphate side left {
-    2_cis_6_cis_farnesyl_diphosphate
-    <-> . +ppi
-    germacrene_c
-  }
-
-  branch from 2_cis_6_cis_farnesyl_diphosphate side right {
-    2_cis_6_cis_farnesyl_diphosphate
-    <-> . +ppi
-    germacrene_a
-  }
-
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    cadinene
+    <-> . +harmol +dmapp
+    6_3_dimethylallyl_harmol
   }
 
   branch from ppi side right {
     ppi
-    <-> . +gpp
-    sabinene
+    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2r_3s_11s_aszonalenin
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +s_citronellol +h +nadph
-    r_citronellal
+    <-> . +h +nadph +24_methylcholesta_5_24_dien_3_ol
+    24_epicampesterol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +2e_geranial +h +nadph
-    thujan_3_ol
+    <-> ec_1_2_1_13 [1.2.1.13] +glyceric_acid_1_3_biphosphate +nadph +h +phosphate
+    d_glyceraldehyde_3_phosphate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +d_talopyranose +phosphate +d_talopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +gentamicin_x2_cation +phosphate +gentamicin_x2_cation
     atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    d_xylulofuranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    antibiotic_ji_20a
   }
 }

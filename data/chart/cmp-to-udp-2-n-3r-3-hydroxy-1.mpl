@@ -20,25 +20,25 @@ pathway cmp-to-udp-2-n-3r-3-hydroxy-1 "CMP to UDP-2-N-[(3R)-3-hydroxy-1…" {
 
   branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side left {
     cmp_3_deoxy_alpha_d_manno_octulosonic_acid
-    <-> ec_2_4_99_13 [2.4.99.13] +cmp +alpha_kdo_2_4_alpha_kdo_2_6_lipid_iva_brucella +h
-    alpha_kdo_2_6_lipid_iva_brucella
-  }
-
-  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side right {
-    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
     <-> ec_2_4_99_12 [2.4.99.12] +alpha_kdo_2_6_lipid_iva_e_coli +cmp +h
     lipid_iva_e_coli
   }
 
+  branch from cmp_3_deoxy_alpha_d_manno_octulosonic_acid side right {
+    cmp_3_deoxy_alpha_d_manno_octulosonic_acid
+    <-> ec_2_7_7_38 [2.7.7.38] +ctp +h +3_deoxy_d_manno_octulosonate
+    diphosphate
+  }
+
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_docosahexaenoylglycerophosphocholine
+    <-> ec_2_7_1_46 [2.7.1.46] +beta_l_arabinose_1_phosphate +h +adp
+    alpha_l_arabinofuranose
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    1_eicosadienoylglycerophosphocholine_delta_11_14
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_di_9z_12z_15z_octadecatrienoyl_sn_glycero_3
   }
 }

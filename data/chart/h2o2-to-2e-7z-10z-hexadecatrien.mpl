@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway h2o2-to-2e-7z-10z-hexadecatrien "H2O2 to (2E,7Z,10Z)-hexadecatrien…" {
-  spacing 194
+  spacing 176
 
   spine at 0,0 {
     h2o2
@@ -24,43 +24,25 @@ pathway h2o2-to-2e-7z-10z-hexadecatrien "H2O2 to (2E,7Z,10Z)-hexadecatrien…" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_22 [1.13.11.22] +e_caffeate +h
-    3_2_carboxyethenyl_cis_cis_muconate
+    <-> ec_1_13_11_63 [1.13.11.63] +retinal
+    all_trans_beta_carotene
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a29 +co2 +succinate +2_oxoglutarate
-    gibberellin_a20
+    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxy_6_oxohexa_2_4_dienoate
+    catechol
   }
 
   branch from coa side left {
     coa
-    <-> . +2e_dodecenoyl_coa +r_carnitine
-    o_5z_dodecenoyl_carnitine
+    <-> . +glycoursodeoxycholate +h +ursodeoxycholoyl_coa
+    glycine
   }
 
   branch from coa side right {
     coa
-    <-> . +2e_tetradecenoyl_coa +r_carnitine
-    5z_tetradecenoylcarnitine
-  }
-
-  branch from 3_oxo_6z_9z_12z_octadecatrienoyl_coa side left {
-    3_oxo_6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nad +nadh +hplus
-    3s_6z_9z_12z_3_hydroxyoctadecatrienoyl_coa
-  }
-
-  branch from 3_oxo_6z_9z_12z_octadecatrienoyl_coa side right {
-    3_oxo_6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nad +nadh +hplus
-    3r_6z_9z_12z_3_hydroxyoctadecatrienoyl_coa
-  }
-
-  branch from 2e_4z_7z_10z_hexadecatetraenoyl_coa side left {
-    2e_4z_7z_10z_hexadecatetraenoyl_coa
-    <-> . +h2o2 +o2
-    4_7_10_hexadecatrienoyl_coenzyme_a
+    <-> . +7z_hexadecenoyl_coa +h2o
+    7_palmitoleic_acid
   }
 }

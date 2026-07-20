@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-d-galactosyl-1-4-d "N-acetyl-β-D-galactosamin… to β-D-galactosyl-(1→4)-β-D-…" {
-  spacing 194
+  spacing 182
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminyl
@@ -18,28 +18,16 @@ pathway n-acetyl-d-galactosamin-to-d-galactosyl-1-4-d "N-acetyl-β-D-galactosami
     d_galactosyl_1_4_d_glucosyl_1_1_ceramide
   }
 
-  branch from n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d side left {
-    n_acetyl_d_galactosaminyl_1_4_d_galactosyl_1_4_d
-    <-> . +d_galactosyl_1_4_d_glucosyl_1_1_ceramide +udp +hplus
-    udp_n_acetyl_d_galactosamine
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
+  branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
     <-> ec_3_2_1_179 [3.2.1.179] +d_4_deoxy_4_glcpa_1_3_d_glcpnac +h2o
     5_dehydro_4_deoxy_d_glucuronate
   }
 
-  branch from n_acetyl_d_galactosamine side left {
+  branch from n_acetyl_d_galactosamine side right {
     n_acetyl_d_galactosamine
     <-> . +n_acetyl_d_galactosaminyl_1_4_d_3_sulfogalactosy +h2o
     d_3_sulfogalactosyl_1_4_d_glucosyl_1_1_ceramide
-  }
-
-  branch from d_galactosyl_1_4_d_glucosyl_1_1_ceramide side right {
-    d_galactosyl_1_4_d_glucosyl_1_1_ceramide
-    <-> . +udpglcnac +udp +hplus
-    n_acetyl_d_glucosaminyl_1_3_d_galactosyl_1_4_d_g
   }
 
   branch from d_galactosyl_1_4_d_glucosyl_1_1_ceramide side left {

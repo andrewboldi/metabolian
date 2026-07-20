@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol to 3-hydroxy-2,4-dioxopentyl…" {
-  spacing 340
+  spacing 334
 
   spine at 0,0 {
     dihydrophloroglucinol
@@ -28,62 +28,50 @@ pathway dihydrophloroglucinol-to-3-hydroxy-2-4-dioxopent "dihydrophloroglucinol 
 
   branch from phloroglucinol side left {
     phloroglucinol
-    <-> ec_2_3_1_272 [2.3.1.272] +2_4_6_trihydroxyacetophenone +hplus
-    2_4_diacetylphloroglucinol
-  }
-
-  branch from phloroglucinol side right {
-    phloroglucinol
     <-> ec_2_3_1_253 [2.3.1.253] +hplus +co2 +coa
     malonyl-coa
   }
 
-  branch from sah side left {
+  branch from sah side right {
     sah
     <-> . +l_lysinium +sam +hplus
     n6_methyl_l_lysinium
   }
 
-  branch from sah side right {
+  branch from sah side left {
     sah
     <-> ec_2_1_1_17 [2.1.1.17] +1_2_diacyl_sn_glycero_3_phosphoethanolamine +sam +hplus
     1_2_diacyl_sn_glycero_3_phospho_n_methylethanola
   }
 
-  branch from adenine side left {
+  branch from adenine side right {
     adenine
     <-> ec_3_2_2_4 [3.2.2.4] +amp +h2o
     d_ribofuranose_5_phosphate
   }
 
-  branch from adenine side right {
+  branch from adenine side left {
     adenine
     <-> ec_2_4_2_1 [2.4.2.1] +adenosine +pi
     r1p
   }
 
-  branch from s_4_5_dihydroxypentane_2_3_dione side left {
+  branch from s_4_5_dihydroxypentane_2_3_dione side right {
     s_4_5_dihydroxypentane_2_3_dione
     <-> .
     2s_4s_2_methyl_2_4_dihydroxydihydrofuran_3_one
   }
 
-  branch from s_4_5_dihydroxypentane_2_3_dione side right {
+  branch from s_4_5_dihydroxypentane_2_3_dione side left {
     s_4_5_dihydroxypentane_2_3_dione
     <-> . +h2o
     2r_4s_2_methyltetrahydrofuran_2_3_3_4_tetrol
   }
 
-  branch from homocysteine side left {
-    homocysteine
-    <-> ec_1_8_4_1 [1.8.4.1] +l_l_homocystine +gsh
-    gssg
-  }
-
   branch from homocysteine side right {
     homocysteine
-    <-> . +h2s +hplus
-    2_aminobut_2_enoic_acid
+    <-> . +atp +hplus +ppi
+    l_homocysteinyl_amp
   }
 
   branch from 3_hydroxy_2_4_dioxopentyl_phosphate side left {

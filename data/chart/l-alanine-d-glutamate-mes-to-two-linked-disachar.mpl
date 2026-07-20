@@ -18,14 +18,14 @@ pathway l-alanine-d-glutamate-mes-to-two-linked-disachar "L-alanine-D-glutamate-
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_10 [3.2.1.10] +isomaltose
-    glucose
+    <-> ec_3_5_1_10 [3.5.1.10] +co2 +z_2_methyl_3_aminoperacrylic_acid +nh4 +z_2_methylureidoperacrylic_acid
+    h
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +melibiose +d_galactopyranose
-    2r_3r_4s_5s_6r_6_2s_3r_4s_5r_6r_3_4_5_trihydrox
+    <-> . +dehydroxypaxilline +nadp +h +o2 +nadph
+    beta_pc_m6
   }
 
   branch from n_acetyl_d_glucosamine_anhydrous_n_acetylmuramyl side left {

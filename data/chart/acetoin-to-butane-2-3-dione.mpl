@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoin-to-butane-2-3-dione "acetoin to butane-2,3-dione" {
-  spacing 248
+  spacing 242
 
   spine at 0,0 {
     acetoin
@@ -18,25 +18,19 @@ pathway acetoin-to-butane-2-3-dione "acetoin to butane-2,3-dione" {
 
   branch from nad side left {
     nad
-    <-> ec_1_2_1_32 [1.2.1.32] +nadh +h +2e_4z_2_hydroxymuconate +h2o
-    2_hydroxymuconic_semialdehyde
+    <-> . +nadh +4_maleylacetoacetate +h
+    3_5_dioxooctanedioic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_3 [1.14.13.3] +nadh +h +4_hydroxyphenylacetate +o2 +h2o
-    3_4_dihydroxyphenylacetate
+    <-> . +nadh +h +3_5_dioxooctanedioic_acid
+    4_fumarylacetoacetate
   }
 
   branch from meso_butane_2_3_diol side left {
     meso_butane_2_3_diol
     <-> . +nad +nadh +hplus
     r_acetoin
-  }
-
-  branch from meso_butane_2_3_diol side right {
-    meso_butane_2_3_diol
-    <-> ec_1_1_1_4 [1.1.1.4] +nadh +h +nad
-    actn
   }
 }

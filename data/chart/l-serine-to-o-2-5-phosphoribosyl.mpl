@@ -18,14 +18,14 @@ pathway l-serine-to-o-2-5-phosphoribosyl "L-serine to O-[2'-(5-phosphoribosyl)-â
 
   branch from ppi side left {
     ppi
-    <-> . +anthranilate +l_tryptophan +atp +amp +hplus
-    3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine
+    <-> . +utp +atp
+    2_3_cuamp
   }
 
   branch from ppi side right {
     ppi
-    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
-    2r_3s_11r_aszonalenin
+    <-> . +all_trans_pentaprenyl_diphosphate
+    astellifadiene
   }
 
   branch from r_4_phosphopantetheine side left {
@@ -36,25 +36,25 @@ pathway l-serine-to-o-2-5-phosphoribosyl "L-serine to O-[2'-(5-phosphoribosyl)-â
 
   branch from acetate side right {
     acetate
-    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_9 +co2 +pyruvate +h2o
-    ubiquinone_9
+    <-> ec_2_8_3_8 [2.8.3.8] +hexanoyl_coa +hexanoate
+    acetyl_coa
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_10 +co2 +pyruvate +h2o
-    ubiquinone_10
+    <-> ec_3_5_1_14 [3.5.1.14] +n_acetyl_l_alaninate +h2o
+    l_alanine
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    xlfg_xyloglucan_oligosaccharide
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    eicosanoyl_coa
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    xxfg_xyloglucan_oligosaccharide
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    hexacosanoyl_coa
   }
 }

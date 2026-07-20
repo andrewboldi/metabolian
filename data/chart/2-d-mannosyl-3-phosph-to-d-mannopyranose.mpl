@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-d-mannosyl-3-phosph-to-d-mannopyranose "2-(α-D-mannosyl)-3-phosph… to β-D-mannopyranose…" {
-  spacing 330
+  spacing 324
 
   spine at 0,0 {
     2_d_mannosyl_3_phosphonatoglycerate
@@ -18,21 +18,15 @@ pathway 2-d-mannosyl-3-phosph-to-d-mannopyranose "2-(α-D-mannosyl)-3-phosph… 
     d_mannopyranose_6_phosphate
   }
 
-  branch from 2_d_mannosyl_d_glycerate side left {
-    2_d_mannosyl_d_glycerate
-    <-> ec_2_4_1_269 [2.4.1.269] +d_glycerate +gdp +hplus
-    gdp_d_mannose
-  }
-
-  branch from l_histidine side right {
-    l_histidine
-    <-> . +gtp +ppi
-    n_5_guanosyl_phosphono_l_histidine_1
-  }
-
   branch from l_histidine side left {
     l_histidine
     <-> . +nad +nicotinamide +hplus
     n_adp_d_ribosyl_l_histidyl_2
+  }
+
+  branch from l_histidine side right {
+    l_histidine
+    <-> . +utp +ppi
+    n_uridylyl_l_histidine_1
   }
 }

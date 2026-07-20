@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway acetoacetyl-coa-to-hydrogen-donor "acetoacetyl-CoA to hydrogen donor" {
-  spacing 258
+  spacing 246
 
   spine at 0,0 {
     acetoacetyl_coa
@@ -20,14 +20,14 @@ pathway acetoacetyl-coa-to-hydrogen-donor "acetoacetyl-CoA to hydrogen donor" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +norcamphor +h
-    trans_bicyclo_2_2_1_heptanol
+    <-> ec_1_1_1_47 [1.1.1.47] +nadh +6_deoxy_d_glucono_1_5_lactone +h
+    d_quinovose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylcyclohexanone +h
-    cis_4_methylcyclohexanol
+    <-> ec_1_2_1_22 [1.2.1.22] +nadh +r_lactate +h +h2o
+    lactaldehyde
   }
 
   branch from r_2_hydroxyglutarate side left {
@@ -38,25 +38,13 @@ pathway acetoacetyl-coa-to-hydrogen-donor "acetoacetyl-CoA to hydrogen donor" {
 
   branch from akg side right {
     akg
-    <-> . +fad +hplus +fadh2
-    s_2_hydroxyglutarate
+    <-> . +nadp +nadph +hplus
+    2_hydroxyglutarate
   }
 
   branch from akg side left {
     akg
-    <-> ec_1_5_1_51 [1.5.1.51] +n_2s_2_amino_2_carboxyethyl_l_glutamate +nad +h2o +nadh +hplus
-    3_amino_l_alanine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +terremutin +hydrogen_acceptor
-    terreate
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +2_amino_6_hydroxyaminopurine +hydrogen_acceptor +h2o
-    9h_purine_2_6_diamine
+    <-> ec_3_5_1_128 [3.5.1.128] +n_4_oxoglutaryl_l_cysteinylglycine +h2o
+    cysgly
   }
 }

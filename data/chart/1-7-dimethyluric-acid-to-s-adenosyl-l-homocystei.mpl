@@ -20,37 +20,37 @@ pathway 1-7-dimethyluric-acid-to-s-adenosyl-l-homocystei "1,7-dimethyluric acid 
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_16 [1.13.11.16] +h +compound_0054366
-    2_hydroxyhexa_2_4_dienoic_acid_6_carboxymethyles
+    <-> . +gibberellin_a9 +nadph +16alpha_17_epoxy_gibberellin_a9 +h2o
+    nadp
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_42 [1.1.3.42] +prosolanapyrone_ii +h2o2
-    solanapyrone_a
+    <-> . +nadh +gibberellin_a9 +nad +h2o
+    16alpha_17_epoxy_gibberellin_a9
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_asparagine +l_proline +l_cysteine
-    prolyl_asparaginyl_cysteine
+    <-> . +l_valine +l_tryptophan +l_phenylalanine
+    valyl_tryptophanyl_phenylalanine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_cysteine
-    prolyl_cysteine
+    <-> . +l_valine +l_tryptophan
+    valyl_tryptophanyl_valine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_42 [2.1.1.42] +3_hydroxyflavonoid +sam +hplus
-    3_methoxyflavones
+    <-> . +5_hydroxyuridine_5_phosphate_1 +sam +hplus
+    5_methoxyuridine_5_phosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_267 [2.1.1.267] +5_hydroxy_3_methoxyflavone +sam +hplus
-    3_5_dimethoxyflavone
+    <-> . +l_methionine +sam
+    s_methyl_l_methionine_1
   }
 }

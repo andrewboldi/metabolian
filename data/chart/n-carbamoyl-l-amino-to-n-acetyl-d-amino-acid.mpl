@@ -18,14 +18,14 @@ pathway n-carbamoyl-l-amino-to-n-acetyl-d-amino-acid "N-carbamoyl-L-α-amino… 
 
   branch from nh3 side left {
     nh3
-    <-> ec_1_4_1_1 [1.4.1.1] +nad +h2o +pyruvate +nadh +hplus
-    alanine
+    <-> ec_1_7_1_10 [1.7.1.10] +nad +h2o +nadh +hplus
+    hydroxylamine
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_1_15 [1.4.1.15] +l_lysinium +nad +nadh +hplus
-    1_piperideine_2_carboxylic_acid
+    <-> ec_1_4_1_7 [1.4.1.7] +serine +nad +h2o +nadh +hplus
+    3_hydroxypyruvate
   }
 
   branch from d_amino_acid side left {

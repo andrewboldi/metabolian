@@ -42,26 +42,26 @@ pathway udp-to-orientin "UDP to orientin" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_4_di_o_d_glucoside
-    quercetin_4_o_d_glucopyranoside
+    <-> . +udp +quercetin_3_o_gentiotetroside +h
+    quercetin_3_gentiotrioside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_4_di_o_d_glucoside
-    quercetin_3_o_d_glucopyranoside
+    <-> . +udp +apigenin_7_o_gentiobioside
+    apigenin_7_o_beta_d_glucoside
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +curcumin_beta_d_glucuronide +curcumin
+    <-> ec_2_4_1_17 [2.4.1.17] +8_hydroxyquinoline_glucuronide +quinolin_8_ol
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +8_hydroxyquinoline_glucuronide +udp_alpha_d_glucuronate
-    quinolin_8_ol
+    <-> ec_2_4_1_17 [2.4.1.17] +h +glucuronosyletoposide +udp_alpha_d_glucuronate
+    etoposide
   }
 
   branch from orientin side left {

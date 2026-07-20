@@ -160,31 +160,41 @@
       }
     },
     {
-      "id": "22_oxodocosanoate",
-      "name": "22-oxodocosanoate",
-      "formula": "C22H41O3",
+      "id": "dihydromonacolin_l_carboxylate",
+      "name": "dihydromonacolin L carboxylate",
+      "short": "dihydromonacolin L…",
+      "formula": "C19H31O4",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76298"
+        "chebi": "CHEBI:79031"
       }
     },
     {
-      "id": "docosanedioate",
-      "name": "docosanedioate",
-      "formula": "C22H40O4",
-      "charge": -2,
+      "id": "monacolin_l_carboxylate",
+      "name": "monacolin L carboxylate",
+      "short": "monacolin L…",
+      "formula": "C19H29O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76299"
+        "chebi": "CHEBI:79044"
       }
     },
     {
-      "id": "22_hydroxydocosanoate",
-      "name": "22-hydroxydocosanoate",
-      "short": "22-hydroxydocosanoa…",
-      "formula": "C22H43O3",
+      "id": "amyrin",
+      "name": "β-amyrin",
+      "formula": "C30H50O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:10352"
+      }
+    },
+    {
+      "id": "oleanolate",
+      "name": "oleanolate",
+      "formula": "C30H47O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:76304"
+        "chebi": "CHEBI:82828"
       }
     },
     {
@@ -284,16 +294,6 @@
       }
     },
     {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -304,23 +304,21 @@
       }
     },
     {
-      "id": "all_trans_octaprenyl_diphosphate",
-      "name": "all-trans-octaprenyl diphosphate",
-      "short": "all-trans-octapreny…",
-      "formula": "C40H65O7P2",
-      "charge": -3,
+      "id": "barbatene",
+      "name": "(+)-α-barbatene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57711"
+        "chebi": "CHEBI:61690"
       }
     },
     {
-      "id": "all_trans_decaprenyl_diphosphate",
-      "name": "all-trans-decaprenyl diphosphate",
-      "short": "all-trans-decapreny…",
-      "formula": "C50H81O7P2",
-      "charge": -3,
+      "id": "patchouli_alcohol",
+      "name": "patchouli alcohol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:60721"
+        "chebi": "CHEBI:7940"
       }
     }
   ],
@@ -354,6 +352,20 @@
       ]
     },
     {
+      "id": "ec_1_14_14_124",
+      "name": "dihydromonacolin L hydroxylase",
+      "ec": [
+        "1.14.14.124"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_126",
+      "name": "beta-amyrin 28-monooxygenase",
+      "ec": [
+        "1.14.14.126"
+      ]
+    },
+    {
       "id": "ec_4_2_1_132",
       "name": "2-hydroxyhexa-2,4-dienoate hydratase",
       "ec": [
@@ -368,17 +380,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_90",
-      "name": "all-trans-octaprenyl-diphosphate synthase",
+      "id": "ec_4_2_3_69",
+      "name": "(+)-alpha-barbatene synthase",
       "ec": [
-        "2.5.1.90"
+        "4.2.3.69"
       ]
     },
     {
-      "id": "ec_2_5_1_91",
-      "name": "all-trans-decaprenyl-diphosphate synthase",
+      "id": "ec_4_2_3_70",
+      "name": "patchoulol synthase",
       "ec": [
-        "2.5.1.91"
+        "4.2.3.70"
       ]
     }
   ],
@@ -589,11 +601,12 @@
     },
     {
       "id": "r5",
-      "name": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxid...",
-      "equation": "22-oxodocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = docosanedioate + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "name": "dihydromonacolin L hydroxylase",
+      "equation": "dihydromonacolin L carboxylate + reduced [NADPH--hemoprotein reductase] + O2 = monacolin L carboxylate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.124",
       "substrates": [
         {
-          "metabolite": "22_oxodocosanoate",
+          "metabolite": "dihydromonacolin_l_carboxylate",
           "stoichiometry": 1
         },
         {
@@ -607,7 +620,7 @@
       ],
       "products": [
         {
-          "metabolite": "docosanedioate",
+          "metabolite": "monacolin_l_carboxylate",
           "stoichiometry": 1
         },
         {
@@ -616,75 +629,86 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_124"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:39043"
+        "rhea": "RHEA:42368"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39043"
+            "id": "RHEA:42368"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "22-hydroxydocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = 22-oxodocosanoate...",
-      "equation": "22-hydroxydocosanoate + reduced [NADPH--hemoprotein reductase] + O2 = 22-oxodocosanoate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "name": "beta-amyrin 28-monooxygenase",
+      "equation": "beta-amyrin + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = oleanolate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.126",
       "substrates": [
         {
-          "metabolite": "22_hydroxydocosanoate",
+          "metabolite": "amyrin",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         }
       ],
       "products": [
         {
-          "metabolite": "22_oxodocosanoate",
+          "metabolite": "oleanolate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 4
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_126"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:39055"
+        "rhea": "RHEA:43068"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:39055"
+            "id": "RHEA:43068"
           }
         ]
       }
@@ -872,14 +896,10 @@
     },
     {
       "id": "r11",
-      "name": "all-trans-octaprenyl-diphosphate synthase",
-      "equation": "5 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-octaprenyl diphosphate + 5 diphosphate",
-      "ec": "2.5.1.90",
+      "name": "(+)-alpha-barbatene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-alpha-barbatene + diphosphate",
+      "ec": "4.2.3.69",
       "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 5
-        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -887,75 +907,75 @@
       ],
       "products": [
         {
-          "metabolite": "all_trans_octaprenyl_diphosphate",
+          "metabolite": "barbatene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 5
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_90"
+          "enzyme": "ec_4_2_3_69"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:27798"
+        "rhea": "RHEA:29499"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27798"
+            "id": "RHEA:29499"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "all-trans-decaprenyl-diphosphate synthase",
-      "equation": "7 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-decaprenyl diphosphate + 7 diphosphate",
-      "ec": "2.5.1.91",
+      "name": "patchoulol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = patchoulol + diphosphate",
+      "ec": "4.2.3.70",
       "substrates": [
         {
-          "metabolite": "ipp",
-          "stoichiometry": 7
+          "metabolite": "fpp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "fpp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "metabolite": "patchouli_alcohol",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 7
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_91"
+          "enzyme": "ec_4_2_3_70"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:27802"
+        "rhea": "RHEA:29503"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27802"
+            "id": "RHEA:29503"
           }
         ]
       }

@@ -18,26 +18,26 @@ pathway 5-hydroxy-2-oxopentanoate-to-biphenyl-2-2-3-3-te "5-hydroxy-2-oxopentano
 
   branch from h2o side left {
     h2o
-    <-> . +l_lysine +l_tryptophan
-    tryptophanyl_lysine
+    <-> ec_3_2_1_105 [3.2.1.105] +alpha_d_glucose +strictosidine_aglycone
+    3alpha_s_strictosidine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_valine +l_methionine +l_tryptophan
-    tryptophanyl_methionyl_valine
+    <-> ec_3_2_1_126 [3.2.1.126] +beta_d_glucose +trans_p_coumaryl_alcohol
+    4_hydroxycinnamyl_alcohol_4_d_glucoside
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_162 [1.14.13.162] +nadh +1r_4r_bornane_2_5_dione +h +nad +h2o
-    1r_4r_5_oxo_1_2_campholide
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nadp +h2o +h +nadph
+    carnitine
   }
 
   branch from o2 side right {
     o2
-    <-> . +trans_4_coumarate +h +nadph +nadp +h2o
-    e_caffeate
+    <-> . +trimethylamine +3r_3_hydroxy_4_oxobutanoate +nad +h2o +h +carnitine
+    nadh
   }
 
   branch from biphenyl_2_2_3_3_tetraol side left {

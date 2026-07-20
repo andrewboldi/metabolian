@@ -83,45 +83,60 @@
       }
     },
     {
-      "id": "desoxyhemigossypol_6_methyl_ether",
-      "name": "desoxyhemigossypol-6-methyl ether",
-      "short": "desoxyhemigossypol-…",
-      "formula": "C16H18O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM11344"
-      }
-    },
-    {
-      "id": "desoxyhemigossypol",
-      "name": "desoxyhemigossypol",
-      "formula": "C15H16O3",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM8535"
-      }
-    },
-    {
-      "id": "7_hydroxy_4_5_dimethoxyisoflavone",
-      "name": "7-hydroxy-4'5'-dimethoxyisoflavone",
-      "short": "7-hydroxy-4'5'-dime…",
-      "formula": "C17H14O5",
-      "charge": 0,
-      "xrefs": {
-        "metanetx": "MNXM10420"
-      }
-    },
-    {
-      "id": "calycosin",
-      "name": "calycosin",
+      "id": "biochanin_a",
+      "name": "biochanin A",
       "formula": "C16H11O5",
       "charge": -1,
       "xrefs": {
-        "metanetx": "MNXM1815"
+        "metanetx": "MNXM1728"
+      }
+    },
+    {
+      "id": "genistein",
+      "name": "genistein",
+      "formula": "C15H9O5",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1476"
+      }
+    },
+    {
+      "id": "3_demethylstaurosporine",
+      "name": "3'-demethylstaurosporine",
+      "short": "3'-demethylstaurosp…",
+      "formula": "C27H25N4O3",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM3831"
+      }
+    },
+    {
+      "id": "o_demethyl_n_demethyl_staurosporine",
+      "name": "O-Demethyl-N-demethyl-staurosporine",
+      "short": "O-Demethyl-N-demeth…",
+      "formula": "C26H22N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:190756"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_212",
+      "name": "2,7,4'-trihydroxyisoflavanone 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.212"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_46",
+      "name": "isoflavone 4'-O-methyltransferase",
+      "ec": [
+        "2.1.1.46"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -251,14 +266,15 @@
     },
     {
       "id": "r4",
-      "name": "Reaction MNXR122603",
+      "name": "2,7,4'-trihydroxyisoflavanone 4'-O-methyltransferase",
+      "ec": "2.1.1.212",
       "substrates": [
         {
           "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "desoxyhemigossypol_6_methyl_ether",
+          "metabolite": "biochanin_a",
           "stoichiometry": 1
         },
         {
@@ -272,35 +288,40 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "desoxyhemigossypol",
+          "metabolite": "genistein",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_212"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "metanetx": "MNXR122603"
+        "metanetx": "MNXR139150"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR122603"
+            "id": "MNXR139150"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR122607",
+      "name": "Reaction MNXR140195",
       "substrates": [
         {
-          "metabolite": "7_hydroxy_4_5_dimethoxyisoflavone",
+          "metabolite": "s_adenosyl_l_homocysteine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "s_adenosyl_l_homocysteine",
+          "metabolite": "3_demethylstaurosporine",
           "stoichiometry": 1
         }
       ],
@@ -310,21 +331,21 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "calycosin",
+          "metabolite": "o_demethyl_n_demethyl_staurosporine",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR122607"
+        "metanetx": "MNXR140195"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR122607"
+            "id": "MNXR140195"
           }
         ]
       }

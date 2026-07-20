@@ -18,14 +18,14 @@ pathway selenite-to-glutathionate "selenite to glutathionate" {
 
   branch from gssg side left {
     gssg
-    <-> ec_1_8_5_1 [1.8.5.1] +l_dehydroascorbate +gsh
-    ascorbate
+    <-> . +5_s_hpete +gsh +h2o
+    5_s_hete
   }
 
   branch from gssg side right {
     gssg
-    <-> . +5_s_hpete +gsh +h2o
-    5_s_hete
+    <-> . +13_s_hpode +gsh +h2o
+    13_s_hode
   }
 
   branch from gsh side left {
@@ -36,7 +36,7 @@ pathway selenite-to-glutathionate "selenite to glutathionate" {
 
   branch from gsh side right {
     gsh
-    <-> . +13_s_hpode +gssg +h2o
-    13_s_hode
+    <-> ec_4_4_1_34 [4.4.1.34] +s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione
+    3r_3_4_epoxy_3_methylbut_1_ene
   }
 }

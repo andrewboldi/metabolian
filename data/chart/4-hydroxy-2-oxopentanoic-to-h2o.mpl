@@ -20,38 +20,38 @@ pathway 4-hydroxy-2-oxopentanoic-to-h2o "4-hydroxy-2-oxopentanoic… to H2O" {
 
   branch from h side left {
     h
-    <-> . +acetyl_coa +3z_6z_dodecadienoyl_coa +coa
-    3_oxo_cis_cis_5_8_tetradecadienoyl_coa
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_18_3_9z_12z_15z_18_2_9z_12z
   }
 
   branch from h side right {
     h
-    <-> . +kinetensin +h2o +kinetensin_1_3 +d_arginyl_l_histidyl_d_prolyl_d_tyrosyl_l_phenyl
-    l_leucine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_octadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +phosphate +phosphoenolpyruvate +h2o
-    udp_n_acetyl_3_o_1_carboxyvinyl_alpha_d_glucosam
+    <-> . +n_acetyl_beta_d_glucosamine_6_phosphate +phosphoenolpyruvate
+    n_acetyl_beta_d_glucosamine
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_1_3_3 [4.1.3.3] +n_acetyl_d_mannosamine
-    n_acetyl_alpha_neuraminate
+    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex +h2o +h
+    2_methyl_3_oxopropanoate
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> . +h2o
-    1_1_ethanediol
+    <-> . +4_hydroxy_5_methyl_3_2h_furanone +h2o
+    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_2_3_1_190 [2.3.1.190] +nadh +acetyl_coa +h +coa +nad
-    r_acetoin
+    <-> . +prefumagillin +o2
+    prefumagillin_aldehyde
   }
 
   branch from 2_deoxy_d_ribose_5_phosphate side left {
@@ -68,14 +68,14 @@ pathway 4-hydroxy-2-oxopentanoic-to-h2o "4-hydroxy-2-oxopentanoic… to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    all_trans_retinal
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    pc_18_2_9z_12z_18_3_9z_12z_15z
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    rosuvastatin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph
   }
 
   branch from deoxyribose side left {
@@ -86,13 +86,13 @@ pathway 4-hydroxy-2-oxopentanoic-to-h2o "4-hydroxy-2-oxopentanoic… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_leucine +l_aspartate +l_phenylalanine
-    phenylalanyl_leucyl_aspartate
+    <-> . +l_alanine +l_tyrosine
+    tyr_ala
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +l_histidine +l_phenylalanine
-    phe_leu_his
+    <-> . +l_serine +l_arginine +l_tyrosine
+    tyrosyl_arginyl_serine
   }
 }

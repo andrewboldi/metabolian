@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-2z-2-methylimino-et-to-h2o "4-[(2Z)-2-(methylimino)et… to H2O" {
-  spacing 212
+  spacing 200
 
   spine at 0,0 {
     4_2z_2_methylimino_ethyl_phenol
@@ -28,51 +28,39 @@ pathway 4-2z-2-methylimino-et-to-h2o "4-[(2Z)-2-(methylimino)et… to H2O" {
     isoprocarb
   }
 
-  branch from 4_hydroxyphenyl_acetaldehyde side left {
-    4_hydroxyphenyl_acetaldehyde
-    <-> ec_1_1_1_2 [1.1.1.2] +h +nadph +nadp
-    2_4_hydroxyphenyl_ethanol
-  }
-
-  branch from 4_hydroxyphenyl_acetaldehyde side right {
-    4_hydroxyphenyl_acetaldehyde
-    <-> ec_1_2_1_5 [1.2.1.5] +h +4_hydroxyphenylacetate +nadph +h2o
-    nadp
-  }
-
   branch from o2 side left {
     o2
-    <-> . +s_beta_hydroxy_l_tryptophan
-    r_n_formyl_beta_hydroxy_l_kynurenine
+    <-> . +palustradiene_diol +nadp +h2o +h +palustradienol
+    nadph
   }
 
   branch from o2 side right {
     o2
-    <-> . +triostin_a_dithiol +h2o2
-    triostin_a
+    <-> . +abietatriene +h +nadph +dehydroabietadienol +h2o
+    nadp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_21_98_2 [1.21.98.2] +3_4_bis_7_chloroindol_3_yl_2_5_diiminiohexanedio +h2o2
-    2_iminio_3_7_chloroindol_3_yl_propionate
+    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
+    3_5_methylthio_pentylmalic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> . +isotrichotriol
-    trichotriol
+    <-> . +2_2_methylsulfanyl_hexyl_maleate +h
+    2_6_methylthio_hexylmalic_acid
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +h2o
-    l_phenylalanine
+    <-> ec_2_7_1_66 [2.7.1.66] +dolichol_phosphate_human_uterine_homolog +h +adp
+    dolichol
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    selenate
+    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_ribose_1_phosphate +h +adp
+    d_ribose
   }
 }

@@ -251,40 +251,48 @@
       }
     },
     {
-      "id": "ldopa",
-      "name": "3,4-Dihydroxy-L-phenylalanine (L-DOPA)",
-      "short": "3,4-Dihydroxy-L-phe…",
-      "formula": "C9H11NO4",
+      "id": "guanosine",
+      "name": "Guanosine",
+      "formula": "C10H13N5O5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57504"
+        "chebi": "CHEBI:16750"
       }
     },
     {
-      "id": "trans_caffeate",
-      "name": "trans-caffeate",
-      "formula": "C9H7O4",
+      "id": "xanthosine",
+      "name": "xanthosine",
+      "formula": "C10H12N4O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18107"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57770"
-      }
-    },
-    {
-      "id": "adp",
-      "name": "ADP",
-      "formula": "C10H12N5O10P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:456216"
-      }
-    },
-    {
-      "id": "idp",
-      "name": "IDP",
-      "formula": "C10H11N4O11P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58280"
+        "chebi": "CHEBI:16301"
       }
     }
   ],
@@ -332,17 +340,17 @@
       ]
     },
     {
-      "id": "ec_3_5_4_7",
-      "name": "ADP deaminase",
+      "id": "ec_3_5_4_15",
+      "name": "guanosine deaminase",
       "ec": [
-        "3.5.4.7"
+        "3.5.4.15"
       ]
     },
     {
-      "id": "ec_3_5_4_17",
-      "name": "adenosine-phosphate deaminase",
+      "id": "ec_1_7_2_2",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
       "ec": [
-        "3.5.4.17"
+        "1.7.2.2"
       ]
     }
   ],
@@ -768,47 +776,12 @@
     },
     {
       "id": "r10",
-      "name": "L-dopa = (E)-caffeate + NH4(+)",
-      "equation": "L-dopa = (E)-caffeate + NH4(+)",
+      "name": "guanosine deaminase",
+      "equation": "guanosine + H2O + H(+) = xanthosine + NH4(+)",
+      "ec": "3.5.4.15",
       "substrates": [
         {
-          "metabolite": "ldopa",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_caffeate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nh3",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 10,
-      "xrefs": {
-        "rhea": "RHEA:12520"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:12520"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r11",
-      "name": "ADP deaminase",
-      "equation": "ADP + H2O + H(+) = IDP + NH4(+)",
-      "ec": "3.5.4.7",
-      "substrates": [
-        {
-          "metabolite": "adp",
+          "metabolite": "guanosine",
           "stoichiometry": 1
         },
         {
@@ -822,7 +795,7 @@
       ],
       "products": [
         {
-          "metabolite": "idp",
+          "metabolite": "xanthosine",
           "stoichiometry": 1
         },
         {
@@ -832,20 +805,73 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_3_5_4_7"
+          "enzyme": "ec_3_5_4_15"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 11,
+      "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:12741"
+        "rhea": "RHEA:12861"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:12741"
+            "id": "RHEA:12861"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r11",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
+      "equation": "6 Fe(III)-[cytochrome c] + NH4(+) + 2 H2O = 6 Fe(II)-[cytochrome c] + nitrite + 8 H(+)",
+      "ec": "1.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "iron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 8
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 11,
+      "xrefs": {
+        "rhea": "RHEA:13089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13089"
           }
         ]
       }

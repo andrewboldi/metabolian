@@ -18,37 +18,37 @@ pathway 1-oleoyl-2-linoleoyl-sn-g-to-3-hydroxypropanal "1-oleoyl-2-linoleoyl-sn-
 
   branch from oleate side left {
     oleate
-    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    choline_alfoscerate
+    <-> . +1_2_dioleoyl_sn_glycerol +h2o +hplus
+    1_oleoyl_sn_glycerol
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_stearoyl_2_oleoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_stearoyl_sn_glycero_3_phosphocholine
+    <-> . +1_oleoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_acetyl_sn_glycero_3_phosphocholine
   }
 
   branch from linoleate side left {
-    linoleate
-    <-> ec_1_13_11_12 [1.13.11.12] +o2
-    13_s_hpode
-  }
-
-  branch from linoleate side right {
     linoleate
     <-> ec_1_13_11_60 [1.13.11.60] +o2
     8_r_hpode
   }
 
+  branch from linoleate side right {
+    linoleate
+    <-> ec_1_13_11_58 [1.13.11.58] +o2
+    9_s_hpode
+  }
+
   branch from glycerol side left {
     glycerol
-    <-> . +1_monolauroylglycerol +h2o +hplus
-    dodecanoate
+    <-> . +prostaglandin_d2_1_glyceryl_ester +h2o +hplus
+    prostaglandin_d2
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +monobutyrin +h2o +hplus
-    butyrate
+    <-> . +15_deoxy_12_14_prostaglandin_j2_2_glyceryl_ester +h2o +hplus
+    15_deoxy_12_14_prostaglandin_j2
   }
 }

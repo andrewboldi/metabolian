@@ -18,13 +18,13 @@ pathway udp-to-udp-alpha-d-glucose "UDP to UDP-alpha-D-glucose" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_7_7_23 [2.7.7.23] +utp +d_glucopyranose_1_phosphate +h
-    diphosphate
+    <-> ec_2_4_1_35 [2.4.1.35] +udp +phenyl_beta_d_glucopyranoside +h
+    phenol
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_117 [2.4.1.117] +udp +h +dolichyl_beta_d_glucosyl_phosphate
-    dolichyl_phosphate
+    <-> ec_2_4_1_173 [2.4.1.173] +udp +h +sterol_3_beta_d_glucoside
+    3beta_hydroxysterol
   }
 }

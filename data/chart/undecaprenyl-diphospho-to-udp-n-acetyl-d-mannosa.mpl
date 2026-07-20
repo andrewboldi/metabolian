@@ -36,25 +36,25 @@ pathway undecaprenyl-diphospho-to-udp-n-acetyl-d-mannosa "Undecaprenyl-diphospho
 
   branch from h side left {
     h
-    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +2_nitrophenol +h2o
-    2_nitrophenyl_d_galactoside
+    <-> . +n_cyclopropylammeline +h2o +nh4
+    n_cyclopropylammelide
   }
 
   branch from h side right {
     h
-    <-> ec_3_8_1_5 [3.8.1.5] +2_3_dibromo_1_propanol +bromide +h2o
-    1_2_3_tribromopropane
+    <-> . +nadh +3e_3_1r_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hept +nad
+    3_1r_2s_5r_6s_5_hydroxy_7_oxabicyclo_4_1_0_hepta
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side left {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +beta_d_glcnac_1_2_alpha_l_rha_1_2_alpha_l_rha_1 +h
-    alpha_l_rha_1_2_alpha_l_rha_1_4_alpha_d_glc_1_3
+    <-> ec_2_4_1_56 [2.4.1.56] +udp +lipid_a_core +h
+    core_oligosaccharide_lipid_a_e_coli_k_12_core_ty
   }
 
   branch from udp_n_acetyl_alpha_d_glucosamine side right {
     udp_n_acetyl_alpha_d_glucosamine
-    <-> . +udp +alpha_d_glcnac_1_4_beta_d_gal_1_3_galnac_pp_und +h
-    beta_d_gal_1_3_alpha_d_galnac_pp_und
+    <-> ec_2_4_1_227 [2.4.1.227] +udp +und_pp_beta_d_glcnac_1_4_murnac_l_ala_gamma_d_gl +h
+    und_pp_murnac_l_ala_gamma_d_glu_meso_dap_d_ala_d
   }
 }

@@ -18,14 +18,14 @@ pathway bufotenin-to-coa "bufotenin to CoA" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +magnesium_protoporphyrin_ix_13_monomethyl_ester
-    mg_protoporphyrin_ix
+    <-> ec_2_1_1_201 [2.1.1.201] +s_adenosyl_l_homocysteine +h +6_methoxy_3_methyl_2_all_trans_polyprenyl_1_4_be
+    2_methoxy_6_all_trans_polyprenyl_1_4_benzoquinol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +mg_protoporphyrin_ix_13_monomethyl_ester
-    mg_protoporphyrin_ix
+    <-> ec_2_1_1_114 [2.1.1.114] +s_adenosyl_l_homocysteine +h +3_polyprenyl_4_hydroxy_5_methoxybenzoate
+    3_polyprenyl_4_5_dihydroxybenzoate
   }
 
   branch from serotonin side left {
@@ -42,25 +42,25 @@ pathway bufotenin-to-coa "bufotenin to CoA" {
 
   branch from h side left {
     h
-    <-> ec_1_11_1_8 [1.11.1.8] +iodide +3_5_diiodo_l_tyrosine +diiodine
-    3_iodo_l_tyrosine
+    <-> ec_3_1_1_38 [3.1.1.38] +triacetate +h2o
+    triacetate_lactone
   }
 
   branch from h side right {
     h
-    <-> . +pmf +nitrite +ferricytochrome_c +h2o +pmf +nitrate
-    ferrocytochrome_c
+    <-> ec_3_1_1_25 [3.1.1.25] +4_hydroxybutanoate +h2o
+    gamma_butyrolactone
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_76 [2.3.1.76] +hexadecanoyl_coa +retinol
-    all_trans_retinyl_hexadecanoate
+    <-> ec_2_3_1_205 [2.3.1.205] +fumigaclavine_a +acetyl_coa
+    fumigaclavine_b
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_126 [2.3.1.126] +trans_caffeoyl_coa +isocitrate
-    2_e_caffeoyl_d_threo_isocitrate
+    <-> ec_2_3_1_235 [2.3.1.235] +malonyl_coa +h +co2 +h2o
+    tetracenomycin_f2
   }
 }

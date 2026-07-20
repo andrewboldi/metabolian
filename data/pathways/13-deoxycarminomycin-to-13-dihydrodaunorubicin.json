@@ -170,33 +170,23 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74411"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "n1_methyladenosine_5_monophosphate_1",
-      "name": "N1-methyladenosine 5'-monophosphate(1−)",
-      "short": "N1-methyladenosine…",
-      "formula": "C11H13N5O6P",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:74491"
-      }
-    },
-    {
-      "id": "n6_n6_dimethyladenosine_5_monophosphate_1",
-      "name": "N6,N6-dimethyladenosine 5'-monophosphate(1−)",
-      "short": "N6,N6-dimethyladeno…",
-      "formula": "C12H15N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74493"
+        "chebi": "CHEBI:74483"
       }
     }
   ],
@@ -209,17 +199,10 @@
       ]
     },
     {
-      "id": "ec_2_1_1_180",
-      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
+      "id": "ec_2_1_1_202",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
       "ec": [
-        "2.1.1.180"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_184",
-      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
-      "ec": [
-        "2.1.1.184"
+        "2.1.1.202"
       ]
     }
   ],
@@ -468,12 +451,12 @@
     },
     {
       "id": "r6",
-      "name": "16S rRNA (adenine(1408)-N(1))-methyltransferase",
-      "equation": "adenosine(1408) in 16S rRNA + S-adenosyl-L-methionine = N(1)-methyladenosine(1408) in 16S rRNA + S-adenosyl-L-homocysteine + H(+)",
-      "ec": "2.1.1.180",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
+      "equation": "cytidine(48) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(48) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.202",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -483,7 +466,7 @@
       ],
       "products": [
         {
-          "metabolite": "n1_methyladenosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -497,69 +480,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_180"
+          "enzyme": "ec_2_1_1_202"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:42776"
+        "rhea": "RHEA:42948"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42776"
+            "id": "RHEA:42948"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "23S rRNA (adenine(2085)-N(6))-dimethyltransferase",
-      "equation": "adenosine(2085) in 23S rRNA + 2 S-adenosyl-L-methionine = N(6)-dimethyladenosine(2085) in 23S rRNA + 2 S-adenosyl-L-homocysteine + 2 H(+)",
-      "ec": "2.1.1.184",
+      "name": "multisite-specific tRNA:(cytosine-C(5))-methyltransferase",
+      "equation": "cytidine(49) in tRNA + S-adenosyl-L-methionine = 5-methylcytidine(49) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.202",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sam",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "n6_n6_dimethyladenosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_1_1_184"
+          "enzyme": "ec_2_1_1_202"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:42784"
+        "rhea": "RHEA:42952"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:42784"
+            "id": "RHEA:42952"
           }
         ]
       }

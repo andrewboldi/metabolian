@@ -20,26 +20,26 @@ pathway 5-s-cysteinyldopa-to-h2o "5-S-cysteinyldopa to H2O" {
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +5_hydroxyindol_3_yl_acetaldehyde +h +h2o
-    5_hydroxyindole_thiazolidine_carboxylate
+    <-> . +s_indole_l_cysteine
+    indole_3_carbaldehyde
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +5_s_cysteinyl_dopamine
-    dopamine_quinone
+    <-> ec_4_2_1_22 [4.2.1.22] +l_homocysteine +h +l_l_cystathionine
+    hydrogen_sulfide
   }
 
   branch from l_dopa side left {
     l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +4as_6r_4a_hydroxy_l_erythro_5_6_7_8_tetrahydrob +o2 +l_tyrosine
-    6r_5_6_7_8_tetrahydrobiopterin
+    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +o2 +l_tyrosine +h2o
+    tetrahydrobiopterin_4a_carbinolamine
   }
 
   branch from l_dopa side right {
     l_dopa
-    <-> ec_1_14_16_2 [1.14.16.2] +sapropterin +o2 +l_tyrosine +h2o
-    tetrahydrobiopterin_4a_carbinolamine
+    <-> ec_1_14_16_2 [1.14.16.2] +o2 +l_tyrosine +tetrahydrobiopterin_4a_carbinolamine +h2o
+    5_6_7_8_tetrahydrobiopterin
   }
 
   branch from 2_s_cysteinyldopaquinone side left {
@@ -50,13 +50,13 @@ pathway 5-s-cysteinyldopa-to-h2o "5-S-cysteinyldopa to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +beta_d_glcp_1_6_beta_d_glcp
-    glucose
+    <-> ec_3_3_2_10 [3.3.2.10] +15_16_dihode
+    15_16_epode
   }
 
   branch from h2o side left {
     h2o
-    <-> . +acetyl_coa +malonyl_coa +h +o2 +nadph +co2 +nadp +coa
-    1_8_dihydroxy_3_methylnaphthalene
+    <-> ec_3_3_2_10 [3.3.2.10] +9_10_epode
+    9_10_dihode
   }
 }

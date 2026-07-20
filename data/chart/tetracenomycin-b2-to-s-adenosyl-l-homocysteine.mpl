@@ -22,14 +22,14 @@ pathway tetracenomycin-b2-to-s-adenosyl-l-homocysteine "tetracenomycin B2 to S-a
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> ec_2_1_1_321 [2.1.1.321] +l_argininium +sam +hplus
+    n_methyl_argininium_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_317 [2.1.1.317] +n_acyl_4e_8e_sphinga_4_8_dienine +sam +hplus
-    n_acyl_4e_8e_9_methylsphinga_4_8_dienine
+    <-> ec_2_1_1_322 [2.1.1.322] +l_argininium +sam +hplus
+    n5_methyl_argininium_1
   }
 
   branch from 8_demethyl_8_2_3_4_o_trimethyl_l_rhamnosyl_tetra side left {

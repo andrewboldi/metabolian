@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-methylcatechol-to-tert-butoxymethanol "3-methylcatechol to tert-butoxymethanol" {
-  spacing 278
+  spacing 260
 
   spine at 0,0 {
     3_methylcatechol
@@ -30,73 +30,55 @@ pathway 3-methylcatechol-to-tert-butoxymethanol "3-methylcatechol to tert-butoxy
 
   branch from h side right {
     h
-    <-> ec_2_5_1_47 [2.5.1.47] +thiosulfate +3_cyano_l_alanine +s_sulfo_l_cysteine
-    cyanide
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +beta_l_fructofuranose +phosphate +beta_l_fructofuranose +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_6_1 [3.1.6.1] +4_nitrophenol +sulfate +h2o
-    4_nitrophenyl_sulfate
-  }
-
-  branch from 2_keto_4_pentenoate side right {
-    2_keto_4_pentenoate
-    <-> ec_3_7_1_9 [3.7.1.9] +h +formate +h2o
-    2_hydroxymuconic_semialdehyde
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +ditrans_octacis_undecaprenyldiphospho_n_acetyl_n
-    ditrans_octacis_undecaprenyldiphospho_n_acetylgl
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    neuraminic_acid
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_2_8_3_18 [2.8.3.18] +acetyl_coa +r_malate
-    3r_3_carboxy_3_hydroxypropanoyl_coa
+    <-> ec_1_2_5_1 [1.2.5.1] +ubiquinol_10 +co2 +pyruvate +h2o
+    ubiquinone_10
   }
 
-  branch from 2_oxohex_3_enedioic_acid side left {
-    2_oxohex_3_enedioic_acid
-    <-> ec_1_2_1_85 [1.2.1.85] +nadh +2_hydroxymuconic_semialdehyde +h2o
-    nad
+  branch from acetate side left {
+    acetate
+    <-> ec_3_1_1_6 [3.1.1.6] +h +z_octadec_11_enol +h2o
+    z_octadec_11_enyl_acetate
   }
 
   branch from 2_oxohex_3_enedioic_acid side right {
     2_oxohex_3_enedioic_acid
-    <-> . +catechol +h +h2o
-    2_hydroxy_6_2_hydroxyphenoxy_6_oxo_cis_cis_hexa
-  }
-
-  branch from 1_2_3_trihydroxybenzene side left {
-    1_2_3_trihydroxybenzene
-    <-> ec_1_13_11_35 [1.13.11.35] +h +o2
-    z_5_oxohex_2_enedioate
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +diphyllin +nadp +h2o +h +justicidin_b
-    nadph
+    <-> ec_1_2_1_85 [1.2.1.85] +nadh +nad +h2o
+    2_hydroxymuconic_semialdehyde
   }
 
   branch from o2 side left {
     o2
-    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +nadph +zealexin_a1 +h2o
+    <-> ec_1_14_13_173 [1.14.13.173] +11_oxo_amyrin +h +nadph +30_hydroxy_11_oxo_amyrin +h2o
     nadp
   }
 
-  branch from h2o side right {
-    h2o
-    <-> . +tyrosyl_tyrosine
-    l_tyrosine
+  branch from o2 side right {
+    o2
+    <-> . +h +30_hydroxy_11_oxo_amyrin +nadph +nadp +h2o
+    glycyrrhetaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_valine +l_methionine +l_tyrosine
-    tyrosyl_valyl_methionine
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_mannose
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    l_mannose
   }
 }

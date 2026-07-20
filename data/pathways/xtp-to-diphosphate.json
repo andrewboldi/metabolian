@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "xtp-to-diphosphate",
   "name": "XTP to diphosphate",
-  "category": "nucleotide-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from XTP(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -138,50 +138,51 @@
       }
     },
     {
-      "id": "n_4_aminobenzoyl_l_glutamate",
-      "name": "N-(4-aminobenzoyl)-L-glutamate",
-      "short": "N-(4-aminobenzoyl)-…",
-      "formula": "C12H12N2O5",
+      "id": "gdp_4_amino_4_6_dideoxy_d_mannose",
+      "name": "GDP-4-amino-4,6-dideoxy-α-D-mannose",
+      "short": "GDP-4-amino-4,6-did…",
+      "formula": "C16H25N6O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:73996"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
       "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:60903"
+        "chebi": "CHEBI:16810"
       }
     },
     {
-      "id": "4_aminobenzoate",
-      "name": "4-aminobenzoate",
-      "formula": "C7H6NO2",
-      "charge": -1,
+      "id": "gdp_4_dehydro_6_deoxy_d_mannose",
+      "name": "GDP-4-dehydro-6-deoxy-α-D-mannose",
+      "short": "GDP-4-dehydro-6-deo…",
+      "formula": "C16H21N5O15P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:17836"
+        "chebi": "CHEBI:57964"
       }
     },
     {
-      "id": "gly_glu",
-      "name": "Gly-Glu",
-      "formula": "C7H11N2O5",
-      "charge": -1,
+      "id": "d_lysinium",
+      "name": "D-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:73784"
+        "chebi": "CHEBI:32557"
       }
     },
     {
-      "id": "glycine",
-      "name": "Glycine",
-      "formula": "C2H5NO2",
+      "id": "6_amino_2_oxohexanoic_acid",
+      "name": "6-amino-2-oxohexanoic acid",
+      "short": "6-amino-2-oxohexano…",
+      "formula": "C6H11NO3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:57305"
-      }
-    },
-    {
-      "id": "ipp",
-      "name": "Isopentenyl diphosphate (IPP)",
-      "short": "Isopentenyl PP (IPP)",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:128769"
+        "chebi": "CHEBI:58183"
       }
     },
     {
@@ -195,33 +196,21 @@
       }
     },
     {
-      "id": "all_trans_hexaprenyl_diphosphate",
-      "name": "all-trans-hexaprenyl diphosphate",
-      "short": "all-trans-hexapreny…",
-      "formula": "C30H49O7P2",
-      "charge": -3,
+      "id": "cubenene",
+      "name": "(+)-cubenene",
+      "formula": "C15H24",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58179"
+        "chebi": "CHEBI:61685"
       }
     },
     {
-      "id": "gpp",
-      "name": "Geranyl diphosphate (GPP)",
-      "short": "Geranyl PP (GPP)",
-      "formula": "C10H17O7P2",
-      "charge": -3,
+      "id": "epicubenol",
+      "name": "(+)-epicubenol",
+      "formula": "C15H26O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:58057"
-      }
-    },
-    {
-      "id": "all_trans_nonaprenyl_diphosphate",
-      "name": "all-trans-nonaprenyl diphosphate",
-      "short": "all-trans-nonapreny…",
-      "formula": "C45H73O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58391"
+        "chebi": "CHEBI:61686"
       }
     }
   ],
@@ -241,17 +230,24 @@
       ]
     },
     {
-      "id": "ec_2_5_1_83",
-      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
+      "id": "ec_2_6_1_102",
+      "name": "GDP-perosamine synthase",
       "ec": [
-        "2.5.1.83"
+        "2.6.1.102"
       ]
     },
     {
-      "id": "ec_2_5_1_84",
-      "name": "all-trans-nonaprenyl-diphosphate synthase [geranyl-diphosphate specific]",
+      "id": "ec_4_2_3_63",
+      "name": "(+)-cubenene synthase",
       "ec": [
-        "2.5.1.84"
+        "4.2.3.63"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_64",
+      "name": "(+)-epicubenol synthase",
+      "ec": [
+        "4.2.3.64"
       ]
     }
   ],
@@ -454,21 +450,22 @@
     },
     {
       "id": "r5",
-      "name": "N-(4-aminobenzoyl)-L-glutamate + H2O = 4-aminobenzoate + L-glutamate",
-      "equation": "N-(4-aminobenzoyl)-L-glutamate + H2O = 4-aminobenzoate + L-glutamate",
+      "name": "GDP-perosamine synthase",
+      "equation": "GDP-alpha-D-perosamine + 2-oxoglutarate = GDP-4-dehydro-alpha-D-rhamnose + L-glutamate",
+      "ec": "2.6.1.102",
       "substrates": [
         {
-          "metabolite": "n_4_aminobenzoyl_l_glutamate",
+          "metabolite": "gdp_4_amino_4_6_dideoxy_d_mannose",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "4_aminobenzoate",
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
           "stoichiometry": 1
         },
         {
@@ -476,38 +473,43 @@
           "stoichiometry": 1
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_102"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:35495"
+        "rhea": "RHEA:36779"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:35495"
+            "id": "RHEA:36779"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
-      "equation": "glycyl-L-glutamate + H2O = glycine + L-glutamate",
+      "name": "D-lysine + 2-oxoglutarate = 6-amino-2-oxohexanoate + L-glutamate",
+      "equation": "D-lysine + 2-oxoglutarate = 6-amino-2-oxohexanoate + L-glutamate",
       "substrates": [
         {
-          "metabolite": "gly_glu",
+          "metabolite": "d_lysinium",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "akg",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "glycine",
+          "metabolite": "6_amino_2_oxohexanoic_acid",
           "stoichiometry": 1
         },
         {
@@ -518,28 +520,24 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:36463"
+        "rhea": "RHEA:37587"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:36463"
+            "id": "RHEA:37587"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "hexaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]",
-      "equation": "3 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-hexaprenyl diphosphate + 3 diphosphate",
-      "ec": "2.5.1.83",
+      "name": "(+)-cubenene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-cubenene + diphosphate",
+      "ec": "4.2.3.63",
       "substrates": [
-        {
-          "metabolite": "ipp",
-          "stoichiometry": 3
-        },
         {
           "metabolite": "fpp",
           "stoichiometry": 1
@@ -547,75 +545,75 @@
       ],
       "products": [
         {
-          "metabolite": "all_trans_hexaprenyl_diphosphate",
+          "metabolite": "cubenene",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_83"
+          "enzyme": "ec_4_2_3_63"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:27559"
+        "rhea": "RHEA:29475"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27559"
+            "id": "RHEA:29475"
           }
         ]
       }
     },
     {
       "id": "r8",
-      "name": "all-trans-nonaprenyl-diphosphate synthase [geranyl-diphosphate specific]",
-      "equation": "7 isopentenyl diphosphate + (2E)-geranyl diphosphate = all-trans-nonaprenyl diphosphate + 7 diphosphate",
-      "ec": "2.5.1.84",
+      "name": "(+)-epicubenol synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate + H2O = (+)-epicubenol + diphosphate",
+      "ec": "4.2.3.64",
       "substrates": [
         {
-          "metabolite": "ipp",
-          "stoichiometry": 7
+          "metabolite": "fpp",
+          "stoichiometry": 1
         },
         {
-          "metabolite": "gpp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "all_trans_nonaprenyl_diphosphate",
+          "metabolite": "epicubenol",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 7
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_84"
+          "enzyme": "ec_4_2_3_64"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 8,
       "xrefs": {
-        "rhea": "RHEA:27563"
+        "rhea": "RHEA:29479"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27563"
+            "id": "RHEA:29479"
           }
         ]
       }

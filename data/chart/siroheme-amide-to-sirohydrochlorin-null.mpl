@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway siroheme-amide-to-sirohydrochlorin-null "siroheme amide to sirohydrochlorin" {
-  spacing 260
+  spacing 248
 
   spine at 0,0 {
     siroheme_amide
@@ -18,52 +18,40 @@ pathway siroheme-amide-to-sirohydrochlorin-null "siroheme amide to sirohydrochlo
     h
   }
 
-  branch from fe side left {
-    fe
-    <-> . +fadh2 +h +fe_enterobactin +enterobactin
-    fad
-  }
-
-  branch from fe side right {
-    fe
-    <-> . +fmnh2 +h +fe_enterobactin +enterobactin
-    fmn
-  }
-
   branch from l_glutamine side left {
     l_glutamine
-    <-> . +trp_gln_gln +h2o
-    l_tryptophan
+    <-> ec_4_2_1_19 [4.2.1.19] +5_amino_1_5_phospho_beta_d_ribosyl_imidazole_4_c +3_imidazol_4_yl_2_oxopropyl_phosphate +h +l_glutamate +h2o
+    5_5_phospho_1_deoxy_d_ribulos_1_ylimino_methylam
   }
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> . +l_tryptophan +l_tyrosine +h2o
-    trp_tyr_gln
+    <-> . +udp_3_acetamido_2_seryl_amino_2_3_dideoxy_alpha +atp +h2o +h +adp +l_glutamate +phosphate
+    udp_3_acetamido_2_3_dideoxy_2_seryl_amino_alpha
   }
 
   branch from atp side left {
     atp
-    <-> ec_2_7_4_14 [2.7.4.14] +h +5_fluorodeoxyuridine_monophosphate +adp
-    5_fluorodeoxyuridine_diphosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_oleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_4_6 [2.7.4.6] +h +5_fluorodeoxyuridine_diphosphate +adp
-    5_fluorodeoxyuridine_triphosphate
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_linoleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_lysine +l_serine
-    seryl_lysyl_histidine
+    <-> ec_1_13_11_34 [1.13.11.34] +5s_6e_8z_11z_13e_15r_5_hydroperoxy_15_hydroxyic
+    7e_9e_11z_13e_15r_5s_6s_5_6_epoxyicosa_15_hydro
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_lysine +l_serine +l_phenylalanine
-    seryl_phenylalanyl_lysine
+    <-> ec_1_13_11_34 [1.13.11.34] +5_s_hydroperoxy_18_r_hydroxy_6e_8z_11z_14z_16e_i
+    7e_9e_11z_14z_18r_16e_5s_6s_5_6_epoxyicosa_15_h
   }
 
   branch from precorrin_2 side left {
@@ -80,37 +68,37 @@ pathway siroheme-amide-to-sirohydrochlorin-null "siroheme amide to sirohydrochlo
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_21 [1.1.1.21] +nadh +beta_d_galactose +h
-    galactitol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1s_2s_4r_isodihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_48 [1.1.1.48] +nadh +h +d_galactono_1_4_lactone
-    beta_d_galactose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    neodihydrocarveol
   }
 
   branch from h side left {
     h
-    <-> ec_2_8_2_39 [2.8.2.39] +adenosine_3_5_bisphosphate +12_sulfooxyjasmonate +12_hydroxyjasmonate
-    3_phosphoadenylyl_sulfate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    lysope_18_3_9z_12z_15z_0_0
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_20_4 [1.14.20.4] +3_hydroxy_2_phenylchromenylium +h2o
-    4s_2_3_dehydroflavan_3_4_diol
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_144 [1.14.13.144] +9_pimara_7_15_dien_19_al +o2 +nadp +h2o
-    9_pimara_7_15_dien_19_oate
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    1r_2s_4r_borneol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_13_145 [1.14.13.145] +ent_cassa_12_15_diene +h +o2 +nadp +h2o
-    11_hydroxy_ent_cassa_12_15_diene
+    <-> ec_1_1_1_71 [1.1.1.71] +borneol +nadp +h
+    phellandral
   }
 }

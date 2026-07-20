@@ -90,14 +90,14 @@ pathway 6-acetyl-2-amino-3-7-8-9-to-l-glutamate "6-acetyl-2-amino-3,7,8,9-… to
 
   branch from ppi side right {
     ppi
-    <-> ec_6_1_1_11 [6.1.1.11] +amp_3_end_1 +serine +atp +amp +hplus
-    3_l_seryl_adenylyl_1_group
+    <-> ec_4_2_3_27 [4.2.3.27] +dmapp
+    isoprene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_23 [4.2.3.23] +fpp
-    germacrene_a
+    <-> ec_4_6_1_2 [4.6.1.2] +gtp
+    3_5_cyclic_gmp
   }
 
   branch from guanine side right {
@@ -108,8 +108,8 @@ pathway 6-acetyl-2-amino-3-7-8-9-to-l-glutamate "6-acetyl-2-amino-3,7,8,9-… to
 
   branch from guanine side left {
     guanine
-    <-> ec_2_4_2_1 [2.4.2.1] +2_deoxyguanosine +pi
-    2_deoxy_d_ribose_1_phosphate
+    <-> . +guanosine +h2o
+    d_ribofuranose
   }
 
   branch from glutamate side right {

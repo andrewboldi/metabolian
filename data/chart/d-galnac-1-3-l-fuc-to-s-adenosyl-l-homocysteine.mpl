@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α-L-Fuc… to S-adenosyl-L-homocysteine" {
-  spacing 338
+  spacing 326
 
   spine at 0,0 {
     d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac_1_3_d
@@ -34,8 +34,8 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> . +n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_galacto +h2o
-    n_acetyl_d_galactosaminyl_1_3_d_galactosyl_1_4_d
+    <-> ec_3_2_1_49 [3.2.1.49] +l_fucosyl_1_2_d_galactoside +h2o
+    n_acetyl_d_galactosaminyl_1_3_l_fucosyl_1_2_d_ga
   }
 
   branch from d_galactosyl_1_4_n_acetyl_d_glucosaminyl_1_3_d side right {
@@ -52,8 +52,8 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
 
   branch from l_fucopyranose side right {
     l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +xllg_xyloglucan_oligosaccharide +h2o
-    xlfg_xyloglucan_oligosaccharide
+    <-> ec_3_2_1_51 [3.2.1.51] +d_galactopyranose +h2o
+    l_fucp_1_6_d_galp
   }
 
   branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_4_n_ace side left {
@@ -64,37 +64,25 @@ pathway d-galnac-1-3-l-fuc-to-s-adenosyl-l-homocysteine "α-D-GalNAc-(1→3)-[α
 
   branch from cytidine_5_monophosphate side right {
     cytidine_5_monophosphate
-    <-> . +d_galactosyl_1_3_n_acetyl_d_galactosaminyl_1_4 +cmp_n_acetyl_neuraminate +hplus
-    d_galactosyl_1_3_n_acetyl_neuraminosyl_2_6_n_ac
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from cytidine_5_monophosphate side left {
     cytidine_5_monophosphate
-    <-> ec_2_4_3_10 [2.4.3.10] +n_acetyl_neuraminyl_2_3_d_galactosyl_1_3_n_acety +cmp_n_acetyl_neuraminate +hplus
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-  }
-
-  branch from n_acetylneuraminate side right {
-    n_acetylneuraminate
-    <-> . +neu5ac_2_3_d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_g +h2o
-    d_gal_1_3_d_galnac_1_4_d_gal_1_4_d_glc_1_1_cer
-  }
-
-  branch from n_acetylneuraminate side left {
-    n_acetylneuraminate
-    <-> . +neu5ac_2_8_neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac +h2o
-    neu5ac_2_3_gal_1_3_galnac_1_4_neu5ac_2_8_neu5ac
+    <-> . +n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace +cmp_n_acetyl_neuraminate +hplus
+    n_acetyl_neuraminosyl_2_3_d_galactosyl_1_3_n_ace
   }
 
   branch from sah side right {
     sah
-    <-> . +l_histidine +sam +hplus
-    n_methyl_l_histidine
+    <-> ec_2_1_1_174 [2.1.1.174] +guanosine_5_monophosphate_1 +sam +hplus
+    n2_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> . +n_methyl_l_histidine +sam +hplus
-    n_n_dimethyl_l_histidine
+    <-> ec_2_1_1_176 [2.1.1.176] +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 }

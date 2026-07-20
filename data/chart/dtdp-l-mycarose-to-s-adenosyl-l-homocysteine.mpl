@@ -30,13 +30,13 @@ pathway dtdp-l-mycarose-to-s-adenosyl-l-homocysteine "dTDP-β-L-mycarose to S-ad
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sam
-    n_methylpyridinium
+    <-> ec_2_1_1_106 [2.1.1.106] +l_tryptophan +sam +hplus
+    2_methyl_l_tryptophan
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
-    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
+    <-> ec_2_1_1_105 [2.1.1.105] +n_benzoyl_4_hydroxyanthranilate +sam +hplus
+    n_benzoyl_4_methoxyanthranilate
   }
 }

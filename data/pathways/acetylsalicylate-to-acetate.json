@@ -119,25 +119,6 @@
       }
     },
     {
-      "id": "l_asparagine",
-      "name": "L-asparagine",
-      "formula": "C4H6N2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50347"
-      }
-    },
-    {
-      "id": "n4_adp_d_ribosyl_l_asparagine_2",
-      "name": "N4-(ADP-D-ribosyl)-L-asparagine(2−)",
-      "short": "N4-(ADP-D-ribosyl)-…",
-      "formula": "C19H25N7O15P2",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:142555"
-      }
-    },
-    {
       "id": "l_serine",
       "name": "L-serine",
       "formula": "C3H5NO2",
@@ -157,6 +138,25 @@
       }
     },
     {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46858"
+      }
+    },
+    {
+      "id": "o_adp_d_ribosyl_l_tyrosine_2",
+      "name": "O-(ADP-D-ribosyl)-L-tyrosine(2−)",
+      "short": "O-(ADP-D-ribosyl)-L…",
+      "formula": "C24H28N6O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:142557"
+      }
+    },
+    {
       "id": "sam",
       "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
       "short": "S-Adenosyl-L-methio…",
@@ -167,12 +167,13 @@
       }
     },
     {
-      "id": "n6_methyl_l_lysinium",
-      "name": "N6-methyl-L-lysinium",
-      "formula": "C7H15N2O",
+      "id": "n6_n6_n6_trimethyl_l_lysine",
+      "name": "N6,N6,N6-trimethyl-L-lysine",
+      "short": "N6,N6,N6-trimethyl-…",
+      "formula": "C9H19N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:61929"
+        "chebi": "CHEBI:61961"
       }
     },
     {
@@ -186,22 +187,12 @@
       }
     },
     {
-      "id": "glyoxal",
-      "name": "glyoxal",
-      "formula": "C2H2O2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:34779"
-      }
-    },
-    {
-      "id": "n6_1_hydroxy_2_oxoethyl_l_lysinium",
-      "name": "N6-(1-hydroxy-2-oxoethyl)-L-lysinium",
-      "short": "N6-(1-hydroxy-2-oxo…",
-      "formula": "C8H15N2O3",
+      "id": "n6_methyl_l_lysinium",
+      "name": "N6-methyl-L-lysinium",
+      "formula": "C7H15N2O",
       "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:141554"
+        "chebi": "CHEBI:61929"
       }
     },
     {
@@ -227,6 +218,20 @@
       "name": "O-acetyl-ADP-ribose deacetylase",
       "ec": [
         "3.1.1.106"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_354",
+      "name": "[histone H3]-lysine(4) N-trimethyltransferase",
+      "ec": [
+        "2.1.1.354"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_364",
+      "name": "[histone H3]-lysine(4) N-methyltransferase",
+      "ec": [
+        "2.1.1.364"
       ]
     }
   ],
@@ -378,49 +383,6 @@
     },
     {
       "id": "r4",
-      "name": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicot...",
-      "equation": "L-asparaginyl-[protein] + NAD(+) = N(4)-(ADP-D-ribosyl)-L-asparaginyl-[protein] + nicotinamide + H(+)",
-      "substrates": [
-        {
-          "metabolite": "l_asparagine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n4_adp_d_ribosyl_l_asparagine_2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nicotinamide",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:58228"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:58228"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
       "equation": "L-seryl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-seryl-[protein] + nicotinamide + H(+)",
       "substrates": [
@@ -448,7 +410,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:58232"
       },
@@ -463,9 +425,102 @@
       }
     },
     {
+      "id": "r5",
+      "name": "L-tyrosyl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-tyrosyl-[protein] + nicotinamide + H(+)",
+      "equation": "L-tyrosyl-[protein] + NAD(+) = O-(ADP-D-ribosyl)-L-tyrosyl-[protein] + nicotinamide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_adp_d_ribosyl_l_tyrosine_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:58236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58236"
+          }
+        ]
+      }
+    },
+    {
       "id": "r6",
-      "name": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate syn...",
-      "equation": "L-lysyl-[citrate synthase] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl-[citrate synthase] + S-adenosyl-L-homocysteine + H(+)",
+      "name": "[histone H3]-lysine(4) N-trimethyltransferase",
+      "equation": "L-lysyl(4)-[histone H3] + 3 S-adenosyl-L-methionine = N(6),N(6),N(6)-trimethyl-L-lysyl(4)-[histone H3] + 3 S-adenosyl-L-homocysteine + 3 H(+)",
+      "ec": "2.1.1.354",
+      "substrates": [
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_n6_n6_trimethyl_l_lysine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_354"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:60260"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60260"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r7",
+      "name": "[histone H3]-lysine(4) N-methyltransferase",
+      "equation": "L-lysyl(4)-[histone H3] + S-adenosyl-L-methionine = N(6)-methyl-L-lysyl(4)-[histone H3] + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.364",
       "substrates": [
         {
           "metabolite": "l_lysinium",
@@ -490,52 +545,22 @@
           "stoichiometry": 1
         }
       ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:55544"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:55544"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "glyoxal + L-lysyl-[protein] = N(6)-(1-hydroxy-2-oxoethyl)-L-lysyl-[protein]",
-      "equation": "glyoxal + L-lysyl-[protein] = N(6)-(1-hydroxy-2-oxoethyl)-L-lysyl-[protein]",
-      "substrates": [
+      "catalysts": [
         {
-          "metabolite": "glyoxal",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "l_lysinium",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_1_hydroxy_2_oxoethyl_l_lysinium",
-          "stoichiometry": 1
+          "enzyme": "ec_2_1_1_364"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:57204"
+        "rhea": "RHEA:60264"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:57204"
+            "id": "RHEA:60264"
           }
         ]
       }

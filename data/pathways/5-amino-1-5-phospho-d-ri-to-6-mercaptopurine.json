@@ -142,41 +142,49 @@
       }
     },
     {
-      "id": "7alpha_hydroxycholest_4_en_3_one",
-      "name": "7alpha-hydroxycholest-4-en-3-one",
-      "short": "7alpha-hydroxychole…",
-      "formula": "C27H44O2",
-      "charge": 0,
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
       "xrefs": {
-        "metanetx": "MNXM730346"
+        "metanetx": "MNXM1101474"
       }
     },
     {
-      "id": "phosphate",
-      "name": "phosphate",
-      "formula": "HO4P",
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
       "charge": -2,
       "xrefs": {
-        "metanetx": "MNXM9"
+        "metanetx": "MNXM728294"
       }
     },
     {
-      "id": "h2o",
-      "name": "H2O",
-      "formula": "H2O",
-      "charge": 0,
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
       "xrefs": {
-        "metanetx": "WATER"
+        "metanetx": "MNXM1102128"
       }
     },
     {
-      "id": "7alpha_12alpha_dihydroxycholest_4_en_3_one",
-      "name": "7alpha,12alpha-dihydroxycholest-4-en-3-one",
-      "short": "7alpha,12alpha-dihy…",
-      "formula": "C27H44O3",
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM741173"
+      }
+    },
+    {
+      "id": "l_alpha_glutamyl_phosphate",
+      "name": "L-alpha-glutamyl phosphate",
+      "short": "L-alpha-glutamyl P",
+      "formula": "C5H10NO7P",
       "charge": 0,
       "xrefs": {
-        "metanetx": "MNXM741570"
+        "metanetx": "MNXM4027"
       }
     }
   ],
@@ -186,6 +194,20 @@
       "name": "hypoxanthine phosphoribosyltransferase",
       "ec": [
         "2.4.2.8"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_10",
+      "name": "nucleoside-triphosphate--adenylate kinase",
+      "ec": [
+        "2.7.4.10"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_13",
+      "name": "EC 2.7.2.13",
+      "ec": [
+        "2.7.2.13"
       ]
     }
   ],
@@ -363,100 +385,92 @@
     },
     {
       "id": "r5",
-      "name": "Reaction MNXR105427",
+      "name": "nucleoside-triphosphate--adenylate kinase",
+      "ec": "2.7.4.10",
       "substrates": [
         {
-          "metabolite": "h",
+          "metabolite": "utp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7alpha_hydroxycholest_4_en_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
+          "metabolite": "amp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "atp",
+          "metabolite": "udp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "7alpha_hydroxycholest_4_en_3_one",
+          "metabolite": "adp",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_2_7_4_10"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "metanetx": "MNXR105427"
+        "metanetx": "MNXR106413"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR105427"
+            "id": "MNXR106413"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "Reaction MNXR105428",
+      "name": "Reaction MNXR106438",
+      "ec": "2.7.2.13",
       "substrates": [
         {
           "metabolite": "h",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "7alpha_12alpha_dihydroxycholest_4_en_3_one",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "phosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "atp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "7alpha_12alpha_dihydroxycholest_4_en_3_one",
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_alpha_glutamyl_phosphate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "adp",
           "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_13"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "metanetx": "MNXR105428"
+        "metanetx": "MNXR106438"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "MetaNetX",
-            "id": "MNXR105428"
+            "id": "MNXR106438"
           }
         ]
       }

@@ -30,14 +30,14 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from ethanolaminium side left {
     ethanolaminium
-    <-> . +1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah +serine
-    1_1z_octadecenyl_2_4z_7z_10z_13z_16z_19z_docosah
+    <-> . +1_1z_octadecenyl_2_9z_octadecenoyl_sn_glycero_3 +serine
+    1_1z_octadecenyl_2_oleoyl_sn_glycero_3_phosphose
   }
 
   branch from ethanolaminium side right {
     ethanolaminium
-    <-> . +1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphoet +serine
-    1_stearoyl_2_arachidonoyl_sn_glycero_3_phosphose
+    <-> . +1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho +serine
+    1_1z_octadecenyl_2_arachidonoyl_sn_glycero_3_pho
   }
 
   branch from palmitoleoyl_coa side left {
@@ -48,19 +48,19 @@ pathway palmitoleoyl-ethanolamide-to-1-hexadecanoyl-2-9z "palmitoleoyl ethanolam
 
   branch from palmitoleoyl_coa side right {
     palmitoleoyl_coa
-    <-> . +1_o_acyl_sn_glycero_3_phosphocholine +coa
-    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphocholin
+    <-> . +1_acyl_sn_glycero_3_phosphoserine +coa
+    1_acyl_2_palmitoleoyl_sn_glycero_3_phosphoserine
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_6_1_9 [3.6.1.9] +xtp +h2o +hplus
-    xmp
+    <-> . +l_selenomethionine +atp +h2o +pi
+    l_adenosylselenomethionine
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_61 [4.2.3.61] +fpp
-    5_epi_aristolochene
+    <-> . +ipp +fpp
+    2_cis_6_trans_10_trans_geranylgeranyl_diphosphat
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway coniferol-to-diphosphate "coniferol to diphosphate" {
-  spacing 204
+  spacing 192
 
   spine at 0,0 {
     coniferol
@@ -14,17 +14,5 @@ pathway coniferol-to-diphosphate "coniferol to diphosphate" {
     trans_ferulate
     <-> . +atp +hplus -ppi
     trans_feruloyl_amp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +kanamycin_a +gtp
-    4_guanylylkanamycin_a
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +itp
-    4_inosinylylkanamycin_a
   }
 }

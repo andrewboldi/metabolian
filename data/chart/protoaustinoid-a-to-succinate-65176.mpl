@@ -18,37 +18,37 @@ pathway protoaustinoid-a-to-succinate-65176 "protoaustinoid A to succinate" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +cannabigerolate +hydrogen_acceptor
-    cannabichromenate
+    <-> ec_1_17_99_11 [1.17.99.11] +1_dihydrotestosterone +hydrogen_acceptor +h2o
+    17_hydroxyandrostan_1_3_dione
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +dopamine +hydrogen_acceptor +h2o
-    m_tyraminium
+    <-> . +hydrogen_acceptor +17_hydroxyandrostan_1_3_dione
+    1_17_dihydroxyandrostan_3_one
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +dehydroprobetaenone_i +hydrogen_donor
-    probetaenone_i
+    <-> . +1_hydroxy_5_androstan_3_17_dione +hydrogen_donor
+    5_androstan_1_3_17_trione
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +betaenone_c +hydrogen_donor
-    betaenone_b
+    <-> ec_1_17_99_10 [1.17.99.10] +cholest_4_6_dien_3_one +h2o +hydrogen_donor
+    25_hydroxycholest_4_6_dien_3_one
   }
 
   branch from succinate side left {
     succinate
-    <-> . +taxifolin +akg +o2 +co2 +h2o +hplus
-    quercetin_7_olate
+    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
+    3_phenylsuccinyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_70 [1.14.11.70] +deoxycylindrospermopsin +akg +o2 +co2
-    7_epi_cylindrospermopsin
+    <-> ec_2_8_3_28 [2.8.3.28] +s_2_benzylsuccinate +succinyl_coa
+    s_2_benzylsuccinyl_coa
   }
 }

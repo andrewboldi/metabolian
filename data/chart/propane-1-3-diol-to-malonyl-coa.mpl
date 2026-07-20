@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway propane-1-3-diol-to-malonyl-coa "propane-1,3-diol to malonyl-CoA" {
-  spacing 254
+  spacing 248
 
   spine at 0,0 {
     propane_1_3_diol
@@ -20,21 +20,15 @@ pathway propane-1-3-diol-to-malonyl-coa "propane-1,3-diol to malonyl-CoA" {
     acetate
   }
 
-  branch from 3_hydroxypropionate side left {
-    3_hydroxypropionate
-    <-> . +atp +coa +adp +pi
-    3_hydroxypropanoyl_coa
+  branch from malonyl-coa side left {
+    malonyl-coa
+    <-> ec_2_3_1_171 [2.3.1.171] +anthocyanidin_3_o_d_glucoside +coa
+    anthocyanidin_3_o_6_o_malonyl_d_glucoside_betain
   }
 
   branch from malonyl-coa side right {
     malonyl-coa
-    <-> . +acetyl_coa +hplus +co2 +coa +h2o
-    3_6_7_9_tetrahydroxy_3_methyl_2_3_dihydro_1h_nap
-  }
-
-  branch from malonyl-coa side left {
-    malonyl-coa
-    <-> ec_2_3_1_165 [2.3.1.165] +acetyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    6_methylsalicylate
+    <-> ec_2_3_1_114 [2.3.1.114] +3_4_dichloroaniline +coa
+    n_3_4_dichlorophenyl_malonamate
   }
 }

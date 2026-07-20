@@ -20,13 +20,13 @@ pathway dibenzothiophene-to-biphenyl-2-3-diol "dibenzothiophene to biphenyl-2,3-
 
   branch from fmn side left {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    22r_22_hydroxycholesterol
+    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
+    5_20_dihete
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    24r_24_hydroxycholesterol
+    <-> . +8_hete +fmnh2 +o2 +h2o +hplus
+    8_20_dihete
   }
 }

@@ -38,13 +38,13 @@ pathway 1-palmitoyl-2-oleoyl-sn-g-to-fmn "1-palmitoyl-2-oleoyl-sn-g… to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    9_hydroxymyristate
+    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_7_decanediol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +soppiline_b +fmnh2 +o2 +h2o +hplus
-    soppiline_c
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_6_dodecanediol
   }
 }

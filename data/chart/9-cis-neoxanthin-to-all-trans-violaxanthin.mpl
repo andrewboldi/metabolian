@@ -28,14 +28,14 @@ pathway 9-cis-neoxanthin-to-all-trans-violaxanthin "9'-cis-neoxanthin to all-tra
 
   branch from o2 side right {
     o2
-    <-> . +5_hydroxyomeprazole +nadp +h2o +5_methoxy_2_4_methoxy_3_5_dimethylpyridin_2_yl_m +nadph
-    h
+    <-> . +alpha_pinene +h +nadph +nadp +h2o
+    alpha_pinene_oxide
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +6_hydroxypaclitaxel +nadp +h2o +h +nadph
-    paclitaxel
+    <-> . +4_hydroxydebrisoquin +nadp +h2o +debrisoquin +nadph
+    h
   }
 
   branch from 9_cis_neoxanthin side right {

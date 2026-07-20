@@ -32,14 +32,14 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
 
   branch from succinate side left {
     succinate
-    <-> . +hexanoyl_coa +akg +o2 +co2
-    2_hydroxyhexanoyl_coa
+    <-> ec_1_14_20_14 [1.14.20.14] +12_epi_fischerindole_u +chloride +akg +o2 +hplus +co2 +h2o
+    12_epi_fischerindole_g
   }
 
   branch from succinate side right {
     succinate
-    <-> . +butyryl_coa +akg +o2 +co2
-    2_hydroxybutanoyl_coa
+    <-> ec_1_14_11_63 [1.14.11.63] +l_lysinium +akg +o2 +co2
+    3s_3_hydroxy_l_lysine_1
   }
 
   branch from 4_chloro_2_methyl_cis_cis_muconate side left {
@@ -56,14 +56,14 @@ pathway r-2-4-chloro-2-methylp-to-5-chloro-3-methylcate "(R)-2-(4-chloro-2-methy
 
   branch from o2 side left {
     o2
-    <-> . +all_trans_retinal +h +nadph +nadp +h2o
-    4_oh_retinal
+    <-> . +h +nadph +lithocholate +nadp +h2o
+    deoxycholate
   }
 
   branch from o2 side right {
     o2
-    <-> . +all_trans_retinol +h +nadph +nadp +h2o
-    4_hydroxyvitamin_a1
+    <-> . +5_oxo_12_r_hydroxy_eicosa_8e_10e_14z_trienoyl_co +h2o2
+    5_oxo_12_r_hydroxy_eicosa_2e_8e_10e_14z_tetraeno
   }
 
   branch from 5_chloro_3_methylcatechol side left {

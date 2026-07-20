@@ -20,13 +20,13 @@ pathway nicotinyl-coa-to-deacetylpyripyropene-e "nicotinyl-CoA to deacetylpyripy
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_225 [4.2.3.225] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    cattleyene
+    <-> . +gpp +h2o
+    1r_2r_menth_2_en_1_ol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_229 [4.2.3.229] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_beyerene
+    <-> . +fpp +h2o
+    africanol
   }
 }

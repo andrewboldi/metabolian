@@ -1,0 +1,373 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-leucine-to-diphosphate",
+  "name": "L-leucine to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-leucine to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR151098"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_leucine",
+      "name": "L-leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1106761"
+      }
+    },
+    {
+      "id": "n_terminal_amino_acid_1",
+      "name": "N-terminal α-amino-acid(1+)",
+      "short": "N-terminal…",
+      "formula": "C2H4NOR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78597"
+      }
+    },
+    {
+      "id": "n_terminal_l_leucyl_l_amino_acid_1",
+      "name": "N-terminal L-leucyl-L-α-amino acid(1+)",
+      "short": "N-terminal…",
+      "formula": "C8H15N2O2R",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83556"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "leucine",
+      "name": "L-Leucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57427"
+      }
+    },
+    {
+      "id": "r_2_hydroxy_3_methylbutyrate",
+      "name": "(R)-2-hydroxy-3-methylbutyrate",
+      "short": "2-hydroxy-3-methylb…",
+      "formula": "C5H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:145660"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "bassianolide",
+      "name": "bassianolide",
+      "formula": "C48H84N4O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145108"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_terminal_l_tryptophanyl_peptide",
+      "name": "N-terminal L-tryptophanyl peptide",
+      "short": "N-terminal…",
+      "formula": "C13H14N3O2R",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:192694"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_11_10",
+      "name": "bacterial leucyl aminopeptidase",
+      "ec": [
+        "3.4.11.10"
+      ]
+    },
+    {
+      "id": "ec_3_4_11_17",
+      "name": "tryptophanyl aminopeptidase",
+      "ec": [
+        "3.4.11.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "bacterial leucyl aminopeptidase",
+      "ec": "3.4.11.10",
+      "substrates": [
+        {
+          "metabolite": "l_leucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_l_leucyl_l_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_11_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR151098"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR151098"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "an N-terminal L-leucyl-L-alpha-aminoacyl-[peptide] + H2O = an N-terminal L-alpha-aminoa...",
+      "equation": "an N-terminal L-leucyl-L-alpha-aminoacyl-[peptide] + H2O = an N-terminal L-alpha-aminoacyl-[peptide] + L-leucine",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_l_leucyl_l_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84791"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84791"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4 (R)-2-hydroxy-3-methylbutanoate + 4 L-leucine + 4 S-adenosyl-L-methionine + 8 ATP = b...",
+      "equation": "4 (R)-2-hydroxy-3-methylbutanoate + 4 L-leucine + 4 S-adenosyl-L-methionine + 8 ATP = bassianolide + 8 AMP + 4 S-adenosyl-L-homocysteine + 8 diphosphate + 8 H(+)",
+      "substrates": [
+        {
+          "metabolite": "r_2_hydroxy_3_methylbutyrate",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "leucine",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 8
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bassianolide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 8
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:62272"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:62272"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tryptophanyl aminopeptidase",
+      "equation": "an N-terminal L-tryptophanyl-L-alpha-aminoacyl-[peptide] + H2O = an N-terminal L-alpha-aminoacyl-[peptide] + L-tryptophan",
+      "ec": "3.4.11.17",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_l_tryptophanyl_peptide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_11_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:72999"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:72999"
+          }
+        ]
+      }
+    }
+  ]
+}

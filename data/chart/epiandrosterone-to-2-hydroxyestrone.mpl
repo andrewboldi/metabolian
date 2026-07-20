@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone…" {
-  spacing 324
+  spacing 312
 
   spine at 0,0 {
     epiandrosterone
@@ -26,58 +26,46 @@ pathway epiandrosterone-to-2-hydroxyestrone "epiandrosterone to 2-hydroxyestrone
     androsterone
   }
 
-  branch from 5_androstane_3_17_dione side right {
-    5_androstane_3_17_dione
-    <-> . +nadp +nadph +hplus
-    17_hydroxy_5_androstan_3_one
-  }
-
-  branch from androst_4_ene_3_17_dione side left {
+  branch from androst_4_ene_3_17_dione side right {
     androst_4_ene_3_17_dione
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     16_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from androst_4_ene_3_17_dione side right {
+  branch from androst_4_ene_3_17_dione side left {
     androst_4_ene_3_17_dione
     <-> . +fmnh2 +o2 +fmn +h2o +hplus
     15_hydroxyandrost_4_ene_3_17_dione
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +hydrogen_acceptor +sah +co2 +coa +h2o
-    dehydroprobetaenone_i
-  }
-
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +1_4_benzoquinones +hydrogen_acceptor
-    hydroquinones
+    <-> . +tetrahydroalstonine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
+    alstonine
   }
 
-  branch from estrone side left {
-    estrone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    15_hydroxyestrone
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> . +ajmalicine +hydrogen_acceptor +fmnh2 +o2 +fmn +h2o +hplus
+    serpentine
   }
 
   branch from estrone side right {
     estrone
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    6_hydroxyestrone
+    <-> . +udp_d_glucuronate +udp +hplus
+    estrone_3_o_d_glucuronide
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_78 [1.14.14.78] +menaquinone_4 +fmnh2 +o2 +h2o +hplus
-    hydroxymenaquinone_4
+    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    4_24s_dihydroxycholesterol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +all_trans_retinal +fmnh2 +o2 +h2o +hplus
-    all_trans_retinoate
+    <-> . +22r_22_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    7_22r_dihydroxycholesterol
   }
 
   branch from 2_hydroxyestrone side left {

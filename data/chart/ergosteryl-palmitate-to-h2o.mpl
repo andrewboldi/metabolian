@@ -28,20 +28,20 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
 
   branch from palmitate side right {
     palmitate
-    <-> . +all_trans_retinyl_palmitate +h2o +hplus
-    retinol
+    <-> . +n_hexadecanoylphytosphingosine +h2o
+    phytosphingosine
   }
 
   branch from fmn side left {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    19_hete
+    <-> . +3_17_dihydroxy_9_10_secoandrosta_1_3_5_10_triene +fmnh2 +o2 +h2o +hplus
+    3_4_17_trihydroxy_9_10_secoandrosta_1_3_5_10_tri
   }
 
   branch from fmn side right {
     fmn
-    <-> . +20_hete +fmnh2 +o2 +h2o +hplus
-    20_oxoarachidonate
+    <-> . +4_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    4_7_dihydroxycholesterol
   }
 
   branch from 1_25_dihydroxyvitamin_d2 side left {
@@ -52,37 +52,37 @@ pathway ergosteryl-palmitate-to-h2o "ergosteryl palmitate to H2O" {
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +di_sulfido_diiron +cholesterol +o2 +hplus +h2o
-    22r_22_hydroxycholesterol
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
+    neopikromycin
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +22r_22_hydroxycholesterol +di_sulfido_diiron +o2 +hplus +h2o
-    20r_22r_20_22_dihydroxycholesterol
+    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +di_sulfido_diiron +o2 +hplus +h2o
+    novapikromycin
   }
 
   branch from nadp side right {
     nadp
-    <-> . +26_hydroxycholesterol +h +nadph
-    3beta_hydroxy_5_cholestenal
+    <-> . +h +15_oxo_lipoxin_a4 +nadph
+    13_14_dihydro_15_oxo_lipoxin_a4
   }
 
   branch from nadp side left {
     nadp
-    <-> . +7alpha_hydroxy_3_oxo_4_cholestenoic_acid_anion +h +nadph
-    3beta_7alpha_dihydroxy_5_cholestenoate
+    <-> . +4_oxo_9_cis_retinoate +h +nadph
+    9_cis_4_oxo_13_14_dihydro_retinoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +hexadecanoate +h +2_hexadecanoyl_sn_glycero_3_phospho_1_sn_glycero
-    dipalmitoyl_phosphatidylglycerol
+    <-> . +2_2_2_2_2_amino_3_4_hydroxyphenyl_1_oxopropyl_am +h +dynorphin_a_6_8
+    dynorphin_a_1_8
   }
 
   branch from h2o side left {
     h2o
-    <-> . +9z_octadecenoate +h +2_acyl_sn_glycero_3_phosphoglycerol_n_c18_1
-    phosphatidylglycerol_dioctadec_11_enoyl_n_c18_1
+    <-> . +h +s_salsolinol +acetaldehyde
+    dopamine
   }
 }

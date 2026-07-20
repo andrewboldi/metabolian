@@ -149,67 +149,49 @@
       }
     },
     {
-      "id": "fmnh2",
-      "name": "FMNH2",
-      "formula": "C17H21N4O9P",
-      "charge": -2,
+      "id": "amikacin",
+      "name": "amikacin",
+      "formula": "C22H47N5O13",
+      "charge": 4,
       "xrefs": {
-        "chebi": "CHEBI:57618"
+        "chebi": "CHEBI:84739"
       }
     },
     {
-      "id": "5_hydroxylaurate",
-      "name": "5-hydroxylaurate",
-      "formula": "C12H23O3",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:195418"
-      }
-    },
-    {
-      "id": "fmn",
-      "name": "FMN",
-      "formula": "C17H18N4O9P",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:58210"
-      }
-    },
-    {
-      "id": "utp",
-      "name": "UTP",
-      "formula": "C9H11N2O15P3",
+      "id": "gtp",
+      "name": "GTP",
+      "formula": "C10H12N5O14P3",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:46398"
+        "chebi": "CHEBI:37565"
       }
     },
     {
-      "id": "2_3_cuamp",
-      "name": "2'3'-cUAMP",
-      "formula": "C19H21N7O14P2",
-      "charge": -2,
+      "id": "4_guanylylamikacin",
+      "name": "4'-guanylylamikacin",
+      "formula": "C32H58N10O20P",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:228269"
+        "chebi": "CHEBI:233257"
       }
     },
     {
-      "id": "all_trans_pentaprenyl_diphosphate",
-      "name": "all-trans-pentaprenyl diphosphate",
-      "short": "all-trans-pentapren…",
-      "formula": "C25H41O7P2",
-      "charge": -3,
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:57907"
+        "chebi": "CHEBI:61402"
       }
     },
     {
-      "id": "astellifadiene",
-      "name": "astellifadiene",
-      "formula": "C25H40",
-      "charge": 0,
+      "id": "4_inosinylylamikacin",
+      "name": "4'-inosinylylamikacin",
+      "short": "4'-inosinylylamikac…",
+      "formula": "C32H57N9O20P",
+      "charge": 3,
       "xrefs": {
-        "chebi": "CHEBI:172939"
+        "chebi": "CHEBI:233259"
       }
     }
   ],
@@ -381,125 +363,78 @@
     },
     {
       "id": "r5",
-      "name": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 5-hydroxydodecanoate + oxid...",
-      "equation": "dodecanoate + reduced [NADPH--hemoprotein reductase] + O2 = 5-hydroxydodecanoate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "name": "amikacin + GTP = 4'-guanylylamikacin + diphosphate",
+      "equation": "amikacin + GTP = 4'-guanylylamikacin + diphosphate",
       "substrates": [
         {
-          "metabolite": "dodecanoate",
+          "metabolite": "amikacin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmnh2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
+          "metabolite": "gtp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "5_hydroxylaurate",
+          "metabolite": "4_guanylylamikacin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "fmn",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
+          "metabolite": "ppi",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:76723"
+        "rhea": "RHEA:83727"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:76723"
+            "id": "RHEA:83727"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "UTP + ATP = 2',3'-cUAMP + 2 diphosphate",
-      "equation": "UTP + ATP = 2',3'-cUAMP + 2 diphosphate",
+      "name": "amikacin + ITP = 4'-inosinylylamikacin + diphosphate",
+      "equation": "amikacin + ITP = 4'-inosinylylamikacin + diphosphate",
       "substrates": [
         {
-          "metabolite": "utp",
+          "metabolite": "amikacin",
           "stoichiometry": 1
         },
         {
-          "metabolite": "atp",
+          "metabolite": "itp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2_3_cuamp",
+          "metabolite": "4_inosinylylamikacin",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:78335"
+        "rhea": "RHEA:83731"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:78335"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = astellifadiene + diphosphate",
-      "equation": "(2E,6E,10E,14E)-geranylfarnesyl diphosphate = astellifadiene + diphosphate",
-      "substrates": [
-        {
-          "metabolite": "all_trans_pentaprenyl_diphosphate",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "astellifadiene",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:78399"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:78399"
+            "id": "RHEA:83731"
           }
         ]
       }

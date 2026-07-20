@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmitoylg… to (8E,10S)-10-hydroperoxy-8…" {
-  spacing 216
+  spacing 198
 
   spine at 0,0 {
     1_3_dioleoyl_2_palmitoylglycerol
@@ -18,63 +18,45 @@ pathway 1-3-dioleoyl-2-palmitoylg-to-8e-10s-10-hydropero "1,3-dioleoyl-2-palmito
     8e_10s_10_hydroperoxy_8_octadecenoate
   }
 
-  branch from 1_3_dioleoylglycerol side left {
-    1_3_dioleoylglycerol
-    <-> . +triolein +coa
-    oleoyl_coa
-  }
-
-  branch from 1_3_dioleoylglycerol side right {
-    1_3_dioleoylglycerol
-    <-> . +h2o +oleate +hplus
-    1_oleoyl_sn_glycerol
-  }
-
   branch from palmitate side left {
     palmitate
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +h2o +hplus
-    2_oleoyl_sn_glycero_3_phosphocholine
+    <-> . +1_hexadecanoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    choline_alfoscerate
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_o_oleoyl_sn_glycero_3_phosphocholine
+    <-> . +1_palmitoyl_2_acyl_sn_glycero_3_phosphocholine +h2o +hplus
+    2_acyl_sn_glycero_3_phosphocholine
   }
 
   branch from triolein side left {
     triolein
-    <-> . +oleoyl_coa +coa
-    2_3_dioleoyl_sn_glycerol
-  }
-
-  branch from triolein side right {
-    triolein
-    <-> . +h2o +oleate +hplus
-    1_2_dioleoyl_sn_glycerol
-  }
-
-  branch from glycerol side left {
-    glycerol
-    <-> . +1_acyl_sn_glycerol
-    dag
+    <-> . +1_2_dioleoyl_sn_glycerol +1_2_dioleoyl_sn_glycero_3_phosphocholine
+    1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from glycerol side right {
     glycerol
-    <-> . +h2o +palmitate +hplus
-    1_monopalmitoylglycerol
+    <-> . +1_monomyristoylglycerol +h2o +hplus
+    tetradecanoate
   }
 
-  branch from oleate side left {
-    oleate
-    <-> . +1_oleoyl_2_o_arachidonyl_sn_glycerol +h2o +hplus
-    2_arachidonyl_glyceryl_ether
+  branch from glycerol side left {
+    glycerol
+    <-> . +1_monolauroylglycerol +h2o +hplus
+    dodecanoate
   }
 
   branch from oleate side right {
     oleate
-    <-> . +1_2_dioleoyl_3_palmitoyl_sn_glycerol +h2o +hplus
-    2_oleoyl_3_palmitoyl_sn_glycerol
+    <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +h2o +hplus
+    1_palmitoyl_3_oleoyl_sn_glycerol
+  }
+
+  branch from oleate side left {
+    oleate
+    <-> . +1_2_dioleoylglycerol +h2o +hplus
+    2_oleoylglycerol
   }
 }

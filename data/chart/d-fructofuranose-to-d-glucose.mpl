@@ -18,13 +18,13 @@ pathway d-fructofuranose-to-d-glucose "D-fructofuranose to β-D-glucose" {
 
   branch from glucose side left {
     glucose
-    <-> . +ginsenoside_mx +h2o
-    ginsenoside_c_mx1
+    <-> . +4_methoxyglucobrassicin +h2o +h
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
   }
 
   branch from glucose side right {
     glucose
-    <-> . +ginsenoside_mx +ginsenoside_c_mx1
-    h2o
+    <-> ec_2_3_1_213 [2.3.1.213] +cyanidin_3_o_6_o_4_coumaroyl_beta_d_glucosyl_1_6 +h +1_o_4_coumaroyl_d_glucose
+    cyanidin_3_o_6_o_glucosyl_2_o_xylosylgalactoside
   }
 }

@@ -22,85 +22,85 @@ pathway 5alpha-pregnan-17alpha-ol-to-h2o "5alpha-Pregnan-17alpha-ol… to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    lovastatin
+    <-> . +r_glycerate +coa +h2o
+    d_glyceroyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +acetyl_coa +l_lysine +coa
-    n_acetyl_l_lysine
+    <-> ec_3_1_8_1 [3.1.8.1] +4_methylsulfanyl_m_cresol +ethoxy_isopropylamino_phosphinate +h2o
+    fenamiphos
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +o2 +roxarsone_iii +nadp +h2o
-    roxarsone
+    <-> ec_1_14_13_124 [1.14.13.124] +co2 +n_benzylformamide +nadp +h2o +h +o2
+    l_phenylalanine
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_ol +nadp +h
-    germacra_1_10_4_11_13_trien_12_al
+    <-> . +5_epi_aristolochene +h +o2 +nadp +h2o
+    1_deoxycapsidiol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_314 [1.1.1.314] +h +nadph +germacra_1_10_4_11_13_trien_12_al +h2o
-    germacra_1_10_4_11_13_trien_12_oate
+    <-> . +h +n_hydroxy_l_valine +o2 +nadph +h2o
+    n_n_dihydroxy_l_valine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadph +h2o
-    germacra_1_10_4_11_13_trien_12_ol
+    <-> . +h +o2 +castasterone +nadph +h2o
+    brassinolide
   }
 
   branch from acetaldehyde side left {
     acetaldehyde
-    <-> ec_1_1_5_5 [1.1.5.5] +ubiquinol_9 +ubiquinone_9
-    ethanol
+    <-> . +sotolone +h2o +h
+    2_oxobutanoate
   }
 
   branch from acetaldehyde side right {
     acetaldehyde
-    <-> ec_1_1_5_5 [1.1.5.5] +ethanol +ubiquinone_10
-    ubiquinol_10
+    <-> . +4_hydroxy_5_methyl_3_furanone +h2o
+    2e_2_ethylidene_4_hydroxy_5_methyl_3_2h_furanon
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2e_6z_9z_12z_octadecatetraenoyl_coa
-    3_s_hydroxy_6z_9z_12z_octadecatrienoyl_coenzyme
+    <-> . +l_serine +l_arginine +l_tryptophan
+    seryl_arginyl_tryptophan
   }
 
   branch from h2o side right {
     h2o
-    <-> . +cholest_5_en_3_yl_13z_16z_docosadienoate +cholesterol
-    13z_16z_docosadienoic_acid
+    <-> . +l_histidine +l_lysine +l_serine
+    seryl_lysyl_histidine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +all_trans_beta_carotene +h +o2 +h2o
-    2s_hydroxy_all_trans_beta_carotene
+    <-> . +nadh +octadecenoic_acid +o2 +h2o
+    octadecadienoate
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +o2 +2s_hydroxy_all_trans_beta_carotene +h2o
-    2s_2_s_dihydroxy_all_trans_beta_carotene
+    <-> . +nadh +1_3_dimethylamino_propyl_1_4_fluorophenyl_1_3_di +h +o2 +h2o
+    citalopram_n_oxide
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    midazolam
+    <-> ec_6_2_1_13 [6.2.1.13] +2_methylpropanoyl_coa +adp +phosphate +coa
+    2_methylpropanoate
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    acetaminophen_mercapturate_conjugate_n_acetyl_cy
+    <-> ec_2_7_11_1 [2.7.11.1] +h +kemptide +adp
+    phosphokemptide
   }
 }

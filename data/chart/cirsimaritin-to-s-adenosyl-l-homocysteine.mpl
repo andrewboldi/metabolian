@@ -18,25 +18,25 @@ pathway cirsimaritin-to-s-adenosyl-l-homocysteine "cirsimaritin to S-adenosyl-L-
 
   branch from sah side left {
     sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam +hplus
-    8_hydroxy_4_methoxyflavone_7_olate
+    <-> ec_2_1_1_399 [2.1.1.399] +piceatannol +sam +hplus
+    rhapontigenin
   }
 
   branch from sah side right {
     sah
-    <-> . +an_8_hydroxyflavone +sam +hplus
-    an_8_methoxyflavone
+    <-> ec_2_1_1_399 [2.1.1.399] +isorhapontigenin +sam +hplus
+    4_o_methylisorhapontigenin
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_295 [2.1.1.295] +s_adenosyl_l_homocysteine +h +plastoquinol_9
-    2_methyl_6_solanyl_1_4_benzoquinol
+    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +methyl_gibberellin_a4 +h
+    gibberellin_a4
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +methyl_gibberellin_a34 +h
-    gibberellin_a34
+    <-> ec_2_1_1_276 [2.1.1.276] +s_adenosyl_l_homocysteine +h +gibberellin_a4
+    methyl_gibberellin_a4
   }
 }

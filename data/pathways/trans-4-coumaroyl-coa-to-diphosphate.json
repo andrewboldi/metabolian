@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-4-coumaroyl-coa-to-diphosphate",
+  "name": "trans-4-coumaroyl-CoA to diphosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from trans-4-coumaroyl-CoA(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57868"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85008"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_4_coumaroyl_coa",
+      "name": "trans-4-coumaroyl-CoA",
+      "short": "trans-4-coumaroyl-C…",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85008"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "trans_2_4_dihydroxy_cinnamoyl_coa",
+      "name": "trans-2,4-dihydroxy-cinnamoyl-CoA",
+      "short": "trans-2,4-dihydroxy…",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:142398"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "umbelliferone",
+      "name": "umbelliferone",
+      "formula": "C9H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27510"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "8_geranylumbelliferone",
+      "name": "8-geranylumbelliferone",
+      "short": "8-geranylumbellifer…",
+      "formula": "C19H22O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134358"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_62",
+      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
+      "ec": [
+        "1.14.11.62"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_138",
+      "name": "coumarin 8-geranyltransferase",
+      "ec": [
+        "2.5.1.138"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "trans-4-coumaroyl-CoA 2'-hydroxylase",
+      "equation": "(E)-4-coumaroyl-CoA + 2-oxoglutarate + O2 = (E)-2,4-dihydroxycinnamoyl-CoA + succinate + CO2",
+      "ec": "1.14.11.62",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumaroyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_4_dihydroxy_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57868"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57868"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-2,4-dihydroxycinnamoyl-CoA = umbelliferone + CoA",
+      "equation": "(E)-2,4-dihydroxycinnamoyl-CoA = umbelliferone + CoA",
+      "substrates": [
+        {
+          "metabolite": "trans_2_4_dihydroxy_cinnamoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "umbelliferone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57872"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57872"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "coumarin 8-geranyltransferase",
+      "equation": "umbelliferone + (2E)-geranyl diphosphate = 8-geranylumbelliferone + diphosphate",
+      "ec": "2.5.1.138",
+      "substrates": [
+        {
+          "metabolite": "umbelliferone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8_geranylumbelliferone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_138"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51860"
+          }
+        ]
+      }
+    }
+  ]
+}

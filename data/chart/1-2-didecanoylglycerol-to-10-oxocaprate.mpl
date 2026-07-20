@@ -30,13 +30,13 @@ pathway 1-2-didecanoylglycerol-to-10-oxocaprate "1,2-didecanoylglycerol to 10-ox
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
-    24s_7_24_dihydroxycholesterol
+    <-> . +17_estradiol +fmnh2 +o2 +h2o +hplus
+    16_hydroxyestradiol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
-    4_hydroxycholesterol
+    <-> . +lipoxin_a4 +fmnh2 +o2 +h2o +hplus
+    20_hydroxylipoxin_a4
   }
 }

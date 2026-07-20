@@ -26,61 +26,61 @@ pathway all-trans-undecaprenyl-to-nad "all-trans-undecaprenyl… to NAD" {
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
-    13s_edaxadiene
+    <-> ec_4_2_3_112 [4.2.3.112] +gpp +h2o
+    r_terpineol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_87 [4.2.3.87] +fpp
-    guaiene
+    <-> ec_4_2_3_114 [4.2.3.114] +gpp
+    terpinene
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_275 [2.1.1.275] +gibberellin_a34 +sam
-    gibberellin_a34_methyl_ester
+    <-> ec_2_1_1_291 [2.1.1.291] +r_reticulinium +sam +hplus
+    r_laudanine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_279 [2.1.1.279] +trans_anol +sam +hplus
-    trans_anethole
+    <-> ec_2_1_1_300 [2.1.1.300] +pavine +sam +hplus
+    argemonine
   }
 
   branch from h side right {
     h
-    <-> . +udp +3_3_5_triiodothyroacetate_beta_d_glucuronoside +3_3_5_triiodothyroacetate
-    udp_alpha_d_glucuronate
+    <-> . +acetyl_coa +l_l_cystathionine +coa
+    n_acetyl_l_cystathionine
   }
 
   branch from h side left {
     h
-    <-> . +udp +3_5_3_triiodothyroacetate_beta_d_glucuronoside +udp_alpha_d_glucuronate
-    tiratricol
+    <-> . +acetyl_coa +l_cysteine +n_acetyl_l_cysteine
+    coa
   }
 
   branch from nadph side right {
     nadph
-    <-> . +cholestane_3_7_12_24_25_pentol +nadp +h
-    3alpha_7alpha_12alpha_25_tetrahydroxy_5beta_chol
+    <-> . +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h +nadp
+    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +cortisol +nadp +acetaldehyde +h2o
-    11beta_hydroxyandrost_4_ene_3_17_dione
+    <-> . +11z_14z_3_oxoicosa_11_14_dienoyl_coa +h +nadp
+    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
-    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
+    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh +h
+    isocitrate
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +18_20_dioxo_20_coa_leukotriene_b4
-    20_coa_20_oxo_18r_hydroxyleucotriene_b4
+    <-> . +nadh +h +benzoate +acetate +h2o
+    e_cinnamate
   }
 }

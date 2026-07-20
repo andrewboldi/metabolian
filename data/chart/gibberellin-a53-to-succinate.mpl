@@ -24,13 +24,13 @@ pathway gibberellin-a53-to-succinate "gibberellin A53 to succinate" {
 
   branch from succinate side right {
     succinate
-    <-> . +pyruvate
-    3_hydroxybutane_1_2_3_tricarboxylate
+    <-> ec_1_14_11_75 [1.14.11.75] +31_hydroxy_l_isoleucine +akg +o2 +co2
+    4s_31_4_dihydroxy_l_isoleucine
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_60 [1.14.11.60] +scopoletin +akg +o2 +co2
-    fraxetin
+    <-> . +preaustinoid_a1 +akg +o2 +co2 +h2o
+    berkeleyone_b
   }
 }

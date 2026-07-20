@@ -56,13 +56,13 @@ pathway 6-o-methyl-dgmp-1-to-di-sulfido-diiron "6-O-methyl dGMP(1−) to di-μ-s
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_12_1_4 [1.12.1.4] +nad +di_sulfido_diiron +nadh +hplus
-    h2
+    <-> . +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_ol
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +carotene +di_sulfido_diiron +o2 +hplus +h2o
-    cryptoxanthin
+    <-> . +pentalen_13_ol +di_sulfido_diiron +o2 +hplus +h2o
+    pentalen_13_al
   }
 }

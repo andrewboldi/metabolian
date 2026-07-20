@@ -32,14 +32,14 @@ pathway n-methyl-l-amino-acid-to-ammonium "N-methyl-L-α-amino acid to ammonium"
 
   branch from formaldehyde side left {
     formaldehyde
-    <-> ec_4_4_1_22 [4.4.1.22] +s_hydroxymethyl_glutathione
-    gsh
+    <-> ec_1_5_3_4 [1.5.3.4] +n6_methyl_l_lysinium +o2 +h2o +h2o2
+    l_lysinium
   }
 
   branch from formaldehyde side right {
     formaldehyde
-    <-> ec_1_5_3_4 [1.5.3.4] +n6_methyl_l_lysinium +o2 +h2o +h2o2
-    l_lysinium
+    <-> ec_1_14_11_32 [1.14.11.32] +codeine +akg +o2 +succinate +co2
+    morphine
   }
 
   branch from 2_oxo_monocarboxylic_acid_anion side left {

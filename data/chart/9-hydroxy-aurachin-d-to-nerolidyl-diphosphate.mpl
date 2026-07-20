@@ -18,38 +18,38 @@ pathway 9-hydroxy-aurachin-d-to-nerolidyl-diphosphate "9'-hydroxy-aurachin D to 
 
   branch from h side left {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +kanamycin_b_2_phosphate +kanamycin_b
-    gtp
+    <-> . +diphosphate +31r_8_12_diethylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
+    31r_8_12_diethylbacteriochlorophyllide_c
   }
 
   branch from h side right {
     h
-    <-> ec_2_7_1_190 [2.7.1.190] +gdp +tobramycin_2_phosphate +gtp
-    tobramycin
+    <-> . +diphosphate +12_ethyl_8_propylbacteriochlorophyll_c +2e_6e_farnesyl_diphosphate
+    12_ethyl_8_propylbacteriochlorophyllide_c
   }
 
   branch from o2 side left {
     o2
-    <-> . +lyngbyatoxin_a +h +nadph +nadp +h2o
-    lyngbyatoxin_b
+    <-> . +bergaptol +nadp +h2o +nadph
+    psoralen
   }
 
   branch from o2 side right {
     o2
-    <-> . +lyngbyatoxin_a +h +nadph +nadp +h2o
-    lyngbyatoxin_c
+    <-> . +h +abieta_8_14_12_diene +nadph +nadp +h2o
+    levopimaradienol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_4_methyl_benzoate +h +nadp +h2o
-    3_hydroxy_4_methylbenzaldehyde
+    <-> ec_1_1_1_348 [1.1.1.348] +h +3r_2_hydroxydihydrodaidzein +nadp
+    3r_4r_7_2_4_trihydroxyisoflavanol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_2_1_7 [1.2.1.7] +3_hydroxy_5_methyl_benzoate +h +nadp +h2o
-    3_hydroxy_5_methylbenzaldehyde
+    <-> ec_1_2_1_4 [1.2.1.4] +s_malate +h +nadp +h2o
+    3r_3_hydroxy_4_oxobutanoate
   }
 
   branch from 2e_6e_farnesyl_diphosphate side left {

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 6-phospho-d-glucono-1-5-l-to-d-allulose-6-phosph "6-phospho-D-glucono-1,5-l… to D-Allulose 6-phosphate" {
-  spacing 340
+  spacing 326
 
   spine at 0,0 {
     6_phospho_d_glucono_1_5_lactone
@@ -40,14 +40,14 @@ pathway 6-phospho-d-glucono-1-5-l-to-d-allulose-6-phosph "6-phospho-D-glucono-1,
 
   branch from nadp side right {
     nadp
-    <-> . +dehydroxypaxilline +h2o +h +o2 +nadph
-    beta_pc_m6
+    <-> . +6z_9z_12z_15z_octadecatetraenoyl_coa +h2o +h +o2 +nadph
+    linolenoyl_coa
   }
 
   branch from nadp side left {
     nadp
-    <-> . +dehydroxypaxilline +h +o2 +nadph +h2o
-    paxilline
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoyl_coa +h2o +h +o2 +nadph
+    7z_10z_13z_16z_19z_docosapentaenoyl_coa
   }
 
   branch from d_mannitol_1_phosphate side right {
@@ -56,22 +56,10 @@ pathway 6-phospho-d-glucono-1-5-l-to-d-allulose-6-phosph "6-phospho-D-glucono-1,
     h2o
   }
 
-  branch from d_mannitol_1_phosphate side left {
-    d_mannitol_1_phosphate
-    <-> . +pyruvate +d_sorbitol
-    phosphoenolpyruvate
-  }
-
-  branch from datp side right {
-    datp
-    <-> . +h +h2o +nh4
-    ditp
-  }
-
   branch from datp side left {
     datp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannopyranose +h +dadp
-    alpha_d_mannose_6_phosphate
+    <-> ec_2_7_1_48 [2.7.1.48] +cmp +h +dadp
+    cytidine
   }
 
   branch from d_sorbitol side right {
@@ -96,17 +84,5 @@ pathway 6-phospho-d-glucono-1-5-l-to-d-allulose-6-phosph "6-phospho-D-glucono-1,
     6_o_phosphonohexopyranose
     <-> ec_2_7_1_1 [2.7.1.1] +h +atp +adp
     beta_d_fructose
-  }
-
-  branch from dadp side right {
-    dadp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_mannose_6_phosphate +h +datp
-    beta_d_mannose
-  }
-
-  branch from dadp side left {
-    dadp
-    <-> ec_2_7_1_1 [2.7.1.1] +alpha_d_glucosamine_6_phosphate +datp
-    beta_d_glucosamine
   }
 }

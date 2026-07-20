@@ -18,14 +18,14 @@ pathway butanal-to-3-oxopentanoate "butanal to 3-oxopentanoate" {
 
   branch from nadp side left {
     nadp
-    <-> . +cyclosporin_a +h +o2 +nadph +h2o
-    cyclosporin_a_metabolite_m18
+    <-> . +tazarotenic_acid +h +o2 +nadph +h2o
+    tazarotenic_acid_sulfoxide
   }
 
   branch from nadp side right {
     nadp
-    <-> . +cyclosporin_a +h +o2 +nadph +h2o
-    cyclosporin_a_metabolite_m17
+    <-> ec_1_1_1_206 [1.1.1.206] +3_methylcyclohexanone +h +nadph
+    3_methylcyclohexanol
   }
 
   branch from butan_2_ol side left {

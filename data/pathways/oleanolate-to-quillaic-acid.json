@@ -1,0 +1,266 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "oleanolate-to-quillaic-acid",
+  "name": "oleanolate to quillaic acid…",
+  "category": "other",
+  "summary": "A 3-step route from oleanolate to quillaic acid 28-β-D-glucoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85023"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:82828"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "oleanolate",
+      "name": "oleanolate",
+      "formula": "C30H47O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82828"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "echinocystate",
+      "name": "echinocystate",
+      "formula": "C30H47O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:234158"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "quillate",
+      "name": "quillate",
+      "formula": "C30H45O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:167136"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "quillaic_acid_28_d_glucoside",
+      "name": "quillaic acid 28-β-D-glucoside",
+      "short": "quillaic acid…",
+      "formula": "C36H56O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:167137"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = echinocystate + oxidized [NA...",
+      "equation": "oleanolate + reduced [NADPH--hemoprotein reductase] + O2 = echinocystate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "oleanolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "echinocystate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85023"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "echinocystate + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = quillate + 2 oxidized...",
+      "equation": "echinocystate + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = quillate + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "echinocystate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "quillate + UDP-alpha-D-glucose = quillaic acid 28-beta-D-glucoside + UDP",
+      "equation": "quillate + UDP-alpha-D-glucose = quillaic acid 28-beta-D-glucoside + UDP",
+      "substrates": [
+        {
+          "metabolite": "quillate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "quillaic_acid_28_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:66488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:66488"
+          }
+        ]
+      }
+    }
+  ]
+}

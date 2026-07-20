@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway digallate-to-nadp "digallate to NADP" {
-  spacing 334
+  spacing 316
 
   spine at 0,0 {
     digallate
@@ -24,69 +24,51 @@ pathway digallate-to-nadp "digallate to NADP" {
     2_6_dioxo_6_phenylhexanoate
   }
 
-  branch from gallate side left {
-    gallate
-    <-> ec_1_13_11_57 [1.13.11.57] +o2 +hplus
-    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
-  }
-
-  branch from pyrogallol side right {
+  branch from pyrogallol side left {
     pyrogallol
     <-> . +3_methoxycatechol +fadh2 +o2 +fad +h2o +hplus
     formaldehyde
   }
 
-  branch from 2z_4e_2_hydroxymuconate side left {
+  branch from 2z_4e_2_hydroxymuconate side right {
     2z_4e_2_hydroxymuconate
     <-> ec_3_5_99_11 [3.5.99.11] +2z_4e_2_ammoniomuconate +h2o
     nh3
   }
 
-  branch from 2_oxopent_4_enoate side right {
+  branch from 2_oxopent_4_enoate side left {
     2_oxopent_4_enoate
     <-> ec_1_4_3_2 [1.4.3.2] +nh4 +h2o2 +o2 +h2o
     l_allylglycine
   }
 
-  branch from hpk side left {
-    hpk
-    <-> . +h
-    2_6_dioxo_6_phenylhexa_3_enoate
-  }
-
-  branch from hpk side right {
-    hpk
-    <-> ec_3_7_1_8 [3.7.1.8] +h +benzoate +h2o
-    2_keto_4_pentenoate
+  branch from h2o side right {
+    h2o
+    <-> ec_1_11_1_8 [1.11.1.8] +h +3_5_diiodo_l_tyrosine +h2o2 +2_aminoprop_2_enoate
+    l_thyroxine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_7_4_2_10 [7.4.2.10] +h +adp +glutathione +phosphate +glutathione
-    atp
+    <-> ec_1_4_1_20 [1.4.1.20] +nadh +h +nh4 +r_3_methyl_2_oxopentanoate +nad
+    l_isoleucine
   }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +atp
-    l_histidine
-  }
-
-  branch from 2_6_dioxo_6_phenylhexanoate side left {
+  branch from 2_6_dioxo_6_phenylhexanoate side right {
     2_6_dioxo_6_phenylhexanoate
     <-> ec_1_3_1_40 [1.3.1.40] +nadph +nadp
     2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
   }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_2_7_1_23 [2.7.1.23] +h +dgdp +nad
-    dgtp
-  }
-
   branch from nadp side left {
     nadp
-    <-> ec_2_7_1_23 [2.7.1.23] +h +dcdp +nad
-    dctp
+    <-> ec_2_7_1_23 [2.7.1.23] +dtdp +h +nad
+    dttp
+  }
+
+  branch from nadp side right {
+    nadp
+    <-> ec_1_7_1_4 [1.7.1.4] +nitrite +h +nadph +h2o
+    ammonium_hydroxide
   }
 }

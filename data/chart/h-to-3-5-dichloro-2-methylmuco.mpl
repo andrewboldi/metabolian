@@ -18,13 +18,13 @@ pathway h-to-3-5-dichloro-2-methylmuco "H to 3,5-Dichloro-2-methylmuco…" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +2_dehydro_d_gluconate
-    2_dehydro_d_glucono_1_5_lactone
+    <-> ec_1_1_1_186 [1.1.1.186] +nadh +h +dtdp_d_galacturonate +nad
+    dtdp_d_galactose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_1_1_78 [4.1.1.78] +enol_oxaloacetate
-    acetylenedicarboxylate
+    <-> ec_3_2_1_128 [3.2.1.128] +glycyrrhetinate +h +2_beta_d_glucuronosyl_d_glucuronate
+    glycyrrhizinate
   }
 }

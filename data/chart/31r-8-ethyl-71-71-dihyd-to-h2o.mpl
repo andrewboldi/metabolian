@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 31r-8-ethyl-71-71-dihyd-to-h2o "(31R)-8-ethyl-71,71-dihyd… to H2O" {
-  spacing 294
+  spacing 288
 
   spine at 0,0 {
     31r_8_ethyl_71_71_dihydroxy_12_methylbacterioch
@@ -24,43 +24,37 @@ pathway 31r-8-ethyl-71-71-dihyd-to-h2o "(31R)-8-ethyl-71,71-dihyd… to H2O" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +13_o_desmethyl_tacrolimus_13_dmt_or_m_i
-    13_31_o_didesmethyl_tacrolimus
+    <-> . +s_adenosyl_l_homocysteine +h +s_methyl_glutathione
+    glutathione
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +13_31_o_didesmethyl_tacrolimus
-    31_o_demethyl_fk_506
+    <-> . +s_adenosyl_l_homocysteine +nbeta_methylajmaline
+    ajmaline
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_56 [1.14.13.56] +dihydrosanguinarine +h +o2 +nadph +nadp
-    10_hydroxydihydrosanguinarine
+    <-> . +pravastatin_sodium +h +o2 +nadph +nadp
+    3_s_hydroxy_pravastatin
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_14_13_57 [1.14.13.57] +dihydrochelirubine +h +o2 +nadph +nadp
-    12_hydroxydihydrochelirubine
+    <-> . +3_hydroxy_simvastatin_lactone_form
+    3_hydroxy_simvastatin_acid_form
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_201 [1.1.1.201] +h +7_oxosteroid +nadph
-    7beta_hydroxysteroid
+    <-> ec_1_3_1_54 [1.3.1.54] +h +cobalt_precorrin_6a +nadph
+    cobalt_precorrin_6b
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_3_1_33 [1.3.1.33] +chlorophyllide_a +h +nadph
-    protochlorophyllide
-  }
-
-  branch from 71_hydroxychlorophyllide_a side left {
-    71_hydroxychlorophyllide_a
-    <-> . +nadp +h2o +h +o2 +nadph
-    71_dihydroxychlorophyllide_a
+    <-> . +4_hydroxymidazolam +h2o +h +o2 +nadph
+    midazolam
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway nitarsone-iii-to-arsenite "nitarsone (III) to arsenite" {
-  spacing 214
+  spacing 196
 
   spine at 0,0 {
     nitarsone_iii
@@ -16,23 +16,5 @@ pathway nitarsone-iii-to-arsenite "nitarsone (III) to arsenite" {
     arseno_mycothiol
     <-> ec_1_20_4_3 [1.20.4.3] +l_cysteine +hplus -arsenite
     s_mycothiol_l_cysteine
-  }
-
-  branch from arsenite side left {
-    arsenite
-    <-> . +r_dihydrolipoate +h +ribose_1_arsenate +beta_d_ribofuranose
-    r_lipoate
-  }
-
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> . +malate +malonyl-coa +acetyl_coa +hydrogen_donor +sam +nadph +hplus +sah +co2 +nadp +coa +h2o
-    trihazone_a
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +linoleate +hydrogen_donor +o2 +h2o
-    9_r_hode
   }
 }

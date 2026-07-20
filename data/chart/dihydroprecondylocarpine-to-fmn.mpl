@@ -26,13 +26,13 @@ pathway dihydroprecondylocarpine-to-fmn "dihydroprecondylocarpine… to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14_15_eet
+    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
+    2_hydroxytestosterone
   }
 
   branch from fmn side left {
     fmn
     <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    11_12_eet
+    16_r_hete
   }
 }

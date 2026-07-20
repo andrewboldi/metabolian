@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-3-p… to S-adenosyl-L-homocysteine" {
-  spacing 284
+  spacing 272
 
   spine at 0,0 {
     1_2_diacyl_sn_glycero_3_phospholipid
@@ -14,18 +14,6 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
     dag
     <-> ec_2_1_1_15 [2.1.1.15] +fatty-acid +sam -sah
     fatty_acid_methyl_ester
-  }
-
-  branch from triacyl_sn_glycerol side left {
-    triacyl_sn_glycerol
-    <-> . +acyl_coa +coa
-    2_3_diacyl_sn_glycerol
-  }
-
-  branch from triacyl_sn_glycerol side right {
-    triacyl_sn_glycerol
-    <-> . +1_3_diacyl_sn_glycerol +1_acyl_sn_glycerol
-    glycerol
   }
 
   branch from dag side left {
@@ -54,13 +42,13 @@ pathway 1-2-diacyl-sn-glycero-3-p-to-s-adenosyl-l-homocy "1,2-diacyl-sn-glycero-
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_181 [2.1.1.181] +adenosine_5_monophosphate_1 +sam +hplus
+    <-> ec_2_1_1_55 [2.1.1.55] +adenosine_5_monophosphate_1 +sam +hplus
     n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_88 [2.1.1.88] +gossypetin +sam +hplus
-    3_4_5_7_pentahydroxy_8_methoxyflavon_3_olate
+    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
+    n4_methyl_dcmp_1
   }
 }

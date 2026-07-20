@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway trithionate-to-menadiol "trithionate to menadiol" {
-  spacing 340
+  spacing 324
 
   spine at 0,0 {
     trithionate
@@ -26,28 +26,16 @@ pathway trithionate-to-menadiol "trithionate to menadiol" {
     menadiol
   }
 
-  branch from trioxidosulfanidosulfate side left {
-    trioxidosulfanidosulfate
-    <-> ec_2_8_5_2 [2.8.5.2] +3_disulfanyl_l_alanine +iron +fe2 +hplus
-    s_2_sulfodisulfanyl_l_cysteine_1
-  }
-
-  branch from trioxidosulfanidosulfate side right {
-    trioxidosulfanidosulfate
-    <-> ec_2_8_5_1 [2.8.5.1] +pser +pi
-    s_sulfo_l_cysteinate
-  }
-
   branch from sulfate side left {
     sulfate
-    <-> . +z_n_sulfonatooxy_prop_2_enimidothioate +sulfur_atom
-    allyl_cyanide
+    <-> . +z_3_hydroxypropyl_n_sulfonatooxy_methanimidothi
+    3_hydroxypropyl_isothiocyanate
   }
 
   branch from sulfate side right {
     sulfate
-    <-> . +z_3_hydroxypropyl_n_sulfonatooxy_methanimidothi
-    3_hydroxypropyl_isothiocyanate
+    <-> . +z_4_methylsufinylbutyl_n_sulfonatooxy_methanimi
+    sulforaphane
   }
 
   branch from 6_decylubiquinol side left {
@@ -118,47 +106,29 @@ pathway trithionate-to-menadiol "trithionate to menadiol" {
 
   branch from menadione side right {
     menadione
-    <-> ec_1_10_5_1 [1.10.5.1] +n_methyldihydronicotinamide +h +menadiol
-    1_methylnicotinamide
-  }
-
-  branch from menadione side left {
-    menadione
-    <-> ec_1_10_5_1 [1.10.5.1] +beta_nicotinamide_d_riboside +menadiol +1_d_ribofuranosyl_1_4_dihydronicotinamide
-    h
-  }
-
-  branch from menadiol side right {
-    menadiol
-    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +ppi
-    menaquinol_4
-  }
-
-  branch from menadiol side left {
-    menadiol
-    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrin_ix +menadione
+    <-> ec_1_3_5_3 [1.3.5.3] +protoporphyrin_ix +menadiol
     protoporphyrinogen_ix
-  }
-
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +7alpha_hydroxycholest_4_en_3_one +nad +h2o
-    7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_15_6 [1.14.15.6] +20_hydroxycholesterol +nadp +h2o +h +nadph
-    cholesterol
+    <-> . +nadh +uracil +h +nad
+    ureidoperacrylic_acid
   }
 
-  branch from superoxide side right {
+  branch from o2 side right {
+    o2
+    <-> . +co2 +3_hydroxyisovaleric_acid +4_methyl_2_oxopentanoate
+    h
+  }
+
+  branch from superoxide side left {
     superoxide
     <-> . +chromium +nadph +o2 +nadp +hplus
     chromium
   }
 
-  branch from superoxide side left {
+  branch from superoxide side right {
     superoxide
     <-> . +nadh +o2 +chromium +nad +hplus
     chromium

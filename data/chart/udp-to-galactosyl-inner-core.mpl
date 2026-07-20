@@ -18,13 +18,13 @@ pathway udp-to-galactosyl-inner-core "UDP to galactosyl-inner core…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +glucoevatromonoside
-    evatromonoside
+    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
+    2_5_7_trihydroxy_2_phenyl_2_3_dihydro_4h_chromen
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +utp +h +glucose_1_p
-    diphosphate
+    <-> . +udp +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
+    2_3_4_dihydroxyphenyl_2_5_7_trihydroxy_2_3_dihyd
   }
 }

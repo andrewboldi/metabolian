@@ -30,25 +30,25 @@ pathway isochorismate-to-pseudomonine "isochorismate to pseudomonine" {
 
   branch from ppi side right {
     ppi
-    <-> . +gpp
-    limonene
+    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2s_3r_11r_aszonalenin
   }
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    thujene
+    <-> . +3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +dmapp
+    2s_3r_11s_aszonalenin
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
-    o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei
+    <-> ec_2_3_1_293 [2.3.1.293] +ultra_long_chain_mono_unsaturated_fatty_acyl_pan +malonyl-acp +hplus +co2
+    ultra_long_chain_mono_unsaturated_3_oxoacyl_pant
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
-    o_s_3_5_7_9_11_pentaoxododecanoyl_pantetheine_4
+    <-> ec_2_3_1_129 [2.3.1.129] +o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser +udpglcnac
+    udp_3_o_3r_hydroxyacyl_n_acetyl_d_glucosamine
   }
 }

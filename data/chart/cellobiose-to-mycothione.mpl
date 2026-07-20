@@ -30,61 +30,49 @@ pathway cellobiose-to-mycothione "cellobiose to mycothione" {
 
   branch from g6p side left {
     g6p
-    <-> ec_4_2_3_124 [4.2.3.124] +pi
-    2_deoxy_scyllo_inosose
-  }
-
-  branch from g6p side right {
-    g6p
     <-> ec_1_1_1_361 [1.1.1.361] +nad +nadh +hplus
     3_dehydro_d_glucose_6_phosphate
   }
 
+  branch from g6p side right {
+    g6p
+    <-> ec_1_1_1_363 [1.1.1.363] +nad +nadh +hplus
+    6pgl
+  }
+
   branch from glucose side left {
     glucose
-    <-> ec_3_1_3_10 [3.1.3.10] +h2o +pi
-    g1p
+    <-> ec_2_3_1_n12 [2.3.1.n12] +cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o +1_o_sinapoyl_d_glucose
+    cyanidin_3_o_6_o_4_o_d_glucosyl_p_coumaroyl_2_o
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_1_1_99_28 [1.1.99.28] +d_fructofuranose +d_glucitol
-    d_glucono_1_5_lactone
+    <-> ec_4_2_99_22 [4.2.99.22] +6_tuliposide_a
+    methylene_butyrolactone
   }
 
-  branch from 1d_myo_inositol_3_phosphate side left {
-    1d_myo_inositol_3_phosphate
-    <-> . +cdp_dipalmitoyl_sn_glycerol +cytidine_5_monophosphate +hplus
-    1_2_dipalmitoyl_sn_glycero_3_phospho_1_d_myo_ino
-  }
-
-  branch from 1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran side right {
+  branch from 1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran side left {
     1d_myo_inositol_2_acetamido_2_deoxy_d_glucopyran
     <-> . +n_acetyl_d_hexosamine +1d_myo_inositol_1_phosphate
     phosphate
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_4_1_2_66 [4.1.2.66] +trans_4_coumarate +h2o
-    4_hydroxybenzaldehyde
-  }
-
   branch from acetate side right {
     acetate
-    <-> . +3_hydroxy_3_4_o_d_glucosyl_3_methoxyphenyl_propa
-    glucovanillin
+    <-> . +n_acetyl_l_tryptophanate +h2o
+    l_tryptophan
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_30 [4.2.3.30] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_pimara_8_14_15_diene
+    <-> ec_4_2_3_45 [4.2.3.45] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate +h2o
+    phyllocladan_16_ol
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_31 [4.2.3.31] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    ent_pimara_9_11_15_diene
+    <-> ec_2_5_1_75 [2.5.1.75] +adenosine_5_monophosphate_1 +dmapp
+    n6_dimethylallyladenine_5_monophosphate_1
   }
 }

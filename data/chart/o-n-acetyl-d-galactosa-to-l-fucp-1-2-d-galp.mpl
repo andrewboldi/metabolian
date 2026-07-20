@@ -36,7 +36,7 @@ pathway o-n-acetyl-d-galactosa-to-l-fucp-1-2-d-galp "O-(N-acetyl-Î±-D-galactosaâ
 
   branch from l_threonine side right {
     l_threonine
-    <-> . +h2o +amp +hplus
-    o_adenyl_l_threonine_1
+    <-> . +octanoyl_coa +coa
+    o_octanoyl_l_threonine
   }
 }

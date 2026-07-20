@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway maltoheptaose-to-d-glucopyranose "maltoheptaose to D-glucopyranose" {
-  spacing 230
+  spacing 212
 
   spine at 0,0 {
     maltoheptaose
@@ -24,69 +24,51 @@ pathway maltoheptaose-to-d-glucopyranose "maltoheptaose to D-glucopyranose" {
     d_glucose
   }
 
-  branch from maltopentaose side left {
-    maltopentaose
-    <-> ec_2_4_1_1 [2.4.1.1] +d_glucopyranose_1_phosphate +phosphate
-    maltohexaose
-  }
-
-  branch from maltopentaose side right {
-    maltopentaose
-    <-> . +beta_d_fructose +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-  }
-
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_2_1_21 [3.2.1.21] +glucose +h2o
-    cellopentaose
+    <-> ec_3_2_1_20 [3.2.1.20] +h2o +glucose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +maltopentaose +h2o
-    beta_d_fructose
+    <-> ec_2_4_1_25 [2.4.1.25] +d_glcp_1_4_d_glcp_1_4_d_glcp +d_maltose
+    beta_d_glucose
   }
 
   branch from alpha_d_glucose side left {
     alpha_d_glucose
-    <-> ec_3_2_1_10 [3.2.1.10] +h +4_nitrophenol +h2o
-    4_nitrophenyl_d_glucoside
+    <-> . +polydextrose +h2o
+    d_galactose
   }
 
   branch from alpha_d_glucose side right {
     alpha_d_glucose
-    <-> ec_3_2_1_20 [3.2.1.20] +methanol +h2o
-    methyl_d_glucopyranoside
+    <-> ec_5_3_1_5 [5.3.1.5]
+    d_fructofuranose
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side left {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> . +h2o +beta_d_fructose
+    <-> . +glucose
     d_maltose
   }
 
   branch from d_glcp_1_4_d_glcp_1_4_d_glcp side right {
     d_glcp_1_4_d_glcp_1_4_d_glcp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    atp
-  }
-
-  branch from d_glucose side left {
-    d_glucose
-    <-> . +d_glucosyl_1_1_n_hexadecanoylsphinganine +h2o
-    n_hexadecanoylsphinganine
-  }
-
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
-    d_galactopyranose
+    <-> . +h2o +d_glucosyl_1_4_d_mannose
+    beta_d_fructose
   }
 
   branch from glucose side left {
     glucose
-    <-> ec_5_1_3_3 [5.1.3.3]
-    beta_d_glucose
+    <-> . +h +4_nitrophenol +h2o
+    4_nitrophenyl_d_glucoside
+  }
+
+  branch from glucose side right {
+    glucose
+    <-> ec_1_1_5_2 [1.1.5.2] +ubiquinol_2 +d_glucono_1_5_lactone
+    ubiquinone_2
   }
 }

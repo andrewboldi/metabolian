@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway quercetin-7-olate-to-h2o "quercetin-7-olate to H2O" {
-  spacing 170
+  spacing 164
 
   spine at 0,0 {
     quercetin_7_olate
@@ -16,21 +16,15 @@ pathway quercetin-7-olate-to-h2o "quercetin-7-olate to H2O" {
     quercetin_3_o_rhamnoside
   }
 
-  branch from quercetin_7_olate side left {
-    quercetin_7_olate
-    <-> . +sam +sah +hplus
-    rhamnetin_3_olate
+  branch from h2o side left {
+    h2o
+    <-> . +h +adp +l_rhamnitol +phosphate +l_rhamnitol
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +aeruginosin_a +phosphate +aeruginosin_a
-    atp
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    microginin_690
+    <-> . +h +adp +phosphate +atp
+    erythritol
   }
 }

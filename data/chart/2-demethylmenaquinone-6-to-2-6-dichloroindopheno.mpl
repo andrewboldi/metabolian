@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-demethylmenaquinone-6-to-2-6-dichloroindopheno "2-demethylmenaquinone-6 to 2,6-dichloroindophenol" {
-  spacing 294
+  spacing 270
 
   spine at 0,0 {
     2_demethylmenaquinone_6
@@ -26,26 +26,14 @@ pathway 2-demethylmenaquinone-6-to-2-6-dichloroindopheno "2-demethylmenaquinone-
 
   branch from nadp side left {
     nadp
-    <-> . +fe +enterobactin +h +nadph
-    fe_enterobactin
+    <-> ec_1_1_1_119 [1.1.1.119] +d_glucono_1_4_lactone +h +nadph
+    beta_d_glucose
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +7_ketolithocholate
-    ursodeoxycholate
-  }
-
-  branch from 2_demethylmenaquinol_6 side left {
-    2_demethylmenaquinol_6
-    <-> . +diphosphate +co2 +h +all_trans_hexaprenyl_diphosphate
-    1_4_dihydroxy_6_naphthoate
-  }
-
-  branch from menaquinol_6 side right {
-    menaquinol_6
-    <-> ec_1_1_99_16 [1.1.99.16] +s_malate +menaquinone_6
-    oxaloacetate
+    <-> ec_1_1_1_21 [1.1.1.21] +beta_d_galactose +h +nadph
+    galactitol
   }
 
   branch from menaquinol_6 side left {
@@ -56,49 +44,37 @@ pathway 2-demethylmenaquinone-6-to-2-6-dichloroindopheno "2-demethylmenaquinone-
 
   branch from sah side right {
     sah
-    <-> . +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> . +adenosine_5_monophosphate_1 +sam +hplus
+    n6_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +sam +n6_methyladenosine_5_monophosphate_1 +hplus
+    adenosine_5_monophosphate_1
   }
 
   branch from 2_demethylmenaquinol_8 side right {
     2_demethylmenaquinol_8
-    <-> . +d_alanine +2_demethylmenaquinone_8 +h2o +nh4
+    <-> . +r_lactate +2_demethylmenaquinone_8
     pyruvate
   }
 
   branch from 2_demethylmenaquinol_8 side left {
     2_demethylmenaquinol_8
-    <-> . +2_demethylmenaquinone_8 +pyruvate
-    r_lactate
-  }
-
-  branch from 2_6_dichloroindophenol side right {
-    2_6_dichloroindophenol
-    <-> . +reduced_2_6_dichlorophenolindophenol +1s_4r_1_hydroxylimonen_2_one
-    1s_2s_4r_limonene_1_2_diol
-  }
-
-  branch from 2_6_dichloroindophenol side left {
-    2_6_dichloroindophenol
-    <-> . +1r_2r_4s_limonene_1_2_diol +reduced_2_6_dichlorophenolindophenol
-    1r_4s_1_hydroxylimonen_2_one
+    <-> ec_1_1_5_4 [1.1.5.4] +s_malate +2_demethylmenaquinone_8
+    oxaloacetate
   }
 
   branch from glucose side right {
     glucose
-    <-> . +maltoheptaose +h2o
-    maltononaose
+    <-> . +evatromonoside +h2o
+    glucoevatromonoside
   }
 
   branch from glucose side left {
     glucose
-    <-> . +maltopentaose +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> . +digitoxin +h2o
+    purpurea_glycoside_a
   }
 }

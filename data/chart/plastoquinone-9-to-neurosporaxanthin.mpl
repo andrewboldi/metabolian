@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanthin" {
-  spacing 286
+  spacing 274
 
   spine at 0,0 {
     plastoquinone_9
@@ -28,44 +28,32 @@ pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanth
 
   branch from 9_9_di_cis_carotene side left {
     9_9_di_cis_carotene
-    <-> . +h2
-    15_cis_phytoene
-  }
-
-  branch from 9_9_di_cis_carotene side right {
-    9_9_di_cis_carotene
-    <-> . +phylloquinone +7_9_9_tri_cis_neurosporene
-    phylloquinol
-  }
-
-  branch from 7_7_9_9_tetra_cis_lycopene side left {
-    7_7_9_9_tetra_cis_lycopene
-    <-> . +phylloquinol +7_9_9_tri_cis_neurosporene
+    <-> ec_1_3_5_6 [1.3.5.6] +7_7_9_9_tetra_cis_lycopene +phylloquinol
     phylloquinone
   }
 
   branch from 7_7_9_9_tetra_cis_lycopene side right {
     7_7_9_9_tetra_cis_lycopene
-    <-> . +2_demethylmenaquinol_8 +2_demethylmenaquinone_8
+    <-> . +phylloquinol +phylloquinone
     7_9_9_tri_cis_neurosporene
   }
 
-  branch from hydroquinones side left {
+  branch from 7_7_9_9_tetra_cis_lycopene side left {
+    7_7_9_9_tetra_cis_lycopene
+    <-> . +ubiquinol_9 +7_9_9_tri_cis_neurosporene
+    ubiquinone_9
+  }
+
+  branch from hydroquinones side right {
     hydroquinones
     <-> . +dca_cl +1_4_benzoquinones +h2o +hplus
     dca_cc
   }
 
-  branch from hydroquinones side right {
+  branch from hydroquinones side left {
     hydroquinones
     <-> . +l_methionine +1_4_benzoquinones +h2o
     l_methionine_s_s_oxide
-  }
-
-  branch from lycopene side left {
-    lycopene
-    <-> ec_2_5_1_150 [2.5.1.150] +dmapp +h2o +ppi
-    dihydroisopentenyldehydrorhodopin
   }
 
   branch from all_trans_3_4_didehydrolycopene side right {
@@ -76,14 +64,14 @@ pathway plastoquinone-9-to-neurosporaxanthin "plastoquinone-9 to neurosporaxanth
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +linolenoyl_coa +o2 +hydrogen_acceptor +h2o
-    6z_9z_12z_15z_octadecatetraenoyl_coa
+    <-> . +5_s_hete +o2 +hydrogen_acceptor +h2o
+    5_s_15_r_dihete
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +dserine +hydrogen_acceptor +h2o +nh3
-    3_hydroxypyruvate
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +o2 +hydrogen_acceptor +h2o
+    17_r_hdohe
   }
 
   branch from torulene side left {

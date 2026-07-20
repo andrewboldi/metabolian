@@ -20,14 +20,14 @@ pathway prephytoene-diphosphate-to-diphosphate "prephytoene diphosphate to dipho
 
   branch from h side left {
     h
-    <-> ec_2_4_2_31 [2.4.2.31] +nicotinamide +n_omega_adp_d_ribosyl_l_arginine +nad
-    l_arginine
+    <-> ec_1_14_13_15 [1.14.13.15] +25r_5beta_cholestane_3alpha_7alpha_26_triol +nadp +h2o +o2 +nadph
+    5beta_cholestane_3alpha_7alpha_diol
   }
 
   branch from h side right {
     h
-    <-> ec_1_14_13_39 [1.14.13.39] +nitric_oxide +nadp +l_citrulline +h2o +nadph +l_arginine
-    o2
+    <-> ec_1_14_13_49 [1.14.13.49] +4s_limonene +o2 +nadph +perillyl_alcohol +h2o
+    nadp
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side left {
@@ -56,14 +56,14 @@ pathway prephytoene-diphosphate-to-diphosphate "prephytoene diphosphate to dipho
 
   branch from ipp side left {
     ipp
-    <-> ec_2_5_1_87 [2.5.1.87] +di_trans_poly_cis_polyprenyl_diphosphate_c80 +diphosphate
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_5_1_20 [2.5.1.20] +diphosphate +poly_cis_polyprenyl_diphosphate_longer_by_one_c5
+    poly_cis_polyprenyl_diphosphate
   }
 
   branch from ipp side right {
     ipp
-    <-> ec_2_5_1_20 [2.5.1.20] +diphosphate +poly_cis_polyprenyl_diphosphate_longer_by_one_c5
-    poly_cis_polyprenyl_diphosphate
+    <-> ec_2_5_1_87 [2.5.1.87] +diphosphate +di_trans_poly_cis_decaprenyl_diphosphate
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from dimethylallyl_diphosphate side left {
@@ -81,12 +81,12 @@ pathway prephytoene-diphosphate-to-diphosphate "prephytoene diphosphate to dipho
   branch from diphosphate side left {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    alpha_bulgarene
+    alpha_ylangene
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    alpha_ylangene
+    cyperene
   }
 }

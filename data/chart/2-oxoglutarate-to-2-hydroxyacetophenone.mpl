@@ -18,49 +18,49 @@ pathway 2-oxoglutarate-to-2-hydroxyacetophenone "2-oxoglutarate to 2-hydroxyacet
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> . +l_glutamine +l_isoleucine +h2o
-    isolecyl_glutaminyl_glutamate
+    <-> . +l_threonine +l_tryptophan +h2o
+    tryptophanyl_threonyl_glutamate
   }
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +l_proline +l_lysine +h2o
-    prolyl_glutamatsyl_lysine
+    <-> . +l_arginine +l_tyrosine +h2o
+    tyrosyl_arginyl_glutamate
   }
 
   branch from nadp side left {
     nadp
-    <-> . +3_decanone +h +o2 +nadph +h2o
-    heptyl_propanoate
+    <-> . +h +o2 +n_hydroxy_l_trihomomethioninate +nadph +h2o
+    n_n_dihydroxy_l_trihomomethioninate
   }
 
   branch from nadp side right {
     nadp
-    <-> . +3_decanone +h +o2 +nadph +h2o
-    ethyl_octanoate
+    <-> . +h +o2 +n_hydroxy_l_tetrahomomethioninate +nadph +h2o
+    n_n_dihydroxy_l_tetrahomomethioninate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_lysine +l_threonine
-    histidyl_lysyl_threonine
+    <-> . +l_proline +l_lysine
+    prolyl_lysyl_proline
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_glutamine +l_methionine
-    histidyl_methionyl_glutamine
+    <-> . +l_proline +l_arginine
+    prolyl_prolyl_arginine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_415 [1.1.1.415] +nadh +h +narcotoline
-    narcotoline_hemiacetal
+    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +campest_5_en_3_one
+    campesterol
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +1_1_dichloro_2_4_chloro_2_3_dihydroxyphenyl_2_4
-    cis_3_2_2_dichloro_1_4_chlorophenyl_vinyl_6_chlo
+    <-> ec_1_1_1_51 [1.1.1.51] +nadh +h +campesterol
+    campest_4_en_3_one
   }
 }

@@ -18,49 +18,49 @@ pathway 3r-3-carboxylmethyl-a-to-s-adenosyl-l-homocyste "(3R)-3-[(carboxylmethyl
 
   branch from glycine side left {
     glycine
-    <-> . +myristoyl_coa +coa +hplus
-    n_myristoylglycinate
+    <-> ec_4_3_2_11 [4.3.2.11] +3r_3_carboxylmethyl_amino_fatty_acid +holo-acp +hplus +h2o
+    o_s_2e_2_enoylpantetheine_4_phosphoryl_l_serine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +lauroyl_coa +coa +hplus
-    n_dodecanoylglycinate
+    <-> . +n_n_dimethyl_l_argininium +glyoxylate
+    5_3_3_dimethylguanidino_2_oxopentanoate
   }
 
   branch from holo-acp side left {
     holo-acp
-    <-> . +l_seryl_amp +amp
-    o_s_l_seryl_pantetheine_4_phosphoryl_l_serine_re
+    <-> . +hexadecanoyl_amp +amp +hplus
+    o_s_hexadecanoylpantetheine_4_phosphoryl_serine
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_73 [6.2.1.73] +l_tryptophan +atp +amp +ppi
-    o_s_l_tryptophyl_pantetheine_4_phosphoryl_l_seri
+    <-> . +medium_chain_fatty_acyl_amp +amp +hplus
+    o_s_medium_chain_fatty_acyl_pantetheine_4_phosph
   }
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +tyrosine +holo-acp +malonyl-coa +acetyl_coa +hydrogen_donor +sam +atp +hplus +amp +sah +co2 +ppi +coa +h2o
-    o_s_n_4e_6e_10s_12z_14e_6_10_dimethyl_3_oxohexad
+    <-> . +urobilinogen +hydrogen_donor
+    4z_15z_mesobilirubin_ix
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +malonyl-coa +hydrogen_donor +hplus +co2 +coa +h2o
-    6_hydroxymellein
+    <-> . +2_4_6_trinitrotoluene +gsh +hydrogen_donor +h2o
+    s_2_4_dinitro_6_hydroxylaminotoluyl_glutathione
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_260 [2.1.1.260] +sam +n1_methylpseudouridine_5_monophosphate_1 +hplus
-    pseudouridine_5_phosphate_1
+    <-> ec_2_1_1_319 [2.1.1.319] +l_argininium +sam +hplus
+    n_n_dimethyl_l_arginine_1
   }
 }

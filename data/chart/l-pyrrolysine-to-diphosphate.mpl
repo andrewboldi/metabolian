@@ -26,49 +26,49 @@ pathway l-pyrrolysine-to-diphosphate "L-pyrrolysine to diphosphate" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_35 [1.1.1.35] +nadh +h +3_24_dioxocholest_4_en_26_oyl_coa
-    24_hydroxy_3_oxocholest_4_en_26_oyl_coa
+    <-> ec_1_1_1_144 [1.1.1.144] +nadh +4r_perillyl_aldehyde +h
+    r_perillyl_alcohol
   }
 
   branch from nad side left {
     nad
-    <-> . +3_oxo_24_ethyl_26_al_cholest_4_ene +h2o +nadh +h
-    3_oxo_24_ethyl_cholest_4_en_26_oate
+    <-> . +nitrite +4_nitrophenol +nadh
+    2_4_dinitrophenol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +z_omega_methylsulfanyl_hexyl_thiohydroximate
-    ser_gly
+    <-> . +oleandomycin +glucose
+    glucosyl_oleandomycin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +ser_gly
-    z_omega_methylsulfanyl_heptyl_thiohydroximate
+    <-> . +diphosphate +intermedeol
+    2e_6e_farnesyl_diphosphate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +cyclohexylammonium +nadp +h2o +nadph +hplus
-    cyclohexanone
+    <-> . +cyclopentylammonium +nadp +h2o +nadph +hplus
+    cyclopentanone
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +1s_2_methyl_cyclohexylammonium +nad +h2o +nadh +hplus
-    2_methylcyclohexanone
+    <-> . +3_methylcyclopentanaminium +nadp +h2o +nadph +hplus
+    3_methylcyclopentanone
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_108 [2.7.7.108] +l_serine +atp
-    o_adenylyl_l_serine_1
+    <-> . +r_2_hydroxy_3_methylbutyrate +l_phenylalanine +sam +atp +amp +sah +hplus
+    beauvericin
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_196 [4.2.3.196] +5_9_10_labda_8_20_13_dien_15_yl_diphosphate
-    dolabradiene
+    <-> . +6_hydroxydeoxybrevianamide_e +dmapp
+    notoamide_s
   }
 }

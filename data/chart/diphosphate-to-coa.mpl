@@ -18,37 +18,37 @@ pathway diphosphate-to-coa "diphosphate to CoA" {
 
   branch from atp side left {
     atp
-    <-> . +co2 +pyruvate +h2o +h +oxaloacetate +phosphate
-    adp
+    <-> ec_6_3_2_2 [6.3.2.2] +l_gamma_glutamyl_l_norvaline +adp +phosphate +l_glutamate
+    l_2_aminopentanoate
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_7_54 [2.7.7.54] +diphosphate +n_adenylyl_l_phenylalanine +h
-    l_phenylalanine
+    <-> ec_6_3_2_2 [6.3.2.2] +l_leucine +l_glutamate +h_gamma_glu_leu_oh +phosphate
+    adp
   }
 
   branch from h side left {
     h
-    <-> . +c33_phthiodiolenone_a +nadph +nadp
-    c33_phthiodiolone_a
+    <-> . +acetyl_coa +n_3_aminopropyl_hydroxylamine +coa
+    n_3_aminopropyl_n_hydroxyacetamide
   }
 
   branch from h side right {
     h
-    <-> . +c34_phenolphthiodiolone_a +nadph +nadp
-    c34_phenolphthiotriol_a
+    <-> . +malonyl_coa +trans_4_coumaroyl_coa +bis_noryangonin +coa
+    co2
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +11e_tetradecen_1_ol
-    11e_tetradecenyl_acetate
+    <-> . +acetyl_coa +3_15_diacetoxyscirpenol
+    3_4_15_triacetoxyscirpenol
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_155 [2.3.1.155] +9z_myristoleoyl_coa +acetyl_coa
-    11z_3_oxohexadecenoyl_coa
+    <-> . +acetyl_coa +trichodermol
+    trichodermin
   }
 }

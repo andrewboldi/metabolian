@@ -36,7 +36,7 @@ pathway s-3-hydroxyhexanoyl-coa-to-trans-hex-2-enoyl-co "(S)-3-hydroxyhexanoyl-C
 
   branch from hexanoyl_coa side right {
     hexanoyl_coa
-    <-> . +malonyl-acp +hplus +co2 +coa
-    o_s_3_oxooctanoylpantetheine_4_phosphoryl_serine
+    <-> . +malonyl-coa +hplus +co2 +coa
+    4_hydroxy_6_pentylpyran_2_one
   }
 }

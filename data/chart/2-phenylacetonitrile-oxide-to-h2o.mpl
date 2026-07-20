@@ -20,14 +20,14 @@ pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    18_r_hepe
+    <-> . +glycerophosphatidylethanolamine +vaccenic_acid
+    1_oleoylglycerophosphoethanolamine_delta_9
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    5_s_15_s_dihete
+    <-> . +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
+    lovastatin
   }
 
   branch from s_z_n_hydroxy_2_phenylethanimidoyl_l_cysteinylgl side left {
@@ -38,26 +38,26 @@ pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_3_2_62 [6.3.2.62] +l_glutamate +atp +adp +pi +hplus
-    l_glutamyl_l_glutamate_2
+    <-> . +isochorismate +atp +amp +ppi +hplus
+    isochorismoyl_l_glutamate
   }
 
   branch from glutamate side left {
     glutamate
-    <-> ec_6_3_2_61 [6.3.2.61] +l_glutamyl_l_glutamate_2 +atp +adp +pi +hplus
-    l_glutamyl_l_glutamyl_l_glutamate_3
+    <-> . +4_hydroxy_methyl_phosphoryl_2_oxobutanoate +akg
+    glufosinate_p
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    choline
+    1_eicosadienoylglycerophosphocholine_delta_11_14
   }
 
   branch from h side left {
     h
-    <-> . +cmp +cardiolipin_tetrahexadecanoyl_n_c16_0 +dipalmitoyl_phosphatidylglycerol
-    cdp_dipalmitoyl_sn_glycerol
+    <-> . +adp +phosphate +atp +h2o
+    1_eicosatrienoylglycerophosphocholine_delta_11_1
   }
 
   branch from z_2_phenyl_1_thioacetohydroximate side right {
@@ -69,12 +69,12 @@ pathway 2-phenylacetonitrile-oxide-to-h2o "2-phenylacetonitrile oxide to H2O" {
   branch from atp side left {
     atp
     <-> . +h +adp +phosphate +h2o
-    chloramphenicol
+    1_heptadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    coprostanol
+    1_myristoyl_sn_glycero_3_phosphocholine
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway a-lipid-iia-to-arachidonate "a lipid IIA to arachidonate" {
-  spacing 202
+  spacing 196
 
   spine at 0,0 {
     a_lipid_iia
@@ -18,19 +18,13 @@ pathway a-lipid-iia-to-arachidonate "a lipid IIA to arachidonate" {
     1_acyl_sn_glycero_3_phosphoethanolamine
   }
 
-  branch from 1_acyl_sn_glycero_3_phosphoethanolamine side left {
-    1_acyl_sn_glycero_3_phosphoethanolamine
-    <-> . +acyl_coa +coa
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-  }
-
-  branch from arachidonate side right {
+  branch from arachidonate side left {
     arachidonate
     <-> . +o2
     12_r_hpete
   }
 
-  branch from arachidonate side left {
+  branch from arachidonate side right {
     arachidonate
     <-> . +o2
     11_r_hpete

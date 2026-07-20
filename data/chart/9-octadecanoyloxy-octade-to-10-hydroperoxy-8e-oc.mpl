@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)octade… to 10-hydroperoxy-8E-octadec…" {
-  spacing 206
+  spacing 194
 
   spine at 0,0 {
     9_octadecanoyloxy_octadecanoate
@@ -32,14 +32,14 @@ pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)oct
 
   branch from octadecanoate side left {
     octadecanoate
-    <-> . +nad +h2o +nadh +hplus
-    octadecanal
+    <-> . +n_octadecanoyl_4_hydroxysphinganine +h2o
+    phytosphingosine
   }
 
   branch from octadecanoate side right {
     octadecanoate
-    <-> . +n_octadecanoyl_4_hydroxysphinganine +h2o
-    phytosphingosine
+    <-> . +ethyl_octadecanoate +h2o +hplus
+    ethanol
   }
 
   branch from 9_9z_octadecenoyloxy_octadecanoate side left {
@@ -52,18 +52,6 @@ pathway 9-octadecanoyloxy-octade-to-10-hydroperoxy-8e-oc "9-(octadecanoyloxy)oct
     9_9z_octadecenoyloxy_octadecanoate
     <-> . +1_palmitoyl_2_3_dioleoyl_sn_glycerol +9_hydroxyoctadecanoate
     1_palmitoyl_3_oleoyl_sn_glycerol
-  }
-
-  branch from oleate side left {
-    oleate
-    <-> . +n_oleoyl_l_lysine +h2o
-    l_lysinium
-  }
-
-  branch from oleate side right {
-    oleate
-    <-> . +1_1z_hexadecenyl_2_9z_octadecenoyl_sn_glycero_3 +h2o +hplus
-    1_1z_hexadecenyl_sn_glycero_3_phosphocholine
   }
 
   branch from 10_hydroperoxy_8e_octadecenoate side left {

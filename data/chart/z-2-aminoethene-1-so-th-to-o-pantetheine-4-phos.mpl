@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway z-2-aminoethene-1-so-th-to-o-pantetheine-4-phos "(Z)-2-aminoethene-1-SO-th… to O-(pantetheine-4'-phospho…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     z_2_aminoethene_1_so_thioperoxol
@@ -18,17 +18,5 @@ pathway z-2-aminoethene-1-so-th-to-o-pantetheine-4-phos "(Z)-2-aminoethene-1-SO-
     o_s_sulfamoylacetylpantetheine_4_phosphoryl_l_se
     <-> . +4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy -holo-acp -hplus
     4ar_6s_7r_2_adenosyl_5_diphospho_5_ribosyl_6_hy
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +fpp
-    2z_4e_ionylideneethane
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +l_oxindolylalanine +l_leucyl_o_isoindolinone_l_homoserine +atp +amp +hplus
-    l_leu_l_isd_l_oid
   }
 }

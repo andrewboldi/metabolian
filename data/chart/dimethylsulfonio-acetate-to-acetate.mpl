@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetate" {
-  spacing 322
+  spacing 310
 
   spine at 0,0 {
     dimethylsulfonio_acetate
@@ -28,14 +28,14 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
 
   branch from methionine side left {
     methionine
-    <-> ec_2_3_1_311 [2.3.1.311] +uridine_5_monophosphate_1 +acetyl_coa +sam +h2o +5_deoxyadenosine +coa +hplus
-    5_carboxymethyl_uridine_5_monophosphate_2
+    <-> . +glycine +fmnh2 +sam +fmnh +5_deoxyadenosine +hplus
+    glycyl_radical
   }
 
   branch from methionine side right {
     methionine
-    <-> ec_1_8_98_7 [1.8.98.7] +l_cysteine +sam +h2o +h2s +5_deoxyadenosine +hplus
-    l_3_oxoalanine
+    <-> . +n_oleoyl_l_methionine +h2o
+    oleate
   }
 
   branch from 3_l_methionyl_adenylyl_zwitterionic_group side left {
@@ -46,14 +46,14 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_36 [4.2.3.36] +terpentedienyl_diphosphate
-    terpentetriene
+    <-> ec_2_5_1_31 [2.5.1.31] +ipp +fpp
+    ditrans_polycis_undecaprenyl_diphosphate
   }
 
   branch from ppi side left {
     ppi
-    <-> . +gpp
-    pinene
+    <-> ec_2_5_1_82 [2.5.1.82] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    all_trans_hexaprenyl_diphosphate
   }
 
   branch from 3_methylthio_propanoyl_coa side right {
@@ -78,17 +78,5 @@ pathway dimethylsulfonio-acetate-to-acetate "(dimethylsulfonio)acetate to acetat
     3_methylthio_acryloyl_coa
     <-> . +3_methylthio_propanoyl_coa +fad +h
     fadh2
-  }
-
-  branch from acetate side right {
-    acetate
-    <-> . +n_acetyl_l_isoleucinate +h2o
-    isoleucine
-  }
-
-  branch from acetate side left {
-    acetate
-    <-> . +pyrrolizixenacetamide +h2o +hplus
-    3_amino_5_6_7_7a_tetrahydro_1h_pyrrolizin_1_one
   }
 }

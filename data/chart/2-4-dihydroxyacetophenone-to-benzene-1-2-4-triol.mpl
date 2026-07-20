@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-4-dihydroxyacetophenone-to-benzene-1-2-4-triol "2,4'-dihydroxyacetophenone to benzene-1,2,4-triol" {
-  spacing 228
+  spacing 222
 
   spine at 0,0 {
     2_4_dihydroxyacetophenone
@@ -16,13 +16,7 @@ pathway 2-4-dihydroxyacetophenone-to-benzene-1-2-4-triol "2,4'-dihydroxyacetophe
     benzene_1_2_4_triol
   }
 
-  branch from formate side left {
-    formate
-    <-> . +hydrogen_cyanide +h2o
-    nh3
-  }
-
-  branch from benzene_1_2_4_triol side right {
+  branch from benzene_1_2_4_triol side left {
     benzene_1_2_4_triol
     <-> ec_1_14_14_27 [1.14.14.27] +fadh2 +o2 +fad +h2o +hplus
     resorcinol

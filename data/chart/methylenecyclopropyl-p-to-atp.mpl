@@ -20,14 +20,14 @@ pathway methylenecyclopropyl-p-to-atp "β-(methylenecyclopropyl)p… to ATP" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +phytenal +nad
-    phytol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_methylcyclohexanone +nad
+    2_methyl_cyclohexanol
   }
 
   branch from h side right {
     h
-    <-> ec_1_13_11_34 [1.13.11.34] +4_s_hydroperoxy_17_r_hydroxydocosahexaenoic_acid +h2o
-    4_5_epoxy_17r_hydroxy_docosahexaenoate
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +4_methylcyclohexanone +nad
+    trans_4_methylcyclohexanol
   }
 
   branch from pyruvate side left {
@@ -50,49 +50,49 @@ pathway methylenecyclopropyl-p-to-atp "β-(methylenecyclopropyl)p… to ATP" {
 
   branch from glutathione side right {
     glutathione
-    <-> ec_1_8_4_4 [1.8.4.4] +glutathione_disulfide +d_cysteine
-    d_cystine
-  }
-
-  branch from glutathione side left {
-    glutathione
     <-> . +glutathione_disulfide +hydroxylamine
     s_hydroxysulfenamide_glutathione
   }
 
+  branch from glutathione side left {
+    glutathione
+    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +glutathione_disulfide
+    2_2_dithiodiethanol
+  }
+
   branch from glycylglycine side right {
     glycylglycine
-    <-> ec_3_4_11_1 [3.4.11.1] +l_leucine +h2o
-    leu_gly_gly
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
+    d_ala_gly_gly
   }
 
   branch from glycylglycine side left {
     glycylglycine
-    <-> . +l_phenylalanine +h2o
-    phe_gly_gly
+    <-> ec_3_4_11_15 [3.4.11.15] +l_lysine +h +h2o
+    lys_gly_gly
   }
 
   branch from glycine side right {
     glycine
-    <-> . +l_phenylalanine +h2o
-    phe_gly
+    <-> ec_3_4_11_19 [3.4.11.19] +glycinamide +h +h2o
+    nh4
   }
 
   branch from glycine side left {
     glycine
-    <-> . +tyr_gly +h2o
-    l_tyrosine
+    <-> ec_3_4_11_19 [3.4.11.19] +d_alanine +h2o
+    d_ala_gly
   }
 
   branch from atp side right {
     atp
-    <-> ec_6_3_1_15 [6.3.1.15] +3_dimethylallyl_4_hydroxybenzoic_acid +3_amino_4_7_dihydroxy_8_methylcoumarin +h +amp +novobiocic_acid
-    diphosphate
+    <-> ec_6_3_2_4 [6.3.2.4] +udpmurnac_oyl_l_ala_gamma_d_glu_l_lys_d_ala_d_se +h +adp +phosphate +udp_n_acetyl_muramoyl_l_alanyl_d_glutamyl_l_lysi
+    d_alanyl_d_serine
   }
 
   branch from atp side left {
     atp
-    <-> ec_6_3_2_2 [6.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +h +adp +phosphate +2s_2_aminobutanoate
-    l_alpha_methyl_glutamate
+    <-> ec_2_7_4_8 [2.7.4.8] +8_azaguanosine_5_diphosphate +adp +h
+    8_azaguanosine_5_monophosphate
   }
 }

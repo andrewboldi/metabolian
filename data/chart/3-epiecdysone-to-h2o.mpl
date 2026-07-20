@@ -18,26 +18,26 @@ pathway 3-epiecdysone-to-h2o "3-Epiecdysone to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> ec_1_14_12_13 [1.14.12.13] +2_bromobenzoate +h +o2 +catechol +bromide +nad
-    co2
+    <-> . +5_dehydro_l_gluconate +h +nad
+    l_gluconic_acid
   }
 
   branch from nadh side right {
     nadh
-    <-> . +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me +nad
-    alphar_betas_guaiacylglycerol_beta_guaiacyl_eth
+    <-> . +all_trans_zeaxanthin +h +o2 +nad +h2o
+    nostoxanthin
   }
 
   branch from h side left {
     h
-    <-> ec_3_5_4_27 [3.5.4.27] +5_formyl_tetrahydrosarcinapterin +h2o
-    5_10_methenyl_tetrahydrosarcinapterin
+    <-> . +o_citryl_l_serine +o_citryl_ethanolamine
+    co2
   }
 
   branch from h side right {
     h
-    <-> ec_2_4_1_50 [2.4.1.50] +udp +5r_5_d_galactosyloxy_l_lysine_1 +5r_5_hydroxy_l_lysine_1
-    udp_alpha_d_galactose
+    <-> . +ctp +glycerol_2_phosphate +cdp_2_glycerol
+    diphosphate
   }
 
   branch from 3_dehydroecdysone side left {
@@ -54,25 +54,25 @@ pathway 3-epiecdysone-to-h2o "3-Epiecdysone to H2O" {
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +2r_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
-    alphar_betar_guaiacylglycerol_beta_guaiacyl_eth
+    <-> . +nadh +all_trans_beta_carotene +h +o2 +h2o
+    2s_2_s_dihydroxy_all_trans_beta_carotene
   }
 
   branch from nad side right {
     nad
-    <-> . +nadh +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
-    alphas_betas_guaiacylglycerol_beta_guaiacyl_eth
+    <-> . +nadh +d_xylonate +h +h2o
+    aldehydo_d_xylose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_3_3 [3.1.3.3] +o_phosphoserine +h +phosphate
-    serine
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_1_1_115 [1.1.1.115] +h +d_ribonate +nadph +nadp
-    aldehydo_d_ribose
+    <-> ec_3_4_19_16 [3.4.19.16] +z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth +l_glutamate
+    z_1_glutathion_s_yl_n_hydroxy_omega_methylsulfa
   }
 }

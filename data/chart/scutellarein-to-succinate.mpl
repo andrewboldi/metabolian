@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway scutellarein-to-succinate "scutellarein to succinate" {
-  spacing 218
+  spacing 194
 
   spine at 0,0 {
     scutellarein
@@ -28,14 +28,14 @@ pathway scutellarein-to-succinate "scutellarein to succinate" {
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_286 [2.1.1.286] +adenosine_5_monophosphate_1 +sam +hplus
-    n1_methyladenosine_5_monophosphate_1
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_287 [2.1.1.287] +sam +n1_methyladenosine_5_monophosphate_1 +hplus
-    adenosine_5_monophosphate_1
+    <-> . +sam +2_o_methylguanosine_5_monophosphate_1 +hplus
+    guanosine_5_monophosphate_1
   }
 
   branch from ladanein side right {
@@ -52,37 +52,13 @@ pathway scutellarein-to-succinate "scutellarein to succinate" {
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +2_oxospirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    2_hydroxy_2_oxospirilloxanthin
+    <-> . +stearoyl_coa +di_sulfido_diiron +o2 +hplus +h2o
+    oleoyl_coa
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +2_hydroxy_2_oxospirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    2_2_dihydroxy_2_oxospirilloxanthin
-  }
-
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +diuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    diuron_desmethyl
-  }
-
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +fluometuron +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    3_3_trifluoromethyl_phenyl_1_methylurea
-  }
-
-  branch from succinate side right {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
-    2_phenylsuccinyl_coa
-  }
-
-  branch from succinate side left {
-    succinate
-    <-> ec_2_8_3_28 [2.8.3.28] +phenylsuccinate +succinyl_coa
-    3_phenylsuccinyl_coa
+    <-> . +all_trans_retinol +di_sulfido_diiron +o2 +hplus +h2o
+    all_trans_3_hydroxyretinol
   }
 }

@@ -20,37 +20,37 @@ pathway 4-hydroxy-3-all-trans-hep-to-h2o "4-hydroxy-3-all-trans-hep… to H2O" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_368 [2.1.1.368] +l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +4_8_dihydroxyflavone_7_olate +sam +hplus
+    8_hydroxy_4_methoxyflavone_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_370 [2.1.1.370] +sam +n6_n6_dimethyl_l_lysine_1 +hplus
-    l_lysinium
+    <-> . +an_8_hydroxyflavone +sam +hplus
+    an_8_methoxyflavone
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
-    palustradienol
+    <-> ec_1_1_1_270 [1.1.1.270] +isoavenastenone +h +nadph
+    isoavenasterol
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_71 [1.1.1.71] +neoabietadienal +h +nadph
-    isopimara_7_15_dienol
+    <-> . +3_amino_4_hydroxyphenyl_arsonate +h2o +h +nadph
+    roxarsone
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    neo_lambda_carratetraose
+    <-> ec_3_2_1_177 [3.2.1.177] +d_xylp_1_6_d_glcp +alpha_d_xylose
+    beta_d_glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    neo_lambda_carrahexaose
+    <-> ec_3_2_1_159 [3.2.1.159] +beta_d_galactose +3_6_anhydro_l_galactopyranose
+    neoagarobiose
   }
 }

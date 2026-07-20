@@ -18,13 +18,13 @@ pathway 3-vinylbacteriochlorophyl-to-s-adenosyl-l-homocy "3-vinylbacteriochlorop
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_373 [2.1.1.373] +2r_2_hydroxy_4_methylsulfanyl_butanoate +sam
-    2r_4_dimethylsulfaniumyl_2_hydroxybutanoate
+    <-> . +8_hydroxyflavone_7_olate +sam +hplus
+    8_methoxyflavone_7_olate
   }
 
   branch from sah side right {
     sah
-    <-> . +malonyl-coa +acetyl_coa +sam +hplus +co2 +coa
-    3_methylorsellinate
+    <-> . +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 }

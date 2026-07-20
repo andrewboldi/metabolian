@@ -18,14 +18,14 @@ pathway dimethylsulfoniopropanoyl-to-l-methionine "dimethylsulfoniopropanoyl… 
 
   branch from h side left {
     h
-    <-> ec_1_3_1_52 [1.3.1.52] +nadh +2e_2_methylbut_2_enoyl_coa +nad
-    2s_2_methylbutanoyl_coa
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +2_octanone +nad
+    2r_octan_2_ol
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_1 [3.1.1.1] +propanoate +glycerol_dipropionate +h2o
-    tripropionin
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +heptan_2_one +2s_2_heptanol
+    nad
   }
 
   branch from dimethyl_sulfide side left {
@@ -36,14 +36,14 @@ pathway dimethylsulfoniopropanoyl-to-l-methionine "dimethylsulfoniopropanoyl… 
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +z_3_oxotetradec_7_enoyl_coa +cis_dodec_5_enoyl_coa
+    <-> . +4_1_methyl_2_pyrrolidinyl_3_oxobutanoyl_coa +1_methylpyrrolidine_2_acetyl_coa
     acetyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +cis_dec_3_enoyl_coa
-    z_3_oxododec_5_enoyl_coa
+    <-> ec_2_3_1_75 [2.3.1.75] +eicosanoyl_coa +dodecan_1_ol
+    dodecyl_icosanoate
   }
 
   branch from l_methionine side right {

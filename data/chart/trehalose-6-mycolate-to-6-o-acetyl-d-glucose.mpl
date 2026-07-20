@@ -18,40 +18,28 @@ pathway trehalose-6-mycolate-to-6-o-acetyl-d-glucose "α,α'-trehalose 6-mycolat
     6_o_acetyl_d_glucose
   }
 
-  branch from trehalose side left {
-    trehalose
-    <-> ec_3_1_3_12 [3.1.3.12] +h2o +pi
-    trehalose_6_phosphate
-  }
-
-  branch from trehalose side right {
-    trehalose
-    <-> . +palmitoyl_coa +coa
-    2_o_palmitoyl_trehalose
-  }
-
   branch from d_glucose side left {
-    d_glucose
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +h2o
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
-  }
-
-  branch from d_glucose side right {
     d_glucose
     <-> ec_3_2_1_48 [3.2.1.48] +sucrose +h2o
     d_fructofuranose
   }
 
+  branch from d_glucose side right {
+    d_glucose
+    <-> ec_3_2_1_48 [3.2.1.48] +maltose +h2o
+    glucose
+  }
+
   branch from g1p side left {
     g1p
-    <-> . +maltopentaose +pi
-    maltotetraose
+    <-> . +maltohexaose +pi
+    maltopentaose
   }
 
   branch from g1p side right {
     g1p
-    <-> . +maltohexaose +pi
-    maltopentaose
+    <-> . +h2o +gmp +hplus
+    gdp_d_glucose
   }
 
   branch from d_glucose side left {

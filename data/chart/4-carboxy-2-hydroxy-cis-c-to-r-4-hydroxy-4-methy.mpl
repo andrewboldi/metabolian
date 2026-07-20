@@ -18,49 +18,49 @@ pathway 4-carboxy-2-hydroxy-cis-c-to-r-4-hydroxy-4-methy "4-carboxy-2-hydroxy-ci
 
   branch from nadp side left {
     nadp
-    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +nadph +r_methylmalonyl_coa +6_8a_seco_6_8a_deoxy_5_oxoavermectin_1a_aglycone +coa +h2o
-    co2
+    <-> ec_1_1_1_117 [1.1.1.117] +h +nadph +d_arabinono_1_4_lactone
+    d_arabinopyranose
   }
 
   branch from nadp side right {
     nadp
-    <-> . +2_methylpropanoyl_coa +malonyl_coa +h +nadph +r_methylmalonyl_coa +co2 +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone
+    <-> ec_1_14_99_33 [1.14.99.33] +9z_12z_octadecadienoate +h +o2 +nadph +h2o
+    crepenynate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_threonine +l_phenylalanine
-    phenylalanyl_phenylalaninyl_threonine
+    <-> . +l_threonine +l_tyrosine
+    tyrosyl_threonine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_arginine +l_phenylalanine
-    phenylalanyl_prolyl_arginine
+    <-> . +l_tryptophan +l_phenylalanine +l_tyrosine
+    tyr_trp_phe
   }
 
   branch from formate side left {
     formate
-    <-> ec_1_1_5_6 [1.1.5.6] +ubiquinol_10 +co2 +h
-    ubiquinone_10
+    <-> . +1_deoxy_l_glycero_tetrulose_4_phosphate +h
+    alpha_d_ribofuranose_5_phosphate
   }
 
   branch from formate side right {
     formate
-    <-> ec_1_14_13_70 [1.14.13.70] +h +24_25_dihydrolanosterol +o2 +nadph +nadp +h2o
-    4_4_dimethyl_8_14_cholestadien_3_ol
+    <-> ec_4_1_99_12 [4.1.99.12] +2_hydroxy_3_oxobutyl_phosphate +h
+    d_ribulose_5_phosphate
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    simvastatin_hydroxy_acid
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    18_3_16_3_pa
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    simvastatin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_stearoyl_2_linoleoyl_sn_glycero_3_phosphate
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "2-hydroxyethylphosphonic-to-hydrogen-donor",
   "name": "2-hydroxyethylphosphonic… to hydrogen donor",
-  "category": "energy-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from 2-hydroxyethylphosphonic acid(1−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -102,23 +102,21 @@
       }
     },
     {
-      "id": "linoleoyl_containing_glycerolipid",
-      "name": "linoleoyl-containing glycerolipid",
-      "short": "linoleoyl-containin…",
-      "formula": "C18H31OR",
-      "charge": 0,
+      "id": "8_s_15_s_dihpete",
+      "name": "8(S),15(S)-DiHPETE",
+      "formula": "C20H31O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:88351"
+        "chebi": "CHEBI:133899"
       }
     },
     {
-      "id": "8e_10e_12z_octadecatrienoyl_containing_glycerol",
-      "name": "(8E,10E,12Z)-octadecatrienoyl-containing glycerolipid",
-      "short": "(8E,10E,12Z)-octade…",
-      "formula": "C18H29OR",
-      "charge": 0,
+      "id": "8_s_15_s_dihete",
+      "name": "8(S),15(S)-DiHETE",
+      "formula": "C20H31O4",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:88257"
+        "chebi": "CHEBI:133903"
       }
     },
     {
@@ -131,23 +129,60 @@
       }
     },
     {
-      "id": "11z_hexadec_11_enoyl_coa",
-      "name": "(11Z)-hexadec-11-enoyl-CoA",
-      "short": "hexadec-11-enoyl-CoA",
-      "formula": "C37H60N7O17P3S",
-      "charge": -4,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:86120"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "10e_12z_hexadecadienoyl_coa",
-      "name": "(10E,12Z)-hexadecadienoyl-CoA",
-      "short": "(10E,12Z)-hexadecad…",
-      "formula": "C37H58N7O17P3S",
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:86122"
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "dehydroprobetaenone_i",
+      "name": "dehydroprobetaenone I",
+      "short": "dehydroprobetaenone…",
+      "formula": "C21H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:145061"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     }
   ],
@@ -171,20 +206,6 @@
       "name": "formate dehydrogenase (acceptor)",
       "ec": [
         "1.17.98.4"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_14",
-      "name": "linoleoyl-lipid Delta(9) conjugase",
-      "ec": [
-        "1.14.19.14"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_15",
-      "name": "(11Z)-hexadec-11-enoyl-CoA conjugase",
-      "ec": [
-        "1.14.19.15"
       ]
     }
   ],
@@ -338,106 +359,110 @@
     },
     {
       "id": "r4",
-      "name": "linoleoyl-lipid Delta(9) conjugase",
-      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + AH2 + O2 = a (8E,10E,12Z)-octadecatrienoyl-containing glycerolipid + A + 2 H2O",
-      "ec": "1.14.19.14",
+      "name": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(...",
+      "equation": "(8S,15S)-dihydroperoxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 AH2 = (8S,15S)-dihydroxy-(5Z,9E,11Z,13E)-eicosatetraenoate + 2 A + 2 H2O",
       "substrates": [
         {
-          "metabolite": "linoleoyl_containing_glycerolipid",
+          "metabolite": "8_s_15_s_dihpete",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "8e_10e_12z_octadecatrienoyl_containing_glycerol",
+          "metabolite": "8_s_15_s_dihete",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
+          "stoichiometry": 2
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_14"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:46440"
+        "rhea": "RHEA:51120"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46440"
+            "id": "RHEA:51120"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "(11Z)-hexadec-11-enoyl-CoA conjugase",
-      "equation": "(11Z)-hexadecenoyl-CoA + AH2 + O2 = (10E,12Z)-hexadecadienoyl-CoA + A + 2 H2O",
-      "ec": "1.14.19.15",
+      "name": "7 malonyl-CoA + acetyl-CoA + 10 AH2 + 5 S-adenosyl-L-methionine + 2 H(+) = dehydroprobe...",
+      "equation": "7 malonyl-CoA + acetyl-CoA + 10 AH2 + 5 S-adenosyl-L-methionine + 2 H(+) = dehydroprobetaenone I + 10 A + 5 S-adenosyl-L-homocysteine + 7 CO2 + 8 CoA + 6 H2O",
       "substrates": [
         {
-          "metabolite": "11z_hexadec_11_enoyl_coa",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
+          "stoichiometry": 10
         },
         {
-          "metabolite": "o2",
-          "stoichiometry": 1
+          "metabolite": "sam",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "10e_12z_hexadecadienoyl_coa",
+          "metabolite": "dehydroprobetaenone_i",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
+          "stoichiometry": 10
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 5
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 8
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_15"
+          "stoichiometry": 6
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46444"
+        "rhea": "RHEA:51348"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46444"
+            "id": "RHEA:51348"
           }
         ]
       }

@@ -26,8 +26,8 @@ pathway benzoylagmatinium-to-glycine "benzoylagmatinium to glycine" {
 
   branch from benzoate side right {
     benzoate
-    <-> . +atp +hplus +ppi
-    benzoyl_amp
+    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
+    dideacetyl_astellolide_a
   }
 
   branch from agmatinium side left {
@@ -44,37 +44,37 @@ pathway benzoylagmatinium-to-glycine "benzoylagmatinium to glycine" {
 
   branch from benzoyl_coa side left {
     benzoyl_coa
-    <-> ec_2_3_1_196 [2.3.1.196] +benzyl_alcohol +coa
-    benzyl_benzoate
+    <-> . +butan_1_ol +coa
+    butyl_benzoate
   }
 
   branch from benzoyl_coa side right {
     benzoyl_coa
-    <-> ec_2_3_1_220 [2.3.1.220] +malonyl-coa +hplus +co2 +coa
-    2_4_6_trihydroxybenzophenone
+    <-> . +ethanol +coa
+    ethyl_benzoate
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_5_1_1_11 [5.1.1.11] +l_phenylalanine +atp +h2o +amp +hplus
-    d_phenylalanine
+    <-> . +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    1r_2r_3r_prephytoene_diphosphate
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_3_dihydroxybenzoate +atp +hplus
-    2_3_dihydroxybenzoyl_5_adenylate
+    <-> ec_2_5_1_1 [2.5.1.1] +ipp +dmapp
+    gpp
   }
 
   branch from glycine side left {
     glycine
-    <-> ec_2_6_1_35 [2.6.1.35] +oxaloacetate +aspartate
-    glyoxylate
+    <-> ec_2_6_1_45 [2.6.1.45] +glyoxylate +serine
+    3_hydroxypyruvate
   }
 
   branch from glycine side right {
     glycine
-    <-> ec_2_6_1_45 [2.6.1.45] +glyoxylate +serine
-    3_hydroxypyruvate
+    <-> . +l_kynurenine +glyoxylate
+    4_2_aminophenyl_2_4_dioxobutanoate
   }
 }

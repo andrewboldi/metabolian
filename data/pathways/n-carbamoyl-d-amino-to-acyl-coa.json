@@ -276,12 +276,12 @@
       }
     },
     {
-      "id": "3_hydroxybenzoate",
-      "name": "3-hydroxybenzoate",
-      "formula": "C7H5O3",
-      "charge": -1,
+      "id": "2_aminophenol",
+      "name": "2-aminophenol",
+      "formula": "C6H7NO",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:16193"
+        "chebi": "CHEBI:18112"
       }
     },
     {
@@ -294,31 +294,33 @@
       }
     },
     {
-      "id": "2_3_dihydroxybenzoate",
-      "name": "2,3-dihydroxybenzoate",
-      "short": "2,3-dihydroxybenzoa…",
-      "formula": "C7H5O4",
+      "id": "2_aminophenoxazin_3_one",
+      "name": "2-aminophenoxazin-3-one",
+      "short": "2-aminophenoxazin-3…",
+      "formula": "C12H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17293"
+      }
+    },
+    {
+      "id": "quinoline_4_carboxylate",
+      "name": "quinoline-4-carboxylate",
+      "short": "quinoline-4-carboxy…",
+      "formula": "C10H6NO2",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:36654"
+        "chebi": "CHEBI:58440"
       }
     },
     {
-      "id": "pyridoxine",
-      "name": "pyridoxine",
-      "formula": "C8H11NO3",
-      "charge": 0,
+      "id": "2_oxo_1_2_dihydroquinoline_4_carboxylate",
+      "name": "2-oxo-1,2-dihydroquinoline-4-carboxylate",
+      "short": "2-oxo-1,2-dihydroqu…",
+      "formula": "C10H6NO3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:16709"
-      }
-    },
-    {
-      "id": "isopyridoxal",
-      "name": "isopyridoxal",
-      "formula": "C8H9NO3",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17889"
+        "chebi": "CHEBI:58878"
       }
     },
     {
@@ -494,17 +496,10 @@
       ]
     },
     {
-      "id": "ec_1_14_99_23",
-      "name": "3-hydroxybenzoate 2-monooxygenase",
+      "id": "ec_1_3_99_19",
+      "name": "quinoline-4-carboxylate 2-oxidoreductase",
       "ec": [
-        "1.14.99.23"
-      ]
-    },
-    {
-      "id": "ec_1_1_99_9",
-      "name": "pyridoxine 5-dehydrogenase",
-      "ec": [
-        "1.1.99.9"
+        "1.3.99.19"
       ]
     },
     {
@@ -1129,16 +1124,15 @@
     },
     {
       "id": "r12",
-      "name": "3-hydroxybenzoate 2-monooxygenase",
-      "equation": "3-hydroxybenzoate + AH2 + O2 = 2,3-dihydroxybenzoate + A + H2O",
-      "ec": "1.14.99.23",
+      "name": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
+      "equation": "2 2-aminophenol + A + O2 = 2-aminophenoxazin-3-one + AH2 + 2 H2O",
       "substrates": [
         {
-          "metabolite": "3_hydroxybenzoate",
-          "stoichiometry": 1
+          "metabolite": "2_aminophenol",
+          "stoichiometry": 2
         },
         {
-          "metabolite": "hydrogen_donor",
+          "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
         },
         {
@@ -1148,7 +1142,41 @@
       ],
       "products": [
         {
-          "metabolite": "2_3_dihydroxybenzoate",
+          "metabolite": "2_aminophenoxazin_3_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 12,
+      "xrefs": {
+        "rhea": "RHEA:14681"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14681"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r13",
+      "name": "quinoline-4-carboxylate 2-oxidoreductase",
+      "equation": "quinoline-4-carboxylate + A + H2O = 2-oxo-1,2-dihydroquinoline-4-carboxylate + AH2",
+      "ec": "1.3.99.19",
+      "substrates": [
+        {
+          "metabolite": "quinoline_4_carboxylate",
           "stoichiometry": 1
         },
         {
@@ -1160,44 +1188,9 @@
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_99_23"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 12,
-      "xrefs": {
-        "rhea": "RHEA:14193"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14193"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r13",
-      "name": "pyridoxine 5-dehydrogenase",
-      "equation": "pyridoxine + A = isopyridoxal + AH2",
-      "ec": "1.1.99.9",
-      "substrates": [
-        {
-          "metabolite": "pyridoxine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
-        }
-      ],
       "products": [
         {
-          "metabolite": "isopyridoxal",
+          "metabolite": "2_oxo_1_2_dihydroquinoline_4_carboxylate",
           "stoichiometry": 1
         },
         {
@@ -1207,20 +1200,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_1_99_9"
+          "enzyme": "ec_1_3_99_19"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 13,
       "xrefs": {
-        "rhea": "RHEA:14497"
+        "rhea": "RHEA:14949"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:14497"
+            "id": "RHEA:14949"
           }
         ]
       }

@@ -24,25 +24,25 @@ pathway r-3-4-hydroxyphenyl-la-to-s-adenosyl-l-homocyst "(R)-3-(4-hydroxyphenyl)
 
   branch from ppi side left {
     ppi
-    <-> . +spectinomycin +atp
-    9_o_adenylylspectinomycin
+    <-> . +pppa_2_5_pg
+    3_2_cgamp
   }
 
   branch from ppi side right {
     ppi
-    <-> . +streptomycin +atp
-    6_o_adenylylstreptomycin
+    <-> . +l_tryptophan +fpp
+    2s_3r_3_farnesyl_2_3_dihydro_2_n_cyclo_l_trypto
   }
 
   branch from sah side left {
     sah
-    <-> . +3_hydroxy_d_kynurenine +sam +hplus
-    3_hydroxy_4_methyl_d_kynurenine
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
+    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

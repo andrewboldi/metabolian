@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-glucose-6-phosphate-to-h2o-null",
+  "name": "beta-D-glucose 6-phosphate to H2O",
+  "category": "other",
+  "summary": "A 4-step route from beta-D-glucose 6-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204885"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_glucose_6_phosphate",
+      "name": "beta-D-glucose 6-phosphate",
+      "short": "beta-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105856"
+      }
+    },
+    {
+      "id": "keto_d_fructose_6_phosphate",
+      "name": "keto-D-fructose 6-phosphate",
+      "short": "keto-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM89629"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "alditol_6_phosphate",
+      "name": "Alditol 6-phosphate",
+      "formula": "C6H15O9P",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1104464"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM23"
+      }
+    },
+    {
+      "id": "d_sorbitol",
+      "name": "D-sorbitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM736685"
+      }
+    },
+    {
+      "id": "phosphoenolpyruvate",
+      "name": "phosphoenolpyruvate",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM73"
+      }
+    },
+    {
+      "id": "alpha_d_galactose",
+      "name": "alpha-D-galactose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364486"
+      }
+    },
+    {
+      "id": "d_galp_1_6_d_glc_oh",
+      "name": "α-D-Galp-(1→6)-D-Glc-OH",
+      "short": "α-D-Galp-(1→6)-D-Gl…",
+      "formula": "C12H24O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:153263"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_22",
+      "name": "alpha-galactosidase",
+      "ec": [
+        "3.2.1.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204885",
+      "substrates": [
+        {
+          "metabolite": "beta_d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204885"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204885"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR206833",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "keto_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alditol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR206833"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206833"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR206834",
+      "substrates": [
+        {
+          "metabolite": "alditol_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "d_sorbitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoenolpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR206834"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR206834"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha-galactosidase",
+      "ec": "3.2.1.22",
+      "substrates": [
+        {
+          "metabolite": "alpha_d_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_sorbitol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galp_1_6_d_glc_oh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR173322"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR173322"
+          }
+        ]
+      }
+    }
+  ]
+}

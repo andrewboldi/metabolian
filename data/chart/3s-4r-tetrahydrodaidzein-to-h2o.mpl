@@ -30,49 +30,49 @@ pathway 3s-4r-tetrahydrodaidzein-to-h2o "(3S,4R)-Tetrahydrodaidzein to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +cerivastatin_m23 +phosphate +cerivastatin_m23 +h2o
+    <-> . +adp +1_octadeca_trienoylglycerophosphocholine_sn1_lpc +phosphate +1_octadeca_trienoylglycerophosphocholine_sn1_lpc +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> . +adenosine_3_5_bisphosphate +cyclosporin_a_sulfate +cyclosporin_a
-    3_phosphoadenylyl_sulfate
+    <-> . +adp +phosphate +atp +h2o
+    1_nonadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from nadph side left {
     nadph
-    <-> . +protoporphyrin_ix +h +nadp
-    protoporphyrinogen_ix
+    <-> ec_1_14_13_134 [1.14.13.134] +amyrin +h +o2 +nadp +h2o
+    11_hydroxy_amyrin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +o2 +pitavastatin +nadp +pitavastatin_m13
-    h2o2
+    <-> ec_1_14_13_143 [1.14.13.143] +h +ent_isokaurene +o2 +nadp +h2o
+    2_hydroxy_ent_isokaurene
   }
 
   branch from nadp side left {
     nadp
-    <-> . +d_ribulose_5_phosphate +h +nadph
-    d_ribitol_5_phosphate
+    <-> ec_1_14_13_145 [1.14.13.145] +ent_cassa_12_15_diene +h +o2 +nadph +h2o
+    11_hydroxy_ent_cassa_12_15_diene
   }
 
   branch from nadp side right {
     nadp
-    <-> . +h +nadph +trans_2_cis_cis_4_8_tetradecatrienoyl_coenzyme_a
-    trans_3_cis_8_tetradecadienoyl_coenzyme_a
+    <-> ec_1_14_13_144 [1.14.13.144] +h +stemod_13_17_ene +o2 +nadph +h2o
+    syn_stemoden_19_oate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphate +atp
-    cyclosporin_a_sulfate
+    <-> . +l_lysine +l_isoleucine +l_phenylalanine
+    lysyl_phenylalanyl_isoleucine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    cyclosporin_a
+    <-> . +l_lysine +l_isoleucine +l_tyrosine
+    lysyl_tyrosyl_isoleucine
   }
 }

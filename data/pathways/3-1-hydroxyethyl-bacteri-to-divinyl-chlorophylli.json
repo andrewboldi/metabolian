@@ -148,25 +148,6 @@
       }
     },
     {
-      "id": "magnesium",
-      "name": "magnesium",
-      "formula": "Mg",
-      "charge": 2,
-      "xrefs": {
-        "chebi": "CHEBI:18420"
-      }
-    },
-    {
-      "id": "linoleoyl_containing_glycerolipid",
-      "name": "linoleoyl-containing glycerolipid",
-      "short": "linoleoyl-containin…",
-      "formula": "C18H31OR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:88351"
-      }
-    },
-    {
       "id": "o2",
       "name": "Dioxygen (O2)",
       "formula": "O2",
@@ -176,33 +157,12 @@
       }
     },
     {
-      "id": "linolenoyl_containing_glycerolipid",
-      "name": "α-linolenoyl-containing glycerolipid",
-      "short": "α-linolenoyl-contai…",
-      "formula": "C18H29OR",
-      "charge": 0,
+      "id": "epoxypheophorbide_a",
+      "name": "epoxypheophorbide a",
+      "formula": "C35H35N4O6",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:90078"
-      }
-    },
-    {
-      "id": "7z_10z_hexadecadienoyl_containing_glycerolipid",
-      "name": "(7Z,10Z)-hexadecadienoyl-containing glycerolipid",
-      "short": "(7Z,10Z)-hexadecadi…",
-      "formula": "C16H27OR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:88268"
-      }
-    },
-    {
-      "id": "7z_10z_13z_hexadecatrienoyl_containing_glycerol",
-      "name": "(7Z,10Z,13Z)-hexadecatrienoyl-containing glycerolipid",
-      "short": "(7Z,10Z,13Z)-hexade…",
-      "formula": "C16H25OR",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:88269"
+        "chebi": "CHEBI:88233"
       }
     },
     {
@@ -236,20 +196,6 @@
       "name": "3,8-divinyl protochlorophyllide a 8-vinyl-reductase (NADPH)",
       "ec": [
         "1.3.1.75"
-      ]
-    },
-    {
-      "id": "ec_4_99_1_10",
-      "name": "magnesium dechelatase",
-      "ec": [
-        "4.99.1.10"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_35",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "ec": [
-        "1.14.19.35"
       ]
     },
     {
@@ -418,165 +364,57 @@
     },
     {
       "id": "r4",
-      "name": "magnesium dechelatase",
-      "equation": "chlorophyllide a + 2 H(+) = pheophorbide a + Mg(2+)",
-      "ec": "4.99.1.10",
+      "name": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + ...",
+      "equation": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 3 H(+) = epoxypheophorbide a + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
-        {
-          "metabolite": "chlorophyllide_a",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
         {
           "metabolite": "pheophorbide_a",
           "stoichiometry": 1
         },
         {
-          "metabolite": "magnesium",
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_4_99_1_10"
+          "metabolite": "epoxypheophorbide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:52792"
+        "rhea": "RHEA:48160"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:52792"
+            "id": "RHEA:48160"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "equation": "a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = (9Z,12Z,15Z)-octadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.35",
-      "substrates": [
-        {
-          "metabolite": "linoleoyl_containing_glycerolipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "linolenoyl_containing_glycerolipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:46408"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46408"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
-      "name": "sn-2 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "equation": "a (7Z,10Z)-hexadecadienoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a (7Z,10Z,13Z)-hexadecatrienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.35",
-      "substrates": [
-        {
-          "metabolite": "7z_10z_hexadecadienoyl_containing_glycerolipid",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "7z_10z_13z_hexadecatrienoyl_containing_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_35"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:46412"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46412"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
       "name": "3,8-divinyl chlorophyllide a reductase",
       "equation": "bacteriochlorophyllide g + 2 oxidized [2Fe-2S]-[ferredoxin] + ADP + phosphate = 3,8-divinyl chlorophyllide a + 2 reduced [2Fe-2S]-[ferredoxin] + ATP + H2O + H(+)",
       "ec": "1.3.7.14",
@@ -626,7 +464,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:48920"
       },

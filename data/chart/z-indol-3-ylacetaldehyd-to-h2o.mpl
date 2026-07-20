@@ -24,26 +24,26 @@ pathway z-indol-3-ylacetaldehyd-to-h2o "(Z)-indol-3-ylacetaldehyd… to H2O" {
 
   branch from h side right {
     h
-    <-> . +n_carbamoyl_d_phenylglycine +h2o
-    phenylhydantoin
+    <-> . +adp +5_s_15_s_dihete +phosphate +5_s_15_s_dihete +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_4_2_1_126 [4.2.1.126] +n_acetyl_beta_d_glucosamine_6_phosphate +r_lactate +h2o
-    n_acetylmuramate_6_phosphate
+    <-> . +adp +phosphate +atp +h2o
+    choline
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_145 [1.1.1.145] +h +androst_4_ene_3_17_dione +nadp
-    3beta_hydroxyandrost_5_en_17_one
+    <-> . +losartan +h +o2 +nadp +h2o
+    losartan_m5
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_14_13_129 [1.14.13.129] +h +6_r_beta_epsilon_carotene +o2 +nadp +h2o
-    zeinoxanthin
+    <-> . +h +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +o2 +nadp +h2o
+    6_beta_hydroxy_lovastatin_acid_form
   }
 
   branch from e_indol_3_yl_acetaldehyde_oxime side right {
@@ -54,26 +54,26 @@ pathway z-indol-3-ylacetaldehyd-to-h2o "(Z)-indol-3-ylacetaldehyd… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_39 [1.13.11.39] +biphenyl_2_3_diol
-    2_hydroxy_6_oxo_6_phenylhexa_2_4_dienoate
+    <-> . +7z_hexadecenoyl_coa +h2o2
+    2e_7z_hexadecadienoyl_coa
   }
 
   branch from o2 side right {
     o2
-    <-> . +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol
-    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
+    <-> . +h +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8 +nadph +nadp +h2o
+    6_exomethylene_lovastatin_acid_form
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_3_2_2_5 [3.2.2.5] +h +nicotinamide +h2o
-    adpribose_2_phosphate
+    <-> . +h +lovastatin +o2 +nadph +h2o
+    3_hydroxy_lovastatin_lactone_form
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_89 [1.14.13.89] +2_hydroxygenistein +h2o +h +o2 +nadph
-    genistein
+    <-> . +h +lovastatin +o2 +nadph +h2o
+    6_beta_hydroxy_lovastatin_lactone_form
   }
 
   branch from s_indolylmethylthiohydroximoyl_l_cysteine side left {
@@ -84,13 +84,13 @@ pathway z-indol-3-ylacetaldehyd-to-h2o "(Z)-indol-3-ylacetaldehyd… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_10 [3.4.11.10] +l_leucine +n_terminal_amino_acid_1
-    n_terminal_l_leucyl_l_amino_acid_1
+    <-> . +h +adp +phosphate +atp
+    chloramphenicol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +gly_ala
-    gly_gly_ala
+    <-> . +h +adp +phosphate +atp
+    coprostanol
   }
 }

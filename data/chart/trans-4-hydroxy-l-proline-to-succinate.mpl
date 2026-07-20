@@ -26,13 +26,13 @@ pathway trans-4-hydroxy-l-proline-to-succinate "trans-4-hydroxy-L-proline to suc
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_209 [4.2.3.209] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    r_axinyssene
+    <-> . +s_s_drim_8_en_11_yl_diphosphate +d_mannitol
+    sporulositol_a
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_210 [4.2.3.210] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    lydicene
+    <-> . +atp
+    5_triphosphoadenylyl_2_5_adenosine
   }
 }

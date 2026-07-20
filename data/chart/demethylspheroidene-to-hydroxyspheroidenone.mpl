@@ -30,25 +30,25 @@ pathway demethylspheroidene-to-hydroxyspheroidenone "demethylspheroidene to Hydr
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_175 [2.1.1.175] +tricetin +sam +hplus
-    3_5_di_o_methyltricetin
+    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
+    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_169 [2.1.1.169] +tricetin +sam +hplus
-    3_4_5_o_trimethyltricetin
+    <-> . +squalene +sam +hplus
+    3_methyl_1_2_didehydro_2_3_dihydrosqualene
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
-    albaflavenone
+    <-> ec_1_14_15_13 [1.14.15.13] +cyclo_l_leucyl_l_leucyl +di_sulfido_diiron +o2 +hplus +h2o
+    pulcherriminate
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_21 [1.14.15.21] +zeaxanthin +di_sulfido_diiron +o2 +hplus +h2o
-    all_trans_violaxanthin
+    <-> ec_1_14_15_6 [1.14.15.6] +di_sulfido_diiron +cholesterol +o2 +hplus +pregnenolone +h2o
+    4_methylpentanal
   }
 }

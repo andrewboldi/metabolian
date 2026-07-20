@@ -24,13 +24,13 @@ pathway gdp-to-d-gal-1-3-d-glcnac "GDP to α-D-Gal-(1→3)-α-D-GlcNAc-…" {
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +curcumin_4_o_beta_d_gentiotetraside +h
-    curcumin_4_o_beta_d_gentiotrioside
+    <-> . +udp +luteolinidin_5_o_glucoside +h
+    2_3_4_dihydroxyphenyl_5_hydroxychromen_7_one
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +curcumin_4_o_d_gentiotetraside +h
-    curcumin_4_o_d_gentiotrioside
+    <-> . +udp +apigeninidin_5_o_beta_d_glucoside +h
+    apigeninidin
   }
 }

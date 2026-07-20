@@ -18,37 +18,37 @@ pathway 5-androst-1-ene-3-17-dio-to-amp "5α-androst-1-ene-3,17-dio… to AMP" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    obyanamide
+    <-> . +adp +phosphate +atp +h2o
+    cysteine
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_23 [3.6.3.23] +adp +phosphate +atp +h2o
-    nostocyclamide
+    <-> ec_1_10_99_2 [1.10.99.2] +ubiquinol_9 +beta_nicotinamide_d_riboside +1_d_ribofuranosyl_1_4_dihydronicotinamide
+    ubiquinone_9
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_2_5_1_146 [2.5.1.146] +2e_geranyl_diphosphate +3_z_2_isocyanoethenyl_1h_indole
-    3_geranyl_3_z_2_isocyanoethenyl_1h_indole
+    <-> ec_2_7_7_37 [2.7.7.37] +utp +beta_l_arabinose_1_phosphate +h
+    udp_beta_l_arabinopyranose
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +schizokinen +amp +h +atp +citryl_n_3_aminopropyl_n_hydroxyacetamide
-    n_3_aminopropyl_n_hydroxyacetamide
+    <-> ec_2_7_7_37 [2.7.7.37] +l_arabinose_1_phosphate +udp_beta_l_arabinopyranose +h
+    utp
   }
 
   branch from amp side left {
     amp
-    <-> . +diphosphate +h +baumannoferrin_b +atp +n5_2_4_diaminobutanoate_n1_citryl_n3_decanoyl_n3
-    2_oxoglutarate
+    <-> . +3_amino_2_4_dihydroxybenzoate +atp +coa +diphosphate
+    3_amino_2_4_dihydroxybenzoyl_coa
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_1_3_1 [6.1.3.1] +diphosphate +3_decyl_4_undecyloxetan_2_one +atp
-    2r_3s_2_decyl_3_hydroxytetradecanoate
+    <-> . +7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19 +h +coa
+    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 }

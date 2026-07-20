@@ -32,13 +32,13 @@ pathway medium-chain-primary-to-mycoketide-coa "medium-chain primary… to mycok
 
   branch from ppi side left {
     ppi
-    <-> . +hexadecanedioate +atp +coa +amp
-    hexadecanedioyl_coa
+    <-> . +icosanoate +atp +coa +amp
+    icosanoyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_124 [2.5.1.124] +2_o_3_dimethylflaviolin_7_olate +gpp
-    6_linalyl_2_o_3_dimethylflaviolin_7_olate
+    <-> . +5_end_purine_ribonucleotide_5_triphosphate_4 +gdp +hplus
+    5_5_triphosphoguanosine_purine_ribonucleotide_3
   }
 }

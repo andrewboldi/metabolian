@@ -18,14 +18,14 @@ pathway tetradecyl-acetate-to-15-hydroxypalmitate "Tetradecyl acetate to 15-hydr
 
   branch from acetyl_coa side left {
     acetyl_coa
-    <-> . +holomycin +coa
-    holothin
+    <-> ec_2_3_1_16 [2.3.1.16] +z_3_oxotetradec_7_enoyl_coa +coa
+    cis_dodec_5_enoyl_coa
   }
 
   branch from acetyl_coa side right {
     acetyl_coa
-    <-> . +3_hydroxytrichothecene +coa
-    isotrichodermin
+    <-> ec_2_3_1_16 [2.3.1.16] +cis_dec_3_enoyl_coa +coa
+    z_3_oxododec_5_enoyl_coa
   }
 
   branch from tetradecan_1_ol side left {

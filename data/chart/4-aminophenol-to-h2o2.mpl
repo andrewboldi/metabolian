@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-aminophenol-to-h2o2 "4-aminophenol to H2O2" {
-  spacing 288
+  spacing 282
 
   spine at 0,0 {
     4_aminophenol
@@ -20,97 +20,91 @@ pathway 4-aminophenol-to-h2o2 "4-aminophenol to H2O2" {
 
   branch from hydroquinone side left {
     hydroquinone
-    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +1_4_benzoquinone
-    glucose
-  }
-
-  branch from hydroquinone side right {
-    hydroquinone
     <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +h2o
     hydroquinone_o_beta_d_glucopyranoside
   }
 
+  branch from hydroquinone side right {
+    hydroquinone
+    <-> ec_3_1_1_2 [3.1.1.2] +acetate +h2o
+    4_hydroxyphenylacetate
+  }
+
   branch from nh4 side left {
     nh4
-    <-> . +co2 +indole_3_acetaldehyde +h2o2 +h +o2 +h2o
-    l_tryptophan
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_heptyl_thiohydroximate
+    pyruvate
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +z_omega_methylsulfanyl_pentyl_thiohydroximate
-    pyruvate
+    <-> ec_4_4_1_13 [4.4.1.13] +z_1_l_cystein_s_yl_n_hydroxy_omega_methylsulfan +h2o +pyruvate
+    z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 
   branch from 1_4_benzoquinone side left {
     1_4_benzoquinone
-    <-> ec_1_10_99_2 [1.10.99.2] +beta_nicotinamide_d_riboside +hydroquinone +h
-    1_d_ribofuranosyl_1_4_dihydronicotinamide
-  }
-
-  branch from 1_4_benzoquinone side right {
-    1_4_benzoquinone
-    <-> ec_1_7_99_7 [1.7.99.7] +nitric_oxide +hydroquinone +h2o
-    nitrous_oxide
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +s_ethyl_ethanesulfinothioate
-    ethylsulfenate
+    <-> ec_1_2_5_3 [1.2.5.3] +co2 +hydroquinone +h2o
+    co
   }
 
   branch from h2o side right {
     h2o
-    <-> . +gamma_l_glutamyl_s_methyl_l_cysteine +glycine
-    s_methyl_glutathione
+    <-> ec_1_10_3_4 [1.10.3.4] +actinocin +o2
+    3_hydroxy_4_methylanthranilate
   }
 
-  branch from h side left {
-    h
-    <-> . +decanoyl_coa +2s_2_aminobutanoate +s_3_aminotridecan_4_one +coa
-    co2
+  branch from h2o side left {
+    h2o
+    <-> ec_3_5_1_9 [3.5.1.9] +r_beta_hydroxy_l_kynurenine +h +formate
+    r_n_formyl_beta_hydroxy_l_kynurenine
   }
 
   branch from h side right {
     h
-    <-> . +s_adenosyl_l_homocysteine +arctigenin +matairesinol
-    s_adenosyl_l_methionine
+    <-> . +5_chloro_trans_dienelactone +chloride
+    2_chloro_2_2_chloro_5_oxofuran_2_yl_acetate
   }
 
-  branch from l_ascorbate side left {
+  branch from h side left {
+    h
+    <-> . +5_methoxybenzimidazole +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
+    5_hydroxybenzimidazole
+  }
+
+  branch from l_ascorbate side right {
     l_ascorbate
     <-> . +l_dehydroascorbic_acid +7_hydroxy_e4_neuroprostane +h2o +h
     7_hydroperoxy_h4_neuroprostane
   }
 
-  branch from l_ascorbate side right {
+  branch from l_ascorbate side left {
     l_ascorbate
     <-> . +l_dehydroascorbic_acid +h2o +7_hydroperoxy_h4_neuroprostane +h
     7_hydroxy_d4_neuroprostane
   }
 
-  branch from l_dehydroascorbic_acid side left {
+  branch from l_dehydroascorbic_acid side right {
     l_dehydroascorbic_acid
     <-> . +11_hydroxy_e4_neuroprostane +h2o +h +l_ascorbate
     11_hydroperoxy_h4_neuroprostane
   }
 
-  branch from l_dehydroascorbic_acid side right {
+  branch from l_dehydroascorbic_acid side left {
     l_dehydroascorbic_acid
     <-> . +h2o +11_hydroperoxy_h4_neuroprostane +h +l_ascorbate
     11_hydroxy_d4_neuroprostane
   }
 
-  branch from h2o2 side left {
-    h2o2
-    <-> . +iso_arabidopaldehyde +o2
-    2_hydroxy_3_1e_3_oxoprop_1_en_1_yl_2h_pyran_6_ca
-  }
-
   branch from h2o2 side right {
     h2o2
-    <-> . +indolin_2_one +h2o
-    indole
+    <-> ec_1_21_98_2 [1.21.98.2] +2_5_diiminio_3_4_bis_indol_3_yl_hexanedioate +h2o
+    2_iminio_3_indol_3_yl_propanoate
+  }
+
+  branch from h2o2 side left {
+    h2o2
+    <-> . +heme_b
+    cis_heme_d
   }
 }

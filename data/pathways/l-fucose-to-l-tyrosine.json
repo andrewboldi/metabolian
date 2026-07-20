@@ -185,36 +185,6 @@
       }
     },
     {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74411"
-      }
-    },
-    {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:57623"
-      }
-    },
-    {
-      "id": "n6_dimethylallyladenine_5_monophosphate_1",
-      "name": "N6-dimethylallyladenine 5'-monophosphate(1−)",
-      "short": "N6-dimethylallylade…",
-      "formula": "C15H19N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74415"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -225,12 +195,40 @@
       }
     },
     {
-      "id": "e_e_farnesene",
-      "name": "(E,E)-α-farnesene",
+      "id": "germacrene_c",
+      "name": "germacrene C",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:10280"
+        "chebi": "CHEBI:61478"
+      }
+    },
+    {
+      "id": "datp",
+      "name": "dATP",
+      "formula": "C10H12N5O12P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61404"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxyadenosine_5_monophosphate",
+      "name": "2'-deoxyadenosine 5'-monophosphate",
+      "short": "2'-deoxyadenosine…",
+      "formula": "C10H12N5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58245"
       }
     },
     {
@@ -323,17 +321,17 @@
       ]
     },
     {
-      "id": "ec_2_5_1_75",
-      "name": "tRNA dimethylallyltransferase",
+      "id": "ec_4_2_3_60",
+      "name": "germacrene C synthase",
       "ec": [
-        "2.5.1.75"
+        "4.2.3.60"
       ]
     },
     {
-      "id": "ec_4_2_3_46",
-      "name": "alpha-farnesene synthase",
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
       "ec": [
-        "4.2.3.46"
+        "3.6.1.9"
       ]
     },
     {
@@ -655,54 +653,9 @@
     },
     {
       "id": "r7",
-      "name": "tRNA dimethylallyltransferase",
-      "equation": "adenosine(37) in tRNA + dimethylallyl diphosphate = N(6)-dimethylallyladenosine(37) in tRNA + diphosphate",
-      "ec": "2.5.1.75",
-      "substrates": [
-        {
-          "metabolite": "adenosine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "n6_dimethylallyladenine_5_monophosphate_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ppi",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_2_5_1_75"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:26482"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:26482"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
-      "name": "alpha-farnesene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (3E,6E)-alpha-farnesene + diphosphate",
-      "ec": "4.2.3.46",
+      "name": "germacrene C synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = germacrene C + diphosphate",
+      "ec": "4.2.3.60",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -711,7 +664,7 @@
       ],
       "products": [
         {
-          "metabolite": "e_e_farnesene",
+          "metabolite": "germacrene_c",
           "stoichiometry": 1
         },
         {
@@ -721,20 +674,69 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_46"
+          "enzyme": "ec_4_2_3_60"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:27421"
+        "rhea": "RHEA:28302"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:27421"
+            "id": "RHEA:28302"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r8",
+      "name": "nucleotide diphosphatase",
+      "equation": "dATP + H2O = dAMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "datp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyadenosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 8,
+      "xrefs": {
+        "rhea": "RHEA:28334"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28334"
           }
         ]
       }

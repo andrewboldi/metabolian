@@ -30,14 +30,14 @@ pathway n-dodecanoylphytosphingos-to-n-2-hydroxyhexacosa "N-dodecanoylphytosphin
 
   branch from dodecanoate side left {
     dodecanoate
-    <-> . +h2o +coa +hplus
-    lauroyl_coa
+    <-> . +trilaurin +h2o +hplus
+    2_3_didodecanoyl_sn_glycerol
   }
 
   branch from dodecanoate side right {
     dodecanoate
-    <-> . +trilaurin +h2o +hplus
-    2_3_didodecanoyl_sn_glycerol
+    <-> . +n_dodecanoylsphinganine +h2o
+    sphinganine
   }
 
   branch from n_2_hydroxyhexacosanyl_4r_phytosphingosine side left {

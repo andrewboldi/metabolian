@@ -24,14 +24,14 @@ pathway juvenile-hormone-ii-to-noscapine "juvenile hormone II to (−)-noscapine
 
   branch from methanol side left {
     methanol
-    <-> . +methyl_jasmonate +h2o +hplus
-    jasmonate
+    <-> . +primary_fluorescent_dioxobilin_type_chlorophyll +h2o +hplus
+    o134_desmethyl_primary_fluorescent_dioxobilin_ty
   }
 
   branch from methanol side right {
     methanol
-    <-> . +methyl_arachidonate +h2o +hplus
-    arachidonate
+    <-> . +h2o +chloride +hplus
+    chloromethane
   }
 
   branch from methyl_anthranilate side left {
@@ -78,14 +78,14 @@ pathway juvenile-hormone-ii-to-noscapine "juvenile hormone II to (−)-noscapine
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_16 [2.1.1.16] +1_acyl_2_z_9_10_enoyl_sn_glycero_3_phospholipid +sam +hplus
-    1_acyl_2_10_methylenealkanoyl_sn_3_glycerophosph
+    <-> ec_2_1_1_97 [2.1.1.97] +3_hydroxyanthranilate +sam +hplus
+    3_hydroxy_4_methylanthranilate
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_76 [2.1.1.76] +quercetin_7_olate +sam +hplus
-    3_4_5_trihydroxy_3_methoxyflavon_7_olate
+    <-> ec_2_1_1_6 [2.1.1.6] +catechols +sam +hplus
+    guaiacols
   }
 
   branch from noscapine_hemiacetal side right {
@@ -96,13 +96,13 @@ pathway juvenile-hormone-ii-to-noscapine "juvenile hormone II to (−)-noscapine
 
   branch from acetate side left {
     acetate
-    <-> . +n6_acetyl_l_lysine +h2o
-    l_lysinium
+    <-> . +n_acetylserotonin +h2o
+    serotonin
   }
 
   branch from acetate side right {
     acetate
-    <-> . +1_o_acetyl_adp_d_ribose +h2o +hplus
-    adp_d_ribose
+    <-> . +n_acetyltryptamine +h2o
+    tryptaminium
   }
 }

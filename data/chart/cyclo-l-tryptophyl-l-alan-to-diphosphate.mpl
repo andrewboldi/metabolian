@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway cyclo-l-tryptophyl-l-alan-to-diphosphate "cyclo(L-tryptophyl-L-alan… to diphosphate" {
-  spacing 176
+  spacing 152
 
   spine at 0,0 {
     cyclo_l_tryptophyl_l_alanyl
@@ -14,29 +14,5 @@ pathway cyclo-l-tryptophyl-l-alan-to-diphosphate "cyclo(L-tryptophyl-L-alan… t
     neoechinulin_a
     <-> . +dmapp -ppi
     variecolorin_g
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> . +tobramycin +atp
-    4_adenylyltobramycin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +kanamycin_a +ctp
-    4_cytidylylkanamycin_a
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +variecoladiene +fmnh2 +o2 +h2o +hplus
-    variecolin
-  }
-
-  branch from fmn side right {
-    fmn
-    <-> . +4_carboxyl_motiol +fmnh2 +o2 +h2o +hplus
-    2_deoxypolytolypin
   }
 }

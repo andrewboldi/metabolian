@@ -50,26 +50,26 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +4_hydroxyphenylacetylglycine +4_hydroxyphenylacetyl_coa
-    glycine
+    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +glycitin +h
+    malonylglycitin
   }
 
   branch from coa side right {
     coa
-    <-> . +h +2_succinylbenzoyl_coa
-    spirodilactone
+    <-> ec_2_3_1_115 [2.3.1.115] +malonyl_coa +daidzein_7_o_beta_d_glucoside +h
+    malonyldaidzin
   }
 
   branch from h side left {
     h
-    <-> . +1_piperideinium +pelletierine
-    anapheline
+    <-> . +dtdp +100_1 +urdamycinone_b
+    dtdp_beta_l_rhodinose
   }
 
   branch from h side right {
     h
-    <-> ec_5_5_1_1 [5.5.1.1] +4_methylmuconolactone
-    3_methyl_cis_cis_muconic_acid
+    <-> ec_1_3_1_29 [1.3.1.29] +nadh +8_methylnaphthalene_1_2_diol +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_methylnaphthalen
   }
 
   branch from heme_b side left {
@@ -86,26 +86,26 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +styrene +nad
-    cis_3_ethenylcyclohexa_3_5_diene_1_2_diol
+    <-> . +2_hydroxy_8_methylchromene_2_carboxylate
+    8_methylnaphthalene_1_2_diol
   }
 
   branch from o2 side right {
     o2
-    <-> . +nadh +h +2_4_5_trichlorophenoxy_acetate +nad +2_4_5_trichlorophenol +h2o
-    glyoxylate
+    <-> . +nadh +h +1_naphthoate +nad
+    cis_1_2_dihydroxy_1_2_dihydro_8_carboxynaphthale
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +2_3_dihydroxy_ddt +nadp
-    1s_2s_ddt_2_3_dihydrodiol
+    <-> . +1_2_dihydronaphthalene_1_2_diol +h +o2 +nadp +h2o
+    1_2_dihydroxy_3_4_epoxy_1_2_3_4_tetrahydronaphth
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_14_12_10 [1.14.12.10] +h +benzoate +o2 +nadp
-    1r_6s_1_6_dihydroxycyclohexa_2_4_diene_1_carbox
+    <-> ec_1_14_14_1 [1.14.14.1] +h +1_nitronaphthalene +o2 +nadp +h2o
+    1_nitronaphthalene_7_8_oxide
   }
 
   branch from fe side left {
@@ -122,26 +122,26 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +o2 +h2o
-    9h_fluoren_9_ol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +1_naphthaldehyde
+    1_naphthyl_methanol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_12_12 [1.14.12.12] +nadh +h +fluorene +o2
-    3s_4r_3_4_dihydroxy_3_4_dihydrofluorene
+    <-> . +nadh +h +1_naphthoate +h2o
+    1_naphthaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +leukotriene_e4 +l_glutamate
-    leukotriene_f4
+    <-> . +nadh +h +2_methylnaphthalene +o2 +nad
+    2_naphthyl_methanol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +6_aminohexanoate
-    epsilon_caprolactam
+    <-> ec_1_14_13_1 [1.14.13.1] +nadh +h +4_methylsalicylic_acid +o2 +nad +4_methylcatechol
+    co2
   }
 
   branch from heme side left {
@@ -158,13 +158,13 @@ pathway r-2-hydroxy-3-methylbut-to-h2o "(R)-2-hydroxy-3-methylbut… to H2O" {
 
   branch from atp side left {
     atp
-    <-> . +h +10s_juvenile_hormone_iii_diol +adp
-    10s_juvenile_hormone_iii_diol_phosphate
+    <-> . +l_threonine +tabtoxinine_lactam +h +adp +phosphate
+    tabtoxin
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_21 [2.7.1.21] +h +floxuridine +adp
-    5_fluorodeoxyuridine_monophosphate
+    <-> . +diphosphate +6_methylsalicylyl_coa +amp +h +coa
+    6_methylsalicylate
   }
 }

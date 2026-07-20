@@ -20,13 +20,13 @@ pathway s-methyl-5-thio-d-ribulos-to-dimethyl-disulfide "S-methyl-5-thio-D-ribul
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +s_citronellal
-    neoisomenthol
+    <-> ec_1_1_1_418 [1.1.1.418] +nadh +isoavenastenone +co2
+    24e_4alpha_carboxy_stigmasta_7_24_241_dien_3bet
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    1s_2s_4r_endo_fenchol
+    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +plastoquinone_9
+    plastoquinol_9
   }
 }

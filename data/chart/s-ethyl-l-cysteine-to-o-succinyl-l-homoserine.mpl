@@ -30,26 +30,26 @@ pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine "S-ethyl-L-cysteine to O-s
 
   branch from h side left {
     h
-    <-> . +nadh +l_gulono_1_4_lactone +nad
-    l_gulopyranose
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +heptan_2_one +nad
+    heptan_2_ol
   }
 
   branch from h side right {
     h
-    <-> . +cdp_n_n_dimethylethanolamine +diphosphate +n_n_dimethylethanolamine_phosphate
-    ctp
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +nad
+    2r_butan_2_ol
   }
 
   branch from acetate side left {
     acetate
-    <-> ec_3_1_1_1 [3.1.1.1] +h +glycerol_1_2_diacetate +h2o
-    triacetin
+    <-> ec_3_1_1_1 [3.1.1.1] +o_nitrophenyl_acetate +h2o +h
+    2_nitrophenol
   }
 
   branch from acetate side right {
     acetate
-    <-> ec_3_5_1_4 [3.5.1.4] +4_nitroacetanilide +h2o +h
-    4_nitroaniline
+    <-> ec_2_8_3_12 [2.8.3.12] +glutarate +acetyl_coa
+    glutaryl_coa
   }
 
   branch from d_cystathionine side left {
@@ -66,13 +66,13 @@ pathway s-ethyl-l-cysteine-to-o-succinyl-l-homoserine "S-ethyl-L-cysteine to O-s
 
   branch from l_cysteine side left {
     l_cysteine
-    <-> . +s_indole_l_cysteine
-    indole_3_carbaldehyde
+    <-> ec_4_4_1_3 [4.4.1.3] +pyruvate +nh4 +h2o
+    l_lanthionine_dizwitterion
   }
 
   branch from l_cysteine side right {
     l_cysteine
-    <-> . +indol_3_ylmethyl_l_cysteine +h2o
-    indole_3_methanol
+    <-> . +c15817
+    heme
   }
 }

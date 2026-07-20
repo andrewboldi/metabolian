@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-cystathionine-to-sulfite",
+  "name": "L-cystathionine… to sulfite",
+  "category": "other",
+  "summary": "A 3-step route from L-cystathionine dizwitterion to sulfite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43020"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58161"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cystathionine",
+      "name": "L-Cystathionine",
+      "formula": "C7H14N2O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58161"
+      }
+    },
+    {
+      "id": "homocysteine",
+      "name": "L-Homocysteine",
+      "formula": "C4H9NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58199"
+      }
+    },
+    {
+      "id": "2_ammonioprop_2_enoate",
+      "name": "2-ammonioprop-2-enoate",
+      "short": "2-ammonioprop-2-eno…",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76565"
+      }
+    },
+    {
+      "id": "l_homolanthionine_dizwitterion",
+      "name": "L-homolanthionine dizwitterion",
+      "short": "L-homolanthionine…",
+      "formula": "C8H16N2O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:178194"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "3_sulfanylhexan_1_ol_l_cysteine",
+      "name": "3-sulfanylhexan-1-ol-L-cysteine",
+      "short": "3-sulfanylhexan-1-o…",
+      "formula": "C9H19NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156140"
+      }
+    },
+    {
+      "id": "3_mercaptohexanol",
+      "name": "3-mercaptohexanol",
+      "formula": "C6H14OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:77690"
+      }
+    },
+    {
+      "id": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine",
+      "short": "S-(4-hydroxy-3-meth…",
+      "formula": "C8H17NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156146"
+      }
+    },
+    {
+      "id": "2_methyl_3_sulfanylbutan_1_ol",
+      "name": "2-methyl-3-sulfanylbutan-1-ol",
+      "short": "2-methyl-3-sulfanyl…",
+      "formula": "C5H12OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:156147"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L,L-cystathionine = L-homocysteine + 2-aminoprop-2-enoate",
+      "equation": "L,L-cystathionine = L-homocysteine + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "cystathionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "homocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43020"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43020"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2 L-homocysteine = L-homolanthionine + hydrogen sulfide + H(+)",
+      "equation": "2 L-homocysteine = L-homolanthionine + hydrogen sulfide + H(+)",
+      "substrates": [
+        {
+          "metabolite": "homocysteine",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homolanthionine_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:68652"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68652"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
+      "equation": "hydrogen sulfide + 3 NAD(+) + 3 H2O = sulfite + 3 NADH + 4 H(+)",
+      "substrates": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55316"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "S-3-(hexan-1-ol)-L-cysteine = 3-sulfanyl-1-hexanol + 2-aminoprop-2-enoate",
+      "equation": "S-3-(hexan-1-ol)-L-cysteine = 3-sulfanyl-1-hexanol + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "3_sulfanylhexan_1_ol_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_mercaptohexanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64768"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine = 2-methyl-3-sulfanylbutan-1-ol + 2-aminopr...",
+      "equation": "S-(4-hydroxy-3-methylbutan-2-yl)-L-cysteine = 2-methyl-3-sulfanylbutan-1-ol + 2-aminoprop-2-enoate",
+      "substrates": [
+        {
+          "metabolite": "s_4_hydroxy_3_methylbutan_2_yl_l_cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyl_3_sulfanylbutan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_ammonioprop_2_enoate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:64772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64772"
+          }
+        ]
+      }
+    }
+  ]
+}

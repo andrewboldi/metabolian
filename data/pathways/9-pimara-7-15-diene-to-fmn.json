@@ -103,44 +103,55 @@
       }
     },
     {
-      "id": "stellata_2_6_19_triene",
-      "name": "stellata-2,6,19-triene",
-      "short": "stellata-2,6,19-tri…",
-      "formula": "C25H40",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138048"
-      }
-    },
-    {
-      "id": "stellatate",
-      "name": "stellatate",
-      "formula": "C25H37O2",
+      "id": "all_trans_4_hydroxyretinoate",
+      "name": "all-trans-4-hydroxyretinoate",
+      "short": "all-trans-4-hydroxy…",
+      "formula": "C20H27O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:167454"
+        "chebi": "CHEBI:134178"
       }
     },
     {
-      "id": "miltiradiene",
-      "name": "miltiradiene",
-      "formula": "C20H32",
-      "charge": 0,
+      "id": "all_trans_4_oxoretinoate",
+      "name": "all-trans-4-oxoretinoate",
+      "short": "all-trans-4-oxoreti…",
+      "formula": "C20H25O3",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:65037"
+        "chebi": "CHEBI:134186"
       }
     },
     {
-      "id": "11_oxomiltiradiene",
-      "name": "11-oxomiltiradiene",
-      "formula": "C20H30O",
+      "id": "s_cis_n_methyltetrahydrothalifendine",
+      "name": "(S)-cis-N-methyltetrahydrothalifendine",
+      "short": "cis-N-methyltetrahy…",
+      "formula": "C20H22NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:194521"
+      }
+    },
+    {
+      "id": "7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza",
+      "name": "7-hydroxy-8-methoxy-11-methyl-17,19-dioxa-11-azatetracyclo[12.7.0.04,9.016,20]henicosa-1(21),4(9),5,7,14,16(20)-hexaen-2-one",
+      "short": "7-hydroxy-8-methoxy…",
+      "formula": "C20H21NO5",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:167496"
+        "chebi": "CHEBI:194522"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_97",
+      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
+      "ec": [
+        "1.14.14.97"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -297,102 +308,108 @@
     },
     {
       "id": "r4",
-      "name": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate +...",
-      "equation": "stellata-2,6,19-triene + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = stellatate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "name": "all-trans-4-hydroxyretinoate + reduced [NADPH--hemoprotein reductase] + O2 = all-trans-...",
+      "equation": "all-trans-4-hydroxyretinoate + reduced [NADPH--hemoprotein reductase] + O2 = all-trans-4-oxoretinoate + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
       "substrates": [
         {
-          "metabolite": "stellata_2_6_19_triene",
+          "metabolite": "all_trans_4_hydroxyretinoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 3
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "stellatate",
+          "metabolite": "all_trans_4_oxoretinoate",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 4
+          "stoichiometry": 2
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 4
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:66712"
+        "rhea": "RHEA:75851"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66712"
+            "id": "RHEA:75851"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "miltiradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxomiltiradiene + 2...",
-      "equation": "miltiradiene + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = 11-oxomiltiradiene + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
+      "equation": "(S)-cis-N-methyltetrahydrothalifendine + reduced [NADPH--hemoprotein reductase] + O2 = 7-hydroxy-8-methoxy-11-methyl-17,19-dioxa-11-azatetracyclo[12.7.0.0(4,9).0(16,20)]henicosa-1(21),4(9),5,7,14,16(20)-hexaen-2-one + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "ec": "1.14.14.97",
       "substrates": [
         {
-          "metabolite": "miltiradiene",
+          "metabolite": "s_cis_n_methyltetrahydrothalifendine",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmnh2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "11_oxomiltiradiene",
+          "metabolite": "7_hydroxy_8_methoxy_11_methyl_17_19_dioxa_11_aza",
           "stoichiometry": 1
         },
         {
           "metabolite": "fmn",
-          "stoichiometry": 2
+          "stoichiometry": 1
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 3
+          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
           "stoichiometry": 2
         }
       ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_97"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:66796"
+        "rhea": "RHEA:76039"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:66796"
+            "id": "RHEA:76039"
           }
         ]
       }

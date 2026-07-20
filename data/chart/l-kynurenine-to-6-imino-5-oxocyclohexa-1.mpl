@@ -18,14 +18,14 @@ pathway l-kynurenine-to-6-imino-5-oxocyclohexa-1 "L-kynurenine to 6-imino-5-oxoc
 
   branch from 3_hydroxy_l_kynurenine side left {
     3_hydroxy_l_kynurenine
-    <-> . +pyruvate +alanine
+    <-> . +oxaloacetate +aspartate
     4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
   }
 
   branch from 3_hydroxy_l_kynurenine side right {
     3_hydroxy_l_kynurenine
-    <-> . +oxaloacetate +4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
-    aspartate
+    <-> . +keto_phenylpyruvate +4_2_amino_3_hydroxyphenyl_2_4_dioxobutanoate
+    l_phenylalanine
   }
 
   branch from 3_hydroxyanthranilate side left {

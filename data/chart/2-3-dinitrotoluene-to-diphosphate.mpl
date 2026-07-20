@@ -22,14 +22,14 @@ pathway 2-3-dinitrotoluene-to-diphosphate "2,3-dinitrotoluene to diphosphate" {
 
   branch from nadh side left {
     nadh
-    <-> ec_1_1_1_53 [1.1.1.53] +h +urocortisone +nad
-    cortolone
+    <-> ec_1_14_99_32 [1.14.99.32] +tetradecanoyl_coa +h +o2 +nad +h2o
+    cis_tetradec_11_enoyl_coa
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_1_1_50 [1.1.1.50] +h +5_dihydrocortisol +nad
-    tetrahydrocortisol
+    <-> ec_1_1_1_90 [1.1.1.90] +h +2_methylbenzaldehyde +nad
+    2_methylbenzyl_alcohol
   }
 
   branch from 2_4_dinitrotoluene side left {
@@ -46,14 +46,14 @@ pathway 2-3-dinitrotoluene-to-diphosphate "2,3-dinitrotoluene to diphosphate" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +trans_3_4_dihydro_3_4_dihydroxy_7_12_dimethylben +h +nadph +nadp +h2o
-    1aalpha_2beta_3alpha_11calpha_1a_2_3_11c_tetrah
+    <-> ec_1_1_3_6 [1.1.3.6] +cholesterol +cholest_4_en_3_one
+    h2o2
   }
 
   branch from o2 side right {
     o2
-    <-> . +dibenzo_a_l_pyrene_11_12_epoxide +nadp +h2o +h +nadph
-    dibenzo_a_l_pyrene
+    <-> ec_1_1_99_9 [1.1.99.9] +isopyridoxal +h2o2
+    pyridoxine
   }
 
   branch from 4_methyl_5_nitrocatechol side left {
@@ -64,13 +64,13 @@ pathway 2-3-dinitrotoluene-to-diphosphate "2,3-dinitrotoluene to diphosphate" {
 
   branch from ppi side right {
     ppi
-    <-> ec_2_7_7_87 [2.7.7.87] +threonine +hco3 +atp +h2o
-    l_threonylcarbamoyladenylate
+    <-> . +16_hydroxyhexadecanoate +atp +coa +amp
+    16_hydroxyhexadecanoyl_coa
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_144 [4.2.3.144] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    geranyllinalool
+    <-> . +dec_9_enoate +atp +coa +amp
+    9_decenoyl_coa
   }
 }

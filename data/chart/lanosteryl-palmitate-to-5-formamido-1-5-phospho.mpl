@@ -18,26 +18,26 @@ pathway lanosteryl-palmitate-to-5-formamido-1-5-phospho "lanosteryl palmitate to
 
   branch from lanosterol side left {
     lanosterol
-    <-> ec_5_4_99_7 [5.4.99.7]
-    epoxysqualene
+    <-> . +sam +sah +hplus
+    eburicol
   }
 
   branch from lanosterol side right {
     lanosterol
-    <-> . +acyl_coa +coa
-    lanosteryl_ester
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    32_hydroxylanosterol
   }
 
   branch from palmitate side left {
     palmitate
-    <-> ec_3_1_1_64 [3.1.1.64] +all_trans_retinyl_palmitate +h2o +hplus
-    11_cis_retinol
+    <-> . +1_oleoyl_2_palmitoyl_sn_glycero_3_phosphocholine +h2o +hplus
+    1_o_oleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from palmitate side right {
     palmitate
-    <-> . +n_hexadecanoylphytosphingosine +h2o
-    phytosphingosine
+    <-> . +1_monopalmitoylglycerol +h2o +hplus
+    glycerol
   }
 
   branch from ffmas side left {
@@ -48,13 +48,13 @@ pathway lanosteryl-palmitate-to-5-formamido-1-5-phospho "lanosteryl palmitate to
 
   branch from fmn side right {
     fmn
-    <-> . +20_oxoarachidonate +fmnh2 +o2 +h2o +hplus
-    5z_8z_11z_14z_icosatetraenedioate
+    <-> ec_1_14_14_26 [1.14.14.26] +24s_24_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    24s_7_24_dihydroxycholesterol
   }
 
   branch from fmn side left {
     fmn
-    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
-    17_18_eetetr
+    <-> . +cholesterol +fmnh2 +o2 +h2o +hplus
+    4_hydroxycholesterol
   }
 }

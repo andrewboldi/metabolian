@@ -18,62 +18,62 @@ pathway 3-methylcatechol-to-h2o "3-methylcatechol to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> ec_1_1_1_363 [1.1.1.363] +6_phospho_d_glucono_1_5_lactone +h +nad
-    beta_d_glucose_6_phosphate
+    <-> . +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me +nad
+    alphar_betas_guaiacylglycerol_beta_guaiacyl_eth
   }
 
   branch from nadh side right {
     nadh
-    <-> . +h +2_5_dichloro_p_benzoquinone +nad
-    2_5_dichlorohydroquinone
+    <-> . +h +2r_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me +nad
+    alphar_betar_guaiacylglycerol_beta_guaiacyl_eth
   }
 
   branch from h side left {
     h
-    <-> ec_1_6_3_5 [1.6.3.5] +nadh +o2 +nad
-    h2o2
+    <-> . +4_chloro_2_fluoromuconate +o2
+    5_chloro_3_fluorocatechol
   }
 
   branch from h side right {
     h
-    <-> . +r_mandelonitrile +nadp +h2o +o2 +nadph
-    z_phenylacetaldehyde_oxime
+    <-> . +2_chloro_4_fluoromuconolactone
+    2_chloro_4_fluoromuconate
   }
 
   branch from o2 side left {
     o2
-    <-> . +trans_trans_2_4_dihydroxy_5_methyl_6_oxo_2_4_hex
-    2_4_5_trihydroxytoluene
+    <-> . +5_hydroxymethylfurfural +h2o2
+    2_5_furandimethanol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +h +l_cysteine +nadph +nadp +h2o
-    s_phenylacetothiohydroximoyl_l_cysteine
+    <-> . +s_scoulerine +h +h2o2
+    dehydroscoulerine
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +5_chloro_2_hydroxy_p_benzoquinone +h
-    5_chloro_1_2_4_trihydroxybenzene
+    <-> . +nadh +h +2s_3_hydroxy_1_4_hydroxy_3_methoxyphenyl_2_2_me
+    alphas_betas_guaiacylglycerol_beta_guaiacyl_eth
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_255 [1.1.1.255] +nadh +aldehydo_d_mannose +h
-    d_mannitol
+    <-> . +nadh +4r_perillyl_aldehyde +h +o2 +h2o
+    4r_4_1_methylethenyl_1_cyclohexenecarboxylic_ac
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2 +l_cysteine +nadph +s_hydroxyphenylacetothiohydroximoyl_l_cysteine
-    nadp
+    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_d_glucoside +4_methylumbelliferone
+    glucose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_5_2_1 [3.5.2.1] +5_methylbarbituric_acid
-    3_oxo_3_ureidoisobutyrate
+    <-> . +glucose
+    beta_d_glcp_1_6_beta_d_glcp
   }
 
   branch from 2_hydroxy_3_methylbenzylidenepyruvic_acid side left {

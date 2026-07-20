@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
-  spacing 236
+  spacing 230
 
   spine at 0,0 {
     10z_13z_16z_19z_docosatetraenoyl_coa
@@ -32,20 +32,20 @@ pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> ec_2_3_1_119 [2.3.1.119] +eicosanoyl_coa +co2 +nadp +coa +h2o +h +nadph
-    octadecanoyl_coa
+    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +h +nadph
+    methylmalonyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +co2 +phosphatidylethanolamine_ditetradecanoyl_n_c14_0
-    phosphatidylserine_ditetradecanoyl_n_c14_0
+    <-> . +4_oxoisotretinoin
+    all_trans_4_oxoretinoate
   }
 
   branch from h side left {
     h
-    <-> ec_2_7_8_8 [2.7.8.8] +cmp +phosphatidylserine_didodecanoyl_n_c12_0 +l_serine
-    cdp_1_2_didodecanoylglycerol
+    <-> . +udp +3_5_3_5_tetraiodothyroacetate_beta_d_glucuronosi +3_3_5_5_tetraiodothyroacetic_acid
+    udp_alpha_d_glucuronate
   }
 
   branch from all_cis_10_13_16_19_docosatetraenoyl_coa side right {
@@ -62,14 +62,14 @@ pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
 
   branch from atp side right {
     atp
-    <-> . +fructosylglycine +h +adp
-    fructoseglycine_ketone_3_phosphate
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    l_serine
   }
 
   branch from atp side left {
     atp
-    <-> . +d_glucitol_3_phosphate +adp +h
-    d_sorbitol
+    <-> ec_3_6_3_31 [3.6.3.31] +h +adp +phosphate +h2o
+    spermidine
   }
 
   branch from coa side right {
@@ -84,21 +84,15 @@ pathway 10z-13z-16z-19z-docosat-to-h2o "(10Z,13Z,16Z,19Z)-docosat… to H2O" {
     acetyl_coa
   }
 
-  branch from lynenic_acid side right {
-    lynenic_acid
-    <-> . +h2o +coa
-    all_cis_10_13_16_19_docosatetraenoyl_coa
+  branch from h2o side right {
+    h2o
+    <-> . +6_hydroxytetrahydro_beta_carboline +h +serotonin
+    formaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +sulfate +3_3_diiodo_l_thyronine
-    3_3_diiodo_l_thyronine_sulfate
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp +beta_d_fructose
-    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+    <-> . +formaldehyde +r_noradrenaline +h
+    4_6_7_trihydroxy_1_2_3_4_tetrahydroisoquinoline
   }
 }

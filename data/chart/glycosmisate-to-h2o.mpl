@@ -50,14 +50,14 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from h side left {
     h
-    <-> . +nitrite +hypochlorous_acid +h2o
-    nitryl_chloride
+    <-> . +leukotriene_c5 +glutathione
+    leukotriene_a5
   }
 
   branch from h side right {
     h
-    <-> . +xanthurenate_8_o_beta_d_glucoside +l_glutamate +h2o +3_hydroxykynurenine_o_beta_d_glucoside
-    2_oxoglutarate
+    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
+    15_epi_lipoxin_b5
   }
 
   branch from vanillin side left {
@@ -74,14 +74,14 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +cortisol
-    11beta_17alpha_21_trihydroxypregnenolone
+    <-> ec_1_1_1_50 [1.1.1.50] +nadh +h +5beta_dihydrocorticosterone
+    tetrahydrocorticosterone
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_15 [1.1.1.15] +nadh +h +d_sorbopyranose
-    d_iditol
+    <-> ec_1_1_1_53 [1.1.1.53] +nadh +h +3alpha_21_dihydroxy_5beta_pregnane_11_20_dione
+    3alpha_20alpha_21_trihydroxy_5beta_pregnane_11_o
   }
 
   branch from vanillate side left {
@@ -98,14 +98,14 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +5_ht_moduline +d_ala_leu
-    l_leucyl_l_serine
+    <-> . +13s_hydroperoxy_9z_11e_octadecadienoate +4_hydroperoxy_2_nonenal
+    nonanoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +13_14_epoxy_retinol
-    13_14_dihydroxy_retinol
+    <-> . +5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+    3_s_5_s_12_r_trihydroxy_eicosa_8_trans_6_14_cis
   }
 
   branch from 3_4_dihydroxybenzoate side left {
@@ -122,14 +122,14 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from methylcobalamin side left {
     methylcobalamin
-    <-> . +5_deoxyadenosine +2_methylbacteriohopanetetrol +cob_iii_alamin +l_methionine +bacteriohopanetetrol
+    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyltetrahymanol +tetrahymanol
     s_adenosyl_l_methionine
   }
 
   branch from methylcobalamin side right {
     methylcobalamin
-    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyltetrahymanol +s_adenosyl_l_methionine
-    tetrahymanol
+    <-> . +5_deoxyadenosine +cob_iii_alamin +l_methionine +2_methyldiplopterol +s_adenosyl_l_methionine
+    hopan_22_ol
   }
 
   branch from 4_hydroxyisophthalic_acid side left {
@@ -140,25 +140,25 @@ pathway glycosmisate-to-h2o "glycosmisate to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +h +13_hydroxy_gamma_tocotrienol +nadph +nadp +h2o
-    13_carboxy_tocotrienol
+    <-> . +dibenzo_a_l_pyrene_11_12_epoxide +nadp +h2o +h +nadph
+    dibenzo_a_l_pyrene
   }
 
   branch from o2 side left {
     o2
-    <-> . +10_11_dihydro_ltb4_coa +h2o2
-    5_s_12_r_dihydroxy_eicosa_2_8_trans_6_14_cis_tet
+    <-> ec_1_13_11_52 [1.13.11.52] +h +formyl_5_hydroxykynurenamine
+    serotonin
   }
 
   branch from nadph side right {
     nadph
-    <-> . +6_7_dihydro_5_oxo_leukotriene_b4 +h +nadp
-    6_7_dihydro_leukotriene_b4
+    <-> . +h +w_carboxy_leukotriene_b4 +nadp
+    20_cooh_10_11_dihydro_ltb4
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +12_dehydro_leukotriene_b4 +nadp
-    10_11_dihydro_12_oxo_ltb4
+    <-> ec_1_1_1_272 [1.1.1.272] +h +3_sulfopyruvate +nadp
+    2s_3_sulfolactate
   }
 }

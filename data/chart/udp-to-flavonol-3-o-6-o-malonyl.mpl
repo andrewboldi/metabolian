@@ -18,25 +18,25 @@ pathway udp-to-flavonol-3-o-6-o-malonyl "UDP to Flavonol 3-O-(6-O-malonyl…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +sutherlandin
-    1_cyano_2_hydroxymethylprop_1_ene_3_ol
+    <-> . +udp +h +glucoevatromonoside
+    evatromonoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +h +glucodigitoxigenin_3_o_beta_d_quinovoside
-    digitoxigenin_3beta_yl_beta_d_quinovoside
+    <-> . +utp +h +glucose_1_p
+    diphosphate
   }
 
   branch from coa side left {
     coa
-    <-> . +h +3r_3_isopropenyl_6_oxoheptanoate +atp +3r_3_isopropenyl_6_oxoheptanoyl_coa +phosphate
-    adp
+    <-> . +glycosyl_4_4_diaponeurosporenoate +12_methyltetradecanoyl_coa
+    staphyloxanthin
   }
 
   branch from coa side right {
     coa
-    <-> . +diphosphate +3r_3_isopropenyl_6_oxoheptanoyl_coa +amp +h +atp
-    3r_3_isopropenyl_6_oxoheptanoate
+    <-> ec_2_3_1_65 [2.3.1.65] +chenodeoxycholoyl_coa +glycine +h
+    glycochenodeoxycholate
   }
 }

@@ -1,0 +1,262 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "11z-octadecenoyl-coa-to-vaccenyl-carnitine",
+  "name": "(11Z)-octadecenoyl-CoA to Vaccenyl carnitine",
+  "category": "other",
+  "summary": "A 3-step route from (11Z)-octadecenoyl-CoA(4−) to Vaccenyl carnitine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:83023"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75121"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "11z_octadecenoyl_coa",
+      "name": "(11Z)-octadecenoyl-CoA",
+      "short": "octadecenoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:75121"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2e_11z_octadecadienoyl_coa",
+      "name": "(2E,11Z)-octadecadienoyl-CoA",
+      "short": "(2E,11Z)-octadecadi…",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:76558"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1105762"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H33N9O15P2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364149"
+      }
+    },
+    {
+      "id": "vaccenyl_coenzyme_a",
+      "name": "Vaccenyl coenzyme A",
+      "formula": "C39H68N7O17P3S",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM4868"
+      }
+    },
+    {
+      "id": "r_carnitine",
+      "name": "(R)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105737"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "vaccenyl_carnitine",
+      "name": "Vaccenyl carnitine",
+      "formula": "C25H47NO4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM9222"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(11Z)-octadecenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,11Z)-oc...",
+      "equation": "(11Z)-octadecenoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E,11Z)-octadecadienoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "substrates": [
+        {
+          "metabolite": "11z_octadecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_11z_octadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:83023"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:83023"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158668",
+      "substrates": [
+        {
+          "metabolite": "2e_11z_octadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 6
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vaccenyl_coenzyme_a",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158668"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158668"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR105178",
+      "substrates": [
+        {
+          "metabolite": "r_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vaccenyl_coenzyme_a",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "vaccenyl_carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR105178"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR105178"
+          }
+        ]
+      }
+    }
+  ]
+}

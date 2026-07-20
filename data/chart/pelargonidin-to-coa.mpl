@@ -24,25 +24,25 @@ pathway pelargonidin-to-coa "pelargonidin… to CoA" {
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> ec_2_3_1_302 [2.3.1.302] +5_hydroxyanthranilate +coa
-    avenanthramide_c
-  }
-
-  branch from trans_caffeoyl_coa side left {
-    trans_caffeoyl_coa
     <-> . +coa +amp +hplus
     trans_caffeoyl_amp
   }
 
+  branch from trans_caffeoyl_coa side left {
+    trans_caffeoyl_coa
+    <-> . +2r_3s_piscidate +coa
+    cimicifugate_d
+  }
+
   branch from coa side right {
     coa
-    <-> . +nonadecanoyl_coa +cholesterol
-    cholesteryl_nonadecanoate
+    <-> . +2_methylpropanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
+    2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_6_i
   }
 
   branch from coa side left {
     coa
-    <-> . +eicosanoyl_coa +cholesterol
-    cholest_5_en_3_yl_eicosanoate
+    <-> . +2s_2_methylbutanoyl_coa +2_4_di_2_methyl_butanoyl_3_5_methyl_hexanoyl_suc
+    2_4_6_tri_2_methyl_butanoyl_3_5_methyl_hexanoyl
   }
 }

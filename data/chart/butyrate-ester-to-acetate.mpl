@@ -18,13 +18,13 @@ pathway butyrate-ester-to-acetate "butyrate ester to acetate" {
 
   branch from aliphatic_alcohol side left {
     aliphatic_alcohol
-    <-> . +tetradecanoate_ester +h2o +hplus
-    tetradecanoate
+    <-> . +octadecanoate_ester +h2o +hplus
+    octadecanoate
   }
 
   branch from aliphatic_alcohol side right {
     aliphatic_alcohol
-    <-> . +octadecanoate_ester +h2o +hplus
-    octadecanoate
+    <-> . +fatty_acid_ester +h2o +hplus
+    fatty-acid
   }
 }

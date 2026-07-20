@@ -24,14 +24,14 @@ pathway geranylgeranyl-diphosphate-to-h2o "geranylgeranyl diphosphate to H2O" {
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    z_bisabolene
+    <-> . +neoechinulin_a +dmapp
+    isoechinulin_a
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_228 [4.2.3.228] +gpp
-    z_ocimene
+    <-> . +isoechinulin_a +dmapp
+    dehydroechinulin
   }
 
   branch from 2e_6e_10e_geranylgeranyl_diphosphate side right {
@@ -48,13 +48,13 @@ pathway geranylgeranyl-diphosphate-to-h2o "geranylgeranyl diphosphate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    n_acetyl_alpha_d_glucosamine_1_phosphate
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    demycarosyl_mithramycin
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    n_acetyl_beta_d_glucosamine
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    mithramycin_sdk
   }
 }

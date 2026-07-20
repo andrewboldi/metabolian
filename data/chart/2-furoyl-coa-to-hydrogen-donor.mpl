@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
-  spacing 252
+  spacing 240
 
   spine at 0,0 {
     2_furoyl_coa
@@ -22,26 +22,26 @@ pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    trehalose_cis_keto_mono_mycolate
+    <-> ec_2_7_7_54 [2.7.7.54] +diphosphate +n_adenylyl_l_phenylalanine +h
+    l_phenylalanine
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    trehalose_trans_keto_mono_mycolate
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    ala_his
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3z_5e_dodecadienoyl_coa
-    5_cis_7_trans_3_oxo_tetradecadienoyl_coa
+    <-> . +malonyl_coa +2_5_dimethyl_4_oxo_4_5_dihydro_3_furanyl_beta_d
+    malonyl_furaneol_glucopyranoside
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_26 [2.3.1.26] +9z_octadecenoyl_coa +lanosterol
-    lanosteryl_oleate
+    <-> . +acetyl_coa +9z_11e_tetradecadien_1_ol
+    9z_11e_tetradecadienyl_acetate
   }
 
   branch from furfural side left {
@@ -52,55 +52,43 @@ pathway 2-furoyl-coa-to-hydrogen-donor "2-furoyl-CoA to hydrogen donor" {
 
   branch from furfural side right {
     furfural
-    <-> . +h2o
-    2_dihydroxymethyl_furan
+    <-> . +h +nadph +nadp
+    furfuryl_alcohol
   }
 
   branch from o2 side left {
     o2
-    <-> . +echinocandin_c +h +nadph +nadp +h2o
-    echinocandin_b
+    <-> ec_1_13_11_4 [1.13.11.4] +2e_3_methyl_4_6_dioxohept_2_enedioate +h
+    4_methylgentisate
   }
 
   branch from o2 side right {
     o2
-    <-> . +deoxynortryptoquialanone +h +nadph +nadp +h2o
-    tryptoquialanone
+    <-> . +4_hydroxy_3_hydroxymethyl_benzoate +nadp +h2o +nadph
+    4_hydroxy_3_methylbenzoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +4_sulfophenyl_acetate +4_hydroxybenzenesulfonic_acid
-    acetate
+    <-> . +lyngbyatoxin_a +h +o2 +nadph +nadp
+    lyngbyatoxin_b
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_97 [3.1.1.97] +diphthine +methanol
-    diphthine_methyl_ester
+    <-> . +lyngbyatoxin_a +h +o2 +nadph +nadp
+    lyngbyatoxin_c
   }
 
   branch from ppi side left {
     ppi
-    <-> . +1r_2r_3r_prephytoene_diphosphate +nadh +hplus +nad
-    lycopaoctaene
+    <-> . +l_serine +utp
+    uridylyl_l_serine_1
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_6_3_2_54 [6.3.2.54] +3_amino_l_alanine +citrate +atp +amp
-    2_l_alanin_3_ylcarbamoyl_methyl_2_hydroxybutaned
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> . +3_iodothyronamine +iodide +hydrogen_acceptor +hplus
-    3_5_diiodothyronamine
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> . +3_iodothyronamine +iodide +hydrogen_acceptor +hplus
-    3_3_diiodothyronamine
+    <-> . +l_threonine +utp
+    uridylyl_l_threonine_1
   }
 }

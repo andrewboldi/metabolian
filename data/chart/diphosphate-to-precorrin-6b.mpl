@@ -26,50 +26,50 @@ pathway diphosphate-to-precorrin-6b "diphosphate to precorrin-6B" {
 
   branch from l_glutamine side right {
     l_glutamine
-    <-> . +l_cysteine +l_methionine +h2o
-    cystyl_glutaminyl_methionine
+    <-> . +l_histidine +l_lysine +h +h2o
+    gln_his_lys
   }
 
   branch from l_glutamine side left {
     l_glutamine
-    <-> . +l_asparagine +h2o
-    glutaminyl_asparaginyl_glutamine
+    <-> . +l_lysine +h +h2o
+    gln_lys_lys
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    dimyristoyl_phosphatidic_acid
+    d_allose
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    3_phosphonooxy_1_2_propanediyl_dioctadecanoate
+    <-> . +1_6_anhydrous_n_acetylmuramate +h2o +adp
+    n_acetylmuramate_6_phosphate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_11_4 [3.4.11.4] +l_leucine +leucyl_leucine
-    l_leucyl_l_leucyl_l_leucine
+    <-> ec_1_14_13_49 [1.14.13.49] +4s_limonene +h +o2 +nadph +s_perillyl_alcohol
+    nadp
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_leucine +trp_leu
-    leu_trp_leu
+    <-> ec_1_14_14_25 [1.14.14.25] +24s_24_hydroxycholesterol +nadp +h +o2 +nadph
+    cholesterol
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_122 [1.1.1.122] +nadh +l_arabino_1_5_lactone +nad
-    l_arabinopyranose
+    <-> ec_1_14_13_95 [1.14.13.95] +7alpha_hydroxycholest_4_en_3_one +o2 +nadph +nadp +h2o
+    7alpha_12alpha_dihydroxycholest_4_en_3_one
   }
 
   branch from h side left {
     h
-    <-> ec_1_14_14_1 [1.14.14.1] +androst_4_ene_3_17_dione +o2 +nadph +19_hydroxyandrost_4_ene_3_17_dione +h2o
-    nadp
+    <-> ec_1_2_4_1 [1.2.4.1] +r_lipoamide +pyruvate +co2
+    r_s_6_acetyldihydrolipoamide
   }
 
   branch from precorrin_8x side right {
@@ -80,14 +80,14 @@ pathway diphosphate-to-precorrin-6b "diphosphate to precorrin-6B" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +sativan
-    vestitol
+    <-> ec_2_1_1_42 [2.1.1.42] +s_adenosyl_l_homocysteine +3_methoxyflavone +h
+    3_hydroxyflavone
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_11 [2.1.1.11] +s_adenosyl_l_homocysteine +h +mg_protoporphyrin_ix_13_monomethyl_ester
-    magnesium_protoporphyrin
+    <-> ec_2_1_1_316 [2.1.1.316] +s_adenosyl_l_homocysteine +h +mitomycin_b
+    7_demethylmitomycin_b
   }
 
   branch from precorrin_6b side left {

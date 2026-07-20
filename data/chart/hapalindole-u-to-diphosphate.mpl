@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway hapalindole-u-to-diphosphate "hapalindole U to diphosphate" {
-  spacing 276
+  spacing 264
 
   spine at 0,0 {
     hapalindole_u
@@ -18,63 +18,51 @@ pathway hapalindole-u-to-diphosphate "hapalindole U to diphosphate" {
     ambiguine_a
   }
 
-  branch from ppi side left {
-    ppi
-    <-> . +amikacin +gtp
-    4_guanylylamikacin
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +amikacin +itp
-    4_inosinylylamikacin
-  }
-
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_3_9z_12z_15z
-    ps_20_2_11z_14z_18_3_9z_12z_15z
+    <-> ec_4_1_1_114 [4.1.1.114] +11z_tricos_11_ene
+    3_decyl_4_undecyloxetan_2_one
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +1_11z_14z_17z_eicoastrienoyl_2_9z_12z_15z_octade +h
-    20_3_18_3_ps
+    <-> ec_4_1_1_114 [4.1.1.114] +9z_nonadec_9_ene
+    4_nonyl_3_octyl_oxetan_2_one
   }
 
   branch from succinate side left {
     succinate
-    <-> . +ambiguine_i +2_oxoglutarate +h +o2 +chloride +co2 +h2o
-    ambiguine_e
+    <-> ec_2_8_3_22 [2.8.3.22] +succinyl_coa +citramalate
+    3s_citramalyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_13 [1.14.11.13] +gibberellin_a1 +2_oxoglutarate +o2 +co2
-    gibberellin_a8
+    <-> . +2r_6z_2_hydroxy_6_hydroxymethylidene_2_5_dimeth +2_oxoglutarate +o2 +co2 +h2o
+    stipitaldehyde
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    leu_leu
+    <-> . +4_4_diapolycopen_4_al
+    4_4_dihydroxy_4_4_diapolycopene
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +viomycin +phosphate +viomycin
-    atp
+    <-> ec_3_1_3_73 [3.1.3.73] +4_methylphenyl_cobeta_adenosylcobamide_5_phospha +phosphate
+    4_methylphenyl_cobeta_adenosylcobamide
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_6_1_3_1 [6.1.3.1] +amp +4_nonyl_3_octyl_oxetan_2_one +atp
-    2r_3s_2_octyl_3_hydroxydodecanoate
+    <-> . +l_asparagine +h +atp
+    l_asparaginyl_adenylate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +tabtoxin +h +amp +tabtoxinine_lactam +atp
-    l_threonine
+    <-> . +4_propyl_l_proline +h +atp
+    4_propyl_l_prolyl_adenylate
   }
 }

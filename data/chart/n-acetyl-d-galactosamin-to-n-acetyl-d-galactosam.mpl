@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-acetyl-d-galactosamin-to-n-acetyl-d-galactosam "N-acetyl-β-D-galactosamin… to N-acetyl-β-D-galactosamin…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminyl
@@ -14,11 +14,5 @@ pathway n-acetyl-d-galactosamin-to-n-acetyl-d-galactosam "N-acetyl-β-D-galactos
     n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
     <-> . +udp_n_acetyl_d_galactosamine -udp -hplus
     n_acetyl_d_galactosaminyl_1_4_n_acetylneuraminos
-  }
-
-  branch from n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace side left {
-    n_acetylneuraminosyl_2_3_d_galactosyl_1_3_n_ace
-    <-> . +acetyl_coa +coa
-    n_acetyl_7_o_acetylneuraminosyl_2_3_d_galactosy
   }
 }

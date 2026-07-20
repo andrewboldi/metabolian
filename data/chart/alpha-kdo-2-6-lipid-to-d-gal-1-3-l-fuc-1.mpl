@@ -32,26 +32,14 @@ pathway alpha-kdo-2-6-lipid-to-d-gal-1-3-l-fuc-1 "alpha-Kdo-(2->6)-lipidâ€¦ to Î
 
   branch from n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po side right {
     n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
-    <-> ec_5_1_3_26 [5.1.3.26]
-    n_acetyl_d_glucosaminyl_1_diphospho_ditrans_poly
-  }
-
-  branch from n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po side left {
-    n_acetyl_d_galactosaminyl_1_diphospho_ditrans_po
     <-> . +udp +alpha_d_glc_1_3_alpha_d_galnac_pp_und +h
     udp_alpha_d_glucose
   }
 
-  branch from d_galnac_1_3_d_galnac_diphospho_ditrans_octacis side right {
+  branch from d_galnac_1_3_d_galnac_diphospho_ditrans_octacis side left {
     d_galnac_1_3_d_galnac_diphospho_ditrans_octacis
     <-> . +alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna +h +udp_alpha_d_glucose
     udp
-  }
-
-  branch from d_gal_1_3_d_galnac_1_3_d_galnac_diphospho_ditra side left {
-    d_gal_1_3_d_galnac_1_3_d_galnac_diphospho_ditra
-    <-> ec_2_4_1_308 [2.4.1.308] +gdp +l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho +h
-    gdp_l_fucose
   }
 
   branch from l_fuc_1_2_d_gal_1_3_d_galnac_1_3_d_galnac_dipho side right {

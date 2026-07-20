@@ -18,14 +18,14 @@ pathway 5-diphospho-1d-myo-inosit-to-3-5-bis-diphospho-1 "5-diphospho-1D-myo-ino
 
   branch from adp side left {
     adp
-    <-> . +phosphomycoketide_c32 +h +atp
-    c32_mycoketide
+    <-> ec_6_4_1_7 [6.4.1.7] +s_oxalatosuccinate +h +phosphate +co2 +atp +h2o
+    2_oxoglutarate
   }
 
   branch from adp side right {
     adp
-    <-> . +1d_myo_inositol_1_4_5_6_tetrakisphosphate +atp +h
-    1d_myo_inositol_1_2_4_5_6_pentakisphosphate
+    <-> . +3s_3_isopropenyl_6_oxoheptanoyl_coa +phosphate +h +atp +coa
+    3s_3_isopropenyl_6_oxoheptanoate
   }
 
   branch from 3_diphospho_1d_myo_inositol_1_2_4_5_6_pentakisph side left {

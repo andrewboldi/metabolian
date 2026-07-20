@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway isoorientin-to-d-glucose "isoorientin to β-D-glucose" {
-  spacing 214
+  spacing 208
 
   spine at 0,0 {
     isoorientin
@@ -16,11 +16,5 @@ pathway isoorientin-to-d-glucose "isoorientin to β-D-glucose" {
     luteolin_7_o_d_glucoside
     <-> . +h2o -d_glucose
     luteolin_7_olate
-  }
-
-  branch from luteolin_7_olate side left {
-    luteolin_7_olate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    tricetin
   }
 }

@@ -18,7 +18,7 @@ pathway 17-estradiol-to-sulfate "17α-estradiol to sulfate" {
 
   branch from estrone side left {
     estrone
-    <-> ec_1_1_1_62 [1.1.1.62] +nad +nadh +hplus
+    <-> ec_1_1_1_62 [1.1.1.62] +nadp +nadph +hplus
     17_estradiol
   }
 
@@ -42,13 +42,13 @@ pathway 17-estradiol-to-sulfate "17α-estradiol to sulfate" {
 
   branch from sulfate side left {
     sulfate
-    <-> ec_1_14_11_77 [1.14.11.77] +decyl_sulfate +akg +o2 +succinate +co2 +hplus
-    decanal
+    <-> ec_3_1_6_22 [3.1.6.22] +2_butyloctyl_sulfate +h2o +hplus
+    2_butyl_1_octanol
   }
 
   branch from sulfate side right {
     sulfate
-    <-> ec_3_1_6_22 [3.1.6.22] +2_butyloctyl_sulfate +h2o +hplus
-    2_butyl_1_octanol
+    <-> ec_4_8_1_6 [4.8.1.6] +z_n_sulfonatooxy_alkenimidothioate
+    epithionitrile
   }
 }

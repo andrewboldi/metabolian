@@ -18,25 +18,25 @@ pathway o-succinyl-l-homoserinate-to-propionyl-coa "O-succinyl-L-homoserinate to
 
   branch from cysteine side left {
     cysteine
-    <-> . +3_disulfanyl_l_alanine +alanine
-    3_trisulfanyl_l_alanine
+    <-> ec_1_13_11_95 [1.13.11.95] +o2 +co2 +h2o
+    2_oxoethane_1_sulfonamide
   }
 
   branch from cysteine side right {
     cysteine
-    <-> . +glyoxylate +glycine
-    mercaptopyruvate
+    <-> . +o2 +co2 +h2o
+    z_2_aminoethene_1_so_thioperoxol
   }
 
   branch from propionyl_coa side left {
     propionyl_coa
-    <-> . +myristoyl_coa +coa
-    2_methyl_3_oxopalmitoyl_coa
+    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
+    s_methylmalonyl_coa
   }
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_4_1_1_94 [4.1.1.94] +hplus +co2
-    s_methylmalonyl_coa
+    <-> . +mycophenolyl_coa +coa
+    4_3_oxo_2_6_dimethyl_6e_octenoyl_coa_5_o_methyl
   }
 }

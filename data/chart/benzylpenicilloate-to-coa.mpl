@@ -24,14 +24,14 @@ pathway benzylpenicilloate-to-coa "benzylpenicilloate to CoA" {
 
   branch from h2o side right {
     h2o
-    <-> . +1_aci_nitro_2_1h_indol_3_yl_ethane +l_cysteine
-    s_indolylmethylthiohydroximoyl_l_cysteine
+    <-> ec_3_5_1_101 [3.5.1.101] +h +s_piperidine_2_carboxamide +nh4
+    l_pipecolate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_phenylpropionaldoxim +co2 +nadp +h +nadph +l_homophenylalanine
-    o2
+    <-> ec_4_2_3_45 [4.2.3.45] +diphosphate +phyllocladan_16alpha_ol
+    copalyl_diphosphate
   }
 
   branch from 6_aminopenicillanate side right {
@@ -60,25 +60,25 @@ pathway benzylpenicilloate-to-coa "benzylpenicilloate to CoA" {
 
   branch from h side right {
     h
-    <-> ec_1_8_1_12 [1.8.1.12] +bis_glutathionyl_spermine_disulfide +nadph +nadp
-    bis_glutathionyl_spermine
+    <-> . +2_oxo_2h_pyran_4_6_dicarboxylate +methanol
+    4_carboxy_2_hydroxy_6_methoxy_6_oxohexa_2_4_dien
   }
 
   branch from h side left {
     h
-    <-> ec_1_8_1_12 [1.8.1.12] +homotrypanothione_disulfide +nadph +nadp
-    homotrypanothione
+    <-> ec_2_7_7_72 [2.7.7.72] +ctp +trna_with_a_3_cytidine +trna_with_a_3_cc_end
+    diphosphate
   }
 
   branch from coa side right {
     coa
-    <-> . +acetyl_coa +thienamycin
-    n_acetylthienamycin
+    <-> . +malonyl_coa +h +co2 +h2o
+    6_2_2_4_dihydroxy_6_methylphenyl_2_oxoethyl_4_hy
   }
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +tabtoxinine_lactam
-    n1_acetyl_tabtoxinine_beta_lactam
+    <-> . +malonyl_coa +h +co2 +h2o
+    octaketide_sek4
   }
 }

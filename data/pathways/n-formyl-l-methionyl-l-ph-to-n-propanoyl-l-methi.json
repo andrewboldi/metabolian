@@ -150,23 +150,59 @@
       }
     },
     {
-      "id": "r_3_ammonio_3_phenylpropanoate",
-      "name": "(R)-3-ammonio-3-phenylpropanoate",
-      "short": "3-ammonio-3-phenylp…",
-      "formula": "C9H11NO2",
+      "id": "sapropterin",
+      "name": "sapropterin",
+      "formula": "C9H15N5O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:67158"
+        "chebi": "CHEBI:59560"
       }
     },
     {
-      "id": "s_3_ammonio_3_phenylpropanoate",
-      "name": "(S)-3-ammonio-3-phenylpropanoate",
-      "short": "3-ammonio-3-phenylp…",
-      "formula": "C9H11NO2",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:68506"
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "l_m_tyrosine",
+      "name": "L-m-tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78290"
+      }
+    },
+    {
+      "id": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
+      "name": "4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
+      "short": "4a-hydroxy-L-erythr…",
+      "formula": "C9H15N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15642"
+      }
+    },
+    {
+      "id": "arachidonate",
+      "name": "arachidonate",
+      "formula": "C20H31O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32395"
+      }
+    },
+    {
+      "id": "n_arachidonoyl_l_phenylalaninate",
+      "name": "N-arachidonoyl-L-phenylalaninate",
+      "short": "N-arachidonoyl-L-ph…",
+      "formula": "C29H40NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134022"
       }
     }
   ],
@@ -179,17 +215,10 @@
       ]
     },
     {
-      "id": "ec_5_4_3_10",
-      "name": "phenylalanine aminomutase (L-beta-phenylalanine forming)",
+      "id": "ec_1_14_16_7",
+      "name": "phenylalanine 3-monooxygenase",
       "ec": [
-        "5.4.3.10"
-      ]
-    },
-    {
-      "id": "ec_5_4_3_11",
-      "name": "phenylalanine aminomutase (D-beta-phenylalanine forming)",
-      "ec": [
-        "5.4.3.11"
+        "1.14.16.7"
       ]
     }
   ],
@@ -401,47 +430,62 @@
     },
     {
       "id": "r6",
-      "name": "phenylalanine aminomutase (L-beta-phenylalanine forming)",
-      "equation": "L-phenylalanine = (3R)-beta-phenylalanine",
-      "ec": "5.4.3.10",
+      "name": "phenylalanine 3-monooxygenase",
+      "equation": "(6R)-L-erythro-5,6,7,8-tetrahydrobiopterin + L-phenylalanine + O2 = 3-hydroxy-L-phenylalanine + (4aS,6R)-4a-hydroxy-L-erythro-5,6,7,8-tetrahydrobiopterin",
+      "ec": "1.14.16.7",
       "substrates": [
         {
+          "metabolite": "sapropterin",
+          "stoichiometry": 1
+        },
+        {
           "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "r_3_ammonio_3_phenylpropanoate",
+          "metabolite": "l_m_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin",
           "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_5_4_3_10"
+          "enzyme": "ec_1_14_16_7"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:34395"
+        "rhea": "RHEA:41532"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34395"
+            "id": "RHEA:41532"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "phenylalanine aminomutase (D-beta-phenylalanine forming)",
-      "equation": "L-phenylalanine = (S)-3-amino-3-phenylpropanoate",
-      "ec": "5.4.3.11",
+      "name": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl...",
+      "equation": "(5Z,8Z,11Z,14Z)-eicosatetraenoate + L-phenylalanine = N-(5Z,8Z,11Z,14Z-eicosatetraenoyl)-L-phenylalanine + H2O",
       "substrates": [
+        {
+          "metabolite": "arachidonate",
+          "stoichiometry": 1
+        },
         {
           "metabolite": "l_phenylalanine",
           "stoichiometry": 1
@@ -449,26 +493,25 @@
       ],
       "products": [
         {
-          "metabolite": "s_3_ammonio_3_phenylpropanoate",
+          "metabolite": "n_arachidonoyl_l_phenylalaninate",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_5_4_3_11"
+          "metabolite": "h2o",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:34527"
+        "rhea": "RHEA:51312"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34527"
+            "id": "RHEA:51312"
           }
         ]
       }

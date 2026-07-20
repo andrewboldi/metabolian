@@ -130,13 +130,23 @@
       }
     },
     {
-      "id": "o_adenyl_l_tyrosine_1",
-      "name": "O-adenyl-L-tyrosine(1−)",
-      "short": "O-adenyl-L-tyrosine…",
-      "formula": "C19H20N6O8P",
-      "charge": -1,
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:83624"
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosaminyl_l_tyrosyl",
+      "name": "N-acetyl-α-D-glucosaminyl-L-tyrosyl",
+      "short": "N-acetyl-α-D-glucos…",
+      "formula": "C17H22N2O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134208"
       }
     }
   ],
@@ -195,13 +205,6 @@
       "name": "glycogenin glucosyltransferase",
       "ec": [
         "2.4.1.186"
-      ]
-    },
-    {
-      "id": "ec_2_7_7_89",
-      "name": "[glutamine synthetase]-adenylyl-L-tyrosine phosphorylase",
-      "ec": [
-        "2.7.7.89"
       ]
     }
   ],
@@ -390,45 +393,43 @@
     },
     {
       "id": "r5",
-      "name": "[glutamine synthetase]-adenylyl-L-tyrosine phosphorylase",
-      "equation": "[glutamine synthetase]-O(4)-(5'-adenylyl)-L-tyrosine + phosphate = [glutamine synthetase]-L-tyrosine + ADP",
-      "ec": "2.7.7.89",
+      "name": "L-tyrosyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = O-(N-acetyl-alpha-D-glucosamin...",
+      "equation": "L-tyrosyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = O-(N-acetyl-alpha-D-glucosaminyl)-L-tyrosyl-[protein] + UDP + H(+)",
       "substrates": [
-        {
-          "metabolite": "o_adenyl_l_tyrosine_1",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
         {
           "metabolite": "l_tyrosine",
           "stoichiometry": 1
         },
         {
-          "metabolite": "adp",
+          "metabolite": "udpglcnac",
           "stoichiometry": 1
         }
       ],
-      "catalysts": [
+      "products": [
         {
-          "enzyme": "ec_2_7_7_89"
+          "metabolite": "n_acetyl_d_glucosaminyl_l_tyrosyl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:43716"
+        "rhea": "RHEA:51536"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:43716"
+            "id": "RHEA:51536"
           }
         ]
       }

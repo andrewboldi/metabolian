@@ -30,26 +30,26 @@ pathway tricaprin-to-3-oxolauroyl-coa "tricaprin to 3-oxolauroyl-CoA" {
 
   branch from decanoyl_coa side left {
     decanoyl_coa
-    <-> . +o2 +h2o2
-    trans_dec_2_enoyl_coa
-  }
-
-  branch from decanoyl_coa side right {
-    decanoyl_coa
     <-> . +1_o_palmityl_2_acetyl_sn_glycerol +coa
     1_hexadecyl_2_acetyl_3_decanoyl_sn_glycerol
   }
 
+  branch from decanoyl_coa side right {
+    decanoyl_coa
+    <-> . +malonyl-acp +hplus +co2 +coa
+    o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
+  }
+
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_79 [4.2.3.79] +fpp
-    thujopsene
+    <-> ec_2_5_1_153 [2.5.1.153] +tuberculosinyl_diphosphate +h2o
+    13s_edaxadiene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_78 [4.2.3.78] +fpp
-    chamigrene
+    <-> ec_4_2_3_87 [4.2.3.87] +fpp
+    guaiene
   }
 
   branch from 3_oxolauroyl_coa side left {

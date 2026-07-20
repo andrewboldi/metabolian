@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnosyl-1-4-d-g-to-nad "α-L-rhamnosyl-(1→4)-β-D-g… to NAD" {
-  spacing 308
+  spacing 296
 
   spine at 0,0 {
     l_rhamnosyl_1_4_d_glucuronide
@@ -16,51 +16,39 @@ pathway l-rhamnosyl-1-4-d-g-to-nad "α-L-rhamnosyl-(1→4)-β-D-g… to NAD" {
     l_rhamnopyranose
   }
 
-  branch from l_rhamnopyranose side left {
-    l_rhamnopyranose
-    <-> ec_4_2_2_28 [4.2.2.28] +h +4_deoxy_l_threo_hex_4_enopyranuronate
-    alpha_l_rhamnosyl_1_4_d_glucuronate
-  }
-
-  branch from l_rhamnopyranose side right {
-    l_rhamnopyranose
-    <-> .
-    l_rhamnulose
-  }
-
   branch from h side left {
     h
-    <-> . +2_methyl_3_oxosuccinic_acid +l_glutamate +2s_3s_3_methyl_l_aspartate
-    2_oxoglutarate
+    <-> . +3_hydroxy_2_methyl_4_pyrone +dtdp
+    dtdp_3_4_didehydro_2_6_dideoxy_d_glucose
   }
 
   branch from h side right {
     h
-    <-> . +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o
-    formylisoglutamine
+    <-> . +20_oxo_5_o_mycaminosyltylactone +nadp +h2o +o2 +nadph
+    5_o_d_mycaminosyltylactone
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_62 [1.1.1.62] +h +16alpha_hydroxyestrone +nadp
-    16alpha_17beta_estriol
+    <-> . +8_8a_deoxyoleandolide +h +o2 +nadp +h2o
+    oleandolide
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_4_1_12 [1.4.1.12] +h +2_amino_5_oxohexanoate +nh4 +nadp +h2o
-    2r_5s_2_5_diaminohexanoate
+    <-> . +2_methylpropanoyl_coa +malonyl_coa +methylmalonyl_coa +h +nadp +6_8a_seco_6_8a_deoxy_5_oxoavermectin_2b_aglycone +coa +h2o
+    co2
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_99_32 [1.14.99.32] +nadh +tetradecanoyl_coa +h +o2 +h2o
-    cis_tetradec_11_enoyl_coa
+    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
+    cis_cyclohexane_1_2_diol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_90 [1.1.1.90] +nadh +h +2_methylbenzaldehyde
-    2_methylbenzyl_alcohol
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +1_2_4_trichlorobenzene +o2
+    1s_2r_3_4_6_trichlorocyclohexa_3_5_diene_1_2_di
   }
 }

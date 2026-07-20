@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
-  spacing 340
+  spacing 338
 
   spine at 0,0 {
     brevianamide_f
@@ -32,57 +32,39 @@ pathway brevianamide-f-to-diphosphate "brevianamide F to diphosphate" {
     demethoxyfumitremorgin_c
   }
 
-  branch from tryprostatin_b side right {
-    tryprostatin_b
-    <-> ec_1_14_13_176 [1.14.13.176] +h +o2 +nadph +6_hydroxytryprostatin_b +h2o
-    nadp
+  branch from ppi side right {
+    ppi
+    <-> . +utp +gtp
+    c_gmp_ump
   }
 
   branch from ppi side left {
     ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    fusoxypene_b
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> . +all_trans_pentaprenyl_diphosphate
-    fusoxypene_c
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    10_hydroxymyristate
+    <-> ec_4_2_3_214 [4.2.3.214] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    5r_12r_14s_dolasta_1_15_8_diene
   }
 
   branch from fmn side right {
     fmn
-    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
-    11_hydroxymyristate
+    <-> . +decan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_3_decanediol
   }
 
-  branch from tryprostatin_a side left {
-    tryprostatin_a
-    <-> ec_1_14_21_10 [1.14.21.10] +fumitremorgin_c +nadp +h2o +o2 +nadph
-    h
+  branch from fmn side left {
+    fmn
+    <-> . +dodecan_1_ol +fmnh2 +o2 +h2o +hplus
+    1_5_dodecanediol
   }
 
   branch from sah side right {
     sah
-    <-> . +cytidine_5_monophosphate_1 +sam +hplus
-    5_methylcytidine_5_monophosphate_1
+    <-> . +uridine_5_monophosphate_1 +sam +hplus
+    5_methyluridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> . +sam +5_methylcytidine_5_monophosphate_1 +hplus
-    cytidine_5_monophosphate_1
-  }
-
-  branch from fumitremorgin_c side right {
-    fumitremorgin_c
-    <-> ec_1_14_13_177 [1.14.13.177] +h +o2 +nadph +12_13_dihydroxyfumitremorgin_c +nadp
-    h2o
+    <-> . +sam +5_methyluridine_5_monophosphate_1 +hplus
+    uridine_5_monophosphate_1
   }
 }

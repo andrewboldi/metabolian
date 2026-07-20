@@ -18,33 +18,27 @@ pathway udp-4-amino-4-6-dideoxy-l-to-h2o "UDP-4-amino-4,6-dideoxy-L… to H2O" {
     udp_2_6_dideoxy_2_acetamidino_beta_l_galactose
   }
 
-  branch from udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos side left {
-    udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos
-    <-> ec_4_2_1_115 [4.2.1.115] +h2o
-    udpglcnac
+  branch from glutamate side left {
+    glutamate
+    <-> . +hydroxylamine +atp +adp +pi
+    glutamine_hydroxamate
   }
 
   branch from glutamate side right {
     glutamate
-    <-> ec_6_3_1_18 [6.3.1.18] +aniline +atp +adp +pi
-    n5_phenyl_l_glutamine
-  }
-
-  branch from glutamate side left {
-    glutamate
-    <-> ec_2_6_1_118 [2.6.1.118] +c_terminal_l_glutamyl_l_lysine_1_group +akg
-    c_terminal_l_glutamyl_l_2_aminoadipate_semialdeh
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +h +phosphatidylglycerol_ditetradecanoyl_n_c14_0 +phosphate
-    phosphatidylglycerophosphate_ditetradecanoyl_n_c
+    <-> ec_2_6_1_109 [2.6.1.109] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +akg
+    7r_6_deoxy_d_manno_oct_7_ulosuronate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1 +phosphate
-    phosphatidylglycerophosphate_ditetradec_7_enoyl
+    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +beta_d_fructose
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp
+  }
+
+  branch from h2o side right {
+    h2o
+    <-> . +beta_casomorphin_1_6 +l_isoleucine
+    casomorphin
   }
 }

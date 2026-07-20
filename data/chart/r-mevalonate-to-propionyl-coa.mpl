@@ -34,14 +34,14 @@ pathway r-mevalonate-to-propionyl-coa "(R)-mevalonate to propionyl-CoA" {
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_56 [1.14.11.56] +l_proline +akg +o2 +co2
-    cis_4_hydroxy_l_proline
+    <-> ec_1_14_11_41 [1.14.11.41] +arginine +akg +o2 +co2
+    3s_3_hydroxy_l_arginine
   }
 
   branch from succinate side right {
     succinate
-    <-> . +pentalenolactone_d +akg +o2 +co2 +h2o
-    pentalenolactone_e
+    <-> ec_1_14_11_43 [1.14.11.43] +s_dichlorprop +akg +o2 +pyruvate +co2
+    2_4_dichlorophenol
   }
 
   branch from succinyl_coa side left {
@@ -58,13 +58,13 @@ pathway r-mevalonate-to-propionyl-coa "(R)-mevalonate to propionyl-CoA" {
 
   branch from propionyl_coa side left {
     propionyl_coa
-    <-> ec_2_3_1_94 [2.3.1.94] +s_methylmalonyl_coa +nadph +hplus +co2 +nadp +coa +h2o
-    6_deoxyerythronolide_b
+    <-> ec_6_4_1_3 [6.4.1.3] +hco3 +atp +adp +pi +hplus
+    s_methylmalonyl_coa
   }
 
   branch from propionyl_coa side right {
     propionyl_coa
-    <-> ec_6_4_1_3 [6.4.1.3] +hco3 +atp +adp +pi +hplus
-    s_methylmalonyl_coa
+    <-> ec_2_3_3_5 [2.3.3.5] +oxaloacetate +h2o +coa +hplus
+    2s_3s_2_methylcitrate
   }
 }

@@ -48,26 +48,26 @@ pathway deacetylipecoside-to-hydrogen-donor "deacetylipecoside to hydrogen donor
 
   branch from dopamine side left {
     dopamine
-    <-> . +o2 +h2o +h2o2 +nh3
-    dopal
-  }
-
-  branch from dopamine side right {
-    dopamine
     <-> . +palmitoyl_coa +coa +hplus
     n_palmitoyl_dopamine
   }
 
+  branch from dopamine side right {
+    dopamine
+    <-> . +oleoyl_coa +coa +hplus
+    n_oleoyldopamine
+  }
+
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_57 [1.14.14.57] +lithocholate +fmnh2 +o2 +h2o +hplus
-    hyodeoxycholate
+    <-> ec_1_14_14_29 [1.14.14.29] +25_hydroxycholesterol +fmnh2 +o2 +h2o +hplus
+    7_25_dihydroxycholesterol
   }
 
   branch from fmn side right {
     fmn
-    <-> . +n_hydroxy_l_tyrosinate +fmnh2 +o2 +h2o +hplus
-    n_n_dihydroxy_l_tyrosinate
+    <-> . +l_phenylalanine +fmnh2 +o2 +h2o +hplus
+    n_hydroxy_l_phenylalaninate
   }
 
   branch from riboflavin side left {
@@ -100,69 +100,63 @@ pathway deacetylipecoside-to-hydrogen-donor "deacetylipecoside to hydrogen donor
     d_arabinitol
   }
 
-  branch from x5p side right {
-    x5p
-    <-> ec_2_2_1_15 [2.2.1.15] +4_deoxy_4_sulfo_d_erythrulose +g3p
-    sulfonatoacetaldehyde
-  }
-
-  branch from g3p side left {
-    g3p
-    <-> . +nh3 +plp +pi +h2o +hplus
-    r5p
-  }
-
   branch from g3p side right {
     g3p
     <-> ec_4_3_3_6 [4.3.3.6] +r5p +glutamine +plp +pi +h2o +hplus
     glutamate
   }
 
-  branch from dhap side left {
+  branch from g3p side left {
+    g3p
+    <-> ec_1_2_1_90 [1.2.1.90] +nad +h2o +nadh +hplus
+    pg3
+  }
+
+  branch from dhap side right {
     dhap
     <-> ec_1_1_3_21 [1.1.3.21] +o2 +h2o2
     sn_glycerol_3_phosphate
   }
 
-  branch from dhap side right {
+  branch from dhap side left {
     dhap
-    <-> ec_1_1_1_261 [1.1.1.261] +nadp +nadph +hplus
-    sn_glycerol_1_phosphate
+    <-> . +menaquinone_8 +sn_glycerol_3_phosphate
+    menaquinol_8
   }
 
-  branch from methylglyoxal side left {
+  branch from methylglyoxal side right {
     methylglyoxal
     <-> ec_4_4_1_5 [4.4.1.5] +lactoylglutathione
     gsh
   }
 
-  branch from methylglyoxal side right {
+  branch from methylglyoxal side left {
     methylglyoxal
     <-> . +l_lysinium
     n6_1_hydroxy_2_oxopropyl_l_lysine
   }
 
-  branch from dlactate side left {
+  branch from dlactate side right {
     dlactate
     <-> . +ubiquinone_8 +pyruvate
     ubiquinol_8
   }
 
-  branch from dlactate side right {
+  branch from dlactate side left {
     dlactate
     <-> ec_6_1_2_1 [6.1.2.1] +d_alanine +atp +adp +pi
     d_alanyl_r_lactic_acid
   }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_99_59 [1.14.99.59] +tryptaminium +o2 +hydrogen_acceptor +h2o
-    4_hydroxytryptamine
-  }
-
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_1_99_26 [1.1.99.26] +3_hydroxycyclohexanone +hydrogen_acceptor
-    cyclohexane_1_3_dione
+    <-> ec_1_3_99_18 [1.3.99.18] +quinaldate +hydrogen_acceptor +h2o
+    kynurenate
+  }
+
+  branch from hydrogen_donor side left {
+    hydrogen_donor
+    <-> ec_1_3_99_17 [1.3.99.17] +quinoline +hydrogen_acceptor +h2o
+    quinolin_2_1h_one
   }
 }

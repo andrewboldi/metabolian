@@ -18,62 +18,62 @@ pathway 4-hydroxymethylcatechol-to-h2o "4-hydroxymethylcatechol to H2O" {
 
   branch from nadh side left {
     nadh
-    <-> . +benzenesulfonic_acid +o2 +h +catechol +nad
-    sulfite
+    <-> . +4r_limonene +h +o2 +nad +h2o
+    r_perillyl_alcohol
   }
 
   branch from nadh side right {
     nadh
-    <-> ec_1_2_1_3 [1.2.1.3] +4_formylbenzoate +nad +h2o +h
-    terephthalate
+    <-> . +diphenylamine +h +o2 +aniline +nad
+    catechol
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_376 [1.1.1.376] +l_arabinopyranose +nadp +nadph
-    l_arabinono_1_4_lactone
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +l_thyroxine_acyl_beta_d_glucuronide +l_thyroxine
+    udp_alpha_d_glucuronate
   }
 
   branch from h side right {
     h
-    <-> . +mycinamicin_viii +o2 +nadph +mycinamicin_vii +h2o
-    nadp
+    <-> ec_2_4_1_17 [2.4.1.17] +udp +tetraiodothyroacetate_ether_glucuronide +udp_alpha_d_glucuronate
+    3_3_5_5_tetraiodothyroacetic_acid
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadp +nocardicin_a +h2o +nadph
-    nocardicin_c_dizwitterion
+    <-> . +beta_fenchene +co2 +h2o
+    beta_fenchocamphorone
   }
 
   branch from o2 side right {
     o2
-    <-> . +6_oxokanamycin_c +h +h2o2
-    kanamycin_c
+    <-> . +dimeric_urushiol_peroxide +h2o
+    3_8z_11e_13z_pentadeca_8_11_13_trien_1_yl_catech
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_236 [1.14.13.236] +nadh +h +o2 +4_methylphenol +h2o
-    4_methylcatechol
+    <-> . +4_chloro_crotonyl_coa +nadh +co2
+    chloroethylmalonyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> . +s_oxalatosuccinate +nadh +h
-    d_threo_isocitrate
+    <-> . +collinusin +nadh +h
+    7_8_7_8_tetrahydrojusticidin_b
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_threonine +tabtoxinine_lactam
-    tabtoxin
+    <-> . +5_hydroxyindol_3_yl_acetaldehyde +l_cysteine +h
+    5_hydroxyindole_thiazolidine_carboxylate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_1_2_1_96 [1.2.1.96] +4_hydroxy_3_methylbenzaldehyde +nadp +h +nadph
-    4_hydroxy_3_methylbenzoic_acid
+    <-> . +1_carboxyvinyl_carboxyphosphonate
+    2_phosphono_formylglycerate
   }
 
   branch from 2_hydroxy_4_hydroxymethylbenzalpyruvate side left {

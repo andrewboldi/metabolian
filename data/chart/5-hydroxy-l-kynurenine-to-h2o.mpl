@@ -18,14 +18,14 @@ pathway 5-hydroxy-l-kynurenine-to-h2o "5-hydroxy-L-kynurenine to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> . +acetylpyruvate
-    2_oxo_3_pentynoate
+    <-> ec_4_2_1_83 [4.2.1.83] +2s_2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
+    1e_4_oxobut_1_ene_1_2_4_tricarboxylate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_3_2_9 [3.3.2.9] +1_chloroethenyl_oxirane
-    3_chloro_3_butene_1_2_diol
+    <-> ec_4_2_1_80 [4.2.1.80] +trans_2_oxohex_4_enoate
+    s_4_hydroxy_2_oxohexanoate
   }
 
   branch from 5_hydroxytryptophan side left {
@@ -42,25 +42,25 @@ pathway 5-hydroxy-l-kynurenine-to-h2o "5-hydroxy-L-kynurenine to H2O" {
 
   branch from o2 side left {
     o2
-    <-> ec_1_1_3_10 [1.1.3.10] +2_keto_d_xylose +h2o2
-    aldehydo_d_xylose
+    <-> ec_1_14_12_12 [1.14.12.12] +ethylbenzene
+    s_1_phenylethanol
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_1_3_15 [1.1.3.15] +2_hydroxypentanoate +h2o2
-    2_oxopentanoate
+    <-> . +superoxide +ferricytochrome_c
+    ferrocytochrome_c
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    l_lanthionine_dizwitterion
+    <-> ec_6_3_2_29 [6.3.2.29] +l_aspartate +l_asp_4_l_arg_n +adp +phosphate
+    l_asp_4_l_arg_n_l_asp
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    cold_adapted_kdo_2_lipid_a
+    <-> ec_6_3_2_30 [6.3.2.30] +h +adp +l_asp_4_l_arg_n_1 +phosphate +l_asp_4_l_arg_n_l_asp
+    l_arginine
   }
 }

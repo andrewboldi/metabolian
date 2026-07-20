@@ -24,26 +24,26 @@ pathway nadh-to-keto-d-fructuronate "NADH to keto-D-fructuronate" {
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_144 [1.1.1.144] +nadh +h +4s_perillyl_aldehyde
-    s_perillyl_alcohol
+    <-> . +nadh +3_oxoicosanoyl_coa +h
+    3_hydroxyicosanoyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_221 [1.1.1.221] +nadh +h +dehydrovomifoliol
-    vomifoliol
+    <-> . +nadh +h +3_oxoheneicosanoyl_coenzyme_a
+    3_hydroxyheneicosanoyl_coenzyme_a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_4_2_1_25 [4.2.1.25] +l_arabinonate
-    2_dehydro_3_deoxy_d_arabinonate
+    <-> ec_1_14_19_41 [1.14.19.41] +brassicasterol +nadp +h +o2 +nadph
+    24_epicampesterol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_1_14_13_16 [1.14.13.16] +cyclopentanone +h +o2 +nadph +valerolactone
-    nadp
+    <-> ec_1_14_15_17 [1.14.15.17] +epoxypheophorbide_a
+    red_chlorophyll_catabolite
   }
 
   branch from d_tagaturonate side right {

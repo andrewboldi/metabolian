@@ -26,37 +26,37 @@ pathway 7-12-26-trihydroxy-5-c-to-nad "7α,12α,26-trihydroxy-5β-c… to NAD" {
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_113 [1.1.1.113] +h +l_xylono_1_4_lactone +nadph
-    l_xylofuranose
+    <-> . +h +medicarpin +nadph
+    vestitol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_7 [1.14.13.7] +3_methylcatechol +h2o +h +o2 +nadph
-    2_hydroxytoluene
+    <-> ec_1_14_13_90 [1.14.13.90] +h +all_trans_antheraxanthin +o2 +nadph +h2o
+    all_trans_violaxanthin
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +tropate +tropine
-    l_hyoscyamine
+    <-> . +2_4_dihydroxy_2_heptenedioic_acid
+    cis_2_oxohept_3_enedioic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_1_1_36 [3.1.1.36] +h +limonoate
-    limonoate_d_ring_lactone
+    <-> ec_3_3_2_7 [3.3.2.7] +5z_9e_14z_8xi_11r_12s_11_12_epoxy_8_hydroxyicos +h
+    5z_9e_14z_8xi_11xi_12s_8_11_12_trihydroxyicosa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +c7a_hydroxy_5b_cholestan_3_one
-    5beta_cholestane_3alpha_7alpha_diol
+    <-> . +nadh +h +3_oxononadecanoyl_coenzyme_a
+    3_hydroxynonadecanoyl_coenzyme_a
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_213 [1.1.1.213] +nadh +h +5beta_pregnan_3_20_dione
-    3_hydroxy_5_pregnan_20_one
+    <-> . +nadh +h +3_oxoheptadecanoyl_coenzyme_a
+    3_hydroxyheptadecanoyl_coenzyme_a
   }
 }

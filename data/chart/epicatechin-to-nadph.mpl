@@ -18,37 +18,37 @@ pathway epicatechin-to-nadph "(+)-epicatechin to NADPH" {
 
   branch from h side left {
     h
-    <-> . +ethanol +n_propanoyl_gamma_l_glutamyl_l_orornithine_delta +h2o
-    glorin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_22_0_18_3_9z_12z_15z +phosphate +pc_22_0_18_3_9z_12z_15z +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> . +8_hydroxygermacra_1_10_4_11_13_trien_12_oate +h2o
-    inunolide
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    22_1_18_3_pc
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_323 [1.1.1.323] +h +thujan_3_one +nadp
-    thujan_3_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    s_terpineol
   }
 
   branch from nadph side right {
     nadph
-    <-> . +h +4_hydroxyphenylacetonitrile +o2 +nadp +h2o
-    s_4_hydroxymandelonitrile
+    <-> ec_1_1_1_71 [1.1.1.71] +h +phellandral +nadp
+    nerol
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +h +d_galactono_1_5_lactone
-    beta_d_galactose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    neodihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_307 [1.1.1.307] +nadh +alpha_d_xylose +h
-    xylitol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +11r_dihydroartemisinic_aldehyde
+    presilphiperfolan_8_ol
   }
 }

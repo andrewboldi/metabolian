@@ -28,14 +28,14 @@ pathway 4-o-digalloyl-1-2-3-6-tet-to-1-o-galloyl-beta-d "4-O-digalloyl-1,2,3,6-t
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_13z_dotriacontadienoylpantetheine_4_phosp +nad
-    o_s_13z_dotriacontenoylpantetheine_4_phosphoryl
+    <-> ec_2_3_1_24 [2.3.1.24] +9z_octadecenoyl_coa +sphing_4_enine +coa
+    n_oleoyl_d_sphingosine
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_13z_25z_tetratetracontatrienoylpantethein +nad
-    o_s_13z_25z_tetratetracontadienoylpantetheine_4
+    <-> ec_2_3_1_24 [2.3.1.24] +hexanoyl_coa +sphing_4_enine +coa
+    n_hexanoyl_d_erythro_sphingosine
   }
 
   branch from 1_2_3_4_6_pentakis_o_galloyl_beta_d_glucose side left {
@@ -52,13 +52,13 @@ pathway 4-o-digalloyl-1-2-3-6-tet-to-1-o-galloyl-beta-d "4-O-digalloyl-1,2,3,6-t
 
   branch from glucose side left {
     glucose
-    <-> . +ellagic_acid
-    pedunculagin
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +tetrabromohydroquinone
+    tetrabromo_1_4_benzoquinone
   }
 
   branch from glucose side right {
     glucose
-    <-> ec_2_4_1_10 [2.4.1.10] +sucrose
-    6_kestotriose
+    <-> ec_1_1_3_10 [1.1.3.10] +2_dehydro_d_glucose +2_6_dimethyl_1_4_benzenediol
+    2_6_dimethyl_1_4_benzoquinone
   }
 }

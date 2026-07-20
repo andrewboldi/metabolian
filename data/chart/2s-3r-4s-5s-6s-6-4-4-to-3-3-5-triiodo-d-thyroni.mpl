@@ -42,25 +42,25 @@ pathway 2s-3r-4s-5s-6s-6-4-4-to-3-3-5-triiodo-d-thyroni "(2S,3R,4S,5S,6S)-6-(4-{
 
   branch from udp side left {
     udp
-    <-> . +dgdp +dgtp
-    ump
-  }
-
-  branch from udp side right {
-    udp
     <-> ec_2_4_1_17 [2.4.1.17] +trichloroethanol_glucuronide +udp_alpha_d_glucuronate
     2_2_2_trichloroethanol
   }
 
+  branch from udp side right {
+    udp
+    <-> ec_2_4_1_225 [2.4.1.225] +beta_d_glucuronosyl_1_4_n_acetyl_alpha_d_glucosa +udp_alpha_d_glucuronate
+    n_acetyl_alpha_d_glucosaminyl_1_4_beta_d_glucuro
+  }
+
   branch from h side left {
     h
-    <-> . +oleandomycin +dtdp +3_o_l_oleandrosyl_oleandolide
-    dtdp_alpha_d_desosamine
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_hydroxy_6_glutathionyl_5_6_dihydronaph +glutathione
+    1_nitronaphthalene_5_6_oxide
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_l_oleandrose +avermectin_a2a_aglycone +avermectin_a2a_monosaccharide
-    dtdp
+    <-> ec_2_5_1_18 [2.5.1.18] +1_nitro_5_glutathionyl_6_hydroxy_5_6_dihydronaph +1_nitronaphthalene_5_6_oxide
+    glutathione
   }
 }

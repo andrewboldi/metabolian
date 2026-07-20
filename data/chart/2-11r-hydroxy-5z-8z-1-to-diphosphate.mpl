@@ -18,13 +18,13 @@ pathway 2-11r-hydroxy-5z-8z-1-to-diphosphate "2-[(11R)-hydroxy-(5Z,8Z,1… to di
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_207 [4.2.3.207] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    neoverrucosan_5_ol
+    <-> . +fpp
+    isosativene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_208 [4.2.3.208] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
-    verrucosan_2_ol
+    <-> . +fpp
+    z_e_farnesene
   }
 }

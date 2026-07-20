@@ -24,49 +24,49 @@ pathway l-dehydroascorbic-acid-to-h2o "L-dehydroascorbic acid to H2O" {
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    ps_20_2_11z_14z_18_2_9z_12z
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +gramicidin_s +phosphate +gramicidin_s +h2o
+    atp
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    ps_20_2_11z_14z_18_3_9z_12z_15z
+    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
+    destruxin_b
   }
 
   branch from l_ascorbate side right {
-    l_ascorbate
-    <-> . +l_dehydroascorbic_acid +nadph
-    nadp
-  }
-
-  branch from l_ascorbate side left {
     l_ascorbate
     <-> ec_1_8_5_1 [1.8.5.1] +l_dehydroascorbic_acid +glutathione +h
     glutathione_disulfide
   }
 
+  branch from l_ascorbate side left {
+    l_ascorbate
+    <-> ec_1_10_99_3 [1.10.99.3] +l_dehydroascorbic_acid +all_trans_zeaxanthin +h2o +h
+    all_trans_violaxanthin
+  }
+
   branch from o2 side right {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +phylloquinone +methanol +h2o +methane
-    phylloquinol
+    <-> . +triethylamine_n_oxide +nadp +h2o +h +triethylamine
+    nadph
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_18_3 [1.14.18.3] +2_phytyl_1_4_dihydroxynaphthalene +methane +methanol +h2o
-    2_phytyl_1_4_naphthoquinone
+    <-> . +n_n_diethylethanamine_oxide +nadp +h2o +h +nadph
+    triethylamine
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    20_3_18_3_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    concanamycin_a
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    22_0_18_1_ps
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    bafilomycin_a1
   }
 }

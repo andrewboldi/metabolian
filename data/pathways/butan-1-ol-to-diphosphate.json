@@ -173,51 +173,51 @@
       }
     },
     {
-      "id": "3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine",
-      "name": "(3S)-3-(1H-Indol-3-ylmethyl)-3H-1,4-benzodiazepine-2,5-diol",
-      "short": "3-(1H-Indol-3-ylmet…",
-      "formula": "C18H15N3O2",
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192693"
+        "chebi": "CHEBI:16526"
       }
     },
     {
-      "id": "dmapp",
-      "name": "Dimethylallyl diphosphate (DMAPP)",
-      "short": "Dimethylallyl PP…",
-      "formula": "C5H9O7P2",
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:57623"
+        "chebi": "CHEBI:175763"
       }
     },
     {
-      "id": "2s_3r_11s_aszonalenin",
-      "name": "(2S,3R,11S)-aszonalenin",
-      "short": "(2S,3R,11S)-aszonal…",
-      "formula": "C23H23N3O2",
+      "id": "silphinene",
+      "name": "silphinene",
+      "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:192691"
+        "chebi": "CHEBI:229523"
       }
     },
     {
-      "id": "preechinulin",
-      "name": "preechinulin",
-      "formula": "C19H23N3O2",
-      "charge": 0,
+      "id": "5_end_ribonucleotide_5_triphosphate_4",
+      "name": "5'-end ribonucleotide 5'-triphosphate(4−)",
+      "short": "5'-end ribonucleoti…",
+      "formula": "C5H7O13P3R",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:193003"
+        "chebi": "CHEBI:167618"
       }
     },
     {
-      "id": "tardioxopiperazine_b",
-      "name": "tardioxopiperazine B",
-      "formula": "C24H31N3O2",
-      "charge": 0,
+      "id": "5_end_ribonucleotide_2",
+      "name": "5'-end ribonucleotide(2−)",
+      "short": "5'-end ribonucleoti…",
+      "formula": "C5H7O7PR",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:193006"
+        "chebi": "CHEBI:138282"
       }
     }
   ],
@@ -227,6 +227,13 @@
       "name": "1-butanol dehydrogenase (cytochrome c)",
       "ec": [
         "1.1.2.9"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_94",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.94"
       ]
     }
   ],
@@ -427,33 +434,12 @@
     },
     {
       "id": "r5",
-      "name": "butanoyl-CoA + hydrogencarbonate + ATP = (2R)-ethylmalonyl-CoA + ADP + phosphate + H(+)",
-      "equation": "butanoyl-CoA + hydrogencarbonate + ATP = (2R)-ethylmalonyl-CoA + ADP + phosphate + H(+)",
+      "name": "ethylmalonyl-CoA decarboxylase",
+      "equation": "(2R)-ethylmalonyl-CoA + H(+) = butanoyl-CoA + CO2",
+      "ec": "4.1.1.94",
       "substrates": [
         {
-          "metabolite": "butyryl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hco3",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "atp",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
           "metabolite": "r_ethylmalonyl_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "adp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "pi",
           "stoichiometry": 1
         },
         {
@@ -461,38 +447,49 @@
           "stoichiometry": 1
         }
       ],
+      "products": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_94"
+        }
+      ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:59536"
+        "rhea": "RHEA:59540"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:59536"
+            "id": "RHEA:59540"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "(S)-benzodiazepinedione + dimethylallyl diphosphate = (2S,3R,11S)-aszonalenin + diphosp...",
-      "equation": "(S)-benzodiazepinedione + dimethylallyl diphosphate = (2S,3R,11S)-aszonalenin + diphosphate",
+      "name": "(2E,6E)-farnesyl diphosphate = silphinene + diphosphate",
+      "equation": "(2E,6E)-farnesyl diphosphate = silphinene + diphosphate",
       "substrates": [
         {
-          "metabolite": "3s_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "dmapp",
+          "metabolite": "fpp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "2s_3r_11s_aszonalenin",
+          "metabolite": "silphinene",
           "stoichiometry": 1
         },
         {
@@ -503,53 +500,57 @@
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:73731"
+        "rhea": "RHEA:78655"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73731"
+            "id": "RHEA:78655"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
-      "equation": "preechinulin + dimethylallyl diphosphate = tardioxopiperazine B + diphosphate",
+      "name": "a 5'-end triphospho-ribonucleoside in mRNA + H2O = a 5'-end phospho-ribonucleoside in m...",
+      "equation": "a 5'-end triphospho-ribonucleoside in mRNA + H2O = a 5'-end phospho-ribonucleoside in mRNA + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "preechinulin",
+          "metabolite": "5_end_ribonucleotide_5_triphosphate_4",
           "stoichiometry": 1
         },
         {
-          "metabolite": "dmapp",
+          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "tardioxopiperazine_b",
+          "metabolite": "5_end_ribonucleotide_2",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
           "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:73775"
+        "rhea": "RHEA:78683"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:73775"
+            "id": "RHEA:78683"
           }
         ]
       }

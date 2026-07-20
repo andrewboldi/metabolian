@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 4-amino-2-methyl-5-dipho-to-phosphate "4-amino-2-methyl-5-(dipho… to phosphate" {
-  spacing 286
+  spacing 274
 
   spine at 0,0 {
     4_amino_2_methyl_5_diphosphooxymethyl_pyrimidine
@@ -22,62 +22,50 @@ pathway 4-amino-2-methyl-5-dipho-to-phosphate "4-amino-2-methyl-5-(dipho… to p
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_4_2_3_190 [4.2.3.190] +manoyl_oxide
-    copal_8_ol_diphosphate
+    <-> ec_4_2_3_51 [4.2.3.51] +phellandrene
+    neryl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_3_6_1_23 [3.6.1.23] +h +5_fluorodeoxyuridine_monophosphate +h2o
-    5_fluorodeoxyuridine_triphosphate
+    <-> ec_4_2_3_32 [4.2.3.32] +ent_abieta_8_14_12_diene
+    ent_copalyl_diphosphate
   }
 
   branch from co2 side left {
     co2
-    <-> ec_2_2_1_3 [2.2.1.3] +formaldehyde +h +3_hydroxypyruvate
-    dihydroxyacetone
+    <-> . +hexanoyl_coa +malonyl_coa +h +olivetolate
+    coa
   }
 
   branch from co2 side right {
     co2
-    <-> ec_1_2_1_27 [1.2.1.27] +propanoate +nadh +h +nad +h2o
-    2_methyl_3_oxopropanoate
+    <-> ec_4_1_1_65 [4.1.1.65] +r_1_2_distearoylphosphatidylethanolamine
+    1_2_distearoyl_sn_glycero_3_phosphoserine
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_21_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    sm_d18_1_22_1_sphingomyelin
-  }
-
-  branch from 4_amino_2_methyl_5_phosphomethylpyrimidine side left {
-    4_amino_2_methyl_5_phosphomethylpyrimidine
-    <-> . +5_deoxyadenosine +h +formate +co +l_methionine +5_amino_1_5_phospho_d_ribosyl_imidazole
-    s_adenosyl_l_methionine
-  }
-
-  branch from 4_amino_2_methyl_5_phosphomethylpyrimidine side right {
-    4_amino_2_methyl_5_phosphomethylpyrimidine
-    <-> . +atp +h +adp
-    4_amino_5_hydroxymethyl_2_methylpyrimidine
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_hexadecenoyl_2_9z_12z_octadecadienoyl_sn_gl
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_22_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_dioleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    sm_d18_1_23_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    18_0_18_3_pe
   }
 
   branch from 5_amino_1_5_phospho_d_ribosyl_imidazole side left {
@@ -88,49 +76,49 @@ pathway 4-amino-2-methyl-5-dipho-to-phosphate "4-amino-2-methyl-5-(dipho… to p
 
   branch from nad side right {
     nad
-    <-> . +nadh +4_methylcyclohexanone +h
-    4_methylcyclohexan_1_ol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    3s_6e_nerolidol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +2_4_dimethyl_3_pentanone +h
-    compound_0286204
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_6e_farnesal +h
+    drimenol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_proline +l_lysine
-    prolyl_lysyl_proline
+    <-> ec_3_1_1_107 [3.1.1.107] +diglucosyl_enterobactin
+    diglucosyl_2_3_dihydroxybenzoylserine_3
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_proline +l_arginine
-    prolyl_prolyl_arginine
+    <-> . +ferroheme_a
+    fe_ii_hydroxyheme_i
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    sm_d18_0_24_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_oleoyl_2_linoleoyl_sn_glycero_3_phosphoethanol
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    sm_d18_0_25_0_sphingomyelin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +phosphate +atp +h2o
+    1_2_dilinoleoyl_sn_glycero_3_phosphoethanolamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +d_ribulose +h2o
-    d_ribulose_5_phosphate
+    <-> . +carbamoyl_phosphate +9beta_mitosane_core
+    carbamoylated_9beta_mitosane_core
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +h +adp +atp +h2o
-    sphingomyelin_homo_sapiens
+    <-> . +carbamoyl_phosphate +9alpha_mitosane_core
+    carbamoylated_9alpha_mitosane_core
   }
 }

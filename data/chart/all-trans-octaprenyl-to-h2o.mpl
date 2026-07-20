@@ -24,61 +24,61 @@ pathway all-trans-octaprenyl-to-h2o "all-trans-octaprenyl… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    cedr_8_ene
+    <-> ec_6_4_1_12 [6.4.1.12] +3_indol_3_yl_pyruvate +atp +amp +hplus
+    didemethylasterriquinone_d
   }
 
   branch from ppi side right {
     ppi
-    <-> . +2_cis_6_cis_farnesyl_diphosphate
-    trans_farnesene
+    <-> . +didemethylasterriquinone_d +dmapp
+    asterriquinone_c1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_362 [2.1.1.362] +n6_methyl_l_lysinium +sam +hplus
-    n6_n6_dimethyl_l_lysine_1
+    <-> . +n6_n6_dimethyl_l_lysine_1 +sam +hplus
+    n6_n6_n6_trimethyl_l_lysine
   }
 
   branch from sah side right {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +l_lysinium +sam +hplus
+    n6_methyl_l_lysinium
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    2_aminogalactopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    amikacin
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    d_galactal
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
+    gentamicin_a2e
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    s_terpineol
+    <-> ec_1_1_1_35 [1.1.1.35] +nadh +11z_3_oxooctadecenoyl_coa +h
+    3s_11z_3_hydroxyoctadecenoyl_coa
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    1s_2s_4r_endo_fenchol
+    <-> ec_1_1_1_14 [1.1.1.14] +nadh +beta_d_fructose +h
+    d_sorbitol
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    6_deoxy_d_sorbose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gentamycin_c2_5
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
-    l_gulopyranose
+    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
+    gentamicin_c1
   }
 }

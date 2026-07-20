@@ -18,25 +18,25 @@ pathway cyanidin-3-o-2-o-xylosy-to-cyanidin-3-o-6-o-p-co "cyanidin 3-O-[2″-O-x
 
   branch from trans_caffeoyl_coa side left {
     trans_caffeoyl_coa
-    <-> ec_2_3_1_126 [2.3.1.126] +h +isocitrate +coa
-    2_caffeoylisocitric_acid
+    <-> ec_2_3_1_153 [2.3.1.153] +pelargonin +coa
+    pelargonidin_3_glucoside_5_caffeoylglucoside
   }
 
   branch from trans_caffeoyl_coa side right {
     trans_caffeoyl_coa
-    <-> . +pelargonin +coa
-    bisdemalonylsalvianin
+    <-> . +albireodelphin +coa
+    gentiodelphin
   }
 
   branch from coa side left {
     coa
-    <-> . +3_o_methyldopa +acetyl_coa
-    n_acetylvanilalanine
+    <-> . +decanoyl_coa +sucrose
+    beta_d_fructofuranosyl_4_o_decanoyl_alpha_d_gluc
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +11z_octadecenoyl_coa
-    car_18_1_11e
+    <-> . +dodecanoyl_coa +sucrose
+    beta_d_fructofuranosyl_4_o_dodecanoyl_alpha_d_gl
   }
 }

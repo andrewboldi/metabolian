@@ -18,14 +18,14 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_32 [1.14.15.32] +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
-    pentalen_13_al
+    <-> ec_1_14_15_39 [1.14.15.39] +epi_isozizaene +di_sulfido_diiron +o2 +hplus +h2o
+    albaflavenone
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> . +pentalenene +di_sulfido_diiron +o2 +hplus +h2o
-    pentalen_13_ol
+    <-> ec_1_14_15_9 [1.14.15.9] +spirilloxanthin +di_sulfido_diiron +o2 +hplus +h2o
+    2_oxospirilloxanthin
   }
 
   branch from dtdp side left {
@@ -42,13 +42,13 @@ pathway 5-o-d-mycaminosyl-20-ox-to-s-adenosyl-l-homocyst "5-O-β-D-mycaminosyl-2
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_236 [2.1.1.236] +dtdp_3_amino_3_6_dideoxy_d_galactopyranose +sam +hplus
-    dtdp_d_ravidosamine
+    <-> . +3_methoxy_4_5_dihydroxy_trans_stilbene +sam +hplus
+    pterostilbene
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_239 [2.1.1.239] +3_o_l_olivosyl_oleandolide +sam +hplus
-    3_o_l_oleandrosyl_oleandolide
+    <-> . +trans_resveratrol +sam +hplus
+    3_methoxy_4_5_dihydroxy_trans_stilbene
   }
 }

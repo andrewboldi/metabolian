@@ -24,14 +24,14 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +ubiquinone_8 +h
-    ubiquinol_8
+    <-> . +fadh2 +co2 +h +succinate +h2o
+    2_oxoglutarate
   }
 
   branch from fad side right {
     fad
-    <-> ec_1_6_6_9 [1.6.6.9] +trimethylamine +h2o +fadh2 +h
-    trimethylamine_n_oxide
+    <-> ec_1_4_3_16 [1.4.3.16] +fadh2 +iminoaspartate +h
+    l_aspartate
   }
 
   branch from n_6_dimethylallyladenine side left {
@@ -48,14 +48,14 @@ pathway fadh2-to-o-d-glucosyl-trans-zeat "FADH2 to O-β-D-glucosyl-trans-zeat…
 
   branch from h2o side left {
     h2o
-    <-> . +o_s_3r_19z_3_hydroxyoctatriacontenoylpantetheine
-    o_s_2e_19z_octatriacontadienoylpantetheine_4_pho
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +beta_d_glucose
+    maltohexaose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +o_s_3r_11z_23z_3_hydroxydotetracontadienoylpante
-    o_s_2e_11z_23z_dotetracontatrienoylpantetheine_4
+    <-> ec_3_2_1_3 [3.2.1.3] +d_maltose
+    beta_d_glucose
   }
 
   branch from n6_2_isopentenyl_adenosine side left {

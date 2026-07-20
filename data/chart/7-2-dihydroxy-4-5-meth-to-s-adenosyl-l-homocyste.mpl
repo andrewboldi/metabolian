@@ -20,37 +20,37 @@ pathway 7-2-dihydroxy-4-5-meth-to-s-adenosyl-l-homocyste "7,2'-dihydroxy-4',5'-m
 
   branch from nadp side left {
     nadp
-    <-> . +formaldehyde +h +sarcosine +nadph +h2o
-    n_n_dimethylglycine
+    <-> ec_1_3_1_80 [1.3.1.80] +primary_fluorescent_chlorophyll_catabolite +nadph
+    red_chlorophyll_catabolite
   }
 
   branch from nadp side right {
     nadp
-    <-> . +3_3_5_triiodo_l_thyronine +iodide +nadph
-    l_thyroxine
+    <-> . +9r_10r_dihydroxyoctadecanoate +h +o2 +nadph +h2o
+    9_10_18_trihydroxyoctadecanoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_aspartate +l_arginine
-    asparaginyl_alanyl_arginine
+    <-> . +l_isoleucine +l_arginine
+    isoleucyl_arginyl_isoleucine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_aspartate +l_glutamate
-    aspartyl_glutamate
+    <-> . +l_histidine +l_asparagine +l_isoleucine
+    isoleucyl_asparaginyl_histidine
   }
 
   branch from sah side left {
     sah
-    <-> . +n_terminal_n_methyl_l_prolyl_l_prolyl_l_lysyl_2 +sam +hplus
-    n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy
+    <-> ec_2_1_1_363 [2.1.1.363] +fpp +sam +hplus
+    pre_sodorifen_diphosphate
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_244 [2.1.1.244] +sam +n_terminal_n_n_dimethyl_l_prolyl_l_prolyl_l_lysy +hplus
-    n_terminal_l_prolyl_l_prolyl_l_lysyl_2
+    <-> . +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 }

@@ -28,14 +28,14 @@ pathway 3-epi-6-deoxocathasterone-to-fmnh2 "3-epi-6-deoxocathasterone to FMNH2" 
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_156 [1.14.14.156] +l_tryptophan +fmnh2 +o2 +co2 +h2o +hplus
-    e_indol_3_ylacetaldehyde_oxime
+    <-> . +all_cis_5_8_11_14_17_icosapentaenoate +fmnh2 +o2 +h2o +hplus
+    20_hepe
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_42 [1.14.14.42] +l_pentahomomethionine +fmnh2 +o2 +co2 +h2o +hplus
-    e_8_methylsulfanyl_octanal_oxime
+    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
+    18_hete
   }
 
   branch from typhasterol side right {
@@ -46,13 +46,13 @@ pathway 3-epi-6-deoxocathasterone-to-fmnh2 "3-epi-6-deoxocathasterone to FMNH2" 
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_14_14_42 [1.14.14.42] +l_hexahomomethionine +o2 +fmn +co2 +h2o +hplus
-    e_9_methylsulfanyl_nonanal_oxime
+    <-> ec_2_5_1_129 [2.5.1.129] +prenyl_phosphate +pi
+    prenyl_fmnh2
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_14_14_87 [1.14.14.87] +s_naringenin +o2 +fmn +h2o +hplus
-    2_hydroxy_2_3_dihydrogenistein
+    <-> . +hydroxy_fatty_acid_anion +o2 +fmn +h2o +hplus
+    oxo_fatty_acid_anion
   }
 }

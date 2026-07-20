@@ -18,14 +18,14 @@ pathway alpha-d-man-1-2-alpha-to-h2o "alpha-D-Man-(1->2)-alpha-… to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    15z_tetracosenoate
+    <-> ec_3_2_1_40 [3.2.1.40] +p_nitrophenyl_alpha_l_rhamnopyranoside +h2o +l_rhamnose
+    4_nitrophenol
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    5_guanidino_2_oxopentanoate
+    <-> ec_3_1_1_33 [3.1.1.33] +alpha_d_glucose +acetate +h2o
+    6_o_acetyl_beta_d_glucose
   }
 
   branch from udp_2_n_3r_3_hydroxytetradecanoyl_3_o_3r_3_hydro side left {
@@ -36,13 +36,13 @@ pathway alpha-d-man-1-2-alpha-to-h2o "alpha-D-Man-(1->2)-alpha-… to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_isoleucine +l_arginine
-    isoleucyl_arginyl_isoleucine
+    <-> . +l_threonine +l_arginine +l_tyrosine
+    threonyl_arginyl_tyrosine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_histidine +l_asparagine +l_isoleucine
-    isoleucyl_asparaginyl_histidine
+    <-> . +l_asparagine +l_threonine +l_tyrosine
+    threonyl_asparaginyl_tyrosine
   }
 }

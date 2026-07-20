@@ -42,37 +42,37 @@ pathway kaempferol-3-o-4-o-4-co-to-h "kaempferol 3-O-(4″-O-4-co… to H" {
 
   branch from h side left {
     h
-    <-> . +4_hydroxybenzoate_1_phenylethylidene +h2o +4_hydroxybenzoate
-    acetophenone_hydrazone
+    <-> . +co2 +c34_phenolphthiodiolenone_a
+    c35_phenolcarboxyphthiodiolenone
   }
 
   branch from h side right {
     h
-    <-> . +3_methyl_pyrroline_5_carboxylate +h2o
-    5_5_dihydroxy_leucine
+    <-> . +co2 +c36_phenolphthiodiolenone_a
+    c37_phenolcarboxyphthiodiolenone
   }
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +3_o_beta_d_glucosyl_esculetin
-    esculetin
+    <-> . +udp +quercetin_3_4_di_o_d_glucoside
+    quercetin_4_o_d_glucopyranoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +19_o_beta_glucopyranosyl_steviol
-    steviol
+    <-> . +udp +quercetin_3_4_di_o_d_glucoside
+    quercetin_3_o_d_glucopyranoside
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +cotinine_glucuronide +cotinine
+    <-> ec_2_4_1_17 [2.4.1.17] +s_nicotinium_n_d_glucosiduronate +h +s_nicotine
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +s_nicotinium_n_d_glucosiduronate +h +udp_alpha_d_glucuronate
-    s_nicotine
+    <-> ec_2_4_1_17 [2.4.1.17] +4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid +udp_alpha_d_glucuronate
+    4z_15z_bilirubin_ixalpha
   }
 }

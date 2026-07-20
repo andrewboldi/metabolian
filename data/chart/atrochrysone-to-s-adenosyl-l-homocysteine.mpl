@@ -24,14 +24,14 @@ pathway atrochrysone-to-s-adenosyl-l-homocysteine "atrochrysone to S-adenosyl-L-
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_tryptophan
-    histidyl_tryptophanyl_histidine
+    <-> . +l_proline +l_threonine +l_tryptophan
+    pro_trp_thr
   }
 
   branch from h2o side left {
     h2o
-    <-> . +h +2e_nonadecenoyl_coenzyme_a
-    3_hydroxynonadecanoyl_coenzyme_a
+    <-> . +l_proline +l_valine +l_glutamine
+    prolyl_valyl_glutamine
   }
 
   branch from emodin side right {
@@ -48,13 +48,13 @@ pathway atrochrysone-to-s-adenosyl-l-homocysteine "atrochrysone to S-adenosyl-L-
 
   branch from sah side right {
     sah
-    <-> . +eburicol +sam +hplus
-    pneumocysterol
+    <-> . +guanosine_5_monophosphate_1 +sam
+    n7_methylguanosine_5_phosphate_zwitterion
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_257 [2.1.1.257] +pseudouridine_5_phosphate_1 +sam +hplus
-    n1_methylpseudouridine_5_monophosphate_1
+    <-> . +sam +n7_methylguanosine_5_phosphate_zwitterion
+    guanosine_5_monophosphate_1
   }
 }

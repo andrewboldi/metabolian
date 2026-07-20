@@ -20,50 +20,50 @@ pathway nadh-to-6-hydroxynicotinate "NADH to 6-hydroxynicotinate" {
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_240 [1.1.1.240] +nadh +h +n_acetyl_d_glucosaminate +h2o
-    n_acetyl_beta_d_glucosamine
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    neodihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_xylono_1_5_lactone +h
-    alpha_d_xylose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    1s_2r_4r_neoisodihydrocarveol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_alanine +l_proline +l_tryptophan
-    tryptophanyl_alanyl_proline
+    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_hepta_l_glutamat +tetrahydropteroyl_hepta_l_glutamate
+    l_serine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_aspartate +l_tryptophan
-    tryptophanyl_aspartyl_aspartate
+    <-> ec_2_1_2_1 [2.1.2.1] +glycine +5_10_methylenetetrahydropteroyl_octa_l_glutamate +l_serine
+    tetrahydropteroyl_octa_l_glutamate
   }
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_42 [4.1.1.42] +s_carnitine +h
-    2_methylcholine
+    <-> ec_4_1_1_65 [4.1.1.65] +1_hexadecanoyl_2_9z_12z_octadecadienoyl_sn_glyce +h
+    1_palmitoyl_2_linoleoyl_sn_glycero_3_phosphoseri
   }
 
   branch from co2 side right {
     co2
-    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +s_3_amino_2_methylpropanoate
-    nh4
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_16_0_18_3_9z_12z_15z +h
+    16_0_18_3_ps
   }
 
   branch from h side left {
     h
-    <-> . +4_dephosphorylated_1_petn_kdo_lipid_a +phosphate +h2o
-    1_petn_kdo_lipid_a
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +pc_20_1_11z_18_3_9z_12z_15z +phosphate +pc_20_1_11z_18_3_9z_12z_15z +h2o
+    atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_2_1_144 [3.2.1.144] +3_deoxy_d_manno_octulosonate +1_petn_kdo_lipid_a +h2o
-    1_petn_kdo2_lipid_a
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pc_20_2_11z_14z_18_2_9z_12z
   }
 
   branch from maleamate side left {
@@ -74,14 +74,14 @@ pathway nadh-to-6-hydroxynicotinate "NADH to 6-hydroxynicotinate" {
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_141 [1.14.13.141] +nadh +h +cholest_4_en_3_one +nad +h2o
-    26_hydroxycholest_4_en_3_one
+    <-> ec_1_14_13_107 [1.14.13.107] +4r_limonene +h +nadph +nadp +h2o
+    4r_limonene_1_2_epoxide
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_13_142 [1.14.13.142] +nadh +h +androsta_1_4_diene_3_17_dione +nad +h2o
-    9_hydroxyandrosta_1_4_diene_3_17_dione
+    <-> ec_1_14_13_107 [1.14.13.107] +nadh +h +4r_limonene_1_2_epoxide +nad +h2o
+    4r_limonene
   }
 
   branch from 6_hydroxynicotinate side right {

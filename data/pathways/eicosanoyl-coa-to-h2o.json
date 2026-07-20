@@ -1,0 +1,240 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "eicosanoyl-coa-to-h2o",
+  "name": "eicosanoyl-CoA to H2O",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from eicosanoyl-CoA to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR158735"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "eicosanoyl_coa",
+      "name": "eicosanoyl-CoA",
+      "formula": "C41H70N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1103962"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726122"
+      }
+    },
+    {
+      "id": "cholest_5_en_3_yl_eicosanoate",
+      "name": "cholest-5-en-3β-yl eicosanoate",
+      "short": "cholest-5-en-3β-yl…",
+      "formula": "C47H84O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:196788"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "eicosanoate",
+      "name": "eicosanoate",
+      "formula": "C20H39O2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM2976"
+      }
+    },
+    {
+      "id": "sphing_4_enine",
+      "name": "sphing-4-enine",
+      "formula": "C18H37NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26743"
+      }
+    },
+    {
+      "id": "n_eicosanoyl_d_sphingosine",
+      "name": "N-Eicosanoyl-D-sphingosine",
+      "short": "N-Eicosanoyl-D-sphi…",
+      "formula": "C38H75NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM727275"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_23",
+      "name": "ceramidase",
+      "ec": [
+        "3.5.1.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR158735",
+      "substrates": [
+        {
+          "metabolite": "eicosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholest_5_en_3_yl_eicosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR158735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158782",
+      "substrates": [
+        {
+          "metabolite": "cholest_5_en_3_yl_eicosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "eicosanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158782"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158782"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ceramidase",
+      "ec": "3.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "sphing_4_enine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "eicosanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_eicosanoyl_d_sphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR132342"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR132342"
+          }
+        ]
+      }
+    }
+  ]
+}

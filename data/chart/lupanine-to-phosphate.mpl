@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway lupanine-to-phosphate "lupanine to phosphate" {
-  spacing 236
+  spacing 230
 
   spine at 0,0 {
     lupanine
@@ -18,14 +18,14 @@ pathway lupanine-to-phosphate "lupanine to phosphate" {
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +co2 +h
-    enol_oxaloacetate
+    <-> . +alpha_lactose +phosphoenolpyruvate
+    lactose_6_phosphate
   }
 
   branch from pyruvate side right {
     pyruvate
-    <-> ec_4_4_1_13 [4.4.1.13] +h +z_2_phenyl_1_thioacetohydroximate +nh4 +h2o
-    s_phenylacetothiohydroximoyl_l_cysteine
+    <-> . +r_lactate +menaquinone_6
+    menaquinol_6
   }
 
   branch from cadaverine side left {
@@ -34,33 +34,27 @@ pathway lupanine-to-phosphate "lupanine to phosphate" {
     o2
   }
 
-  branch from cadaverine side right {
-    cadaverine
-    <-> . +2_oxoglutarate +l_glutamate +h2o
-    1_piperideinium
+  branch from h side right {
+    h
+    <-> . +nadh +phenylglyoxylate +nad
+    s_mandelate
   }
 
   branch from h side left {
     h
-    <-> . +formaldehyde +tryptamine +h2o
-    2_3_4_9_tetrahydro_1h_pyrido_3_4_b_indole
-  }
-
-  branch from h side right {
-    h
-    <-> . +l_dehydroascorbic_acid +20_hydroxy_e4_neuroprostane +h2o +l_ascorbate
-    20_hydroperoxy_h4_neuroprostane
-  }
-
-  branch from phosphate side left {
-    phosphate
-    <-> ec_3_1_3_27 [3.1.3.27] +h +phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1 +h2o
-    phosphatidylglycerophosphate_dihexadec_9_enoyl_n
+    <-> . +nadh +phenylglyoxylate +nad
+    mandelate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_27 [3.1.3.27] +distearoyl_phosphatidylglycerol +h2o
-    phosphatidylglycerophosphate_dioctadecanoyl_n_c1
+    <-> ec_3_1_3_93 [3.1.3.93] +l_galactose_1_phosphate +h2o +h
+    alpha_l_galactose
+  }
+
+  branch from phosphate side left {
+    phosphate
+    <-> ec_3_1_3_11 [3.1.3.11] +d_fructofuranose_1_phosphate +h2o
+    beta_d_fructose
   }
 }

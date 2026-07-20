@@ -26,61 +26,61 @@ pathway all-trans-tridecaprenyl-to-nad "all-trans-tridecaprenyl… to NAD" {
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_90 [4.2.3.90] +fpp
-    5_epi_selinene
+    <-> ec_4_2_3_118 [4.2.3.118] +e_2_methylgeranyl_diphosphate +h2o
+    2_methylisoborneol
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_91 [4.2.3.91] +fpp +h2o
-    cubebol
+    <-> ec_4_2_3_121 [4.2.3.121] +gpp
+    pinene
   }
 
   branch from sah side right {
     sah
-    <-> . +2_3s_3_carboxylato_3_dimethylammonio_propyl_l_hi +sam +hplus
-    diphthine_betaine
+    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
+    2_o_methyluridine_5_monophosphate_1
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_228 [2.1.1.228] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_167 [2.1.1.167] +guanosine_5_monophosphate_1 +sam +hplus
+    2_o_methylguanosine_5_monophosphate_1
   }
 
   branch from h side right {
     h
-    <-> . +6_hydroxytetrahydro_beta_carboline +h2o +serotonin
-    formaldehyde
+    <-> . +udp +gama_cehc_glucuronide +cehc
+    udp_alpha_d_glucuronate
   }
 
   branch from h side left {
     h
-    <-> . +formaldehyde +r_noradrenaline +h2o
-    4_6_7_trihydroxy_1_2_3_4_tetrahydroisoquinoline
+    <-> . +15z_3_oxotetracosenoyl_coa +nadph +nadp
+    3_s_hydroxy_cis_15_tetracosaenoyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> . +3_oxo_all_cis_6_9_12_15_18_tetracosapentaenoyl_c +h +nadp
-    3_s_hydroxy_tetracosa_9_12_15_18_21_all_cis_pent
+    <-> . +2e_9z_octadecadienoyl_coa +h +nadp
+    9z_octadecenoyl_coa
   }
 
   branch from nadph side left {
     nadph
-    <-> . +11z_14z_3_oxoicosa_11_14_dienoyl_coa +h +nadp
-    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
+    <-> . +6_trans_12_epi_leukotriene_b4 +nadp +h
+    5_oxo_6e_12_epi_leukotriene_b4
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_1_1 [1.6.1.1] +nadh +nadp +nadph
-    pmf
+    <-> ec_1_1_1_174 [1.1.1.174] +nadh +h +cyclohexan_1_2_dione
+    2_hydroxycyclohexan_1_one
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +nadh +h
-    isocitrate
+    <-> ec_1_14_99_2 [1.14.99.2] +nadh +kynurenate +h +o2
+    7_8_dihydro_7_8_dihydroxykynurenate
   }
 }

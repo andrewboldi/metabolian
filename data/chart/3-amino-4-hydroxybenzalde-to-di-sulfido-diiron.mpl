@@ -18,13 +18,13 @@ pathway 3-amino-4-hydroxybenzalde-to-di-sulfido-diiron "3-amino-4-hydroxybenzald
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
-    neopikromycin
+    <-> ec_1_14_19_43 [1.14.19.43] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_acyl_2_3e_hexadec_3_enoyl_glycerolipid
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_14_15_33 [1.14.15.33] +narbomycin +o2 +hplus +di_sulfido_diiron +h2o
-    novapikromycin
+    <-> ec_1_14_19_27 [1.14.19.27] +1_acyl_2_palmitoylglycerolipid +o2 +hplus +di_sulfido_diiron +h2o
+    1_acyl_2_palmitoleoylglycerolipid
   }
 }

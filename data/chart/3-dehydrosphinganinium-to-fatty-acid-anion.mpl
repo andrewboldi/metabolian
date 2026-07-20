@@ -24,13 +24,13 @@ pathway 3-dehydrosphinganinium-to-fatty-acid-anion "3-dehydrosphinganinium to fa
 
   branch from sphinganine side right {
     sphinganine
-    <-> . +2_hydroxystearoyl_coa +coa +hplus
-    n_2_hydroxyoctadecanoyl_sphinganine
+    <-> . +2_hydroxybehenoyl_coa +coa +hplus
+    n_2_hydroxydocosanoyl_sphinganine
   }
 
   branch from sphinganine side left {
     sphinganine
-    <-> . +2_hydroxybehenoyl_coa +coa +hplus
-    n_2_hydroxydocosanoyl_sphinganine
+    <-> . +2_hydroxypalmitoyl_coa +coa +hplus
+    n_2_hydroxyhexadecanoyl_sphinganine
   }
 }

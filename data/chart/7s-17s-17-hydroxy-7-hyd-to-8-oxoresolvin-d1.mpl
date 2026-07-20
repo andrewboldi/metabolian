@@ -18,14 +18,14 @@ pathway 7s-17s-17-hydroxy-7-hyd-to-8-oxoresolvin-d1 "(7S,17S)-17-hydroxy-7-hydâ€
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +alpha_d_glucose
-    maltohexaose
+    <-> ec_3_2_1_21 [3.2.1.21] +p_nitrophenyl_beta_d_fucopyranoside +4_nitrophenol +beta_d_fucose
+    h
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_22_40 [3.4.22.40] +l_histidine +2_naphthylamine
-    l_histidyl_beta_naphthylamide
+    <-> ec_1_2_1_3 [1.2.1.3] +1h_imidazole +p_dimethylamino_cinnamate
+    p_dimethylamino_cinnamoylimidazole
   }
 
   branch from resolvin_d1 side left {

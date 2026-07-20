@@ -36,20 +36,20 @@ pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylgl
 
   branch from 1s_4s_prephenate side right {
     1s_4s_prephenate
-    <-> . +sam +keto_phenylpyruvate +h2o
-    s_adenosyl_s_carboxymethyl_l_homocysteine_dizwit
+    <-> . +2_octaprenylphenol +hydrogen_acceptor +hplus +keto_phenylpyruvate +hydrogen_donor +co2
+    3_all_trans_octaprenyl_benzene_1_2_diol
   }
 
   branch from aspartate side left {
     aspartate
-    <-> ec_2_3_1_17 [2.3.1.17] +acetyl_coa +coa +hplus
-    n_acetyl_l_aspartate
+    <-> ec_5_1_1_13 [5.1.1.13]
+    d_aspartate
   }
 
   branch from aspartate side right {
     aspartate
-    <-> ec_5_1_1_13 [5.1.1.13]
-    d_aspartate
+    <-> ec_4_1_1_11 [4.1.1.11] +hplus +co2
+    alanine
   }
 
   branch from 3_4_hydroxyphenyl_pyruvate side left {
@@ -102,8 +102,8 @@ pathway l-arogenate-to-trans-3-methylglutaconyl "L-arogenate to trans-3-methylgl
 
   branch from butyrate side left {
     butyrate
-    <-> . +tributyrin +h2o +hplus
-    dibutyrin
+    <-> . +1_palmitoyl_2_butanoyl_sn_glycero_3_phosphocholi +h2o +hplus
+    1_hexadecanoyl_sn_glycero_3_phosphocholine
   }
 
   branch from hmg_coa side right {

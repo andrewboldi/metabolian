@@ -26,25 +26,25 @@ pathway 5-hydroxymethylfurfural-to-furan-2-5-dicarboxyla "5-hydroxymethylfurfura
 
   branch from o2 side right {
     o2
-    <-> . +13_cis_retinal +h +nadph +nadp +h2o
-    4_oh_13_cis_retinal
+    <-> . +5_s_6_s_epoxy_15_r_hydroxyeicosatetraenoate +h2o
+    15_r_hydroxy_5z_8z_11z_13e_eicosatetraenoate
   }
 
   branch from o2 side left {
     o2
-    <-> . +11_cis_retinal +h +nadph +nadp +h2o
-    4_oh_9_cis_retinal
+    <-> ec_1_14_14_1 [1.14.14.1] +h +estrone +nadph +nadp +h2o
+    16alpha_hydroxyestrone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_27 [3.6.3.27] +h +adp +phosphate +phosphate
-    atp
+    <-> . +maltodecaose +beta_d_fructose
+    maltononaose
   }
 
   branch from h2o side left {
     h2o
-    <-> . +9e_tetradecenoic_acid +2_acyl_sn_glycero_3_phosphoglycerol_n_c14_1
-    phosphatidylglycerol_ditetradec_7_enoyl_n_c14_1
+    <-> . +maltodecaose +maltononaose
+    glucose
   }
 }

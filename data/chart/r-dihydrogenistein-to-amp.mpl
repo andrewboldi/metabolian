@@ -30,73 +30,73 @@ pathway r-dihydrogenistein-to-amp "(R)-dihydrogenistein to AMP" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_tetracosanoyl_sn_glycero_3_phosphocholine
+    <-> ec_3_2_1_167 [3.2.1.167] +baicalein +beta_d_glucuronate +h2o
+    baicalin
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    pe_12_0_0_0
+    <-> ec_3_2_1_175 [3.2.1.175] +alpha_d_glucose +2_cis_abscisate +h2o
+    abscisic_acid_d_glucopyranosyl_ester
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_11_1_21 [1.11.1.21] +h +tert_butyl_hydroperoxide +nadp +h2o
-    tert_butanol
+    <-> . +h +n_hydroxy_l_isoleucine +o2 +nadp +h2o
+    n_n_dihydroxy_l_isoleucine
   }
 
   branch from nadph side right {
     nadph
-    <-> . +flucloxacillin +h +o2 +nadp +h2o
-    5_hydroxymethylflucloxacillin
+    <-> ec_1_14_13_115 [1.14.13.115] +h +o2 +r_columbianetin +acetone +nadp +h2o
+    angelicin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +7_2_6_dimethyl_8_2_methyl_1_oxobutoxy_1_2_6_7_8
-    lovastatin
+    <-> . +l_lysine +l_isoleucine +l_tryptophan
+    tryptophanyl_isoleucyl_lysine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_histidine +l_lysine +l_cysteine
-    lysyl_cysteinyl_histidine
+    <-> . +l_isoleucine +l_tryptophan
+    trp_ile_trp
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +h +amp +taurolithocholate +atp +lithocholate
-    taurine
+    <-> . +13e_labdene_8alpha_15_diol +h2o
+    copal_8_ol_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
-    <-> . +h +simvastatin +amp +atp
-    simvastatin_hydroxy_acid
+    <-> ec_4_2_3_51 [4.2.3.51] +phellandrene
+    neryl_diphosphate
   }
 
   branch from coa side left {
     coa
-    <-> . +r_carnitine +13z_icosenoyl_coa
-    eicosenoylcarnitine_7
+    <-> . +r_carnitine +11z_octadecenoyl_coa
+    car_18_1_11e
   }
 
   branch from coa side right {
     coa
-    <-> . +11z_eicosenoyl_coa +r_carnitine
-    eicosenoylcarnitine_9
+    <-> . +3_oxo_4_r_8_dimethyl_nonanoyl_coenzyme_a +2r_2_6_dimethylheptanoyl_coa
+    acetyl_coa
   }
 
   branch from amp side left {
     amp
-    <-> ec_6_3_2_52 [6.3.2.52] +l_alanine +atp +jasmonic_acid_anion +diphosphate +h
-    7_epi_jasmonoyl_l_alanine
+    <-> ec_6_3_2_52 [6.3.2.52] +diphosphate +jasmonoyl_l_isoleucine +atp +jasmonate
+    l_isoleucine
   }
 
   branch from amp side right {
     amp
-    <-> . +diphosphate +30_hydroxytriacontanoyl_coa +atp +coa
-    hydroxytriacontanoate
+    <-> ec_6_2_1_1 [6.2.1.1] +acetyl_coa +diphosphate +atp +coa
+    acetate
   }
 }

@@ -26,14 +26,14 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
 
   branch from oleate side right {
     oleate
-    <-> . +dioleoylglycerol +h2o +hplus
-    monooleoylglycerol
+    <-> . +s_s_bis_2_oleoylglycero_1_phosphate +h2o +hplus
+    s_s_2_oleoylglycero_1_phospho_1_glycerol
   }
 
   branch from oleate side left {
     oleate
-    <-> . +n_oleoyl_l_glutaminate +h2o
-    glutamine
+    <-> . +r_r_bis_2_oleoylglycero_3_phosphate +h2o +hplus
+    r_r_2_oleoylglycero_1_phospho_1_glycerol
   }
 
   branch from 1d_myo_inositol_1_phosphate side right {
@@ -50,25 +50,25 @@ pathway 1-oleoyl-sn-glycero-3-pho-to-s-adenosyl-l-homocy "1-oleoyl-sn-glycero-3-
 
   branch from glycerol side right {
     glycerol
-    <-> . +15_deoxy_12_14_prostaglandin_j2_2_glyceryl_ester +h2o +hplus
-    15_deoxy_12_14_prostaglandin_j2
+    <-> . +prostaglandin_e2_1_glyceryl_ester +h2o +hplus
+    prostaglandin_e2
   }
 
   branch from glycerol side left {
     glycerol
-    <-> ec_3_1_3_21 [3.1.3.21] +h2o +pi
-    sn_glycerol_1_phosphate
+    <-> . +1_linolenoylglycerol +h2o +hplus
+    linolenate
   }
 
   branch from sah side right {
     sah
-    <-> . +lathosterone +sam +hplus
-    4_methyllathosterone
+    <-> ec_2_1_1_386 [2.1.1.386] +3_end_ribonucleotide_1 +sam +hplus
+    3_end_2_o_methylribonucleotide_1
   }
 
   branch from sah side left {
     sah
-    <-> . +gibberellin_a1 +sam
-    gibberellin_a1_methyl_ester
+    <-> ec_2_1_1_95 [2.1.1.95] +tocopherol +sam +hplus
+    tocopherol
   }
 }

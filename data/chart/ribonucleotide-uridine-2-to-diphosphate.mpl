@@ -36,13 +36,13 @@ pathway ribonucleotide-uridine-2-to-diphosphate "ribonucleotide-uridine(2−) to
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_133 [2.5.1.133] +bacteriochlorophyllide_a +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +hplus
-    geranylgeranyl_bacteriochlorophyllide_a
+    <-> ec_4_2_3_181 [4.2.3.181] +fpp
+    selina_4_15_7_11_diene
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_2_7_7_90 [2.7.7.90] +8_amino_3_8_dideoxy_d_manno_oct_2_ulosonic_acid +ctp
-    cmp_8_amino_3_8_dideoxy_d_manno_oct_2_ulosonate
+    <-> ec_4_2_3_180 [4.2.3.180] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    pseudolaratriene
   }
 }

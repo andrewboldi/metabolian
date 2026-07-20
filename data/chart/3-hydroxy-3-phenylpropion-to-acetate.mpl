@@ -22,38 +22,38 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to ac
 
   branch from e_cinnamate side left {
     e_cinnamate
-    <-> . +h2o
-    tropate
+    <-> ec_1_14_13_11 [1.14.13.11] +trans_4_coumarate +nadp +h2o +h +nadph
+    o2
   }
 
   branch from e_cinnamate side right {
     e_cinnamate
-    <-> . +nh4
-    r_3_ammonio_3_phenylpropanoate
+    <-> . +nadh +h +o2 +nad
+    cis_3_3_carboxyethenyl_3_5_cyclohexadiene_1_2_di
   }
 
   branch from h side left {
     h
-    <-> ec_3_1_1_95 [3.1.1.95] +15_demethoxy_epsilon_rhodomycinone +methanol +h2o
-    epsilon_rhodomycinone
+    <-> . +roquefortine_f +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
+    n1_hydroxy_roquefortine_c
   }
 
   branch from h side right {
     h
-    <-> . +co2 +15_decarboxymethyl_epsilon_rhodomycinone
-    15_demethoxy_epsilon_rhodomycinone
+    <-> ec_2_3_1_199 [2.3.1.199] +malonyl_coa +densipoloyl_coa +3_oxoauricoloyl_coa +coa
+    co2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +11_dehydro_15_oxo_spinosyn_macrolactone
-    15_oxo_spinosyn_macrolactone
+    <-> . +6_hydroxy_allocryptopine
+    dihydrochelerythrine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +beta_d_glcp_1_6_beta_d_glcp +2_hydroxy_2_methylpropanenitrile
-    linustatin
+    <-> . +2_keto_4_hydroxy_5_phosphopentanoate
+    2_keto_5_phospho_3_cis_pentenoate
   }
 
   branch from d_phenylalanine side left {
@@ -70,25 +70,25 @@ pathway 3-hydroxy-3-phenylpropion-to-acetate "3-hydroxy-3-phenylpropion… to ac
 
   branch from coa side left {
     coa
-    <-> . +4_methylumbelliferyl_d_glucoside +malonyl_coa
-    4_methylumbelliferone_6_o_malonylglucoside
+    <-> ec_2_3_1_198 [2.3.1.198] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
+    sn_2_c16_0_dca_lpa
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_176 [2.3.1.176] +3_oxochol_4_en_24_oyl_coa +propanoyl_coa
-    3_24_dioxocholest_4_en_26_oyl_coa
+    <-> ec_2_3_1_198 [2.3.1.198] +2_omega_hydroxy_c22_0_lpa +sn_glycerol_3_phosphate
+    22_hydroxy_docosanoyl_coa
   }
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> . +arachidonate +h2o
-    n_arachidonoyl_l_phenylalaninate
+    <-> .
+    d_phenylalanine
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> .
-    d_phenylalanine
+    <-> . +des_arg9_bradykinin +h2o
+    des_phe8_des_arg9_bradykinin
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "sapienate-to-3e-tetradecenoyl-coa",
   "name": "sapienate to (3E)-tetradecenoyl-CoA",
-  "category": "other",
+  "category": "nucleotide-metabolism",
   "summary": "A 7-step route from sapienate to (3E)-tetradecenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -251,53 +251,56 @@
       }
     },
     {
-      "id": "kolavenyl_diphosphate",
-      "name": "(+)-kolavenyl diphosphate",
-      "short": "(+)-kolavenyl PP",
-      "formula": "C20H33O7P2",
-      "charge": -3,
-      "xrefs": {
-        "chebi": "CHEBI:138311"
-      }
-    },
-    {
-      "id": "kolavelool",
-      "name": "(+)-kolavelool",
-      "formula": "C20H34O",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:138313"
-      }
-    },
-    {
-      "id": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
-      "name": "8-[(1S,2S)-3-oxo-2-{(Z)-pent-2-en-1-yl}cyclopentyl]octanoate",
-      "short": "8-[(1S,2S)-3-oxo-2-…",
-      "formula": "C18H29O3",
+      "id": "4_2_4_dichlorophenoxy_butanoate",
+      "name": "4-(2,4-dichlorophenoxy)butanoate",
+      "short": "4-(2,4-dichlorophen…",
+      "formula": "C10H9Cl2O3",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:191855"
+        "chebi": "CHEBI:143277"
       }
     },
     {
-      "id": "opc8_coa",
-      "name": "OPC8-CoA",
-      "formula": "C39H60N7O18P3S",
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "n2_4_2_4_dichlorophenoxy_butanoyl_l_glutamine",
+      "name": "N2-[4-(2,4-dichlorophenoxy)butanoyl]-L-glutamine",
+      "short": "N2-[4-(2,4-dichloro…",
+      "formula": "C15H17Cl2N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143278"
+      }
+    },
+    {
+      "id": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
+      "name": "tRNA 3'-terminal nucleotidyl-cytidyl-cytidine(3−)",
+      "short": "tRNA 3'-terminal…",
+      "formula": "C23H30N6O20P3R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:83069"
+      }
+    },
+    {
+      "id": "trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden",
+      "name": "tRNA 3'-terminal nucleotidyl-cytidyl-cytidyl-adenosine(4−)",
+      "short": "tRNA 3'-terminal…",
+      "formula": "C33H41N11O26P4R",
       "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:138396"
+        "chebi": "CHEBI:83071"
       }
     }
   ],
-  "enzymes": [
-    {
-      "id": "ec_3_1_7_12",
-      "name": "(+)-kolavelool synthase",
-      "ec": [
-        "3.1.7.12"
-      ]
-    }
-  ],
+  "enzymes": [],
   "reactions": [
     {
       "id": "r1",
@@ -645,74 +648,72 @@
     },
     {
       "id": "r9",
-      "name": "(+)-kolavelool synthase",
-      "equation": "(+)-kolavenyl diphosphate + H2O = (+)-kolavelool + diphosphate",
-      "ec": "3.1.7.12",
+      "name": "4-(2,4-dichlorophenoxy)butanoate + L-glutamine + ATP = 4-(2,4-dichlorophenoxy)butanoyl-...",
+      "equation": "4-(2,4-dichlorophenoxy)butanoate + L-glutamine + ATP = 4-(2,4-dichlorophenoxy)butanoyl-L-glutamine + AMP + diphosphate + H(+)",
       "substrates": [
         {
-          "metabolite": "kolavenyl_diphosphate",
+          "metabolite": "4_2_4_dichlorophenoxy_butanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "h2o",
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "kolavelool",
+          "metabolite": "n2_4_2_4_dichlorophenoxy_butanoyl_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
           "stoichiometry": 1
         },
         {
           "metabolite": "ppi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_3_1_7_12"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:54672"
+        "rhea": "RHEA:59868"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54672"
+            "id": "RHEA:59868"
           }
         ]
       }
     },
     {
       "id": "r10",
-      "name": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
-      "equation": "(1S,2S)-OPC-8 + ATP + CoA = OPC8-CoA + AMP + diphosphate",
+      "name": "a tRNA with a 3' CC end + ATP = a tRNA with a 3' CCA end + diphosphate",
+      "equation": "a tRNA with a 3' CC end + ATP = a tRNA with a 3' CCA end + diphosphate",
       "substrates": [
         {
-          "metabolite": "8_1s_2s_3_oxo_2_z_pent_2_en_1_yl_cyclopentyl_oct",
+          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidine_3",
           "stoichiometry": 1
         },
         {
           "metabolite": "atp",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "coa",
-          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "opc8_coa",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "amp",
+          "metabolite": "trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden",
           "stoichiometry": 1
         },
         {
@@ -723,14 +724,14 @@
       "reversibility": "reversible",
       "pathwayStep": 10,
       "xrefs": {
-        "rhea": "RHEA:54888"
+        "rhea": "RHEA:60012"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:54888"
+            "id": "RHEA:60012"
           }
         ]
       }

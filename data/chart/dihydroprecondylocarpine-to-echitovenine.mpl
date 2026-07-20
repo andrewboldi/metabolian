@@ -18,13 +18,13 @@ pathway dihydroprecondylocarpine-to-echitovenine "dihydroprecondylocarpine… to
 
   branch from fmn side left {
     fmn
-    <-> . +5_hete +fmnh2 +o2 +h2o +hplus
-    5_20_dihete
+    <-> . +1_o_oleoyl_sn_glycero_3_phosphocholine +fmnh2 +o2 +h2o +hplus
+    1_o_11_hydroxyoleoyl_sn_glycero_3_phosphocholine
   }
 
   branch from fmn side right {
     fmn
-    <-> . +8_hete +fmnh2 +o2 +h2o +hplus
-    8_20_dihete
+    <-> ec_1_14_14_177 [1.14.14.177] +triacontanoate +fmnh2 +o2 +h2o +hplus
+    hydroxytriacontanoate
   }
 }

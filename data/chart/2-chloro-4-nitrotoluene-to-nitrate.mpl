@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-chloro-4-nitrotoluene-to-nitrate "2-chloro-4-nitrotoluene to nitrate" {
-  spacing 190
+  spacing 184
 
   spine at 0,0 {
     2_chloro_4_nitrotoluene
@@ -28,21 +28,15 @@ pathway 2-chloro-4-nitrotoluene-to-nitrate "2-chloro-4-nitrotoluene to nitrate" 
     1_3_dinitroglycerol
   }
 
-  branch from no side left {
-    no
-    <-> ec_1_14_15_41 [1.14.15.41] +l_tryptophan +di_sulfido_diiron +o2 +hplus +di_sulfido_diiron +h2o
-    4_nitro_l_tryptophan
+  branch from hydrogen_acceptor side left {
+    hydrogen_acceptor
+    <-> . +uridine_5_monophosphate_1 +hydrogen_donor +o2 +h2o
+    5_hydroxyuridine_5_phosphate_1
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +4_4_diaponeurosporene +hydrogen_donor +o2 +h2o
-    4_4_diaponeurosporenal
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> . +dihydro_ferroheme_d1 +hydrogen_donor
-    ferroheme_d1
+    <-> . +2_3_bis_o_phytanyl_sn_glycerol_1_phospholipid_an +hydrogen_donor
+    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phospholi
   }
 }

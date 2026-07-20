@@ -20,56 +20,44 @@ pathway dtdp-3-amino-4-oxo-2-3-6-to-dtdp-3-4-didehydro-2 "dTDP-3-amino-4-oxo-2,3
 
   branch from dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose side left {
     dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose
-    <-> . +nadp +h +nadph
-    dtdp_4_oxo_2_6_dideoxy_d_allose
+    <-> . +nadh +h +dtdp_4_dehydro_2_6_dideoxy_d_glucose
+    nad
   }
 
   branch from dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose side right {
     dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose
-    <-> . +h
-    dtdp_1_ester_with_6s_5_6_dihydro_4_hydroxy_6_met
+    <-> . +nadh +h +nad
+    dtdp_4_oxo_2_6_dideoxy_d_allose
   }
 
   branch from h side left {
     h
-    <-> . +2_3_dioxo_l_gulonate
-    dehydroascorbate_bicyclic_form
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +lanosterol +h2o
+    lanosteryl_oleate
   }
 
   branch from h side right {
     h
-    <-> . +4_o_oxalyl_l_threonate +h2o
-    cyclic_3_4_o_oxalyl_l_threonate
+    <-> ec_3_1_1_13 [3.1.1.13] +9z_octadecenoate +ergosterol +h2o
+    ergosteryl_oleate
   }
 
-  branch from pyridoxamine_5_phosphate side left {
-    pyridoxamine_5_phosphate
-    <-> . +pyridoxal_5_phosphate +l_tryptophan
-    indole_3_pyruvate
-  }
-
-  branch from dtdp_4_dehydro_2_6_dideoxy_d_glucose side right {
+  branch from dtdp_4_dehydro_2_6_dideoxy_d_glucose side left {
     dtdp_4_dehydro_2_6_dideoxy_d_glucose
     <-> . +h +nadph +nadp
     dtdp_l_olivose
   }
 
-  branch from dtdp_4_dehydro_2_6_dideoxy_d_glucose side left {
-    dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    <-> . +nadh +dtdp_2_6_dideoxy_d_glycero_hex_2_enos_4_ulose +h
-    nad
-  }
-
   branch from nadp side right {
     nadp
-    <-> . +s_3_chloro_1_phenyl_1_propanol +h +nadph
-    3_chloro_1_phenyl_1_propanone
+    <-> . +acetyl_coa +malonyl_coa +h +nadph +4z_7z_10z_13z_16z_19z_docosahexaenoate +coa +h2o
+    co2
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_362 [1.1.1.362] +maggiemycin +h +nadph
-    epsilon_rhodomycinone
+    <-> ec_1_1_1_330 [1.1.1.330] +3_oxoauricoloyl_coa +h +nadph
+    3r_hydroxy_auricoloyl_coa
   }
 
   branch from dtdp_3_4_didehydro_2_6_dideoxy_d_glucose side right {

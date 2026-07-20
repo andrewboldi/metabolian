@@ -1,0 +1,243 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "linolenoyl-coa-to-3r-6z-9z-12z-15z-3-hydr",
+  "name": "γ-linolenoyl-CoA to (3R,6Z,9Z,12Z,15Z)-3-hydr…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from γ-linolenoyl-CoA(4−) to (3R,6Z,9Z,12Z,15Z)-3-hydroxyoctadecatetraenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42180"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57363"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "linolenoyl_coa",
+      "name": "γ-linolenoyl-CoA",
+      "formula": "C39H60N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57363"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "6z_9z_12z_15z_octadecatetraenoyl_coa",
+      "name": "(6Z,9Z,12Z,15Z)-octadecatetraenoyl-CoA",
+      "short": "(6Z,9Z,12Z,15Z)-oct…",
+      "formula": "C39H58N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:71489"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2e_6z_9z_12z_15z_octadecapentaenoyl_coa",
+      "name": "(2E,6Z,9Z,12Z,15Z)-octadecapentaenoyl-CoA",
+      "short": "(2E,6Z,9Z,12Z,15Z)-…",
+      "formula": "C39H56N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:233740"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "3r_6z_9z_12z_15z_3_hydroxyoctadecatetraenoyl_co",
+      "name": "(3R,6Z,9Z,12Z,15Z)-3-hydroxyoctadecatetraenoyl-CoA",
+      "short": "(3R,6Z,9Z,12Z,15Z)-…",
+      "formula": "C39H58N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:144032"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(6Z,9Z,12Z)-octadecatrienoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (6Z,9Z,12Z,...",
+      "equation": "(6Z,9Z,12Z)-octadecatrienoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (6Z,9Z,12Z,15Z)-octadecatetraenoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "substrates": [
+        {
+          "metabolite": "linolenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6z_9z_12z_15z_octadecatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(6Z,9Z,12Z,15Z)-octadecatetraenoyl-CoA + O2 = (2E,6Z,9Z,12Z,15Z)-octadecapentaenoyl-CoA...",
+      "equation": "(6Z,9Z,12Z,15Z)-octadecatetraenoyl-CoA + O2 = (2E,6Z,9Z,12Z,15Z)-octadecapentaenoyl-CoA + H2O2",
+      "substrates": [
+        {
+          "metabolite": "6z_9z_12z_15z_octadecatetraenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_6z_9z_12z_15z_octadecapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:84723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(2E,6Z,9Z,12Z,15Z)-octadecapentaenoyl-CoA + H2O = 3R-hydroxy-(6Z,9Z,12Z,15Z)-octadecate...",
+      "equation": "(2E,6Z,9Z,12Z,15Z)-octadecapentaenoyl-CoA + H2O = 3R-hydroxy-(6Z,9Z,12Z,15Z)-octadecatetraenoyl-CoA",
+      "substrates": [
+        {
+          "metabolite": "2e_6z_9z_12z_15z_octadecapentaenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6z_9z_12z_15z_3_hydroxyoctadecatetraenoyl_co",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:84807"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:84807"
+          }
+        ]
+      }
+    }
+  ]
+}

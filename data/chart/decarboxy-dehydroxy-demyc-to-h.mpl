@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway decarboxy-dehydroxy-demyc-to-h "decarboxy-dehydroxy-demyc… to H" {
-  spacing 200
+  spacing 188
 
   spine at 0,0 {
     decarboxy_dehydroxy_demycosaminyl_nystatin
@@ -18,49 +18,37 @@ pathway decarboxy-dehydroxy-demyc-to-h "decarboxy-dehydroxy-demyc… to H" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_120 [1.1.1.120] +alpha_d_galactose +h +nadph
-    d_galactono_1_4_lactone
+    <-> . +octadecanoyl_coa +h +o2 +nadph +h2o
+    trans_9_octadecenoyl_coa
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_112 [1.1.1.112] +indan_1_one +h +nadph
-    indan_1_ol
+    <-> ec_1_7_1_11 [1.7.1.11] +para_dimethylamino_azobenzene +h2o +h +nadph
+    4_dimethylamino_phenylazoxybenzene
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +cephamycin_c +phosphate +cephamycin_c
-    atp
+    <-> ec_3_2_1_214 [3.2.1.214] +d_glcp_1_2_d_glcp_1_2_d_glcp +sophorose
+    beta_1_2_glucopentaose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    methicillin
-  }
-
-  branch from gdp side left {
-    gdp
-    <-> . +dcdp +dcmp
-    gtp
-  }
-
-  branch from gdp side right {
-    gdp
-    <-> . +h +phosphate +gtp +h2o
-    fe
+    <-> . +precolibactin_16a +n_myristoyl_d_asparagine +h
+    precolibactin_1491
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    cefaloridine
+    <-> . +precolibactin_16a +h2o
+    unstable_precolibactin_intermediate
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_44 [3.6.3.44] +adp +phosphate +atp +h2o
-    cefalotin
+    <-> . +2s_4_prop_1_en_1_yl_2_3_dihydro_1h_pyrrole_2_ca
+    2s_4_propylidene_2_3_dihydropyrrole_2_carboxyla
   }
 }

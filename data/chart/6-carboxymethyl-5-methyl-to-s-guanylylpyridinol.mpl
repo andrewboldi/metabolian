@@ -20,25 +20,25 @@ pathway 6-carboxymethyl-5-methyl-to-s-guanylylpyridinol "6-carboxymethyl-5-methy
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_321 [2.1.1.321] +l_argininium +sam +hplus
-    n_methyl_argininium_1
+    <-> . +cytidine_5_monophosphate_1 +sam +hplus
+    5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_320 [2.1.1.320] +l_argininium +sam +hplus
-    n_n_dimethyl_l_arginine_1
+    <-> ec_2_1_1_337 [2.1.1.337] +r_reticulinium +sam +hplus
+    r_tembetarine
   }
 
   branch from ppi side left {
     ppi
-    <-> . +l_cysteinate_group +carbamoyl_p +atp +h2o +amp +pi +hplus
-    c_terminal_s_carbamoyl_l_cysteinate
+    <-> . +gtp +atp
+    cyclic_amp_amp_gmp
   }
 
   branch from ppi side right {
     ppi
-    <-> . +c_terminal_gly_gly_1 +atp +hplus
-    c_terminal_gly_gly_amp_1_group
+    <-> . +utp
+    cyclic_di_ump
   }
 }

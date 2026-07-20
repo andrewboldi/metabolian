@@ -24,14 +24,14 @@ pathway 2-hexaprenyl-6-hydroxyphe-to-s-adenosyl-l-homocy "2-hexaprenyl-6-hydroxy
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_35 [2.1.1.35] +uridine_5_monophosphate_1 +sam +hplus
-    5_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_297 [2.1.1.297] +l_glutamine +sam +hplus
+    n5_methyl_l_glutamine
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_166 [2.1.1.166] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_187 [2.1.1.187] +guanosine_5_monophosphate_1 +sam +hplus
+    n1_methylguanosine_5_monophosphate_1
   }
 
   branch from all_trans_6_methoxy_2_hexaprenylhydroquinone side right {

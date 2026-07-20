@@ -20,43 +20,43 @@ pathway gdp-to-h-null "GDP to H" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_360 [2.4.1.360] +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
-    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+    <-> . +udp +cyanidin_3_o_6_o_p_coumaroyl_2_o_d_xylosyl_d_glu +h
+    cyanidin_3_o_6_o_4_coumaroyl_beta_d_sambubioside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +1_phenyl_3_3_c_glucosyl_2_4_6_trihydroxyphenyl_p +h
-    1_phenyl_3_2_4_6_trihydroxyphenyl_propane_1_3_di
+    <-> . +udp +arabidopsis_anthocyanin_a3 +h
+    cyanidin_3_o_2_o_xylosyl_6_o_p_coumaroyl_glucosi
   }
 
   branch from udp side left {
     udp
-    <-> . +rosuvastatin_glucuronide +rosuvastatin
-    udp_alpha_d_glucuronate
+    <-> . +l_arabinopyranose +h +h2o
+    udp_beta_l_arabinopyranose
   }
 
   branch from udp side right {
     udp
-    <-> . +simvastatin_acyl_glucuronide +udp_alpha_d_glucuronate
-    simvastatin_hydroxy_acid
+    <-> ec_2_4_1_241 [2.4.1.241] +1_16_0_2_18_2_digalactosyldiacylglycerol +h +18_1_16_1_mgdg
+    udp_alpha_d_galactose
   }
 
   branch from h side left {
     h
-    <-> . +ferrocytochrome_c +pyruvate +ferricytochrome_c
-    r_lactate
+    <-> . +adenosine_3_5_bisphosphate +deoxycylindrospermopsin +desulfo_7_deoxycylindrospermopsin
+    3_phosphoadenylyl_sulfate
   }
 
   branch from h side right {
     h
-    <-> . +alpha_d_glucose_1_6_bisphosphate +2r_3_phosphoglycerate +2r_3_phospho_glyceroyl_phosphate
-    d_glucopyranose_1_phosphate
+    <-> ec_3_1_4_11 [3.1.4.11] +1d_myo_inositol_1_4_5_trisphosphate +1_stearoyl_2_arachidonoyl_sn_glycerol +h2o
+    1_stearoyl_2_arachidonoyl_sn_glycero_3_phospho_1
   }
 
   branch from beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal side left {
     beta_d_mannac_1_3_alpha_l_fucnac_1_3_alpha_d_gal
-    <-> . +udp +alpha_d_gal_1_3_beta_d_mannac_1_3_alpha_l_fucnac +h
-    udp_alpha_d_galactose
+    <-> . +udp +h +udp_alpha_d_galactose
+    alpha_d_gal_1_3_beta_d_mannac_1_3_alpha_l_fucnac
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway phenylglyoxylyl-coa-to-cis-cis-muconate "phenylglyoxylyl-CoA to cis,cis-muconate" {
-  spacing 328
+  spacing 322
 
   spine at 0,0 {
     phenylglyoxylyl_coa
@@ -24,23 +24,17 @@ pathway phenylglyoxylyl-coa-to-cis-cis-muconate "phenylglyoxylyl-CoA to cis,cis-
 
   branch from benzaldehyde side left {
     benzaldehyde
-    <-> . +benzylaminium +o2 +h2o +h2o2
-    nh3
-  }
-
-  branch from benzaldehyde side right {
-    benzaldehyde
     <-> . +nadp +nadph +hplus
     benzyl_alcohol
   }
 
-  branch from benzoate side left {
-    benzoate
-    <-> . +7_14_16_trihydroxyconfertifolin +hplus +h2o
-    dideacetyl_astellolide_a
+  branch from benzaldehyde side right {
+    benzaldehyde
+    <-> . +benzylaminium +pyruvate
+    alanine
   }
 
-  branch from cis_cis_muconate side right {
+  branch from cis_cis_muconate side left {
     cis_cis_muconate
     <-> ec_5_5_1_1 [5.5.1.1] +hplus
     s_5_oxo_2_5_dihydro_2_furylacetate

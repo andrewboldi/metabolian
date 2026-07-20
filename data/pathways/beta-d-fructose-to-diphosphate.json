@@ -1,0 +1,326 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "beta-d-fructose-to-diphosphate",
+  "name": "beta-D-fructose… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from beta-D-fructose 6-phosphate to diphosphate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR137382"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "beta_d_fructose_6_phosphate",
+      "name": "beta-D-fructose 6-phosphate",
+      "short": "beta-D-fructose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1107898"
+      }
+    },
+    {
+      "id": "nh4",
+      "name": "NH4",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM729302"
+      }
+    },
+    {
+      "id": "alpha_d_glucosamine_1_phosphate",
+      "name": "alpha-D-glucosamine 1-phosphate",
+      "short": "alpha-D-glucosamine…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM1364052"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104266"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "n_acetyl_d_mannosamine_1_phosphate",
+      "name": "N-acetyl-D-mannosamine 1-phosphate",
+      "short": "N-acetyl-D-mannosam…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM729920"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1101474"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_alpha_d_glucosamine",
+      "name": "UDP-N-acetyl-alpha-D-glucosamine",
+      "short": "UDP-N-acetyl-alpha-…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104529"
+      }
+    },
+    {
+      "id": "diphosphate",
+      "name": "diphosphate",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM11"
+      }
+    },
+    {
+      "id": "n_acetyl_beta_d_glucosamine_6_phosphate",
+      "name": "N-acetyl-beta-D-glucosamine 6-phosphate",
+      "short": "N-acetyl-beta-D-glu…",
+      "formula": "C8H14NO9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364174"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_157",
+      "name": "glucosamine-1-phosphate N-acetyltransferase",
+      "ec": [
+        "2.3.1.157"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_23",
+      "name": "UDP-N-acetylglucosamine diphosphorylase",
+      "ec": [
+        "2.7.7.23"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_3",
+      "name": "phosphoacetylglucosamine mutase",
+      "ec": [
+        "5.4.2.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR137382",
+      "substrates": [
+        {
+          "metabolite": "beta_d_fructose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "alpha_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR137382"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR137382"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucosamine-1-phosphate N-acetyltransferase",
+      "ec": "2.3.1.157",
+      "substrates": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alpha_d_glucosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetyl_d_mannosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_157"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR153672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR153672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-N-acetylglucosamine diphosphorylase",
+      "ec": "2.7.7.23",
+      "substrates": [
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_acetyl_d_mannosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_alpha_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR146658"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR146658"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phosphoacetylglucosamine mutase",
+      "ec": "5.4.2.3",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_beta_d_glucosamine_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_mannosamine_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR152761"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR152761"
+          }
+        ]
+      }
+    }
+  ]
+}

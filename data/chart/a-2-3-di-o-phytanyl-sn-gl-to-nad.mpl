@@ -20,37 +20,37 @@ pathway a-2-3-di-o-phytanyl-sn-gl-to-nad "a 2,3-di-O-phytanyl-sn-gl… to NAD" {
 
   branch from hydrogen_acceptor side left {
     hydrogen_acceptor
-    <-> . +malonyl-coa +acetyl_coa +hydrogen_donor +sam +hplus +sah +co2 +coa +h2o
-    2_4_dihydroxy_3_methyl_6_2_oxopropyl_benzaldehyd
+    <-> . +2s_9s_annullatin_h +hydrogen_donor
+    2s_9s_annullatin_d
   }
 
   branch from hydrogen_acceptor side right {
     hydrogen_acceptor
-    <-> . +o_s_2e_4e_6s_4_6_dimethylocta_2_4_dienyl_panteth +malonyl-coa +hydrogen_donor +sam +hplus +holo-acp +sah +co2 +coa +h2o
-    6_3e_5e_7s_5_7_dimethyl_2_oxonona_3_5_dienyl_2_4
+    <-> . +trans_sinapyl_alcohol +hydrogen_donor
+    e_sinapaldehyde
   }
 
   branch from glycine side left {
     glycine
-    <-> . +fatty_acyl_coa +coa +hplus
-    n_fatty_acyl_glycine
+    <-> . +linoleoyl_coa +coa +hplus
+    n_linoleoylglycine
   }
 
   branch from glycine side right {
     glycine
-    <-> . +decanoyl_coa +coa +hplus
-    n_decanoylglycinate
+    <-> . +l_glutamate +atp +adp +pi +hplus
+    glycyl_l_glutamate_1
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +cis_3_chloroallyl_aldehyde
-    cis_3_chloroprop_2_en_1_ol
+    <-> . +nadh +h +streptomycin_6_phosphate
+    dihydrostreptomycin_6_phosphate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +p_cumate +h2o
-    4_isopropylbenzaldehyde
+    <-> . +1_hydroxy_2_naphthoate +nadh +h +h2o
+    1_hydroxy_2_naphthaldehyde
   }
 }

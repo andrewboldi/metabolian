@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "trichloroethene-to-hydrogen-acceptor",
   "name": "trichloroethene to hydrogen acceptor",
-  "category": "cofactor-vitamin-metabolism",
+  "category": "amino-acid-metabolism",
   "summary": "A 3-step route from trichloroethene to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -92,32 +92,68 @@
       }
     },
     {
-      "id": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
-      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one",
-      "short": "9,10-dihydroxy-7-me…",
-      "formula": "C17H14O6",
-      "charge": 0,
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
       "xrefs": {
-        "chebi": "CHEBI:146010"
+        "chebi": "CHEBI:57384"
       }
     },
     {
-      "id": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
-      "name": "(3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one",
-      "short": "9,10-dihydroxy-7-me…",
-      "formula": "C17H16O6",
-      "charge": 0,
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:146011"
+        "chebi": "CHEBI:57288"
       }
     },
     {
-      "id": "ferroheme_o",
-      "name": "ferroheme o",
-      "formula": "C49H56FeN4O5",
-      "charge": -2,
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:60530"
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "clavatol",
+      "name": "clavatol",
+      "formula": "C10H12O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:188925"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
       }
     },
     {
@@ -130,12 +166,30 @@
       }
     },
     {
-      "id": "fe_ii_heme_i",
-      "name": "Fe(II)-heme i",
-      "formula": "C49H56FeN4O6",
-      "charge": -2,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:147291"
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "cordypyrone_a",
+      "name": "cordypyrone A",
+      "formula": "C22H28O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:190187"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
       }
     },
     {
@@ -154,15 +208,6 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:15379"
-      }
-    },
-    {
-      "id": "co2",
-      "name": "CO2",
-      "formula": "CO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:16526"
       }
     }
   ],
@@ -319,82 +364,134 @@
     },
     {
       "id": "r4",
-      "name": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-...",
-      "equation": "9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H-benzo[g]isochromen-1-one + AH2 = (3S)-9,10-dihydroxy-7-methoxy-3-(2-oxopropyl)-1H,3H,4H-naphtho[2,3-c]pyran-1-one + A",
+      "name": "3 malonyl-CoA + acetyl-CoA + AH2 + 2 S-adenosyl-L-methionine + H(+) = clavatol + A + 2 ...",
+      "equation": "3 malonyl-CoA + acetyl-CoA + AH2 + 2 S-adenosyl-L-methionine + H(+) = clavatol + A + 2 S-adenosyl-L-homocysteine + 3 CO2 + 4 CoA + H2O",
       "substrates": [
         {
-          "metabolite": "9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_benzo",
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "acetyl_coa",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_donor",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "3s_9_10_dihydroxy_7_methoxy_3_2_oxopropyl_1h_3h",
+          "metabolite": "clavatol",
           "stoichiometry": 1
         },
         {
           "metabolite": "hydrogen_acceptor",
           "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:62880"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:62880"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
-      "name": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
-      "equation": "Fe(II)-heme o + A + H2O = Fe(II)-heme i + AH2",
-      "substrates": [
-        {
-          "metabolite": "ferroheme_o",
-          "stoichiometry": 1
         },
         {
-          "metabolite": "hydrogen_acceptor",
-          "stoichiometry": 1
+          "metabolite": "sah",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 4
         },
         {
           "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
-      "products": [
-        {
-          "metabolite": "fe_ii_heme_i",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hydrogen_donor",
-          "stoichiometry": 1
-        }
-      ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:63392"
+        "rhea": "RHEA:70075"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:63392"
+            "id": "RHEA:70075"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "10 malonyl-CoA + acetyl-CoA + 3 AH2 + 8 NADPH + 18 H(+) = cordypyrone A + 3 A + 10 CO2 ...",
+      "equation": "10 malonyl-CoA + acetyl-CoA + 3 AH2 + 8 NADPH + 18 H(+) = cordypyrone A + 3 A + 10 CO2 + 8 NADP(+) + 11 CoA + 8 H2O",
+      "substrates": [
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 10
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 18
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cordypyrone_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 10
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 8
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 11
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 8
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:71139"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:71139"
           }
         ]
       }

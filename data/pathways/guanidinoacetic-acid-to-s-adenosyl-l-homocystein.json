@@ -102,41 +102,23 @@
       }
     },
     {
-      "id": "nocamycin_e",
-      "name": "nocamycin E",
-      "formula": "C25H29NO9",
-      "charge": -2,
+      "id": "cytidine_5_monophosphate_1",
+      "name": "cytidine 5'-monophosphate(1−)",
+      "short": "cytidine 5'-MP(1−)",
+      "formula": "C9H11N3O7P",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:141048"
+        "chebi": "CHEBI:82748"
       }
     },
     {
-      "id": "nocamycin_i",
-      "name": "nocamycin I",
-      "formula": "C26H32NO9",
+      "id": "5_methylcytidine_5_monophosphate_1",
+      "name": "5-methylcytidine 5'-monophosphate(1−)",
+      "short": "5-methylcytidine…",
+      "formula": "C10H13N3O7P",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:141049"
-      }
-    },
-    {
-      "id": "adenosine_5_monophosphate_1",
-      "name": "adenosine 5'-monophosphate(1−)",
-      "short": "adenosine 5'-MP(1−)",
-      "formula": "C10H11N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74411"
-      }
-    },
-    {
-      "id": "2_o_methyladenosine_5_monophosphate_1",
-      "name": "2'-O-methyladenosine 5'-monophosphate(1−)",
-      "short": "2'-O-methyladenosin…",
-      "formula": "C11H13N5O6P",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:74477"
+        "chebi": "CHEBI:74483"
       }
     }
   ],
@@ -160,13 +142,6 @@
       "name": "sarcosine/dimethylglycine N-methyltransferase",
       "ec": [
         "2.1.1.157"
-      ]
-    },
-    {
-      "id": "ec_2_1_1_351",
-      "name": "nocamycin O-methyltransferase",
-      "ec": [
-        "2.1.1.351"
       ]
     }
   ],
@@ -316,12 +291,11 @@
     },
     {
       "id": "r4",
-      "name": "nocamycin O-methyltransferase",
-      "equation": "nocamycin E + S-adenosyl-L-methionine = nocamycin I + S-adenosyl-L-homocysteine",
-      "ec": "2.1.1.351",
+      "name": "a cytidine in RNA + S-adenosyl-L-methionine = a 5-methylcytidine in RNA + S-adenosyl-L-...",
+      "equation": "a cytidine in RNA + S-adenosyl-L-methionine = a 5-methylcytidine in RNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "nocamycin_e",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -331,41 +305,40 @@
       ],
       "products": [
         {
-          "metabolite": "nocamycin_i",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
           "metabolite": "sah",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
+        },
         {
-          "enzyme": "ec_2_1_1_351"
+          "metabolite": "hplus",
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:56844"
+        "rhea": "RHEA:61460"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56844"
+            "id": "RHEA:61460"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "adenosine(32) in tRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(32) in tRNA + S-...",
-      "equation": "adenosine(32) in tRNA + S-adenosyl-L-methionine = 2'-O-methyladenosine(32) in tRNA + S-adenosyl-L-homocysteine + H(+)",
+      "name": "a cytidine in mRNA + S-adenosyl-L-methionine = a 5-methylcytidine in mRNA + S-adenosyl-...",
+      "equation": "a cytidine in mRNA + S-adenosyl-L-methionine = a 5-methylcytidine in mRNA + S-adenosyl-L-homocysteine + H(+)",
       "substrates": [
         {
-          "metabolite": "adenosine_5_monophosphate_1",
+          "metabolite": "cytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -375,7 +348,7 @@
       ],
       "products": [
         {
-          "metabolite": "2_o_methyladenosine_5_monophosphate_1",
+          "metabolite": "5_methylcytidine_5_monophosphate_1",
           "stoichiometry": 1
         },
         {
@@ -390,14 +363,14 @@
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:56884"
+        "rhea": "RHEA:61464"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:56884"
+            "id": "RHEA:61464"
           }
         ]
       }

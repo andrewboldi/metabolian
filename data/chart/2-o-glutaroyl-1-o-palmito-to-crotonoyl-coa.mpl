@@ -38,14 +38,14 @@ pathway 2-o-glutaroyl-1-o-palmito-to-crotonoyl-coa "2-O-glutaroyl-1-O-palmito…
 
   branch from succinate side right {
     succinate
-    <-> . +3_methyldodecanoyl_coa +akg +o2 +co2
-    2_hydroxy_3_methyldodecanoyl_coa
+    <-> . +l_argininium +akg +o2 +co2
+    3r_3_hydroxy_l_argininium
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_58 [1.14.11.58] +n2_3r_3_2_saturated_acyloxy_acyl_l_ornithine +akg +o2 +co2
-    n2_3r_3_2_hydroxyacyloxy_acyl_l_ornithine
+    <-> . +pyruvate
+    3_hydroxybutane_1_2_3_tricarboxylate
   }
 
   branch from trans_4_carboxybut_2_enoyl_coa side right {

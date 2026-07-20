@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "1-stearoyl-2-acylglycerol-to-di-sulfido-diiron",
   "name": "1-stearoyl 2-acylglycerol… to di-μ-sulfido-diiron",
-  "category": "lipid-metabolism",
+  "category": "energy-metabolism",
   "summary": "A 4-step route from 1-stearoyl 2-acylglycerolipid to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -114,52 +114,40 @@
       }
     },
     {
-      "id": "oleoyl_containing_glycerolipid",
-      "name": "oleoyl-containing glycerolipid",
-      "short": "oleoyl-containing…",
-      "formula": "C18H33OR",
+      "id": "epothilone_d",
+      "name": "epothilone D",
+      "formula": "C27H41NO5S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:88240"
+        "chebi": "CHEBI:29579"
       }
     },
     {
-      "id": "linoleoyl_containing_glycerolipid",
-      "name": "linoleoyl-containing glycerolipid",
-      "short": "linoleoyl-containin…",
-      "formula": "C18H31OR",
+      "id": "epothilone_b",
+      "name": "epothilone B",
+      "formula": "C27H41NO6S",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:88351"
+        "chebi": "CHEBI:31550"
       }
     },
     {
-      "id": "cholesterol",
-      "name": "Cholesterol",
-      "formula": "C27H46O",
-      "charge": 0,
+      "id": "pheophorbide_a",
+      "name": "pheophorbide a",
+      "formula": "C35H34N4O5",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:16113"
+        "chebi": "CHEBI:58687"
       }
     },
     {
-      "id": "25r_cholest_5_ene_3_26_diol",
-      "name": "(25R)-cholest-5-ene-3β,26-diol",
-      "short": "cholest-5-ene-3β,26…",
-      "formula": "C27H46O2",
-      "charge": 0,
+      "id": "red_chlorophyll_catabolite",
+      "name": "red chlorophyll catabolite",
+      "short": "red chlorophyll…",
+      "formula": "C35H36N4O7",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:76591"
-      }
-    },
-    {
-      "id": "1_linolenoyl_2_acylglycerolipid",
-      "name": "1-α-linolenoyl 2-acylglycerolipid",
-      "short": "1-α-linolenoyl…",
-      "formula": "C22H34O5R2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:87023"
+        "chebi": "CHEBI:58716"
       }
     }
   ],
@@ -193,10 +181,10 @@
       ]
     },
     {
-      "id": "ec_1_14_19_23",
-      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
+      "id": "ec_1_14_15_17",
+      "name": "pheophorbide a oxygenase",
       "ec": [
-        "1.14.19.23"
+        "1.14.15.17"
       ]
     }
   ],
@@ -431,12 +419,11 @@
     },
     {
       "id": "r5",
-      "name": "acyl-lipid (n+3)-(Z)-desaturase (ferredoxin)",
-      "equation": "a (9Z)-octadecenoyl-containing glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a (9Z,12Z)-octadecadienoyl-containing glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.23",
+      "name": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidize...",
+      "equation": "epothilone D + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = epothilone B + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
       "substrates": [
         {
-          "metabolite": "oleoyl_containing_glycerolipid",
+          "metabolite": "epothilone_d",
           "stoichiometry": 1
         },
         {
@@ -454,7 +441,7 @@
       ],
       "products": [
         {
-          "metabolite": "linoleoyl_containing_glycerolipid",
+          "metabolite": "epothilone_b",
           "stoichiometry": 1
         },
         {
@@ -463,88 +450,32 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_23"
+          "stoichiometry": 1
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:46376"
+        "rhea": "RHEA:47808"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46376"
+            "id": "RHEA:47808"
           }
         ]
       }
     },
     {
       "id": "r6",
-      "name": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol...",
-      "equation": "2 reduced [adrenodoxin] + cholesterol + O2 + 2 H(+) = (25R)-cholest-5-ene-3beta,26-diol + 2 oxidized [adrenodoxin] + H2O",
+      "name": "pheophorbide a oxygenase",
+      "equation": "pheophorbide a + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = red chlorophyll catabolite + 2 oxidized [2Fe-2S]-[ferredoxin]",
+      "ec": "1.14.15.17",
       "substrates": [
         {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "cholesterol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25r_cholest_5_ene_3_26_diol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 6,
-      "xrefs": {
-        "rhea": "RHEA:46400"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:46400"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r7",
-      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
-      "equation": "a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z,12Z,15Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.36",
-      "substrates": [
-        {
-          "metabolite": "1_linoleoyl_2_acylglycerolipid",
+          "metabolite": "pheophorbide_a",
           "stoichiometry": 1
         },
         {
@@ -562,34 +493,30 @@
       ],
       "products": [
         {
-          "metabolite": "1_linolenoyl_2_acylglycerolipid",
+          "metabolite": "red_chlorophyll_catabolite",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 2
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_36"
+          "enzyme": "ec_1_14_15_17"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46784"
+        "rhea": "RHEA:48140"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46784"
+            "id": "RHEA:48140"
           }
         ]
       }

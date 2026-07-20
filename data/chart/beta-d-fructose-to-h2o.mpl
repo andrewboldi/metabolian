@@ -20,38 +20,38 @@ pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
 
   branch from keto_d_fructose_6_phosphate side left {
     keto_d_fructose_6_phosphate
-    <-> ec_2_7_1_11 [2.7.1.11] +gdp +beta_d_fructose_1_6_bisphosphate +h
-    gtp
+    <-> ec_2_7_1_1 [2.7.1.1] +atp +h +adp
+    beta_d_fructose
   }
 
   branch from keto_d_fructose_6_phosphate side right {
     keto_d_fructose_6_phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +phosphate +h2o
-    beta_d_fructose
+    <-> . +h +amp +adp
+    beta_d_fructose_1_6_bisphosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_2 [3.1.3.2] +4_methyl_umbelliferyl_phosphate +h2o
-    4_methylumbelliferone
+    <-> ec_3_1_3_1 [3.1.3.1] +1_naphthyl_dihydrogen_phosphate +h2o +h
+    1_naphthol
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_36 [3.1.3.36] +3_o_methylfluorescein +h +h2o
-    3_o_methylfluorescein_6_phosphate
+    <-> . +3_azido_3_deoxythymidine_5_phosphate +h2o
+    zidovudine
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +heptan_2_one
-    heptan_2_ol
+    <-> ec_1_1_1_2 [1.1.1.2] +nadh +h +methylacetoacetic_acid
+    methyl_3_hydroxybutyrate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +butan_2_one +h
-    2r_butan_2_ol
+    <-> ec_1_1_1_1 [1.1.1.1] +nadh +h +decanal
+    decan_1_ol
   }
 
   branch from d_mannitol_1_phosphate side left {
@@ -62,20 +62,20 @@ pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
 
   branch from d_mannitol_1_phosphate side right {
     d_mannitol_1_phosphate
-    <-> . +beta_d_fructose_6_phosphate +h +nadph
-    nadp
+    <-> ec_2_7_1_1 [2.7.1.1] +itp +d_sorbitol +h
+    idp
   }
 
   branch from atp side left {
     atp
-    <-> . +h +l_glutamate +adp
-    d_alpha_glutamyl_phosphate
+    <-> . +h +adp +phosphate +h2o
+    toluene
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_1_64 [2.7.1.64] +myo_inositol +h +adp
-    1d_myo_inositol_1_phosphate
+    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
+    glycyl_l_leucine
   }
 
   branch from d_sorbitol side left {
@@ -92,13 +92,13 @@ pathway beta-d-fructose-to-h2o "beta-D-fructose… to H2O" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +alpha_d_galactose +h +2_nitrophenol
-    o_nitrophenyl_alpha_d_galactoside
+    <-> ec_3_1_1_25 [3.1.1.25] +dl_4_hydroxy_caproic_acid
+    caprolactone
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_4_1 [3.1.4.1] +gmp +adenosine +h
-    5_apg_3
+    <-> ec_3_2_1_81 [3.2.1.81] +neoagarobiose
+    neoagarotetraose
   }
 }

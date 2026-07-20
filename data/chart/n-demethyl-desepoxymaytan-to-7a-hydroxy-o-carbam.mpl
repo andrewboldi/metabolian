@@ -18,14 +18,14 @@ pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymay
 
   branch from carbamoyl_phosphate side left {
     carbamoyl_phosphate
-    <-> ec_2_7_2_2 [2.7.2.2] +utp +carbamate
-    udp
+    <-> ec_2_7_2_2 [2.7.2.2] +gdp +carbamate
+    gtp
   }
 
   branch from carbamoyl_phosphate side right {
     carbamoyl_phosphate
-    <-> ec_2_7_2_2 [2.7.2.2] +gdp +carbamate
-    gtp
+    <-> ec_2_1_3_6 [2.1.3.6] +spermidine +h +phosphate
+    n_carbamoylspermidine
   }
 
   branch from 20_o_methyl_19_chloroproansamitocin side left {
@@ -36,37 +36,37 @@ pathway n-demethyl-desepoxymaytan-to-7a-hydroxy-o-carbam "N-Demethyl-desepoxymay
 
   branch from phosphate side right {
     phosphate
-    <-> ec_2_5_1_95 [2.5.1.95] +4_6_ch3_coo_c_beta_d_man_1_4_beta_glca_1_2_6_o_a +d_man_beta_1_4_glca_beta_1_2_6_o_acetyl_d_man_al
-    phosphoenolpyruvate
+    <-> . +1_archaetidyl_d_myo_inositol +h2o
+    1_archaetidyl_1d_myo_inositol_3_phosphate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_2_7_4_27 [2.7.4.27] +diphosphate +h +l_threonine
-    o_phospho_l_threonine
+    <-> . +guanosine +h2o
+    guanosine_2_monophosphate
   }
 
   branch from co2 side right {
     co2
-    <-> . +5_chrysenecarboxylate
-    4_5_chrysenedicarboxylate
+    <-> ec_4_1_1_56 [4.1.1.56] +tridecan_2_one
+    3_oxotetradecanoic_acid
   }
 
   branch from co2 side left {
     co2
-    <-> . +tabtoxin_biosynthesis_intermediate_4
-    tabtoxin_biosynthesis_intermediate_3
+    <-> . +15_decarboxymethyl_epsilon_rhodomycinone +h
+    15_demethoxy_epsilon_rhodomycinone
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_6 [1.14.20.6] +2_oxoglutarate +r_naringenin +o2 +co2
-    2s_3s_3_5_7_trihydroxy_2_4_hydroxyphenyl_2_3_di
+    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2
+    fusicocca_1_10_14_diene_3_8beta_16_triol
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2
-    fusicocca_1_10_14_diene_3_8beta_16_triol
+    <-> . +2_oxoglutarate +fusicocca_2_10_14_diene_8beta_16_diol +o2 +co2 +h2o
+    8beta_hydroxyfusicocca_1_10_14_diene_16_al
   }
 }

@@ -31,11 +31,16 @@
          in both themes (in light theme a white sheet on warm paper is only a
          ~2% gap; the grey ramp and the offset carry it). ================ -->
     <section class="hero" aria-labelledby="hero-title">
+      <!-- Two columns: .hero__lede (type) beside .hero__figure (the plate).
+           home.css styles both by name, plus .hero__title, .sheet-stack and
+           .hero__figcaption — renaming any of them silently unstyles the hero. -->
       <div class="wrap hero__inner">
 
         <div class="hero__lede">
           <p class="eyebrow" data-animate>Open metabolic atlas · v0.1</p>
+
           <h1 id="hero-title" class="hero__title" data-animate>A living chart of<br /><span class="hero__hl">metabolism.</span></h1>
+
           <p class="lead" data-animate>
             In the 1960s Gerhard Michal drew metabolism by hand for Boehringer Mannheim, and the
             Biochemical Pathways wall chart became the map biochemists grew up with. Metabolian
@@ -43,10 +48,17 @@
             the database record it came from.
           </p>
 
+          <div class="hero__cta" data-animate>
+            <a class="btn" href="chart.html">Open the chart</a>
+            <a class="btn btn--ghost" href="learn.html">How to read it</a>
+          </div>
+
           <!-- Counts are never written into the markup. They are read from
-               graph/index.json at runtime (home.ts fills every [data-stat]),
-               so the page cannot misstate the size of its own corpus when the
-               data is rebuilt. "—" is the honest pre-load and failure state. -->
+               graph/index.json at runtime (home.ts fills every [data-stat]), so
+               the page cannot misstate the size of its own corpus when the data
+               is rebuilt. "—" is the honest pre-load and failure state.
+               dt precedes dd because a dl group is only conforming in that
+               order; the readout reads label-over-figure. -->
           <dl class="hero__stats readout" id="hero-stats" data-animate aria-label="Size of the atlas">
             <div class="stat">
               <dt class="stat__label">pathway sheets</dt>
@@ -65,149 +77,169 @@
               <dd class="stat__num" data-stat="enzymes">—</dd>
             </div>
           </dl>
-
-          <div class="hero__cta" data-animate>
-            <a class="btn" href="chart.html">Open the chart</a>
-            <a class="btn btn--ghost" href="learn.html">How to read it</a>
-          </div>
         </div>
 
+        <!-- The plate. Real inline SVG rather than a background image, so it
+             carries a title/desc a screen reader can read, stays selectable
+             and inspectable, and needs no second paint path.
+
+             Chemistry verbatim from data/pathways/glycolysis.json: reactions
+             gly1-gly4 (KEGG R00299 / R00771 / R00756 / R01068, RHEA:17828 and
+             RHEA:16112), enzymes hexokinase 1, glucose-6-phosphate isomerase,
+             phosphofructokinase-1 and fructose-bisphosphate aldolase A, and
+             regulation reg_f26bp_pfk. Nothing here is invented; if that module
+             changes, this fragment must be re-checked.
+
+             Geometry note: the artwork is deliberately NARROW in user units
+             (334 across). .sheet-stack is width:100%, so the render scale is
+             column-px / 334 — at the 350px the figure gets on a 390px phone
+             that is still ~1.0, and 11px label text stays 11px. A wider
+             landscape sheet reads better on a desktop column but collapses to
+             ~7px type on mobile, which is why this is portrait. -->
         <figure class="hero__figure" data-animate>
-          <svg class="sheet-stack" viewBox="0 0 566 406" role="img"
+          <svg class="sheet-stack" viewBox="0 0 334 456" role="img"
                aria-labelledby="sheet-title sheet-desc" preserveAspectRatio="xMidYMid meet">
-            <title id="sheet-title">Glycolysis, steps 1 to 3, drawn as a Metabolian chart sheet</title>
-            <desc id="sheet-desc">A white pathway sheet, frontmost in a receding stack of four more. Four boxed metabolites run down the sheet — D-glucose, D-glucose 6-phosphate, D-fructose 6-phosphate and D-fructose 1,6-bisphosphate — joined by black reaction arrows. Beside each arrow the catalysing enzyme is named in blue with its EC number and source accession: hexokinase 1 (EC 2.7.1.1), glucose-6-phosphate isomerase (EC 5.3.1.9) and phosphofructokinase-1 (EC 2.7.1.11). Red arcs across the two kinase steps show ATP being spent as ADP. At the right, a green arrow marks allosteric activation of phosphofructokinase-1 by fructose 2,6-bisphosphate and an orange bar marks its allosteric inhibition by ATP.</desc>
+            <title id="sheet-title">Glycolysis, steps 1 to 4, drawn as a Metabolian chart sheet</title>
+            <desc id="sheet-desc">A white pathway sheet, frontmost in a receding stack of four more. Boxed metabolites run down the sheet — D-glucose, D-glucose 6-phosphate, D-fructose 6-phosphate and D-fructose 1,6-bisphosphate — joined by black reaction arrows, with the last splitting into dihydroxyacetone phosphate and D-glyceraldehyde 3-phosphate. Beside each arrow the catalysing enzyme is named in blue with its EC number: hexokinase 1 (EC 2.7.1.1), glucose-6-phosphate isomerase (EC 5.3.1.9), phosphofructokinase-1 (EC 2.7.1.11) and fructose-bisphosphate aldolase A (EC 4.1.2.13). Red arcs across the two kinase steps show ATP being spent as ADP. A green arrow marks allosteric activation of phosphofructokinase-1 by fructose 2,6-bisphosphate. The sheet is footed with its sources: KEGG hsa00010 and Reactome R-HSA-70171, at high confidence.</desc>
 
             <!-- Michal's palette, verbatim from the chart renderer: paper
                  #FFFFFF, ink #231F20, enzyme blue #254991, cofactor red
-                 #EF2D47, regulation orange #F14C1C, activation green #13A950.
-                 Theme-invariant by design — the sheet is always paper. -->
+                 #EF2D47, activation green #13A950. Literal hexes rather than
+                 tokens because chart.css hardcodes them too — paper is
+                 theme-invariant, a sheet is a sheet under either lamp. -->
             <style>
-              .sh-box      { fill: none; stroke: #231F20; stroke-width: 1.5; }
+              .sh-box      { fill: #FFFFFF; stroke: #231F20; stroke-width: 1.5; }
               .sh-flux     { fill: none; stroke: #231F20; stroke-width: 1.6; }
               .sh-flux--committed { stroke-width: 2.6; }
               .sh-cofactor { fill: none; stroke: #EF2D47; stroke-width: 1.1; }
-              .sh-reg      { fill: none; stroke-width: 1.2; stroke-dasharray: 5 3; }
-              .sh-reg--inhibit  { stroke: #F14C1C; }
-              .sh-reg--activate { stroke: #13A950; }
+              .sh-reg      { fill: none; stroke: #13A950; stroke-width: 1.2; stroke-dasharray: 5 3; }
+              .sh-rule     { stroke: #231F20; stroke-width: 0.6; opacity: 0.32; }
               .sh-met      { font: 11px/1 Inter, "Helvetica Neue", system-ui, sans-serif; fill: #231F20; letter-spacing: 0.04em; text-anchor: middle; }
+              .sh-met--sm  { font-size: 9px; letter-spacing: 0.03em; }
               .sh-formula  { font: 9px/1 "JetBrains Mono", ui-monospace, monospace; fill: #55504A; text-anchor: middle; }
               .sh-enz      { font: 10px/1 Inter, "Helvetica Neue", system-ui, sans-serif; fill: #254991; letter-spacing: 0.02em; }
               .sh-ec       { font: 8.5px/1 "JetBrains Mono", ui-monospace, monospace; fill: #254991; opacity: 0.75; }
               .sh-cof-lbl  { font: 9px/1 Inter, system-ui, sans-serif; fill: #EF2D47; text-anchor: end; }
-              .sh-reg-lbl  { font: 9px/1 Inter, system-ui, sans-serif; }
-              .sh-sign     { font: 600 9px/1 Inter, system-ui, sans-serif; text-anchor: middle; }
-              .sh-title    { font: 10px/1 "JetBrains Mono", ui-monospace, monospace; fill: #231F20; letter-spacing: 0.2em; }
-              .sh-meta     { font: 8px/1 "JetBrains Mono", ui-monospace, monospace; fill: #6B6660; letter-spacing: 0.1em; }
+              .sh-reg-lbl  { font: 9px/1 Inter, system-ui, sans-serif; fill: #13A950; }
+              .sh-sign     { font: 600 11px/1 Inter, system-ui, sans-serif; fill: #13A950; text-anchor: middle; }
+              .sh-title    { font: 8px/1 "JetBrains Mono", ui-monospace, monospace; fill: #231F20; letter-spacing: 0.18em; }
+              .sh-meta     { font: 7px/1 "JetBrains Mono", ui-monospace, monospace; fill: #231F20; opacity: 0.6; letter-spacing: 0.1em; }
             </style>
 
             <defs>
-              <marker id="sheet-arrow" viewBox="0 0 10 8" refX="10" refY="4"
-                      markerWidth="10" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
-                <path d="M0 0 L10 4 L0 8 Z" fill="#231F20" />
+              <marker id="sheet-arrow" viewBox="0 0 9 7" refX="9" refY="3.5"
+                      markerWidth="9" markerHeight="7" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+                <path d="M0 0 L9 3.5 L0 7 Z" fill="#231F20" />
               </marker>
-              <marker id="sheet-cofactor" viewBox="0 0 8 8" refX="7" refY="4"
-                      markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse">
-                <path d="M1 1 L7 4 L1 7" fill="none" stroke="#EF2D47" stroke-width="1.1" />
+              <marker id="sheet-cofactor" viewBox="0 0 7 7" refX="6" refY="3.5"
+                      markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse">
+                <path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#EF2D47" stroke-width="1.1" />
               </marker>
-              <marker id="sheet-activate" viewBox="0 0 8 8" refX="7" refY="4"
-                      markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse">
-                <path d="M1 1 L7 4 L1 7" fill="none" stroke="#13A950" stroke-width="1.3" />
-              </marker>
-              <marker id="sheet-inhibit" viewBox="0 0 8 10" refX="6" refY="5"
-                      markerWidth="8" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse">
-                <path d="M6 0 V10" fill="none" stroke="#F14C1C" stroke-width="1.6" />
+              <marker id="sheet-activate" viewBox="0 0 7 7" refX="6" refY="3.5"
+                      markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse">
+                <path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#13A950" stroke-width="1.3" />
               </marker>
             </defs>
 
-            <!-- the corpus behind the sheet: four plates receding up-right.
-                 An opaque warm-grey ramp rather than opacity, so the depth
-                 survives being composited over a light background. -->
+            <!-- the corpus behind the sheet: four plates receding up-right. An
+                 opaque warm-grey ramp rather than opacity, so the depth reads
+                 the same composited over a dark field or over warm paper. -->
             <g stroke="#231F20" stroke-opacity="0.18" stroke-width="1">
-              <rect x="42" y="2"    width="520" height="368" fill="#A9A59C" />
-              <rect x="33" y="9.5"  width="520" height="368" fill="#BEBAB1" />
-              <rect x="24" y="17"   width="520" height="368" fill="#D3CFC6" />
-              <rect x="15" y="24.5" width="520" height="368" fill="#E8E4DB" />
+              <rect x="32" y="0"    width="300" height="424" fill="#A9A59C" />
+              <rect x="25" y="6.5"  width="300" height="424" fill="#BEBAB1" />
+              <rect x="18" y="13"   width="300" height="424" fill="#D3CFC6" />
+              <rect x="11" y="19.5" width="300" height="424" fill="#E8E4DB" />
             </g>
 
             <!-- hard offset = the stock's own thickness (--elev-paper) -->
-            <rect x="2" y="36" width="520" height="368" fill="#8E8A82" />
-            <rect x="6" y="32" width="520" height="368" fill="#FFFFFF" />
+            <rect x="0" y="30" width="300" height="424" fill="#8E8A82" />
+            <rect x="4" y="26" width="300" height="424" fill="#FFFFFF" />
 
-            <svg x="6" y="32" width="520" height="368" viewBox="0 0 520 368">
+            <svg x="4" y="26" width="300" height="424" viewBox="0 0 300 424">
 
               <!-- sheet header -->
-              <text class="sh-title" x="24" y="26">GLYCOLYSIS</text>
-              <text class="sh-meta" x="496" y="26" text-anchor="end">EMBDEN–MEYERHOF–PARNAS · STEPS 1–3</text>
-              <line x1="24" y1="38" x2="496" y2="38" stroke="#231F20" stroke-width="1" />
+              <text class="sh-title" x="22" y="17">GLYCOLYSIS</text>
+              <text class="sh-meta" x="278" y="17" text-anchor="end">EMBDEN–MEYERHOF · PLATE 01</text>
+              <line class="sh-rule" x1="22" y1="24" x2="278" y2="24" />
 
               <!-- step 1 · irreversible, ATP-consuming -->
-              <line class="sh-flux" x1="150" y1="92" x2="150" y2="126" marker-end="url(#sheet-arrow)" />
-              <path class="sh-cofactor" d="M150 96 C122 96 114 102 114 109 C114 116 122 122 150 122" marker-end="url(#sheet-cofactor)" />
-              <text class="sh-cof-lbl" x="106" y="101">ATP</text>
-              <text class="sh-cof-lbl" x="106" y="126">ADP</text>
-              <text class="sh-enz" x="246" y="106">Hexokinase 1</text>
-              <text class="sh-ec"  x="246" y="118">EC 2.7.1.1 · RHEA:17828</text>
+              <line class="sh-flux" x1="150" y1="72" x2="150" y2="112" marker-end="url(#sheet-arrow)" />
+              <path class="sh-cofactor" d="M150 79 Q112 92 150 105" marker-end="url(#sheet-cofactor)" />
+              <text class="sh-cof-lbl" x="105" y="84">ATP</text>
+              <text class="sh-cof-lbl" x="105" y="106">ADP</text>
+              <text class="sh-enz" x="162" y="87">Hexokinase 1</text>
+              <text class="sh-ec"  x="162" y="98">EC 2.7.1.1</text>
 
-              <!-- step 2 · reversible -->
-              <line class="sh-flux" x1="150" y1="162" x2="150" y2="196"
+              <!-- step 2 · reversible, so the arrow is headed at both ends -->
+              <line class="sh-flux" x1="150" y1="146" x2="150" y2="190"
                     marker-start="url(#sheet-arrow)" marker-end="url(#sheet-arrow)" />
-              <text class="sh-enz" x="246" y="176">Glucose-6-phosphate isomerase</text>
-              <text class="sh-ec"  x="246" y="188">EC 5.3.1.9 · KEGG R00771</text>
+              <text class="sh-enz" x="162" y="161">Glucose-6-phosphate</text>
+              <text class="sh-enz" x="162" y="172">isomerase</text>
+              <text class="sh-ec"  x="162" y="183">EC 5.3.1.9</text>
 
-              <!-- step 3 · the committed step: heavier ink, both effectors -->
-              <line class="sh-flux sh-flux--committed" x1="150" y1="232" x2="150" y2="266" marker-end="url(#sheet-arrow)" />
-              <path class="sh-cofactor" d="M150 236 C122 236 114 242 114 249 C114 256 122 262 150 262" marker-end="url(#sheet-cofactor)" />
-              <text class="sh-cof-lbl" x="106" y="241">ATP</text>
-              <text class="sh-cof-lbl" x="106" y="266">ADP</text>
-              <text class="sh-enz" x="246" y="246">Phosphofructokinase-1</text>
-              <text class="sh-ec"  x="246" y="258">EC 2.7.1.11 · RHEA:16112</text>
+              <!-- step 3 · the committed step: heavier ink, and the one arrow
+                   on this plate that is regulation rather than mass flow -->
+              <line class="sh-flux sh-flux--committed" x1="150" y1="224" x2="150" y2="268" marker-end="url(#sheet-arrow)" />
+              <path class="sh-cofactor" d="M150 231 Q112 246 150 261" marker-end="url(#sheet-cofactor)" />
+              <text class="sh-cof-lbl" x="105" y="236">ATP</text>
+              <text class="sh-cof-lbl" x="105" y="262">ADP</text>
+              <text class="sh-enz" x="162" y="237">Phosphofructokinase-1</text>
+              <text class="sh-ec"  x="162" y="248">EC 2.7.1.11</text>
+              <path class="sh-reg" d="M238 262 C206 259 176 257 158 256" marker-end="url(#sheet-activate)" />
+              <text class="sh-sign" x="152" y="260">+</text>
+              <text class="sh-reg-lbl" x="240" y="266">F-2,6-BP</text>
 
-              <!-- allosteric effectors of PFK-1 (glycolysis.json: reg_f26bp_pfk, reg_atp_pfk) -->
-              <text class="sh-meta" x="436" y="245">ALLOSTERIC</text>
-              <line class="sh-reg sh-reg--activate" x1="430" y1="208" x2="368" y2="236" marker-end="url(#sheet-activate)" />
-              <circle cx="399" cy="222" r="6" fill="#FFFFFF" stroke="#13A950" stroke-width="1" />
-              <text class="sh-sign" x="399" y="225.4" fill="#13A950">+</text>
-              <text class="sh-reg-lbl" x="436" y="211" fill="#13A950">F-2,6-BP</text>
-
-              <line class="sh-reg sh-reg--inhibit" x1="430" y1="276" x2="368" y2="250" marker-end="url(#sheet-inhibit)" />
-              <circle cx="399" cy="263" r="6" fill="#FFFFFF" stroke="#F14C1C" stroke-width="1" />
-              <text class="sh-sign" x="399" y="266.4" fill="#F14C1C">−</text>
-              <text class="sh-reg-lbl" x="436" y="279" fill="#F14C1C">ATP</text>
+              <!-- step 4 · aldol cleavage into the two triose phosphates -->
+              <line class="sh-flux" x1="150" y1="302" x2="150" y2="338"
+                    marker-start="url(#sheet-arrow)" marker-end="url(#sheet-arrow)" />
+              <path class="sh-flux" d="M81 338 H219" />
+              <line class="sh-flux" x1="81" y1="338" x2="81" y2="352" marker-end="url(#sheet-arrow)" />
+              <line class="sh-flux" x1="219" y1="338" x2="219" y2="352" marker-end="url(#sheet-arrow)" />
+              <text class="sh-enz" x="162" y="313">Fructose-bisphosphate</text>
+              <text class="sh-enz" x="162" y="324">aldolase A</text>
+              <text class="sh-ec"  x="162" y="335">EC 4.1.2.13</text>
 
               <!-- metabolites, drawn last so their boxes mask the arrow tails -->
               <g>
-                <rect class="sh-box" x="65" y="58" width="170" height="32" fill="#FFFFFF" />
-                <text class="sh-met" x="150" y="72">D-Glucose</text>
-                <text class="sh-formula" x="150" y="84">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">12</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">6</tspan></text>
+                <rect class="sh-box" x="106" y="38" width="88" height="34" />
+                <text class="sh-met" x="150" y="54">D-Glucose</text>
+                <text class="sh-formula" x="150" y="66">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">12</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">6</tspan></text>
               </g>
               <g>
-                <rect class="sh-box" x="65" y="128" width="170" height="32" fill="#FFFFFF" />
-                <text class="sh-met" x="150" y="142">D-Glucose 6-phosphate</text>
-                <text class="sh-formula" x="150" y="154">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">11</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">9</tspan><tspan dy="-2.5">P</tspan></text>
+                <rect class="sh-box" x="80" y="112" width="140" height="34" />
+                <text class="sh-met" x="150" y="128">D-Glucose 6-phosphate</text>
+                <text class="sh-formula" x="150" y="140">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">11</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">9</tspan><tspan dy="-2.5">P</tspan></text>
               </g>
               <g>
-                <rect class="sh-box" x="65" y="198" width="170" height="32" fill="#FFFFFF" />
-                <text class="sh-met" x="150" y="212">D-Fructose 6-phosphate</text>
-                <text class="sh-formula" x="150" y="224">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">11</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">9</tspan><tspan dy="-2.5">P</tspan></text>
+                <rect class="sh-box" x="78" y="190" width="144" height="34" />
+                <text class="sh-met" x="150" y="206">D-Fructose 6-phosphate</text>
+                <text class="sh-formula" x="150" y="218">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">11</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">9</tspan><tspan dy="-2.5">P</tspan></text>
               </g>
               <g>
-                <rect class="sh-box" x="65" y="268" width="170" height="32" fill="#FFFFFF" />
-                <text class="sh-met" x="150" y="282">D-Fructose 1,6-bisphosphate</text>
-                <text class="sh-formula" x="150" y="294">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">10</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">12</tspan><tspan dy="-2.5">P</tspan><tspan font-size="7" dy="2.5">2</tspan></text>
+                <rect class="sh-box" x="62" y="268" width="176" height="34" />
+                <text class="sh-met" x="150" y="284">D-Fructose 1,6-bisphosphate</text>
+                <text class="sh-formula" x="150" y="296">C<tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">10</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">12</tspan><tspan dy="-2.5">P</tspan><tspan font-size="7" dy="2.5">2</tspan></text>
+              </g>
+              <g>
+                <rect class="sh-box" x="22" y="356" width="118" height="32" />
+                <text class="sh-met sh-met--sm" x="81" y="370">Dihydroxyacetone-P</text>
+                <text class="sh-formula" x="81" y="382">C<tspan font-size="7" dy="2.5">3</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">5</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">P</tspan></text>
+              </g>
+              <g>
+                <rect class="sh-box" x="160" y="356" width="118" height="32" />
+                <text class="sh-met sh-met--sm" x="219" y="370">D-Glyceraldehyde-3-P</text>
+                <text class="sh-formula" x="219" y="382">C<tspan font-size="7" dy="2.5">3</tspan><tspan dy="-2.5">H</tspan><tspan font-size="7" dy="2.5">5</tspan><tspan dy="-2.5">O</tspan><tspan font-size="7" dy="2.5">6</tspan><tspan dy="-2.5">P</tspan></text>
               </g>
 
               <!-- sheet footer: the sources this plate is answerable to -->
-              <line x1="24" y1="324" x2="496" y2="324" stroke="#231F20" stroke-opacity="0.3" stroke-width="1" />
-              <text class="sh-meta" x="24" y="340">KEGG hsa00010 · REACTOME R-HSA-70171 · LEHNINGER 8e</text>
-              <text class="sh-meta" x="496" y="340" text-anchor="end">CONFIDENCE · HIGH</text>
+              <line class="sh-rule" x1="22" y1="402" x2="278" y2="402" />
+              <text class="sh-meta" x="22" y="414">KEGG hsa00010 · R-HSA-70171</text>
+              <text class="sh-meta" x="278" y="414" text-anchor="end">CONFIDENCE · HIGH</text>
             </svg>
           </svg>
 
           <figcaption class="hero__figcaption">
-            One sheet from the atlas — glycolysis, steps 1 to 3. Boxes are metabolites; blue names the
-            enzyme, red the cofactor pair, orange and green its allosteric effectors. Every other sheet
-            is drawn to the same conventions.
+            Glycolysis, steps 1&ndash;4 &mdash; one plate of the atlas, set in the chart&rsquo;s own ink.
           </figcaption>
         </figure>
 

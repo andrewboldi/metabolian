@@ -20,26 +20,26 @@ pathway methylselenol-to-r-laudanine "methylselenol to (R)-laudanine" {
 
   branch from h2o side left {
     h2o
-    <-> . +pyrene_4_5_oxide
-    trans_4_5_dihydroxy_4_5_dihydropyrene
+    <-> ec_1_14_14_45 [1.14.14.45] +e_phenylacetaldehyde_oxime +h +o2 +l_cysteine +nadph +nadp
+    s_phenylacetothiohydroximoyl_l_cysteine
   }
 
   branch from h2o side right {
     h2o
-    <-> . +benzo_a_pyrene_11_12_epoxide
-    benzo_a_pyrene_trans_11_12_dihydrodiol
+    <-> ec_1_14_14_45 [1.14.14.45] +h +e_4_hydroxyphenylacetaldehyde_oxime +o2 +l_cysteine +nadph +s_hydroxyphenylacetothiohydroximoyl_l_cysteine
+    nadp
   }
 
   branch from s_s_adenosyl_l_methionine side left {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_76 [2.1.1.76] +s_adenosyl_l_homocysteine +h +3_4_5_7_tetrahydroxy_3_methoxyflavone
-    quercetin
+    <-> ec_2_1_1_118 [2.1.1.118] +s_adenosyl_l_homocysteine +palmatine +h
+    columbamine
   }
 
   branch from s_s_adenosyl_l_methionine side right {
     s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_118 [2.1.1.118] +s_adenosyl_l_homocysteine +palmatine +h
-    columbamine
+    <-> ec_2_1_1_117 [2.1.1.117] +s_adenosyl_l_homocysteine +s_tetrahydrocolumbamine +h
+    s_scoulerine
   }
 
   branch from se_methyl_l_selenocysteine side left {
@@ -80,13 +80,13 @@ pathway methylselenol-to-r-laudanine "methylselenol to (R)-laudanine" {
 
   branch from h side left {
     h
-    <-> . +cinchonidine +nadp +nadph
-    cinchonidinone
+    <-> . +mycinamicin_viii +o2 +nadph +nadp +h2o
+    mycinamicin_vii
   }
 
   branch from h side right {
     h
-    <-> . +dtdp_4_dehydro_2_6_dideoxy_d_glucose
-    dtdp_4_oxo_2_6_dideoxy_l_mannose
+    <-> . +dtdp +mycinamicin_viii +protomycinolide_iv
+    dtdp_alpha_d_desosamine
   }
 }

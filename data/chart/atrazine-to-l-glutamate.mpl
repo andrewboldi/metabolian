@@ -64,13 +64,13 @@ pathway atrazine-to-l-glutamate "atrazine to L-glutamate" {
 
   branch from l_glutamate side right {
     l_glutamate
-    <-> . +leukotriene_f4_cytosol +h2o
-    leukotriene_e4
+    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
+    atp
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    atp
+    <-> ec_3_6_3_21 [3.6.3.21] +adp +phosphate +atp +h2o
+    h
   }
 }

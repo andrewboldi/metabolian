@@ -42,13 +42,13 @@ pathway vitexin-2-o-l-rhamnos-to-hydrogen-donor "vitexin 2''-O-β-L-rhamnos… t
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_21_99_1 [1.21.99.1] +3z_5s_3_1_oxidoethylidene_5_4_3_methylbut_2_en +hydrogen_acceptor
-    cyclopiazonate
+    <-> ec_1_1_99_31 [1.1.99.31] +s_mandelate +hydrogen_acceptor
+    phenylglyoxylate
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +2_aminophenol +hydrogen_acceptor +o2 +h2o
-    2_aminophenoxazin_3_one
+    <-> ec_1_14_99_59 [1.14.99.59] +tryptaminium +o2 +hydrogen_acceptor +h2o
+    4_hydroxytryptamine
   }
 }

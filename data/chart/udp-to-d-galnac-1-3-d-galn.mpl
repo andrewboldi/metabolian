@@ -18,25 +18,25 @@ pathway udp-to-d-galnac-1-3-d-galn "UDP to α-D-GalNAc-(1→3)-α-D-GalN…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +luteolinidin_5_o_glucoside +h
-    2_3_4_dihydroxyphenyl_5_hydroxychromen_7_one
+    <-> ec_2_4_1_115 [2.4.1.115] +udp +peonidin_3_glucoside
+    3_5_7_trihydroxy_2_4_hydroxy_3_methoxyphenyl_chr
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +apigeninidin_5_o_beta_d_glucoside +h
-    apigeninidin
+    <-> . +udp +cyanidin_5_o_glucoside +h
+    cyanidin
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +h +1_18_2_2_18_3_digalactosyldiacylglycerol
-    1_18_2_2_18_3_monogalactosyldiacylglycerol
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_2_digalactosyldiacylglycerol +h
+    1_9z_12z_octadecadienoyl_2_hexadecanoyl_3_beta_d
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +h +1_18_3_2_18_3_digalactosyldiacylglycerol
-    1_2_di_9z_12z_15z_octadecatrienoyl_3_beta_d_gala
+    <-> ec_2_4_1_241 [2.4.1.241] +udp +1_16_0_2_18_3_digalactosyldiacylglycerol +h
+    1_9z_12z_15z_octadecatrienoyl_2_hexadecanoyl_3_b
   }
 }

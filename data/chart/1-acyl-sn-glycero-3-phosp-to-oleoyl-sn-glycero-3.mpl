@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-acyl-sn-glycero-3-phosp-to-oleoyl-sn-glycero-3 "1-acyl-sn-glycero-3-phosp… to oleoyl-sn-glycero-3-phosp…" {
-  spacing 158
+  spacing 152
 
   spine at 0,0 {
     1_acyl_sn_glycero_3_phospho_1d_myo_inositol
@@ -14,11 +14,5 @@ pathway 1-acyl-sn-glycero-3-phosp-to-oleoyl-sn-glycero-3 "1-acyl-sn-glycero-3-ph
     oleoyl_sn_glycero_3_phosphocholine
     <-> . +2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate +oleoyl_coa -coa
     oleoyl_sn_glycero_3_phosphoethanolamine
-  }
-
-  branch from 2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate side left {
-    2_ammonioethyl_2r_2_3_dihydroxypropyl_phosphate
-    <-> . +acyl_coa +coa
-    2_acyl_sn_glycero_3_phosphoethanolamine
   }
 }

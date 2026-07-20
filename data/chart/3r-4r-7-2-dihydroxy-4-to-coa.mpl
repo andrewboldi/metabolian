@@ -42,14 +42,14 @@ pathway 3r-4r-7-2-dihydroxy-4-to-coa "(3R,4R)-7,2'-dihydroxy-4'… to CoA" {
 
   branch from h2o side left {
     h2o
-    <-> . +h +adp +phosphatidylserine_ditetradecanoyl_n_c14_0 +phosphate +phosphatidylserine_ditetradecanoyl_n_c14_0
-    atp
+    <-> . +prostaglandin_e2
+    prostaglandin_b2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +h +adp +phosphate +atp
-    phosphatidylserine_dihexadecanoyl_n_c16_0
+    <-> . +prostaglandin_pge2_glyceryl_ester
+    prostaglandin_pgb2_glyceryl_ester
   }
 
   branch from coa side left {

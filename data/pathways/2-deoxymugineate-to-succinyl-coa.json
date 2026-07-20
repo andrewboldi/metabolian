@@ -137,25 +137,6 @@
       }
     },
     {
-      "id": "l_proline",
-      "name": "L-proline",
-      "formula": "C5H7NO",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:50342"
-      }
-    },
-    {
-      "id": "trans_4_hydroxy_l_proline",
-      "name": "trans-4-hydroxy-L-proline",
-      "short": "trans-4-hydroxy-L-p…",
-      "formula": "C5H7NO2",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:61965"
-      }
-    },
-    {
       "id": "3_epi_3_hydroxy_2_deoxymugineate",
       "name": "3-epi-3-hydroxy-2'-deoxymugineate",
       "short": "3-epi-3-hydroxy-2'-…",
@@ -163,6 +144,25 @@
       "charge": -2,
       "xrefs": {
         "chebi": "CHEBI:58684"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "cis_3_hydroxy_l_proline",
+      "name": "cis-3-hydroxy-L-proline",
+      "short": "cis-3-hydroxy-L-pro…",
+      "formula": "C5H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60041"
       }
     },
     {
@@ -226,10 +226,10 @@
       ]
     },
     {
-      "id": "ec_1_14_11_2",
-      "name": "procollagen-proline 4-dioxygenase",
+      "id": "ec_1_14_11_28",
+      "name": "proline 3-hydroxylase",
       "ec": [
-        "1.14.11.2"
+        "1.14.11.28"
       ]
     },
     {
@@ -413,59 +413,6 @@
     },
     {
       "id": "r4",
-      "name": "procollagen-proline 4-dioxygenase",
-      "equation": "L-prolyl-[collagen] + 2-oxoglutarate + O2 = trans-4-hydroxy-L-prolyl-[collagen] + succinate + CO2",
-      "ec": "1.14.11.2",
-      "substrates": [
-        {
-          "metabolite": "l_proline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "akg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "trans_4_hydroxy_l_proline",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "succinate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "co2",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_11_2"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:18945"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:18945"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "mugineic-acid 3-dioxygenase",
       "equation": "2'-deoxymugineate + 2-oxoglutarate + O2 = 3-epihydroxy-2'-deoxymugineate + succinate + CO2 + H(+)",
       "ec": "1.14.11.25",
@@ -507,7 +454,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:20065"
       },
@@ -517,6 +464,59 @@
           {
             "db": "Rhea",
             "id": "RHEA:20065"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "proline 3-hydroxylase",
+      "equation": "L-proline + 2-oxoglutarate + O2 = cis-3-hydroxy-L-proline + succinate + CO2",
+      "ec": "1.14.11.28",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_3_hydroxy_l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20265"
           }
         ]
       }

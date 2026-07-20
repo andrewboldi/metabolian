@@ -24,25 +24,25 @@ pathway n-arachidonoyl-1-oleoyl-s-to-9z-17-hydroxyoctade "N-arachidonoyl-1-oleoy
 
   branch from oleate side left {
     oleate
-    <-> . +n_hexadecanoyl_o_1_octadecanoyl_2_oleoyl_sn_glyc +h2o +hplus
-    n_hexadecanoyl_o_1_octadecanoyl_sn_glycero_3_pho
+    <-> . +n_oleoyl_l_tyrosine +h2o
+    tyrosine
   }
 
   branch from oleate side right {
     oleate
-    <-> . +s_s_bis_2_oleoylglycero_1_phosphate +h2o +hplus
-    s_s_2_oleoylglycero_1_phospho_1_glycerol
+    <-> . +n_oleoyl_l_lysine +h2o
+    l_lysinium
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_126 [1.14.14.126] +amyrin +fmnh2 +o2 +h2o +hplus
-    oleanolate
+    <-> . +dehydroepiandrosterone +fmnh2 +o2 +h2o +hplus
+    16_hydroxydehydroepiandrosterone
   }
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_128 [1.14.14.128] +2e_6e_farnesoate +fmnh2 +o2 +h2o +hplus
-    juvenile_hormone_iii_carboxylate
+    <-> . +dehydroepiandrosterone_sulfate +fmnh2 +o2 +h2o +hplus
+    16_hydroxydehydroepiandrosterone_3_sulfate
   }
 }

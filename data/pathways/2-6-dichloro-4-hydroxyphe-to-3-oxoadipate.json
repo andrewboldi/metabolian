@@ -1,0 +1,325 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-6-dichloro-4-hydroxyphe-to-3-oxoadipate",
+  "name": "2,6-dichloro-4-hydroxyphe… to 3-oxoadipate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2,6-dichloro-4-hydroxyphenolate to 3-oxoadipate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR109556"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141024"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_6_dichloro_4_hydroxyphenolate",
+      "name": "2,6-dichloro-4-hydroxyphenolate",
+      "short": "2,6-dichloro-4-hydr…",
+      "formula": "C6H3Cl2O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:141024"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "O2",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM735438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "2_chloromaleylacetic_acid",
+      "name": "2-chloromaleylacetic acid",
+      "short": "2-chloromaleylaceti…",
+      "formula": "C6H5ClO5",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM34930"
+      }
+    },
+    {
+      "id": "chloride",
+      "name": "chloride",
+      "formula": "Cl",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM735978"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM10"
+      }
+    },
+    {
+      "id": "maleylacetate",
+      "name": "Maleylacetate",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1363850"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "metanetx": "MNXM8"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "3_oxoadipate",
+      "name": "3-oxoadipate",
+      "formula": "C6H6O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM716"
+      }
+    },
+    {
+      "id": "3_hydroxy_cis_cis_muconate",
+      "name": "3-hydroxy-cis,cis-muconate",
+      "short": "3-hydroxy-cis,cis-m…",
+      "formula": "C6H4O5",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM114170"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_32",
+      "name": "maleylacetate reductase",
+      "ec": [
+        "1.3.1.32"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR109556",
+      "substrates": [
+        {
+          "metabolite": "2_6_dichloro_4_hydroxyphenolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_chloromaleylacetic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR109556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR109556"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "maleylacetate reductase",
+      "ec": "1.3.1.32",
+      "substrates": [
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_chloromaleylacetic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "chloride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR197943"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197943"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "maleylacetate reductase",
+      "ec": "1.3.1.32",
+      "substrates": [
+        {
+          "metabolite": "maleylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_oxoadipate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR195702"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR195702"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "Reaction MNXR197357",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_cis_cis_muconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleylacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "metanetx": "MNXR197357"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR197357"
+          }
+        ]
+      }
+    }
+  ]
+}

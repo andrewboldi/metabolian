@@ -2,7 +2,7 @@
   "$schema": "../../schema/pathway.schema.json",
   "id": "p-xylene-to-p-toluate",
   "name": "p-xylene to p-toluate",
-  "category": "lipid-metabolism",
+  "category": "redox-detox",
   "summary": "A 3-step route from p-xylene to p-toluate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
@@ -191,33 +191,43 @@
       }
     },
     {
-      "id": "1_acyl_2_palmitoylglycerolipid",
-      "name": "1-acyl-2-palmitoylglycerolipid",
-      "short": "1-acyl-2-palmitoylg…",
-      "formula": "C20H36O5R2",
-      "charge": 0,
+      "id": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-2,6-…",
+      "formula": "C16H22N2O14P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:86999"
+        "chebi": "CHEBI:84537"
       }
     },
     {
-      "id": "1_acyl_2_7z_hexadec_7_enoyl_glycerolipid",
-      "name": "1-acyl-2-[(7Z)-hexadec-7-enoyl]-glycerolipid",
-      "short": "1-acyl-2-[(7Z)-hexa…",
-      "formula": "C20H34O5R2",
-      "charge": 0,
+      "id": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
+      "name": "dTDP-4-dehydro-2,3,6-trideoxy-α-D-glucose",
+      "short": "dTDP-4-dehydro-2,3,…",
+      "formula": "C16H22N2O13P2",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:87000"
+        "chebi": "CHEBI:90944"
       }
     },
     {
-      "id": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
-      "name": "1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid",
-      "short": "1-acyl-2-[(3E)-hexa…",
-      "formula": "C20H34O5R2",
+      "id": "24r_24_25_dihydroxycalciol",
+      "name": "(24R)-24,25-dihydroxycalciol",
+      "short": "24,25-dihydroxycalc…",
+      "formula": "C27H44O3",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:87002"
+        "chebi": "CHEBI:28818"
+      }
+    },
+    {
+      "id": "25_hydroxy_24_oxocalciol",
+      "name": "25-hydroxy-24-oxocalciol",
+      "short": "25-hydroxy-24-oxoca…",
+      "formula": "C27H42O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47805"
       }
     }
   ],
@@ -244,17 +254,10 @@
       ]
     },
     {
-      "id": "ec_1_14_19_42",
-      "name": "palmitoyl-[glycerolipid] 7-desaturase",
+      "id": "ec_4_2_1_164",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-D-glucose 3-dehydratase",
       "ec": [
-        "1.14.19.42"
-      ]
-    },
-    {
-      "id": "ec_1_14_19_43",
-      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
-      "ec": [
-        "1.14.19.43"
+        "4.2.1.164"
       ]
     }
   ],
@@ -502,21 +505,17 @@
     },
     {
       "id": "r6",
-      "name": "palmitoyl-[glycerolipid] 7-desaturase",
-      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(7Z)-hexadecenoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.42",
+      "name": "dTDP-4-dehydro-2,6-dideoxy-D-glucose 3-dehydratase",
+      "equation": "dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose + 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+) = dTDP-4-dehydro-2,3,6-trideoxy-alpha-D-hexopyranose + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "4.2.1.164",
       "substrates": [
         {
-          "metabolite": "1_acyl_2_palmitoylglycerolipid",
+          "metabolite": "dtdp_4_dehydro_2_6_dideoxy_d_glucose",
           "stoichiometry": 1
         },
         {
           "metabolite": "di_sulfido_diiron",
           "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
         },
         {
           "metabolite": "hplus",
@@ -525,7 +524,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_7z_hexadec_7_enoyl_glycerolipid",
+          "metabolite": "dtdp_4_dehydro_2_3_6_trideoxy_d_glucose",
           "stoichiometry": 1
         },
         {
@@ -534,37 +533,36 @@
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 2
+          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_1_14_19_42"
+          "enzyme": "ec_4_2_1_164"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:46756"
+        "rhea": "RHEA:49140"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46756"
+            "id": "RHEA:49140"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "palmitoyl-[glycerolipid] 3-(E)-desaturase",
-      "equation": "a 1-acyl-2-hexadecanoyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-acyl-2-[(3E)-hexadec-3-enoyl]-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
-      "ec": "1.14.19.43",
+      "name": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxi...",
+      "equation": "secalciferol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = 25-hydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + 2 H2O",
       "substrates": [
         {
-          "metabolite": "1_acyl_2_palmitoylglycerolipid",
+          "metabolite": "24r_24_25_dihydroxycalciol",
           "stoichiometry": 1
         },
         {
@@ -582,7 +580,7 @@
       ],
       "products": [
         {
-          "metabolite": "1_acyl_2_3e_hexadec_3_enoyl_glycerolipid",
+          "metabolite": "25_hydroxy_24_oxocalciol",
           "stoichiometry": 1
         },
         {
@@ -594,22 +592,17 @@
           "stoichiometry": 2
         }
       ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_14_19_43"
-        }
-      ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:46764"
+        "rhea": "RHEA:49196"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:46764"
+            "id": "RHEA:49196"
           }
         ]
       }

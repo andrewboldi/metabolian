@@ -18,49 +18,49 @@ pathway h-to-o2 "H to O2" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_89 [1.14.13.89] +h +isoflavone +o2 +nadph +h2o
-    2_hydroxyisoflavone
+    <-> . +h +lovastatin +o2 +nadph +h2o
+    6_exomethylene_lovastatin_lactone_form
   }
 
   branch from nadp side right {
     nadp
-    <-> . +l_homomethionine +h +o2 +nadph +4_methylthiobutanaldoxime +h2o
-    co2
+    <-> . +n_hexahydrocyclopenta_c_pyrrol_2_1h_yl_amino_car +h2o +h +o2 +nadph
+    gliclazide
   }
 
   branch from h2o side left {
     h2o
-    <-> . +glycine +l_tyrosine
-    l_tyrosine_n_glycyl
+    <-> . +h +adp +carboxy_gliclazide +phosphate +carboxy_gliclazide
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_alanine +l_tyrosine
-    ala_tyr
+    <-> . +h +adp +phosphate +atp
+    cerivastatin
   }
 
   branch from fmn side left {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    1_hydroxytestosterone
+    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
+    all_trans_18_hydroxyretinoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +testosterone +fmnh2 +o2 +h2o +hplus
-    2_hydroxytestosterone
+    <-> . +all_trans_retinoate +fmnh2 +o2 +h2o +hplus
+    5_6_epoxyretinoate
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_13_11_36 [1.13.11.36] +5_amino_4_chloro_2_2_3_dihydroxyphenyl_pyridazin
-    5_amino_4_chloro_2_5_hydroxymuconoyl_3_2h_pyrida
+    <-> . +2_octaprenyl_3_methyl_6_methoxy_1_4_benzoquinol +h +nadph +nadp +h2o
+    2_octaprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
   }
 
   branch from o2 side right {
     o2
-    <-> . +h +4_methylthiobutanaldoxime +l_cysteine +nadph +nadp +h2o
-    s_4_methylthiobutylthiohydroximoyl_l_cysteine
+    <-> . +h +nadph +pitavastatin +nadp +pitavastatin_m13
+    h2o2
   }
 }

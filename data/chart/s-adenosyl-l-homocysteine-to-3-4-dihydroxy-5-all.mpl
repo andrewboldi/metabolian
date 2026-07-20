@@ -22,50 +22,50 @@ pathway s-adenosyl-l-homocysteine-to-3-4-dihydroxy-5-all "S-adenosyl-L-homocyste
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> ec_2_1_1_352 [2.1.1.352] +s_adenosyl_l_homocysteine +h +noscapine
-    narcotoline
+    <-> ec_2_1_1_275 [2.1.1.275] +s_adenosyl_l_homocysteine +methyl_gibberellin_a9 +h
+    gibberellin_a9
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +brassinin +s_adenosyl_l_homocysteine +h
-    indol_3_ylmethylcarbamodithiolate
+    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +r_nicotine_isomethonium_ion
+    s_nicotine
   }
 
   branch from h side left {
     h
-    <-> . +adp +lithocholate +phosphate +lithocholate +h2o
-    atp
+    <-> . +3z_dodecenoyl_coa +acetyl_coa +3_oxomyrist_5_enoyl_coenzyme_a
+    coa
   }
 
   branch from h side right {
     h
     <-> . +adp +phosphate +atp +h2o
-    13s_hydroperoxy_9z_11e_octadecadienoate
+    lithocholate_sulfate
   }
 
   branch from o2 side left {
     o2
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +h +nadph +nadp +h2o
-    5z_8z_11z_14z_eicosatetraenoyl_coa
+    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +2_hydroxy_pentan_3_one +h2o
+    3_nitro_2_pentanol
   }
 
   branch from o2 side right {
     o2
-    <-> . +6z_9z_12z_15z_18z_tetracosapentaenoyl_coa +nadp +h2o +h +nadph
-    9z_12z_15z_18z_tetracosatetraenoyl_coa
+    <-> ec_1_7_3_1 [1.7.3.1] +nitrite +h +h2o2 +cyclohexanone +h2o
+    nitrocyclohexane
   }
 
   branch from nadph side left {
     nadph
-    <-> . +8z_11z_14z_3_oxoicosa_8_11_14_trienoyl_coa +h +nadp
-    3_s_hydroxy_dihomo_gama_linolenoyl_coenzyme_a
+    <-> . +h +o2 +2_polyprenyl_3_methyl_6_methoxy_1_4_benzoquinone +nadp +h2o
+    2_polyprenyl_3_methyl_5_hydroxy_6_methoxy_1_4_be
   }
 
   branch from nadph side right {
     nadph
-    <-> . +13z_16z_docosadienoyl_coa +nadp +h
-    trans_cis_cis_2_13_16_docasatrienoyl_coenzyme_a
+    <-> ec_1_1_1_274 [1.1.1.274] +h +2_5_didehydro_d_gluconate +nadp
+    2_dehydro_d_galactonate
   }
 
   branch from 3_all_trans_hexaprenyl_4_amino_5_methoxybenzoate side left {
@@ -76,13 +76,13 @@ pathway s-adenosyl-l-homocysteine-to-3-4-dihydroxy-5-all "S-adenosyl-L-homocyste
 
   branch from diphosphate side right {
     diphosphate
-    <-> ec_4_2_3_140 [4.2.3.140] +cis_abienol
-    copal_8_ol_diphosphate
+    <-> . +h +amp +taurolithocholate +atp +lithocholate
+    taurine
   }
 
   branch from diphosphate side left {
     diphosphate
-    <-> ec_4_2_3_133 [4.2.3.133] +alpha_copaene
-    2e_6e_farnesyl_diphosphate
+    <-> ec_2_7_7_40 [2.7.7.40] +cdp_l_ribitol +ctp +d_ribitol_5_phosphate
+    pmf
   }
 }

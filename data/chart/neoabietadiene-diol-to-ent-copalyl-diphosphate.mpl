@@ -18,50 +18,50 @@ pathway neoabietadiene-diol-to-ent-copalyl-diphosphate "neoabietadiene-diol to e
 
   branch from neoabietadienol side left {
     neoabietadienol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadp +h +nadph
-    abietal
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +palustradienal
+    nad
   }
 
   branch from neoabietadienol side right {
     neoabietadienol
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +abietal
-    nad
+    <-> ec_1_1_1_71 [1.1.1.71] +h +isopimara_7_15_dienal +nad
+    nadh
   }
 
   branch from h side left {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_19z_31z_pentacontatrienoylpantetheine_4_p +nad
-    o_s_19z_31z_pentacontadienoylpantetheine_4_phosp
+    <-> . +p_nitrostyrene_oxide +bromide
+    s_p_nitro_2_bromo_1_phenylethanol
   }
 
   branch from h side right {
     h
-    <-> ec_1_3_1_10 [1.3.1.10] +nadh +o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor +nad
-    o_s_5z_tetracosenoylpantetheine_4_phosphoryl_l_s
+    <-> . +r_2_chloro_1_phenylethanol +chloride
+    s_styrene_oxide
   }
 
   branch from o2 side left {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +nadph +nadp +h2o
-    16alpha_hydroxyprogesterone
+    <-> . +6_hydroxychlorzoxazone +nadp +h2o +h +nadph
+    chlorzoxazone
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_14_1 [1.14.14.1] +4_4_dichloroindigo +h2o
-    4_chloroindole
+    <-> ec_1_14_18_1 [1.14.18.1] +4_acetamido_o_benzoquinone +h2o
+    4_acetamidophenol
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_15z_3_hydroxytetratriacontenoylpantethein +nadp +h
-    o_s_15z_3_oxotetratriacontenoylpantetheine_4_pho
+    <-> ec_1_1_1_21 [1.1.1.21] +3_bromobenzaldehyde +h +nadp
+    3_bromobenzyl_alcohol
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_7z_3_hydroxyhexacosenoylpantetheine_4_pho +nadp +h
-    o_s_7z_3_oxohexacosenoylpantetheine_4_phosphoryl
+    <-> ec_1_1_1_21 [1.1.1.21] +2_ethylbutanal +h +nadp
+    2_ethylbutanol
   }
 
   branch from ent_copalyl_diphosphate side left {

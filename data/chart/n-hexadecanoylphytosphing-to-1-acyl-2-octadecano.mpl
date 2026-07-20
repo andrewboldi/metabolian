@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n-hexadecanoylphytosphing-to-1-acyl-2-octadecano "N-hexadecanoylphytosphing… to 1-acyl-2-octadecanoyl-sn-…" {
-  spacing 164
+  spacing 152
 
   spine at 0,0 {
     n_hexadecanoylphytosphingosine
@@ -16,17 +16,5 @@ pathway n-hexadecanoylphytosphing-to-1-acyl-2-octadecano "N-hexadecanoylphytosph
     1_acyl_sn_glycerol_3_phosphate
     <-> . +stearoyl_coa -coa
     1_acyl_2_octadecanoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_acyl_sn_glycerol_3_phosphate side left {
-    1_acyl_sn_glycerol_3_phosphate
-    <-> . +lauroyl_coa +coa
-    1_acyl_2_dodecanoyl_sn_glycero_3_phosphate
-  }
-
-  branch from 1_acyl_sn_glycerol_3_phosphate side right {
-    1_acyl_sn_glycerol_3_phosphate
-    <-> . +n_acyllysophosphatidylethanolamine +h2o +hplus
-    n_acylethanolamine
   }
 }

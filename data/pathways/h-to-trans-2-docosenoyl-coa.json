@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "h-to-trans-2-docosenoyl-coa",
+  "name": "H to trans-2-docosenoyl-CoA",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from H(+) to trans-2-docosenoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR158789"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "behenate",
+      "name": "behenate",
+      "formula": "C22H43O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:23858"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM726122"
+      }
+    },
+    {
+      "id": "cholesteryl_behenate",
+      "name": "cholesteryl behenate",
+      "formula": "C49H88O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84352"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    },
+    {
+      "id": "docosanoyl_coa",
+      "name": "docosanoyl-CoA",
+      "formula": "C43H74N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:65059"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_2_docosenoyl_coa",
+      "name": "trans-2-docosenoyl-CoA",
+      "short": "trans-2-docosenoyl-…",
+      "formula": "C43H72N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:74692"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR158789",
+      "substrates": [
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR158789"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158789"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR158742",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_behenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "docosanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR158742"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR158742"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "docosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-docosenoyl-CoA...",
+      "equation": "docosanoyl-CoA + oxidized [electron-transfer flavoprotein] + H(+) = (2E)-docosenoyl-CoA + reduced [electron-transfer flavoprotein]",
+      "substrates": [
+        {
+          "metabolite": "docosanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_2_docosenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47228"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47228"
+          }
+        ]
+      }
+    }
+  ]
+}

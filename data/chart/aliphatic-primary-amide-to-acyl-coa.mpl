@@ -32,37 +32,37 @@ pathway aliphatic-primary-amide-to-acyl-coa "aliphatic primary amide to acyl-CoA
 
   branch from nh3 side left {
     nh3
-    <-> ec_3_5_4_24 [3.5.4.24] +l_sepiapterin +h2o +hplus
-    s_xanthopterin_b2
+    <-> ec_3_5_1_67 [3.5.1.67] +4_methylene_l_glutamine +h2o
+    4_methylene_l_glutamate
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_3_5_1_7 [3.5.1.7] +carbamoyl-aspartate +h2o +hplus +co2
-    aspartate
+    <-> ec_3_5_4_6 [3.5.4.6] +amp +h2o +hplus
+    imp
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_7 [4.2.3.7] +fpp
-    pentalenene
+    <-> ec_4_2_3_13 [4.2.3.13] +fpp
+    cadinene
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_42 [2.5.1.42] +sn_3_o_geranylgeranyl_glycerol_1_phosphate +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    2_3_bis_o_geranylgeranyl_sn_glycerol_1_phosphate
+    <-> ec_4_2_3_11 [4.2.3.11] +gpp +h2o
+    sabinene_hydrate
   }
 
   branch from acyl_coa side left {
     acyl_coa
-    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +coa
-    3_oxoacyl_coa
+    <-> ec_2_3_1_125 [2.3.1.125] +1_alkyl_2_acetyl_sn_glycerol +coa
+    1_alkyl_2_acetyl_3_acyl_sn_glycerol
   }
 
   branch from acyl_coa side right {
     acyl_coa
-    <-> ec_2_3_1_125 [2.3.1.125] +1_alkyl_2_acetyl_sn_glycerol +coa
-    1_alkyl_2_acetyl_3_acyl_sn_glycerol
+    <-> ec_2_3_1_185 [2.3.1.185] +tropinium +coa +hplus
+    o_acyltropine
   }
 }

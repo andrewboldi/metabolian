@@ -20,26 +20,26 @@ pathway fadh2-to-h2o-null "FADH2 to H2O" {
 
   branch from fad side left {
     fad
-    <-> . +fadh2 +5_amino_2_oxopentanoate +h +nh4 +h2o
-    d_ornithine
+    <-> . +fadh2 +h +cis2trans4decadienoyl_coenzyme_a
+    trans4decenoyl_coenzyme_a
   }
 
   branch from fad side right {
     fad
-    <-> . +trans_trans_deca_2_4_dienoyl_coa +fadh2 +h
-    4e_decenoyl_coa
+    <-> . +fadh2 +h +2e_henicosenoyl_coa
+    heneicosanoyl_coenzyme_a
   }
 
   branch from h2o side left {
     h2o
-    <-> . +d_glucono_1_5_lactone +h
-    d_gluconate
+    <-> . +2_4_dihydroxy_2_heptenedioic_acid
+    2_hydroxyhepta_2_4_dienedioic_acid
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_1_1_68 [3.1.1.68] +l_lyxonate +h
-    d_xylono_1_5_lactone
+    <-> ec_1_14_13_89 [1.14.13.89] +h +isoflavone +o2 +nadph +2_hydroxyisoflavone
+    nadp
   }
 
   branch from 7e_10e_hexadecadienoyl_coa side left {
@@ -50,37 +50,37 @@ pathway fadh2-to-h2o-null "FADH2 to H2O" {
 
   branch from coa side right {
     coa
-    <-> . +2s_3s_3_hydroxy_2_methylbutanoyl_coa +h2o
-    3_hydroxy_2_methylbutanoic_acid
+    <-> . +2e_11z_14z_icosatrienoyl_coa +h2o +h
+    trans_cis_cis_2_11_14_eicosatrienoic_acid
   }
 
   branch from coa side left {
     coa
-    <-> . +2_methyl_3_ketovaleric_acid +h2o
-    2_methyl_3_oxo_valeryl_coenzyme_a
+    <-> . +diphosphate +h +amp +11z_octadecenoyl_coa +atp
+    vaccenic_acid
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_174 [1.1.1.174] +nadh +2_hydroxycyclohexan_1_one +h
-    cyclohexane_1_2_diol
+    <-> . +octanoyl_coa +coa +o2 +h2o +nadh +acetyl_coa +h +h2o2
+    hexanoyl_coa
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_4_1_11 [1.4.1.11] +nadh +h +5s_5_amino_3_oxohexanoate +nh4 +h2o
-    3r_5r_3_5_diammoniohexanoate
+    <-> . +nadh +acetyl_coa +h +trans4decenoyl_coenzyme_a +coa +h2o
+    trans2_6dodecadienoyl_coenzyme_a
   }
 
   branch from atp side right {
     atp
-    <-> ec_2_7_7_96 [2.7.7.96] +adp_beta_d_ribose +diphosphate +h
-    aldehydo_d_ribose_5_phosphate
+    <-> . +h +adp +phosphate +h2o
+    3_s_hydroxy_pravastatin
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +h2o
-    gly_asp
+    <-> . +h +adp +phosphate +h2o
+    3_hydroxy_simvastatin_acid_form
   }
 }

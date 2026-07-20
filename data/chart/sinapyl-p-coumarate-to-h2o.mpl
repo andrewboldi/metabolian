@@ -36,26 +36,26 @@ pathway sinapyl-p-coumarate-to-h2o "Sinapyl p-coumarate to H2O" {
 
   branch from co2 side right {
     co2
-    <-> ec_2_3_1_199 [2.3.1.199] +15z_tetracosenoyl_coa +malonyl_coa +h +coa
-    3_oxo_17z_hexacosenoyl_coa
+    <-> . +3z_5_chloro_2_oxopent_3_enoate +h
+    3z_2_chloro_5_oxohex_3_enedioate
   }
 
   branch from co2 side left {
     co2
-    <-> . +4alpha_14alpha_dimethyl_ergosta_8_25_27_dienol +h
-    4beta_carboxycyclolaudenol
+    <-> . +2_keto_4_pentenoate +h
+    3z_2_oxohex_3_enedioate
   }
 
   branch from coa side right {
     coa
-    <-> . +r_carnitine +8z_11z_icosadienoyl_coa
-    8z_11z_eicosadienoylcarnitine
+    <-> . +acetyl_coa +2_methylpropanoyl_coa
+    3_oxoisohexanoyl_coa
   }
 
   branch from coa side left {
     coa
-    <-> . +r_carnitine +heneicosanoyl_coenzyme_a
-    heneicosanoylcarnitine
+    <-> ec_2_3_1_5 [2.3.1.5] +acetyl_coa +hydrazine
+    acetohydrazide
   }
 
   branch from 2_4_4_6_tetrahydroxychalcone side right {
@@ -72,13 +72,13 @@ pathway sinapyl-p-coumarate-to-h2o "Sinapyl p-coumarate to H2O" {
 
   branch from h2o side right {
     h2o
-    <-> . +l_isoleucine +l_methionine
-    methionyl_methionyl_isoleucine
+    <-> . +l_threonine +l_isoleucine +l_tryptophan
+    tryptophanyl_threonyl_isoleucine
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_methionine +l_arginine +l_phenylalanine
-    methionyl_phenylalanyl_arginine
+    <-> . +l_threonine +l_tryptophan +l_tyrosine
+    tryptophanyl_threonyl_tyrosine
   }
 }

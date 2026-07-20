@@ -44,14 +44,14 @@ pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2
 
   branch from l_phenylalanine side left {
     l_phenylalanine
-    <-> ec_1_13_12_9 [1.13.12.9] +o2 +co2 +h2o
-    2_phenylacetamide
+    <-> ec_4_2_1_91 [4.2.1.91] +hplus +co2 +h2o
+    l_arogenate
   }
 
   branch from l_phenylalanine side right {
     l_phenylalanine
-    <-> ec_4_2_1_91 [4.2.1.91] +hplus +co2 +h2o
-    l_arogenate
+    <-> ec_2_3_1_53 [2.3.1.53] +acetyl_coa +coa +hplus
+    n_acetyl_l_phenylalaninate
   }
 
   branch from r_3_indol_3_yl_2_oxobutyrate side left {
@@ -62,13 +62,13 @@ pathway 3-4-hydroxycyclohex-2-en-to-s-adenosyl-l-homocys "3-(4-hydroxycyclohex-2
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_265 [2.1.1.265] +tellurite +sam
-    methanetelluronate
+    <-> . +c30_botryococcene +sam +hplus
+    20_methyl_21_22_didehydro_20_21_dihydrobotryococ
   }
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_262 [2.1.1.262] +squalene +sam +hplus
-    3_22_dimethyl_1_2_23_24_tetradehydro_2_3_22_23_t
+    <-> . +3_methyl_1_2_didehydro_2_3_dihydrobotryococcene +sam +hplus
+    3_20_dimethyl_1_2_21_22_tetradehydro_2_3_20_21_t
   }
 }

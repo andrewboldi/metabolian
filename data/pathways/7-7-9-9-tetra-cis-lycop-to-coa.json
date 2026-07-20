@@ -1,0 +1,223 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-7-9-9-tetra-cis-lycop-to-coa",
+  "name": "7,7',9,9'-tetra-cis-lycop… to CoA",
+  "category": "other",
+  "summary": "A 3-step route from 7,7',9,9'-tetra-cis-lycopene to CoA, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR182159"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62466"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_7_9_9_tetra_cis_lycopene",
+      "name": "7,7',9,9'-tetra-cis-lycopene",
+      "short": "7,7',9,9'-tetra-cis…",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62466"
+      }
+    },
+    {
+      "id": "ubiquinol_10",
+      "name": "ubiquinol-10",
+      "formula": "C59H92O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:64183"
+      }
+    },
+    {
+      "id": "ubiquinone_10",
+      "name": "ubiquinone-10",
+      "formula": "C59H90O4",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1364539"
+      }
+    },
+    {
+      "id": "7_9_9_tri_cis_neurosporene",
+      "name": "7,9,9'-tri-cis-neurosporene",
+      "short": "7,9,9'-tri-cis-neur…",
+      "formula": "C40H58",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:62463"
+      }
+    },
+    {
+      "id": "dodecanoyl_coa",
+      "name": "dodecanoyl-CoA",
+      "formula": "C33H54N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1092909"
+      }
+    },
+    {
+      "id": "2e_dodecenoyl_coa",
+      "name": "(2E)-dodecenoyl-CoA",
+      "formula": "C33H52N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM1104661"
+      }
+    },
+    {
+      "id": "r_carnitine",
+      "name": "(R)-carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1105737"
+      }
+    },
+    {
+      "id": "o_5z_dodecenoyl_carnitine",
+      "name": "O-[(5Z)-dodecenoyl]carnitine",
+      "short": "O-[(5Z)-dodecenoyl]…",
+      "formula": "C19H35NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:73053"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "CoA",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM727276"
+      }
+    }
+  ],
+  "enzymes": [],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR182159",
+      "substrates": [
+        {
+          "metabolite": "7_7_9_9_tetra_cis_lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_9_9_tri_cis_neurosporene",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR182159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR182159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "Reaction MNXR163361",
+      "substrates": [
+        {
+          "metabolite": "dodecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinone_10",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2e_dodecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ubiquinol_10",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR163361"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR163361"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR154975",
+      "substrates": [
+        {
+          "metabolite": "2e_dodecenoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_5z_dodecenoyl_carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR154975"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR154975"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,14 +24,14 @@ pathway neocasomorphin-to-fmn "neocasomorphin to FMN" {
 
   branch from fmn side right {
     fmn
-    <-> ec_1_14_14_28 [1.14.14.28] +long_chain_alkane +fmnh2 +o2 +h2o +hplus
-    long_chain_fatty_alcohol
+    <-> . +4z_7z_10z_13z_16z_19z_docosahexaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_13z_16z_19z_10_11_epoxydocosapentaenoate
   }
 
   branch from fmn side left {
     fmn
-    <-> . +1_4_cineole +fmnh2 +o2 +h2o +hplus
-    2_exo_hydroxy_1_4_cineole
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_10z_13z_16z_19_20_epoxydocosatetraenoate
   }
 
   branch from 2_hydroxy_2_methylbutanenitrile side right {

@@ -22,37 +22,37 @@ pathway cyclobis-1-6-nigerosyl-to-h2o "cyclobis-(1→6)-α-nigerosyl to H2O" {
 
   branch from glucose side left {
     glucose
-    <-> . +indol_3_ylacetothiohydroxamate_o_sulfonate +h +h2o
-    z_glucobrassicin
+    <-> . +sucrose +6_kestotriose
+    6_6_kestotetraose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +ternatin_c3 +1_o_4_coumaroyl_d_glucose
-    ternatin_c5
+    <-> ec_3_2_1_147 [3.2.1.147] +4_methoxyglucobrassicin +h2o +h
+    4_methoxy_3_indolylmethyl_glucosinolate_aglycone
   }
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    fagopyritol_b3
+    <-> ec_3_6_3_47 [3.6.3.47] +h +adp +phosphate +h2o
+    dodecanoyl_coa
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +h2o
-    fagopyritol_a2
+    <-> . +h +adp +phosphate +h2o
+    n_acetyl_beta_d_glucosamine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    fagopyritol_a3
+    <-> . +h +adp +phosphate +atp
+    1_f_beta_d_fructosylsucrose
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_18 [3.6.3.18] +h +adp +phosphate +atp
-    agarotetraose
+    <-> . +h +adp +phosphate +atp
+    4_amino_4_deoxy_l_arabinopyranose
   }
 }

@@ -20,14 +20,14 @@ pathway 5alpha-androstane-3alpha-to-h2o "5alpha-Androstane-3alpha,… to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +4_hydroxynon_2_enal +nadph +nadp
-    4_hydroxynonenol
+    <-> ec_1_14_14_25 [1.14.14.25] +testosterone +o2 +nadph +nadp +h2o
+    16_hydroxytestosterone
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_21 [1.1.1.21] +formaldehyde +nadph +nadp
-    methanol
+    <-> ec_3_5_2_16 [3.5.2.16] +n_carbamoyl_2_oxoglycine +h2o
+    parabanic_acid
   }
 
   branch from androsterone side left {
@@ -38,49 +38,49 @@ pathway 5alpha-androstane-3alpha-to-h2o "5alpha-Androstane-3alpha,… to H2O" {
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +2_4_6_trimethylbenzoyl_methanol +nadp +h
-    2_4_6_trimethylphenylglyoxal
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_meiqx +nadp +h2o +h +o2
+    meiqx
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +2_methylpentanal +h +nadp
-    2_methylpentanol
+    <-> ec_1_14_14_1 [1.14.14.1] +n_hydroxy_iq +nadp +h2o +h +o2
+    3_methyl_3h_imidazo_4_5_f_quinolin_2_amine
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_bromobenzaldehyde +h +nadph
-    4_bromobenzyl_alcohol
+    <-> ec_1_14_14_91 [1.14.14.91] +2_fluoro_trans_cinnamate +h +o2 +nadph +h2o
+    2_fluoro_4_hydroxycinnamate
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +4_phenylphenylglyoxal +h +nadph
-    4_phenylbenzoyl_methanol
+    <-> ec_1_14_14_91 [1.14.14.91] +2_chloro_trans_cinnamate +h +o2 +nadph +h2o
+    2_chloro_4_hydroxycinnamate
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_23 [3.2.1.23] +beta_d_galactose +methanol
-    methyl_beta_d_galactoside
+    <-> ec_3_2_1_22 [3.2.1.22] +beta_d_galactose +alpha_d_galactose
+    galabiose
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +maltoheptaose +maltohexaose
-    alpha_d_glucose
+    <-> ec_3_4_11_10 [3.4.11.10] +l_phenylalanine_p_nitroanilide +l_phenylalanine
+    4_nitroaniline
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    actn
+    thiamine
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    arsenobetaine
+    <-> ec_6_3_2_12 [6.3.2.12] +6r_10_formyltetrahydrofolate +h +l_glutamate +adp +phosphate
+    6r_10_formyltetrahydropteroyldiglutamate
   }
 }

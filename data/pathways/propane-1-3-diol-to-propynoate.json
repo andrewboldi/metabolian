@@ -166,30 +166,21 @@
       }
     },
     {
-      "id": "amp",
-      "name": "AMP",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:456215"
-      }
-    },
-    {
-      "id": "ppi",
-      "name": "Diphosphate (PPi)",
-      "formula": "HO7P2",
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
       "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:33019"
+        "chebi": "CHEBI:456216"
       }
     },
     {
-      "id": "malonaldehyde",
-      "name": "malonaldehyde",
-      "formula": "C3H4O2",
-      "charge": 0,
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
       "xrefs": {
-        "chebi": "CHEBI:566274"
+        "chebi": "CHEBI:43474"
       }
     },
     {
@@ -258,13 +249,6 @@
       "name": "acetylenecarboxylate hydratase",
       "ec": [
         "4.2.1.27"
-      ]
-    },
-    {
-      "id": "ec_6_2_1_36",
-      "name": "3-hydroxypropionyl-CoA synthase",
-      "ec": [
-        "6.2.1.36"
       ]
     }
   ],
@@ -492,9 +476,8 @@
     },
     {
       "id": "r6",
-      "name": "3-hydroxypropionyl-CoA synthase",
-      "equation": "3-hydroxypropanoate + ATP + CoA = 3-hydroxypropanoyl-CoA + AMP + diphosphate",
-      "ec": "6.2.1.36",
+      "name": "3-hydroxypropanoate + ATP + CoA = 3-hydroxypropanoyl-CoA + ADP + phosphate",
+      "equation": "3-hydroxypropanoate + ATP + CoA = 3-hydroxypropanoyl-CoA + ADP + phosphate",
       "substrates": [
         {
           "metabolite": "3_hydroxypropionate",
@@ -515,83 +498,31 @@
           "stoichiometry": 1
         },
         {
-          "metabolite": "amp",
+          "metabolite": "adp",
           "stoichiometry": 1
         },
         {
-          "metabolite": "ppi",
+          "metabolite": "pi",
           "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_6_2_1_36"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 6,
       "xrefs": {
-        "rhea": "RHEA:26534"
+        "rhea": "RHEA:67136"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:26534"
+            "id": "RHEA:67136"
           }
         ]
       }
     },
     {
       "id": "r7",
-      "name": "malonaldehyde + NAD(+) + H2O = 3-oxopropanoate + NADH + 2 H(+)",
-      "equation": "malonaldehyde + NAD(+) + H2O = 3-oxopropanoate + NADH + 2 H(+)",
-      "substrates": [
-        {
-          "metabolite": "malonaldehyde",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nad",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_oxopropanoate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "nadh",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 7,
-      "xrefs": {
-        "rhea": "RHEA:67252"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:67252"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r8",
       "name": "3-nitropropanoate + A + H2O = 3-oxopropanoate + nitrite + AH2 + H(+)",
       "equation": "3-nitropropanoate + A + H2O = 3-oxopropanoate + nitrite + AH2 + H(+)",
       "substrates": [
@@ -627,7 +558,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 8,
+      "pathwayStep": 7,
       "xrefs": {
         "rhea": "RHEA:81399"
       },
@@ -642,7 +573,7 @@
       }
     },
     {
-      "id": "r9",
+      "id": "r8",
       "name": "prop-2-ynal + NAD(+) + H2O = propynoate + NADH + 2 H(+)",
       "equation": "prop-2-ynal + NAD(+) + H2O = propynoate + NADH + 2 H(+)",
       "substrates": [
@@ -674,7 +605,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 9,
+      "pathwayStep": 8,
       "xrefs": {
         "rhea": "RHEA:30879"
       },

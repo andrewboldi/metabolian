@@ -46,37 +46,37 @@ pathway beta-d-glucose-to-nad "beta-D-glucose to NAD" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +chalcone_2_o_glucoside +h
-    2_4_4_6_tetrahydroxychalcone
+    <-> . +udp +cicerin_7_o_glucoside
+    cicerin
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +betanin +h
-    betanidin
+    <-> . +udp +h +isoorientin_4_o_beta_d_glucoside
+    isoorientin
   }
 
   branch from udp_alpha_d_galactose side left {
     udp_alpha_d_galactose
-    <-> . +udp +beta_d_gal_1_4_alpha_d_glc_1_4_alpha_d_galnac_1 +h
-    alpha_d_glc_1_4_alpha_d_galnac_1_3_alpha_d_galna
+    <-> . +udp +oleanolate_3_beta_d_glucuronoside_3_1_galactosid +h
+    chikusetsusaponin_iva
   }
 
   branch from udp_alpha_d_galactose side right {
     udp_alpha_d_galactose
-    <-> . +udp +alpha_neu5ac_2_3_alpha_d_gal_1_2_beta_d_glc_1_3 +h
-    alpha_neu5ac_2_3_beta_d_glc_1_3_alpha_d_glcnac_p
+    <-> . +udp +3_o_d_galactosyl_1_2_d_glucuronosyl_quillate +h
+    3_o_d_glucuronosyl_quillate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_121 [1.1.1.121] +nadh +d_xylono_1_5_lactone +h
-    beta_d_xylose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
+    1s_2r_4r_neoisodihydrocarveol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_1_1_46 [1.1.1.46] +nadh +l_arabinono_1_4_lactone +h
-    beta_l_arabinofuranose
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
+    isodihydrocarveol
   }
 }

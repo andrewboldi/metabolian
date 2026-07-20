@@ -22,13 +22,13 @@ pathway 2-3-cyclic-amp-to-9h-xanthine "2',3'-cyclic AMP to 9H-xanthine" {
 
   branch from nh3 side left {
     nh3
-    <-> . +l_alaninamide +h2o
-    alanine
+    <-> ec_3_5_4_38 [3.5.4.38] +2_deoxycytidine_5_monophosphate_1 +h2o +hplus
+    dump
   }
 
   branch from nh3 side right {
     nh3
-    <-> ec_1_4_3_3 [1.4.3.3] +d_lysinium +o2 +h2o +h2o2
-    6_amino_2_oxohexanoic_acid
+    <-> ec_3_5_4_35 [3.5.4.35] +cytidine_5_monophosphate_1 +h2o +hplus
+    uridine_5_monophosphate_1
   }
 }

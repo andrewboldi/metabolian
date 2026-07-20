@@ -18,37 +18,37 @@ pathway bis-2-ethylhexyl-adipate-to-h2o "bis(2-ethylhexyl) adipate to H2O" {
 
   branch from h side left {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_2_distearoyl_sn_glycero_3_phosphoserine +phosphate +1_2_distearoyl_sn_glycero_3_phosphoserine +h2o
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +n_acetyl_d_muramic_acid +phosphate +n_acetyl_d_muramic_acid +h2o
     atp
   }
 
   branch from h side right {
     h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    1_2_dihexadecanoyl_sn_glycero_3_phospho_l_serine
+    <-> ec_3_6_3_17 [3.6.3.17] +adp +phosphate +atp +h2o
+    psicopyranose
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_14_13_119 [1.14.13.119] +nadh +5_epi_aristolochene +h +o2 +h2o
-    capsidiol
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
+    levopimaradienol
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_84 [1.14.13.84] +nadh +4_hydroxyacetophenone +o2 +h2o
-    4_hydroxyphenylacetate
+    <-> ec_1_1_1_71 [1.1.1.71] +nadh +neoabietadienal +h
+    palustradienol
   }
 
   branch from h2o side left {
     h2o
-    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_d_p_put
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    alpha_l_rhamnose
   }
 
   branch from h2o side right {
     h2o
-    <-> . +r_3_hydroxydecanoic_acid +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_b_p_put
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
+    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +atp
+    d_tagatopyranose
   }
 }

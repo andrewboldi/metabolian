@@ -20,14 +20,14 @@ pathway s-adenosyl-l-homocysteine-to-trypanothione "S-adenosyl-L-homocysteine to
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +kawain
-    e_5_6_dihydro_4_hydroxy_6_styryl_pyran_2_one
+    <-> . +s_adenosyl_l_homocysteine +h +alpha_tocopherol
+    2r_2_5_8_trimethyl_2_4_8_12_trimethyltridecyl_c
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +yangonin
-    bis_noryangonin
+    <-> . +s_adenosyl_l_homocysteine +h +tacrolimus
+    31_o_demethyl_fk_506
   }
 
   branch from s_amphetamine side left {
@@ -38,26 +38,26 @@ pathway s-adenosyl-l-homocysteine-to-trypanothione "S-adenosyl-L-homocysteine to
 
   branch from l_ascorbate side right {
     l_ascorbate
-    <-> ec_1_11_1_11 [1.11.1.11] +l_dehydroascorbic_acid +h2o +h
-    h2o2
-  }
-
-  branch from l_ascorbate side left {
-    l_ascorbate
     <-> ec_1_14_11_38 [1.14.11.38] +dehydroascorbide +co2 +succinate +verruculogen +h2o +o2 +fumitremorgin_b
     2_oxoglutarate
   }
 
+  branch from l_ascorbate side left {
+    l_ascorbate
+    <-> . +dehydroascorbide +h +nadph
+    nadp
+  }
+
   branch from o2 side right {
     o2
-    <-> . +dihydrotoxoflavin +1_6e_5_hydroxy_1_methyl_1_6_dihydro_1_2_4_triazi
-    co2
+    <-> . +elymoclavine +h2o
+    paspalic_acid
   }
 
   branch from o2 side left {
     o2
-    <-> . +2z_4e_2_hydroxyhexa_2_4_dienedioate +h +chloride +h2o
-    3_chlorocatechol
+    <-> . +nadp +n_hydroxy_l_trihomomethioninate +h2o +nadph
+    l_trihomomethionine
   }
 
   branch from l_dehydroascorbic_acid side right {

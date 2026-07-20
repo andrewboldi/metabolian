@@ -18,13 +18,13 @@ pathway n2-3r-3-2-saturated-a-to-s-adenosyl-l-homocystei "N2-[(3R)-3-(2-saturate
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_178 [2.1.1.178] +cytidine_5_monophosphate_1 +sam +hplus
+    <-> ec_2_1_1_202 [2.1.1.202] +cytidine_5_monophosphate_1 +sam +hplus
     5_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_179 [2.1.1.179] +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> ec_2_1_1_202 [2.1.1.202] +sam +5_methylcytidine_5_monophosphate_1 +hplus
+    cytidine_5_monophosphate_1
   }
 }

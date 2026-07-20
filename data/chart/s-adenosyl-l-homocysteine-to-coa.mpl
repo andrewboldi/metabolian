@@ -22,14 +22,14 @@ pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +dtdp_l_oleandrose +s_adenosyl_l_homocysteine +h
-    dtdp_l_olivose
+    <-> . +casticin +s_adenosyl_l_homocysteine +h
+    oxyayanin_b
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco
-    dtdp_4_oxo_2_6_dideoxy_l_mannose
+    <-> . +s_4_deoxygadusol +s_adenosyl_l_homocysteine
+    s_demethyl_4_deoxygadusol
   }
 
   branch from beta_alanine side left {
@@ -46,26 +46,26 @@ pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
 
   branch from diphosphate side left {
     diphosphate
-    <-> . +alpha_cubebene
+    <-> . +z_e_germacrene_b
     2e_6e_farnesyl_diphosphate
   }
 
   branch from diphosphate side right {
     diphosphate
     <-> . +2e_6e_farnesyl_diphosphate
-    z_e_germacrene_b
+    3_7_11_eudesmadiene
   }
 
   branch from h side left {
     h
-    <-> . +2_chloro_2_2_4_dichloro_5_oxofuran_2_yl_acetate
-    2_3_5_trichloro_cis_cis_muconate
+    <-> ec_3_1_2_6 [3.1.2.6] +acetate +glutathione +h2o
+    s_acetylglutathione
   }
 
   branch from h side right {
     h
-    <-> ec_5_5_1_7 [5.5.1.7] +2_chloro_4_methyl_cis_dienelactone
-    2_chloro_4_methyl_cis_cis_muconate
+    <-> ec_1_1_1_284 [1.1.1.284] +nadh +ethanol +s_formylglutathione +glutathione_ethyl_ester +nad +h2o
+    formaldehyde
   }
 
   branch from carnosine side left {
@@ -82,25 +82,25 @@ pathway s-adenosyl-l-homocysteine-to-coa "S-adenosyl-L-homocysteine to CoA" {
 
   branch from amp side left {
     amp
-    <-> ec_6_2_1_12 [6.2.1.12] +diphosphate +4_methoxycinnamoyl_coa +h +atp +coa
-    4_methoxycinnamic_acid
+    <-> ec_6_2_1_1 [6.2.1.1] +diphosphate +fluoroacetyl_coa +atp +coa
+    fluoroacetate
   }
 
   branch from amp side right {
     amp
-    <-> ec_6_2_1_33 [6.2.1.33] +diphosphate +4_iodobenzoyl_coa +atp +coa
-    4_iodobenzoate
+    <-> ec_3_6_1_29 [3.6.1.29] +h +adp +h2o
+    p_1_p_2_bis_5_adenosyl_triphosphate
   }
 
   branch from coa side left {
     coa
-    <-> . +trichodermol +2_4_6_octatrienedioyl_coa
-    harzianum_a
+    <-> ec_2_3_1_255 [2.3.1.255] +acetyl_coa +l_threonyl_group
+    n_acetyl_l_threonyl
   }
 
   branch from coa side right {
     coa
-    <-> . +udp_2_4_diacetamido_2_4_6_trideoxy_beta_l_idose +acetyl_coa
-    udp_4_amino_4_6_dideoxy_n_acetyl_beta_l_idosamin
+    <-> . +trans_4_coumaroyl_coa +r_3_4_hydroxyphenyl_lactate
+    4_coumaroyl_4_hydroxyphenyllactate
   }
 }

@@ -20,14 +20,14 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
 
   branch from h side left {
     h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyhexadecanoylpantetheine_4_phosphor +nadp +nadph
-    o_s_3_oxohexadecanoylpantetheine_4_phosphoryl_se
+    <-> ec_1_1_1_218 [1.1.1.218] +nadh +codeinone +nad
+    codeine
   }
 
   branch from h side right {
     h
-    <-> . +34a_deoxy_rifamycin_w +nadph +nadp
-    proansamycin_x
+    <-> ec_1_1_1_149 [1.1.1.149] +2_hydroxycyclohexan_1_one +nadp +nadph
+    cyclohexan_1_2_dione
   }
 
   branch from tetracenomycin_a2 side left {
@@ -38,37 +38,37 @@ pathway 4-hydroxytetracenomycin-a2-to-h2o "4-hydroxytetracenomycin A2 to H2O" {
 
   branch from o2 side right {
     o2
-    <-> . +h +2_chloro_4_methyl_cis_cis_muconate
-    3_chloro_5_methylcatechol
+    <-> ec_1_1_3_7 [1.1.3.7] +2e_4e_2_4_hexadien_1_ol +e_e_2_4_hexadienal
+    h2o2
   }
 
   branch from o2 side left {
     o2
-    <-> . +2_oxoglutarate +2_chloro_4_methyl_phenoxyacetate +succinate +glyoxylate +2_chloro_4_methylphenol
-    co2
+    <-> ec_1_1_3_7 [1.1.3.7] +3_fluorobenzyl_alcohol +h2o2
+    3_fluorobenzaldehyde
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyoctadecanoylpantetheine_4_phosphor +nadp +h
-    o_s_3_oxooctadecanoylpantetheine_4_phosphoryl_se
+    <-> ec_1_1_1_218 [1.1.1.218] +h +hydrocodone +nadp
+    dihydrocodeine
   }
 
   branch from nadph side left {
     nadph
-    <-> . +h +16_oxohexadecanoic_acid +nadp
-    16_hydroxyhexadecanoic_acid
+    <-> ec_1_8_4_2 [1.8.4.2] +mercaptoethanol +nadp +h
+    2_2_dithiodiethanol
   }
 
   branch from h2o side right {
     h2o
-    <-> . +di_trans_poly_cis_polyprenyl_diphosphate_c80 +di_trans_poly_cis_polyprenol_c80
-    diphosphate
+    <-> ec_4_2_1_80 [4.2.1.80] +4_hydroxy_2_oxopentanoic_acid
+    2_hydroxypenta_2_4_dienoic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_4_17_13 [3.4.17.13] +d_alanine +l_alanyl_d_glutamyl_meso_2_6_diaminoheptanedioat +h
-    l_alanyl_gamma_d_glutamyl_meso_2_6_diaminopimelo
+    <-> ec_3_2_1_20 [3.2.1.20] +maltopentaose +alpha_d_glucose
+    maltohexaose
   }
 }

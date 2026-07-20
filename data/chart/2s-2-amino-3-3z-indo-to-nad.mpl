@@ -18,50 +18,50 @@ pathway 2s-2-amino-3-3z-indo-to-nad "(2S)-2-amino-3-[(3Z)-indo… to NAD" {
 
   branch from co2 side left {
     co2
-    <-> . +2_3_4_tribromo_1h_pyrrole +h
-    tribromopyrrole_2_carboxylate
+    <-> ec_4_1_1_42 [4.1.1.42] +s_carnitine +h
+    2_methylcholine
   }
 
   branch from co2 side right {
     co2
-    <-> . +salinisporamycin_a
-    rifsaliniketal
+    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +nh4
+    s_3_amino_2_methylpropanoate
   }
 
   branch from 2r_2_hydroxy_2_indol_3_yl_acetaldehyde side left {
-    2r_2_hydroxy_2_indol_3_yl_acetaldehyde
-    <-> . +o2 +h2o2
-    indole_3_glyoxal
-  }
-
-  branch from 2r_2_hydroxy_2_indol_3_yl_acetaldehyde side right {
     2r_2_hydroxy_2_indol_3_yl_acetaldehyde
     <-> ec_1_13_99_3 [1.13.99.3] +h2o2 +o2 +h2o
     indole_3_acetaldehyde
   }
 
+  branch from 2r_2_hydroxy_2_indol_3_yl_acetaldehyde side right {
+    2r_2_hydroxy_2_indol_3_yl_acetaldehyde
+    <-> ec_1_13_99_3 [1.13.99.3] +co2 +nh4 +h2o2 +h +o2 +h2o
+    l_tryptophan
+  }
+
   branch from nh4 side left {
     nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +2_4_7_trihydroxypteridine +h +h2o
-    2_amino_4_7_dihydroxypteridine
+    <-> ec_3_5_4_11 [3.5.4.11] +biolumazine +h +h2o
+    d_erythro_7_8_dihydrobiopterin
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_3_5_4_11 [3.5.4.11] +h +2_amino_4_6_pteridinediol +h2o
-    2_4_6_trihydroxypteridine
+    <-> ec_3_5_3_15 [3.5.3.15] +h +benzoyl_l_arginine_amide +h2o
+    benzoyl_l_citrulline_amide
   }
 
   branch from h2o2 side left {
     h2o2
-    <-> . +isonicotinoylradical +diazenium +h2o +h
-    isoniazide
+    <-> ec_1_11_1_16 [1.11.1.16] +2_methoxy_1_4_benzoquinone +h2o
+    2_methoxyhydroquinone
   }
 
   branch from h2o2 side right {
     h2o2
-    <-> ec_1_3_3_8 [1.3.3.8] +coptisine +h +o2
-    s_stylopine
+    <-> ec_1_11_1_16 [1.11.1.16] +2_6_dimethoxybenzoquinone +h2o
+    1_4_dihydroxy_2_6_dimethoxybenzene
   }
 
   branch from indol_3_yl_glycol side left {
@@ -72,19 +72,19 @@ pathway 2s-2-amino-3-3z-indo-to-nad "(2S)-2-amino-3-[(3Z)-indo… to NAD" {
 
   branch from indol_3_yl_glycol side right {
     indol_3_yl_glycol
-    <-> . +h2o2 +o2
-    hydroxymethyl_indol_3_yl_ketone
+    <-> . +h2o
+    2_indol_3_ylidene_ethanol
   }
 
   branch from nad side left {
     nad
-    <-> . +nadh +h +o2 +3beta_hydroxy_4alpha_methyl_5alpha_cholest_7_ene +h2o
-    3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylic
+    <-> . +nadh +h +cdp_4_dehydro_3_6_dideoxy_d_glucose
+    cdp_d_abequose
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_14_13_246 [1.14.13.246] +nadh +h +o2 +3_hydroxy_4_methyl_5_cholest_7_ene_4_carboxylic +h2o
-    4_4_dimethyl_5alpha_cholest_7_en_3beta_ol
+    <-> . +nadh +acetyl_coa +co2 +coa
+    pyruvate
   }
 }

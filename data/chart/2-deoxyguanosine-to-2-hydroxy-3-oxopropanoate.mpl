@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2-hydroxy-3-oxopropanoate" {
-  spacing 300
+  spacing 264
 
   spine at 0,0 {
     2_deoxyguanosine_3_monophosphate
@@ -32,38 +32,26 @@ pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2
 
   branch from h side left {
     h
-    <-> ec_4_2_2_13 [4.2.2.13] +1_5_anhydro_d_fructose +fluoride
-    alpha_d_glucopyranosyl_fluoride
+    <-> ec_4_2_2_1 [4.2.2.1] +beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac +h2o
+    d_glcpnac_1_4_d_glcpa
   }
 
   branch from h side right {
     h
-    <-> ec_1_1_1_12 [1.1.1.12] +nadh +keto_d_sorbose +nad
-    l_glucitol
+    <-> . +5_12_18r_trihepe +h2o
+    5_6_epoxy_18r_hepe
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_4_2_3_27 [4.2.3.27] +prenyl_phosphate
-    isoprene
+    <-> ec_2_4_1_1 [2.4.1.1] +d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g +d_glucopyranose_1_phosphate
+    d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_glcp_1_4_d_g
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +d_glyceraldehyde_3_phosphate
-    enolaldehyde
-  }
-
-  branch from 2_deoxycytidine side left {
-    2_deoxycytidine
-    <-> ec_2_7_1_74 [2.7.1.74] +cdp +h +dcmp
-    ctp
-  }
-
-  branch from 2_deoxycytidine side right {
-    2_deoxycytidine
-    <-> ec_2_7_1_74 [2.7.1.74] +h +dcmp +dadp
-    datp
+    <-> ec_2_4_1_1 [2.4.1.1] +maltoheptaose +maltohexaose
+    d_glucopyranose_1_phosphate
   }
 
   branch from guanine side left {
@@ -78,51 +66,27 @@ pathway 2-deoxyguanosine-to-2-hydroxy-3-oxopropanoate "2'-deoxyguanosine… to 2
     beta_d_ribofuranose
   }
 
-  branch from 2_deoxycytosine_5_monophosphate side left {
-    2_deoxycytosine_5_monophosphate
-    <-> . +h2o +pi +hplus
-    dcdp
-  }
-
-  branch from dump side right {
-    dump
-    <-> . +h2o +pi +hplus
-    dutp
-  }
-
-  branch from dump side left {
-    dump
-    <-> . +h2o +pi +hplus
-    dudp
+  branch from nh3 side left {
+    nh3
+    <-> . +d_tryptophan +o2 +h2o +h2o2
+    3_indol_3_yl_pyruvate
   }
 
   branch from nh3 side right {
     nh3
-    <-> . +hexan_3_aminium +nadp +h2o +nadph +hplus
-    3_hexanone
-  }
-
-  branch from nh3 side left {
-    nh3
-    <-> . +3_methyl_butan_2_aminium +nadp +h2o +nadph +hplus
-    3_methylbutan_2_one
-  }
-
-  branch from pg3 side right {
-    pg3
-    <-> ec_2_7_7_106 [2.7.7.106] +gtp +hplus +ppi
-    3_r_glyceryl_diphospho_5_guanosine
+    <-> . +d_threonine +o2 +h2o +h2o2
+    s_3_hydroxy_2_oxobutanoate
   }
 
   branch from 3_hydroxypyruvate side left {
     3_hydroxypyruvate
-    <-> . +nad +h2o +nh3 +nadh +hplus
-    dserine
+    <-> . +d_erythrose
+    3s_4s_5r_6r_3_4_5_6_7_pentahydroxy_2_oxoheptano
   }
 
   branch from 3_hydroxypyruvate side right {
     3_hydroxypyruvate
-    <-> . +d_erythrose
-    3s_4s_5r_6r_3_4_5_6_7_pentahydroxy_2_oxoheptano
+    <-> . +nad +nadh +hplus
+    glycerate
   }
 }

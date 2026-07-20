@@ -38,14 +38,14 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from 17_hydroxy_5_androstan_3_one side left {
     17_hydroxy_5_androstan_3_one
-    <-> ec_1_1_1_53 [1.1.1.53] +nad +nadh +hplus
+    <-> . +nadp +nadph +hplus
     5_androstane_3_17_diol
   }
 
   branch from 17_hydroxy_5_androstan_3_one side right {
     17_hydroxy_5_androstan_3_one
-    <-> ec_1_3_1_22 [1.3.1.22] +nadp +nadph +hplus
-    testosterone
+    <-> . +udp_d_glucuronate +udp +hplus
+    5_dihydrotestosterone_17_o_d_glucuronide
   }
 
   branch from 5_androst_1_ene_3_17_dione side left {
@@ -56,37 +56,37 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> . +2_arachidonoyl_sn_glycero_3_phosphocholine +o2 +hydrogen_acceptor +h2o
-    2_15r_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g
+    <-> ec_1_17_99_8 [1.17.99.8] +4r_limonene +hydrogen_acceptor +h2o
+    r_perillyl_alcohol
   }
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> . +2_arachidonoyl_sn_glycero_3_phosphocholine +o2 +hydrogen_acceptor +h2o
-    2_15s_hydroxy_5z_8z_11z_13e_icosatetraenoyl_sn_g
+    <-> ec_1_17_99_8 [1.17.99.8] +4s_limonene +hydrogen_acceptor +h2o
+    s_perillyl_alcohol
   }
 
   branch from di_sulfido_diiron side right {
     di_sulfido_diiron
-    <-> ec_1_3_1_109 [1.3.1.109] +butyryl_coa +di_sulfido_diiron +nad +nadh
-    crotonoyl_coa
+    <-> . +20s_hydroxyvitamin_d3 +di_sulfido_diiron +o2 +hplus +h2o
+    20_s_25_dihydroxyvitamin_d3
   }
 
   branch from di_sulfido_diiron side left {
     di_sulfido_diiron
-    <-> . +7_ketocholesterol +di_sulfido_diiron +o2 +hplus +h2o
-    25r_3_26_dihydroxycholest_5_en_7_one
+    <-> . +25_hydroxy_24_oxocalciol +di_sulfido_diiron +o2 +hplus +h2o
+    23_s_25_dihydroxy_24_oxovitamin_d3
   }
 
   branch from fmn side right {
     fmn
-    <-> . +fmnh2 +h +fe_iii_enterobactin +fe
-    enterobactin
+    <-> . +fmnh2 +h +coprogen +fe
+    desferricoprogen
   }
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +1_hexanesulfonic_acid +o2 +hexanal +h2o
+    <-> . +fmnh2 +h +1_pentanesulfonate +o2 +pentanal +h2o
     sulfite
   }
 
@@ -104,97 +104,91 @@ pathway epiandrosterone-to-nad "epiandrosterone to NAD" {
 
   branch from h2o side right {
     h2o
-    <-> . +2e_11z_14z_icosatrienoyl_coa
-    3s_hydroxy_eicosa_cis_cis_11_14_dienoyl_coa
+    <-> . +2s_homocitric_acid
+    trans_homoaconitate
   }
 
   branch from h2o side left {
     h2o
-    <-> . +3_s_hydroxy_10_13_16_all_cis_docosatrienoyl_coa
-    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
+    <-> ec_3_6_3_25 [3.6.3.25] +h +adp +phosphate +atp
+    thiosulfate
   }
 
   branch from fmnh2 side right {
     fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +3_phenylpyruvate +fmn
-    r_3_phenyllactate
+    <-> . +ctp +h +fmn +h2o
+    dctp
   }
 
   branch from fmnh2 side left {
     fmnh2
-    <-> ec_1_1_99_31 [1.1.99.31] +h +phenylglyoxylate +fmn
-    mandelate
+    <-> . +utp +h +fmn +h2o
+    dutp
   }
 
   branch from h side right {
     h
-    <-> . +leukotriene_c5 +glutathione
-    leukotriene_a5
+    <-> ec_3_6_3_25 [3.6.3.25] +thiosulfate +phosphate +thiosulfate +atp +h2o
+    adp
   }
 
   branch from h side left {
     h
-    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
-    15_epi_lipoxin_b5
+    <-> ec_3_6_3_55 [3.6.3.55] +adp +phosphate +atp +h2o
+    tungstate
   }
 
-  branch from ferrichrome side right {
-    ferrichrome
-    <-> . +deferrichrome +fe +riboflavin +h
-    4a_5_dihydroriboflavin
-  }
-
-  branch from ferrichrome side left {
-    ferrichrome
-    <-> ec_3_6_3_34 [3.6.3.34] +h +phosphate +atp +h2o
-    adp
-  }
-
-  branch from deferrichrome side right {
-    deferrichrome
-    <-> . +fe +h +4a_5_dihydroriboflavin +ferrichrome
-    riboflavin
-  }
-
-  branch from fad side left {
+  branch from fad side right {
     fad
     <-> . +fadh2 +h +15_oxo_spinosyn_macrolactone
     spinosyn_macrolactone
   }
 
-  branch from fad side right {
+  branch from fad side left {
     fad
     <-> . +fadh2 +8_desmethylnovobiocic_acid +h +o2 +chloride +h2o
     chlorobiocic_acid
   }
 
-  branch from fe side left {
+  branch from fe side right {
     fe
     <-> . +h +fe +sulfite +h2o
     sulfate
   }
 
-  branch from fe side right {
+  branch from fe side left {
     fe
     <-> . +o2 +h2o +h +h2o2
     feo_oh_monomer
   }
 
-  branch from ferrichrome side left {
-    ferrichrome
-    <-> . +h +adp +atp +h2o
-    phosphate
-  }
-
   branch from fe side right {
     fe
-    <-> . +l_dehydroascorbic_acid +fe +h
-    l_ascorbate
+    <-> . +triglucosyl_enterobactin +h
+    iron_iii_triglucosyl_enterobactin_complex
   }
 
   branch from fe side left {
     fe
-    <-> . +desferricoprogen +h
-    coprogen
+    <-> . +diglucosyl_enterobactin +h
+    fe_iii_di_c_5_deoxy_d_glucosyl_enterobactin
+  }
+
+  branch from n5_acetyl_n5_hydroxy_l_ornithine side right {
+    n5_acetyl_n5_hydroxy_l_ornithine
+    <-> . +acetyl_coa +n5_hydroxy_l_ornithine
+    coa
+  }
+
+  branch from glycine side left {
+    glycine
+    <-> . +4_hydroxyphenylacetylglycine +coa
+    4_hydroxyphenylacetyl_coa
+  }
+
+  branch from glycine side right {
+    glycine
+    <-> . +diphosphate +n_indol_3_ylacetyl_glycine +amp +atp
+    indol_3_yl_acetate
   }
 }

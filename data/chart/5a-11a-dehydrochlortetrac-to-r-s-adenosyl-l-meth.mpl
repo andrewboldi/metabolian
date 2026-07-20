@@ -18,49 +18,49 @@ pathway 5a-11a-dehydrochlortetrac-to-r-s-adenosyl-l-meth "5a,11a-Dehydrochlortet
 
   branch from h side left {
     h
-    <-> ec_2_4_1_17 [2.4.1.17] +udp +5_hydroxytryptophol_glucuronide +5_hydroxytryptophol
-    udp_alpha_d_glucuronate
+    <-> ec_2_3_1_80 [2.3.1.80] +acetyl_coa +s_4_hydroxy_nonenal_3_yl_l_cysteine +4_hydroxy_2_nonenal_n_acetyl_l_cysteine
+    coa
   }
 
   branch from h side right {
     h
-    <-> . +s_malate +trans_caffeoyl_coa +caffeoylmalic_acid
-    coa
+    <-> ec_2_7_11_32 [2.7.11.32] +adp +l_threonine +amp
+    o_phospho_l_threonine
   }
 
   branch from o2 side left {
     o2
-    <-> . +dimeric_urushiol_peroxide +h2o
-    3_8z_11e_13z_pentadeca_8_11_13_trien_1_yl_catech
+    <-> . +o_methylandrocymbine +h2o
+    n_formyldemecolcine
   }
 
   branch from o2 side right {
     o2
-    <-> . +uwm6 +h2o
-    rabelomycin
+    <-> . +2_oxoglutarate +l_threonine +threo_2_amino_3_4_dihydroxybutanoic_acid +succinate
+    co2
   }
 
   branch from nadph side left {
     nadph
-    <-> . +butanal +nadp +h
-    z_but_2_enal
+    <-> . +14alpha_hydroxy_cholesta_4_7_diene_3_6_dione +h +nadp
+    14alpha_hydroxy_5beta_cholest_7_ene_3_6_dione
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_1_1_36 [1.1.1.36] +3_oxopentanoyl_coa +h +nadp
-    r_3_hydroxypentanoyl_coa
+    <-> . +s_3_chloro_1_phenyl_1_propanol +nadp +h
+    3_chloro_1_phenyl_1_propanone
   }
 
   branch from s_adenosyl_l_methionine side left {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_4_5_o_trimethylmyricetin_3_7_diolate +h
-    3_4_dimethylmyricetin
+    <-> . +s_adenosyl_l_homocysteine +h +cirsilineol
+    cirsiliol
   }
 
   branch from s_adenosyl_l_methionine side right {
     s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +gentamicin_c2b
-    gentamicin_c1a
+    <-> . +s_adenosyl_l_homocysteine +dtdp_4_oxo_5_c_methyl_l_rhamnose +h
+    dtdp_4_dehydro_beta_l_rhamnose
   }
 }

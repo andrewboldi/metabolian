@@ -18,25 +18,25 @@ pathway s-naringenin-to-diphosphate "(S)-naringenin to diphosphate" {
 
   branch from ppi side left {
     ppi
-    <-> . +icas_1 +atp +coa +amp
-    ic_asc_c7_coa
+    <-> . +fpp
+    cadinene
   }
 
   branch from ppi side right {
     ppi
-    <-> . +o_adenyl_l_tyrosine_1 +atp
-    o_5_adenyl_5_3_adenyl_l_tyrosine_2
+    <-> . +gpp
+    sabinene
   }
 
   branch from fmn side left {
     fmn
-    <-> . +s_naringenin +fmnh2 +o2 +h2o +hplus
-    2s_2_hydroxynaringenin
+    <-> . +dodecanoate +fmnh2 +o2 +h2o +hplus
+    10_hydroxylaurate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +pinocembrin +fmnh2 +o2 +h2o +hplus
-    2s_2_hydroxypinocembrin
+    <-> . +tetradecanoate +fmnh2 +o2 +h2o +hplus
+    9_hydroxymyristate
   }
 }

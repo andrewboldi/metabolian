@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydroneopterin-to-l-xylulose-1-phosphate "Dihydroneopterin… to L-Xylulose 1-phosphate" {
-  spacing 230
+  spacing 218
 
   spine at 0,0 {
     dihydroneopterin_monophosphate
@@ -18,43 +18,31 @@ pathway dihydroneopterin-to-l-xylulose-1-phosphate "Dihydroneopterin… to L-Xyl
 
   branch from h side left {
     h
-    <-> . +9z_12z_15z_octadecatrienoate +h2o2 +aplotaxene +h2o
+    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44 +succinate +gibberellin_a19
     co2
   }
 
   branch from h side right {
     h
-    <-> . +5_hydroxymethyl_cytosine +alpha_d_ribofuranose_5_phosphate +h2o
-    5_hydroxymethylcytidine_5_phosphate
+    <-> ec_1_14_11_12 [1.14.11.12] +2_oxoglutarate +o2 +gibberellin_a44_closed_lactone_form +co2 +gibberellin_a19
+    succinate
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +n_acetyl_d_mannosamine +h2o
-    aldehydo_n_acetyl_d_mannosamine_6_phosphate
+    <-> ec_2_5_1_56 [2.5.1.56] +n_acetylneuraminate +phosphoenolpyruvate +h2o
+    aldehydo_n_acetyl_d_mannosamine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_63 [3.1.3.63] +2_carboxy_d_arabinitol +h2o
-    2_carboxy_d_arabinitol_1_phosphate
+    <-> . +h +adp +11_deoxycortisol +11_deoxycortisol +h2o
+    atp
   }
 
   branch from 6_hydroxymethyl_7_8_dihydropterin side left {
     6_hydroxymethyl_7_8_dihydropterin
-    <-> ec_2_5_1_15 [2.5.1.15] +diphosphate +h +7_8_dihydropteroate +amp +4_aminobenzoate
-    atp
-  }
-
-  branch from 6_hydroxymethyl_7_8_dihydropterin side right {
-    6_hydroxymethyl_7_8_dihydropterin
-    <-> ec_4_1_2_60 [4.1.2.60] +7_8_dihydroneopterin_3_triphosphate +h
-    glycolaldehyde_triphosphate
-  }
-
-  branch from l_xylulose_1_phosphate side left {
-    l_xylulose_1_phosphate
-    <-> ec_2_7_1_5 [2.7.1.5] +lyxulose +h +atp
-    adp
+    <-> . +6_hydroxymethyl_5_6_7_8_tetrahydropterin +nadp +h
+    nadph
   }
 }

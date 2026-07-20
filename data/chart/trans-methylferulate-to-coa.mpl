@@ -18,14 +18,14 @@ pathway trans-methylferulate-to-coa "trans-methylferulate to CoA" {
 
   branch from h side left {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +quinoline_4_carboxylate +nad +h2o
-    quinoline_4_carboxaldehyde
+    <-> ec_5_3_2_1 [5.3.2.1] +2_hydroxy_3_4_hydroxyphenyl_prop_2_enoic_acid
+    3_4_hydroxyphenyl_pyruvate
   }
 
   branch from h side right {
     h
-    <-> ec_1_2_1_3 [1.2.1.3] +nadh +3_methoxybenzoate +nad +h2o
-    3_methoxybenzaldehyde
+    <-> ec_1_11_1_8 [1.11.1.8] +iodide +3_5_diiodo_l_tyrosine +diiodine
+    3_iodo_l_tyrosine
   }
 
   branch from e_ferulate side left {
@@ -42,14 +42,14 @@ pathway trans-methylferulate-to-coa "trans-methylferulate to CoA" {
 
   branch from methanol side left {
     methanol
-    <-> ec_3_2_1_21 [3.2.1.21] +beta_d_glucose +h2o
-    methyl_d_glucopyranoside
+    <-> ec_3_4_21_62 [3.4.21.62] +n_acetyl_l_tryptophanate +h +h2o
+    n_acetyl_l_tryptophan_methyl_ester
   }
 
   branch from methanol side right {
     methanol
-    <-> ec_3_1_1_73 [3.1.1.73] +e_4_coumaric_acid_methyl_ester +h2o +h
-    4_coumarate
+    <-> ec_3_1_1_78 [3.1.1.78] +polyneuridine_aldehyde +h2o +16_epivellosimine
+    co2
   }
 
   branch from 1_o_feruloyl_d_glucose side left {
@@ -72,13 +72,13 @@ pathway trans-methylferulate-to-coa "trans-methylferulate to CoA" {
 
   branch from coa side right {
     coa
-    <-> . +nadh +acetyl_coa +h +h2o2 +o2 +nad +h2o
-    9z_octadecenoyl_coa
+    <-> . +h +13e_tetranor_16_carboxy_lte4 +h2o
+    13e_tetranor_16_oxo_16_coa_lte4
   }
 
   branch from coa side left {
     coa
-    <-> . +nadh +acetyl_coa +h +nadp +h2o2 +9z_octadecenoyl_coa +nadph +nad +h2o
-    o2
+    <-> . +e_feruloyl_coa +h +quercetin_3_o_d_glucopyranoside
+    quercetin_3_6_ferulylglucoside
   }
 }

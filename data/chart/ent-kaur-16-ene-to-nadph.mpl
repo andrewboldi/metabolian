@@ -20,26 +20,26 @@ pathway ent-kaur-16-ene-to-nadph "ent-kaur-16-ene to NADPH" {
 
   branch from nadp side left {
     nadp
-    <-> ec_1_3_1_71 [1.3.1.71] +h +24_methylenecholesterol +nadph
-    24_epicampesterol
+    <-> . +hydroxy_torasemide +h2o +h +o2 +nadph
+    torasemide
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_19_41 [1.14.19.41] +h2o +h +24_epicampesterol +o2 +nadph
-    brassicasterol
+    <-> . +h +o2 +nadph +torasemide +h2o
+    4_hydroxy_torasemide
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_20 [3.2.1.20] +melibiose +d_galactose
-    glucose
+    <-> . +h +adp +cerivastatin_m23 +phosphate +cerivastatin_m23
+    atp
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_2_1_22 [3.2.1.22] +polydextrose +glucose
-    d_galactose
+    <-> . +h +adp +phosphate +atp
+    cyclosporin_a_sulfate
   }
 
   branch from gibberellin_a12 side left {
@@ -56,49 +56,49 @@ pathway ent-kaur-16-ene-to-nadph "ent-kaur-16-ene to NADPH" {
 
   branch from co2 side left {
     co2
-    <-> . +4_aminoimidazole
-    5_aminoimidazole_4_carboxylic_acid
+    <-> . +2_polyprenyl_6_methoxyphenol
+    3_polyprenyl_4_hydroxy_5_methoxybenzoate
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_68 [4.1.1.68] +2_hydroxyhepta_2_4_dienedioic_acid
+    <-> ec_4_1_1_68 [4.1.1.68] +cis_2_oxohept_3_enedioic_acid
     5_carboxy_2_oxohept_3_enedioate
   }
 
   branch from succinate side left {
     succinate
-    <-> ec_4_1_3_30 [4.1.3.30] +2r_3s_2_methylcitrate
-    pyruvate
-  }
-
-  branch from succinate side right {
-    succinate
     <-> ec_1_3_5_1 [1.3.5.1] +ubiquinone_6 +fumarate
     ubiquinol_6
   }
 
+  branch from succinate side right {
+    succinate
+    <-> . +menaquinone_6 +menaquinol_6
+    fumarate
+  }
+
   branch from o2 side left {
     o2
-    <-> ec_1_14_17_4 [1.14.17.4] +cyanide +l_dehydroascorbic_acid +co2 +ethene +h2o +l_ascorbate
-    1_aminocyclopropane_1_carboxylate
+    <-> . +pitavastatin +h2o
+    pitavastatin_m3
   }
 
   branch from o2 side right {
     o2
-    <-> ec_1_14_13_136 [1.14.13.136] +2s_liquiritigenin +h +nadph +nadp +h2o
-    2_4_7_trihydroxyisoflavanone
+    <-> . +5z_8z_11z_14z_eicosatetraenoyl_coa +2_trans_cis_cis_cis_cis_4_8_11_14_eicosapentaeno
+    h2o2
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_153 [1.1.1.153] +l_sepiapterin +h +nadp
-    d_erythro_7_8_dihydrobiopterin
+    <-> . +pravastatin_sodium +h +o2 +nadp +h2o2
+    triol_metabolite_of_pravastatin
   }
 
   branch from nadph side right {
     nadph
-    <-> ec_1_5_1_3 [1.5.1.3] +nadp +h +d_erythro_7_8_dihydrobiopterin
-    5_6_7_8_tetrahydrobiopterin
+    <-> . +2_undecylpyrrole +nadp +h2o +h
+    4_keto_2_undecylpyrroline
   }
 }

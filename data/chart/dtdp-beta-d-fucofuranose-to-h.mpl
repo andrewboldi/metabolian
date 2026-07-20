@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dtdp-beta-d-fucofuranose-to-h "dTDP-beta-D-fucofuranose to H" {
-  spacing 188
+  spacing 164
 
   spine at 0,0 {
     dtdp_beta_d_fucofuranose
@@ -16,39 +16,15 @@ pathway dtdp-beta-d-fucofuranose-to-h "dTDP-beta-D-fucofuranose to H" {
     beta_d_fucf_1_3_beta_6dmanhep_1_3_beta_d_fucf_1
   }
 
-  branch from dtdp side left {
-    dtdp
-    <-> . +dtdp_l_oleandrose +avermectin_a1b_monosaccharide +h
-    avermectin_a1b
-  }
-
-  branch from dtdp side right {
-    dtdp
-    <-> . +premithramycin_a3 +h +dtdp_beta_d_mycarose
-    premithramycin_a2
-  }
-
   branch from h side left {
     h
-    <-> . +adp +1_myristoyl_sn_glycero_3_phosphocholine +phosphate +1_myristoyl_sn_glycero_3_phosphocholine +h2o
-    atp
+    <-> ec_3_1_2_4 [3.1.2.4] +r_3_hydroxyisobutyrate +coa +h2o
+    3_hydroxy_2_methylpropanoyl_coa
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    1_pentadecanoyl_sn_glycero_3_phosphocholine
-  }
-
-  branch from gdp side left {
-    gdp
-    <-> . +gdp_n_acetyl_d_perosamine +alpha_l_fuc_1_4_beta_d_glc_1_3_alpha_d_galnac_pp +h
-    alpha_d_rha4nac_1_3_alpha_l_fuc_1_4_beta_d_glc_1
-  }
-
-  branch from gdp side right {
-    gdp
-    <-> ec_6_3_2_31 [6.3.2.31] +coenzyme_f420_1 +phosphate +f420_0 +h +l_glutamate
-    gtp
+    <-> ec_3_5_5_1 [3.5.5.1] +d_alanine +nh4 +h2o
+    alpha_aminopropionitrile
   }
 }

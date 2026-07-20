@@ -18,37 +18,37 @@ pathway gdp-2-acetamido-2-6-dideo-to-2-4-diacetamido-2-4 "GDP-2-acetamido-2,6-di
 
   branch from 2_oxoglutarate side left {
     2_oxoglutarate
-    <-> ec_2_6_1_13 [2.6.1.13] +2s_2_4_diaminopentanedioate +l_glutamate
-    2s_2_amino_4_oxopentanedioate
+    <-> . +gibberellin_a15_closed_lactone_form +o2 +succinate +gibberellin_a37_closed_lactone_form
+    co2
   }
 
   branch from 2_oxoglutarate side right {
     2_oxoglutarate
-    <-> . +gibberellin_a34 +o2 +succinate +gibberellin_a34_catabolite +h2o
-    co2
+    <-> . +h +gibberellin_a12 +o2 +co2 +gibberellin_a110
+    succinate
   }
 
   branch from h side left {
     h
-    <-> ec_2_2_1_12 [2.2.1.12] +co2 +r_1_3_diphenyl_pentane_1_4_dione +trans_chalcone
-    pyruvate
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +tobramycin_2_phosphate +tobramycin
+    gtp
   }
 
   branch from h side right {
     h
-    <-> . +gdp_d_erythro_alpha_d_gluco_octose +diphosphate +d_erythro_alpha_d_gluco_octopyranose1_phosphate
-    gtp
+    <-> ec_2_7_1_190 [2.7.1.190] +gdp +sisomicin_2_phosphate +gtp
+    sisomicin
   }
 
   branch from coa side left {
     coa
-    <-> ec_2_3_1_198 [2.3.1.198] +2_omega_hydroxy_c22_0_lpa +sn_glycerol_3_phosphate
-    22_hydroxy_docosanoyl_coa
+    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
+    quercetin_3_o_3_6_o_di_4_coumaroyl_glucoside
   }
 
   branch from coa side right {
     coa
-    <-> ec_2_3_1_15 [2.3.1.15] +hexadecanedioyl_coa +sn_glycerol_3_phosphate
-    1_c16_0_alpha_omega_dicarboxyl_2_lysophosphatida
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +3z_5e_dodecadienoyl_coa
+    5_cis_7_trans_3_oxo_tetradecadienoyl_coa
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc… to α-L-fucosyl-(1→2)-β-D-gal…" {
-  spacing 194
+  spacing 182
 
   spine at 0,0 {
     d_galnac_1_3_l_fuc_1_2_d_gal_1_3_d_galnac_1_3_l
@@ -22,20 +22,8 @@ pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from n_acetyl_d_galactosamine side left {
     n_acetyl_d_galactosamine
-    <-> . +o2 +h2o2
-    n_acetyl_d_galactosamino_1_5_lactone
-  }
-
-  branch from n_acetyl_d_galactosamine side right {
-    n_acetyl_d_galactosamine
-    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_serine +h2o
-    l_serine
-  }
-
-  branch from l_fucopyranose side left {
-    l_fucopyranose
-    <-> ec_3_2_1_51 [3.2.1.51] +n_acetyl_d_hexosamine +h2o
-    l_fucp_1_3_d_glcpnac
+    <-> ec_3_2_1_217 [3.2.1.217] +o_n_acetyl_d_galactosaminyl_l_threonine +h2o
+    l_threonine
   }
 
   branch from d_galnac_1_3_l_fuc_1_2_d_gal_1_4_d_glcnac side right {
@@ -46,14 +34,14 @@ pathway d-galnac-1-3-l-fuc-to-l-fucosyl-1-2-d-gal "α-D-GalNAc-(1→3)-[α-L-Fuc
 
   branch from d_galactopyranose side left {
     d_galactopyranose
-    <-> . +d_galp_1_6_d_manp_1_4_d_manp_1_4_d_manp +h2o
-    d_manp_1_4_d_manp_1_4_d_manp
+    <-> . +d_manp_1_4_d_galp_1_6_d_manp_1_4_d_manp_1_4_d_m +h2o
+    d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
   }
 
   branch from d_galactopyranose side right {
     d_galactopyranose
-    <-> . +d_manp_1_4_d_galp_1_6_d_manp_1_4_d_manp_1_4_d_m +h2o
-    d_manp_1_4_d_manp_1_4_d_manp_1_4_d_manp
+    <-> ec_5_1_3_3 [5.1.3.3]
+    alpha_d_galactose
   }
 
   branch from l_fucosyl_1_2_d_galactosyl_1_4_n_acetyl_d_gluco side left {

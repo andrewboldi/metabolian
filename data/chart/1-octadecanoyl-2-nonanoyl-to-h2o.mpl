@@ -34,14 +34,14 @@ pathway 1-octadecanoyl-2-nonanoyl-to-h2o "1-octadecanoyl-2-nonanoyl… to H2O" {
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_139 [4.2.3.139] +fpp
-    valerena_4_7_11_diene
+    <-> ec_4_2_3_148 [4.2.3.148] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
+    cembrene_c
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_32 [2.5.1.32] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    15_cis_phytoene
+    <-> ec_4_2_3_149 [4.2.3.149] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    r_nephthenol
   }
 
   branch from 3r_hydroxynonanoyl_coa side left {
@@ -64,49 +64,49 @@ pathway 1-octadecanoyl-2-nonanoyl-to-h2o "1-octadecanoyl-2-nonanoyl… to H2O" {
 
   branch from coa side right {
     coa
-    <-> . +2s_2_methylbutanoyl_coa +glycine
-    n_2_methylbutanoyl_glycine
+    <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
+    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
   }
 
   branch from coa side left {
     coa
-    <-> . +3_oxo_10_r_hydroxy_octadeca_6e_8e_12z_trienoyl_c +h2o
-    6e_8e_10r_12z_10_hydroxy_3_oxooctadecatrienoic
+    <-> . +acetyl_coa +18_coa_18_oxo_dinorleukotriene_b4
+    18_20_dioxo_20_coa_leukotriene_b4
   }
 
   branch from o2 side right {
     o2
-    <-> . +5_s_6_s_epoxy_15_r_hepe +h2o
-    15_r_hepe
+    <-> . +trans_4_coumarate
+    e_caffeate
   }
 
   branch from o2 side left {
     o2
-    <-> . +12_hydroxyeicosatetraenoate +h +nadph +12_20_dihete +h2o
-    nadp
+    <-> ec_1_17_3_2 [1.17.3.2] +3_4_oxo_4_5_dihydro_1h_imidazol_5_yl_propanoic_a +h2o +h +h2o2
+    hydantoin_5_propionate
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_2_1_40 [1.2.1.40] +nadh +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
+    <-> ec_1_2_1_29 [1.2.1.29] +nadh +h +p_cumate +h2o
+    4_isopropylbenzaldehyde
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_145 [1.1.1.145] +nadh +h +21_hydroxyprogesterone
-    21_hydroxypregnenolone
+    <-> ec_1_3_1_56 [1.3.1.56] +nadh +h +4_chlorobiphenyl_2_3_diol
+    1s_2r_3_4_chlorophenyl_cyclohexa_3_5_diene_1_2
   }
 
   branch from h2o side right {
     h2o
-    <-> . +trans_cis_cis_cis_cis_2_10_13_16_19_docosapentae
-    3_s_hydroxy_docosa_10_13_16_19_all_cis_tetraenoy
+    <-> . +thromboxane_b2
+    thromboxane_a2
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2e_11z_icosadienoyl_coa
-    3_s_hydroxy_11_cis_eicosenoyl_coa
+    <-> ec_3_6_3_22 [3.6.3.22] +h +adp +phosphate +atp
+    l_valine
   }
 }

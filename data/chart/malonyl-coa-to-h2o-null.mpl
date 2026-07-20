@@ -20,26 +20,26 @@ pathway malonyl-coa-to-h2o-null "malonyl-CoA to H2O" {
 
   branch from coa side left {
     coa
-    <-> . +acetyl_coa +9z_octadecenoyl_coa
-    11z_3_oxoicosa_11_enoyl_coa
+    <-> . +acetyl_coa +gitoxigenin
+    oleandrigenin
   }
 
   branch from coa side right {
     coa
-    <-> . +erucoyl_coa +acetyl_coa
-    15z_3_oxotetracosenoyl_coa
+    <-> . +acetyl_coa +alpha_l_fuc_1_3_alpha_d_glc_pp_und
+    2_3_o_ac_alpha_l_fuc_1_3_alpha_d_glc_pp_und
   }
 
   branch from glucose side left {
     glucose
-    <-> . +d_glcp_1_4_d_glcp_1_4_d_glcp
-    d_maltose
+    <-> ec_2_4_1_10 [2.4.1.10] +sucrose +h2o
+    beta_d_fructose
   }
 
   branch from glucose side right {
     glucose
-    <-> .
-    alpha_d_glucose
+    <-> ec_1_1_1_119 [1.1.1.119] +h +nadph +nadp
+    d_glucono_1_4_lactone
   }
 
   branch from cyanidin_3_o_2_o_2_o_sinapoyl_bata_d_xylopyranos side left {
@@ -50,37 +50,37 @@ pathway malonyl-coa-to-h2o-null "malonyl-CoA to H2O" {
 
   branch from h side right {
     h
-    <-> . +adenosine_3_5_bisphosphate +taurocholic_acid_3_sulfate +3_phosphoadenylyl_sulfate
-    taurocholate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
   }
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    taurodeoxycholic_acid_3_sulfate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +phosphate +1_stearoyl_2_oleoyl_sn_glycero_3_phospho_1d_myo +h2o
+    atp
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_14_13_121 [1.14.13.121] +solavetivol +h +o2 +nadph +h2o
-    solavetivone
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +phellandral
+    1s_2r_4r_neoisodihydrocarveol
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_14_13_124 [1.14.13.124] +h +n_hydroxy_l_phenylalanine +o2 +nadph +h2o
-    n_n_dihydroxy_l_phenylalanine
+    <-> ec_1_1_1_71 [1.1.1.71] +h +nadph +1s_2r_4r_neoisodihydrocarveol
+    2e_geranial
   }
 
   branch from h2o side right {
     h2o
-    <-> . +3s_3_hydroxy_cis_8_tetradecenoyl_coenzyme_a
-    trans_2_cis_8_tetradecadienoyl_coenzyme_a
+    <-> . +7r_7_hydroxyluteothin
+    dehydrodeoxyaureothin
   }
 
   branch from h2o side left {
     h2o
-    <-> . +2e_6z_9z_12z_15z_18z_tetracosahexaenoyl_coa
-    3_s_hydroxy_tetracosa_6_9_12_15_18_all_cis_penta
+    <-> . +prochaxamycin
+    3_demethylchaxamycin_b
   }
 }

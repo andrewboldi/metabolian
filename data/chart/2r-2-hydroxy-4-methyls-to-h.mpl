@@ -46,26 +46,26 @@ pathway 2r-2-hydroxy-4-methyls-to-h "(2R)-2-hydroxy-4-(methyls… to H" {
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_209 [2.1.1.209] +guanosine_5_monophosphate_1 +sam +hplus
-    n1_methylguanosine_5_monophosphate_1
+    <-> ec_2_1_1_225 [2.1.1.225] +cytidine_5_monophosphate_1 +sam +hplus
+    2_o_methylcytidine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_211 [2.1.1.211] +uridine_5_monophosphate_1 +sam +hplus
-    2_o_methyluridine_5_monophosphate_1
+    <-> ec_2_1_1_225 [2.1.1.225] +adenosine_5_monophosphate_1 +sam +hplus
+    2_o_methyladenosine_5_monophosphate_1
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_30 [1.14.14.30] +2_methylpropanaminium +fmnh2 +o2 +h2o +hplus
-    n_hydroxy_2_methylpropanamine
+    <-> . +7z_10z_13z_16z_19z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    7z_13z_16z_19z_10_11_epoxydocosatetraenoate
   }
 
   branch from fmn side right {
     fmn
-    <-> . +arachidonate +fmnh2 +o2 +h2o +hplus
-    14s_15r_eet
+    <-> . +4z_7z_10z_13z_16z_docosapentaenoate +fmnh2 +o2 +h2o +hplus
+    4z_7z_10z_13z_16z_20_hydroxydocosapentaenoate
   }
 
   branch from s_reticulinium side left {
@@ -106,13 +106,13 @@ pathway 2r-2-hydroxy-4-methyls-to-h "(2R)-2-hydroxy-4-(methyls… to H" {
 
   branch from h side left {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_octadecadienoate +cholesterol +h2o
-    cholesteryl_linoleate
+    <-> . +3_phosphonopyruvate +l_glutamate +2_amino_3_phosphonopropanoic_acid
+    2_oxoglutarate
   }
 
   branch from h side right {
     h
-    <-> ec_3_1_1_13 [3.1.1.13] +9z_12z_15z_octadecatrienoate +cholesterol +h2o
-    cholesteryl_linolenate
+    <-> ec_1_2_3_1 [1.2.3.1] +n_methyl_4_pyridone_3_carboxamide +h2o2 +o2 +h2o
+    1_methylnicotinamide
   }
 }

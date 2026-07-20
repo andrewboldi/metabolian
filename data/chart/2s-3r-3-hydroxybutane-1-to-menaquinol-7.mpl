@@ -20,49 +20,49 @@ pathway 2s-3r-3-hydroxybutane-1-to-menaquinol-7 "(2S,3R)-3-hydroxybutane-1… to
 
   branch from succinate side left {
     succinate
-    <-> ec_1_14_11_43 [1.14.11.43] +s_2_4_chloro_2_methylphenoxy_propanoate +akg +o2 +pyruvate +co2
-    4_chloro_2_methylphenol
+    <-> ec_2_8_3_20 [2.8.3.20] +r_malate +succinyl_coa
+    3r_3_carboxy_3_hydroxypropanoyl_coa
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_11_42 [1.14.11.42] +7_3s_3_amino_3_carboxypropyl_wyosine_5_monophosp +akg +o2 +co2
-    7_2_hydroxy_3_amino_3_carboxypropyl_wyosine_5_mo
+    <-> . +l_lysinium +akg +o2 +co2
+    3s_3_hydroxy_l_lysine
   }
 
   branch from menaquinol_7 side left {
     menaquinol_7
-    <-> ec_2_1_1_163 [2.1.1.163] +2_demethylmenaquinol_7 +sam +hplus
-    sah
+    <-> . +fadh2 +menaquinone_7 +h +fad
+    pmf
   }
 
   branch from menaquinol_7 side right {
     menaquinol_7
-    <-> . +nitrite +menaquinone_7 +h2o +nitrate
-    pmf
+    <-> . +fadh2 +menaquinone_7 +h
+    fad
   }
 
   branch from menaquinone_7 side left {
     menaquinone_7
-    <-> . +pmf +fadh2 +h +pmf +menaquinol_7
-    fad
+    <-> . +s_malate +menaquinol_7
+    oxaloacetate
   }
 
   branch from menaquinone_7 side right {
     menaquinone_7
-    <-> . +h +menaquinol_7 +fad
-    fadh2
+    <-> ec_2_1_1_163 [2.1.1.163] +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
+    demethylmenaquinone_7
   }
 
   branch from s_lactate side left {
     s_lactate
-    <-> ec_1_1_1_1 [1.1.1.1] +nadp +pyruvate +nadph
-    h
+    <-> . +ubiquinol_2 +pyruvate
+    ubiquinone_2
   }
 
   branch from s_lactate side right {
     s_lactate
-    <-> ec_1_1_1_27 [1.1.1.27] +deamido_nad +pyruvate
-    nicotinamide_hypoxanthine_dinucleotide
+    <-> ec_2_8_3_1 [2.8.3.1] +acetyl_coa +s_lactoyl_coa
+    acetate
   }
 }

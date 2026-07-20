@@ -26,14 +26,14 @@ pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
 
   branch from h2o side right {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +h +bromide
-    1_3_dibromopropane
+    <-> . +aminodhq
+    5_amino_5_deoxy_3_dehydroshikimic_acid
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_8_1_5 [3.8.1.5] +3_bromo_1_propanol +propane_1_3_diol +bromide
-    h
+    <-> . +7_9_12_decaketide_intermediate_2
+    7_9_12_decaketide_intermediate_3
   }
 
   branch from z_progoitrin side right {
@@ -44,13 +44,13 @@ pathway d-glucopyranose-to-sulfate "D-glucopyranose to sulfate" {
 
   branch from glucose side left {
     glucose
-    <-> . +nadp +h +nadph
-    d_glucono_1_5_lactone
+    <-> ec_3_2_1_23 [3.2.1.23] +d_galactopyranose +h2o
+    beta_lactose
   }
 
   branch from glucose side right {
     glucose
-    <-> . +h +4_nitrophenol +h2o
-    4_nitrophenyl_d_glucoside
+    <-> ec_3_2_1_10 [3.2.1.10] +h2o
+    isomaltose
   }
 }

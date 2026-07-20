@@ -103,47 +103,61 @@
       }
     },
     {
-      "id": "2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl",
-      "name": "2,3-di-O-dodecanoyl-1-O-β-D-galactopyranosyl-sn-glycerol",
-      "short": "2,3-di-O-dodecanoyl…",
-      "formula": "C33H62O10",
+      "id": "dodecanal",
+      "name": "dodecanal",
+      "formula": "C12H24O",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90342"
+        "chebi": "CHEBI:27836"
       }
     },
     {
-      "id": "1_d_galactosyl_monododecanoyl_sn_glycerol",
-      "name": "1-(β-D-galactosyl)-monododecanoyl-sn-glycerol",
-      "short": "1-(β-D-galactosyl)-…",
-      "formula": "C21H40O9",
-      "charge": 0,
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
       "xrefs": {
-        "chebi": "CHEBI:90514"
+        "chebi": "CHEBI:58349"
       }
     },
     {
-      "id": "1_2_didodecanoyl_3_d_galactosyl_sn_glycerol",
-      "name": "1,2-didodecanoyl-3-β-D-galactosyl-sn-glycerol",
-      "short": "1,2-didodecanoyl-3-…",
-      "formula": "C33H62O10",
-      "charge": 0,
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
       "xrefs": {
-        "chebi": "CHEBI:90340"
+        "chebi": "CHEBI:57783"
       }
     },
     {
-      "id": "3_d_galactosyl_monododecanoyl_sn_glycerol",
-      "name": "3-(β-D-galactosyl)-monododecanoyl-sn-glycerol",
-      "short": "3-(β-D-galactosyl)-…",
-      "formula": "C21H40O9",
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90515"
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2r_2_hydroperoxydodecanoate",
+      "name": "(2R)-2-hydroperoxydodecanoate",
+      "short": "2-hydroperoxydodeca…",
+      "formula": "C12H23O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:149611"
       }
     }
   ],
-  "enzymes": [],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_92",
+      "name": "fatty acid alpha-dioxygenase",
+      "ec": [
+        "1.13.11.92"
+      ]
+    }
+  ],
   "reactions": [
     {
       "id": "r1",
@@ -272,11 +286,15 @@
     },
     {
       "id": "r4",
-      "name": "1-beta-D-galactosyl-2,3-didodecanoyl-sn-glycerol + H2O = 1-beta-D-galactosyl-dodecanoyl...",
-      "equation": "1-beta-D-galactosyl-2,3-didodecanoyl-sn-glycerol + H2O = 1-beta-D-galactosyl-dodecanoyl-sn-glycerol + dodecanoate + H(+)",
+      "name": "dodecanal + NADP(+) + H2O = dodecanoate + NADPH + 2 H(+)",
+      "equation": "dodecanal + NADP(+) + H2O = dodecanoate + NADPH + 2 H(+)",
       "substrates": [
         {
-          "metabolite": "2_3_di_o_dodecanoyl_1_o_d_galactopyranosyl_sn_gl",
+          "metabolite": "dodecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
           "stoichiometry": 1
         },
         {
@@ -286,72 +304,70 @@
       ],
       "products": [
         {
-          "metabolite": "1_d_galactosyl_monododecanoyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "dodecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "nadph",
           "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 4,
       "xrefs": {
-        "rhea": "RHEA:48536"
+        "rhea": "RHEA:60724"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48536"
+            "id": "RHEA:60724"
           }
         ]
       }
     },
     {
       "id": "r5",
-      "name": "1,2-didodecanoyl-3-beta-D-galactosyl-sn-glycerol + H2O = dodecanoyl-3-beta-D-galactosyl...",
-      "equation": "1,2-didodecanoyl-3-beta-D-galactosyl-sn-glycerol + H2O = dodecanoyl-3-beta-D-galactosyl-sn-glycerol + dodecanoate + H(+)",
+      "name": "fatty acid alpha-dioxygenase",
+      "equation": "dodecanoate + O2 = (2R)-2-hydroperoxydodecanoate",
+      "ec": "1.13.11.92",
       "substrates": [
-        {
-          "metabolite": "1_2_didodecanoyl_3_d_galactosyl_sn_glycerol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "3_d_galactosyl_monododecanoyl_sn_glycerol",
-          "stoichiometry": 1
-        },
         {
           "metabolite": "dodecanoate",
           "stoichiometry": 1
         },
         {
-          "metabolite": "hplus",
+          "metabolite": "o2",
           "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_2_hydroperoxydodecanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_92"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 5,
       "xrefs": {
-        "rhea": "RHEA:48540"
+        "rhea": "RHEA:63852"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48540"
+            "id": "RHEA:63852"
           }
         ]
       }

@@ -18,61 +18,61 @@ pathway carbamoyl-phosphate-to-succinate "carbamoyl phosphate to succinate" {
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
-    6_phospho_d_gluconate
+    <-> . +beta_l_gulose_1_phosphate +h2o
+    l_gulopyranose
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +l_glyceraldehyde_3_phosphate +h2o +h
-    l_glyceraldehyde
+    <-> ec_3_1_3_29 [3.1.3.29] +lyxose +h2o
+    d_ribulose_5_phosphate
   }
 
   branch from h side left {
     h
-    <-> ec_1_1_1_1 [1.1.1.1] +nadh +indole_3_glyoxal +nad
-    hydroxymethyl_indol_3_yl_ketone
+    <-> . +l_glyceraldehyde_3_phosphate +nadph +sn_glycerol_3_phosphate
+    nadp
   }
 
   branch from h side right {
     h
-    <-> . +trimethylaminoacetone +co2
-    3_dehydrocarnitine
+    <-> ec_2_5_1_18 [2.5.1.18] +bromoacetate +glutathione +bromide
+    2_s_glutathionyl_acetate
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +linamarin +2_hydroxy_2_methylpropanenitrile
-    glucose
+    <-> . +o_s_3r_9z_3_hydroxyoctacosenoylpantetheine_4_pho
+    o_s_2e_9z_octacosadienoylpantetheine_4_phosphory
   }
 
   branch from h2o side right {
     h2o
-    <-> . +betaine_aldehyde
-    betaine_aldehyde_hydrate
+    <-> . +o_s_3r_5z_3_hydroxytetracosenoylpantetheine_4_ph
+    o_s_2e_5z_tetracosadienoylpantetheine_4_phosphor
   }
 
   branch from co2 side left {
     co2
-    <-> . +malonyl_coa +trans_4_coumaroyl_coa +h +coa
-    bis_noryangonin
+    <-> . +protoanemonin +chloride
+    r_2_chloro_5_oxo_2_5_dihydro_2_furyl_acetate
   }
 
   branch from co2 side right {
     co2
-    <-> . +malonyl_coa +trans_4_coumaroyl_coa +h +h2o +coa
-    4_coumaroyltriacetate
+    <-> ec_4_1_1_64 [4.1.1.64] +l_alanine +acetone +h +2_aminoisobutanoic_acid
+    pyruvate
   }
 
   branch from succinate side left {
     succinate
-    <-> . +2_oxoglutarate +gibberellin_a15_closed_lactone_form +o2 +co2
-    gibberellin_a37_closed_lactone_form
+    <-> ec_3_5_1_3 [3.5.1.3] +2_methylbutanedioic_acid +h2o +h
+    methanol
   }
 
   branch from succinate side right {
     succinate
-    <-> . +succinyl_coa +3_methylbenzylsuccinate
-    3_methylbenzyl_succinyl_coa
+    <-> ec_1_14_11_17 [1.14.11.17] +2_oxoglutarate +3_n_morpholino_propanesulfonate +o2 +co2 +h +sulfite
+    3_n_morpholino_propanal
   }
 }

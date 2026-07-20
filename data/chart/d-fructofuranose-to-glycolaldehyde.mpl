@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-fructofuranose-to-glycolaldehyde "β-D-fructofuranose… to glycolaldehyde" {
-  spacing 192
+  spacing 180
 
   spine at 0,0 {
     d_fructofuranose_1_phosphate
@@ -16,17 +16,5 @@ pathway d-fructofuranose-to-glycolaldehyde "β-D-fructofuranose… to glycolalde
     3_hydroxypyruvate
     <-> ec_4_1_1_40 [4.1.1.40] +hplus -co2
     glycolaldehyde
-  }
-
-  branch from d_glyceraldehyde side left {
-    d_glyceraldehyde
-    <-> . +pyruvate
-    2_keto_3_deoxy_l_galactonate
-  }
-
-  branch from 3_hydroxypyruvate side right {
-    3_hydroxypyruvate
-    <-> . +nad +nadh +hplus
-    glycerate
   }
 }

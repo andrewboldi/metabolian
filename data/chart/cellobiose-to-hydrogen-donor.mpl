@@ -22,25 +22,25 @@ pathway cellobiose-to-hydrogen-donor "cellobiose to hydrogen donor" {
 
   branch from hydrogen_donor side left {
     hydrogen_donor
-    <-> ec_1_3_99_25 [1.3.99.25] +dihydrocarvone +hydrogen_acceptor
-    carvone
+    <-> ec_1_5_99_15 [1.5.99.15] +5_6_7_8_tetrahydromethanopterin +hydrogen_acceptor
+    7_8_dihydromethanopterin
   }
 
   branch from hydrogen_donor side right {
     hydrogen_donor
-    <-> ec_1_3_99_25 [1.3.99.25] +isodihydrocarvone +hydrogen_acceptor
-    carvone
+    <-> . +c20_dihydroceramide +o2 +hydrogen_acceptor +h2o
+    c20_ceramide
   }
 
   branch from g1p side left {
     g1p
-    <-> . +maltotetraose +pi
-    maltotriose
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_l_galactose +gdp_d_glucose
+    l_galactose_1_phosphate
   }
 
   branch from g1p side right {
     g1p
-    <-> . +adp +hplus +pi
-    adp_d_glucoside
+    <-> ec_2_7_7_69 [2.7.7.69] +gdp_d_glucose +d_mannose_1_phosphate
+    gdp_d_mannose
   }
 }

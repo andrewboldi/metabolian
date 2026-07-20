@@ -1,0 +1,295 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-geranial-to-hydrogen-donor",
+  "name": "(2E)-geranial to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2E)-geranial to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR181146"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_geranial",
+      "name": "(2E)-geranial",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1368412"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM738702"
+      }
+    },
+    {
+      "id": "isodihydrocarveol",
+      "name": "(−)-isodihydrocarveol",
+      "short": "(−)-isodihydrocarve…",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:150"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM5"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "isodihydrocarvone",
+      "name": "(−)-isodihydrocarvone",
+      "short": "(−)-isodihydrocarvo…",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:155"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "carvone",
+      "name": "(+)-carvone",
+      "formula": "C10H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15399"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_71",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.71"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_296",
+      "name": "dihydrocarveol dehydrogenase",
+      "ec": [
+        "1.1.1.296"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_25",
+      "name": "carvone reductase",
+      "ec": [
+        "1.3.99.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alcohol dehydrogenase [NAD(P)(+)]",
+      "ec": "1.1.1.71",
+      "substrates": [
+        {
+          "metabolite": "2e_geranial",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isodihydrocarveol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR181146"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR181146"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dihydrocarveol dehydrogenase",
+      "equation": "(1R,2R,4S)-isodihydrocarveol + NAD(+) = (1R,4S)-isodihydrocarvone + NADH + H(+)",
+      "ec": "1.1.1.296",
+      "substrates": [
+        {
+          "metabolite": "isodihydrocarveol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isodihydrocarvone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_296"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carvone reductase",
+      "equation": "(1R,4S)-isodihydrocarvone + A = (S)-carvone + AH2",
+      "ec": "1.3.99.25",
+      "substrates": [
+        {
+          "metabolite": "isodihydrocarvone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carvone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32427"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32427"
+          }
+        ]
+      }
+    }
+  ]
+}

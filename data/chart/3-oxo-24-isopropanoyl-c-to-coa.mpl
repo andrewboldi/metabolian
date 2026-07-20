@@ -30,61 +30,61 @@ pathway 3-oxo-24-isopropanoyl-c-to-coa "3-oxo-24-(isopropanoyl)-c… to CoA" {
 
   branch from atp side left {
     atp
-    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +adp
-    diphosphate
+    <-> ec_7_6_2_10 [7.6.2.10] +h +adp +phosphate +h2o
+    sn_glycerophosphodiester
   }
 
   branch from atp side right {
     atp
     <-> . +h +adp +phosphate +h2o
-    alpha_alpha_trehalose_6_alpha_mycolate
+    l_l_homocystine
   }
 
   branch from h side left {
     h
-    <-> . +2r_3e_phycocyanobilin
-    3z_phycocyanobilin
+    <-> . +s_adenosyl_l_homocysteine +fusarubinaldehyde +6_o_demethylfusarubinaldehyde
+    s_adenosyl_l_methionine
   }
 
   branch from h side right {
     h
-    <-> . +roquefortine_f +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
-    n1_hydroxy_roquefortine_c
+    <-> . +s_adenosyl_l_homocysteine +8_o_methylfusarubinaldehyde +s_adenosyl_l_methionine
+    fusarubinaldehyde
   }
 
   branch from adp side left {
     adp
-    <-> . +h +phosphate +atp +h2o
-    trehalose_cis_methoxy_mono_mycolate
+    <-> . +co2 +pyruvate +atp +h2o +h +phosphate
+    oxaloacetate
   }
 
   branch from adp side right {
     adp
     <-> . +h +phosphate +atp +h2o
-    trehalose_trans_methoxy_mono_mycolate
+    l_arabinopyranose
   }
 
   branch from phosphate side left {
     phosphate
-    <-> . +aldehydo_d_mannose +h2o
-    aldehydo_d_mannose_6_phosphate
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h2o
+    d_myo_inositol_1_2_3_4_tetrakisphosphate
   }
 
   branch from phosphate side right {
     phosphate
-    <-> . +aldehydo_d_mannose +h2o
-    alpha_d_mannose_1_phosphate
+    <-> ec_3_1_3_62 [3.1.3.62] +d_myo_inositol_2_3_4_trisphosphate +h +h2o
+    1d_myo_inositol_2_4_bisphosphate
   }
 
   branch from coa side left {
     coa
-    <-> . +isorhamnetin_3_o_6_o_feruloyl_glucoside +trans_4_coumaroyl_coa
-    isorhamnetin_3_o_3_o_4_coumaroyl_6_o_feruloyl_gl
+    <-> . +18_hydroxyoleoyl_coa +1_18_hydroxyoeoyl_2_18_hydroxy_linoleoyl_sn_glyc
+    tri_acyl_estolide
   }
 
   branch from coa side right {
     coa
-    <-> . +quercetin_3_o_6_o_4_coumaroyl_glucoside +trans_4_coumaroyl_coa
-    quercetin_3_o_3_6_o_di_4_coumaroyl_glucoside
+    <-> . +9z_12z_18_hydroxyoctadecadienoyl_coa +tri_acyl_estolide
+    tetra_acyl_estolide
   }
 }

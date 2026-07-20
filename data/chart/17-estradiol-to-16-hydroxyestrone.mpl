@@ -18,8 +18,8 @@ pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone
 
   branch from estrone side left {
     estrone
-    <-> ec_1_1_1_62 [1.1.1.62] +nadp +nadph +hplus
-    17_estradiol
+    <-> . +fmnh2 +o2 +fmn +h2o +hplus
+    15_hydroxyestrone
   }
 
   branch from estrone side right {
@@ -36,13 +36,13 @@ pathway 17-estradiol-to-16-hydroxyestrone "17α-estradiol to 16α-hydroxyestrone
 
   branch from fmn side right {
     fmn
-    <-> . +isethionate +fmnh2 +o2 +sulfite +h2o +hplus
-    glycolaldehyde
+    <-> ec_1_14_14_87 [1.14.14.87] +liquiritigenin +fmnh2 +o2 +h2o +hplus
+    2r_3s_2_4_7_trihydroxyisoflavanone
   }
 
   branch from fmn side left {
     fmn
-    <-> ec_1_14_14_158 [1.14.14.158] +carotene +fmnh2 +o2 +h2o +hplus
-    cryptoxanthin
+    <-> ec_1_14_14_153 [1.14.14.153] +1h_indole +fmnh2 +o2 +h2o +hplus
+    indolin_2_one
   }
 }

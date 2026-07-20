@@ -18,49 +18,49 @@ pathway 2-amino-4-hydroxy-5-phosp-to-phosphate "2-amino-4-hydroxy-5-phosp… to 
 
   branch from h2o side left {
     h2o
-    <-> ec_3_5_1_9 [3.5.1.9] +r_beta_hydroxy_l_kynurenine +h +formate
-    r_n_formyl_beta_hydroxy_l_kynurenine
+    <-> ec_3_1_2_23 [3.1.2.23] +benzoyl_coa +h +coa
+    benzoate
   }
 
   branch from h2o side right {
     h2o
-    <-> . +n_acetylphosphinothricyl_l_alanyl_l_leucine +h +phosalacine
-    acetate
+    <-> . +3s_hydroxyadipyl_coa +h
+    5_oxo_furan_2_acetyl_coa
   }
 
   branch from h side left {
     h
-    <-> . +3_6_dichloro_3a_methyl_dihydro_3h_furo_3_2_b_fur +2_chloro_3_methyl_dienelactone
-    chloride
+    <-> . +co2 +2_oxo_6_methylthiohexanoic_acid
+    3_carboxy_6_methylsulfanyl_2_oxohexanoate
   }
 
   branch from h side right {
     h
-    <-> . +2_chloro_2_2_chloro_4_methyl_5_oxofuran_2_yl_ace +chloride
-    5_chloro_2_methyl_dienelactone
+    <-> . +co2 +2_oxopentanoate
+    3_ethyl_2_oxosuccinate
   }
 
   branch from adp side left {
     adp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +phosphate +atp +h2o
-    d_galactofuranose
+    <-> ec_6_3_2_2 [6.3.2.2] +l_alpha_methyl_gamma_glutamyl_l_alpha_aminobutyr +h +phosphate +2s_2_aminobutanoate +atp
+    l_alpha_methyl_glutamate
   }
 
   branch from adp side right {
     adp
-    <-> . +h +phosphate +atp +h2o
-    n_acetyl_dl_methionine
+    <-> ec_6_3_2_2 [6.3.2.2] +gamma_l_glutamyl_s_methyl_l_cysteine +h +phosphate +atp +l_glutamate
+    s_methylcysteine
   }
 
   branch from phosphate side left {
     phosphate
-    <-> ec_3_1_3_29 [3.1.3.29] +alpha_d_glucosamine_6_phosphate +h2o +h
-    beta_d_glucosamine
+    <-> . +h +l_threonine +h2o
+    o_phospho_l_threonine
   }
 
   branch from phosphate side right {
     phosphate
-    <-> ec_3_1_3_62 [3.1.3.62] +1d_myo_inositol_1_2_bisphosphate +h2o
-    1d_myo_inositol_1_2_3_trisphosphate
+    <-> ec_3_1_3_104 [3.1.3.104] +d_gluconate +h2o
+    6_phospho_d_gluconate
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-lysi… to S-adenosyl-L-homocysteine" {
-  spacing 340
+  spacing 334
 
   spine at 0,0 {
     n6_n6_n6_trimethyl_l_lysine
@@ -32,14 +32,14 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from succinate side left {
     succinate
-    <-> . +arginine +akg +o2 +co2
-    5_hydroxy_l_arginine
+    <-> ec_1_14_11_56 [1.14.11.56] +l_proline +akg +o2 +co2
+    cis_4_hydroxy_l_proline
   }
 
   branch from succinate side right {
     succinate
-    <-> ec_1_14_20_7 [1.14.20.7] +arginine +akg +o2 +l_glutamic_5_semialdehyde +co2
-    guanidinium
+    <-> ec_1_14_11_40 [1.14.11.40] +l_enduracididine +akg +o2 +co2
+    3s_3_hydroxy_l_enduracididine
   }
 
   branch from glycine side left {
@@ -50,79 +50,73 @@ pathway n6-n6-n6-trimethyl-l-lysi-to-s-adenosyl-l-homocy "N6,N6,N6-trimethyl-L-l
 
   branch from glycine side right {
     glycine
-    <-> ec_1_4_2_1 [1.4.2.1] +iron +h2o +fe2 +glyoxylate +hplus
-    nh3
+    <-> ec_2_6_1_35 [2.6.1.35] +oxaloacetate +glyoxylate
+    aspartate
   }
 
   branch from 4_trimethylammonio_butanoate side left {
-    4_trimethylammonio_butanoate
-    <-> ec_6_2_1_48 [6.2.1.48] +atp +coa +amp +ppi
-    butyrobetainyl_coa
-  }
-
-  branch from 4_trimethylammonio_butanoate side right {
     4_trimethylammonio_butanoate
     <-> . +nadh +o2 +hplus +trimethylammonium +nad +h2o
     4_oxobutanoate
   }
 
-  branch from carnitine side left {
+  branch from carnitine side right {
     carnitine
     <-> ec_4_1_1_42 [4.1.1.42] +hplus +co2
     2_methylcholine
   }
 
-  branch from 3_dehydrocarnitine side right {
+  branch from 3_dehydrocarnitine side left {
     3_dehydrocarnitine
     <-> ec_1_1_1_254 [1.1.1.254] +nad +nadh +hplus
     s_carnitine
   }
 
-  branch from 3_dehydrocarnitine side left {
+  branch from 3_dehydrocarnitine side right {
     3_dehydrocarnitine
     <-> . +nad +nadh +hplus
     carnitine
   }
 
-  branch from acetate side right {
-    acetate
-    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
-    1_o_octadecyl_sn_glycero_3_phosphocholine
-  }
-
   branch from acetate side left {
     acetate
-    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
+    <-> . +2_hydroxyglutarate +acetyl_coa
+    2_hydroxyglutaryl_coa
   }
 
-  branch from n_n_n_trimethylglycyl_coa side right {
+  branch from acetate side right {
+    acetate
+    <-> . +triacetin +h2o +hplus
+    diacetin
+  }
+
+  branch from n_n_n_trimethylglycyl_coa side left {
     n_n_n_trimethylglycyl_coa
     <-> ec_2_3_1_317 [2.3.1.317] +3_dehydrocarnitine +acetyl_coa
     acetoacetate
   }
 
-  branch from methionine side left {
-    methionine
-    <-> . +h2o +glycine
-    gly_met
-  }
-
   branch from methionine side right {
     methionine
-    <-> . +met_ala +h2o
-    alanine
+    <-> ec_2_1_1_224 [2.1.1.224] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
+    8_methyladenosine_5_monophosphate_1
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_55 [2.1.1.55] +adenosine_5_monophosphate_1 +sam +hplus
-    n6_methyladenosine_5_monophosphate_1
+  branch from methionine side left {
+    methionine
+    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +5_deoxyadenosine +di_sulfido_diiron +sah
+    2_methyladenosine_5_monophosphate_1
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_113 [2.1.1.113] +2_deoxycytidine_5_monophosphate_1 +sam +hplus
-    n4_methyl_dcmp_1
+    <-> ec_2_1_1_87 [2.1.1.87] +pyridine +sam
+    n_methylpyridinium
+  }
+
+  branch from sah side left {
+    sah
+    <-> ec_2_1_1_197 [2.1.1.197] +malonyl-acp +sam
+    o_s_methoxycarbonylacetyl_pantetheine_4_phosphor
   }
 }

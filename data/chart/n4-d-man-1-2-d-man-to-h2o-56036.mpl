@@ -24,13 +24,13 @@ pathway n4-d-man-1-2-d-man-to-h2o-56036 "N4-{α-D-Man-(1→2)-α-D-Man… to H2O
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +anabaenopeptilide_90a +phosphate +anabaenopeptilide_90a
+    <-> . +h +adp +amylopectin +phosphate +amylopectin
     atp
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_23 [3.6.3.23] +h +adp +phosphate +atp
-    nostopeptolide_a2
+    <-> . +h +adp +phosphate +atp
+    l_sorbosone_1_4_lactone
   }
 }

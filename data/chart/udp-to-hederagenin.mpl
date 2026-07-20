@@ -30,25 +30,25 @@ pathway udp-to-hederagenin "UDP to hederagenin…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +rubusoside
-    19_o_beta_glucopyranosyl_steviol
+    <-> . +udp +h +quercetin_3_7_di_o_d_glucoside
+    quercetin_7_o_beta_d_glucoside
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> ec_2_4_1_178 [2.4.1.178] +udp +h +r_3_4_dihydroxymandelonitrile_beta_d_glucoside
-    r_3_4_dihydroxymandelonitrile
+    <-> . +udp +quercetin_3_gentiotrioside +h
+    quercetin_3_gentiobioside
   }
 
   branch from udp side left {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +4e_15e_bilirubin_ixalpha_c8_beta_d_glucuronosid +4z_15z_bilirubin_ixalpha
+    <-> ec_2_4_1_17 [2.4.1.17] +h +4_methylumbelliferone_d_glucuronide +4_methylumbelliferone
     udp_alpha_d_glucuronate
   }
 
   branch from udp side right {
     udp
-    <-> ec_2_4_1_17 [2.4.1.17] +h +4_methylumbelliferone_d_glucuronide +udp_alpha_d_glucuronate
-    4_methylumbelliferone
+    <-> ec_2_4_1_17 [2.4.1.17] +curcumin_beta_d_glucuronide +udp_alpha_d_glucuronate
+    curcumin
   }
 }

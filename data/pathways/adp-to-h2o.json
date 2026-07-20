@@ -1,0 +1,249 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "adp-to-h2o",
+  "name": "ADP to H2O",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from ADP to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR204136"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM40333"
+      }
+    },
+    {
+      "id": "dudp",
+      "name": "dUDP",
+      "formula": "C9H11N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "metanetx": "MNXM572"
+      }
+    },
+    {
+      "id": "dutp",
+      "name": "dUTP",
+      "formula": "C9H11N2O14P3",
+      "charge": -4,
+      "xrefs": {
+        "metanetx": "MNXM452"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM728294"
+      }
+    },
+    {
+      "id": "uridine",
+      "name": "uridine",
+      "formula": "C9H12N2O6",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "MNXM1103104"
+      }
+    },
+    {
+      "id": "ump",
+      "name": "UMP",
+      "formula": "C9H11N2O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1104823"
+      }
+    },
+    {
+      "id": "h",
+      "name": "H",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "metanetx": "MNXM1"
+      }
+    },
+    {
+      "id": "2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin",
+      "name": "2,3-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate",
+      "short": "2,3-Bis(3-hydroxyte…",
+      "formula": "C34H64NO12P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1560663"
+      }
+    },
+    {
+      "id": "udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine",
+      "name": "UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine",
+      "short": "UDP-2,3-bis(3-hydro…",
+      "formula": "C43H75N3O20P2",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM727269"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_48",
+      "name": "uridine/cytidine kinase",
+      "ec": [
+        "2.7.1.48"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR204136",
+      "substrates": [
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dudp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dutp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR204136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR204136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "uridine/cytidine kinase",
+      "ec": "2.7.1.48",
+      "substrates": [
+        {
+          "metabolite": "uridine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dutp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dudp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR190954"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR190954"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "Reaction MNXR207070",
+      "substrates": [
+        {
+          "metabolite": "ump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_3_bis_3_hydroxytetradecanoyl_beta_d_glucosamin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_2_3_bis_3_hydroxytetradecanoyl_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR207070"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR207070"
+          }
+        ]
+      }
+    }
+  ]
+}

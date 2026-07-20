@@ -20,73 +20,73 @@ pathway sedoheptulose-1-phosphate-to-h2o "sedoheptulose 1-phosphate to H2O" {
 
   branch from h side left {
     h
-    <-> . +adp +phosphate +atp +h2o
-    pregnenolone_sulfate
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    pg_18_0_18_0
   }
 
   branch from h side right {
     h
-    <-> . +adp +phosphate +atp +h2o
-    pregnenolone
+    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
+    1_2_di_9z_octadecenoyl_sn_glycero_3_phosphocholi
   }
 
   branch from dihydroxyacetone_phosphate side left {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +phylloquinone +sn_glycerol_3_phosphate
-    phylloquinol
+    <-> ec_1_1_5_3 [1.1.5.3] +ubiquinone_6 +sn_glycerol_3_phosphate
+    ubiquinol_6
   }
 
   branch from dihydroxyacetone_phosphate side right {
     dihydroxyacetone_phosphate
-    <-> ec_1_1_5_3 [1.1.5.3] +2_phytyl_1_4_dihydroxynaphthalene +sn_glycerol_3_phosphate
-    2_phytyl_1_4_naphthoquinone
+    <-> ec_4_1_2_13 [4.1.2.13] +sedoheptulose_1_phosphate +h
+    d_erythrose
   }
 
   branch from nadp side left {
     nadp
-    <-> ec_1_1_1_21 [1.1.1.21] +h +alpha_l_arabinofuranose +nadph
-    l_arabinitol
+    <-> ec_1_1_1_270 [1.1.1.270] +31_norcycloartenol +h +nadph
+    31_norcycloartenone
   }
 
   branch from nadp side right {
     nadp
-    <-> ec_1_1_1_42 [1.1.1.42] +s_oxalatosuccinate +h +nadph
-    d_erythro_isocitrate
+    <-> . +trans_p_coumaryl_alcohol +h +nadph +h2o
+    trans_anol
   }
 
   branch from nadph side left {
     nadph
-    <-> . +8_8a_deoxyoleandolide +co2 +nadp +coa +h2o +h +r_methylmalonyl_coa
-    malonyl_coa
+    <-> . +hexadecanoate +adp +nadp +coa +phosphate +h +atp +h2o
+    acetyl_coa
   }
 
   branch from nadph side right {
     nadph
-    <-> . +malonyl_coa +methylmalonyl_coa +h +co2 +nadp +coa +h2o
-    10_deoxymethynolide
+    <-> . +brassicasterol +h +nadp
+    24_epicampesterol
   }
 
   branch from atp side left {
     atp
-    <-> . +h +adp +phosphate +h2o
-    pristanic_acid
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_2_di_9z_12z_octadecadienoyl_sn_glycero_3_phosp
   }
 
   branch from atp side right {
     atp
-    <-> . +h +adp +phosphate +h2o
-    pitavastatin
+    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
+    1_9z_octadec_9_enoyl_2_hexadecanoyl_sn_glycero_3
   }
 
   branch from h2o side left {
     h2o
-    <-> . +l_methionine +l_tryptophan +l_phenylalanine
-    methionyl_tryptophanyl_phenylalanine
+    <-> . +l_glutamine +l_tryptophan +l_tyrosine
+    trp_tyr_gln
   }
 
   branch from h2o side right {
     h2o
-    <-> . +l_asparagine +l_methionine +l_phenylalanine
-    phenylalanyl_asparaginyl_methionine
+    <-> . +l_tryptophan +l_tyrosine
+    tryptophanyl_tyrosyl_tyrosine
   }
 }

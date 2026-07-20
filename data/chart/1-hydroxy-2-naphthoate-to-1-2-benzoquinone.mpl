@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-hydroxy-2-naphthoate-to-1-2-benzoquinone "1-hydroxy-2-naphthoate to 1,2-benzoquinone" {
-  spacing 278
+  spacing 272
 
   spine at 0,0 {
     1_hydroxy_2_naphthoate
@@ -38,19 +38,13 @@ pathway 1-hydroxy-2-naphthoate-to-1-2-benzoquinone "1-hydroxy-2-naphthoate to 1,
     2_2_disulfonatoazobenzene
   }
 
-  branch from 3_4_dihydroxybenzoate side left {
-    3_4_dihydroxybenzoate
-    <-> . +udp_d_glucose +udp +hplus
-    4_d_glucosyloxy_3_hydroxybenzoate
-  }
-
-  branch from catechol side right {
+  branch from catechol side left {
     catechol
     <-> ec_1_14_13_244 [1.14.13.244] +nadh +o2 +hplus +nad +h2o
     phenol
   }
 
-  branch from catechol side left {
+  branch from catechol side right {
     catechol
     <-> ec_1_3_1_20 [1.3.1.20] +nadp +nadph +hplus
     1s_2s_cyclohexa_3_5_diene_1_2_diol

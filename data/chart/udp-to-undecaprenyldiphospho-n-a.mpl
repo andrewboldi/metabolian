@@ -18,13 +18,13 @@ pathway udp-to-undecaprenyldiphospho-n-a "UDP to undecaprenyldiphospho-N-a…" {
 
   branch from udp_alpha_d_glucose side left {
     udp_alpha_d_glucose
-    <-> . +udp +h +soyasapogenol_e_3_o_beta_d_glucoside
-    soyasapogenol_e
+    <-> ec_2_4_1_195 [2.4.1.195] +6_methylsulfanyl_hexyl_desulfoglucosinolate +udp +h
+    z_omega_methylsulfanyl_heptyl_thiohydroximate
   }
 
   branch from udp_alpha_d_glucose side right {
     udp_alpha_d_glucose
-    <-> . +udp +kaempferol_3_o_gentiobioside_7_o_rhamnoside +h
-    kaempferol_3_o_d_glucopyranosyl_7_o_l_rhamnopyra
+    <-> ec_2_4_1_195 [2.4.1.195] +7_methylthioheptyl_desulfoglucosinolate +udp +h
+    z_omega_methylsulfanyl_octyl_thiohydroximate
   }
 }

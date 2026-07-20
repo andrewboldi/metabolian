@@ -1,0 +1,213 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1d-myo-inositol-to-h2o",
+  "name": "1D-myo-inositol… to H2O",
+  "category": "other",
+  "summary": "A 3-step route from 1D-myo-inositol 1-phosphate to H2O, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "MetaNetX",
+        "id": "MNXR121927"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1d_myo_inositol_1_phosphate",
+      "name": "1D-myo-inositol 1-phosphate",
+      "short": "1D-myo-inositol 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM1364687"
+      }
+    },
+    {
+      "id": "phosphate",
+      "name": "phosphate",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "metanetx": "MNXM9"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_2_bisphosphate",
+      "name": "1D-myo-inositol 1,2-bisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:195539"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "H2O",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "metanetx": "WATER"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_1_2_3_trisphosphate",
+      "name": "1D-myo-inositol 1,2,3-trisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H9O15P3",
+      "charge": -6,
+      "xrefs": {
+        "chebi": "CHEBI:195536"
+      }
+    },
+    {
+      "id": "d_myo_inositol_1_2_3_4_tetrakisphosphate",
+      "name": "D-myo-inositol (1,2,3,4) tetrakisphosphate",
+      "short": "D-myo-inositol…",
+      "formula": "C6H8O18P4",
+      "charge": -8,
+      "xrefs": {
+        "metanetx": "MNXM8502"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_62",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "ec": [
+        "3.1.3.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Reaction MNXR121927",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "metanetx": "MNXR121927"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121927"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "ec": "3.1.3.62",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_3_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "metanetx": "MNXR121926"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121926"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "multiple inositol-polyphosphate phosphatase",
+      "ec": "3.1.3.62",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_2_3_trisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_myo_inositol_1_2_3_4_tetrakisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "metanetx": "MNXR121932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "MetaNetX",
+            "id": "MNXR121932"
+          }
+        ]
+      }
+    }
+  ]
+}

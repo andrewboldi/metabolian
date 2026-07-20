@@ -18,14 +18,14 @@ pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosp
 
   branch from sah side left {
     sah
-    <-> ec_2_1_1_374 [2.1.1.374] +3_bromo_2_heptyl_1_hydroxy_4_1h_quinolinone +sam +hplus
-    3_bromo_2_heptyl_1_methoxy_4_1h_quinolinone
+    <-> . +tryptaminium +sam +hplus
+    n_methyltryptaminium
   }
 
   branch from sah side right {
     sah
-    <-> ec_2_1_1_374 [2.1.1.374] +3_methyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_propyl +sam +hplus
-    3_5_dimethyl_1_oxo_2_3_oxo_3_pyrrolidin_1_yl_pro
+    <-> . +n_methyltryptaminium +sam +hplus
+    n_n_dimethyltryptaminium
   }
 
   branch from alanine side left {
@@ -42,13 +42,13 @@ pathway 3-hydroxy-l-kynurenine-to-diphosphate "3-hydroxy-L-kynurenine to diphosp
 
   branch from ppi side left {
     ppi
-    <-> ec_4_2_3_216 [4.2.3.216] +all_trans_pentaprenyl_diphosphate
-    somaliensene_a
+    <-> . +kanamycin_a +utp
+    4_uridylylkanamycin_a
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_4_2_3_217 [4.2.3.217] +all_trans_pentaprenyl_diphosphate
-    somaliensene_b
+    <-> . +kanamycin_a +datp
+    4_2_deoxyadenylyl_kanamycin_a
   }
 }

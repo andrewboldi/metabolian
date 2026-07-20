@@ -157,31 +157,12 @@
       }
     },
     {
-      "id": "2_deoxyguanosine_5_monophosphate",
-      "name": "2'-deoxyguanosine 5'-monophosphate",
-      "short": "2'-deoxyguanosine…",
-      "formula": "C10H12N5O7P",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:57673"
-      }
-    },
-    {
       "id": "inosine",
       "name": "Inosine",
       "formula": "C10H12N4O5",
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:17596"
-      }
-    },
-    {
-      "id": "2_deoxyguanosine",
-      "name": "2'-deoxyguanosine",
-      "formula": "C10H13N5O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:17172"
       }
     },
     {
@@ -201,6 +182,15 @@
       "charge": 0,
       "xrefs": {
         "chebi": "CHEBI:16750"
+      }
+    },
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61402"
       }
     }
   ],
@@ -407,45 +397,6 @@
     },
     {
       "id": "r5",
-      "name": "dGMP + inosine = 2'-deoxyguanosine + IMP",
-      "equation": "dGMP + inosine = 2'-deoxyguanosine + IMP",
-      "substrates": [
-        {
-          "metabolite": "2_deoxyguanosine_5_monophosphate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "inosine",
-          "stoichiometry": 1
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "2_deoxyguanosine",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "imp",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 5,
-      "xrefs": {
-        "rhea": "RHEA:69580"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:69580"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r6",
       "name": "inosine + GMP = guanosine + IMP",
       "equation": "inosine + GMP = guanosine + IMP",
       "substrates": [
@@ -469,7 +420,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:69584"
       },
@@ -479,6 +430,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:69584"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "ITP + 2 H2O = IMP + 2 phosphate + 2 H(+)",
+      "equation": "ITP + 2 H2O = IMP + 2 phosphate + 2 H(+)",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "imp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:77735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77735"
           }
         ]
       }

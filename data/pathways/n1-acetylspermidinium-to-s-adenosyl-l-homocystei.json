@@ -1,0 +1,292 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n1-acetylspermidinium-to-s-adenosyl-l-homocystei",
+  "name": "N1-acetylspermidinium to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N1-acetylspermidinium(2+) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26027"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58324"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n1_acetylspermidinium",
+      "name": "N1-acetylspermidinium",
+      "short": "N1-acetylspermidini…",
+      "formula": "C9H23N3O",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58324"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetylputrescinium",
+      "name": "N-acetylputrescinium",
+      "formula": "C6H15N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58263"
+      }
+    },
+    {
+      "id": "3_ammoniopropanal",
+      "name": "3-ammoniopropanal",
+      "formula": "C3H8NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58374"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_methylputrescinium",
+      "name": "N-methylputrescinium",
+      "formula": "C5H16N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58039"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_62",
+      "name": "acetylputrescine deacetylase",
+      "ec": [
+        "3.5.1.62"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_53",
+      "name": "putrescine N-methyltransferase",
+      "ec": [
+        "2.1.1.53"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N(1)-acetylspermidine + O2 + H2O = N-acetylputrescine + 3-aminopropanal + H2O2",
+      "equation": "N(1)-acetylspermidine + O2 + H2O = N-acetylputrescine + 3-aminopropanal + H2O2",
+      "substrates": [
+        {
+          "metabolite": "n1_acetylspermidinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_ammoniopropanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetylputrescine deacetylase",
+      "equation": "N-acetylputrescine + H2O = putrescine + acetate",
+      "ec": "3.5.1.62",
+      "substrates": [
+        {
+          "metabolite": "n_acetylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23412"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23412"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "putrescine N-methyltransferase",
+      "equation": "putrescine + S-adenosyl-L-methionine = N-methylputrescine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.53",
+      "substrates": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15037"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15037"
+          }
+        ]
+      }
+    }
+  ]
+}

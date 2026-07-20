@@ -18,26 +18,26 @@ pathway 5-epi-valiolone-to-validone-7-phosphate "5-epi-valiolone to validone 7-p
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +doxorubicin +phosphate +doxorubicin
-    atp
+    <-> ec_4_2_1_165 [4.2.1.165] +chlorophyllide_a
+    3_1_hydroxyethyl_chlorophyllide_a
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +atp
-    neamine
+    <-> ec_3_1_1_1 [3.1.1.1] +3_2_2_dichlorovinyl_2_2_dimethylcyclopropanecarb +3_phenoxyphenyl_methanol
+    trans_permethrin
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_13 +h
-    2_demethylmenaquinol_13
+    <-> . +nadh +4_5_dehydro_l_arginine +h
+    l_arginine
   }
 
   branch from nad side right {
     nad
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +plastoquinone_9
-    plastoquinol_9
+    <-> . +nadh +h +butane +o2 +h2o
+    2r_butan_2_ol
   }
 
   branch from validone_7_phosphate side left {

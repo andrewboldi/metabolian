@@ -251,13 +251,12 @@
       }
     },
     {
-      "id": "1_aminocyclopropanecarboxylic_acid",
-      "name": "1-aminocyclopropanecarboxylic acid",
-      "short": "1-aminocyclopropane…",
-      "formula": "C4H7NO2",
-      "charge": 0,
+      "id": "l_homoserine_lactone",
+      "name": "L-homoserine lactone",
+      "formula": "C4H8NO2",
+      "charge": 1,
       "xrefs": {
-        "chebi": "CHEBI:58360"
+        "chebi": "CHEBI:58633"
       }
     },
     {
@@ -298,15 +297,6 @@
       }
     },
     {
-      "id": "ferroheme_b",
-      "name": "ferroheme b",
-      "formula": "C34H30FeN4O4",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:60344"
-      }
-    },
-    {
       "id": "fpp",
       "name": "trans,trans-Farnesyl diphosphate (FPP)",
       "short": "trans,trans-Farnesy…",
@@ -317,21 +307,21 @@
       }
     },
     {
-      "id": "ferroheme_o",
-      "name": "ferroheme o",
-      "formula": "C49H56FeN4O5",
-      "charge": -2,
-      "xrefs": {
-        "chebi": "CHEBI:60530"
-      }
-    },
-    {
-      "id": "s_bisabolene",
-      "name": "(S)-β-bisabolene",
+      "id": "thujopsene",
+      "name": "(+)-thujopsene",
       "formula": "C15H24",
       "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:49263"
+        "chebi": "CHEBI:61737"
+      }
+    },
+    {
+      "id": "chamigrene",
+      "name": "(+)-β-chamigrene",
+      "formula": "C15H24",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61746"
       }
     }
   ],
@@ -386,24 +376,24 @@
       ]
     },
     {
-      "id": "ec_4_4_1_14",
-      "name": "1-aminocyclopropane-1-carboxylate synthase",
+      "id": "ec_4_4_1_42",
+      "name": "S-adenosyl-L-methionine lyase",
       "ec": [
-        "4.4.1.14"
+        "4.4.1.42"
       ]
     },
     {
-      "id": "ec_2_5_1_141",
-      "name": "heme o synthase",
+      "id": "ec_4_2_3_79",
+      "name": "thujopsene synthase",
       "ec": [
-        "2.5.1.141"
+        "4.2.3.79"
       ]
     },
     {
-      "id": "ec_4_2_3_55",
-      "name": "(S)-beta-bisabolene synthase",
+      "id": "ec_4_2_3_78",
+      "name": "beta-chamigrene synthase",
       "ec": [
-        "4.2.3.55"
+        "4.2.3.78"
       ]
     }
   ],
@@ -816,9 +806,9 @@
     },
     {
       "id": "r9",
-      "name": "1-aminocyclopropane-1-carboxylate synthase",
-      "equation": "S-adenosyl-L-methionine = 1-aminocyclopropane-1-carboxylate + S-methyl-5'-thioadenosine + H(+)",
-      "ec": "4.4.1.14",
+      "name": "S-adenosyl-L-methionine lyase",
+      "equation": "S-adenosyl-L-methionine = L-homoserine lactone + S-methyl-5'-thioadenosine",
+      "ec": "4.4.1.42",
       "substrates": [
         {
           "metabolite": "sam",
@@ -827,34 +817,30 @@
       ],
       "products": [
         {
-          "metabolite": "1_aminocyclopropanecarboxylic_acid",
+          "metabolite": "l_homoserine_lactone",
           "stoichiometry": 1
         },
         {
           "metabolite": "5_s_methyl_5_thioadenosine",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
         }
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_4_1_14"
+          "enzyme": "ec_4_4_1_42"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 9,
       "xrefs": {
-        "rhea": "RHEA:21744"
+        "rhea": "RHEA:21932"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:21744"
+            "id": "RHEA:21932"
           }
         ]
       }
@@ -903,26 +889,18 @@
     },
     {
       "id": "r11",
-      "name": "heme o synthase",
-      "equation": "heme b + (2E,6E)-farnesyl diphosphate + H2O = Fe(II)-heme o + diphosphate",
-      "ec": "2.5.1.141",
+      "name": "thujopsene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-thujopsene + diphosphate",
+      "ec": "4.2.3.79",
       "substrates": [
         {
-          "metabolite": "ferroheme_b",
-          "stoichiometry": 1
-        },
-        {
           "metabolite": "fpp",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "h2o",
           "stoichiometry": 1
         }
       ],
       "products": [
         {
-          "metabolite": "ferroheme_o",
+          "metabolite": "thujopsene",
           "stoichiometry": 1
         },
         {
@@ -932,29 +910,29 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_2_5_1_141"
+          "enzyme": "ec_4_2_3_79"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 11,
       "xrefs": {
-        "rhea": "RHEA:28070"
+        "rhea": "RHEA:30375"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28070"
+            "id": "RHEA:30375"
           }
         ]
       }
     },
     {
       "id": "r12",
-      "name": "(S)-beta-bisabolene synthase",
-      "equation": "(2E,6E)-farnesyl diphosphate = (S)-beta-bisabolene + diphosphate",
-      "ec": "4.2.3.55",
+      "name": "beta-chamigrene synthase",
+      "equation": "(2E,6E)-farnesyl diphosphate = (+)-beta-chamigrene + diphosphate",
+      "ec": "4.2.3.78",
       "substrates": [
         {
           "metabolite": "fpp",
@@ -963,7 +941,7 @@
       ],
       "products": [
         {
-          "metabolite": "s_bisabolene",
+          "metabolite": "chamigrene",
           "stoichiometry": 1
         },
         {
@@ -973,20 +951,20 @@
       ],
       "catalysts": [
         {
-          "enzyme": "ec_4_2_3_55"
+          "enzyme": "ec_4_2_3_78"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 12,
       "xrefs": {
-        "rhea": "RHEA:28266"
+        "rhea": "RHEA:30379"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:28266"
+            "id": "RHEA:30379"
           }
         ]
       }

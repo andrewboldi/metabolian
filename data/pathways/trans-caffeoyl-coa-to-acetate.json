@@ -1,0 +1,269 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-caffeoyl-coa-to-acetate",
+  "name": "trans-caffeoyl-CoA to acetate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from trans-caffeoyl-CoA(4−) to acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16925"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87136"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "trans_feruloyl_coa",
+      "name": "trans-feruloyl-CoA",
+      "formula": "C31H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87305"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "trans_ferulate",
+      "name": "trans-ferulate",
+      "formula": "C10H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29749"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "vanillin",
+      "name": "vanillin",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18346"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_104",
+      "name": "caffeoyl-CoA O-methyltransferase",
+      "ec": [
+        "2.1.1.104"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_65",
+      "name": "ferulate hydratase/lyase",
+      "ec": [
+        "4.1.2.65"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "caffeoyl-CoA O-methyltransferase",
+      "equation": "(E)-caffeoyl-CoA + S-adenosyl-L-methionine = (E)-feruloyl-CoA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.104",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16925"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16925"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(E)-feruloyl-CoA + H2O = (E)-ferulate + CoA + H(+)",
+      "equation": "(E)-feruloyl-CoA + H2O = (E)-ferulate + CoA + H(+)",
+      "substrates": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46224"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46224"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ferulate hydratase/lyase",
+      "equation": "(E)-ferulate + H2O = vanillin + acetate",
+      "ec": "4.1.2.65",
+      "substrates": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "vanillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:76491"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:76491"
+          }
+        ]
+      }
+    }
+  ]
+}

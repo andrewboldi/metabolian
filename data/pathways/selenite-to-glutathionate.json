@@ -111,25 +111,6 @@
       }
     },
     {
-      "id": "l_dehydroascorbate",
-      "name": "L-dehydroascorbate",
-      "formula": "C6H5O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58539"
-      }
-    },
-    {
-      "id": "ascorbate",
-      "name": "L-Ascorbate (vitamin C)",
-      "short": "L-Ascorbate…",
-      "formula": "C6H7O6",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:38290"
-      }
-    },
-    {
       "id": "5_s_hpete",
       "name": "5(S)-HPETE",
       "formula": "C20H31O4",
@@ -145,6 +126,24 @@
       "charge": -1,
       "xrefs": {
         "chebi": "CHEBI:90632"
+      }
+    },
+    {
+      "id": "13_s_hpode",
+      "name": "13(S)-HPODE",
+      "formula": "C18H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57466"
+      }
+    },
+    {
+      "id": "13_s_hode",
+      "name": "13(S)-HODE",
+      "formula": "C18H31O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90850"
       }
     },
     {
@@ -166,37 +165,39 @@
       }
     },
     {
-      "id": "13_s_hpode",
-      "name": "13(S)-HPODE",
-      "formula": "C18H31O4",
+      "id": "s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione",
+      "name": "S-(1-hydroxy-2-methylbut-3-en-2-yl)glutathione",
+      "short": "S-(1-hydroxy-2-meth…",
+      "formula": "C15H24N3O7S",
       "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:57466"
+        "chebi": "CHEBI:131718"
       }
     },
     {
-      "id": "13_s_hode",
-      "name": "13(S)-HODE",
-      "formula": "C18H31O3",
-      "charge": -1,
+      "id": "3r_3_4_epoxy_3_methylbut_1_ene",
+      "name": "(3R)-3,4-epoxy-3-methylbut-1-ene",
+      "short": "3,4-epoxy-3-methylb…",
+      "formula": "C5H8O",
+      "charge": 0,
       "xrefs": {
-        "chebi": "CHEBI:90850"
+        "chebi": "CHEBI:131720"
       }
     }
   ],
   "enzymes": [
     {
-      "id": "ec_1_8_5_1",
-      "name": "glutathione dehydrogenase (ascorbate)",
-      "ec": [
-        "1.8.5.1"
-      ]
-    },
-    {
       "id": "ec_4_3_2_7",
       "name": "glutathione-specific gamma-glutamylcyclotransferase",
       "ec": [
         "4.3.2.7"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_34",
+      "name": "isoprene-epoxide--glutathione S-transferase",
+      "ec": [
+        "4.4.1.34"
       ]
     }
   ],
@@ -340,51 +341,6 @@
     },
     {
       "id": "r4",
-      "name": "glutathione dehydrogenase (ascorbate)",
-      "equation": "L-dehydroascorbate + 2 glutathione = glutathione disulfide + L-ascorbate",
-      "ec": "1.8.5.1",
-      "substrates": [
-        {
-          "metabolite": "l_dehydroascorbate",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "gssg",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "ascorbate",
-          "stoichiometry": 1
-        }
-      ],
-      "catalysts": [
-        {
-          "enzyme": "ec_1_8_5_1"
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 4,
-      "xrefs": {
-        "rhea": "RHEA:24424"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:24424"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r5",
       "name": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + 2 glutathione = (5S)-hydroxy-(6E,8...",
       "equation": "(5S)-hydroperoxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + 2 glutathione = (5S)-hydroxy-(6E,8Z,11Z,14Z)-eicosatetraenoate + glutathione disulfide + H2O",
       "substrates": [
@@ -412,7 +368,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:48620"
       },
@@ -422,6 +378,49 @@
           {
             "db": "Rhea",
             "id": "RHEA:48620"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-oc...",
+      "equation": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-octadecadienoate + glutathione disulfide + H2O",
+      "substrates": [
+        {
+          "metabolite": "13_s_hpode",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13_s_hode",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:48888"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48888"
           }
         ]
       }
@@ -469,43 +468,41 @@
     },
     {
       "id": "r7",
-      "name": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-oc...",
-      "equation": "(13S)-hydroperoxy-(9Z,11E)-octadecadienoate + 2 glutathione = (13S)-hydroxy-(9Z,11E)-octadecadienoate + glutathione disulfide + H2O",
+      "name": "isoprene-epoxide--glutathione S-transferase",
+      "equation": "2-glutathionyl-2-methylbut-3-en-1-ol = (3R)-3,4-epoxy-3-methylbut-1-ene + glutathione",
+      "ec": "4.4.1.34",
       "substrates": [
         {
-          "metabolite": "13_s_hpode",
+          "metabolite": "s_1_hydroxy_2_methylbut_3_en_2_yl_glutathione",
           "stoichiometry": 1
-        },
-        {
-          "metabolite": "gsh",
-          "stoichiometry": 2
         }
       ],
       "products": [
         {
-          "metabolite": "13_s_hode",
+          "metabolite": "3r_3_4_epoxy_3_methylbut_1_ene",
           "stoichiometry": 1
         },
         {
-          "metabolite": "gssg",
+          "metabolite": "gsh",
           "stoichiometry": 1
-        },
+        }
+      ],
+      "catalysts": [
         {
-          "metabolite": "h2o",
-          "stoichiometry": 1
+          "enzyme": "ec_4_4_1_34"
         }
       ],
       "reversibility": "reversible",
       "pathwayStep": 7,
       "xrefs": {
-        "rhea": "RHEA:48888"
+        "rhea": "RHEA:49568"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:48888"
+            "id": "RHEA:49568"
           }
         ]
       }

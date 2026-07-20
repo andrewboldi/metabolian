@@ -38,14 +38,14 @@ pathway maltose-to-d-glucose "α-maltose to α-D-glucose…" {
 
   branch from g1p side left {
     g1p
-    <-> . +udp_d_glucose +h2o +hplus
-    ump
+    <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
+    gdp_d_glucose
   }
 
   branch from g1p side right {
     g1p
-    <-> ec_2_7_7_69 [2.7.7.69] +pi +gdp +hplus
-    gdp_d_glucose
+    <-> ec_2_4_1_352 [2.4.1.352] +2_o_d_glucopyranosyl_d_glycerate +pi
+    d_glycerate
   }
 
   branch from d_glucose_1_6_bisphosphate side left {

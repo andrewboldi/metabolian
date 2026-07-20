@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway c-terminal-amino-acid-to-fatty-acid-anion "C-terminal amino acid-… to fatty acid anion" {
-  spacing 176
+  spacing 158
 
   spine at 0,0 {
     c_terminal_amino_acid_phosphatidylethanolamine_a
@@ -18,25 +18,7 @@ pathway c-terminal-amino-acid-to-fatty-acid-anion "C-terminal amino acid-… to 
 
   branch from c_terminal_proteinogenic_amino_acid side left {
     c_terminal_proteinogenic_amino_acid
-    <-> ec_3_4_17_24 [3.4.17.24] +c_terminal_amino_acyl_l_glutamate_2 +h2o
-    glutamate
-  }
-
-  branch from c_terminal_proteinogenic_amino_acid side right {
-    c_terminal_proteinogenic_amino_acid
     <-> . +c_terminal_amino_acid_phosphatidylserine_amidate +h2o
     phosphatidylserine_amidated_glycine
-  }
-
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_acyl_3_o_d_galactosyl_sn_glycerol +h2o +hplus
-    3_o_d_galactopyranosyl_sn_glycerol
-  }
-
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_3_diglyceride +h2o +hplus
-    1_acyl_sn_glycerol
   }
 }

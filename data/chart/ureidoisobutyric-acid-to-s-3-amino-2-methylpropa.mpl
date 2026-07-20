@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway ureidoisobutyric-acid-to-s-3-amino-2-methylpropa "Ureidoisobutyric acid to (S)-3-amino-2-methylpropa…" {
-  spacing 290
+  spacing 284
 
   spine at 0,0 {
     ureidoisobutyric_acid
@@ -18,55 +18,49 @@ pathway ureidoisobutyric-acid-to-s-3-amino-2-methylpropa "Ureidoisobutyric acid 
 
   branch from co2 side left {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_16_0_18_3_9z_12z_15z +h
-    16_0_18_3_ps
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_2_9z_12z
+    ps_20_2_11z_14z_18_2_9z_12z
   }
 
   branch from co2 side right {
     co2
-    <-> ec_4_1_1_65 [4.1.1.65] +pe_16_1_9z_18_3_9z_12z_15z +h
-    1_9z_hexadecenoyl_2_9z_12z_15z_octadecatrienoyl
+    <-> ec_4_1_1_65 [4.1.1.65] +pe_20_2_11z_14z_18_3_9z_12z_15z
+    ps_20_2_11z_14z_18_3_9z_12z_15z
   }
 
   branch from nh4 side left {
     nh4
-    <-> . +beta_d_glcnac_1_4_mur2ac_oyl_l_ala_gamma_d_glu_l +h2o
-    beta_d_glcnac_1_4_mur2ac_oyl_l_ala_d_isoglutamin
+    <-> . +2_hydroxy_5_chloromuconate +h +h2o
+    2e_4e_2_amino_5_chlorohexa_2_4_dienedioate
   }
 
   branch from nh4 side right {
     nh4
-    <-> ec_2_1_1_21 [2.1.1.21] +n_methyl_l_glutamate +h2o
-    n_5_methyl_l_glutamine
-  }
-
-  branch from 2_methyl_3_oxopropanoate side left {
-    2_methyl_3_oxopropanoate
-    <-> ec_1_2_1_27 [1.2.1.27] +nadh +propanoyl_coa +co2 +nad
-    coa
-  }
-
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_1_hydroxy_3_methylhexan_3_yl_l_cysteinylglycin +h2o
-    3_glutathion_s_yl_3_methylhexan_1_ol
+    <-> . +dtdp_3_dehydro_4_6_dideoxy_alpha_d_glucose
+    dtdp_4_amino_4_6_dideoxy_alpha_d_glucose
   }
 
   branch from l_glutamate side left {
     l_glutamate
-    <-> ec_3_4_19_13 [3.4.19.13] +s_1_hydroxyhexan_3_yl_l_cysteinylglycine +h2o
-    3_glutathion_s_yl_hexan_1_ol
+    <-> ec_3_4_19_13 [3.4.19.13] +4_n_s_cysteinylglycylacetyl_amino_phenylarsonous +h +h2o
+    s_2_4_dihydroxyarsino_phenylamino_2_oxoethyl_glu
   }
 
-  branch from pyruvate side right {
-    pyruvate
-    <-> . +n_n_diacetylchitobiose +phosphoenolpyruvate
-    diacetylchitobiose_6_phosphate
+  branch from l_glutamate side right {
+    l_glutamate
+    <-> . +h +methanopterin +h2o
+    sarcinapterin
   }
 
   branch from pyruvate side left {
     pyruvate
-    <-> . +beta_d_glucose_6_phosphate +phosphoenolpyruvate
-    beta_d_glucose
+    <-> . +phylloquinone +r_lactate
+    phylloquinol
+  }
+
+  branch from pyruvate side right {
+    pyruvate
+    <-> . +ubiquinol_9 +r_lactate
+    ubiquinone_9
   }
 }

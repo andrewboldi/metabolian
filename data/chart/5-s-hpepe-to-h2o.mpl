@@ -18,25 +18,25 @@ pathway 5-s-hpepe-to-h2o "5(S)-HpEPE to H2O" {
 
   branch from atp side left {
     atp
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
-    octyl_alpha_d_mannopyranoside
+    <-> ec_2_7_2_18 [2.7.2.18] +hexadecanoate +adp
+    hexadecanoyl_phosphate
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +h2o
-    octyl_alpha_d_galactopyranoside
+    <-> . +h +adp +phosphate +h2o
+    l_ectoine
   }
 
   branch from h2o side left {
     h2o
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
-    octyl_2_acetamido_2_deoxy_alpha_d_glucopyranosid
+    <-> ec_3_1_3_73 [3.1.3.73] +5_hydroxybenzimidazole_ribotide_phosphate +phosphate
+    5_hydroxybenzimidazole_ribotide
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_6_3_39 [3.6.3.39] +h +adp +phosphate +atp
-    lipid_a_e_coli
+    <-> . +4_octanoyl_5_oxo_2h_furan_3_yl_methyl_phosphate
+    2_oxo_3_phosphooxy_propyl_3_oxodecanoate
   }
 }

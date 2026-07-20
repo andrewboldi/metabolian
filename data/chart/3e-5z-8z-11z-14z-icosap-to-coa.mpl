@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3e-5z-8z-11z-14z-icosap-to-coa "(3E,5Z,8Z,11Z,14Z)-icosap… to CoA" {
-  spacing 312
+  spacing 306
 
   spine at 0,0 {
     3e_5z_8z_11z_14z_icosapentaenoyl_coa
@@ -22,111 +22,105 @@ pathway 3e-5z-8z-11z-14z-icosap-to-coa "(3E,5Z,8Z,11Z,14Z)-icosap… to CoA" {
     gamma_linolenyl_carnitine
   }
 
-  branch from 2e_8z_11z_14z_icosatetraenoyl_coa side left {
-    2e_8z_11z_14z_icosatetraenoyl_coa
-    <-> . +h +h2o
-    3_icosa_8_11_14_trienoyl_coa
-  }
-
-  branch from 8z_11z_14z_eicosatrienoyl_coa side right {
-    8z_11z_14z_eicosatrienoyl_coa
-    <-> ec_3_1_2_2 [3.1.2.2] +h2o +h +coa
-    8z_11z_14z_eicosatrienoate
-  }
-
   branch from 8z_11z_14z_eicosatrienoyl_coa side left {
     8z_11z_14z_eicosatrienoyl_coa
     <-> . +s_carnitine +coa
     dihomo_gamma_linolenyl_carnitine
   }
 
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +e_2_pentenal
-    3_hydroxy_3_methylbut_1_ene
+  branch from 8z_11z_14z_eicosatrienoyl_coa side right {
+    8z_11z_14z_eicosatrienoyl_coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_8z_11z_14z_eicosatrienoyl_glycero_3_phosphate
   }
 
   branch from nad side left {
     nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +2e_geranial +h
-    thujan_3_ol
+    <-> . +nadh +4_iminobutan_1_amine +h
+    putrescine
   }
 
-  branch from 6z_9z_12z_octadecatrienoyl_coa side right {
-    6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nadh +h +o2 +nad +h2o
-    9z_12z_octadecadienoyl_coa
+  branch from nad side right {
+    nad
+    <-> . +nadh +11s_16s_7_oxo_ent_kauran_11_16_epoxy_19_oate +h
+    7s_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
   }
 
   branch from 6z_9z_12z_octadecatrienoyl_coa side left {
     6z_9z_12z_octadecatrienoyl_coa
-    <-> . +nadh +h +o2 +nad +h2o
-    9e_12e_octadecadienoyl_coa
+    <-> . +sn_glycerol_3_phosphate +coa
+    1_6z_9z_12z_octadecatrienoyl_glycero_3_phosphate
   }
 
-  branch from malonyl_coa side right {
-    malonyl_coa
-    <-> . +acetyl_coa +h +1_4_5_10_13_pentahydroxy_delta2_3_protoilludene +co2 +coa +h2o
-    melledonol
+  branch from 6z_9z_12z_octadecatrienoyl_coa side right {
+    6z_9z_12z_octadecatrienoyl_coa
+    <-> . +nadp +h2o +h +o2 +nadph
+    9e_12e_octadecadienoyl_coa
   }
 
   branch from malonyl_coa side left {
     malonyl_coa
-    <-> . +acetyl_coa +h +echinocidin_b +co2 +coa +h2o
-    melleolide_f
+    <-> . +acetyl_coa +h +h2o +co2 +coa
+    3_5_7_9_11_13_15_17_19_nonaoxoicosanoate
   }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +phosphate +atp +h2o
-    neo_lambda_carrabiose
+  branch from malonyl_coa side right {
+    malonyl_coa
+    <-> ec_2_3_1_199 [2.3.1.199] +octanoyl_coa +h +co2 +coa
+    3_oxodecanoyl_coa
   }
 
   branch from h side left {
     h
-    <-> ec_3_6_3_18 [3.6.3.18] +adp +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +phosphate +d_glucosaminyl_1_4_n_acetyl_d_glucosamine +h2o
-    atp
+    <-> . +beta_d_glucose +indol_3_ylacetothiohydroxamate_o_sulfonate +h2o
+    z_glucobrassicin
   }
 
-  branch from o2 side right {
-    o2
-    <-> . +nadh +h +6_r_beta_epsilon_carotene +nad +h2o
-    zeinoxanthin
+  branch from h side right {
+    h
+    <-> . +2z_3_3_4_dioxocyclohexa_1_5_dien_1_yl_prop_2_en +h2o
+    3_4_6_dihydroxy_3_oxocyclohexa_1_4_dien_1_yl_acr
   }
 
   branch from o2 side left {
     o2
-    <-> . +nadh +h +canthaxanthin +nad +h2o
-    phoenicoxanthin
+    <-> . +2_indol_3_ylidene_ethanol +h2o2
+    indole_3_ethanol
   }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +isopimara_7_15_dienal +nadp
-    palustradienol
+  branch from o2 side right {
+    o2
+    <-> . +2_3z_indol_3_ylidene_acetate +h2o2
+    indol_3_yl_acetate
   }
 
   branch from nadph side left {
     nadph
-    <-> ec_1_1_1_71 [1.1.1.71] +h +palustradienal +nadp
-    isopimara_7_15_dienol
+    <-> . +4_aminophenol +nadp +h2o +h
+    4_nitrophenol
   }
 
-  branch from gamma_linolenyl_carnitine side right {
+  branch from nadph side right {
+    nadph
+    <-> . +r_dihydroglycitein +nadp +h
+    glycitein
+  }
+
+  branch from gamma_linolenyl_carnitine side left {
     gamma_linolenyl_carnitine
     <-> . +6z_9z_12z_octadecatrienoyl_coa +coa
     s_carnitine
   }
 
-  branch from coa side left {
-    coa
-    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_alpha_neuraminate
-    n_acetyl_7_o_acetylneuraminate
-  }
-
   branch from coa side right {
     coa
-    <-> ec_2_3_1_45 [2.3.1.45] +acetyl_coa +n_acetyl_neuraminic_acid
-    neuac9ac
+    <-> ec_6_3_2_50 [6.3.2.50] +acetoacetyl_coa +atp +l_isoleucine +diphosphate +h +amp
+    tenuazonic_acid
+  }
+
+  branch from coa side left {
+    coa
+    <-> . +acetyl_coa +h +3_phenylpyruvate +h2o
+    2_benzylmalic_acid
   }
 }

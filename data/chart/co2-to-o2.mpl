@@ -34,14 +34,14 @@ pathway co2-to-o2 "CO2 to O2" {
 
   branch from o2 side left {
     o2
-    <-> . +9_10_dihydroxybenzo_a_pyrene
-    cis_4_8_hydroxypyren_7_yl_2_oxobut_3_enoate
+    <-> . +4_4a_dihydroxy_dihydro_dibenzo_p_dioxin +nad +h +dibenzo_p_dioxin
+    nadh
   }
 
   branch from o2 side right {
     o2
-    <-> . +4_5_dihydroxybenzo_a_pyrene
-    4_5_chrysenedicarboxylate
+    <-> ec_1_14_12_26 [1.14.12.26] +nadh +h +2_4_dichlorotoluene +nad
+    1r_2s_4_6_dichloro_3_methylcyclohexa_3_5_diene
   }
 
   branch from l_tyrosine side left {
@@ -64,13 +64,13 @@ pathway co2-to-o2 "CO2 to O2" {
 
   branch from fmn side right {
     fmn
-    <-> . +fmnh2 +h +coprogen +fe
-    desferricoprogen
+    <-> ec_1_14_14_22 [1.14.14.22] +fmn_n5_oxide +nadh +h +h2o
+    nad
   }
 
   branch from fmn side left {
     fmn
-    <-> . +fmnh2 +h +coprogen +desferricoprogen
-    fe
+    <-> ec_1_19_6_1 [1.19.6.1] +fmnh2 +acetylene +atp +h2o +h +adp +ethene +phosphate
+    h2
   }
 }

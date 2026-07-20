@@ -26,13 +26,13 @@ pathway coproporphyrinogen-iii-to-2-4-divinyl "coproporphyrinogen III to 2,4-div
 
   branch from sah side left {
     sah
-    <-> . +guanosine_5_monophosphate_1 +sam
-    n7_methylguanosine_5_phosphate_zwitterion
+    <-> . +ribonucleotide +sam +hplus
+    2_o_methylribonucleotide_1
   }
 
   branch from sah side right {
     sah
-    <-> . +n6_methyl_l_lysinium +sam +hplus
+    <-> ec_2_1_1_371 [2.1.1.371] +l_lysinium +sam +hplus
     n6_n6_dimethyl_l_lysine_1
   }
 }

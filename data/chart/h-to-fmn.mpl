@@ -18,25 +18,25 @@ pathway h-to-fmn "H to FMN" {
 
   branch from h2o side left {
     h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_methylumbelliferyl_l_arabinoside +alpha_l_arabinopyanose
-    4_methylumbelliferone
+    <-> . +3_phenylpropionitrile
+    3_phenylpropionaldoxim
   }
 
   branch from h2o side right {
     h2o
-    <-> ec_3_4_17_12 [3.4.17.12] +leu_enkephalin_arg +h +l_arginine
-    leu_enkephalin
+    <-> ec_1_2_1_3 [1.2.1.3] +nadh +phenanthrene_9_carboxylate +h +nad
+    phenanthrene_9_carboxaldehyde
   }
 
   branch from fmn side left {
     fmn
-    <-> . +17_hydroxy_5_androstan_3_one +fmnh2 +o2 +h2o +hplus
-    19_hydroxy_5_dihydrotestosterone
+    <-> ec_1_14_14_69 [1.14.14.69] +ent_cassa_12_15_diene +fmnh2 +o2 +h2o +hplus
+    ent_3_hydroxycassa_12_15_dien_2_one
   }
 
   branch from fmn side right {
     fmn
-    <-> . +19_hydroxy_5_dihydrotestosterone +fmnh2 +o2 +h2o +hplus
-    19_oxo_5_dihydrotestosterone
+    <-> . +ent_cassa_12_15_dien_2_ol +fmnh2 +o2 +h2o +hplus
+    ent_cassa_12_15_dien_2_3_diol
   }
 }

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'-phospho…" {
-  spacing 224
+  spacing 218
 
   spine at 0,0 {
     diphosphate
@@ -24,26 +24,26 @@ pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'
 
   branch from atp side left {
     atp
-    <-> . +udp_n_acetyl_alpha_d_muramate +l_alanine_d_glutamate_meso_2_6_diaminoheptanedio +h +adp +phosphate
-    udp_n_acetylmuramoyl_l_alanyl_d_gamma_glutamyl_m
+    <-> . +h +adp +phosphate +h2o
+    n_5_hydroxyhexahydrocyclopenta_c_pyrrol_2_1h_yl
   }
 
   branch from atp side right {
     atp
-    <-> ec_3_6_3_33 [3.6.3.33] +h +adp +phosphate +h2o
-    adenosylcob_iii_alamin
+    <-> . +h +adp +phosphate +h2o
+    7_beta_oh_gliclazide_glucuronide
   }
 
   branch from coa side left {
     coa
-    <-> . +2e_11z_14z_icosatrienoyl_coa +h2o +trans_cis_cis_2_11_14_eicosatrienoic_acid
-    h
+    <-> . +erucoyl_coa +diphosphate +amp +atp
+    13z_docosenoate
   }
 
   branch from coa side right {
     coa
-    <-> . +diphosphate +h +amp +11z_octadecenoyl_coa +atp
-    vaccenic_acid
+    <-> . +tricosanoyl_coa +diphosphate +amp +atp
+    tricosanoate
   }
 
   branch from 4_hydroxyamino_benzoate side left {
@@ -54,43 +54,37 @@ pathway diphosphate-to-o-pantetheine-4-phospho "diphosphate to O-(pantetheine-4'
 
   branch from nh3 side right {
     nh3
-    <-> . +4_phenylbutan_2_aminium +nad +h2o +nadh +hplus
-    4_phenylbutan_2_one
+    <-> . +n_carbamoylglycinate +h2o +hplus +co2
+    glycine
   }
 
   branch from nh3 side left {
     nh3
-    <-> . +3_5_dimethylcyclohexan_1_aminium +nadp +h2o +nadph +hplus
-    3_5_dimethylcyclohexanone
+    <-> . +n_carbamoyl_l_tyrosinate +h2o +hplus +co2
+    tyrosine
   }
 
   branch from ppi side right {
     ppi
-    <-> . +trna_3_terminal_nucleotidyl_cytidyl_cytidine_3 +atp
-    trna_3_terminal_nucleotidyl_cytidyl_cytidyl_aden
+    <-> . +o_adenyl_l_tyrosine_1 +atp
+    o_5_adenyl_5_3_adenyl_l_tyrosine_2
   }
 
   branch from ppi side left {
     ppi
-    <-> . +fpp
-    sesquisabinene_b
-  }
-
-  branch from n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi side right {
-    n1_3_4_dihydroxybenzoyl_n8_n_8_citryl_bis_spermi
-    <-> . +spermidine +atp +amp +ppi +hplus
-    n1_3_4_dihydroxybenzoyl_n8_citryl_spermidine
-  }
-
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +l_arginyl_amp +amp +hplus
-    o_s_l_arginyl_pantetheine_4_phosphoryl_serine_1
+    <-> . +o_5_adenyl_5_3_adenyl_l_tyrosine_2 +atp
+    o_5_adenyl_5_3_adenyl_5_3_adenyl_l_tyrosine_3
   }
 
   branch from holo-acp side right {
     holo-acp
-    <-> ec_6_2_1_74 [6.2.1.74] +3_amino_5_hydroxybenzoate +atp +amp +ppi
-    o_s_3_hydroxy_5_benzoyl_pantetheine_4_phosphoryl
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
+    o_s_3_5_7_9_11_13_hexaoxotetradecanoyl_pantethei
+  }
+
+  branch from holo-acp side left {
+    holo-acp
+    <-> . +malonyl-coa +acetyl_coa +hplus +co2 +coa
+    o_s_3_5_7_9_11_pentaoxododecanoyl_pantetheine_4
   }
 }

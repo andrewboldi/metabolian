@@ -60,20 +60,20 @@ pathway aliphatic-aldoxime-to-diphosphate "aliphatic aldoxime to diphosphate" {
 
   branch from acyl_coa side left {
     acyl_coa
-    <-> ec_2_3_1_13 [2.3.1.13] +glycine +coa +hplus
-    n_acylglycinate
+    <-> ec_2_3_1_16 [2.3.1.16] +acetyl_coa +coa
+    3_oxoacyl_coa
   }
 
   branch from ppi side right {
     ppi
-    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
-    4_3_methylbut_2_enyl_l_tryptophan
+    <-> ec_6_1_1_14 [6.1.1.14] +amp_3_end_1 +glycine +atp +amp
+    3_glycyladenylyl_zwitterionic_group
   }
 
   branch from ppi side left {
     ppi
-    <-> ec_3_1_7_2 [3.1.7.2] +h2o +gdp +hplus
-    guanosine_3_5_bis_diphosphate
+    <-> ec_4_2_3_167 [4.2.3.167] +2_trans_6_trans_10_trans_geranylgeranyl_diphosph +h2o
+    3e_7e_dolabella_3_7_dien_18_ol
   }
 
   branch from uracil side right {
