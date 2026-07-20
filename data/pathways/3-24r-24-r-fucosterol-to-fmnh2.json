@@ -1,0 +1,342 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-24r-24-r-fucosterol-to-fmnh2",
+  "name": "(3β,24R,24'R)-fucosterol… to FMNH2",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (3β,24R,24'R)-fucosterol epoxide to FMNH2(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10884"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15577"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_24r_24_r_fucosterol_epoxide",
+      "name": "(3β,24R,24'R)-fucosterol epoxide",
+      "short": "(3β,24R,24'R)-fucos…",
+      "formula": "C29H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15577"
+      }
+    },
+    {
+      "id": "desmosterol",
+      "name": "Desmosterol (cholesta-5,24-dien-3beta-ol)",
+      "short": "Desmosterol…",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17737"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "24_s_25_epoxycholesterol",
+      "name": "24(S),25-epoxycholesterol",
+      "short": "24(S),25-epoxychole…",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:41633"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "24s_25_epoxy_7_hydroxycholesterol",
+      "name": "(24S,25)-epoxy-7α-hydroxycholesterol",
+      "short": "(24S,25)-epoxy-7α-h…",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86146"
+      }
+    },
+    {
+      "id": "2_azaniumyl_2_deoxyisochorismate",
+      "name": "2-azaniumyl-2-deoxyisochorismate",
+      "short": "2-azaniumyl-2-deoxy…",
+      "formula": "C10H10NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58792"
+      }
+    },
+    {
+      "id": "3_1_carboxylatovinyloxy_anthranilate",
+      "name": "3-(1-carboxylatovinyloxy)anthranilate",
+      "short": "3-(1-carboxylatovin…",
+      "formula": "C10H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58790"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_33",
+      "name": "fucosterol-epoxide lyase",
+      "ec": [
+        "4.1.2.33"
+      ]
+    },
+    {
+      "id": "ec_1_3_8_16",
+      "name": "2-amino-4-deoxychorismate dehydrogenase",
+      "ec": [
+        "1.3.8.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "fucosterol-epoxide lyase",
+      "equation": "(24R,24(1)R)-fucosterol epoxide = desmosterol + acetaldehyde",
+      "ec": "4.1.2.33",
+      "substrates": [
+        {
+          "metabolite": "3_24r_24_r_fucosterol_epoxide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "desmosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10884"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10884"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "desmosterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-25-epoxycholesterol +...",
+      "equation": "desmosterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S)-25-epoxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "desmosterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24_s_25_epoxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(24S)-25-epoxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S,25)-epox...",
+      "equation": "(24S)-25-epoxycholesterol + reduced [NADPH--hemoprotein reductase] + O2 = (24S,25)-epoxy-7alpha-hydroxycholesterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "substrates": [
+        {
+          "metabolite": "24_s_25_epoxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "24s_25_epoxy_7_hydroxycholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46464"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46464"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-amino-4-deoxychorismate dehydrogenase",
+      "equation": "(2S)-2-amino-4-deoxychorismate + FMN = 3-(1-carboxyvinyloxy)anthranilate + FMNH2",
+      "ec": "1.3.8.16",
+      "substrates": [
+        {
+          "metabolite": "2_azaniumyl_2_deoxyisochorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_1_carboxylatovinyloxy_anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:25371"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25371"
+          }
+        ]
+      }
+    }
+  ]
+}

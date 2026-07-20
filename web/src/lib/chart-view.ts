@@ -247,7 +247,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     label.append(s("text", { class: "region-ref", x: reg.x - 30 + tw - 14, y: reg.y - 64 }, [reg.ref]));
     layerRegions.append(g);
     layerLabels.append(label);
-    regionLabels.push({ el: label, reg, short: reg.title.replace(/\s*\(.*$/, "") });
+    // The overview label must be SHORT, not merely de-parenthesised. Ingested
+    // sheets are titled from systematic compound names, and at overview zoom a
+    // 90-character title printed across three neighbouring regions.
+    const bare = reg.title.replace(/\s*\(.*$/, "");
+    const short = bare.length <= 34 ? bare : `${bare.slice(0, 33).replace(/\s+\S*$/, "")}\u2026`;
+    regionLabels.push({ el: label, reg, short });
   }
 
   const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));

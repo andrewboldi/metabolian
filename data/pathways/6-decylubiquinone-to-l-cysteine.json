@@ -1,0 +1,369 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-decylubiquinone-to-l-cysteine",
+  "name": "6-decylubiquinone to L-cysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from 6-decylubiquinone to L-cysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10936"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:52020"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_decylubiquinone",
+      "name": "6-decylubiquinone",
+      "formula": "C19H30O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52020"
+      }
+    },
+    {
+      "id": "trioxidosulfanidosulfate",
+      "name": "trioxidosulfanidosulfate",
+      "short": "trioxidosulfanidosu…",
+      "formula": "HO3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:33542"
+      }
+    },
+    {
+      "id": "6_decylubiquinol",
+      "name": "6-decylubiquinol",
+      "formula": "C19H32O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52021"
+      }
+    },
+    {
+      "id": "tetrathionate",
+      "name": "tetrathionate",
+      "formula": "O6S4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15226"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26833"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "pser",
+      "name": "O-Phospho-L-serine",
+      "formula": "C3H6NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57524"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_8_5_2",
+      "name": "thiosulfate dehydrogenase (quinone)",
+      "ec": [
+        "1.8.5.2"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_55",
+      "name": "sulfur oxygenase/reductase",
+      "ec": [
+        "1.13.11.55"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_65",
+      "name": "O-phosphoserine sulfhydrylase",
+      "ec": [
+        "2.5.1.65"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "thiosulfate dehydrogenase (quinone)",
+      "equation": "6-decylubiquinone + 2 thiosulfate = 6-decylubiquinol + tetrathionate",
+      "ec": "1.8.5.2",
+      "substrates": [
+        {
+          "metabolite": "6_decylubiquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_decylubiquinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tetrathionate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10936"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10936"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tetrathionate + H2O = sulfur + thiosulfate + sulfate + H(+)",
+      "equation": "tetrathionate + H2O = sulfur + thiosulfate + sulfate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "tetrathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trioxidosulfanidosulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13541"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13541"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sulfur oxygenase/reductase",
+      "equation": "4 sulfur + O2 + 4 H2O = 2 hydrogen sulfide + 2 sulfite + 6 H(+)",
+      "ec": "1.13.11.55",
+      "substrates": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 6
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13957"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "O-phosphoserine sulfhydrylase",
+      "equation": "O-phospho-L-serine + hydrogen sulfide + H(+) = L-cysteine + phosphate",
+      "ec": "2.5.1.65",
+      "substrates": [
+        {
+          "metabolite": "pser",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_65"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10252"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10252"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo",
+  "name": "3-(β-D-ribofuranosyl)uric… to 5-O-phosphonato-α-D-ribof…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 5-step route from 3-(β-D-ribofuranosyl)uric acid to 5-O-phosphonato-α-D-ribofuranosyl diphosphate(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13909"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:50547"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_d_ribofuranosyl_uric_acid",
+      "name": "3-(β-D-ribofuranosyl)uric acid",
+      "short": "3-(β-D-ribosyl)uric…",
+      "formula": "C10H12N4O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50547"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
+    },
+    {
+      "id": "7_9_dihydro_1h_purine_2_6_8_3h_trione",
+      "name": "7,9-dihydro-1H-purine-2,6,8(3H)-trione",
+      "short": "7,9-dihydro-1H-puri…",
+      "formula": "C5H4N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17775"
+      }
+    },
+    {
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78346"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "prpp",
+      "name": "5-Phospho-alpha-D-ribose 1-diphosphate (PRPP)",
+      "short": "5-Phospho-alpha-D-r…",
+      "formula": "C5H8O14P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:58017"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_ribose_1_5_bisphosphate",
+      "name": "α-D-ribose 1,5-bisphosphate",
+      "short": "α-D-ribose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:68688"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_16",
+      "name": "urate-ribonucleoside phosphorylase",
+      "ec": [
+        "2.4.2.16"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_7",
+      "name": "phosphopentomutase",
+      "ec": [
+        "5.4.2.7"
+      ]
+    },
+    {
+      "id": "ec_2_7_6_1",
+      "name": "ribose-phosphate diphosphokinase",
+      "ec": [
+        "2.7.6.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_23",
+      "name": "ribose 1,5-bisphosphate phosphokinase",
+      "ec": [
+        "2.7.4.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "urate-ribonucleoside phosphorylase",
+      "equation": "urate D-ribonucleoside + phosphate = alpha-D-ribose 1-phosphate + urate",
+      "ec": "2.4.2.16",
+      "substrates": [
+        {
+          "metabolite": "3_d_ribofuranosyl_uric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_9_dihydro_1h_purine_2_6_8_3h_trione",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13909"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13909"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphopentomutase",
+      "equation": "alpha-D-ribose 1-phosphate = D-ribose 5-phosphate",
+      "ec": "5.4.2.7",
+      "substrates": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18793"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18793"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ribose-phosphate diphosphokinase",
+      "equation": "D-ribose 5-phosphate + ATP = 5-phospho-alpha-D-ribose 1-diphosphate + AMP + H(+)",
+      "ec": "2.7.6.1",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15609"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15609"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "5-phospho-alpha-D-ribose 1-diphosphate + H2O = alpha-D-ribose 1,5-bisphosphate + phosph...",
+      "equation": "5-phospho-alpha-D-ribose 1-diphosphate + H2O = alpha-D-ribose 1,5-bisphosphate + phosphate + H(+)",
+      "substrates": [
+        {
+          "metabolite": "prpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:80811"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:80811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "ribose 1,5-bisphosphate phosphokinase",
+      "equation": "alpha-D-ribose 1,5-bisphosphate + ATP = 5-phospho-alpha-D-ribose 1-diphosphate + ADP",
+      "ec": "2.7.4.23",
+      "substrates": [
+        {
+          "metabolite": "d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "prpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20109"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20109"
+          }
+        ]
+      }
+    }
+  ]
+}

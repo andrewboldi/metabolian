@@ -1,0 +1,473 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-methyladenosine-to-glyoxylate",
+  "name": "1-methyladenosine to glyoxylate",
+  "category": "energy-metabolism",
+  "summary": "A 6-step route from 1-methyladenosine to glyoxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12865"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16020"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_methyladenosine",
+      "name": "1-methyladenosine",
+      "formula": "C11H15N5O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16020"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_methyladenine",
+      "name": "1-methyladenine",
+      "formula": "C6H7N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18083"
+      }
+    },
+    {
+      "id": "d_ribofuranose",
+      "name": "D-ribofuranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47013"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "d_ribonate",
+      "name": "D-ribonate",
+      "formula": "C5H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17773"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_dehydro_3_deoxy_d_arabinonate",
+      "name": "2-dehydro-3-deoxy-D-arabinonate",
+      "short": "2-dehydro-3-deoxy-D…",
+      "formula": "C5H7O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16699"
+      }
+    },
+    {
+      "id": "glycolaldehyde",
+      "name": "glycolaldehyde",
+      "formula": "C2H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17071"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29805"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_2_13",
+      "name": "1-methyladenosine nucleosidase",
+      "ec": [
+        "3.2.2.13"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_115",
+      "name": "ribose 1-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.115"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_28",
+      "name": "2-dehydro-3-deoxy-D-pentonate aldolase",
+      "ec": [
+        "4.1.2.28"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_21",
+      "name": "glycolaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.21"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_79",
+      "name": "glyoxylate reductase (NADP(+))",
+      "ec": [
+        "1.1.1.79"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "1-methyladenosine nucleosidase",
+      "equation": "1-methyladenosine + H2O = 1-methyladenine + D-ribose",
+      "ec": "3.2.2.13",
+      "substrates": [
+        {
+          "metabolite": "1_methyladenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_methyladenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12865"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ribose 1-dehydrogenase (NADP(+))",
+      "equation": "D-ribose + NADP(+) + H2O = D-ribonate + NADPH + 2 H(+)",
+      "ec": "1.1.1.115",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-ribonate = 2-dehydro-3-deoxy-D-arabinonate + H2O",
+      "equation": "D-ribonate = 2-dehydro-3-deoxy-D-arabinonate + H2O",
+      "substrates": [
+        {
+          "metabolite": "d_ribonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_arabinonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:37031"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-dehydro-3-deoxy-D-pentonate aldolase",
+      "equation": "2-dehydro-3-deoxy-D-arabinonate = glycolaldehyde + pyruvate",
+      "ec": "4.1.2.28",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_deoxy_d_arabinonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20609"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20609"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "glycolaldehyde dehydrogenase",
+      "equation": "glycolaldehyde + NAD(+) + H2O = glycolate + NADH + 2 H(+)",
+      "ec": "1.2.1.21",
+      "substrates": [
+        {
+          "metabolite": "glycolaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:20001"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "glyoxylate reductase (NADP(+))",
+      "equation": "glycolate + NADP(+) = glyoxylate + NADPH + H(+)",
+      "ec": "1.1.1.79",
+      "substrates": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:10992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10992"
+          }
+        ]
+      }
+    }
+  ]
+}

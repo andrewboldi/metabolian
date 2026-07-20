@@ -66,7 +66,10 @@ export type MetaboliteRole =
   | "hormone" | "neurotransmitter" | "electron-carrier" | "building-block" | "waste" | "toxin" | "other";
 
 export interface Metabolite {
-  id: string; name: string; synonyms?: string[]; formula?: string; charge?: number;
+  id: string; name: string; synonyms?: string[];
+  /** Chart caption form when the curated name is too long for a side arc. */
+  short?: string;
+  formula?: string; charge?: number;
   monoisotopicMass?: number; smiles?: string; inchikey?: string; class?: string;
   roles?: MetaboliteRole[]; xrefs?: Xref; description?: string; provenance?: Provenance;
 }
