@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-myrcene",
+  "name": "geranyl diphosphate to β-myrcene",
+  "category": "other",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to β-myrcene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32679"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "geraniol",
+      "name": "geraniol",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17447"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "s_linalool",
+      "name": "(S)-linalool",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:98"
+      }
+    },
+    {
+      "id": "myrcene",
+      "name": "β-myrcene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17221"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_7_11",
+      "name": "geranyl diphosphate diphosphatase",
+      "ec": [
+        "3.1.7.11"
+      ]
+    },
+    {
+      "id": "ec_5_4_4_4",
+      "name": "geraniol isomerase",
+      "ec": [
+        "5.4.4.4"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_127",
+      "name": "linalool dehydratase",
+      "ec": [
+        "4.2.1.127"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "geranyl diphosphate diphosphatase",
+      "equation": "(2E)-geranyl diphosphate + H2O = (2E)-geraniol + diphosphate",
+      "ec": "3.1.7.11",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32679"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32679"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "geraniol isomerase",
+      "equation": "(2E)-geraniol = (S)-linalool",
+      "ec": "5.4.4.4",
+      "substrates": [
+        {
+          "metabolite": "geraniol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_linalool",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_4_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30715"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30715"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "linalool dehydratase",
+      "equation": "(S)-linalool = beta-myrcene + H2O",
+      "ec": "4.2.1.127",
+      "substrates": [
+        {
+          "metabolite": "s_linalool",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myrcene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30711"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30711"
+          }
+        ]
+      }
+    }
+  ]
+}

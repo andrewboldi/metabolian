@@ -1,0 +1,311 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-4-naphthoquinone-2-carb-to-s-adenosyl-l-homocy",
+  "name": "1,4-naphthoquinone-2-carb… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1,4-naphthoquinone-2-carboxylate to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47740"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87842"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_4_naphthoquinone_2_carboxylate",
+      "name": "1,4-naphthoquinone-2-carboxylate",
+      "short": "1,4-naphthoquinone-…",
+      "formula": "C11H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:87842"
+      }
+    },
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_naphthoquinone",
+      "name": "2-phytyl-1,4-naphthoquinone",
+      "short": "2-phytyl-1,4-naphth…",
+      "formula": "C30H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:31087"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "2_phytyl_1_4_dihydroxynaphthalene",
+      "name": "2-phytyl-1,4-dihydroxynaphthalene",
+      "short": "2-phytyl-1,4-dihydr…",
+      "formula": "C30H46O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87844"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "phyllohydroquinone",
+      "name": "phyllohydroquinone",
+      "formula": "C31H48O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28433"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_130",
+      "name": "2-carboxy-1,4-naphthoquinone phytyltransferase",
+      "ec": [
+        "2.5.1.130"
+      ]
+    },
+    {
+      "id": "ec_1_6_5_12",
+      "name": "demethylphylloquinone reductase",
+      "ec": [
+        "1.6.5.12"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_329",
+      "name": "demethylphylloquinol methyltransferase",
+      "ec": [
+        "2.1.1.329"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-carboxy-1,4-naphthoquinone phytyltransferase",
+      "equation": "2-carboxy-1,4-naphthoquinone + phytyl diphosphate + H(+) = demethylphylloquinone + CO2 + diphosphate",
+      "ec": "2.5.1.130",
+      "substrates": [
+        {
+          "metabolite": "1_4_naphthoquinone_2_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phytyl_1_4_naphthoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_130"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "demethylphylloquinone reductase",
+      "equation": "demethylphylloquinone + NADPH + H(+) = demethylphylloquinol + NADP(+)",
+      "ec": "1.6.5.12",
+      "substrates": [
+        {
+          "metabolite": "2_phytyl_1_4_naphthoquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_6_5_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47744"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47744"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "demethylphylloquinol methyltransferase",
+      "equation": "demethylphylloquinol + S-adenosyl-L-methionine = phylloquinol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.329",
+      "substrates": [
+        {
+          "metabolite": "2_phytyl_1_4_dihydroxynaphthalene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phyllohydroquinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_329"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40551"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40551"
+          }
+        ]
+      }
+    }
+  ]
+}

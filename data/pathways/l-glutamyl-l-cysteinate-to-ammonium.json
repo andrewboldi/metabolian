@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-glutamyl-l-cysteinate-to-ammonium",
+  "name": "L-γ-glutamyl-L-cysteinate to ammonium",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-γ-glutamyl-L-cysteinate(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42672"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58173"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glu_cys",
+      "name": "γ-L-Glutamyl-L-cysteine",
+      "short": "γ-L-Glutamyl-L-cyst…",
+      "formula": "C8H13N2O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58173"
+      }
+    },
+    {
+      "id": "n_n_n_trimethyl_l_histidine",
+      "name": "Nα,Nα,Nα-trimethyl-L-histidine",
+      "short": "Nα,Nα,Nα-trimethyl-…",
+      "formula": "C9H15N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15781"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "n_l_glutamyl_hercynyl_l_cysteine_sulfoxide",
+      "name": "Nα-(L-γ-glutamyl)-hercynyl-L-cysteine sulfoxide",
+      "short": "Nα-(L-γ-glutamyl)-h…",
+      "formula": "C17H26N5O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82703"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hercynylcysteine_sulfoxide",
+      "name": "hercynylcysteine sulfoxide",
+      "short": "hercynylcysteine…",
+      "formula": "C12H20N4O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82706"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ergothioneine",
+      "name": "ergothioneine",
+      "formula": "C9H16N3O2S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:134344"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_99_50",
+      "name": "gamma-glutamyl hercynylcysteine S-oxide synthase",
+      "ec": [
+        "1.14.99.50"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_118",
+      "name": "gamma-glutamyl hercynylcysteine S-oxide hydrolase",
+      "ec": [
+        "3.5.1.118"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_36",
+      "name": "hercynylcysteine S-oxide lyase",
+      "ec": [
+        "4.4.1.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "gamma-glutamyl hercynylcysteine S-oxide synthase",
+      "equation": "gamma-L-glutamyl-L-cysteine + hercynine + O2 = gamma-L-glutamyl-hercynylcysteine S-oxide + H2O",
+      "ec": "1.14.99.50",
+      "substrates": [
+        {
+          "metabolite": "glu_cys",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_n_n_trimethyl_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_l_glutamyl_hercynyl_l_cysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gamma-glutamyl hercynylcysteine S-oxide hydrolase",
+      "equation": "gamma-L-glutamyl-hercynylcysteine S-oxide + H2O = S-(hercyn-2-yl)-L-cysteine S-oxide + L-glutamate",
+      "ec": "3.5.1.118",
+      "substrates": [
+        {
+          "metabolite": "n_l_glutamyl_hercynyl_l_cysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hercynylcysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:42684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42684"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hercynylcysteine S-oxide lyase",
+      "equation": "S-(hercyn-2-yl)-L-cysteine S-oxide + AH2 + H(+) = ergothioneine + pyruvate + A + NH4(+)",
+      "ec": "4.4.1.36",
+      "substrates": [
+        {
+          "metabolite": "hercynylcysteine_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ergothioneine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42688"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42688"
+          }
+        ]
+      }
+    }
+  ]
+}

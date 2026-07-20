@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-phosphooxymethyl-2-fu-to-diphosphate",
+  "name": "4-(phosphooxymethyl)-2-fu… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from 4-(phosphooxymethyl)-2-furancarboxaldehyde(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43564"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83407"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_phosphooxymethyl_2_furancarboxaldehyde",
+      "name": "4-(phosphooxymethyl)-2-furancarboxaldehyde",
+      "short": "4-(phosphooxymethyl…",
+      "formula": "C6H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83407"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "5_ammoniomethyl_3_furyl_methyl_phosphate",
+      "name": "[5-(ammoniomethyl)-3-furyl]methyl phosphate",
+      "short": "[5-(ammoniomethyl)-…",
+      "formula": "C6H9NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83431"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "5_ammoniomethyl_3_furyl_methyl_diphosphate",
+      "name": "[5-(ammoniomethyl)-3-furyl]methyl diphosphate",
+      "short": "[5-(ammoniomethyl)-…",
+      "formula": "C6H9NO8P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88054"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "glutamyltyramine",
+      "name": "γ-glutamyltyramine",
+      "formula": "C13H18N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83425"
+      }
+    },
+    {
+      "id": "4_4_2_l_glutamylamino_ethyl_phenoxymethyl_furan",
+      "name": "(4-{4-[2-(γ-L-glutamylamino)ethyl]phenoxymethyl}furan-2-yl)methanamine",
+      "short": "(4-{4-[2-(γ-L-gluta…",
+      "formula": "C19H26N3O5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:88055"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_108",
+      "name": "(5-formylfuran-3-yl)methyl phosphate transaminase",
+      "ec": [
+        "2.6.1.108"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_31",
+      "name": "[5-(aminomethyl)furan-3-yl]methyl phosphate kinase",
+      "ec": [
+        "2.7.4.31"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_131",
+      "name": "(4-{4-[2-(gamma-L-glutamylamino)ethyl]phenoxymethyl}furan-2-",
+      "ec": [
+        "2.5.1.131"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(5-formylfuran-3-yl)methyl phosphate transaminase",
+      "equation": "4-(hydroxymethyl)-2-furancarboxaldehyde phosphate + L-alanine = [5-(aminomethyl)-3-furyl]methyl phosphate + pyruvate",
+      "ec": "2.6.1.108",
+      "substrates": [
+        {
+          "metabolite": "4_phosphooxymethyl_2_furancarboxaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_ammoniomethyl_3_furyl_methyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_108"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[5-(aminomethyl)furan-3-yl]methyl phosphate kinase",
+      "equation": "[5-(aminomethyl)-3-furyl]methyl phosphate + ATP = [5-(aminomethyl)furan-3-yl]methyl diphosphate + ADP",
+      "ec": "2.7.4.31",
+      "substrates": [
+        {
+          "metabolite": "5_ammoniomethyl_3_furyl_methyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_ammoniomethyl_3_furyl_methyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47836"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47836"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(4-{4-[2-(gamma-L-glutamylamino)ethyl]phenoxymethyl}furan-2-",
+      "equation": "gamma-L-glutamyltyramine + [5-(aminomethyl)furan-3-yl]methyl diphosphate = (4-{4-[2-(gamma-L-glutamylamino)ethyl]phenoxymethyl}furan-2-yl)methanamine + diphosphate",
+      "ec": "2.5.1.131",
+      "substrates": [
+        {
+          "metabolite": "glutamyltyramine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_ammoniomethyl_3_furyl_methyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_4_2_l_glutamylamino_ethyl_phenoxymethyl_furan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47840"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47840"
+          }
+        ]
+      }
+    }
+  ]
+}

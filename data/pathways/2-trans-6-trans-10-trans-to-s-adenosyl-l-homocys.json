@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-trans-6-trans-10-trans-to-s-adenosyl-l-homocys",
+  "name": "2-trans,6-trans,10-trans-… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2-trans,6-trans,10-trans-geranylgeranyl diphosphate(3−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:54676"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58756"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+      "name": "2-trans,6-trans,10-trans-geranylgeranyl diphosphate",
+      "short": "2-trans,6-trans,10-…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58756"
+      }
+    },
+    {
+      "id": "kolavenyl_diphosphate",
+      "name": "(+)-kolavenyl diphosphate",
+      "short": "(+)-kolavenyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:138311"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "kolavelool",
+      "name": "(+)-kolavelool",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138313"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "o_methylkolavelool",
+      "name": "(+)-O-methylkolavelool",
+      "short": "(+)-O-methylkolavel…",
+      "formula": "C21H36O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:139480"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_5_1_29",
+      "name": "(+)-kolavenyl diphosphate synthase",
+      "ec": [
+        "5.5.1.29"
+      ]
+    },
+    {
+      "id": "ec_3_1_7_12",
+      "name": "(+)-kolavelool synthase",
+      "ec": [
+        "3.1.7.12"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_347",
+      "name": "(+)-O-methylkolavelool synthase",
+      "ec": [
+        "2.1.1.347"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-kolavenyl diphosphate synthase",
+      "equation": "(2E,6E,10E)-geranylgeranyl diphosphate = (+)-kolavenyl diphosphate",
+      "ec": "5.5.1.29",
+      "substrates": [
+        {
+          "metabolite": "2_trans_6_trans_10_trans_geranylgeranyl_diphosph",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kolavenyl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:54676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(+)-kolavelool synthase",
+      "equation": "(+)-kolavenyl diphosphate + H2O = (+)-kolavelool + diphosphate",
+      "ec": "3.1.7.12",
+      "substrates": [
+        {
+          "metabolite": "kolavenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kolavelool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_7_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:54672"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54672"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(+)-O-methylkolavelool synthase",
+      "equation": "(+)-kolavelool + S-adenosyl-L-methionine = (+)-O-methylkolavelool + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.347",
+      "substrates": [
+        {
+          "metabolite": "kolavelool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_methylkolavelool",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_347"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55968"
+          }
+        ]
+      }
+    }
+  ]
+}

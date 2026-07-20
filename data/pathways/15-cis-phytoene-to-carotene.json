@@ -1,0 +1,213 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "15-cis-phytoene-to-carotene",
+  "name": "15-cis-phytoene to ε-carotene",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 15-cis-phytoene to ε-carotene, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15585"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27787"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "15_cis_phytoene",
+      "name": "15-cis-phytoene",
+      "formula": "C40H64",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27787"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "lycopene",
+      "name": "lycopene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15948"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "δ-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27705"
+      }
+    },
+    {
+      "id": "carotene",
+      "name": "ε-carotene",
+      "formula": "C40H56",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:32549"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_99_31",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "ec": [
+        "1.3.99.31"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_18",
+      "name": "lycopene epsilon-cyclase",
+      "ec": [
+        "5.5.1.18"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phytoene desaturase (lycopene-forming)",
+      "equation": "15-cis-phytoene + 4 A = all-trans-lycopene + 4 AH2",
+      "ec": "1.3.99.31",
+      "substrates": [
+        {
+          "metabolite": "15_cis_phytoene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 4
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15585"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "lycopene epsilon-cyclase",
+      "equation": "all-trans-lycopene = delta-carotene",
+      "ec": "5.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "lycopene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53124"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lycopene epsilon-cyclase",
+      "equation": "delta-carotene = epsilon-carotene",
+      "ec": "5.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carotene",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53128"
+          }
+        ]
+      }
+    }
+  ]
+}

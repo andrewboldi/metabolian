@@ -1,0 +1,292 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7r-7-4-carboxylatobuta-to-hydrogen-donor",
+  "name": "(7R)-7-(4-carboxylatobuta… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (7R)-7-(4-carboxylatobutanamido)cephalosporanate to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23508"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58693"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7r_7_4_carboxylatobutanamido_cephalosporanate",
+      "name": "(7R)-7-(4-carboxylatobutanamido)cephalosporanate",
+      "short": "7-(4-carboxylatobut…",
+      "formula": "C15H16N2O8S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58693"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "7_aminocephalosporanic_acid",
+      "name": "7β-aminocephalosporanic acid",
+      "short": "7β-aminocephalospor…",
+      "formula": "C10H12N2O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58501"
+      }
+    },
+    {
+      "id": "glutarate",
+      "name": "glutarate",
+      "formula": "C5H6O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30921"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_2_hydroxyglutarate",
+      "name": "(S)-2-hydroxyglutarate",
+      "short": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16782"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_93",
+      "name": "glutaryl-7-aminocephalosporanic-acid acylase",
+      "ec": [
+        "3.5.1.93"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_64",
+      "name": "glutarate dioxygenase",
+      "ec": [
+        "1.14.11.64"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_2",
+      "name": "L-2-hydroxyglutarate dehydrogenase",
+      "ec": [
+        "1.1.99.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glutaryl-7-aminocephalosporanic-acid acylase",
+      "equation": "(7R)-7-(4-carboxybutanamido)cephalosporanate + H2O = (7R)-7-aminocephalosporanate + glutarate",
+      "ec": "3.5.1.93",
+      "substrates": [
+        {
+          "metabolite": "7r_7_4_carboxylatobutanamido_cephalosporanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_aminocephalosporanic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutarate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23508"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glutarate dioxygenase",
+      "equation": "glutarate + 2-oxoglutarate + O2 = (S)-2-hydroxyglutarate + succinate + CO2",
+      "ec": "1.14.11.64",
+      "substrates": [
+        {
+          "metabolite": "glutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13821"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-2-hydroxyglutarate dehydrogenase",
+      "equation": "(S)-2-hydroxyglutarate + A = 2-oxoglutarate + AH2",
+      "ec": "1.1.99.2",
+      "substrates": [
+        {
+          "metabolite": "s_2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21252"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21252"
+          }
+        ]
+      }
+    }
+  ]
+}

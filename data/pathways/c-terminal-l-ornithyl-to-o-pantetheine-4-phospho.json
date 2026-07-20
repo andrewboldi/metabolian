@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "c-terminal-l-ornithyl-to-o-pantetheine-4-phospho",
+  "name": "C-terminal-γ-(L-ornithyl)… to O-(pantetheine-4'-phospho…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from C-terminal-γ-(L-ornithyl)-L-glutamyl(1−) group to O-(pantetheine-4'-phosphoryl)serine(1−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52676"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136763"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "c_terminal_l_ornithyl_l_glutamyl_1_group",
+      "name": "C-terminal-γ-(L-ornithyl)-L-glutamyl(1−) group",
+      "short": "C-terminal-γ-(L-orn…",
+      "formula": "C10H17N3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136763"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_glutamo_2_group",
+      "name": "L-glutamo(2−) group",
+      "formula": "C5H6NO4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78525"
+      }
+    },
+    {
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:46911"
+      }
+    },
+    {
+      "id": "o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser",
+      "name": "O-[S-(3R)-3-hydroxyacylpantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(3R)-3-hydroxy…",
+      "formula": "C17H28N3O10PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78827"
+      }
+    },
+    {
+      "id": "n2_3r_hydroxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-hydroxy-acyl]-L-ornithine",
+      "short": "N2-[(3R)-hydroxy-ac…",
+      "formula": "C8H15N2O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138482"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+      "name": "O-(S-fatty acylpantetheine-4'-phosphoryl)-L-serine(1−)",
+      "short": "O-(S-fatty…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138651"
+      }
+    },
+    {
+      "id": "n2_3r_3_acyloxy_acyl_l_ornithine",
+      "name": "N2-[(3R)-3-(acyloxy)acyl]-L-ornithine",
+      "short": "N2-[(3R)-3-(acyloxy…",
+      "formula": "C9H14N2O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140663"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_132",
+      "name": "[amino group carrier protein]-ornithine hydrolase",
+      "ec": [
+        "3.5.1.132"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_30",
+      "name": "L-ornithine N(alpha)-acyltransferase",
+      "ec": [
+        "2.3.2.30"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_270",
+      "name": "lyso-ornithine lipid O-acyltransferase",
+      "ec": [
+        "2.3.1.270"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "[amino group carrier protein]-ornithine hydrolase",
+      "equation": "[amino-group carrier protein]-C-terminal-gamma-(L-ornithyl)-L-glutamate + H2O = [amino-group carrier protein]-C-terminal-L-glutamate + L-ornithine",
+      "ec": "3.5.1.132",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_ornithyl_l_glutamyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamo_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52676"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52676"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-ornithine N(alpha)-acyltransferase",
+      "equation": "a (3R)-hydroxyacyl-[ACP] + L-ornithine = a lyso-ornithine lipid + holo-[ACP] + H(+)",
+      "ec": "2.3.2.30",
+      "substrates": [
+        {
+          "metabolite": "o_s_3r_3_hydroxyacylpantetheine_4_phosphoryl_ser",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_3r_hydroxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20633"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20633"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lyso-ornithine lipid O-acyltransferase",
+      "equation": "a lyso-ornithine lipid + a fatty acyl-[ACP] = an N(2)-[(3R)-3-(acyloxy)acyl]-L-ornithine lipid + holo-[ACP]",
+      "ec": "2.3.1.270",
+      "substrates": [
+        {
+          "metabolite": "n2_3r_hydroxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_s_fatty_acylpantetheine_4_phosphoryl_l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n2_3r_3_acyloxy_acyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_270"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55760"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55760"
+          }
+        ]
+      }
+    }
+  ]
+}

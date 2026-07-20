@@ -1,0 +1,247 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-serine-to-ammonium",
+  "name": "L-serine to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-serine zwitterion to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22852"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:33384"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "3_hydroxypyruvate",
+      "name": "3-hydroxypyruvate",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17180"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "d_alanine",
+      "name": "D-alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57416"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "l_glutamyl_d_alaninate",
+      "name": "L-γ-glutamyl-D-alaninate",
+      "short": "L-γ-glutamyl-D-alan…",
+      "formula": "C8H13N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57915"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_51",
+      "name": "serine--pyruvate transaminase",
+      "ec": [
+        "2.6.1.51"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_1",
+      "name": "alanine racemase",
+      "ec": [
+        "5.1.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_14",
+      "name": "D-alanine gamma-glutamyltransferase",
+      "ec": [
+        "2.3.2.14"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "serine--pyruvate transaminase",
+      "equation": "L-serine + pyruvate = 3-hydroxypyruvate + L-alanine",
+      "ec": "2.6.1.51",
+      "substrates": [
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxypyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22852"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22852"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alanine racemase",
+      "equation": "L-alanine = D-alanine",
+      "ec": "5.1.1.1",
+      "substrates": [
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20249"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20249"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-alanine gamma-glutamyltransferase",
+      "equation": "D-alanine + L-glutamine = gamma-L-glutamyl-D-alanine + NH4(+)",
+      "ec": "2.3.2.14",
+      "substrates": [
+        {
+          "metabolite": "d_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamyl_d_alaninate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23556"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23556"
+          }
+        ]
+      }
+    }
+  ]
+}

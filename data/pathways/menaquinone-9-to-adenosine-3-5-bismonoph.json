@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "menaquinone-9-to-adenosine-3-5-bismonoph",
+  "name": "menaquinone-9 to adenosine 3',5'-bismonoph…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from menaquinone-9 to adenosine 3',5'-bismonophosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51924"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:44147"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "menaquinone_9",
+      "name": "menaquinone-9",
+      "formula": "C56H80O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:44147"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "dihydromenaquinone_9",
+      "name": "β-dihydromenaquinone-9",
+      "short": "β-dihydromenaquinon…",
+      "formula": "C56H82O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134607"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hydroxy_dihydromenaquinone_9",
+      "name": "ω-hydroxy-β-dihydromenaquinone-9",
+      "short": "ω-hydroxy-β-dihydro…",
+      "formula": "C56H82O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140189"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "sulfo_dihydromenaquinone_9",
+      "name": "ω-sulfo-β-dihydromenaquinone-9",
+      "short": "ω-sulfo-β-dihydrome…",
+      "formula": "C56H81O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:142861"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_99_38",
+      "name": "menaquinone-9beta-reductase",
+      "ec": [
+        "1.3.99.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_27",
+      "name": "beta-dihydromenaquinone-9 omega-hydroxylase",
+      "ec": [
+        "1.14.15.27"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_40",
+      "name": "omega-hydroxy-beta-dihydromenaquinone-9 sulfotransferase",
+      "ec": [
+        "2.8.2.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "menaquinone-9beta-reductase",
+      "equation": "menaquinone-9 + AH2 = beta-dihydromenaquinone-9 + A",
+      "ec": "1.3.99.38",
+      "substrates": [
+        {
+          "metabolite": "menaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydromenaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-dihydromenaquinone-9 omega-hydroxylase",
+      "equation": "beta-dihydromenaquinone-9 + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = omega-hydroxy-beta-dihydromenaquinone-9 + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.27",
+      "substrates": [
+        {
+          "metabolite": "dihydromenaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hydroxy_dihydromenaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "omega-hydroxy-beta-dihydromenaquinone-9 sulfotransferase",
+      "equation": "omega-hydroxy-beta-dihydromenaquinone-9 + 3'-phosphoadenylyl sulfate = omega-sulfo-beta-dihydromenaquinone-9 + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.40",
+      "substrates": [
+        {
+          "metabolite": "hydroxy_dihydromenaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfo_dihydromenaquinone_9",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58892"
+          }
+        ]
+      }
+    }
+  ]
+}

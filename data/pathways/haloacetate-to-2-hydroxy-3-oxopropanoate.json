@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "haloacetate-to-2-hydroxy-3-oxopropanoate",
+  "name": "haloacetate to 2-hydroxy-3-oxopropanoate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from haloacetate(1−) to 2-hydroxy-3-oxopropanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11044"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85638"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "haloacetate",
+      "name": "haloacetate",
+      "formula": "C2H2O2X",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85638"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "halide_anion",
+      "name": "halide anion",
+      "formula": "X",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16042"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29805"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "2_hydroxy_3_oxopropanoate",
+      "name": "2-hydroxy-3-oxopropanoate",
+      "short": "2-hydroxy-3-oxoprop…",
+      "formula": "C3H3O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57978"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_8_1_3",
+      "name": "haloacetate dehalogenase",
+      "ec": [
+        "3.8.1.3"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_79",
+      "name": "glyoxylate reductase (NADP(+))",
+      "ec": [
+        "1.1.1.79"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_47",
+      "name": "tartronate-semialdehyde synthase",
+      "ec": [
+        "4.1.1.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "haloacetate dehalogenase",
+      "equation": "a haloacetate + H2O = a halide anion + glycolate + H(+)",
+      "ec": "3.8.1.3",
+      "substrates": [
+        {
+          "metabolite": "haloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "halide_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_8_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11044"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11044"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glyoxylate reductase (NADP(+))",
+      "equation": "glycolate + NADP(+) = glyoxylate + NADPH + H(+)",
+      "ec": "1.1.1.79",
+      "substrates": [
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tartronate-semialdehyde synthase",
+      "equation": "2 glyoxylate + H(+) = 2-hydroxy-3-oxopropanoate + CO2",
+      "ec": "4.1.1.47",
+      "substrates": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxy_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10136"
+          }
+        ]
+      }
+    }
+  ]
+}

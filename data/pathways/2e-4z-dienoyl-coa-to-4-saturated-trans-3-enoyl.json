@@ -1,0 +1,253 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2e-4z-dienoyl-coa-to-4-saturated-trans-3-enoyl",
+  "name": "(2E,4Z)-dienoyl-CoA to 4-saturated-trans-3-enoyl…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (2E,4Z)-dienoyl-CoA(4−) to 4-saturated-trans-3-enoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:45232"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85099"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2e_4z_dienoyl_coa",
+      "name": "(2E,4Z)-dienoyl-CoA",
+      "formula": "C26H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85099"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_5_saturated_trans_2_enoyl_coa",
+      "name": "4,5-saturated-trans-2-enoyl-CoA",
+      "short": "4,5-saturated-trans…",
+      "formula": "C26H37N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85100"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "trans_trans_2_4_dienoyl_coa",
+      "name": "trans,trans-2,4-dienoyl-CoA",
+      "short": "trans,trans-2,4-die…",
+      "formula": "C26H35N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85101"
+      }
+    },
+    {
+      "id": "4_saturated_trans_3_enoyl_coa",
+      "name": "4-saturated-trans-3-enoyl-CoA",
+      "short": "4-saturated-trans-3…",
+      "formula": "C26H37N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:85493"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_34",
+      "name": "2,4-dienoyl-CoA reductase [(2E)-enoyl-CoA-producing]",
+      "ec": [
+        "1.3.1.34"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_124",
+      "name": "2,4-dienoyl-CoA reductase [(3E)-enoyl-CoA-producing]",
+      "ec": [
+        "1.3.1.124"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,4-dienoyl-CoA reductase [(2E)-enoyl-CoA-producing]",
+      "equation": "a (2E,4Z)-dienoyl-CoA + NADPH + H(+) = a 4,5-saturated-(2E)-enoyl-CoA + NADP(+)",
+      "ec": "1.3.1.34",
+      "substrates": [
+        {
+          "metabolite": "2e_4z_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_5_saturated_trans_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:45232"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45232"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,4-dienoyl-CoA reductase [(2E)-enoyl-CoA-producing]",
+      "equation": "a 4,5-saturated-(2E)-enoyl-CoA + NADP(+) = a (2E,4E)-dienoyl-CoA + NADPH + H(+)",
+      "ec": "1.3.1.34",
+      "substrates": [
+        {
+          "metabolite": "4_5_saturated_trans_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_trans_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,4-dienoyl-CoA reductase [(3E)-enoyl-CoA-producing]",
+      "equation": "a (2E,4E)-dienoyl-CoA + NADPH + H(+) = a 4,5-saturated-(3E)-enoyl-CoA + NADP(+)",
+      "ec": "1.3.1.124",
+      "substrates": [
+        {
+          "metabolite": "trans_trans_2_4_dienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_saturated_trans_3_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45912"
+          }
+        ]
+      }
+    }
+  ]
+}

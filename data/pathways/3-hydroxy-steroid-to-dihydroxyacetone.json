@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-steroid-to-dihydroxyacetone",
+  "name": "3β-hydroxy steroid to dihydroxyacetone",
+  "category": "lipid-metabolism",
+  "summary": "A 4-step route from 3β-hydroxy steroid to dihydroxyacetone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16897"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:36836"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_steroid",
+      "name": "3β-hydroxy steroid",
+      "formula": "C19H31OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:36836"
+      }
+    },
+    {
+      "id": "triglyceride",
+      "name": "triglyceride",
+      "formula": "C6H5O6R3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17855"
+      }
+    },
+    {
+      "id": "3_hydroxysterol_ester",
+      "name": "3β-hydroxysterol ester",
+      "short": "3β-hydroxysterol…",
+      "formula": "C20H30O2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13610"
+      }
+    },
+    {
+      "id": "diglyceride",
+      "name": "diglyceride",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18035"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "monoacylglycerol",
+      "name": "monoacylglycerol",
+      "formula": "C4H7O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17408"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "dihydroxyacetone",
+      "name": "dihydroxyacetone",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16016"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_77",
+      "name": "triacylglycerol--sterol O-acyltransferase",
+      "ec": [
+        "2.3.1.77"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_79",
+      "name": "hormone-sensitive lipase",
+      "ec": [
+        "3.1.1.79"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_6",
+      "name": "glycerol dehydrogenase",
+      "ec": [
+        "1.1.1.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "triacylglycerol--sterol O-acyltransferase",
+      "equation": "a 3beta-hydroxysteroid + a triacylglycerol = a 3beta-hydroxysteroid ester + a diacylglycerol",
+      "ec": "2.3.1.77",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "triglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxysterol_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "diglyceride",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hormone-sensitive lipase",
+      "equation": "a diacylglycerol + H2O = a monoacylglycerol + a fatty acid + H(+)",
+      "ec": "3.1.1.79",
+      "substrates": [
+        {
+          "metabolite": "diglyceride",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "monoacylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32731"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32731"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hormone-sensitive lipase",
+      "equation": "a monoacylglycerol + H2O = glycerol + a fatty acid + H(+)",
+      "ec": "3.1.1.79",
+      "substrates": [
+        {
+          "metabolite": "monoacylglycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15245"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glycerol dehydrogenase",
+      "equation": "glycerol + NAD(+) = dihydroxyacetone + NADH + H(+)",
+      "ec": "1.1.1.6",
+      "substrates": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13769"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13769"
+          }
+        ]
+      }
+    }
+  ]
+}

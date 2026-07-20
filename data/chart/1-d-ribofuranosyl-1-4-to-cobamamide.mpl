@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 1-d-ribofuranosyl-1-4-to-cobamamide "1-(β-D-ribofuranosyl)-1,4… to cobamamide" {
-  spacing 152
+  spacing 280
 
   spine at 0,0 {
     1_d_ribofuranosyl_1_4_dihydronicotinamide

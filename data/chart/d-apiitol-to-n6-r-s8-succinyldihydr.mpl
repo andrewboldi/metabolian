@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway d-apiitol-to-n6-r-s8-succinyldihydr "D-apiitol to N6-[(R)-S8-succinyldihydr…" {
-  spacing 152
+  spacing 280
 
   spine at 0,0 {
     d_apiitol

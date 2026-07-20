@@ -1,0 +1,295 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dcdp-to-ammonium",
+  "name": "dCDP to ammonium",
+  "category": "other",
+  "summary": "A 3-step route from dCDP(3−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27678"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58593"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dcdp",
+      "name": "dCDP",
+      "formula": "C9H12N3O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58593"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57566"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H11N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:246422"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_4_6",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": [
+        "2.7.4.6"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_12",
+      "name": "dCTP diphosphatase",
+      "ec": [
+        "3.6.1.12"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_65",
+      "name": "(d)CTP diphosphatase",
+      "ec": [
+        "3.6.1.65"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_12",
+      "name": "dCMP deaminase",
+      "ec": [
+        "3.5.4.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleoside-diphosphate kinase",
+      "equation": "dCDP + ATP = dCTP + ADP",
+      "ec": "2.7.4.6",
+      "substrates": [
+        {
+          "metabolite": "dcdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27678"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27678"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nucleotide diphosphatase",
+      "equation": "dCTP + H2O = dCMP + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dCMP deaminase",
+      "equation": "dCMP + H2O + H(+) = dUMP + NH4(+)",
+      "ec": "3.5.4.12",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22924"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-o-d-glucosyl-d-gluc-to-d-fructofuranuronate",
+  "name": "3-O-β-D-glucosyl-β-D-gluc… to D-fructofuranuronate",
+  "category": "other",
+  "summary": "A 3-step route from 3-O-β-D-glucosyl-β-D-glucuronoside to D-fructofuranuronate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78699"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229542"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_o_d_glucosyl_d_glucuronoside",
+      "name": "3-O-β-D-glucosyl-β-D-glucuronoside",
+      "short": "3-O-β-D-glucosyl-β-…",
+      "formula": "C12H18O12R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:229542"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_glucosiduronate",
+      "name": "β-D-glucosiduronate",
+      "formula": "C6H8O7R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83411"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_glucopyranuronate",
+      "name": "D-glucopyranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58720"
+      }
+    },
+    {
+      "id": "alcohol",
+      "name": "alcohol",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30879"
+      }
+    },
+    {
+      "id": "d_fructofuranuronate",
+      "name": "D-fructofuranuronate",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59863"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_392",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "ec": [
+        "2.4.1.392"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_31",
+      "name": "beta-glucuronidase",
+      "ec": [
+        "3.2.1.31"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_12",
+      "name": "glucuronate isomerase",
+      "ec": [
+        "5.3.1.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-O-beta-D-glucopyranosyl-beta-D-glucuronide phosphorylase",
+      "equation": "a 3-O-beta-D-glucosyl-beta-D-glucuronoside + phosphate = a beta-D-glucuronoside + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.392",
+      "substrates": [
+        {
+          "metabolite": "3_o_d_glucosyl_d_glucuronoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_392"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78699"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78699"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-glucuronidase",
+      "equation": "a beta-D-glucuronoside + H2O = D-glucuronate + an alcohol",
+      "ec": "3.2.1.31",
+      "substrates": [
+        {
+          "metabolite": "d_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17633"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17633"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucuronate isomerase",
+      "equation": "D-glucuronate = D-fructuronate",
+      "ec": "5.3.1.12",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13049"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13049"
+          }
+        ]
+      }
+    }
+  ]
+}

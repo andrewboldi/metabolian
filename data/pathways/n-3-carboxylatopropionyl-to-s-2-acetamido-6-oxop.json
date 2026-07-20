@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-3-carboxylatopropionyl-to-s-2-acetamido-6-oxop",
+  "name": "N-(3-carboxylatopropionyl… to (S)-2-acetamido-6-oxopime…",
+  "category": "other",
+  "summary": "A 3-step route from N-(3-carboxylatopropionyl)-LL-2,6-diaminopimelate(2−) to (S)-2-acetamido-6-oxopimelate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22608"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58087"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
+      "name": "N-(3-carboxylatopropionyl)-LL-2,6-diaminopimelate",
+      "short": "N-(3-carboxylatopro…",
+      "formula": "C11H16N2O7",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58087"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2s_6s_2_6_diaminopimelic_acid_dizwitterion",
+      "name": "(2S,6S)-2,6-diaminopimelic acid dizwitterion",
+      "short": "(2S,6S)-2,6-diamino…",
+      "formula": "C7H14N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57609"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "s_2_3_4_5_tetrahydrodipicolinate",
+      "name": "(S)-2,3,4,5-tetrahydrodipicolinate",
+      "short": "2,3,4,5-tetrahydrod…",
+      "formula": "C7H7NO4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16845"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "s_2_acetamido_6_oxopimelate",
+      "name": "(S)-2-acetamido-6-oxopimelate",
+      "short": "2-acetamido-6-oxopi…",
+      "formula": "C9H11NO6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58117"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_18",
+      "name": "succinyl-diaminopimelate desuccinylase",
+      "ec": [
+        "3.5.1.18"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_83",
+      "name": "LL-diaminopimelate aminotransferase",
+      "ec": [
+        "2.6.1.83"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_89",
+      "name": "tetrahydrodipicolinate N-acetyltransferase",
+      "ec": [
+        "2.3.1.89"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "succinyl-diaminopimelate desuccinylase",
+      "equation": "N-succinyl-(2S,6S)-2,6-diaminopimelate + H2O = (2S,6S)-2,6-diaminopimelate + succinate",
+      "ec": "3.5.1.18",
+      "substrates": [
+        {
+          "metabolite": "n_3_carboxylatopropionyl_ll_2_6_diaminopimelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_6s_2_6_diaminopimelic_acid_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "LL-diaminopimelate aminotransferase",
+      "equation": "(2S,6S)-2,6-diaminopimelate + 2-oxoglutarate = (S)-2,3,4,5-tetrahydrodipicolinate + L-glutamate + H2O + H(+)",
+      "ec": "2.6.1.83",
+      "substrates": [
+        {
+          "metabolite": "2s_6s_2_6_diaminopimelic_acid_dizwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_3_4_5_tetrahydrodipicolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23988"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23988"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tetrahydrodipicolinate N-acetyltransferase",
+      "equation": "(S)-2,3,4,5-tetrahydrodipicolinate + acetyl-CoA + H2O = L-2-acetamido-6-oxoheptanedioate + CoA",
+      "ec": "2.3.1.89",
+      "substrates": [
+        {
+          "metabolite": "s_2_3_4_5_tetrahydrodipicolinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_2_acetamido_6_oxopimelate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13085"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13085"
+          }
+        ]
+      }
+    }
+  ]
+}

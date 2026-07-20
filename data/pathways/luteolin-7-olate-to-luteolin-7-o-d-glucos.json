@@ -1,0 +1,260 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "luteolin-7-olate-to-luteolin-7-o-d-glucos",
+  "name": "luteolin-7-olate to luteolin 7-O-[(β-D-glucos…",
+  "category": "other",
+  "summary": "A 3-step route from luteolin-7-olate to luteolin 7-O-[(β-D-glucosyluronate)-(1→2)-(β-D-glucosiduronate)] 4'-O-β-D-glucosiduronate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10568"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57545"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "luteolin_7_olate",
+      "name": "luteolin-7-olate",
+      "formula": "C15H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57545"
+      }
+    },
+    {
+      "id": "udp_d_glucuronate",
+      "name": "UDP-α-D-glucuronate",
+      "formula": "C15H19N2O18P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58052"
+      }
+    },
+    {
+      "id": "luteolin_7_o_d_glucosiduronate",
+      "name": "luteolin 7-O-β-D-glucosiduronate",
+      "short": "luteolin 7-O-β-D-gl…",
+      "formula": "C21H16O12",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:77671"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "luteolin_7_o_d_glucosiduronate_1_2_d_glucosiduro",
+      "name": "luteolin 7-O-[(β-D-glucosiduronate)-(1→2)-(β-D-glucosiduronate)]",
+      "short": "luteolin 7-O-[(β-D-…",
+      "formula": "C27H23O18",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:77989"
+      }
+    },
+    {
+      "id": "luteolin_7_o_d_glucosyluronate_1_2_d_glucosiduro",
+      "name": "luteolin 7-O-[(β-D-glucosyluronate)-(1→2)-(β-D-glucosiduronate)] 4'-O-β-D-glucosiduronate",
+      "short": "luteolin 7-O-[(β-D-…",
+      "formula": "C33H30O24",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77825"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_189",
+      "name": "luteolin 7-O-glucuronosyltransferase",
+      "ec": [
+        "2.4.1.189"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_190",
+      "name": "luteolin-7-O-glucuronide 2''-O-glucuronosyltransferase",
+      "ec": [
+        "2.4.1.190"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_191",
+      "name": "luteolin-7-O-diglucuronide 4'-O-glucuronosyltransferase",
+      "ec": [
+        "2.4.1.191"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "luteolin 7-O-glucuronosyltransferase",
+      "equation": "luteolin + UDP-alpha-D-glucuronate = luteolin 7-O-beta-D-glucuronide + UDP + H(+)",
+      "ec": "2.4.1.189",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_olate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "luteolin_7_o_d_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_189"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "luteolin-7-O-glucuronide 2''-O-glucuronosyltransferase",
+      "equation": "luteolin 7-O-beta-D-glucuronide + UDP-alpha-D-glucuronate = luteolin 7-O-[(beta-D-glucuronosyl)-(1->2)-(beta-D-glucuronide)] + UDP + H(+)",
+      "ec": "2.4.1.190",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_o_d_glucosiduronate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "luteolin_7_o_d_glucosiduronate_1_2_d_glucosiduro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_190"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14149"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14149"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "luteolin-7-O-diglucuronide 4'-O-glucuronosyltransferase",
+      "equation": "luteolin 7-O-[(beta-D-glucuronosyl)-(1->2)-(beta-D-glucuronide)] + UDP-alpha-D-glucuronate = luteolin 7-O-[(beta-D-glucuronosyl)-(1->2)-(beta-D-glucuronide)] 4'-O-beta-D-glucuronide + UDP + H(+)",
+      "ec": "2.4.1.191",
+      "substrates": [
+        {
+          "metabolite": "luteolin_7_o_d_glucosiduronate_1_2_d_glucosiduro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucuronate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "luteolin_7_o_d_glucosyluronate_1_2_d_glucosiduro",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_191"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22116"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22116"
+          }
+        ]
+      }
+    }
+  ]
+}

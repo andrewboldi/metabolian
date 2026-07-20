@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3r-3-hydroxy-d-aspartate-to-formyl-coa",
+  "name": "(3R)-3-hydroxy-D-aspartate to formyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (3R)-3-hydroxy-D-aspartate(1−) to formyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27938"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60898"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3r_3_hydroxy_d_aspartate",
+      "name": "(3R)-3-hydroxy-D-aspartate",
+      "short": "3-hydroxy-D-asparta…",
+      "formula": "C4H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60898"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "oxalyl_coa",
+      "name": "oxalyl-CoA",
+      "formula": "C23H31N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57388"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "formyl_coa",
+      "name": "formyl-CoA",
+      "formula": "C22H32N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57376"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_3_41",
+      "name": "3-hydroxy-D-aspartate aldolase",
+      "ec": [
+        "4.1.3.41"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_17",
+      "name": "glyoxylate dehydrogenase (acylating)",
+      "ec": [
+        "1.2.1.17"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_8",
+      "name": "oxalyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-hydroxy-D-aspartate aldolase",
+      "equation": "(3R)-3-hydroxy-D-aspartate = glyoxylate + glycine",
+      "ec": "4.1.3.41",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxy_d_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_3_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27938"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27938"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glyoxylate dehydrogenase (acylating)",
+      "equation": "glyoxylate + NADP(+) + CoA = oxalyl-CoA + NADPH + H(+)",
+      "ec": "1.2.1.17",
+      "substrates": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21024"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21024"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "oxalyl-CoA decarboxylase",
+      "equation": "oxalyl-CoA + H(+) = formyl-CoA + CO2",
+      "ec": "4.1.1.8",
+      "substrates": [
+        {
+          "metabolite": "oxalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19333"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19333"
+          }
+        ]
+      }
+    }
+  ]
+}

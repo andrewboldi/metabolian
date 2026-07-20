@@ -1,0 +1,268 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3r-5-guanidino-3-methyl-to-udp-n-acetyl-3-o-1-c",
+  "name": "(3R)-5-guanidino-3-methyl… to UDP-N-acetyl-3-O-(1-carbo…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (3R)-5-guanidino-3-methyl-2-oxopentanoic acid zwitterion to UDP-N-acetyl-3-O-(1-carboxylatovinyl)-α-D-glucosamine(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:78823"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:229580"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3r_5_guanidino_3_methyl_2_oxopentanoic_acid",
+      "name": "(3R)-5-guanidino-3-methyl-2-oxopentanoic acid",
+      "short": "5-guanidino-3-methy…",
+      "formula": "C7H13N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:229580"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "3r_3_methyl_l_arginine",
+      "name": "(3R)-3-methyl-L-arginine",
+      "short": "3-methyl-L-arginine",
+      "formula": "C7H17N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:229593"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin",
+      "name": "UDP-N-acetyl-3-O-(1-carboxylatovinyl)-α-D-glucosamine",
+      "short": "UDP-N-acetyl-3-O-(1…",
+      "formula": "C20H26N3O19P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:68483"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_126",
+      "name": "L-aspartate:5-guanidino-3-methyl-2-oxopentanoate transaminase",
+      "ec": [
+        "2.6.1.126"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_31",
+      "name": "phosphoenolpyruvate carboxylase",
+      "ec": [
+        "4.1.1.31"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_7",
+      "name": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase",
+      "ec": [
+        "2.5.1.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-aspartate:5-guanidino-3-methyl-2-oxopentanoate transaminase",
+      "equation": "(3R)-5-guanidino-3-methyl-2-oxopentanoate + L-aspartate = (3R)-3-methyl-L-arginine + oxaloacetate",
+      "ec": "2.6.1.126",
+      "substrates": [
+        {
+          "metabolite": "3r_5_guanidino_3_methyl_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_3_methyl_l_arginine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:78823"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78823"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoenolpyruvate carboxylase",
+      "equation": "oxaloacetate + phosphate = phosphoenolpyruvate + hydrogencarbonate",
+      "ec": "4.1.1.31",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28370"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-N-acetylglucosamine 1-carboxyvinyltransferase",
+      "equation": "phosphoenolpyruvate + UDP-N-acetyl-alpha-D-glucosamine = UDP-N-acetyl-3-O-(1-carboxyvinyl)-alpha-D-glucosamine + phosphate",
+      "ec": "2.5.1.7",
+      "substrates": [
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18681"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18681"
+          }
+        ]
+      }
+    }
+  ]
+}

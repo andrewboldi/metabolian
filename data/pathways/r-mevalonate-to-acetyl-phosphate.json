@@ -1,0 +1,485 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-mevalonate-to-acetyl-phosphate",
+  "name": "(R)-mevalonate to acetyl phosphate",
+  "category": "other",
+  "summary": "A 6-step route from (R)-mevalonate to acetyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17065"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:36464"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mevalonate",
+      "name": "(R)-Mevalonate",
+      "formula": "C6H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36464"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "mevalonate_5p",
+      "name": "(R)-5-Phosphomevalonate",
+      "short": "5-Phosphomevalonate",
+      "formula": "C6H10O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58146"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "mevalonate_5pp",
+      "name": "(R)-5-Diphosphomevalonate",
+      "short": "5-Diphosphomevalona…",
+      "formula": "C6H10O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57557"
+      }
+    },
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "neryl_diphosphate",
+      "name": "neryl diphosphate",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57665"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "phellandrene",
+      "name": "β-phellandrene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:48741"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "acetyl_phosphate",
+      "name": "acetyl phosphate",
+      "formula": "C2H3O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:22191"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_36",
+      "name": "mevalonate kinase",
+      "ec": [
+        "2.7.1.36"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_2",
+      "name": "phosphomevalonate kinase",
+      "ec": [
+        "2.7.4.2"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_33",
+      "name": "diphosphomevalonate decarboxylase",
+      "ec": [
+        "4.1.1.33"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_28",
+      "name": "dimethylallylcistransferase",
+      "ec": [
+        "2.5.1.28"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_51",
+      "name": "beta-phellandrene synthase (neryl-diphosphate-cyclizing)",
+      "ec": [
+        "4.2.3.51"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_12",
+      "name": "acetate kinase (diphosphate)",
+      "ec": [
+        "2.7.2.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mevalonate kinase",
+      "equation": "(R)-mevalonate + ATP = (R)-5-phosphomevalonate + ADP + H(+)",
+      "ec": "2.7.1.36",
+      "substrates": [
+        {
+          "metabolite": "mevalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mevalonate_5p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17065"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17065"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphomevalonate kinase",
+      "equation": "(R)-5-phosphomevalonate + ATP = (R)-5-diphosphomevalonate + ADP",
+      "ec": "2.7.4.2",
+      "substrates": [
+        {
+          "metabolite": "mevalonate_5p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mevalonate_5pp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16341"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16341"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diphosphomevalonate decarboxylase",
+      "equation": "(R)-5-diphosphomevalonate + ATP = isopentenyl diphosphate + ADP + CO2 + phosphate",
+      "ec": "4.1.1.33",
+      "substrates": [
+        {
+          "metabolite": "mevalonate_5pp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dimethylallylcistransferase",
+      "equation": "isopentenyl diphosphate + dimethylallyl diphosphate = neryl diphosphate + diphosphate",
+      "ec": "2.5.1.28",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neryl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:11328"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11328"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "beta-phellandrene synthase (neryl-diphosphate-cyclizing)",
+      "equation": "neryl diphosphate = beta-phellandrene + diphosphate",
+      "ec": "4.2.3.51",
+      "substrates": [
+        {
+          "metabolite": "neryl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phellandrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:27830"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27830"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r6",
+      "name": "acetate kinase (diphosphate)",
+      "equation": "acetate + diphosphate = acetyl phosphate + phosphate",
+      "ec": "2.7.2.12",
+      "substrates": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 6,
+      "xrefs": {
+        "rhea": "RHEA:24276"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24276"
+          }
+        ]
+      }
+    }
+  ]
+}

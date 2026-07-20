@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isophthalate-to-n-benzoylanthranilate",
+  "name": "isophthalate to N-benzoylanthranilate",
+  "category": "other",
+  "summary": "A 3-step route from isophthalate(2−) to N-benzoylanthranilate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:61636"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30803"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isophthalate",
+      "name": "isophthalate",
+      "formula": "C8H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30803"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "isophthalyl_coa",
+      "name": "isophthalyl-CoA",
+      "formula": "C29H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:143791"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "n_benzoylanthranilate",
+      "name": "N-benzoylanthranilate",
+      "short": "N-benzoylanthranila…",
+      "formula": "C14H10NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17331"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_6_2_1_58",
+      "name": "isophthalate--CoA ligase",
+      "ec": [
+        "6.2.1.58"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_118",
+      "name": "isophthalyl-CoA decarboxylase",
+      "ec": [
+        "4.1.1.118"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_144",
+      "name": "anthranilate N-benzoyltransferase",
+      "ec": [
+        "2.3.1.144"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isophthalate--CoA ligase",
+      "equation": "isophthalate + ATP + CoA = isophthalyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.58",
+      "substrates": [
+        {
+          "metabolite": "isophthalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "isophthalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:61636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "isophthalyl-CoA decarboxylase",
+      "equation": "isophthalyl-CoA + H(+) = benzoyl-CoA + CO2",
+      "ec": "4.1.1.118",
+      "substrates": [
+        {
+          "metabolite": "isophthalyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:61640"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:61640"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "anthranilate N-benzoyltransferase",
+      "equation": "anthranilate + benzoyl-CoA = N-benzoylanthranilate + CoA",
+      "ec": "2.3.1.144",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_benzoylanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_144"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21600"
+          }
+        ]
+      }
+    }
+  ]
+}

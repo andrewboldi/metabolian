@@ -4,13 +4,13 @@
 # edit the generator, not this file.
 
 pathway monosaccharide-1-phosphate-to-diphosphate "monosaccharide 1-phosphate to diphosphate" {
-  spacing 152
+  spacing 264
 
   spine at 0,0 {
     monosaccharide_1_phosphate
     <-> ec_2_7_7_64 [2.7.7.64] +utp +hplus -ppi
     udp_monosaccharide
-    <-> ec_2_4_2_14 [2.4.2.14] +pra +glutamate +ppi -glutamine -h2o
+    <-> ec_2_4_2_12 [2.4.2.12] +nmn +ppi -nicotinamide -hplus
     prpp
     <-> ec_6_3_4_21 [6.3.4.21] +nicotinate +atp +h2o -adp -pi -ppi
     nicotinate_d_ribonucleotide

@@ -1,0 +1,254 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-carboxy-2-hydroxymucona-to-4-carboxy-2-hydroxy",
+  "name": "4-carboxy-2-hydroxymucona… to 4-carboxy-2-hydroxy-cis,c…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-carboxy-2-hydroxymuconate semialdehyde hemiacetal(2−) to 4-carboxy-2-hydroxy-cis,cis-muconate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:29587"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61985"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_carboxy_2_hydroxymuconate_semialdehyde_hemiace",
+      "name": "4-carboxy-2-hydroxymuconate semialdehyde hemiacetal",
+      "short": "4-carboxy-2-hydroxy…",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61985"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "2_oxo_2h_pyran_4_6_dicarboxylate",
+      "name": "2-oxo-2H-pyran-4,6-dicarboxylate",
+      "short": "2-oxo-2H-pyran-4,6-…",
+      "formula": "C7H2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58304"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate",
+      "name": "(1E)-4-oxobut-1-ene-1,2,4-tricarboxylate",
+      "short": "4-oxobut-1-ene-1,2,…",
+      "formula": "C7H3O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57471"
+      }
+    },
+    {
+      "id": "4_carboxy_2_hydroxy_cis_cis_muconate",
+      "name": "4-carboxy-2-hydroxy-cis,cis-muconate",
+      "short": "4-carboxy-2-hydroxy…",
+      "formula": "C7H3O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58142"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_312",
+      "name": "2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase",
+      "ec": [
+        "1.1.1.312"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_57",
+      "name": "2-pyrone-4,6-dicarboxylate lactonase",
+      "ec": [
+        "3.1.1.57"
+      ]
+    },
+    {
+      "id": "ec_5_3_2_8",
+      "name": "4-oxalomesaconate tautomerase",
+      "ec": [
+        "5.3.2.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase",
+      "equation": "4-carboxy-2-hydroxymuconate semialdehyde hemiacetal + NADP(+) = 2-oxo-2H-pyran-4,6-dicarboxylate + NADPH + H(+)",
+      "ec": "1.1.1.312",
+      "substrates": [
+        {
+          "metabolite": "4_carboxy_2_hydroxymuconate_semialdehyde_hemiace",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_2h_pyran_4_6_dicarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_312"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:29587"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29587"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-pyrone-4,6-dicarboxylate lactonase",
+      "equation": "2-oxo-2H-pyran-4,6-dicarboxylate + H2O = (1E)-4-oxobut-1-ene-1,2,4-tricarboxylate + H(+)",
+      "ec": "3.1.1.57",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_2h_pyran_4_6_dicarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10644"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10644"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-oxalomesaconate tautomerase",
+      "equation": "(1E)-4-oxobut-1-ene-1,2,4-tricarboxylate = 4-carboxy-2-hydroxy-cis,cis-muconate",
+      "ec": "5.3.2.8",
+      "substrates": [
+        {
+          "metabolite": "1e_4_oxobut_1_ene_1_2_4_tricarboxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_carboxy_2_hydroxy_cis_cis_muconate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28931"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28931"
+          }
+        ]
+      }
+    }
+  ]
+}

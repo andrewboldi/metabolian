@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7r-7-5-carboxy-5-oxope-to-cephalosporin-c",
+  "name": "(7R)-7-(5-carboxy-5-oxope… to cephalosporin C",
+  "category": "other",
+  "summary": "A 3-step route from (7R)-7-(5-carboxy-5-oxopentanamido)cephalosporanate(2−) to cephalosporin C(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14553"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57536"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7r_7_5_carboxy_5_oxopentanamido_cephalosporanat",
+      "name": "(7R)-7-(5-carboxy-5-oxopentanamido)cephalosporanate",
+      "short": "7-(5-carboxy-5-oxop…",
+      "formula": "C16H16N2O9S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57536"
+      }
+    },
+    {
+      "id": "d_glutamate",
+      "name": "D-glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29986"
+      }
+    },
+    {
+      "id": "cephalosporin_c",
+      "name": "cephalosporin C",
+      "formula": "C16H20N3O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57511"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "deacetylcephalosporin_c",
+      "name": "deacetylcephalosporin C",
+      "short": "deacetylcephalospor…",
+      "formula": "C14H18N3O7S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58366"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_74",
+      "name": "cephalosporin-C transaminase",
+      "ec": [
+        "2.6.1.74"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_41",
+      "name": "cephalosporin-C deacetylase",
+      "ec": [
+        "3.1.1.41"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_175",
+      "name": "deacetylcephalosporin-C acetyltransferase",
+      "ec": [
+        "2.3.1.175"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cephalosporin-C transaminase",
+      "equation": "(7R)-7-(5-carboxy-5-oxopentanamido)deacetylcephalosporanate + D-glutamate = cephalosporin C + 2-oxoglutarate",
+      "ec": "2.6.1.74",
+      "substrates": [
+        {
+          "metabolite": "7r_7_5_carboxy_5_oxopentanamido_cephalosporanat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cephalosporin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cephalosporin-C deacetylase",
+      "equation": "cephalosporin C + H2O = deacetylcephalosporin C + acetate + H(+)",
+      "ec": "3.1.1.41",
+      "substrates": [
+        {
+          "metabolite": "cephalosporin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deacetylcephalosporin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22596"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22596"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "deacetylcephalosporin-C acetyltransferase",
+      "equation": "deacetylcephalosporin C + acetyl-CoA = cephalosporin C + CoA",
+      "ec": "2.3.1.175",
+      "substrates": [
+        {
+          "metabolite": "deacetylcephalosporin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cephalosporin_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_175"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23860"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23860"
+          }
+        ]
+      }
+    }
+  ]
+}

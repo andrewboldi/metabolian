@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway r-amygdalin-to-d-glucopyranose "(R)-amygdalin to D-glucopyranose" {
-  spacing 152
+  spacing 168
 
   spine at 0,0 {
     r_amygdalin

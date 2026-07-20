@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxy-5-pregnan-20-to-testosterone-acetate",
+  "name": "3β-hydroxy-5α-pregnan-20-… to testosterone acetate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3β-hydroxy-5α-pregnan-20-one to testosterone acetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18137"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11909"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxy_5_pregnan_20_one",
+      "name": "3β-hydroxy-5α-pregnan-20-one",
+      "short": "3β-hydroxy-5α-pregn…",
+      "formula": "C21H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:11909"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "5_pregnane_3_20_dione",
+      "name": "5α-pregnane-3,20-dione",
+      "short": "5α-pregnane-3,20-di…",
+      "formula": "C21H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28952"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "progesterone",
+      "name": "progesterone",
+      "formula": "C21H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17026"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "testosterone_acetate",
+      "name": "testosterone acetate",
+      "formula": "C21H30O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16524"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_278",
+      "name": "3beta-hydroxy-5alpha-steroid dehydrogenase",
+      "ec": [
+        "1.1.1.278"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_22",
+      "name": "3-oxo-5alpha-steroid 4-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.3.1.22"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_54",
+      "name": "ketosteroid monooxygenase",
+      "ec": [
+        "1.14.13.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3beta-hydroxy-5alpha-steroid dehydrogenase",
+      "equation": "3beta-hydroxy-5alpha-pregnane-20-one + NADP(+) = 5alpha-pregnane-3,20-dione + NADPH + H(+)",
+      "ec": "1.1.1.278",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_5_pregnan_20_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_278"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18137"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18137"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-oxo-5alpha-steroid 4-dehydrogenase (NADP(+))",
+      "equation": "5alpha-pregnane-3,20-dione + NADP(+) = progesterone + NADPH + H(+)",
+      "ec": "1.3.1.22",
+      "substrates": [
+        {
+          "metabolite": "5_pregnane_3_20_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21952"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21952"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ketosteroid monooxygenase",
+      "equation": "progesterone + NADPH + O2 + H(+) = testosterone acetate + NADP(+) + H2O",
+      "ec": "1.14.13.54",
+      "substrates": [
+        {
+          "metabolite": "progesterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "testosterone_acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11700"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11700"
+          }
+        ]
+      }
+    }
+  ]
+}

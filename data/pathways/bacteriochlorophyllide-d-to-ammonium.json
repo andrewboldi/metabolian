@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "bacteriochlorophyllide-d-to-ammonium",
+  "name": "bacteriochlorophyllide d to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from bacteriochlorophyllide d(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49180"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90955"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "bacteriochlorophyllide_d",
+      "name": "bacteriochlorophyllide d",
+      "short": "bacteriochlorophyll…",
+      "formula": "C31H27MgN4O4R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90955"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "bacteriochlorophyllide_c",
+      "name": "bacteriochlorophyllide c",
+      "short": "bacteriochlorophyll…",
+      "formula": "C32H29MgN4O4R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90965"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bacteriochlorophyllide_e",
+      "name": "bacteriochlorophyllide e",
+      "short": "bacteriochlorophyll…",
+      "formula": "C32H27MgN4O5R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136512"
+      }
+    },
+    {
+      "id": "5_deoxyadenosine",
+      "name": "5'-deoxyadenosine",
+      "formula": "C10H13N5O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17319"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "5_deoxyinosine",
+      "name": "5'-deoxyinosine",
+      "formula": "C10H12N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82775"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_333",
+      "name": "bacteriochlorophyllide d C-20 methyltransferase",
+      "ec": [
+        "2.1.1.333"
+      ]
+    },
+    {
+      "id": "ec_1_17_98_2",
+      "name": "bacteriochlorophyllide c C-7(1)-hydroxylase",
+      "ec": [
+        "1.17.98.2"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_41",
+      "name": "5'-deoxyadenosine deaminase",
+      "ec": [
+        "3.5.4.41"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "bacteriochlorophyllide d C-20 methyltransferase",
+      "equation": "a bacteriochlorophyllide d + S-adenosyl-L-methionine = a bacteriochlorophyllide c + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.333",
+      "substrates": [
+        {
+          "metabolite": "bacteriochlorophyllide_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bacteriochlorophyllide_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_333"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49180"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49180"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "bacteriochlorophyllide c C-7(1)-hydroxylase",
+      "equation": "a bacteriochlorophyllide c + 2 S-adenosyl-L-methionine + H2O = a bacteriochlorophyllide e + 2 5'-deoxyadenosine + 2 L-methionine + 2 H(+)",
+      "ec": "1.17.98.2",
+      "substrates": [
+        {
+          "metabolite": "bacteriochlorophyllide_c",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bacteriochlorophyllide_e",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_98_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52252"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52252"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5'-deoxyadenosine deaminase",
+      "equation": "5'-deoxyadenosine + H2O + H(+) = 5'-deoxyinosine + NH4(+)",
+      "ec": "3.5.4.41",
+      "substrates": [
+        {
+          "metabolite": "5_deoxyadenosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_deoxyinosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42892"
+          }
+        ]
+      }
+    }
+  ]
+}

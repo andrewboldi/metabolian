@@ -1,0 +1,236 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gdp-l-gulose-to-gdp-4-dehydro-6-deoxy-d",
+  "name": "GDP-β-L-gulose to GDP-4-dehydro-6-deoxy-α-D…",
+  "category": "other",
+  "summary": "A 3-step route from GDP-β-L-gulose(2−) to GDP-4-dehydro-6-deoxy-α-D-mannose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:63804"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:149550"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gdp_l_gulose",
+      "name": "GDP-β-L-gulose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:149550"
+      }
+    },
+    {
+      "id": "gdp_l_galactose",
+      "name": "GDP-β-L-galactose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61454"
+      }
+    },
+    {
+      "id": "d_mannose_1_phosphate",
+      "name": "α-D-mannose 1-phosphate",
+      "short": "α-D-mannose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58409"
+      }
+    },
+    {
+      "id": "l_galactose_1_phosphate",
+      "name": "β-L-galactose 1-phosphate",
+      "short": "β-L-galactose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75522"
+      }
+    },
+    {
+      "id": "gdp_d_mannose",
+      "name": "GDP-α-D-mannose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57527"
+      }
+    },
+    {
+      "id": "gdp_4_dehydro_6_deoxy_d_mannose",
+      "name": "GDP-4-dehydro-6-deoxy-α-D-mannose",
+      "short": "GDP-4-dehydro-6-deo…",
+      "formula": "C16H21N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57964"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_3_18",
+      "name": "GDP-mannose 3,5-epimerase",
+      "ec": [
+        "5.1.3.18"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_69",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "ec": [
+        "2.7.7.69"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_47",
+      "name": "GDP-mannose 4,6-dehydratase",
+      "ec": [
+        "4.2.1.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "GDP-mannose 3,5-epimerase",
+      "equation": "GDP-beta-L-gulose = GDP-beta-L-galactose",
+      "ec": "5.1.3.18",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_gulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:63804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase",
+      "equation": "GDP-beta-L-galactose + alpha-D-mannose 1-phosphate = beta-L-galactose 1-phosphate + GDP-alpha-D-mannose",
+      "ec": "2.7.7.69",
+      "substrates": [
+        {
+          "metabolite": "gdp_l_galactose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_mannose_1_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_galactose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_69"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:65708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "GDP-mannose 4,6-dehydratase",
+      "equation": "GDP-alpha-D-mannose = GDP-4-dehydro-alpha-D-rhamnose + H2O",
+      "ec": "4.2.1.47",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_mannose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gdp_4_dehydro_6_deoxy_d_mannose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23820"
+          }
+        ]
+      }
+    }
+  ]
+}

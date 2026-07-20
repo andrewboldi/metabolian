@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-caffeate-to-3-hydroxy-3-4-hydroxy-3",
+  "name": "trans-caffeate to 3-hydroxy-3-(4-hydroxy-3-…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from trans-caffeate to 3-hydroxy-3-(4-hydroxy-3-methoxyphenyl)propanoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20225"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57770"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_caffeate",
+      "name": "trans-caffeate",
+      "formula": "C9H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57770"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "trans_ferulate",
+      "name": "trans-ferulate",
+      "formula": "C10H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29749"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "trans_feruloyl_coa",
+      "name": "trans-feruloyl-CoA",
+      "formula": "C31H40N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87305"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoyl",
+      "name": "3-hydroxy-3-(4-hydroxy-3-methoxyphenyl)propanoyl-CoA",
+      "short": "3-hydroxy-3-(4-hydr…",
+      "formula": "C31H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58004"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_68",
+      "name": "caffeate O-methyltransferase",
+      "ec": [
+        "2.1.1.68"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_34",
+      "name": "trans-feruloyl-CoA synthase",
+      "ec": [
+        "6.2.1.34"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_61",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "ec": [
+        "4.1.2.61"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "caffeate O-methyltransferase",
+      "equation": "(E)-caffeate + S-adenosyl-L-methionine = (E)-ferulate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.68",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20225"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "trans-feruloyl-CoA synthase",
+      "equation": "(E)-ferulate + ATP + CoA = (E)-feruloyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.34",
+      "substrates": [
+        {
+          "metabolite": "trans_ferulate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_34"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36251"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36251"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "feruloyl-CoA hydratase/lyase",
+      "equation": "(E)-feruloyl-CoA + H2O = 3-hydroxy-3-(4-hydroxy-3-methoxyphenyl)propanoyl-CoA",
+      "ec": "4.1.2.61",
+      "substrates": [
+        {
+          "metabolite": "trans_feruloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_3_4_hydroxy_3_methoxyphenyl_propanoyl",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14517"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14517"
+          }
+        ]
+      }
+    }
+  ]
+}

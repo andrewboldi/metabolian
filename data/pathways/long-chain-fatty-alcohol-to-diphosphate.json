@@ -1,0 +1,307 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "long-chain-fatty-alcohol-to-diphosphate",
+  "name": "long-chain fatty alcohol to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from long-chain fatty alcohol to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38443"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17135"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "long_chain_fatty_alcohol",
+      "name": "long-chain fatty alcohol",
+      "short": "long-chain fatty…",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17135"
+      }
+    },
+    {
+      "id": "fatty_acyl_coa",
+      "name": "fatty acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:77636"
+      }
+    },
+    {
+      "id": "long_chain_alcohol_wax_ester",
+      "name": "long-chain alcohol wax ester",
+      "short": "long-chain alcohol…",
+      "formula": "CO2R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:235323"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "long_chain_fatty_acid_anion",
+      "name": "long-chain fatty acid anion",
+      "short": "long-chain fatty…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57560"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "holo-acp",
+      "name": "Holo-[acyl-carrier protein]",
+      "short": "Holo-[acyl-carrier…",
+      "formula": "C14H25N3O8PS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64479"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+      "name": "O-[S-(long-chain fatty acyl)pantetheine-4'-phosphoryl]serine(1−)",
+      "short": "O-[S-(long-chain…",
+      "formula": "C15H24N3O9PSR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133243"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_75",
+      "name": "long-chain-alcohol O-fatty-acyltransferase",
+      "ec": [
+        "2.3.1.75"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_50",
+      "name": "wax-ester hydrolase",
+      "ec": [
+        "3.1.1.50"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_59",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "ec": [
+        "6.2.1.59"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "long-chain-alcohol O-fatty-acyltransferase",
+      "equation": "a long chain fatty alcohol + a fatty acyl-CoA = a long-chain alcohol wax ester + CoA",
+      "ec": "2.3.1.75",
+      "substrates": [
+        {
+          "metabolite": "long_chain_fatty_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty_acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_alcohol_wax_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38443"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38443"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "wax-ester hydrolase",
+      "equation": "a long-chain alcohol wax ester + H2O = a long chain fatty alcohol + a long-chain fatty acid + H(+)",
+      "ec": "3.1.1.50",
+      "substrates": [
+        {
+          "metabolite": "long_chain_alcohol_wax_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "long_chain_fatty_alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "long_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13577"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13577"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "long-chain fatty acid adenylase/transferase FadD26",
+      "equation": "holo-[(phenol)carboxyphthiodiolenone synthase] + a long-chain fatty acid + ATP = a long-chain fatty acyl-[(phenol)carboxyphthiodiolenone synthase] + AMP + diphosphate",
+      "ec": "6.2.1.59",
+      "substrates": [
+        {
+          "metabolite": "holo-acp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "long_chain_fatty_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_s_long_chain_fatty_acyl_pantetheine_4_phosphor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_59"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:64660"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64660"
+          }
+        ]
+      }
+    }
+  ]
+}

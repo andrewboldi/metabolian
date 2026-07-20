@@ -1,0 +1,352 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-6-dihydrothymine-to-aminomalonate",
+  "name": "5,6-dihydrothymine to aminomalonate",
+  "category": "other",
+  "summary": "A 4-step route from 5,6-dihydrothymine to aminomalonate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37335"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27468"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_6_dihydrothymine",
+      "name": "5,6-dihydrothymine",
+      "formula": "C5H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27468"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_ureidoisobutyrate",
+      "name": "3-ureidoisobutyrate",
+      "formula": "C5H9N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74414"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_3_aminoisobutyric_acid",
+      "name": "(R)-3-aminoisobutyric acid",
+      "short": "3-aminoisobutyric…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57731"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "2_methyl_3_oxopropanoate",
+      "name": "2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57700"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "oxomalonate",
+      "name": "oxomalonate",
+      "formula": "C3O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17121"
+      }
+    },
+    {
+      "id": "aminomalonate",
+      "name": "aminomalonate",
+      "formula": "C3H4NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58158"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_2_2",
+      "name": "dihydropyrimidinase",
+      "ec": [
+        "3.5.2.2"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_6",
+      "name": "beta-ureidopropionase",
+      "ec": [
+        "3.5.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_40",
+      "name": "(R)-3-amino-2-methylpropionate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.40"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_47",
+      "name": "alanine--oxomalonate transaminase",
+      "ec": [
+        "2.6.1.47"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dihydropyrimidinase",
+      "equation": "5,6-dihydrothymine + H2O = 3-(carbamoylamino)-2-methylpropanoate + H(+)",
+      "ec": "3.5.2.2",
+      "substrates": [
+        {
+          "metabolite": "5_6_dihydrothymine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_ureidoisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37335"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37335"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "beta-ureidopropionase",
+      "equation": "3-(carbamoylamino)-2-methylpropanoate + H2O + 2 H(+) = (R)-3-amino-2-methylpropanoate + NH4(+) + CO2",
+      "ec": "3.5.1.6",
+      "substrates": [
+        {
+          "metabolite": "3_ureidoisobutyrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_aminoisobutyric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37339"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37339"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(R)-3-amino-2-methylpropionate--pyruvate transaminase",
+      "equation": "(R)-3-amino-2-methylpropanoate + pyruvate = 2-methyl-3-oxopropanoate + L-alanine",
+      "ec": "2.6.1.40",
+      "substrates": [
+        {
+          "metabolite": "r_3_aminoisobutyric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alanine--oxomalonate transaminase",
+      "equation": "oxomalonate + L-alanine = aminomalonate + pyruvate",
+      "ec": "2.6.1.47",
+      "substrates": [
+        {
+          "metabolite": "oxomalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aminomalonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:18809"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18809"
+          }
+        ]
+      }
+    }
+  ]
+}

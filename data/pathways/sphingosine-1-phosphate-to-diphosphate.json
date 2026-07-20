@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sphingosine-1-phosphate-to-diphosphate",
+  "name": "sphingosine 1-phosphate to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from sphingosine 1-phosphate(1−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33507"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:60119"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s1p",
+      "name": "Sphingosine 1-phosphate",
+      "short": "Sphingosine 1-P",
+      "formula": "C18H37NO5P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60119"
+      }
+    },
+    {
+      "id": "hexadecenal",
+      "name": "(2E)-Hexadecenal",
+      "formula": "C16H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17585"
+      }
+    },
+    {
+      "id": "phosphoethanolamine",
+      "name": "Ethanolamine phosphate",
+      "short": "Ethanolamine P",
+      "formula": "C2H7NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58190"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_methylethanolaminium_phosphate",
+      "name": "N-methylethanolaminium phosphate",
+      "short": "N-methylethanolamin…",
+      "formula": "C3H9NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57781"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cdp_n_methylethanolamine",
+      "name": "CDP-N-methylethanolamine",
+      "short": "CDP-N-methylethanol…",
+      "formula": "C12H21N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57547"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_27",
+      "name": "sphinganine-1-phosphate aldolase",
+      "ec": [
+        "4.1.2.27"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_103",
+      "name": "phosphoethanolamine N-methyltransferase",
+      "ec": [
+        "2.1.1.103"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_57",
+      "name": "N-methylphosphoethanolamine cytidylyltransferase",
+      "ec": [
+        "2.7.7.57"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sphinganine-1-phosphate aldolase",
+      "equation": "sphing-4-enine 1-phosphate = (2E)-hexadecenal + phosphoethanolamine",
+      "ec": "4.1.2.27",
+      "substrates": [
+        {
+          "metabolite": "s1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecenal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33507"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33507"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoethanolamine N-methyltransferase",
+      "equation": "phosphoethanolamine + S-adenosyl-L-methionine = N-methylethanolamine phosphate + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.103",
+      "substrates": [
+        {
+          "metabolite": "phosphoethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methylethanolaminium_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20365"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20365"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-methylphosphoethanolamine cytidylyltransferase",
+      "equation": "N-methylethanolamine phosphate + CTP + H(+) = CDP-N-methylethanolamine + diphosphate",
+      "ec": "2.7.7.57",
+      "substrates": [
+        {
+          "metabolite": "n_methylethanolaminium_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp_n_methylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10576"
+          }
+        ]
+      }
+    }
+  ]
+}

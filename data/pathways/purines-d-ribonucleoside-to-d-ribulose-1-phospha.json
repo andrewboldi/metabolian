@@ -1,0 +1,334 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "purines-d-ribonucleoside-to-d-ribulose-1-phospha",
+  "name": "purines D-ribonucleoside to D-ribulose 1-phosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from purines D-ribonucleoside to D-ribulose 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19805"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:142355"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "purines_d_ribonucleoside",
+      "name": "purines D-ribonucleoside",
+      "short": "purines D-ribonucle…",
+      "formula": "C10H11N4O4R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142355"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "purine_nucleobase",
+      "name": "purine nucleobase",
+      "formula": "C5H3N4R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26386"
+      }
+    },
+    {
+      "id": "r1p",
+      "name": "alpha-D-Ribose 1-phosphate",
+      "short": "alpha-D-Ribose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57720"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "d_ribose_1_5_bisphosphate",
+      "name": "α-D-ribose 1,5-bisphosphate",
+      "short": "α-D-ribose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:68688"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_ribulose_1_5_bisphosphate",
+      "name": "D-ribulose 1,5-bisphosphate",
+      "short": "D-ribulose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57870"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_ribulose_1_phosphate",
+      "name": "D-ribulose 1-phosphate",
+      "short": "D-ribulose 1-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:71680"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_2_1",
+      "name": "purine-nucleoside phosphorylase",
+      "ec": [
+        "2.4.2.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_239",
+      "name": "alpha-D-ribose-1-phosphate 5-kinase (ATP)",
+      "ec": [
+        "2.7.1.239"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_29",
+      "name": "ribose-1,5-bisphosphate isomerase",
+      "ec": [
+        "5.3.1.29"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_109",
+      "name": "ribulose-1,5-bisphosphate 5-phosphatase",
+      "ec": [
+        "3.1.3.109"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "purine-nucleoside phosphorylase",
+      "equation": "a purine D-ribonucleoside + phosphate = a purine nucleobase + alpha-D-ribose 1-phosphate",
+      "ec": "2.4.2.1",
+      "substrates": [
+        {
+          "metabolite": "purines_d_ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "purine_nucleobase",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19805"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-D-ribose-1-phosphate 5-kinase (ATP)",
+      "equation": "alpha-D-ribose 1-phosphate + ATP = alpha-D-ribose 1,5-bisphosphate + ADP + H(+)",
+      "ec": "2.7.1.239",
+      "substrates": [
+        {
+          "metabolite": "r1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_239"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29775"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29775"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ribose-1,5-bisphosphate isomerase",
+      "equation": "alpha-D-ribose 1,5-bisphosphate = D-ribulose 1,5-bisphosphate",
+      "ec": "5.3.1.29",
+      "substrates": [
+        {
+          "metabolite": "d_ribose_1_5_bisphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_5_bisphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32243"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32243"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "ribulose-1,5-bisphosphate 5-phosphatase",
+      "equation": "D-ribulose 1,5-bisphosphate + H2O = D-ribulose 1-phosphate + phosphate",
+      "ec": "3.1.3.109",
+      "substrates": [
+        {
+          "metabolite": "d_ribulose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_109"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:77883"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:77883"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "adenosine-5-diphospho-5-to-5-end-2-deoxyribonucl",
+  "name": "adenosine-5'-diphospho-5'… to 5'-end 2'-deoxyribonucleo…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from adenosine-5'-diphospho-5'-(2'-deoxyribonucleotide) residue(2−) to 5'-end 2'-deoxyribonucleotide(2−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52128"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136413"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "adenosine_5_diphospho_5_2_deoxyribonucleotide",
+      "name": "adenosine-5'-diphospho-5'-(2'-deoxyribonucleotide)",
+      "short": "adenosine-5'-diphos…",
+      "formula": "C15H19N5O12P2R",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136413"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_end_2_deoxyribonucleotide_2",
+      "name": "5'-end 2'-deoxyribonucleotide(2−)",
+      "short": "5'-end 2'-deoxyribo…",
+      "formula": "C5H7O6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136412"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_end_2_deoxyribonucleoside",
+      "name": "5'-end 2'-deoxyribonucleoside",
+      "short": "5'-end 2'-deoxyribo…",
+      "formula": "C5H8O3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136416"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_71",
+      "name": "adenosine-5'-diphospho-5'-[DNA] diphosphatase",
+      "ec": [
+        "3.6.1.71"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_33",
+      "name": "polynucleotide 5'-phosphatase",
+      "ec": [
+        "3.1.3.33"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_78",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "ec": [
+        "2.7.1.78"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "adenosine-5'-diphospho-5'-[DNA] diphosphatase",
+      "equation": "a 5'-end adenosine-5'-diphospho-5'-2'-deoxyribonucleoside-DNA + H2O = a 5'-end 5'-phospho-2'-deoxyribonucleoside-DNA + AMP + 2 H(+)",
+      "ec": "3.6.1.71",
+      "substrates": [
+        {
+          "metabolite": "adenosine_5_diphospho_5_2_deoxyribonucleotide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52128"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52128"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "polynucleotide 5'-phosphatase",
+      "equation": "a 5'-end 5'-phospho-2'-deoxyribonucleoside-DNA + H2O = a 5'-end dephospho-2'-deoxyribonucleoside-DNA + phosphate",
+      "ec": "3.1.3.33",
+      "substrates": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:67776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:67776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "polynucleotide 5'-hydroxyl-kinase",
+      "equation": "a 5'-end dephospho-2'-deoxyribonucleoside-DNA + ATP = a 5'-end 5'-phospho-2'-deoxyribonucleoside-DNA + ADP + H(+)",
+      "ec": "2.7.1.78",
+      "substrates": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_end_2_deoxyribonucleotide_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15669"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15669"
+          }
+        ]
+      }
+    }
+  ]
+}

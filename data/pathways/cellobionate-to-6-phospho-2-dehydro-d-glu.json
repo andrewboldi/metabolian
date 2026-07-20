@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cellobionate-to-6-phospho-2-dehydro-d-glu",
+  "name": "cellobionate to 6-phospho-2-dehydro-D-glu…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from cellobionate to 6-phospho-2-dehydro-D-gluconate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11564"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76825"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cellobionate",
+      "name": "cellobionate",
+      "formula": "C12H21O12",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76825"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_gluconate",
+      "name": "D-gluconate",
+      "formula": "C6H11O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18391"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "2_dehydro_d_gluconate",
+      "name": "2-dehydro-D-gluconate",
+      "short": "2-dehydro-D-glucona…",
+      "formula": "C6H9O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16808"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "6_phospho_2_dehydro_d_gluconate",
+      "name": "6-phospho-2-dehydro-D-gluconate",
+      "short": "6-phospho-2-dehydro…",
+      "formula": "C6H8O10P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:20750"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_321",
+      "name": "cellobionic acid phosphorylase",
+      "ec": [
+        "2.4.1.321"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_3",
+      "name": "gluconate 2-dehydrogenase (acceptor)",
+      "ec": [
+        "1.1.99.3"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_13",
+      "name": "dehydrogluconokinase",
+      "ec": [
+        "2.7.1.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cellobionic acid phosphorylase",
+      "equation": "4-O-beta-D-glucopyranosyl-D-gluconate + phosphate = D-gluconate + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.321",
+      "substrates": [
+        {
+          "metabolite": "cellobionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_321"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gluconate 2-dehydrogenase (acceptor)",
+      "equation": "D-gluconate + A = 2-dehydro-D-gluconate + AH2",
+      "ec": "1.1.99.3",
+      "substrates": [
+        {
+          "metabolite": "d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12769"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12769"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dehydrogluconokinase",
+      "equation": "2-dehydro-D-gluconate + ATP = 6-phospho-2-dehydro-D-gluconate + ADP + H(+)",
+      "ec": "2.7.1.13",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_phospho_2_dehydro_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10788"
+          }
+        ]
+      }
+    }
+  ]
+}

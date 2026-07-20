@@ -1,0 +1,350 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cholesteryl-d-glucoside-to-s-adenosyl-l-homocyst",
+  "name": "cholesteryl β-D-glucoside to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from cholesteryl β-D-glucoside to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11956"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17495"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cholesteryl_d_glucoside",
+      "name": "cholesteryl β-D-glucoside",
+      "short": "cholesteryl…",
+      "formula": "C33H56O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17495"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cholesterol",
+      "name": "Cholesterol",
+      "formula": "C27H46O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16113"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "cholesteryl_ester",
+      "name": "cholesteryl ester",
+      "formula": "C28H45O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17002"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "fatty_acid_methyl_ester",
+      "name": "fatty acid methyl ester",
+      "short": "fatty acid methyl…",
+      "formula": "C2H3O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4986"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_104",
+      "name": "steryl-beta-glucosidase",
+      "ec": [
+        "3.2.1.104"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_26",
+      "name": "sterol O-acyltransferase",
+      "ec": [
+        "2.3.1.26"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_13",
+      "name": "sterol esterase",
+      "ec": [
+        "3.1.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_15",
+      "name": "fatty-acid O-methyltransferase",
+      "ec": [
+        "2.1.1.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "steryl-beta-glucosidase",
+      "equation": "cholesteryl 3-beta-D-glucoside + H2O = cholesterol + D-glucose",
+      "ec": "3.2.1.104",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_104"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sterol O-acyltransferase",
+      "equation": "an acyl-CoA + cholesterol = a cholesterol ester + CoA",
+      "ec": "2.3.1.26",
+      "substrates": [
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17729"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17729"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sterol esterase",
+      "equation": "a cholesterol ester + H2O = cholesterol + a fatty acid + H(+)",
+      "ec": "3.1.1.13",
+      "substrates": [
+        {
+          "metabolite": "cholesteryl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cholesterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36403"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36403"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "fatty-acid O-methyltransferase",
+      "equation": "a fatty acid + S-adenosyl-L-methionine = a fatty acid methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.15",
+      "substrates": [
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fatty_acid_methyl_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23012"
+          }
+        ]
+      }
+    }
+  ]
+}

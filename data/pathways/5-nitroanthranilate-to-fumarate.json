@@ -1,0 +1,399 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-nitroanthranilate-to-fumarate",
+  "name": "5-nitroanthranilate to fumarate",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from 5-nitroanthranilate to fumarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28166"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61267"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_nitroanthranilate",
+      "name": "5-nitroanthranilate",
+      "formula": "C7H5N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61267"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "5_nitrosalicylate",
+      "name": "5-nitrosalicylate",
+      "formula": "C7H4NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:61268"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_oxo_3_5_oxofuran_2_ylidene_propanoate",
+      "name": "2-oxo-3-(5-oxofuran-2-ylidene)propanoate",
+      "short": "2-oxo-3-(5-oxofuran…",
+      "formula": "C7H3O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:65081"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16301"
+      }
+    },
+    {
+      "id": "3_maleylpyruvate",
+      "name": "3-maleylpyruvate",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16727"
+      }
+    },
+    {
+      "id": "3_fumarylpyruvate",
+      "name": "3-fumarylpyruvate",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16854"
+      }
+    },
+    {
+      "id": "fumarate",
+      "name": "Fumarate",
+      "formula": "C4H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29806"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_99_8",
+      "name": "5-nitroanthranilic acid aminohydrolase",
+      "ec": [
+        "3.5.99.8"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_64",
+      "name": "5-nitrosalicylate dioxygenase",
+      "ec": [
+        "1.13.11.64"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_91",
+      "name": "2-oxo-3-(5-oxofuran-2-ylidene)propanoate lactonase",
+      "ec": [
+        "3.1.1.91"
+      ]
+    },
+    {
+      "id": "ec_5_2_1_4",
+      "name": "maleylpyruvate isomerase",
+      "ec": [
+        "5.2.1.4"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_20",
+      "name": "3-fumarylpyruvate hydrolase",
+      "ec": [
+        "3.7.1.20"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "5-nitroanthranilic acid aminohydrolase",
+      "equation": "5-nitroanthranilate + H2O + H(+) = 5-nitrosalicylate + NH4(+)",
+      "ec": "3.5.99.8",
+      "substrates": [
+        {
+          "metabolite": "5_nitroanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_nitrosalicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_99_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28166"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28166"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-nitrosalicylate dioxygenase",
+      "equation": "5-nitrosalicylate + O2 = 2-oxo-3-(5-oxofuran-2-ylidene)propanoate + nitrite + H(+)",
+      "ec": "1.13.11.64",
+      "substrates": [
+        {
+          "metabolite": "5_nitrosalicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_3_5_oxofuran_2_ylidene_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34227"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxo-3-(5-oxofuran-2-ylidene)propanoate lactonase",
+      "equation": "2-oxo-3-(5-oxofuran-2-ylidene)propanoate + H2O = 3-maleylpyruvate + H(+)",
+      "ec": "3.1.1.91",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_3_5_oxofuran_2_ylidene_propanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_maleylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:33967"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33967"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "maleylpyruvate isomerase",
+      "equation": "3-maleylpyruvate = 3-fumarylpyruvate",
+      "ec": "5.2.1.4",
+      "substrates": [
+        {
+          "metabolite": "3_maleylpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_fumarylpyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_2_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-fumarylpyruvate hydrolase",
+      "equation": "3-fumarylpyruvate + H2O = fumarate + pyruvate + H(+)",
+      "ec": "3.7.1.20",
+      "substrates": [
+        {
+          "metabolite": "3_fumarylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:26168"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26168"
+          }
+        ]
+      }
+    }
+  ]
+}

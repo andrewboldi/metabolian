@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-acetylphosphopantotheine-to-diphosphate",
+  "name": "S-acetylphosphopantotheine to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from S-acetylphosphopantotheine(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20393"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58555"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_acetylphosphopantotheine",
+      "name": "S-acetylphosphopantotheine",
+      "short": "S-acetylphosphopant…",
+      "formula": "C13H23N2O8PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58555"
+      }
+    },
+    {
+      "id": "o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3",
+      "name": "O-[2'-(5-phosphoribosyl)-3'-dephospho-CoA]-L-serine(3−)",
+      "short": "O-[2'-(5-phosphorib…",
+      "formula": "C29H44N8O21P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:82683"
+      }
+    },
+    {
+      "id": "s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l",
+      "name": "S-acetyl-O-[2'-(5-phosphoribosyl)-3'-dephospho-CoA]-L-serine(3−)",
+      "short": "S-acetyl-O-[2'-(5-p…",
+      "formula": "C31H46N8O22P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:137976"
+      }
+    },
+    {
+      "id": "d_pantetheine_4_phosphate",
+      "name": "D-pantetheine 4'-phosphate",
+      "short": "D-pantetheine 4'-P",
+      "formula": "C11H21N2O7PS",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61723"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_49",
+      "name": "deacetyl-[citrate-(pro-3S)-lyase] S-acetyltransferase",
+      "ec": [
+        "2.3.1.49"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_16",
+      "name": "citrate-lyase deacetylase",
+      "ec": [
+        "3.1.2.16"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_1",
+      "name": "acetate--CoA ligase",
+      "ec": [
+        "6.2.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deacetyl-[citrate-(pro-3S)-lyase] S-acetyltransferase",
+      "equation": "S-acetylphosphopantotheine + holo-[citrate lyase ACP] = acetyl-[citrate lyase ACP] + (R)-4'-phosphopantetheine",
+      "ec": "2.3.1.49",
+      "substrates": [
+        {
+          "metabolite": "s_acetylphosphopantotheine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_pantetheine_4_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20393"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20393"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "citrate-lyase deacetylase",
+      "equation": "acetyl-[citrate lyase ACP] + H2O = holo-[citrate lyase ACP] + acetate + H(+)",
+      "ec": "3.1.2.16",
+      "substrates": [
+        {
+          "metabolite": "s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13657"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13657"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "acetate--CoA ligase",
+      "equation": "acetate + ATP + CoA = acetyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.1",
+      "substrates": [
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23176"
+          }
+        ]
+      }
+    }
+  ]
+}

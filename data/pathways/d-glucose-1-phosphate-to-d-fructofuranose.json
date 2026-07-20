@@ -1,0 +1,244 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucose-1-phosphate-to-d-fructofuranose",
+  "name": "α-D-glucose 1-phosphate to β-D-fructofuranose…",
+  "category": "other",
+  "summary": "A 3-step route from α-D-glucose 1-phosphate(2−) to β-D-fructofuranose 1,6-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23536"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58601"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "α-D-glucose 6-phosphate",
+      "short": "α-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58225"
+      }
+    },
+    {
+      "id": "d_fructofuranose_6_phosphate",
+      "name": "β-D-fructofuranose 6-phosphate",
+      "short": "β-D-fructofuranose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57634"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "f16bp",
+      "name": "D-Fructose 1,6-bisphosphate",
+      "short": "D-Fructose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:32966"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_2_2",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "ec": [
+        "5.4.2.2"
+      ]
+    },
+    {
+      "id": "ec_5_4_2_5",
+      "name": "phosphoglucomutase (glucose-cofactor)",
+      "ec": [
+        "5.4.2.5"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_9",
+      "name": "glucose-6-phosphate isomerase",
+      "ec": [
+        "5.3.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_146",
+      "name": "ADP-specific phosphofructokinase",
+      "ec": [
+        "2.7.1.146"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)",
+      "equation": "alpha-D-glucose 1-phosphate = alpha-D-glucose 6-phosphate",
+      "ec": "5.4.2.2",
+      "substrates": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23536"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23536"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose-6-phosphate isomerase",
+      "equation": "alpha-D-glucose 6-phosphate = beta-D-fructose 6-phosphate",
+      "ec": "5.3.1.9",
+      "substrates": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ADP-specific phosphofructokinase",
+      "equation": "beta-D-fructose 6-phosphate + ADP = beta-D-fructose 1,6-bisphosphate + AMP + H(+)",
+      "ec": "2.7.1.146",
+      "substrates": [
+        {
+          "metabolite": "d_fructofuranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "f16bp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_146"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20105"
+          }
+        ]
+      }
+    }
+  ]
+}

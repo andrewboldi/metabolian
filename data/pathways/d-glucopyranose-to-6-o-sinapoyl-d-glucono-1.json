@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-glucopyranose-to-6-o-sinapoyl-d-glucono-1",
+  "name": "D-glucopyranose… to 6-O-sinapoyl-D-glucono-1,…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-glucopyranose 1-phosphate(2−) to 6-O-sinapoyl-D-glucono-1,5-lactone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16397"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57629"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_glucopyranose_1_phosphate",
+      "name": "D-glucopyranose 1-phosphate",
+      "short": "D-glucopyranose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57629"
+      }
+    },
+    {
+      "id": "d_glucose_1_6_bisphosphate",
+      "name": "D-glucose 1,6-bisphosphate",
+      "short": "D-glucose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58232"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "d_glucono_1_5_lactone",
+      "name": "D-glucono-1,5-lactone",
+      "short": "D-glucono-1,5-lacto…",
+      "formula": "C6H10O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16217"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sinapoyl_coa",
+      "name": "sinapoyl-CoA",
+      "formula": "C32H42N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57393"
+      }
+    },
+    {
+      "id": "6_o_sinapoyl_d_glucono_1_5_lactone",
+      "name": "6-O-sinapoyl-D-glucono-1,5-lactone",
+      "short": "6-O-sinapoyl-D-gluc…",
+      "formula": "C17H20O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60076"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_41",
+      "name": "glucose-1-phosphate phosphodismutase",
+      "ec": [
+        "2.7.1.41"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_47",
+      "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.47"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_118",
+      "name": "glucose 1-dehydrogenase (NAD(+))",
+      "ec": [
+        "1.1.1.118"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_359",
+      "name": "aldose 1-dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.359"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_132",
+      "name": "glucarolactone O-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.132"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucose-1-phosphate phosphodismutase",
+      "equation": "2 D-glucopyranose 1-phosphate = D-glucose 1,6-bisphosphate + D-glucose",
+      "ec": "2.7.1.41",
+      "substrates": [
+        {
+          "metabolite": "d_glucopyranose_1_phosphate",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16397"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucose 1-dehydrogenase [NAD(P)(+)]",
+      "equation": "D-glucose + NAD(+) = D-glucono-1,5-lactone + NADH + H(+)",
+      "ec": "1.1.1.47",
+      "substrates": [
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14293"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14293"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucarolactone O-hydroxycinnamoyltransferase",
+      "equation": "(E)-sinapoyl-CoA + D-glucono-1,5-lactone = 6-O-[(E)-sinapoyl]-D-glucono-1,5-lactone + CoA",
+      "ec": "2.3.1.132",
+      "substrates": [
+        {
+          "metabolite": "sinapoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_o_sinapoyl_d_glucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14261"
+          }
+        ]
+      }
+    }
+  ]
+}

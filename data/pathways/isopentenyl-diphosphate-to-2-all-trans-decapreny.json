@@ -1,0 +1,268 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isopentenyl-diphosphate-to-2-all-trans-decapreny",
+  "name": "isopentenyl diphosphate to 2-all-trans-decaprenylphe…",
+  "category": "other",
+  "summary": "A 3-step route from isopentenyl diphosphate(3−) to 2-all-trans-decaprenylphenol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27802"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:128769"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ipp",
+      "name": "Isopentenyl diphosphate (IPP)",
+      "short": "Isopentenyl PP (IPP)",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:128769"
+      }
+    },
+    {
+      "id": "fpp",
+      "name": "trans,trans-Farnesyl diphosphate (FPP)",
+      "short": "trans,trans-Farnesy…",
+      "formula": "C15H25O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:175763"
+      }
+    },
+    {
+      "id": "all_trans_decaprenyl_diphosphate",
+      "name": "all-trans-decaprenyl diphosphate",
+      "short": "all-trans-decapreny…",
+      "formula": "C50H81O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60721"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "4_hydroxybenzoate",
+      "name": "4-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17879"
+      }
+    },
+    {
+      "id": "4_hydroxy_3_all_trans_decaprenylbenzoate",
+      "name": "4-hydroxy-3-all-trans-decaprenylbenzoate",
+      "short": "4-hydroxy-3-all-tra…",
+      "formula": "C57H85O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:84503"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_all_trans_decaprenylphenol",
+      "name": "2-all-trans-decaprenylphenol",
+      "short": "2-all-trans-decapre…",
+      "formula": "C56H86O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:84511"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_91",
+      "name": "all-trans-decaprenyl-diphosphate synthase",
+      "ec": [
+        "2.5.1.91"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_39",
+      "name": "4-hydroxybenzoate polyprenyltransferase",
+      "ec": [
+        "2.5.1.39"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_98",
+      "name": "4-hydroxy-3-polyprenylbenzoate decarboxylase",
+      "ec": [
+        "4.1.1.98"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "all-trans-decaprenyl-diphosphate synthase",
+      "equation": "7 isopentenyl diphosphate + (2E,6E)-farnesyl diphosphate = all-trans-decaprenyl diphosphate + 7 diphosphate",
+      "ec": "2.5.1.91",
+      "substrates": [
+        {
+          "metabolite": "ipp",
+          "stoichiometry": 7
+        },
+        {
+          "metabolite": "fpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 7
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27802"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27802"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxybenzoate polyprenyltransferase",
+      "equation": "all-trans-decaprenyl diphosphate + 4-hydroxybenzoate = 4-hydroxy-3-(all-trans-decaprenyl)benzoate + diphosphate",
+      "ec": "2.5.1.39",
+      "substrates": [
+        {
+          "metabolite": "all_trans_decaprenyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxy_3_all_trans_decaprenylbenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44564"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44564"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-hydroxy-3-polyprenylbenzoate decarboxylase",
+      "equation": "4-hydroxy-3-(all-trans-decaprenyl)benzoate + H(+) = 2-all-trans-decaprenylphenol + CO2",
+      "ec": "4.1.1.98",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxy_3_all_trans_decaprenylbenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_all_trans_decaprenylphenol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_98"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:44580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44580"
+          }
+        ]
+      }
+    }
+  ]
+}

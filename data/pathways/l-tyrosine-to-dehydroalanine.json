@@ -1,0 +1,270 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tyrosine-to-dehydroalanine",
+  "name": "L-tyrosine to dehydroalanine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-tyrosine residue to dehydroalanine residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48956"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46858"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_tyrosine",
+      "name": "L-tyrosine",
+      "formula": "C9H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46858"
+      }
+    },
+    {
+      "id": "iodide",
+      "name": "iodide",
+      "formula": "I",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16382"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_iodo_l_tyrosine",
+      "name": "3-iodo-L-tyrosine",
+      "formula": "C9H8INO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90870"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_5_diiodo_l_tyrosine",
+      "name": "3,5-diiodo-L-tyrosine",
+      "short": "3,5-diiodo-L-tyrosi…",
+      "formula": "C9H7I2NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90871"
+      }
+    },
+    {
+      "id": "l_thyroxine",
+      "name": "L-thyroxine",
+      "formula": "C15H9I4NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90872"
+      }
+    },
+    {
+      "id": "dehydroalanine",
+      "name": "dehydroalanine",
+      "formula": "C3H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90873"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_11_1_8",
+      "name": "iodide peroxidase",
+      "ec": [
+        "1.11.1.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "iodide peroxidase",
+      "equation": "[thyroglobulin]-L-tyrosine + iodide + H2O2 + H(+) = [thyroglobulin]-3-iodo-L-tyrosine + 2 H2O",
+      "ec": "1.11.1.8",
+      "substrates": [
+        {
+          "metabolite": "l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_iodo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "iodide peroxidase",
+      "equation": "[thyroglobulin]-3-iodo-L-tyrosine + iodide + H2O2 + H(+) = [thyroglobulin]-3,5-diiodo-L-tyrosine + 2 H2O",
+      "ec": "1.11.1.8",
+      "substrates": [
+        {
+          "metabolite": "3_iodo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iodide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_diiodo_l_tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48960"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48960"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "iodide peroxidase",
+      "equation": "2 [thyroglobulin]-3,5-diiodo-L-tyrosine + H2O2 = [thyroglobulin]-L-thyroxine + [thyroglobulin]-dehydroalanine + 2 H2O",
+      "ec": "1.11.1.8",
+      "substrates": [
+        {
+          "metabolite": "3_5_diiodo_l_tyrosine",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_thyroxine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dehydroalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_11_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48964"
+          }
+        ]
+      }
+    }
+  ]
+}

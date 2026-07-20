@@ -1,0 +1,360 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-hydroxy-6-2-oxidopheny-to-maleate",
+  "name": "2-hydroxy-6-(2-oxidopheny… to maleate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 2-hydroxy-6-(2-oxidophenyl)-6-oxo-cis,cis-hexa-2,4-dienoate(2−) to maleate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:42468"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:79172"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_hydroxy_6_2_oxidophenyl_6_oxo_cis_cis_hexa_2_4",
+      "name": "2-hydroxy-6-(2-oxidophenyl)-6-oxo-cis,cis-hexa-2,4-dienoate",
+      "short": "2-hydroxy-6-(2-oxid…",
+      "formula": "C12H8O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:79172"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_oxopent_4_enoate",
+      "name": "2-oxopent-4-enoate",
+      "formula": "C5H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11641"
+      }
+    },
+    {
+      "id": "salicylate",
+      "name": "salicylate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30762"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_5_dihydroxybenzoate",
+      "name": "2,5-dihydroxybenzoate",
+      "short": "2,5-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58044"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "3_maleylpyruvate",
+      "name": "3-maleylpyruvate",
+      "formula": "C7H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16727"
+      }
+    },
+    {
+      "id": "maleate",
+      "name": "maleate",
+      "formula": "C4H2O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30780"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_8",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "ec": [
+        "3.7.1.8"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_172",
+      "name": "salicylate 5-hydroxylase",
+      "ec": [
+        "1.14.13.172"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_4",
+      "name": "gentisate 1,2-dioxygenase",
+      "ec": [
+        "1.13.11.4"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_23",
+      "name": "maleylpyruvate hydrolase",
+      "ec": [
+        "3.7.1.23"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,6-dioxo-6-phenylhexa-3-enoate hydrolase",
+      "equation": "2-hydroxy-6-(2-hydroxyphenyl)-6-oxo-cis,cis-hexa-2,4-dienoate + H2O = 2-oxopent-4-enoate + salicylate",
+      "ec": "3.7.1.8",
+      "substrates": [
+        {
+          "metabolite": "2_hydroxy_6_2_oxidophenyl_6_oxo_cis_cis_hexa_2_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxopent_4_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:42468"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42468"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "salicylate 5-hydroxylase",
+      "equation": "salicylate + NADH + O2 + H(+) = 2,5-dihydroxybenzoate + NAD(+) + H2O",
+      "ec": "1.14.13.172",
+      "substrates": [
+        {
+          "metabolite": "salicylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_5_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_172"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:35307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:35307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "gentisate 1,2-dioxygenase",
+      "equation": "2,5-dihydroxybenzoate + O2 = 3-maleylpyruvate + H(+)",
+      "ec": "1.13.11.4",
+      "substrates": [
+        {
+          "metabolite": "2_5_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_maleylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18237"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "maleylpyruvate hydrolase",
+      "equation": "3-maleylpyruvate + H2O = maleate + pyruvate + H(+)",
+      "ec": "3.7.1.23",
+      "substrates": [
+        {
+          "metabolite": "3_maleylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "maleate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47956"
+          }
+        ]
+      }
+    }
+  ]
+}

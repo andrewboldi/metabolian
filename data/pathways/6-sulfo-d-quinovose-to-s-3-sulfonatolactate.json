@@ -1,0 +1,394 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-sulfo-d-quinovose-to-s-3-sulfonatolactate",
+  "name": "6-sulfo-D-quinovose to (S)-3-sulfonatolactate",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from 6-sulfo-D-quinovose(1−) to (S)-3-sulfonatolactate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:47896"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77132"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_sulfo_d_quinovose",
+      "name": "6-sulfo-D-quinovose",
+      "formula": "C6H11O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77132"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "6_deoxy_6_sulfoglucono_1_5_lactone",
+      "name": "6-deoxy-6-sulfoglucono-1,5-lactone",
+      "short": "6-deoxy-6-sulfogluc…",
+      "formula": "C6H9O8S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:88091"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "6_deoxy_6_sulfo_d_gluconate",
+      "name": "6-deoxy-6-sulfo-D-gluconate",
+      "short": "6-deoxy-6-sulfo-D-g…",
+      "formula": "C6H10O9S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88093"
+      }
+    },
+    {
+      "id": "2_dehydro_3_6_dideoxy_6_sulfo_d_gluconate",
+      "name": "2-dehydro-3,6-dideoxy-6-sulfo-D-gluconate",
+      "short": "2-dehydro-3,6-dideo…",
+      "formula": "C6H8O8S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:88094"
+      }
+    },
+    {
+      "id": "l_3_sulfolactaldehyde",
+      "name": "L-3-sulfolactaldehyde",
+      "short": "L-3-sulfolactaldehy…",
+      "formula": "C3H5O5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90109"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "s_3_sulfonatolactate",
+      "name": "(S)-3-sulfonatolactate",
+      "short": "3-sulfonatolactate",
+      "formula": "C3H4O6S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61289"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_390",
+      "name": "sulfoquinovose 1-dehydrogenase",
+      "ec": [
+        "1.1.1.390"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_99",
+      "name": "6-deoxy-6-sulfogluconolactonase",
+      "ec": [
+        "3.1.1.99"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_162",
+      "name": "6-deoxy-6-sulfo-D-gluconate dehydratase",
+      "ec": [
+        "4.2.1.162"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_58",
+      "name": "2-dehydro-3,6-dideoxy-6-sulfogluconate aldolase",
+      "ec": [
+        "4.1.2.58"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_97",
+      "name": "3-sulfolactaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.97"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sulfoquinovose 1-dehydrogenase",
+      "equation": "6-sulfo-D-quinovose + NAD(+) = 6-deoxy-6-sulfo-D-glucono-1,5-lactone + NADH + H(+)",
+      "ec": "1.1.1.390",
+      "substrates": [
+        {
+          "metabolite": "6_sulfo_d_quinovose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxy_6_sulfoglucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_390"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:47896"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47896"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-deoxy-6-sulfogluconolactonase",
+      "equation": "6-deoxy-6-sulfo-D-glucono-1,5-lactone + H2O = 6-deoxy-6-sulfo-D-gluconate + H(+)",
+      "ec": "3.1.1.99",
+      "substrates": [
+        {
+          "metabolite": "6_deoxy_6_sulfoglucono_1_5_lactone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-deoxy-6-sulfo-D-gluconate dehydratase",
+      "equation": "6-deoxy-6-sulfo-D-gluconate = 2-dehydro-3,6-dideoxy-6-sulfo-D-gluconate + H2O",
+      "ec": "4.2.1.162",
+      "substrates": [
+        {
+          "metabolite": "6_deoxy_6_sulfo_d_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_dehydro_3_6_dideoxy_6_sulfo_d_gluconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_162"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:47912"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47912"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "2-dehydro-3,6-dideoxy-6-sulfogluconate aldolase",
+      "equation": "2-dehydro-3,6-dideoxy-6-sulfo-D-gluconate = (2S)-3-sulfolactaldehyde + pyruvate",
+      "ec": "4.1.2.58",
+      "substrates": [
+        {
+          "metabolite": "2_dehydro_3_6_dideoxy_6_sulfo_d_gluconate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_3_sulfolactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:47924"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47924"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "3-sulfolactaldehyde dehydrogenase",
+      "equation": "(2S)-3-sulfolactaldehyde + NAD(+) + H2O = (2S)-3-sulfolactate + NADH + 2 H(+)",
+      "ec": "1.2.1.97",
+      "substrates": [
+        {
+          "metabolite": "l_3_sulfolactaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_3_sulfonatolactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:47932"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47932"
+          }
+        ]
+      }
+    }
+  ]
+}

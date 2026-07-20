@@ -1,0 +1,298 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n5-phospho-l-glutamine-to-cytidine-3-phospho-5-d",
+  "name": "N5-phospho-L-glutamine to cytidine 3'-phospho-5'-di…",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from N5-phospho-L-glutamine(2−) to cytidine 3'-phospho-5'-diphosphoramidate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57308"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:139073"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n5_phospho_l_glutamine",
+      "name": "N5-phospho-L-glutamine",
+      "short": "N5-phospho-L-glutam…",
+      "formula": "C5H9N2O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:139073"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n5_cytidine_5_diphosphoramidyl_l_glutamine",
+      "name": "N5-(cytidine 5'-diphosphoramidyl)-L-glutamine",
+      "short": "N5-(cytidine…",
+      "formula": "C14H21N5O13P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141583"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cytidine_5_diphosphoramidate",
+      "name": "cytidine 5'-diphosphoramidate",
+      "short": "cytidine 5'-diphosp…",
+      "formula": "C9H14N4O10P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:141582"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cytidine_3_phospho_5_diphosphoramidate",
+      "name": "cytidine 3'-phospho-5'-diphosphoramidate",
+      "short": "cytidine 3'-phospho…",
+      "formula": "C9H13N4O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:141584"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_7_103",
+      "name": "L-glutamine-phosphate cytidylyltransferase",
+      "ec": [
+        "2.7.7.103"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_129",
+      "name": "N(5)-(cytidine 5'-diphosphoramidyl)-L-glutamine hydrolase",
+      "ec": [
+        "3.5.1.129"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_224",
+      "name": "cytidine diphosphoramidate kinase",
+      "ec": [
+        "2.7.1.224"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-glutamine-phosphate cytidylyltransferase",
+      "equation": "N(5)-phospho-L-glutamine + CTP + H(+) = N(5)-(cytidine 5'-diphosphoramidyl)-L-glutamine + diphosphate",
+      "ec": "2.7.7.103",
+      "substrates": [
+        {
+          "metabolite": "n5_phospho_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n5_cytidine_5_diphosphoramidyl_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57308"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57308"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N(5)-(cytidine 5'-diphosphoramidyl)-L-glutamine hydrolase",
+      "equation": "N(5)-(cytidine 5'-diphosphoramidyl)-L-glutamine + H2O = cytidine 5'-diphosphoramidate + L-glutamate + H(+)",
+      "ec": "3.5.1.129",
+      "substrates": [
+        {
+          "metabolite": "n5_cytidine_5_diphosphoramidyl_l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine_5_diphosphoramidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_129"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57312"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57312"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cytidine diphosphoramidate kinase",
+      "equation": "cytidine 5'-diphosphoramidate + ATP = cytidine 3'-phospho-5'-diphosphoramidate + ADP + H(+)",
+      "ec": "2.7.1.224",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_diphosphoramidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine_3_phospho_5_diphosphoramidate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_224"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57316"
+          }
+        ]
+      }
+    }
+  ]
+}

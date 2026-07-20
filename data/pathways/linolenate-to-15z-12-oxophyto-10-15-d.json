@@ -1,0 +1,223 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "linolenate-to-15z-12-oxophyto-10-15-d",
+  "name": "α-linolenate to (15Z)-12-oxophyto-10,15-d…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from α-linolenate to (15Z)-12-oxophyto-10,15-dienoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34495"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:32387"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "linolenate",
+      "name": "α-linolenate",
+      "formula": "C18H29O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:32387"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+      "name": "(9Z,11E,13S,15Z)-13-hydroperoxyoctadeca-9,11,15-trienoate",
+      "short": "(9Z,11E,13S,15Z)-13…",
+      "formula": "C18H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58757"
+      }
+    },
+    {
+      "id": "9z_13s_15z_12_13_epoxyoctadeca_9_11_15_trienoat",
+      "name": "(9Z,13S,15Z)-12,13-epoxyoctadeca-9,11,15-trienoate",
+      "short": "(9Z,13S,15Z)-12,13-…",
+      "formula": "C18H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36438"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "15z_12_oxophyto_10_15_dienoate",
+      "name": "(15Z)-12-oxophyto-10,15-dienoate",
+      "short": "12-oxophyto-10,15-d…",
+      "formula": "C18H27O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57411"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_12",
+      "name": "linoleate 13S-lipoxygenase",
+      "ec": [
+        "1.13.11.12"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_92",
+      "name": "hydroperoxide dehydratase",
+      "ec": [
+        "4.2.1.92"
+      ]
+    },
+    {
+      "id": "ec_5_3_99_6",
+      "name": "allene-oxide cyclase",
+      "ec": [
+        "5.3.99.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "linoleate 13S-lipoxygenase",
+      "equation": "(9Z,12Z,15Z)-octadecatrienoate + O2 = (13S)-hydroperoxy-(9Z,11E,15Z)-octadecatrienoate",
+      "ec": "1.13.11.12",
+      "substrates": [
+        {
+          "metabolite": "linolenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34495"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34495"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydroperoxide dehydratase",
+      "equation": "(13S)-hydroperoxy-(9Z,11E,15Z)-octadecatrienoate = (9Z,13S,15Z)-12,13-epoxyoctadeca-9,11,15-trienoate + H2O",
+      "ec": "4.2.1.92",
+      "substrates": [
+        {
+          "metabolite": "9z_11e_13s_15z_13_hydroperoxyoctadeca_9_11_15_t",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_13s_15z_12_13_epoxyoctadeca_9_11_15_trienoat",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25074"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25074"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "allene-oxide cyclase",
+      "equation": "(9Z,13S,15Z)-12,13-epoxyoctadeca-9,11,15-trienoate = (9S,13S,15Z)-12-oxophyto-10,15-dienoate",
+      "ec": "5.3.99.6",
+      "substrates": [
+        {
+          "metabolite": "9z_13s_15z_12_13_epoxyoctadeca_9_11_15_trienoat",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15z_12_oxophyto_10_15_dienoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22592"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22592"
+          }
+        ]
+      }
+    }
+  ]
+}

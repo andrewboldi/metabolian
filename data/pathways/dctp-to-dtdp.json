@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dctp-to-dtdp",
+  "name": "dCTP to dTDP",
+  "category": "other",
+  "summary": "A 3-step route from dCTP(4−) to dTDP(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19205"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61481"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dctp",
+      "name": "dCTP",
+      "formula": "C9H12N3O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61481"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dump",
+      "name": "dUMP",
+      "formula": "C9H11N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:246422"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "methylene_thf",
+      "name": "5,10-Methylenetetrahydrofolate",
+      "short": "5,10-Methylenetetra…",
+      "formula": "C20H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15636"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "dtmp",
+      "name": "dTMP",
+      "formula": "C10H13N2O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:63528"
+      }
+    },
+    {
+      "id": "thf",
+      "name": "Tetrahydrofolate",
+      "formula": "C19H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57453"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "dtdp",
+      "name": "dTDP",
+      "formula": "C10H13N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58369"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_4_30",
+      "name": "dCTP deaminase (dUMP-forming)",
+      "ec": [
+        "3.5.4.30"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_148",
+      "name": "thymidylate synthase (FAD)",
+      "ec": [
+        "2.1.1.148"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_9",
+      "name": "dTMP kinase",
+      "ec": [
+        "2.7.4.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_12",
+      "name": "T2-induced deoxynucleotide kinase",
+      "ec": [
+        "2.7.4.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dCTP deaminase (dUMP-forming)",
+      "equation": "dCTP + 2 H2O = dUMP + NH4(+) + diphosphate",
+      "ec": "3.5.4.30",
+      "substrates": [
+        {
+          "metabolite": "dctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19205"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19205"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thymidylate synthase (FAD)",
+      "equation": "dUMP + (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate + NADPH + H(+) = dTMP + (6S)-5,6,7,8-tetrahydrofolate + NADP(+)",
+      "ec": "2.1.1.148",
+      "substrates": [
+        {
+          "metabolite": "dump",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "thf",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_148"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29043"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29043"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dTMP kinase",
+      "equation": "dTMP + ATP = dTDP + ADP",
+      "ec": "2.7.4.9",
+      "substrates": [
+        {
+          "metabolite": "dtmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13517"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13517"
+          }
+        ]
+      }
+    }
+  ]
+}

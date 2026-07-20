@@ -1,0 +1,309 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-deoxyloganetin-to-fmn",
+  "name": "7-deoxyloganetin to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 7-deoxyloganetin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:39899"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76849"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_deoxyloganetin",
+      "name": "7-deoxyloganetin",
+      "formula": "C11H16O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:76849"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "7_deoxyloganin",
+      "name": "7-deoxyloganin",
+      "formula": "C17H26O9",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18370"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "loganin",
+      "name": "loganin",
+      "formula": "C17H26O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15771"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "secologanin",
+      "name": "(−)-secologanin",
+      "formula": "C17H24O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18002"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_324",
+      "name": "7-deoxyloganetin glucosyltransferase",
+      "ec": [
+        "2.4.1.324"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_85",
+      "name": "7-deoxyloganate 7-hydroxylase",
+      "ec": [
+        "1.14.14.85"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_62",
+      "name": "secologanin synthase",
+      "ec": [
+        "1.14.19.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "7-deoxyloganetin glucosyltransferase",
+      "equation": "7-deoxyloganetin + UDP-alpha-D-glucose = 7-deoxyloganin + UDP + H(+)",
+      "ec": "2.4.1.324",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_324"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:39899"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39899"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-deoxyloganate 7-hydroxylase",
+      "equation": "7-deoxyloganin + reduced [NADPH--hemoprotein reductase] + O2 = loganin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.85",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "loganin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "secologanin synthase",
+      "equation": "loganin + reduced [NADPH--hemoprotein reductase] + O2 = secologanin + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.62",
+      "substrates": [
+        {
+          "metabolite": "loganin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "secologanin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20585"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20585"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 17-o-acetylnorajmaline-to-cortalcerone "17-O-acetylnorajmaline to cortalcerone" {
-  spacing 152
+  spacing 212
 
   spine at 0,0 {
     17_o_acetylnorajmaline

@@ -1,0 +1,296 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n2-l-glutamino-1-group-to-c-terminal-l-glutamyl",
+  "name": "N2-L-glutamino(1−) group to C-terminal-γ-L-glutamyl-L…",
+  "category": "other",
+  "summary": "A 3-step route from N2-L-glutamino(1−) group to C-terminal-γ-L-glutamyl-L-2-aminoadipate 6-phosphate(4−) group, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10032"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:88115"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n2_l_glutamino_1_group",
+      "name": "N2-L-glutamino(1−) group",
+      "short": "N2-L-glutamino(1−)…",
+      "formula": "C5H8N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:88115"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_glutamo_2_group",
+      "name": "L-glutamo(2−) group",
+      "formula": "C5H6NO4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78525"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "l_2_aminoadipate",
+      "name": "L-2-aminoadipate",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58672"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_3_group",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate(3−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H14N2O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:78503"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha",
+      "name": "C-terminal-γ-L-glutamyl-L-2-aminoadipate 6-phosphate(4−) group",
+      "short": "C-terminal-γ-L-glut…",
+      "formula": "C11H14N2O10P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_43",
+      "name": "peptidyl-glutaminase",
+      "ec": [
+        "3.5.1.43"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_43",
+      "name": "[amino-group carrier protein]--L-2-aminoadipate ligase",
+      "ec": [
+        "6.3.2.43"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_17",
+      "name": "[amino-group carrier protein]-L-2-aminoadipate 6-kinase",
+      "ec": [
+        "2.7.2.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "peptidyl-glutaminase",
+      "equation": "[protein]-C-terminal-L-glutamine + H2O = [protein]-C-terminal-L-glutamate + NH4(+)",
+      "ec": "3.5.1.43",
+      "substrates": [
+        {
+          "metabolite": "n2_l_glutamino_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamo_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10032"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10032"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[amino-group carrier protein]--L-2-aminoadipate ligase",
+      "equation": "[amino-group carrier protein]-C-terminal-L-glutamate + L-2-aminoadipate + ATP = [amino-group carrier protein]-C-terminal-N-(1,4-dicarboxybutan-1-yl)-L-glutamine + ADP + phosphate + H(+)",
+      "ec": "6.3.2.43",
+      "substrates": [
+        {
+          "metabolite": "l_glutamo_2_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_2_aminoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_3_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41940"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "[amino-group carrier protein]-L-2-aminoadipate 6-kinase",
+      "equation": "[amino-group carrier protein]-C-terminal-N-(1,4-dicarboxybutan-1-yl)-L-glutamine + ATP = [amino-group carrier protein]-C-terminal-N-(1-carboxy-5-phosphooxy-5-oxopentan-1-yl)-L-glutamine + ADP",
+      "ec": "2.7.2.17",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_3_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_l_glutamyl_l_2_aminoadipate_6_phospha",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:41944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41944"
+          }
+        ]
+      }
+    }
+  ]
+}

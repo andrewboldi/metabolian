@@ -4,17 +4,13 @@
 # edit the generator, not this file.
 
 pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydrox…" {
-  spacing 152
+  spacing 280
 
   spine at 0,0 {
     diol_cdca
     <-> ec_1_14_14_139 [1.14.14.139] +fmnh2 +o2 -fmn -h2o -hplus
     triol_ca
-    <-> spontaneous +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    25r_5_cholestane_3_7_12_26_tetrol
-    <-> spontaneous +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
-    25r_3_7_12_trihydroxy_5_cholestan_26_al
-    <-> spontaneous +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
+    <-> ec_1_14_15_15 [1.14.15.15] +di_sulfido_diiron +o2 +hplus -di_sulfido_diiron -h2o
     25r_3_7_12_trihydroxy_5_cholestan_26_oate
     <-> ec_6_2_1_7 [6.2.1.7] +atp +coa -amp -ppi
     thca_coa_25r

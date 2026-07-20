@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "aldehydo-d-mannose-to-diphosphate",
+  "name": "aldehydo-D-mannose… to diphosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from aldehydo-D-mannose 6-phosphate(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:49200"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:231735"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "aldehydo_d_mannose_6_phosphate",
+      "name": "aldehydo-D-mannose 6-phosphate",
+      "short": "aldehydo-D-mannose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231735"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_deoxy_d_glycero_d_galacto_nonulosonate_9_phosp",
+      "name": "3-deoxy-D-glycero-β-D-galacto-nonulosonate 9-phosphate",
+      "short": "3-deoxy-D-glycero-β…",
+      "formula": "C9H14O12P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:90987"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "3_deoxy_d_glycero_d_galacto_nonulosonate",
+      "name": "3-deoxy-D-glycero-β-D-galacto-nonulosonate",
+      "short": "3-deoxy-D-glycero-β…",
+      "formula": "C9H15O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90988"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "cmp_3_deoxy_d_glycero_d_galacto_nonulosonate",
+      "name": "CMP-3-deoxy-D-glycero-β-D-galacto-nonulosonate",
+      "short": "CMP-3-deoxy-D-glyce…",
+      "formula": "C18H26N3O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:90989"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_132",
+      "name": "3-deoxy-D-glycero-D-galacto-nononate 9-phosphate synthase",
+      "ec": [
+        "2.5.1.132"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_103",
+      "name": "3-deoxy-D-glycero-D-galacto-nonulopyranosonate 9-phosphatase",
+      "ec": [
+        "3.1.3.103"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_92",
+      "name": "3-deoxy-D-glycero-D-galacto-nononate cytidylyltransferase",
+      "ec": [
+        "2.7.7.92"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-deoxy-D-glycero-D-galacto-nononate 9-phosphate synthase",
+      "equation": "aldehydo-D-mannose 6-phosphate + phosphoenolpyruvate + H2O = 3-deoxy-D-glycero-beta-D-galacto-non-2-ulopyranosonate 9-phosphate + phosphate",
+      "ec": "2.5.1.132",
+      "substrates": [
+        {
+          "metabolite": "aldehydo_d_mannose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deoxy_d_glycero_d_galacto_nonulosonate_9_phosp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_132"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:49200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-deoxy-D-glycero-D-galacto-nonulopyranosonate 9-phosphatase",
+      "equation": "3-deoxy-D-glycero-beta-D-galacto-non-2-ulopyranosonate 9-phosphate + H2O = 3-deoxy-D-glycero-beta-D-galacto-non-2-ulopyranosonate + phosphate",
+      "ec": "3.1.3.103",
+      "substrates": [
+        {
+          "metabolite": "3_deoxy_d_glycero_d_galacto_nonulosonate_9_phosp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_deoxy_d_glycero_d_galacto_nonulosonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:49216"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49216"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-deoxy-D-glycero-D-galacto-nononate cytidylyltransferase",
+      "equation": "3-deoxy-D-glycero-beta-D-galacto-non-2-ulopyranosonate + CTP = CMP-beta-3-deoxy-D-glycero-beta-D-galacto-non-2-ulopyranosonate + diphosphate",
+      "ec": "2.7.7.92",
+      "substrates": [
+        {
+          "metabolite": "3_deoxy_d_glycero_d_galacto_nonulosonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cmp_3_deoxy_d_glycero_d_galacto_nonulosonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49220"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49220"
+          }
+        ]
+      }
+    }
+  ]
+}

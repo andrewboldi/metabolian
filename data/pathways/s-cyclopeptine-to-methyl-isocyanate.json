@@ -1,0 +1,295 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-cyclopeptine-to-methyl-isocyanate",
+  "name": "(S)-cyclopeptine to methyl isocyanate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-cyclopeptine to methyl isocyanate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:74479"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:71333"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_cyclopeptine",
+      "name": "(S)-cyclopeptine",
+      "formula": "C17H16N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71333"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "z_dehydrocyclopeptine",
+      "name": "(Z)-dehydrocyclopeptine",
+      "short": "dehydrocyclopeptine",
+      "formula": "C17H14N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:71330"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cyclopenine",
+      "name": "(−)-cyclopenine",
+      "formula": "C17H14N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:193522"
+      }
+    },
+    {
+      "id": "viridicatin",
+      "name": "viridicatin",
+      "formula": "C15H10NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:193553"
+      }
+    },
+    {
+      "id": "methyl_isocyanate",
+      "name": "methyl isocyanate",
+      "formula": "C2H3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59059"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_81",
+      "name": "(-)-cyclopenine synthase",
+      "ec": [
+        "1.14.11.81"
+      ]
+    },
+    {
+      "id": "ec_4_1_99_27",
+      "name": "cyclopenase",
+      "ec": [
+        "4.1.99.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(-)-cyclopenine synthase",
+      "equation": "(-)-cyclopeptine + 2-oxoglutarate + O2 = (Z)-dehydrocyclopeptine + succinate + CO2 + H2O",
+      "ec": "1.14.11.81",
+      "substrates": [
+        {
+          "metabolite": "s_cyclopeptine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "z_dehydrocyclopeptine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:74479"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74479"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(-)-cyclopenine synthase",
+      "equation": "(Z)-dehydrocyclopeptine + 2-oxoglutarate + O2 = (-)-cyclopenine + succinate + CO2",
+      "ec": "1.14.11.81",
+      "substrates": [
+        {
+          "metabolite": "z_dehydrocyclopeptine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclopenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:74483"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:74483"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cyclopenase",
+      "equation": "(-)-cyclopenine = viridicatin + methyl isocyanate + H(+)",
+      "ec": "4.1.99.27",
+      "substrates": [
+        {
+          "metabolite": "cyclopenine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "viridicatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_isocyanate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_99_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:73415"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:73415"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-3-dihydroxyindole-to-2-amino-5-oxocyclohex-1-e",
+  "name": "2,3-dihydroxyindole to 2-amino-5-oxocyclohex-1-e…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 2,3-dihydroxyindole to 2-amino-5-oxocyclohex-1-enecarbonyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19445"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17828"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_3_dihydroxyindole",
+      "name": "2,3-dihydroxyindole",
+      "formula": "C8H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17828"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "anthranilate",
+      "name": "anthranilate",
+      "formula": "C7H6NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16567"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "anthraniloyl_coa",
+      "name": "anthraniloyl-CoA",
+      "formula": "C28H37N8O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57331"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "2_amino_5_oxocyclohex_1_enecarbonyl_coa",
+      "name": "2-amino-5-oxocyclohex-1-enecarbonyl-CoA",
+      "short": "2-amino-5-oxocycloh…",
+      "formula": "C28H39N8O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58410"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_23",
+      "name": "2,3-dihydroxyindole 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.23"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_32",
+      "name": "anthranilate--CoA ligase",
+      "ec": [
+        "6.2.1.32"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_40",
+      "name": "anthraniloyl-CoA monooxygenase",
+      "ec": [
+        "1.14.13.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,3-dihydroxyindole 2,3-dioxygenase",
+      "equation": "2,3-dihydroxyindole + O2 = anthranilate + CO2 + H(+)",
+      "ec": "1.13.11.23",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxyindole",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "anthranilate--CoA ligase",
+      "equation": "anthranilate + ATP + CoA = anthraniloyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.32",
+      "substrates": [
+        {
+          "metabolite": "anthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "anthraniloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "anthraniloyl-CoA monooxygenase",
+      "equation": "anthraniloyl-CoA + 2 NADPH + O2 + 2 H(+) = 2-amino-5-oxocyclohex-1-enecarbonyl-CoA + 2 NADP(+) + H2O",
+      "ec": "1.14.13.40",
+      "substrates": [
+        {
+          "metabolite": "anthraniloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_amino_5_oxocyclohex_1_enecarbonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15993"
+          }
+        ]
+      }
+    }
+  ]
+}

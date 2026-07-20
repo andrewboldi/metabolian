@@ -1,0 +1,386 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-serine-o-sulfate-to-nitrite",
+  "name": "L-serine O-sulfate to nitrite",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from L-serine O-sulfate(1−) to nitrite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15605"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57531"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_serine_o_sulfate",
+      "name": "L-serine O-sulfate",
+      "formula": "C3H6NO6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57531"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16301"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "no",
+      "name": "Nitric oxide (NO)",
+      "formula": "NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16480"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17632"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_1_10",
+      "name": "serine-sulfate ammonia-lyase",
+      "ec": [
+        "4.3.1.10"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_4",
+      "name": "nitrite reductase [NAD(P)H]",
+      "ec": [
+        "1.7.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_15",
+      "name": "nitrite reductase (NADH)",
+      "ec": [
+        "1.7.1.15"
+      ]
+    },
+    {
+      "id": "ec_1_7_6_1",
+      "name": "nitrite dismutase",
+      "ec": [
+        "1.7.6.1"
+      ]
+    },
+    {
+      "id": "ec_1_7_2_1",
+      "name": "nitrite reductase (NO-forming)",
+      "ec": [
+        "1.7.2.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "serine-sulfate ammonia-lyase",
+      "equation": "L-serine O-sulfate + H2O = sulfate + pyruvate + NH4(+) + H(+)",
+      "ec": "4.3.1.10",
+      "substrates": [
+        {
+          "metabolite": "l_serine_o_sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15605"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nitrite reductase [NAD(P)H]",
+      "equation": "NH4(+) + 3 NAD(+) + 2 H2O = nitrite + 3 NADH + 5 H(+)",
+      "ec": "1.7.1.4",
+      "substrates": [
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitrite dismutase",
+      "equation": "3 nitrite + 2 H(+) = 2 nitric oxide + nitrate + H2O",
+      "ec": "1.7.6.1",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:31367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nitrite reductase (NO-forming)",
+      "equation": "nitric oxide + Fe(III)-[cytochrome c] + H2O = Fe(II)-[cytochrome c] + nitrite + 2 H(+)",
+      "ec": "1.7.2.1",
+      "substrates": [
+        {
+          "metabolite": "no",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:15233"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15233"
+          }
+        ]
+      }
+    }
+  ]
+}

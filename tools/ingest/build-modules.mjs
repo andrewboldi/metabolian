@@ -25,9 +25,11 @@ import { chebiTable, loadReactions, conjugateMap, enzymeNames, CURRENCY } from "
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = join(ROOT, "data", "pathways");
 
-const MIN_SPINE = Number(process.env.MIN_SPINE || 4);   // shorter reads as a stub, not a pathway
+const MIN_SPINE = Number(process.env.MIN_SPINE || 3);   // 2 steps is a reaction pair, not a route
 const MAX_SPINE = Number(process.env.MAX_SPINE || 9);   // longer overflows a sheet
-const MAX_SHEETS = Number(process.env.MAX_SHEETS || 120);
+// High enough not to bind: spine extraction exhausts the EC-annotated corpus
+// at ~760 sheets on its own, so this is a runaway guard rather than a target.
+const MAX_SHEETS = Number(process.env.MAX_SHEETS || 2500);
 
 // Trailing hyphens are trimmed AFTER the length cut, not before: slicing a long
 // name mid-word leaves one behind, and the schema's id pattern rejects it.
@@ -51,7 +53,14 @@ function categoryFor(ecs, names) {
 }
 
 const chebi = chebiTable();
-const { reactions } = loadReactions(chebi);
+// Only EC-annotated reactions become sheets. The .mpl grammar requires an enzyme
+// token on every step, and for the 56% of Rhea reactions with no EC assignment
+// the generator was emitting "spontaneous" — which asserts a mechanism Rhea
+// never claims. That is fabricated biochemistry, and this project's first rule
+// forbids it. Restricting to EC-annotated steps means every enzyme label on an
+// ingested sheet is the accepted ExPASy name for a real, assigned activity.
+const { reactions: allReactions } = loadReactions(chebi);
+const reactions = allReactions.filter((r) => r.ec.length);
 
 // ------------------------------------------------- reuse the repo's own naming
 // The hand-authored modules already carry 300+ curated ChEBI -> id/name
@@ -286,7 +295,13 @@ for (const chain of sheets) {
   lines.push(`# edit the generator, not this file.`);
   lines.push("");
   lines.push(`pathway ${id} ${JSON.stringify(title)} {`);
-  lines.push("  spacing 152");
+  // Spacing follows the longest enzyme name on the sheet. A fixed 152 is right
+  // for short names and far too tight for "O-ureido-D-serine cyclo-ligase",
+  // whose label had nowhere to go and printed across two molecular formulas.
+  // Cheaper and more honest than hiding the label: give the sheet more paper.
+  const longestEnz = Math.max(20, ...rxns.map((r) => ((r.ec[0] && ecNames.get(r.ec[0])) || "").length));
+  const spacing = Math.min(280, 152 + Math.max(0, longestEnz - 22) * 4);
+  lines.push(`  spacing ${spacing}`);
   lines.push("");
   lines.push("  spine at 0,0 {");
 
@@ -305,7 +320,7 @@ for (const chain of sheets) {
       ...cofIn.map((c) => `+${metIds.get(c)}`),
       ...cofOut.map((c) => `-${metIds.get(c)}`),
     ].join(" ");
-    lines.push(`    <-> ${enz || "spontaneous"}${ecTag}${side ? ` ${side}` : ""}`);
+    lines.push(`    <-> ${enz}${ecTag}${side ? ` ${side}` : ""}`);
     lines.push(`    ${metIds.get(nextMain)}`);
     carry = nextMain;
   }

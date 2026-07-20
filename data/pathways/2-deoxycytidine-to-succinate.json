@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deoxycytidine-to-succinate",
+  "name": "2'-deoxycytidine… to succinate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from 2'-deoxycytidine 5'-monophosphate(1−) residue to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13681"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:85452"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deoxycytidine_5_monophosphate_1",
+      "name": "2'-deoxycytidine 5'-monophosphate(1−)",
+      "short": "2'-deoxycytidine…",
+      "formula": "C9H11N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85452"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "5_methyl_dcmp_1",
+      "name": "5-methyl dCMP(1−)",
+      "formula": "C10H13N3O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:85454"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "5_hydroxymethyldeoxycytidine_5_monophosphate_1",
+      "name": "5-hydroxymethyldeoxycytidine 5'-monophosphate(1−)",
+      "short": "5-hydroxymethyldeox…",
+      "formula": "C10H13N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136731"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "5_formyl_dcmp_1",
+      "name": "5-formyl-dCMP(1−)",
+      "formula": "C10H11N3O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:137731"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_carboxy_dcmp_2",
+      "name": "5-carboxy-dCMP(2−)",
+      "formula": "C10H10N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:137732"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_37",
+      "name": "DNA (cytosine-5-)-methyltransferase",
+      "ec": [
+        "2.1.1.37"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_80",
+      "name": "methylcytosine dioxygenase",
+      "ec": [
+        "1.14.11.80"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "DNA (cytosine-5-)-methyltransferase",
+      "equation": "a 2'-deoxycytidine in DNA + S-adenosyl-L-methionine = a 5-methyl-2'-deoxycytidine in DNA + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.37",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methyl_dcmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13681"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13681"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methylcytosine dioxygenase",
+      "equation": "a 5-methyl-2'-deoxycytidine in DNA + 2-oxoglutarate + O2 = a 5-hydroxymethyl-2'-deoxycytidine in DNA + succinate + CO2",
+      "ec": "1.14.11.80",
+      "substrates": [
+        {
+          "metabolite": "5_methyl_dcmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxymethyldeoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:52636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methylcytosine dioxygenase",
+      "equation": "a 5-hydroxymethyl-2'-deoxycytidine in DNA + 2-oxoglutarate + O2 = a 5-formyl-2'-deoxycytidine in DNA + succinate + CO2 + H2O",
+      "ec": "1.14.11.80",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxymethyldeoxycytidine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_formyl_dcmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53828"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53828"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "methylcytosine dioxygenase",
+      "equation": "a 5-formyl-2'-deoxycytidine in DNA + 2-oxoglutarate + O2 = a 5-carboxyl-2'-deoxycytidine in DNA + succinate + CO2 + H(+)",
+      "ec": "1.14.11.80",
+      "substrates": [
+        {
+          "metabolite": "5_formyl_dcmp_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_carboxy_dcmp_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:53832"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53832"
+          }
+        ]
+      }
+    }
+  ]
+}

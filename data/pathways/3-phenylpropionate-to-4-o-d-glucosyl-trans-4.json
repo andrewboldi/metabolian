@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-phenylpropionate-to-4-o-d-glucosyl-trans-4",
+  "name": "3-phenylpropionate to 4-O-β-D-glucosyl-trans-4-…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-phenylpropionate to 4-O-β-D-glucosyl-trans-4-coumarate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59996"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:51057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_phenylpropionate",
+      "name": "3-phenylpropionate",
+      "formula": "C9H9O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:51057"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "trans_cinnamate",
+      "name": "trans-cinnamate",
+      "formula": "C9H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15669"
+      }
+    },
+    {
+      "id": "fadh2",
+      "name": "FADH2",
+      "formula": "C27H33N9O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58307"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "trans_4_coumarate",
+      "name": "trans-4-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:12876"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "4_o_d_glucosyl_trans_4_coumarate",
+      "name": "4-O-β-D-glucosyl-trans-4-coumarate",
+      "short": "4-O-β-D-glucosyl-tr…",
+      "formula": "C15H17O8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:79066"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_8_15",
+      "name": "3-(aryl)acrylate reductase",
+      "ec": [
+        "1.3.8.15"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_91",
+      "name": "trans-cinnamate 4-monooxygenase",
+      "ec": [
+        "1.14.14.91"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_126",
+      "name": "hydroxycinnamate 4-beta-glucosyltransferase",
+      "ec": [
+        "2.4.1.126"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-(aryl)acrylate reductase",
+      "equation": "3-phenylpropanoate + oxidized [electron-transfer flavoprotein] + H(+) = (E)-cinnamate + reduced [electron-transfer flavoprotein]",
+      "ec": "1.3.8.15",
+      "substrates": [
+        {
+          "metabolite": "3_phenylpropionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fadh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "trans-cinnamate 4-monooxygenase",
+      "equation": "(E)-cinnamate + reduced [NADPH--hemoprotein reductase] + O2 = (E)-4-coumarate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.91",
+      "substrates": [
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_91"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10608"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10608"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "hydroxycinnamate 4-beta-glucosyltransferase",
+      "equation": "(E)-4-coumarate + UDP-alpha-D-glucose = 4-O-(beta-D-glucosyl)-trans-4-coumarate + UDP + H(+)",
+      "ec": "2.4.1.126",
+      "substrates": [
+        {
+          "metabolite": "trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_o_d_glucosyl_trans_4_coumarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_126"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21636"
+          }
+        ]
+      }
+    }
+  ]
+}

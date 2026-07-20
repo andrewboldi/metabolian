@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "itp-to-diphosphate",
+  "name": "ITP to diphosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from ITP(4−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:29399"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61402"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61402"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "imp",
+      "name": "Inosine 5'-monophosphate (IMP)",
+      "short": "Inosine 5'-MP (IMP)",
+      "formula": "C10H11N4O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58053"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "xmp",
+      "name": "Xanthosine 5'-monophosphate (XMP)",
+      "short": "Xanthosine 5'-MP…",
+      "formula": "C10H11N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57464"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "Guanosine 5'-monophosphate (GMP)",
+      "short": "Guanosine 5'-MP…",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58115"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_8",
+      "name": "ATP diphosphatase",
+      "ec": [
+        "3.6.1.8"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_66",
+      "name": "XTP/dITP diphosphatase",
+      "ec": [
+        "3.6.1.66"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_205",
+      "name": "IMP dehydrogenase",
+      "ec": [
+        "1.1.1.205"
+      ]
+    },
+    {
+      "id": "ec_6_3_5_2",
+      "name": "GMP synthase (glutamine-hydrolyzing)",
+      "ec": [
+        "6.3.5.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ATP diphosphatase",
+      "equation": "ITP + H2O = IMP + diphosphate + H(+)",
+      "ec": "3.6.1.8",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "imp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:29399"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29399"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "IMP dehydrogenase",
+      "equation": "IMP + NAD(+) + H2O = XMP + NADH + H(+)",
+      "ec": "1.1.1.205",
+      "substrates": [
+        {
+          "metabolite": "imp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_205"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11708"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11708"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "GMP synthase (glutamine-hydrolyzing)",
+      "equation": "XMP + L-glutamine + ATP + H2O = GMP + L-glutamate + AMP + diphosphate + 2 H(+)",
+      "ec": "6.3.5.2",
+      "substrates": [
+        {
+          "metabolite": "xmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11680"
+          }
+        ]
+      }
+    }
+  ]
+}

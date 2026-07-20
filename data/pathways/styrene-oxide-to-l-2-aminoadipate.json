@@ -1,0 +1,389 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "styrene-oxide-to-l-2-aminoadipate",
+  "name": "styrene oxide to L-2-aminoadipate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from styrene oxide to L-2-aminoadipate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21604"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17907"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "styrene_oxide",
+      "name": "styrene oxide",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17907"
+      }
+    },
+    {
+      "id": "phenylacetaldehyde",
+      "name": "phenylacetaldehyde",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16424"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phenylacetate",
+      "name": "phenylacetate",
+      "formula": "C8H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18401"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "phenylacetyl_coa",
+      "name": "phenylacetyl-CoA",
+      "formula": "C29H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57390"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "isopenicillin_n",
+      "name": "isopenicillin N",
+      "formula": "C14H20N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58399"
+      }
+    },
+    {
+      "id": "benzylpenicillin",
+      "name": "benzylpenicillin",
+      "formula": "C16H17N2O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:51354"
+      }
+    },
+    {
+      "id": "l_2_aminoadipate",
+      "name": "L-2-aminoadipate",
+      "formula": "C6H10NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58672"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_99_7",
+      "name": "styrene-oxide isomerase",
+      "ec": [
+        "5.3.99.7"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_39",
+      "name": "phenylacetaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.39"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_30",
+      "name": "phenylacetate--CoA ligase",
+      "ec": [
+        "6.2.1.30"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_164",
+      "name": "isopenicillin-N N-acyltransferase",
+      "ec": [
+        "2.3.1.164"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "styrene-oxide isomerase",
+      "equation": "styrene oxide = 2-phenylacetaldehyde",
+      "ec": "5.3.99.7",
+      "substrates": [
+        {
+          "metabolite": "styrene_oxide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetaldehyde",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_99_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21604"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21604"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phenylacetaldehyde dehydrogenase",
+      "equation": "2-phenylacetaldehyde + NAD(+) + H2O = 2-phenylacetate + NADH + 2 H(+)",
+      "ec": "1.2.1.39",
+      "substrates": [
+        {
+          "metabolite": "phenylacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21392"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21392"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phenylacetate--CoA ligase",
+      "equation": "2-phenylacetate + ATP + CoA = phenylacetyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.30",
+      "substrates": [
+        {
+          "metabolite": "phenylacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20956"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20956"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "isopenicillin-N N-acyltransferase",
+      "equation": "isopenicillin N + phenylacetyl-CoA + H2O = penicillin G + L-2-aminoadipate + CoA + H(+)",
+      "ec": "2.3.1.164",
+      "substrates": [
+        {
+          "metabolite": "isopenicillin_n",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phenylacetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzylpenicillin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_2_aminoadipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_164"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20720"
+          }
+        ]
+      }
+    }
+  ]
+}

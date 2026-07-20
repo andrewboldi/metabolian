@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-phosphonato-d-ribose-to-diphosphate",
+  "name": "5-phosphonato-α-D-ribose… to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from 5-phosphonato-α-D-ribose cyclic-1,2-phosphate(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41612"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:68687"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_phosphonato_d_ribose_cyclic_1_2_phosphate",
+      "name": "5-phosphonato-α-D-ribose cyclic-1,2-phosphate",
+      "short": "5-phosphonato-α-D-r…",
+      "formula": "C5H7O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:68687"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_ribofuranose_2_5_bisphosphate",
+      "name": "D-ribofuranose-2,5-bisphosphate",
+      "short": "D-ribofuranose-2,5-…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:78345"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78346"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp_d_ribose",
+      "name": "ADP-D-ribose",
+      "formula": "C15H21N5O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57967"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_57",
+      "name": "phosphoribosyl 1,2-cyclic phosphate 1,2-diphosphodiesterase",
+      "ec": [
+        "3.1.4.57"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_96",
+      "name": "ADP-D-ribose pyrophosphorylase",
+      "ec": [
+        "2.7.7.96"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphoribosyl 1,2-cyclic phosphate 1,2-diphosphodiesterase",
+      "equation": "alpha-D-ribose 1,2-cyclic phosphate 5-phosphate + H2O = D-ribose 2,5-bisphosphate + H(+)",
+      "ec": "3.1.4.57",
+      "substrates": [
+        {
+          "metabolite": "5_phosphonato_d_ribose_cyclic_1_2_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_2_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41612"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoribosyl 1,2-cyclic phosphate 1,2-diphosphodiesterase",
+      "equation": "D-ribose 2,5-bisphosphate + H2O = D-ribose 5-phosphate + phosphate",
+      "ec": "3.1.4.57",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose_2_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41616"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ADP-D-ribose pyrophosphorylase",
+      "equation": "D-ribose 5-phosphate + ATP + H(+) = ADP-D-ribose + diphosphate",
+      "ec": "2.7.7.96",
+      "substrates": [
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:50248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50248"
+          }
+        ]
+      }
+    }
+  ]
+}

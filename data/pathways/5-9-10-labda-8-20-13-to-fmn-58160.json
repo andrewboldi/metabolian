@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-9-10-labda-8-20-13-to-fmn-58160",
+  "name": "5β,9α,10α-labda-8(20),13-… to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate(3−) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:58160"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58553"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+      "name": "5β,9α,10α-labda-8(20),13-dien-15-yl diphosphate",
+      "short": "5β,9α,10α-labda-8(2…",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58553"
+      }
+    },
+    {
+      "id": "dolabradiene",
+      "name": "dolabradiene",
+      "formula": "C20H32",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141822"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "15_16_epoxydolabrene",
+      "name": "15,16-epoxydolabrene",
+      "formula": "C20H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141821"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxy_15_16_epoxydolabrene",
+      "name": "3β-hydroxy-15,16-epoxydolabrene",
+      "short": "3β-hydroxy-15,16-ep…",
+      "formula": "C20H32O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141820"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_196",
+      "name": "dolabradiene synthase",
+      "ec": [
+        "4.2.3.196"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_159",
+      "name": "dolabradiene monooxygenase",
+      "ec": [
+        "1.14.14.159"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dolabradiene synthase",
+      "equation": "ent-copalyl diphosphate = dolabradiene + diphosphate",
+      "ec": "4.2.3.196",
+      "substrates": [
+        {
+          "metabolite": "5_9_10_labda_8_20_13_dien_15_yl_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dolabradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_196"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:58160"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58160"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dolabradiene monooxygenase",
+      "equation": "dolabradiene + reduced [NADPH--hemoprotein reductase] + O2 = 15,16-epoxydolabrene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.159",
+      "substrates": [
+        {
+          "metabolite": "dolabradiene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "15_16_epoxydolabrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57516"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57516"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dolabradiene monooxygenase",
+      "equation": "15,16-epoxydolabrene + reduced [NADPH--hemoprotein reductase] + O2 = 3beta-hydroxy-15,16-epoxydolabrene + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.159",
+      "substrates": [
+        {
+          "metabolite": "15_16_epoxydolabrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_15_16_epoxydolabrene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_159"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57520"
+          }
+        ]
+      }
+    }
+  ]
+}

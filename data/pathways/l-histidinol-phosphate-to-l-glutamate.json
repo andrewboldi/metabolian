@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-histidinol-phosphate-to-l-glutamate",
+  "name": "L-histidinol phosphate to L-glutamate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from L-histidinol phosphate(1−) to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14465"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57980"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_histidinol_phosphate",
+      "name": "L-histidinol phosphate",
+      "short": "L-histidinol P",
+      "formula": "C6H11N3O4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57980"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_histidinol",
+      "name": "L-histidinol",
+      "formula": "C6H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57699"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H9N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57595"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "3_imidazol_5_yl_pyruvate",
+      "name": "3-(imidazol-5-yl)pyruvate",
+      "short": "3-(imidazol-5-yl)py…",
+      "formula": "C6H5N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58133"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_15",
+      "name": "histidinol-phosphatase",
+      "ec": [
+        "3.1.3.15"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_23",
+      "name": "histidinol dehydrogenase",
+      "ec": [
+        "1.1.1.23"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_38",
+      "name": "histidine transaminase",
+      "ec": [
+        "2.6.1.38"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "histidinol-phosphatase",
+      "equation": "L-histidinol phosphate + H2O = L-histidinol + phosphate",
+      "ec": "3.1.3.15",
+      "substrates": [
+        {
+          "metabolite": "l_histidinol_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_histidinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14465"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14465"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "histidinol dehydrogenase",
+      "equation": "L-histidinol + 2 NAD(+) + H2O = L-histidine + 2 NADH + 3 H(+)",
+      "ec": "1.1.1.23",
+      "substrates": [
+        {
+          "metabolite": "l_histidinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20641"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20641"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "histidine transaminase",
+      "equation": "L-histidine + 2-oxoglutarate = 3-(imidazol-5-yl)pyruvate + L-glutamate",
+      "ec": "2.6.1.38",
+      "substrates": [
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_imidazol_5_yl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16565"
+          }
+        ]
+      }
+    }
+  ]
+}

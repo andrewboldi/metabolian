@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "5-dihydrotestosterone-to-hydrogen-donor",
+  "name": "5β-dihydrotestosterone to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 5β-dihydrotestosterone to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46636"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:2150"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "5_dihydrotestosterone",
+      "name": "5β-dihydrotestosterone",
+      "short": "5β-dihydrotestoster…",
+      "formula": "C19H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2150"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "testosterone",
+      "name": "testosterone",
+      "formula": "C19H28O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17347"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "androst_4_ene_3_17_dione",
+      "name": "androst-4-ene-3,17-dione",
+      "short": "androst-4-ene-3,17-…",
+      "formula": "C19H26O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16422"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "androsta_1_4_diene_3_17_dione",
+      "name": "androsta-1,4-diene-3,17-dione",
+      "short": "androsta-1,4-diene-…",
+      "formula": "C19H24O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40799"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_3",
+      "name": "Delta(4)-3-oxosteroid 5beta-reductase",
+      "ec": [
+        "1.3.1.3"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_51",
+      "name": "3(or 17)beta-hydroxysteroid dehydrogenase",
+      "ec": [
+        "1.1.1.51"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_64",
+      "name": "testosterone 17beta-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.64"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_4",
+      "name": "3-oxosteroid 1-dehydrogenase",
+      "ec": [
+        "1.3.99.4"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Delta(4)-3-oxosteroid 5beta-reductase",
+      "equation": "5beta-dihydrotestosterone + NADP(+) = testosterone + NADPH + H(+)",
+      "ec": "1.3.1.3",
+      "substrates": [
+        {
+          "metabolite": "5_dihydrotestosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46636"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46636"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3(or 17)beta-hydroxysteroid dehydrogenase",
+      "equation": "testosterone + NADP(+) = androst-4-ene-3,17-dione + NADPH + H(+)",
+      "ec": "1.1.1.51",
+      "substrates": [
+        {
+          "metabolite": "testosterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "androst_4_ene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14981"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14981"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxosteroid 1-dehydrogenase",
+      "equation": "androst-4-ene-3,17-dione + A = androsta-1,4-diene-3,17-dione + AH2",
+      "ec": "1.3.99.4",
+      "substrates": [
+        {
+          "metabolite": "androst_4_ene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "androsta_1_4_diene_3_17_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51056"
+          }
+        ]
+      }
+    }
+  ]
+}

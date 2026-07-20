@@ -1,0 +1,273 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-1-hydroxy-2-oxoethyl-to-adp-d-ribose",
+  "name": "Nω-(1-hydroxy-2-oxoethyl)… to ADP-D-ribose",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from Nω-(1-hydroxy-2-oxoethyl)-L-argininium residue to ADP-D-ribose(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57188"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141553"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_1_hydroxy_2_oxoethyl_l_argininium",
+      "name": "Nω-(1-hydroxy-2-oxoethyl)-L-argininium",
+      "short": "Nω-(1-hydroxy-2-oxo…",
+      "formula": "C8H15N4O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141553"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_argininium",
+      "name": "L-argininium",
+      "formula": "C6H13N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:29965"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29805"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "n_adp_d_ribosyl_l_arginine_1",
+      "name": "Nω-α-(ADP-D-ribosyl)-L-arginine(1−)",
+      "short": "Nω-α-(ADP-D-ribosyl…",
+      "formula": "C21H32N9O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83960"
+      }
+    },
+    {
+      "id": "nicotinamide",
+      "name": "nicotinamide",
+      "formula": "C6H6N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17154"
+      }
+    },
+    {
+      "id": "adp_d_ribose",
+      "name": "ADP-D-ribose",
+      "formula": "C15H21N5O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57967"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_124",
+      "name": "protein deglycase",
+      "ec": [
+        "3.5.1.124"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_37",
+      "name": "NAD(+)--dinitrogen-reductase ADP-D-ribosyltransferase",
+      "ec": [
+        "2.4.2.37"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_24",
+      "name": "ADP-ribosyl-[dinitrogen reductase] hydrolase",
+      "ec": [
+        "3.2.2.24"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein deglycase",
+      "equation": "N(omega)-(1-hydroxy-2-oxoethyl)-L-arginyl-[protein] + H2O = L-arginyl-[protein] + glycolate + H(+)",
+      "ec": "3.5.1.124",
+      "substrates": [
+        {
+          "metabolite": "n_1_hydroxy_2_oxoethyl_l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_124"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57188"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57188"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "NAD(+)--dinitrogen-reductase ADP-D-ribosyltransferase",
+      "equation": "L-arginyl-[dinitrogen reductase] + NAD(+) = N(omega)-alpha-(ADP-D-ribosyl)-L-arginyl-[dinitrogen reductase] + nicotinamide + H(+)",
+      "ec": "2.4.2.37",
+      "substrates": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nicotinamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18077"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18077"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ADP-ribosyl-[dinitrogen reductase] hydrolase",
+      "equation": "N(omega)-alpha-(ADP-D-ribosyl)-L-arginyl-[dinitrogen reductase] + H2O = L-arginyl-[dinitrogen reductase] + ADP-D-ribose",
+      "ec": "3.2.2.24",
+      "substrates": [
+        {
+          "metabolite": "n_adp_d_ribosyl_l_arginine_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp_d_ribose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14493"
+          }
+        ]
+      }
+    }
+  ]
+}

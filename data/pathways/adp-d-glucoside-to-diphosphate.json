@@ -1,0 +1,282 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "adp-d-glucoside-to-diphosphate",
+  "name": "ADP α-D-glucoside to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from ADP α-D-glucoside(2−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:30923"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57498"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "adp_d_glucoside",
+      "name": "ADP α-D-glucoside",
+      "formula": "C16H23N5O15P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57498"
+      }
+    },
+    {
+      "id": "d_glycerate",
+      "name": "D-glycerate",
+      "formula": "C3H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16659"
+      }
+    },
+    {
+      "id": "2_o_d_glucopyranosyl_d_glycerate",
+      "name": "2-O-(α-D-glucopyranosyl)-D-glycerate",
+      "short": "2-O-(α-D-glucopyran…",
+      "formula": "C9H15O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62510"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "g1p",
+      "name": "alpha-D-Glucose 1-phosphate (Cori ester)",
+      "short": "alpha-D-Glucose…",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58601"
+      }
+    },
+    {
+      "id": "utp",
+      "name": "UTP",
+      "formula": "C9H11N2O15P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:46398"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_268",
+      "name": "glucosylglycerate synthase",
+      "ec": [
+        "2.4.1.268"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_352",
+      "name": "glucosylglycerate phosphorylase",
+      "ec": [
+        "2.4.1.352"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_9",
+      "name": "UTP--glucose-1-phosphate uridylyltransferase",
+      "ec": [
+        "2.7.7.9"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glucosylglycerate synthase",
+      "equation": "ADP-alpha-D-glucose + (R)-glycerate = (2R)-2-O-(alpha-D-glucopyranosyl)-glycerate + ADP + H(+)",
+      "ec": "2.4.1.268",
+      "substrates": [
+        {
+          "metabolite": "adp_d_glucoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_o_d_glucopyranosyl_d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_268"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:30923"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30923"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glucosylglycerate phosphorylase",
+      "equation": "(2R)-2-O-(alpha-D-glucopyranosyl)-glycerate + phosphate = (R)-glycerate + alpha-D-glucose 1-phosphate",
+      "ec": "2.4.1.352",
+      "substrates": [
+        {
+          "metabolite": "2_o_d_glucopyranosyl_d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glycerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_352"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55268"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UTP--glucose-1-phosphate uridylyltransferase",
+      "equation": "alpha-D-glucose 1-phosphate + UTP + H(+) = UDP-alpha-D-glucose + diphosphate",
+      "ec": "2.7.7.9",
+      "substrates": [
+        {
+          "metabolite": "g1p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "utp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19889"
+          }
+        ]
+      }
+    }
+  ]
+}

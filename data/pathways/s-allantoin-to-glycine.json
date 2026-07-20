@@ -1,0 +1,320 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-allantoin-to-glycine",
+  "name": "(S)-(+)-allantoin to glycine",
+  "category": "other",
+  "summary": "A 4-step route from (S)-(+)-allantoin to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17029"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15678"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_allantoin",
+      "name": "(S)-(+)-allantoin",
+      "formula": "C4H6N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15678"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "allantoate",
+      "name": "allantoate",
+      "formula": "C4H7N4O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17536"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ureidoglycolate",
+      "name": "(−)-ureidoglycolate",
+      "formula": "C3H5N2O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57296"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_2_5",
+      "name": "allantoinase",
+      "ec": [
+        "3.5.2.5"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_4",
+      "name": "allantoicase",
+      "ec": [
+        "3.5.3.4"
+      ]
+    },
+    {
+      "id": "ec_4_3_2_3",
+      "name": "ureidoglycolate lyase",
+      "ec": [
+        "4.3.2.3"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_44",
+      "name": "alanine--glyoxylate transaminase",
+      "ec": [
+        "2.6.1.44"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "allantoinase",
+      "equation": "(S)-allantoin + H2O = allantoate + H(+)",
+      "ec": "3.5.2.5",
+      "substrates": [
+        {
+          "metabolite": "s_allantoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "allantoicase",
+      "equation": "allantoate + H2O = (S)-ureidoglycolate + urea",
+      "ec": "3.5.3.4",
+      "substrates": [
+        {
+          "metabolite": "allantoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ureidoglycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ureidoglycolate lyase",
+      "equation": "(S)-ureidoglycolate = urea + glyoxylate",
+      "ec": "4.3.2.3",
+      "substrates": [
+        {
+          "metabolite": "ureidoglycolate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11304"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11304"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alanine--glyoxylate transaminase",
+      "equation": "glyoxylate + L-alanine = glycine + pyruvate",
+      "ec": "2.6.1.44",
+      "substrates": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24248"
+          }
+        ]
+      }
+    }
+  ]
+}

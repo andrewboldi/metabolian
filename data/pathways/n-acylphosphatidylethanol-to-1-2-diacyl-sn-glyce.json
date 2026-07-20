@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acylphosphatidylethanol-to-1-2-diacyl-sn-glyce",
+  "name": "N-acylphosphatidylethanol… to 1,2-diacyl-sn-glycerol…",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from N-acylphosphatidylethanolamine(1−) to 1,2-diacyl-sn-glycerol 3-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:33159"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62537"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acylphosphatidylethanolamine",
+      "name": "N-acylphosphatidylethanolamine",
+      "short": "N-acylphosphatidyle…",
+      "formula": "C8H10NO9PR3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:62537"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acylethanolamine",
+      "name": "N-acylethanolamine",
+      "formula": "C3H6NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52640"
+      }
+    },
+    {
+      "id": "1_2_diacyl_sn_glycerol_3_phosphate",
+      "name": "1,2-diacyl-sn-glycerol 3-phosphate",
+      "short": "1,2-diacyl-sn-glyce…",
+      "formula": "C5H5O8PR2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58608"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_acyl_sn_glycero_3_phosphate",
+      "name": "2-acyl-sn-glycero-3-phosphate",
+      "short": "2-acyl-sn-glycero-3…",
+      "formula": "C4H6O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64982"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_4_54",
+      "name": "N-acetylphosphatidylethanolamine-hydrolyzing phospholipase D",
+      "ec": [
+        "3.1.4.54"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_118",
+      "name": "phospholipid sn-1 acylhydrolase",
+      "ec": [
+        "3.1.1.118"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_52",
+      "name": "2-acylglycerol-3-phosphate O-acyltransferase",
+      "ec": [
+        "2.3.1.52"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetylphosphatidylethanolamine-hydrolyzing phospholipase D",
+      "equation": "an N-acyl-1,2-diacyl-sn-glycero-3-phosphoethanolamine + H2O = an N-acylethanolamine + a 1,2-diacyl-sn-glycero-3-phosphate + H(+)",
+      "ec": "3.1.4.54",
+      "substrates": [
+        {
+          "metabolite": "n_acylphosphatidylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylethanolamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_2_diacyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:33159"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33159"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phospholipid sn-1 acylhydrolase",
+      "equation": "a 1,2-diacyl-sn-glycero-3-phosphate + H2O = a 2-acyl-sn-glycerol 3-phosphate + a fatty acid + H(+)",
+      "ec": "3.1.1.118",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_118"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:44648"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44648"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-acylglycerol-3-phosphate O-acyltransferase",
+      "equation": "a 2-acyl-sn-glycerol 3-phosphate + an acyl-CoA = a 1,2-diacyl-sn-glycero-3-phosphate + CoA",
+      "ec": "2.3.1.52",
+      "substrates": [
+        {
+          "metabolite": "2_acyl_sn_glycero_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_52"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14233"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14233"
+          }
+        ]
+      }
+    }
+  ]
+}

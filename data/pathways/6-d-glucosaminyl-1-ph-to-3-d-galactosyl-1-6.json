@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "6-d-glucosaminyl-1-ph-to-3-d-galactosyl-1-6",
+  "name": "6-(α-D-glucosaminyl)-1-ph… to 3-[α-D-galactosyl-(1→6)-β…",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol zwitterion to 3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-1,2-diacyl-sn-glycerol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14333"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57997"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol",
+      "name": "6-(α-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol",
+      "short": "6-(α-D-glucosaminyl…",
+      "formula": "C17H28NO17PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57997"
+      }
+    },
+    {
+      "id": "6_d_glucosaminyl_1d_myo_inositol_1_2_cyclic_phos",
+      "name": "6-(α-D-glucosaminyl)-1D-myo-inositol 1,2-cyclic phosphate",
+      "short": "6-(α-D-glucosaminyl…",
+      "formula": "C12H22NO12P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58891"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "udp_d_galactose",
+      "name": "UDP-α-D-galactose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:66914"
+      }
+    },
+    {
+      "id": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+      "name": "1,2-diacyl-3-β-D-galactosyl-sn-glycerol",
+      "short": "1,2-diacyl-3-β-D-ga…",
+      "formula": "C11H16O10R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17615"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl",
+      "name": "3-[α-D-galactosyl-(1→6)-β-D-galactosyl]-1,2-diacyl-sn-glycerol",
+      "short": "3-[α-D-galactosyl-(…",
+      "formula": "C17H26O15R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28396"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_6_1_14",
+      "name": "glycosylphosphatidylinositol diacylglycerol-lyase",
+      "ec": [
+        "4.6.1.14"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_46",
+      "name": "monogalactosyldiacylglycerol synthase",
+      "ec": [
+        "2.4.1.46"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_241",
+      "name": "digalactosyldiacylglycerol synthase",
+      "ec": [
+        "2.4.1.241"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glycosylphosphatidylinositol diacylglycerol-lyase",
+      "equation": "a 6-(alpha-D-glucosaminyl)-1-(1,2-diacyl-sn-glycero-3-phospho)-1D-myo-inositol = 6-(alpha-D-glucosaminyl)-1D-myo-inositol 1,2-cyclic phosphate + a 1,2-diacyl-sn-glycerol",
+      "ec": "4.6.1.14",
+      "substrates": [
+        {
+          "metabolite": "6_d_glucosaminyl_1_phosphatidyl_1d_myo_inositol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_d_glucosaminyl_1d_myo_inositol_1_2_cyclic_phos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_6_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14333"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14333"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "monogalactosyldiacylglycerol synthase",
+      "equation": "a 1,2-diacyl-sn-glycerol + UDP-alpha-D-galactose = a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + UDP + H(+)",
+      "ec": "2.4.1.46",
+      "substrates": [
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14945"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14945"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "digalactosyldiacylglycerol synthase",
+      "equation": "a 1,2-diacyl-3-O-(beta-D-galactosyl)-sn-glycerol + UDP-alpha-D-galactose = a 1,2-diacyl-3-O-[alpha-D-galactosyl-(1->6)-beta-D-galactosyl]-sn-glycerol + UDP + H(+)",
+      "ec": "2.4.1.241",
+      "substrates": [
+        {
+          "metabolite": "1_2_diacyl_3_d_galactosyl_sn_glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_galactose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_d_galactosyl_1_6_d_galactosyl_1_2_diacyl_sn_gl",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_241"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10520"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10520"
+          }
+        ]
+      }
+    }
+  ]
+}

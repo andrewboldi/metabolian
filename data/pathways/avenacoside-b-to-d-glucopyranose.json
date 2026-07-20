@@ -1,0 +1,341 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "avenacoside-b-to-d-glucopyranose",
+  "name": "avenacoside B to D-glucopyranose",
+  "category": "other",
+  "summary": "A 4-step route from avenacoside B to D-glucopyranose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:38911"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:2938"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "avenacoside_b",
+      "name": "avenacoside B",
+      "formula": "C57H92O28",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:2938"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "26_desglucoavenacoside_b",
+      "name": "26-desglucoavenacoside B",
+      "short": "26-desglucoavenacos…",
+      "formula": "C51H82O23",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:75931"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "n_phosphonato_l_histidine",
+      "name": "Nπ-phosphonato-L-histidine",
+      "short": "Nπ-phosphonato-L-hi…",
+      "formula": "C6H6N3O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:64837"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "l_histidine",
+      "name": "L-histidine",
+      "formula": "C6H7N3O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29979"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "trehalose_6_phosphate",
+      "name": "α,α-trehalose 6-phosphate",
+      "short": "α,α-trehalose 6-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58429"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_188",
+      "name": "avenacosidase",
+      "ec": [
+        "3.2.1.188"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_199",
+      "name": "protein-N(pi)-phosphohistidine--D-glucose phosphotransferase",
+      "ec": [
+        "2.7.1.199"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_15",
+      "name": "alpha,alpha-trehalose-phosphate synthase (UDP-forming)",
+      "ec": [
+        "2.4.1.15"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_93",
+      "name": "alpha,alpha-phosphotrehalase",
+      "ec": [
+        "3.2.1.93"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "avenacosidase",
+      "equation": "avenacoside B + H2O = 26-desgluco-avenacoside B + D-glucose",
+      "ec": "3.2.1.188",
+      "substrates": [
+        {
+          "metabolite": "avenacoside_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "26_desglucoavenacoside_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_188"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:38911"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38911"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-N(pi)-phosphohistidine--D-glucose phosphotransferase",
+      "equation": "N(pros)-phospho-L-histidyl-[protein] + D-glucose(out) = D-glucose 6-phosphate(in) + L-histidyl-[protein]",
+      "ec": "2.7.1.199",
+      "substrates": [
+        {
+          "metabolite": "n_phosphonato_l_histidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_histidine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_199"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:33367"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:33367"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha,alpha-trehalose-phosphate synthase (UDP-forming)",
+      "equation": "D-glucose 6-phosphate + UDP-alpha-D-glucose = alpha,alpha-trehalose 6-phosphate + UDP + H(+)",
+      "ec": "2.4.1.15",
+      "substrates": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18889"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18889"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "alpha,alpha-phosphotrehalase",
+      "equation": "alpha,alpha-trehalose 6-phosphate + H2O = D-glucose 6-phosphate + D-glucose",
+      "ec": "3.2.1.93",
+      "substrates": [
+        {
+          "metabolite": "trehalose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_93"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:23008"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23008"
+          }
+        ]
+      }
+    }
+  ]
+}

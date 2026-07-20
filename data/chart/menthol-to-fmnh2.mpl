@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
-  spacing 152
+  spacing 220
 
   spine at 0,0 {
     menthol
@@ -14,7 +14,7 @@ pathway menthol-to-fmnh2 "(−)-menthol to FMNH2" {
     pulegone
     <-> ec_1_14_14_143 [1.14.14.143] +fmnh2 +o2 -fmn -h2o -hplus
     menthofuran
-    <-> ec_1_17_7_3 [1.17.7.3] +2e_4_hydroxy_3_methylbut_2_enyl_diphosphate +fmn +h2o +hplus -fmnh2
-    2_c_methyl_d_erythritol_2_4_cyclic_diphosphate
+    <-> ec_1_3_8_16 [1.3.8.16] +2_azaniumyl_2_deoxyisochorismate +fmn -fmnh2
+    3_1_carboxylatovinyloxy_anthranilate
   }
 }

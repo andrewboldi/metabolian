@@ -1,0 +1,385 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butane-to-butanoyl-phosphate",
+  "name": "butane to butanoyl phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from butane to butanoyl phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50000"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:37808"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butane",
+      "name": "butane",
+      "formula": "C4H10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:37808"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "butan_1_ol",
+      "name": "butan-1-ol",
+      "formula": "C4H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28885"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "butanal",
+      "name": "butanal",
+      "formula": "C4H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15743"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "butyryl_coa",
+      "name": "Butyryl-CoA (butanoyl-CoA)",
+      "short": "Butyryl-CoA…",
+      "formula": "C25H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57371"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "butyryl_p",
+      "name": "Butanoyl phosphate",
+      "formula": "C4H7O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58079"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_230",
+      "name": "butane monooxygenase (soluble)",
+      "ec": [
+        "1.14.13.230"
+      ]
+    },
+    {
+      "id": "ec_1_1_2_9",
+      "name": "1-butanol dehydrogenase (cytochrome c)",
+      "ec": [
+        "1.1.2.9"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_57",
+      "name": "butanal dehydrogenase",
+      "ec": [
+        "1.2.1.57"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_19",
+      "name": "phosphate butyryltransferase",
+      "ec": [
+        "2.3.1.19"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "butane monooxygenase (soluble)",
+      "equation": "butane + NADH + O2 + H(+) = butan-1-ol + NAD(+) + H2O",
+      "ec": "1.14.13.230",
+      "substrates": [
+        {
+          "metabolite": "butane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_230"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "1-butanol dehydrogenase (cytochrome c)",
+      "equation": "butan-1-ol + 2 Fe(III)-[cytochrome c] = butanal + 2 Fe(II)-[cytochrome c] + 2 H(+)",
+      "ec": "1.1.2.9",
+      "substrates": [
+        {
+          "metabolite": "butan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_2_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "butanal dehydrogenase",
+      "equation": "butanal + NAD(+) + CoA = butanoyl-CoA + NADH + H(+)",
+      "ec": "1.2.1.57",
+      "substrates": [
+        {
+          "metabolite": "butanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22968"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22968"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "phosphate butyryltransferase",
+      "equation": "butanoyl-CoA + phosphate = butanoyl phosphate + CoA",
+      "ec": "2.3.1.19",
+      "substrates": [
+        {
+          "metabolite": "butyryl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butyryl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20892"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20892"
+          }
+        ]
+      }
+    }
+  ]
+}

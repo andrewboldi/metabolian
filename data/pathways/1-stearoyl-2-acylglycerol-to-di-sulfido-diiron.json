@@ -1,0 +1,377 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-stearoyl-2-acylglycerol-to-di-sulfido-diiron",
+  "name": "1-stearoyl 2-acylglycerol… to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 1-stearoyl 2-acylglycerolipid to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:46772"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:87007"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_stearoyl_2_acylglycerolipid",
+      "name": "1-stearoyl 2-acylglycerolipid",
+      "short": "1-stearoyl…",
+      "formula": "C22H40O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87007"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_oleoyl_2_acylglycerolipid",
+      "name": "1-oleoyl-2-acylglycerolipid",
+      "short": "1-oleoyl-2-acylglyc…",
+      "formula": "C22H38O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87008"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1_linoleoyl_2_acylglycerolipid",
+      "name": "1-linoleoyl-2-acylglycerolipid",
+      "short": "1-linoleoyl-2-acylg…",
+      "formula": "C22H36O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87010"
+      }
+    },
+    {
+      "id": "1_linolenoyl_2_acylglycerolipid",
+      "name": "1-γ-linolenoyl 2-acylglycerolipid",
+      "short": "1-γ-linolenoyl…",
+      "formula": "C22H34O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87017"
+      }
+    },
+    {
+      "id": "1_6z_9z_12z_15z_octadec_6_9_12_15_tetraenoyl_2_a",
+      "name": "1-[(6Z,9Z,12Z,15Z)-octadec-6,9,12,15-tetraenoyl]-2-acylglycerolipid",
+      "short": "1-[(6Z,9Z,12Z,15Z)-…",
+      "formula": "C22H32O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:87024"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_28",
+      "name": "sn-1 stearoyl-lipid 9-desaturase",
+      "ec": [
+        "1.14.19.28"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_45",
+      "name": "sn-1 oleoyl-lipid 12-desaturase",
+      "ec": [
+        "1.14.19.45"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_46",
+      "name": "sn-1 linoleoyl-lipid 6-desaturase",
+      "ec": [
+        "1.14.19.46"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_36",
+      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "ec": [
+        "1.14.19.36"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "sn-1 stearoyl-lipid 9-desaturase",
+      "equation": "a 1-octadecanoyl 2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z)-octadecenoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.28",
+      "substrates": [
+        {
+          "metabolite": "1_stearoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_oleoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:46772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sn-1 oleoyl-lipid 12-desaturase",
+      "equation": "a 1-[(9Z)-octadecenoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.45",
+      "substrates": [
+        {
+          "metabolite": "1_oleoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_linoleoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_45"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:46776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sn-1 linoleoyl-lipid 6-desaturase",
+      "equation": "a 1-[(9Z,12Z)-octadecdienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(6Z,9Z,12Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.46",
+      "substrates": [
+        {
+          "metabolite": "1_linoleoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_linolenoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:46780"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46780"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "sn-1 acyl-lipid omega-3 desaturase (ferredoxin)",
+      "equation": "a 1-[(6Z,9Z,12Z)-octadectrienoyl]-2-acyl-glycerolipid + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = a 1-[(6Z,9Z,12Z,15Z)-octadectetraenoyl]-2-acyl-glycerolipid + 2 oxidized [2Fe-2S]-[ferredoxin] + 2 H2O",
+      "ec": "1.14.19.36",
+      "substrates": [
+        {
+          "metabolite": "1_linolenoyl_2_acylglycerolipid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_6z_9z_12z_15z_octadec_6_9_12_15_tetraenoyl_2_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:46788"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:46788"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-12-hydroxy-7-isoja-to-2-methylbutanal",
+  "name": "N-[(+)-12-hydroxy-7-isoja… to 2-methylbutanal",
+  "category": "other",
+  "summary": "A 3-step route from N-[(+)-12-hydroxy-7-isojasmonyl]-L-isoleucinate to 2-methylbutanal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52036"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136181"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_12_hydroxy_7_isojasmonyl_l_isoleucinate",
+      "name": "N-[(+)-12-hydroxy-7-isojasmonyl]-L-isoleucinate",
+      "short": "N-[(+)-12-hydroxy-7…",
+      "formula": "C18H28NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136181"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "tuberonate",
+      "name": "tuberonate",
+      "formula": "C12H17O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136182"
+      }
+    },
+    {
+      "id": "isoleucine",
+      "name": "L-Isoleucine",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58045"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "kmv",
+      "name": "(S)-3-Methyl-2-oxopentanoate",
+      "short": "3-Methyl-2-oxopenta…",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35146"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_methylbutanal",
+      "name": "2-methylbutanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16182"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_127",
+      "name": "jasmonoyl-L-amino acid hydrolase",
+      "ec": [
+        "3.5.1.127"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_42",
+      "name": "branched-chain-amino-acid transaminase",
+      "ec": [
+        "2.6.1.42"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_72",
+      "name": "branched-chain-2-oxoacid decarboxylase",
+      "ec": [
+        "4.1.1.72"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "jasmonoyl-L-amino acid hydrolase",
+      "equation": "L-isoleucine-(+)-12-hydroxy-7-isojasmonate + H2O = tuberonate + L-isoleucine",
+      "ec": "3.5.1.127",
+      "substrates": [
+        {
+          "metabolite": "n_12_hydroxy_7_isojasmonyl_l_isoleucinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tuberonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_127"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52036"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52036"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "branched-chain-amino-acid transaminase",
+      "equation": "L-isoleucine + 2-oxoglutarate = (S)-3-methyl-2-oxopentanoate + L-glutamate",
+      "ec": "2.6.1.42",
+      "substrates": [
+        {
+          "metabolite": "isoleucine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "kmv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24801"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24801"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "branched-chain-2-oxoacid decarboxylase",
+      "equation": "(S)-3-methyl-2-oxopentanoate + H(+) = 2-methylbutanal + CO2",
+      "ec": "4.1.1.72",
+      "substrates": [
+        {
+          "metabolite": "kmv",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methylbutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_72"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21108"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21108"
+          }
+        ]
+      }
+    }
+  ]
+}

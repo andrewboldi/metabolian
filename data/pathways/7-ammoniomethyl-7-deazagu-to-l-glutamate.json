@@ -1,0 +1,303 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7-ammoniomethyl-7-deazagu-to-l-glutamate",
+  "name": "7-ammoniomethyl-7-deazagu… to L-glutamate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from 7-ammoniomethyl-7-deazaguanine to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13409"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58703"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7_ammoniomethyl_7_deazaguanine",
+      "name": "7-ammoniomethyl-7-deazaguanine",
+      "short": "7-ammoniomethyl-7-d…",
+      "formula": "C7H10N5O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58703"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "7_cyano_7_deazaguanine",
+      "name": "7-cyano-7-deazaguanine",
+      "short": "7-cyano-7-deazaguan…",
+      "formula": "C7H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:45075"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "guanosine_5_monophosphate_1",
+      "name": "guanosine 5'-monophosphate(1−)",
+      "short": "guanosine 5'-MP(1−)",
+      "formula": "C10H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:74269"
+      }
+    },
+    {
+      "id": "7_cyano_7_carbaguanine_5_phosphate_1",
+      "name": "7-cyano-7-carbaguanine 5'-phosphate(1−)",
+      "short": "7-cyano-7-carbaguan…",
+      "formula": "C12H11N5O7P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:82850"
+      }
+    },
+    {
+      "id": "guanine",
+      "name": "Guanine",
+      "formula": "C5H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16235"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "archaeosine_5_phosphate_zwitterionic",
+      "name": "archaeosine 5'-phosphate zwitterionic",
+      "short": "archaeosine 5'-P…",
+      "formula": "C12H15N6O7P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138803"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_7_1_13",
+      "name": "preQ1 synthase",
+      "ec": [
+        "1.7.1.13"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_48",
+      "name": "tRNA-guanine(15) transglycosylase",
+      "ec": [
+        "2.4.2.48"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_97",
+      "name": "archaeosine synthase",
+      "ec": [
+        "2.6.1.97"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "preQ1 synthase",
+      "equation": "7-aminomethyl-7-carbaguanine + 2 NADP(+) = 7-cyano-7-carbaguanine + 2 NADPH + 3 H(+)",
+      "ec": "1.7.1.13",
+      "substrates": [
+        {
+          "metabolite": "7_ammoniomethyl_7_deazaguanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_cyano_7_deazaguanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_1_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13409"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13409"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tRNA-guanine(15) transglycosylase",
+      "equation": "guanosine(15) in tRNA + 7-cyano-7-carbaguanine = 7-cyano-7-carbaguanosine(15) in tRNA + guanine",
+      "ec": "2.4.2.48",
+      "substrates": [
+        {
+          "metabolite": "guanosine_5_monophosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "7_cyano_7_deazaguanine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_cyano_7_carbaguanine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "archaeosine synthase",
+      "equation": "7-cyano-7-carbaguanosine(15) in tRNA + L-glutamine + H2O = archaeosine(15) in tRNA + L-glutamate",
+      "ec": "2.6.1.97",
+      "substrates": [
+        {
+          "metabolite": "7_cyano_7_carbaguanine_5_phosphate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "archaeosine_5_phosphate_zwitterionic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:54084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:54084"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ethylbenzene-to-3-oxo-3-phenylpropionate",
+  "name": "ethylbenzene to 3-oxo-3-phenylpropionate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from ethylbenzene to 3-oxo-3-phenylpropionate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17897"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16101"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ethylbenzene",
+      "name": "ethylbenzene",
+      "formula": "C8H10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16101"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_1_phenylethanol",
+      "name": "(S)-1-phenylethanol",
+      "formula": "C8H10O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16346"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "acetophenone",
+      "name": "acetophenone",
+      "formula": "C8H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27632"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "3_oxo_3_phenylpropionate",
+      "name": "3-oxo-3-phenylpropionate",
+      "short": "3-oxo-3-phenylpropi…",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:22731"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_17_99_2",
+      "name": "ethylbenzene hydroxylase",
+      "ec": [
+        "1.17.99.2"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_311",
+      "name": "(S)-1-phenylethanol dehydrogenase",
+      "ec": [
+        "1.1.1.311"
+      ]
+    },
+    {
+      "id": "ec_6_4_1_8",
+      "name": "acetophenone carboxylase",
+      "ec": [
+        "6.4.1.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ethylbenzene hydroxylase",
+      "equation": "ethylbenzene + A + H2O = (S)-1-phenylethanol + AH2",
+      "ec": "1.17.99.2",
+      "substrates": [
+        {
+          "metabolite": "ethylbenzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_phenylethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-1-phenylethanol dehydrogenase",
+      "equation": "(S)-1-phenylethanol + NAD(+) = acetophenone + NADH + H(+)",
+      "ec": "1.1.1.311",
+      "substrates": [
+        {
+          "metabolite": "s_1_phenylethanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_311"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28198"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28198"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "acetophenone carboxylase",
+      "equation": "acetophenone + hydrogencarbonate + 2 ATP + H2O = 3-oxo-3-phenylpropanoate + 2 ADP + 2 phosphate + 2 H(+)",
+      "ec": "6.4.1.8",
+      "substrates": [
+        {
+          "metabolite": "acetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_3_phenylpropionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_4_1_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28647"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28647"
+          }
+        ]
+      }
+    }
+  ]
+}

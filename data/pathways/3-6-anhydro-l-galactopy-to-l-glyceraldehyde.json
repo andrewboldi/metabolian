@@ -1,0 +1,262 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-6-anhydro-l-galactopy-to-l-glyceraldehyde",
+  "name": "3,6-anhydro-α-L-galactopy… to L-glyceraldehyde",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3,6-anhydro-α-L-galactopyranose to L-glyceraldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:40803"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83433"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_6_anhydro_l_galactopyranose",
+      "name": "3,6-anhydro-α-L-galactopyranose",
+      "short": "3,6-anhydro-α-L-gal…",
+      "formula": "C6H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:83433"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_6_anhydro_l_galactonate",
+      "name": "3,6-anhydro-L-galactonate",
+      "short": "3,6-anhydro-L-galac…",
+      "formula": "C6H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:83435"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_keto_3_deoxy_l_galactonate",
+      "name": "2-keto-3-deoxy-L-galactonate",
+      "short": "2-keto-3-deoxy-L-ga…",
+      "formula": "C6H9O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:75545"
+      }
+    },
+    {
+      "id": "l_glyceraldehyde",
+      "name": "L-glyceraldehyde",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27975"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_92",
+      "name": "3,6-anhydro-alpha-L-galactose dehydrogenase",
+      "ec": [
+        "1.2.1.92"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_25",
+      "name": "3,6-anhydro-L-galactonate cycloisomerase",
+      "ec": [
+        "5.5.1.25"
+      ]
+    },
+    {
+      "id": "ec_4_1_2_54",
+      "name": "L-threo-3-deoxy-hexylosonate aldolase",
+      "ec": [
+        "4.1.2.54"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3,6-anhydro-alpha-L-galactose dehydrogenase",
+      "equation": "3,6-anhydro-alpha-L-galactopyranose + NADP(+) + H2O = 3,6-anhydro-L-galactonate + NADPH + 2 H(+)",
+      "ec": "1.2.1.92",
+      "substrates": [
+        {
+          "metabolite": "3_6_anhydro_l_galactopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_6_anhydro_l_galactonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:40803"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40803"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3,6-anhydro-L-galactonate cycloisomerase",
+      "equation": "3,6-anhydro-L-galactonate = 2-dehydro-3-deoxy-L-galactonate",
+      "ec": "5.5.1.25",
+      "substrates": [
+        {
+          "metabolite": "3_6_anhydro_l_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_keto_3_deoxy_l_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21512"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21512"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-threo-3-deoxy-hexylosonate aldolase",
+      "equation": "2-dehydro-3-deoxy-L-galactonate = L-glyceraldehyde + pyruvate",
+      "ec": "4.1.2.54",
+      "substrates": [
+        {
+          "metabolite": "2_keto_3_deoxy_l_galactonate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glyceraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38107"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38107"
+          }
+        ]
+      }
+    }
+  ]
+}

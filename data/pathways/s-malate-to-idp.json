@@ -1,0 +1,372 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-malate-to-idp",
+  "name": "(S)-malate to IDP",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (S)-malate(2−) to IDP(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21432"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15589"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "malate",
+      "name": "L-Malate ((S)-malate)",
+      "short": "L-Malate ((S)-malat…",
+      "formula": "C4H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15589"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "itp",
+      "name": "ITP",
+      "formula": "C10H11N4O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61402"
+      }
+    },
+    {
+      "id": "idp",
+      "name": "IDP",
+      "formula": "C10H11N4O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58280"
+      }
+    },
+    {
+      "id": "phosphonatoenolpyruvate",
+      "name": "phosphonatoenolpyruvate",
+      "short": "phosphonatoenolpyru…",
+      "formula": "C3H2O6P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58702"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_37",
+      "name": "(S)-malate dehydrogenase (NAD(+), oxaloacetate-forming)",
+      "ec": [
+        "1.1.1.37"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_299",
+      "name": "malate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.299"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_32",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "ec": [
+        "4.1.1.32"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_6",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": [
+        "2.7.4.6"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_73",
+      "name": "inosine/xanthosine triphosphatase",
+      "ec": [
+        "3.6.1.73"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-malate dehydrogenase (NAD(+), oxaloacetate-forming)",
+      "equation": "(S)-malate + NAD(+) = oxaloacetate + NADH + H(+)",
+      "ec": "1.1.1.37",
+      "substrates": [
+        {
+          "metabolite": "malate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_37"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21432"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoenolpyruvate carboxykinase (GTP)",
+      "equation": "ITP + oxaloacetate = IDP + phosphoenolpyruvate + CO2",
+      "ec": "4.1.1.32",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphonatoenolpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:64864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64864"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nucleoside-diphosphate kinase",
+      "equation": "IDP + ATP = ITP + ADP",
+      "ec": "2.7.4.6",
+      "substrates": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30347"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30347"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "inosine/xanthosine triphosphatase",
+      "equation": "ITP + H2O = IDP + phosphate + H(+)",
+      "ec": "3.6.1.73",
+      "substrates": [
+        {
+          "metabolite": "itp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "idp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:28330"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28330"
+          }
+        ]
+      }
+    }
+  ]
+}

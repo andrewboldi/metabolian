@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-mannitol-to-2-deoxy-4-epi-scyllo-inos",
+  "name": "D-mannitol to 2-deoxy-4-epi-scyllo-inos…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from D-mannitol to 2-deoxy-4-epi-scyllo-inosose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15029"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16899"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_mannitol",
+      "name": "D-mannitol",
+      "formula": "C6H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16899"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "d_mannopyranose",
+      "name": "D-mannopyranose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4208"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "d_mannopyranose_6_phosphate",
+      "name": "D-mannopyranose 6-phosphate",
+      "short": "D-mannopyranose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58735"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "2_deoxy_4_epi_scyllo_inosose",
+      "name": "2-deoxy-4-epi-scyllo-inosose",
+      "short": "2-deoxy-4-epi-scyll…",
+      "formula": "C6H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:232323"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_255",
+      "name": "mannitol dehydrogenase",
+      "ec": [
+        "1.1.1.255"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_1",
+      "name": "hexokinase",
+      "ec": [
+        "2.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_7",
+      "name": "mannokinase",
+      "ec": [
+        "2.7.1.7"
+      ]
+    },
+    {
+      "id": "ec_4_2_3_230",
+      "name": "2-deoxy-4-epi-scyllo-inosose synthase",
+      "ec": [
+        "4.2.3.230"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mannitol dehydrogenase",
+      "equation": "D-mannitol + NAD(+) = D-mannose + NADH + H(+)",
+      "ec": "1.1.1.255",
+      "substrates": [
+        {
+          "metabolite": "d_mannitol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_255"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15029"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15029"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexokinase",
+      "equation": "D-mannose + ATP = D-mannose 6-phosphate + ADP + H(+)",
+      "ec": "2.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_mannopyranose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11028"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11028"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-deoxy-4-epi-scyllo-inosose synthase",
+      "equation": "D-mannose 6-phosphate = 2-deoxy-4-epi-scyllo-inosose + phosphate",
+      "ec": "4.2.3.230",
+      "substrates": [
+        {
+          "metabolite": "d_mannopyranose_6_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_4_epi_scyllo_inosose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_230"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:82407"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:82407"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "r-3-phenyllactate-to-fmn",
+  "name": "(R)-3-phenyllactate to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (R)-3-phenyllactate to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:85407"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11009"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "r_3_phenyllactate",
+      "name": "(R)-3-phenyllactate",
+      "formula": "C9H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11009"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "r_3_phenyllactyl_d_glucose",
+      "name": "(R)-3-phenyllactyl-β-D-glucose",
+      "short": "3-phenyllactyl-β-D-…",
+      "formula": "C15H20O8",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:234340"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "tropinium",
+      "name": "tropinium",
+      "formula": "C8H16NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57554"
+      }
+    },
+    {
+      "id": "r_littorine",
+      "name": "(R)-littorine",
+      "formula": "C17H24NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:234341"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hyoscyamine_aldehyde",
+      "name": "hyoscyamine aldehyde",
+      "formula": "C17H22NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:234345"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_399",
+      "name": "phenyllactate glucosyltransferase",
+      "ec": [
+        "2.4.1.399"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_400",
+      "name": "littorine synthase",
+      "ec": [
+        "2.4.1.400"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_195",
+      "name": "littorine mutase",
+      "ec": [
+        "1.14.14.195"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phenyllactate glucosyltransferase",
+      "equation": "(R)-3-phenyllactate + UDP-alpha-D-glucose = (R)-3-phenyllactyl-beta-D-glucose + UDP",
+      "ec": "2.4.1.399",
+      "substrates": [
+        {
+          "metabolite": "r_3_phenyllactate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_3_phenyllactyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_399"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:85407"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85407"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "littorine synthase",
+      "equation": "(R)-3-phenyllactyl-beta-D-glucose + tropine = (R)-littorine + D-glucose",
+      "ec": "2.4.1.400",
+      "substrates": [
+        {
+          "metabolite": "r_3_phenyllactyl_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "tropinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_littorine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_400"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:85411"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85411"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "littorine mutase",
+      "equation": "(R)-littorine + reduced [NADPH--hemoprotein reductase] + O2 = hyoscyamine aldehyde + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.14.195",
+      "substrates": [
+        {
+          "metabolite": "r_littorine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hyoscyamine_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_195"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:85415"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:85415"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "amidinoproclavaminic-acid-to-succinate",
+  "name": "amidinoproclavaminic acid to succinate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from amidinoproclavaminic acid zwitterion to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17001"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58647"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "amidinoproclavaminic_acid",
+      "name": "amidinoproclavaminic acid",
+      "short": "amidinoproclavamini…",
+      "formula": "C9H16N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58647"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "proclavaminic_acid",
+      "name": "proclavaminic acid",
+      "formula": "C8H14N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57302"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "dihydroclavaminic_acid",
+      "name": "dihydroclavaminic acid",
+      "short": "dihydroclavaminic…",
+      "formula": "C8H12N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57301"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "clavaminic_acid",
+      "name": "clavaminic acid",
+      "formula": "C8H10N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57300"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_3_22",
+      "name": "proclavaminate amidinohydrolase",
+      "ec": [
+        "3.5.3.22"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_21",
+      "name": "clavaminate synthase",
+      "ec": [
+        "1.14.11.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "proclavaminate amidinohydrolase",
+      "equation": "amidinoproclavaminate + H2O = proclavaminate + urea",
+      "ec": "3.5.3.22",
+      "substrates": [
+        {
+          "metabolite": "amidinoproclavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "proclavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17001"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17001"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "clavaminate synthase",
+      "equation": "proclavaminate + 2-oxoglutarate + O2 = dihydroclavaminate + succinate + CO2 + H2O",
+      "ec": "1.14.11.21",
+      "substrates": [
+        {
+          "metabolite": "proclavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroclavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12773"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "clavaminate synthase",
+      "equation": "dihydroclavaminate + 2-oxoglutarate + O2 = clavaminate + succinate + CO2 + H2O",
+      "ec": "1.14.11.21",
+      "substrates": [
+        {
+          "metabolite": "dihydroclavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "clavaminic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19785"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19785"
+          }
+        ]
+      }
+    }
+  ]
+}

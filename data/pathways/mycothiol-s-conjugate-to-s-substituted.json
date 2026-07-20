@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "mycothiol-s-conjugate-to-s-substituted",
+  "name": "mycothiol S-conjugate to S-substituted…",
+  "category": "other",
+  "summary": "A 3-step route from mycothiol S-conjugate to S-substituted N-acetyl-L-cysteinate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36543"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59633"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "mycothiol_s_conjugate",
+      "name": "mycothiol S-conjugate",
+      "short": "mycothiol…",
+      "formula": "C17H29N2O12SR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59633"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "s_substituted_n_acetyl_l_cysteinate",
+      "name": "S-substituted N-acetyl-L-cysteinate",
+      "short": "S-substituted…",
+      "formula": "C5H7NO3SR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58718"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_2_ammonio_2_deoxy_d_glucopyranos",
+      "name": "1D-myo-inositol 2-ammonio-2-deoxy-α-D-glucopyranoside",
+      "short": "1D-myo-inositol…",
+      "formula": "C12H24NO10",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58886"
+      }
+    },
+    {
+      "id": "s_substituted_l_cysteine",
+      "name": "S-substituted L-cysteine",
+      "short": "S-substituted…",
+      "formula": "C3H6NO2SR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58717"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_115",
+      "name": "mycothiol S-conjugate amidase",
+      "ec": [
+        "3.5.1.115"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_14",
+      "name": "N-acyl-aliphatic-L-amino acid amidohydrolase",
+      "ec": [
+        "3.5.1.14"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_114",
+      "name": "N-acyl-aromatic-L-amino acid amidohydrolase",
+      "ec": [
+        "3.5.1.114"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_80",
+      "name": "cysteine-S-conjugate N-acetyltransferase",
+      "ec": [
+        "2.3.1.80"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "mycothiol S-conjugate amidase",
+      "equation": "mycothiol S-conjugate + H2O = an N-acetyl-L-cysteine-S-conjugate + 1D-myo-inositol 2-amino-2-deoxy-alpha-D-glucopyranoside",
+      "ec": "3.5.1.115",
+      "substrates": [
+        {
+          "metabolite": "mycothiol_s_conjugate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_substituted_n_acetyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1d_myo_inositol_2_ammonio_2_deoxy_d_glucopyranos",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_115"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36543"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36543"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acyl-aliphatic-L-amino acid amidohydrolase",
+      "equation": "an N-acetyl-L-cysteine-S-conjugate + H2O = an S-substituted L-cysteine + acetate",
+      "ec": "3.5.1.14",
+      "substrates": [
+        {
+          "metabolite": "s_substituted_n_acetyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_substituted_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36855"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36855"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cysteine-S-conjugate N-acetyltransferase",
+      "equation": "an S-substituted L-cysteine + acetyl-CoA = an N-acetyl-L-cysteine-S-conjugate + CoA + H(+)",
+      "ec": "2.3.1.80",
+      "substrates": [
+        {
+          "metabolite": "s_substituted_l_cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_substituted_n_acetyl_l_cysteinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19213"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19213"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "neomenthol-to-3r-6s-6-hydroxy-3-7-dim",
+  "name": "(+)-neomenthol to (3R,6S)-6-hydroxy-3,7-dim…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (+)-neomenthol to (3R,6S)-6-hydroxy-3,7-dimethyloctanoate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23812"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15402"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "neomenthol",
+      "name": "(+)-neomenthol",
+      "formula": "C10H20O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15402"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "menthone",
+      "name": "(−)-menthone",
+      "formula": "C10H18O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15410"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4r_7s_7_isopropyl_4_methyloxepan_2_one",
+      "name": "(4R,7S)-7-isopropyl-4-methyloxepan-2-one",
+      "short": "(4R,7S)-7-isopropyl…",
+      "formula": "C10H18O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:50250"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3r_6s_6_hydroxy_3_7_dimethyloctanoate",
+      "name": "(3R,6S)-6-hydroxy-3,7-dimethyloctanoate",
+      "short": "(3R,6S)-6-hydroxy-3…",
+      "formula": "C10H19O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64221"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_208",
+      "name": "(+)-neomenthol dehydrogenase",
+      "ec": [
+        "1.1.1.208"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_105",
+      "name": "monocyclic monoterpene ketone monooxygenase",
+      "ec": [
+        "1.14.13.105"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_83",
+      "name": "monoterpene epsilon-lactone hydrolase",
+      "ec": [
+        "3.1.1.83"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(+)-neomenthol dehydrogenase",
+      "equation": "(+)-neomenthol + NADP(+) = (1R,4S)-menthone + NADPH + H(+)",
+      "ec": "1.1.1.208",
+      "substrates": [
+        {
+          "metabolite": "neomenthol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "menthone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_208"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23812"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23812"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "monocyclic monoterpene ketone monooxygenase",
+      "equation": "(1R,4S)-menthone + NADPH + O2 + H(+) = (4R,7S)-7-isopropyl-4-methyloxepan-2-one + NADP(+) + H2O",
+      "ec": "1.14.13.105",
+      "substrates": [
+        {
+          "metabolite": "menthone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4r_7s_7_isopropyl_4_methyloxepan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32431"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32431"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "monoterpene epsilon-lactone hydrolase",
+      "equation": "(4R,7S)-7-isopropyl-4-methyloxepan-2-one + H2O = (3R,6S)-6-hydroxy-3,7-dimethyloctanoate + H(+)",
+      "ec": "3.1.1.83",
+      "substrates": [
+        {
+          "metabolite": "4r_7s_7_isopropyl_4_methyloxepan_2_one",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_6s_6_hydroxy_3_7_dimethyloctanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_83"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32591"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32591"
+          }
+        ]
+      }
+    }
+  ]
+}

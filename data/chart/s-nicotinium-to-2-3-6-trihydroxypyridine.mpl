@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway s-nicotinium-to-2-3-6-trihydroxypyridine "(S)-nicotinium to 2,3,6-trihydroxypyridine" {
-  spacing 152
+  spacing 224
 
   spine at 0,0 {
     s_nicotinium

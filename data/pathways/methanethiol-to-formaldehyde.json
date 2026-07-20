@@ -1,0 +1,425 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "methanethiol-to-formaldehyde",
+  "name": "methanethiol to formaldehyde",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from methanethiol to formaldehyde, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:50428"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16007"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "methanethiol",
+      "name": "methanethiol",
+      "formula": "CH4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16007"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "dimethyl_sulfide",
+      "name": "dimethyl sulfide",
+      "formula": "C2H6S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17437"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "dimethyl_sulfoxide",
+      "name": "dimethyl sulfoxide",
+      "formula": "C2H6OS",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28262"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "sulfonyldimethane",
+      "name": "sulfonyldimethane",
+      "formula": "C2H6O2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:9349"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "methanesulfinate",
+      "name": "methanesulfinate",
+      "formula": "CH3O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:133603"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_334",
+      "name": "methanethiol S-methyltransferase",
+      "ec": [
+        "2.1.1.334"
+      ]
+    },
+    {
+      "id": "ec_1_8_2_4",
+      "name": "dimethyl sulfide:cytochrome c2 reductase",
+      "ec": [
+        "1.8.2.4"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_17",
+      "name": "dimethylsulfone reductase",
+      "ec": [
+        "1.8.1.17"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_35",
+      "name": "dimethylsulfone monooxygenase",
+      "ec": [
+        "1.14.14.35"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methanethiol S-methyltransferase",
+      "equation": "methanethiol + S-adenosyl-L-methionine = dimethyl sulfide + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.334",
+      "substrates": [
+        {
+          "metabolite": "methanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_334"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:50428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "dimethyl sulfide:cytochrome c2 reductase",
+      "equation": "2 Fe(III)-[cytochrome c2] + dimethyl sulfide + H2O = 2 Fe(II)-[cytochrome c2] + dimethyl sulfoxide + 2 H(+)",
+      "ec": "1.8.2.4",
+      "substrates": [
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dimethyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "dimethyl_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30227"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30227"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "dimethylsulfone reductase",
+      "equation": "dimethyl sulfoxide + NAD(+) + H2O = dimethyl sulfone + NADH + H(+)",
+      "ec": "1.8.1.17",
+      "substrates": [
+        {
+          "metabolite": "dimethyl_sulfoxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonyldimethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30219"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30219"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dimethylsulfone monooxygenase",
+      "equation": "dimethyl sulfone + FMNH2 + O2 = methanesulfinate + FMN + formaldehyde + H2O + 2 H(+)",
+      "ec": "1.14.14.35",
+      "substrates": [
+        {
+          "metabolite": "sulfonyldimethane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanesulfinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:50716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:50716"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-4-dihydroxyacetophenone-to-3-5-dibromocatechol",
+  "name": "2,4'-dihydroxyacetophenone to 3,5-dibromocatechol",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2,4'-dihydroxyacetophenone to 3,5-dibromocatechol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24416"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:35164"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_4_dihydroxyacetophenone",
+      "name": "2,4'-dihydroxyacetophenone",
+      "short": "2,4'-dihydroxyaceto…",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35164"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "4_hydroxybenzoate",
+      "name": "4-hydroxybenzoate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17879"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "3_4_dihydroxybenzoate",
+      "name": "3,4-dihydroxybenzoate",
+      "short": "3,4-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36241"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "bromide",
+      "name": "bromide",
+      "formula": "Br",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15858"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "3_5_dibromocatechol",
+      "name": "3,5-dibromocatechol",
+      "formula": "C6H4Br2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140214"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_41",
+      "name": "2,4'-dihydroxyacetophenone dioxygenase",
+      "ec": [
+        "1.13.11.41"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_33",
+      "name": "4-hydroxybenzoate 3-monooxygenase [NAD(P)H]",
+      "ec": [
+        "1.14.13.33"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_55",
+      "name": "4-hydroxybenzoate brominase (decarboxylating)",
+      "ec": [
+        "1.14.19.55"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2,4'-dihydroxyacetophenone dioxygenase",
+      "equation": "2,4'-dihydroxyacetophenone + O2 = 4-hydroxybenzoate + formate + 2 H(+)",
+      "ec": "1.13.11.41",
+      "substrates": [
+        {
+          "metabolite": "2_4_dihydroxyacetophenone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24416"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24416"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-hydroxybenzoate 3-monooxygenase [NAD(P)H]",
+      "equation": "4-hydroxybenzoate + NADH + O2 + H(+) = 3,4-dihydroxybenzoate + NAD(+) + H2O",
+      "ec": "1.14.13.33",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19473"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-hydroxybenzoate brominase (decarboxylating)",
+      "equation": "3,4-dihydroxybenzoate + 2 bromide + 2 NADPH + 2 O2 + 5 H(+) = 3,5-dibromobenzene-1,2-diol + CO2 + 2 NADP(+) + 4 H2O",
+      "ec": "1.14.19.55",
+      "substrates": [
+        {
+          "metabolite": "3_4_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bromide",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 5
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_dibromocatechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_55"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56368"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56368"
+          }
+        ]
+      }
+    }
+  ]
+}

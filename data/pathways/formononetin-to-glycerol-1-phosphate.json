@@ -1,0 +1,327 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "formononetin-to-glycerol-1-phosphate",
+  "name": "formononetin to glycerol 1-phosphate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from formononetin(1−) to glycerol 1-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12388"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77688"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "formononetin",
+      "name": "formononetin",
+      "formula": "C16H11O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77688"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_hydroxyformononetin",
+      "name": "2'-hydroxyformononetin",
+      "short": "2'-hydroxyformonone…",
+      "formula": "C16H11O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77687"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "fad",
+      "name": "FAD",
+      "formula": "C27H30N9O15P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57692"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "glycerol_1_phosphate",
+      "name": "glycerol 1-phosphate",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:231935"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_89",
+      "name": "4'-methoxyisoflavone 2'-hydroxylase",
+      "ec": [
+        "1.14.14.89"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_90",
+      "name": "isoflavone 2'-hydroxylase",
+      "ec": [
+        "1.14.14.90"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_2",
+      "name": "FAD synthase",
+      "ec": [
+        "2.7.7.2"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_79",
+      "name": "diphosphate--glycerol phosphotransferase",
+      "ec": [
+        "2.7.1.79"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4'-methoxyisoflavone 2'-hydroxylase",
+      "equation": "formononetin + reduced [NADPH--hemoprotein reductase] + O2 = 2'-hydroxyformononetin + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.89",
+      "substrates": [
+        {
+          "metabolite": "formononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyformononetin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12388"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "FAD synthase",
+      "equation": "FMN + ATP + H(+) = FAD + diphosphate",
+      "ec": "2.7.7.2",
+      "substrates": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17237"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17237"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diphosphate--glycerol phosphotransferase",
+      "equation": "glycerol + diphosphate = glycerol 1-phosphate + phosphate + H(+)",
+      "ec": "2.7.1.79",
+      "substrates": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glycerol_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_79"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13689"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13689"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "gibberellin-a20-to-succinyl-coa",
+  "name": "gibberellin A20 to succinyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from gibberellin A20(1−) to succinyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10104"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58526"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gibberellin_a20",
+      "name": "gibberellin A20",
+      "formula": "C19H23O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58526"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "gibberellin_a1",
+      "name": "gibberellin A1",
+      "formula": "C19H23O6",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58524"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "gibberellin_a8",
+      "name": "gibberellin A8",
+      "formula": "C19H23O7",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58594"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_11_15",
+      "name": "gibberellin 3beta-dioxygenase",
+      "ec": [
+        "1.14.11.15"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_13",
+      "name": "gibberellin 2beta-dioxygenase",
+      "ec": [
+        "1.14.11.13"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_5",
+      "name": "succinate--CoA ligase (ADP-forming)",
+      "ec": [
+        "6.2.1.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "gibberellin 3beta-dioxygenase",
+      "equation": "gibberellin A20 + 2-oxoglutarate + O2 = gibberellin A1 + succinate + CO2",
+      "ec": "1.14.11.15",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a20",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10104"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10104"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gibberellin 2beta-dioxygenase",
+      "equation": "gibberellin A1 + 2-oxoglutarate + O2 = gibberellin A8 + succinate + CO2",
+      "ec": "1.14.11.13",
+      "substrates": [
+        {
+          "metabolite": "gibberellin_a1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gibberellin_a8",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15005"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "succinate--CoA ligase (ADP-forming)",
+      "equation": "succinate + ATP + CoA = succinyl-CoA + ADP + phosphate",
+      "ec": "6.2.1.5",
+      "substrates": [
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17661"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17661"
+          }
+        ]
+      }
+    }
+  ]
+}

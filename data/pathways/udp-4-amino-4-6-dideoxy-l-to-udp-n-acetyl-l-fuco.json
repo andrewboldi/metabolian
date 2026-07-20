@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-4-amino-4-6-dideoxy-l-to-udp-n-acetyl-l-fuco",
+  "name": "UDP-4-amino-4,6-dideoxy-L… to UDP-N-acetyl-β-L-fucosami…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from UDP-4-amino-4,6-dideoxy-L-N-acetyl-β-L-altrosamine(1−) to UDP-N-acetyl-β-L-fucosamine(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31767"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:63389"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine",
+      "name": "UDP-4-amino-4,6-dideoxy-L-N-acetyl-β-L-altrosamine",
+      "short": "UDP-4-amino-4,6-did…",
+      "formula": "C17H27N4O15P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:63389"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos",
+      "name": "UDP-2-acetamido-2,6-dideoxy-β-L-arabino-hex-4-ulose",
+      "short": "UDP-2-acetamido-2,6…",
+      "formula": "C17H23N3O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60101"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_2_acetamido_2_6_dideoxy_l_talose",
+      "name": "UDP-2-acetamido-2,6-dideoxy-β-L-talose",
+      "short": "UDP-2-acetamido-2,6…",
+      "formula": "C17H25N3O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62372"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_l_fucosamine",
+      "name": "UDP-N-acetyl-β-L-fucosamine",
+      "short": "UDP-N-acetyl-β-L-fu…",
+      "formula": "C17H25N3O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62241"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_92",
+      "name": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine transaminase",
+      "ec": [
+        "2.6.1.92"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_367",
+      "name": "UDP-2-acetamido-2,6-beta-L-arabino-hexul-4-ose reductase",
+      "ec": [
+        "1.1.1.367"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_28",
+      "name": "UDP-N-acetyl-L-fucosamine synthase",
+      "ec": [
+        "5.1.3.28"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine transaminase",
+      "equation": "UDP-4-amino-4,6-dideoxy-N-acetyl-beta-L-altrosamine + 2-oxoglutarate = UDP-2-acetamido-2,6-dideoxy-beta-L-arabino-hex-4-ulose + L-glutamate",
+      "ec": "2.6.1.92",
+      "substrates": [
+        {
+          "metabolite": "udp_4_amino_4_6_dideoxy_l_n_acetyl_l_altrosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_92"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31767"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31767"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "UDP-2-acetamido-2,6-beta-L-arabino-hexul-4-ose reductase",
+      "equation": "UDP-2-acetamido-2,6-dideoxy-beta-L-arabino-hex-4-ulose + NADPH + H(+) = UDP-2-acetamido-2,6-dideoxy-beta-L-talose + NADP(+)",
+      "ec": "1.1.1.367",
+      "substrates": [
+        {
+          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_arabino_hex_4_ulos",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_talose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_367"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30835"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30835"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-N-acetyl-L-fucosamine synthase",
+      "equation": "UDP-2-acetamido-2,6-dideoxy-beta-L-talose = UDP-N-acetyl-beta-L-fucosamine",
+      "ec": "5.1.3.28",
+      "substrates": [
+        {
+          "metabolite": "udp_2_acetamido_2_6_dideoxy_l_talose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_l_fucosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30839"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30839"
+          }
+        ]
+      }
+    }
+  ]
+}

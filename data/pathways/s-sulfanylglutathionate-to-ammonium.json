@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-sulfanylglutathionate-to-ammonium",
+  "name": "S-sulfanylglutathionate to ammonium",
+  "category": "redox-detox",
+  "summary": "A 3-step route from S-sulfanylglutathionate(1−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12981"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58905"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_sulfanylglutathionate",
+      "name": "S-sulfanylglutathionate",
+      "short": "S-sulfanylglutathio…",
+      "formula": "C10H16N3O6S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58905"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sulfite",
+      "name": "sulfite",
+      "formula": "O3S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17359"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "l_cysteate",
+      "name": "L-cysteate",
+      "formula": "C3H6NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58090"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_13_11_18",
+      "name": "persulfide dioxygenase",
+      "ec": [
+        "1.13.11.18"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_10",
+      "name": "cysteine lyase",
+      "ec": [
+        "4.4.1.10"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_25",
+      "name": "L-cysteate sulfo-lyase",
+      "ec": [
+        "4.4.1.25"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "persulfide dioxygenase",
+      "equation": "S-sulfanylglutathione + O2 + H2O = sulfite + glutathione + 2 H(+)",
+      "ec": "1.13.11.18",
+      "substrates": [
+        {
+          "metabolite": "s_sulfanylglutathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12981"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12981"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cysteine lyase",
+      "equation": "sulfite + L-cysteine = L-cysteate + hydrogen sulfide",
+      "ec": "4.4.1.10",
+      "substrates": [
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20916"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20916"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-cysteate sulfo-lyase",
+      "equation": "L-cysteate + H2O = sulfite + pyruvate + NH4(+) + H(+)",
+      "ec": "4.4.1.25",
+      "substrates": [
+        {
+          "metabolite": "l_cysteate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13441"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13441"
+          }
+        ]
+      }
+    }
+  ]
+}

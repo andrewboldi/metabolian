@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dimethyl-sulfide-to-sulfur-atom",
+  "name": "dimethyl sulfide to sulfur atom",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from dimethyl sulfide to sulfur atom, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31355"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17437"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dimethyl_sulfide",
+      "name": "dimethyl sulfide",
+      "formula": "C2H6S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17437"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methanethiol",
+      "name": "methanethiol",
+      "formula": "CH4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16007"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "coenzyme_m",
+      "name": "coenzyme M",
+      "formula": "C2H5O3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58319"
+      }
+    },
+    {
+      "id": "methyl_com",
+      "name": "methyl-CoM",
+      "formula": "C3H7O3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58286"
+      }
+    },
+    {
+      "id": "h2s",
+      "name": "Hydrogen sulfide (H2S)",
+      "short": "Hydrogen sulfide…",
+      "formula": "HS",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29919"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "sulfur_atom",
+      "name": "sulfur atom",
+      "formula": "S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26833"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_131",
+      "name": "dissimilatory dimethyl-sulfide monooxygenase",
+      "ec": [
+        "1.14.13.131"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_251",
+      "name": "methylated-thiol--coenzyme M methyltransferase",
+      "ec": [
+        "2.1.1.251"
+      ]
+    },
+    {
+      "id": "ec_1_8_2_3",
+      "name": "sulfide-cytochrome-c reductase (flavocytochrome c)",
+      "ec": [
+        "1.8.2.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "dissimilatory dimethyl-sulfide monooxygenase",
+      "equation": "dimethyl sulfide + NADH + O2 + H(+) = methanethiol + formaldehyde + NAD(+) + H2O",
+      "ec": "1.14.13.131",
+      "substrates": [
+        {
+          "metabolite": "dimethyl_sulfide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_131"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31355"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31355"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methylated-thiol--coenzyme M methyltransferase",
+      "equation": "methanethiol + coenzyme M = methyl-coenzyme M + hydrogen sulfide + H(+)",
+      "ec": "2.1.1.251",
+      "substrates": [
+        {
+          "metabolite": "methanethiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_251"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sulfide-cytochrome-c reductase (flavocytochrome c)",
+      "equation": "hydrogen sulfide + 2 Fe(III)-[cytochrome c] = sulfur + 2 Fe(II)-[cytochrome c] + H(+)",
+      "ec": "1.8.2.3",
+      "substrates": [
+        {
+          "metabolite": "h2s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfur_atom",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30223"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30223"
+          }
+        ]
+      }
+    }
+  ]
+}

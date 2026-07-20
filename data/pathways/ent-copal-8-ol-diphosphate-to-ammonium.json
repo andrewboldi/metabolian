@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "ent-copal-8-ol-diphosphate-to-ammonium",
+  "name": "ent-copal-8-ol diphosphate to ammonium",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from ent-copal-8-ol diphosphate(3−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18721"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:138223"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "ent_copal_8_ol_diphosphate",
+      "name": "ent-copal-8-ol diphosphate",
+      "short": "ent-copal-8-ol PP",
+      "formula": "C20H35O8P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:138223"
+      }
+    },
+    {
+      "id": "13r_epi_8_13_epoxylabd_14_ene",
+      "name": "(13R)-epi-8,13-epoxylabd-14-ene",
+      "short": "epi-8,13-epoxylabd-…",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138224"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "gmp",
+      "name": "Guanosine 5'-monophosphate (GMP)",
+      "short": "Guanosine 5'-MP…",
+      "formula": "C10H12N5O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58115"
+      }
+    },
+    {
+      "id": "guanine",
+      "name": "Guanine",
+      "formula": "C5H5N5O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16235"
+      }
+    },
+    {
+      "id": "prpp",
+      "name": "5-Phospho-alpha-D-ribose 1-diphosphate (PRPP)",
+      "short": "5-Phospho-alpha-D-r…",
+      "formula": "C5H8O14P3",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:58017"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "xanthine",
+      "name": "Xanthine",
+      "formula": "C5H4N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17712"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_186",
+      "name": "ent-13-epi-manoyl oxide synthase",
+      "ec": [
+        "4.2.3.186"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_8",
+      "name": "hypoxanthine phosphoribosyltransferase",
+      "ec": [
+        "2.4.2.8"
+      ]
+    },
+    {
+      "id": "ec_3_5_4_3",
+      "name": "guanine deaminase",
+      "ec": [
+        "3.5.4.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ent-13-epi-manoyl oxide synthase",
+      "equation": "ent-8alpha-hydroxylabd-13-en-15-yl diphosphate = ent-13-epi-manoyl oxide + diphosphate",
+      "ec": "4.2.3.186",
+      "substrates": [
+        {
+          "metabolite": "ent_copal_8_ol_diphosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13r_epi_8_13_epoxylabd_14_ene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_186"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18721"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18721"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hypoxanthine phosphoribosyltransferase",
+      "equation": "GMP + diphosphate = guanine + 5-phospho-alpha-D-ribose 1-diphosphate",
+      "ec": "2.4.2.8",
+      "substrates": [
+        {
+          "metabolite": "gmp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "prpp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25424"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "guanine deaminase",
+      "equation": "guanine + H2O + H(+) = xanthine + NH4(+)",
+      "ec": "3.5.4.3",
+      "substrates": [
+        {
+          "metabolite": "guanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "xanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14665"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14665"
+          }
+        ]
+      }
+    }
+  ]
+}

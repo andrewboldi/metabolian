@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway dihydrosanguinarine-to-macarpine "dihydrosanguinarine to macarpine" {
-  spacing 152
+  spacing 272
 
   spine at 0,0 {
     dihydrosanguinarine

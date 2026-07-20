@@ -1,0 +1,365 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "7s-salutaridinol-to-codeinone",
+  "name": "(7S)-salutaridinol to codeinone",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (7S)-salutaridinol(1+) to codeinone(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22856"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58463"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "7s_salutaridinol",
+      "name": "(7S)-salutaridinol",
+      "formula": "C19H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58463"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "7_o_acetylsalutaridinol",
+      "name": "7-O-acetylsalutaridinol",
+      "short": "7-O-acetylsalutarid…",
+      "formula": "C21H26NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57672"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "thebaine",
+      "name": "thebaine",
+      "formula": "C19H22NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59953"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "neopinone",
+      "name": "neopinone",
+      "formula": "C18H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59950"
+      }
+    },
+    {
+      "id": "formaldehyde",
+      "name": "formaldehyde",
+      "formula": "CH2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16842"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "codeinone",
+      "name": "codeinone",
+      "formula": "C18H20NO3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58473"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_150",
+      "name": "salutaridinol 7-O-acetyltransferase",
+      "ec": [
+        "2.3.1.150"
+      ]
+    },
+    {
+      "id": "ec_4_2_99_24",
+      "name": "thebaine synthase",
+      "ec": [
+        "4.2.99.24"
+      ]
+    },
+    {
+      "id": "ec_1_14_11_31",
+      "name": "thebaine 6-O-demethylase",
+      "ec": [
+        "1.14.11.31"
+      ]
+    },
+    {
+      "id": "ec_5_3_3_24",
+      "name": "neopinone isomerase",
+      "ec": [
+        "5.3.3.24"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "salutaridinol 7-O-acetyltransferase",
+      "equation": "(7S)-salutaridinol + acetyl-CoA = (7S)-O-acetylsalutaridinol + CoA",
+      "ec": "2.3.1.150",
+      "substrates": [
+        {
+          "metabolite": "7s_salutaridinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_o_acetylsalutaridinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_150"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "thebaine synthase",
+      "equation": "(7S)-O-acetylsalutaridinol = thebaine + acetate + H(+)",
+      "ec": "4.2.99.24",
+      "substrates": [
+        {
+          "metabolite": "7_o_acetylsalutaridinol",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thebaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_99_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56908"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56908"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "thebaine 6-O-demethylase",
+      "equation": "thebaine + 2-oxoglutarate + O2 = neopinone + formaldehyde + succinate + CO2",
+      "ec": "1.14.11.31",
+      "substrates": [
+        {
+          "metabolite": "thebaine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "neopinone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_11_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27477"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27477"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "neopinone isomerase",
+      "equation": "neopinone = codeinone",
+      "ec": "5.3.3.24",
+      "substrates": [
+        {
+          "metabolite": "neopinone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "codeinone",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:75127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:75127"
+          }
+        ]
+      }
+    }
+  ]
+}

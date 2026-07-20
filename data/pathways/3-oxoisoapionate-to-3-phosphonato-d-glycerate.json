@@ -1,0 +1,285 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-oxoisoapionate-to-3-phosphonato-d-glycerate",
+  "name": "3-oxoisoapionate… to 3-phosphonato-D-glycerate",
+  "category": "other",
+  "summary": "A 3-step route from 3-oxoisoapionate 4-phosphate(3−) to 3-phosphonato-D-glycerate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57076"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:141357"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_oxoisoapionate_4_phosphate",
+      "name": "3-oxoisoapionate 4-phosphate",
+      "short": "3-oxoisoapionate 4-P",
+      "formula": "C5H6O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:141357"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58272"
+      }
+    },
+    {
+      "id": "glycolate",
+      "name": "glycolate",
+      "formula": "C2H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29805"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "bpg13",
+      "name": "1,3-Bisphospho-D-glycerate",
+      "short": "1,3-Bisphospho-D-gl…",
+      "formula": "C3H4O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57604"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "d_glucose_6_phosphate",
+      "name": "α-D-glucose 6-phosphate",
+      "short": "α-D-glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58225"
+      }
+    },
+    {
+      "id": "d_glucose_1_6_bisphosphate",
+      "name": "α-D-glucose 1,6-bisphosphate",
+      "short": "α-D-glucose…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58392"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_7_1_28",
+      "name": "3-oxoisoapionate-4-phosphate transcarboxylase/hydrolase",
+      "ec": [
+        "3.7.1.28"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_3",
+      "name": "phosphoglycerate kinase",
+      "ec": [
+        "2.7.2.3"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_106",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "ec": [
+        "2.7.1.106"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3-oxoisoapionate-4-phosphate transcarboxylase/hydrolase",
+      "equation": "3-oxoisoapionate 4-phosphate + H2O = (2R)-3-phosphoglycerate + glycolate + H(+)",
+      "ec": "3.7.1.28",
+      "substrates": [
+        {
+          "metabolite": "3_oxoisoapionate_4_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phosphoglycerate kinase",
+      "equation": "(2R)-3-phosphoglycerate + ATP = (2R)-3-phospho-glyceroyl phosphate + ADP",
+      "ec": "2.7.2.3",
+      "substrates": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "bpg13",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14801"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14801"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucose-1,6-bisphosphate synthase",
+      "equation": "alpha-D-glucose 6-phosphate + (2R)-3-phospho-glyceroyl phosphate = alpha-D-glucose 1,6-bisphosphate + (2R)-3-phosphoglycerate + H(+)",
+      "ec": "2.7.1.106",
+      "substrates": [
+        {
+          "metabolite": "d_glucose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "bpg13",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_6_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_106"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70911"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70911"
+          }
+        ]
+      }
+    }
+  ]
+}

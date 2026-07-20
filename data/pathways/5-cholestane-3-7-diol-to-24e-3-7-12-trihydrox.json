@@ -3,7 +3,7 @@
   "id": "5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox",
   "name": "5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydrox…",
   "category": "energy-metabolism",
-  "summary": "A 7-step route from 5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydroxy-5β-cholest-24-en-26-oyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "summary": "A 5-step route from 5β-cholestane-3α,7α-diol to (24E)-3α,7α,12α-trihydroxy-5β-cholest-24-en-26-oyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
   "provenance": {
     "confidence": "high",
     "sources": [
@@ -93,13 +93,13 @@
       }
     },
     {
-      "id": "25r_5_cholestane_3_7_12_26_tetrol",
-      "name": "(25R)-5β-cholestane-3α,7α,12α,26-tetrol",
-      "short": "5β-cholestane-3α,7α…",
-      "formula": "C27H48O4",
-      "charge": 0,
+      "id": "25r_3_7_12_trihydroxy_5_cholestan_26_oate",
+      "name": "(25R)-3α,7α,12α-trihydroxy-5β-cholestan-26-oate",
+      "short": "3α,7α,12α-trihydrox…",
+      "formula": "C27H45O5",
+      "charge": -1,
       "xrefs": {
-        "chebi": "CHEBI:48939"
+        "chebi": "CHEBI:58734"
       }
     },
     {
@@ -109,26 +109,6 @@
       "charge": 2,
       "xrefs": {
         "chebi": "CHEBI:33737"
-      }
-    },
-    {
-      "id": "25r_3_7_12_trihydroxy_5_cholestan_26_al",
-      "name": "(25R)-3α,7α,12α-trihydroxy-5β-cholestan-26-al",
-      "short": "3α,7α,12α-trihydrox…",
-      "formula": "C27H46O4",
-      "charge": 0,
-      "xrefs": {
-        "chebi": "CHEBI:48940"
-      }
-    },
-    {
-      "id": "25r_3_7_12_trihydroxy_5_cholestan_26_oate",
-      "name": "(25R)-3α,7α,12α-trihydroxy-5β-cholestan-26-oate",
-      "short": "3α,7α,12α-trihydrox…",
-      "formula": "C27H45O5",
-      "charge": -1,
-      "xrefs": {
-        "chebi": "CHEBI:58734"
       }
     },
     {
@@ -225,6 +205,13 @@
       ]
     },
     {
+      "id": "ec_1_14_15_15",
+      "name": "cholestanetriol 26-monooxygenase",
+      "ec": [
+        "1.14.15.15"
+      ]
+    },
+    {
       "id": "ec_6_2_1_7",
       "name": "cholate--CoA ligase",
       "ec": [
@@ -306,8 +293,9 @@
     },
     {
       "id": "r2",
-      "name": "5beta-cholestane-3alpha,7alpha,12alpha-triol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = ...",
-      "equation": "5beta-cholestane-3alpha,7alpha,12alpha-triol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-5beta-cholestane-3alpha,7alpha,12alpha,26-tetrol + 2 oxidized [adrenodoxin] + H2O",
+      "name": "cholestanetriol 26-monooxygenase",
+      "equation": "5beta-cholestane-3alpha,7alpha,12alpha-triol + 6 reduced [adrenodoxin] + 3 O2 + 5 H(+) = (25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oate + 6 oxidized [adrenodoxin] + 4 H2O",
+      "ec": "1.14.15.15",
       "substrates": [
         {
           "metabolite": "triol_ca",
@@ -315,117 +303,15 @@
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 6
         },
         {
           "metabolite": "o2",
-          "stoichiometry": 1
+          "stoichiometry": 3
         },
         {
           "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25r_5_cholestane_3_7_12_26_tetrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 1
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 2,
-      "xrefs": {
-        "rhea": "RHEA:14373"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:14373"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r3",
-      "name": "(25R)-5beta-cholestane-3alpha,7alpha,12alpha,26-tetrol + 2 reduced [adrenodoxin] + O2 +...",
-      "equation": "(25R)-5beta-cholestane-3alpha,7alpha,12alpha,26-tetrol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-al + 2 oxidized [adrenodoxin] + 2 H2O",
-      "substrates": [
-        {
-          "metabolite": "25r_5_cholestane_3_7_12_26_tetrol",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 2
-        }
-      ],
-      "products": [
-        {
-          "metabolite": "25r_3_7_12_trihydroxy_5_cholestan_26_al",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "h2o",
-          "stoichiometry": 2
-        }
-      ],
-      "reversibility": "reversible",
-      "pathwayStep": 3,
-      "xrefs": {
-        "rhea": "RHEA:40231"
-      },
-      "provenance": {
-        "confidence": "high",
-        "sources": [
-          {
-            "db": "Rhea",
-            "id": "RHEA:40231"
-          }
-        ]
-      }
-    },
-    {
-      "id": "r4",
-      "name": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-al + 2 reduced [adrenodoxin] ...",
-      "equation": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-al + 2 reduced [adrenodoxin] + O2 + H(+) = (25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oate + 2 oxidized [adrenodoxin] + H2O",
-      "substrates": [
-        {
-          "metabolite": "25r_3_7_12_trihydroxy_5_cholestan_26_al",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
-        },
-        {
-          "metabolite": "o2",
-          "stoichiometry": 1
-        },
-        {
-          "metabolite": "hplus",
-          "stoichiometry": 1
+          "stoichiometry": 5
         }
       ],
       "products": [
@@ -435,30 +321,35 @@
         },
         {
           "metabolite": "di_sulfido_diiron",
-          "stoichiometry": 2
+          "stoichiometry": 6
         },
         {
           "metabolite": "h2o",
-          "stoichiometry": 1
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_15"
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 4,
+      "pathwayStep": 2,
       "xrefs": {
-        "rhea": "RHEA:34627"
+        "rhea": "RHEA:34631"
       },
       "provenance": {
         "confidence": "high",
         "sources": [
           {
             "db": "Rhea",
-            "id": "RHEA:34627"
+            "id": "RHEA:34631"
           }
         ]
       }
     },
     {
-      "id": "r5",
+      "id": "r3",
       "name": "cholate--CoA ligase",
       "equation": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oate + ATP + CoA = (25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA + AMP + diphosphate",
       "ec": "6.2.1.7",
@@ -496,7 +387,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 5,
+      "pathwayStep": 3,
       "xrefs": {
         "rhea": "RHEA:22976"
       },
@@ -511,7 +402,7 @@
       }
     },
     {
-      "id": "r6",
+      "id": "r4",
       "name": "3alpha,7alpha,12alpha-trihydroxy-5beta-cholestanoyl-CoA 24-hydroxylase",
       "equation": "(25R)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholestan-26-oyl-CoA + A + H2O = (24R,25R)-3alpha,7alpha,12alpha,24-tetrahydroxy-5beta-cholestan-26-oyl-CoA + AH2",
       "ec": "1.17.99.3",
@@ -545,7 +436,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 6,
+      "pathwayStep": 4,
       "xrefs": {
         "rhea": "RHEA:15733"
       },
@@ -560,7 +451,7 @@
       }
     },
     {
-      "id": "r7",
+      "id": "r5",
       "name": "3alpha,7alpha,12alpha-trihydroxy-5beta-cholest-24-enoyl-CoA hydratase",
       "equation": "(24R,25R)-3alpha,7alpha,12alpha,24-tetrahydroxy-5beta-cholestan-26-oyl-CoA = (24E)-3alpha,7alpha,12alpha-trihydroxy-5beta-cholest-24-en-26-oyl-CoA + H2O",
       "ec": "4.2.1.107",
@@ -586,7 +477,7 @@
         }
       ],
       "reversibility": "reversible",
-      "pathwayStep": 7,
+      "pathwayStep": 5,
       "xrefs": {
         "rhea": "RHEA:18933"
       },

@@ -1,0 +1,290 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-d-mannosyl-l-threon-to-n-acetyl-d-galactosamin",
+  "name": "O-(α-D-mannosyl)-L-threon… to N-acetyl-β-D-galactosamin…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from O-(α-D-mannosyl)-L-threonine residue to N-acetyl-β-D-galactosaminyl-(1→3)-N-acetyl-β-D-glucosaminyl-(1→4)-6-O-phosphonato-α-D-mannosyl-L-threonine(2−) residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:37663"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:137323"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_d_mannosyl_l_threonine",
+      "name": "O-(α-D-mannosyl)-L-threonine",
+      "short": "O-(α-D-mannosyl)-L-…",
+      "formula": "C10H17NO7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137323"
+      }
+    },
+    {
+      "id": "udpglcnac",
+      "name": "UDP-N-acetyl-α-D-glucosamine (UDP-GlcNAc)",
+      "short": "UDP-N-acetyl-α-D-gl…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57705"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosaminyl_1_4_d_mannosyl_l_threoni",
+      "name": "N-acetyl-β-D-glucosaminyl-(1→4)-α-D-mannosyl-L-threonine",
+      "short": "N-acetyl-β-D-glucos…",
+      "formula": "C18H30N2O12",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137540"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_d_galactosamine",
+      "name": "UDP-N-acetyl-α-D-galactosamine",
+      "short": "UDP-N-acetyl-α-D-ga…",
+      "formula": "C17H25N3O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:67138"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→3)-N-acetyl-β-D-glucosaminyl-(1→4)-α-D-mannosyl-L-threonine",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C26H43N3O17",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:136709"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa",
+      "name": "N-acetyl-β-D-galactosaminyl-(1→3)-N-acetyl-β-D-glucosaminyl-(1→4)-6-O-phosphonato-α-D-mannosyl-L-threonine(2−)",
+      "short": "N-acetyl-β-D-galact…",
+      "formula": "C26H42N3O20P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:136710"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_312",
+      "name": "protein O-mannose beta-1,4-N-acetylglucosaminyltransferase",
+      "ec": [
+        "2.4.1.312"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_313",
+      "name": "protein O-mannose beta-1,3-N-acetylgalactosaminyltransferase",
+      "ec": [
+        "2.4.1.313"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_183",
+      "name": "glycoprotein-mannosyl O(6)-kinase",
+      "ec": [
+        "2.7.1.183"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein O-mannose beta-1,4-N-acetylglucosaminyltransferase",
+      "equation": "3-O-(alpha-D-mannosyl)-L-threonyl-[protein] + UDP-N-acetyl-alpha-D-glucosamine = 3-O-(N-acetyl-beta-D-glucosaminyl-(1->4)-alpha-D-mannosyl)-L-threonyl-[protein] + UDP + H(+)",
+      "ec": "2.4.1.312",
+      "substrates": [
+        {
+          "metabolite": "o_d_mannosyl_l_threonine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udpglcnac",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_mannosyl_l_threoni",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_312"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:37663"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein O-mannose beta-1,3-N-acetylgalactosaminyltransferase",
+      "equation": "3-O-(N-acetyl-beta-D-glucosaminyl-(1->4)-alpha-D-mannosyl)-L-threonyl-[protein] + UDP-N-acetyl-alpha-D-galactosamine = 3-O-[beta-D-GalNAc-(1->3)-beta-D-GlcNAc-(1->4)-alpha-D-Man]-L-Thr-[protein] + UDP + H(+)",
+      "ec": "2.4.1.313",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosaminyl_1_4_d_mannosyl_l_threoni",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_n_acetyl_d_galactosamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_313"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:37667"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:37667"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycoprotein-mannosyl O(6)-kinase",
+      "equation": "3-O-[beta-D-GalNAc-(1->3)-beta-D-GlcNAc-(1->4)-alpha-D-Man]-L-Thr-[protein] + ATP = 3-O-[beta-D-GalNAc-(1->3)-beta-D-GlcNAc-(1->4)-(O-6-P-alpha-D-Man)]-Thr-[protein] + ADP + H(+)",
+      "ec": "2.7.1.183",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_galactosaminyl_1_3_n_acetyl_d_glucosa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_183"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:52616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52616"
+          }
+        ]
+      }
+    }
+  ]
+}

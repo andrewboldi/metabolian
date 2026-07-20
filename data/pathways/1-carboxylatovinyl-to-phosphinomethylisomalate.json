@@ -1,0 +1,267 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-carboxylatovinyl-to-phosphinomethylisomalate",
+  "name": "1-carboxylatovinyl… to phosphinomethylisomalate",
+  "category": "other",
+  "summary": "A 3-step route from 1-carboxylatovinyl carboxylatophosphonate(3−) to phosphinomethylisomalate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14045"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57999"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_carboxylatovinyl_carboxylatophosphonate",
+      "name": "1-carboxylatovinyl carboxylatophosphonate",
+      "short": "1-carboxylatovinyl…",
+      "formula": "C4H2O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57999"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxy_oxido_phosphoranyl_pyruvate",
+      "name": "3-[hydroxy(oxido)phosphoranyl]pyruvate",
+      "short": "3-[hydroxy(oxido)ph…",
+      "formula": "C3H3O5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58348"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_phosphinomethylmalate",
+      "name": "2-phosphinomethylmalate",
+      "short": "2-phosphinomethylma…",
+      "formula": "C5H6O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:91181"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "phosphinomethylisomalate",
+      "name": "phosphinomethylisomalate",
+      "short": "phosphinomethylisom…",
+      "formula": "C5H6O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:131650"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_23",
+      "name": "carboxyvinyl-carboxyphosphonate phosphorylmutase",
+      "ec": [
+        "2.7.8.23"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_18",
+      "name": "2-phosphinomethylmalate synthase",
+      "ec": [
+        "2.3.3.18"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_166",
+      "name": "phosphinomethylmalate isomerase",
+      "ec": [
+        "4.2.1.166"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "carboxyvinyl-carboxyphosphonate phosphorylmutase",
+      "equation": "1-carboxyvinyl carboxyphosphonate + H(+) = 3-(hydrohydroxyphosphoryl)pyruvate + CO2",
+      "ec": "2.7.8.23",
+      "substrates": [
+        {
+          "metabolite": "1_carboxylatovinyl_carboxylatophosphonate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_oxido_phosphoranyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14045"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14045"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-phosphinomethylmalate synthase",
+      "equation": "3-(hydrohydroxyphosphoryl)pyruvate + acetyl-CoA + H2O = phosphinomethylmalate + CoA + H(+)",
+      "ec": "2.3.3.18",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_oxido_phosphoranyl_pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_phosphinomethylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26068"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26068"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phosphinomethylmalate isomerase",
+      "equation": "phosphinomethylmalate = phosphinomethylisomalate",
+      "ec": "4.2.1.166",
+      "substrates": [
+        {
+          "metabolite": "2_phosphinomethylmalate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphinomethylisomalate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_166"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:49504"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:49504"
+          }
+        ]
+      }
+    }
+  ]
+}

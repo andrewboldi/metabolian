@@ -1,0 +1,331 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acyl-d-amino-acid-to-di-sulfido-diiron",
+  "name": "N-acyl-D-α-amino acid… to di-μ-sulfido-diiron",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from N-acyl-D-α-amino acid anion to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18309"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59876"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acyl_d_amino_acid_anion",
+      "name": "N-acyl-D-α-amino acid anion",
+      "short": "N-acyl-D-α-amino…",
+      "formula": "C3H2NO3R2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:59876"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "d_amino_acid",
+      "name": "D-α-amino acid",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59871"
+      }
+    },
+    {
+      "id": "carboxylic_acid_anion",
+      "name": "carboxylic acid anion",
+      "short": "carboxylic acid…",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29067"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_oxo_monocarboxylic_acid_anion",
+      "name": "2-oxo monocarboxylic acid anion",
+      "short": "2-oxo monocarboxyli…",
+      "formula": "C2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35179"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acyl_coa",
+      "name": "acyl-CoA",
+      "formula": "C22H31N7O17P3SR",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58342"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_81",
+      "name": "N-acyl-D-amino-acid deacylase",
+      "ec": [
+        "3.5.1.81"
+      ]
+    },
+    {
+      "id": "ec_1_4_3_3",
+      "name": "D-amino-acid oxidase",
+      "ec": [
+        "1.4.3.3"
+      ]
+    },
+    {
+      "id": "ec_1_2_7_11",
+      "name": "2-oxoacid oxidoreductase (ferredoxin)",
+      "ec": [
+        "1.2.7.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acyl-D-amino-acid deacylase",
+      "equation": "an N-acyl-D-amino acid + H2O = a D-alpha-amino acid + a carboxylate",
+      "ec": "3.5.1.81",
+      "substrates": [
+        {
+          "metabolite": "n_acyl_d_amino_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carboxylic_acid_anion",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18309"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "D-amino-acid oxidase",
+      "equation": "a D-alpha-amino acid + O2 + H2O = a 2-oxocarboxylate + H2O2 + NH4(+)",
+      "ec": "1.4.3.3",
+      "substrates": [
+        {
+          "metabolite": "d_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21816"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21816"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-oxoacid oxidoreductase (ferredoxin)",
+      "equation": "a 2-oxocarboxylate + 2 oxidized [2Fe-2S]-[ferredoxin] + CoA = an acyl-CoA + 2 reduced [2Fe-2S]-[ferredoxin] + CO2 + H(+)",
+      "ec": "1.2.7.11",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "acyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:42316"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:42316"
+          }
+        ]
+      }
+    }
+  ]
+}

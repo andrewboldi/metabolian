@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranylgeranyl-diphosphate-to-hydrogen-acceptor",
+  "name": "geranylgeranyl diphosphate to hydrogen acceptor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from geranylgeranyl diphosphate(3−) to hydrogen acceptor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:41628"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57533"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "geranylgeranyl_diphosphate",
+      "name": "geranylgeranyl diphosphate",
+      "short": "geranylgeranyl PP",
+      "formula": "C20H33O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57533"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cyclooctat_9_en_7_ol",
+      "name": "cyclooctat-9-en-7-ol",
+      "formula": "C20H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78352"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "cyclooctat_9_en_5_7_diol",
+      "name": "cyclooctat-9-en-5,7-diol",
+      "short": "cyclooctat-9-en-5,7…",
+      "formula": "C20H34O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:141020"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "cyclooctatin",
+      "name": "cyclooctatin",
+      "formula": "C20H34O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78370"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_146",
+      "name": "cyclooctat-9-en-7-ol synthase",
+      "ec": [
+        "4.2.3.146"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_61",
+      "name": "cyclooctat-9-en-7-ol 5-monooxygenase",
+      "ec": [
+        "1.14.99.61"
+      ]
+    },
+    {
+      "id": "ec_1_14_99_62",
+      "name": "cyclooctatin synthase",
+      "ec": [
+        "1.14.99.62"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cyclooctat-9-en-7-ol synthase",
+      "equation": "geranylgeranyl diphosphate + H2O = cyclooctat-9-en-7-ol + diphosphate",
+      "ec": "4.2.3.146",
+      "substrates": [
+        {
+          "metabolite": "geranylgeranyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclooctat_9_en_7_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_146"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:41628"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41628"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cyclooctat-9-en-7-ol 5-monooxygenase",
+      "equation": "cyclooctat-9-en-7-ol + AH2 + O2 = cyclooctat-9-ene-5,7-diol + A + H2O",
+      "ec": "1.14.99.61",
+      "substrates": [
+        {
+          "metabolite": "cyclooctat_9_en_7_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclooctat_9_en_5_7_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:56820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cyclooctatin synthase",
+      "equation": "cyclooctat-9-ene-5,7-diol + AH2 + O2 = cyclooctatin + A + H2O",
+      "ec": "1.14.99.62",
+      "substrates": [
+        {
+          "metabolite": "cyclooctat_9_en_5_7_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cyclooctatin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_99_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:56824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:56824"
+          }
+        ]
+      }
+    }
+  ]
+}

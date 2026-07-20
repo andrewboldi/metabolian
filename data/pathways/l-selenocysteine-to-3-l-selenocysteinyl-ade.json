@@ -1,0 +1,325 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-selenocysteine-to-3-l-selenocysteinyl-ade",
+  "name": "L-selenocysteine to 3'-(L-selenocysteinyl)ade…",
+  "category": "other",
+  "summary": "A 3-step route from L-selenocysteine zwitterion to 3'-(L-selenocysteinyl)adenylyl(1−) group, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11632"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57843"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_selenocysteine",
+      "name": "L-selenocysteine",
+      "formula": "C3H7NO2Se",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57843"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "selanide",
+      "name": "selanide",
+      "formula": "HSe",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29317"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "selenophosphate",
+      "name": "selenophosphate",
+      "formula": "O3PSe",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16144"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "3_l_seryl_adenylyl_1_group",
+      "name": "3'-(L-seryl)adenylyl(1−) group",
+      "short": "3'-(L-seryl)adenyly…",
+      "formula": "C13H17N6O8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78533"
+      }
+    },
+    {
+      "id": "3_l_selenocysteinyl_adenylyl_1_group",
+      "name": "3'-(L-selenocysteinyl)adenylyl(1−) group",
+      "short": "3'-(L-selenocystein…",
+      "formula": "C13H17N6O7PSe",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78573"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_16",
+      "name": "selenocysteine lyase",
+      "ec": [
+        "4.4.1.16"
+      ]
+    },
+    {
+      "id": "ec_2_7_9_3",
+      "name": "selenide, water dikinase",
+      "ec": [
+        "2.7.9.3"
+      ]
+    },
+    {
+      "id": "ec_2_9_1_1",
+      "name": "L-seryl-tRNA(Sec) selenium transferase",
+      "ec": [
+        "2.9.1.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "selenocysteine lyase",
+      "equation": "L-selenocysteine + AH2 = hydrogenselenide + L-alanine + A + H(+)",
+      "ec": "4.4.1.16",
+      "substrates": [
+        {
+          "metabolite": "l_selenocysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selanide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11632"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "selenide, water dikinase",
+      "equation": "hydrogenselenide + ATP + H2O = selenophosphate + AMP + phosphate + 2 H(+)",
+      "ec": "2.7.9.3",
+      "substrates": [
+        {
+          "metabolite": "selanide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "selenophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_9_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18737"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-seryl-tRNA(Sec) selenium transferase",
+      "equation": "L-seryl-tRNA(Sec) + selenophosphate + H(+) = L-selenocysteinyl-tRNA(Sec) + phosphate",
+      "ec": "2.9.1.1",
+      "substrates": [
+        {
+          "metabolite": "3_l_seryl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "selenophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_l_selenocysteinyl_adenylyl_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_9_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22728"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22728"
+          }
+        ]
+      }
+    }
+  ]
+}

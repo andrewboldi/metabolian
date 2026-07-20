@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "benzylmalonyl-coa-to-e-cinnamoyl-coa",
+  "name": "benzylmalonyl-CoA to (E)-cinnamoyl-CoA",
+  "category": "redox-detox",
+  "summary": "A 3-step route from benzylmalonyl-CoA(5−) to (E)-cinnamoyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:69751"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:188360"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "benzylmalonyl_coa",
+      "name": "benzylmalonyl-CoA",
+      "formula": "C31H39N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:188360"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "e_cinnamoyl_coa",
+      "name": "(E)-cinnamoyl-CoA",
+      "formula": "C30H38N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57252"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "r_3_phenyllactate",
+      "name": "(R)-3-phenyllactate",
+      "formula": "C9H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11009"
+      }
+    },
+    {
+      "id": "r_phenyllactoyl_coa",
+      "name": "(R)-phenyllactoyl-CoA",
+      "short": "phenyllactoyl-CoA",
+      "formula": "C30H40N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57254"
+      }
+    },
+    {
+      "id": "trans_cinnamate",
+      "name": "trans-cinnamate",
+      "formula": "C9H7O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15669"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_3_17",
+      "name": "benzylmalonyl-CoA dehydrogenase",
+      "ec": [
+        "1.3.3.17"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_17",
+      "name": "3-(aryl)acryloyl-CoA:(R)-3-(aryl)lactate CoA-transferase",
+      "ec": [
+        "2.8.3.17"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_175",
+      "name": "(R)-3-(aryl)lactoyl-CoA dehydratase",
+      "ec": [
+        "4.2.1.175"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "benzylmalonyl-CoA dehydrogenase",
+      "equation": "benzylmalonyl-CoA + O2 + H(+) = (E)-cinnamoyl-CoA + H2O2 + CO2",
+      "ec": "1.3.3.17",
+      "substrates": [
+        {
+          "metabolite": "benzylmalonyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:69751"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:69751"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-(aryl)acryloyl-CoA:(R)-3-(aryl)lactate CoA-transferase",
+      "equation": "(E)-cinnamoyl-CoA + (R)-3-phenyllactate = (R)-3-phenyllactoyl-CoA + (E)-cinnamate",
+      "ec": "2.8.3.17",
+      "substrates": [
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_3_phenyllactate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_phenyllactoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trans_cinnamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15601"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15601"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(R)-3-(aryl)lactoyl-CoA dehydratase",
+      "equation": "(R)-3-phenyllactoyl-CoA = (E)-cinnamoyl-CoA + H2O",
+      "ec": "4.2.1.175",
+      "substrates": [
+        {
+          "metabolite": "r_phenyllactoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_cinnamoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_175"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38355"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38355"
+          }
+        ]
+      }
+    }
+  ]
+}

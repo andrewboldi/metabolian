@@ -1,0 +1,390 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "iridodial-lactol-to-s-adenosyl-l-homocysteine",
+  "name": "(+)-iridodial lactol to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from (+)-iridodial lactol to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57560"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:26"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "iridodial_lactol",
+      "name": "(+)-iridodial lactol",
+      "formula": "C10H16O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:26"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "7_deoxyloganetate",
+      "name": "7-deoxyloganetate",
+      "formula": "C10H13O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76846"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "7_deoxyloganate",
+      "name": "7-deoxyloganate",
+      "formula": "C16H23O9",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:76844"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "loganate",
+      "name": "loganate",
+      "formula": "C16H23O10",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18052"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "loganin",
+      "name": "loganin",
+      "formula": "C17H26O10",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15771"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_161",
+      "name": "nepetalactol monooxygenase",
+      "ec": [
+        "1.14.14.161"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_323",
+      "name": "7-deoxyloganetic acid glucosyltransferase",
+      "ec": [
+        "2.4.1.323"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_85",
+      "name": "7-deoxyloganate 7-hydroxylase",
+      "ec": [
+        "1.14.14.85"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_50",
+      "name": "loganate O-methyltransferase",
+      "ec": [
+        "2.1.1.50"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nepetalactol monooxygenase",
+      "equation": "(+)-cis-trans-nepetalactol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = 7-deoxyloganetate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.161",
+      "substrates": [
+        {
+          "metabolite": "iridodial_lactol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_161"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "7-deoxyloganetic acid glucosyltransferase",
+      "equation": "7-deoxyloganetate + UDP-alpha-D-glucose = 7-deoxyloganate + UDP + H(+)",
+      "ec": "2.4.1.323",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_deoxyloganate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_323"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:39895"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39895"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "7-deoxyloganate 7-hydroxylase",
+      "equation": "7-deoxyloganate + reduced [NADPH--hemoprotein reductase] + O2 = loganate + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.85",
+      "substrates": [
+        {
+          "metabolite": "7_deoxyloganate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "loganate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57576"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57576"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "loganate O-methyltransferase",
+      "equation": "loganate + S-adenosyl-L-methionine = loganin + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.50",
+      "substrates": [
+        {
+          "metabolite": "loganate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "loganin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12508"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12508"
+          }
+        ]
+      }
+    }
+  ]
+}

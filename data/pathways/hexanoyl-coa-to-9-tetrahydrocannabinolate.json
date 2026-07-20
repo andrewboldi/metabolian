@@ -1,0 +1,362 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexanoyl-coa-to-9-tetrahydrocannabinolate",
+  "name": "hexanoyl-CoA to Δ9-tetrahydrocannabinolate",
+  "category": "redox-detox",
+  "summary": "A 4-step route from hexanoyl-CoA(4−) to Δ9-tetrahydrocannabinolate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34119"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:62620"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexanoyl_coa",
+      "name": "hexanoyl-CoA",
+      "formula": "C27H42N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62620"
+      }
+    },
+    {
+      "id": "malonyl-coa",
+      "name": "Malonyl-CoA",
+      "formula": "C24H33N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57384"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_5_7_trioxododecanoyl_coa",
+      "name": "3,5,7-trioxododecanoyl-CoA",
+      "short": "3,5,7-trioxododecan…",
+      "formula": "C33H48N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:66957"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "olivetolate",
+      "name": "olivetolate",
+      "formula": "C12H15O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66950"
+      }
+    },
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "cannabigerolate",
+      "name": "cannabigerolate",
+      "formula": "C22H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66962"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "9_tetrahydrocannabinolate",
+      "name": "Δ9-tetrahydrocannabinolate",
+      "short": "Δ9-tetrahydrocannab…",
+      "formula": "C22H29O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:66963"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_3_1_206",
+      "name": "3,5,7-trioxododecanoyl-CoA synthase",
+      "ec": [
+        "2.3.1.206"
+      ]
+    },
+    {
+      "id": "ec_4_4_1_26",
+      "name": "olivetolic acid cyclase",
+      "ec": [
+        "4.4.1.26"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_102",
+      "name": "geranylpyrophosphate--olivetolic acid geranyltransferase",
+      "ec": [
+        "2.5.1.102"
+      ]
+    },
+    {
+      "id": "ec_1_21_3_7",
+      "name": "tetrahydrocannabinolic acid synthase",
+      "ec": [
+        "1.21.3.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3,5,7-trioxododecanoyl-CoA synthase",
+      "equation": "hexanoyl-CoA + 3 malonyl-CoA + 3 H(+) = 3,5,7-trioxododecanoyl-CoA + 3 CO2 + 3 CoA",
+      "ec": "2.3.1.206",
+      "substrates": [
+        {
+          "metabolite": "hexanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "malonyl-coa",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_206"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34119"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34119"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "olivetolic acid cyclase",
+      "equation": "3,5,7-trioxododecanoyl-CoA = olivetolate + CoA + H(+)",
+      "ec": "4.4.1.26",
+      "substrates": [
+        {
+          "metabolite": "3_5_7_trioxododecanoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "olivetolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:34123"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34123"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "geranylpyrophosphate--olivetolic acid geranyltransferase",
+      "equation": "olivetolate + (2E)-geranyl diphosphate = cannabigerolate + diphosphate",
+      "ec": "2.5.1.102",
+      "substrates": [
+        {
+          "metabolite": "olivetolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cannabigerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:34127"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34127"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tetrahydrocannabinolic acid synthase",
+      "equation": "cannabigerolate + O2 = Delta(9)-tetrahydrocannabinolate + H2O2",
+      "ec": "1.21.3.7",
+      "substrates": [
+        {
+          "metabolite": "cannabigerolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9_tetrahydrocannabinolate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_21_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:34135"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34135"
+          }
+        ]
+      }
+    }
+  ]
+}

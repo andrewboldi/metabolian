@@ -1,0 +1,370 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "glutamyl-aminobutyral-to-succinyl-coa",
+  "name": "γ-glutamyl-γ-aminobutyral… to succinyl-CoA",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from γ-glutamyl-γ-aminobutyraldehyde zwitterion to succinyl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28410"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61508"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "glutamyl_aminobutyraldehyde",
+      "name": "γ-glutamyl-γ-aminobutyraldehyde",
+      "short": "γ-glutamyl-γ-aminob…",
+      "formula": "C9H16N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:61508"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_l_glutamylamino_butanoate",
+      "name": "4-(L-γ-glutamylamino)butanoate",
+      "short": "4-(L-γ-glutamylamin…",
+      "formula": "C9H15N2O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58800"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "4_oxobutanoate",
+      "name": "4-oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57706"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_99",
+      "name": "4-(gamma-glutamylamino)butanal dehydrogenase",
+      "ec": [
+        "1.2.1.99"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_94",
+      "name": "gamma-glutamyl-gamma-aminobutyrate hydrolase",
+      "ec": [
+        "3.5.1.94"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_96",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.96"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_76",
+      "name": "succinate-semialdehyde dehydrogenase (acetylating)",
+      "ec": [
+        "1.2.1.76"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-(gamma-glutamylamino)butanal dehydrogenase",
+      "equation": "4-(gamma-L-glutamylamino)butanal + NADP(+) + H2O = 4-(gamma-L-glutamylamino)butanoate + NADPH + 2 H(+)",
+      "ec": "1.2.1.99",
+      "substrates": [
+        {
+          "metabolite": "glutamyl_aminobutyraldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_l_glutamylamino_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28410"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28410"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gamma-glutamyl-gamma-aminobutyrate hydrolase",
+      "equation": "4-(gamma-L-glutamylamino)butanoate + H2O = 4-aminobutanoate + L-glutamate",
+      "ec": "3.5.1.94",
+      "substrates": [
+        {
+          "metabolite": "4_l_glutamylamino_butanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19737"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19737"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "equation": "4-aminobutanoate + pyruvate = succinate semialdehyde + L-alanine",
+      "ec": "2.6.1.96",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:32263"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32263"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "succinate-semialdehyde dehydrogenase (acetylating)",
+      "equation": "succinate semialdehyde + NADP(+) + CoA = succinyl-CoA + NADPH + H(+)",
+      "ec": "1.2.1.76",
+      "substrates": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26450"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26450"
+          }
+        ]
+      }
+    }
+  ]
+}

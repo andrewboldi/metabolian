@@ -1,0 +1,291 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-deoxycytidine-to-5-methyldeoxycytidine",
+  "name": "2'-deoxycytidine to 5-methyldeoxycytidine…",
+  "category": "other",
+  "summary": "A 3-step route from 2'-deoxycytidine to 5-methyldeoxycytidine 5'-diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20061"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15698"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_deoxycytidine",
+      "name": "2'-deoxycytidine",
+      "formula": "C9H13N3O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15698"
+      }
+    },
+    {
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "2_deoxycytosine_5_monophosphate",
+      "name": "2'-deoxycytosine 5'-monophosphate",
+      "short": "2'-deoxycytosine…",
+      "formula": "C9H12N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57566"
+      }
+    },
+    {
+      "id": "nucleoside_5_diphosphate",
+      "name": "nucleoside 5'-diphosphate",
+      "short": "nucleoside 5'-PP",
+      "formula": "C5H8O10P2R",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57930"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methylene_thf",
+      "name": "5,10-Methylenetetrahydrofolate",
+      "short": "5,10-Methylenetetra…",
+      "formula": "C20H21N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15636"
+      }
+    },
+    {
+      "id": "2_deoxy_5_methyl_5_cytidylate",
+      "name": "2'-deoxy-5-methyl-5'-cytidylate",
+      "short": "2'-deoxy-5-methyl-5…",
+      "formula": "C10H14N3O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57886"
+      }
+    },
+    {
+      "id": "dhf",
+      "name": "7,8-Dihydrofolate",
+      "formula": "C19H19N7O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57451"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "5_methyldeoxycytidine_5_diphosphate",
+      "name": "5-methyldeoxycytidine 5'-diphosphate",
+      "short": "5-methyldeoxycytidi…",
+      "formula": "C10H14N3O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58541"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_74",
+      "name": "deoxycytidine kinase",
+      "ec": [
+        "2.7.1.74"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_54",
+      "name": "deoxycytidylate C-methyltransferase",
+      "ec": [
+        "2.1.1.54"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_19",
+      "name": "5-methyldeoxycytidine-5'-phosphate kinase",
+      "ec": [
+        "2.7.4.19"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "deoxycytidine kinase",
+      "equation": "2'-deoxycytidine + a ribonucleoside 5'-triphosphate = dCMP + a ribonucleoside 5'-diphosphate + H(+)",
+      "ec": "2.7.1.74",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nucleoside_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20061"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20061"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "deoxycytidylate C-methyltransferase",
+      "equation": "dCMP + (6R)-5,10-methylene-5,6,7,8-tetrahydrofolate = 5-methyldeoxycytidine 5'-phosphate + 7,8-dihydrofolate",
+      "ec": "2.1.1.54",
+      "substrates": [
+        {
+          "metabolite": "2_deoxycytosine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylene_thf",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxy_5_methyl_5_cytidylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dhf",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11568"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11568"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-methyldeoxycytidine-5'-phosphate kinase",
+      "equation": "5-methyldeoxycytidine 5'-phosphate + ATP = 5-methyldeoxycytidine diphosphate + ADP",
+      "ec": "2.7.4.19",
+      "substrates": [
+        {
+          "metabolite": "2_deoxy_5_methyl_5_cytidylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methyldeoxycytidine_5_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11396"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11396"
+          }
+        ]
+      }
+    }
+  ]
+}

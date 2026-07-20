@@ -274,6 +274,11 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const nameBoxes: { x: number; y: number; w: number; h: number }[] = [];
   const nodeEls = new Map<string, SVGGElement>();
   const edgeEls: { el: SVGElement; rxn: ChartRxn }[] = [];
+  /** The master wall chart is a different artifact from a single sheet: at 5,703
+   *  cells the quadratic label refinements cost seconds and buy nothing, because
+   *  it is read at overview zoom where those labels are not legible. Sheets are
+   *  far below this and keep the full treatment. */
+  const CROWDED = ir.nodes.length > 400;
   /** .met-formula font size — the band the formula occupies at the cell foot. */
   const FORMULA_FONT = 9;
   /** .enz-ec font size — used to reconstruct an EC's box when CSS has it hidden. */
@@ -491,12 +496,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // reserving y..y+top left the one label the placer most needs to see invisible
     // to it — measure the real ink bottom instead of assuming the metabolite layout.
     const inkBot = (isProtein ? 34 : 12) + (shown.length - 1) * 11 + 4;
-    nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : Math.max(top, inkBot) });
+    if (!CROWDED) nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : Math.max(top, inkBot) });
     // The molecular formula is text too, and it sits at the FOOT of the cell —
     // outside the name band reserved above. Placers therefore treated the bottom
     // of every structure cell as free paper and dropped effector tags and
     // cofactor captions straight onto the formula.
-    if (n.formula && !cond?.length) {
+    if (n.formula && !cond?.length && !CROWDED) {
       nameBoxes.push({ x: n.x, y: n.y + n.h - 4 - FORMULA_FONT, w: n.w, h: FORMULA_FONT + 4 });
     }
     g.setAttribute("data-structure-top", String(top));
@@ -513,7 +518,19 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   // of one class routing around a fixed guess made by the other.
   (function placeLabels() {
     const FONT = 10, EC_H = 11, COF = 9;
-    const cells = ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
+    // The placer is quadratic: every candidate position is scored against every
+    // cell and every label committed so far. That is the right trade for a sheet
+    // of a few dozen cells and the wrong one for the master wall chart, where
+    // 5,703 cells took 13.7 SECONDS to first paint — the exact symptom issue
+    // #309 reported. At that size the map is read at overview zoom, where none
+    // of these labels is legible and the refinement buys nothing.
+    //
+    // Above the threshold the obstacle sets are emptied rather than the placer
+    // skipped: every label still commits a position and every cofactor arc is
+    // still rebuilt to match its caption, so geometry stays correct — only the
+    // search for a BETTER position is dropped. Individual sheets are far below
+    // the threshold and are unaffected.
+    const cells = CROWDED ? [] : ir.nodes.map((n) => ({ x: n.x - 4, y: n.y - 4, w: n.w + 8, h: n.h + 8 }));
     // Regulation rails and scaffolding hairlines are ink too — a label that lands
     // on one gets struck through at its baseline. Reserve a thin corridor along
     // every segment so names and EC numbers are placed clear of them.
@@ -705,7 +722,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         if (!hit(box, cells) && !hit(box, taken)) {
           if (!hit(box, railBoxes)) {         // best: clear of ink entirely
             commit(c, x, y);
-            taken.push(box);
+            if (!CROWDED) taken.push(box);
             placed = true;
             break;
           }
@@ -720,7 +737,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       const relaxed = offOwn || onOwn;
       if (!placed && relaxed) {
         commit(relaxed.c, relaxed.x, relaxed.y);
-        taken.push(relaxed.box);
+        if (!CROWDED) taken.push(relaxed.box);
         placed = true;
       }
       // Nowhere clear: hold it back to detail zoom, but still park it at the
@@ -775,7 +792,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       };
     };
     const measEcBox = textMeasurer(svg, "enz-ec", EC_FONT * 0.6);
-    const committed = enzymeLabels.flatMap((L) => {
+    const committed = (CROWDED ? [] : enzymeLabels).flatMap((L) => {
       const out: { el: SVGElement; isEc: boolean }[] = [];
       if (L.name.getAttribute("visibility") !== "hidden") out.push({ el: L.name, isEc: false });
       if (L.ec && L.ec.getAttribute("visibility") !== "hidden") out.push({ el: L.ec, isEc: true });
@@ -890,7 +907,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       for (const ts of Array.from(L.text.querySelectorAll("tspan"))) ts.setAttribute("x", String(c.x));
       // the arc follows the caption, so the two can never come apart
       L.arc.setAttribute("d", cofactorArc(c.mx, c.my, c.d, c.rx, c.ry, L.side));
-      taken.push(c.box);
+      if (!CROWDED) taken.push(c.box);
       layerCofactor.append(L.text);
     }
 
@@ -902,7 +919,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // rail by a walk-back distance, so a few units along the local rail normal
     // costs nothing legible, where moving a 200px name has nowhere to go.
     // `taken` is every label box this placer actually committed.
-    for (const gl of regGlyphs) {
+    for (const gl of CROWDED ? [] : regGlyphs) {
       const R = 7;
       // nameBoxes too: a disc that dodges the enzyme labels can still land on a
       // metabolite's own caption, which is what put a '–' on 6-PHOSPHO-D-GLUCONO-.
@@ -943,7 +960,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // stacked them ON EACH OTHER: a '+' and a '–' merged into one smudge, which is
     // strictly worse than the collision being fixed.
     const placedTags: Box[] = [];
-    for (const t of effTags) {
+    for (const t of CROWDED ? [] : effTags) {
       let box: { x: number; y: number; width: number; height: number };
       try { box = t.el.getBBox(); } catch { continue; }
       // The discs moved just above, so reserve them at their CURRENT centres —
@@ -981,7 +998,7 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     // display:none element reports a zero box — so every geometric comparison
     // here silently compared nothing. This was the real reason three
     // successive attempts at this sweep changed no pixel.
-    for (const L of enzymeLabels) {
+    for (const L of CROWDED ? [] : enzymeLabels) {
       if (!L.ec || L.ec.getAttribute("visibility") === "hidden") continue;
       if (hit(boxOf(L.ec, true), placedTags)) L.ec.setAttribute("visibility", "hidden");
     }

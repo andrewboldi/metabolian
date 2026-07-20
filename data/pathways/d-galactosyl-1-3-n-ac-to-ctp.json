@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-galactosyl-1-3-n-ac-to-ctp",
+  "name": "β-D-galactosyl-(1→3)-N-ac… to CTP",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from β-D-galactosyl-(1→3)-N-acetyl-α-D-galactosaminide to CTP(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11136"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:133470"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_galactosyl_1_3_n_acetyl_d_galactosaminide",
+      "name": "β-D-galactosyl-(1→3)-N-acetyl-α-D-galactosaminide",
+      "short": "β-D-galactosyl-(1→3…",
+      "formula": "C14H24NO11R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133470"
+      }
+    },
+    {
+      "id": "cmp_n_acetyl_neuraminate",
+      "name": "CMP-N-acetyl-β-neuraminate",
+      "short": "CMP-N-acetyl-β-neur…",
+      "formula": "C20H29N4O16P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57812"
+      }
+    },
+    {
+      "id": "d_galactosyl_1_3_n_acetyl_neuraminyl_2_6_n_acet",
+      "name": "β-D-galactosyl-(1→3)-[N-acetyl-α-neuraminyl-(2→6)]-N-acetyl-α-D-galactosaminide",
+      "short": "β-D-galactosyl-(1→3…",
+      "formula": "C25H40N2O19R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140764"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58069"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_3_3",
+      "name": "alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase",
+      "ec": [
+        "2.4.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_14",
+      "name": "UMP/CMP kinase",
+      "ec": [
+        "2.7.4.14"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_25",
+      "name": "(d)CMP kinase",
+      "ec": [
+        "2.7.4.25"
+      ]
+    },
+    {
+      "id": "ec_2_7_4_6",
+      "name": "nucleoside-diphosphate kinase",
+      "ec": [
+        "2.7.4.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alpha-N-acetylgalactosaminide alpha-2,6-sialyltransferase",
+      "equation": "a beta-D-galactosyl-(1->3)-N-acetyl-alpha-D-galactosaminyl derivative + CMP-N-acetyl-beta-neuraminate = a beta-D-galactosyl-(1->3)-[N-acetyl-alpha-neuraminyl-(2->6)]-N-acetyl-alpha-D-galactosaminyl derivative + CMP + H(+)",
+      "ec": "2.4.3.3",
+      "substrates": [
+        {
+          "metabolite": "d_galactosyl_1_3_n_acetyl_d_galactosaminide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cmp_n_acetyl_neuraminate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_galactosyl_1_3_n_acetyl_neuraminyl_2_6_n_acet",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11136"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11136"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "UMP/CMP kinase",
+      "equation": "CMP + ATP = CDP + ADP",
+      "ec": "2.7.4.14",
+      "substrates": [
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11600"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11600"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nucleoside-diphosphate kinase",
+      "equation": "CDP + ATP = CTP + ADP",
+      "ec": "2.7.4.6",
+      "substrates": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_4_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25237"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25237"
+          }
+        ]
+      }
+    }
+  ]
+}

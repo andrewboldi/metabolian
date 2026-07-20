@@ -1,0 +1,361 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cobalt-ii-factor-iii-to-s-adenosyl-l-homocystein",
+  "name": "cobalt(II)-factor III to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from cobalt(II)-factor III(8−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:36155"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:73299"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cobalt_ii_factor_iii",
+      "name": "cobalt(II)-factor III",
+      "short": "cobalt(II)-factor…",
+      "formula": "C43H38CoN4O16",
+      "charge": -8,
+      "xrefs": {
+        "chebi": "CHEBI:73299"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_4",
+      "name": "cobalt-precorrin-4",
+      "formula": "C44H43CoN4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:60061"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_5a",
+      "name": "cobalt-precorrin-5A",
+      "formula": "C45H45CoN4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:60062"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_5b",
+      "name": "cobalt-precorrin-5B",
+      "formula": "C43H42CoN4O16",
+      "charge": -8,
+      "xrefs": {
+        "chebi": "CHEBI:60063"
+      }
+    },
+    {
+      "id": "acetaldehyde",
+      "name": "Acetaldehyde",
+      "formula": "C2H4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15343"
+      }
+    },
+    {
+      "id": "cobalt_precorrin_6a",
+      "name": "cobalt-precorrin-6A",
+      "formula": "C44H45CoN4O16",
+      "charge": -7,
+      "xrefs": {
+        "chebi": "CHEBI:60064"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_272",
+      "name": "cobalt-factor III methyltransferase",
+      "ec": [
+        "2.1.1.272"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_271",
+      "name": "cobalt-precorrin-4 methyltransferase",
+      "ec": [
+        "2.1.1.271"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_12",
+      "name": "cobalt-precorrin 5A hydrolase",
+      "ec": [
+        "3.7.1.12"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_195",
+      "name": "cobalt-precorrin-5B (C(1))-methyltransferase",
+      "ec": [
+        "2.1.1.195"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "cobalt-factor III methyltransferase",
+      "equation": "Co(II)-factor III + AH2 + S-adenosyl-L-methionine = Co-precorrin-4 + A + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.272",
+      "substrates": [
+        {
+          "metabolite": "cobalt_ii_factor_iii",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_272"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:36155"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36155"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cobalt-precorrin-4 methyltransferase",
+      "equation": "Co-precorrin-4 + S-adenosyl-L-methionine = Co-precorrin-5A + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.271",
+      "substrates": [
+        {
+          "metabolite": "cobalt_precorrin_4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_5a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_271"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:26277"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cobalt-precorrin 5A hydrolase",
+      "equation": "Co-precorrin-5A + H2O = Co-precorrin-5B + acetaldehyde + H(+)",
+      "ec": "3.7.1.12",
+      "substrates": [
+        {
+          "metabolite": "cobalt_precorrin_5a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_5b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:26281"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26281"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "cobalt-precorrin-5B (C(1))-methyltransferase",
+      "equation": "Co-precorrin-5B + S-adenosyl-L-methionine = Co-precorrin-6A + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.195",
+      "substrates": [
+        {
+          "metabolite": "cobalt_precorrin_5b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cobalt_precorrin_6a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_195"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26285"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26285"
+          }
+        ]
+      }
+    }
+  ]
+}

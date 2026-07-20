@@ -1,0 +1,355 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "amino-acid-ester-to-l-argininium",
+  "name": "α-amino acid ester to L-argininium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from α-amino acid ester(1+) to L-argininium(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17241"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:83410"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "amino_acid_ester",
+      "name": "α-amino acid ester",
+      "formula": "C2H4NO2R2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:83410"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "amino_acid",
+      "name": "α-amino-acid",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78608"
+      }
+    },
+    {
+      "id": "alcohol",
+      "name": "alcohol",
+      "formula": "HOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30879"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_glutamyl_n_terminal_amino_acid_zwitterionic",
+      "name": "(γ-L-glutamyl) N-terminal α-amino-acid zwitterionic",
+      "short": "(γ-L-glutamyl)…",
+      "formula": "C7H10N2O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78599"
+      }
+    },
+    {
+      "id": "5_l_glutamyl_amino_acid",
+      "name": "5-L-glutamyl amino acid",
+      "short": "5-L-glutamyl amino…",
+      "formula": "C7H10N2O5R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77644"
+      }
+    },
+    {
+      "id": "n_terminal_amino_acid_1",
+      "name": "N-terminal α-amino-acid(1+)",
+      "short": "N-terminal…",
+      "formula": "C2H4NOR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78597"
+      }
+    },
+    {
+      "id": "3_l_arginyl_adenylyl_1_group",
+      "name": "3'-(L-arginyl)adenylyl(1+) group",
+      "short": "3'-(L-arginyl)adeny…",
+      "formula": "C16H26N9O7P",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:78513"
+      }
+    },
+    {
+      "id": "n_terminal_l_arginyl_l_amino_acid_2",
+      "name": "N-terminal L-arginyl-L-α-amino acid(2+)",
+      "short": "N-terminal…",
+      "formula": "C8H17N5O2R",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:83562"
+      }
+    },
+    {
+      "id": "amp_3_end_1",
+      "name": "AMP 3'-end(1−)",
+      "formula": "C10H12N5O6P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:78442"
+      }
+    },
+    {
+      "id": "arginine",
+      "name": "L-Arginine",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32682"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_43",
+      "name": "alpha-amino-acid esterase",
+      "ec": [
+        "3.1.1.43"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_2",
+      "name": "gamma-glutamyltransferase",
+      "ec": [
+        "2.3.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_3_2_8",
+      "name": "arginyltransferase",
+      "ec": [
+        "2.3.2.8"
+      ]
+    },
+    {
+      "id": "ec_3_4_11_27",
+      "name": "archaeal arginyl aminopeptidase",
+      "ec": [
+        "3.4.11.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "alpha-amino-acid esterase",
+      "equation": "an alpha-amino acid ester + H2O = an alpha-amino acid + an alcohol + H(+)",
+      "ec": "3.1.1.43",
+      "substrates": [
+        {
+          "metabolite": "amino_acid_ester",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alcohol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_43"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17241"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17241"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "gamma-glutamyltransferase",
+      "equation": "an N-terminal (5-L-glutamyl)-[peptide] + an alpha-amino acid = 5-L-glutamyl amino acid + an N-terminal L-alpha-aminoacyl-[peptide]",
+      "ec": "2.3.2.2",
+      "substrates": [
+        {
+          "metabolite": "l_glutamyl_n_terminal_amino_acid_zwitterionic",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amino_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_l_glutamyl_amino_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23904"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23904"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "arginyltransferase",
+      "equation": "an N-terminal L-alpha-aminoacyl-[protein] + L-arginyl-tRNA(Arg) = an N-terminal L-arginyl-L-aminoacyl-[protein] + tRNA(Arg) + H(+)",
+      "ec": "2.3.2.8",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_l_arginyl_adenylyl_1_group",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_l_arginyl_l_amino_acid_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp_3_end_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_2_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10208"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "archaeal arginyl aminopeptidase",
+      "equation": "an N-terminal L-arginyl-L-aminoacyl-[protein] + H2O = an N-terminal L-alpha-aminoacyl-[protein] + L-arginine",
+      "ec": "3.4.11.27",
+      "substrates": [
+        {
+          "metabolite": "n_terminal_l_arginyl_l_amino_acid_2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_terminal_amino_acid_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "arginine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_11_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:78707"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:78707"
+          }
+        ]
+      }
+    }
+  ]
+}

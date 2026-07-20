@@ -1,0 +1,303 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-carvone",
+  "name": "geranyl diphosphate to (+)-carvone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to (+)-carvone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10940"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "4r_limonene",
+      "name": "(4R)-limonene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15382"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "trans_carveol",
+      "name": "(+)-trans-carveol",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15388"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "carvone",
+      "name": "(+)-carvone",
+      "formula": "C10H14O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15399"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_20",
+      "name": "(R)-limonene synthase",
+      "ec": [
+        "4.2.3.20"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_53",
+      "name": "(R)-limonene 6-monooxygenase",
+      "ec": [
+        "1.14.14.53"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_275",
+      "name": "(+)-trans-carveol dehydrogenase",
+      "ec": [
+        "1.1.1.275"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(R)-limonene synthase",
+      "equation": "(2E)-geranyl diphosphate = (4R)-limonene + diphosphate",
+      "ec": "4.2.3.20",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4r_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10940"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10940"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(R)-limonene 6-monooxygenase",
+      "equation": "(4R)-limonene + reduced [NADPH--hemoprotein reductase] + O2 = (1R,5S)-carveol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.53",
+      "substrates": [
+        {
+          "metabolite": "4r_limonene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trans_carveol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_53"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18957"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18957"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(+)-trans-carveol dehydrogenase",
+      "equation": "(1R,5S)-carveol + NAD(+) = (S)-carvone + NADH + H(+)",
+      "ec": "1.1.1.275",
+      "substrates": [
+        {
+          "metabolite": "trans_carveol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carvone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_275"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14825"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14825"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-cis-n-methylcanadine-to-fmn",
+  "name": "(S)-cis-N-methylcanadine to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from (S)-cis-N-methylcanadine to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:57376"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:50540"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_cis_n_methylcanadine",
+      "name": "(S)-cis-N-methylcanadine",
+      "short": "cis-N-methylcanadine",
+      "formula": "C21H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:50540"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_1_hydroxy_n_methylcanadine",
+      "name": "(S)-1-hydroxy-N-methylcanadine",
+      "short": "1-hydroxy-N-methylc…",
+      "formula": "C21H24NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141633"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "13s_14r_1_13_dihydroxy_n_methylcanadine",
+      "name": "(13S,14R)-1,13-dihydroxy-N-methylcanadine",
+      "short": "(13S,14R)-1,13-dihy…",
+      "formula": "C21H24NO6",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141639"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "13s_14r_1_hydroxy_13_o_acetyl_n_methylcanadine",
+      "name": "(13S,14R)-1-hydroxy-13-O-acetyl-N-methylcanadine",
+      "short": "(13S,14R)-1-hydroxy…",
+      "formula": "C23H26NO7",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141640"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "13s_14r_1_8_dihydroxy_13_o_acetyl_n_methylcanad",
+      "name": "(13S,14R)-1,8-dihydroxy-13-O-acetyl-N-methylcanadine",
+      "short": "(13S,14R)-1,8-dihyd…",
+      "formula": "C23H26NO8",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:141642"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_166",
+      "name": "(S)-N-methylcanadine 1-hydroxylase",
+      "ec": [
+        "1.14.14.166"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_163",
+      "name": "(S)-1-hydroxy-N-methylcanadine 13-hydroxylase",
+      "ec": [
+        "1.14.14.163"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_285",
+      "name": "(13S,14R)-1,13-dihydroxy-N-methylcanadine 13-O-acetyltransferase",
+      "ec": [
+        "2.3.1.285"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_167",
+      "name": "(13S,14R)-13-O-acetyl-1-hydroxy-N-methylcanadine 8-hydroxylase",
+      "ec": [
+        "1.14.14.167"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-N-methylcanadine 1-hydroxylase",
+      "equation": "(S)-cis-N-methylcanadine + reduced [NADPH--hemoprotein reductase] + O2 = (S)-1-hydroxy-N-methylcanadine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.166",
+      "substrates": [
+        {
+          "metabolite": "s_cis_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_1_hydroxy_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_166"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:57376"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57376"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-1-hydroxy-N-methylcanadine 13-hydroxylase",
+      "equation": "(S)-1-hydroxy-N-methylcanadine + reduced [NADPH--hemoprotein reductase] + O2 = (13S,14R)-1,13-dihydroxy-N-methylcanadine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.163",
+      "substrates": [
+        {
+          "metabolite": "s_1_hydroxy_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13s_14r_1_13_dihydroxy_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_163"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:57380"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57380"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "(13S,14R)-1,13-dihydroxy-N-methylcanadine 13-O-acetyltransferase",
+      "equation": "(13S,14R)-1,13-dihydroxy-N-methylcanadine + acetyl-CoA = (13S,14R)-13-O-acetyl-1-hydroxy-N-methylcanadine + CoA",
+      "ec": "2.3.1.285",
+      "substrates": [
+        {
+          "metabolite": "13s_14r_1_13_dihydroxy_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13s_14r_1_hydroxy_13_o_acetyl_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_285"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:57384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "(13S,14R)-13-O-acetyl-1-hydroxy-N-methylcanadine 8-hydroxylase",
+      "equation": "(13S,14R)-13-O-acetyl-1-hydroxy-N-methylcanadine + reduced [NADPH--hemoprotein reductase] + O2 = (13S,14R)-13-O-acetyl-1,8-dihydroxy-N-methylcanadine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.167",
+      "substrates": [
+        {
+          "metabolite": "13s_14r_1_hydroxy_13_o_acetyl_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "13s_14r_1_8_dihydroxy_13_o_acetyl_n_methylcanad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_167"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:57388"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:57388"
+          }
+        ]
+      }
+    }
+  ]
+}

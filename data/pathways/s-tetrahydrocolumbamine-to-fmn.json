@@ -1,0 +1,309 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-tetrahydrocolumbamine-to-fmn",
+  "name": "(S)-tetrahydrocolumbamine to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (S)-tetrahydrocolumbamine to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21456"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17772"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_tetrahydrocolumbamine",
+      "name": "(S)-tetrahydrocolumbamine",
+      "short": "tetrahydrocolumbami…",
+      "formula": "C20H23NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17772"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "s_canadine",
+      "name": "(S)-canadine",
+      "formula": "C20H21NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16592"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "s_cis_n_methylcanadine",
+      "name": "(S)-cis-N-methylcanadine",
+      "short": "cis-N-methylcanadine",
+      "formula": "C21H24NO4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:50540"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "allocryptopine",
+      "name": "allocryptopine",
+      "formula": "C21H23NO5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17390"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_68",
+      "name": "(S)-canadine synthase",
+      "ec": [
+        "1.14.19.68"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_122",
+      "name": "(S)-tetrahydroprotoberberine N-methyltransferase",
+      "ec": [
+        "2.1.1.122"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_97",
+      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
+      "ec": [
+        "1.14.14.97"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-canadine synthase",
+      "equation": "(S)-tetrahydrocolumbamine + reduced [NADPH--hemoprotein reductase] + O2 = (S)-canadine + oxidized [NADPH--hemoprotein reductase] + 2 H2O + H(+)",
+      "ec": "1.14.19.68",
+      "substrates": [
+        {
+          "metabolite": "s_tetrahydrocolumbamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_canadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_68"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21456"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21456"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "(S)-tetrahydroprotoberberine N-methyltransferase",
+      "equation": "(S)-canadine + S-adenosyl-L-methionine = (S)-cis-N-methylcanadine + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.122",
+      "substrates": [
+        {
+          "metabolite": "s_canadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_cis_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_122"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12805"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12805"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methyltetrahydroprotoberberine 14-monooxygenase",
+      "equation": "(S)-cis-N-methylcanadine + reduced [NADPH--hemoprotein reductase] + O2 = allocryptopine + oxidized [NADPH--hemoprotein reductase] + H2O + 2 H(+)",
+      "ec": "1.14.14.97",
+      "substrates": [
+        {
+          "metabolite": "s_cis_n_methylcanadine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "allocryptopine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_97"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23684"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23684"
+          }
+        ]
+      }
+    }
+  ]
+}

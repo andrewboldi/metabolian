@@ -1,0 +1,451 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "calciol-to-di-sulfido-diiron",
+  "name": "calciol to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 5-step route from calciol to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32903"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28940"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "calciol",
+      "name": "calciol",
+      "formula": "C27H44O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28940"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "calcidiol",
+      "name": "calcidiol",
+      "formula": "C27H44O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17933"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "calcitriol",
+      "name": "calcitriol",
+      "formula": "C27H44O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17823"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "calcitetrol",
+      "name": "calcitetrol",
+      "formula": "C27H44O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47799"
+      }
+    },
+    {
+      "id": "1s_1_25_dihydroxy_24_oxocalciol",
+      "name": "(1S)-1,25-dihydroxy-24-oxocalciol",
+      "short": "1,25-dihydroxy-24-o…",
+      "formula": "C27H42O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47812"
+      }
+    },
+    {
+      "id": "1s_1_23_25_trihydroxy_24_oxocalciol",
+      "name": "(1S)-1,23,25-trihydroxy-24-oxocalciol",
+      "short": "1,23,25-trihydroxy-…",
+      "formula": "C27H42O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47813"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_24",
+      "name": "vitamin D 25-hydroxylase",
+      "ec": [
+        "1.14.14.24"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_18",
+      "name": "calcidiol 1-monooxygenase",
+      "ec": [
+        "1.14.15.18"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_16",
+      "name": "vitamin D3 24-hydroxylase",
+      "ec": [
+        "1.14.15.16"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "vitamin D 25-hydroxylase",
+      "equation": "calciol + reduced [NADPH--hemoprotein reductase] + O2 = calcidiol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.24",
+      "substrates": [
+        {
+          "metabolite": "calciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_24"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32903"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32903"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "calcidiol 1-monooxygenase",
+      "equation": "calcidiol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = calcitriol + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.18",
+      "substrates": [
+        {
+          "metabolite": "calcidiol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcitriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_18"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20573"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "vitamin D3 24-hydroxylase",
+      "equation": "calcitriol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = calcitetrol + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.16",
+      "substrates": [
+        {
+          "metabolite": "calcitriol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "calcitetrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:24964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "vitamin D3 24-hydroxylase",
+      "equation": "calcitetrol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (1S)-1,25-dihydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + 2 H2O",
+      "ec": "1.14.15.16",
+      "substrates": [
+        {
+          "metabolite": "calcitetrol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_1_25_dihydroxy_24_oxocalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:24972"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24972"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "name": "vitamin D3 24-hydroxylase",
+      "equation": "(1S)-1,25-dihydroxy-24-oxocalciol + 2 reduced [adrenodoxin] + O2 + 2 H(+) = (1S)-1,23,25-trihydroxy-24-oxocalciol + 2 oxidized [adrenodoxin] + H2O",
+      "ec": "1.14.15.16",
+      "substrates": [
+        {
+          "metabolite": "1s_1_25_dihydroxy_24_oxocalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1s_1_23_25_trihydroxy_24_oxocalciol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 5,
+      "xrefs": {
+        "rhea": "RHEA:24976"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24976"
+          }
+        ]
+      }
+    }
+  ]
+}

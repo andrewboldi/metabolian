@@ -1,0 +1,272 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1d-myo-inositol-to-s-adenosyl-l-homocysteine",
+  "name": "1D-myo-inositol… to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1D-myo-inositol 1,4-bisphosphate(4−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15553"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58282"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1d_myo_inositol_1_4_bisphosphate",
+      "name": "1D-myo-inositol 1,4-bisphosphate",
+      "short": "1D-myo-inositol…",
+      "formula": "C6H10O12P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58282"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "1d_myo_inositol_4_phosphate",
+      "name": "1D-myo-inositol 4-phosphate",
+      "short": "1D-myo-inositol 4-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58469"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "myo_inositol",
+      "name": "myo-inositol",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17268"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "1d_1_o_methyl_myo_inositol",
+      "name": "1D-1-O-methyl-myo-inositol",
+      "short": "1D-1-O-methyl-myo-i…",
+      "formula": "C7H14O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18427"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_3_57",
+      "name": "inositol-1,4-bisphosphate 1-phosphatase",
+      "ec": [
+        "3.1.3.57"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_25",
+      "name": "inositol-phosphate phosphatase",
+      "ec": [
+        "3.1.3.25"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_40",
+      "name": "inositol 1-methyltransferase",
+      "ec": [
+        "2.1.1.40"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "inositol-1,4-bisphosphate 1-phosphatase",
+      "equation": "1D-myo-inositol 1,4-bisphosphate + H2O = 1D-myo-inositol 4-phosphate + phosphate",
+      "ec": "3.1.3.57",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_1_4_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_myo_inositol_4_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15553"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15553"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "inositol-phosphate phosphatase",
+      "equation": "1D-myo-inositol 4-phosphate + H2O = myo-inositol + phosphate",
+      "ec": "3.1.3.25",
+      "substrates": [
+        {
+          "metabolite": "1d_myo_inositol_4_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:30735"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30735"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "inositol 1-methyltransferase",
+      "equation": "myo-inositol + S-adenosyl-L-methionine = 1D-1-O-methyl-myo-inositol + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.40",
+      "substrates": [
+        {
+          "metabolite": "myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1d_1_o_methyl_myo_inositol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17565"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17565"
+          }
+        ]
+      }
+    }
+  ]
+}

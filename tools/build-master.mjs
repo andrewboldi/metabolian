@@ -55,7 +55,13 @@ function packInto(colCount) {
 }
 
 let best = null;
-for (let c = 2; c <= Math.min(10, charts.length); c++) {
+// The column ceiling has to scale with the sheet count. Fixed at 10 it could not
+// reach a wall-chart aspect once ingestion took the atlas past a hundred sheets:
+// 904 regions packed into 10 columns is a strip ~2.5x taller than it is wide,
+// which fits a landscape screen at 2% zoom and reads as a smudge. Roughly
+// 2*sqrt(n) columns is enough to find a poster-shaped canvas at any size.
+const MAX_COLS = Math.min(charts.length, Math.max(10, Math.ceil(Math.sqrt(charts.length) * 2)));
+for (let c = 2; c <= MAX_COLS; c++) {
   const p = packInto(c);
   const score = Math.abs(p.W / Math.max(p.H, 1) - TARGET_ASPECT);
   if (!best || score < best.score) best = { ...p, score, cols: c };

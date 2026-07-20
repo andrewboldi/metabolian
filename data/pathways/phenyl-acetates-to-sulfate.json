@@ -1,0 +1,278 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phenyl-acetates-to-sulfate",
+  "name": "phenyl acetates to sulfate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from phenyl acetates to sulfate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17309"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:140310"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phenyl_acetates",
+      "name": "phenyl acetates",
+      "formula": "C8H3O2R5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:140310"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phenols",
+      "name": "phenols",
+      "formula": "C6HOR5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33853"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_phosphonato_5_adenylyl_sulfate",
+      "name": "3'-phosphonato-5'-adenylyl sulfate",
+      "short": "3'-phosphonato-5'-a…",
+      "formula": "C10H11N5O13P2S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58339"
+      }
+    },
+    {
+      "id": "phenyl_sulfate_oxoanion",
+      "name": "phenyl sulfate oxoanion",
+      "short": "phenyl sulfate…",
+      "formula": "C6O4SR5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:140317"
+      }
+    },
+    {
+      "id": "adenosine_3_5_bismonophosphate",
+      "name": "adenosine 3',5'-bismonophosphate",
+      "short": "adenosine…",
+      "formula": "C10H11N5O10P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58343"
+      }
+    },
+    {
+      "id": "sulfate",
+      "name": "sulfate",
+      "formula": "O4S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16189"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_2",
+      "name": "arylesterase",
+      "ec": [
+        "3.1.1.2"
+      ]
+    },
+    {
+      "id": "ec_2_8_2_1",
+      "name": "aryl sulfotransferase",
+      "ec": [
+        "2.8.2.1"
+      ]
+    },
+    {
+      "id": "ec_3_1_6_1",
+      "name": "arylsulfatase (type I)",
+      "ec": [
+        "3.1.6.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arylesterase",
+      "equation": "a phenyl acetate + H2O = a phenol + acetate + H(+)",
+      "ec": "3.1.1.2",
+      "substrates": [
+        {
+          "metabolite": "phenyl_acetates",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenols",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17309"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aryl sulfotransferase",
+      "equation": "a phenol + 3'-phosphoadenylyl sulfate = an aryl sulfate + adenosine 3',5'-bisphosphate + H(+)",
+      "ec": "2.8.2.1",
+      "substrates": [
+        {
+          "metabolite": "phenols",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "3_phosphonato_5_adenylyl_sulfate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenyl_sulfate_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenosine_3_5_bismonophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12164"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12164"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "arylsulfatase (type I)",
+      "equation": "an aryl sulfate + H2O = a phenol + sulfate + H(+)",
+      "ec": "3.1.6.1",
+      "substrates": [
+        {
+          "metabolite": "phenyl_sulfate_oxoanion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phenols",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sulfate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17261"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17261"
+          }
+        ]
+      }
+    }
+  ]
+}

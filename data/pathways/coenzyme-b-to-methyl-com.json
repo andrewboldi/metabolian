@@ -1,0 +1,373 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "coenzyme-b-to-methyl-com",
+  "name": "coenzyme B to methyl-CoM",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from coenzyme B(3−) to methyl-CoM(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12532"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58596"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "coenzyme_b",
+      "name": "coenzyme B",
+      "formula": "C11H19NO7PS",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58596"
+      }
+    },
+    {
+      "id": "methyl_com",
+      "name": "methyl-CoM",
+      "formula": "C3H7O3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58286"
+      }
+    },
+    {
+      "id": "methane",
+      "name": "methane",
+      "formula": "CH4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16183"
+      }
+    },
+    {
+      "id": "com_s_s_cob",
+      "name": "CoM-S-S-CoB",
+      "formula": "C13H22NO10PS3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58411"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_hydroxybenzimidazolylcob_i_amide",
+      "name": "5-hydroxybenzimidazolylcob(I)amide",
+      "short": "5-hydroxybenzimidaz…",
+      "formula": "C60H84CoN13O15P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:60494"
+      }
+    },
+    {
+      "id": "co_methyl_co_5_hydroxybenzimidazolylcob_iii_amid",
+      "name": "Co-methyl-Co-5-hydroxybenzimidazolylcob(III)amide",
+      "short": "Co-methyl-Co-5-hydr…",
+      "formula": "C61H87CoN13O15P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16379"
+      }
+    },
+    {
+      "id": "coenzyme_m",
+      "name": "coenzyme M",
+      "formula": "C2H5O3S2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58319"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_4_1",
+      "name": "coenzyme-B sulfoethylthiotransferase",
+      "ec": [
+        "2.8.4.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_25",
+      "name": "methane monooxygenase (soluble)",
+      "ec": [
+        "1.14.13.25"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_90",
+      "name": "methanol--corrinoid protein Co-methyltransferase",
+      "ec": [
+        "2.1.1.90"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_246",
+      "name": "[methyl-Co(III) methanol-specific corrinoid protein]:coenzyme M",
+      "ec": [
+        "2.1.1.246"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "coenzyme-B sulfoethylthiotransferase",
+      "equation": "coenzyme B + methyl-coenzyme M = methane + coenzyme M-coenzyme B heterodisulfide",
+      "ec": "2.8.4.1",
+      "substrates": [
+        {
+          "metabolite": "coenzyme_b",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_com",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "com_s_s_cob",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_4_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12532"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12532"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methane monooxygenase (soluble)",
+      "equation": "methane + NADH + O2 + H(+) = methanol + NAD(+) + H2O",
+      "ec": "1.14.13.25",
+      "substrates": [
+        {
+          "metabolite": "methane",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13637"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13637"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "methanol--corrinoid protein Co-methyltransferase",
+      "equation": "Co(I)-[methanol-specific corrinoid protein] + methanol + H(+) = methyl-Co(III)-[methanol-specific corrinoid protein] + H2O",
+      "ec": "2.1.1.90",
+      "substrates": [
+        {
+          "metabolite": "5_hydroxybenzimidazolylcob_i_amide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "co_methyl_co_5_hydroxybenzimidazolylcob_iii_amid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45204"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45204"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[methyl-Co(III) methanol-specific corrinoid protein]:coenzyme M",
+      "equation": "methyl-Co(III)-[methanol-specific corrinoid protein] + coenzyme M = Co(I)-[methanol-specific corrinoid protein] + methyl-coenzyme M + H(+)",
+      "ec": "2.1.1.246",
+      "substrates": [
+        {
+          "metabolite": "co_methyl_co_5_hydroxybenzimidazolylcob_iii_amid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coenzyme_m",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_hydroxybenzimidazolylcob_i_amide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_com",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_246"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:45208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45208"
+          }
+        ]
+      }
+    }
+  ]
+}

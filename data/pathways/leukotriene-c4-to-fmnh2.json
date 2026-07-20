@@ -1,0 +1,378 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "leukotriene-c4-to-fmnh2",
+  "name": "leukotriene C4 to FMNH2",
+  "category": "redox-detox",
+  "summary": "A 4-step route from leukotriene C4(2−) to FMNH2(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17617"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57973"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "leukotriene_c4",
+      "name": "leukotriene C4",
+      "formula": "C30H45N3O9S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57973"
+      }
+    },
+    {
+      "id": "leukotriene_a4",
+      "name": "leukotriene A4",
+      "formula": "C20H29O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57463"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "leukotriene_b4",
+      "name": "leukotriene B4",
+      "formula": "C20H31O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57461"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "20_hydroxy_leukotriene_b4",
+      "name": "20-hydroxy-leukotriene B4",
+      "short": "20-hydroxy-leukotri…",
+      "formula": "C20H31O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57460"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_4_1_20",
+      "name": "leukotriene-C4 synthase",
+      "ec": [
+        "4.4.1.20"
+      ]
+    },
+    {
+      "id": "ec_3_3_2_6",
+      "name": "leukotriene-A4 hydrolase",
+      "ec": [
+        "3.3.2.6"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_94",
+      "name": "leukotriene-B4 20-monooxygenase",
+      "ec": [
+        "1.14.14.94"
+      ]
+    },
+    {
+      "id": "ec_1_2_8_1",
+      "name": "pyruvate synthase (flavodoxin)",
+      "ec": [
+        "1.2.8.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "leukotriene-C4 synthase",
+      "equation": "leukotriene C4 = leukotriene A4 + glutathione",
+      "ec": "4.4.1.20",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_c4",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_4_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17617"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17617"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "leukotriene-A4 hydrolase",
+      "equation": "leukotriene A4 + H2O = leukotriene B4",
+      "ec": "3.3.2.6",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_a4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "leukotriene_b4",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22324"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "leukotriene-B4 20-monooxygenase",
+      "equation": "leukotriene B4 + reduced [NADPH--hemoprotein reductase] + O2 = 20-hydroxy-leukotriene B4 + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.94",
+      "substrates": [
+        {
+          "metabolite": "leukotriene_b4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "20_hydroxy_leukotriene_b4",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22176"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22176"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "pyruvate synthase (flavodoxin)",
+      "equation": "oxidized [flavodoxin] + pyruvate + CoA + 2 H(+) = reduced [flavodoxin] + acetyl-CoA + CO2",
+      "ec": "1.2.8.1",
+      "substrates": [
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_8_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:44140"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:44140"
+          }
+        ]
+      }
+    }
+  ]
+}

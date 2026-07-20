@@ -1,0 +1,311 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-phosphonato-l-serine-to-ammonium",
+  "name": "O-phosphonato-L-serine to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from O-phosphonato-L-serine(2−) to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:52384"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57524"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pser",
+      "name": "O-Phospho-L-serine",
+      "formula": "C3H6NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57524"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "n_2s_2_amino_2_carboxyethyl_l_glutamate",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate",
+      "short": "N-[(2S)-2-amino-2-c…",
+      "formula": "C8H12N2O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:134610"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_amino_l_alanine",
+      "name": "3-amino-L-alanine",
+      "formula": "C3H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57721"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_140",
+      "name": "N-(2-amino-2-carboxyethyl)-L-glutamate synthase",
+      "ec": [
+        "2.5.1.140"
+      ]
+    },
+    {
+      "id": "ec_1_5_1_51",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate dehydrogenase",
+      "ec": [
+        "1.5.1.51"
+      ]
+    },
+    {
+      "id": "ec_4_3_1_15",
+      "name": "diaminopropionate ammonia-lyase",
+      "ec": [
+        "4.3.1.15"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-(2-amino-2-carboxyethyl)-L-glutamate synthase",
+      "equation": "O-phospho-L-serine + L-glutamate = N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate + phosphate + H(+)",
+      "ec": "2.5.1.140",
+      "substrates": [
+        {
+          "metabolite": "pser",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_2s_2_amino_2_carboxyethyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_140"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:52384"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52384"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate dehydrogenase",
+      "equation": "N-[(2S)-2-amino-2-carboxyethyl]-L-glutamate + NAD(+) + H2O = (S)-2,3-diaminopropanoate + 2-oxoglutarate + NADH + H(+)",
+      "ec": "1.5.1.51",
+      "substrates": [
+        {
+          "metabolite": "n_2s_2_amino_2_carboxyethyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_amino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_51"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51928"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51928"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diaminopropionate ammonia-lyase",
+      "equation": "(S)-2,3-diaminopropanoate + H2O + H(+) = pyruvate + 2 NH4(+)",
+      "ec": "4.3.1.15",
+      "substrates": [
+        {
+          "metabolite": "3_amino_l_alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_15"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22084"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22084"
+          }
+        ]
+      }
+    }
+  ]
+}

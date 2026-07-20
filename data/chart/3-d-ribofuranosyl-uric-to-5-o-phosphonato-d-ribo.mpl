@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway 3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo "3-(β-D-ribofuranosyl)uric… to 5-O-phosphonato-α-D-ribof…" {
-  spacing 152
+  spacing 212
 
   spine at 0,0 {
     3_d_ribofuranosyl_uric_acid
@@ -12,9 +12,7 @@ pathway 3-d-ribofuranosyl-uric-to-5-o-phosphonato-d-ribo "3-(β-D-ribofuranosyl)
     r1p
     <-> ec_5_4_2_7 [5.4.2.7]
     d_ribofuranose_5_phosphate
-    <-> ec_2_7_6_1 [2.7.6.1] +atp -amp -hplus
-    prpp
-    <-> spontaneous +h2o -pi -hplus
+    <-> ec_2_7_1_18 [2.7.1.18] +atp -adp -hplus
     d_ribose_1_5_bisphosphate
     <-> ec_2_7_4_23 [2.7.4.23] +atp -adp
     prpp

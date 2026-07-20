@@ -1,0 +1,360 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "phytyl-diphosphate-to-cytidine-5-monophosphate",
+  "name": "phytyl diphosphate to cytidine 5'-monophosphate",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from phytyl diphosphate(3−) to cytidine 5'-monophosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17317"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:75434"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "phytyl_diphosphate",
+      "name": "phytyl diphosphate",
+      "formula": "C20H39O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:75434"
+      }
+    },
+    {
+      "id": "chlorophyllide_a",
+      "name": "chlorophyllide a",
+      "formula": "C35H32MgN4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:83348"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "chlorophyll_a",
+      "name": "chlorophyll a",
+      "formula": "C55H71MgN4O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58416"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "phytol",
+      "name": "phytol",
+      "formula": "C20H40O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17327"
+      }
+    },
+    {
+      "id": "ctp",
+      "name": "CTP (cytidine 5'-triphosphate)",
+      "short": "CTP (cytidine 5'-TP)",
+      "formula": "C9H12N3O14P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:37563"
+      }
+    },
+    {
+      "id": "phytyl_phosphate",
+      "name": "phytyl phosphate",
+      "formula": "C20H39O4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:75483"
+      }
+    },
+    {
+      "id": "cdp",
+      "name": "CDP",
+      "formula": "C9H12N3O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58069"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_62",
+      "name": "chlorophyll synthase",
+      "ec": [
+        "2.5.1.62"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_14",
+      "name": "chlorophyllase",
+      "ec": [
+        "3.1.1.14"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_182",
+      "name": "phytol kinase",
+      "ec": [
+        "2.7.1.182"
+      ]
+    },
+    {
+      "id": "ec_3_6_1_6",
+      "name": "nucleoside diphosphate phosphatase",
+      "ec": [
+        "3.6.1.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "chlorophyll synthase",
+      "equation": "phytyl diphosphate + chlorophyllide a + H(+) = chlorophyll a + diphosphate",
+      "ec": "2.5.1.62",
+      "substrates": [
+        {
+          "metabolite": "phytyl_diphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_62"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17317"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17317"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "chlorophyllase",
+      "equation": "chlorophyll a + H2O = phytol + chlorophyllide a + H(+)",
+      "ec": "3.1.1.14",
+      "substrates": [
+        {
+          "metabolite": "chlorophyll_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "chlorophyllide_a",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_14"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:38011"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38011"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "phytol kinase",
+      "equation": "phytol + CTP = phytyl phosphate + CDP + H(+)",
+      "ec": "2.7.1.182",
+      "substrates": [
+        {
+          "metabolite": "phytol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ctp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phytyl_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_182"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38055"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38055"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nucleoside diphosphate phosphatase",
+      "equation": "CDP + H2O = CMP + phosphate + H(+)",
+      "ec": "3.6.1.6",
+      "substrates": [
+        {
+          "metabolite": "cdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:64880"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:64880"
+          }
+        ]
+      }
+    }
+  ]
+}

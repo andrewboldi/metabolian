@@ -1,0 +1,277 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dtdp-l-mycarose-to-s-adenosyl-l-homocysteine",
+  "name": "dTDP-β-L-mycarose to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from dTDP-β-L-mycarose(2−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:14649"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:76814"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dtdp_l_mycarose",
+      "name": "dTDP-β-L-mycarose",
+      "formula": "C17H26N2O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:76814"
+      }
+    },
+    {
+      "id": "demethyllactenocin",
+      "name": "demethyllactenocin",
+      "formula": "C37H62NO14",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76810"
+      }
+    },
+    {
+      "id": "demethylmacrocin",
+      "name": "demethylmacrocin",
+      "formula": "C44H74NO17",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76819"
+      }
+    },
+    {
+      "id": "dtdp",
+      "name": "dTDP",
+      "formula": "C10H13N2O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58369"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "macrocin",
+      "name": "macrocin",
+      "formula": "C45H76NO17",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:76820"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "tylosin",
+      "name": "tylosin",
+      "formula": "C46H78NO17",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:77047"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_318",
+      "name": "demethyllactenocin mycarosyltransferase",
+      "ec": [
+        "2.4.1.318"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_102",
+      "name": "demethylmacrocin O-methyltransferase",
+      "ec": [
+        "2.1.1.102"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_101",
+      "name": "macrocin O-methyltransferase",
+      "ec": [
+        "2.1.1.101"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "demethyllactenocin mycarosyltransferase",
+      "equation": "dTDP-beta-L-mycarose + demethyllactenocin = demethylmacrocin + dTDP + H(+)",
+      "ec": "2.4.1.318",
+      "substrates": [
+        {
+          "metabolite": "dtdp_l_mycarose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "demethyllactenocin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "demethylmacrocin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dtdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_318"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:14649"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14649"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "demethylmacrocin O-methyltransferase",
+      "equation": "demethylmacrocin + S-adenosyl-L-methionine = macrocin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.102",
+      "substrates": [
+        {
+          "metabolite": "demethylmacrocin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "macrocin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_102"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17573"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17573"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "macrocin O-methyltransferase",
+      "equation": "macrocin + S-adenosyl-L-methionine = tylosin + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.101",
+      "substrates": [
+        {
+          "metabolite": "macrocin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tylosin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17269"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17269"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "butyrobetainyl-coa-to-diphosphate",
+  "name": "γ-butyrobetainyl-CoA to diphosphate",
+  "category": "other",
+  "summary": "A 4-step route from γ-butyrobetainyl-CoA(3−) to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28418"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61513"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "butyrobetainyl_coa",
+      "name": "γ-butyrobetainyl-CoA",
+      "formula": "C28H46N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:61513"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "r_carnitinyl_coa",
+      "name": "(R)-carnitinyl-CoA",
+      "formula": "C28H46N8O18P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60932"
+      }
+    },
+    {
+      "id": "4_trimethylammonio_butanoate",
+      "name": "4-(trimethylammonio)butanoate",
+      "short": "4-(trimethylammonio…",
+      "formula": "C7H15NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16244"
+      }
+    },
+    {
+      "id": "e_4_trimethylammonio_but_2_enoyl_coa",
+      "name": "(E)-4-(trimethylammonio)but-2-enoyl-CoA",
+      "short": "4-(trimethylammonio…",
+      "formula": "C28H44N8O17P3S",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:60933"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "e_4_trimethylammonio_but_2_enoate",
+      "name": "(E)-4-(trimethylammonio)but-2-enoate",
+      "short": "4-(trimethylammonio…",
+      "formula": "C7H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17237"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_8_3_21",
+      "name": "L-carnitine CoA-transferase",
+      "ec": [
+        "2.8.3.21"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_149",
+      "name": "crotonobetainyl-CoA hydratase",
+      "ec": [
+        "4.2.1.149"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_48",
+      "name": "carnitine--CoA ligase",
+      "ec": [
+        "6.2.1.48"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-carnitine CoA-transferase",
+      "equation": "4-(trimethylamino)butanoyl-CoA + (R)-carnitine = (R)-carnitinyl-CoA + 4-(trimethylamino)butanoate",
+      "ec": "2.8.3.21",
+      "substrates": [
+        {
+          "metabolite": "butyrobetainyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_carnitinyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "4_trimethylammonio_butanoate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28418"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28418"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "crotonobetainyl-CoA hydratase",
+      "equation": "(R)-carnitinyl-CoA = crotonobetainyl-CoA + H2O",
+      "ec": "4.2.1.149",
+      "substrates": [
+        {
+          "metabolite": "r_carnitinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_149"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:28338"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28338"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-carnitine CoA-transferase",
+      "equation": "crotonobetainyl-CoA + (R)-carnitine = crotonobetaine + (R)-carnitinyl-CoA",
+      "ec": "2.8.3.21",
+      "substrates": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "r_carnitinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:28526"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28526"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "carnitine--CoA ligase",
+      "equation": "crotonobetaine + ATP + CoA = crotonobetainyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.48",
+      "substrates": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "e_4_trimethylammonio_but_2_enoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_48"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:30079"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30079"
+          }
+        ]
+      }
+    }
+  ]
+}

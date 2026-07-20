@@ -1,0 +1,311 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-acetylarylalkylamine-to-aromatic-carboxylate",
+  "name": "N-acetylarylalkylamine to aromatic carboxylate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from N-acetylarylalkylamine to aromatic carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10352"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18096"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_acetylarylalkylamine",
+      "name": "N-acetylarylalkylamine",
+      "short": "N-acetylarylalkylam…",
+      "formula": "C3H6NOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18096"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "aralkylammonium",
+      "name": "aralkylammonium",
+      "formula": "CH5NR",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:88332"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29036"
+      }
+    },
+    {
+      "id": "arenecarbaldehyde",
+      "name": "arenecarbaldehyde",
+      "formula": "CHOR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33855"
+      }
+    },
+    {
+      "id": "copper",
+      "name": "copper",
+      "formula": "Cu",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:49552"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "aromatic_carboxylate",
+      "name": "aromatic carboxylate",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:91007"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_76",
+      "name": "arylalkyl acylamidase",
+      "ec": [
+        "3.5.1.76"
+      ]
+    },
+    {
+      "id": "ec_1_4_9_2",
+      "name": "aralkylamine dehydrogenase (azurin)",
+      "ec": [
+        "1.4.9.2"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_29",
+      "name": "aryl-aldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.29"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arylalkyl acylamidase",
+      "equation": "an N-acetylarylalkylamine + H2O = an aralkylamine + acetate",
+      "ec": "3.5.1.76",
+      "substrates": [
+        {
+          "metabolite": "n_acetylarylalkylamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aralkylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aralkylamine dehydrogenase (azurin)",
+      "equation": "an aralkylamine + 2 oxidized [azurin] + H2O = an aromatic aldehyde + 2 reduced [azurin] + NH4(+) + 2 H(+)",
+      "ec": "1.4.9.2",
+      "substrates": [
+        {
+          "metabolite": "aralkylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "copper",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_9_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:47796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:47796"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aryl-aldehyde dehydrogenase",
+      "equation": "an aromatic aldehyde + NAD(+) + H2O = an aromatic carboxylate + NADH + 2 H(+)",
+      "ec": "1.2.1.29",
+      "substrates": [
+        {
+          "metabolite": "arenecarbaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aromatic_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_29"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11804"
+          }
+        ]
+      }
+    }
+  ]
+}

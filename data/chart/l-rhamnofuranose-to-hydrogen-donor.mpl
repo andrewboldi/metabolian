@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway l-rhamnofuranose-to-hydrogen-donor "L-rhamnofuranose to hydrogen donor" {
-  spacing 152
+  spacing 208
 
   spine at 0,0 {
     l_rhamnofuranose

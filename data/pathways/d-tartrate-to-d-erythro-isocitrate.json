@@ -1,0 +1,317 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-tartrate-to-d-erythro-isocitrate",
+  "name": "D-tartrate to D-erythro-isocitrate",
+  "category": "other",
+  "summary": "A 4-step route from D-tartrate(2−) to D-erythro-isocitrate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18289"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30927"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_tartrate",
+      "name": "D-tartrate",
+      "formula": "C4H4O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30927"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "citrate",
+      "name": "Citrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16947"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "d_threo_isocitrate",
+      "name": "D-threo-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15562"
+      }
+    },
+    {
+      "id": "d_erythro_isocitrate",
+      "name": "D-erythro-isocitrate",
+      "formula": "C6H5O7",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15563"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_1_81",
+      "name": "D(-)-tartrate dehydratase",
+      "ec": [
+        "4.2.1.81"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_1",
+      "name": "citrate (Si)-synthase",
+      "ec": [
+        "2.3.3.1"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_3",
+      "name": "citrate (Re)-synthase",
+      "ec": [
+        "2.3.3.3"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_16",
+      "name": "citrate synthase (unknown stereospecificity)",
+      "ec": [
+        "2.3.3.16"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_3",
+      "name": "aconitate hydratase",
+      "ec": [
+        "4.2.1.3"
+      ]
+    },
+    {
+      "id": "ec_5_1_2_6",
+      "name": "isocitrate epimerase",
+      "ec": [
+        "5.1.2.6"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D(-)-tartrate dehydratase",
+      "equation": "(S,S)-tartrate = oxaloacetate + H2O",
+      "ec": "4.2.1.81",
+      "substrates": [
+        {
+          "metabolite": "d_tartrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_81"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18289"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18289"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "citrate (Si)-synthase",
+      "equation": "oxaloacetate + acetyl-CoA + H2O = citrate + CoA + H(+)",
+      "ec": "2.3.3.1",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16845"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16845"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aconitate hydratase",
+      "equation": "citrate = D-threo-isocitrate",
+      "ec": "4.2.1.3",
+      "substrates": [
+        {
+          "metabolite": "citrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10336"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10336"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "isocitrate epimerase",
+      "equation": "D-threo-isocitrate = D-erythro-isocitrate",
+      "ec": "5.1.2.6",
+      "substrates": [
+        {
+          "metabolite": "d_threo_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_erythro_isocitrate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_2_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10820"
+          }
+        ]
+      }
+    }
+  ]
+}

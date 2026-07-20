@@ -1,0 +1,194 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-arabinopyranose-to-l-xylulose",
+  "name": "α-L-arabinopyranose to L-xylulose",
+  "category": "other",
+  "summary": "A 3-step route from α-L-arabinopyranose to L-xylulose, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:63332"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:46987"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_arabinopyranose",
+      "name": "α-L-arabinopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:46987"
+      }
+    },
+    {
+      "id": "l_arabinopyranose",
+      "name": "β-L-arabinopyranose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:40886"
+      }
+    },
+    {
+      "id": "l_ribulose",
+      "name": "L-ribulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16880"
+      }
+    },
+    {
+      "id": "l_xylulose",
+      "name": "L-xylulose",
+      "formula": "C5H10O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17399"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_1_3_3",
+      "name": "aldose 1-epimerase",
+      "ec": [
+        "5.1.3.3"
+      ]
+    },
+    {
+      "id": "ec_5_3_1_4",
+      "name": "L-arabinose isomerase",
+      "ec": [
+        "5.3.1.4"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_31",
+      "name": "D-tagatose 3-epimerase",
+      "ec": [
+        "5.1.3.31"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aldose 1-epimerase",
+      "equation": "alpha-L-arabinopyanose = beta-L-arabinopyranose",
+      "ec": "5.1.3.3",
+      "substrates": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:63332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:63332"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "L-arabinose isomerase",
+      "equation": "beta-L-arabinopyranose = L-ribulose",
+      "ec": "5.3.1.4",
+      "substrates": [
+        {
+          "metabolite": "l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14821"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14821"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-tagatose 3-epimerase",
+      "equation": "L-ribulose = L-xylulose",
+      "ec": "5.1.3.31",
+      "substrates": [
+        {
+          "metabolite": "l_ribulose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_xylulose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_31"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53268"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53268"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-8-diazacyclotetradecane-to-adipate",
+  "name": "1,8-diazacyclotetradecane… to adipate",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from 1,8-diazacyclotetradecane-2,9-dione to adipate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16225"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16968"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_8_diazacyclotetradecane_2_9_dione",
+      "name": "1,8-diazacyclotetradecane-2,9-dione",
+      "short": "1,8-diazacyclotetra…",
+      "formula": "C12H22N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16968"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_6_aminohexanoyl_6_aminohexanoic_acid",
+      "name": "N-(6-aminohexanoyl)-6-aminohexanoic acid",
+      "short": "N-(6-aminohexanoyl)…",
+      "formula": "C12H24N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58798"
+      }
+    },
+    {
+      "id": "6_aminohexanoic_acid",
+      "name": "6-aminohexanoic acid",
+      "formula": "C6H13NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57826"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "6_oxohexanoate",
+      "name": "6-oxohexanoate",
+      "formula": "C6H9O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18322"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "adipate",
+      "name": "adipate",
+      "formula": "C6H8O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17128"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_2_12",
+      "name": "6-aminohexanoate-cyclic-dimer hydrolase",
+      "ec": [
+        "3.5.2.12"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_46",
+      "name": "6-aminohexanoate-oligomer exohydrolase",
+      "ec": [
+        "3.5.1.46"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_116",
+      "name": "6-aminohexanoate aminotransferase",
+      "ec": [
+        "2.6.1.116"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_63",
+      "name": "6-oxohexanoate dehydrogenase",
+      "ec": [
+        "1.2.1.63"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "6-aminohexanoate-cyclic-dimer hydrolase",
+      "equation": "1,8-diazacyclotetradecane-2,9-dione + H2O = N-(6-aminohexanoyl)-6-aminohexanoate",
+      "ec": "3.5.2.12",
+      "substrates": [
+        {
+          "metabolite": "1_8_diazacyclotetradecane_2_9_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_6_aminohexanoyl_6_aminohexanoic_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_2_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16225"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16225"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-aminohexanoate-oligomer exohydrolase",
+      "equation": "N-(6-aminohexanoyl)-6-aminohexanoate + H2O = 2 6-aminohexanoate",
+      "ec": "3.5.1.46",
+      "substrates": [
+        {
+          "metabolite": "n_6_aminohexanoyl_6_aminohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_aminohexanoic_acid",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:21364"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21364"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "6-aminohexanoate aminotransferase",
+      "equation": "6-aminohexanoate + 2-oxoglutarate = 6-oxohexanoate + L-glutamate",
+      "ec": "2.6.1.116",
+      "substrates": [
+        {
+          "metabolite": "6_aminohexanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_116"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:58200"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:58200"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "6-oxohexanoate dehydrogenase",
+      "equation": "6-oxohexanoate + NADP(+) + H2O = hexanedioate + NADPH + 2 H(+)",
+      "ec": "1.2.1.63",
+      "substrates": [
+        {
+          "metabolite": "6_oxohexanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "adipate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:13397"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13397"
+          }
+        ]
+      }
+    }
+  ]
+}

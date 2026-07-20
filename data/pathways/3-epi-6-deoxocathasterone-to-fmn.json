@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-epi-6-deoxocathasterone-to-fmn",
+  "name": "3-epi-6-deoxocathasterone to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3-epi-6-deoxocathasterone to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:27321"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:59410"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_epi_6_deoxocathasterone",
+      "name": "3-epi-6-deoxocathasterone",
+      "short": "3-epi-6-deoxocathas…",
+      "formula": "C28H50O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59410"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "6_deoxotyphasterol",
+      "name": "6-deoxotyphasterol",
+      "formula": "C28H50O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20717"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "typhasterol",
+      "name": "typhasterol",
+      "formula": "C28H48O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27173"
+      }
+    },
+    {
+      "id": "7_oxatyphasterol",
+      "name": "7-oxatyphasterol",
+      "formula": "C28H48O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:185407"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_147",
+      "name": "22alpha-hydroxysteroid 23-monooxygenase",
+      "ec": [
+        "1.14.14.147"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_179",
+      "name": "brassinosteroid 6-oxygenase",
+      "ec": [
+        "1.14.14.179"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_180",
+      "name": "brassinolide synthase",
+      "ec": [
+        "1.14.14.180"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "22alpha-hydroxysteroid 23-monooxygenase",
+      "equation": "3-epi-6-deoxocathasterone + reduced [NADPH--hemoprotein reductase] + O2 = 6-deoxotyphasterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.147",
+      "substrates": [
+        {
+          "metabolite": "3_epi_6_deoxocathasterone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_deoxotyphasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_147"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:27321"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "brassinosteroid 6-oxygenase",
+      "equation": "6-deoxotyphasterol + 2 reduced [NADPH--hemoprotein reductase] + 2 O2 = typhasterol + 2 oxidized [NADPH--hemoprotein reductase] + 3 H2O + 2 H(+)",
+      "ec": "1.14.14.179",
+      "substrates": [
+        {
+          "metabolite": "6_deoxotyphasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "typhasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_179"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:70035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "brassinolide synthase",
+      "equation": "typhasterol + reduced [NADPH--hemoprotein reductase] + O2 = 7-oxatyphasterol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.180",
+      "substrates": [
+        {
+          "metabolite": "typhasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7_oxatyphasterol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_180"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:70019"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:70019"
+          }
+        ]
+      }
+    }
+  ]
+}

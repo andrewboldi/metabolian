@@ -1,0 +1,286 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3r-3-hydroxy-l-aspartate-to-3-propylmalate",
+  "name": "(3R)-3-hydroxy-L-aspartate to 3-propylmalate",
+  "category": "other",
+  "summary": "A 3-step route from (3R)-3-hydroxy-L-aspartate(1−) to 3-propylmalate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19757"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58196"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3r_3_hydroxy_l_aspartate",
+      "name": "(3R)-3-hydroxy-L-aspartate",
+      "short": "3-hydroxy-L-asparta…",
+      "formula": "C4H6NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58196"
+      }
+    },
+    {
+      "id": "oxaloacetate",
+      "name": "Oxaloacetate",
+      "formula": "C4H2O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16452"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "pentanoyl_coa",
+      "name": "pentanoyl-CoA",
+      "formula": "C26H40N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57389"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_propylmalate",
+      "name": "3-propylmalate",
+      "formula": "C7H10O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:15594"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_1_20",
+      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
+      "ec": [
+        "4.3.1.20"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_35",
+      "name": "glycine--oxaloacetate transaminase",
+      "ec": [
+        "2.6.1.35"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_12",
+      "name": "3-propylmalate synthase",
+      "ec": [
+        "2.3.3.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "erythro-3-hydroxy-L-aspartate ammonia-lyase",
+      "equation": "(3R)-3-hydroxy-L-aspartate = oxaloacetate + NH4(+)",
+      "ec": "4.3.1.20",
+      "substrates": [
+        {
+          "metabolite": "3r_3_hydroxy_l_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_20"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19757"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19757"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycine--oxaloacetate transaminase",
+      "equation": "oxaloacetate + glycine = glyoxylate + L-aspartate",
+      "ec": "2.6.1.35",
+      "substrates": [
+        {
+          "metabolite": "oxaloacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:17141"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-propylmalate synthase",
+      "equation": "pentanoyl-CoA + glyoxylate + H2O = 3-propylmalate + CoA + H(+)",
+      "ec": "2.3.3.12",
+      "substrates": [
+        {
+          "metabolite": "pentanoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_propylmalate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14457"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14457"
+          }
+        ]
+      }
+    }
+  ]
+}

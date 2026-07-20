@@ -1,0 +1,313 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "enterobactin-to-n-c-5-deoxy-d-glucos",
+  "name": "enterobactin to [N-(C-5-[deoxy-β-D-glucos…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from enterobactin(1−) to [N-(C-5-[deoxy-β-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine]3, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:24448"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:77805"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "enterobactin",
+      "name": "enterobactin",
+      "formula": "C30H26N3O15",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77805"
+      }
+    },
+    {
+      "id": "udp_d_glucose",
+      "name": "UDP-α-D-glucose",
+      "formula": "C15H22N2O17P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58885"
+      }
+    },
+    {
+      "id": "monoglucosyl_enterobactin",
+      "name": "monoglucosyl-enterobactin",
+      "short": "monoglucosyl-entero…",
+      "formula": "C36H37N3O20",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142958"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "diglucosyl_enterobactin",
+      "name": "diglucosyl-enterobactin",
+      "short": "diglucosyl-enteroba…",
+      "formula": "C42H47N3O25",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142959"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "triglucosyl_enterobactin",
+      "name": "triglucosyl-enterobactin",
+      "short": "triglucosyl-enterob…",
+      "formula": "C48H57N3O30",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:142960"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_s",
+      "name": "[N-(C-5-[deoxy-β-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine]3",
+      "short": "[N-(C-5-[deoxy-β-D-…",
+      "formula": "C48H58N3O31",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:143021"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_4_1_369",
+      "name": "enterobactin C-glucosyltransferase",
+      "ec": [
+        "2.4.1.369"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_107",
+      "name": "apo-salmochelin esterase",
+      "ec": [
+        "3.1.1.107"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "enterobactin C-glucosyltransferase",
+      "equation": "enterobactin + UDP-alpha-D-glucose = monoglucosyl-enterobactin + UDP",
+      "ec": "2.4.1.369",
+      "substrates": [
+        {
+          "metabolite": "enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "monoglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_369"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:24448"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24448"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "enterobactin C-glucosyltransferase",
+      "equation": "monoglucosyl-enterobactin + UDP-alpha-D-glucose = diglucosyl-enterobactin + UDP + H(+)",
+      "ec": "2.4.1.369",
+      "substrates": [
+        {
+          "metabolite": "monoglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "diglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_369"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:59096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59096"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "enterobactin C-glucosyltransferase",
+      "equation": "diglucosyl-enterobactin + UDP-alpha-D-glucose = triglucosyl-enterobactin + UDP + H(+)",
+      "ec": "2.4.1.369",
+      "substrates": [
+        {
+          "metabolite": "diglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "triglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_369"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:59100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "apo-salmochelin esterase",
+      "equation": "triglucosyl-enterobactin + H2O = [N-(C-5-[deoxy-beta-D-glucosyl]-2,3-dihydroxybenzoyl)-L-serine]3 + H(+)",
+      "ec": "3.1.1.107",
+      "substrates": [
+        {
+          "metabolite": "triglucosyl_enterobactin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_c_5_deoxy_d_glucosyl_2_3_dihydroxybenzoyl_l_s",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_107"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60420"
+          }
+        ]
+      }
+    }
+  ]
+}

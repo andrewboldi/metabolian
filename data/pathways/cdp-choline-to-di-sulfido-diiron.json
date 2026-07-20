@@ -1,0 +1,384 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cdp-choline-to-di-sulfido-diiron",
+  "name": "CDP-choline to di-μ-sulfido-diiron",
+  "category": "nucleotide-metabolism",
+  "summary": "A 4-step route from CDP-choline(1−) to di-μ-sulfido-diiron(2+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32939"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58779"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cdp_choline",
+      "name": "CDP-choline",
+      "formula": "C14H25N4O11P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58779"
+      }
+    },
+    {
+      "id": "dag",
+      "name": "1,2-Diacyl-sn-glycerol",
+      "short": "1,2-Diacyl-sn-glyce…",
+      "formula": "C5H6O5R2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17815"
+      }
+    },
+    {
+      "id": "phosphatidylcholine",
+      "name": "Phosphatidylcholine",
+      "formula": "C10H18NO8PR2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57643"
+      }
+    },
+    {
+      "id": "cytidine_5_monophosphate",
+      "name": "cytidine 5'-monophosphate",
+      "short": "cytidine 5'-MP",
+      "formula": "C9H12N3O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:60377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "n_acylsphingosine",
+      "name": "N-acylsphingosine",
+      "formula": "C19H36NO3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:52639"
+      }
+    },
+    {
+      "id": "sphingomyelin",
+      "name": "Sphingomyelin",
+      "formula": "C24H48N2O6PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17636"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acylsphingosine_1_phosphate",
+      "name": "N-acylsphingosine 1-phosphate",
+      "short": "N-acylsphingosine…",
+      "formula": "C19H35NO6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57674"
+      }
+    },
+    {
+      "id": "choline",
+      "name": "Choline",
+      "formula": "C5H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15354"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "betaine_aldehyde_hydrate",
+      "name": "betaine aldehyde hydrate",
+      "short": "betaine aldehyde…",
+      "formula": "C5H14NO2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15870"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_8_2",
+      "name": "diacylglycerol cholinephosphotransferase",
+      "ec": [
+        "2.7.8.2"
+      ]
+    },
+    {
+      "id": "ec_2_7_8_27",
+      "name": "sphingomyelin synthase",
+      "ec": [
+        "2.7.8.27"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_41",
+      "name": "sphingomyelin phosphodiesterase D",
+      "ec": [
+        "3.1.4.41"
+      ]
+    },
+    {
+      "id": "ec_1_14_15_7",
+      "name": "choline monooxygenase",
+      "ec": [
+        "1.14.15.7"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "diacylglycerol cholinephosphotransferase",
+      "equation": "CDP-choline + a 1,2-diacyl-sn-glycerol = a 1,2-diacyl-sn-glycero-3-phosphocholine + CMP + H(+)",
+      "ec": "2.7.8.2",
+      "substrates": [
+        {
+          "metabolite": "cdp_choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cytidine_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32939"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32939"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "sphingomyelin synthase",
+      "equation": "an N-acylsphing-4-enine + a 1,2-diacyl-sn-glycero-3-phosphocholine = a sphingomyelin + a 1,2-diacyl-sn-glycerol",
+      "ec": "2.7.8.27",
+      "substrates": [
+        {
+          "metabolite": "n_acylsphingosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "phosphatidylcholine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sphingomyelin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dag",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_8_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:18765"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18765"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sphingomyelin phosphodiesterase D",
+      "equation": "a sphingomyelin + H2O = an N-acylsphing-4-enine 1-phosphate + choline + H(+)",
+      "ec": "3.1.4.41",
+      "substrates": [
+        {
+          "metabolite": "sphingomyelin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acylsphingosine_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20984"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20984"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "choline monooxygenase",
+      "equation": "choline + 2 reduced [2Fe-2S]-[ferredoxin] + O2 + 2 H(+) = betaine aldehyde hydrate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O",
+      "ec": "1.14.15.7",
+      "substrates": [
+        {
+          "metabolite": "choline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "betaine_aldehyde_hydrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_15_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:17769"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17769"
+          }
+        ]
+      }
+    }
+  ]
+}

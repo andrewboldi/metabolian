@@ -1,0 +1,269 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-glutamine-to-methanol",
+  "name": "L-glutamine to methanol",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-glutamine residue to methanol, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16441"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:30011"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_glutamine",
+      "name": "L-glutamine",
+      "formula": "C5H8N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:30011"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_glutamate",
+      "name": "L-glutamate",
+      "formula": "C5H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29973"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "methyl_l_glutamate",
+      "name": "γ-methyl L-glutamate",
+      "formula": "C6H9NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:82795"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17790"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_44",
+      "name": "protein-glutamine glutaminase",
+      "ec": [
+        "3.5.1.44"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_80",
+      "name": "protein-glutamate O-methyltransferase",
+      "ec": [
+        "2.1.1.80"
+      ]
+    },
+    {
+      "id": "ec_3_1_1_61",
+      "name": "protein-glutamate methylesterase",
+      "ec": [
+        "3.1.1.61"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein-glutamine glutaminase",
+      "equation": "L-glutaminyl-[protein] + H2O = L-glutamyl-[protein] + NH4(+)",
+      "ec": "3.5.1.44",
+      "substrates": [
+        {
+          "metabolite": "l_glutamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_44"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16441"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16441"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "protein-glutamate O-methyltransferase",
+      "equation": "L-glutamyl-[protein] + S-adenosyl-L-methionine = [protein]-L-glutamate 5-O-methyl ester + S-adenosyl-L-homocysteine",
+      "ec": "2.1.1.80",
+      "substrates": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24452"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24452"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "protein-glutamate methylesterase",
+      "equation": "[protein]-L-glutamate 5-O-methyl ester + H2O = L-glutamyl-[protein] + methanol + H(+)",
+      "ec": "3.1.1.61",
+      "substrates": [
+        {
+          "metabolite": "methyl_l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methanol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23236"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23236"
+          }
+        ]
+      }
+    }
+  ]
+}

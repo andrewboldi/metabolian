@@ -1,0 +1,348 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n-n-dimethylformamide-to-dimethylaminium",
+  "name": "N,N-dimethylformamide to dimethylaminium",
+  "category": "other",
+  "summary": "A 4-step route from N,N-dimethylformamide to dimethylaminium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19517"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17741"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n_n_dimethylformamide",
+      "name": "N,N-dimethylformamide",
+      "short": "N,N-dimethylformami…",
+      "formula": "C3H7NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17741"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "dimethylaminium",
+      "name": "dimethylaminium",
+      "formula": "C2H8N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58040"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "cobalt",
+      "name": "cobalt",
+      "formula": "Co",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:85033"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methyl_co",
+      "name": "methyl-Co",
+      "formula": "CH3Co",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:85035"
+      }
+    },
+    {
+      "id": "methylamine",
+      "name": "Methylamine",
+      "formula": "CH6N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59338"
+      }
+    },
+    {
+      "id": "5_6_7_8_tetrahydrosarcinapterin",
+      "name": "5,6,7,8-tetrahydrosarcinapterin",
+      "short": "5,6,7,8-tetrahydros…",
+      "formula": "C35H48N7O19P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:59924"
+      }
+    },
+    {
+      "id": "5_methyltetrahydrosarcinapterin",
+      "name": "5-methyltetrahydrosarcinapterin",
+      "short": "5-methyltetrahydros…",
+      "formula": "C36H50N7O19P",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:64267"
+      }
+    },
+    {
+      "id": "trimethylammonium",
+      "name": "trimethylammonium",
+      "formula": "C3H10N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58389"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_56",
+      "name": "N,N-dimethylformamidase",
+      "ec": [
+        "3.5.1.56"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_249",
+      "name": "[dimethylamine--corrinoid protein] Co-methyltransferase",
+      "ec": [
+        "2.1.1.249"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_245",
+      "name": "5-methyltetrahydrosarcinapterin:corrinoid/iron-sulfur protein",
+      "ec": [
+        "2.1.1.245"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_250",
+      "name": "[trimethylamine--corrinoid protein] Co-methyltransferase",
+      "ec": [
+        "2.1.1.250"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N,N-dimethylformamidase",
+      "equation": "N,N-dimethylformamide + H2O = dimethylamine + formate",
+      "ec": "3.5.1.56",
+      "substrates": [
+        {
+          "metabolite": "n_n_dimethylformamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dimethylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_56"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19517"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19517"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[dimethylamine--corrinoid protein] Co-methyltransferase",
+      "equation": "Co(I)-[dimethylamine-specific corrinoid protein] + dimethylamine + H(+) = methyl-Co(III)-[dimethylamine-specific corrinoid protein] + methylamine",
+      "ec": "2.1.1.249",
+      "substrates": [
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimethylaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methylamine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_249"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:41175"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:41175"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5-methyltetrahydrosarcinapterin:corrinoid/iron-sulfur protein",
+      "equation": "5,6,7,8-tetrahydrosarcinapterin + methyl-Co(III)-[corrinoid Fe-S protein] = 5-methyltetrahydrosarcinapterin + Co(I)-[corrinoid Fe-S protein] + H(+)",
+      "ec": "2.1.1.245",
+      "substrates": [
+        {
+          "metabolite": "5_6_7_8_tetrahydrosarcinapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_methyltetrahydrosarcinapterin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_245"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45196"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45196"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "[trimethylamine--corrinoid protein] Co-methyltransferase",
+      "equation": "Co(I)-[trimethylamine-specific corrinoid protein] + trimethylamine + H(+) = methyl-Co(III)-[trimethylamine-specific corrinoid protein] + dimethylamine",
+      "ec": "2.1.1.250",
+      "substrates": [
+        {
+          "metabolite": "cobalt",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trimethylammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "methyl_co",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dimethylaminium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_250"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:39287"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:39287"
+          }
+        ]
+      }
+    }
+  ]
+}

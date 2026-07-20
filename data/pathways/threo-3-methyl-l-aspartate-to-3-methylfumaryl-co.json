@@ -1,0 +1,234 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "threo-3-methyl-l-aspartate-to-3-methylfumaryl-co",
+  "name": "threo-3-methyl-L-aspartate to 3-methylfumaryl-CoA",
+  "category": "other",
+  "summary": "A 3-step route from threo-3-methyl-L-aspartate(1−) to 3-methylfumaryl-CoA(5−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12829"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58724"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "threo_3_methyl_l_aspartate",
+      "name": "threo-3-methyl-L-aspartate",
+      "short": "threo-3-methyl-L-as…",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58724"
+      }
+    },
+    {
+      "id": "mesaconate",
+      "name": "mesaconate",
+      "formula": "C5H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:36986"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "mesaconyl_coa",
+      "name": "mesaconyl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:75635"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "3_methylfumaryl_coa",
+      "name": "3-methylfumaryl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:75636"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_3_1_2",
+      "name": "methylaspartate ammonia-lyase",
+      "ec": [
+        "4.3.1.2"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_26",
+      "name": "succinyl-CoA:mesaconate CoA transferase",
+      "ec": [
+        "2.8.3.26"
+      ]
+    },
+    {
+      "id": "ec_5_4_1_3",
+      "name": "2-methylfumaryl-CoA isomerase",
+      "ec": [
+        "5.4.1.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "methylaspartate ammonia-lyase",
+      "equation": "(2S,3S)-3-methyl-L-aspartate = mesaconate + NH4(+)",
+      "ec": "4.3.1.2",
+      "substrates": [
+        {
+          "metabolite": "threo_3_methyl_l_aspartate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mesaconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_3_1_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12829"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12829"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "succinyl-CoA:mesaconate CoA transferase",
+      "equation": "mesaconate + succinyl-CoA = 2-methylfumaryl-CoA + succinate",
+      "ec": "2.8.3.26",
+      "substrates": [
+        {
+          "metabolite": "mesaconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "mesaconyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_26"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:45820"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45820"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-methylfumaryl-CoA isomerase",
+      "equation": "2-methylfumaryl-CoA = 3-methylfumaryl-CoA",
+      "ec": "5.4.1.3",
+      "substrates": [
+        {
+          "metabolite": "mesaconyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylfumaryl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38267"
+          }
+        ]
+      }
+    }
+  ]
+}

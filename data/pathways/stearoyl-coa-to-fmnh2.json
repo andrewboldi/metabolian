@@ -1,0 +1,393 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "stearoyl-coa-to-fmnh2",
+  "name": "stearoyl-CoA to FMNH2",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from stearoyl-CoA(4−) to FMNH2(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19721"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57394"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "stearoyl_coa",
+      "name": "stearoyl-CoA",
+      "formula": "C39H66N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57394"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "oleoyl_coa",
+      "name": "oleoyl-CoA",
+      "formula": "C39H64N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57387"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "linoleoyl_coa",
+      "name": "linoleoyl-CoA",
+      "formula": "C39H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57383"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "9z_12z_18_hydroxyoctadecadienoyl_coa",
+      "name": "(9Z,12Z)-18-hydroxyoctadecadienoyl-CoA",
+      "short": "(9Z,12Z)-18-hydroxy…",
+      "formula": "C39H62N7O18P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:84904"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "f420_0",
+      "name": "F420-0",
+      "formula": "C19H19N3O12P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:59907"
+      }
+    },
+    {
+      "id": "dehydro_coenzyme_f420_0",
+      "name": "dehydro coenzyme F420-0",
+      "short": "dehydro coenzyme…",
+      "formula": "C19H17N3O12P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:143705"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_19_1",
+      "name": "stearoyl-CoA 9-desaturase",
+      "ec": [
+        "1.14.19.1"
+      ]
+    },
+    {
+      "id": "ec_1_14_19_6",
+      "name": "acyl-CoA (9+3)-desaturase",
+      "ec": [
+        "1.14.19.6"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_129",
+      "name": "long-chain acyl-CoA omega-monooxygenase",
+      "ec": [
+        "1.14.14.129"
+      ]
+    },
+    {
+      "id": "ec_1_3_8_17",
+      "name": "dehydro coenzyme F420 reductase",
+      "ec": [
+        "1.3.8.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "stearoyl-CoA 9-desaturase",
+      "equation": "octadecanoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (9Z)-octadecenoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.1",
+      "substrates": [
+        {
+          "metabolite": "stearoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19721"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19721"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acyl-CoA (9+3)-desaturase",
+      "equation": "(9Z)-octadecenoyl-CoA + 2 Fe(II)-[cytochrome b5] + O2 + 2 H(+) = (9Z,12Z)-octadecadienoyl-CoA + 2 Fe(III)-[cytochrome b5] + 2 H2O",
+      "ec": "1.14.19.6",
+      "substrates": [
+        {
+          "metabolite": "oleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_19_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25856"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25856"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "long-chain acyl-CoA omega-monooxygenase",
+      "equation": "(9Z,12Z)-octadecadienoyl-CoA + reduced [NADPH--hemoprotein reductase] + O2 = (9Z,12Z)-18-hydroxyoctadecadienoyl-CoA + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.129",
+      "substrates": [
+        {
+          "metabolite": "linoleoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "9z_12z_18_hydroxyoctadecadienoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_129"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:45076"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:45076"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "dehydro coenzyme F420 reductase",
+      "equation": "oxidized coenzyme F420-0 + FMN + H(+) = dehydro coenzyme F420-0 + FMNH2",
+      "ec": "1.3.8.17",
+      "substrates": [
+        {
+          "metabolite": "f420_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dehydro_coenzyme_f420_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_8_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:60360"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:60360"
+          }
+        ]
+      }
+    }
+  ]
+}

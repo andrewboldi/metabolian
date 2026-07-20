@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-7-dimethylxanthine-to-1-3-7-trimethyl-5-hydrox",
+  "name": "1,7-dimethylxanthine to 1,3,7-trimethyl-5-hydroxy…",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1,7-dimethylxanthine to 1,3,7-trimethyl-5-hydroxyisouric acid, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10280"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:25858"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_7_dimethylxanthine",
+      "name": "1,7-dimethylxanthine",
+      "formula": "C7H8N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:25858"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "caffeine",
+      "name": "caffeine",
+      "formula": "C8H10N4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27732"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "ubiquinone_0",
+      "name": "ubiquinone-0",
+      "formula": "C9H10O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27906"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "ubiquinol_0",
+      "name": "ubiquinol-0",
+      "formula": "C9H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60899"
+      }
+    },
+    {
+      "id": "1_3_7_trimethyluric_acid",
+      "name": "1,3,7-trimethyluric acid",
+      "short": "1,3,7-trimethyluric…",
+      "formula": "C8H10N4O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:691622"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "1_3_7_trimethyl_5_hydroxyisouric_acid",
+      "name": "1,3,7-trimethyl-5-hydroxyisouric acid",
+      "short": "1,3,7-trimethyl-5-h…",
+      "formula": "C8H10N4O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90885"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_1_1_160",
+      "name": "caffeine synthase",
+      "ec": [
+        "2.1.1.160"
+      ]
+    },
+    {
+      "id": "ec_1_17_5_2",
+      "name": "caffeine dehydrogenase",
+      "ec": [
+        "1.17.5.2"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_212",
+      "name": "1,3,7-trimethyluric acid 5-monooxygenase",
+      "ec": [
+        "1.14.13.212"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "caffeine synthase",
+      "equation": "1,7-dimethylxanthine + S-adenosyl-L-methionine = caffeine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.160",
+      "substrates": [
+        {
+          "metabolite": "1_7_dimethylxanthine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "caffeine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_160"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10280"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10280"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "caffeine dehydrogenase",
+      "equation": "ubiquinone-0 + caffeine + H2O = ubiquinol-0 + 1,3,7-trimethylurate",
+      "ec": "1.17.5.2",
+      "substrates": [
+        {
+          "metabolite": "ubiquinone_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "caffeine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ubiquinol_0",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_3_7_trimethyluric_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_5_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27902"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27902"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "1,3,7-trimethyluric acid 5-monooxygenase",
+      "equation": "1,3,7-trimethylurate + NADH + O2 + H(+) = 1,3,7-trimethyl-5-hydroxyisourate + NAD(+) + H2O",
+      "ec": "1.14.13.212",
+      "substrates": [
+        {
+          "metabolite": "1_3_7_trimethyluric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_3_7_trimethyl_5_hydroxyisouric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_212"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:48992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48992"
+          }
+        ]
+      }
+    }
+  ]
+}

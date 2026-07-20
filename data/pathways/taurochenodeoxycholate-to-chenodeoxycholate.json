@@ -1,0 +1,287 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "taurochenodeoxycholate-to-chenodeoxycholate",
+  "name": "taurochenodeoxycholate to chenodeoxycholate",
+  "category": "other",
+  "summary": "A 3-step route from taurochenodeoxycholate to chenodeoxycholate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16309"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:9407"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "taurochenodeoxycholate",
+      "name": "Taurochenodeoxycholate",
+      "short": "Taurochenodeoxychol…",
+      "formula": "C26H44NO6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:9407"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "chenodeoxycholate",
+      "name": "Chenodeoxycholic acid (chenodeoxycholate)",
+      "short": "Chenodeoxycholic…",
+      "formula": "C24H39O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36234"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "chenodeoxycholoyl_coa",
+      "name": "Chenodeoxycholoyl-CoA",
+      "short": "Chenodeoxycholoyl-C…",
+      "formula": "C45H70N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:62989"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_74",
+      "name": "chenodeoxycholoyltaurine hydrolase",
+      "ec": [
+        "3.5.1.74"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_7",
+      "name": "cholate--CoA ligase",
+      "ec": [
+        "6.2.1.7"
+      ]
+    },
+    {
+      "id": "ec_3_1_2_27",
+      "name": "choloyl-CoA hydrolase",
+      "ec": [
+        "3.1.2.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "chenodeoxycholoyltaurine hydrolase",
+      "equation": "taurochenodeoxycholate + H2O = chenodeoxycholate + taurine",
+      "ec": "3.5.1.74",
+      "substrates": [
+        {
+          "metabolite": "taurochenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_74"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16309"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16309"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cholate--CoA ligase",
+      "equation": "chenodeoxycholate + ATP + CoA = chenodeoxycholoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.7",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:43764"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43764"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "choloyl-CoA hydrolase",
+      "equation": "chenodeoxycholoyl-CoA + H2O = chenodeoxycholate + CoA + H(+)",
+      "ec": "3.1.2.27",
+      "substrates": [
+        {
+          "metabolite": "chenodeoxycholoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "chenodeoxycholate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:31511"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31511"
+          }
+        ]
+      }
+    }
+  ]
+}

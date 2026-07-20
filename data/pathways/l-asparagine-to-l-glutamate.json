@@ -1,0 +1,374 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-asparagine-to-l-glutamate",
+  "name": "L-asparagine to L-glutamate",
+  "category": "other",
+  "summary": "A 4-step route from L-asparagine zwitterion to L-glutamate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21016"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58048"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_asparagine",
+      "name": "L-asparagine",
+      "formula": "C4H8N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58048"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "aspartate",
+      "name": "L-Aspartate",
+      "formula": "C4H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29991"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "n_acetyl_l_aspartate",
+      "name": "N-acetyl-L-aspartate",
+      "formula": "C6H7NO5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16953"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "ac_asp_glu",
+      "name": "Ac-Asp-Glu",
+      "formula": "C11H13N2O8",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:76931"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_1",
+      "name": "asparaginase",
+      "ec": [
+        "3.5.1.1"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_38",
+      "name": "glutamin-(asparagin-)ase",
+      "ec": [
+        "3.5.1.38"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_17",
+      "name": "aspartate N-acetyltransferase",
+      "ec": [
+        "2.3.1.17"
+      ]
+    },
+    {
+      "id": "ec_6_3_2_41",
+      "name": "N-acetylaspartylglutamate synthase",
+      "ec": [
+        "6.3.2.41"
+      ]
+    },
+    {
+      "id": "ec_3_4_17_21",
+      "name": "glutamate carboxypeptidase II",
+      "ec": [
+        "3.4.17.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "asparaginase",
+      "equation": "L-asparagine + H2O = L-aspartate + NH4(+)",
+      "ec": "3.5.1.1",
+      "substrates": [
+        {
+          "metabolite": "l_asparagine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21016"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21016"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "aspartate N-acetyltransferase",
+      "equation": "L-aspartate + acetyl-CoA = N-acetyl-L-aspartate + CoA + H(+)",
+      "ec": "2.3.1.17",
+      "substrates": [
+        {
+          "metabolite": "aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14165"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14165"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "N-acetylaspartylglutamate synthase",
+      "equation": "N-acetyl-L-aspartate + L-glutamate + ATP = N-acetyl-L-aspartyl-L-glutamate + ADP + phosphate + H(+)",
+      "ec": "6.3.2.41",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ac_asp_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_3_2_41"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:40035"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:40035"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "glutamate carboxypeptidase II",
+      "equation": "N-acetyl-L-aspartyl-L-glutamate + H2O = N-acetyl-L-aspartate + L-glutamate",
+      "ec": "3.4.17.21",
+      "substrates": [
+        {
+          "metabolite": "ac_asp_glu",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_l_aspartate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_17_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:68356"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:68356"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-acyl-sn-glycero-3-phosp-to-glycerone-phosphate",
+  "name": "1-acyl-sn-glycero-3-phosp… to glycerone phosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from 1-acyl-sn-glycero-3-phosphoserine(1−) to glycerone phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:32979"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:64379"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_acyl_sn_glycero_3_phosphoserine",
+      "name": "1-acyl-sn-glycero-3-phosphoserine",
+      "short": "1-acyl-sn-glycero-3…",
+      "formula": "C7H12NO9PR",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64379"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "sn_glycero_3_phosphoserine",
+      "name": "sn-glycero-3-phosphoserine",
+      "short": "sn-glycero-3-phosph…",
+      "formula": "C6H13NO8P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:64765"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "serine",
+      "name": "L-Serine",
+      "formula": "C3H7NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:33384"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "dhap",
+      "name": "Dihydroxyacetone phosphate",
+      "short": "Dihydroxyacetone P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57642"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_111",
+      "name": "phosphatidylserine sn-1 acylhydrolase",
+      "ec": [
+        "3.1.1.111"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_46",
+      "name": "glycerophosphodiester phosphodiesterase",
+      "ec": [
+        "3.1.4.46"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_94",
+      "name": "glycerol-3-phosphate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.1.1.94"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "phosphatidylserine sn-1 acylhydrolase",
+      "equation": "a 1-acyl-sn-glycero-3-phospho-L-serine + H2O = sn-glycero-3-phospho-L-serine + a fatty acid + H(+)",
+      "ec": "3.1.1.111",
+      "substrates": [
+        {
+          "metabolite": "1_acyl_sn_glycero_3_phosphoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycero_3_phosphoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_111"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:32979"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32979"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerophosphodiester phosphodiesterase",
+      "equation": "sn-glycero-3-phospho-L-serine + H2O = sn-glycerol 3-phosphate + L-serine + H(+)",
+      "ec": "3.1.4.46",
+      "substrates": [
+        {
+          "metabolite": "sn_glycero_3_phosphoserine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_46"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:29875"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:29875"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycerol-3-phosphate dehydrogenase [NAD(P)(+)]",
+      "equation": "sn-glycerol 3-phosphate + NADP(+) = dihydroxyacetone phosphate + NADPH + H(+)",
+      "ec": "1.1.1.94",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dhap",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:11096"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11096"
+          }
+        ]
+      }
+    }
+  ]
+}

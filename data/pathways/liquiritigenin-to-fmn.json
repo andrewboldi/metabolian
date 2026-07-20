@@ -1,0 +1,288 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "liquiritigenin-to-fmn",
+  "name": "liquiritigenin to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from liquiritigenin to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:31723"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28777"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "liquiritigenin",
+      "name": "liquiritigenin",
+      "formula": "C15H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28777"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2r_3s_2_4_7_trihydroxyisoflavanone",
+      "name": "(2R,3S)-2,4',7-trihydroxyisoflavanone",
+      "short": "(2R,3S)-2,4',7-trih…",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:63325"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "daidzein",
+      "name": "daidzein",
+      "formula": "C15H9O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77764"
+      }
+    },
+    {
+      "id": "2_hydroxydaidzein",
+      "name": "2'-hydroxydaidzein",
+      "formula": "C15H9O5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:77800"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_87",
+      "name": "2-hydroxyisoflavanone synthase",
+      "ec": [
+        "1.14.14.87"
+      ]
+    },
+    {
+      "id": "ec_4_2_1_105",
+      "name": "2-hydroxyisoflavanone dehydratase",
+      "ec": [
+        "4.2.1.105"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_90",
+      "name": "isoflavone 2'-hydroxylase",
+      "ec": [
+        "1.14.14.90"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-hydroxyisoflavanone synthase",
+      "equation": "(2S)-liquiritigenin + reduced [NADPH--hemoprotein reductase] + O2 = (2R,3S)-2,4',7-trihydroxyisoflavanone + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.87",
+      "substrates": [
+        {
+          "metabolite": "liquiritigenin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2r_3s_2_4_7_trihydroxyisoflavanone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:31723"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31723"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-hydroxyisoflavanone dehydratase",
+      "equation": "(2R,3S)-2,4',7-trihydroxyisoflavanone = daidzein + H2O + H(+)",
+      "ec": "4.2.1.105",
+      "substrates": [
+        {
+          "metabolite": "2r_3s_2_4_7_trihydroxyisoflavanone",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_1_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:16445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16445"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "isoflavone 2'-hydroxylase",
+      "equation": "daidzein + reduced [NADPH--hemoprotein reductase] + O2 = 2'-hydroxydaidzein + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.90",
+      "substrates": [
+        {
+          "metabolite": "daidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxydaidzein",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_90"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:53208"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53208"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-tryptophanamide-to-nitrite",
+  "name": "L-tryptophanamide to nitrite",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from L-tryptophanamide(1+) to nitrite, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11012"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57803"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_tryptophanamide",
+      "name": "L-tryptophanamide",
+      "formula": "C11H14N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57803"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_tryptophan",
+      "name": "L-tryptophan",
+      "formula": "C11H12N2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57912"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "iron",
+      "name": "iron",
+      "formula": "Fe",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:29034"
+      }
+    },
+    {
+      "id": "fe2",
+      "name": "Ferrous iron (Fe2+)",
+      "formula": "Fe",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:29033"
+      }
+    },
+    {
+      "id": "nitrite",
+      "name": "nitrite",
+      "formula": "NO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16301"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "nitrate",
+      "name": "nitrate",
+      "formula": "NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17632"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_57",
+      "name": "tryptophanamidase",
+      "ec": [
+        "3.5.1.57"
+      ]
+    },
+    {
+      "id": "ec_1_7_2_2",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
+      "ec": [
+        "1.7.2.2"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_1",
+      "name": "nitrate reductase (NADH)",
+      "ec": [
+        "1.7.1.1"
+      ]
+    },
+    {
+      "id": "ec_1_7_1_2",
+      "name": "nitrate reductase [NAD(P)H]",
+      "ec": [
+        "1.7.1.2"
+      ]
+    },
+    {
+      "id": "ec_1_9_6_1",
+      "name": "nitrate reductase (cytochrome)",
+      "ec": [
+        "1.9.6.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tryptophanamidase",
+      "equation": "L-tryptophanamide + H2O = L-tryptophan + NH4(+)",
+      "ec": "3.5.1.57",
+      "substrates": [
+        {
+          "metabolite": "l_tryptophanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_tryptophan",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_57"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11012"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11012"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nitrite reductase (cytochrome; ammonia-forming)",
+      "equation": "6 Fe(III)-[cytochrome c] + NH4(+) + 2 H2O = 6 Fe(II)-[cytochrome c] + nitrite + 8 H(+)",
+      "ec": "1.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "iron",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 6
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 8
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13089"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13089"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "nitrate reductase (NADH)",
+      "equation": "nitrite + NAD(+) + H2O = nitrate + NADH + H(+)",
+      "ec": "1.7.1.1",
+      "substrates": [
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_7_1_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17913"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17913"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "nitrate reductase (cytochrome)",
+      "equation": "2 Fe(II)-[cytochrome] + nitrate + 2 H(+) = 2 Fe(III)-[cytochrome] + nitrite + H2O",
+      "ec": "1.9.6.1",
+      "substrates": [
+        {
+          "metabolite": "fe2",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nitrate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "iron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nitrite",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_9_6_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:12909"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12909"
+          }
+        ]
+      }
+    }
+  ]
+}

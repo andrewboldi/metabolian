@@ -1,0 +1,387 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "carboxyspermidine-to-glycine",
+  "name": "carboxyspermidine to glycine",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from carboxyspermidine(2+) to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34095"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:65072"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "carboxyspermidine",
+      "name": "carboxyspermidine",
+      "formula": "C8H21N3O2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:65072"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "spermidine",
+      "name": "spermidine",
+      "formula": "C7H22N3",
+      "charge": 3,
+      "xrefs": {
+        "chebi": "CHEBI:57834"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "4_ammoniobutanal",
+      "name": "4-ammoniobutanal",
+      "formula": "C4H10NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58264"
+      }
+    },
+    {
+      "id": "trimethylenediaminium",
+      "name": "trimethylenediaminium",
+      "short": "trimethylenediamini…",
+      "formula": "C3H12N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:57484"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "4_oxobutanoate",
+      "name": "4-oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57706"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_1_96",
+      "name": "carboxynorspermidine decarboxylase",
+      "ec": [
+        "4.1.1.96"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_6",
+      "name": "spermidine dehydrogenase",
+      "ec": [
+        "1.5.99.6"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_19",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.19"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_96",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "ec": [
+        "2.6.1.96"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "carboxynorspermidine decarboxylase",
+      "equation": "carboxyspermidine + H(+) = spermidine + CO2",
+      "ec": "4.1.1.96",
+      "substrates": [
+        {
+          "metabolite": "carboxyspermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34095"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34095"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "spermidine dehydrogenase",
+      "equation": "spermidine + A + H2O = 4-aminobutanal + propane-1,3-diamine + AH2",
+      "ec": "1.5.99.6",
+      "substrates": [
+        {
+          "metabolite": "spermidine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "trimethylenediaminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14273"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14273"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "aminobutyraldehyde dehydrogenase",
+      "equation": "4-aminobutanal + NAD(+) + H2O = 4-aminobutanoate + NADH + 2 H(+)",
+      "ec": "1.2.1.19",
+      "substrates": [
+        {
+          "metabolite": "4_ammoniobutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19105"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19105"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "4-aminobutyrate--pyruvate transaminase",
+      "equation": "4-aminobutanoate + glyoxylate = succinate semialdehyde + glycine",
+      "ec": "2.6.1.96",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_96"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32267"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32267"
+          }
+        ]
+      }
+    }
+  ]
+}

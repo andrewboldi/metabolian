@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "c-terminal-n-glycylaminoe-to-diphosphate",
+  "name": "C-terminal N-glycylaminoe… to diphosphate",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from C-terminal N-glycylaminoethanethioate(1−) residue to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48740"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:232372"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "c_terminal_n_glycylaminoethanethioate_1",
+      "name": "C-terminal N-glycylaminoethanethioate(1−)",
+      "short": "C-terminal…",
+      "formula": "C4H6N2O2S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:232372"
+      }
+    },
+    {
+      "id": "pser",
+      "name": "O-Phospho-L-serine",
+      "formula": "C3H6NO6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57524"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "c_terminal_s_gly_gly_l_cys_zwitterion",
+      "name": "C-terminal S-(Gly-Gly)-L-Cys zwitterion",
+      "short": "C-terminal…",
+      "formula": "C7H12N3O4S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90783"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_1",
+      "name": "C-terminal Gly-Gly(1−)",
+      "short": "C-terminal…",
+      "formula": "C4H6N2O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90778"
+      }
+    },
+    {
+      "id": "cysteine",
+      "name": "L-Cysteine",
+      "formula": "C3H7NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:35235"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "c_terminal_gly_gly_amp_1_group",
+      "name": "C-terminal Gly-Gly-AMP(1−) group",
+      "short": "C-terminal…",
+      "formula": "C14H18N7O9P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:90618"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_113",
+      "name": "[CysO sulfur-carrier protein]-thiocarboxylate-dependent cysteine",
+      "ec": [
+        "2.5.1.113"
+      ]
+    },
+    {
+      "id": "ec_3_13_1_6",
+      "name": "[CysO sulfur-carrier protein]-S-L-cysteine hydrolase",
+      "ec": [
+        "3.13.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_80",
+      "name": "molybdopterin-synthase adenylyltransferase",
+      "ec": [
+        "2.7.7.80"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "[CysO sulfur-carrier protein]-thiocarboxylate-dependent cysteine",
+      "equation": "[CysO sulfur-carrier protein]-C-terminal-Gly-aminoethanethioate + O-phospho-L-serine + H(+) = [CysO sulfur-carrier protein]-Gly-NH-CH2-C(O)-S-L-Cys + phosphate",
+      "ec": "2.5.1.113",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_n_glycylaminoethanethioate_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pser",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_s_gly_gly_l_cys_zwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_113"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "[CysO sulfur-carrier protein]-S-L-cysteine hydrolase",
+      "equation": "[CysO sulfur-carrier protein]-Gly-NH-CH2-C(O)-S-L-Cys + H2O = [CysO sulfur-carrier protein]-C-terminal Gly-Gly + L-cysteine + H(+)",
+      "ec": "3.13.1.6",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_s_gly_gly_l_cys_zwitterion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_gly_gly_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "cysteine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_13_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48732"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48732"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "molybdopterin-synthase adenylyltransferase",
+      "equation": "[molybdopterin-synthase sulfur-carrier protein]-C-terminal Gly-Gly + ATP + H(+) = [molybdopterin-synthase sulfur-carrier protein]-C-terminal Gly-Gly-AMP + diphosphate",
+      "ec": "2.7.7.80",
+      "substrates": [
+        {
+          "metabolite": "c_terminal_gly_gly_1",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "c_terminal_gly_gly_amp_1_group",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_80"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:43616"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43616"
+          }
+        ]
+      }
+    }
+  ]
+}

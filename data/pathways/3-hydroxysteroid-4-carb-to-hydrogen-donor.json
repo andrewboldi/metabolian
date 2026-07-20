@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "3-hydroxysteroid-4-carb-to-hydrogen-donor",
+  "name": "3β-hydroxysteroid-4α-carb… to hydrogen donor",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 3β-hydroxysteroid-4α-carboxylate to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:34771"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:136966"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "3_hydroxysteroid_4_carboxylate",
+      "name": "3β-hydroxysteroid-4α-carboxylate",
+      "short": "3β-hydroxysteroid-4…",
+      "formula": "C20H30O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:136966"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "3_oxo_steroid",
+      "name": "3-oxo steroid",
+      "formula": "C19H29OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:47788"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "3_oxo_1_steroid",
+      "name": "3-oxo-Δ1 steroid",
+      "formula": "C19H27OR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:20156"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "steroid_1_3_dione",
+      "name": "steroid 1,3-dione",
+      "formula": "C19H27O2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:157751"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_170",
+      "name": "3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
+      "ec": [
+        "1.1.1.170"
+      ]
+    },
+    {
+      "id": "ec_1_3_99_4",
+      "name": "3-oxosteroid 1-dehydrogenase",
+      "ec": [
+        "1.3.99.4"
+      ]
+    },
+    {
+      "id": "ec_1_17_99_11",
+      "name": "3-oxo-Delta(1)-steroid hydratase/dehydrogenase",
+      "ec": [
+        "1.17.99.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase",
+      "equation": "a 3beta-hydroxysteroid-4alpha-carboxylate + NADP(+) = a 3-oxosteroid + CO2 + NADPH",
+      "ec": "1.1.1.170",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxysteroid_4_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_170"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:34771"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:34771"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "3-oxosteroid 1-dehydrogenase",
+      "equation": "a 3-oxosteroid + A = a 3-oxo-Delta(1)-steroid + AH2",
+      "ec": "1.3.99.4",
+      "substrates": [
+        {
+          "metabolite": "3_oxo_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_oxo_1_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_99_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13329"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13329"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-oxo-Delta(1)-steroid hydratase/dehydrogenase",
+      "equation": "a 3-oxo-Delta(1)-steroid + A + H2O = a steroid 1,3-dione + AH2",
+      "ec": "1.17.99.11",
+      "substrates": [
+        {
+          "metabolite": "3_oxo_1_steroid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "steroid_1_3_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_99_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:65848"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:65848"
+          }
+        ]
+      }
+    }
+  ]
+}

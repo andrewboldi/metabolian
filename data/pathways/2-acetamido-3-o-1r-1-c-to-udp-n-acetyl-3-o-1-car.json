@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-acetamido-3-o-1r-1-c-to-udp-n-acetyl-3-o-1-car",
+  "name": "2-acetamido-3-O-[(1R)-1-c… to UDP-N-acetyl-3-O-(1-carbo…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 2-acetamido-3-O-[(1R)-1-carboxylatoethyl]-2-deoxy-D-glucopyranose to UDP-N-acetyl-3-O-(1-carboxylatovinyl)-α-D-glucosamine(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:53720"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:28881"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d",
+      "name": "2-acetamido-3-O-[(1R)-1-carboxylatoethyl]-2-deoxy-D-glucopyranose",
+      "short": "2-acetamido-3-O-[(1…",
+      "formula": "C11H18NO8",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28881"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "n_acetyl_d_muramate_1_phosphate",
+      "name": "N-acetyl-α-D-muramate 1-phosphate",
+      "short": "N-acetyl-α-D-murama…",
+      "formula": "C11H17NO11P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:137594"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_d_muramate",
+      "name": "UDP-N-acetyl-α-D-muramate",
+      "short": "UDP-N-acetyl-α-D-mu…",
+      "formula": "C20H28N3O19P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:70757"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin",
+      "name": "UDP-N-acetyl-3-O-(1-carboxylatovinyl)-α-D-glucosamine",
+      "short": "UDP-N-acetyl-3-O-(1…",
+      "formula": "C20H26N3O19P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:68483"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_221",
+      "name": "N-acetylmuramate 1-kinase",
+      "ec": [
+        "2.7.1.221"
+      ]
+    },
+    {
+      "id": "ec_2_7_7_99",
+      "name": "N-acetyl-alpha-D-muramate 1-phosphate uridylyltransferase",
+      "ec": [
+        "2.7.7.99"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_98",
+      "name": "UDP-N-acetylmuramate dehydrogenase",
+      "ec": [
+        "1.3.1.98"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "N-acetylmuramate 1-kinase",
+      "equation": "N-acetyl-D-muramate + ATP = N-acetyl-alpha-D-muramate 1-phosphate + ADP + H(+)",
+      "ec": "2.7.1.221",
+      "substrates": [
+        {
+          "metabolite": "2_acetamido_3_o_1r_1_carboxylatoethyl_2_deoxy_d",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_muramate_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_221"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:53720"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53720"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetyl-alpha-D-muramate 1-phosphate uridylyltransferase",
+      "equation": "N-acetyl-alpha-D-muramate 1-phosphate + UDP + H(+) = UDP-N-acetyl-alpha-D-muramate + phosphate",
+      "ec": "2.7.7.99",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_muramate_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_d_muramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_7_99"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:53716"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:53716"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "UDP-N-acetylmuramate dehydrogenase",
+      "equation": "UDP-N-acetyl-alpha-D-muramate + NADP(+) = UDP-N-acetyl-3-O-(1-carboxyvinyl)-alpha-D-glucosamine + NADPH + H(+)",
+      "ec": "1.3.1.98",
+      "substrates": [
+        {
+          "metabolite": "udp_n_acetyl_d_muramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_n_acetyl_3_o_1_carboxylatovinyl_d_glucosamin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_98"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:12248"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12248"
+          }
+        ]
+      }
+    }
+  ]
+}

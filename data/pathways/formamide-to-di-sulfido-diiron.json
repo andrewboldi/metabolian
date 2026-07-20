@@ -1,0 +1,263 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "formamide-to-di-sulfido-diiron",
+  "name": "formamide to di-μ-sulfido-diiron",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from formamide to di-μ-sulfido-diiron(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21948"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16397"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "formamide",
+      "name": "formamide",
+      "formula": "CH3NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16397"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "formate",
+      "name": "Formate",
+      "formula": "CHO2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15740"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2",
+      "name": "Dihydrogen (H2)",
+      "formula": "H2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18276"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_49",
+      "name": "formamidase",
+      "ec": [
+        "3.5.1.49"
+      ]
+    },
+    {
+      "id": "ec_1_17_98_5",
+      "name": "hydrogen-dependent carbon dioxide reductase",
+      "ec": [
+        "1.17.98.5"
+      ]
+    },
+    {
+      "id": "ec_1_12_7_2",
+      "name": "ferredoxin hydrogenase",
+      "ec": [
+        "1.12.7.2"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "formamidase",
+      "equation": "formamide + H2O = formate + NH4(+)",
+      "ec": "3.5.1.49",
+      "substrates": [
+        {
+          "metabolite": "formamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21948"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21948"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hydrogen-dependent carbon dioxide reductase",
+      "equation": "formate + H(+) = H2 + CO2",
+      "ec": "1.17.98.5",
+      "substrates": [
+        {
+          "metabolite": "formate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_17_98_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:27610"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27610"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ferredoxin hydrogenase",
+      "equation": "H2 + 2 oxidized [2Fe-2S]-[ferredoxin] = 2 reduced [2Fe-2S]-[ferredoxin] + 2 H(+)",
+      "ec": "1.12.7.2",
+      "substrates": [
+        {
+          "metabolite": "h2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_12_7_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17445"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17445"
+          }
+        ]
+      }
+    }
+  ]
+}

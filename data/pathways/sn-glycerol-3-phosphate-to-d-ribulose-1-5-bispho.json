@@ -1,0 +1,301 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "sn-glycerol-3-phosphate-to-d-ribulose-1-5-bispho",
+  "name": "sn-glycerol 3-phosphate to D-ribulose 1,5-bisphospha…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from sn-glycerol 3-phosphate(2−) to D-ribulose 1,5-bisphosphate(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:19773"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57597"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "sn_glycerol_3_phosphate",
+      "name": "sn-glycerol 3-phosphate",
+      "short": "sn-glycerol 3-P",
+      "formula": "C3H7O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57597"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "g3p",
+      "name": "D-Glyceraldehyde 3-phosphate",
+      "short": "D-Glyceraldehyde 3-P",
+      "formula": "C3H5O6P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:59776"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:33737"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "pg3",
+      "name": "3-Phospho-D-glycerate",
+      "short": "3-Phospho-D-glycera…",
+      "formula": "C3H4O7P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58272"
+      }
+    },
+    {
+      "id": "di_sulfido_diiron",
+      "name": "di-μ-sulfido-diiron",
+      "formula": "Fe2S2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:33738"
+      }
+    },
+    {
+      "id": "d_ribulose_1_5_bisphosphate",
+      "name": "D-ribulose 1,5-bisphosphate",
+      "short": "D-ribulose…",
+      "formula": "C5H8O11P2",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57870"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_177",
+      "name": "glycerol-3-phosphate 1-dehydrogenase (NADP(+))",
+      "ec": [
+        "1.1.1.177"
+      ]
+    },
+    {
+      "id": "ec_1_2_7_6",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (ferredoxin)",
+      "ec": [
+        "1.2.7.6"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_39",
+      "name": "ribulose-bisphosphate carboxylase",
+      "ec": [
+        "4.1.1.39"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glycerol-3-phosphate 1-dehydrogenase (NADP(+))",
+      "equation": "sn-glycerol 3-phosphate + NADP(+) = D-glyceraldehyde 3-phosphate + NADPH + H(+)",
+      "ec": "1.1.1.177",
+      "substrates": [
+        {
+          "metabolite": "sn_glycerol_3_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_177"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:19773"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glyceraldehyde-3-phosphate dehydrogenase (ferredoxin)",
+      "equation": "D-glyceraldehyde 3-phosphate + 2 oxidized [2Fe-2S]-[ferredoxin] + H2O = (2R)-3-phosphoglycerate + 2 reduced [2Fe-2S]-[ferredoxin] + 3 H(+)",
+      "ec": "1.2.7.6",
+      "substrates": [
+        {
+          "metabolite": "g3p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "di_sulfido_diiron",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 3
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_7_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:24148"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:24148"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "ribulose-bisphosphate carboxylase",
+      "equation": "2 (2R)-3-phosphoglycerate + 2 H(+) = D-ribulose 1,5-bisphosphate + CO2 + H2O",
+      "ec": "4.1.1.39",
+      "substrates": [
+        {
+          "metabolite": "pg3",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_ribulose_1_5_bisphosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_39"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:23124"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23124"
+          }
+        ]
+      }
+    }
+  ]
+}

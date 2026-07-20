@@ -1,0 +1,363 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "cellobiose-to-d-glucopyranose",
+  "name": "cellobiose to D-glucopyranose…",
+  "category": "other",
+  "summary": "A 4-step route from cellobiose to D-glucopyranose 6-phosphate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:21944"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:17057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "cellobiose",
+      "name": "cellobiose",
+      "formula": "C12H22O11",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17057"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "6_phosphonato_d_glucosyl_1_4_d_glucose",
+      "name": "6-phosphonato-β-D-glucosyl-(1→4)-D-glucose",
+      "short": "6-phosphonato-β-D-g…",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58312"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "g6p",
+      "name": "D-Glucose 6-phosphate",
+      "short": "D-Glucose 6-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61548"
+      }
+    },
+    {
+      "id": "glucose",
+      "name": "D-Glucose",
+      "formula": "C6H12O6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:4167"
+      }
+    },
+    {
+      "id": "gdp_d_glucose",
+      "name": "GDP-α-D-glucose",
+      "formula": "C16H23N5O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:62230"
+      }
+    },
+    {
+      "id": "trehalose_6_phosphate",
+      "name": "α,α-trehalose 6-phosphate",
+      "short": "α,α-trehalose 6-P",
+      "formula": "C12H21O14P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58429"
+      }
+    },
+    {
+      "id": "gdp",
+      "name": "GDP",
+      "formula": "C10H12N5O11P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58189"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    },
+    {
+      "id": "d_glucose_1_phosphate",
+      "name": "β-D-glucose 1-phosphate",
+      "short": "β-D-glucose 1-P",
+      "formula": "C6H11O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57684"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_7_1_85",
+      "name": "beta-glucoside kinase",
+      "ec": [
+        "2.7.1.85"
+      ]
+    },
+    {
+      "id": "ec_3_2_1_86",
+      "name": "6-phospho-beta-glucosidase",
+      "ec": [
+        "3.2.1.86"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_36",
+      "name": "alpha,alpha-trehalose-phosphate synthase (GDP-forming)",
+      "ec": [
+        "2.4.1.36"
+      ]
+    },
+    {
+      "id": "ec_2_4_1_216",
+      "name": "trehalose 6-phosphate phosphorylase",
+      "ec": [
+        "2.4.1.216"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "beta-glucoside kinase",
+      "equation": "D-cellobiose + ATP = 6-phospho-beta-D-glucosyl-(1->4)-D-glucose + ADP + H(+)",
+      "ec": "2.7.1.85",
+      "substrates": [
+        {
+          "metabolite": "cellobiose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_phosphonato_d_glucosyl_1_4_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_85"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:21944"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21944"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "6-phospho-beta-glucosidase",
+      "equation": "6-phospho-beta-D-glucosyl-(1->4)-D-glucose + H2O = D-glucose 6-phosphate + D-glucose",
+      "ec": "3.2.1.86",
+      "substrates": [
+        {
+          "metabolite": "6_phosphonato_d_glucosyl_1_4_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glucose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_86"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha,alpha-trehalose-phosphate synthase (GDP-forming)",
+      "equation": "GDP-alpha-D-glucose + D-glucose 6-phosphate = alpha,alpha-trehalose 6-phosphate + GDP + H(+)",
+      "ec": "2.4.1.36",
+      "substrates": [
+        {
+          "metabolite": "gdp_d_glucose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "trehalose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gdp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_36"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14605"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14605"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "trehalose 6-phosphate phosphorylase",
+      "equation": "alpha,alpha-trehalose 6-phosphate + phosphate = beta-D-glucose 1-phosphate + D-glucose 6-phosphate",
+      "ec": "2.4.1.216",
+      "substrates": [
+        {
+          "metabolite": "trehalose_6_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_glucose_1_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "g6p",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_1_216"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:20864"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20864"
+          }
+        ]
+      }
+    }
+  ]
+}

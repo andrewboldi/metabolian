@@ -1,0 +1,270 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "o-n-acetyl-d-glucosami-to-n-acetyl-d-glucosamine",
+  "name": "O-(N-acetyl-β-D-glucosami… to N-acetyl-D-glucosamine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from O-(N-acetyl-β-D-glucosaminyl)-L-serine residue to N-acetyl-D-glucosamine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48876"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:90838"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "o_n_acetyl_d_glucosaminyl_l_serine",
+      "name": "O-(N-acetyl-β-D-glucosaminyl)-L-serine",
+      "short": "O-(N-acetyl-β-D-glu…",
+      "formula": "C11H18N2O7",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:90838"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n_acetyl_d_glucosamine",
+      "name": "N-acetyl-D-glucosamine",
+      "short": "N-acetyl-D-glucosam…",
+      "formula": "C8H15NO6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:506227"
+      }
+    },
+    {
+      "id": "l_serine",
+      "name": "L-serine",
+      "formula": "C3H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29999"
+      }
+    },
+    {
+      "id": "2_ammonio_2_deoxy_d_glucopyranose",
+      "name": "2-ammonio-2-deoxy-D-glucopyranose",
+      "short": "2-ammonio-2-deoxy-D…",
+      "formula": "C6H14NO5",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58723"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "acetyl_coa",
+      "name": "Acetyl-CoA",
+      "formula": "C23H34N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57288"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_2_1_169",
+      "name": "protein O-GlcNAcase",
+      "ec": [
+        "3.2.1.169"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_33",
+      "name": "N-acetylglucosamine deacetylase",
+      "ec": [
+        "3.5.1.33"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_3",
+      "name": "glucosamine N-acetyltransferase",
+      "ec": [
+        "2.3.1.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "protein O-GlcNAcase",
+      "equation": "3-O-(N-acetyl-beta-D-glucosaminyl)-L-seryl-[protein] + H2O = N-acetyl-D-glucosamine + L-seryl-[protein]",
+      "ec": "3.2.1.169",
+      "substrates": [
+        {
+          "metabolite": "o_n_acetyl_d_glucosaminyl_l_serine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_serine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_1_169"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48876"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48876"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "N-acetylglucosamine deacetylase",
+      "equation": "N-acetyl-D-glucosamine + H2O = D-glucosamine + acetate",
+      "ec": "3.5.1.33",
+      "substrates": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_ammonio_2_deoxy_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_33"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glucosamine N-acetyltransferase",
+      "equation": "D-glucosamine + acetyl-CoA = N-acetyl-D-glucosamine + CoA + H(+)",
+      "ec": "2.3.1.3",
+      "substrates": [
+        {
+          "metabolite": "2_ammonio_2_deoxy_d_glucopyranose",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_acetyl_d_glucosamine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21332"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21332"
+          }
+        ]
+      }
+    }
+  ]
+}

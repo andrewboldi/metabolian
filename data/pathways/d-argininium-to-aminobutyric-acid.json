@@ -1,0 +1,387 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "d-argininium-to-aminobutyric-acid",
+  "name": "D-argininium to γ-aminobutyric acid",
+  "category": "energy-metabolism",
+  "summary": "A 4-step route from D-argininium(1+) to γ-aminobutyric acid zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:43572"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:32689"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "d_argininium",
+      "name": "D-argininium",
+      "formula": "C6H15N4O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32689"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "5_guanidino_2_oxopentanoic_acid",
+      "name": "5-guanidino-2-oxopentanoic acid",
+      "short": "5-guanidino-2-oxope…",
+      "formula": "C6H11N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58489"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "4_guanidiniumylbutanal",
+      "name": "4-guanidiniumylbutanal",
+      "short": "4-guanidiniumylbuta…",
+      "formula": "C5H12N3O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57854"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "4_guanidinobutanoic_acid",
+      "name": "4-guanidinobutanoic acid",
+      "short": "4-guanidinobutanoic…",
+      "formula": "C5H11N3O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57486"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "urea",
+      "name": "Urea",
+      "formula": "CH4N2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16199"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_4_99_6",
+      "name": "D-arginine dehydrogenase",
+      "ec": [
+        "1.4.99.6"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_75",
+      "name": "5-guanidino-2-oxopentanoate decarboxylase",
+      "ec": [
+        "4.1.1.75"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_54",
+      "name": "gamma-guanidinobutyraldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.54"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_7",
+      "name": "guanidinobutyrase",
+      "ec": [
+        "3.5.3.7"
+      ]
+    },
+    {
+      "id": "ec_3_5_3_17",
+      "name": "guanidinopropionase",
+      "ec": [
+        "3.5.3.17"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "D-arginine dehydrogenase",
+      "equation": "D-arginine + A + H2O = 5-guanidino-2-oxopentanoate + AH2 + NH4(+)",
+      "ec": "1.4.99.6",
+      "substrates": [
+        {
+          "metabolite": "d_argininium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_4_99_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:43572"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:43572"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "5-guanidino-2-oxopentanoate decarboxylase",
+      "equation": "5-guanidino-2-oxopentanoate + H(+) = 4-guanidinobutanal + CO2",
+      "ec": "4.1.1.75",
+      "substrates": [
+        {
+          "metabolite": "5_guanidino_2_oxopentanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_guanidiniumylbutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_75"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11340"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11340"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "gamma-guanidinobutyraldehyde dehydrogenase",
+      "equation": "4-guanidinobutanal + NAD(+) + H2O = 4-guanidinobutanoate + NADH + 2 H(+)",
+      "ec": "1.2.1.54",
+      "substrates": [
+        {
+          "metabolite": "4_guanidiniumylbutanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_guanidinobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_54"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14381"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14381"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "guanidinobutyrase",
+      "equation": "4-guanidinobutanoate + H2O = urea + 4-aminobutanoate",
+      "ec": "3.5.3.7",
+      "substrates": [
+        {
+          "metabolite": "4_guanidinobutanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "urea",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:19501"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19501"
+          }
+        ]
+      }
+    }
+  ]
+}

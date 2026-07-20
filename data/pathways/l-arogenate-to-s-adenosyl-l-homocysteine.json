@@ -1,0 +1,289 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-arogenate-to-s-adenosyl-l-homocysteine",
+  "name": "L-arogenate to S-adenosyl-L-homocysteine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from L-arogenate(1−) to S-adenosyl-L-homocysteine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15417"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58180"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_arogenate",
+      "name": "L-arogenate",
+      "formula": "C10H12NO5",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58180"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "tyrosine",
+      "name": "L-Tyrosine",
+      "formula": "C9H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58315"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "tyraminium",
+      "name": "tyraminium",
+      "formula": "C8H12NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:327995"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "n_methyltyraminium",
+      "name": "N-methyltyraminium",
+      "formula": "C9H14NO",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58155"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_3_1_78",
+      "name": "arogenate dehydrogenase (NADP(+))",
+      "ec": [
+        "1.3.1.78"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_79",
+      "name": "arogenate dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.3.1.79"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_25",
+      "name": "tyrosine decarboxylase",
+      "ec": [
+        "4.1.1.25"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_27",
+      "name": "tyramine N-methyltransferase",
+      "ec": [
+        "2.1.1.27"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "arogenate dehydrogenase (NADP(+))",
+      "equation": "L-arogenate + NADP(+) = L-tyrosine + CO2 + NADPH",
+      "ec": "1.3.1.78",
+      "substrates": [
+        {
+          "metabolite": "l_arogenate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_78"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15417"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15417"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tyrosine decarboxylase",
+      "equation": "L-tyrosine + H(+) = tyramine + CO2",
+      "ec": "4.1.1.25",
+      "substrates": [
+        {
+          "metabolite": "tyrosine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14345"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14345"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tyramine N-methyltransferase",
+      "equation": "tyramine + S-adenosyl-L-methionine = N-methyltyramine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.27",
+      "substrates": [
+        {
+          "metabolite": "tyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_methyltyraminium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:14865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14865"
+          }
+        ]
+      }
+    }
+  ]
+}

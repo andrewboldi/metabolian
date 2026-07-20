@@ -1,0 +1,271 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "nucleoside-5-triphoshate-to-2-deoxyribonucleosid",
+  "name": "nucleoside 5'-triphoshate to 2'-deoxyribonucleoside",
+  "category": "other",
+  "summary": "A 3-step route from nucleoside 5'-triphoshate(4−) to 2'-deoxyribonucleoside, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:23996"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61557"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "nucleoside_5_triphoshate",
+      "name": "nucleoside 5'-triphoshate",
+      "short": "nucleoside…",
+      "formula": "C5H8O13P3R",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:61557"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "nucleoside_5_monophosphate",
+      "name": "nucleoside 5'-monophosphate",
+      "short": "nucleoside 5'-MP",
+      "formula": "C5H8O7PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58043"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "2_deoxyribonucleoside",
+      "name": "2'-deoxyribonucleoside",
+      "short": "2'-deoxyribonucleos…",
+      "formula": "C5H9O3R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18274"
+      }
+    },
+    {
+      "id": "ribonucleoside",
+      "name": "ribonucleoside",
+      "formula": "C5H9O4R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18254"
+      }
+    },
+    {
+      "id": "2_deoxynucleoside_5_monophosphate",
+      "name": "2'-deoxynucleoside 5'-monophosphate",
+      "short": "2'-deoxynucleoside…",
+      "formula": "C5H8O6PR",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:65317"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_6_1_9",
+      "name": "nucleotide diphosphatase",
+      "ec": [
+        "3.6.1.9"
+      ]
+    },
+    {
+      "id": "ec_2_7_1_77",
+      "name": "nucleoside phosphotransferase",
+      "ec": [
+        "2.7.1.77"
+      ]
+    },
+    {
+      "id": "ec_3_1_3_89",
+      "name": "5'-deoxynucleotidase",
+      "ec": [
+        "3.1.3.89"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "nucleotide diphosphatase",
+      "equation": "a ribonucleoside 5'-triphosphate + H2O = a ribonucleoside 5'-phosphate + diphosphate + H(+)",
+      "ec": "3.6.1.9",
+      "substrates": [
+        {
+          "metabolite": "nucleoside_5_triphoshate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_6_1_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:23996"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23996"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "nucleoside phosphotransferase",
+      "equation": "a 2'-deoxyribonucleoside + a ribonucleoside 5'-phosphate = a ribonucleoside + a 2'-deoxyribonucleoside 5'-phosphate",
+      "ec": "2.7.1.77",
+      "substrates": [
+        {
+          "metabolite": "2_deoxyribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nucleoside_5_monophosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "2_deoxynucleoside_5_monophosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19961"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19961"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "5'-deoxynucleotidase",
+      "equation": "a 2'-deoxyribonucleoside 5'-phosphate + H2O = a 2'-deoxyribonucleoside + phosphate",
+      "ec": "3.1.3.89",
+      "substrates": [
+        {
+          "metabolite": "2_deoxynucleoside_5_monophosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_deoxyribonucleoside",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_3_89"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:36167"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36167"
+          }
+        ]
+      }
+    }
+  ]
+}

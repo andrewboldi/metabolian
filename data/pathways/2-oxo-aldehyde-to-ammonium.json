@@ -1,0 +1,368 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-oxo-aldehyde-to-ammonium",
+  "name": "2-oxo aldehyde to ammonium",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from 2-oxo aldehyde to ammonium, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:18129"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:27659"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_oxo_aldehyde",
+      "name": "2-oxo aldehyde",
+      "formula": "C2HO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:27659"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2_oxo_monocarboxylic_acid_anion",
+      "name": "2-oxo monocarboxylic acid anion",
+      "short": "2-oxo monocarboxyli…",
+      "formula": "C2O3R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:35179"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "methionine",
+      "name": "L-Methionine",
+      "formula": "C5H11NO2S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57844"
+      }
+    },
+    {
+      "id": "4_methylthio_2_oxobutanoate",
+      "name": "4-methylthio-2-oxobutanoate",
+      "short": "4-methylthio-2-oxob…",
+      "formula": "C5H7O3S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16723"
+      }
+    },
+    {
+      "id": "l_amino_acid",
+      "name": "L-α-amino acid",
+      "formula": "C2H4NO2R",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59869"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "2_oxoglutaramate",
+      "name": "2-oxoglutaramate",
+      "formula": "C5H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_2_1_49",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "ec": [
+        "1.2.1.49"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_88",
+      "name": "methionine transaminase",
+      "ec": [
+        "2.6.1.88"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_117",
+      "name": "L-glutamine--4-(methylsulfanyl)-2-oxobutanoate aminotransferase",
+      "ec": [
+        "2.6.1.117"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_3",
+      "name": "omega-amidase",
+      "ec": [
+        "3.5.1.3"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_111",
+      "name": "2-oxoglutaramate amidase",
+      "ec": [
+        "3.5.1.111"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-oxoaldehyde dehydrogenase (NADP(+))",
+      "equation": "2-oxoaldehyde + NADP(+) + H2O = a 2-oxocarboxylate + NADPH + 2 H(+)",
+      "ec": "1.2.1.49",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_aldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_49"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:18129"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18129"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methionine transaminase",
+      "equation": "a 2-oxocarboxylate + L-methionine = 4-methylsulfanyl-2-oxobutanoate + an L-alpha-amino acid",
+      "ec": "2.6.1.88",
+      "substrates": [
+        {
+          "metabolite": "2_oxo_monocarboxylic_acid_anion",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_methylthio_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_amino_acid",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_88"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:31763"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:31763"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "L-glutamine--4-(methylsulfanyl)-2-oxobutanoate aminotransferase",
+      "equation": "4-methylsulfanyl-2-oxobutanoate + L-glutamine = 2-oxoglutaramate + L-methionine",
+      "ec": "2.6.1.117",
+      "substrates": [
+        {
+          "metabolite": "4_methylthio_2_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "methionine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_117"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:30391"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:30391"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "omega-amidase",
+      "equation": "2-oxoglutaramate + H2O = 2-oxoglutarate + NH4(+)",
+      "ec": "3.5.1.3",
+      "substrates": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:32963"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32963"
+          }
+        ]
+      }
+    }
+  ]
+}

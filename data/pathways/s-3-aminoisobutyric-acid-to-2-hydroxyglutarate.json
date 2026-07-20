@@ -1,0 +1,325 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-aminoisobutyric-acid-to-2-hydroxyglutarate",
+  "name": "(S)-3-aminoisobutyric acid to 2-hydroxyglutarate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S)-3-aminoisobutyric acid zwitterion to 2-hydroxyglutarate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13993"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58655"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_aminoisobutyric_acid",
+      "name": "(S)-3-aminoisobutyric acid",
+      "short": "3-aminoisobutyric…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58655"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "2_methyl_3_oxopropanoate",
+      "name": "2-methyl-3-oxopropanoate",
+      "short": "2-methyl-3-oxopropa…",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57700"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "glyoxylate",
+      "name": "Glyoxylate",
+      "formula": "C2HO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36655"
+      }
+    },
+    {
+      "id": "2_hydroxyglutarate",
+      "name": "2-hydroxyglutarate",
+      "formula": "C5H6O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:11596"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_22",
+      "name": "(S)-3-amino-2-methylpropionate transaminase",
+      "ec": [
+        "2.6.1.22"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_27",
+      "name": "methylmalonate-semialdehyde dehydrogenase (CoA acylating)",
+      "ec": [
+        "1.2.1.27"
+      ]
+    },
+    {
+      "id": "ec_2_3_3_11",
+      "name": "2-hydroxyglutarate synthase",
+      "ec": [
+        "2.3.3.11"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S)-3-amino-2-methylpropionate transaminase",
+      "equation": "(S)-3-amino-2-methylpropanoate + 2-oxoglutarate = 2-methyl-3-oxopropanoate + L-glutamate",
+      "ec": "2.6.1.22",
+      "substrates": [
+        {
+          "metabolite": "s_3_aminoisobutyric_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13993"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13993"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "methylmalonate-semialdehyde dehydrogenase (CoA acylating)",
+      "equation": "2-methyl-3-oxopropanoate + NAD(+) + CoA + H2O = propanoyl-CoA + hydrogencarbonate + NADH + H(+)",
+      "ec": "1.2.1.27",
+      "substrates": [
+        {
+          "metabolite": "2_methyl_3_oxopropanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:20804"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20804"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-hydroxyglutarate synthase",
+      "equation": "propanoyl-CoA + glyoxylate + H2O = 2-hydroxyglutarate + CoA + H(+)",
+      "ec": "2.3.3.11",
+      "substrates": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glyoxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_hydroxyglutarate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_3_11"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:19185"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19185"
+          }
+        ]
+      }
+    }
+  ]
+}

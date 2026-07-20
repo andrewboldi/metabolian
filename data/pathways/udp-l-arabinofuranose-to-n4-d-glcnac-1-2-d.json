@@ -1,0 +1,237 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "udp-l-arabinofuranose-to-n4-d-glcnac-1-2-d",
+  "name": "UDP-β-L-arabinofuranose to N4-{β-D-GlcNAc-(1→2)-α-D-…",
+  "category": "other",
+  "summary": "A 3-step route from UDP-β-L-arabinofuranose(2−) to N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-[β-D-Xyl-(1→2)]-β-D-Man-(1→4)-β-D-GlcNAcl-(1→4)-β-D-GlcNAc}-Asn residue, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:28350"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:61463"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "udp_l_arabinofuranose",
+      "name": "UDP-β-L-arabinofuranose",
+      "short": "UDP-β-L-arabinofura…",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61463"
+      }
+    },
+    {
+      "id": "udp_l_arabinopyranose",
+      "name": "UDP-β-L-arabinopyranose",
+      "short": "UDP-β-L-arabinopyra…",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:61457"
+      }
+    },
+    {
+      "id": "udp_d_xylose",
+      "name": "UDP-α-D-xylose",
+      "formula": "C14H20N2O16P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57632"
+      }
+    },
+    {
+      "id": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6",
+      "name": "N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-β-D-Man-(1→4)-β-D-GlcNAcl-(1→4)-β-D-GlcNAc}-Asn",
+      "short": "N4-{β-D-GlcNAc-(1→2…",
+      "formula": "C54H88N6O37",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60651"
+      }
+    },
+    {
+      "id": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6",
+      "name": "N4-{β-D-GlcNAc-(1→2)-α-D-Man-(1→3)-[β-D-GlcNAc-(1→2)-α-D-Man-(1→6)]-[β-D-Xyl-(1→2)]-β-D-Man-(1→4)-β-D-GlcNAcl-(1→4)-β-D-GlcNAc}-Asn",
+      "short": "N4-{β-D-GlcNAc-(1→2…",
+      "formula": "C59H96N6O41",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:137186"
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP",
+      "formula": "C9H11N2O12P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58223"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_4_99_30",
+      "name": "UDP-arabinopyranose mutase",
+      "ec": [
+        "5.4.99.30"
+      ]
+    },
+    {
+      "id": "ec_5_1_3_5",
+      "name": "UDP-arabinose 4-epimerase",
+      "ec": [
+        "5.1.3.5"
+      ]
+    },
+    {
+      "id": "ec_2_4_2_38",
+      "name": "glycoprotein 2-beta-D-xylosyltransferase",
+      "ec": [
+        "2.4.2.38"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "UDP-arabinopyranose mutase",
+      "equation": "UDP-beta-L-arabinofuranose = UDP-beta-L-arabinopyranose",
+      "ec": "5.4.99.30",
+      "substrates": [
+        {
+          "metabolite": "udp_l_arabinofuranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_4_99_30"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:28350"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:28350"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "UDP-arabinose 4-epimerase",
+      "equation": "UDP-beta-L-arabinopyranose = UDP-alpha-D-xylose",
+      "ec": "5.1.3.5",
+      "substrates": [
+        {
+          "metabolite": "udp_l_arabinopyranose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11320"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11320"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycoprotein 2-beta-D-xylosyltransferase",
+      "equation": "N(4)-{beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L-asparaginyl-[protein] + UDP-alpha-D-xylose = N(4)-{beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->3)-[beta-D-GlcNAc-(1->2)-alpha-D-Man-(1->6)]-[beta-D-Xyl-(1->2)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-beta-D-GlcNAc}-L-asparaginyl-[protein] + UDP + H(+)",
+      "ec": "2.4.2.38",
+      "substrates": [
+        {
+          "metabolite": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp_d_xylose",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n4_d_glcnac_1_2_d_man_1_3_d_glcnac_1_2_d_man_1_6",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "udp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_4_2_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:10612"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10612"
+          }
+        ]
+      }
+    }
+  ]
+}

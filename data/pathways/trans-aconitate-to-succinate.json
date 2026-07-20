@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "trans-aconitate-to-succinate",
+  "name": "trans-aconitate to succinate",
+  "category": "other",
+  "summary": "A 3-step route from trans-aconitate(3−) to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17265"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:15708"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "trans_aconitate",
+      "name": "trans-aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:15708"
+      }
+    },
+    {
+      "id": "cis_aconitate",
+      "name": "cis-Aconitate",
+      "formula": "C6H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:16383"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "itaconate",
+      "name": "itaconate",
+      "formula": "C5H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:17240"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "succinyl_coa",
+      "name": "Succinyl-CoA",
+      "formula": "C25H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57292"
+      }
+    },
+    {
+      "id": "itaconyl_coa",
+      "name": "itaconyl-CoA",
+      "formula": "C26H35N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57381"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_3_3_7",
+      "name": "aconitate Delta-isomerase",
+      "ec": [
+        "5.3.3.7"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_6",
+      "name": "cis-aconitate decarboxylase",
+      "ec": [
+        "4.1.1.6"
+      ]
+    },
+    {
+      "id": "ec_2_8_3_22",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "ec": [
+        "2.8.3.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "aconitate Delta-isomerase",
+      "equation": "trans-aconitate = cis-aconitate",
+      "ec": "5.3.3.7",
+      "substrates": [
+        {
+          "metabolite": "trans_aconitate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_3_3_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17265"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17265"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-aconitate decarboxylase",
+      "equation": "cis-aconitate + H(+) = itaconate + CO2",
+      "ec": "4.1.1.6",
+      "substrates": [
+        {
+          "metabolite": "cis_aconitate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "itaconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_6"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15253"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15253"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "succinyl-CoA--L-malate CoA-transferase",
+      "equation": "itaconate + succinyl-CoA = itaconyl-CoA + succinate",
+      "ec": "2.8.3.22",
+      "substrates": [
+        {
+          "metabolite": "itaconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "itaconyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_8_3_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:38283"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:38283"
+          }
+        ]
+      }
+    }
+  ]
+}

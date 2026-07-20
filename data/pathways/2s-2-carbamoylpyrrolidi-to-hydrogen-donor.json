@@ -1,0 +1,248 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2s-2-carbamoylpyrrolidi-to-hydrogen-donor",
+  "name": "(2S)-2-carbamoylpyrrolidi… to hydrogen donor",
+  "category": "amino-acid-metabolism",
+  "summary": "A 3-step route from (2S)-2-carbamoylpyrrolidin-1-ium to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:26510"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58495"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2s_2_carbamoylpyrrolidin_1_ium",
+      "name": "(2S)-2-carbamoylpyrrolidin-1-ium",
+      "short": "2-carbamoylpyrrolid…",
+      "formula": "C5H11N2O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58495"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "l_proline",
+      "name": "L-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:60039"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "d_proline",
+      "name": "D-proline",
+      "formula": "C5H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57726"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "1_pyrroline_2_carboxylic_acid",
+      "name": "1-pyrroline-2-carboxylic acid",
+      "short": "1-pyrroline-2-carbo…",
+      "formula": "C5H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:39785"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_101",
+      "name": "L-proline amide hydrolase",
+      "ec": [
+        "3.5.1.101"
+      ]
+    },
+    {
+      "id": "ec_5_1_1_4",
+      "name": "proline racemase",
+      "ec": [
+        "5.1.1.4"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_13",
+      "name": "D-proline dehydrogenase",
+      "ec": [
+        "1.5.99.13"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "L-proline amide hydrolase",
+      "equation": "L-prolinamide + H2O = L-proline + NH4(+)",
+      "ec": "3.5.1.101",
+      "substrates": [
+        {
+          "metabolite": "2s_2_carbamoylpyrrolidin_1_ium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_101"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:26510"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26510"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "proline racemase",
+      "equation": "L-proline = D-proline",
+      "ec": "5.1.1.4",
+      "substrates": [
+        {
+          "metabolite": "l_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "d_proline",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_1_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10680"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10680"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "D-proline dehydrogenase",
+      "equation": "D-proline + A = 1-pyrroline-2-carboxylate + AH2",
+      "ec": "1.5.99.13",
+      "substrates": [
+        {
+          "metabolite": "d_proline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_pyrroline_2_carboxylic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:27306"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:27306"
+          }
+        ]
+      }
+    }
+  ]
+}

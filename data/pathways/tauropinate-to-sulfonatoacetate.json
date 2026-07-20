@@ -1,0 +1,293 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "tauropinate-to-sulfonatoacetate",
+  "name": "tauropinate to sulfonatoacetate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from tauropinate(1−) to sulfonatoacetate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12580"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57779"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "tauropinate",
+      "name": "tauropinate",
+      "formula": "C5H10NO5S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57779"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "taurine",
+      "name": "Taurine",
+      "formula": "C2H7NO3S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:507393"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sulfonatoacetaldehyde",
+      "name": "sulfonatoacetaldehyde",
+      "short": "sulfonatoacetaldehy…",
+      "formula": "C2H3O4S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58246"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "sulfonatoacetate",
+      "name": "sulfonatoacetate",
+      "formula": "C2H2O5S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58824"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_5_1_23",
+      "name": "tauropine dehydrogenase",
+      "ec": [
+        "1.5.1.23"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_77",
+      "name": "taurine--pyruvate aminotransferase",
+      "ec": [
+        "2.6.1.77"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_73",
+      "name": "sulfoacetaldehyde dehydrogenase",
+      "ec": [
+        "1.2.1.73"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tauropine dehydrogenase",
+      "equation": "tauropine + NAD(+) + H2O = taurine + pyruvate + NADH + H(+)",
+      "ec": "1.5.1.23",
+      "substrates": [
+        {
+          "metabolite": "tauropinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_1_23"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12580"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12580"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "taurine--pyruvate aminotransferase",
+      "equation": "taurine + pyruvate = sulfoacetaldehyde + L-alanine",
+      "ec": "2.6.1.77",
+      "substrates": [
+        {
+          "metabolite": "taurine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_77"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10420"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10420"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "sulfoacetaldehyde dehydrogenase",
+      "equation": "sulfoacetaldehyde + NAD(+) + H2O = sulfoacetate + NADH + 2 H(+)",
+      "ec": "1.2.1.73",
+      "substrates": [
+        {
+          "metabolite": "sulfonatoacetaldehyde",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "sulfonatoacetate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_73"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:25637"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25637"
+          }
+        ]
+      }
+    }
+  ]
+}

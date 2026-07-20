@@ -1,0 +1,300 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "l-kynurenine-to-6-imino-5-oxocyclohexa-1",
+  "name": "L-kynurenine to 6-imino-5-oxocyclohexa-1,…",
+  "category": "redox-detox",
+  "summary": "A 3-step route from L-kynurenine zwitterion to 6-imino-5-oxocyclohexa-1,3-diene-1-carboxylate, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:20545"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57959"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "l_kynurenine",
+      "name": "L-kynurenine",
+      "formula": "C10H12N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57959"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "3_hydroxy_l_kynurenine",
+      "name": "3-hydroxy-L-kynurenine",
+      "short": "3-hydroxy-L-kynuren…",
+      "formula": "C10H12N2O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58125"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "3_hydroxyanthranilate",
+      "name": "3-hydroxyanthranilate",
+      "short": "3-hydroxyanthranila…",
+      "formula": "C7H6NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36559"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "6_imino_5_oxocyclohexa_1_3_diene_1_carboxylate",
+      "name": "6-imino-5-oxocyclohexa-1,3-diene-1-carboxylate",
+      "short": "6-imino-5-oxocycloh…",
+      "formula": "C7H4NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57583"
+      }
+    },
+    {
+      "id": "h2o2",
+      "name": "Hydrogen peroxide",
+      "formula": "H2O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16240"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_13_9",
+      "name": "kynurenine 3-monooxygenase",
+      "ec": [
+        "1.14.13.9"
+      ]
+    },
+    {
+      "id": "ec_3_7_1_3",
+      "name": "kynureninase",
+      "ec": [
+        "3.7.1.3"
+      ]
+    },
+    {
+      "id": "ec_1_10_3_5",
+      "name": "3-hydroxyanthranilate oxidase",
+      "ec": [
+        "1.10.3.5"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "kynurenine 3-monooxygenase",
+      "equation": "L-kynurenine + NADPH + O2 + H(+) = 3-hydroxy-L-kynurenine + NADP(+) + H2O",
+      "ec": "1.14.13.9",
+      "substrates": [
+        {
+          "metabolite": "l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxy_l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_9"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:20545"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "kynureninase",
+      "equation": "3-hydroxy-L-kynurenine + H2O = 3-hydroxyanthranilate + L-alanine + H(+)",
+      "ec": "3.7.1.3",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxy_l_kynurenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_hydroxyanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_7_1_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:25143"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25143"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "3-hydroxyanthranilate oxidase",
+      "equation": "3-hydroxyanthranilate + O2 = 6-imino-5-oxocyclohexa-1,3-dienecarboxylate + H2O2",
+      "ec": "1.10.3.5",
+      "substrates": [
+        {
+          "metabolite": "3_hydroxyanthranilate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "6_imino_5_oxocyclohexa_1_3_diene_1_carboxylate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_10_3_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17245"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17245"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "benzene-to-1-2-benzoquinone",
+  "name": "benzene to 1,2-benzoquinone",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from benzene to 1,2-benzoquinone, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:13813"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16716"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "benzene",
+      "name": "benzene",
+      "formula": "C6H6",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16716"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "cis_cyclohexa_3_5_diene_1_2_diol",
+      "name": "cis-cyclohexa-3,5-diene-1,2-diol",
+      "short": "cis-cyclohexa-3,5-d…",
+      "formula": "C6H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16190"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "catechol",
+      "name": "catechol",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18135"
+      }
+    },
+    {
+      "id": "1_2_benzoquinone",
+      "name": "1,2-benzoquinone",
+      "formula": "C6H4O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17253"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_12_3",
+      "name": "benzene 1,2-dioxygenase",
+      "ec": [
+        "1.14.12.3"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_19",
+      "name": "cis-1,2-dihydrobenzene-1,2-diol dehydrogenase",
+      "ec": [
+        "1.3.1.19"
+      ]
+    },
+    {
+      "id": "ec_1_10_3_1",
+      "name": "catechol oxidase",
+      "ec": [
+        "1.10.3.1"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "benzene 1,2-dioxygenase",
+      "equation": "benzene + NADH + O2 + H(+) = cis-1,2-dihydrobenzene-1,2-diol + NAD(+)",
+      "ec": "1.14.12.3",
+      "substrates": [
+        {
+          "metabolite": "benzene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "cis_cyclohexa_3_5_diene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_12_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:13813"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13813"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cis-1,2-dihydrobenzene-1,2-diol dehydrogenase",
+      "equation": "cis-1,2-dihydrobenzene-1,2-diol + NAD(+) = catechol + NADH + H(+)",
+      "ec": "1.3.1.19",
+      "substrates": [
+        {
+          "metabolite": "cis_cyclohexa_3_5_diene_1_2_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:15457"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "catechol oxidase",
+      "equation": "2 catechol + O2 = 2 1,2-benzoquinone + 2 H2O",
+      "ec": "1.10.3.1",
+      "substrates": [
+        {
+          "metabolite": "catechol",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_2_benzoquinone",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_10_3_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:21632"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:21632"
+          }
+        ]
+      }
+    }
+  ]
+}

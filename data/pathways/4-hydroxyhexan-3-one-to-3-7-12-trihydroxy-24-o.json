@@ -1,0 +1,264 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-hydroxyhexan-3-one-to-3-7-12-trihydroxy-24-o",
+  "name": "4-hydroxyhexan-3-one to 3α,7α,12α-trihydroxy-24-o…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-hydroxyhexan-3-one to 3α,7α,12α-trihydroxy-24-oxo-5β-cholestan-26-oyl-CoA(4−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11100"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18351"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_hydroxyhexan_3_one",
+      "name": "4-hydroxyhexan-3-one",
+      "formula": "C6H12O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:18351"
+      }
+    },
+    {
+      "id": "propanal",
+      "name": "propanal",
+      "formula": "C3H6O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17153"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "propionyl_coa",
+      "name": "Propionyl-CoA",
+      "formula": "C24H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57392"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "choloyl_coa",
+      "name": "Choloyl-CoA",
+      "formula": "C45H70N7O20P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57373"
+      }
+    },
+    {
+      "id": "thca_24oxo_coa",
+      "name": "3alpha,7alpha,12alpha-Trihydroxy-5beta-24-oxocholestanoyl-CoA",
+      "short": "3alpha,7alpha,12alp…",
+      "formula": "C48H74N7O21P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:58507"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_1_2_35",
+      "name": "propioin synthase",
+      "ec": [
+        "4.1.2.35"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_87",
+      "name": "propanal dehydrogenase (CoA-propanoylating)",
+      "ec": [
+        "1.2.1.87"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_176",
+      "name": "propanoyl-CoA C-acyltransferase",
+      "ec": [
+        "2.3.1.176"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "propioin synthase",
+      "equation": "4-hydroxyhexan-3-one = 2 propanal",
+      "ec": "4.1.2.35",
+      "substrates": [
+        {
+          "metabolite": "4_hydroxyhexan_3_one",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_2_35"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11100"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "propanal dehydrogenase (CoA-propanoylating)",
+      "equation": "propanal + NAD(+) + CoA = propanoyl-CoA + NADH + H(+)",
+      "ec": "1.2.1.87",
+      "substrates": [
+        {
+          "metabolite": "propanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_87"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:36027"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:36027"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "propanoyl-CoA C-acyltransferase",
+      "equation": "choloyl-CoA + propanoyl-CoA = 3alpha,7alpha,12alpha-trihydroxy-24-oxo-5beta-cholestan-26-oyl-CoA + CoA",
+      "ec": "2.3.1.176",
+      "substrates": [
+        {
+          "metabolite": "choloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "propionyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "thca_24oxo_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_176"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16865"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16865"
+          }
+        ]
+      }
+    }
+  ]
+}

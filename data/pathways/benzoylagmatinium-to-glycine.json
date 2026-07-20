@@ -1,0 +1,354 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "benzoylagmatinium-to-glycine",
+  "name": "benzoylagmatinium to glycine",
+  "category": "other",
+  "summary": "A 4-step route from benzoylagmatinium to glycine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15065"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57708"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "benzoylagmatinium",
+      "name": "benzoylagmatinium",
+      "formula": "C12H19N4O",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57708"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "benzoate",
+      "name": "benzoate",
+      "formula": "C7H5O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16150"
+      }
+    },
+    {
+      "id": "agmatinium",
+      "name": "agmatinium",
+      "formula": "C5H16N4",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:58145"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "benzoyl_coa",
+      "name": "benzoyl-CoA",
+      "formula": "C28H36N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57369"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine",
+      "formula": "C2H5NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57305"
+      }
+    },
+    {
+      "id": "n_benzoylglycinate",
+      "name": "N-benzoylglycinate",
+      "formula": "C9H8NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:606565"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_40",
+      "name": "acylagmatine amidase",
+      "ec": [
+        "3.5.1.40"
+      ]
+    },
+    {
+      "id": "ec_6_2_1_25",
+      "name": "benzoate--CoA ligase",
+      "ec": [
+        "6.2.1.25"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_71",
+      "name": "glycine N-benzoyltransferase",
+      "ec": [
+        "2.3.1.71"
+      ]
+    },
+    {
+      "id": "ec_3_5_1_32",
+      "name": "hippurate hydrolase",
+      "ec": [
+        "3.5.1.32"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "acylagmatine amidase",
+      "equation": "N(4)-benzoylagmatine + H2O = benzoate + agmatine",
+      "ec": "3.5.1.40",
+      "substrates": [
+        {
+          "metabolite": "benzoylagmatinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "agmatinium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_40"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15065"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15065"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "benzoate--CoA ligase",
+      "equation": "benzoate + ATP + CoA = benzoyl-CoA + AMP + diphosphate",
+      "ec": "6.2.1.25",
+      "substrates": [
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_6_2_1_25"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10132"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10132"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycine N-benzoyltransferase",
+      "equation": "benzoyl-CoA + glycine = N-benzoylglycine + CoA + H(+)",
+      "ec": "2.3.1.71",
+      "substrates": [
+        {
+          "metabolite": "benzoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_benzoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_71"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:18493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:18493"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "hippurate hydrolase",
+      "equation": "N-benzoylglycine + H2O = benzoate + glycine",
+      "ec": "3.5.1.32",
+      "substrates": [
+        {
+          "metabolite": "n_benzoylglycinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "benzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_32"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:10424"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10424"
+          }
+        ]
+      }
+    }
+  ]
+}

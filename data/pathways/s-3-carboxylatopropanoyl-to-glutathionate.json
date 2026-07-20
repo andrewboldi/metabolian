@@ -1,0 +1,283 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-3-carboxylatopropanoyl-to-glutathionate",
+  "name": "S-(3-carboxylatopropanoyl… to glutathionate",
+  "category": "redox-detox",
+  "summary": "A 3-step route from S-(3-carboxylatopropanoyl)glutathionate(2−) to glutathionate(1−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:16713"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57556"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_3_carboxylatopropanoyl_glutathionate",
+      "name": "S-(3-carboxylatopropanoyl)glutathionate",
+      "short": "S-(3-carboxylatopro…",
+      "formula": "C14H19N3O9S",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57556"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gsh",
+      "name": "Glutathione (reduced, GSH)",
+      "short": "Glutathione…",
+      "formula": "C10H16N3O6S",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57925"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "nadp",
+      "name": "NADP+",
+      "formula": "C21H25N7O17P3",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58349"
+      }
+    },
+    {
+      "id": "gssg",
+      "name": "Glutathione disulfide (oxidized, GSSG)",
+      "short": "Glutathione…",
+      "formula": "C20H30N6O12S2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58297"
+      }
+    },
+    {
+      "id": "nadph",
+      "name": "NADPH",
+      "formula": "C21H26N7O17P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57783"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "coa_glutathione",
+      "name": "CoA-glutathione",
+      "formula": "C31H46N10O22P3S2",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:60023"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_2_13",
+      "name": "S-succinylglutathione hydrolase",
+      "ec": [
+        "3.1.2.13"
+      ]
+    },
+    {
+      "id": "ec_1_8_1_7",
+      "name": "glutathione-disulfide reductase",
+      "ec": [
+        "1.8.1.7"
+      ]
+    },
+    {
+      "id": "ec_1_8_4_3",
+      "name": "glutathione--CoA-glutathione transhydrogenase",
+      "ec": [
+        "1.8.4.3"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "S-succinylglutathione hydrolase",
+      "equation": "S-succinylglutathione + H2O = glutathione + succinate + H(+)",
+      "ec": "3.1.2.13",
+      "substrates": [
+        {
+          "metabolite": "s_3_carboxylatopropanoyl_glutathionate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_2_13"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:16713"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16713"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glutathione-disulfide reductase",
+      "equation": "2 glutathione + NADP(+) = glutathione disulfide + NADPH + H(+)",
+      "ec": "1.8.1.7",
+      "substrates": [
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 2
+        },
+        {
+          "metabolite": "nadp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadph",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_1_7"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:11740"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11740"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glutathione--CoA-glutathione transhydrogenase",
+      "equation": "glutathione disulfide + CoA = CoA-glutathione + glutathione",
+      "ec": "1.8.4.3",
+      "substrates": [
+        {
+          "metabolite": "gssg",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "coa_glutathione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "gsh",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_8_4_3"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13125"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13125"
+          }
+        ]
+      }
+    }
+  ]
+}

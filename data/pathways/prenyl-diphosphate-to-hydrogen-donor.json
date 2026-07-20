@@ -1,0 +1,293 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "prenyl-diphosphate-to-hydrogen-donor",
+  "name": "prenyl diphosphate to hydrogen donor",
+  "category": "nucleotide-metabolism",
+  "summary": "A 3-step route from prenyl diphosphate(3−) to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15285"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:57623"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "amp",
+      "name": "AMP",
+      "formula": "C10H12N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:456215"
+      }
+    },
+    {
+      "id": "n6_dimethylallyl_adenosine_5_phosphate",
+      "name": "N6-(dimethylallyl)adenosine 5'-phosphate",
+      "short": "N6-(dimethylallyl)a…",
+      "formula": "C15H20N5O7P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57526"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "n6_dimethylallyladenine",
+      "name": "N6-dimethylallyladenine",
+      "short": "N6-dimethylallylade…",
+      "formula": "C10H13N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17660"
+      }
+    },
+    {
+      "id": "d_ribofuranose_5_phosphate",
+      "name": "D-ribofuranose 5-phosphate",
+      "short": "D-ribofuranose 5-P",
+      "formula": "C5H9O8P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:78346"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "3_methylbut_2_enal",
+      "name": "3-methylbut-2-enal",
+      "formula": "C5H8O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15825"
+      }
+    },
+    {
+      "id": "adenine",
+      "name": "Adenine",
+      "formula": "C5H5N5",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16708"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_27",
+      "name": "adenylate dimethylallyltransferase (AMP-dependent)",
+      "ec": [
+        "2.5.1.27"
+      ]
+    },
+    {
+      "id": "ec_3_2_2_n1",
+      "name": "cytokinin riboside 5'-monophosphate phosphoribohydrolase",
+      "ec": [
+        "3.2.2.n1"
+      ]
+    },
+    {
+      "id": "ec_1_5_99_12",
+      "name": "cytokinin dehydrogenase",
+      "ec": [
+        "1.5.99.12"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "adenylate dimethylallyltransferase (AMP-dependent)",
+      "equation": "dimethylallyl diphosphate + AMP = N(6)-(dimethylallyl)adenosine 5'-phosphate + diphosphate",
+      "ec": "2.5.1.27",
+      "substrates": [
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "amp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_dimethylallyl_adenosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_27"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15285"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15285"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "cytokinin riboside 5'-monophosphate phosphoribohydrolase",
+      "equation": "N(6)-(dimethylallyl)adenosine 5'-phosphate + H2O = N(6)-dimethylallyladenine + D-ribose 5-phosphate",
+      "ec": "3.2.2.n1",
+      "substrates": [
+        {
+          "metabolite": "n6_dimethylallyl_adenosine_5_phosphate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n6_dimethylallyladenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "d_ribofuranose_5_phosphate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_2_2_n1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:48560"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48560"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "cytokinin dehydrogenase",
+      "equation": "N(6)-dimethylallyladenine + A + H2O = 3-methyl-2-butenal + adenine + AH2",
+      "ec": "1.5.99.12",
+      "substrates": [
+        {
+          "metabolite": "n6_dimethylallyladenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3_methylbut_2_enal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adenine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_5_99_12"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13625"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13625"
+          }
+        ]
+      }
+    }
+  ]
+}

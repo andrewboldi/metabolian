@@ -1,0 +1,297 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "4-acetamidobutanoate-to-succinate",
+  "name": "4-acetamidobutanoate to succinate",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from 4-acetamidobutanoate to succinate(2−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15897"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:11951"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "4_acetamidobutanoate",
+      "name": "4-acetamidobutanoate",
+      "formula": "C6H10NO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:11951"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "acetate",
+      "name": "Acetate",
+      "formula": "C2H3O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:30089"
+      }
+    },
+    {
+      "id": "akg",
+      "name": "2-Oxoglutarate",
+      "formula": "C5H4O5",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:16810"
+      }
+    },
+    {
+      "id": "4_oxobutanoate",
+      "name": "4-oxobutanoate",
+      "formula": "C4H5O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57706"
+      }
+    },
+    {
+      "id": "glutamate",
+      "name": "L-Glutamate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:29985"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "succinate",
+      "name": "Succinate",
+      "formula": "C4H4O4",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:30031"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_63",
+      "name": "4-acetamidobutyrate deacetylase",
+      "ec": [
+        "3.5.1.63"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_19",
+      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
+      "ec": [
+        "2.6.1.19"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_16",
+      "name": "succinate-semialdehyde dehydrogenase [NAD(P)(+)]",
+      "ec": [
+        "1.2.1.16"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_24",
+      "name": "succinate-semialdehyde dehydrogenase (NAD(+))",
+      "ec": [
+        "1.2.1.24"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "4-acetamidobutyrate deacetylase",
+      "equation": "4-acetamidobutanoate + H2O = 4-aminobutanoate + acetate",
+      "ec": "3.5.1.63",
+      "substrates": [
+        {
+          "metabolite": "4_acetamidobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "acetate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_63"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15897"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15897"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "4-aminobutyrate--2-oxoglutarate transaminase",
+      "equation": "4-aminobutanoate + 2-oxoglutarate = succinate semialdehyde + L-glutamate",
+      "ec": "2.6.1.19",
+      "substrates": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "akg",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_19"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23352"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23352"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "succinate-semialdehyde dehydrogenase [NAD(P)(+)]",
+      "equation": "succinate semialdehyde + NAD(+) + H2O = succinate + NADH + 2 H(+)",
+      "ec": "1.2.1.16",
+      "substrates": [
+        {
+          "metabolite": "4_oxobutanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "succinate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_16"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:13217"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13217"
+          }
+        ]
+      }
+    }
+  ]
+}

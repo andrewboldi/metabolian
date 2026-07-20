@@ -1,0 +1,246 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "s-s-butane-2-3-diol-to-butane-2-3-dione",
+  "name": "(S,S)-butane-2,3-diol to butane-2,3-dione",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from (S,S)-butane-2,3-diol to butane-2,3-dione, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:12184"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16812"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "s_s_butane_2_3_diol",
+      "name": "(S,S)-butane-2,3-diol",
+      "short": "(S,S)-butane-2,3-di…",
+      "formula": "C4H10O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16812"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "s_acetoin",
+      "name": "(S)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15687"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "r_acetoin",
+      "name": "(R)-acetoin",
+      "formula": "C4H8O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15686"
+      }
+    },
+    {
+      "id": "butane_2_3_dione",
+      "name": "butane-2,3-dione",
+      "formula": "C4H6O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16583"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_76",
+      "name": "(S,S)-butanediol dehydrogenase",
+      "ec": [
+        "1.1.1.76"
+      ]
+    },
+    {
+      "id": "ec_5_1_2_4",
+      "name": "acetoin racemase",
+      "ec": [
+        "5.1.2.4"
+      ]
+    },
+    {
+      "id": "ec_1_1_1_303",
+      "name": "diacetyl reductase [(R)-acetoin forming]",
+      "ec": [
+        "1.1.1.303"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(S,S)-butanediol dehydrogenase",
+      "equation": "(S,S)-butane-2,3-diol + NAD(+) = (S)-acetoin + NADH + H(+)",
+      "ec": "1.1.1.76",
+      "substrates": [
+        {
+          "metabolite": "s_s_butane_2_3_diol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "s_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_76"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:12184"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12184"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "acetoin racemase",
+      "equation": "(S)-acetoin = (R)-acetoin",
+      "ec": "5.1.2.4",
+      "substrates": [
+        {
+          "metabolite": "s_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_1_2_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:12092"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12092"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "diacetyl reductase [(R)-acetoin forming]",
+      "equation": "(R)-acetoin + NAD(+) = diacetyl + NADH + H(+)",
+      "ec": "1.1.1.303",
+      "substrates": [
+        {
+          "metabolite": "r_acetoin",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "butane_2_3_dione",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_303"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:22900"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22900"
+          }
+        ]
+      }
+    }
+  ]
+}

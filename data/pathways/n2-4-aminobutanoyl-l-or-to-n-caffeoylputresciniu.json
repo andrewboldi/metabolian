@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "n2-4-aminobutanoyl-l-or-to-n-caffeoylputresciniu",
+  "name": "N2-(4-aminobutanoyl)-L-or… to N-caffeoylputrescinium",
+  "category": "other",
+  "summary": "A 3-step route from N2-(4-aminobutanoyl)-L-ornithine(1+) to N-caffeoylputrescinium(1+), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:59624"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:143160"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "n2_4_aminobutanoyl_l_ornithine",
+      "name": "N2-(4-aminobutanoyl)-L-ornithine",
+      "short": "N2-(4-aminobutanoyl…",
+      "formula": "C9H20N3O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:143160"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "gaba",
+      "name": "γ-Aminobutyrate (GABA)",
+      "short": "γ-Aminobutyrate…",
+      "formula": "C4H9NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:59888"
+      }
+    },
+    {
+      "id": "ornithine",
+      "name": "L-Ornithine",
+      "formula": "C5H13N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:46911"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "1_4_butanediammonium",
+      "name": "1,4-butanediammonium",
+      "formula": "C4H14N2",
+      "charge": 2,
+      "xrefs": {
+        "chebi": "CHEBI:326268"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "trans_caffeoyl_coa",
+      "name": "trans-caffeoyl-CoA",
+      "formula": "C30H38N7O19P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:87136"
+      }
+    },
+    {
+      "id": "n_caffeoylputrescinium",
+      "name": "N-caffeoylputrescinium",
+      "short": "N-caffeoylputrescin…",
+      "formula": "C13H19N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58138"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_4_13_4",
+      "name": "Xaa-Arg dipeptidase",
+      "ec": [
+        "3.4.13.4"
+      ]
+    },
+    {
+      "id": "ec_4_1_1_17",
+      "name": "ornithine decarboxylase",
+      "ec": [
+        "4.1.1.17"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_138",
+      "name": "putrescine N-hydroxycinnamoyltransferase",
+      "ec": [
+        "2.3.1.138"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "Xaa-Arg dipeptidase",
+      "equation": "N(2)-(4-aminobutanoyl)-L-ornithine + H2O = 4-aminobutanoate + L-ornithine",
+      "ec": "3.4.13.4",
+      "substrates": [
+        {
+          "metabolite": "n2_4_aminobutanoyl_l_ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "gaba",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_4_13_4"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:59624"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:59624"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ornithine decarboxylase",
+      "equation": "L-ornithine + H(+) = putrescine + CO2",
+      "ec": "4.1.1.17",
+      "substrates": [
+        {
+          "metabolite": "ornithine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_1_1_17"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:22964"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22964"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "putrescine N-hydroxycinnamoyltransferase",
+      "equation": "(E)-caffeoyl-CoA + putrescine = N-caffeoylputrescine + CoA + H(+)",
+      "ec": "2.3.1.138",
+      "substrates": [
+        {
+          "metabolite": "trans_caffeoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "1_4_butanediammonium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "n_caffeoylputrescinium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_138"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:12436"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12436"
+          }
+        ]
+      }
+    }
+  ]
+}

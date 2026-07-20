@@ -4,7 +4,7 @@
 # edit the generator, not this file.
 
 pathway n4-n-acetyl-d-glucosam-to-n-acetyl-d-glucosamine "N4-(β-N-acetyl-D-glucosam… to N-acetyl-D-glucosamine…" {
-  spacing 152
+  spacing 236
 
   spine at 0,0 {
     n4_n_acetyl_d_glucosaminyl_l_asparagine

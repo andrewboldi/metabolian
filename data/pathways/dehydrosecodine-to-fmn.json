@@ -1,0 +1,367 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "dehydrosecodine-to-fmn",
+  "name": "dehydrosecodine to FMN",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from dehydrosecodine(1+) to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:81307"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:146237"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "dehydrosecodine",
+      "name": "dehydrosecodine",
+      "formula": "C21H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:146237"
+      }
+    },
+    {
+      "id": "tabersoninium",
+      "name": "tabersoninium",
+      "formula": "C21H25N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:57893"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "16_hydroxytabersoninium",
+      "name": "16-hydroxytabersoninium",
+      "short": "16-hydroxytabersoni…",
+      "formula": "C21H25N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58239"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "sam",
+      "name": "S-Adenosyl-L-methionine (SAM / AdoMet)",
+      "short": "S-Adenosyl-L-methio…",
+      "formula": "C15H23N6O5S",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:59789"
+      }
+    },
+    {
+      "id": "16_methoxytabersoninium",
+      "name": "16-methoxytabersoninium",
+      "short": "16-methoxytabersoni…",
+      "formula": "C22H27N2O3",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:58930"
+      }
+    },
+    {
+      "id": "sah",
+      "name": "S-Adenosyl-L-homocysteine (SAH / AdoHcy)",
+      "short": "S-Adenosyl-L-homocy…",
+      "formula": "C14H20N6O5S",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57856"
+      }
+    },
+    {
+      "id": "3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd",
+      "name": "(3R)-1,2-didehydro-3-hydroxy-16-methoxy-2,3-dihydrotabersoninium",
+      "short": "1,2-didehydro-3-hyd…",
+      "formula": "C22H27N2O4",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:136640"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_5_5_1_38",
+      "name": "tabersonine synthase",
+      "ec": [
+        "5.5.1.38"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_103",
+      "name": "tabersonine 16-hydroxylase",
+      "ec": [
+        "1.14.14.103"
+      ]
+    },
+    {
+      "id": "ec_2_1_1_94",
+      "name": "tabersonine 16-O-methyltransferase",
+      "ec": [
+        "2.1.1.94"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_50",
+      "name": "tabersonine 3-oxygenase",
+      "ec": [
+        "1.14.14.50"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "tabersonine synthase",
+      "equation": "dehydrosecodine = (-)-tabersonine",
+      "ec": "5.5.1.38",
+      "substrates": [
+        {
+          "metabolite": "dehydrosecodine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "tabersoninium",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:81307"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:81307"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "tabersonine 16-hydroxylase",
+      "equation": "(-)-tabersonine + reduced [NADPH--hemoprotein reductase] + O2 = 16-hydroxytabersonine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.103",
+      "substrates": [
+        {
+          "metabolite": "tabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_hydroxytabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_103"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:14133"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:14133"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "tabersonine 16-O-methyltransferase",
+      "equation": "16-hydroxytabersonine + S-adenosyl-L-methionine = 16-methoxytabersonine + S-adenosyl-L-homocysteine + H(+)",
+      "ec": "2.1.1.94",
+      "substrates": [
+        {
+          "metabolite": "16_hydroxytabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sam",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "16_methoxytabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "sah",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_1_94"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20992"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20992"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "tabersonine 3-oxygenase",
+      "equation": "16-methoxytabersonine + reduced [NADPH--hemoprotein reductase] + O2 = (3R)-1,2-didehydro-3-hydroxy-16-methoxy-2,3-dihydrotabersonine + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.50",
+      "substrates": [
+        {
+          "metabolite": "16_methoxytabersoninium",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "3r_1_2_didehydro_3_hydroxy_16_methoxy_2_3_dihyd",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:52480"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:52480"
+          }
+        ]
+      }
+    }
+  ]
+}

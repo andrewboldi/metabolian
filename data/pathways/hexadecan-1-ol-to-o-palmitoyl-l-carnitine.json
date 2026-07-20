@@ -1,0 +1,275 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "hexadecan-1-ol-to-o-palmitoyl-l-carnitine",
+  "name": "hexadecan-1-ol to O-palmitoyl-L-carnitine",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from hexadecan-1-ol to O-palmitoyl-L-carnitine, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:22056"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16125"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "hexadecan_1_ol",
+      "name": "hexadecan-1-ol",
+      "formula": "C16H34O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16125"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "hexadecanal",
+      "name": "hexadecanal",
+      "formula": "C16H32O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17600"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "palmitoyl_coa",
+      "name": "Palmitoyl-CoA",
+      "formula": "C37H62N7O17P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57379"
+      }
+    },
+    {
+      "id": "carnitine",
+      "name": "L-Carnitine",
+      "formula": "C7H15NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16347"
+      }
+    },
+    {
+      "id": "palmitoylcarnitine",
+      "name": "L-Palmitoylcarnitine",
+      "formula": "C23H45NO4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17490"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_1_1_164",
+      "name": "hexadecanol dehydrogenase",
+      "ec": [
+        "1.1.1.164"
+      ]
+    },
+    {
+      "id": "ec_1_2_1_42",
+      "name": "hexadecanal dehydrogenase (acylating)",
+      "ec": [
+        "1.2.1.42"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_21",
+      "name": "carnitine O-palmitoyltransferase",
+      "ec": [
+        "2.3.1.21"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "hexadecanol dehydrogenase",
+      "equation": "hexadecan-1-ol + NAD(+) = hexadecanal + NADH + H(+)",
+      "ec": "1.1.1.164",
+      "substrates": [
+        {
+          "metabolite": "hexadecan_1_ol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "hexadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_1_164"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:22056"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:22056"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "hexadecanal dehydrogenase (acylating)",
+      "equation": "hexadecanal + NAD(+) + CoA = hexadecanoyl-CoA + NADH + H(+)",
+      "ec": "1.2.1.42",
+      "substrates": [
+        {
+          "metabolite": "hexadecanal",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_2_1_42"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19705"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19705"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carnitine O-palmitoyltransferase",
+      "equation": "(R)-carnitine + hexadecanoyl-CoA = O-hexadecanoyl-(R)-carnitine + CoA",
+      "ec": "2.3.1.21",
+      "substrates": [
+        {
+          "metabolite": "carnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "palmitoyl_coa",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "palmitoylcarnitine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_21"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:12661"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:12661"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "1-o-acyl-sn-glycero-3-pho-to-hydrogen-donor",
+  "name": "1-O-acyl-sn-glycero-3-pho… to hydrogen donor",
+  "category": "lipid-metabolism",
+  "summary": "A 3-step route from 1-O-acyl-sn-glycero-3-phosphocholine to hydrogen donor, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:15177"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58168"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "1_o_acyl_sn_glycero_3_phosphocholine",
+      "name": "1-O-acyl-sn-glycero-3-phosphocholine",
+      "short": "1-O-acyl-sn-glycero…",
+      "formula": "C9H19NO7PR",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58168"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "choline_alfoscerate",
+      "name": "choline alfoscerate",
+      "formula": "C8H20NO6P",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16870"
+      }
+    },
+    {
+      "id": "fatty-acid",
+      "name": "Fatty acid",
+      "formula": "CO2R",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:28868"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "phosphocholine",
+      "name": "Phosphocholine",
+      "formula": "C5H13NO4P",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:295975"
+      }
+    },
+    {
+      "id": "glycerol",
+      "name": "glycerol",
+      "formula": "C3H8O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17754"
+      }
+    },
+    {
+      "id": "hydrogen_acceptor",
+      "name": "hydrogen acceptor",
+      "formula": "A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:13193"
+      }
+    },
+    {
+      "id": "dihydroxyacetone",
+      "name": "dihydroxyacetone",
+      "formula": "C3H6O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16016"
+      }
+    },
+    {
+      "id": "hydrogen_donor",
+      "name": "hydrogen donor",
+      "formula": "H2A",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17499"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_1_1_5",
+      "name": "lysophospholipase",
+      "ec": [
+        "3.1.1.5"
+      ]
+    },
+    {
+      "id": "ec_3_1_4_38",
+      "name": "glycerophosphocholine cholinephosphodiesterase",
+      "ec": [
+        "3.1.4.38"
+      ]
+    },
+    {
+      "id": "ec_1_1_99_22",
+      "name": "glycerol dehydrogenase (acceptor)",
+      "ec": [
+        "1.1.99.22"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "lysophospholipase",
+      "equation": "a 1-acyl-sn-glycero-3-phosphocholine + H2O = sn-glycerol 3-phosphocholine + a fatty acid + H(+)",
+      "ec": "3.1.1.5",
+      "substrates": [
+        {
+          "metabolite": "1_o_acyl_sn_glycero_3_phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "choline_alfoscerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fatty-acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_1_5"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:15177"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15177"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "glycerophosphocholine cholinephosphodiesterase",
+      "equation": "sn-glycerol 3-phosphocholine + H2O = phosphocholine + glycerol + H(+)",
+      "ec": "3.1.4.38",
+      "substrates": [
+        {
+          "metabolite": "choline_alfoscerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "phosphocholine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_1_4_38"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:19545"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:19545"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "glycerol dehydrogenase (acceptor)",
+      "equation": "glycerol + A = dihydroxyacetone + AH2",
+      "ec": "1.1.99.22",
+      "substrates": [
+        {
+          "metabolite": "glycerol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_acceptor",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "dihydroxyacetone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hydrogen_donor",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_1_99_22"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17493"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17493"
+          }
+        ]
+      }
+    }
+  ]
+}

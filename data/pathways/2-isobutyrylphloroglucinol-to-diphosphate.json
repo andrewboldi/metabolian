@@ -1,0 +1,245 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "2-isobutyrylphloroglucinol-to-diphosphate",
+  "name": "2-isobutyrylphloroglucinol to diphosphate",
+  "category": "other",
+  "summary": "A 3-step route from 2-isobutyrylphloroglucinol to diphosphate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:51772"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:133419"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "2_isobutyrylphloroglucinol",
+      "name": "2-isobutyrylphloroglucinol",
+      "short": "2-isobutyrylphlorog…",
+      "formula": "C10H12O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:133419"
+      }
+    },
+    {
+      "id": "dmapp",
+      "name": "Dimethylallyl diphosphate (DMAPP)",
+      "short": "Dimethylallyl PP…",
+      "formula": "C5H9O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:57623"
+      }
+    },
+    {
+      "id": "2_isobutyryl_4_prenylphloroglucinol",
+      "name": "2-isobutyryl-4-prenylphloroglucinol",
+      "short": "2-isobutyryl-4-pren…",
+      "formula": "C15H20O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134342"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "deoxycohumulone",
+      "name": "deoxycohumulone",
+      "formula": "C20H28O4",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:134353"
+      }
+    },
+    {
+      "id": "colupulone",
+      "name": "colupulone",
+      "formula": "C25H35O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:134349"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_5_1_136",
+      "name": "2-acylphloroglucinol 4-prenyltransferase",
+      "ec": [
+        "2.5.1.136"
+      ]
+    },
+    {
+      "id": "ec_2_5_1_137",
+      "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
+      "ec": [
+        "2.5.1.137"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "2-acylphloroglucinol 4-prenyltransferase",
+      "equation": "phlorisobutanophenone + dimethylallyl diphosphate = 4-prenylphlorisobutanophenone + diphosphate",
+      "ec": "2.5.1.136",
+      "substrates": [
+        {
+          "metabolite": "2_isobutyrylphloroglucinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_isobutyryl_4_prenylphloroglucinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_136"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:51772"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51772"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
+      "equation": "4-prenylphlorisobutanophenone + dimethylallyl diphosphate = deoxycohumulone + diphosphate",
+      "ec": "2.5.1.137",
+      "substrates": [
+        {
+          "metabolite": "2_isobutyryl_4_prenylphloroglucinol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "deoxycohumulone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_137"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:51776"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51776"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2-acyl-4-prenylphloroglucinol 6-prenyltransferase",
+      "equation": "deoxycohumulone + dimethylallyl diphosphate = colupulone + diphosphate + H(+)",
+      "ec": "2.5.1.137",
+      "substrates": [
+        {
+          "metabolite": "deoxycohumulone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "dmapp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "colupulone",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_5_1_137"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:51796"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:51796"
+          }
+        ]
+      }
+    }
+  ]
+}

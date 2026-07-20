@@ -1,0 +1,279 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "isochorismate-to-2-carboxylato-cis-cis-muc",
+  "name": "isochorismate to 2-carboxylato-cis,cis-muc…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from isochorismate(2−) to 2-carboxylato-cis,cis-muconate(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:11112"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:29780"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "isochorismate",
+      "name": "isochorismate",
+      "formula": "C10H8O6",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:29780"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2s_3s_2_3_dihydroxy_2_3_dihydrobenzoate",
+      "name": "(2S,3S)-2,3-dihydroxy-2,3-dihydrobenzoate",
+      "short": "(2S,3S)-2,3-dihydro…",
+      "formula": "C7H7O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:58764"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "2_3_dihydroxybenzoate",
+      "name": "2,3-dihydroxybenzoate",
+      "short": "2,3-dihydroxybenzoa…",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:36654"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "2_carboxylato_cis_cis_muconate",
+      "name": "2-carboxylato-cis,cis-muconate",
+      "short": "2-carboxylato-cis,c…",
+      "formula": "C7H3O6",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58114"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_3_2_1",
+      "name": "isochorismatase",
+      "ec": [
+        "3.3.2.1"
+      ]
+    },
+    {
+      "id": "ec_1_3_1_28",
+      "name": "2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase",
+      "ec": [
+        "1.3.1.28"
+      ]
+    },
+    {
+      "id": "ec_1_13_11_28",
+      "name": "2,3-dihydroxybenzoate 2,3-dioxygenase",
+      "ec": [
+        "1.13.11.28"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "isochorismatase",
+      "equation": "isochorismate + H2O = (2S,3S)-2,3-dihydroxy-2,3-dihydrobenzoate + pyruvate",
+      "ec": "3.3.2.1",
+      "substrates": [
+        {
+          "metabolite": "isochorismate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2s_3s_2_3_dihydroxy_2_3_dihydrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_3_2_1"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:11112"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:11112"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase",
+      "equation": "(2S,3S)-2,3-dihydroxy-2,3-dihydrobenzoate + NAD(+) = 2,3-dihydroxybenzoate + NADH + H(+)",
+      "ec": "1.3.1.28",
+      "substrates": [
+        {
+          "metabolite": "2s_3s_2_3_dihydroxy_2_3_dihydrobenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_3_1_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:23824"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:23824"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "2,3-dihydroxybenzoate 2,3-dioxygenase",
+      "equation": "2,3-dihydroxybenzoate + O2 = 2-carboxy-cis,cis-muconate + 2 H(+)",
+      "ec": "1.13.11.28",
+      "substrates": [
+        {
+          "metabolite": "2_3_dihydroxybenzoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_carboxylato_cis_cis_muconate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 2
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_13_11_28"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:15369"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:15369"
+          }
+        ]
+      }
+    }
+  ]
+}

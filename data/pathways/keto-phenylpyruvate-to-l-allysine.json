@@ -1,0 +1,370 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "keto-phenylpyruvate-to-l-allysine",
+  "name": "keto-phenylpyruvate to L-allysine",
+  "category": "amino-acid-metabolism",
+  "summary": "A 4-step route from keto-phenylpyruvate to L-allysine zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:17593"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:18005"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "keto_phenylpyruvate",
+      "name": "keto-phenylpyruvate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:18005"
+      }
+    },
+    {
+      "id": "glutamine",
+      "name": "L-Glutamine",
+      "formula": "C5H10N2O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58359"
+      }
+    },
+    {
+      "id": "2_oxoglutaramate",
+      "name": "2-oxoglutaramate",
+      "formula": "C5H6NO4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:16769"
+      }
+    },
+    {
+      "id": "l_phenylalanine",
+      "name": "L-phenylalanine",
+      "formula": "C9H11NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58095"
+      }
+    },
+    {
+      "id": "pyruvate",
+      "name": "Pyruvate",
+      "formula": "C3H3O3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:15361"
+      }
+    },
+    {
+      "id": "alanine",
+      "name": "L-Alanine",
+      "formula": "C3H7NO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:57972"
+      }
+    },
+    {
+      "id": "pimeloyl_coa",
+      "name": "pimeloyl-CoA",
+      "formula": "C28H41N7O19P3S",
+      "charge": -5,
+      "xrefs": {
+        "chebi": "CHEBI:57360"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "8s_8_amino_7_oxononanoic_acid",
+      "name": "(8S)-8-amino-7-oxononanoic acid",
+      "short": "8-amino-7-oxononano…",
+      "formula": "C9H17NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:149468"
+      }
+    },
+    {
+      "id": "co2",
+      "name": "CO2",
+      "formula": "CO2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16526"
+      }
+    },
+    {
+      "id": "coa",
+      "name": "Coenzyme A (CoA-SH)",
+      "formula": "C21H32N7O16P3S",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:57287"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "7r_8s_7_8_diammoniononanoate",
+      "name": "(7R,8S)-7,8-diammoniononanoate",
+      "short": "(7R,8S)-7,8-diammon…",
+      "formula": "C9H21N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:149469"
+      }
+    },
+    {
+      "id": "l_allysine",
+      "name": "L-allysine",
+      "formula": "C6H11NO3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58321"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_2_6_1_64",
+      "name": "glutamine--phenylpyruvate transaminase",
+      "ec": [
+        "2.6.1.64"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_58",
+      "name": "phenylalanine(histidine) transaminase",
+      "ec": [
+        "2.6.1.58"
+      ]
+    },
+    {
+      "id": "ec_2_3_1_47",
+      "name": "8-amino-7-oxononanoate synthase",
+      "ec": [
+        "2.3.1.47"
+      ]
+    },
+    {
+      "id": "ec_2_6_1_105",
+      "name": "lysine--8-amino-7-oxononanoate transaminase",
+      "ec": [
+        "2.6.1.105"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "glutamine--phenylpyruvate transaminase",
+      "equation": "3-phenylpyruvate + L-glutamine = 2-oxoglutaramate + L-phenylalanine",
+      "ec": "2.6.1.64",
+      "substrates": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "glutamine",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2_oxoglutaramate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_64"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:17593"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17593"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "phenylalanine(histidine) transaminase",
+      "equation": "L-phenylalanine + pyruvate = 3-phenylpyruvate + L-alanine",
+      "ec": "2.6.1.58",
+      "substrates": [
+        {
+          "metabolite": "l_phenylalanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pyruvate",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "keto_phenylpyruvate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_58"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:13053"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:13053"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "8-amino-7-oxononanoate synthase",
+      "equation": "6-carboxyhexanoyl-CoA + L-alanine + H(+) = (8S)-8-amino-7-oxononanoate + CO2 + CoA",
+      "ec": "2.3.1.47",
+      "substrates": [
+        {
+          "metabolite": "pimeloyl_coa",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "alanine",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "8s_8_amino_7_oxononanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "co2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "coa",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_3_1_47"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:20712"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:20712"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "name": "lysine--8-amino-7-oxononanoate transaminase",
+      "equation": "(8S)-8-amino-7-oxononanoate + L-lysine = (7R,8S)-7,8-diammoniononanoate + (S)-2-amino-6-oxohexanoate",
+      "ec": "2.6.1.105",
+      "substrates": [
+        {
+          "metabolite": "8s_8_amino_7_oxononanoic_acid",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "7r_8s_7_8_diammoniononanoate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_allysine",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_6_1_105"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 4,
+      "xrefs": {
+        "rhea": "RHEA:26329"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:26329"
+          }
+        ]
+      }
+    }
+  ]
+}

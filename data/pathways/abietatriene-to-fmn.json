@@ -1,0 +1,299 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "abietatriene-to-fmn",
+  "name": "abietatriene to FMN",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from abietatriene to FMN(3−), ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:48080"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:86062"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "abietatriene",
+      "name": "abietatriene",
+      "formula": "C20H30",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:86062"
+      }
+    },
+    {
+      "id": "fmnh2",
+      "name": "FMNH2",
+      "formula": "C17H21N4O9P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57618"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "ferruginol",
+      "name": "ferruginol",
+      "formula": "C20H30O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:78274"
+      }
+    },
+    {
+      "id": "fmn",
+      "name": "FMN",
+      "formula": "C17H18N4O9P",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58210"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "11_hydroxyferruginol",
+      "name": "11-hydroxyferruginol",
+      "formula": "C20H30O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:138942"
+      }
+    },
+    {
+      "id": "carnosate",
+      "name": "carnosate",
+      "formula": "C20H27O4",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:138943"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_1_14_14_175",
+      "name": "ferruginol synthase",
+      "ec": [
+        "1.14.14.175"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_60",
+      "name": "ferruginol monooxygenase",
+      "ec": [
+        "1.14.14.60"
+      ]
+    },
+    {
+      "id": "ec_1_14_14_61",
+      "name": "carnosic acid synthase",
+      "ec": [
+        "1.14.14.61"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "ferruginol synthase",
+      "equation": "abieta-8,11,13-triene + reduced [NADPH--hemoprotein reductase] + O2 = ferruginol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.175",
+      "substrates": [
+        {
+          "metabolite": "abietatriene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "ferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_175"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:48080"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:48080"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "ferruginol monooxygenase",
+      "equation": "ferruginol + reduced [NADPH--hemoprotein reductase] + O2 = 11-hydroxyferruginol + oxidized [NADPH--hemoprotein reductase] + H2O + H(+)",
+      "ec": "1.14.14.60",
+      "substrates": [
+        {
+          "metabolite": "ferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "11_hydroxyferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_60"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:55428"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55428"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "carnosic acid synthase",
+      "equation": "11-hydroxyferruginol + 3 reduced [NADPH--hemoprotein reductase] + 3 O2 = carnosate + 3 oxidized [NADPH--hemoprotein reductase] + 4 H2O + 4 H(+)",
+      "ec": "1.14.14.61",
+      "substrates": [
+        {
+          "metabolite": "11_hydroxyferruginol",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmnh2",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 3
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carnosate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "fmn",
+          "stoichiometry": 3
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 4
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 4
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_14_61"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:55432"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:55432"
+          }
+        ]
+      }
+    }
+  ]
+}

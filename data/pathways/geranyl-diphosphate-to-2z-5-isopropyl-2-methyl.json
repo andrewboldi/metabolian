@@ -1,0 +1,274 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "geranyl-diphosphate-to-2z-5-isopropyl-2-methyl",
+  "name": "geranyl diphosphate to (2Z)-5-isopropyl-2-methyl…",
+  "category": "energy-metabolism",
+  "summary": "A 3-step route from geranyl diphosphate(3−) to (2Z)-5-isopropyl-2-methylhexa-2,5-dienal, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:25488"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:58057"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "gpp",
+      "name": "Geranyl diphosphate (GPP)",
+      "short": "Geranyl PP (GPP)",
+      "formula": "C10H17O7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:58057"
+      }
+    },
+    {
+      "id": "pinene",
+      "name": "(−)-α-pinene",
+      "formula": "C10H16",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:28660"
+      }
+    },
+    {
+      "id": "ppi",
+      "name": "Diphosphate (PPi)",
+      "formula": "HO7P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:33019"
+      }
+    },
+    {
+      "id": "nadh",
+      "name": "NADH",
+      "formula": "C21H27N7O14P2",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:57945"
+      }
+    },
+    {
+      "id": "o2",
+      "name": "Dioxygen (O2)",
+      "formula": "O2",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15379"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "pinene_oxide",
+      "name": "α-pinene oxide",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:29060"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD+",
+      "formula": "C21H26N7O14P2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:57540"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "2z_5_isopropyl_2_methylhexa_2_5_dienal",
+      "name": "(2Z)-5-isopropyl-2-methylhexa-2,5-dienal",
+      "short": "5-isopropyl-2-methy…",
+      "formula": "C10H16O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:17546"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_4_2_3_119",
+      "name": "(-)-alpha-pinene synthase",
+      "ec": [
+        "4.2.3.119"
+      ]
+    },
+    {
+      "id": "ec_1_14_13_155",
+      "name": "alpha-pinene monooxygenase",
+      "ec": [
+        "1.14.13.155"
+      ]
+    },
+    {
+      "id": "ec_5_5_1_10",
+      "name": "alpha-pinene-oxide decyclase",
+      "ec": [
+        "5.5.1.10"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "(-)-alpha-pinene synthase",
+      "equation": "(2E)-geranyl diphosphate = (1S,5S)-alpha-pinene + diphosphate",
+      "ec": "4.2.3.119",
+      "substrates": [
+        {
+          "metabolite": "gpp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "ppi",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_4_2_3_119"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:25488"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:25488"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "alpha-pinene monooxygenase",
+      "equation": "(1S,5S)-alpha-pinene + NADH + O2 + H(+) = alpha-pinene oxide + NAD(+) + H2O",
+      "ec": "1.14.13.155",
+      "substrates": [
+        {
+          "metabolite": "pinene",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nadh",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "o2",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "pinene_oxide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nad",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_1_14_13_155"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:32891"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:32891"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "alpha-pinene-oxide decyclase",
+      "equation": "alpha-pinene oxide = (Z)-2-methyl-5-isopropylhexa-2,5-dienal",
+      "ec": "5.5.1.10",
+      "substrates": [
+        {
+          "metabolite": "pinene_oxide",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "2z_5_isopropyl_2_methylhexa_2_5_dienal",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_5_5_1_10"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:16693"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:16693"
+          }
+        ]
+      }
+    }
+  ]
+}

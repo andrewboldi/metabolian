@@ -1,0 +1,306 @@
+{
+  "$schema": "../../schema/pathway.schema.json",
+  "id": "pentanamide-to-l-homocitrulline",
+  "name": "pentanamide to L-homocitrulline",
+  "category": "other",
+  "summary": "A 3-step route from pentanamide to L-homocitrulline zwitterion, ingested from Rhea. Every step is curated by Rhea and independently verified here to balance in mass and charge.",
+  "provenance": {
+    "confidence": "high",
+    "sources": [
+      {
+        "db": "Rhea",
+        "id": "RHEA:10000"
+      },
+      {
+        "db": "ChEBI",
+        "id": "CHEBI:16459"
+      }
+    ]
+  },
+  "metabolites": [
+    {
+      "id": "pentanamide",
+      "name": "pentanamide",
+      "formula": "C5H11NO",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:16459"
+      }
+    },
+    {
+      "id": "h2o",
+      "name": "Water",
+      "formula": "H2O",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:15377"
+      }
+    },
+    {
+      "id": "valerate",
+      "name": "valerate",
+      "formula": "C5H9O2",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:31011"
+      }
+    },
+    {
+      "id": "nh3",
+      "name": "Ammonia (NH3)",
+      "formula": "H4N",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:28938"
+      }
+    },
+    {
+      "id": "hco3",
+      "name": "Bicarbonate (HCO3-)",
+      "formula": "CHO3",
+      "charge": -1,
+      "xrefs": {
+        "chebi": "CHEBI:17544"
+      }
+    },
+    {
+      "id": "atp",
+      "name": "ATP",
+      "formula": "C10H12N5O13P3",
+      "charge": -4,
+      "xrefs": {
+        "chebi": "CHEBI:30616"
+      }
+    },
+    {
+      "id": "carbamoyl_p",
+      "name": "Carbamoyl phosphate",
+      "formula": "CH2NO5P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:58228"
+      }
+    },
+    {
+      "id": "adp",
+      "name": "ADP",
+      "formula": "C10H12N5O10P2",
+      "charge": -3,
+      "xrefs": {
+        "chebi": "CHEBI:456216"
+      }
+    },
+    {
+      "id": "hplus",
+      "name": "Proton (H+)",
+      "formula": "H",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:15378"
+      }
+    },
+    {
+      "id": "l_lysinium",
+      "name": "L-lysinium",
+      "formula": "C6H15N2O2",
+      "charge": 1,
+      "xrefs": {
+        "chebi": "CHEBI:32551"
+      }
+    },
+    {
+      "id": "l_homocitrulline",
+      "name": "L-homocitrulline",
+      "formula": "C7H15N3O3",
+      "charge": 0,
+      "xrefs": {
+        "chebi": "CHEBI:58148"
+      }
+    },
+    {
+      "id": "pi",
+      "name": "Orthophosphate (Pi)",
+      "formula": "HO4P",
+      "charge": -2,
+      "xrefs": {
+        "chebi": "CHEBI:43474"
+      }
+    }
+  ],
+  "enzymes": [
+    {
+      "id": "ec_3_5_1_50",
+      "name": "pentanamidase",
+      "ec": [
+        "3.5.1.50"
+      ]
+    },
+    {
+      "id": "ec_2_7_2_2",
+      "name": "carbamate kinase",
+      "ec": [
+        "2.7.2.2"
+      ]
+    },
+    {
+      "id": "ec_2_1_3_8",
+      "name": "lysine carbamoyltransferase",
+      "ec": [
+        "2.1.3.8"
+      ]
+    }
+  ],
+  "reactions": [
+    {
+      "id": "r1",
+      "name": "pentanamidase",
+      "equation": "pentanamide + H2O = pentanoate + NH4(+)",
+      "ec": "3.5.1.50",
+      "substrates": [
+        {
+          "metabolite": "pentanamide",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "valerate",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_3_5_1_50"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 1,
+      "xrefs": {
+        "rhea": "RHEA:10000"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "name": "carbamate kinase",
+      "equation": "hydrogencarbonate + NH4(+) + ATP = carbamoyl phosphate + ADP + H2O + H(+)",
+      "ec": "2.7.2.2",
+      "substrates": [
+        {
+          "metabolite": "hco3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "nh3",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "atp",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "adp",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "h2o",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_7_2_2"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 2,
+      "xrefs": {
+        "rhea": "RHEA:10152"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:10152"
+          }
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "name": "lysine carbamoyltransferase",
+      "equation": "carbamoyl phosphate + L-lysine = L-homocitrulline + phosphate + H(+)",
+      "ec": "2.1.3.8",
+      "substrates": [
+        {
+          "metabolite": "carbamoyl_p",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "l_lysinium",
+          "stoichiometry": 1
+        }
+      ],
+      "products": [
+        {
+          "metabolite": "l_homocitrulline",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "pi",
+          "stoichiometry": 1
+        },
+        {
+          "metabolite": "hplus",
+          "stoichiometry": 1
+        }
+      ],
+      "catalysts": [
+        {
+          "enzyme": "ec_2_1_3_8"
+        }
+      ],
+      "reversibility": "reversible",
+      "pathwayStep": 3,
+      "xrefs": {
+        "rhea": "RHEA:17121"
+      },
+      "provenance": {
+        "confidence": "high",
+        "sources": [
+          {
+            "db": "Rhea",
+            "id": "RHEA:17121"
+          }
+        ]
+      }
+    }
+  ]
+}
