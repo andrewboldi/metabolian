@@ -14,7 +14,15 @@ async function main() {
   const root = document.getElementById("pathway-root")!;
   let sub: Sub;
   try { sub = await getJSON<Sub>(`graph/pathways/${id}.json`); }
-  catch { root.innerHTML = `<p class="muted">Pathway "${id}" not found. <a href="${asset("explore.html")}">Open the chart →</a></p>`; return; }
+  catch {
+    // Build with el() so the URL-supplied id lands as a text node (escaped),
+    // not interpolated into innerHTML — closes the js/xss DOM sink.
+    root.replaceChildren(el("p.muted", {}, [
+      `Pathway "${id}" not found. `,
+      el("a", { href: asset("explore.html") }, ["Open the chart →"]),
+    ]));
+    return;
+  }
 
   document.title = `${sub.name} — Metabolian`;
   const reactions = sub.nodes.filter((n) => n.kind === "reaction").sort((a, b) => (a.data.pathwayStep ?? 0) - (b.data.pathwayStep ?? 0));

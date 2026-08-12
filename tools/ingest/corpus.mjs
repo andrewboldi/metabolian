@@ -36,13 +36,18 @@ export const CURRENCY = new Set([
  *  "i-r-i-linalool" and "small-l-small-saccharopinate" — unreadable as a name and
  *  worse as a module id. Strip the tags, keep the letter they wrap. */
 export function cleanName(raw) {
-  return String(raw || "")
-    .replace(/<[^>]+>/g, "")
+  // Decode entities FIRST so entity-encoded markup ("&lt;i&gt;") becomes real
+  // tags the strip below removes, instead of surviving as literal text.
+  let s = String(raw || "")
+    .replace(/&(amp|lt|gt|quot|#39);/g, (m) => ({ "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'" }[m] || m));
+  // Strip tags repeatedly: one pass over <…> can splice two fragments ("<sc" +
+  // "ript>") back into a fresh tag, so loop until the text stops changing.
+  for (let prev; s !== prev; ) { prev = s; s = s.replace(/<[^>]+>/g, ""); }
+  return s
     // ChEBI writes the prime in a locant as an ASCII quote: 4"-O-acyl. Left as
     // one it terminates the quoted title in a .mpl file and the sheet fails to
     // parse — and the double prime is the correct character for it anyway.
     .replace(/"/g, "\u2033")
-    .replace(/&(amp|lt|gt|quot|#39);/g, (m) => ({ "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'" }[m] || m))
     .replace(/\s+/g, " ")
     .trim();
 }

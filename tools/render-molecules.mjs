@@ -32,10 +32,14 @@ export function safeKey(key) {
  * background so structures sit on the chart, and let stroke colour inherit.
  */
 export function cleanSvg(svg) {
-  return svg
+  let s = svg
     .replace(/<\?xml[^>]*\?>/g, "")
-    .replace(/<!DOCTYPE[^>]*>/g, "")
-    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<!DOCTYPE[^>]*>/g, "");
+  // Strip comments repeatedly: a single pass over <!--…--> can splice two partial
+  // delimiters ("<!-" + "->") into a fresh comment, and an unterminated "<!--"
+  // must go too — so loop until the markup stops changing.
+  for (let prev; s !== prev; ) { prev = s; s = s.replace(/<!--[\s\S]*?(?:-->|$)/g, ""); }
+  return s
     // Collapse whitespace BEFORE matching tags. RDKit emits the ground rect as
     // `<rect …>\n</rect>`, so every rule below that expected `></rect>` silently
     // missed while looking correct in isolation — which is exactly how the rect
@@ -114,4 +118,6 @@ async function main() {
   console.log(`Rendered ${ok} molecule SVGs (${skipped} without SMILES, ${macro} macromolecules named not drawn, ${failed} failed) -> web/public/mol/`);
 }
 
-main();
+// Only render when run directly (`node tools/render-molecules.mjs`); importing
+// cleanSvg for tests must not kick off the RDKit pipeline.
+if (import.meta.url === `file://${process.argv[1]}`) main();
