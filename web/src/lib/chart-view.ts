@@ -18,7 +18,7 @@ function s<K extends keyof SVGElementTagNameMap>(tag: K, attrs: Attrs = {}, kids
 export interface ChartNode {
   id: string; metabolite: string; label: string; x: number; y: number; w: number; h: number;
   formula: string | null; mol: string | null; molSize: { w: number; h: number } | null;
-  xrefs: Record<string, unknown>; lane: string;
+  xrefs: Record<string, unknown>; lane: string; charge?: number | null;
 }
 export interface ChartRxn {
   id: string; kind: string; enzyme: string | null; enzymeName: string | null; ec: string | null;
@@ -234,28 +234,15 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     layerRegions.append(g);
   }
 
+  // Regions are kept as data-only markers \u2014 the ties and connectors are what draw
+  // the cross-pathway flow. The Roche-style boxed frames and section-title chips
+  // are intentionally NOT drawn: the atlas reads as one contiguous metabolism, not
+  // a grid of boxed sections. regionLabels stays empty so declutterLabels no-ops.
   const regionLabels: { el: SVGGElement; reg: any; short: string }[] = [];
   for (const reg of master.regions || []) {
-    const g = s("g", { class: "region", "data-region": reg.id });
-    g.append(s("rect", { class: "region-frame", x: reg.x - 40, y: reg.y - 40, width: reg.w + 80, height: reg.h + 80, rx: 4 }));
-    // Roche-style boxed section title
-    const label = s("g", { class: "region-title" });
-    const tw = Math.max(160, reg.title.length * 9.2);
-    label.append(s("rect", { x: reg.x - 40, y: reg.y - 84, width: tw, height: 30, rx: 3 }));
-    const titleText = s("text", { x: reg.x - 30, y: reg.y - 64 }, [reg.title]);
-    label.append(titleText);
-    label.append(s("text", { class: "region-ref", x: reg.x - 30 + tw - 14, y: reg.y - 64 }, [reg.ref]));
-    layerRegions.append(g);
-    layerLabels.append(label);
-    // The overview label must be SHORT, not merely de-parenthesised. Ingested
-    // sheets are titled from systematic compound names, and at overview zoom a
-    // 90-character title printed across three neighbouring regions.
-    const bare = reg.title.replace(/\s*\(.*$/, "");
-    const short = bare.length <= 34 ? bare : `${bare.slice(0, 33).replace(/\s+\S*$/, "")}\u2026`;
-    regionLabels.push({ el: label, reg, short });
+    layerRegions.append(s("g", { class: "region", "data-region": reg.id }));
   }
 
-  const nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
   const enzymeLabels: {
     name: SVGTextElement; ec: SVGTextElement | null; mx: number; my: number;
     full: string; shown: string;
@@ -281,8 +268,6 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   const CROWDED = ir.nodes.length > 400;
   /** Cells on a crowded chart whose text has not been built yet, keyed by node id. */
   const pendingText = new Map<string, { fill: () => void; n: ChartNode }>();
-  /** .met-formula font size — the band the formula occupies at the cell foot. */
-  const FORMULA_FONT = 9;
   /** .enz-ec font size — used to reconstruct an EC's box when CSS has it hidden. */
   const EC_FONT = 8.5;
   const regGlyphs: { el: SVGGElement; x: number; y: number; cap: number }[] = [];
@@ -498,20 +483,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
         class: "cond-row lod-normal", x: n.w / 2, y: top + 12 + i * 13,
       }, [row])));
     }
-    if (n.formula) g.append(s("text", { class: "met-formula lod-detail", x: n.w / 2, y: n.h - 4 }, [n.formula]));
     // a condensed cell is text all the way down; every other cell only at the top.
     // A protein chip paints its name at y=34, BELOW `top` (=23 for one line), so
     // reserving y..y+top left the one label the placer most needs to see invisible
     // to it — measure the real ink bottom instead of assuming the metabolite layout.
     const inkBot = (isProtein ? 34 : 12) + (shown.length - 1) * 11 + 4;
     if (!CROWDED) nameBoxes.push({ x: n.x, y: n.y, w: n.w, h: cond?.length ? n.h : Math.max(top, inkBot) });
-    // The molecular formula is text too, and it sits at the FOOT of the cell —
-    // outside the name band reserved above. Placers therefore treated the bottom
-    // of every structure cell as free paper and dropped effector tags and
-    // cofactor captions straight onto the formula.
-    if (n.formula && !cond?.length && !CROWDED) {
-      nameBoxes.push({ x: n.x, y: n.y + n.h - 4 - FORMULA_FONT, w: n.w, h: FORMULA_FONT + 4 });
-    }
     g.setAttribute("data-structure-top", String(top));
     };
     if (CROWDED) pendingText.set(n.id, { fill: fillText, n });
