@@ -92,6 +92,18 @@
 .traced .dimmed { opacity: 0.08; }
 .trace-hit { stroke: #d43900 !important; stroke-width: 3.2 !important; }
 .trace-hit-node .met-box { stroke: #d43900; stroke-width: 2.4; }
+/* Long-range isolation, layered on the trace above. When a metabolite (or a
+   tie/connector) is selected, the ties/connectors that couple it — or its pathway
+   region — brighten and thicken via `.xtalk-hit`, while the unrelated ones fall
+   back with the same `.dimmed` the chemistry uses. That is the whole point: a
+   distant coupling reads on demand, then clears, so the chart never becomes a ball
+   of yarn. Registry colours are LAW (arrows.json) — the tie stays blue, the
+   connector magenta — so only weight and opacity change here, never hue. No
+   transition is used, so an instant opacity change needs no reduced-motion guard. */
+.traced .xtalk-hit .tie-line { opacity: 1; stroke-width: 2.6; }
+.traced .xtalk-hit .tie-label { font-weight: 600; }
+.traced .xtalk-hit .connector-line { opacity: 1; stroke-width: 3.4; }
+.traced .xtalk-hit .connector-label { font-weight: 700; }
 
 /* ---- HUD ---- */
 .chart-hud { position: absolute; top: var(--sp-4); left: var(--sp-4); z-index: 5; display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;
@@ -147,6 +159,8 @@
   fill: #231F20; letter-spacing: .03em; text-anchor: middle; }
 .met-box.name-only { stroke: #231F20; stroke-width: 1.5; }
 /* shared-compound ties — adjacent pathways flowing into one another */
+/* Both long-range layers are click targets now (isolate the coupling on click). */
+.tie, .connector { cursor: pointer; }
 .tie-line { stroke: #254991; stroke-width: 1.2; fill: none; stroke-dasharray: 9 4; opacity: .75; }
 .tie-label { font-family: Inter, "Helvetica Neue", system-ui, sans-serif; font-size: 9px; fill: #254991;
   paint-order: stroke; stroke: #fff; stroke-width: 3px; }

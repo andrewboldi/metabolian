@@ -205,12 +205,24 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
     }
     layerGrid.append(s("rect", { class: "grid-frame", x: b.x, y: b.y, width: b.w, height: b.h }));
   }
+  // Long-range links — the shared-compound `ties` and the pathway-crosstalk
+  // `connectors` — indexed by the DOM group plus the {from,to,metabolite} triple
+  // they couple, so trace() can isolate the ones touching a clicked node and dim
+  // the rest. Both layers share the same triple, so one registry serves both. The
+  // array stays empty on a single sheet (no ties/connectors), where tracing is
+  // therefore unchanged.
+  type Crosstalk = { from: string; to: string; metabolite: string };
+  const crosstalkEls: { el: SVGGElement; link: Crosstalk }[] = [];
+
   // shared-compound ties: adjacent pathways flowing into one another
   for (const t of (master as any).ties || []) {
     const g = s("g", { class: "tie lod-normal" });
     g.append(s("polyline", { class: "tie-line", points: t.points.map((p: number[]) => p.join(",")).join(" ") }));
     const mid = t.points[Math.floor(t.points.length / 2)];
     g.append(s("text", { class: "tie-label", x: mid[0] + 5, y: mid[1] - 4 }, [t.label || t.metabolite]));
+    crosstalkEls.push({ el: g, link: t });
+    // Clicking the link itself isolates the coupling on its own (chemistry left lit).
+    g.addEventListener("click", (e) => { e.stopPropagation(); focusCrosstalk(t); });
     layerRegions.append(g);
   }
 
@@ -231,6 +243,8 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       class: "connector-label", x: x2 + c.dir * 6, y: y - 4,
       "text-anchor": c.dir > 0 ? "start" : "end",
     }, [`${c.label} ${c.ref}`]));
+    crosstalkEls.push({ el: g, link: c });
+    g.addEventListener("click", (e) => { e.stopPropagation(); focusCrosstalk(c); });
     layerRegions.append(g);
   }
 
@@ -1225,12 +1239,37 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
   }
 
   // ---------- tracing ----------
-  function trace(nodeId: string | null) {
-    if (!nodeId) {
-      svg.classList.remove("traced");
-      svg.querySelectorAll(".dimmed,.trace-hit,.trace-hit-node").forEach((e) => e.classList.remove("dimmed", "trace-hit", "trace-hit-node"));
-      return;
+  /** Drop every isolation state — same-sheet chemistry AND the long-range links —
+   *  so the chart returns to its default, nothing-selected look. */
+  function clearTrace() {
+    svg.classList.remove("traced");
+    svg.querySelectorAll(".dimmed,.trace-hit,.trace-hit-node,.xtalk-hit")
+      .forEach((e) => e.classList.remove("dimmed", "trace-hit", "trace-hit-node", "xtalk-hit"));
+  }
+
+  /** Emphasize the long-range links (ties + connectors) that couple this
+   *  metabolite or either of these regions; dim the rest. This is what keeps a
+   *  distant coupling readable on demand instead of a permanent ball of yarn.
+   *  A no-op on a single sheet, where `crosstalkEls` is empty. */
+  function markCrosstalk(metabolite: string | null, regions: Set<string>) {
+    for (const { el, link } of crosstalkEls) {
+      const hit = (metabolite !== null && link.metabolite === metabolite)
+        || regions.has(link.from) || regions.has(link.to);
+      el.classList.toggle("xtalk-hit", hit);
+      el.classList.toggle("dimmed", !hit);
     }
+  }
+
+  /** A direct click on a tie/connector isolates the long-range layer on its own —
+   *  the chemistry stays as drawn — so one distant coupling can be read in relief. */
+  function focusCrosstalk(link: Crosstalk) {
+    clearTrace();
+    svg.classList.add("traced");
+    markCrosstalk(link.metabolite, new Set([link.from, link.to]));
+  }
+
+  function trace(nodeId: string | null) {
+    if (!nodeId) { clearTrace(); return; }
     // walk the reaction graph both ways from this metabolite
     const keepNodes = new Set<string>([nodeId]);
     const keepRxn = new Set<string>();
@@ -1253,6 +1292,12 @@ export function mountChart(ir: ChartIR, canvas: HTMLElement, base: string, hooks
       el.classList.toggle("trace-hit", keepRxn.has(rxn.id));
     }
     nodeEls.get(nodeId)?.classList.add("trace-hit-node");
+    // Layer the long-range isolation ON TOP of the same-sheet trace: emphasize the
+    // ties/connectors touching this metabolite or its own pathway region, dim the
+    // rest. `pathway` is stamped on every node by build-master (not in ChartNode).
+    const node = ir.nodes.find((n) => n.id === nodeId);
+    const region = node ? (node as ChartNode & { pathway?: string }).pathway : undefined;
+    markCrosstalk(node?.metabolite ?? null, new Set(region ? [region] : []));
   }
 
   canvas.addEventListener("click", (e) => { if (e.target === svg || e.target === canvas) trace(null); });
