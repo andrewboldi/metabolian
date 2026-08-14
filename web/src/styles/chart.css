@@ -132,8 +132,11 @@
 /* the boxed plate only makes sense once the title is at its drawn size */
 [data-lod="overview"] .region-title rect, [data-lod="normal"] .region-title rect { display: none; }
 [data-lod="overview"] .region-ref { display: none; }
-.connector-line { stroke: #254991; stroke-width: 1.4; }
-.connector-label { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #254991; }
+/* Pathway crosstalk (arrows.json: --edge-crosstalk, dashed) — the long-range
+   couplings between distant pathways. Painted in the registry's magenta so they
+   read as a distinct layer of cross-pathway interaction, not more spine flux. */
+.connector-line { stroke: var(--edge-crosstalk); stroke-width: 2; stroke-dasharray: 7 4; fill: none; marker-end: none; }
+.connector-label { font-family: "Inter", system-ui, sans-serif; font-size: 10px; font-weight: 500; fill: var(--edge-crosstalk); }
 
 /* White knockout haloes — the poster's own trick so a line never strikes
    through a label (QA #102, #101). */
