@@ -16,6 +16,10 @@ let view: ReturnType<typeof mountChart> | null = null;
  *  view over by panning or zooming, so auto-correction never fights them. */
 let autoView: (() => void) | null = null;
 
+/** Node + reaction lookup for the inspector, rebuilt each time a sheet loads. */
+let nodeById = new Map<string, ChartNode>();
+let chartReactions: ChartRxn[] = [];
+
 async function main() {
   const canvas = document.getElementById("chart-canvas")!;
   const index = await getJSON<{ charts: { id: string; title: string; grid: string }[] }>("chart/index.json");
@@ -52,6 +56,8 @@ async function load(id: string, canvas: HTMLElement) {
     document.fonts?.ready ?? Promise.resolve(),
   ]);
   document.getElementById("chart-title")!.textContent = ir.title;
+  nodeById = new Map(ir.nodes.map((n) => [n.id, n]));
+  chartReactions = ir.reactions;
   view = mountChart(ir, canvas, BASE, {
     onMetabolite: (n) => { openNode(n); view?.trace(n.id); },
     onEnzyme: (r) => openEnzyme(r),
@@ -132,6 +138,17 @@ function closeInspector() {
 type ProteinFields = { isProtein?: boolean; fullName?: string | null; gene?: string | null; uniprot?: string | null };
 const asProtein = (n: ChartNode) => n as ChartNode & ProteinFields;
 
+/** Currency metabolites — the recurring reagents/products (ATP, NAD+, Pi …) that
+ *  carry energy or groups rather than being a pathway's principal substrate. */
+const CURRENCY = /^(ATP|ADP|AMP|GTP|GDP|GMP|CTP|CDP|CMP|UTP|UDP|UMP|dATP|dADP|Pi|PPi|H2O|H\+|O2|CO2|HCO3-?|NH3|NH4\+|NAD\+?|NADH|NADP\+?|NADPH|FAD|FADH2|FMN|CoA|phosphate|diphosphate|pyrophosphate|H2O2)$/i;
+/** Resolve a namespaced node id (glycolysis:g6p) to its display label. */
+const nodeLabel = (id: string) => nodeById.get(id)?.label || id.replace(/^[^:]+:/, "");
+/** Chips for a reagent/product list, dimming the currency carriers. */
+function partChips(labels: string[]): HTMLElement {
+  return el("div.rxn-parts", {}, labels.map((l) =>
+    el("span", { class: CURRENCY.test(l) ? "chip chip--currency" : "chip" }, [l])));
+}
+
 async function openNode(n: ChartNode) {
   if (asProtein(n).isProtein) await openProtein(n);
   else await openMetabolite(n);
@@ -189,6 +206,25 @@ async function openMetabolite(n: ChartNode) {
     chips.append(url ? el("a.chip", { href: url, target: "_blank", rel: "noopener" }, [`${db}:${v}`]) : el("span.chip", {}, [`${db}:${v}`]));
   }
   if (chips.childElementCount) body.append(chips);
+
+  // Every reaction this metabolite takes part in — the enzyme and where it flows.
+  const rxns = chartReactions.filter((r) => r.from === n.id || r.to === n.id);
+  if (rxns.length) {
+    body.append(el("h3.rxn-h", {}, [`${rxns.length} reaction${rxns.length === 1 ? "" : "s"}`]));
+    const list = el("ul.rxn-list");
+    for (const r of rxns.slice(0, 14)) {
+      const outgoing = r.from === n.id;
+      const other = nodeLabel(outgoing ? r.to : r.from);
+      const arrow = r.reversible ? "⇌" : outgoing ? "→" : "←";
+      list.append(el("li", {}, [
+        el("span.rxn-enz", {}, [r.enzymeName || r.enzyme || "—"]),
+        el("span.muted", {}, [` · ${arrow} ${other}`]),
+      ]));
+    }
+    body.append(list);
+    if (rxns.length > 14) body.append(el("p.muted", {}, [`+${rxns.length - 14} more`]));
+  }
+
   body.append(el("p.muted", { style: "font-size:var(--step--1)" }, ["Connected reactions are highlighted on the chart. Click empty space to clear the trace."]));
 }
 
@@ -203,10 +239,21 @@ async function openEnzyme(r: ChartRxn) {
   if (r.uniprot) chips.append(el("a.chip", { href: `https://www.uniprot.org/uniprotkb/${r.uniprot}/entry`, target: "_blank", rel: "noopener" }, [`UniProt ${r.uniprot}`]));
   if (chips.childElementCount) body.append(chips);
 
-  if (r.inLabels?.length || r.outLabels?.length) {
-    body.append(el("p.muted", { style: "font-size:var(--step--1)" }, [
-      `${r.inLabels?.length ? "consumes " + r.inLabels.join(" + ") : ""}${r.inLabels?.length && r.outLabels?.length ? " · " : ""}${r.outLabels?.length ? "releases " + r.outLabels.join(" + ") : ""}`,
+  // The principal transformation (substrate → product) followed by the reagents
+  // it consumes and the by-products it releases — ATP, NAD+, Pi and the rest.
+  const sub = nodeLabel(r.from), prod = nodeLabel(r.to);
+  if (sub || prod) {
+    body.append(el("p.rxn-transform", {}, [
+      el("span.rxn-sub", {}, [sub]),
+      el("span.rxn-arrow", { "aria-hidden": "true" }, [r.reversible ? " ⇌ " : " → "]),
+      el("span.rxn-prod", {}, [prod]),
     ]));
+  }
+  if (r.inLabels?.length || r.outLabels?.length) {
+    const kv = el("dl.kv");
+    if (r.inLabels?.length) kv.append(el("dt", {}, ["consumes"]), el("dd", {}, [partChips(r.inLabels)]));
+    if (r.outLabels?.length) kv.append(el("dt", {}, ["releases"]), el("dd", {}, [partChips(r.outLabels)]));
+    body.append(kv);
   }
 
   await structureBlock(body, { uniprot: r.uniprot, pdb: r.pdb }, r.enzymeName || "");
