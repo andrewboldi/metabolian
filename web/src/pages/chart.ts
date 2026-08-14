@@ -39,6 +39,19 @@ async function main() {
     for (const ev of ["wheel", "pointerdown"]) canvas.addEventListener(ev, dismiss, { once: true, passive: true });
   }
 
+  // Slippy Atlas overview: ?tiles swaps in the read-only raster viewer (baked by
+  // tools/build-tiles.mjs) for the master only. Dynamically imported so it stays
+  // out of the default chart bundle, and the no-flag path renders exactly as before.
+  if (new URLSearchParams(location.search).has("tiles") && wanted === "_master") {
+    try {
+      const { mountTiles } = await import("../lib/tiles-view");
+      await mountTiles(canvas, "master");
+      return;
+    } catch (e) {
+      console.warn("tiled viewer unavailable; falling back to the renderer", e);
+    }
+  }
+
   await load(wanted, canvas);
   wireHud();
 }
