@@ -117,16 +117,21 @@
 /* ------------------------------------------------------------------ *
  * 2. Hero — a column of type beside a plate on the light table
  *
- * Static by construction: the markup carries no canvas, so there is nothing
- * to fail. The only depth device above the fold is the sheet's own drawn
- * stack plus one drop-shadow, which follows the plate silhouette rather than
- * the element box — a box-shadow here would trace a rectangle the artwork
- * does not fill.
+ * The baseline is static and cannot fail: type beside the drawn plate, whose
+ * only depth device is its own stacked-sheet SVG plus one drop-shadow. When
+ * motion is wanted and WebGL is present, lib/hero.ts activates .hero-stage — a
+ * full-bleed WebGL journey behind the type — but that is pure enhancement; the
+ * page is complete without it. The hero is sized to about a screen so that
+ * journey has room to play as the reader scrolls it.
  * ------------------------------------------------------------------ */
 .hero {
   position: relative;
   isolation: isolate;
   overflow: clip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: min(92svh, 920px);
   padding-block: clamp(2.5rem, 7vh, 4.5rem) clamp(3rem, 8vh, 5.5rem);
 }
 
@@ -292,21 +297,101 @@
 }
 
 /* ------------------------------------------------------------------ *
- * 5. The surface a canvas would sit behind
+ * 5. The journey stage — the WebGL hero backdrop
  *
- * There is deliberately no canvas above the fold. If the paper-stack section
- * ever lands, its canvas is full-bleed and edge-masked into the page with
- * CSS rather than framebuffer alpha, which is what lets the renderer stay
- * opaque — and an opaque, depth-tested material is the entire reason that
- * scene stays at ~1x overdraw instead of one draw per sheet.
+ * A full-bleed layer behind the hero type. It is display:none until
+ * lib/hero.ts adds .is-hero-live, so no-JS / reduced-motion / no-WebGL /
+ * data-saver readers never see an empty box — the static plate carries them.
+ *
+ * The renderer is OPAQUE and clears to --bg (the same field the page paints),
+ * then the canvas is edge-masked into the page with CSS rather than framebuffer
+ * alpha — which is what lets an opaque, depth-tested material stay at ~1x
+ * overdraw instead of one draw per sheet (see the early-Z note in lib/hero.ts).
+ * z-index sits above .hero::before (-2) and below .hero__inner (positioned),
+ * so the type and plate always read over it.
  * ------------------------------------------------------------------ */
-#main .section canvas {
+.hero-stage {
+  position: fixed;
+  inset: 0;
+  /* below the page flow, above the field the body paints; the sticky header
+     (z 50) always stays on top, and opaque .card / .panel surfaces cover it. */
+  z-index: -1;
+  display: none;
+  pointer-events: none;
+  /* opacity is driven inline by lib/hero.ts's ScrollTrigger as the reader
+     reaches the grammar plate, so the backdrop recedes off clean field. */
+  opacity: 1;
+}
+.hero-stage.is-hero-live {
   display: block;
+}
+.hero-canvas {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  height: 100%;
+  /* The buffer is opaque and clears to --bg (the field the page paints), so the
+     edges already match; this radial vignette concentrates the journey on the
+     right — where the plate sits — and fades it out under the type column and
+     the masthead so nothing competes with the headline. */
+  -webkit-mask-image: radial-gradient(125% 108% at 72% 46%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(125% 108% at 72% 46%, #000 52%, transparent 100%);
+}
+
+/* When the journey is live it stands in for the static plate (both are
+   glycolysis, steps 1–4), so the plate fades out to give the 3D the right-hand
+   space. The box is kept (visibility, not display) so the two-column grid never
+   reflows; reduced-motion / no-WebGL readers keep the plate, since `hero-live`
+   is only ever set on the motion path. */
+@media (prefers-reduced-motion: no-preference) {
+  /* fading out: opacity eases, then visibility flips once it is gone */
+  .hero__figure { transition: opacity var(--t-slow, 320ms) var(--ease); }
+  body.hero-live .hero__figure {
+    transition: opacity var(--t-slow, 320ms) var(--ease), visibility 0s linear var(--t-slow, 320ms);
+  }
+}
+body.hero-live .hero__figure {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Transit-map station labels, projected into this box each frame by lib/hero.ts
+   (which writes transform + opacity inline — no CSS transition, or it would lag
+   the per-frame writes). */
+.hero-stage__labels {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, opacity;
+  font-family: var(--font-mono);
+  font-size: var(--step--2, 0.6875rem);
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-dim);
+  background: color-mix(in oklab, var(--bg) 74%, transparent);
+  box-shadow: var(--_hairline);
+  border-radius: var(--_r);
+  padding: 0.28em 0.5em;
+}
+.hero-label--branch {
+  color: var(--text-faint);
+}
+
+/* Belt-and-suspenders: even if the live class is somehow set, reduced motion
+   never shows the animated backdrop. lib/hero.ts is not fetched in that case,
+   but the stylesheet does not rely on that. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stage {
+    display: none !important;
+  }
 }
 
 /* ------------------------------------------------------------------ *

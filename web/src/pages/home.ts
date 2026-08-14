@@ -378,9 +378,11 @@ function mountHero(): void {
   if (!canvas) return;
 
   whenSeen(
-    // Watch the section, not the canvas: a canvas is 300x150 until something sizes it, and
-    // hero.ts is the thing that sizes it — waiting on its own box would be circular.
-    canvas.closest("section") ?? canvas,
+    // Watch the hero section, never the canvas: the canvas is a fixed backdrop that
+    // lib/hero.ts keeps display:none until it goes live, and a display:none element never
+    // intersects — waiting on it (or on any ancestor it hides inside) would deadlock the
+    // very mount meant to reveal it. The section is always laid out.
+    document.querySelector(".hero") ?? canvas.closest("section") ?? canvas,
     () =>
       whenIdle(async () => {
         try {

@@ -18,6 +18,18 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
+  <!-- The journey stage. A fixed, full-viewport WebGL backdrop that sits behind
+       all page content (z-index below the flow, above the field). It is empty
+       and display:none until lib/hero.ts activates it — so a reader with no JS,
+       reduced motion, no WebGL, or data-saver on never sees an empty box, and
+       the static plate in the hero carries the composition. The canvas carries
+       `data-hero`, the contract home.ts's mountHero() looks for. Decorative:
+       aria-hidden, out of the reading order. -->
+  <div class="hero-stage" aria-hidden="true">
+    <canvas class="hero-canvas" data-hero></canvas>
+  </div>
+
   <div id="app-header"></div>
 
   <main id="main">
