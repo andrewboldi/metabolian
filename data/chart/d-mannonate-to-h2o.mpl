@@ -16,81 +16,15 @@ pathway d-mannonate-to-h2o "D-mannonate to H2O" {
     h
   }
 
-  branch from nadh side left {
-    nadh
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer +h +nad
-    cdp_ascarylose
-  }
 
-  branch from nadh side right {
-    nadh
-    <-> . +h +tetrachlorocatechol +nad
-    1r_2s_3_4_5_6_tetrachlorocyclohexa_3_5_diene_1
-  }
 
-  branch from d_mannopyranuronic_acid side left {
-    d_mannopyranuronic_acid
-    <-> . +h +nadph +isohexonic_acid
-    nadp
-  }
 
-  branch from d_mannopyranuronic_acid side right {
-    d_mannopyranuronic_acid
-    <-> . +h +adp +phosphate +h2o
-    atp
-  }
 
-  branch from isohexonic_acid side left {
-    isohexonic_acid
-    <-> . +nadh +h +nad
-    d_fructofuranuronic_acid
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +h +benzo_a_pyrene +o2
-    benzo_a_pyrene_7_8_diol
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_3_1_29 [1.3.1.29] +nadh +h +4_5_dihydroxypyrene
-    cis_4_5_dihydroxy_4_5_dihydropyrene
-  }
 
-  branch from h side right {
-    h
-    <-> . +cdp_4_dehydro_3_6_dideoxy_d_glucose_epimer
-    cdp_4_dehydro_3_6_dideoxy_d_glucose
-  }
 
-  branch from h side left {
-    h
-    <-> ec_2_7_8_23 [2.7.8.23] +1_carboxyvinyl_carboxyphosphonate
-    carboxyphosphonopyruvate
-  }
 
-  branch from 2_dehydro_3_deoxy_d_gluconate side right {
-    2_dehydro_3_deoxy_d_gluconate
-    <-> ec_4_1_2_55 [4.1.2.55] +glyceraldehyde
-    pyruvate
-  }
 
-  branch from 2_dehydro_3_deoxy_d_gluconate side left {
-    2_dehydro_3_deoxy_d_gluconate
-    <-> . +h +nadph +nadp
-    5_dehydro_4_deoxy_d_glucuronate
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +2_4_dinitrotoluene +nadph +nadp
-    5_nitro_o_toluidine
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +2_4_dinitrotoluene +nadph +nadp
-    4_amino_2_nitrotoluene
-  }
 }

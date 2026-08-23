@@ -16,51 +16,10 @@ pathway 4-2z-2-methylimino-et-to-h2o "4-[(2Z)-2-(methylimino)et… to H2O" {
     atp
   }
 
-  branch from methylamine side left {
-    methylamine
-    <-> ec_1_4_1_17 [1.4.1.17] +n_methyl_alanine +nadp +h2o +h +nadph
-    pyruvate
-  }
 
-  branch from methylamine side right {
-    methylamine
-    <-> ec_3_5_1_137 [3.5.1.137] +co2 +2_isopropylphenol +h +h2o
-    isoprocarb
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +palustradiene_diol +nadp +h2o +h +palustradienol
-    nadph
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +abietatriene +h +nadph +dehydroabietadienol +h2o
-    nadp
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +2_2_methylsulfanyl_pentyl_maleate +h
-    3_5_methylthio_pentylmalic_acid
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +2_2_methylsulfanyl_hexyl_maleate +h
-    2_6_methylthio_hexylmalic_acid
-  }
 
-  branch from atp side left {
-    atp
-    <-> ec_2_7_1_66 [2.7.1.66] +dolichol_phosphate_human_uterine_homolog +h +adp
-    dolichol
-  }
-
-  branch from atp side right {
-    atp
-    <-> ec_2_7_1_3 [2.7.1.3] +alpha_d_ribose_1_phosphate +h +adp
-    d_ribose
-  }
 }

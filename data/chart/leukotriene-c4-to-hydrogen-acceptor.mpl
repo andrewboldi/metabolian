@@ -38,165 +38,29 @@ pathway leukotriene-c4-to-hydrogen-acceptor "leukotriene C4 to hydrogen acceptor
     n6_2e_4_hydroxy_3_methylbut_2_en_1_yl_2_methylsu
   }
 
-  branch from leukotriene_a4 side left {
-    leukotriene_a4
-    <-> . +h2o
-    5s_6r_dihydroxy_7e_9e_11z_14z_icosatetraenoate
-  }
 
-  branch from gsh side right {
-    gsh
-    <-> ec_1_11_1_9 [1.11.1.9] +h2o2 +h2o
-    gssg
-  }
 
-  branch from gsh side left {
-    gsh
-    <-> ec_1_11_1_12 [1.11.1.12] +hydroperoxy_polyunsaturated_fatty_acid_anion +gssg +h2o
-    hydroxy_polyunsaturated_fatty_acid_anion
-  }
 
-  branch from leukotriene_b4 side right {
-    leukotriene_b4
-    <-> . +nadp +nadph +hplus
-    12_dehydro_leukotriene_b4
-  }
 
-  branch from leukotriene_b4 side left {
-    leukotriene_b4
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    19_hydroxyleukotriene_b4
-  }
 
-  branch from 20_hydroxy_leukotriene_b4 side right {
-    20_hydroxy_leukotriene_b4
-    <-> . +nadp +nadph +hplus
-    12_oxo_20_hydroxyleukotriene_b4
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_36 [1.14.14.36] +tyrosine +fmnh2 +o2 +co2 +h2o +hplus
-    e_4_hydroxyphenyl_acetaldehyde_oxime
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_151 [1.14.14.151] +premnaspirodiene +fmnh2 +o2 +h2o +hplus
-    solavetivone
-  }
 
-  branch from o_s_pimeloylpantetheine_4_phosphoryl_serine_2 side left {
-    o_s_pimeloylpantetheine_4_phosphoryl_serine_2
-    <-> ec_3_1_1_85 [3.1.1.85] +h +methanol +h2o
-    o_s_6_methoxycarbonylhexanoyl_pantetheine_4_phos
-  }
 
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_14_14_84 [1.14.14.84] +linalool +o2 +fmn +h2o +hplus
-    6e_8_oxolinalool
-  }
 
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_14_14_42 [1.14.14.42] +l_dihomomethionine +o2 +fmn +co2 +h2o +hplus
-    e_5_methylsulfanyl_pentanal_oxime
-  }
 
-  branch from 8s_8_amino_7_oxononanoic_acid side right {
-    8s_8_amino_7_oxononanoic_acid
-    <-> . +l_lysinium +nadph +hplus +nadp +h2o
-    n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1
-  }
 
-  branch from 8s_8_amino_7_oxononanoic_acid side left {
-    8s_8_amino_7_oxononanoic_acid
-    <-> . +nadh +hplus +n6_2s_3r_2_amino_8_carboxyoctan_3_yl_l_lysine_1 +nad +h2o
-    l_lysinium
-  }
 
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_2_3_1_39 [2.3.1.39] +malonyl-coa +coa
-    malonyl-acp
-  }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> ec_2_3_1_n5 [2.3.1.n5] +o_s_fatty_acylpantetheine_4_phosphoryl_l_serine +sn_glycerol_3_phosphate
-    1_acyl_sn_glycerol_3_phosphate
-  }
 
-  branch from 7r_8s_7_8_diammoniononanoate side right {
-    7r_8s_7_8_diammoniononanoate
-    <-> ec_2_6_1_127 [2.6.1.127] +8s_8_amino_7_oxononanoic_acid +spermidine
-    n_3_ammoniopropyl_4_ammoniobutanal
-  }
 
-  branch from biotinate side left {
-    biotinate
-    <-> ec_3_5_1_12 [3.5.1.12] +biocytin +h2o
-    l_lysinium
-  }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> ec_2_1_1_192 [2.1.1.192] +adenosine_5_monophosphate_1 +di_sulfido_diiron +sam +methionine +di_sulfido_diiron +sah
-    2_methyladenosine_5_monophosphate_1
-  }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +neomycin_c +hydrogen_donor +sam +methionine +hydrogen_acceptor +hplus
-    framycetin
-  }
 
-  branch from methionine side right {
-    methionine
-    <-> ec_1_21_98_3 [1.21.98.3] +magnesium_protoporphyrin_13_monomethyl_ester +sam +h2o +5_deoxyadenosine +hplus
-    2_4_divinyl_protochlorophyllide_a
-  }
 
-  branch from methionine side left {
-    methionine
-    <-> ec_4_1_99_22 [4.1.99.22] +gtp +hydrogen_donor +sam +5_deoxyadenosine +hydrogen_acceptor +hplus
-    8s_3_8_cyclo_7_8_dihydroguanosine_5_triphosphat
-  }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_2_7_12 [1.2.7.12] +n_formylmethanofuran +h2o +di_sulfido_diiron +co2 +hplus
-    methanofuranate
-  }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_3_7_12 [1.3.7.12] +primary_fluorescent_chlorophyll_catabolite +di_sulfido_diiron +hplus
-    red_chlorophyll_catabolite
-  }
 
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +3_disulfanyl_l_alanine +alanine
-    cysteine
-  }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> ec_3_1_2_22 [3.1.2.22] +s_palmitoyl_l_cysteine +h2o +hplus
-    palmitate
-  }
 
-  branch from hydrogen_acceptor side right {
-    hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_8_ol +h2o +hydrogen_donor
-    8_hydroxyquinolin_2_1h_one
-  }
-
-  branch from hydrogen_acceptor side left {
-    hydrogen_acceptor
-    <-> ec_1_3_99_17 [1.3.99.17] +3_methylquinoline +h2o +hydrogen_donor
-    3_methylquinolin_2_1h_one
-  }
 }

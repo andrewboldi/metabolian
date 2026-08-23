@@ -34,99 +34,18 @@ pathway pyridine-3-4-diol-to-cobamamide "pyridine-3,4-diol to cobamamide" {
     cobamamide
   }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_2_5_1_119 [2.5.1.119] +isoxazolin_5_one +o_acetyl_l_serine +hplus
-    3_5_oxoisoxazolin_4_yl_l_alanine
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> . +2_o_acetyl_1_o_octadecyl_sn_glycero_3_phosphocho +h2o +hplus
-    1_o_octadecyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l side left {
-    s_acetyl_o_2_5_phosphoribosyl_3_dephospho_coa_l
-    <-> ec_3_1_2_16 [3.1.2.16] +h +acetate +o_2_5_phosphoribosyl_3_dephospho_coa_l_serine_3
-    h2o
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_6_1_1_12 [6.1.1.12] +amp_3_end_1 +aspartate +atp +amp
-    3_l_aspartate_adenylyl_1_group
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_6_2_1_11 [6.2.1.11] +biotinate +atp +coa +amp
-    biotinyl_coa
-  }
 
-  branch from d_pantetheine_4_phosphate side right {
-    d_pantetheine_4_phosphate
-    <-> ec_3_6_1_77 [3.6.1.77] +coa +h2o +hplus
-    adenosine_3_5_bismonophosphate
-  }
 
-  branch from d_pantetheine_4_phosphate side left {
-    d_pantetheine_4_phosphate
-    <-> . +5_coa_ribonucleoside_2 +h2o +hplus
-    5_end_phospho_adenosine_phospho_ribonucleoside_3
-  }
 
-  branch from 3_dephospho_coa side right {
-    3_dephospho_coa
-    <-> . +5_coa_ribonucleoside_2 +h2o +hplus
-    5_end_ribonucleotide_2
-  }
 
-  branch from adenine side left {
-    adenine
-    <-> ec_2_4_2_57 [2.4.2.57] +amp +pi
-    d_ribose_1_5_bisphosphate
-  }
 
-  branch from adenine side right {
-    adenine
-    <-> . +atp +h2o
-    d_ribose_5_triphosphate
-  }
 
-  branch from glutamine side left {
-    glutamine
-    <-> ec_6_3_5_6 [6.3.5.6] +3_l_aspartate_adenylyl_1_group +atp +h2o +glutamate +adp +pi +hplus
-    3_l_asparaginyl_adenylyl_1_group
-  }
 
-  branch from glutamine side right {
-    glutamine
-    <-> ec_1_4_1_13 [1.4.1.13] +glutamate +nadp +nadph +hplus
-    akg
-  }
 
-  branch from nicotinate_d_ribonucleotide side left {
-    nicotinate_d_ribonucleotide
-    <-> ec_2_7_1_173 [2.7.1.173] +atp +adp +hplus
-    d_ribosylnicotinate
-  }
 
-  branch from ribazole_5_phosphate side right {
-    ribazole_5_phosphate
-    <-> ec_3_1_3_73 [3.1.3.73] +h2o +pi
-    ribazole
-  }
 
-  branch from nicotinate side left {
-    nicotinate
-    <-> ec_2_1_1_7 [2.1.1.7] +sam +sah
-    n_methylnicotinate
-  }
-
-  branch from nicotinate side right {
-    nicotinate
-    <-> ec_1_17_2_1 [1.17.2.1] +iron +h2o +fe2 +hplus
-    6_hydroxynicotinate
-  }
 }

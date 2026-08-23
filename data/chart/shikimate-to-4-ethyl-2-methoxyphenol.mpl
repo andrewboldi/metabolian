@@ -22,57 +22,11 @@ pathway shikimate-to-4-ethyl-2-methoxyphenol "shikimate to 4-Ethyl-2-methoxyphen
     4_ethyl_2_methoxyphenol
   }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_57 [1.14.14.57] +lithocholate +fmnh2 +o2 +h2o +hplus
-    hyodeoxycholate
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +n_hydroxy_l_tyrosinate +fmnh2 +o2 +h2o +hplus
-    n_n_dihydroxy_l_tyrosinate
-  }
 
-  branch from shikimate side left {
-    shikimate
-    <-> ec_1_1_1_25 [1.1.1.25] +nadp +nadph +hplus
-    3_dehydroshikimate
-  }
 
-  branch from trans_caffeate side right {
-    trans_caffeate
-    <-> . +udp_d_glucose +udp
-    1_caffeoyl_d_glucose
-  }
 
-  branch from trans_caffeate side left {
-    trans_caffeate
-    <-> . +malonyl-coa +atp +hplus +amp +co2 +ppi +coa
-    hispidin
-  }
 
-  branch from trans_ferulate side right {
-    trans_ferulate
-    <-> . +udp_d_glucuronate +udp
-    e_ferulic_acid_d_glucuronate_ester
-  }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_108 [2.1.1.108] +6_hydroxymellein +sam +hplus
-    6_methoxymellein
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_118 [2.1.1.118] +columbamine +sam +hplus
-    palmatine
-  }
-
-  branch from 2_methoxy_4_vinylphenol side left {
-    2_methoxy_4_vinylphenol
-    <-> ec_1_13_11_94 [1.13.11.94] +o2 +formaldehyde
-    vanillin
-  }
 }

@@ -16,51 +16,10 @@ pathway nicotinate-beta-d-ribonuc-to-h2o "nicotinate beta-D-ribonuc… to H2O" {
     atp
   }
 
-  branch from h side left {
-    h
-    <-> . +9z_hexadecenoate +1_palmitoleoyl_sn_glycerol_3_phosphate +h2o
-    1_2_di_9z_hexadecenoyl_sn_glycero_3_phosphate
-  }
 
-  branch from h side right {
-    h
-    <-> . +diphosphate +1_5_phosphoribosyl_amp +h2o
-    1_5_phosphoribosyl_atp
-  }
 
-  branch from phosphate side left {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    propranolol_glucuronide
-  }
 
-  branch from phosphate side right {
-    phosphate
-    <-> . +h +adp +atp +h2o
-    1_propionyl_2_butanoyl_sn_glycero_3_phospho_l_se
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +5_phospho_alpha_d_ribose_1_diphosphate +h +amp
-    alpha_d_ribose_5_phosphate
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    pitavastatin
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +phenylalanyl_tyrosinyl_glutamine +l_phenylalanine +l_tyrosine
-    l_glutamine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_lysine +l_phenylalanine +l_tyrosine
-    phenylalanyl_tyrosinyl_lysine
-  }
 }

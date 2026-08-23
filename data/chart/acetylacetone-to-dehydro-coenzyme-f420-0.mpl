@@ -32,123 +32,22 @@ pathway acetylacetone-to-dehydro-coenzyme-f420-0 "acetylacetone to dehydro coenz
     dehydro_coenzyme_f420_0
   }
 
-  branch from methylglyoxal side left {
-    methylglyoxal
-    <-> . +gtp
-    n2_1_hydroxy_2_oxopropyl_gtp
-  }
 
-  branch from methylglyoxal side right {
-    methylglyoxal
-    <-> . +gdp
-    n2_1_hydroxy_2_oxopropyl_gdp
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> . +1_palmitoyl_2_acetyl_sn_glycero_3_phosphocholine +h2o +hplus
-    1_hexadecanoyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> . +1_tetradecyl_2_acetyl_sn_glycero_3_phosphocholin +h2o +hplus
-    1_tetradecyl_sn_glycero_3_phosphocholine
-  }
 
-  branch from d_glyceraldehyde side left {
-    d_glyceraldehyde
-    <-> . +3_hydroxypyruvate
-    3r_4s_5r_3_4_5_6_tetrahydroxy_2_oxohexanoate
-  }
 
-  branch from d_glyceraldehyde side right {
-    d_glyceraldehyde
-    <-> . +3_hydroxypyruvate
-    2_dehydro_d_galactonate
-  }
 
-  branch from r5p side left {
-    r5p
-    <-> .
-    d_ribofuranose_5_phosphate
-  }
 
-  branch from formate side right {
-    formate
-    <-> ec_3_5_1_88 [3.5.1.88] +n_formyl_l_methionyl_group +h2o
-    l_methioniniumyl_group
-  }
 
-  branch from formate side left {
-    formate
-    <-> . +n_formylmethanofuran +h2o
-    methanofuranate
-  }
 
-  branch from 5_amino_6_d_ribitylamino_uracil side right {
-    5_amino_6_d_ribitylamino_uracil
-    <-> ec_3_1_3_104 [3.1.3.104] +h2o +pi
-    5_amino_6_5_phosphoribitylamino_uracil
-  }
 
-  branch from 5_amino_6_d_ribitylamino_uracil side left {
-    5_amino_6_d_ribitylamino_uracil
-    <-> . +glyoxal +h2o
-    5_2_oxoethylideneamino_6_d_ribitylaminouracil
-  }
 
-  branch from dehydroglycine side right {
-    dehydroglycine
-    <-> . +o2 +h2o2
-    glycine
-  }
 
-  branch from dehydroglycine side left {
-    dehydroglycine
-    <-> . +h2o +nh3
-    glyoxylate
-  }
 
-  branch from 5_deoxyadenosine side right {
-    5_deoxyadenosine
-    <-> ec_1_1_99_38 [1.1.99.38] +2_deoxy_scyllo_inosamine +sam +methionine +hplus
-    3_ammonio_2_3_dideoxy_scyllo_inosose
-  }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> ec_2_8_4_5 [2.8.4.5] +n6_l_threonylcarbamoyladenine_5_monophosphate_2 +thiol_group +hydrogen_donor +sam +h_group +methionine +hydrogen_acceptor +sah +hplus
-    2_methylthio_n6_l_threonylcarbamoyladenine_5_mon
-  }
 
-  branch from methionine side right {
-    methionine
-    <-> . +h2o +glycine
-    gly_met
-  }
 
-  branch from methionine side left {
-    methionine
-    <-> . +met_ala +h2o
-    alanine
-  }
 
-  branch from 7_8_didemethyl_8_hydroxy_5_deazariboflavin side right {
-    7_8_didemethyl_8_hydroxy_5_deazariboflavin
-    <-> ec_2_7_8_28 [2.7.8.28] +3_r_glyceryl_diphospho_5_guanosine +gmp +hplus
-    3pg_factor420_0
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_3_5_1_2 [3.5.1.2] +glutamine +h2o
-    glutamate
-  }
-
-  branch from nh3 side right {
-    nh3
-    <-> ec_3_5_3_21 [3.5.3.21] +methylenediurea +h2o +hplus +co2
-    n_hydroxymethyl_urea
-  }
 }

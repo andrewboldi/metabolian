@@ -17,3 +17,10 @@ npm-debug.log*
 # Everything DERIVED from them (modules, layouts, sheets.json) is committed.
 data/ingest/*.tsv
 data/ingest/*.dat
+
+# Molecule SVGs — derived from data/smiles.json by `npm run mol:build` (RDKit).
+# Committing ~1,143 was fine, but full ChEBI coverage (~12k structures) is ~240 MB,
+# too large for git. Baked at BUILD TIME instead: predev/prebuild run mol:build
+# before data:build, and @rdkit/rdkit is a dependency so CI/Pages renders them.
+# (Size exception to the "derived is committed" rule above.)
+web/public/mol/

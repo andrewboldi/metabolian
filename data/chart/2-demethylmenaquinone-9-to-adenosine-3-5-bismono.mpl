@@ -22,93 +22,17 @@ pathway 2-demethylmenaquinone-9-to-adenosine-3-5-bismono "2-demethylmenaquinone-
     sulfo_dihydromenaquinone_9
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +h +nadph
-    d_galactono_1_5_lactone
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_120 [1.1.1.120] +beta_d_galactose +h +nadph
-    d_galactono_1_4_lactone
-  }
 
-  branch from 2_demethylmenaquinol_9 side left {
-    2_demethylmenaquinol_9
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +2_demethylmenaquinone_9 +h
-    nad
-  }
 
-  branch from menaquinol_9 side right {
-    menaquinol_9
-    <-> ec_1_6_5_2 [1.6.5.2] +menaquinone_9 +h +nad
-    nadh
-  }
 
-  branch from menaquinol_9 side left {
-    menaquinol_9
-    <-> ec_7_1_1_7 [7.1.1.7] +o2 +menaquinone_9 +h2o
-    pmf
-  }
 
-  branch from sah side right {
-    sah
-    <-> . +desmethylnectriapyrone +sam +hplus
-    nectriapyrone
-  }
 
-  branch from sah side left {
-    sah
-    <-> . +malonyl-coa +acetyl_coa +sam +nadph +hplus +co2 +nadp +coa +h2o
-    desmethylnectriapyrone
-  }
 
-  branch from menaquinone_9 side right {
-    menaquinone_9
-    <-> ec_1_3_5_1 [1.3.5.1] +menaquinol_9 +fumarate
-    succinate
-  }
 
-  branch from menaquinone_9 side left {
-    menaquinone_9
-    <-> ec_1_1_5_3 [1.1.5.3] +menaquinol_9 +dihydroxyacetone_phosphate
-    sn_glycerol_3_phosphate
-  }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    margaric_acid_d3
-  }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    9z_heptadecenoate
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_179 [1.1.1.179] +d_xylono_1_5_lactone +h +nadp
-    beta_d_xylose
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_1_1_21 [1.1.1.21] +alpha_d_xylose +h +nadp
-    xylitol
-  }
 
-  branch from adenosine_3_5_bismonophosphate side right {
-    adenosine_3_5_bismonophosphate
-    <-> . +2_hydroxy_17_estradiol +3_phosphonato_5_adenylyl_sulfate +hplus
-    2_hydroxy_17_estradiol_3_sulfate
-  }
-
-  branch from adenosine_3_5_bismonophosphate side left {
-    adenosine_3_5_bismonophosphate
-    <-> . +dehydroepiandrosterone +3_phosphonato_5_adenylyl_sulfate +hplus
-    dehydroepiandrosterone_sulfate
-  }
 }

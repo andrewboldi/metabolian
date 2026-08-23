@@ -28,105 +28,19 @@ pathway diphosphate-to-s-adenosyl-l-homocysteine "diphosphate to S-adenosyl-L-ho
     ubiquinol_10
   }
 
-  branch from all_trans_decaprenyl_diphosphate side left {
-    all_trans_decaprenyl_diphosphate
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +h2o
-    atp
-  }
 
-  branch from all_trans_decaprenyl_diphosphate side right {
-    all_trans_decaprenyl_diphosphate
-    <-> . +diphosphate +h +ipp
-    undecaprenyl_diphosphate
-  }
 
-  branch from ipp side left {
-    ipp
-    <-> ec_2_5_1_1 [2.5.1.1] +diphosphate
-    2e_geranyl_diphosphate
-  }
 
-  branch from ipp side right {
-    ipp
-    <-> ec_2_5_1_89 [2.5.1.89] +tri_trans_hexa_cis_decaprenyl_diphosphate +diphosphate
-    2e_6e_10e_geranylgeranyl_diphosphate
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> . +fpp +h2o
-    trichobrasilenol
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> . +fpp
-    african_3_ene
-  }
 
-  branch from 2_decaprenyl_6_methoxyphenol side left {
-    2_decaprenyl_6_methoxyphenol
-    <-> . +o2 +h2o
-    2_decaprenyl_6_methoxy_1_4_benzoquinone
-  }
 
-  branch from sah side right {
-    sah
-    <-> . +3_hydroxy_d_kynurenine +sam +hplus
-    3_hydroxy_4_methyl_d_kynurenine
-  }
 
-  branch from sah side left {
-    sah
-    <-> . +l_glutamine +sam +hplus
-    n5_methyl_l_glutamine
-  }
 
-  branch from 2_decaprenyl_6_methoxyhydroquinone side right {
-    2_decaprenyl_6_methoxyhydroquinone
-    <-> ec_1_6_5_2 [1.6.5.2] +nadh +h +2_decaprenyl_6_methoxy_1_4_benzoquinone
-    nad
-  }
 
-  branch from 3_demethylubiquinol_10 side left {
-    3_demethylubiquinol_10
-    <-> . +nadph +hplus +nadp
-    3_demethylubiquinone_10
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_314 [1.1.1.314] +germacra_1_10_4_11_13_trien_12_oate +h +nadph +h2o
-    germacra_1_10_4_11_13_trien_12_ol
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +4_methylamino_antipyrine +formaldehyde +h2o +h +o2 +nadph
-    aminophenazone
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_glutamate
-    glutamyl_leucine
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +l_histidine +l_methionine +l_glutamate
-    glutamyl_methioninyl_histidine
-  }
 
-  branch from ubiquinol_10 side right {
-    ubiquinol_10
-    <-> . +nadph +hplus +nadp
-    coenzyme_q10
-  }
-
-  branch from ubiquinol_10 side left {
-    ubiquinol_10
-    <-> . +2e_hexadecenoyl_coa +ubiquinone_10
-    hexadecanoyl_coa
-  }
 }

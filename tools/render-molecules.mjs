@@ -5,7 +5,7 @@
 // Structures are generated at build time so the client ships static vector art —
 // no runtime chemistry toolkit, no layout cost.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { createRequire } from "node:module";
 import { inkExtent } from "./lib/manhattan.mjs";
 import { fileURLToPath } from "node:url";
@@ -70,13 +70,18 @@ async function main() {
     process.exit(1);
   }
   const cache = JSON.parse(readFileSync(CACHE, "utf8"));
+  const force = process.argv.includes("--force");
   const RDKit = await initRDKit();
 
-  rmSync(OUT, { recursive: true, force: true });
+  // Incremental: keep SVGs already rendered and only draw the missing ones, so a
+  // build/dev that already has the cache is near-instant. --force re-renders all.
+  // web/public/mol is a build artifact now (gitignored, baked by `npm run mol:build`).
   mkdirSync(OUT, { recursive: true });
+  const idxPath = join(OUT, "index.json");
+  const prevIndex = (!force && existsSync(idxPath)) ? JSON.parse(readFileSync(idxPath, "utf8")) : {};
 
   const index = {};
-  let ok = 0, skipped = 0, failed = 0, macro = 0;
+  let ok = 0, skipped = 0, failed = 0, macro = 0, reused = 0;
 
   for (const [key, entry] of Object.entries(cache)) {
     if (!entry?.smiles) { skipped++; continue; }
@@ -90,6 +95,11 @@ async function main() {
     // 100; the largest genuine metabolite (a bile-acid CoA conjugate) is 80.
     const heavyAtoms = (entry.smiles.match(/[A-Z]/g) || []).length;
     if (heavyAtoms > MACROMOLECULE_ATOMS) { macro++; continue; }
+
+    // Reuse an existing render — a ChEBI id's SMILES is stable; --force overrides.
+    if (!force && prevIndex[key] && existsSync(join(OUT, `${safeKey(key)}.svg`))) {
+      index[key] = prevIndex[key]; reused++; continue;
+    }
 
     let mol;
     try {
@@ -114,8 +124,8 @@ async function main() {
     }
   }
 
-  writeFileSync(join(OUT, "index.json"), JSON.stringify(index));
-  console.log(`Rendered ${ok} molecule SVGs (${skipped} without SMILES, ${macro} macromolecules named not drawn, ${failed} failed) -> web/public/mol/`);
+  writeFileSync(idxPath, JSON.stringify(index));
+  console.log(`Rendered ${ok} molecule SVGs (reused ${reused}, ${skipped} without SMILES, ${macro} macromolecules named not drawn, ${failed} failed) -> web/public/mol/`);
 }
 
 // Only render when run directly (`node tools/render-molecules.mjs`); importing

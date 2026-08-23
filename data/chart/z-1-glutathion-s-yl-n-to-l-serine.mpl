@@ -16,75 +16,14 @@ pathway z-1-glutathion-s-yl-n-to-l-serine "(Z)-1-(glutathion-S-yl)-N… to L-ser
     glycine
   }
 
-  branch from z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth side left {
-    z_1_l_cysteinylglycin_s_yl_n_hydroxy_omega_meth
-    <-> ec_3_4_13_23 [3.4.13.23] +h2o +glycine
-    s_4_methylthiobutylthiohydroximoyl_l_cysteine
-  }
 
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> . +2_oxoglutarate +3r_beta_leucine
-    4_methyl_3_oxopentanoate
-  }
 
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +n_beta_d_glucosyl_indol_3_yl_acetyl_l_glutamate +h2o
-    n_beta_d_glucosyl_indol_3_yl_acetate
-  }
 
-  branch from ser_gly side right {
-    ser_gly
-    <-> . +z_1_l_cysteinylglycin_s_yl_n_hydroxy_2_1h_indol +h2o +h
-    e_2_indol_3_yl_1_thioacetohydroximate
-  }
 
-  branch from 4_methylthiobutylthiohydroximate side left {
-    4_methylthiobutylthiohydroximate
-    <-> ec_2_4_1_195 [2.4.1.195] +udp +3_methylthiopropyl_desulfoglucosinolate +h
-    udp_alpha_d_glucose
-  }
 
-  branch from 4_methylthiobutylthiohydroximate side right {
-    4_methylthiobutylthiohydroximate
-    <-> ec_2_4_1_195 [2.4.1.195] +3_methylthiopropyl_desulfoglucosinolate +h +udp_alpha_d_glucose
-    udp
-  }
 
-  branch from glycine side left {
-    glycine
-    <-> . +gamma_glu_cys_gamma_glu_cys_beta_ala +glutathione
-    gamma_l_glutamyl_l_cysteinyl_beta_alanine
-  }
 
-  branch from glycine side right {
-    glycine
-    <-> . +gamma_l_glutamyl_s_allyl_l_cysteine +h2o
-    2_glutathion_s_yl_propene
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +4_hydroxybenzoyl_acetate +h +amp +phosphate +4_hydroxyacetophenone +h2o
-    co2
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +p_1_p_3_bis_5_adenosyl_triphosphate +h +adp
-    diphosphate
-  }
 
-  branch from l_serine side left {
-    l_serine
-    <-> . +2_oxoglutarate +l_glutamate
-    3_hydroxypyruvate
-  }
-
-  branch from l_serine side right {
-    l_serine
-    <-> . +ser_gly_gly +h2o
-    glycylglycine
-  }
 }

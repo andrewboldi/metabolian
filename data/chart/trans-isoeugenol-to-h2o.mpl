@@ -26,129 +26,23 @@ pathway trans-isoeugenol-to-h2o "trans-isoeugenol to H2O" {
     nadp
   }
 
-  branch from sah side left {
-    sah
-    <-> ec_2_1_1_8 [2.1.1.8] +histaminium +sam +hplus
-    n_methylhistaminium
-  }
 
-  branch from sah side right {
-    sah
-    <-> ec_2_1_1_128 [2.1.1.128] +rs_norcoclaurinium +sam +hplus
-    rs_coclaurinium
-  }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_25 [2.1.1.25] +s_adenosyl_l_homocysteine +methacetin +h
-    4_acetamidophenol
-  }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_49 [2.1.1.49] +s_adenosyl_l_homocysteine +h +imipramine
-    desipramine
-  }
 
-  branch from s_adenosyl_l_homocysteine side left {
-    s_adenosyl_l_homocysteine
-    <-> . +h +4_methoxyestrone +s_adenosyl_l_methionine
-    4_hydroxyestrone
-  }
 
-  branch from s_adenosyl_l_homocysteine side right {
-    s_adenosyl_l_homocysteine
-    <-> . +2_hydroxy_3_methoxyestrone +h +s_adenosyl_l_methionine
-    2_hydroxyestrone
-  }
 
-  branch from methylarsonate side left {
-    methylarsonate
-    <-> . +nadp +h2o +o2 +nadph
-    methylarsonous_acid
-  }
 
-  branch from methylarsonate side right {
-    methylarsonate
-    <-> . +s_adenosyl_l_homocysteine +h +s_adenosyl_l_methionine
-    arsenous_acid
-  }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +salsoline_1_carboxylate
-    salsolinol_1_carboxylate
-  }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +salsoline +h
-    s_salsolinol
-  }
 
-  branch from arsenite side left {
-    arsenite
-    <-> . +arsenate +h +glutathione +h2o
-    glutathione_disulfide
-  }
 
-  branch from arsenite side right {
-    arsenite
-    <-> . +r_dihydrolipoate +h +ribose_1_arsenate +beta_d_ribofuranose
-    r_lipoate
-  }
 
-  branch from h side left {
-    h
-    <-> . +udp +beta_d_4_deoxy_delta_4_glcpa_1_3_beta_d_glcpnac +udp_alpha_d_glucuronate
-    udp_n_acetyl_alpha_d_glucosamine
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_22 [3.6.3.22] +adp +l_isoleucine +phosphate +l_isoleucine +h2o
-    atp
-  }
 
-  branch from dimethylselenide side left {
-    dimethylselenide
-    <-> ec_2_1_1_96 [2.1.1.96] +s_adenosyl_l_homocysteine +s_adenosyl_l_methionine
-    trimethylselenonium
-  }
 
-  branch from se_methyl_l_selenomethionine side right {
-    se_methyl_l_selenomethionine
-    <-> . +co2 +h
-    dimethylselenopropanoate_amine
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    myo_inositol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    isethionic_acid
-  }
 
-  branch from l_selenomethionine side left {
-    l_selenomethionine
-    <-> . +6s_5_6_7_8_tetrahydrofolate +h +l_selenohomocysteine
-    5_methyltetrahydrofolic_acid
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +h +progesterone +o2 +nadph +h2o
-    21_hydroxyprogesterone
-  }
-
-  branch from nadp side left {
-    nadp
-    <-> . +h +25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol +nadph +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-  }
 }

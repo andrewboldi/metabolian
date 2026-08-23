@@ -16,39 +16,8 @@ pathway d-glcp-1-4-d-galp-to-cdp-4-dehydro-6-deoxy-d-g "β-D-Glcp-(1→4)-D-Galp
     cdp_4_dehydro_6_deoxy_d_glucose
   }
 
-  branch from d_galactopyranose side left {
-    d_galactopyranose
-    <-> ec_1_1_3_5 [1.1.3.5] +o2 +h2o2
-    d_galactono_1_5_lactone
-  }
 
-  branch from d_galactopyranose side right {
-    d_galactopyranose
-    <-> . +d_galp_1_6_d_manp_1_4_d_manp_1_4_d_manp +h2o
-    d_manp_1_4_d_manp_1_4_d_manp
-  }
 
-  branch from g1p side left {
-    g1p
-    <-> ec_2_4_1_389 [2.4.1.389] +pi +d_galactopyranose
-    d_glcp_1_3_d_galp
-  }
 
-  branch from g1p side right {
-    g1p
-    <-> . +h2o +amp +hplus
-    adp_d_glucoside
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_7_7_n6 [2.7.7.n6] +l_tyrosine +gtp
-    o_guanylyl_l_tyrosine_1
-  }
-
-  branch from ppi side right {
-    ppi
-    <-> ec_4_2_3_182 [4.2.3.182] +fpp +h2o
-    2s_3r_9r_pristinol
-  }
 }

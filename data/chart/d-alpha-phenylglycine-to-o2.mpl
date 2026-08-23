@@ -16,75 +16,14 @@ pathway d-alpha-phenylglycine-to-o2 "D-alpha-phenylglycine to O2" {
     ampicillin
   }
 
-  branch from ampicillin side left {
-    ampicillin
-    <-> ec_3_5_2_6 [3.5.2.6] +h2o +4s_2_s_2r_2_amino_2_phenylacetamido_carboxylato
-    h
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +ile_asn +h +nh4
-    isoleucyl_aspartate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +l_valyl_l_aspartate +nh4 +h
-    val_asn
-  }
 
-  branch from co2 side right {
-    co2
-    <-> ec_3_5_1_6 [3.5.1.6] +3_ureidoisobutyric_acid +h +h2o +3_aminoisobutanoic_acid
-    nh4
-  }
 
-  branch from co2 side left {
-    co2
-    <-> ec_4_1_1_74 [4.1.1.74] +4_bromobenzaldehyde
-    4_bromobenzoylformate
-  }
 
-  branch from succinate side right {
-    succinate
-    <-> . +l_histidine +h +h2o
-    n_succinyl_l_histidine
-  }
 
-  branch from succinate side left {
-    succinate
-    <-> . +succinylserine +h2o +h
-    l_serine
-  }
 
-  branch from cephalexin side right {
-    cephalexin
-    <-> ec_3_6_3_44 [3.6.3.44] +h +adp +phosphate +h2o
-    atp
-  }
 
-  branch from 4_methyl_2_oxopentanoate side left {
-    4_methyl_2_oxopentanoate
-    <-> . +l_leucine +3_phenylpyruvate
-    l_phenylalanine
-  }
 
-  branch from 4_methyl_2_oxopentanoate side right {
-    4_methyl_2_oxopentanoate
-    <-> . +nadh +3_methylbutanoate +co2 +h +h2o
-    nad
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +6_methyl_7_9_dihydropurin_8_one +h2o2 +h2o
-    6_methylpurine
-  }
-
-  branch from o2 side right {
-    o2
-    <-> ec_1_17_3_2 [1.17.3.2] +6_methyladenine +h2o +h2o2
-    6_methylamino_7_9_dihydropurin_8_one
-  }
 }

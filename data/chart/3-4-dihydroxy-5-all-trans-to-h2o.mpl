@@ -20,39 +20,8 @@ pathway 3-4-dihydroxy-5-all-trans-to-h2o "3,4-dihydroxy-5-all-trans… to H2O" {
     nadp
   }
 
-  branch from sah side left {
-    sah
-    <-> . +8_hydroxy_7_methoxyflavone +sam +hplus
-    7_8_dimethoxyflavone
-  }
 
-  branch from sah side right {
-    sah
-    <-> . +4_8_dihydroxyflavone_7_olate +sam +hplus
-    4_hydroxy_8_methoxyflavone_7_olate
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +tomatid_5_en_3_one +h +nadph
-    dehydrotomatidine
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +11s_16s_7_oxo_ent_kauran_11_16_epoxy_19_oate +h +nadph
-    7r_11s_16s_7_hydroxy_ent_kauran_11_16_epoxy_19
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +esculin +esculetin
-    beta_d_glucose
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +beta_d_glucose +be_13793c
-    ed_110
-  }
 }

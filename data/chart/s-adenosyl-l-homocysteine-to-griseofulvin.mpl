@@ -22,81 +22,15 @@ pathway s-adenosyl-l-homocysteine-to-griseofulvin "S-adenosyl-L-homocysteine to 
     griseofulvin
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +h +dtdp_4_dehydro_3_methyl_2_6_dideoxy_beta_l_gluco
-    dtdp_4_oxo_2_6_dideoxy_l_mannose
-  }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> ec_2_3_1_161 [2.3.1.161] +s_adenosyl_l_homocysteine +co2 +dihydromonacolin_l +nadp +coa +h2o +malonyl_coa +h +nadph
-    acetyl_coa
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxyoctadecanoylpantetheine_4_phosphor +nadp +nadph
-    o_s_3_oxooctadecanoylpantetheine_4_phosphoryl_se
-  }
 
-  branch from h side right {
-    h
-    <-> ec_2_3_1_41 [2.3.1.41] +malonyl_coa +dodecanoyl_pantetheine_4_phosphorylserine_1 +coa +o_s_3_oxotetradecanoylpantetheine_4_phosphoryl_s
-    co2
-  }
 
-  branch from griseophenone_c side left {
-    griseophenone_c
-    <-> . +sam +sah
-    griseophenone_d
-  }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_14_13_20 [1.14.13.20] +h +nadph +2_chloro_4_methylphenol +nadp +h2o
-    3_chloro_5_methylcatechol
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +h +5_deoxy_dihydrokalafungin +h2o
-    dihydrokalafungin
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +4_nitroso_2_6_dinitrotoluene +nadp +h2o +h
-    2_4_6_trinitrotoluene
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +h +16_oxohexadecanoic_acid +nadp
-    16_hydroxyhexadecanoic_acid
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> . +carbocyclic_thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    19_hydroxycarbocyclic_thromboxane_a2
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> . +carbocyclic_thromboxane_a2 +fmnh2 +o2 +h2o +hplus
-    18_hydroxycarbocyclic_thromboxane_a2
-  }
 
-  branch from sah side right {
-    sah
-    <-> . +2_hydroxy_17_estradiol +sam +hplus
-    2_methoxy_17_estradiol
-  }
-
-  branch from sah side left {
-    sah
-    <-> . +2_hydroxy_17_estradiol +sam +hplus
-    2_hydroxyestradiol_3_methyl_ether
-  }
 }

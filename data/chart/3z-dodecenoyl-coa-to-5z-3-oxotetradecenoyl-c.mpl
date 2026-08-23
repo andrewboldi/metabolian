@@ -16,45 +16,9 @@ pathway 3z-dodecenoyl-coa-to-5z-3-oxotetradecenoyl-c "(3Z)-dodecenoyl-CoA to (5Z
     5z_3_oxotetradecenoyl_coa
   }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +tryptoquialanol
-    tryptoquialanine_a
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +benzoyl_coa +pyrrothine
-    benzoyl_pyrrothine
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_21_3_6 [1.21.3.6] +coreopsin +h2o
-    aureusidin_6_o_glucoside
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +all_trans_beta_carotene +ionone
-    4_9_dimethyldodeca_2_4_6_8_10_pentaenedial
-  }
 
-  branch from 2e_5z_tetradecadienoyl_coa side left {
-    2e_5z_tetradecadienoyl_coa
-    <-> . +o2 +h2o2
-    5z_tetradecenoyl_coa
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +2_n_n_dihydroxynocardicin_c +h
-    nocardicin_b
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_1_63 [3.6.1.63] +diphosphate +alpha_d_ribose_1_2_n_acetamidomethylphosphonate +h
-    alpha_d_ribose_1_acetamidomethylphosphonate_5_tr
-  }
 }

@@ -30,105 +30,19 @@ pathway 3-24r-24-r-fucosterol-to-cobamamide "(3β,24R,24'R)-fucosterol… to cob
     cobamamide
   }
 
-  branch from desmosterol side left {
-    desmosterol
-    <-> ec_1_3_1_72 [1.3.1.72] +nadp +nadph +hplus
-    cholesterol
-  }
 
-  branch from acetaldehyde side right {
-    acetaldehyde
-    <-> ec_2_1_2_1 [2.1.2.1] +threonine
-    glycine
-  }
 
-  branch from acetaldehyde side left {
-    acetaldehyde
-    <-> ec_4_1_3_39 [4.1.3.39] +pyruvate
-    s_4_hydroxy_2_oxopentanoate
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_51 [1.14.14.51] +4s_limonene +fmnh2 +o2 +h2o +hplus
-    trans_carveol
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_90 [1.14.14.90] +2_unsubstituted_isoflavones +fmnh2 +o2 +h2o +hplus
-    2_hydroxyisoflavones
-  }
 
-  branch from cob_ii_yrinic_acid_a_c_diamide side right {
-    cob_ii_yrinic_acid_a_c_diamide
-    <-> . +glutamine +atp +h2o +glutamate +adp +pi +hplus
-    cob_ii_yrinate_c_monoamide
-  }
 
-  branch from fmnh2 side left {
-    fmnh2
-    <-> ec_1_14_19_65 [1.14.19.65] +s_scoulerine +o2 +fmn +h2o +hplus
-    s_cheilanthifoline
-  }
 
-  branch from fmnh2 side right {
-    fmnh2
-    <-> ec_1_14_14_23 [1.14.14.23] +cholesterol +o2 +fmn +h2o +hplus
-    hydroxycholesterol_7a
-  }
 
-  branch from triphosphate side left {
-    triphosphate
-    <-> ec_2_5_1_17 [2.5.1.17] +fadh2 +atp +adenosylcobinamide +fad +hplus
-    cob_ii_inamide
-  }
 
-  branch from triphosphate side right {
-    triphosphate
-    <-> ec_3_1_5_1 [3.1.5.1] +dgtp +h2o +hplus
-    2_deoxyguanosine
-  }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_5_1_1_3 [5.1.1.3]
-    d_glutamate
-  }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_5_4_99_1 [5.4.99.1]
-    threo_3_methyl_l_aspartate
-  }
 
-  branch from adenosylcobinamide side left {
-    adenosylcobinamide
-    <-> . +diphosphate +phosphate +atp +cobinamide +h2o
-    h
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_6_3_1_7 [6.3.1.7] +4_methylene_l_glutamate +nh3 +atp +amp +hplus
-    4_methylene_l_glutamine
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_34 [2.5.1.34] +dmapp +l_tryptophan
-    4_3_methylbut_2_enyl_l_tryptophan
-  }
 
-  branch from cobamamide side right {
-    cobamamide
-    <-> . +cob_ii_alamin +hydrogen_donor +atp +triphosphate +hplus
-    hydrogen_acceptor
-  }
-
-  branch from cobamamide side left {
-    cobamamide
-    <-> ec_2_5_1_154 [2.5.1.154] +fadh2 +atp +h2o +fad +pi +ppi +hplus
-    cob_ii_alamin
-  }
 }

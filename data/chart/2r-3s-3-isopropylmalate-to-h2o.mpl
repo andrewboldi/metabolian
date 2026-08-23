@@ -42,111 +42,20 @@ pathway 2r-3s-3-isopropylmalate-to-h2o "(2R,3S)-3-isopropylmalate to H2O" {
     atp
   }
 
-  branch from kic side left {
-    kic
-    <-> . +fad +hplus +fadh2
-    r_2_hydroxy_4_methylpentanoate
-  }
 
-  branch from 3_methylbutanal side right {
-    3_methylbutanal
-    <-> ec_1_1_1_265 [1.1.1.265] +nad +nadh +hplus
-    isoamylol
-  }
 
-  branch from isovaleryl_coa side left {
-    isovaleryl_coa
-    <-> .
-    pivaloyl_coa
-  }
 
-  branch from isovaleryl_coa side right {
-    isovaleryl_coa
-    <-> . +akg +o2 +succinate +co2
-    2_hydroxyisovaleryl_coa
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_172 [4.2.3.172] +fpp +h2o
-    10_epi_juneol
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_4_6_1_6 [4.6.1.6] +ctp
-    3_5_cyclic_cmp
-  }
 
-  branch from deoxyhumulone side left {
-    deoxyhumulone
-    <-> . +2e_geranyl_diphosphate +dimethylallyl_diphosphate +adhyperforin
-    diphosphate
-  }
 
-  branch from deoxyhumulone side right {
-    deoxyhumulone
-    <-> . +2e_geranyl_diphosphate +dimethylallyl_diphosphate +diphosphate +h
-    adhyperforin
-  }
 
-  branch from anthranilate side left {
-    anthranilate
-    <-> ec_2_1_1_111 [2.1.1.111] +sam +sah +hplus
-    n_methylanthranilate
-  }
 
-  branch from anthranilate side right {
-    anthranilate
-    <-> ec_3_7_1_3 [3.7.1.3] +l_kynurenine +h2o +hplus
-    alanine
-  }
 
-  branch from ribostamycin side left {
-    ribostamycin
-    <-> . +atp +ppi
-    4_adenylylribostamycin
-  }
 
-  branch from acetate side right {
-    acetate
-    <-> ec_3_1_1_66 [3.1.1.66] +5_3_4_diacetoxybut_1_ynyl_2_2_bithiophene +h2o +hplus
-    5_3_hydroxy_4_acetoxybut_1_ynyl_2_2_bithiophene
-  }
 
-  branch from acetate side left {
-    acetate
-    <-> ec_2_8_3_10 [2.8.3.10] +citrate +acetyl_coa
-    3s_citryl_coa
-  }
 
-  branch from 6_oxoneomycin_c side right {
-    6_oxoneomycin_c
-    <-> ec_2_6_1_95 [2.6.1.95] +neomycin_c +akg
-    glutamate
-  }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_17 [3.6.3.17] +h +adp +phosphate +h2o
-    glucose
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_3_6_3_21 [3.6.3.21] +h +adp +phosphate +h2o
-    l_glutamine
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +leukotriene_f4_cytosol +l_glutamate
-    leukotriene_e4
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +glucose +ubiquinone_8 +h +d_gluconate
-    ubiquinol_8
-  }
 }

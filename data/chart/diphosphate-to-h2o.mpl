@@ -16,51 +16,10 @@ pathway diphosphate-to-h2o "diphosphate to H2O" {
     4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
   }
 
-  branch from atp side left {
-    atp
-    <-> . +1d_myo_inositol_3_4_5_6_tetrakisphosphate +h +adp
-    1d_myo_inositol_3_4_6_trisphosphate
-  }
 
-  branch from atp side right {
-    atp
-    <-> ec_6_2_1_26 [6.2.1.26] +2_succinylbenzoate +coa +2_succinylbenzoyl_coa +phosphate
-    adp
-  }
 
-  branch from l_glutamate side left {
-    l_glutamate
-    <-> . +2_oxoglutarate +validamine_7_phosphate
-    validone_7_phosphate
-  }
 
-  branch from l_glutamate side right {
-    l_glutamate
-    <-> ec_2_6_1_13 [2.6.1.13] +2_oxoglutarate +2s_2_4_diaminopentanedioate
-    2s_2_amino_4_oxopentanedioate
-  }
 
-  branch from vanillate side left {
-    vanillate
-    <-> ec_2_4_1_299 [2.4.1.299] +mirtillin +1_o_vanilloyl_d_glucose +h
-    delphin
-  }
 
-  branch from 5_carboxyvanillic_acid side right {
-    5_carboxyvanillic_acid
-    <-> . +4_methylene_2_oxoglutarate +h +h2o
-    4_2_5_carboxy_2_hydroxy_3_methoxyphenyl_2_oxoeth
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +4_e_2_methylamino_ethenyl_phenol
-    r_synephrine
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_2_1_31 [3.2.1.31] +luteolin +beta_d_glucuronate
-    luteolin_7_o_beta_d_glucuronide
-  }
 }

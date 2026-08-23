@@ -36,69 +36,13 @@ pathway decanoate-ester-to-1-2-diacyl-3-o-d-glc "decanoate ester to 1,2-diacyl-3
     1_2_diacyl_3_o_d_glc_1_6_d_glc_1_6_d_glc_sn_glyc
   }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_4_2_3_133 [4.2.3.133] +fpp
-    copaene
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_5_1_100 [2.5.1.100] +fumigaclavine_a +dmapp
-    fumigaclavine_c
-  }
 
-  branch from o_s_decanoylpantetheine_4_phosphoryl_serine_1 side left {
-    o_s_decanoylpantetheine_4_phosphoryl_serine_1
-    <-> ec_1_3_3_6 [1.3.3.6] +o_s_2e_decenoylpantetheine_4_phosphoryl_serine_1 +h2o2
-    o2
-  }
 
-  branch from o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri side right {
-    o_s_3_oxododecanoylpantetheine_4_phosphoryl_seri
-    <-> ec_1_1_1_100 [1.1.1.100] +o_s_3r_hydroxydodecanoylpantetheine_4_phosphoryl +nadp +nadph
-    h
-  }
 
-  branch from holo-acp side left {
-    holo-acp
-    <-> . +o_s_hexadecanoylpantetheine_4_phosphoryl_serine +1_palmitoyl_sn_glycerol_3_phosphate
-    1_2_dihexadecanoyl_sn_glycerol_3_phosphate
-  }
 
-  branch from holo-acp side right {
-    holo-acp
-    <-> ec_6_2_1_54 [6.2.1.54] +d_alanine +atp +amp +ppi
-    o_s_d_alanyl_pantetheine_4_phosphoryl_l_serine_z
-  }
 
-  branch from o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine side left {
-    o_s_2e_dodecenoylpantetheine_4_phosphoryl_serine
-    <-> ec_1_3_1_10 [1.3.1.10] +h +nadph +dodecanoyl_pantetheine_4_phosphorylserine_1
-    nadp
-  }
 
-  branch from dodecanoyl_pantetheine_4_phosphorylserine_1 side right {
-    dodecanoyl_pantetheine_4_phosphorylserine_1
-    <-> . +fad +hplus +fadh2
-    o_s_2z_dodecenoylpantetheine_4_phosphoryl_l_seri
-  }
 
-  branch from dodecanoyl_pantetheine_4_phosphorylserine_1 side left {
-    dodecanoyl_pantetheine_4_phosphorylserine_1
-    <-> . +holo-acp +atp +amp +ppi
-    dodecanoate
-  }
 
-  branch from dag side right {
-    dag
-    <-> . +lipid_a +1_2_diacyl_sn_glycero_3_phosphoethanolamine +hplus
-    lipid_a_1_2_aminoethyl_diphosphate_oxoanion
-  }
-
-  branch from dag side left {
-    dag
-    <-> . +mannosylinositol_phosphorylceramide +1_phosphatidyl_1d_myo_inositol
-    mannosyl_diphosphorylinositol_ceramide
-  }
 }

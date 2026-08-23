@@ -24,129 +24,23 @@ pathway d-gal-1-3-d-glcnac-to-h2o "β-D-Gal-(1→3)-β-D-GlcNAc-… to H2O" {
     atp
   }
 
-  branch from d_galp_1_3_d_glcpnac side left {
-    d_galp_1_3_d_glcpnac
-    <-> ec_2_4_1_341 [2.4.1.341] +gdp_l_colitose +gdp +hplus
-    l_colitosyl_1_2_d_galactosyl_1_3_n_acetyl_d_glu
-  }
 
-  branch from d_galp_1_3_d_glcpnac side right {
-    d_galp_1_3_d_glcpnac
-    <-> . +gdp_l_fucose +gdp +hplus
-    d_galp_1_3_l_fucp_1_4_d_glcpnac
-  }
 
-  branch from lactose side left {
-    lactose
-    <-> ec_3_2_1_227 [3.2.1.227] +d_gal_1_4_d_glcnac_1_3_d_gal_1_4_d_glc +h2o
-    n_acetyllactosamine
-  }
 
-  branch from lactose side right {
-    lactose
-    <-> .
-    d_gal_1_4_d_man
-  }
 
-  branch from d_galactose_1_phosphate side left {
-    d_galactose_1_phosphate
-    <-> . +udp_d_galactose +h2o +hplus
-    ump
-  }
 
-  branch from udp_d_galactose side right {
-    udp_d_galactose
-    <-> ec_2_4_1_87 [2.4.1.87] +d_galactosyl_1_4_n_acetyl_d_glucosaminide +udp +hplus
-    d_galactosyl_1_3_d_galactosyl_1_4_n_acetyl_d_gl
-  }
 
-  branch from udp_d_galactose side left {
-    udp_d_galactose
-    <-> ec_2_4_1_137 [2.4.1.137] +sn_glycerol_3_phosphate +udp +hplus
-    2_d_galactosyl_sn_glycerol_3_phosphate
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> . +gpp
-    pinene
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_81 [2.5.1.81] +ipp +2_trans_6_trans_10_trans_geranylgeranyl_diphosph
-    all_trans_pentaprenyl_diphosphate
-  }
 
-  branch from triphosphate side right {
-    triphosphate
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +6_hydroxymethyl_7_8_dihydropterin
-    acetate
-  }
 
-  branch from triphosphate side left {
-    triphosphate
-    <-> . +7_8_dihydroneopterin_3_triphosphate +h2o +h +glycolaldehyde
-    6_hydroxymethyl_7_8_dihydropterin
-  }
 
-  branch from cbl side right {
-    cbl
-    <-> ec_2_5_1_17 [2.5.1.17] +adenosylcob_iii_alamin +phosphate +h +atp +h2o
-    diphosphate
-  }
 
-  branch from cbl side left {
-    cbl
-    <-> ec_2_1_1_251 [2.1.1.251] +h +methyl_coenzyme_m +methylcobalamin
-    coenzyme_m
-  }
 
-  branch from h side right {
-    h
-    <-> . +glycerophosphatidylethanolamine +acyl_phosphatidylglycerol_n_c12_0 +2_dodecanoyl_sn_glycero_3_phosphoethanolamine
-    dilauroyl_phosphatidylglycerol
-  }
 
-  branch from h side left {
-    h
-    <-> . +glycerophosphatidylethanolamine +acyl_phosphatidylglycerol_n_c18_0 +distearoyl_phosphatidylglycerol
-    2_octadecanoyl_sn_glycero_3_phosphoethanolamine
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +1d_myo_inositol_3_4_bisphosphate +h +adp
-    1d_myo_inositol_4_phosphate
-  }
 
-  branch from atp side left {
-    atp
-    <-> ec_3_6_3_29 [3.6.3.29] +h +adp +phosphate +h2o
-    molybdate
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +cholestane_3_7_12_24_25_pentol +nadp +h2o +h +o2
-    5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +5beta_cholestane_3alpha_7alpha_12alpha_23_25_pen +nadp +h2o +h +5beta_cholestane_3alpha_7alpha_12alpha_25_tetrol
-    o2
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +1d_myo_inositol_1_4_bisphosphate +phosphate
-    1d_myo_inositol_1_phosphate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    methanesulfonate
-  }
 }

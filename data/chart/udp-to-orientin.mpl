@@ -16,63 +16,12 @@ pathway udp-to-orientin "UDP to orientin" {
     udp
   }
 
-  branch from udp_beta_l_rhamnose side left {
-    udp_beta_l_rhamnose
-    <-> . +udp +h +beta_chaconine
-    chaconine
-  }
 
-  branch from udp_beta_l_rhamnose side right {
-    udp_beta_l_rhamnose
-    <-> . +udp +3_o_l_rha_1_3_d_gal_1_2_d_glca_quillate +h
-    3_o_d_galactosyl_1_2_d_glucuronosyl_quillate
-  }
 
-  branch from kaempferol_3_o_d_glucosyl_1_2_d_glucoside side left {
-    kaempferol_3_o_d_glucosyl_1_2_d_glucoside
-    <-> ec_2_4_1_240 [2.4.1.240] +udp +h +udp_alpha_d_glucose
-    kaempferol_3_o_beta_d_glucosyl_1_2_glucosyl_1_2
-  }
 
-  branch from kaempferol_3_o_d_glucosyl_1_2_d_glucoside side right {
-    kaempferol_3_o_d_glucosyl_1_2_d_glucoside
-    <-> ec_2_4_1_240 [2.4.1.240] +udp +h +udp_alpha_d_glucose
-    kaempferol_3_o_d_glucosyl_1_2_d_glucosyl_1_2_d_g
-  }
 
-  branch from udp_alpha_d_glucose side left {
-    udp_alpha_d_glucose
-    <-> . +udp +quercetin_3_o_gentiotetroside +h
-    quercetin_3_gentiotrioside
-  }
 
-  branch from udp_alpha_d_glucose side right {
-    udp_alpha_d_glucose
-    <-> . +udp +apigenin_7_o_gentiobioside
-    apigenin_7_o_beta_d_glucoside
-  }
 
-  branch from udp side left {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +8_hydroxyquinoline_glucuronide +quinolin_8_ol
-    udp_alpha_d_glucuronate
-  }
 
-  branch from udp side right {
-    udp
-    <-> ec_2_4_1_17 [2.4.1.17] +h +glucuronosyletoposide +udp_alpha_d_glucuronate
-    etoposide
-  }
 
-  branch from orientin side left {
-    orientin
-    <-> ec_2_1_1_78 [2.1.1.78] +s_adenosyl_l_homocysteine +h +isoscoparin
-    s_adenosyl_l_methionine
-  }
-
-  branch from orientin side right {
-    orientin
-    <-> . +1_3_4_dihydroxyphenyl_3_3_c_glucosyl_2_4_6_trihy +h
-    h2o
-  }
 }

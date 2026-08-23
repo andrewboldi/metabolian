@@ -16,69 +16,13 @@ pathway aflatoxin-q1-to-aflatoxin-b1exo-8-9-epoxi "aflatoxin Q1 to Aflatoxin B1e
     aflatoxin_b1exo_8_9_epoxide_gsh
   }
 
-  branch from h side left {
-    h
-    <-> . +5_s_cysteinyldopa +h2o
-    1_4_benzothiazinyl_alanine
-  }
 
-  branch from h side right {
-    h
-    <-> . +5_hydroxy_cmp +diphosphate +h2o
-    5_hydroxy_ctp
-  }
 
-  branch from lsm_36909 side left {
-    lsm_36909
-    <-> ec_1_14_13_175 [1.14.13.175] +co2 +nadp +methanol +h2o +h +o2 +nadph
-    8_o_methylsterigmatocystin
-  }
 
-  branch from o2 side right {
-    o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_6_trans_tridecadienoyl_coa +h2o2
-    6_trans_tridecenoyl_coa
-  }
 
-  branch from o2 side left {
-    o2
-    <-> ec_1_3_3_6 [1.3.3.6] +2_trans_5_cis_7_trans_tetradecatrienoyl_coa +h2o2
-    5_cis_7_trans_tetradecadienoyl_coa
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_1_1_362 [1.1.1.362] +maggiemycin +h +nadp
-    epsilon_rhodomycinone
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +n_3_hydroxybutan_2_yl_acetamide +nadp +h
-    n_3_oxobutan_2_yl_acetamide
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +9_hydroxy_aurachin_d +h +o2 +nadph +h2o
-    aurachin_re
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> . +h +aurachin_d +o2 +nadph +h2o
-    aurachin_c
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +neocarrabiose +neocarrabiose_sulfate
-    neocarratetraose_4_o_sulfate
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> ec_4_2_3_38 [4.2.3.38] +diphosphate +alpha_bisabolol
-    2e_6e_farnesyl_diphosphate
-  }
 }

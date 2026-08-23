@@ -16,63 +16,12 @@ pathway 3-s-hydroxy-10-13-16-all-to-h2o "3(S)-hydroxy-10,13,16-all… to H2O" {
     trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
   }
 
-  branch from 10z_13z_16z_3_oxodocosatrienoyl_coa side left {
-    10z_13z_16z_3_oxodocosatrienoyl_coa
-    <-> . +malonyl-coa +hplus +co2 +coa
-    8z_11z_14z_icosatrienoyl_coa
-  }
 
-  branch from h side right {
-    h
-    <-> . +nadh +4_amino_2_6_dinitrotoluene +nad +h2o
-    2_4_diamino_6_nitrotoluene
-  }
 
-  branch from h side left {
-    h
-    <-> . +nadh +4_amino_2_6_dinitrotoluene +nad +h2o
-    4_amino_2_hydroxylamino_6_nitrotoluene
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +alpha_hydroxytamoxifen +nadp +h2o +h +o2
-    tamoxifen
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_14_14_1 [1.14.14.1] +h +n_desmethyltamoxifen +o2 +nadp +h2o
-    alpha_hydroxy_n_desmethyltamoxifen
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_14_14_1 [1.14.14.1] +cyclophosphamide +h +o2 +nadph +h2o
-    4_hydroxycyclophosphamide
-  }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_2_1_5 [1.2.1.5] +h +carboxyphosphamide +nadph +h2o
-    aldophosphamide
-  }
 
-  branch from trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co side right {
-    trans_cis_cis_cis_2_10_13_16_docosatetraenoyl_co
-    <-> . +nadp +h +nadph
-    10z_13z_16z_docosatrienoyl_coa
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +nadh +h +citronellic_acid +nad
-    s_citronellal
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_4_5 [3.5.4.5] +h +5_deoxy_5_fluorocytidine +nh4
-    doxifluridine
-  }
 }

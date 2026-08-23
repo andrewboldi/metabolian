@@ -24,75 +24,14 @@ pathway 5-cholestane-3-7-diol-to-24e-3-7-12-trihydrox "5β-cholestane-3α,7α-di
     24e_3_7_12_trihydroxy_5_cholest_24_en_26_oyl_co
   }
 
-  branch from triol_ca side left {
-    triol_ca
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    5_cholestane_3_7_12_25_tetrol
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_149 [1.14.14.149] +5_epi_aristolochene +fmnh2 +o2 +h2o +hplus
-    capsidiol
-  }
 
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_19_63 [1.14.19.63] +pratensein +fmnh2 +o2 +h2o +hplus
-    5_hydroxypseudobaptigenin
-  }
 
-  branch from di_sulfido_diiron side right {
-    di_sulfido_diiron
-    <-> ec_1_14_15_4 [1.14.15.4] +steroid +di_sulfido_diiron +o2 +hplus +h2o
-    11_hydroxy_steroid
-  }
 
-  branch from di_sulfido_diiron side left {
-    di_sulfido_diiron
-    <-> ec_1_3_7_4 [1.3.7.4] +3z_phytochromobilin +di_sulfido_diiron +hplus
-    biliverdin
-  }
 
-  branch from 25r_3_7_12_trihydroxy_5_cholestan_26_oate side right {
-    25r_3_7_12_trihydroxy_5_cholestan_26_oate
-    <-> . +fmnh2 +o2 +fmn +h2o +hplus
-    25r_3_7_dihydroxy_5_cholestan_26_oate
-  }
 
-  branch from thca_coa_25r side left {
-    thca_coa_25r
-    <-> .
-    25s_3_7_12_trihydroxy_5_cholestan_26_oyl_coa
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_5_1_36 [2.5.1.36] +3_6_9_trihydroxypterocarpan +dmapp
-    6as_11as_4_dimethylallyl_3_6a_9_trihydroxyptero
-  }
 
-  branch from ppi side left {
-    ppi
-    <-> ec_2_5_1_68 [2.5.1.68] +ipp +gpp
-    2_cis_6_trans_farnesyl_diphosphate
-  }
 
-  branch from thca_24oh_coa side right {
-    thca_24oh_coa
-    <-> . +nad +nadh +hplus
-    thca_24oxo_coa
-  }
 
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_14_99_38 [1.14.99.38] +cholesterol +o2 +hydrogen_acceptor +h2o
-    25_hydroxycholesterol
-  }
-
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_7_99_1 [1.7.99.1] +hydrogen_acceptor +nh3 +h2o +hplus
-    hydroxylamine
-  }
 }

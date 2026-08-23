@@ -10,8 +10,8 @@
   "scripts": {
     "data:validate": "node tools/validate.mjs",
     "data:build": "node tools/build-graph.mjs && node tools/build-charts-parallel.mjs",
-    "prebuild": "npm run data:validate && npm run data:build",
-    "predev": "npm run data:build",
+    "prebuild": "npm run data:validate && npm run mol:build && npm run data:build",
+    "predev": "npm run mol:build && npm run data:build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",

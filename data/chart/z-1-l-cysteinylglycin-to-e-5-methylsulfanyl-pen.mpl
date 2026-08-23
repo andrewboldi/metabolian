@@ -22,81 +22,15 @@ pathway z-1-l-cysteinylglycin-to-e-5-methylsulfanyl-pen "(Z)-1-(L-cysteinylglyci
     e_5_methylsulfanyl_pentanal_oxime
   }
 
-  branch from glycine side left {
-    glycine
-    <-> . +l_isoleucine +l_arginine +h2o
-    isolecyl_glycyl_arginine
-  }
 
-  branch from glycine side right {
-    glycine
-    <-> . +l_methionine +l_arginine +h2o
-    methionyl_glycyl_arginine
-  }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    5z_8z_11z_eicosatrienoic_acid
-  }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    henicosanoic_acid
-  }
 
-  branch from e_5_methylsulfanyl_pentanal_oxime side left {
-    e_5_methylsulfanyl_pentanal_oxime
-    <-> . +h +nadph +nadp +h2o
-    5_methylthiopentanonitrile_oxide
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +2_oxoglutarate +dimboa_beta_d_glucoside +co2 +trimboa_beta_d_glucoside
-    succinate
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +2_oxoglutarate +alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_c_p_put +co2 +succinate
-    alpha_kdo_2_4_alpha_kdo_2_6_lipid_a_form_a_p_put
-  }
 
-  branch from l_cysteine side right {
-    l_cysteine
-    <-> . +l_histidine +l_lysine +h2o
-    lysyl_cysteinyl_histidine
-  }
 
-  branch from l_cysteine side left {
-    l_cysteine
-    <-> . +l_proline +l_arginine +h2o
-    prolyl_arginyl_cysteine
-  }
 
-  branch from nadph side right {
-    nadph
-    <-> . +malonyl_coa +h +r_methylmalonyl_coa +co2 +nadp +narbonolide +h2o
-    coa
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +malonyl_coa +2s_2_methylbutanoyl_coa +h +r_methylmalonyl_coa +co2 +nadp +coa +h2o
-    6_8a_seco_6_8a_deoxy_5_oxoavermectin_2a_aglycon
-  }
 
-  branch from fmn side right {
-    fmn
-    <-> ec_1_14_14_74 [1.14.14.74] +albendazole +fmnh2 +o2 +h2o +hplus
-    hydroxyalbendazole
-  }
-
-  branch from fmn side left {
-    fmn
-    <-> ec_1_14_14_75 [1.14.14.75] +fenbendazole +fmnh2 +o2 +h2o +hplus
-    hydroxyfenbendazole
-  }
 }

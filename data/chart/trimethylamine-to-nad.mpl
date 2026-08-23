@@ -20,99 +20,18 @@ pathway trimethylamine-to-nad "trimethylamine to NAD" {
     ubiquinol_10
   }
 
-  branch from menaquinol_8 side left {
-    menaquinol_8
-    <-> . +protoporphyrin_ix +mk_8
-    protoporphyrinogen_ix
-  }
 
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> . +selenite +mk_8 +h2o
-    selenate
-  }
 
-  branch from h side left {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphate +atp +h2o
-    pgp_16_1_9z_16_1_9z
-  }
 
-  branch from h side right {
-    h
-    <-> ec_3_6_3_1 [3.6.3.1] +adp +phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1 +phosphate +phosphatidylglycerol_dihexadec_9_enoyl_n_c16_1 +h2o
-    atp
-  }
 
-  branch from pmf side left {
-    pmf
-    <-> . +asparagine
-    l_asparagine
-  }
 
-  branch from pmf side right {
-    pmf
-    <-> ec_7_1_1_2 [7.1.1.2] +nadh +menaquinone_9 +h +nad
-    menaquinol_9
-  }
 
-  branch from mk_8 side left {
-    mk_8
-    <-> . +thiosulfate +menaquinol_8
-    tetrathionate
-  }
 
-  branch from mk_8 side right {
-    mk_8
-    <-> . +l_aspartate +menaquinol_8 +h
-    iminoaspartate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    dipalmitoyl_l_1_phosphatidyl_inositol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_6_3_1 [3.6.3.1] +h +adp +phosphate +atp
-    dipalmitoyl_1_phosphatidyl_1d_myo_inositol_4_pho
-  }
 
-  branch from ubiquinone_10 side left {
-    ubiquinone_10
-    <-> . +ubiquinol_10 +2e_2_methylbut_2_enoyl_coa
-    2s_2_methylbutanoyl_coa
-  }
 
-  branch from ubiquinone_10 side right {
-    ubiquinone_10
-    <-> . +2e_tetradecenoyl_coa +ubiquinol_10
-    tetradecanoyl_coa
-  }
 
-  branch from ubiquinol_10 side left {
-    ubiquinol_10
-    <-> . +nadh +hplus +nad
-    coenzyme_q10
-  }
 
-  branch from ubiquinol_10 side right {
-    ubiquinol_10
-    <-> ec_1_1_5_8 [1.1.5.8] +3_dehydroquinate +ubiquinone_10
-    l_quinate
-  }
 
-  branch from nad side left {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    borneol
-  }
-
-  branch from nad side right {
-    nad
-    <-> ec_1_1_1_71 [1.1.1.71] +nadh +h +phellandral
-    s_terpineol
-  }
 }

@@ -16,45 +16,9 @@ pathway n-long-chain-acyl-ethano-to-o-s-2s-4s-6s-2-4-6-t "N-(long-chain-acyl)eth
     o_s_2s_4s_6s_2_4_6_trimethyl_very_long_chain_fat
   }
 
-  branch from long_chain_fatty_acid_anion side left {
-    long_chain_fatty_acid_anion
-    <-> ec_6_2_1_59 [6.2.1.59] +holo-acp +atp +amp +ppi
-    o_s_long_chain_fatty_acyl_pantetheine_4_phosphor
-  }
 
-  branch from ethanolaminium side right {
-    ethanolaminium
-    <-> ec_3_1_4_4 [3.1.4.4] +1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphoethano +h2o +hplus
-    1_z_alk_1_enyl_2_acyl_sn_glycero_3_phosphate
-  }
 
-  branch from ethanolaminium side left {
-    ethanolaminium
-    <-> . +1_hexadecanoyl_2_9z_octadecenoyl_sn_glycero_3_ph +serine
-    1_palmitoyl_2_oleoyl_sn_glycero_3_phosphoserine
-  }
 
-  branch from long_chain_fatty_acyl_coa side right {
-    long_chain_fatty_acyl_coa
-    <-> ec_2_3_1_279 [2.3.1.279] +trehalose +coa
-    2_o_long_chain_fatty_acyl_trehalose
-  }
 
-  branch from long_chain_fatty_acyl_coa side left {
-    long_chain_fatty_acyl_coa
-    <-> ec_2_3_1_26 [2.3.1.26] +sterol +coa
-    long_chain_3_hydroxysterol_ester
-  }
 
-  branch from ppi side right {
-    ppi
-    <-> ec_2_7_7_65 [2.7.7.65] +gtp
-    c_di_gmp
-  }
-
-  branch from ppi side left {
-    ppi
-    <-> ec_6_2_1_37 [6.2.1.37] +3_hydroxybenzoate +atp +coa +amp
-    3_hydroxybenzoyl_coa
-  }
 }

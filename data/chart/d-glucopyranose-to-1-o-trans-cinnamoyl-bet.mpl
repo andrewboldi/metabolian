@@ -16,51 +16,10 @@ pathway d-glucopyranose-to-1-o-trans-cinnamoyl-bet "D-glucopyranose to 1-O-(tran
     ethanol
   }
 
-  branch from 1_o_trans_cinnamoyl_beta_d_glucose side left {
-    1_o_trans_cinnamoyl_beta_d_glucose
-    <-> ec_2_3_1_152 [2.3.1.152] +beta_d_glucose +methyl_trans_cinnamate
-    methanol
-  }
 
-  branch from 1_o_trans_cinnamoyl_beta_d_glucose side right {
-    1_o_trans_cinnamoyl_beta_d_glucose
-    <-> ec_2_3_1_152 [2.3.1.152] +alpha_d_glucose +methanol
-    methyl_trans_cinnamate
-  }
 
-  branch from 1_propanol side left {
-    1_propanol
-    <-> ec_2_3_1_84 [2.3.1.84] +propyl_benzoate +coa
-    benzoyl_coa
-  }
 
-  branch from 1_propanol side right {
-    1_propanol
-    <-> ec_3_1_1_2 [3.1.1.2] +propanoate +h +h2o
-    propyl_propionate
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_220 [3.2.1.220] +6_o_methyl_n_deacetylipecoside +h2o
-    6_o_methyl_n_deacetylipecoside_aglycone
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> . +deacetylisoipecoside +h2o
-    n_deacetylisoipecoside_aglycone
-  }
 
-  branch from ethanol side left {
-    ethanol
-    <-> . +cocaine +methanol +cocaethylene
-    h
-  }
-
-  branch from ethanol side right {
-    ethanol
-    <-> ec_3_1_3_1 [3.1.3.1] +h +phosphate +h2o
-    ethyl_dihydrogen_phosphate
-  }
 }

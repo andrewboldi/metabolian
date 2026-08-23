@@ -16,57 +16,11 @@ pathway palmatine-to-h2o2 "palmatine to H2O2" {
     columbamine
   }
 
-  branch from h side left {
-    h
-    <-> . +alpha_d_glucosamine_6_phosphate +beta_d_glucosamine +h2o
-    chitobiose_6_phosphate
-  }
 
-  branch from h side right {
-    h
-    <-> . +4_1e_3_carboxy_3_oxoprop_1_en_1_yl_2_3_dihydro_1
-    4z_4_2e_3_carboxylato_3_hydroxyprop_2_en_1_ylid
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +8_8a_deoxyoleandolide +h2o
-    oleandolide
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +h +2z_4z_2_amino_5_formylhexa_2_4_dienedioate
-    4_amino_3_hydroxybenzoate
-  }
 
-  branch from s_tetrahydrocolumbamine side left {
-    s_tetrahydrocolumbamine
-    <-> ec_1_14_19_68 [1.14.19.68] +h +o2 +nadph +nadp +h2o
-    s_canadine
-  }
 
-  branch from s_s_adenosyl_l_methionine side right {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_6_o_methylnorlaudanosoline
-    norlaudanosoline
-  }
 
-  branch from s_s_adenosyl_l_methionine side left {
-    s_s_adenosyl_l_methionine
-    <-> ec_2_1_1_128 [2.1.1.128] +s_adenosyl_l_homocysteine +h +s_6_o_methylnorlaudanosoline
-    s_norlaudanosoline
-  }
 
-  branch from h2o2 side right {
-    h2o2
-    <-> . +hexadecanoate +h +1_pentadecene +h2o
-    co2
-  }
-
-  branch from h2o2 side left {
-    h2o2
-    <-> . +9z_octadecenoate +h +co2 +h2o
-    1e_8z_heptadecadiene
-  }
 }

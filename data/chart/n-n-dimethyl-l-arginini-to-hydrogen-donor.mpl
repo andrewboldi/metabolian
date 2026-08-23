@@ -18,81 +18,15 @@ pathway n-n-dimethyl-l-arginini-to-hydrogen-donor "Nω,Nω-dimethyl-L-arginini�
     formaldehyde
   }
 
-  branch from dimethylaminium side left {
-    dimethylaminium
-    <-> ec_1_5_3_27 [1.5.3.27] +2_dimethylaminoethyl_phosphonate +o2 +h2o +h2o2
-    phosphonoacetaldehyde
-  }
 
-  branch from citrulline side right {
-    citrulline
-    <-> ec_3_5_3_6 [3.5.3.6] +h2o +nh3
-    arginine
-  }
 
-  branch from citrulline side left {
-    citrulline
-    <-> ec_1_14_13_39 [1.14.13.39] +arginine +nadph +o2 +hplus +nadp +h2o
-    no
-  }
 
-  branch from methylamine side right {
-    methylamine
-    <-> ec_1_4_1_17 [1.4.1.17] +nadp +h2o +pyruvate +nadph +hplus
-    n_methyl_l_alanine
-  }
 
-  branch from methylamine side left {
-    methylamine
-    <-> ec_3_5_1_36 [3.5.1.36] +n_methyl_2_oxoglutaramate +h2o
-    akg
-  }
 
-  branch from formaldehyde side right {
-    formaldehyde
-    <-> . +5_n7_methyl_5_triphosphoguanosine_n6_methyl_2_o +akg +o2 +succinate +co2
-    5_n7_methyl_5_triphosphoguanosine_2_o_methyladen
-  }
 
-  branch from formaldehyde side left {
-    formaldehyde
-    <-> . +n_n_dimethyl_l_arginine_1 +akg +o2 +succinate +co2
-    l_argininium
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_4_1_99_1 [4.1.99.1] +l_tryptophan +h2o +pyruvate
-    1h_indole
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> ec_4_3_1_20 [4.3.1.20] +3r_3_hydroxy_l_aspartate
-    oxaloacetate
-  }
 
-  branch from glutamate side right {
-    glutamate
-    <-> ec_2_6_1_57 [2.6.1.57] +aromatic_l_amino_acid +akg
-    aromatic_2_oxo_monocarboxylic_acid_anion
-  }
 
-  branch from glutamate side left {
-    glutamate
-    <-> ec_4_1_1_15 [4.1.1.15] +hplus +co2
-    gaba
-  }
 
-  branch from hydrogen_donor side right {
-    hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_6_ol +hydrogen_acceptor +h2o
-    6_hydroxyquinolin_2_1h_one
-  }
-
-  branch from hydrogen_donor side left {
-    hydrogen_donor
-    <-> ec_1_3_99_17 [1.3.99.17] +quinolin_7_ol +hydrogen_acceptor +h2o
-    7_hydroxyquinolin_2_1h_one
-  }
 }

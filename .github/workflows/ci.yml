@@ -21,6 +21,8 @@ jobs:
         run: npm run data:validate
       - name: Unit tests
         run: npm test
+      - name: Render molecule structures (build-time; gates must see the real corpus)
+        run: npm run mol:build
       - name: Build master graph
         run: npm run data:build
       - name: Chart QA gates (routing, dangling arrows, cell overlap)

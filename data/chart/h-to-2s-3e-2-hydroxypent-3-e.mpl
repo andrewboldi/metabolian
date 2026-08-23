@@ -22,75 +22,14 @@ pathway h-to-2s-3e-2-hydroxypent-3-e "H to (2S,3E)-2-hydroxypent-3-e…" {
     2s_3e_2_hydroxypent_3_enenitrile
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +pseudoisoeugenol +h2o +h +o2 +nadph
-    trans_anethole
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_3_1_105 [1.3.1.105] +2_butyl_4_hydroxy_5_methyl_3_2h_furanone +h +nadph
-    2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_119 [3.2.1.119] +mandelonitrile +vicianose
-    vicianin
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +glycodeoxycholic_acid +h +deoxycholate
-    glycine
-  }
 
-  branch from hydrogen_cyanide side left {
-    hydrogen_cyanide
-    <-> . +3_formylthiophene
-    2s_2_hydroxy_2_thiophen_3_yl_acetonitrile
-  }
 
-  branch from hydrogen_cyanide side right {
-    hydrogen_cyanide
-    <-> . +3_furaldehyde
-    2s_2_furan_3_yl_2_hydroxyacetonitrile
-  }
 
-  branch from nad side left {
-    nad
-    <-> . +nadh +flaviolin +h +o2 +h2o
-    2_5_7_8_tetrahydroxynaphthalene_1_4_dione
-  }
 
-  branch from nad side right {
-    nad
-    <-> . +nadh +4_5_dehydro_l_arginine +h
-    l_arginine
-  }
 
-  branch from h side left {
-    h
-    <-> ec_5_4_2_4 [5.4.2.4] +glyceric_acid_1_3_biphosphate
-    2r_2_3_bisphosphoglycerate
-  }
 
-  branch from h side right {
-    h
-    <-> ec_2_8_2_24 [2.8.2.24] +adenosine_3_5_bisphosphate +sinalbin +p_hydroxybenzyldesulphoglucosinolate
-    3_phosphoadenylyl_sulfate
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> ec_1_3_1_105 [1.3.1.105] +nadp +h +2e_2_butylidene_4_hydroxy_5_methyl_3_2h_furanon
-    2_butyl_4_hydroxy_5_methyl_3_2h_furanone
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_3_1_105 [1.3.1.105] +4_hydroxy_5_methyl_2_propyl_3_2h_furanone +nadp +h
-    2e_4_hydroxy_5_methyl_2_propylidene_3_2h_furano
-  }
 }

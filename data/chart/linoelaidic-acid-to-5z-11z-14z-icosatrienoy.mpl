@@ -16,75 +16,14 @@ pathway linoelaidic-acid-to-5z-11z-14z-icosatrienoy "linoelaidic acid to (5Z,11Z
     5z_11z_14z_icosatrienoyl_coa
   }
 
-  branch from diphosphate side left {
-    diphosphate
-    <-> . +eicosanoyl_coa +amp +atp +coa
-    eicosanoate
-  }
 
-  branch from diphosphate side right {
-    diphosphate
-    <-> ec_6_2_1_3 [6.2.1.3] +h +a_tetradecenoyl_coa_n_c14_1coa +amp +atp +coa
-    9e_tetradecenoic_acid
-  }
 
-  branch from h side left {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pitavastatin_m3
-  }
 
-  branch from h side right {
-    h
-    <-> . +adp +phosphate +atp +h2o
-    pravastatin
-  }
 
-  branch from amp side left {
-    amp
-    <-> . +diphosphate +vaccenyl_coenzyme_a +h +atp +coa
-    vaccenic_acid
-  }
 
-  branch from amp side right {
-    amp
-    <-> . +8z_11z_14z_eicosatrienoyl_coa +diphosphate +atp +coa
-    8z_11z_14z_eicosatrienoate
-  }
 
-  branch from co2 side left {
-    co2
-    <-> . +sec_butylamine
-    l_2_aminopentanoate
-  }
 
-  branch from co2 side right {
-    co2
-    <-> . +2_methylpropanoate +h +nh4 +h2o
-    l_valine
-  }
 
-  branch from coa side left {
-    coa
-    <-> . +acetyl_coa +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c
-    3_oxo_5_s_12_r_dihydroxy_eicosa_8_trans_6_14_cis
-  }
 
-  branch from coa side right {
-    coa
-    <-> . +3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoyl_c +h2o +h
-    3_s_10_r_oh_octadeca_6_trans_4_12_cis_trienoate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +1_5_phospho_beta_d_ribosyl_5_5_phospho_beta_d_ri
-    1_5_phosphoribosyl_amp
-  }
-
-  branch from h2o side right {
-    h2o
-    <-> . +l_leucine +l_proline +l_arginine
-    prolyl_leucyl_arginine
-  }
 }

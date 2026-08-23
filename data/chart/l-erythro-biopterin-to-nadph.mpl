@@ -16,51 +16,10 @@ pathway l-erythro-biopterin-to-nadph "L-erythro-biopterin to NADPH" {
     2_hydroxylaminobenzoic_acid
   }
 
-  branch from nadp side left {
-    nadp
-    <-> . +s_macrocarpen_15_ol +h2o +h +o2 +nadph
-    s_macrocarpene
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> . +4s_4_5_5_dimethylcyclohex_1_en_1_yl_cyclohex_1 +h2o +h +o2 +nadph
-    s_macrocarpen_15_ol
-  }
 
-  branch from anthranilate side left {
-    anthranilate
-    <-> ec_1_13_11_23 [1.13.11.23] +3_hydroxyindolin_2_one +o2 +h
-    co2
-  }
 
-  branch from anthranilate side right {
-    anthranilate
-    <-> . +3r_3_1h_indol_3_ylmethyl_3h_1_4_benzodiazepine +diphosphate +amp +h2o +l_tryptophan
-    atp
-  }
 
-  branch from o2 side left {
-    o2
-    <-> . +nadh +linalool +h +nad +h2o
-    6e_8_hydroxylinalool
-  }
 
-  branch from o2 side right {
-    o2
-    <-> . +4_oxahomoadamantan_5_one +nad +h2o +nadh +h
-    adamantanone
-  }
 
-  branch from nadph side left {
-    nadph
-    <-> . +11alpha_30_dihydroxy_beta_amyrin +nadp +h2o +h +o2
-    30_hydroxy_beta_amyrin
-  }
-
-  branch from nadph side right {
-    nadph
-    <-> ec_1_14_13_188 [1.14.13.188] +h +6_deoxyerythronolide_b +o2 +nadp +h2o
-    erythronolide_b
-  }
 }

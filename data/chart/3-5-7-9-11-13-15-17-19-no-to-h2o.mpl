@@ -16,39 +16,8 @@ pathway 3-5-7-9-11-13-15-17-19-no-to-h2o "3,5,7,9,11,13,15,17,19-no… to H2O" {
     atp
   }
 
-  branch from co2 side left {
-    co2
-    <-> . +3e_5_oxopent_3_ene_1_2_5_tricarboxylic_acid
-    2_hydroxyhepta_2_4_dienedioic_acid
-  }
 
-  branch from co2 side right {
-    co2
-    <-> . +compound_0286062 +h2o
-    2_5_dioxopentanoate
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cerivastatin_m1_glucuronide
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    cerivastatin_m23_glucuronide
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    diclofenac_d_glucosiduronic_acid
-  }
-
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    n_desisopropyl_fluvastatin
-  }
 }

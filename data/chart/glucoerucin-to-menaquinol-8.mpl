@@ -24,117 +24,21 @@ pathway glucoerucin-to-menaquinol-8 "glucoerucin to Menaquinol 8" {
     menaquinol_8
   }
 
-  branch from nadp side left {
-    nadp
-    <-> ec_1_2_1_10 [1.2.1.10] +acetyl_coa +h +nadph +acetaldehyde
-    coa
-  }
 
-  branch from nadp side right {
-    nadp
-    <-> ec_1_1_1_151 [1.1.1.151] +21_dehydrocorticosterone +h +nadph
-    corticosterone
-  }
 
-  branch from h2o side left {
-    h2o
-    <-> ec_3_2_1_21 [3.2.1.21] +4_nitrophenyl_l_arabinoside +h +alpha_l_arabinopyanose
-    4_nitrophenol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> ec_3_5_1_1 [3.5.1.1] +d_aspartate +nh4
-    d_asparagine
-  }
 
-  branch from glucose side left {
-    glucose
-    <-> ec_3_2_1_21 [3.2.1.21] +pyridoxine +h2o
-    5_o_beta_d_glucosylpyridoxine
-  }
 
-  branch from glucose side right {
-    glucose
-    <-> ec_3_2_1_108 [3.2.1.108] +alpha_lactose +h2o
-    d_galactopyranose
-  }
 
-  branch from sulfur_atom side left {
-    sulfur_atom
-    <-> . +4r_5s_dethiobiotin
-    4_5_secobiotin
-  }
 
-  branch from sulfur_atom side right {
-    sulfur_atom
-    <-> . +arsenous_acid +h
-    sulfanylarsonate
-  }
 
-  branch from hydrogen_sulfide side left {
-    hydrogen_sulfide
-    <-> . +acetyl_coa +l_serine +coa +l_cysteine
-    acetate
-  }
 
-  branch from hydrogen_sulfide side right {
-    hydrogen_sulfide
-    <-> ec_2_5_1_47 [2.5.1.47] +o_acetyl_l_serine +acetate
-    cysteine
-  }
 
-  branch from h side left {
-    h
-    <-> ec_1_1_1_50 [1.1.1.50] +nadh +1_ketoacenaphthalene +nad
-    1_acenaphthalenol
-  }
 
-  branch from h side right {
-    h
-    <-> ec_1_1_1_88 [1.1.1.88] +nadh +3s_3_hydroxy_3_methylglutaryl_coa +coa +nad
-    r_mevaldate
-  }
 
-  branch from sulfite side left {
-    sulfite
-    <-> ec_4_4_1_24 [4.4.1.24] +h +pyruvate
-    3_sulfolactic_acid
-  }
 
-  branch from sulfite side right {
-    sulfite
-    <-> ec_1_13_11_2 [1.13.11.2] +h +2e_4z_2_hydroxymuconate +o2 +h2o
-    2_3_dihydroxybenzenesulfonate
-  }
 
-  branch from menaquinol_8 side left {
-    menaquinol_8
-    <-> . +h2 +mk_8
-    pmf
-  }
 
-  branch from menaquinol_8 side right {
-    menaquinol_8
-    <-> . +s_malate +mk_8
-    oxaloacetate
-  }
 
-  branch from mk_8 side left {
-    mk_8
-    <-> . +nadh +h +menaquinol_8
-    nad
-  }
 
-  branch from mk_8 side right {
-    mk_8
-    <-> ec_1_6_5_3 [1.6.5.3] +pmf +h +pmf +menaquinol_8 +nad
-    nadh
-  }
-
-  branch from nitrous_oxide side left {
-    nitrous_oxide
-    <-> ec_1_7_5_2 [1.7.5.2] +nitric_oxide +menaquinol +h2o
-    menaquinone_2
-  }
 }

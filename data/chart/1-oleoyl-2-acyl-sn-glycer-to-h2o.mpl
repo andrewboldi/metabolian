@@ -16,57 +16,11 @@ pathway 1-oleoyl-2-acyl-sn-glycer-to-h2o "1-oleoyl-2-acyl-sn-glycer… to H2O" {
     atp
   }
 
-  branch from 1_oleoyl_sn_glycero_3_phosphate side left {
-    1_oleoyl_sn_glycero_3_phosphate
-    <-> . +nonadecanoyl_coa +coa
-    1_oleoyl_2_nonadecanoyl_sn_glycero_3_phosphate
-  }
 
-  branch from 1_oleoyl_sn_glycero_3_phosphate side right {
-    1_oleoyl_sn_glycero_3_phosphate
-    <-> . +1_oleoyl_sn_glycero_3_phosphoserine +h2o +hplus
-    serine
-  }
 
-  branch from fatty-acid side left {
-    fatty-acid
-    <-> . +1_acyl_2_arachidonoyl_sn_glycero_3_phosphoethano +h2o +hplus
-    2_arachidonoyl_sn_glycero_3_phosphoethanolamine
-  }
 
-  branch from fatty-acid side right {
-    fatty-acid
-    <-> . +1_2_diacyl_sn_glycero_3_phospho_n_acyl_serine +h2o +hplus
-    1_acyl_2_hydroxy_sn_glycero_3_phospho_n_acyl_ser
-  }
 
-  branch from 1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate side left {
-    1_oleoyl_2_palmitoyl_sn_glycero_3_phosphate
-    <-> . +atp +adp +hplus
-    1_oleoyl_2_palmitoyl_sn_glycerol
-  }
 
-  branch from atp side right {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    taurolithocholate_3_sulfate
-  }
 
-  branch from atp side left {
-    atp
-    <-> . +h +adp +phosphate +h2o
-    25r_3alpha_7alpha_12alpha_trihydroxy_5beta_chol
-  }
 
-  branch from h2o side right {
-    h2o
-    <-> . +h +adp +phosphate +atp
-    3alpha_7alpha_dihydroxy_5beta_cholestan_26_oic_a
-  }
-
-  branch from h2o side left {
-    h2o
-    <-> . +formate +nh4
-    hydrogen_cyanide
-  }
 }

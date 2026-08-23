@@ -16,63 +16,12 @@ pathway 3-d-phenylalanyl-adenyl-to-l-phenylalanine "3'-(D-phenylalanyl)adenyl…
     oxaloacetate
   }
 
-  branch from amp_3_end_1 side left {
-    amp_3_end_1
-    <-> . +3_l_seryl_adenylyl_1_group +h2o
-    serine
-  }
 
-  branch from amp_3_end_1 side right {
-    amp_3_end_1
-    <-> . +3_l_threonyl_adenylyl_1_group +h2o
-    threonine
-  }
 
-  branch from keto_phenylpyruvate side left {
-    keto_phenylpyruvate
-    <-> . +nad +nadh +hplus
-    3_phenyllactate
-  }
 
-  branch from keto_phenylpyruvate side right {
-    keto_phenylpyruvate
-    <-> . +atp +h2o +amp +ppi +hplus
-    phenguignardate
-  }
 
-  branch from nh3 side left {
-    nh3
-    <-> . +triuret +h2o
-    1_carboxybiuret
-  }
 
-  branch from nh3 side right {
-    nh3
-    <-> ec_4_3_3_8 [4.3.3.8] +l_mimosine +h2o +pyruvate
-    3_hydroxypyridin_4_1h_one
-  }
 
-  branch from oxaloacetate side left {
-    oxaloacetate
-    <-> ec_1_1_1_37 [1.1.1.37] +nad +nadh +hplus
-    malate
-  }
 
-  branch from oxaloacetate side right {
-    oxaloacetate
-    <-> ec_4_1_3_17 [4.1.3.17] +pyruvate
-    2_hydroxy_4_oxobutane_1_2_4_tricarboxylate
-  }
 
-  branch from l_phenylalanine side left {
-    l_phenylalanine
-    <-> ec_1_14_16_1 [1.14.16.1] +sapropterin +o2 +tyrosine
-    4a_hydroxy_l_erythro_5_6_7_8_tetrahydrobiopterin
-  }
-
-  branch from l_phenylalanine side right {
-    l_phenylalanine
-    <-> ec_3_4_17_23 [3.4.17.23] +ile5_angiotensin_ii_dizwitterion +h2o
-    ile5_angiotensin_ii_1_7_dizwitterion
-  }
 }

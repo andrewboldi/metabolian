@@ -18,69 +18,13 @@ pathway s-adenosyl-l-homocysteine-to-31r-8-12-diethyl-71 "S-adenosyl-L-homocyste
     31r_8_12_diethyl_71_71_dihydroxybacteriochlorop
   }
 
-  branch from s_adenosyl_l_methionine side left {
-    s_adenosyl_l_methionine
-    <-> . +casticin +s_adenosyl_l_homocysteine +h
-    3_4_5_trihydroxy_3_6_7_trimethoxyflavone
-  }
 
-  branch from s_adenosyl_l_methionine side right {
-    s_adenosyl_l_methionine
-    <-> . +s_adenosyl_l_homocysteine +3_6_7_2_4_pentamethylquercetagetin +h
-    2_hydroxy_3_6_7_4_tetramethylquercetagetin
-  }
 
-  branch from n1_n5_n10_tri_e_5_hydroxyferuloyl_spermidine side left {
-    n1_n5_n10_tri_e_5_hydroxyferuloyl_spermidine
-    <-> . +n1_n5_n10_tris_e_feruloyl_spermidine +fmnh2 +o2 +h2o +hplus
-    fmn
-  }
 
-  branch from 31r_8_12_diethylbacteriochlorophyllide_c side right {
-    31r_8_12_diethylbacteriochlorophyllide_c
-    <-> . +31r_8_12_diethylbacteriochlorophyll_c +diphosphate +h
-    2e_6e_farnesyl_diphosphate
-  }
 
-  branch from s_adenosyl_l_homocysteine side left {
-    s_adenosyl_l_homocysteine
-    <-> . +4alpha_14alpha_dimethyl_porifersta_8_25_27_dieno +h +s_adenosyl_l_methionine
-    obtusifoliol
-  }
 
-  branch from s_adenosyl_l_homocysteine side right {
-    s_adenosyl_l_homocysteine
-    <-> . +h +patuletin +s_adenosyl_l_methionine
-    quercetagetin
-  }
 
-  branch from h side left {
-    h
-    <-> . +1_methylpyrrolinium +1_2_dihydropyrimidine
-    3_6_dihydronicotine
-  }
 
-  branch from h side right {
-    h
-    <-> . +2z_4z_2_amino_5_formylhexa_2_4_dienedioate +h2o
-    isocinchomeronic_acid
-  }
 
-  branch from 5_deoxyadenosine side left {
-    5_deoxyadenosine
-    <-> . +h2o +adenine
-    5_deoxyribose
-  }
 
-  branch from l_methionine side right {
-    l_methionine
-    <-> ec_2_6_1_15 [2.6.1.15] +4_methylsulfanyl_2_oxobutanoate +l_phenylalanine
-    3_phenylpyruvate
-  }
-
-  branch from l_methionine side left {
-    l_methionine
-    <-> ec_2_6_1_27 [2.6.1.27] +4_methylsulfanyl_2_oxobutanoate +l_tryptophan
-    indole_3_pyruvate
-  }
 }
