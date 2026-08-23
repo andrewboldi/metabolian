@@ -69,6 +69,30 @@ export async function mountMasterHybrid(canvas: HTMLElement, opts: HybridOptions
   const ac = new AbortController();
   const { signal } = ac;
 
+  // Deep link (?z/cx/cy) parity with the SVG path: frame the opening view instead
+  // of a plain fit, and keep the URL current as the reader navigates (shareable).
+  const q = new URLSearchParams(location.search);
+  const numQ = (k: string) => { const r = q.get(k); if (r === null || r.trim() === "") return undefined; const n = Number(r); return Number.isFinite(n) ? n : undefined; };
+  const dz = numQ("z"), dcx = numQ("cx"), dcy = numQ("cy");
+  if (dz !== undefined && dz > 0 && dcx !== undefined && dcy !== undefined) {
+    tiles.setView(dz, dcx, dcy);
+    if (dz >= T) crossedT = true; // a detail-zoom deep link hands straight off to the SVG
+  }
+  let urlTimer = 0;
+  const writeUrl = () => {
+    clearTimeout(urlTimer);
+    urlTimer = window.setTimeout(() => {
+      let z: number, cx: number, cy: number;
+      if (handedOff && svgView) { const g = svgView.getTransform(); z = g.k; cx = (canvas.clientWidth / 2 - g.tx) / g.k; cy = (canvas.clientHeight / 2 - g.ty) / g.k; }
+      else { const c = tiles.centre(); z = c.z; cx = c.cx; cy = c.cy; }
+      const p = new URLSearchParams(location.search);
+      p.set("z", z.toFixed(4)); p.set("cx", cx.toFixed(1)); p.set("cy", cy.toFixed(1));
+      history.replaceState(null, "", `${location.pathname}?${p}`);
+    }, 400);
+  };
+  canvas.addEventListener("wheel", writeUrl, { passive: true, signal });
+  canvas.addEventListener("pointerup", writeUrl, { passive: true, capture: true, signal });
+
   // Track pointer state so the heavy (~30k-node, multi-second) synchronous SVG mount
   // is never STARTED mid-gesture and janks a live pan. Capture phase: tiles-view
   // captures the pointer on its own root, so a bubbling listener would miss it.

@@ -40,6 +40,10 @@ export interface TilesController {
   setActive(on: boolean): void;
   zoomBy(factor: number): void;
   fit(): void;
+  /** Frame world-point (cx,cy) at the viewport centre at scale z — for deep links. */
+  setView(z: number, cx: number, cy: number): void;
+  /** Current world-point + scale under the viewport centre, for writing the deep link. */
+  centre(): { z: number; cx: number; cy: number };
   /** Detach every listener/observer this viewer wired (fixes the leaked HUD buttons). */
   destroy(): void;
 }
@@ -135,6 +139,18 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string, opts: Til
     ty = (vh() - B.h * s) / 2 - B.y * s;
     render();
   }
+
+  /** Frame world-point (cx,cy) at the viewport centre at scale z — for deep links
+   *  (?z/cx/cy). Clamped to the chart, like every other view change. */
+  function setView(z: number, cx: number, cy: number) {
+    s = Math.min(6, Math.max(scale0 * 0.5, z));
+    tx = vw() / 2 - cx * s;
+    ty = vh() / 2 - cy * s;
+    clamp();
+    render();
+  }
+  /** Current world-point under the viewport centre, for writing the deep link. */
+  function centre() { return { z: s, cx: (vw() / 2 - tx) / s, cy: (vh() / 2 - ty) / s }; }
 
   function zoomBy(factor: number, px = vw() / 2, py = vh() / 2) {
     const nk = Math.min(6, Math.max(scale0 * 0.5, s * factor));
@@ -282,6 +298,8 @@ export async function mountTiles(canvas: HTMLElement, tilesId: string, opts: Til
     setActive: (on: boolean) => { root.style.pointerEvents = on ? "" : "none"; },
     zoomBy: (factor: number) => zoomBy(factor),
     fit: () => fit(),
+    setView: (z: number, cx: number, cy: number) => setView(z, cx, cy),
+    centre: () => centre(),
     destroy: () => { ac.abort(); ro.disconnect(); },
   };
 }

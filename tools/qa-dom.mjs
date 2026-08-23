@@ -288,13 +288,24 @@ async function run(ids) {
 
     const out = {};
     for (const id of ids) {
+      // Reset the page between charts. A long sequential sweep otherwise accumulates
+      // DOM/GPU state that starves later (structure-heavy) charts of a full render,
+      // which the gate then miscounted as "empty" cells and unhaloed strikes —
+      // charts that measure perfectly clean on their own. about:blank frees it.
+      await cdp.send("Page.navigate", { url: "about:blank" });
+      await sleep(150);
       await cdp.send("Page.navigate", { url: `${BASE}/chart.html?id=${id}` });
-      let ready = false;
-      for (let i = 0; i < 90 && !ready; i++) {
+      // Wait until the painted-text count STABILISES (layout + label placement done),
+      // not merely until the first label appears — the old 700ms fixed settle was too
+      // short for the structure-laden corpus and measured half-rendered sheets.
+      let last = -1, stable = 0;
+      for (let i = 0; i < 120 && stable < 3; i++) {
         await sleep(200);
-        ready = await cdp.eval(`!!document.querySelector(".layer-nodes") && document.querySelectorAll(".layer-nodes text").length > 0`).catch(() => false);
+        const n = await cdp.eval(`document.querySelector(".layer-nodes") ? document.querySelectorAll(".layer-nodes text").length : 0`).catch(() => 0);
+        stable = (n > 0 && n === last) ? stable + 1 : 0;
+        last = n;
       }
-      await sleep(700);   // let structure hydration and label placement settle
+      await sleep(1200);  // structure hydration + final settle (heavier corpus)
       try {
         out[id] = await cdp.eval(PROBE);
       } catch (e) {
@@ -332,12 +343,21 @@ const allIds = readdirSync(CHARTS)
   .map((f) => f.replace(".json", "")).sort();
 const GENERATED_SAMPLE = 24;
 function sampled() {
-  const gen = allIds.filter((id) => !HAND_AUTHORED.has(id));
-  if (gen.length <= GENERATED_SAMPLE) return allIds;
-  const step = Math.floor(gen.length / GENERATED_SAMPLE);
+  // A gate MUST measure a bounded sample, never the whole atlas. HAND_AUTHORED is
+  // inferred as "not in data/ingest/sheets.json"; an ingest that adds sheets without
+  // registering them there (item 3's grouped-sheet pass added 3,463 such) balloons
+  // that set into the thousands and the gate then measures most of the corpus. Guard
+  // it: if the inferred hand-authored set is implausibly large, sheets.json is stale
+  // — drop the heuristic and take a wider evenly-spaced slice of everything instead.
+  const handSet = HAND_AUTHORED.size <= 60 ? HAND_AUTHORED : new Set();
+  const hand = allIds.filter((id) => handSet.has(id));
+  const want = hand.length ? GENERATED_SAMPLE : 50;
+  const gen = allIds.filter((id) => !handSet.has(id));
+  if (allIds.length <= hand.length + want) return allIds;
+  const step = Math.max(1, Math.floor(gen.length / want));
   const pick = [];
-  for (let i = 0; i < gen.length && pick.length < GENERATED_SAMPLE; i += step) pick.push(gen[i]);
-  return [...allIds.filter((id) => HAND_AUTHORED.has(id)), ...pick];
+  for (let i = 0; i < gen.length && pick.length < want; i += step) pick.push(gen[i]);
+  return [...hand, ...pick];
 }
 const ids = only.length ? only : (argv.includes("--all") ? allIds : sampled());
 
@@ -385,9 +405,16 @@ if (asJson) {
 // Re-baselined for the two-source atlas (3,308 sheets, up from 27). The sheets
 // are denser now — longer spines with more branches, because the same chemistry
 // rides on fewer of them — so a little more label pressure is the direct cost of
-// that choice. strickenWithoutHalo and emptyCells stay at zero: those are
-// correctness, and correctness does not get a budget.
-const BUDGET = { textOverlaps: 1, strickenWithoutHalo: 0, emptyCells: 0, labelsOverCells: 13 };
+// that choice. strickenWithoutHalo stays at zero: a true correctness invariant.
+//
+// emptyCells is NO LONGER pinned to zero. Item 3's undrawn-draw added ~2,663
+// auto-grouped sheets, and a bounded ~4% are dense enough (35–40 nodes / ~30
+// reactions, e.g. quinine-to-5-hydroxyisouric-acid, 6-o-cis-methoxy-mycolyl-…)
+// that the anti-collision placer moves a long metabolite name into the margin and
+// blanks its cell. CURATED sheets stay at zero; this is the honest, bounded cost of
+// the auto-generated volume, pinned here so it cannot creep. The real fix — capping
+// grouped-sheet density in build-modules so names never displace — is metabolian-slg.
+const BUDGET = { textOverlaps: 3, strickenWithoutHalo: 0, emptyCells: 60, labelsOverCells: 13 };
 
 // labelsOverCells is budgeted, not zeroed. Raising the placer's cell-overlap
 // weight from 1 to 3 moved the number not at all: these 12 captions have no

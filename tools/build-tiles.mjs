@@ -172,7 +172,10 @@ async function main() {
     // A tile is exactly one 256px CSS viewport, captured at 2x -> 512px physical.
     await cdp.send("Emulation.setDeviceMetricsOverride", { width: TILE, height: TILE, deviceScaleFactor: DSF, mobile: false });
 
-    await cdp.send("Page.navigate", { url: `${BASE}chart.html?id=_master` });
+    // ?tiles=off forces the pure-SVG renderer: since Stage 2, id=_master defaults
+    // to the hybrid tiled viewer, which has no .met-cell/SVG to screenshot (baking
+    // it would recursively capture the tiles we are trying to produce).
+    await cdp.send("Page.navigate", { url: `${BASE}chart.html?id=_master&tiles=off` });
 
     // Wait for the real chart to mount and lay its cells out.
     let ready = false;
